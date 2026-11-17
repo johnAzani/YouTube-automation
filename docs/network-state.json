@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T11:00:02Z",
+  "generated_at": "2026-11-17T11:06:47Z",
   "monitor_generated_at": "2026-11-17T10:47:28.214897+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 388,
+    "published_total": 389,
     "published_longform": 136,
-    "published_shorts": 252,
-    "public_total": 386,
+    "published_shorts": 253,
+    "public_total": 387,
     "queued_longform": 59,
-    "queued_shorts": 86,
+    "queued_shorts": 85,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 25,
+        "published_total": 26,
         "published_longform": 8,
-        "published_shorts": 17,
-        "thumbnail_pending": 25,
-        "public_total": 25,
+        "published_shorts": 18,
+        "thumbnail_pending": 26,
+        "public_total": 26,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0707",
-        "title": "Breath Left in Your Lungs: Psalm 150:6 | The Praise Garden",
-        "format": "longform",
-        "youtube_video_id": "fRiT9_Zn20Y",
-        "watch_url": "https://youtu.be/fRiT9_Zn20Y",
+        "id": "SHORT-GARDENPSALM104V33",
+        "title": "Pray This Psalm 104:33 Prayer of Thanksgiving | Sing Unto The Lord #Shorts",
+        "format": "short",
+        "youtube_video_id": "mr10VySulyU",
+        "watch_url": "https://www.youtube.com/shorts/mr10VySulyU",
         "published_on": "2026-11-17",
-        "published_at": "2026-11-17T07:37:49Z"
+        "published_at": "2026-11-17T11:06:01Z"
       },
       "next_queued_longform": {
         "id": "0708",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm104v33",
-        "scripture": "Psalm 104:33",
+        "short": "short-gardenpsalm147v1",
+        "scripture": "Psalm 147:1",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM104V33",
+      "slug": "short-gardenpsalm104v33-thanksgiving-prayer",
+      "file": "short-gardenpsalm104v33-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 104:33 Prayer of Thanksgiving | Sing Unto The Lord #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T11:06:01Z",
+      "youtube_video_id": "mr10VySulyU",
+      "watch_url": "https://www.youtube.com/shorts/mr10VySulyU",
+      "youtu_be_url": "https://youtu.be/mr10VySulyU",
+      "shorts_url": "https://www.youtube.com/shorts/mr10VySulyU",
+      "studio_url": "https://studio.youtube.com/video/mr10VySulyU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/mr10VySulyU/hqdefault.jpg",
+      "thumb_text": "THE PRAISE GARDEN \u00b7 PSALM 104:33",
+      "thumbnail_pending": true,
+      "duration_label": "72s",
+      "words": 622
+    },
     {
       "id": "SHORT-HEALINGHOSEA6V1",
       "slug": "short-healinghosea6v1-restoration-prayer",
@@ -10806,17 +10830,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-gardenpsalm104v33",
-        "file": "0000-short-gardenpsalm104v33.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 104:33",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm147v1",
