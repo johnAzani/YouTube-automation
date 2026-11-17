@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T07:36:17Z",
+  "generated_at": "2026-11-17T07:38:34Z",
   "monitor_generated_at": "2026-11-17T07:35:20.196240+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 379,
-    "published_longform": 134,
-    "published_shorts": 245,
-    "public_total": 377,
-    "queued_longform": 61,
-    "queued_shorts": 93,
+    "published_total": 381,
+    "published_longform": 135,
+    "published_shorts": 246,
+    "public_total": 379,
+    "queued_longform": 60,
+    "queued_shorts": 92,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -577,33 +577,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 23,
-        "published_longform": 7,
-        "published_shorts": 16,
-        "thumbnail_pending": 23,
-        "public_total": 23,
-        "queued_longform": 6,
+        "published_total": 25,
+        "published_longform": 8,
+        "published_shorts": 17,
+        "thumbnail_pending": 25,
+        "public_total": 25,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM34V1",
-        "title": "Pray This Psalm 34:1-3 Prayer of Thanksgiving | Your Heart #Shorts",
-        "format": "short",
-        "youtube_video_id": "N1Xn0AZfo4s",
-        "watch_url": "https://www.youtube.com/shorts/N1Xn0AZfo4s",
-        "published_on": "2026-11-16",
-        "published_at": "2026-11-16T23:36:50Z"
-      },
-      "next_queued_longform": {
         "id": "0707",
         "title": "Breath Left in Your Lungs: Psalm 150:6 | The Praise Garden",
-        "words": 1243,
+        "format": "longform",
+        "youtube_video_id": "fRiT9_Zn20Y",
+        "watch_url": "https://youtu.be/fRiT9_Zn20Y",
+        "published_on": "2026-11-17",
+        "published_at": "2026-11-17T07:37:49Z"
+      },
+      "next_queued_longform": {
+        "id": "0708",
+        "title": "When Every Day Depends on Grace: Psalm 136:1 | The Praise Garden",
+        "words": 1507,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenluke1v46",
-        "scripture": "Luke 1:46-49",
+        "short": "short-gardenpsalm104v33",
+        "scripture": "Psalm 104:33",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0707",
+      "slug": "breath-left-in-your-lungs-psalm-150-6-the-praise-garden",
+      "file": "0707-breath-left-in-your-lungs-psalm-150-6-the-praise-garden.md",
+      "title": "Breath Left in Your Lungs: Psalm 150:6 | The Praise Garden",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T07:37:49Z",
+      "youtube_video_id": "fRiT9_Zn20Y",
+      "watch_url": "https://youtu.be/fRiT9_Zn20Y",
+      "youtu_be_url": "https://youtu.be/fRiT9_Zn20Y",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/fRiT9_Zn20Y/edit",
+      "thumb_url": "https://i.ytimg.com/vi/fRiT9_Zn20Y/hqdefault.jpg",
+      "thumb_text": "THAT BREATHES",
+      "thumbnail_pending": true,
+      "duration_label": "~9 min",
+      "words": 1243
+    },
+    {
       "id": "0311",
       "slug": "believing-god-for-your-family-acts-16-31-34",
       "file": "0311-believing-god-for-your-family-acts-16-31-34.md",
@@ -748,6 +772,30 @@
       "thumbnail_pending": false,
       "duration_label": "52s",
       "words": 630
+    },
+    {
+      "id": "SHORT-GARDENLUKE1V46",
+      "slug": "short-gardenluke1v46-thanksgiving-prayer",
+      "file": "short-gardenluke1v46-thanksgiving-prayer.md",
+      "title": "Pray This Luke 1:46-49 Prayer of Thanksgiving | God My Savior #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T07:06:22Z",
+      "youtube_video_id": "eFgd4cP3wqg",
+      "watch_url": "https://www.youtube.com/shorts/eFgd4cP3wqg",
+      "youtu_be_url": "https://youtu.be/eFgd4cP3wqg",
+      "shorts_url": "https://www.youtube.com/shorts/eFgd4cP3wqg",
+      "studio_url": "https://studio.youtube.com/video/eFgd4cP3wqg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/eFgd4cP3wqg/hqdefault.jpg",
+      "thumb_text": "THE PRAISE GARDEN \u00b7 LUKE 1:46-49",
+      "thumbnail_pending": true,
+      "duration_label": "50s",
+      "words": 637
     },
     {
       "id": "SHORT-PROVISION1CORINTHIANS16V9",
@@ -10438,19 +10486,6 @@
         "words": 2005
       },
       {
-        "id": "0707",
-        "slug": "breath-left-in-your-lungs-psalm-150-6-the-praise-garden",
-        "file": "0707-breath-left-in-your-lungs-psalm-150-6-the-praise-garden.md",
-        "title": "Breath Left in Your Lungs: Psalm 150:6 | The Praise Garden",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1243
-      },
-      {
         "id": "0708",
         "slug": "when-every-day-depends-on-grace-psalm-136-1-the-praise-garden",
         "file": "0708-when-every-day-depends-on-grace-psalm-136-1-the-praise-garden.md",
@@ -10627,17 +10662,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-gardenluke1v46",
-        "file": "0000-short-gardenluke1v46.yml",
-        "companion_longform_id": "",
-        "scripture": "Luke 1:46-49",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm104v33",
