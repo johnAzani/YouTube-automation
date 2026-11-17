@@ -2,25 +2,11 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 217,
-      "name": "Gemini Brain Autonomous Queue Replenishment",
-      "ran_at": "2026-11-16T06:51:46+00:00",
-      "slot": "2026-11-16T03:14:00+00:00",
-      "workflow": "gemini_brain.yml"
-    },
-    {
       "late_minutes": 208,
       "name": "Keepalive",
       "ran_at": "2026-11-16T06:51:47+00:00",
       "slot": "2026-11-16T03:23:00+00:00",
       "workflow": "keepalive.yml"
-    },
-    {
-      "late_minutes": 194,
-      "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
-      "ran_at": "2026-11-16T06:51:49+00:00",
-      "slot": "2026-11-16T03:37:00+00:00",
-      "workflow": "channel-analytics.yml"
     },
     {
       "late_minutes": 173,
@@ -30,8 +16,8 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-17T02:28:06.251264+00:00",
-  "last_run_at": "2026-11-17T02:27:20+00:00",
+  "generated_at": "2026-11-17T04:02:42.893736+00:00",
+  "last_run_at": "2026-11-17T04:01:29+00:00",
   "on_time": [
     {
       "late_minutes": 50,
@@ -55,10 +41,10 @@
       "workflow": "community.yml"
     },
     {
-      "late_minutes": 15,
+      "late_minutes": 36,
       "name": "Automation monitor",
-      "ran_at": "2026-11-17T00:38:36+00:00",
-      "slot": "2026-11-17T00:23:00+00:00",
+      "ran_at": "2026-11-17T03:59:32+00:00",
+      "slot": "2026-11-17T03:23:00+00:00",
       "workflow": "monitor.yml"
     },
     {
@@ -76,10 +62,10 @@
       "workflow": "reporting-jobs.yml"
     },
     {
-      "late_minutes": 100,
+      "late_minutes": 14,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-17T02:27:20+00:00",
-      "slot": "2026-11-17T00:47:00+00:00",
+      "ran_at": "2026-11-17T04:01:29+00:00",
+      "slot": "2026-11-17T03:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     },
     {
@@ -90,6 +76,6 @@
       "workflow": "tests-on-main.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 1,
   "warn_minutes": 120
 }
