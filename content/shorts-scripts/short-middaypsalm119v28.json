@@ -1,0 +1,277 @@
+{
+  "key": "short-middaypsalm119v28",
+  "channel": "prayer3",
+  "psalm": 119,
+  "title": [
+    "STRENGTH FOR",
+    "THE HEAVY HEART"
+  ],
+  "poster": [
+    "FINDING REST",
+    "IN THE MIDDLE",
+    "OF YOUR DAY",
+    "THE MIDDAY WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sunlight streaming through a window",
+    "quiet wooden desk with an open leather book",
+    "high sun illuminating a golden field",
+    "soft dust motes dancing in a sunbeam",
+    "still pond water reflecting the midday sky",
+    "empty wooden chair in a sunlit corner"
+  ],
+  "scenes": [
+    {
+      "a": "That persistent feeling of exhaustion that makes every simple task feel impossible is understood today.",
+      "img": "short-middaypsalm119v28-scene-01.jpg",
+      "kicker": "PSALM 119:28",
+      "sub": "GOD SEES YOUR WEARINESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Listen to the word of the Lord as it speaks into your quiet spirit right now.",
+      "img": "short-middaypsalm119v28-scene-02.jpg",
+      "kicker": "PSALM 119:28",
+      "sub": "HEAR HIS PROMISE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "My soul melteth for heaviness: strengthen thou me according unto thy word.",
+      "img": "short-middaypsalm119v28-scene-03.jpg",
+      "kicker": "PSALM 119:28",
+      "sub": "HIS STRENGTH REMAINS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, the weight of this midday hour presses upon me, yet I turn my eyes upward.",
+      "img": "short-middaypsalm119v28-scene-04.jpg",
+      "kicker": "PSALM 119:28",
+      "sub": "LEAN INTO HIS GRACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Refresh my tired mind, replace this inner heaviness with the anchor of your eternal truth, God.",
+      "img": "short-middaypsalm119v28-scene-05.jpg",
+      "kicker": "PSALM 119:28",
+      "sub": "FIND RENEWAL NOW",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "I receive your quiet strength for the remainder of my afternoon work and my home.",
+      "img": "short-middaypsalm119v28-scene-06.jpg",
+      "kicker": "PSALM 119:28",
+      "sub": "WALK IN PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "That persistent feeling of exhaustion that makes every simple task feel impossible is understood today."
+    ],
+    [
+      11,
+      20,
+      "Listen to the word of the Lord as it speaks into your quiet spirit right now."
+    ],
+    [
+      21,
+      35,
+      "My soul melteth for heaviness: strengthen thou me according unto thy word."
+    ],
+    [
+      36,
+      50,
+      "Lord, the weight of this midday hour presses upon me, yet I turn my eyes upward."
+    ],
+    [
+      51,
+      68,
+      "Refresh my tired mind, replace this inner heaviness with the anchor of your eternal truth, God."
+    ],
+    [
+      69,
+      85,
+      "I receive your quiet strength for the remainder of my afternoon work and my home."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "PERSISTENT EXHAUSTION MAKES",
+        "EVERY TASK FEEL",
+        "IMPOSSIBLE TODAY"
+      ],
+      [
+        "EXHAUSTION",
+        "IMPOSSIBLE"
+      ],
+      "PSALM 119:28"
+    ],
+    [
+      11,
+      20,
+      [
+        "LISTEN TO THE",
+        "LORD AS HE",
+        "SPEAKS TO YOU"
+      ],
+      [
+        "LISTEN",
+        "SPEAKS"
+      ],
+      "PSALM 119:28"
+    ],
+    [
+      21,
+      35,
+      [
+        "MY SOUL MELTETH",
+        "FOR HEAVINESS",
+        "STRENGTHEN THOU ME",
+        "ACCORDING UNTO THY WORD"
+      ],
+      [
+        "MELTETH",
+        "STRENGTHEN"
+      ],
+      "PSALM 119:28"
+    ],
+    [
+      36,
+      50,
+      [
+        "LORD THE WEIGHT",
+        "PRESSES UPON ME",
+        "I TURN MY EYES"
+      ],
+      [
+        "WEIGHT",
+        "UPWARD"
+      ],
+      "PSALM 119:28"
+    ],
+    [
+      51,
+      68,
+      [
+        "REFRESH MY TIRED MIND",
+        "REPLACE HEAVINESS WITH",
+        "YOUR ETERNAL TRUTH"
+      ],
+      [
+        "REFRESH",
+        "TRUTH"
+      ],
+      "PSALM 119:28"
+    ],
+    [
+      69,
+      85,
+      [
+        "I RECEIVE YOUR",
+        "QUIET STRENGTH FOR",
+        "MY AFTERNOON WORK"
+      ],
+      [
+        "STRENGTH",
+        "QUIET"
+      ],
+      "PSALM 119:28"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That persistent feeling of exhaustion that makes every simple task feel impossible is understood today.",
+      "kind": "phrase",
+      "words": [
+        "EXHAUSTION",
+        "IMPOSSIBLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Listen to the word of the Lord as it speaks into your quiet spirit right now.",
+      "kind": "phrase",
+      "words": [
+        "LISTEN",
+        "SPEAKS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "My soul melteth for heaviness: strengthen thou me according unto thy word.",
+      "kind": "phrase",
+      "words": [
+        "MELTETH",
+        "STRENGTHEN"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, the weight of this midday hour presses upon me, yet I turn my eyes upward.",
+      "kind": "phrase",
+      "words": [
+        "WEIGHT",
+        "UPWARD"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Refresh my tired mind, replace this inner heaviness with the anchor of your eternal truth, God.",
+      "kind": "phrase",
+      "words": [
+        "REFRESH",
+        "TRUTH"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "I receive your quiet strength for the remainder of my afternoon work and my home.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "QUIET"
+      ],
+      "hi": 5,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 119:28"
+}

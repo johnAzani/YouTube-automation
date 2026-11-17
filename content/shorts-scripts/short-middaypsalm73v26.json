@@ -1,0 +1,275 @@
+{
+  "key": "short-middaypsalm73v26",
+  "channel": "prayer3",
+  "psalm": 73,
+  "title": [
+    "WHEN STRENGTH FAILS",
+    "GOD IS YOUR PORTION"
+  ],
+  "poster": [
+    "MIDDAY WATCH",
+    "STRENGTH FAILS",
+    "GOD REMAINS",
+    "PSALM 73:26"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright midday light spilling across quiet empty office desk minimal",
+    "open bible on wooden table under warm mid day sunlight",
+    "sunbeams illuminating dust motes in serene room midday",
+    "bright high noon sun shining over peaceful mountain valley",
+    "quiet sunlit window with soft curtain blowing gently",
+    "calm sunlight pouring over clean still surface midday"
+  ],
+  "scenes": [
+    {
+      "a": "When your strength runs completely dry",
+      "img": "short-middaypsalm73v26-scene-01.jpg",
+      "kicker": "MIDDAY WATCH",
+      "sub": "WHEN STRENGTH FAILS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "My flesh and my heart faileth",
+      "img": "short-middaypsalm73v26-scene-02.jpg",
+      "kicker": "PSALM 73:26",
+      "sub": "GOD IS MY STRENGTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, when our energy fades",
+      "img": "short-middaypsalm73v26-scene-03.jpg",
+      "kicker": "NOONDAY PRAYER",
+      "sub": "YOU ARE PRESENT",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "become our strength, our peace",
+      "img": "short-middaypsalm73v26-scene-04.jpg",
+      "kicker": "PSALM 73:26",
+      "sub": "OUR PORTION FOREVER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Renew our weary spirits",
+      "img": "short-middaypsalm73v26-scene-05.jpg",
+      "kicker": "REST IN GOD",
+      "sub": "RENEW YOUR SPIRIT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Subscribe to join The Midday Watch",
+      "img": "short-middaypsalm73v26-scene-06.jpg",
+      "kicker": "PAUSE & PRAY",
+      "sub": "THE MIDDAY WATCH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "When your strength runs completely dry halfway through this exhausting workday, turn your heart upward."
+    ],
+    [
+      6,
+      17,
+      "Scripture reminds us in Psalm 73:26, 'My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever.'"
+    ],
+    [
+      17,
+      26,
+      "Lord, when our energy fades and our internal courage falters in the middle of this afternoon, remind us that You are still present."
+    ],
+    [
+      26,
+      35,
+      "When our human power fails us, become our strength, our peace, and our eternal portion right here where we sit."
+    ],
+    [
+      35,
+      41,
+      "Renew our weary spirits as we pause before You now."
+    ],
+    [
+      41,
+      46,
+      "Subscribe to join The Midday Watch for daily noon prayers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "WHEN YOUR STRENGTH",
+        "RUNS COMPLETELY DRY",
+        "TURN YOUR HEART UPWARD"
+      ],
+      [
+        "STRENGTH",
+        "UPWARD"
+      ],
+      "MIDDAY WATCH"
+    ],
+    [
+      6,
+      17,
+      [
+        "MY FLESH AND HEART FAILETH",
+        "BUT GOD IS THE STRENGTH",
+        "OF MY HEART FOREVER"
+      ],
+      [
+        "GOD IS THE STRENGTH",
+        "PORTION"
+      ],
+      "PSALM 73:26"
+    ],
+    [
+      17,
+      26,
+      [
+        "WHEN ENERGY FADES",
+        "AND COURAGE FALTERS",
+        "YOU ARE STILL PRESENT"
+      ],
+      [
+        "STILL PRESENT"
+      ],
+      "NOONDAY PRAYER"
+    ],
+    [
+      26,
+      35,
+      [
+        "BECOME OUR STRENGTH",
+        "OUR PEACE AND PORTION",
+        "RIGHT WHERE WE SIT"
+      ],
+      [
+        "STRENGTH",
+        "PEACE"
+      ],
+      "PSALM 73:26"
+    ],
+    [
+      35,
+      41,
+      [
+        "RENEW OUR WEARY SPIRITS",
+        "AS WE PAUSE BEFORE YOU"
+      ],
+      [
+        "RENEW",
+        "WEARY"
+      ],
+      "REST IN GOD"
+    ],
+    [
+      41,
+      46,
+      [
+        "SUBSCRIBE TO JOIN",
+        "THE MIDDAY WATCH",
+        "FOR DAILY NOON PRAYERS"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "THE MIDDAY WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When your strength runs completely dry halfway through this exhausting workday, turn your heart upward.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "RUNS",
+        "DRY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture reminds us in Psalm 73:26, 'My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever.'",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "IS",
+        "STRENGTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when our energy fades and our internal courage falters in the middle of this afternoon, remind us that You are still present.",
+      "kind": "phrase",
+      "words": [
+        "ENERGY",
+        "FADES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When our human power fails us, become our strength, our peace, and our eternal portion right here where we sit.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Renew our weary spirits as we pause before You now.",
+      "kind": "phrase",
+      "words": [
+        "RENEW",
+        "WEARY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join The Midday Watch for daily noon prayers.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "MIDDAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 73:26"
+}

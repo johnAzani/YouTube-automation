@@ -1,0 +1,270 @@
+{
+  "key": "short-middaypsalm27v13",
+  "channel": "prayer3",
+  "psalm": 27,
+  "title": [
+    "FAINTING HEART",
+    "WAITING SOUL"
+  ],
+  "poster": [
+    "THE GOODNESS",
+    "OF THE LORD",
+    "IN THE LAND",
+    "OF THE LIVING"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sun pouring through dust motes",
+    "still glass of water on dark wood desk",
+    "golden wheat field blowing in noon wind",
+    "open Bible on wooden table bright light",
+    "soft shadows moving across white wall",
+    "lone tree silhouetted against bright midday sky"
+  ],
+  "scenes": [
+    {
+      "a": "That persistent doubt about your future is keeping you from seeing the path ahead today.",
+      "img": "short-middaypsalm27v13-scene-01.jpg",
+      "kicker": "PSALM 27:13-14",
+      "sub": "FINDING STRENGTH AT NOON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "I had fainted, unless I had believed to see the goodness of the LORD in the land of the living.",
+      "img": "short-middaypsalm27v13-scene-02.jpg",
+      "kicker": "PSALM 27:13-14",
+      "sub": "THE GOODNESS OF THE LORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Wait on the LORD: be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD.",
+      "img": "short-middaypsalm27v13-scene-03.jpg",
+      "kicker": "PSALM 27:13-14",
+      "sub": "BE OF GOOD COURAGE",
+      "cam": "pan_left",
+      "focus": [
+        0.8,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, help me stop striving against the heavy things that I cannot fix on my own.",
+      "img": "short-middaypsalm27v13-scene-04.jpg",
+      "kicker": "PSALM 27:13-14",
+      "sub": "SURRENDER THE BURDEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant me the stillness to rely on your timing instead of my own anxious heartbeat now.",
+      "img": "short-middaypsalm27v13-scene-05.jpg",
+      "kicker": "PSALM 27:13-14",
+      "sub": "TRUST HIS TIMING",
+      "cam": "pull_out",
+      "focus": [
+        0.2,
+        0.5
+      ]
+    },
+    {
+      "a": "Anchor my spirit in your unwavering presence as the afternoon sun marks this quiet time.",
+      "img": "short-middaypsalm27v13-scene-06.jpg",
+      "kicker": "PSALM 27:13-14",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That persistent doubt about your future is keeping you from seeing the path ahead today."
+    ],
+    [
+      8,
+      16,
+      "I had fainted, unless I had believed to see the goodness of the LORD in the land of the living."
+    ],
+    [
+      16,
+      24,
+      "Wait on the LORD: be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD."
+    ],
+    [
+      24,
+      32,
+      "Lord, help me stop striving against the heavy things that I cannot fix on my own."
+    ],
+    [
+      32,
+      40,
+      "Grant me the stillness to rely on your timing instead of my own anxious heartbeat now."
+    ],
+    [
+      40,
+      48,
+      "Anchor my spirit in your unwavering presence as the afternoon sun marks this quiet time."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "PERSISTENT DOUBT",
+        "BLOCKS YOUR PATH",
+        "SEEING CLEARLY"
+      ],
+      [
+        "PERSISTENT DOUBT"
+      ],
+      "PSALM 27 : 13"
+    ],
+    [
+      8,
+      16,
+      [
+        "GOODNESS OF THE LORD",
+        "IN THE LAND",
+        "OF THE LIVING"
+      ],
+      [
+        "GOODNESS"
+      ],
+      "PSALM 27 : 13"
+    ],
+    [
+      16,
+      24,
+      [
+        "WAIT ON THE LORD",
+        "BE OF GOOD COURAGE",
+        "STRENGTHEN THINE HEART"
+      ],
+      [
+        "GOOD COURAGE"
+      ],
+      "PSALM 27 : 14"
+    ],
+    [
+      24,
+      32,
+      [
+        "STOP THE STRIVING",
+        "RELEASE THE BURDEN",
+        "HEAVY THINGS"
+      ],
+      [
+        "RELEASE"
+      ],
+      "PSALM 27 : 14"
+    ],
+    [
+      32,
+      40,
+      [
+        "RELY ON TIMING",
+        "STILL THE HEART",
+        "TRUST HIS WAYS"
+      ],
+      [
+        "TRUST"
+      ],
+      "PSALM 27 : 14"
+    ],
+    [
+      40,
+      48,
+      [
+        "ANCHOR YOUR SPIRIT",
+        "UNWAVERING PRESENCE",
+        "QUIET TIME"
+      ],
+      [
+        "ANCHOR"
+      ],
+      "PSALM 27 : 14"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That persistent doubt about your future is keeping you from seeing the path ahead today.",
+      "kind": "phrase",
+      "words": [
+        "PERSISTENT",
+        "DOUBT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I had fainted, unless I had believed to see the goodness of the LORD in the land of the living.",
+      "kind": "phrase",
+      "words": [
+        "GOODNESS",
+        "OF THE LORD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Wait on the LORD: be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD.",
+      "kind": "phrase",
+      "words": [
+        "GOOD",
+        "COURAGE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help me stop striving against the heavy things that I cannot fix on my own.",
+      "kind": "phrase",
+      "words": [
+        "STOP",
+        "STRIVING"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the stillness to rely on your timing instead of my own anxious heartbeat now.",
+      "kind": "phrase",
+      "words": [
+        "RELY",
+        "ON TIMING"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "Anchor my spirit in your unwavering presence as the afternoon sun marks this quiet time.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "MY SPIRIT"
+      ],
+      "hi": 5,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 27:13-14"
+}

@@ -1,0 +1,276 @@
+{
+  "key": "short-middaycolossians3v2",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "SET YOUR AFFECTION",
+    "ON THINGS ABOVE"
+  ],
+  "poster": [
+    "THE MIDDAY WATCH",
+    "PAUSE AT NOON",
+    "COLOSSIANS 3:2",
+    "SET YOUR HEART ABOVE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sun beam streaming into quiet sunroom desk",
+    "bright sunlight warm open valley mountain view",
+    "soft midday light through window on calm room",
+    "bright blue sky with soft white clouds high noon",
+    "peaceful sunlit wooden table near window calm",
+    "calm bright midday atmosphere peaceful open field"
+  ],
+  "scenes": [
+    {
+      "a": "If your mind is currently racing over today's endless list of demands, stop right here.",
+      "img": "short-middaycolossians3v2-scene-01.jpg",
+      "kicker": "COLOSSIANS 3:2",
+      "sub": "A MIDDAY PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "God reminds us in Colossians three, verse two: Set your affection on things above, not on things on the earth.",
+      "img": "short-middaycolossians3v2-scene-02.jpg",
+      "kicker": "COLOSSIANS 3:2",
+      "sub": "SET YOUR AFFECTION ABOVE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, in this busy middle hour, our thoughts so easily cling to temporary worries and earthly noise.",
+      "img": "short-middaycolossians3v2-scene-03.jpg",
+      "kicker": "COLOSSIANS 3:2",
+      "sub": "RELEASE TEMPORARY WORRIES",
+      "cam": "pan_right",
+      "focus": [
+        0.45,
+        0.55
+      ]
+    },
+    {
+      "a": "Lift our gaze back toward Your eternal presence, where true peace, stillness, and heavenly strength reside.",
+      "img": "short-middaycolossians3v2-scene-04.jpg",
+      "kicker": "COLOSSIANS 3:2",
+      "sub": "FIX YOUR GAZE ON HEAVEN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Realign our desires with Your ultimate kingdom today, so we can step into this afternoon entirely steadfast.",
+      "img": "short-middaycolossians3v2-scene-05.jpg",
+      "kicker": "COLOSSIANS 3:2",
+      "sub": "STEADFAST IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Midday Watch to pause and align your heart in prayer every day at noon.",
+      "img": "short-middaycolossians3v2-scene-06.jpg",
+      "kicker": "COLOSSIANS 3:2",
+      "sub": "PAUSE AND PRAY AT NOON",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If your mind is currently racing over today's endless list of demands, stop right here."
+    ],
+    [
+      8,
+      18,
+      "God reminds us in Colossians three, verse two: Set your affection on things above, not on things on the earth."
+    ],
+    [
+      19,
+      29,
+      "Lord, in this busy middle hour, our thoughts so easily cling to temporary worries and earthly noise."
+    ],
+    [
+      30,
+      40,
+      "Lift our gaze back toward Your eternal presence, where true peace, stillness, and heavenly strength reside."
+    ],
+    [
+      41,
+      51,
+      "Realign our desires with Your ultimate kingdom today, so we can step into this afternoon entirely steadfast."
+    ],
+    [
+      52,
+      60,
+      "Subscribe to The Midday Watch to pause and align your heart in prayer every day at noon."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF YOUR MIND IS RACING",
+        "OVER TODAY'S DEMANDS",
+        "STOP RIGHT HERE"
+      ],
+      [
+        "DEMANDS",
+        "STOP"
+      ],
+      "COLOSSIANS 3:2"
+    ],
+    [
+      8,
+      18,
+      [
+        "SET YOUR AFFECTION",
+        "ON THINGS ABOVE",
+        "NOT ON THINGS ON EARTH"
+      ],
+      [
+        "AFFECTION",
+        "ABOVE"
+      ],
+      "COLOSSIANS 3:2"
+    ],
+    [
+      19,
+      29,
+      [
+        "IN THIS BUSY MIDDLE HOUR",
+        "OUR THOUGHTS CLING TO",
+        "TEMPORARY EARTHLY WORRIES"
+      ],
+      [
+        "BUSY",
+        "WORRIES"
+      ],
+      "COLOSSIANS 3:2"
+    ],
+    [
+      30,
+      40,
+      [
+        "LIFT OUR GAZE BACK TO",
+        "YOUR ETERNAL PRESENCE",
+        "AND HEAVENLY STRENGTH"
+      ],
+      [
+        "ETERNAL",
+        "STRENGTH"
+      ],
+      "COLOSSIANS 3:2"
+    ],
+    [
+      41,
+      51,
+      [
+        "REALIGN OUR DESIRES WITH",
+        "YOUR ULTIMATE KINGDOM",
+        "ENTIRELY STEADFAST"
+      ],
+      [
+        "KINGDOM",
+        "STEADFAST"
+      ],
+      "COLOSSIANS 3:2"
+    ],
+    [
+      52,
+      60,
+      [
+        "SUBSCRIBE TO THE MIDDAY WATCH",
+        "PAUSE AND ALIGN YOUR HEART",
+        "EVERY DAY AT NOON"
+      ],
+      [
+        "MIDDAY WATCH",
+        "NOON"
+      ],
+      "COLOSSIANS 3:2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "stop right here",
+      "kind": "phrase",
+      "words": [
+        "STOP",
+        "HERE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Set your affection on things above",
+      "kind": "phrase",
+      "words": [
+        "AFFECTION",
+        "ABOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "cling to temporary worries",
+      "kind": "phrase",
+      "words": [
+        "TEMPORARY",
+        "WORRIES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your eternal presence",
+      "kind": "phrase",
+      "words": [
+        "ETERNAL",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "entirely steadfast",
+      "kind": "phrase",
+      "words": [
+        "ENTIRELY",
+        "STEADFAST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "pause and align your heart",
+      "kind": "phrase",
+      "words": [
+        "ALIGN",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Colossians 3:2"
+}
