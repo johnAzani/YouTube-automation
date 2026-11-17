@@ -1,0 +1,258 @@
+{
+  "key": "short-healingjames5v14",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "JAMES FIVE",
+    "HEALING PRAYER"
+  ],
+  "poster": [
+    "JAMES",
+    "FIVE",
+    "PRAYER",
+    "HEALING"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters",
+    "warm golden sanctuary light",
+    "white dove peace imagery",
+    "calm mountain lake sunset",
+    "gentle flowing stream",
+    "soft morning light on water"
+  ],
+  "scenes": [
+    {
+      "a": "If your body is weak and the room is very quiet, rest here.",
+      "img": "short-healingjames5v14-scene-01.jpg",
+      "kicker": "JAMES 5:14",
+      "sub": "CALL FOR THE ELDERS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Is any sick among you? let him call for the elders of the church; and let them pray over him, anointing him with oil in the name of the Lord:",
+      "img": "short-healingjames5v14-scene-02.jpg",
+      "kicker": "JAMES 5:14",
+      "sub": "PRAY OVER HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "And the prayer of faith shall save the sick, and the Lord shall raise him up; and if he have committed sins, they shall be forgiven him.",
+      "img": "short-healingjames5v14-scene-03.jpg",
+      "kicker": "JAMES 5:15",
+      "sub": "THE PRAYER OF FAITH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Confess your faults one to another, and pray one for another, that ye may be healed. The effectual fervent prayer of a righteous man availeth much.",
+      "img": "short-healingjames5v14-scene-04.jpg",
+      "kicker": "JAMES 5:16",
+      "sub": "PRAY ONE FOR ANOTHER",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, touch this weary frame with Your restoring hand.",
+      "img": "short-healingjames5v14-scene-05.jpg",
+      "kicker": "JAMES 5:16",
+      "sub": "RESTOREING HAND",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant Your peace as we cast every care upon You.",
+      "img": "short-healingjames5v14-scene-06.jpg",
+      "kicker": "JAMES 5:16",
+      "sub": "PEACE AND REST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If your body is weak and the room is very quiet, rest here."
+    ],
+    [
+      8,
+      17,
+      "Is any sick among you? let him call for the elders of the church; and let them pray over him, anointing him with oil in the name of the Lord:"
+    ],
+    [
+      18,
+      28,
+      "And the prayer of faith shall save the sick, and the Lord shall raise him up; and if he have committed sins, they shall be forgiven him."
+    ],
+    [
+      29,
+      39,
+      "Confess your faults one to another, and pray one for another, that ye may be healed. The effectual fervent prayer of a righteous man availeth much."
+    ],
+    [
+      40,
+      48,
+      "Lord, touch this weary frame with Your restoring hand."
+    ],
+    [
+      49,
+      58,
+      "Grant Your peace as we cast every care upon You."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF YOUR BODY IS WEAK",
+        "AND THE ROOM IS VERY",
+        "QUIET, REST HERE."
+      ],
+      "WEAK",
+      "JAMES 5 : 14"
+    ],
+    [
+      8,
+      17,
+      [
+        "IS ANY SICK AMONG YOU?",
+        "LET HIM CALL FOR THE ELDERS",
+        "OF THE CHURCH"
+      ],
+      "SICK",
+      "JAMES 5 : 14"
+    ],
+    [
+      18,
+      28,
+      [
+        "AND THE PRAYER OF FAITH",
+        "SHALL SAVE THE SICK",
+        "AND THE LORD SHALL RAISE HIM UP"
+      ],
+      "FAITH",
+      "JAMES 5 : 15"
+    ],
+    [
+      29,
+      39,
+      [
+        "CONFESS YOUR FAULTS",
+        "AND PRAY ONE FOR ANOTHER",
+        "THAT YE MAY BE HEALED"
+      ],
+      "HEALED",
+      "JAMES 5 : 16"
+    ],
+    [
+      40,
+      48,
+      [
+        "LORD, TOUCH THIS WEARY",
+        "FRAME WITH YOUR",
+        "RESTORING HAND."
+      ],
+      "TOUCH",
+      "JAMES 5 : 16"
+    ],
+    [
+      49,
+      58,
+      [
+        "GRANT YOUR PEACE",
+        "AS WE CAST EVERY CARE",
+        "UPON YOU."
+      ],
+      "PEACE",
+      "JAMES 5 : 16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If your body is weak and the room is very quiet, rest here.",
+      "kind": "phrase",
+      "words": [
+        "BODY",
+        "WEAK"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Is any sick among you? let him call for the elders of the church; and let them pray over him, anointing him with oil in the name of the Lord:",
+      "kind": "phrase",
+      "words": [
+        "SICK",
+        "ELDERS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "And the prayer of faith shall save the sick, and the Lord shall raise him up; and if he have committed sins, they shall be forgiven him.",
+      "kind": "phrase",
+      "words": [
+        "FAITH",
+        "RAISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Confess your faults one to another, and pray one for another, that ye may be healed. The effectual fervent prayer of a righteous man availeth much.",
+      "kind": "phrase",
+      "words": [
+        "FAULTS",
+        "HEALED"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, touch this weary frame with Your restoring hand.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "HAND"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Grant Your peace as we cast every care upon You.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "CARE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "James 5:14-16"
+}

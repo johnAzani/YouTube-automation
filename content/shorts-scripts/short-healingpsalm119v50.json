@@ -1,0 +1,271 @@
+{
+  "key": "short-healingpsalm119v50",
+  "channel": "prayer6",
+  "psalm": 119,
+  "title": [
+    "FINDING COMFORT",
+    "IN AFFLICTION"
+  ],
+  "poster": [
+    "COMFORT IN",
+    "YOUR STRUGGLE",
+    "GOD IS NEAR",
+    "RECEIVE PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters",
+    "warm golden sanctuary light",
+    "soft white dove in flight",
+    "glowing candlelight on stone",
+    "rippling stream in forest",
+    "peaceful dawn over mountain"
+  ],
+  "scenes": [
+    {
+      "a": "If the pain that keeps returning has left you feeling isolated today, listen right now.",
+      "img": "short-healingpsalm119v50-scene-01.jpg",
+      "kicker": "PSALM 119:50",
+      "sub": "GOD HEARS YOUR STRUGGLE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We turn to the truth of Scripture, knowing that your presence is the balm our spirits crave.",
+      "img": "short-healingpsalm119v50-scene-02.jpg",
+      "kicker": "DIVINE COMFORT",
+      "sub": "REST IN HIS TRUTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "This is my comfort in my affliction: for thy word hath quickened me.",
+      "img": "short-healingpsalm119v50-scene-03.jpg",
+      "kicker": "HOLY WORD",
+      "sub": "QUICKENED BY GRACE",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, breathe life into these weary bones and restore the hope that feels so distant tonight.",
+      "img": "short-healingpsalm119v50-scene-04.jpg",
+      "kicker": "HEALING PRAYER",
+      "sub": "RENEWAL OF SPIRIT",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Carry us through this valley, illuminating the path with your gentle light and abiding, perfect peace.",
+      "img": "short-healingpsalm119v50-scene-05.jpg",
+      "kicker": "PEACE OF GOD",
+      "sub": "WALKING IN HIS LIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "May your grace be sufficient in every trial we face until we rest in your arms.",
+      "img": "short-healingpsalm119v50-scene-06.jpg",
+      "kicker": "ABIDING FAITH",
+      "sub": "YOUR GRACE IS SUFFICIENT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the pain that keeps returning has left you feeling isolated today, listen right now."
+    ],
+    [
+      8,
+      16,
+      "We turn to the truth of Scripture, knowing that your presence is the balm our spirits crave."
+    ],
+    [
+      16,
+      24,
+      "This is my comfort in my affliction: for thy word hath quickened me."
+    ],
+    [
+      24,
+      32,
+      "Lord, breathe life into these weary bones and restore the hope that feels so distant tonight."
+    ],
+    [
+      32,
+      40,
+      "Carry us through this valley, illuminating the path with your gentle light and abiding, perfect peace."
+    ],
+    [
+      40,
+      48,
+      "May your grace be sufficient in every trial we face until we rest in your arms."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "ISOLATED PAIN",
+        "FEELING ALONE",
+        "LISTEN RIGHT NOW"
+      ],
+      [
+        "ISOLATED PAIN"
+      ],
+      "PSALM 119:50"
+    ],
+    [
+      8,
+      16,
+      [
+        "TRUTH OF SCRIPTURE",
+        "BALM FOR SPIRITS",
+        "YOUR PRESENCE"
+      ],
+      [
+        "BALM"
+      ],
+      "PSALM 119:50"
+    ],
+    [
+      16,
+      24,
+      [
+        "COMFORT IN AFFLICTION",
+        "QUICKENED BY",
+        "GOD'S HOLY WORD"
+      ],
+      [
+        "COMFORT",
+        "QUICKENED"
+      ],
+      "PSALM 119:50"
+    ],
+    [
+      24,
+      32,
+      [
+        "LIFE TO BONES",
+        "RESTORE OUR HOPE",
+        "DISTANT TONIGHT"
+      ],
+      [
+        "RESTORE"
+      ],
+      "PSALM 119:50"
+    ],
+    [
+      32,
+      40,
+      [
+        "THROUGH THE VALLEY",
+        "GENTLE LIGHT",
+        "PERFECT PEACE"
+      ],
+      [
+        "PERFECT PEACE"
+      ],
+      "PSALM 119:50"
+    ],
+    [
+      40,
+      48,
+      [
+        "GRACE IS SUFFICIENT",
+        "EVERY TRIAL",
+        "REST IN ARMS"
+      ],
+      [
+        "SUFFICIENT"
+      ],
+      "PSALM 119:50"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the pain that keeps returning has left you feeling isolated today, listen right now.",
+      "kind": "phrase",
+      "words": [
+        "ISOLATED",
+        "PAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We turn to the truth of Scripture, knowing that your presence is the balm our spirits crave.",
+      "kind": "phrase",
+      "words": [
+        "BALM",
+        "SPIRITS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "This is my comfort in my affliction: for thy word hath quickened me.",
+      "kind": "phrase",
+      "words": [
+        "COMFORT",
+        "QUICKENED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, breathe life into these weary bones and restore the hope that feels so distant tonight.",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "HOPE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Carry us through this valley, illuminating the path with your gentle light and abiding, perfect peace.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your grace be sufficient in every trial we face until we rest in your arms.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "SUFFICIENT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 119:50"
+}
