@@ -1,0 +1,367 @@
+{
+  "key": "short-shieldpsalm32v7",
+  "channel": "prayer8",
+  "psalm": 32,
+  "title": [
+    "THOU ART MY",
+    "HIDING PLACE"
+  ],
+  "poster": [
+    "PSALM 32:7",
+    "THOU SHALT PRESERVE ME",
+    "FROM TROUBLE",
+    "THE COVENANT SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone fortress mountain sunrise golden rays",
+    "sunlit mountain valley peaceful river mist",
+    "dramatic cloud golden light beam mountain peak",
+    "ancient stone watchtower misty valley dawn",
+    "calm deep lake surrounded by majestic mountains",
+    "sun rays shining through dense forest canopy",
+    "panoramic alpine peak golden light morning sky",
+    "peaceful flowing river golden sunlit canyon"
+  ],
+  "scenes": [
+    {
+      "a": "If a hidden trouble is weighing on your heart right now, hear God's unfailing word.",
+      "img": "short-shieldpsalm32v7-scene-01.jpg",
+      "kicker": "PSALM 32:7",
+      "sub": "GOD IS YOUR HIDING PLACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Thou art my hiding place; thou shalt preserve me from trouble;",
+      "img": "short-shieldpsalm32v7-scene-02.jpg",
+      "kicker": "PSALM 32:7",
+      "sub": "PRESERVED FROM ALL TROUBLE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "thou shalt compass me about with songs of deliverance.",
+      "img": "short-shieldpsalm32v7-scene-03.jpg",
+      "kicker": "PSALM 32:7",
+      "sub": "SONGS OF DELIVERANCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, be the secure refuge surrounding this heart against every rising fear and unseen danger.",
+      "img": "short-shieldpsalm32v7-scene-04.jpg",
+      "kicker": "PSALM 32:7",
+      "sub": "A SECURE STRONG TOWER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Where anxiety seeks to overtake their thoughts, enclose them completely in Your protective peace.",
+      "img": "short-shieldpsalm32v7-scene-05.jpg",
+      "kicker": "PSALM 32:7",
+      "sub": "PROTECTIVE PEACE WITHIN",
+      "cam": "push_in",
+      "focus": [
+        0.45,
+        0.45
+      ]
+    },
+    {
+      "a": "Shield them on every side and surround their soul with songs of deliverance and strength.",
+      "img": "short-shieldpsalm32v7-scene-06.jpg",
+      "kicker": "PSALM 32:7",
+      "sub": "SHIELDED ON EVERY SIDE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Keep their steps safe from harm today, grounding their spirit in Your unshakeable presence. Amen.",
+      "img": "short-shieldpsalm32v7-scene-07.jpg",
+      "kicker": "PSALM 32:7",
+      "sub": "UNSHAKEABLE DIVINE COVERING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Covenant Shield to walk under God's daily covering.",
+      "img": "short-shieldpsalm32v7-scene-08.jpg",
+      "kicker": "THE COVENANT SHIELD",
+      "sub": "WALK UNDER DAILY PROTECTION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If a hidden trouble is weighing on your heart right now, hear God's unfailing word."
+    ],
+    [
+      6,
+      14,
+      "Thou art my hiding place; thou shalt preserve me from trouble;"
+    ],
+    [
+      14,
+      21,
+      "thou shalt compass me about with songs of deliverance."
+    ],
+    [
+      21,
+      28,
+      "Lord, be the secure refuge surrounding this heart against every rising fear and unseen danger."
+    ],
+    [
+      28,
+      35,
+      "Where anxiety seeks to overtake their thoughts, enclose them completely in Your protective peace."
+    ],
+    [
+      35,
+      42,
+      "Shield them on every side and surround their soul with songs of deliverance and strength."
+    ],
+    [
+      42,
+      49,
+      "Keep their steps safe from harm today, grounding their spirit in Your unshakeable presence. Amen."
+    ],
+    [
+      49,
+      55,
+      "Subscribe to The Covenant Shield to walk under God's daily covering."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF A HIDDEN TROUBLE IS WEIGHING",
+        "ON YOUR HEART RIGHT NOW",
+        "HEAR GODS UNFAILING WORD"
+      ],
+      [
+        "HIDDEN TROUBLE",
+        "UNFAILING WORD"
+      ],
+      "PSALM 32:7"
+    ],
+    [
+      6,
+      14,
+      [
+        "THOU ART MY HIDING PLACE",
+        "THOU SHALT PRESERVE ME",
+        "FROM TROUBLE"
+      ],
+      [
+        "HIDING PLACE",
+        "PRESERVE ME"
+      ],
+      "PSALM 32:7"
+    ],
+    [
+      14,
+      21,
+      [
+        "THOU SHALT COMPASS ME ABOUT",
+        "WITH SONGS OF DELIVERANCE"
+      ],
+      [
+        "COMPASS ME",
+        "DELIVERANCE"
+      ],
+      "PSALM 32:7"
+    ],
+    [
+      21,
+      28,
+      [
+        "LORD BE THE SECURE REFUGE",
+        "SURROUNDING THIS HEART",
+        "AGAINST EVERY RISING FEAR",
+        "AND UNSEEN DANGER"
+      ],
+      [
+        "SECURE REFUGE",
+        "UNSEEN DANGER"
+      ],
+      "PSALM 32:7"
+    ],
+    [
+      28,
+      35,
+      [
+        "WHERE ANXIETY SEEKS TO OVERTAKE",
+        "THEIR THOUGHTS ENCLOSE THEM",
+        "COMPLETELY IN YOUR",
+        "PROTECTIVE PEACE"
+      ],
+      [
+        "ENCLOSE THEM",
+        "PROTECTIVE PEACE"
+      ],
+      "PSALM 32:7"
+    ],
+    [
+      35,
+      42,
+      [
+        "SHIELD THEM ON EVERY SIDE",
+        "AND SURROUND THEIR SOUL WITH",
+        "SONGS OF DELIVERANCE AND STRENGTH"
+      ],
+      [
+        "SHIELD THEM",
+        "DELIVERANCE AND STRENGTH"
+      ],
+      "PSALM 32:7"
+    ],
+    [
+      42,
+      49,
+      [
+        "KEEP THEIR STEPS SAFE FROM HARM",
+        "GROUNDING THEIR SPIRIT IN YOUR",
+        "UNSHAKEABLE PRESENCE AMEN"
+      ],
+      [
+        "STEPS SAFE",
+        "UNSHAKEABLE PRESENCE"
+      ],
+      "PSALM 32:7"
+    ],
+    [
+      49,
+      55,
+      [
+        "SUBSCRIBE TO THE COVENANT SHIELD",
+        "TO WALK UNDER GODS",
+        "DAILY COVERING"
+      ],
+      [
+        "COVENANT SHIELD",
+        "DAILY COVERING"
+      ],
+      "PSALM 32:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If a hidden trouble is weighing on your heart right now, hear God's unfailing word.",
+      "kind": "phrase",
+      "words": [
+        "HIDDEN",
+        "TROUBLE",
+        "HEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thou art my hiding place; thou shalt preserve me from trouble;",
+      "kind": "phrase",
+      "words": [
+        "HIDING",
+        "PLACE",
+        "PRESERVE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "thou shalt compass me about with songs of deliverance.",
+      "kind": "phrase",
+      "words": [
+        "COMPASS",
+        "SONGS",
+        "DELIVERANCE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, be the secure refuge surrounding this heart against every rising fear and unseen danger.",
+      "kind": "phrase",
+      "words": [
+        "SECURE",
+        "REFUGE",
+        "DANGER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Where anxiety seeks to overtake their thoughts, enclose them completely in Your protective peace.",
+      "kind": "phrase",
+      "words": [
+        "ENCLOSE",
+        "PROTECTIVE",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Shield them on every side and surround their soul with songs of deliverance and strength.",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "SURROUND",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Keep their steps safe from harm today, grounding their spirit in Your unshakeable presence. Amen.",
+      "kind": "phrase",
+      "words": [
+        "STEPS",
+        "UNSHAKEABLE",
+        "PRESENCE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Covenant Shield to walk under God's daily covering.",
+      "kind": "phrase",
+      "words": [
+        "COVENANT",
+        "SHIELD",
+        "DAILY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 32:7"
+}
