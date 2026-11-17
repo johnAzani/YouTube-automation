@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T17:02:34Z",
+  "generated_at": "2026-11-17T17:30:45Z",
   "monitor_generated_at": "2026-11-17T17:01:06.346999+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 403,
-    "published_longform": 139,
-    "published_shorts": 264,
-    "public_total": 401,
-    "queued_longform": 63,
-    "queued_shorts": 91,
+    "published_total": 405,
+    "published_longform": 140,
+    "published_shorts": 265,
+    "public_total": 403,
+    "queued_longform": 62,
+    "queued_shorts": 90,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -169,33 +169,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 50,
-        "published_longform": 18,
-        "published_shorts": 32,
+        "published_total": 52,
+        "published_longform": 19,
+        "published_shorts": 33,
         "thumbnail_pending": 0,
-        "public_total": 50,
-        "queued_longform": 6,
+        "public_total": 52,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYPSALM119V28",
-        "title": "Say This Psalm 119:28 Prayer at Noon | God Sees Your Weariness #Shorts",
-        "format": "short",
-        "youtube_video_id": "fsLe9w5_848",
-        "watch_url": "https://www.youtube.com/shorts/fsLe9w5_848",
-        "published_on": "2026-11-17",
-        "published_at": "2026-11-17T10:56:05Z"
-      },
-      "next_queued_longform": {
         "id": "0093",
         "title": "Eyes on God When Answers Run Out: 2 Chronicles 20:12",
-        "words": 2554,
+        "format": "longform",
+        "youtube_video_id": "q31Ou2q3utw",
+        "watch_url": "https://youtu.be/q31Ou2q3utw",
+        "published_on": "2026-11-17",
+        "published_at": "2026-11-17T17:29:43Z"
+      },
+      "next_queued_longform": {
+        "id": "0094",
+        "title": "Praying Right in the Middle of Your Work: Nehemiah 2:4",
+        "words": 1784,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayproverbs18v10",
-        "scripture": "Proverbs 18:10",
+        "short": "short-middaypsalm27v13",
+        "scripture": "Psalm 27:13-14",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0093",
+      "slug": "2-chronicles-20-12-midday-prayer",
+      "file": "0093-2-chronicles-20-12-midday-prayer.md",
+      "title": "Eyes on God When Answers Run Out: 2 Chronicles 20:12",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T17:29:43Z",
+      "youtube_video_id": "q31Ou2q3utw",
+      "watch_url": "https://youtu.be/q31Ou2q3utw",
+      "youtu_be_url": "https://youtu.be/q31Ou2q3utw",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/q31Ou2q3utw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/q31Ou2q3utw/hqdefault.jpg",
+      "thumb_text": "EYES UPON THEE",
+      "thumbnail_pending": false,
+      "duration_label": "~18 min",
+      "words": 2554
+    },
+    {
       "id": "SHORT-GARDEN1CHRONICLES29V11",
       "slug": "short-garden1chronicles29v11-thanksgiving-prayer",
       "file": "short-garden1chronicles29v11-thanksgiving-prayer.md",
@@ -820,6 +844,30 @@
       "thumbnail_pending": false,
       "duration_label": "54s",
       "words": 657
+    },
+    {
+      "id": "SHORT-MIDDAYPROVERBS18V10",
+      "slug": "short-middayproverbs18v10-midday-prayer",
+      "file": "short-middayproverbs18v10-midday-prayer.md",
+      "title": "Say This Proverbs 18:10 Prayer at Noon | Find Your Refuge #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T15:31:19Z",
+      "youtube_video_id": "PDtlgCg9qCk",
+      "watch_url": "https://www.youtube.com/shorts/PDtlgCg9qCk",
+      "youtu_be_url": "https://youtu.be/PDtlgCg9qCk",
+      "shorts_url": "https://www.youtube.com/shorts/PDtlgCg9qCk",
+      "studio_url": "https://studio.youtube.com/video/PDtlgCg9qCk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/PDtlgCg9qCk/hqdefault.jpg",
+      "thumb_text": "A REFUGE AT NOON \u00b7 A CALM SPIRIT",
+      "thumbnail_pending": false,
+      "duration_label": "46s",
+      "words": 591
     },
     {
       "id": "SHORT-PSALM116V7",
@@ -10572,19 +10620,6 @@
         "words": 1078
       },
       {
-        "id": "0093",
-        "slug": "2-chronicles-20-12-midday-prayer",
-        "file": "0093-2-chronicles-20-12-midday-prayer.md",
-        "title": "Eyes on God When Answers Run Out: 2 Chronicles 20:12",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2554
-      },
-      {
         "id": "0094",
         "slug": "praying-right-in-the-middle-of-your-work-nehemiah-2-4",
         "file": "0094-praying-right-in-the-middle-of-your-work-nehemiah-2-4.md",
@@ -11262,17 +11297,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-middayproverbs18v10",
-        "file": "0000-short-middayproverbs18v10.yml",
-        "companion_longform_id": "",
-        "scripture": "Proverbs 18:10",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm27v13",

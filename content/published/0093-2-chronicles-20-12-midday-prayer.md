@@ -2,7 +2,7 @@
 id: 0093
 title: "Eyes on God When Answers Run Out: 2 Chronicles 20:12"
 slug: 2-chronicles-20-12-midday-prayer
-status: approved
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -78,6 +78,14 @@ originality:
   source_notes: true
 title_before: "When You Don't Know What to Do: 2 Chronicles 20:12 | The Midday Watch"
 queue_title_fixed_at: "2026-11-16"
+published_on: "2026-11-17"
+published_at: "2026-11-17T17:29:43Z"
+youtube_video_id: "q31Ou2q3utw"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Noonday Pause
