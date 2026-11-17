@@ -11,7 +11,7 @@ replace: false
 target_window_utc: 06:14
 notes: "Standalone Short on Psalm 138:8 (evergreen list) \u2014 spec authored by the\
   \ brain (113 narration words)"
-alignment_failures: 1
+alignment_failures: 2
 last_alignment_error: 'cannot prepare Charon narration for short-morningpsalm138v8
   (Short speech alignment unavailable or incomplete; refusing to render [ValueError:
   Narration does not match the script: only 80% of the 113 script words were recognised
