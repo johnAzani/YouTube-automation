@@ -1,0 +1,264 @@
+{
+  "key": "short-morningcolossians3v17",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "A PRAYER FOR",
+    "YOUR DAILY WORK"
+  ],
+  "poster": [
+    "GRACE IN EVERY",
+    "ACTION",
+    "GUIDANCE FOR THE",
+    "DAY AHEAD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "soft morning sunlight hitting wooden table",
+    "mist rising over a calm mountain lake at dawn",
+    "golden sun rays through open window curtains",
+    "dew drops on green leaves at sunrise",
+    "early morning sky with soft clouds",
+    "golden light illuminating a quiet home interior"
+  ],
+  "scenes": [
+    {
+      "a": "That task you are dreading feels too heavy to start without a clear sense of purpose.",
+      "img": "short-morningcolossians3v17-scene-01.jpg",
+      "kicker": "COLOSSIANS 3:17",
+      "sub": "FIND YOUR PURPOSE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "And whatsoever ye do in word or deed, do all in the name of the Lord Jesus, giving thanks to God and the Father by him.",
+      "img": "short-morningcolossians3v17-scene-02.jpg",
+      "kicker": "THE WORD",
+      "sub": "GOD'S TRUTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, help me to carry this focus into the hours that lie ahead of me today.",
+      "img": "short-morningcolossians3v17-scene-03.jpg",
+      "kicker": "A PRAYER",
+      "sub": "SEEKING HIS GUIDANCE",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Let every conversation, every choice, and every small labor be an offering of true worship.",
+      "img": "short-morningcolossians3v17-scene-04.jpg",
+      "kicker": "A PRAYER",
+      "sub": "OFFERING YOUR WORK",
+      "cam": "push_in",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Quiet my anxious heart so I may see Your presence in the ordinary parts of life.",
+      "img": "short-morningcolossians3v17-scene-05.jpg",
+      "kicker": "A PRAYER",
+      "sub": "RESTING IN HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May my actions reflect Your grace as I move through this world with You today, Amen.",
+      "img": "short-morningcolossians3v17-scene-06.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "WALKING IN GRACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That task you are dreading feels too heavy to start without a clear sense of purpose."
+    ],
+    [
+      8,
+      20,
+      "And whatsoever ye do in word or deed, do all in the name of the Lord Jesus, giving thanks to God and the Father by him."
+    ],
+    [
+      20,
+      30,
+      "Lord, help me to carry this focus into the hours that lie ahead of me today."
+    ],
+    [
+      30,
+      42,
+      "Let every conversation, every choice, and every small labor be an offering of true worship."
+    ],
+    [
+      42,
+      52,
+      "Quiet my anxious heart so I may see Your presence in the ordinary parts of life."
+    ],
+    [
+      52,
+      60,
+      "May my actions reflect Your grace as I move through this world with You today, Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "TASK YOU DREAD",
+        "TOO HEAVY",
+        "NEED PURPOSE"
+      ],
+      [
+        "PURPOSE"
+      ],
+      "COLOSSIANS 3:17"
+    ],
+    [
+      8,
+      20,
+      [
+        "WHATSOEVER YE DO",
+        "IN WORD OR DEED",
+        "NAME OF THE LORD"
+      ],
+      [
+        "LORD JESUS"
+      ],
+      "COLOSSIANS 3:17"
+    ],
+    [
+      20,
+      30,
+      [
+        "CARRY THIS FOCUS",
+        "INTO THE HOURS",
+        "AHEAD TODAY"
+      ],
+      [
+        "FOCUS"
+      ],
+      "COLOSSIANS 3:17"
+    ],
+    [
+      30,
+      42,
+      [
+        "EVERY CONVERSATION",
+        "EVERY CHOICE",
+        "OFFERING OF WORSHIP"
+      ],
+      [
+        "WORSHIP"
+      ],
+      "COLOSSIANS 3:17"
+    ],
+    [
+      42,
+      52,
+      [
+        "QUIET ANXIOUS HEART",
+        "SEE HIS PRESENCE",
+        "ORDINARY LIFE"
+      ],
+      [
+        "PRESENCE"
+      ],
+      "COLOSSIANS 3:17"
+    ],
+    [
+      52,
+      60,
+      [
+        "ACTIONS REFLECT GRACE",
+        "MOVE THROUGH WORLD",
+        "WITH YOU AMEN"
+      ],
+      [
+        "GRACE"
+      ],
+      "COLOSSIANS 3:17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That task you are dreading feels too heavy to start without a clear sense of purpose.",
+      "kind": "phrase",
+      "words": [
+        "PURPOSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And whatsoever ye do in word or deed, do all in the name of the Lord Jesus, giving thanks to God and the Father by him.",
+      "kind": "phrase",
+      "words": [
+        "LORD JESUS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help me to carry this focus into the hours that lie ahead of me today.",
+      "kind": "phrase",
+      "words": [
+        "FOCUS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let every conversation, every choice, and every small labor be an offering of true worship.",
+      "kind": "phrase",
+      "words": [
+        "WORSHIP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Quiet my anxious heart so I may see Your presence in the ordinary parts of life.",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May my actions reflect Your grace as I move through this world with You today, Amen.",
+      "kind": "phrase",
+      "words": [
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Colossians 3:17"
+}
