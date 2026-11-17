@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T15:31:59Z",
+  "generated_at": "2026-11-17T15:32:32Z",
   "monitor_generated_at": "2026-11-17T15:25:57.173146+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 396,
+    "published_total": 397,
     "published_longform": 139,
-    "published_shorts": 257,
-    "public_total": 394,
+    "published_shorts": 258,
+    "public_total": 395,
     "queued_longform": 63,
-    "queued_shorts": 98,
+    "queued_shorts": 97,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 59,
+        "published_total": 60,
         "published_longform": 18,
-        "published_shorts": 41,
+        "published_shorts": 42,
         "thumbnail_pending": 5,
-        "public_total": 58,
+        "public_total": 59,
         "queued_longform": 9,
         "queued_other": 5,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PSALM17V8",
-        "title": "Say This Psalm 17:8 Prayer Before You Sleep | Safe Beneath His Wings #Shorts",
+        "id": "SHORT-PSALM116V7",
+        "title": "Say This Psalm 116:7 Prayer Before You Sleep | Find Your Rest #Shorts",
         "format": "short",
-        "youtube_video_id": "eFcQoqt5j8o",
-        "watch_url": "https://www.youtube.com/shorts/eFcQoqt5j8o",
+        "youtube_video_id": "LmMOMD6pS3w",
+        "watch_url": "https://www.youtube.com/shorts/LmMOMD6pS3w",
         "published_on": "2026-11-17",
-        "published_at": "2026-11-17T10:52:53Z"
+        "published_at": "2026-11-17T15:31:18Z"
       },
       "next_queued_longform": {
         "id": "0027",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm116v7",
-        "scripture": "Psalm 116:7",
+        "short": "short-psalm127v2",
+        "scripture": "Psalm 127:2",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM116V7",
+      "slug": "short-psalm116v7-pre-sleep-prayer",
+      "file": "short-psalm116v7-pre-sleep-prayer.md",
+      "title": "Say This Psalm 116:7 Prayer Before You Sleep | Find Your Rest #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T15:31:18Z",
+      "youtube_video_id": "LmMOMD6pS3w",
+      "watch_url": "https://www.youtube.com/shorts/LmMOMD6pS3w",
+      "youtu_be_url": "https://youtu.be/LmMOMD6pS3w",
+      "shorts_url": "https://www.youtube.com/shorts/LmMOMD6pS3w",
+      "studio_url": "https://studio.youtube.com/video/LmMOMD6pS3w/edit",
+      "thumb_url": "https://i.ytimg.com/vi/LmMOMD6pS3w/hqdefault.jpg",
+      "thumb_text": "REST FOR \u00b7 YOUR SOUL",
+      "thumbnail_pending": false,
+      "duration_label": "47s",
+      "words": 610
+    },
     {
       "id": "SHORT-MIDNIGHTLUKE18V1",
       "slug": "short-midnightluke18v1-midnight-prayer",
@@ -11237,17 +11261,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-psalm116v7",
-        "file": "0000-short-psalm116v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 116:7",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm127v2",
