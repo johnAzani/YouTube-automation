@@ -2,7 +2,7 @@
 id: 0807
 title: "Trusting God With Your Plans: Proverbs 16:9 | The Guided Path"
 slug: when-your-plans-fall-short-proverbs-16-9
-status: approved
+status: published
 channel: prayer10
 privacy: public
 format: longform
@@ -75,6 +75,13 @@ originality:
   source_notes: true
 title_before: "When Your Plans Fall Short: Proverbs 16:9 | The Guided Path"
 queue_title_fixed_at: "2026-11-16"
+published_on: "2026-11-17"
+published_at: "2026-11-17T11:51:11Z"
+youtube_video_id: "YPUHaVcOrDs"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Bringing the Decision to the Lord

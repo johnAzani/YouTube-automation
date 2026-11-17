@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T11:49:34Z",
+  "generated_at": "2026-11-17T11:52:00Z",
   "monitor_generated_at": "2026-11-17T10:47:28.214897+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 390,
-    "published_longform": 137,
-    "published_shorts": 253,
-    "public_total": 388,
-    "queued_longform": 58,
-    "queued_shorts": 85,
+    "published_total": 392,
+    "published_longform": 138,
+    "published_shorts": 254,
+    "public_total": 390,
+    "queued_longform": 57,
+    "queued_shorts": 84,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -645,33 +645,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 22,
-        "published_longform": 7,
-        "published_shorts": 15,
+        "published_total": 24,
+        "published_longform": 8,
+        "published_shorts": 16,
         "thumbnail_pending": 12,
-        "public_total": 22,
-        "queued_longform": 6,
+        "public_total": 24,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPROVERBS14V12",
-        "title": "Pray This Proverbs 14:12 Prayer for God's Guidance | Seek God's Path #Shorts",
-        "format": "short",
-        "youtube_video_id": "0qwjuB-nuCg",
-        "watch_url": "https://www.youtube.com/shorts/0qwjuB-nuCg",
-        "published_on": "2026-11-17",
-        "published_at": "2026-11-17T07:11:38Z"
-      },
-      "next_queued_longform": {
         "id": "0807",
         "title": "Trusting God With Your Plans: Proverbs 16:9 | The Guided Path",
-        "words": 1344,
+        "format": "longform",
+        "youtube_video_id": "YPUHaVcOrDs",
+        "watch_url": "https://youtu.be/YPUHaVcOrDs",
+        "published_on": "2026-11-17",
+        "published_at": "2026-11-17T11:51:11Z"
+      },
+      "next_queued_longform": {
+        "id": "0808",
+        "title": "Steady Steps on an Uncertain Road: Psalm 37:23-24 | The Guided Path",
+        "words": 1793,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedproverbs19v21",
-        "scripture": "Proverbs 19:21",
+        "short": "short-guidedpsalm48v14",
+        "scripture": "Psalm 48:14",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0807",
+      "slug": "when-your-plans-fall-short-proverbs-16-9",
+      "file": "0807-when-your-plans-fall-short-proverbs-16-9.md",
+      "title": "Trusting God With Your Plans: Proverbs 16:9 | The Guided Path",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T11:51:11Z",
+      "youtube_video_id": "YPUHaVcOrDs",
+      "watch_url": "https://youtu.be/YPUHaVcOrDs",
+      "youtu_be_url": "https://youtu.be/YPUHaVcOrDs",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/YPUHaVcOrDs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/YPUHaVcOrDs/hqdefault.jpg",
+      "thumb_text": "ORDER MY STEPS",
+      "thumbnail_pending": false,
+      "duration_label": "~9 min",
+      "words": 1344
+    },
     {
       "id": "0609",
       "slug": "walk-in-safety-today-proverbs-3-23-26",
@@ -748,6 +772,30 @@
       "thumbnail_pending": true,
       "duration_label": "72s",
       "words": 622
+    },
+    {
+      "id": "SHORT-GUIDEDPROVERBS19V21",
+      "slug": "short-guidedproverbs19v21-guidance-prayer",
+      "file": "short-guidedproverbs19v21-guidance-prayer.md",
+      "title": "Pray This Proverbs 19:21 Prayer for God's Guidance | Lay Down Your Anxiety #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T11:04:06Z",
+      "youtube_video_id": "BmHQoUv5UsM",
+      "watch_url": "https://www.youtube.com/shorts/BmHQoUv5UsM",
+      "youtu_be_url": "https://youtu.be/BmHQoUv5UsM",
+      "shorts_url": "https://www.youtube.com/shorts/BmHQoUv5UsM",
+      "studio_url": "https://studio.youtube.com/video/BmHQoUv5UsM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/BmHQoUv5UsM/hqdefault.jpg",
+      "thumb_text": "SEEKING WISDOM \u00b7 IN EVERY SEASON",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 617
     },
     {
       "id": "SHORT-HEALINGHOSEA6V1",
@@ -10741,19 +10789,6 @@
         "words": 1726
       },
       {
-        "id": "0807",
-        "slug": "when-your-plans-fall-short-proverbs-16-9",
-        "file": "0807-when-your-plans-fall-short-proverbs-16-9.md",
-        "title": "Trusting God With Your Plans: Proverbs 16:9 | The Guided Path",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1344
-      },
-      {
         "id": "0808",
         "slug": "when-your-steps-feel-uncertain-psalm-37-23-24",
         "file": "0808-when-your-steps-feel-uncertain-psalm-37-23-24.md",
@@ -10863,17 +10898,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedproverbs19v21",
-        "file": "0000-short-guidedproverbs19v21.yml",
-        "companion_longform_id": "",
-        "scripture": "Proverbs 19:21",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedpsalm48v14",
