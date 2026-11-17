@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T06:54:13Z",
+  "generated_at": "2026-11-17T06:54:56Z",
   "monitor_generated_at": "2026-11-17T06:45:20.694843+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 373,
+    "published_total": 374,
     "published_longform": 133,
-    "published_shorts": 240,
-    "public_total": 371,
+    "published_shorts": 241,
+    "public_total": 372,
     "queued_longform": 62,
-    "queued_shorts": 98,
+    "queued_shorts": 97,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 48,
+        "published_total": 49,
         "published_longform": 18,
-        "published_shorts": 30,
+        "published_shorts": 31,
         "thumbnail_pending": 0,
-        "public_total": 48,
+        "public_total": 49,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYCOLOSSIANS3V23",
-        "title": "Say This Colossians 3:23-24 Prayer at Noon | Unseen Labor #Shorts",
+        "id": "SHORT-MIDDAYCOLOSSIANS3V2",
+        "title": "Say This Colossians 3:2 Prayer at Noon | Set Your Heart Above #Shorts",
         "format": "short",
-        "youtube_video_id": "jWafsSkZ_tg",
-        "watch_url": "https://www.youtube.com/shorts/jWafsSkZ_tg",
-        "published_on": "2026-11-16",
-        "published_at": "2026-11-16T23:30:46Z"
+        "youtube_video_id": "EaFFe832g6g",
+        "watch_url": "https://www.youtube.com/shorts/EaFFe832g6g",
+        "published_on": "2026-11-17",
+        "published_at": "2026-11-17T06:54:04Z"
       },
       "next_queued_longform": {
         "id": "0093",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaycolossians3v2",
-        "scripture": "Colossians 3:2",
+        "short": "short-middaypsalm119v28",
+        "scripture": "Psalm 119:28",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYCOLOSSIANS3V2",
+      "slug": "short-middaycolossians3v2-midday-prayer",
+      "file": "short-middaycolossians3v2-midday-prayer.md",
+      "title": "Say This Colossians 3:2 Prayer at Noon | Set Your Heart Above #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T06:54:04Z",
+      "youtube_video_id": "EaFFe832g6g",
+      "watch_url": "https://www.youtube.com/shorts/EaFFe832g6g",
+      "youtu_be_url": "https://youtu.be/EaFFe832g6g",
+      "shorts_url": "https://www.youtube.com/shorts/EaFFe832g6g",
+      "studio_url": "https://studio.youtube.com/video/EaFFe832g6g/edit",
+      "thumb_url": "https://i.ytimg.com/vi/EaFFe832g6g/hqdefault.jpg",
+      "thumb_text": "THE MIDDAY WATCH \u00b7 PAUSE AT NOON",
+      "thumbnail_pending": false,
+      "duration_label": "49s",
+      "words": 595
+    },
     {
       "id": "SHORT-MIDNIGHT2TIMOTHY4V18",
       "slug": "short-midnight2timothy4v18-midnight-prayer",
@@ -10606,17 +10630,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-middaycolossians3v2",
-        "file": "0000-short-middaycolossians3v2.yml",
-        "companion_longform_id": "",
-        "scripture": "Colossians 3:2",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm119v28",
