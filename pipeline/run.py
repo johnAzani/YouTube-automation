@@ -107,6 +107,8 @@ def _mark_job_uploaded(
     scheduled_for: str | None = None,
     pinned_comment: str | None = None,
     caption_track: str | None = None,
+    caption_cues: int | None = None,
+    caption_sha256: str | None = None,
     extra_fields: dict | None = None,
 ) -> Path:
     """Move and stamp a queue job only after YouTube confirms an uploaded video ID.
@@ -221,6 +223,10 @@ def _mark_job_uploaded(
     # whether the track landed. See pipeline/api_budget.py.
     if caption_track in ("ok", "failed"):
         stamped.append(("caption_track", caption_track))
+    if caption_track == "ok" and caption_cues:
+        stamped.append(("caption_cues", int(caption_cues)))
+        if caption_sha256:
+            stamped.append(("caption_sha256", caption_sha256))
     if narration_engine and narration_voice:
         stamped.extend((("narration_engine", narration_engine), ("narration_voice", narration_voice)))
     if thumb_ok:
@@ -261,6 +267,10 @@ def _mark_job_uploaded(
         doc.meta["top_comment"] = pinned_comment
     if caption_track in ("ok", "failed"):
         doc.meta["caption_track"] = caption_track
+    if caption_track == "ok" and caption_cues:
+        doc.meta["caption_cues"] = int(caption_cues)
+        if caption_sha256:
+            doc.meta["caption_sha256"] = caption_sha256
     if narration_engine and narration_voice:
         doc.meta["narration_engine"] = narration_engine
         doc.meta["narration_voice"] = narration_voice
@@ -634,7 +644,9 @@ def _disabled_legacy_process(path: Path, dry_run: bool) -> dict:
         _mark_job_uploaded(path, doc, up.video_id, up.thumbnail_status,
                            scheduled_for=getattr(up, "scheduled_for", "") or None,
                            pinned_comment=getattr(up, "pinned_comment", None),
-                           caption_track=getattr(up, "caption_track", None))
+                           caption_track=getattr(up, "caption_track", None),
+                           caption_cues=getattr(up, "caption_cues", None),
+                           caption_sha256=getattr(up, "caption_sha256", None))
         if getattr(up, "scheduled_for", ""):
             result["scheduled_for"] = up.scheduled_for
 

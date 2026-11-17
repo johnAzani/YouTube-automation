@@ -64,6 +64,11 @@ class UploadResult:
     # 2026 the long-form path threw this result away, so no receipt could say
     # whether the track landed or whether the 400 units were spent.
     caption_track: str = "not_attempted"
+    # Cues and a short digest of the SRT that was uploaded: the file itself is
+    # written into a gitignored output directory, so this is the only record of
+    # what the 400 units sent (see pipeline/captions.py::caption_fingerprint).
+    caption_cues: int = 0
+    caption_sha256: str = ""
 
 
 from pipeline.quota_handler import (
@@ -582,12 +587,16 @@ def upload(
         print(f"[upload] no thumbnail file to apply for {video_id}")
 
     caption_track = "not_attempted"
+    caption_cues, caption_sha256 = 0, ""
     if caption_path and caption_path.is_file() and not is_short:
         try:
             from .captions import upload_captions
 
             upload_captions(youtube, video_id, caption_path, language="en")
             caption_track = "ok"
+            from .captions import caption_fingerprint
+
+            caption_cues, caption_sha256 = caption_fingerprint(caption_path)
         except Exception as exc:  # noqa: BLE001
             caption_track = "failed"
             print(f"[upload] caption upload skipped: {exc!r}")
@@ -629,6 +638,8 @@ def upload(
         scheduled_for=scheduled_for,
         pinned_comment=pinned_comment,
         caption_track=caption_track,
+        caption_cues=caption_cues,
+        caption_sha256=caption_sha256,
     )
 
 

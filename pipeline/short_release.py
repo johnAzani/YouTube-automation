@@ -812,7 +812,8 @@ def _verified_video_fingerprints(scenes: list[dict]) -> set[str]:
 
 
 def upload_short_captions(video_id: str, short_key: str, *, youtube=None,
-                          audio_dir: Path | None = None, out_dir: Path | None = None) -> str:
+                          audio_dir: Path | None = None, out_dir: Path | None = None,
+                          record: dict | None = None) -> str:
     """Give a published Short a caption track from the words it was rendered with.
 
     The words on screen are part of the picture; YouTube cannot search them,
@@ -847,6 +848,12 @@ def upload_short_captions(video_id: str, short_key: str, *, youtube=None,
                              words, narration_text=narration, duration=words[-1][2])
         if srt is None:
             return "skipped: empty caption file"
+        if record is not None:
+            # What was sent, for the receipt: the file itself is not kept.
+            from .captions import caption_fingerprint
+
+            cues, digest = caption_fingerprint(srt)
+            record.update(caption_cues=cues, caption_sha256=digest)
         if youtube is None:
             from .upload import _thumb_client
 
@@ -872,6 +879,8 @@ def _write_published_record(
     visual_fingerprints: list[str] | None = None,
     captions: str | None = None,
     top_comment: str | None = None,
+    caption_cues: int | None = None,
+    caption_sha256: str | None = None,
 ) -> Path:
     PUBLISHED_DIR.mkdir(parents=True, exist_ok=True)
     now_utc = datetime.now(timezone.utc)
@@ -897,6 +906,7 @@ def _write_published_record(
     # Shorts looked explained and had no thumbnail at all.
     # A successful thumbnail on a different or superseded video is not proof
     # that the video named by this receipt has one.
+    caption_track_ok = str(captions or "").strip().lower().startswith("ok")
     active_status = str((thumbnail_results or {}).get(video_id, "not_attempted"))
     thumb_fields = ""
     if active_status == "ok" and poster:
@@ -942,6 +952,10 @@ def _write_published_record(
         # recorded nowhere at all on this path.
         + (f'top_comment: "{top_comment}"\n'
            if top_comment in ("ok", "failed", "skipped") else "")
+        # The track was uploaded and its file is gone; these two facts are all a
+        # later pass can know about what was sent (see pipeline/captions.py).
+        + (f"caption_cues: {int(caption_cues)}\n" if caption_track_ok and caption_cues else "")
+        + (f'caption_sha256: "{caption_sha256}"\n' if caption_track_ok and caption_sha256 else "")
         + 'metadata_revision: "selar-seo-v1"\n'
         f"width: {probe.width}\n"
         f"height: {probe.height}\n"
@@ -1746,7 +1760,9 @@ def run_short_release(
                           and active_video_id == up.video_id)
         # Last, after the thumbnail and the audit: the caption track is the one
         # optional call here and the most expensive (400 units).
-        caption_status = (upload_short_captions(up.video_id, edition.key, out_dir=stage_dir)
+        caption_record: dict = {}
+        caption_status = (upload_short_captions(up.video_id, edition.key, out_dir=stage_dir,
+                                               record=caption_record)
                           if not skip_render else "skipped: not rendered in this run")
         print(f"[short-release] caption track: {caption_status}")
         result["caption_track"] = caption_status
@@ -1768,6 +1784,8 @@ def run_short_release(
                                         if isinstance(v, str) and re.fullmatch(r'(?:url|sha256):[0-9a-f]{64}', v)}),
             captions=caption_status,
             top_comment=getattr(up, "pinned_comment", None),
+            caption_cues=caption_record.get("caption_cues"),
+            caption_sha256=caption_record.get("caption_sha256"),
         )
         if manifest_path and manifest_path.is_file():
             manifest_path.unlink()

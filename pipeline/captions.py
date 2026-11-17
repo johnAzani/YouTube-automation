@@ -10,11 +10,21 @@ Builds broadcast-compliant UTF-8 (no BOM) `.srt` closed captions directly from
 """
 from __future__ import annotations
 
+import hashlib
 import re
 from pathlib import Path
 from typing import Any
 
 from .social_pack import sanitize_persona_integrity
+
+#: A cue is packed to two lines of ``max_line_chars``, but the packer can only
+#: split on word boundaries, and a cue filled to 2 x 40 characters rarely has one
+#: at 40: the best split lands at 43-44. Measured over the six alignment files in
+#: ``assets/deepdive/`` — at the 80-character budget **23 of 82 cues (28%)** carried
+#: a line longer than 40 characters, the worst 44; at **72** every line fits, for
+#: seven more cues (82 -> 89). The broadcast two-line rule is 32-37 characters a
+#: line (BBC) or 42 (Netflix), so the packer's budget is what gives, not the line.
+MAX_CUE_CHARS = 72
 
 
 def format_srt_timestamp(seconds: float) -> str:
@@ -97,7 +107,7 @@ def build_srt_from_aligned_words(
     if not enriched:
         return ""
 
-    max_chars_per_cue = max_line_chars * max_lines
+    max_chars_per_cue = min(max_line_chars * max_lines, MAX_CUE_CHARS)
     raw_cues: list[tuple[float, float, list[str]]] = []
     cur_tokens: list[str] = []
     cur_start = 0.0
@@ -187,6 +197,21 @@ def write_srt_file(
     with open(out_path, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(srt)
     return out_path
+
+
+def caption_fingerprint(srt_path: Path) -> tuple[int, str]:
+    """Cues and a short digest of an SRT — the part of the track that is kept.
+
+    The file itself is written into a gitignored ``output/`` directory and uploaded
+    on the same run, so of the most expensive call the pipeline makes (400 units)
+    nothing survives except what the receipt says. Two facts are enough to notice
+    a track that changed, was truncated at the 1,450-cue ceiling, or never
+    contained the words it should: the cue count, and a digest of the bytes.
+    """
+    data = Path(srt_path).read_bytes()
+    text = data.decode("utf-8", "replace")
+    cues = len([block for block in text.strip().split("\n\n") if block.strip()])
+    return cues, hashlib.sha256(data).hexdigest()[:12]
 
 
 def upload_captions(
