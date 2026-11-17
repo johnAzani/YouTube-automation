@@ -591,7 +591,9 @@ def upload(
         except Exception as exc:  # noqa: BLE001
             print(f"[upload] playlist insert failed: {exc!r}")
 
-    # --- FIRST-HOUR PASTORAL PINNED COMMENT ---
+    # --- FIRST-HOUR PASTORAL COMMENT ---
+    # Posted first, never pinned: the Data API has no pin method (see
+    # pipeline/pinned_comments.py). The outcome is stamped as `top_comment`.
     pinned_comment = "skipped"
     try:
         from .pinned_comments import generate_pastoral_pinned_comment, post_pastoral_pinned_comment
@@ -601,7 +603,7 @@ def upload(
             pinned_comment = "ok" if posted else "failed"
     except Exception as exc:
         pinned_comment = "failed"
-        print(f"[upload] Notice: pastoral pinned comment skipped: {exc}")
+        print(f"[upload] Notice: pastoral first comment not posted: {exc}")
 
     return UploadResult(
         video_id=video_id,

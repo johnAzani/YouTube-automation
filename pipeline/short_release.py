@@ -871,6 +871,7 @@ def _write_published_record(
     narration_voice: str | None = None,
     visual_fingerprints: list[str] | None = None,
     captions: str | None = None,
+    top_comment: str | None = None,
 ) -> Path:
     PUBLISHED_DIR.mkdir(parents=True, exist_ok=True)
     now_utc = datetime.now(timezone.utc)
@@ -936,7 +937,12 @@ def _write_published_record(
         f'youtube_watch_url: "{watch_url}"\n'
         f'youtube_studio_url: "{studio_url}"\n'
         f'privacy_status: "{privacy_status}"\n'
-        'metadata_revision: "selar-seo-v1"\n'
+        # The Short's first comment (the bridge to the full prayer) is posted at
+        # upload; it cannot be pinned through the API. Success used to be
+        # recorded nowhere at all on this path.
+        + (f'top_comment: "{top_comment}"\n'
+           if top_comment in ("ok", "failed", "skipped") else "")
+        + 'metadata_revision: "selar-seo-v1"\n'
         f"width: {probe.width}\n"
         f"height: {probe.height}\n"
         f"duration_seconds: {round(probe.duration_seconds, 2)}\n"
@@ -1761,6 +1767,7 @@ def run_short_release(
                                         for v in row.get('source_fingerprints', [])
                                         if isinstance(v, str) and re.fullmatch(r'(?:url|sha256):[0-9a-f]{64}', v)}),
             captions=caption_status,
+            top_comment=getattr(up, "pinned_comment", None),
         )
         if manifest_path and manifest_path.is_file():
             manifest_path.unlink()

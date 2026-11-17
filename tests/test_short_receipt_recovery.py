@@ -238,3 +238,19 @@ def test_real_recovered_receipt_keeps_verified_identity_without_reupload():
     assert doc.meta['published_at'] == '2026-11-11T12:03:29Z'
     # The thumbnail may be cooling down or eventually applied; its current state
     # is live operational data, not an invariant of the recovered receipt.
+
+
+def test_the_short_first_comment_outcome_reaches_the_receipt(tmp_path, monkeypatch):
+    """A Short's comment is the bridge to the full prayer, and it used to be
+    recorded nowhere: this writer had no field for it at all."""
+    monkeypatch.setattr(release, 'PUBLISHED_DIR', tmp_path)
+    for status, expected in (('ok', 'ok'), ('failed', 'failed'), (None, None)):
+        path = tmp_path / f'receipt-{status}.md'
+        release._write_published_record(path, _edition(), 'active', 'https://youtu.be/active',
+                                        'public', release.MediaProbe(True, True, 720, 1280, 54), 1,
+                                        top_comment=status)
+        meta = parse_script(path).meta
+        if expected is None:
+            assert 'top_comment' not in meta
+        else:
+            assert meta['top_comment'] == expected

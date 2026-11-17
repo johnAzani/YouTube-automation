@@ -707,6 +707,15 @@ the shortest gap the pipeline can produce is the render's own roughly 70 minutes
 The daily monitor prints the figure as `publish instant`. Reading and the way to
 land on the minute: `docs/PUBLISH_INSTANT_RESEARCH_2026-11-17.md`.
 
+The first comment under each video is posted at upload and **cannot be pinned**:
+the API has no such method (checked against the discovery document the client
+ships with, revision 20261104 — `commentThreads` has `insert` and `list` only).
+It goes first by being early and alone; pinning is a Studio click. Every upload
+now stamps `top_comment: ok|failed|skipped` on its receipt, because until 17
+November 2026 success was recorded nowhere and `pinned_comment_pending` was the
+only trace — written on failure, and only for scheduled uploads. Reading:
+`docs/COMMENT_LEDGER_RESEARCH_2026-11-17.md`.
+
 The expansion pass no longer has a cron of its own: it runs inside the brain at
 4:14am **and** at the top of every production run, so a missed or late cron is
 repaired by the next release instead of becoming an empty evening.
