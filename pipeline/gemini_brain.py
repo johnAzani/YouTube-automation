@@ -251,7 +251,14 @@ def queued_thumb_lines(own_id: str = "", queue_dir: Path | None = None) -> set[s
 
 def _clamp_thumb_text_for_ctr(raw_thumb: str, daypart: str = "night", title: str = "",
                               taken: set[str] | frozenset[str] = frozenset()) -> str:
-    """Guarantee `thumb_text` fits the 660px CTR hero box at >= 105px.
+    """Guarantee the frame can draw every word of `thumb_text`, inside the real box.
+
+    The box is `thumbnail_ctr.HERO_TEXT_BOX` — the hook concept's 604x386 text box,
+    the narrowest and shortest of the three. Until 17 November this measured the
+    same line against a 660x492 box that no concept uses, and demanded >= 105 px:
+    seven authored lines passed at exactly 105 px there and rendered at the 96 px
+    floor here, where the layout could only place three of "COMMIT YOUR WORK AT
+    NOON". The guarantee is now the thing it claims to be — every word is drawn.
 
     `taken` holds the lines of scripts already in the queue. A line one of them
     uses is passed over for the next cut that fits. On 15 November 2026 The
@@ -282,13 +289,11 @@ def _clamp_thumb_text_for_ctr(raw_thumb: str, daypart: str = "night", title: str
     candidates += [c for c in _title_candidates(title) if c not in candidates] + single
     fits: list[str] = []
     try:
-        from PIL import Image, ImageDraw
         from . import thumbnail_ctr as ctr
 
-        draw = ImageDraw.Draw(Image.new("RGB", (1280, 720)))
         for option in candidates:
-            _f, _l, _t, _ld, px = ctr._layout(draw, option, (86, 76, 746, 568))
-            if px >= 105:
+            px, dropped = ctr.hero_fit(option)
+            if px >= ctr.MIN_HERO_PX and not dropped:
                 if option in taken:
                     fits.append(option)
                 elif fits and len(option.split()) < 2:

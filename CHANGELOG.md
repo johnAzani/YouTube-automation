@@ -5,6 +5,16 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-17 — The clamp certified a box nothing draws into
+
+- **Two functions disagreed about whether text fits, and the loser was silent.** `gemini_brain._clamp_thumb_text_for_ctr` guaranteed every authored `thumb_text` fitted a **660x492** box at **>=105 px**. No concept draws into that box: the frame the pipeline uploads uses **604x386**. Six of the 202 authored lines measured **exactly 105 px** there and **96 px** in the real box — and `_layout`'s search ran `range(300, 95, -5)`, which stops at 100, so 96-99 were never tried.
+- **Those lines fell to a branch that took the first three words** (`hero.split()[:3]`). Three published thumbnails are missing a word: `0037` reads "YOUR MERCY THIS" (loses MORNING), `0047` reads "COMMIT YOUR WORK" (loses NOON), `0007` reads "THE EXCHANGE PRESSED" (loses UNDO). The gold accent line fell on the wrong word in all three.
+- **The report certified the frame it did not match.** Job `0047`'s `report.json` read `words: 5, lines: 3, notes: []` while the frame carried three words — `words` counted the input, not the drawing.
+- **Four tests enforced the phantom box**, including one whose message was literally "dropped words in {lines} vs {hero}" — measured against 660x492, where nothing dropped.
+- **The repair, measured.** One constant `HERO_TEXT_BOX`, one function `hero_fit() -> (px, dropped_words)`, a search that reaches the floor, a last-resort branch that wraps instead of cutting, four lines allowed where the height holds them, and a report that counts what it drew and says in `notes` when a word was lost. Re-run over all 202 authored lines: **3 lines losing a word → 0**, seven still at the 96 px floor, median hero unchanged at 135 px. Only those seven frames change, and only on a re-render; no live thumbnail was touched.
+- **The clamp now measures the frame's own box** and accepts a line only when every word is drawn at `>= MIN_HERO_PX`; the four phantom-box tests now read the real one. A corpus test reads every authored line in `content/published/` and `content/queue/` (195 today) and fails if any would lose a word. Reading: `docs/THUMBNAIL_HERO_FIT_2026-11-17.md`.
+- **Owner-only:** re-rendering the three live frames is 150 quota units against the 200-a-day limit; `_refresh_live_thumbnail` will do it on its own if any of those jobs is re-run.
+
 ## 2026-11-17 — The pack is not the mould. The map is.
 
 - **A correction of the reading published three hours earlier.** `docs/MOULD_AND_HOURS_RESEARCH_2026-11-17.md` said the long-form thumbnail is one navy grade for all ten channels. That is true of `pipeline/thumbnail.py::render_studio_thumbnail` and false of the channel: **nothing on the publish path calls it.** Both of its call sites sit in `run.py::_disabled_legacy_process`, a function `process()` never invokes, below a line that raises on purpose. The frame that ships is `thumbnail_ctr.generate_ctr_pack`, called with `channel_id=doc.channel`: **30 palettes, three per channel, 30 distinct, none repeated.** The corrected reading is `docs/THUMBNAIL_PACK_RESEARCH_2026-11-17.md`.

@@ -56,7 +56,9 @@ from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageStat
 
 from .thumbnail_studio import (
     CANVAS,
+    MAX_LINES,
     MIN_CONTRAST,
+    MIN_HERO_PX,
     Palette,
     _font,
     _mean_colour,
@@ -150,6 +152,14 @@ PATHWAY_SAGE = Palette("pathway-sage", (8, 30, 32), (72, 108, 92), (254, 236, 18
                        (252, 212, 102), (254, 250, 240))
 PATHWAY_SANCTUARY = Palette("pathway-sanctuary", (9, 36, 40), (36, 106, 106), (255, 238, 190),
                             (252, 216, 108), (254, 250, 240))
+
+# The one hero box a `thumb_text` has to survive: the narrowest and shortest of the
+# three concepts (hook, the frame the pipeline uploads). `gemini_brain`'s clamp and
+# every test that says "this line fits" must measure against *this* box, or the
+# guarantee is about a box nothing draws into — the 660x492 phantom the clamp used
+# until 17 November validated lines at 105 px that the 604x386 frame could only
+# draw by dropping a word.
+HERO_TEXT_BOX = (86, 84, 690, 470)
 
 _NOCTURNAL_GRADES = ("night", "midnight")
 
@@ -1277,7 +1287,7 @@ def _layout(draw, hero: str, box, tracking_ratio: float = -0.022):
     words = hero.split()
     best_fit = None
     clean = None
-    for size in range(300, 95, -5):
+    for size in (*range(300, MIN_HERO_PX, -5), MIN_HERO_PX):
         font = _font(size)
         tracking = tracking_ratio * size
         lines = _balanced_wrap(draw, words, font, tracking, max_w, max_lines=3)
@@ -1296,10 +1306,48 @@ def _layout(draw, hero: str, box, tracking_ratio: float = -0.022):
         return clean
     if best_fit:
         return best_fit
-    font = _font(96)
-    tracking = tracking_ratio * 96
-    lines = hero.split()[:3]
-    return font, lines, tracking, 90, 96
+    # Nothing fitted above the floor. Wrap inside the box at the floor and keep at
+    # most MAX_LINES lines — never "the first three words", which used to cut
+    # "COMMIT YOUR WORK AT NOON" to "COMMIT YOUR WORK" and still report 5 words.
+    font = _font(MIN_HERO_PX)
+    tracking = tracking_ratio * MIN_HERO_PX
+    leading = int(MIN_HERO_PX * 0.94)
+    lines = _balanced_wrap(draw, words, font, tracking, max_w, max_lines=MAX_LINES)
+    if not lines:
+        # Still nothing in three lines: allow as many lines as the box height holds
+        # (the 386 px box holds four at 96 px) so a meaning-carrying word — "UNDO" in
+        # "THE EXCHANGE PRESSED UNDO" — is not the price of a three-line cap.
+        room = max(1, min(4, max_h // leading))
+        lines = _balanced_wrap(draw, words, font, tracking, max_w, max_lines=room)
+    if not lines:  # more than seven words, or a word wider than the box at the floor
+        greedy, current = [], ""
+        for word in words:
+            candidate = f"{current} {word}".strip()
+            if _tracked_width(draw, candidate, font, tracking) <= max_w:
+                current = candidate
+                continue
+            if current:
+                greedy.append(current)
+            # A word wider than the whole box at 96 px cannot be drawn at any size in
+            # this range; it is dropped rather than allowed to spill into the art, and
+            # `hero_fit` reports the loss so the brain's clamp rejects the line.
+            current = word if _tracked_width(draw, word, font, tracking) <= max_w else ""
+        if current:
+            greedy.append(current)
+        lines = greedy[:room] or words[:1]
+    return font, lines, tracking, leading, MIN_HERO_PX
+
+
+def hero_fit(hero: str, box: tuple[int, int, int, int] = HERO_TEXT_BOX) -> tuple[int, int]:
+    """Largest px `hero` draws at inside `box`, and how many of its words are lost.
+
+    One function for every caller that needs to assert a line fits — the brain's
+    clamp, the tests, and the report. Returns (px, dropped_words); a line that fits
+    without loss has dropped_words == 0.
+    """
+    draw = ImageDraw.Draw(Image.new('RGB', (1280, 720)))
+    _font_, lines, _tracking, _leading, px = _layout(draw, str(hero or '').upper().strip(), box)
+    return px, max(0, len(str(hero or '').split()) - sum(len(line.split()) for line in lines))
 
 
 def draw_ctr_hero(img: Image.Image, hero: str, variant: CtrVariant):
@@ -1336,7 +1384,7 @@ def draw_ctr_hero(img: Image.Image, hero: str, variant: CtrVariant):
         _tracked(draw, (x0, sy), line, font, colour, tracking,
                  stroke_width=stroke, stroke_fill=(3, 7, 18))
         sy += leading
-    return img, size, len(lines), contrast
+    return img, size, len(lines), contrast, sum(len(line.split()) for line in lines)
 
 
 # --------------------------------------------------------------------------- #
@@ -1453,10 +1501,10 @@ def render_ctr(variant: CtrVariant, out_path: Path, size=CANVAS,
     img = paint_ctr_scene(active, size, avoid=avoid, backdrop=backdrop)
     notes: list[str] = []
     grade = getattr(active, "grade", "night") or "night"
-    hero_px, lines, contrast = 0, 0, 99.0
+    hero_px, lines, contrast, hero_words = 0, 0, 99.0, 0
     if active.hero:
         base_scene = img.copy()
-        img, hero_px, lines, contrast = draw_ctr_hero(img, active.hero, active)
+        img, hero_px, lines, contrast, hero_words = draw_ctr_hero(img, active.hero, active)
         if contrast < MIN_CONTRAST:
             reinforced = _text_scrim(
                 base_scene,
@@ -1464,7 +1512,7 @@ def render_ctr(variant: CtrVariant, out_path: Path, size=CANVAS,
                 strength=0.52,
                 scrim_rgb=_scrim_rgb_for(grade),
             )
-            img, hero_px, lines, contrast = draw_ctr_hero(reinforced, active.hero, active)
+            img, hero_px, lines, contrast, hero_words = draw_ctr_hero(reinforced, active.hero, active)
             notes.append(f"scrim reinforced to {contrast:.1f}:1")
     img = _finish(img)
     if backdrop:
@@ -1472,6 +1520,8 @@ def render_ctr(variant: CtrVariant, out_path: Path, size=CANVAS,
     img = img.filter(ImageFilter.UnsharpMask(radius=2.0, percent=62, threshold=2))
     if active.hero and contrast < MIN_CONTRAST:
         notes.append(f"contrast {contrast:.1f} below {MIN_CONTRAST} — needs a scrim")
+    if active.hero and hero_words < len(active.hero.split()):
+        notes.append(f"hero drew {hero_words} of {len(active.hero.split())} words")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     icc_bytes: bytes | None = None
     try:
@@ -1491,7 +1541,7 @@ def render_ctr(variant: CtrVariant, out_path: Path, size=CANVAS,
     return CtrReport(
         path=out_path, variant=active.label, concept=active.concept,
         hero=active.hero or "", hero_px=hero_px, lines=lines,
-        words=len(active.hero.split()) if active.hero else 0,
+        words=hero_words,
         contrast=contrast if active.hero else 0.0,
         mean_luma=ImageStat.Stat(img.convert("L")).mean[0], edge_luma=el,
         bright_share=bright_share(img), border_dark=border_dark_share(img),

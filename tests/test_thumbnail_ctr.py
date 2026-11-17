@@ -17,6 +17,7 @@ from pipeline import thumbnail_ctr as ctr
 from pipeline.thumbnail_studio import CANVAS, MIN_CONTRAST, SAFE_BOX, contrast_ratio
 
 TMP = Path("/tmp/ctr-tests")
+CHANNELS = ("secret-place", *(f"prayer{i}" for i in range(2, 11)))
 
 
 def setUpModule():
@@ -386,28 +387,70 @@ class TestTheFrameIsTheVideosOwnFootage(unittest.TestCase):
         out = Image.open(reports[0].path).convert("L").crop(DURATION_BADGE_BOX)
         self.assertLess(ImageStat.Stat(out).mean[0], 85.0)
 
+    def test_hero_box_is_the_narrowest_box_the_frame_draws_into(self):
+        """`HERO_TEXT_BOX` must be the box a real concept uses, and the tightest one.
+
+        The brain's clamp validates every authored line against this constant. It
+        used to validate against (86, 76, 746, 568) — 660x492, a box no concept has —
+        at 105 px, which let seven lines through that the 604x386 frame could only
+        draw by dropping a word.
+        """
+        boxes = [v.text_box for ch in CHANNELS for v in ctr.variants_for_channel(ch) if v.hero]
+        self.assertTrue(boxes)
+        narrowest = min(b[2] - b[0] for b in boxes)
+        shortest = min(b[3] - b[1] for b in boxes)
+        self.assertEqual(ctr.HERO_TEXT_BOX[2] - ctr.HERO_TEXT_BOX[0], narrowest)
+        self.assertEqual(ctr.HERO_TEXT_BOX[3] - ctr.HERO_TEXT_BOX[1], shortest)
+        self.assertIn(ctr.HERO_TEXT_BOX, [v.text_box for ch in CHANNELS for v in ctr.variants_for_channel(ch)])
+
     def test_every_approved_queue_script_fits_cleanly_without_dropping_words(self):
-        from pathlib import Path
-        from PIL import Image, ImageDraw
         from pipeline.script_doc import parse_script
 
-        queue = Path(__file__).resolve().parents[1] / "content" / "queue"
-        draw = ImageDraw.Draw(Image.new("RGB", (1280, 720)))
+        root = Path(__file__).resolve().parents[1]
         checked = 0
-        for md in sorted(queue.glob("*.md")):
-            doc = parse_script(md)
-            if str(doc.meta.get("status", "")).lower() not in {"approved", "quota_paused"}:
-                continue
-            checked += 1
-            hero = (str(doc.meta.get("thumb_text") or "").strip() or doc.title).upper()
-            _font, lines, _tracking, _leading, px = ctr._layout(draw, hero, (86, 76, 746, 568))
-            self.assertGreaterEqual(px, 105, f"{md.name}: {hero} -> {px}px")
-            self.assertEqual(
-                " ".join(lines),
-                " ".join(hero.split()),
-                f"{md.name}: dropped words in {lines} vs {hero}",
-            )
-        self.assertGreaterEqual(checked, 15)
+        for folder in ("queue", "published"):
+            for md in sorted((root / "content" / folder).glob("*.md")):
+                doc = parse_script(md)
+                if doc.channel not in CHANNELS:
+                    continue
+                if str(doc.meta.get("format") or "longform").lower() != "longform":
+                    continue  # Shorts posters are graded elsewhere
+                if folder == "queue" and str(doc.meta.get("status", "")).lower() not in {"approved", "quota_paused", "tts_blocked"}:
+                    continue
+                hero = str(doc.meta.get("thumb_text") or "").strip().upper()
+                if not hero:
+                    continue  # no authored line: the concept keeps its own copy
+                checked += 1
+                px, dropped = ctr.hero_fit(hero)
+                self.assertGreaterEqual(px, ctr.MIN_HERO_PX, f"{md.name}: {hero} -> {px}px")
+                self.assertEqual(dropped, 0, f"{md.name}: {hero} would lose a word")
+        self.assertGreaterEqual(checked, 190, f"only {checked} scripts measured")
+
+    def test_a_hero_too_wide_for_the_box_keeps_every_word(self):
+        """The 17 November defect: 96 px is reachable, the old search stopped at 100.
+
+        "COMMIT YOUR WORK AT NOON" and "THE EXCHANGE PRESSED UNDO" both rendered as
+        their first three words, and the report still counted five.
+        """
+        for hero in ("COMMIT YOUR WORK AT NOON", "THE EXCHANGE PRESSED UNDO",
+                     "YOUR MERCY THIS MORNING", "GUARD OUR DOORPOSTS"):
+            px, dropped = ctr.hero_fit(hero)
+            self.assertEqual(dropped, 0, f"{hero} loses a word")
+            self.assertGreaterEqual(px, ctr.MIN_HERO_PX)
+
+    def test_the_report_counts_only_the_words_it_drew(self):
+        reports = ctr.generate_ctr_pack(
+            TMP / "word-report",
+            variants=(ctr.CtrVariant(
+                label="hook", concept="test", hero="COMMIT YOUR WORK AT NOON",
+                palette=ctr.NOON_GOLD, moon=(0.775, 0.41), moon_scale=0.205,
+                horizon=0.735, dawn=0.7, rays=True, seed=1, text_box=ctr.HERO_TEXT_BOX,
+            ),),
+        )
+        report = reports[0]
+        self.assertEqual(report.words, 5)
+        self.assertEqual(report.lines, 3)
+        self.assertFalse([n for n in report.notes if "drew" in n])
 
 
 class TestDaypartPacks(unittest.TestCase):

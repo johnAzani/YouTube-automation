@@ -95,6 +95,10 @@ signature, not an accident, and it is not a defect.
 
 ## 3. Where the mould actually remains: concepts 1 and 2 are one idea
 
+> **Follow-up, same day:** the hero line itself was being cut on three published
+> frames — a separate defect in how the pack fits text, found after this reading:
+> `docs/THUMBNAIL_HERO_FIT_2026-11-17.md`.
+
 `generate_ctr_pack` (line 1529) replaces the copy on every concept that has copy:
 
 ```python

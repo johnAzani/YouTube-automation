@@ -66,7 +66,7 @@ class TestEighthChannelRegistration(unittest.TestCase):
                     self.assertIn(doc.status, ("approved", "quota_paused", "tts_blocked"))
                     self.assertEqual(doc.channel, "prayer8")
                     self.assertGreaterEqual(doc.word_count, MIN_LONGFORM_WORDS)
-                    self.assertGreaterEqual(thumbnail_ctr._layout(draw, doc.meta["thumb_text"], (86, 76, 746, 568))[-1], 105)
+                    _px, _dropped = thumbnail_ctr.hero_fit(doc.meta["thumb_text"]); self.assertGreaterEqual(_px, thumbnail_ctr.MIN_HERO_PX); self.assertEqual(_dropped, 0)
                     self.assertTrue((ROOT / "content" / "factcheck" / script.name).is_file())
                 for manifest in (ROOT / "content" / "shorts-queue").glob(f"{ident}-*.yml"):
                     entry = yaml.safe_load(manifest.read_text())
@@ -155,8 +155,9 @@ class TestEighthChannelIdentityAndVisuals(unittest.TestCase):
         draw = ImageDraw.Draw(Image.new("RGB", (1280, 720)))
         for entry in COVENANT_SHIELD_ROADMAP:
             hero = entry["hook"].upper()
-            _f, _lines, _tr, _ld, px = thumbnail_ctr._layout(draw, hero, (86, 76, 746, 568))
-            self.assertGreaterEqual(px, 105, f"{entry['id']}: {hero} -> {px}px")
+            px, dropped = thumbnail_ctr.hero_fit(hero)
+            self.assertGreaterEqual(px, thumbnail_ctr.MIN_HERO_PX, f"{entry['id']}: {hero} -> {px}px")
+            self.assertEqual(dropped, 0, f"{entry['id']}: {hero} loses a word")
 
     def test_shorts_and_ctr_grades_use_dedicated_fortress_palette(self):
         self.assertEqual(shorts_poster.grade_for("prayer8"), "fortress")
