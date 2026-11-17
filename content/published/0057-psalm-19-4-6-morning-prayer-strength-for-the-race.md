@@ -1,6 +1,6 @@
 ---
 id: '0057'
-title: 'Psalm 19:4-6 Morning Prayer: Rejoicing as a Strong Man to Run a Race'
+title: "Strength to Run the Race Today: Psalm 19:4-6 | The Morning Altar"
 slug: psalm-19-4-6-morning-prayer-strength-for-the-race
 status: published
 channel: prayer2
@@ -78,10 +78,13 @@ originality:
 published_on: "2026-11-10"
 published_at: "2026-11-10T22:12:35Z"
 youtube_video_id: "isIRHPSVy-0"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Psalm 19:4-6 Morning Prayer: Rejoicing as a Strong Man to Run a Race"
+retitled_at: "2026-11-17"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The First Light and the Voice of the Morning
