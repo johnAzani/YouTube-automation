@@ -44,8 +44,8 @@
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "generated_at": "2026-11-16T23:54:27.451440+00:00",
-  "last_run_at": "2026-11-16T23:53:43+00:00",
+  "generated_at": "2026-11-17T00:39:21.668482+00:00",
+  "last_run_at": "2026-11-17T00:38:36+00:00",
   "on_time": [
     {
       "late_minutes": 50,
@@ -67,6 +67,13 @@
       "ran_at": "2026-11-15T20:45:10+00:00",
       "slot": "2026-11-15T19:14:00+00:00",
       "workflow": "community.yml"
+    },
+    {
+      "late_minutes": 15,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-17T00:38:36+00:00",
+      "slot": "2026-11-17T00:23:00+00:00",
+      "workflow": "monitor.yml"
     },
     {
       "late_minutes": 9,
