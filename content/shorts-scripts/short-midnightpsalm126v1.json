@@ -1,0 +1,278 @@
+{
+  "key": "short-midnightpsalm126v1",
+  "channel": "prayer4",
+  "psalm": 126,
+  "title": [
+    "A MIDNIGHT",
+    "RESTORATION"
+  ],
+  "poster": [
+    "THE LORD",
+    "HAS DONE",
+    "GREAT THINGS",
+    "FOR YOU"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "silhouette of watchtower under starlight",
+    "vast starry night sky over dark forest",
+    "warm oil lamp glowing in dark stone room",
+    "mist over a still mountain lake at night",
+    "soft moonlight on an ancient stone path",
+    "crescent moon hanging in deep blue twilight"
+  ],
+  "scenes": [
+    {
+      "a": "The heavy silence in this room mirrors the weight you have carried all day long.",
+      "img": "short-midnightpsalm126v1-scene-01.jpg",
+      "kicker": "A MOMENT OF PEACE",
+      "sub": "HEAR THIS PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "When the LORD turned again the captivity of Zion, we were like them that dream.",
+      "img": "short-midnightpsalm126v1-scene-02.jpg",
+      "kicker": "PSALM 126:1",
+      "sub": "LIKE THEM THAT DREAM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Then was our mouth filled with laughter, and our tongue with singing: then said they among the heathen, The LORD hath done great things for them.",
+      "img": "short-midnightpsalm126v1-scene-03.jpg",
+      "kicker": "PSALM 126:2",
+      "sub": "FILLED WITH LAUGHTER",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "The LORD hath done great things for us; whereof we are glad.",
+      "img": "short-midnightpsalm126v1-scene-04.jpg",
+      "kicker": "PSALM 126:3",
+      "sub": "WHERE OF WE ARE GLAD",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, replace this bitterness with the joy of your unexpected deliverance in this dark hour.",
+      "img": "short-midnightpsalm126v1-scene-05.jpg",
+      "kicker": "A MIDNIGHT PRAYER",
+      "sub": "REST IN HIS GRACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "May your spirit settle into the truth that the restoration you seek is already coming.",
+      "img": "short-midnightpsalm126v1-scene-06.jpg",
+      "kicker": "STAY FAITHFUL",
+      "sub": "THE MIDNIGHT WATCH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The heavy silence in this room mirrors the weight you have carried all day long."
+    ],
+    [
+      8,
+      16,
+      "When the LORD turned again the captivity of Zion, we were like them that dream."
+    ],
+    [
+      16,
+      26,
+      "Then was our mouth filled with laughter, and our tongue with singing: then said they among the heathen, The LORD hath done great things for them."
+    ],
+    [
+      26,
+      32,
+      "The LORD hath done great things for us; whereof we are glad."
+    ],
+    [
+      32,
+      40,
+      "Lord, replace this bitterness with the joy of your unexpected deliverance in this dark hour."
+    ],
+    [
+      40,
+      48,
+      "May your spirit settle into the truth that the restoration you seek is already coming."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "HEAVY SILENCE",
+        "MIRRORS THE",
+        "WEIGHT CARRIED",
+        "ALL DAY LONG"
+      ],
+      [
+        "HEAVY SILENCE"
+      ],
+      "PSALM 126"
+    ],
+    [
+      8,
+      16,
+      [
+        "CAPTIVITY OF ZION",
+        "LIKE THEM",
+        "THAT DREAM"
+      ],
+      [
+        "LIKE THEM THAT DREAM"
+      ],
+      "PSALM 126 : 1"
+    ],
+    [
+      16,
+      26,
+      [
+        "MOUTH FILLED",
+        "WITH LAUGHTER",
+        "TONGUE WITH SINGING",
+        "GREAT THINGS"
+      ],
+      [
+        "GREAT THINGS"
+      ],
+      "PSALM 126 : 2"
+    ],
+    [
+      26,
+      32,
+      [
+        "THE LORD",
+        "HATH DONE",
+        "GREAT THINGS",
+        "WHERE OF GLAD"
+      ],
+      [
+        "WHERE OF GLAD"
+      ],
+      "PSALM 126 : 3"
+    ],
+    [
+      32,
+      40,
+      [
+        "REPLACE BITTERNESS",
+        "WITH THE",
+        "JOY OF",
+        "DELIVERANCE"
+      ],
+      [
+        "JOY"
+      ],
+      "PSALM 126"
+    ],
+    [
+      40,
+      48,
+      [
+        "SPIRIT SETTLE",
+        "INTO TRUTH",
+        "RESTORATION",
+        "IS COMING"
+      ],
+      [
+        "RESTORATION"
+      ],
+      "PSALM 126"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The heavy silence in this room mirrors the weight you have carried all day long.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "SILENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When the LORD turned again the captivity of Zion, we were like them that dream.",
+      "kind": "phrase",
+      "words": [
+        "LIKE",
+        "THEM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Then was our mouth filled with laughter, and our tongue with singing: then said they among the heathen, The LORD hath done great things for them.",
+      "kind": "phrase",
+      "words": [
+        "GREAT",
+        "THINGS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD hath done great things for us; whereof we are glad.",
+      "kind": "phrase",
+      "words": [
+        "WHERE",
+        "OF",
+        "GLAD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, replace this bitterness with the joy of your unexpected deliverance in this dark hour.",
+      "kind": "phrase",
+      "words": [
+        "JOY",
+        "OF",
+        "DELIVERANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your spirit settle into the truth that the restoration you seek is already coming.",
+      "kind": "phrase",
+      "words": [
+        "RESTORATION",
+        "IS",
+        "COMING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 126:1-3"
+}

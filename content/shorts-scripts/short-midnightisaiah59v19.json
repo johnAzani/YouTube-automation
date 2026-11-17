@@ -1,0 +1,250 @@
+{
+  "key": "short-midnightisaiah59v19",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "ISAIAH 59:19",
+    "THE FLOOD"
+  ],
+  "poster": [
+    "THE SPIRIT",
+    "LIFTS THE",
+    "STANDARD",
+    "AT MIDNIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "deep starry night sky over mountain",
+    "silhouette of old stone watchtower",
+    "glowing lamp on wooden table midnight",
+    "misty forest at night moonlit",
+    "crashing waves under moonlight",
+    "calm dark ocean horizon",
+    "empty sanctuary interior night"
+  ],
+  "scenes": [
+    {
+      "a": "That relentless storm currently raging in your life has finally met its match right now.",
+      "img": "short-midnightisaiah59v19-scene-01.jpg",
+      "kicker": "ISAIAH 59:19",
+      "sub": "THE STANDARD IS RAISED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Listen to these ancient words as the weight of your worry begins to dissolve tonight.",
+      "img": "short-midnightisaiah59v19-scene-02.jpg",
+      "kicker": "THE LORD SPEAKS",
+      "sub": "HEARING HIS TRUTH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "So shall they fear the name of the LORD from the west, and his glory from the rising of the sun.",
+      "img": "short-midnightisaiah59v19-scene-03.jpg",
+      "kicker": "THE PROMISE",
+      "sub": "GLORY FROM THE SUNRISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "When the enemy shall come in like a flood, the Spirit of the LORD shall lift up a standard against him.",
+      "img": "short-midnightisaiah59v19-scene-04.jpg",
+      "kicker": "AGAINST THE FLOOD",
+      "sub": "HIS SPIRIT STANDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Heavenly Father, when the tides of pressure rise, let your standard be the wall around us.",
+      "img": "short-midnightisaiah59v19-scene-05.jpg",
+      "kicker": "PRAYER",
+      "sub": "STAND FIRM IN FAITH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your presence quiet the rushing waters of fear that attempt to overtake this weary heart.",
+      "img": "short-midnightisaiah59v19-scene-06.jpg",
+      "kicker": "STILLNESS",
+      "sub": "RESTING IN HIM",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Grant us the courage to anchor our souls in your victory instead of our fleeting troubles.",
+      "img": "short-midnightisaiah59v19-scene-07.jpg",
+      "kicker": "VICTORY",
+      "sub": "ANCHORED IN HIS WORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That relentless storm currently raging in your life has finally met its match right now."
+    ],
+    [
+      8,
+      16,
+      "Listen to these ancient words as the weight of your worry begins to dissolve tonight."
+    ],
+    [
+      16,
+      26,
+      "So shall they fear the name of the LORD from the west, and his glory from the rising of the sun."
+    ],
+    [
+      26,
+      36,
+      "When the enemy shall come in like a flood, the Spirit of the LORD shall lift up a standard against him."
+    ],
+    [
+      36,
+      46,
+      "Heavenly Father, when the tides of pressure rise, let your standard be the wall around us."
+    ],
+    [
+      46,
+      56,
+      "May your presence quiet the rushing waters of fear that attempt to overtake this weary heart."
+    ],
+    [
+      56,
+      66,
+      "Grant us the courage to anchor our souls in your victory instead of our fleeting troubles."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "RELENTLESS STORM",
+        "RAGING IN LIFE",
+        "MET ITS MATCH"
+      ],
+      [
+        "MET ITS MATCH"
+      ],
+      "ISAIAH 59:19"
+    ],
+    [
+      8,
+      16,
+      [
+        "ANCIENT WORDS",
+        "WIGTH OF WORRY",
+        "DISSOLVE TONIGHT"
+      ],
+      [
+        "DISSOLVE TONIGHT"
+      ],
+      "ISAIAH 59:19"
+    ],
+    [
+      16,
+      26,
+      [
+        "FEAR THE NAME",
+        "OF THE LORD",
+        "GLORY FROM THE SUN"
+      ],
+      [
+        "FEAR THE NAME"
+      ],
+      "ISAIAH 59:19"
+    ],
+    [
+      26,
+      36,
+      [
+        "ENEMY LIKE A FLOOD",
+        "SPIRIT OF THE LORD",
+        "LIFT UP A STANDARD"
+      ],
+      [
+        "LIFT UP A STANDARD"
+      ],
+      "ISAIAH 59:19"
+    ],
+    [
+      36,
+      46,
+      [
+        "TIDES OF PRESSURE",
+        "LET YOUR STANDARD",
+        "BE THE WALL"
+      ],
+      [
+        "BE THE WALL"
+      ],
+      "ISAIAH 59:19"
+    ],
+    [
+      46,
+      56,
+      [
+        "QUIET RUSHING WATERS",
+        "OVERTAKE THIS HEART"
+      ],
+      [
+        "QUIET RUSHING WATERS"
+      ],
+      "ISAIAH 59:19"
+    ],
+    [
+      56,
+      66,
+      [
+        "COURAGE TO ANCHOR",
+        "SOULS IN VICTORY",
+        "NOT FLEETING TROUBLES"
+      ],
+      [
+        "ANCHOR"
+      ],
+      "ISAIAH 59:19"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That relentless storm currently raging in your life has finally met its match right now.",
+      "kind": "phrase",
+      "words": [
+        "MET",
+        "ITS",
+        "MATCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 59:19"
+}

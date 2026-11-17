@@ -1,0 +1,264 @@
+{
+  "key": "short-midnightcolossians2v14",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "THE MIDNIGHT WATCH",
+    "COLOSSIANS 2:14-15"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "COLOSSIANS 2:14-15",
+    "A SILENT PRAYER",
+    "STAND IN FAITH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette starry sky",
+    "deep starry heavens night prayer",
+    "lamp-lit sanctuary vigil dark room",
+    "calm mountain lake night reflection",
+    "dark stormy night clouds glowing light",
+    "quiet ancient stone cross night sky"
+  ],
+  "scenes": [
+    {
+      "a": "If that old record of failure still weights your heart at this midnight hour.",
+      "img": "short-midnightcolossians2v14-scene-01.jpg",
+      "kicker": "COLOSSIANS 2:14",
+      "sub": "STAND IN THE SILENT WATCH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, we come before you in this quiet hour acknowledging the burdens we carry.",
+      "img": "short-midnightcolossians2v14-scene-02.jpg",
+      "kicker": "COLOSSIANS 2:14",
+      "sub": "BRING YOUR WEARY HEART",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Blotting out the handwriting of ordinances that was against us, which was contrary to us, and took it out of the way, nailing it to his cross;",
+      "img": "short-midnightcolossians2v14-scene-03.jpg",
+      "kicker": "COLOSSIANS 2:14",
+      "sub": "NAILED TO THE CROSS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father, let this truth anchor our souls as the night deepens around us.",
+      "img": "short-midnightcolossians2v14-scene-04.jpg",
+      "kicker": "COLOSSIANS 2:15",
+      "sub": "REST IN HIS VICTORY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "And having spoiled principalities and powers, he made a show of them openly, triumphing over them in it.",
+      "img": "short-midnightcolossians2v14-scene-05.jpg",
+      "kicker": "COLOSSIANS 2:15",
+      "sub": "TRIUMPHING OVER THEM",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We rest securely in your finished work tonight, trusting your mighty name.",
+      "img": "short-midnightcolossians2v14-scene-06.jpg",
+      "kicker": "COLOSSIANS 2:15",
+      "sub": "SECURE IN HIS WORK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "If that old record of failure still weights your heart at this midnight hour."
+    ],
+    [
+      13,
+      25,
+      "Lord, we come before you in this quiet hour acknowledging the burdens we carry."
+    ],
+    [
+      26,
+      42,
+      "Blotting out the handwriting of ordinances that was against us, which was contrary to us, and took it out of the way, nailing it to his cross;"
+    ],
+    [
+      43,
+      55,
+      "Father, let this truth anchor our souls as the night deepens around us."
+    ],
+    [
+      56,
+      72,
+      "And having spoiled principalities and powers, he made a show of them openly, triumphing over them in it."
+    ],
+    [
+      73,
+      85,
+      "We rest securely in your finished work tonight, trusting your mighty name."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "IF THAT OLD RECORD",
+        "OF FAILURE STILL WEIGHTS",
+        "YOUR HEART AT MIDNIGHT"
+      ],
+      "FAILURE",
+      "COLOSSIANS 2 : 14"
+    ],
+    [
+      13,
+      25,
+      [
+        "LORD WE COME BEFORE",
+        "YOU IN THIS QUIET HOUR",
+        "ACKNOWLEDGING OUR BURDENS"
+      ],
+      "BURDENS",
+      "COLOSSIANS 2 : 14"
+    ],
+    [
+      26,
+      42,
+      [
+        "BLOTTING OUT THE ORDINANCES",
+        "THAT WAS AGAINST US",
+        "NAILING IT TO HIS CROSS"
+      ],
+      "CROSS",
+      "COLOSSIANS 2 : 14"
+    ],
+    [
+      43,
+      55,
+      [
+        "FATHER LET THIS TRUTH",
+        "ANCHOR OUR SOULS AS",
+        "THE NIGHT DEEPENS"
+      ],
+      "TRUTH",
+      "COLOSSIANS 2 : 15"
+    ],
+    [
+      56,
+      72,
+      [
+        "AND HAVING SPOILED",
+        "PRINCIPALITIES AND POWERS",
+        "TRIUMPHING OVER THEM"
+      ],
+      "TRIUMPHING",
+      "COLOSSIANS 2 : 15"
+    ],
+    [
+      73,
+      85,
+      [
+        "WE REST SECURELY",
+        "IN YOUR FINISHED WORK",
+        "TRUSTING YOUR NAME"
+      ],
+      "SECURELY",
+      "COLOSSIANS 2 : 15"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that old record of failure still weights your heart at this midnight hour.",
+      "kind": "phrase",
+      "words": [
+        "RECORD",
+        "FAILURE",
+        "HEART"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we come before you in this quiet hour acknowledging the burdens we carry.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "HOUR",
+        "BURDENS"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Blotting out the handwriting of ordinances that was against us, which was contrary to us, and took it out of the way, nailing it to his cross;",
+      "kind": "phrase",
+      "words": [
+        "BLOTTING",
+        "OUT",
+        "CROSS"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Father, let this truth anchor our souls as the night deepens around us.",
+      "kind": "phrase",
+      "words": [
+        "TRUTH",
+        "ANCHOR",
+        "SOULS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And having spoiled principalities and powers, he made a show of them openly, triumphing over them in it.",
+      "kind": "phrase",
+      "words": [
+        "SPOILED",
+        "POWERS",
+        "TRIUMPHING"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "We rest securely in your finished work tonight, trusting your mighty name.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "SECURELY",
+        "WORK"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Colossians 2:14-15"
+}

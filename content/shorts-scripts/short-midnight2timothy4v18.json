@@ -1,0 +1,229 @@
+{
+  "key": "short-midnight2timothy4v18",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "DELIVERANCE IN",
+    "THE MIDNIGHT HOUR"
+  ],
+  "poster": [
+    "THE LORD SHALL",
+    "DELIVER YOU",
+    "FROM EVERY",
+    "EVIL WORK"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "silhouette of watchtower against midnight sky",
+    "deep starry night celestial heavens",
+    "ancient candle flickering in stone sanctuary",
+    "soft moonlight on empty stone floor",
+    "glowing stars over silhouette mountain range",
+    "shadowy prayer corner with dim lamp"
+  ],
+  "scenes": [
+    {
+      "a": "The heavy burden you carry in silence right now finds its rest at this hour.",
+      "img": "short-midnight2timothy4v18-scene-01.jpg",
+      "kicker": "2 TIMOTHY 4:18",
+      "sub": "FAITH IN THE SHADOWS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear these sacred words meant to anchor your spirit against the rising dark of night.",
+      "img": "short-midnight2timothy4v18-scene-02.jpg",
+      "kicker": "2 TIMOTHY 4:18",
+      "sub": "PROMISE OF PROTECTION",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And the Lord shall deliver me from every evil work, and will preserve me unto his heavenly kingdom: to whom be glory for ever and ever. Amen.",
+      "img": "short-midnight2timothy4v18-scene-03.jpg",
+      "kicker": "2 TIMOTHY 4:18",
+      "sub": "THE DIVINE SHIELD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, in this still moment, we release our anxieties and trust in your sovereign protection.",
+      "img": "short-midnight2timothy4v18-scene-04.jpg",
+      "kicker": "2 TIMOTHY 4:18",
+      "sub": "SURRENDER TO PEACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Grant us the quiet confidence that your grace covers every hidden fear we face today.",
+      "img": "short-midnight2timothy4v18-scene-05.jpg",
+      "kicker": "2 TIMOTHY 4:18",
+      "sub": "WALK IN LIGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "We stand firm in your promise and remain hopeful under your eternal and watchful care.",
+      "img": "short-midnight2timothy4v18-scene-06.jpg",
+      "kicker": "2 TIMOTHY 4:18",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "The heavy burden you carry in silence right now finds its rest at this hour."
+    ],
+    [
+      13,
+      26,
+      "Hear these sacred words meant to anchor your spirit against the rising dark of night."
+    ],
+    [
+      27,
+      52,
+      "And the Lord shall deliver me from every evil work, and will preserve me unto his heavenly kingdom: to whom be glory for ever and ever. Amen."
+    ],
+    [
+      53,
+      70,
+      "Lord, in this still moment, we release our anxieties and trust in your sovereign protection."
+    ],
+    [
+      71,
+      86,
+      "Grant us the quiet confidence that your grace covers every hidden fear we face today."
+    ],
+    [
+      87,
+      105,
+      "We stand firm in your promise and remain hopeful under your eternal and watchful care."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "HEAVY BURDEN",
+        "CARRIED IN SILENCE",
+        "FINDS REST"
+      ],
+      [
+        "HEAVY BURDEN"
+      ],
+      "2 TIMOTHY 4:18"
+    ],
+    [
+      13,
+      26,
+      [
+        "SACRED WORDS",
+        "ANCHOR YOUR SPIRIT",
+        "AGAINST THE DARK"
+      ],
+      [
+        "SACRED WORDS"
+      ],
+      "2 TIMOTHY 4:18"
+    ],
+    [
+      27,
+      52,
+      [
+        "LORD SHALL DELIVER",
+        "FROM EVERY EVIL",
+        "PRESERVE UNTO KINGDOM",
+        "GLORY FOREVER AMEN"
+      ],
+      [
+        "LORD SHALL DELIVER"
+      ],
+      "2 TIMOTHY 4:18"
+    ],
+    [
+      53,
+      70,
+      [
+        "RELEASE ANXIETIES",
+        "TRUST IN",
+        "SOVEREIGN PROTECTION"
+      ],
+      [
+        "SOVEREIGN PROTECTION"
+      ],
+      "2 TIMOTHY 4:18"
+    ],
+    [
+      71,
+      86,
+      [
+        "QUIET CONFIDENCE",
+        "GRACE COVERS",
+        "EVERY HIDDEN FEAR"
+      ],
+      [
+        "QUIET CONFIDENCE"
+      ],
+      "2 TIMOTHY 4:18"
+    ],
+    [
+      87,
+      105,
+      [
+        "STAND FIRM",
+        "REMAIN HOPEFUL",
+        "WATCHFUL CARE"
+      ],
+      [
+        "STAND FIRM"
+      ],
+      "2 TIMOTHY 4:18"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The heavy burden you carry in silence right now finds its rest at this hour.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY BURDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And the Lord shall deliver me from every evil work, and will preserve me unto his heavenly kingdom: to whom be glory for ever and ever. Amen.",
+      "kind": "phrase",
+      "words": [
+        "LORD SHALL DELIVER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Timothy 4:18"
+}
