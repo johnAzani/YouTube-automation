@@ -16,8 +16,8 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-17T05:10:27.317094+00:00",
-  "last_run_at": "2026-11-17T05:09:40+00:00",
+  "generated_at": "2026-11-17T05:53:44.551523+00:00",
+  "last_run_at": "2026-11-17T05:53:04+00:00",
   "on_time": [
     {
       "late_minutes": 50,
@@ -74,13 +74,6 @@
       "ran_at": "2026-11-16T23:23:30+00:00",
       "slot": "2026-11-16T23:14:00+00:00",
       "workflow": "produce.yml"
-    },
-    {
-      "late_minutes": 96,
-      "name": "YouTube reporting jobs (thumbnail impressions)",
-      "ran_at": "2026-11-16T07:23:39+00:00",
-      "slot": "2026-11-16T05:47:00+00:00",
-      "workflow": "reporting-jobs.yml"
     },
     {
       "late_minutes": 14,
