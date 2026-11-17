@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T20:02:42Z",
+  "generated_at": "2026-11-17T20:03:38Z",
   "monitor_generated_at": "2026-11-17T19:43:42.749785+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 412,
+    "published_total": 413,
     "published_longform": 141,
-    "published_shorts": 271,
-    "public_total": 410,
+    "published_shorts": 272,
+    "public_total": 411,
     "queued_longform": 61,
-    "queued_shorts": 84,
+    "queued_shorts": 83,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 27,
+        "published_total": 28,
         "published_longform": 8,
-        "published_shorts": 19,
-        "thumbnail_pending": 27,
-        "public_total": 27,
+        "published_shorts": 20,
+        "thumbnail_pending": 28,
+        "public_total": 28,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-GARDEN1CHRONICLES29V11",
-        "title": "Pray This 1 Chronicles 29:11-13 Prayer of Thanksgiving | Look Unto His Majesty #Shorts",
+        "id": "SHORT-GARDENPSALM147V1",
+        "title": "Pray This Psalm 147:1 Prayer of Thanksgiving | Lift Your Heart In Praise #Shorts",
         "format": "short",
-        "youtube_video_id": "QidM8nh1JeE",
-        "watch_url": "https://www.youtube.com/shorts/QidM8nh1JeE",
+        "youtube_video_id": "BskWO55-GgA",
+        "watch_url": "https://www.youtube.com/shorts/BskWO55-GgA",
         "published_on": "2026-11-17",
-        "published_at": "2026-11-17T15:47:24Z"
+        "published_at": "2026-11-17T20:02:37Z"
       },
       "next_queued_longform": {
         "id": "0708",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm147v1",
-        "scripture": "Psalm 147:1",
+        "short": "short-gardenpsalm66v1",
+        "scripture": "Psalm 66:1-4",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM147V1",
+      "slug": "short-gardenpsalm147v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm147v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 147:1 Prayer of Thanksgiving | Lift Your Heart In Praise #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T20:02:37Z",
+      "youtube_video_id": "BskWO55-GgA",
+      "watch_url": "https://www.youtube.com/shorts/BskWO55-GgA",
+      "youtu_be_url": "https://youtu.be/BskWO55-GgA",
+      "shorts_url": "https://www.youtube.com/shorts/BskWO55-GgA",
+      "studio_url": "https://studio.youtube.com/video/BskWO55-GgA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/BskWO55-GgA/hqdefault.jpg",
+      "thumb_text": "IT IS GOOD TO SING \u00b7 PRAISES UNTO OUR GOD",
+      "thumbnail_pending": true,
+      "duration_label": "55s",
+      "words": 633
+    },
     {
       "id": "SHORT-PROVISIONPSALM35V27",
       "slug": "short-provisionpsalm35v27-stewardship-prayer",
@@ -11387,17 +11411,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-gardenpsalm147v1",
-        "file": "0000-short-gardenpsalm147v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 147:1",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
       {
         "short": "short-gardenpsalm66v1",
         "file": "0000-short-gardenpsalm66v1.yml",
