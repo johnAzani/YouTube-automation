@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T23:43:32Z",
+  "generated_at": "2026-11-17T00:24:15Z",
   "monitor_generated_at": "2026-11-16T21:06:04.374364+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 367,
-    "published_longform": 131,
-    "published_shorts": 236,
-    "public_total": 365,
-    "queued_longform": 58,
-    "queued_shorts": 62,
+    "published_total": 369,
+    "published_longform": 132,
+    "published_shorts": 237,
+    "public_total": 367,
+    "queued_longform": 57,
+    "queued_shorts": 61,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -237,33 +237,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 38,
-        "published_longform": 14,
-        "published_shorts": 24,
-        "thumbnail_pending": 37,
-        "public_total": 38,
-        "queued_longform": 6,
+        "published_total": 40,
+        "published_longform": 15,
+        "published_shorts": 25,
+        "thumbnail_pending": 39,
+        "public_total": 40,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTPSALM138V7",
-        "title": "Pray This Psalm 138:7 Midnight Prayer | God Sees Your Distress #Shorts",
-        "format": "short",
-        "youtube_video_id": "4L9tl7fRLOE",
-        "watch_url": "https://www.youtube.com/shorts/4L9tl7fRLOE",
-        "published_on": "2026-11-16",
-        "published_at": "2026-11-16T19:52:59Z"
-      },
-      "next_queued_longform": {
         "id": "0214",
         "title": "Lift Up Your Heads, O Ye Gates: Psalm 24:7-10 | The Midnight Watch",
-        "words": 1531,
+        "format": "longform",
+        "youtube_video_id": "3hNgrB9b834",
+        "watch_url": "https://youtu.be/3hNgrB9b834",
+        "published_on": "2026-11-17",
+        "published_at": "2026-11-17T00:23:31Z"
+      },
+      "next_queued_longform": {
+        "id": "0215",
+        "title": "Plead My Cause Against Them That Strive: Psalm 35:1-4",
+        "words": 1176,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightpsalm18v28",
-        "scripture": "Psalm 18:28-29",
+        "short": "short-midnightpsalm24v7",
+        "scripture": "Psalm 24:7-10",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0214",
+      "slug": "lift-up-your-heads-psalm-24-7-10-the-midnight-watch",
+      "file": "0214-lift-up-your-heads-psalm-24-7-10-the-midnight-watch.md",
+      "title": "Lift Up Your Heads, O Ye Gates: Psalm 24:7-10 | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T00:23:31Z",
+      "youtube_video_id": "3hNgrB9b834",
+      "watch_url": "https://youtu.be/3hNgrB9b834",
+      "youtu_be_url": "https://youtu.be/3hNgrB9b834",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/3hNgrB9b834/edit",
+      "thumb_url": "https://i.ytimg.com/vi/3hNgrB9b834/hqdefault.jpg",
+      "thumb_text": "OPEN YE GATES",
+      "thumbnail_pending": true,
+      "duration_label": "~11 min",
+      "words": 1531
+    },
+    {
       "id": "SHORT-GUIDEDISAIAH30V21",
       "slug": "short-guidedisaiah30v21-guidance-prayer",
       "file": "short-guidedisaiah30v21-guidance-prayer.md",
@@ -868,6 +892,30 @@
       "thumbnail_pending": false,
       "duration_label": "44s",
       "words": 585
+    },
+    {
+      "id": "SHORT-MIDNIGHTPSALM18V28",
+      "slug": "short-midnightpsalm18v28-midnight-prayer",
+      "file": "short-midnightpsalm18v28-midnight-prayer.md",
+      "title": "Pray This Psalm 18:28-29 Midnight Prayer | Prayer For Strength #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T23:30:21Z",
+      "youtube_video_id": "tCyovOWm5Q4",
+      "watch_url": "https://www.youtube.com/shorts/tCyovOWm5Q4",
+      "youtu_be_url": "https://youtu.be/tCyovOWm5Q4",
+      "shorts_url": "https://www.youtube.com/shorts/tCyovOWm5Q4",
+      "studio_url": "https://studio.youtube.com/video/tCyovOWm5Q4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/tCyovOWm5Q4/hqdefault.jpg",
+      "thumb_text": "MIDNIGHT WATCH \u00b7 PSALM 18:28",
+      "thumbnail_pending": true,
+      "duration_label": "44s",
+      "words": 602
     },
     {
       "id": "SHORT-FAMILYJOB1V10",
@@ -9773,19 +9821,6 @@
         "words": 2357
       },
       {
-        "id": "0214",
-        "slug": "lift-up-your-heads-psalm-24-7-10-the-midnight-watch",
-        "file": "0214-lift-up-your-heads-psalm-24-7-10-the-midnight-watch.md",
-        "title": "Lift Up Your Heads, O Ye Gates: Psalm 24:7-10 | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1531
-      },
-      {
         "id": "0215",
         "slug": "plead-my-cause-psalm-35-breakthrough",
         "file": "0215-plead-my-cause-psalm-35-breakthrough.md",
@@ -10465,17 +10500,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightpsalm18v28",
-        "file": "0213-short-midnightpsalm18v28.yml",
-        "companion_longform_id": "0213",
-        "scripture": "Psalm 18:28-29",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightpsalm24v7",
