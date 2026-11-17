@@ -85,7 +85,7 @@ Videos by watch time, 365 days (up to 50):
 | [Say This Psalm 55:22 Prayer Before You Sleep / The Secret Place #Shor…](https://youtu.be/IbDB_YEQ-ZY) | 0.12 | 29 | 0:30 (53%) |
 | [Psalm 91:5-6 Night Prayer / Deliverance From Terror by Night](https://youtu.be/rb6X37vQt7o) | 0.1 | 3 | 6:19 (99.9%) |
 
-Thumbnails, 2026-10-15 to 2026-11-14 (27 days of YouTube's daily reach files): shown 3,565 times, clicked 50 times, a click rate of 1.4%.
+Thumbnails, 2026-10-15 to 2026-11-14 (28 days of YouTube's daily reach files): shown 3,589 times, clicked 50 times, a click rate of 1.4%.
 A thumbnail is counted where YouTube shows one (search, home, suggested, the channel page). The Shorts feed shows none, so Shorts watched there are not in these figures.
 
 Videos by times shown (up to 25):
@@ -94,14 +94,14 @@ Videos by times shown (up to 25):
 | :--- | ---: | ---: | ---: |
 | [When the Night Feels Too Dark: Psalm 139:11-12 / The Secret Place](https://youtu.be/VPAFfGNkCGs) | 730 | 7 | 0.96% |
 | [Psalm 91:11-12 Night Prayer / Angels Guard Your Home & Sleep](https://youtu.be/dgvGl0EZyYE) | 566 | 16 | 2.8% |
-| [pbpPdG7_DQk](https://youtu.be/pbpPdG7_DQk) | 164 | 3 | 1.8% |
+| [pbpPdG7_DQk](https://youtu.be/pbpPdG7_DQk) | 167 | 3 | 1.8% |
 | [Psalm 37:7 Bedtime Prayer / Rest in the Lord & Fret Not](https://youtu.be/sAyMduXhoeQ) | 133 | 2 | 1.5% |
+| [Zw0pjLM5hEI](https://youtu.be/Zw0pjLM5hEI) | 131 | 3 | 2.3% |
 | [Psalm 91:5-6 Night Prayer / Deliverance From Terror by Night](https://youtu.be/rb6X37vQt7o) | 126 | 0 | 0% |
-| [Zw0pjLM5hEI](https://youtu.be/Zw0pjLM5hEI) | 123 | 3 | 2.4% |
 | [Psalm 31:5 Bedtime Prayer / Into Your Hands I Commit My Spirit](https://youtu.be/r3nA7BgZpP4) | 109 | 1 | 0.92% |
 | [Say This Psalm 37:7 Prayer Before You Sleep / The Secret Place #Shorts](https://youtu.be/5ekShDmycic) | 97 | 0 | 0% |
+| [Say This Psalm 91 Prayer Before You Sleep / Divine Protection #Shorts](https://youtu.be/SG69BbNlfRw) | 95 | 1 | 1.1% |
 | [Say This Psalm 121 Prayer Before You Sleep / He Who Keeps You #Shorts](https://youtu.be/xkpfupurX-0) | 94 | 0 | 0% |
-| [Say This Psalm 91 Prayer Before You Sleep / Divine Protection #Shorts](https://youtu.be/SG69BbNlfRw) | 93 | 1 | 1.1% |
 | [Say This Psalm 27 Prayer Before You Sleep / Fear No Evil #Shorts](https://youtu.be/KkPAtMLoGf4) | 89 | 0 | 0% |
 | [Say This Psalm 34 Prayer Before You Sleep / Angels Stand Watch #Shorts](https://youtu.be/fTYu1V5GHUE) | 77 | 0 | 0% |
 | [Uhd7uMYo9Mo](https://youtu.be/Uhd7uMYo9Mo) | 73 | 0 | 0% |
