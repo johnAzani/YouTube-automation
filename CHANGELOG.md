@@ -5,6 +5,14 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-17 — The last frame was a subscribe card
+
+- **Two Shorts sat at 98.8% and 99.6% viewed and then left.** Psalm 18:2 (125 views, 54.3s) and Psalm 139:11-12 (52 views, 62.2s). YouTube Help ranks Shorts on average % viewed after the swipe. A loop is 100% or more.
+- **The renderer added 1.6 seconds after the voice so a SUBSCRIBE card could play.** `total = adur + 1.6`. 1.6s is 3% of a 54s clip — the gap between watching to the last word and a loop. Kinetic type was cut 0.4s before that card. Spoken subscribe was already refused at authoring; the card was still painted on every prayer Short, including the 353 waiting in the queue.
+- **Changed, for Shorts rendered from now on.** A prayer Short's encoded length is the narration. The subscribe card in the spec is not painted; the last spoken frame stays on screen so the next frame is the hook. Documentary Shorts keep the 1.6s card. Queued last captions are unaltered — `validate_spec` still loads them. Scene-1 kicker checks and ranking by loop-ratio are untouched.
+- **Unproven:** that the two 99% videos would have looped without the tail — they are already published. **Owner-only:** unchanged. **Next step:** `average_view_percent` on the next rendered Shorts; 100% is a loop.
+- Tests: `tests/test_short_loop_restart.py` (new, 4). Reading: `docs/SHORTS_VIRALITY_RESEARCH_2026-11-17.md` §4d.
+
 ## 2026-11-17 — Views are not how long they stayed
 
 - **The brain ranked Shorts by views.** YouTube Help (Shorts search & discovery) names "% who chose to view", then average view duration and average % viewed. The Secret Place's Analytics agrees: Psalm 27 has the most views (393) at 76% watched; Psalm 16:7-8 has 140 views at **191%** and more watch hours. Ranking by views writes the clicked book first.

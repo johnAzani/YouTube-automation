@@ -27,6 +27,15 @@ except Exception:  # pragma: no cover - import guard only
 W, H, FPS = 720, 1280, 24
 CW, CH = 1080, 1920  # 1.5x super-sampled 9:16 plate canvas for sub-pixel cinema camera
 
+try:
+    from pipeline.short_script import clip_length, paints_subscribe_card
+except Exception:  # pragma: no cover - pipeline package unavailable
+    def clip_length(narration_seconds, *, is_prayer):
+        return max(0.0, float(narration_seconds or 0.0)) + (0.0 if is_prayer else 1.6)
+
+    def paints_subscribe_card(*, is_prayer):
+        return not bool(is_prayer)
+
 # 20:9 / 19.5:9 YouTube Shorts viewport safe margins (in 720x1280 space):
 # - Tall 20:9 phones crop ~52px off left & right edges -> keep UI inside x=[76..644]
 # - Top status bar + YouTube back/search bar occupy y=[0..122] -> start HUD at y=136
@@ -830,8 +839,10 @@ def _narration_kinetic_stream(cfg, raw_words, adur=None):
         flush()
     for i, page in enumerate(stream):
         page['disp_t0'] = 0.0 if i == 0 else stream[i - 1]['t1']
+        # Authored prayer Shorts have no subscribe card. Hold the last words
+        # through the last spoken frame so the loop restarts on the hook.
         page['disp_t1'] = (page['t1'] if i + 1 < len(stream)
-                           else max(page['t1'], (adur or 0) - 0.4))
+                           else max(page['t1'], adur or 0))
     return stream
 
 
@@ -929,7 +940,12 @@ def build_kinetic_stream(key, raw_words, adur=None):
         else:
             stream[i]['disp_t0'] = stream[i - 1]['t1']
 
-    end_cap = (adur - 0.4) if adur is not None else (39.55 if key == 'short-psalm91' else stream[-1]['t1'] + 0.35)
+    # Prayer Shorts hold type through the last spoken frame. Documentary
+    # Shorts still yield 0.4s for the subscribe card.
+    if adur is not None:
+        end_cap = adur if cfg.get('is_prayer') else (adur - 0.4)
+    else:
+        end_cap = 39.55 if key == 'short-psalm91' else stream[-1]['t1'] + 0.35
     for i in range(len(stream)):
         if i + 1 < len(stream):
             stream[i]['disp_t1'] = max(stream[i]['disp_t0'] + 0.2, stream[i]['t1'])
@@ -2200,7 +2216,8 @@ def main(key):
     cmd = [FFMPEG, '-y', '-i', '/tmp/_short_in.mp3', '-c:a', 'aac', '-b:a', '160k', nar]
     subprocess.run(cmd, check=True, capture_output=True)
     adur = duration(nar)
-    total = adur + 1.6
+    is_prayer = bool(cfg.get('is_prayer')) or (key == 'short-psalm91' or 'psalm' in key or 'prayer' in key)
+    total = clip_length(adur, is_prayer=is_prayer)
     n = int(total * FPS)
     words = load_words(key)
     beats = resolve_beats(key, words)
@@ -2413,12 +2430,13 @@ def main(key):
         if not in_open_poster and not in_mid_poster:
             ov.alpha_composite(hud_chapter_layer(frame, sc['kicker'], sc.get('sub', ''), k + 1, nscenes, pos, sc_dur, t / total, is_prayer=is_prayer))
             if is_prayer and kinetic_stream:
-                if t < end_start:
-                    ov.alpha_composite(kinetic_typography_layer(frame, kinetic_stream, t, is_prayer=is_prayer))
+                # Keep the last words on screen through the last frame so the
+                # loop restarts on the hook, not on a blank or a subscribe card.
+                ov.alpha_composite(kinetic_typography_layer(frame, kinetic_stream, t, is_prayer=is_prayer))
             else:
                 ov.alpha_composite(caption_ribbon_layer(frame, cap_stream, t, is_prayer=is_prayer))
         frame = Image.alpha_composite(frame.convert('RGBA'), ov).convert('RGB')
-        if t >= end_start:
+        if paints_subscribe_card(is_prayer=is_prayer) and t >= end_start:
             frame = end_card_overlay(frame, cfg['end'], t - end_start, total - end_start, is_prayer=is_prayer)
         proc.stdin.write(frame.tobytes())
         if i % 360 == 0:

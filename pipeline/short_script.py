@@ -35,6 +35,27 @@ MAX_SUB_CHARS = 34
 MIN_SECONDS, MAX_SECONDS = 30, 180   # the shipped Psalm 91 Short runs 107s
 MIN_WORDS = 90             # ~35s of calm narration
 MAX_WORDS = 165
+#: Documentary Shorts keep a subscribe card after the voice. Prayer Shorts
+#: must not: measured 17 November 2026, two Secret Place Shorts sat at 98.8%
+#: and 99.6% viewed (Psalm 18:2, 54.3s; Psalm 139:11-12, 62.2s). The encoder
+#: used to add 1.6s after the narration so the card could play. Average %
+#: viewed is duration-relative; 1.6s is 3% of a 54s clip — the gap between
+#: watching to the last word and a loop. Specs still carry `end: SUBSCRIBE`;
+#: the renderer does not paint it onto a prayer Short.
+DOCUMENTARY_TAIL_SECONDS = 1.6
+PRAYER_TAIL_SECONDS = 0.0
+
+
+def clip_length(narration_seconds, *, is_prayer):
+    """How long the encoded Short is, given the narration."""
+    narration_seconds = max(0.0, float(narration_seconds or 0.0))
+    tail = PRAYER_TAIL_SECONDS if is_prayer else DOCUMENTARY_TAIL_SECONDS
+    return narration_seconds + tail
+
+
+def paints_subscribe_card(*, is_prayer):
+    """Prayer Shorts loop. A subscribe card is a closer."""
+    return not bool(is_prayer)
 
 BANNED_NAMES = ("azani", "john azani", "narrated by")
 
@@ -426,8 +447,9 @@ or swipes in this window (percent who chose to view, then average percent viewed
   {first_end}), and its stacked lines ARE those opening words, not the verse.
 
 THE LAST SENTENCE — the clip restarts itself:
-- Do not speak "subscribe", "follow", or "type amen". The end card already
-  says SUBSCRIBE. A spoken closer is a reason to swipe as the loop begins.
+- Do not speak "subscribe", "follow", or "type amen". The renderer does not
+  paint a subscribe card after the last word: the next frame is caption 1
+  again. A spoken closer is a reason to swipe as the loop begins.
 - The last spoken line may say Amen, then restates the opening need in a few
   words so a listener who stayed hears the first line again as it restarts.
 

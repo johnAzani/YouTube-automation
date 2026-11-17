@@ -159,6 +159,40 @@ channels have not been granted Analytics; they still rank by views. The
 network pool does not inherit The Secret Place's loops — that would pull
 every channel toward the same books.
 
+## 4d. The clip did not restart — it asked for a subscribe
+
+Joined published durations with Analytics the same day. Two Shorts watched
+almost to the last frame and then left:
+
+| Video | Duration | Average % viewed | Views |
+|---|---:|---:|---:|
+| Psalm 18:2 | 54.3s | **98.8%** | 125 |
+| Psalm 139:11-12 | 62.2s | **99.6%** | 52 |
+
+The encoder added **1.6 seconds after the narration** so a SUBSCRIBE card
+could play (`total = adur + 1.6` in `tools/shorts.py`). Average % viewed is
+duration-relative. 1.6s is 3% of a 54s clip — the gap between "watched to
+the last word" and a loop. Kinetic type was also cut 0.4s before that card,
+so the last thing on screen was SUBSCRIBE, then dead air, then (if anyone
+stayed) caption 1.
+
+The four Shorts that did loop (110–191%) did so *through* that tail. The
+two that sat on 99% did not. Spoken subscribe was already refused at
+authoring; the card was still painted on every render, including the 353
+queued specs.
+
+Changed, for Shorts **rendered from now on** (queued specs keep loading;
+their last caption is unaltered):
+
+- A prayer Short's encoded length is the narration. No 1.6s tail.
+- The subscribe card in the spec is not painted. Kinetic type stays on
+  the last spoken frame so the next frame is the hook.
+- Documentary Shorts (not prayer) still get the 1.6s card.
+- The authoring prompt now says the next frame is caption 1.
+
+The HUD fade-in at t=0, scene-1 kicker checks, and ranking by loop-ratio
+are unchanged.
+
 ## 5. Unproven
 
 - That a three-second first caption raises "% who chose to view". Studio
@@ -173,6 +207,9 @@ every channel toward the same books.
   arrives 0.42s later.
 - That ranking the next Short by loop as well as views raises average % viewed
   on Shorts written after this. Four looping videos is not a law.
+- That dropping the 1.6s subscribe tail lifts the 98–99% Shorts over 100%.
+  Those two videos are already published; the figure this expects to move is
+  average % viewed on Shorts rendered after this.
 
 ## 6. Owner-only
 
