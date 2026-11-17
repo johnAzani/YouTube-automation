@@ -5,6 +5,14 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-17 — Views are not how long they stayed
+
+- **The brain ranked Shorts by views.** YouTube Help (Shorts search & discovery) names "% who chose to view", then average view duration and average % viewed. The Secret Place's Analytics agrees: Psalm 27 has the most views (393) at 76% watched; Psalm 16:7-8 has 140 views at **191%** and more watch hours. Ranking by views writes the clicked book first.
+- **Average % viewed was already in the repo and never read for ranking.** `content/analytics/secret-place.json` `videos_365d` carries it for 32 videos. Only this channel has been granted Analytics; the other nine are unchanged.
+- **Changed.** `load_retention_index` joins that file by video id. A Short with fewer than 25 views is ignored, so three plays at 200% do not crown a book. When the figure is present, `short_passage_ratio` averages the view ratio with the loop ratio. No video ids enter the committed report. Other channels, and the network pool, still rank by views.
+- **Unproven:** that writing the looping books next raises average % viewed on new Shorts — the first of those will not have had their two days when this lands. **Owner-only:** Analytics on the other nine channels. **Next step:** after the next daily feedback run, `content/research/performance_feedback.json` `shorts.looped_shorts` should read 4 (the four looping Shorts already counted), not missing.
+- Tests: `tests/test_shorts_feedback.py` (+4). Reading: `docs/SHORTS_VIRALITY_RESEARCH_2026-11-17.md` §4c.
+
 ## 2026-11-17 — The first picture was a citation
 
 - **285 of 353 Shorts open the HUD on a book+chapter.** `PSALM 23:1`, `PROVERBS 16:3`, `1 PETER 5:7`. Four more open on the channel's name. The prompt's scene example was `"kicker": "PSALM NN:1"`. Kinetic type on frame 0 was already the need; the card a stranger can read by second 0.4 was a reference, the same one on every channel.

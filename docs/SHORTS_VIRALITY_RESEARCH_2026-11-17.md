@@ -132,6 +132,33 @@ The HUD fade-in at t=0 was **not** removed. Making it visible on frame 0
 while 285 queued specs still say `PSALM NN:1` would put a citation on the
 first frame of videos already waiting to render.
 
+## 4c. The brain ranked what was clicked, not what was watched
+
+`pipeline/performance_feedback.py` ordered the next Short by views of each
+book. That is the public Data API statistic the snapshots already collect.
+YouTube Help, and this channel's own Analytics, say the ranking signal after
+the swipe is how much of the Short was watched.
+
+Joined `videos_365d` (The Secret Place only, 17 November 2026) with the
+published titles:
+
+| | Views | Average % viewed | Watch hours |
+|---|---:|---:|---:|
+| Psalm 27 Short | 393 | 76% | 1.97 |
+| Psalm 16:7-8 Short | 140 | **191%** | 1.77 |
+| Psalm 23 Short | 258 | **145%** | 2.08 |
+| John 14:27 Short | 178 | **110%** | 1.53 |
+
+Four Shorts looped (≥100% viewed). Views alone would keep writing Psalm 27.
+The loop figure was sitting in `content/analytics/secret-place.json` and was
+never read for ranking.
+
+Changed: when that file is present, a book's view-ratio is averaged with its
+loop-ratio. A Short with fewer than 25 views is ignored. The other nine
+channels have not been granted Analytics; they still rank by views. The
+network pool does not inherit The Secret Place's loops — that would pull
+every channel toward the same books.
+
 ## 5. Unproven
 
 - That a three-second first caption raises "% who chose to view". Studio
@@ -144,6 +171,8 @@ first frame of videos already waiting to render.
 - That a need on the HUD instead of a citation raises "% who chose to view".
   The first kinetic phrase was already need-language; the HUD is smaller and
   arrives 0.42s later.
+- That ranking the next Short by loop as well as views raises average % viewed
+  on Shorts written after this. Four looping videos is not a law.
 
 ## 6. Owner-only
 
