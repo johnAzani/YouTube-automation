@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T07:38:34Z",
+  "generated_at": "2026-11-17T07:38:39Z",
   "monitor_generated_at": "2026-11-17T07:35:20.196240+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 381,
-    "published_longform": 135,
-    "published_shorts": 246,
-    "public_total": 379,
-    "queued_longform": 60,
-    "queued_shorts": 92,
+    "published_total": 383,
+    "published_longform": 136,
+    "published_shorts": 247,
+    "public_total": 381,
+    "queued_longform": 59,
+    "queued_shorts": 91,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,33 +101,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 64,
-        "published_longform": 25,
-        "published_shorts": 39,
+        "published_total": 66,
+        "published_longform": 26,
+        "published_shorts": 40,
         "thumbnail_pending": 1,
-        "public_total": 63,
-        "queued_longform": 6,
+        "public_total": 65,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM90V14",
-        "title": "Say This Psalm 90:14 Prayer at Sunrise | Turn Your Heart Upward #Shorts",
-        "format": "short",
-        "youtube_video_id": "2SkR7cLBdwE",
-        "watch_url": "https://www.youtube.com/shorts/2SkR7cLBdwE",
-        "published_on": "2026-11-16",
-        "published_at": "2026-11-16T23:31:08Z"
-      },
-      "next_queued_longform": {
         "id": "0069",
         "title": "Morning Prayer for a Clear Path Today: Psalm 119:105",
-        "words": 1759,
+        "format": "longform",
+        "youtube_video_id": "0pHh-jVsZb8",
+        "watch_url": "https://youtu.be/0pHh-jVsZb8",
+        "published_on": "2026-11-17",
+        "published_at": "2026-11-17T07:37:51Z"
+      },
+      "next_queued_longform": {
+        "id": "0070",
+        "title": "Early Morning Prayer Before the Day Begins: Psalm 119:147",
+        "words": 1150,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningephesians6v10",
-        "scripture": "Ephesians 6:10-11",
+        "short": "short-morningpsalm138v8",
+        "scripture": "Psalm 138:8",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0069",
+      "slug": "psalm-119-105-morning-prayer",
+      "file": "0069-psalm-119-105-morning-prayer.md",
+      "title": "Morning Prayer for a Clear Path Today: Psalm 119:105",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T07:37:51Z",
+      "youtube_video_id": "0pHh-jVsZb8",
+      "watch_url": "https://youtu.be/0pHh-jVsZb8",
+      "youtu_be_url": "https://youtu.be/0pHh-jVsZb8",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/0pHh-jVsZb8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/0pHh-jVsZb8/hqdefault.jpg",
+      "thumb_text": "LIGHT FOR MY PATH",
+      "thumbnail_pending": false,
+      "duration_label": "~12 min",
+      "words": 1759
+    },
+    {
       "id": "0707",
       "slug": "breath-left-in-your-lungs-psalm-150-6-the-praise-garden",
       "file": "0707-breath-left-in-your-lungs-psalm-150-6-the-praise-garden.md",
@@ -940,6 +964,30 @@
       "thumbnail_pending": false,
       "duration_label": "58s",
       "words": 617
+    },
+    {
+      "id": "SHORT-MORNINGEPHESIANS6V10",
+      "slug": "short-morningephesians6v10-sunrise-prayer",
+      "file": "short-morningephesians6v10-sunrise-prayer.md",
+      "title": "Say This Ephesians 6:10-11 Prayer at Sunrise | Morning Stillness #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T06:50:46Z",
+      "youtube_video_id": "SF0cW8pHvoY",
+      "watch_url": "https://www.youtube.com/shorts/SF0cW8pHvoY",
+      "youtu_be_url": "https://youtu.be/SF0cW8pHvoY",
+      "shorts_url": "https://www.youtube.com/shorts/SF0cW8pHvoY",
+      "studio_url": "https://studio.youtube.com/video/SF0cW8pHvoY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/SF0cW8pHvoY/hqdefault.jpg",
+      "thumb_text": "ARMOR OF GOD \u00b7 STRENGTH IN THE LORD",
+      "thumbnail_pending": false,
+      "duration_label": "40s",
+      "words": 585
     },
     {
       "id": "0608",
@@ -9966,19 +10014,6 @@
         "words": 1025
       },
       {
-        "id": "0069",
-        "slug": "psalm-119-105-morning-prayer",
-        "file": "0069-psalm-119-105-morning-prayer.md",
-        "title": "Morning Prayer for a Clear Path Today: Psalm 119:105",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1759
-      },
-      {
         "id": "0070",
         "slug": "psalm-119-147-morning-prayer",
         "file": "0070-psalm-119-147-morning-prayer.md",
@@ -10783,17 +10818,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningephesians6v10",
-        "file": "0000-short-morningephesians6v10.yml",
-        "companion_longform_id": "",
-        "scripture": "Ephesians 6:10-11",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm138v8",

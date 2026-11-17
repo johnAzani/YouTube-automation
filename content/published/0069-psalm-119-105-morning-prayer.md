@@ -2,7 +2,7 @@
 id: 0069
 title: "Morning Prayer for a Clear Path Today: Psalm 119:105"
 slug: psalm-119-105-morning-prayer
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -76,6 +76,13 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-17"
+published_at: "2026-11-17T07:37:51Z"
+youtube_video_id: "0pHh-jVsZb8"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Sunrise Hook and Directing the Prayer
