@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T15:34:52Z",
+  "generated_at": "2026-11-17T15:39:27Z",
   "monitor_generated_at": "2026-11-17T15:33:43.596180+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 397,
+    "published_total": 398,
     "published_longform": 139,
-    "published_shorts": 258,
-    "public_total": 395,
+    "published_shorts": 259,
+    "public_total": 396,
     "queued_longform": 63,
-    "queued_shorts": 97,
+    "queued_shorts": 96,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -373,23 +373,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 33,
+        "published_total": 34,
         "published_longform": 11,
-        "published_shorts": 22,
+        "published_shorts": 23,
         "thumbnail_pending": 7,
-        "public_total": 33,
+        "public_total": 34,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-HEALINGHOSEA6V1",
-        "title": "Pray This Hosea 6:1 Healing Prayer for Peace & Strength | Hosea Six One #Shorts",
+        "id": "SHORT-HEALINGJAMES5V14",
+        "title": "Pray This James 5:14-16 Healing Prayer for Peace & Strength | Call For The Elders #Shorts",
         "format": "short",
-        "youtube_video_id": "DHnLBMapEwY",
-        "watch_url": "https://www.youtube.com/shorts/DHnLBMapEwY",
+        "youtube_video_id": "EX8Tz_JtUuU",
+        "watch_url": "https://www.youtube.com/shorts/EX8Tz_JtUuU",
         "published_on": "2026-11-17",
-        "published_at": "2026-11-17T10:59:20Z"
+        "published_at": "2026-11-17T15:38:40Z"
       },
       "next_queued_longform": {
         "id": "0411",
@@ -398,8 +398,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingjames5v14",
-        "scripture": "James 5:14-16",
+        "short": "short-healingluke8v50",
+        "scripture": "Luke 8:50",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGJAMES5V14",
+      "slug": "short-healingjames5v14-restoration-prayer",
+      "file": "short-healingjames5v14-restoration-prayer.md",
+      "title": "Pray This James 5:14-16 Healing Prayer for Peace & Strength | Call For The Elders #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T15:38:40Z",
+      "youtube_video_id": "EX8Tz_JtUuU",
+      "watch_url": "https://www.youtube.com/shorts/EX8Tz_JtUuU",
+      "youtu_be_url": "https://youtu.be/EX8Tz_JtUuU",
+      "shorts_url": "https://www.youtube.com/shorts/EX8Tz_JtUuU",
+      "studio_url": "https://studio.youtube.com/video/EX8Tz_JtUuU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/EX8Tz_JtUuU/hqdefault.jpg",
+      "thumb_text": "JAMES \u00b7 FIVE",
+      "thumbnail_pending": false,
+      "duration_label": "54s",
+      "words": 657
+    },
     {
       "id": "SHORT-PSALM116V7",
       "slug": "short-psalm116v7-pre-sleep-prayer",
@@ -11129,17 +11153,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-healingjames5v14",
-        "file": "0000-short-healingjames5v14.yml",
-        "companion_longform_id": "",
-        "scripture": "James 5:14-16",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingluke8v50",
