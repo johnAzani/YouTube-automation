@@ -254,3 +254,25 @@ def test_the_short_first_comment_outcome_reaches_the_receipt(tmp_path, monkeypat
             assert 'top_comment' not in meta
         else:
             assert meta['top_comment'] == expected
+
+
+def test_a_short_receipt_carries_its_caption_fingerprint(tmp_path, monkeypatch):
+    monkeypatch.setattr(release, 'PUBLISHED_DIR', tmp_path)
+    path = tmp_path / 'receipt-captions.md'
+    release._write_published_record(path, _edition(), 'active', 'https://youtu.be/active',
+                                    'public', release.MediaProbe(True, True, 720, 1280, 54), 1,
+                                    captions='ok', caption_cues=112, caption_sha256='abc123def456')
+    meta = parse_script(path).meta
+    assert meta['caption_track'] == 'ok'
+    assert meta['caption_cues'] == 112 and meta['caption_sha256'] == 'abc123def456'
+
+
+def test_a_refused_track_leaves_no_fingerprint(tmp_path, monkeypatch):
+    monkeypatch.setattr(release, 'PUBLISHED_DIR', tmp_path)
+    path = tmp_path / 'receipt-captions-failed.md'
+    release._write_published_record(path, _edition(), 'active', 'https://youtu.be/active',
+                                    'public', release.MediaProbe(True, True, 720, 1280, 54), 1,
+                                    captions='skipped: YouTube refused the track',
+                                    caption_cues=112, caption_sha256='abc123def456')
+    meta = parse_script(path).meta
+    assert 'caption_cues' not in meta and 'caption_sha256' not in meta

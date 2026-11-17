@@ -726,6 +726,16 @@ units — six a day — are marked superseded; the receipts refute them (one cha
 uploaded eight videos in a Pacific quota day). The monitor prints the figure as
 `api budget`. Reading: `docs/API_BUDGET_RESEARCH_2026-11-17.md`.
 
+**A caption track is the most expensive call and the only one with no artefact**
+(measured 17 November 2026). 149 Short tracks — every Short since 14 November, on
+all ten channels — are 400 units each, and the same call runs on every long-form
+with no receipt recording whether it worked. The SRT is written into a gitignored
+output directory and uploaded on the same run, so the receipt now carries what
+survives of it: `caption_cues` and a 12-hex `caption_sha256`, stamped only when
+the track landed. The generator's "≤ 40 chars/line" claim was false in 28% of
+cues and now holds (0 of 174 lines over 40). A Short should carry 8–12 cues.
+Reading: `docs/CAPTION_TRACK_RESEARCH_2026-11-17.md`.
+
 The expansion pass no longer has a cron of its own: it runs inside the brain at
 4:14am **and** at the top of every production run, so a missed or late cron is
 repaired by the next release instead of becoming an empty evening.

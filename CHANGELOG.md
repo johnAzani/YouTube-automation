@@ -5,6 +5,15 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-17 — The track nobody kept
+
+- **Caption tracks are 85% of the quota spend and leave no artefact.** 149 Short tracks exist (every Short since the field appeared, 14–17 November, all ten channels), **59,600 units**; the same call runs on every long-form and **0 of 139 long-form receipts** has ever recorded whether it worked (~55,600 units unconfirmed). The SRT goes to a gitignored `output/`, the alignment sidecar is gitignored, and the per-word timings survive for six legacy files only — so a Short's whole track, **884–1,131 bytes**, is deleted minutes after YouTube accepts it.
+- **The generator's line-width guarantee was false in 28% of cues.** `pipeline/captions.py` promises "≤ 40 chars/line"; measured over the six real alignment files, **23 of 82 cues carried a line of 41–44**, because a cue is packed to 80 characters and the packer splits on words. Fixed with `MAX_CUE_CHARS = 72`: **0 of 174 lines exceed 40**, widest exactly 40, for seven more cues (82 → 89, +8.5%).
+- **What a track should contain is now a figure.** Measured: 13.2 words a cue, 72 characters a cue, median **15.8 chars/second** (worst 21.2, against Netflix's 20), last cue within 0.02–0.91 s of the audio's end. A Short says 90–154 words (median 105 over 353 specs) — so **8–12 cues**.
+- **Changed:** the packet budget above, and a fingerprint in place of the file — `caption_cues` and `caption_sha256` (12 hex) on the receipt, stamped only when the track landed, on both writers. Nothing already uploaded changes; the 149 tracks on YouTube stay as they are.
+- **Unproven:** whether anyone reads them — `content/analytics/` holds no caption or playback-location data. **Owner-only:** keeping the SRTs (~150 KB for the Shorts, ~13 MB for every long-form hour), re-uploading the 149 narrower (another 59,600 units), and whether Shorts need an uploaded track at all when the words are already burned into the picture. **Next step:** read `caption_cues` tomorrow — 0 → 8–12.
+- Tests: `tests/test_caption_track_artefact.py` (new, 15), `tests/test_scheduled_publishing.py` (+2), `tests/test_short_receipt_recovery.py` (+2). Reading: `docs/CAPTION_TRACK_RESEARCH_2026-11-17.md`.
+
 ## 2026-11-17 — A reply that costs fifty
 
 - **A comment reply is 50 quota units, not 2.** Google's page for the method opens with *"A call to this method has a quota cost of 50 units"*; the sentence the 2026-11-07 audit read — *"the snippet part has a quota cost of 2 units"* — prices the `part` parameter. That audit cited the client's bundled discovery document as its evidence, and **that document carries no method-level price for anything**: its only quota sentences are the part costs of the two comment inserts and the live-chat methods. Measured since: **109 replies = 5,450 units**, where the 2-unit model says 218.

@@ -818,3 +818,25 @@ def test_a_caption_track_that_was_never_attempted_is_not_claimed(queue):
     run, job, _ = queue
     dest = run._mark_job_uploaded(job, doc_for(job), "abcdefghijk", "ok")
     assert "caption_track" not in frontmatter(dest)
+
+
+def test_a_long_form_caption_track_is_fingerprinted_on_the_receipt(queue):
+    """The SRT lives in a gitignored output directory and is gone after the run;
+    the cue count and a short digest are what a later pass can still read."""
+    run, job, _ = queue
+    dest = run._mark_job_uploaded(
+        job, doc_for(job), "abcdefghijk", "ok",
+        caption_track="ok", caption_cues=89, caption_sha256="3f2a1b9c4d5e")
+    meta = frontmatter(dest)
+    assert meta["caption_cues"] == 89
+    assert meta["caption_sha256"] == "3f2a1b9c4d5e"
+
+
+def test_a_failed_caption_track_claims_no_cues(queue):
+    run, job, _ = queue
+    dest = run._mark_job_uploaded(
+        job, doc_for(job), "abcdefghijk", "ok",
+        caption_track="failed", caption_cues=89, caption_sha256="3f2a1b9c4d5e")
+    meta = frontmatter(dest)
+    assert meta["caption_track"] == "failed"
+    assert "caption_cues" not in meta and "caption_sha256" not in meta
