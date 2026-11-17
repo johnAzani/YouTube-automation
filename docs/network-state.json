@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T10:56:32Z",
+  "generated_at": "2026-11-17T10:56:59Z",
   "monitor_generated_at": "2026-11-17T10:47:28.214897+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 386,
+    "published_total": 387,
     "published_longform": 136,
-    "published_shorts": 250,
-    "public_total": 384,
+    "published_shorts": 251,
+    "public_total": 385,
     "queued_longform": 59,
-    "queued_shorts": 88,
+    "queued_shorts": 87,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 49,
+        "published_total": 50,
         "published_longform": 18,
-        "published_shorts": 31,
+        "published_shorts": 32,
         "thumbnail_pending": 0,
-        "public_total": 49,
+        "public_total": 50,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYCOLOSSIANS3V2",
-        "title": "Say This Colossians 3:2 Prayer at Noon | Set Your Heart Above #Shorts",
+        "id": "SHORT-MIDDAYPSALM119V28",
+        "title": "Say This Psalm 119:28 Prayer at Noon | God Sees Your Weariness #Shorts",
         "format": "short",
-        "youtube_video_id": "EaFFe832g6g",
-        "watch_url": "https://www.youtube.com/shorts/EaFFe832g6g",
+        "youtube_video_id": "fsLe9w5_848",
+        "watch_url": "https://www.youtube.com/shorts/fsLe9w5_848",
         "published_on": "2026-11-17",
-        "published_at": "2026-11-17T06:54:04Z"
+        "published_at": "2026-11-17T10:56:05Z"
       },
       "next_queued_longform": {
         "id": "0093",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm119v28",
-        "scripture": "Psalm 119:28",
+        "short": "short-middaypsalm27v13",
+        "scripture": "Psalm 27:13-14",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYPSALM119V28",
+      "slug": "short-middaypsalm119v28-midday-prayer",
+      "file": "short-middaypsalm119v28-midday-prayer.md",
+      "title": "Say This Psalm 119:28 Prayer at Noon | God Sees Your Weariness #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T10:56:05Z",
+      "youtube_video_id": "fsLe9w5_848",
+      "watch_url": "https://www.youtube.com/shorts/fsLe9w5_848",
+      "youtu_be_url": "https://youtu.be/fsLe9w5_848",
+      "shorts_url": "https://www.youtube.com/shorts/fsLe9w5_848",
+      "studio_url": "https://studio.youtube.com/video/fsLe9w5_848/edit",
+      "thumb_url": "https://i.ytimg.com/vi/fsLe9w5_848/hqdefault.jpg",
+      "thumb_text": "FINDING REST \u00b7 IN THE MIDDLE",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 585
+    },
     {
       "id": "SHORT-MIDNIGHTCOLOSSIANS2V14",
       "slug": "short-midnightcolossians2v14-midnight-prayer",
@@ -10835,17 +10859,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-middaypsalm119v28",
-        "file": "0000-short-middaypsalm119v28.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 119:28",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm27v13",
