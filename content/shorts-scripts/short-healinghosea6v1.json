@@ -1,0 +1,334 @@
+{
+  "key": "short-healinghosea6v1",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HOSEA 6:1",
+    "THE HEALING BALM"
+  ],
+  "poster": [
+    "RESTORE",
+    "THE LORD HEALS",
+    "HIS BROKEN CHILDREN",
+    "HOSEA SIX ONE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters",
+    "warm golden sanctuary light",
+    "white dove peace imagery",
+    "gentle morning light on still water",
+    "calm river flowing through green valley",
+    "soft light through chapel stained glass",
+    "peaceful mountain stream at sunrise",
+    "tranquil forest river in soft light"
+  ],
+  "scenes": [
+    {
+      "a": "If you are sitting alone in the quiet room wondering how your heart survived this week, listen.",
+      "img": "short-healinghosea6v1-scene-01.jpg",
+      "kicker": "HOSEA SIX ONE",
+      "sub": "THE LORD BINDS UP OUR WOUNDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we come to you carrying the deep fractures of our lives, acknowledging our brokenness in your holy presence.",
+      "img": "short-healinghosea6v1-scene-02.jpg",
+      "kicker": "HOSEA SIX ONE",
+      "sub": "COME AND RETURN UNTO THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "You are the God who sees every hidden tear and every weary sigh that escapes our lips.",
+      "img": "short-healinghosea6v1-scene-03.jpg",
+      "kicker": "HOSEA SIX ONE",
+      "sub": "FOR HE HATH TORN AND WILL HEAL",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "As your word declares, Come, and let us return unto the LORD: for he hath torn, and he will heal us; he hath smitten, and he will bind us up.",
+      "img": "short-healinghosea6v1-scene-04.jpg",
+      "kicker": "HOSEA SIX ONE",
+      "sub": "HE HATH SMITTEN AND WILL BIND",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, where we feel shattered by circumstance, extend your gentle hand to mend what is broken inside.",
+      "img": "short-healinghosea6v1-scene-05.jpg",
+      "kicker": "HOSEA SIX ONE",
+      "sub": "RECEIVE HIS GENTLE RESTORATION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Pour out your tender mercy upon every heavy spirit seeking solace in you today, O God.",
+      "img": "short-healinghosea6v1-scene-06.jpg",
+      "kicker": "HOSEA SIX ONE",
+      "sub": "REST IN HIS ETERNAL PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Establish our steps in your unfailing grace, trusting your restoring power through every changing season of life.",
+      "img": "short-healinghosea6v1-scene-07.jpg",
+      "kicker": "HOSEA SIX ONE",
+      "sub": "WALK IN FAITH AND GRACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In Jesus name we pray, Amen.",
+      "img": "short-healinghosea6v1-scene-08.jpg",
+      "kicker": "HOSEA SIX ONE",
+      "sub": "AMEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If you are sitting alone in the quiet room wondering how your heart survived this week, listen."
+    ],
+    [
+      6,
+      13,
+      "Father, we come to you carrying the deep fractures of our lives, acknowledging our brokenness in your holy presence."
+    ],
+    [
+      13,
+      19,
+      "You are the God who sees every hidden tear and every weary sigh that escapes our lips."
+    ],
+    [
+      19,
+      27,
+      "As your word declares, Come, and let us return unto the LORD: for he hath torn, and he will heal us; he hath smitten, and he will bind us up."
+    ],
+    [
+      27,
+      33,
+      "Lord, where we feel shattered by circumstance, extend your gentle hand to mend what is broken inside."
+    ],
+    [
+      33,
+      39,
+      "Pour out your tender mercy upon every heavy spirit seeking solace in you today, O God."
+    ],
+    [
+      39,
+      45,
+      "Establish our steps in your unfailing grace, trusting your restoring power through every changing season of life."
+    ],
+    [
+      45,
+      48,
+      "In Jesus name we pray, Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "SITTING ALONE IN THE QUIET ROOM",
+        "WONDERING HOW YOUR HEART",
+        "SURVIVED THIS WEEK"
+      ],
+      "SURVIVED",
+      "HOSEA 6 : 1"
+    ],
+    [
+      6,
+      13,
+      [
+        "CARRYING THE DEEP FRACTURES",
+        "OF OUR LIVES",
+        "IN YOUR HOLY PRESENCE"
+      ],
+      "FRACTURES",
+      "HOSEA 6 : 1"
+    ],
+    [
+      13,
+      19,
+      [
+        "SEES EVERY HIDDEN TEAR",
+        "AND EVERY WEARY SIGH",
+        "THAT ESCAPES OUR LIPS"
+      ],
+      "HIDDEN",
+      "HOSEA 6 : 1"
+    ],
+    [
+      19,
+      27,
+      [
+        "COME AND LET US RETURN",
+        "UNTO THE LORD FOR HE",
+        "HATH TORN AND WILL HEAL US"
+      ],
+      "RETURN",
+      "HOSEA 6 : 1"
+    ],
+    [
+      27,
+      33,
+      [
+        "SHATTERED BY CIRCUMSTANCE",
+        "EXTEND YOUR GENTLE HAND",
+        "TO MEND WHAT IS BROKEN"
+      ],
+      "SHATTERED",
+      "HOSEA 6 : 1"
+    ],
+    [
+      33,
+      39,
+      [
+        "POUR OUT YOUR TENDER MERCY",
+        "UPON EVERY HEAVY SPIRIT",
+        "SEEKING SOLACE TODAY"
+      ],
+      "MERCY",
+      "HOSEA 6 : 1"
+    ],
+    [
+      39,
+      45,
+      [
+        "ESTABLISH OUR STEPS",
+        "IN YOUR UNFAILING GRACE",
+        "THROUGH EVERY CHANGING SEASON"
+      ],
+      "GRACE",
+      "HOSEA 6 : 1"
+    ],
+    [
+      45,
+      48,
+      [
+        "IN JESUS NAME",
+        "WE PRAY",
+        "AMEN"
+      ],
+      "AMEN",
+      "HOSEA 6 : 1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are sitting alone in the quiet room wondering how your heart survived this week, listen.",
+      "kind": "phrase",
+      "words": [
+        "SITTING",
+        "SURVIVED"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we come to you carrying the deep fractures of our lives, acknowledging our brokenness in your holy presence.",
+      "kind": "phrase",
+      "words": [
+        "CARRYING",
+        "FRACTURES"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "You are the God who sees every hidden tear and every weary sigh that escapes our lips.",
+      "kind": "phrase",
+      "words": [
+        "SEES",
+        "HIDDEN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "As your word declares, Come, and let us return unto the LORD: for he hath torn, and he will heal us; he hath smitten, and he will bind us up.",
+      "kind": "phrase",
+      "words": [
+        "RETURN",
+        "HEAL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, where we feel shattered by circumstance, extend your gentle hand to mend what is broken inside.",
+      "kind": "phrase",
+      "words": [
+        "SHATTERED",
+        "MEND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Pour out your tender mercy upon every heavy spirit seeking solace in you today, O God.",
+      "kind": "phrase",
+      "words": [
+        "MERCY",
+        "SOLACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Establish our steps in your unfailing grace, trusting your restoring power through every changing season of life.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "RESTORING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus name we pray, Amen.",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "AMEN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Hosea 6:1"
+}

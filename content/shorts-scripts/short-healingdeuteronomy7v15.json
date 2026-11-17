@@ -1,0 +1,259 @@
+{
+  "key": "short-healingdeuteronomy7v15",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "DEUTERONOMY 7:15",
+    "THE HEALING BALM"
+  ],
+  "poster": [
+    "DEUTERONOMY 7:15",
+    "TAKE AWAY SICKNESS",
+    "RESTORE YOUR STRENGTH",
+    "THE HEALING BALM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters river stream sunlit",
+    "warm golden sanctuary light filtering through trees",
+    "white dove peace imagery soft gentle clouds holy",
+    "peaceful flowing stream crystal clear water morning",
+    "serene river surface gentle ripples golden hour light",
+    "calm mountain stream surrounded by lush green foliage"
+  ],
+  "scenes": [
+    {
+      "a": "If that persistent pain in your body is making this quiet hour hard to bear, listen close.",
+      "img": "short-healingdeuteronomy7v15-scene-01.jpg",
+      "kicker": "DEUT 7:15",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we come before your throne tonight asking for your comforting touch upon every weary frame.",
+      "img": "short-healingdeuteronomy7v15-scene-02.jpg",
+      "kicker": "DEUT 7:15",
+      "sub": "HIS GENTLE MERCY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Your holy word brings profound hope to our tired souls as we rest in your unfailing promises.",
+      "img": "short-healingdeuteronomy7v15-scene-03.jpg",
+      "kicker": "DEUT 7:15",
+      "sub": "UNFAILING PROMISES",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "And the LORD will take away from thee all sickness, and will put none of the evil diseases of Egypt, which thou knowest, upon thee; but will lay them upon all them that hate thee.",
+      "img": "short-healingdeuteronomy7v15-scene-04.jpg",
+      "kicker": "DEUT 7:15",
+      "sub": "TAKE AWAY SICKNESS",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we hold fast to this wonderful truth, trusting your merciful hands to sustain us completely.",
+      "img": "short-healingdeuteronomy7v15-scene-05.jpg",
+      "kicker": "DEUT 7:15",
+      "sub": "MERCIFUL HANDS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Fill our hearts with your lasting peace and renew our bodies for the days ahead in Jesus' name.",
+      "img": "short-healingdeuteronomy7v15-scene-06.jpg",
+      "kicker": "DEUT 7:15",
+      "sub": "LASTING PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "If that persistent pain in your body is making this quiet hour hard to bear, listen close."
+    ],
+    [
+      12,
+      25,
+      "Father, we come before your throne tonight asking for your comforting touch upon every weary frame."
+    ],
+    [
+      25,
+      37,
+      "Your holy word brings profound hope to our tired souls as we rest in your unfailing promises."
+    ],
+    [
+      37,
+      52,
+      "And the LORD will take away from thee all sickness, and will put none of the evil diseases of Egypt, which thou knowest, upon thee; but will lay them upon all them that hate thee."
+    ],
+    [
+      52,
+      64,
+      "Lord, we hold fast to this wonderful truth, trusting your merciful hands to sustain us completely."
+    ],
+    [
+      64,
+      76,
+      "Fill our hearts with your lasting peace and renew our bodies for the days ahead in Jesus' name."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "PERSISTENT PAIN",
+        "IN YOUR BODY",
+        "LISTEN CLOSE"
+      ],
+      "PAIN",
+      "DEUT 7 : 15"
+    ],
+    [
+      12,
+      25,
+      [
+        "FATHER WE COME",
+        "BEFORE YOUR THRONE",
+        "COMFORTING TOUCH"
+      ],
+      "THRONE",
+      "DEUT 7 : 15"
+    ],
+    [
+      25,
+      37,
+      [
+        "PROFOUND HOPE",
+        "TO OUR TIRED",
+        "SOULS"
+      ],
+      "HOPE",
+      "DEUT 7 : 15"
+    ],
+    [
+      37,
+      52,
+      [
+        "TAKE AWAY SICKNESS",
+        "AND WILL PUT",
+        "NONE UPON THEE"
+      ],
+      "SICKNESS",
+      "DEUT 7 : 15"
+    ],
+    [
+      52,
+      64,
+      [
+        "HOLD FAST",
+        "TO THIS TRUTH",
+        "MERCIFUL HANDS"
+      ],
+      "TRUTH",
+      "DEUT 7 : 15"
+    ],
+    [
+      64,
+      76,
+      [
+        "LASTING PEACE",
+        "RENEW OUR BODIES",
+        "JESUS NAME"
+      ],
+      "PEACE",
+      "DEUT 7 : 15"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that persistent pain in your body is making this quiet hour hard to bear, listen close.",
+      "kind": "phrase",
+      "words": [
+        "PERSISTENT",
+        "PAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we come before your throne tonight asking for your comforting touch upon every weary frame.",
+      "kind": "phrase",
+      "words": [
+        "COMFORTING",
+        "TOUCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your holy word brings profound hope to our tired souls as we rest in your unfailing promises.",
+      "kind": "phrase",
+      "words": [
+        "PROFOUND",
+        "HOPE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And the LORD will take away from thee all sickness, and will put none of the evil diseases of Egypt, which thou knowest, upon thee; but will lay them upon all them that hate thee.",
+      "kind": "phrase",
+      "words": [
+        "TAKE",
+        "AWAY",
+        "SICKNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we hold fast to this wonderful truth, trusting your merciful hands to sustain us completely.",
+      "kind": "phrase",
+      "words": [
+        "MERCIFUL",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Fill our hearts with your lasting peace and renew our bodies for the days ahead in Jesus' name.",
+      "kind": "phrase",
+      "words": [
+        "LASTING",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Deuteronomy 7:15"
+}

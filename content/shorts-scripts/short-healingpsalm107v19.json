@@ -1,0 +1,277 @@
+{
+  "key": "short-healingpsalm107v19",
+  "channel": "prayer6",
+  "psalm": 107,
+  "title": [
+    "HEALING PRAYER",
+    "PSALM 107"
+  ],
+  "poster": [
+    "FINDING REST",
+    "IN GOD'S WORD",
+    "THE HEALING BALM",
+    "GOD'S GRACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters",
+    "warm golden sanctuary light",
+    "white dove flying slow motion",
+    "soft morning dew on green leaves",
+    "sunlight filtering through ancient trees",
+    "calm mountain lake at twilight"
+  ],
+  "scenes": [
+    {
+      "a": "That recurring sharp ache",
+      "img": "short-healingpsalm107v19-scene-01.jpg",
+      "kicker": "PSALM 107:19",
+      "sub": "HEALING IN THE WORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Then they cry unto",
+      "img": "short-healingpsalm107v19-scene-02.jpg",
+      "kicker": "PSALM 107:19",
+      "sub": "CRY OUT TO HIM",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He sent his word",
+      "img": "short-healingpsalm107v19-scene-03.jpg",
+      "kicker": "PSALM 107:20",
+      "sub": "HIS WORD RESTORES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord please touch",
+      "img": "short-healingpsalm107v19-scene-04.jpg",
+      "kicker": "PRAYER OF PEACE",
+      "sub": "RECEIVE HIS COMFORT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "bring steady renewal",
+      "img": "short-healingpsalm107v19-scene-05.jpg",
+      "kicker": "DIVINE RESTORATION",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "You are held",
+      "img": "short-healingpsalm107v19-scene-06.jpg",
+      "kicker": "FAITHFUL PROMISE",
+      "sub": "YOU ARE NOT ALONE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "That recurring sharp ache in your side is exactly why you need this prayer now."
+    ],
+    [
+      11,
+      25,
+      "Then they cry unto the LORD in their trouble, and he saveth them out of their distresses."
+    ],
+    [
+      26,
+      40,
+      "He sent his word, and healed them, and delivered them from their destructions."
+    ],
+    [
+      41,
+      60,
+      "Lord please touch every weary fiber of this soul with your calm and gentle restoration."
+    ],
+    [
+      61,
+      85,
+      "Bring steady renewal where there is fatigue and replace every hidden anxiety with your quiet strength."
+    ],
+    [
+      86,
+      105,
+      "You are held in his perfect care, kept by the promise of his everlasting love today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "THAT RECURRING",
+        "SHARP ACHE",
+        "IS WHY YOU",
+        "NEED THIS PRAYER"
+      ],
+      [
+        "SHARP ACHE"
+      ],
+      "PSALM 107:19"
+    ],
+    [
+      11,
+      25,
+      [
+        "THEN THEY CRY",
+        "UNTO THE LORD",
+        "IN THEIR TROUBLE",
+        "HE SAVETH THEM"
+      ],
+      [
+        "SAVETH THEM"
+      ],
+      "PSALM 107:19"
+    ],
+    [
+      26,
+      40,
+      [
+        "HE SENT HIS WORD",
+        "AND HEALED THEM",
+        "AND DELIVERED THEM",
+        "FROM THEIR DESTRUCTIONS"
+      ],
+      [
+        "HEALED THEM"
+      ],
+      "PSALM 107:20"
+    ],
+    [
+      41,
+      60,
+      [
+        "LORD PLEASE TOUCH",
+        "EVERY WEARY FIBER",
+        "WITH YOUR CALM",
+        "GENTLE RESTORATION"
+      ],
+      [
+        "CALM"
+      ],
+      "PSALM 107:20"
+    ],
+    [
+      61,
+      85,
+      [
+        "BRING STEADY RENEWAL",
+        "WHERE THERE IS",
+        "FATIGUE AND REPLACE",
+        "HIDDEN ANXIETY"
+      ],
+      [
+        "RENEWAL"
+      ],
+      "PSALM 107:20"
+    ],
+    [
+      86,
+      105,
+      [
+        "YOU ARE HELD",
+        "IN HIS CARE",
+        "KEPT BY THE",
+        "PROMISE OF LOVE"
+      ],
+      [
+        "HELD"
+      ],
+      "PSALM 107:20"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That recurring sharp ache",
+      "kind": "phrase",
+      "words": [
+        "SHARP",
+        "ACHE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Then they cry unto",
+      "kind": "phrase",
+      "words": [
+        "CRY",
+        "UNTO"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He sent his word",
+      "kind": "phrase",
+      "words": [
+        "SENT",
+        "HIS",
+        "WORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord please touch",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "PLEASE",
+        "TOUCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "bring steady renewal",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "RENEWAL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are held",
+      "kind": "phrase",
+      "words": [
+        "HELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 107:19-20"
+}

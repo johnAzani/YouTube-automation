@@ -1,0 +1,243 @@
+{
+  "key": "short-healingluke8v50",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "FEAR NOT",
+    "BELIEVE ONLY"
+  ],
+  "poster": [
+    "RESTORE YOUR HEART",
+    "A PRAYER FOR PEACE",
+    "LUKE 8:50",
+    "THE HEALING BALM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters",
+    "warm golden sanctuary light",
+    "soft white dove in flight",
+    "rippling water reflection",
+    "ethereal light beams",
+    "serene garden sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "That sharp panic rising in your chest right now is exactly what Christ sees today.",
+      "img": "short-healingluke8v50-scene-01.jpg",
+      "kicker": "LUKE 8:50",
+      "sub": "HEAR HIS VOICE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Listen to the word of the Lord as he speaks into your current storm.",
+      "img": "short-healingluke8v50-scene-02.jpg",
+      "kicker": "LUKE 8:50",
+      "sub": "THE MASTER SPEAKS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "But when Jesus heard it, he answered him, saying, Fear not: believe only, and she shall be made whole.",
+      "img": "short-healingluke8v50-scene-03.jpg",
+      "kicker": "LUKE 8:50",
+      "sub": "HIS PROMISE REMAINS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we bring this heavy heart to you, seeking rest in your infinite and quiet mercy.",
+      "img": "short-healingluke8v50-scene-04.jpg",
+      "kicker": "LUKE 8:50",
+      "sub": "SURRENDER YOUR BURDEN",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Remove the weight of what is uncertain and anchor our spirits in your faithful truth.",
+      "img": "short-healingluke8v50-scene-05.jpg",
+      "kicker": "LUKE 8:50",
+      "sub": "REST IN HIS TRUTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your presence settle over this soul, calming every fear with your everlasting, holy peace.",
+      "img": "short-healingluke8v50-scene-06.jpg",
+      "kicker": "LUKE 8:50",
+      "sub": "RECEIVE HIS PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That sharp panic rising in your chest right now is exactly what Christ sees today."
+    ],
+    [
+      8,
+      16,
+      "Listen to the word of the Lord as he speaks into your current storm."
+    ],
+    [
+      16,
+      32,
+      "But when Jesus heard it, he answered him, saying, Fear not: believe only, and she shall be made whole."
+    ],
+    [
+      32,
+      45,
+      "Lord, we bring this heavy heart to you, seeking rest in your infinite and quiet mercy."
+    ],
+    [
+      45,
+      58,
+      "Remove the weight of what is uncertain and anchor our spirits in your faithful truth."
+    ],
+    [
+      58,
+      70,
+      "May your presence settle over this soul, calming every fear with your everlasting, holy peace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT SHARP PANIC",
+        "IN YOUR CHEST",
+        "IS SEEN BY",
+        "CHRIST TODAY"
+      ],
+      [
+        "CHRIST"
+      ],
+      "LUKE 8:50"
+    ],
+    [
+      8,
+      16,
+      [
+        "LISTEN TO THE",
+        "WORD OF GOD",
+        "SPEAKING INTO YOUR",
+        "CURRENT STORM"
+      ],
+      [
+        "SPEAKING"
+      ],
+      "LUKE 8:50"
+    ],
+    [
+      16,
+      32,
+      [
+        "FEAR NOT",
+        "BELIEVE ONLY",
+        "SHE SHALL BE",
+        "MADE WHOLE"
+      ],
+      [
+        "BELIEVE ONLY"
+      ],
+      "LUKE 8:50"
+    ],
+    [
+      32,
+      45,
+      [
+        "WE BRING THIS",
+        "HEAVY HEART TO YOU",
+        "SEEKING REST IN",
+        "YOUR QUIET MERCY"
+      ],
+      [
+        "HEAVY HEART"
+      ],
+      "LUKE 8:50"
+    ],
+    [
+      45,
+      58,
+      [
+        "REMOVE THE WEIGHT",
+        "OF THE UNCERTAIN",
+        "ANCHOR OUR SPIRITS",
+        "IN YOUR TRUTH"
+      ],
+      [
+        "ANCHOR"
+      ],
+      "LUKE 8:50"
+    ],
+    [
+      58,
+      70,
+      [
+        "SETTLE OVER THIS SOUL",
+        "CALMING EVERY FEAR",
+        "WITH EVERLASTING",
+        "HOLY PEACE"
+      ],
+      [
+        "HOLY PEACE"
+      ],
+      "LUKE 8:50"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That sharp panic rising in your chest right now is exactly what Christ sees today.",
+      "kind": "phrase",
+      "words": [
+        "CHRIST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But when Jesus heard it, he answered him, saying, Fear not: believe only, and she shall be made whole.",
+      "kind": "phrase",
+      "words": [
+        "BELIEVE ONLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your presence settle over this soul, calming every fear with your everlasting, holy peace.",
+      "kind": "phrase",
+      "words": [
+        "HOLY PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Luke 8:50"
+}
