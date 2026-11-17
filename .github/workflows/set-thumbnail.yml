@@ -31,7 +31,7 @@ on:
         options: [hook, quiet, poster, main, b, c]
         default: hook
       hero:
-        description: "Override the hero text on the text variants (blank = each concept keeps its own copy)"
+        description: "Override the hero text on the text variants. Blank = the job's own thumb_text; only a job with no thumb_text keeps each concept's own copy"
         required: false
         default: ""
       dry_run:

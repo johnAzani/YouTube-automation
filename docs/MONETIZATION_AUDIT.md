@@ -212,7 +212,7 @@ Our studio thumbnail engine (`pipeline/thumbnail.py`) implements a proven psycho
 ### 6.2 The Bottom-Right Safe Zone Rule
 YouTube permanently renders a black duration time-badge (e.g. `10:15`, `0:42`) in the bottom-right corner across all mobile, desktop, and smart TV surfaces.
 - **Crucial Rule:** No essential text, faces, or brand iconography may appear within the bottom-right 280×120px bounding box.
-- **Studio Implementation:** All typography in `render_studio_thumbnail()` is strictly left-aligned within a frosted sapphire card terminating at $X = 820\text{px}$, leaving the entire right quadrant completely clear.
+- **Studio Implementation:** `pipeline/thumbnail_ctr.render_ctr()` keeps every text element inside a declared text box clear of the badge, and reports `badge_zone_ok` / `safe_zone_ok` per frame. (The older `render_studio_thumbnail()` card that this section used to cite is retired and no longer on the publish path — `docs/THUMBNAIL_PACK_RESEARCH_2026-11-17.md` §1.)
 
 ---
 

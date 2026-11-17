@@ -1,4 +1,10 @@
-"""Approved-style long-form production path (not yet enabled on main)."""
+"""Approved-style long-form production path — the only one on main.
+
+`pipeline.run.process()` routes every job here; the older montage renderer in
+`run._disabled_legacy_process` is never called. Thumbnails on this path come from
+`thumbnail_ctr.generate_ctr_pack` (per-channel grade, three concepts), never from
+the retired card generator in `pipeline/thumbnail.py`.
+"""
 from __future__ import annotations
 import importlib.util
 import json

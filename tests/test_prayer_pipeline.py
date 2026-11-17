@@ -148,6 +148,7 @@ class PrayerPipelineTests(unittest.TestCase):
         self.addCleanup(lookup.stop)
 
     def test_full_path_uses_approved_renderer_and_marks_confirmed_upload(self):
+        from pipeline.thumbnail_ctr import generate_ctr_pack as real_ctr_pack
         with TemporaryDirectory() as tmp:
             root = Path(tmp); model = root / 'model'; model.mkdir(); (model/'model.bin').write_bytes(b'local')
             doc = ScriptDoc(root/'job.md', {'id': 'test', 'slug': 'test', 'title': 'Test', 'status': 'approved', 'format': 'longform', 'niche': 'prayer', 'voice': 'Charon'}, [Scene(1, 'One', 'hello ' * 900)])
@@ -161,7 +162,8 @@ class PrayerPipelineTests(unittest.TestCase):
                  patch('pipeline.prayer_pipeline.importlib.util.find_spec', return_value=True), patch('pipeline.prayer_pipeline.OUTPUT_DIR', root), \
                  patch('pipeline.prayer_pipeline.synthesize_gemini_audio', side_effect=lambda text, audio, **kw: audio.write_bytes(b'charon')) as tts, patch('pipeline.prayer_pipeline._probe_duration', return_value=301), \
                  patch('pipeline.prayer_pipeline.align', return_value=words), patch('pipeline.assets.fetch_scene_assets', return_value=[SimpleNamespace(path=asset)]), \
-                 patch('pipeline.prayer_pipeline.render', return_value=output) as renderer, patch('pipeline.thumbnail.generate_thumbnail_variants', return_value=[thumbnail]), \
+                 patch('pipeline.prayer_pipeline.render', return_value=output) as renderer, patch('pipeline.thumbnail.generate_thumbnail_variants', side_effect=AssertionError('produce must not use the retired card generator')), \
+                 patch('pipeline.thumbnail_ctr.generate_ctr_pack', wraps=real_ctr_pack) as pack, \
                  patch('pipeline.metadata.write_metadata_pack', return_value={'description':'prayer'}), patch('pipeline.upload.upload', return_value=upload), \
                  patch('pipeline.upload.inspect_existing_longform', return_value={'video_id':'abc', 'privacy_status':'public', 'upload_status':'processed', 'published_at':'2026-11-01T12:00:00Z'}), \
                  patch('pipeline.run._mark_job_uploaded') as mark, patch('pipeline.run._open_release_ticket'):
@@ -181,6 +183,17 @@ class PrayerPipelineTests(unittest.TestCase):
             self.assertEqual(tts.call_args.kwargs['voice'], 'Charon')
             self.assertEqual(tts.call_args.kwargs['model'], 'gemini-3.8-flash-tts')
             self.assertEqual(renderer.call_args.kwargs['timing_source'], 'measured')
+            # The live path must reach the CTR pack, which is the only renderer that
+            # takes a channel and paints that channel's own grade. The AssertionError
+            # mock above fails loudly if produce is ever re-wired to the retired card
+            # generator, and `channel_id` here fails if the pack is ever called with
+            # None (which would silently paint the night palette on all ten channels).
+            self.assertTrue(pack.called, "produce never rendered a thumbnail pack")
+            self.assertEqual(pack.call_args.kwargs['channel_id'], doc.channel)
+            self.assertIsNotNone(pack.call_args.kwargs['channel_id'])
+            self.assertIsNone(pack.call_args.kwargs['hero_override'])
+            self.assertTrue(result['thumbnail'].endswith('thumbnail_hook.jpg'),
+                            f"thumbnail came from {result['thumbnail']}")
             mark.assert_called_once()
             self.assertEqual(mark.call_args.args[3], 'not_requested')
 

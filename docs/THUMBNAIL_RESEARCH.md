@@ -80,7 +80,8 @@ different concepts, not recolours.
 
 ## 6. What the published Psalm 121 thumbnail got wrong
 
-Measured from the actual output (`pipeline/thumbnail.py::render_studio_thumbnail`):
+Measured from the actual output (`pipeline/thumbnail.py::render_studio_thumbnail`, since retired: that renderer is not on the publish path. The live frame comes from
+`pipeline/thumbnail_ctr.generate_ctr_pack` — see `docs/THUMBNAIL_PACK_RESEARCH_2026-11-17.md` §1):
 
 1. **Five text elements** — kicker pill, two-line hero, gold rule, subtitle,
    tag pill. At 168 px the kicker and tag became unreadable mush.
