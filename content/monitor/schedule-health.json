@@ -16,8 +16,8 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-17T12:49:16.945243+00:00",
-  "last_run_at": "2026-11-17T12:48:31+00:00",
+  "generated_at": "2026-11-17T15:23:50.888503+00:00",
+  "last_run_at": "2026-11-17T15:23:03+00:00",
   "on_time": [
     {
       "late_minutes": 50,
@@ -32,13 +32,6 @@
       "ran_at": "2026-11-17T05:07:13+00:00",
       "slot": "2026-11-17T03:37:00+00:00",
       "workflow": "channel-analytics.yml"
-    },
-    {
-      "late_minutes": 90,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-17T08:44:25+00:00",
-      "slot": "2026-11-17T07:14:00+00:00",
-      "workflow": "comments.yml"
     },
     {
       "late_minutes": 91,
@@ -62,18 +55,11 @@
       "workflow": "growth-autopilot.yml"
     },
     {
-      "late_minutes": 11,
+      "late_minutes": 0,
       "name": "Automation monitor",
-      "ran_at": "2026-11-17T12:34:20+00:00",
-      "slot": "2026-11-17T12:23:00+00:00",
+      "ran_at": "2026-11-17T15:23:03+00:00",
+      "slot": "2026-11-17T15:23:00+00:00",
       "workflow": "monitor.yml"
-    },
-    {
-      "late_minutes": 33,
-      "name": "Produce video",
-      "ran_at": "2026-11-17T10:47:16+00:00",
-      "slot": "2026-11-17T10:14:00+00:00",
-      "workflow": "produce.yml"
     },
     {
       "late_minutes": 102,
