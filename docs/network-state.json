@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T07:03:27Z",
+  "generated_at": "2026-11-17T07:05:25Z",
   "monitor_generated_at": "2026-11-17T06:45:20.694843+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 376,
+    "published_total": 377,
     "published_longform": 133,
-    "published_shorts": 243,
-    "public_total": 374,
+    "published_shorts": 244,
+    "public_total": 375,
     "queued_longform": 62,
-    "queued_shorts": 95,
+    "queued_shorts": 94,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 32,
+        "published_total": 33,
         "published_longform": 12,
-        "published_shorts": 20,
+        "published_shorts": 21,
         "thumbnail_pending": 7,
-        "public_total": 32,
+        "public_total": 33,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONMATTHEW6V31",
-        "title": "Pray This Matthew 6:31-33 Prayer for Open Doors & Provision | Quiet Your Heart #Shorts",
+        "id": "SHORT-PROVISION1CORINTHIANS16V9",
+        "title": "Pray This 1 Corinthians 16:9 Prayer for Open Doors & Provision | Many Adversaries #Shorts",
         "format": "short",
-        "youtube_video_id": "TGA3hm88xMA",
-        "watch_url": "https://www.youtube.com/shorts/TGA3hm88xMA",
-        "published_on": "2026-11-16",
-        "published_at": "2026-11-16T23:38:02Z"
+        "youtube_video_id": "T3_6bSYuEj4",
+        "watch_url": "https://www.youtube.com/shorts/T3_6bSYuEj4",
+        "published_on": "2026-11-17",
+        "published_at": "2026-11-17T07:04:26Z"
       },
       "next_queued_longform": {
         "id": "0512",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provision1corinthians16v9",
-        "scripture": "1 Corinthians 16:9",
+        "short": "short-provisionisaiah1v19",
+        "scripture": "Isaiah 1:19",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISION1CORINTHIANS16V9",
+      "slug": "short-provision1corinthians16v9-stewardship-prayer",
+      "file": "short-provision1corinthians16v9-stewardship-prayer.md",
+      "title": "Pray This 1 Corinthians 16:9 Prayer for Open Doors & Provision | Many Adversaries #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T07:04:26Z",
+      "youtube_video_id": "T3_6bSYuEj4",
+      "watch_url": "https://www.youtube.com/shorts/T3_6bSYuEj4",
+      "youtu_be_url": "https://youtu.be/T3_6bSYuEj4",
+      "shorts_url": "https://www.youtube.com/shorts/T3_6bSYuEj4",
+      "studio_url": "https://studio.youtube.com/video/T3_6bSYuEj4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/T3_6bSYuEj4/hqdefault.jpg",
+      "thumb_text": "FOR A GREAT DOOR \u00b7 AND EFFECTUAL IS OPENED",
+      "thumbnail_pending": false,
+      "duration_label": "49s",
+      "words": 641
+    },
     {
       "id": "SHORT-SHIELDEXODUS12V13",
       "slug": "short-shieldexodus12v13-protection-prayer",
@@ -10755,17 +10779,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provision1corinthians16v9",
-        "file": "0000-short-provision1corinthians16v9.yml",
-        "companion_longform_id": "",
-        "scripture": "1 Corinthians 16:9",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionisaiah1v19",
