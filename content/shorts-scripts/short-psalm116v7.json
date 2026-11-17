@@ -1,0 +1,276 @@
+{
+  "key": "short-psalm116v7",
+  "channel": "secret-place",
+  "psalm": 116,
+  "title": [
+    "A PRAYER FOR",
+    "YOUR REST"
+  ],
+  "poster": [
+    "REST FOR",
+    "YOUR SOUL",
+    "THE SECRET",
+    "PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake night",
+    "glowing candle in dark room",
+    "slow moving starry night sky",
+    "serene ocean waves at twilight",
+    "soft moonlight through window blinds",
+    "gently flickering fireplace embers"
+  ],
+  "scenes": [
+    {
+      "a": "If you are struggling to quiet your racing heart while lying in bed tonight, listen.",
+      "img": "short-psalm116v7-scene-01.jpg",
+      "kicker": "PSALM 116:7",
+      "sub": "FIND YOUR REST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Return unto thy rest, O my soul; for the LORD hath dealt bountifully with thee.",
+      "img": "short-psalm116v7-scene-02.jpg",
+      "kicker": "THE WORD",
+      "sub": "DIVINE PROMISE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, the weight of the day presses against my chest and makes it hard to exhale.",
+      "img": "short-psalm116v7-scene-03.jpg",
+      "kicker": "A PRAYER",
+      "sub": "LAYING DOWN BURDENS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "I bring my worries about tomorrow to your feet, knowing you have already seen them all.",
+      "img": "short-psalm116v7-scene-04.jpg",
+      "kicker": "OFFERING",
+      "sub": "SURRENDERING CONTROL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Help me to trust that your hand has been upon my life throughout every passing hour.",
+      "img": "short-psalm116v7-scene-05.jpg",
+      "kicker": "GRACE",
+      "sub": "STEADY FAITH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant me the peace that settles deep in the bones and quietness for my weary spirit.",
+      "img": "short-psalm116v7-scene-06.jpg",
+      "kicker": "SLEEP",
+      "sub": "PEACEFUL NIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are struggling to quiet your racing heart while lying in bed tonight, listen."
+    ],
+    [
+      8,
+      18,
+      "Return unto thy rest, O my soul; for the LORD hath dealt bountifully with thee."
+    ],
+    [
+      18,
+      28,
+      "Father, the weight of the day presses against my chest and makes it hard to exhale."
+    ],
+    [
+      28,
+      38,
+      "I bring my worries about tomorrow to your feet, knowing you have already seen them all."
+    ],
+    [
+      38,
+      48,
+      "Help me to trust that your hand has been upon my life throughout every passing hour."
+    ],
+    [
+      48,
+      58,
+      "Grant me the peace that settles deep in the bones and quietness for my weary spirit."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "QUIET YOUR RACING",
+        "HEART TONIGHT",
+        "REST IN GOD"
+      ],
+      [
+        "QUIET",
+        "HEART"
+      ],
+      "PSALM 116:7"
+    ],
+    [
+      8,
+      18,
+      [
+        "RETURN UNTO THY",
+        "REST O MY SOUL",
+        "GOD DEALT BOUNTIFULLY"
+      ],
+      [
+        "REST",
+        "SOUL"
+      ],
+      "PSALM 116:7"
+    ],
+    [
+      18,
+      28,
+      [
+        "THE WEIGHT OF",
+        "THE DAY PRESSES",
+        "HARD TO EXHALE"
+      ],
+      [
+        "WEIGHT",
+        "EXHALE"
+      ],
+      "PSALM 116:7"
+    ],
+    [
+      28,
+      38,
+      [
+        "I BRING MY",
+        "WORRIES TO FEET",
+        "HE HAS SEEN"
+      ],
+      [
+        "WORRIES",
+        "FEET"
+      ],
+      "PSALM 116:7"
+    ],
+    [
+      38,
+      48,
+      [
+        "TRUST YOUR HAND",
+        "UPON MY LIFE",
+        "THROUGH EVERY HOUR"
+      ],
+      [
+        "TRUST",
+        "HAND"
+      ],
+      "PSALM 116:7"
+    ],
+    [
+      48,
+      58,
+      [
+        "PEACE SETTLES DEEP",
+        "QUIET FOR SPIRIT",
+        "WEARY REST"
+      ],
+      [
+        "PEACE",
+        "QUIET"
+      ],
+      "PSALM 116:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are struggling to quiet your racing heart while lying in bed tonight, listen.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Return unto thy rest, O my soul; for the LORD hath dealt bountifully with thee.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "SOUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, the weight of the day presses against my chest and makes it hard to exhale.",
+      "kind": "phrase",
+      "words": [
+        "WEIGHT",
+        "EXHALE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I bring my worries about tomorrow to your feet, knowing you have already seen them all.",
+      "kind": "phrase",
+      "words": [
+        "WORRIES",
+        "FEET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help me to trust that your hand has been upon my life throughout every passing hour.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "HAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the peace that settles deep in the bones and quietness for my weary spirit.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "QUIET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 116:7"
+}

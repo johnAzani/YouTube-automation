@@ -1,0 +1,235 @@
+{
+  "key": "short-psalm127v2",
+  "channel": "secret-place",
+  "psalm": 127,
+  "title": [
+    "REST FOR THE",
+    "WEARY HEART"
+  ],
+  "poster": [
+    "THE SECRET PLACE",
+    "A PRAYER FOR",
+    "YOUR NIGHT",
+    "REST IN HIM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm moonlight over forest lake",
+    "flickering candle in dark room",
+    "misty mountain at dusk",
+    "glowing embers in fireplace",
+    "stars reflecting on still water",
+    "dew on grass at twilight"
+  ],
+  "scenes": [
+    {
+      "a": "Lay aside the heavy list of tasks waiting for you in the morning light.",
+      "img": "short-psalm127v2-scene-01.jpg",
+      "kicker": "PSALM 127:2",
+      "sub": "FIND YOUR REST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Your labor does not define your worth or secure your future tonight.",
+      "img": "short-psalm127v2-scene-02.jpg",
+      "kicker": "PSALM 127:2",
+      "sub": "HE GIVETH SLEEP",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "It is vain for you to rise up early, to sit up late, to eat the bread of sorrows: for so he giveth his beloved sleep.",
+      "img": "short-psalm127v2-scene-03.jpg",
+      "kicker": "PSALM 127:2",
+      "sub": "HIS PROMISE IS PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, help this soul release the anxiety of trying to control every outcome.",
+      "img": "short-psalm127v2-scene-04.jpg",
+      "kicker": "PSALM 127:2",
+      "sub": "RELEASE YOUR BURDEN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Replace the bread of sorrows with the assurance of your constant, gentle presence.",
+      "img": "short-psalm127v2-scene-05.jpg",
+      "kicker": "PSALM 127:2",
+      "sub": "TRUST IN HIS CARE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your beloved child drift into deep, restorative peace tonight, sheltered by your grace.",
+      "img": "short-psalm127v2-scene-06.jpg",
+      "kicker": "PSALM 127:2",
+      "sub": "REST IN HIS LOVE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "Lay aside the heavy list of tasks waiting for you in the morning light."
+    ],
+    [
+      11,
+      22,
+      "Your labor does not define your worth or secure your future tonight."
+    ],
+    [
+      23,
+      45,
+      "It is vain for you to rise up early, to sit up late, to eat the bread of sorrows: for so he giveth his beloved sleep."
+    ],
+    [
+      46,
+      65,
+      "Lord, help this soul release the anxiety of trying to control every outcome."
+    ],
+    [
+      66,
+      85,
+      "Replace the bread of sorrows with the assurance of your constant, gentle presence."
+    ],
+    [
+      86,
+      105,
+      "May your beloved child drift into deep, restorative peace tonight, sheltered by your grace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "LAY ASIDE THE LIST",
+        "OF TASKS WAITING",
+        "IN THE MORNING LIGHT"
+      ],
+      [
+        "LAY ASIDE"
+      ],
+      "PSALM 127:2"
+    ],
+    [
+      11,
+      22,
+      [
+        "YOUR LABOR DOES NOT",
+        "DEFINE YOUR WORTH",
+        "OR SECURE YOUR FUTURE"
+      ],
+      [
+        "YOUR LABOR"
+      ],
+      "PSALM 127:2"
+    ],
+    [
+      23,
+      45,
+      [
+        "IT IS VAIN",
+        "TO RISE UP EARLY",
+        "TO SIT UP LATE",
+        "TO EAT THE BREAD",
+        "OF SORROWS"
+      ],
+      [
+        "HE GIVETH SLEEP"
+      ],
+      "PSALM 127:2"
+    ],
+    [
+      46,
+      65,
+      [
+        "LORD HELP THIS SOUL",
+        "RELEASE THE ANXIETY",
+        "OF TRYING TO",
+        "CONTROL EVERY OUTCOME"
+      ],
+      [
+        "RELEASE THE ANXIETY"
+      ],
+      "PSALM 127:2"
+    ],
+    [
+      66,
+      85,
+      [
+        "REPLACE THE BREAD",
+        "OF SORROWS WITH",
+        "THE ASSURANCE OF",
+        "YOUR GENTLE PRESENCE"
+      ],
+      [
+        "GENTLE PRESENCE"
+      ],
+      "PSALM 127:2"
+    ],
+    [
+      86,
+      105,
+      [
+        "MAY YOUR BELOVED CHILD",
+        "DRIFT INTO DEEP",
+        "RESTORATIVE PEACE",
+        "SHELTERED BY GRACE"
+      ],
+      [
+        "RESTORATIVE PEACE"
+      ],
+      "PSALM 127:2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Lay aside the heavy list of tasks waiting for you in the morning light.",
+      "kind": "phrase",
+      "words": [
+        "LAY ASIDE",
+        "MORNING LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "It is vain for you to rise up early, to sit up late, to eat the bread of sorrows: for so he giveth his beloved sleep.",
+      "kind": "phrase",
+      "words": [
+        "HE GIVETH",
+        "HIS BELOVED SLEEP"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 127:2"
+}
