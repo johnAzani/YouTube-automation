@@ -804,3 +804,17 @@ def test_a_recovered_receipt_claims_nothing_about_a_comment(queue):
     dest = run._mark_job_uploaded(job, doc_for(job), "abcdefghijk", recovered_video=video,
                                   pinned_comment="ok")
     assert "top_comment" not in frontmatter(dest)
+
+
+def test_the_caption_track_outcome_reaches_a_long_form_receipt(queue):
+    """400 units is the most expensive call an upload makes, and the long-form
+    path recorded nothing about it: no receipt could say whether the track landed."""
+    run, job, _ = queue
+    dest = run._mark_job_uploaded(job, doc_for(job), "abcdefghijk", "ok", caption_track="ok")
+    assert frontmatter(dest)["caption_track"] == "ok"
+
+
+def test_a_caption_track_that_was_never_attempted_is_not_claimed(queue):
+    run, job, _ = queue
+    dest = run._mark_job_uploaded(job, doc_for(job), "abcdefghijk", "ok")
+    assert "caption_track" not in frontmatter(dest)

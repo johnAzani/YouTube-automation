@@ -710,6 +710,95 @@ def publish_delays(published_dir: Path | None = None, *,
     return result
 
 
+def api_budget(published_dir: Path | None = None, *, days: int = 7,
+               ledger_path: Path | None = None) -> dict:
+    """Units the pipeline's own records say it spent, priced by `pipeline.api_budget`.
+
+    The Data API is free and metered: an upload spends one unit of a separate
+    100-a-day allowance, and everything around it — the thumbnail (50), the
+    first comment (50), the caption track (400) — spends the project's shared
+    10,000-unit pool. None of that was ever totalled, and three documents price
+    it differently, one of them by a factor of twenty-five.
+
+    The window is anchored to the newest receipt rather than to today, so the
+    figure is a fact about the repository and not about when it was read.
+    ``replies`` comes from the reply ledger, where every entry is one
+    ``comments.insert``.
+    """
+    import json
+
+    from pipeline.api_budget import SHARED_POOL_UNITS, UNIT_COST
+
+    published = Path(published_dir or ROOT / "content" / "published")
+    rows: list[tuple[datetime, int, bool, bool, bool]] = []
+    for path in sorted(published.glob("*.md")):
+        text = path.read_text(encoding="utf-8", errors="replace")
+        if "youtube_video_id:" not in text:
+            continue
+        match = _PUBLISHED_AT.search(text)
+        if not match:
+            continue
+        try:
+            when = datetime.fromisoformat(match.group(1).strip().replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if when.tzinfo is None:
+            continue
+        thumb = bool(re.search(r"(?m)^thumbnail_revision:", text))
+        comment = bool(re.search(r'(?m)^top_comment:\s*"ok"', text))
+        caption = bool(re.search(r'(?m)^caption_track:\s*"ok"', text))
+        rows.append((when.astimezone(timezone.utc), thumb, comment, caption))
+    result = {
+        "window_days": days,
+        "uploads": 0,
+        "units": 0,
+        "per_upload": None,
+        "thumbnails": 0,
+        "comments": 0,
+        "captions": 0,
+        "caption_units": 0,
+        "replies": 0,
+        "reply_units": 0,
+        "shared_pool": SHARED_POOL_UNITS,
+        "priced_caption": 0,
+    }
+    if not rows:
+        return result
+    cutoff = max(when for when, *_rest in rows) - timedelta(days=days)
+    from pipeline.api_budget import price_upload
+
+    in_window = [row for row in rows if row[0] >= cutoff]
+    for _when, thumb, comment, caption in in_window:
+        units, _parts = price_upload(thumbnail=thumb, comment=comment, caption=caption)
+        result["units"] += units
+        result["thumbnails"] += int(thumb)
+        result["comments"] += int(comment)
+        result["captions"] += int(caption)
+        result["caption_units"] += UNIT_COST["captions.insert"] * int(caption)
+    result["uploads"] = len(in_window)
+    result["per_upload"] = round(result["units"] / len(in_window), 1) if in_window else None
+
+    ledger = Path(ledger_path or ROOT / "content" / "comments" / "replied.json")
+    if ledger.is_file():
+        try:
+            entries = json.loads(ledger.read_text(encoding="utf-8"))
+        except Exception:  # noqa: BLE001 - a report must not cost the monitor
+            entries = {}
+        for entry in (entries.values() if isinstance(entries, dict) else entries):
+            if not isinstance(entry, dict):
+                continue
+            stamp = str(entry.get("replied_at") or "")
+            try:
+                when = datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+            except ValueError:
+                continue
+            if when.tzinfo is None or when.astimezone(timezone.utc) < cutoff:
+                continue
+            result["replies"] += 1
+        result["reply_units"] = result["replies"] * UNIT_COST["comments.insert"]
+    return result
+
+
 def check_outcomes(report: MonitorReport, now: datetime | None = None,
                    published_dir: Path | None = None,
                    log_path: Path | None = None) -> MonitorReport:
@@ -817,6 +906,44 @@ def check_outcomes(report: MonitorReport, now: datetime | None = None,
         report.outcomes.append({
             "outcome": "publish instant",
             "detail": f"Could not read the publish times: {type(exc).__name__}",
+            "severity": "info",
+        })
+
+    # What the API calls cost, in the units Google meters them in. An upload is
+    # one unit of its own allowance; the thumbnail, the first comment and the
+    # caption track spend the shared 10,000-unit pool, and the caption track is
+    # eight comments. Nothing else totals this up.
+    try:
+        budget = api_budget(published)
+        if budget["uploads"]:
+            detail = (
+                f"the last {budget['window_days']} days priced from the receipts: "
+                f"{budget['uploads']} uploads spending ~{budget['units']} units "
+                f"({budget['per_upload']:.0f} each); {budget['captions']} caption track(s) at "
+                f"400 are {budget['caption_units']} of that, {budget['replies']} replies 50 "
+                f"apiece are {budget['reply_units']} — the shared pool is "
+                f"{budget['shared_pool']} units a day and an upload is one unit of a "
+                f"separate 100-a-day allowance"
+            )
+            if budget["comments"]:
+                detail += f"; {budget['comments']} first comment(s) at 50"
+            if not budget["captions"] and not budget["comments"]:
+                detail += " (no receipt in this window records a caption track or a comment)"
+            report.outcomes.append({
+                "outcome": "api budget",
+                "detail": detail,
+                "severity": "ok",
+            })
+        else:
+            report.outcomes.append({
+                "outcome": "api budget",
+                "detail": "no receipt carries a published video in the last days, so nothing is priced",
+                "severity": "info",
+            })
+    except Exception as exc:  # noqa: BLE001 - a reporter must not cost a run
+        report.outcomes.append({
+            "outcome": "api budget",
+            "detail": f"Could not price the receipts: {type(exc).__name__}",
             "severity": "info",
         })
 

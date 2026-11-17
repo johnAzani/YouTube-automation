@@ -1,5 +1,12 @@
 """YouTube upload via Data API v3 (free — 1 unit from the 100/day uploads bucket).
 
+The upload allowance is separate from the project's 10,000-unit shared pool,
+which thumbnails (50), comments (50), playlists (50) and caption tracks (400)
+spend. `pipeline/quota_handler.py` and `pipeline/channels.py` still describe
+the pre-June-2026 model, where an upload cost 1,600 units of that pool; the
+receipts show a channel uploading eight videos in one Pacific quota day, so
+the separate allowance is the one in force. Prices: `pipeline/api_budget.py`.
+
 Visibility policy (PLAN.md §3.4):
   * Unaudited GCP projects have historically been forced to `private` on
     videos.insert. So the default is `private` + a GitHub "release ticket"
@@ -52,6 +59,11 @@ class UploadResult:
     # the receipt says the comment is owed and the monitor posts it once the
     # video is public.
     pinned_comment: str = "not_attempted"
+    # "ok", "failed" or "not_attempted". A caption track is the most expensive
+    # call an upload makes — 400 units, eight comments — and until 17 November
+    # 2026 the long-form path threw this result away, so no receipt could say
+    # whether the track landed or whether the 400 units were spent.
+    caption_track: str = "not_attempted"
 
 
 from pipeline.quota_handler import (
@@ -569,12 +581,15 @@ def upload(
         thumbnail_status = "missing_file"
         print(f"[upload] no thumbnail file to apply for {video_id}")
 
+    caption_track = "not_attempted"
     if caption_path and caption_path.is_file() and not is_short:
         try:
             from .captions import upload_captions
 
             upload_captions(youtube, video_id, caption_path, language="en")
+            caption_track = "ok"
         except Exception as exc:  # noqa: BLE001
+            caption_track = "failed"
             print(f"[upload] caption upload skipped: {exc!r}")
 
     if CONFIG.playlist_id:
@@ -613,6 +628,7 @@ def upload(
         thumbnail_status=thumbnail_status,
         scheduled_for=scheduled_for,
         pinned_comment=pinned_comment,
+        caption_track=caption_track,
     )
 
 

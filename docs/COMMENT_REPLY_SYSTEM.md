@@ -50,7 +50,7 @@ The system operates strictly within YouTube's standard free tier of **10,000 quo
 | :--- | :--- | :---: | :--- |
 | `commentThreads.list` | `GET` | **1 unit** | Fetches up to 100 comment threads (top-level comment, author metadata, reply count). The cost is per call, not per thread, so the engine always asks for 100. |
 | `comments.list` | `GET` | **1 unit** | Lists the replies of one thread (`parentId`). Used only when the listing truncated the replies and the engine must prove it has not already answered. |
-| `comments.insert` | `POST` | **2 units** | Inserts a reply to an existing comment thread (`parentId`). |
+| `comments.insert` | `POST` | **50 units** | Inserts a reply to an existing comment thread (`parentId`). Corrected 2026-11-17 — see below. |
 | `channels.list` | `GET` | **1 unit** | Resolves the channel's own channel ID to prevent replying to own comments, and to prove the credentials belong to the channel being answered. |
 
 > **Corrected 2026-11-07.** This table used to price `comments.insert` at 50 units and
@@ -62,6 +62,18 @@ The system operates strictly within YouTube's standard free tier of **10,000 quo
 > the engine answered almost nobody: six replies in four days on ~12 green runs.
 > The same 2-unit fact is recorded in the module docstring of
 > `pipeline/comment_replies.py`.
+>
+> **Corrected again 2026-11-17 — the 2026-11-07 correction was wrong.** Google's
+> page for the method opens with *"A call to this method has a quota cost of 50
+> units"* and only then says the snippet part costs 2. The 07-11 correction cited
+> the bundled discovery document as its evidence, and that document contains no
+> method-level price at all — the part sentence is the only quota text in it for
+> this method — so 50 was right and "25x less" was the error. Measured: this
+> engine has posted **109 replies**, which is **5,450 units**, where the 2-unit
+> model says 218. The cap below (8 a pulse, up to 24 a day) still stands on its
+> own arithmetic: 24 x 50 = **1,200 units**, 12% of a project's shared pool a
+> day, and the busiest day so far (15 November, 30 replies) cost 1,500. The
+> monitor prints the priced figure as **`api budget`**.
 
 ### 2.2 Daily Quota Safety Budget
 
@@ -273,7 +285,10 @@ The repository includes an autonomous workflow: [`.github/workflows/comments.yml
   2026-11-07 the scheduled run was hardcoded to The Secret Place and the other two
   channels were never read.
 * **Batch Sizing:** Default 8 comments per pulse per channel (up to 24/day),
-  consuming ~84 quota units/day (<1% of the free tier).
+  consuming ~1,300 quota units/day at the real 50 units a reply (~13% of a
+  project's shared pool; this line said 84 until 17 November 2026 because it was
+  computed from the 2-unit price). The busiest measured day, 15 November, was 30
+  replies = 1,500 units.
 * **Manual Dispatch:** Can be triggered on-demand via GitHub Actions UI with custom
   `channel`, `limit`, `pages` and `video_id` parameters.
 * **Prioritisation:** candidates are ranked before drafting — prayer requests
