@@ -2,22 +2,22 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
+      "late_minutes": 224,
+      "name": "Weekly metrics snapshot",
+      "ran_at": "2026-11-13T22:25:40+00:00",
+      "slot": "2026-11-13T18:41:00+00:00",
+      "workflow": "metrics.yml"
+    },
+    {
       "late_minutes": 208,
       "name": "Keepalive",
       "ran_at": "2026-11-16T06:51:47+00:00",
       "slot": "2026-11-16T03:23:00+00:00",
       "workflow": "keepalive.yml"
-    },
-    {
-      "late_minutes": 173,
-      "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-13T21:34:19+00:00",
-      "slot": "2026-11-13T18:41:00+00:00",
-      "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-17T18:48:12.372268+00:00",
-  "last_run_at": "2026-11-17T18:47:21+00:00",
+  "generated_at": "2026-11-17T19:10:57.615634+00:00",
+  "last_run_at": "2026-11-17T19:10:09+00:00",
   "on_time": [
     {
       "late_minutes": 50,
