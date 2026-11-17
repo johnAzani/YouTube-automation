@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T19:45:00Z",
+  "generated_at": "2026-11-17T19:52:37Z",
   "monitor_generated_at": "2026-11-17T19:43:42.749785+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 406,
+    "published_total": 407,
     "published_longform": 141,
-    "published_shorts": 265,
-    "public_total": 404,
+    "published_shorts": 266,
+    "public_total": 405,
     "queued_longform": 61,
-    "queued_shorts": 90,
+    "queued_shorts": 89,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 67,
+        "published_total": 68,
         "published_longform": 26,
-        "published_shorts": 41,
+        "published_shorts": 42,
         "thumbnail_pending": 1,
-        "public_total": 66,
+        "public_total": 67,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM138V8",
-        "title": "Say This Psalm 138:8 Prayer at Sunrise | God Will Perfect Your Path #Shorts",
+        "id": "SHORT-MORNINGPSALM63V1",
+        "title": "Say This Psalm 63:1 Prayer at Sunrise | Quiet Your Heart #Shorts",
         "format": "short",
-        "youtube_video_id": "mzpqnlA0BxY",
-        "watch_url": "https://www.youtube.com/shorts/mzpqnlA0BxY",
+        "youtube_video_id": "q6K4Ghwwqa8",
+        "watch_url": "https://www.youtube.com/shorts/q6K4Ghwwqa8",
         "published_on": "2026-11-17",
-        "published_at": "2026-11-17T15:30:52Z"
+        "published_at": "2026-11-17T19:51:50Z"
       },
       "next_queued_longform": {
         "id": "0070",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm63v1",
-        "scripture": "Psalm 63:1",
+        "short": "short-morningromans12v1",
+        "scripture": "Romans 12:1-2",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM63V1",
+      "slug": "short-morningpsalm63v1-sunrise-prayer",
+      "file": "short-morningpsalm63v1-sunrise-prayer.md",
+      "title": "Say This Psalm 63:1 Prayer at Sunrise | Quiet Your Heart #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T19:51:50Z",
+      "youtube_video_id": "q6K4Ghwwqa8",
+      "watch_url": "https://www.youtube.com/shorts/q6K4Ghwwqa8",
+      "youtu_be_url": "https://youtu.be/q6K4Ghwwqa8",
+      "shorts_url": "https://www.youtube.com/shorts/q6K4Ghwwqa8",
+      "studio_url": "https://studio.youtube.com/video/q6K4Ghwwqa8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/q6K4Ghwwqa8/hqdefault.jpg",
+      "thumb_text": "EARLY WILL \u00b7 I SEEK THEE",
+      "thumbnail_pending": false,
+      "duration_label": "58s",
+      "words": 613
+    },
     {
       "id": "0312",
       "slug": "a-generation-blessed-by-god-psalm-112-1-3",
@@ -11352,17 +11376,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningpsalm63v1",
-        "file": "0000-short-morningpsalm63v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 63:1",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningromans12v1",
