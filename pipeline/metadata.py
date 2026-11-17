@@ -271,10 +271,21 @@ def _unwrap_prose_paragraphs(text: str) -> str:
     return "\n\n".join(rendered_blocks)
 
 
+def _end_once(text: str) -> str:
+    """A search snippet ends once.
+
+    Line 1 of the description is the snippet YouTube and Google show, and nine
+    published ones ended in a doubled full stop ("…peace for the hours ahead..")
+    because the authored `seo_hook` carried one. A single trailing run of periods
+    collapses to one; an ellipsis written as "…" is left alone.
+    """
+    return re.sub(r"\.{2,}\s*$", ".", (text or "").strip())
+
+
 def _synthesize_seo_hook(doc: ScriptDoc) -> str:
     explicit = " ".join(str(doc.meta.get("seo_hook", "")).split()).strip()
     if explicit:
-        return sanitize_youtube_text(explicit)[:155]
+        return _end_once(sanitize_youtube_text(explicit)[:155])
 
     if is_faith_doc(doc):
         from .channel_capabilities import brand_for
@@ -283,8 +294,8 @@ def _synthesize_seo_hook(doc: ScriptDoc) -> str:
         m = _SCRIPTURE_RE.search(doc.title or "")
         if m:
             ref = m.group(1)
-            return brand.seo_hook_ref_template.format(ref=ref)[:155]
-        return brand.seo_hook_generic[:155]
+            return _end_once(brand.seo_hook_ref_template.format(ref=ref)[:155])
+        return _end_once(brand.seo_hook_generic[:155])
 
     return smart_truncate_title(doc.title, 150)
 

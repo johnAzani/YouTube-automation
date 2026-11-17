@@ -5,6 +5,16 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-17 — One picture, ten skies
+
+- **The colour is per channel; the picture is not.** Rendering the `hook` concept for all ten channels with the same seed and no backdrop and correlating the grayscale art half of the frames: any two channels are **0.963 median alike** (0.897 to 0.995). The moon, ridge, house and reflection sit at the same coordinates on every channel; only sky colour and noise seed differ. Thirty concepts reduce to **three arrangements** with ±0.02 of jitter. Palettes were the last reading; this is the layer under them.
+- **The fallback photographs are thirteen.** When a job's own footage yields no usable still, the pack hashes the job id into **7 night plates and 6 daylight plates**. The 136 published faith long-forms map onto 7 plates; the most-used carries **29 videos across all ten channels**, and **1,307 of the 1,471** pairs sharing a plate are cross-channel (89%); with the queue counted, 202 videos and 35 on one plate. The owner's `set-thumbnail.yml` path never calls `pick_backdrop`, so every thumbnail it sets is one of those photographs.
+- **A negative worth keeping:** sharing a passage does not make the writing converge. 120 cross-channel same-passage pairs are **0.0028** alike in their author's own words (all King James phrases removed); 400 different-passage pairs are **0.0028** too.
+- **Metadata measured so as not to over-report sameness:** 202 distinct description snippets over 202 videos (186 skeletons), 1,156 distinct tags at 15–18 per video, no description anywhere near the 4,900-byte ceiling.
+- **One live defect fixed.** Nine published descriptions ended their **first line** — the snippet YouTube and Google show — with "..", because the authored `seo_hook` carried it. `metadata._end_once` closes the sentence once: **9 → 0** of 202, with a corpus test to keep it there.
+- **A number for the picture in the daily report.** `scripts/channel_protection.py` gains **"Thumbnail backdrops"**: pool sizes, videos, distinct plates, the most-used plate with its video and channel counts, and how many sharing pairs are cross-channel. It reports and fails nothing, and says plainly that it is the fallback's worst case, not a count of shipped frames.
+- **Not changed, deliberately:** no palette, geometry or plate was touched. More cleared plates and a workflow that prefers the job's own footage are owner decisions; the hash is not the problem — seven buckets are. Reading: `docs/THUMBNAIL_BACKDROP_RESEARCH_2026-11-17.md`.
+
 ## 2026-11-17 — The clamp certified a box nothing draws into
 
 - **Two functions disagreed about whether text fits, and the loser was silent.** `gemini_brain._clamp_thumb_text_for_ctr` guaranteed every authored `thumb_text` fitted a **660x492** box at **>=105 px**. No concept draws into that box: the frame the pipeline uploads uses **604x386**. Six of the 202 authored lines measured **exactly 105 px** there and **96 px** in the real box — and `_layout`'s search ran `range(300, 95, -5)`, which stops at 100, so 96-99 were never tried.

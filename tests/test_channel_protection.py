@@ -372,3 +372,47 @@ def test_the_frame_section_is_in_the_report_and_reads_the_rows(dirs):
     assert "published Short titles open with two words another channel also uses" in report
     # Without the figure the section still renders.
     assert "#### Short titles built on one frame" in cp.render(rows)
+
+
+def test_backdrop_plates_count_the_fallback_photographs_and_who_shares_them(dirs):
+    """The plate measure: a small pool, and a photograph on more than one channel.
+
+    `curated_backdrop_for` hashes the job id into a pool of cleared plates, so the
+    figure this reports is the pool's size and the sharing it forces — not what any
+    single frame used.
+    """
+    published, _specs = dirs
+    for n in range(8):
+        _receipt(published, f"0{n}11", channel="secret-place" if n < 4 else "prayer8",
+                 day="2026-11-15", short=False,
+                 title=f"Psalm {n + 11}:1 Night Prayer | The Secret Place")
+    plates = cp.backdrop_plates(published_dir=published)
+    assert plates["videos"] == 8
+    assert plates["plates"] <= 8
+    assert plates["plates"] <= plates["pool_nocturnal"] + plates["pool_daylight"]
+    assert plates["top_videos"] >= 1
+    assert plates["top_plate"]
+    # Pairs are counted for every two videos on the same plate, and the ones on
+    # different channels are named separately because only those are a network.
+    assert plates["shared_pairs"] <= plates["pairs"]
+
+
+def test_backdrop_plates_ignores_shorts_and_reads_nothing_else(dirs):
+    published, _specs = dirs
+    _receipt(published, "s1", channel="prayer3", day="2026-11-15", short=True,
+             title="Say This Psalm 5:3 Prayer at Noon | Stand Still #Shorts")
+    assert cp.backdrop_plates(published_dir=published)["videos"] == 0
+
+
+def test_the_report_says_where_the_backdrop_photographs_come_from(dirs):
+    published, specs = dirs
+    for n in range(6):
+        _receipt(published, f"1{n}22", channel="prayer5", day="2026-11-15", short=False,
+                 title=f"Psalm {n + 20}:1 Family Prayer | The Family Altar")
+    rows = cp.measure(today=NOW, published_dir=published, spec_dir=specs)
+    network = cp.network_openers(published_dir=published)
+    network["plates"] = cp.backdrop_plates(published_dir=published)
+    report = cp.render(rows, network)
+    assert "#### Thumbnail backdrops" in report
+    assert "photographs" in report
+    assert "fallback" in report

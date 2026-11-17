@@ -303,3 +303,42 @@ def test_mp4_stream_atoms_bt709_48khz_eng_and_thumbnail_icc(tmp_path: Path):
     assert reports[0].path.stat().st_size < 2_000_000
     with Image.open(reports[0].path) as th:
         assert th.info.get("icc_profile"), "Thumbnail JPEG must embed sRGB ICC profile"
+
+
+def test_the_search_snippet_ends_once():
+    """Line 1 of the description is what YouTube and Google show as the snippet.
+
+    Nine published faith videos shipped one ending in ".." because the authored
+    `seo_hook` carried a doubled full stop. The builder now ends it once; an
+    ellipsis written as "…" is left alone, and an internal ".." is not touched.
+    """
+    from pipeline.metadata import _end_once
+
+    assert _end_once("Pray this Psalm 91 (KJV) and rest tonight..") == \
+        "Pray this Psalm 91 (KJV) and rest tonight."
+    assert _end_once("Wait for Him…") == "Wait for Him…"
+    assert _end_once("a... b") == "a... b"
+    assert _end_once("no full stop here") == "no full stop here"
+
+
+def test_no_published_or_queued_faith_snippet_ends_in_a_doubled_full_stop():
+    import glob
+
+    from pipeline.metadata import _synthesize_seo_hook
+    from pipeline.script_doc import parse_script
+
+    root = Path(__file__).resolve().parents[1]
+    channels = ("secret-place", *(f"prayer{i}" for i in range(2, 11)))
+    checked = 0
+    for pattern in ("content/published/*.md", "content/queue/*.md"):
+        for path in sorted(glob.glob(str(root / pattern))):
+            doc = parse_script(Path(path))
+            if doc.channel not in channels:
+                continue
+            if str(doc.meta.get("format") or "longform").lower() != "longform":
+                continue
+            checked += 1
+            snippet = _synthesize_seo_hook(doc)
+            assert not snippet.rstrip().endswith(".."), f"{path}: {snippet[-40:]}"
+            assert len(snippet) <= 155
+    assert checked >= 190, f"only {checked} snippets read"

@@ -31,7 +31,10 @@ starts and a fix can be shown to have worked:
 * passages prayed on more than one channel — the clearest form of "many
   similar videos across linked channels", counted from the network's own
   passage ledger (``pipeline/passage_ownership.py``), together with the
-  unwritten roadmap entries that still name one of them.
+  unwritten roadmap entries that still name one of them;
+* the photographs the thumbnails fall back to — one cleared 16:9 plate is
+  chosen per job by hashing its id, so a small pool puts the same photograph
+  on several channels at once (``pipeline/thumbnail_ctr.py``).
 
     python -m scripts.channel_protection          # table, and a step summary in Actions
     python -m scripts.channel_protection --json   # the same as JSON
@@ -306,6 +309,70 @@ def network_openers(*, published_dir: Path | None = None) -> dict:
             "openings": len(counts)}
 
 
+def backdrop_plates(*, published_dir: Path | None = None) -> dict:
+    """The photographs the ten channels' thumbnails fall back to, and who shares them.
+
+    `pipeline.thumbnail_ctr.curated_backdrop_for` picks a cleared 16:9 plate by
+    hashing the job id, for any job whose own footage yields no usable still — and
+    `set-thumbnail.yml`, the owner's manual path, passes it directly, so every
+    hand-set thumbnail is one of those plates. The pool is chosen by the channel's
+    grade and holds a handful of files, so the same photograph can sit on several
+    channels at once. Read from the front matter of every published faith
+    long-form; the figure moves when the pool or the ids do.
+
+    Reports only. It cannot tell whether a given frame used the fallback — the
+    job's own footage, when it has any, wins — so this is the fallback's worst
+    case, not a count of shipped plates.
+    """
+    from pipeline import thumbnail_ctr
+    from pipeline.channels import normalize_channel_id
+
+    folder = PUBLISHED_DIR if published_dir is None else published_dir
+    rows: list[tuple[str, str, str]] = []
+    for path in sorted(folder.glob("*.md")):
+        match = _FRONT.match(path.read_text(encoding="utf-8", errors="replace"))
+        if not match:
+            continue
+        head = match.group(1)
+        if "faith" not in _field(head, "niche").lower():
+            continue
+        if _field(head, "format").lower() == "short" or path.name.startswith("short-"):
+            continue
+        key = _field(head, "id", "slug")
+        if not key:
+            continue
+        channel = normalize_channel_id(_field(head, "channel") or None)
+        plate = thumbnail_ctr.curated_backdrop_for(key, channel_id=channel)
+        rows.append((path.name, channel, plate.name if plate else ""))
+
+    used = Counter(plate for _name, _ch, plate in rows if plate)
+    channels_of: dict[str, set[str]] = defaultdict(set)
+    for _name, channel, plate in rows:
+        if plate:
+            channels_of[plate].add(channel)
+    pairs = shared_pairs = 0
+    by_plate = defaultdict(list)
+    for _name, channel, plate in rows:
+        by_plate[plate].append(channel)
+    for plate, chans in by_plate.items():
+        n = len(chans)
+        pairs += n * (n - 1) // 2
+        for i, a in enumerate(chans):
+            shared_pairs += sum(1 for b in chans[i + 1:] if a != b)
+    top, top_videos = used.most_common(1)[0] if used else ("", 0)
+    return {
+        "videos": len(rows),
+        "plates": len(used),
+        "pool_nocturnal": len(thumbnail_ctr._ALL_CURATED_PLATES),
+        "pool_daylight": len(thumbnail_ctr._DAYLIGHT_CURATED_PLATES),
+        "top_plate": top,
+        "top_videos": top_videos,
+        "top_channels": sorted(channels_of.get(top, set())),
+        "pairs": pairs,
+        "shared_pairs": shared_pairs,
+    }
+
+
 def measure(*, today: datetime | None = None, published_dir: Path | None = None,
             spec_dir: Path | None = None, queue_dir: Path | None = None,
             shorts_queue_dir: Path | None = None) -> list[Row]:
@@ -502,6 +569,35 @@ def render(rows: list[Row], network: dict | None = None) -> str:
             f"(\"{network['opener'].title()}\", {network['uses']} of them); the network "
             f"uses {network['openings']} opening(s) in all.",
         ]
+    if network and network.get("plates"):
+        plates = network["plates"]
+        if plates.get("videos"):
+            names = ", ".join(plates["top_channels"][:3])
+            more = "" if len(plates["top_channels"]) <= 3 else " and others"
+            lines += [
+                "",
+                "#### Thumbnail backdrops",
+                "",
+                "When a job's own footage yields no usable still, the thumbnail falls "
+                "back to a cleared 16:9 plate chosen by hashing the job id "
+                "(`pipeline/thumbnail_ctr.py`). The owner's manual "
+                "`set-thumbnail.yml` run always takes that path. The pool is "
+                f"**{plates['pool_nocturnal']} photographs** for the night grades and "
+                f"**{plates['pool_daylight']}** for the daylight ones, so the fallback "
+                "repeats the same picture across channels.",
+                "",
+                "| | Reading |",
+                "|---|---|",
+                f"| Published long-forms | {plates['videos']} |",
+                f"| Distinct plates they fall back to | {plates['plates']} |",
+                f"| Most-used plate | `{plates['top_plate']}` — {plates['top_videos']} "
+                f"video(s) on {len(plates['top_channels'])} channel(s) ({names}{more}) |",
+                f"| Video pairs sharing a plate | {plates['pairs']} "
+                f"({plates['shared_pairs']} of them cross-channel) |",
+                "",
+                "This is the fallback's worst case, not a count of shipped plates: a "
+                "job with usable footage of its own never reaches it.",
+            ]
     lines += [
         "",
         "#### Long-prayer titles",
@@ -575,7 +671,9 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps([{**asdict(row), "weak_share": round(row.weak_share, 3)}
                           for row in rows], indent=2))
         return 0
-    report = render(rows, network_openers())
+    network = network_openers()
+    network["plates"] = backdrop_plates()
+    report = render(rows, network)
     print(report)
     for row in rows:
         for note in row.notes:
