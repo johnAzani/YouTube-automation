@@ -2,7 +2,7 @@
 id: '0610'
 title: 'When Trouble Surrounds You: Psalm 46:1-2 | The Covenant Shield'
 slug: when-trouble-surrounds-you-psalm-46-1-2-the-covenant-shield
-status: approved
+status: published
 channel: prayer8
 privacy: public
 format: longform
@@ -78,6 +78,15 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-18"
+published_at: "2026-11-18T02:25:14Z"
+youtube_video_id: "-klHB-q9h7Y"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Running Into the Strong Tower of the LORD

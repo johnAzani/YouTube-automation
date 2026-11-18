@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T01:54:27Z",
+  "generated_at": "2026-11-18T02:25:59Z",
   "monitor_generated_at": "2026-11-18T01:02:31.148573+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 428,
-    "published_longform": 144,
-    "published_shorts": 284,
-    "public_total": 426,
-    "queued_longform": 58,
-    "queued_shorts": 71,
+    "published_total": 430,
+    "published_longform": 145,
+    "published_shorts": 285,
+    "public_total": 428,
+    "queued_longform": 57,
+    "queued_shorts": 70,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,33 +509,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 29,
-        "published_longform": 10,
-        "published_shorts": 19,
-        "thumbnail_pending": 29,
-        "public_total": 29,
-        "queued_longform": 6,
+        "published_total": 31,
+        "published_longform": 11,
+        "published_shorts": 20,
+        "thumbnail_pending": 31,
+        "public_total": 31,
+        "queued_longform": 5,
         "queued_other": 2,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM20V1",
-        "title": "Pray This Psalm 20:1-2 Prayer for Divine Protection | The Lord Hear Thee #Shorts",
-        "format": "short",
-        "youtube_video_id": "MJfWwC2F2v8",
-        "watch_url": "https://www.youtube.com/shorts/MJfWwC2F2v8",
-        "published_on": "2026-11-17",
-        "published_at": "2026-11-17T19:57:55Z"
-      },
-      "next_queued_longform": {
         "id": "0610",
         "title": "When Trouble Surrounds You: Psalm 46:1-2 | The Covenant Shield",
-        "words": 1960,
+        "format": "longform",
+        "youtube_video_id": "-klHB-q9h7Y",
+        "watch_url": "https://youtu.be/-klHB-q9h7Y",
+        "published_on": "2026-11-18",
+        "published_at": "2026-11-18T02:25:14Z"
+      },
+      "next_queued_longform": {
+        "id": "0611",
+        "title": "The Lord Is My Rock and Fortress: Psalm 18:2 | The Covenant Shield",
+        "words": 1496,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldproverbs3v23",
-        "scripture": "Proverbs 3:23-26",
+        "short": "short-shieldpsalm46v1",
+        "scripture": "Psalm 46:1-2",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0610",
+      "slug": "when-trouble-surrounds-you-psalm-46-1-2-the-covenant-shield",
+      "file": "0610-when-trouble-surrounds-you-psalm-46-1-2-the-covenant-shield.md",
+      "title": "When Trouble Surrounds You: Psalm 46:1-2 | The Covenant Shield",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T02:25:14Z",
+      "youtube_video_id": "-klHB-q9h7Y",
+      "watch_url": "https://youtu.be/-klHB-q9h7Y",
+      "youtu_be_url": "https://youtu.be/-klHB-q9h7Y",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/-klHB-q9h7Y/edit",
+      "thumb_url": "https://i.ytimg.com/vi/-klHB-q9h7Y/hqdefault.jpg",
+      "thumb_text": "PRESENT HELP",
+      "thumbnail_pending": true,
+      "duration_label": "~14 min",
+      "words": 1960
+    },
+    {
       "id": "0215",
       "slug": "plead-my-cause-psalm-35-breakthrough",
       "file": "0215-plead-my-cause-psalm-35-breakthrough.md",
@@ -772,6 +796,30 @@
       "thumbnail_pending": true,
       "duration_label": "50s",
       "words": 642
+    },
+    {
+      "id": "SHORT-SHIELDPROVERBS3V23",
+      "slug": "short-shieldproverbs3v23-protection-prayer",
+      "file": "short-shieldproverbs3v23-protection-prayer.md",
+      "title": "Pray This Proverbs 3:23-26 Prayer for Divine Protection | Walk Safely In His Peace #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T01:19:12Z",
+      "youtube_video_id": "VmfqUNtCX0c",
+      "watch_url": "https://www.youtube.com/shorts/VmfqUNtCX0c",
+      "youtu_be_url": "https://youtu.be/VmfqUNtCX0c",
+      "shorts_url": "https://www.youtube.com/shorts/VmfqUNtCX0c",
+      "studio_url": "https://studio.youtube.com/video/VmfqUNtCX0c/edit",
+      "thumb_url": "https://i.ytimg.com/vi/VmfqUNtCX0c/hqdefault.jpg",
+      "thumb_text": "SAFE STEPS \u00b7 SWEET REST",
+      "thumbnail_pending": true,
+      "duration_label": "55s",
+      "words": 658
     },
     {
       "id": "SHORT-PROVISIONPSALM5V12",
@@ -11497,19 +11545,6 @@
         "words": 1149
       },
       {
-        "id": "0610",
-        "slug": "when-trouble-surrounds-you-psalm-46-1-2-the-covenant-shield",
-        "file": "0610-when-trouble-surrounds-you-psalm-46-1-2-the-covenant-shield.md",
-        "title": "When Trouble Surrounds You: Psalm 46:1-2 | The Covenant Shield",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1960
-      },
-      {
         "id": "0611",
         "slug": "the-lord-is-my-rock-and-fortress-psalm-18-2-the-covenant-shield",
         "file": "0611-the-lord-is-my-rock-and-fortress-psalm-18-2-the-covenant-shield.md",
@@ -12270,17 +12305,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldproverbs3v23",
-        "file": "0609-short-shieldproverbs3v23.yml",
-        "companion_longform_id": "0609",
-        "scripture": "Proverbs 3:23-26",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm46v1",
