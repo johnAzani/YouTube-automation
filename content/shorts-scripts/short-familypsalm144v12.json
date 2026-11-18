@@ -1,0 +1,319 @@
+{
+  "key": "short-familypsalm144v12",
+  "channel": "prayer5",
+  "psalm": 144,
+  "title": [
+    "BLESSINGS FOR YOUR HOME",
+    "PSALM 144 FAMILY PRAYER"
+  ],
+  "poster": [
+    "BLESSINGS FOR",
+    "YOUR HOME AND",
+    "YOUR CHILDREN",
+    "PSALM 144:12-15"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit open Bible on wooden table in cozy living room",
+    "sunlight streaming through green olive tree branches in quiet garden",
+    "peaceful stone cottage nestled in lush green countryside valley",
+    "golden sunset light over tranquil rural landscape and farmland",
+    "warm vintage lantern glowing on rustic porch at twilight",
+    "soft candlelight beside open scripture on warm wooden desk",
+    "serene morning light over peaceful home surrounded by greenery"
+  ],
+  "scenes": [
+    {
+      "a": "When you worry whether your home",
+      "img": "short-familypsalm144v12-scene-01.jpg",
+      "kicker": "PSALM 144:12",
+      "sub": "GOD'S PROMISE FOR YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "That our sons may be as plants grown up in their youth;",
+      "img": "short-familypsalm144v12-scene-02.jpg",
+      "kicker": "PSALM 144:12",
+      "sub": "OUR SONS GROWN IN STRENGTH",
+      "cam": "pull_out",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "that our daughters may be as corner stones,",
+      "img": "short-familypsalm144v12-scene-03.jpg",
+      "kicker": "PSALM 144:12",
+      "sub": "OUR DAUGHTERS POLISHED IN GRACE",
+      "cam": "pan_right",
+      "focus": [
+        0.52,
+        0.4
+      ]
+    },
+    {
+      "a": "Happy is that people, that is in such a case:",
+      "img": "short-familypsalm144v12-scene-04.jpg",
+      "kicker": "PSALM 144:15",
+      "sub": "BLESSED IS THE FAITHFUL HOME",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Heavenly Father, establish our children in Your truth",
+      "img": "short-familypsalm144v12-scene-05.jpg",
+      "kicker": "HOUSEHOLD PRAYER",
+      "sub": "ESTABLISH US IN TRUTH",
+      "cam": "push_in",
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    {
+      "a": "Supply all our needs, fill our rooms with joy,",
+      "img": "short-familypsalm144v12-scene-06.jpg",
+      "kicker": "FAMILY ALTAR",
+      "sub": "STEADFAST IN FAITH",
+      "cam": "pan_left",
+      "focus": [
+        0.55,
+        0.48
+      ]
+    },
+    {
+      "a": "Subscribe to join us in covering your home in daily prayer.",
+      "img": "short-familypsalm144v12-scene-07.jpg",
+      "kicker": "THE FAMILY ALTAR",
+      "sub": "COVER YOUR HOME IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "When you worry whether your home will stand strong in this world, hear God's promise."
+    ],
+    [
+      7,
+      15,
+      "That our sons may be as plants grown up in their youth;"
+    ],
+    [
+      15,
+      24,
+      "that our daughters may be as corner stones, polished after the similitude of a palace:"
+    ],
+    [
+      24,
+      32,
+      "Happy is that people, that is in such a case: yea, happy is that people, whose God is the LORD."
+    ],
+    [
+      32,
+      40,
+      "Heavenly Father, establish our children in Your truth and shield our household from harm."
+    ],
+    [
+      40,
+      48,
+      "Supply all our needs, fill our rooms with joy, and keep our family steadfast in faith."
+    ],
+    [
+      48,
+      56,
+      "Subscribe to join us in covering your home in daily prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "WHEN YOU WORRY",
+        "FOR YOUR HOME",
+        "HEAR GOD'S PROMISE"
+      ],
+      [
+        "WORRY",
+        "PROMISE"
+      ],
+      "PSALM 144:12"
+    ],
+    [
+      7,
+      15,
+      [
+        "THAT OUR SONS",
+        "MAY BE AS PLANTS",
+        "GROWN UP IN YOUTH"
+      ],
+      [
+        "SONS",
+        "PLANTS"
+      ],
+      "PSALM 144:12"
+    ],
+    [
+      15,
+      24,
+      [
+        "THAT OUR DAUGHTERS",
+        "BE AS CORNER STONES",
+        "POLISHED LIKE A PALACE"
+      ],
+      [
+        "DAUGHTERS",
+        "CORNER",
+        "STONES"
+      ],
+      "PSALM 144:12"
+    ],
+    [
+      24,
+      32,
+      [
+        "HAPPY IS THAT PEOPLE",
+        "WHOSE GOD IS",
+        "THE LORD"
+      ],
+      [
+        "HAPPY",
+        "LORD"
+      ],
+      "PSALM 144:15"
+    ],
+    [
+      32,
+      40,
+      [
+        "HEAVENLY FATHER",
+        "ESTABLISH OUR CHILDREN",
+        "SHIELD OUR HOUSEHOLD"
+      ],
+      [
+        "FATHER",
+        "SHIELD"
+      ],
+      "HOUSEHOLD PRAYER"
+    ],
+    [
+      40,
+      48,
+      [
+        "SUPPLY ALL OUR NEEDS",
+        "FILL OUR ROOMS WITH JOY",
+        "STEADFAST IN FAITH"
+      ],
+      [
+        "NEEDS",
+        "JOY",
+        "FAITH"
+      ],
+      "FAMILY ALTAR"
+    ],
+    [
+      48,
+      56,
+      [
+        "SUBSCRIBE TO JOIN US",
+        "COVERING YOUR HOME",
+        "IN DAILY PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "PRAYER"
+      ],
+      "THE FAMILY ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When you worry whether your home",
+      "kind": "phrase",
+      "words": [
+        "WHEN",
+        "WORRY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "That our sons may be as plants grown up in their youth;",
+      "kind": "phrase",
+      "words": [
+        "SONS",
+        "PLANTS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "that our daughters may be as corner stones,",
+      "kind": "phrase",
+      "words": [
+        "DAUGHTERS",
+        "STONES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Happy is that people, that is in such a case:",
+      "kind": "phrase",
+      "words": [
+        "HAPPY",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, establish our children in Your truth",
+      "kind": "phrase",
+      "words": [
+        "HEAVENLY",
+        "FATHER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Supply all our needs, fill our rooms with joy,",
+      "kind": "phrase",
+      "words": [
+        "JOY",
+        "FAITH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join us in covering your home in daily prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 144:12-15"
+}

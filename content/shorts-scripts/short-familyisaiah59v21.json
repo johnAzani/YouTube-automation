@@ -1,0 +1,268 @@
+{
+  "key": "short-familyisaiah59v21",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "A COVENANT",
+    "FOR YOUR LINEAGE"
+  ],
+  "poster": [
+    "A PROMISE",
+    "FOR YOUR",
+    "CHILDREN AND",
+    "THEIR CHILDREN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit bible on wooden table",
+    "peaceful countryside cottage window at dusk",
+    "gentle morning light over family dining table",
+    "soft focus greenery near a home entrance",
+    "open bible with olive branches on table",
+    "tranquil sunset view from a quiet home"
+  ],
+  "scenes": [
+    {
+      "a": "If the silence in your home feels heavy with worry for your children’s future, stay.",
+      "img": "short-familyisaiah59v21-scene-01.jpg",
+      "kicker": "ISAIAH 59:21",
+      "sub": "A PROMISE FOR GENERATIONS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "As for me, this is my covenant with them, saith the LORD;",
+      "img": "short-familyisaiah59v21-scene-02.jpg",
+      "kicker": "ISAIAH 59:21",
+      "sub": "GOD’S EVERLASTING WORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "My spirit that is upon thee, and my words which I have put in thy mouth,",
+      "img": "short-familyisaiah59v21-scene-03.jpg",
+      "kicker": "ISAIAH 59:21",
+      "sub": "HIS SPIRIT REMAINS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "shall not depart out of thy mouth, nor out of the mouth of thy seed,",
+      "img": "short-familyisaiah59v21-scene-04.jpg",
+      "kicker": "ISAIAH 59:21",
+      "sub": "FAITH PASSED DOWN",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "nor out of the mouth of thy seed’s seed, saith the LORD, from henceforth and for ever.",
+      "img": "short-familyisaiah59v21-scene-05.jpg",
+      "kicker": "ISAIAH 59:21",
+      "sub": "HIS PROMISE IS ETERNAL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, anchor our household in this truth, ensuring our legacy remains anchored in Your grace.",
+      "img": "short-familyisaiah59v21-scene-06.jpg",
+      "kicker": "THE FAMILY ALTAR",
+      "sub": "PRAYER FOR THE HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      9,
+      "If the silence in your home feels heavy with worry for your children’s future, stay."
+    ],
+    [
+      9,
+      18,
+      "As for me, this is my covenant with them, saith the LORD;"
+    ],
+    [
+      18,
+      27,
+      "My spirit that is upon thee, and my words which I have put in thy mouth,"
+    ],
+    [
+      27,
+      36,
+      "shall not depart out of thy mouth, nor out of the mouth of thy seed,"
+    ],
+    [
+      36,
+      45,
+      "nor out of the mouth of thy seed’s seed, saith the LORD, from henceforth and for ever."
+    ],
+    [
+      45,
+      54,
+      "Lord, anchor our household in this truth, ensuring our legacy remains anchored in Your grace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      9,
+      [
+        "IF SILENCE IN",
+        "YOUR HOME FEELS",
+        "HEAVY WITH WORRY"
+      ],
+      [
+        "HEAVY WITH WORRY"
+      ],
+      "ISAIAH 59 : 21"
+    ],
+    [
+      9,
+      18,
+      [
+        "AS FOR ME",
+        "THIS IS MY COVENANT",
+        "SAITH THE LORD"
+      ],
+      [
+        "COVENANT"
+      ],
+      "ISAIAH 59 : 21"
+    ],
+    [
+      18,
+      27,
+      [
+        "MY SPIRIT UPON THEE",
+        "MY WORDS PUT",
+        "IN THY MOUTH"
+      ],
+      [
+        "SPIRIT"
+      ],
+      "ISAIAH 59 : 21"
+    ],
+    [
+      27,
+      36,
+      [
+        "SHALL NOT DEPART",
+        "OUT OF THY MOUTH",
+        "OR THY SEED"
+      ],
+      [
+        "SHALL NOT DEPART"
+      ],
+      "ISAIAH 59 : 21"
+    ],
+    [
+      36,
+      45,
+      [
+        "SEED'S SEED",
+        "SAITH THE LORD",
+        "HENCEFORTH AND FOREVER"
+      ],
+      [
+        "FOREVER"
+      ],
+      "ISAIAH 59 : 21"
+    ],
+    [
+      45,
+      54,
+      [
+        "ANCHOR OUR HOUSEHOLD",
+        "IN THIS TRUTH",
+        "OUR LEGACY REMAINS"
+      ],
+      [
+        "ANCHOR"
+      ],
+      "ISAIAH 59 : 21"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the silence in your home feels heavy with worry for your children’s future, stay.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "WORRY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As for me, this is my covenant with them, saith the LORD;",
+      "kind": "phrase",
+      "words": [
+        "COVENANT",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "My spirit that is upon thee, and my words which I have put in thy mouth,",
+      "kind": "phrase",
+      "words": [
+        "SPIRIT",
+        "WORDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "shall not depart out of thy mouth, nor out of the mouth of thy seed,",
+      "kind": "phrase",
+      "words": [
+        "NOT",
+        "DEPART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "nor out of the mouth of thy seed’s seed, saith the LORD, from henceforth and for ever.",
+      "kind": "phrase",
+      "words": [
+        "FOREVER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor our household in this truth, ensuring our legacy remains anchored in Your grace.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 59:21"
+}

@@ -1,0 +1,283 @@
+{
+  "key": "short-familypsalm68v6",
+  "channel": "prayer5",
+  "psalm": 68,
+  "title": [
+    "GOD SETTETH THE",
+    "SOLITARY IN FAMILIES"
+  ],
+  "poster": [
+    "A PRAYER FOR",
+    "THE FAMILY ALTAR",
+    "PSALM SIXTY-EIGHT",
+    "VERSE SIX"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit open bible on wooden table",
+    "soft focus olive branches in ceramic vase",
+    "empty cozy living room with soft evening glow",
+    "peaceful countryside home view at twilight",
+    "gently flickering candle on a prayer table",
+    "warm sunlight streaming into a quiet home"
+  ],
+  "scenes": [
+    {
+      "a": "If the loneliness of this season feels like a wall around your heart, please listen.",
+      "img": "short-familypsalm68v6-scene-01.jpg",
+      "kicker": "PSALM 68:6",
+      "sub": "GOD RESTORES CONNECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "God setteth the solitary in families: he bringeth out those which are bound with chains: but the rebellious dwell in a dry land.",
+      "img": "short-familypsalm68v6-scene-02.jpg",
+      "kicker": "THE WORD OF GOD",
+      "sub": "HE SETTETH THE SOLITARY",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, we bring our empty chairs and our quiet halls to You tonight.",
+      "img": "short-familypsalm68v6-scene-03.jpg",
+      "kicker": "HOUSEHOLD PRAYER",
+      "sub": "BRINGING HEARTS BEFORE GOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You are the one who binds the broken pieces of our weary hearts together.",
+      "img": "short-familypsalm68v6-scene-04.jpg",
+      "kicker": "HEALING PRESENCE",
+      "sub": "BINDING EVERY WOUND",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Break the chains of isolation and lead us into the safety of Your love.",
+      "img": "short-familypsalm68v6-scene-05.jpg",
+      "kicker": "FREEDOM IN FAITH",
+      "sub": "LEAD US INTO SAFETY",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Fill our rooms with the warmth of Your purpose and the peace of belonging.",
+      "img": "short-familypsalm68v6-scene-06.jpg",
+      "kicker": "ABIDING PEACE",
+      "sub": "PURPOSE IN THE HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If the loneliness of this season feels like a wall around your heart, please listen."
+    ],
+    [
+      7,
+      18,
+      "God setteth the solitary in families: he bringeth out those which are bound with chains: but the rebellious dwell in a dry land."
+    ],
+    [
+      19,
+      28,
+      "Father, we bring our empty chairs and our quiet halls to You tonight."
+    ],
+    [
+      29,
+      39,
+      "You are the one who binds the broken pieces of our weary hearts together."
+    ],
+    [
+      40,
+      50,
+      "Break the chains of isolation and lead us into the safety of Your love."
+    ],
+    [
+      51,
+      62,
+      "Fill our rooms with the warmth of Your purpose and the peace of belonging."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF THE LONELINESS",
+        "OF THIS SEASON",
+        "FEELS LIKE A WALL",
+        "AROUND YOUR HEART",
+        "PLEASE LISTEN"
+      ],
+      [
+        "LONELINESS",
+        "PLEASE LISTEN"
+      ],
+      "PSALM 68:6"
+    ],
+    [
+      7,
+      18,
+      [
+        "GOD SETTETH THE",
+        "SOLITARY IN FAMILIES",
+        "HE BRINGETH OUT",
+        "THOSE BOUND WITH CHAINS"
+      ],
+      [
+        "SOLITARY",
+        "BOUND WITH CHAINS"
+      ],
+      "PSALM 68:6"
+    ],
+    [
+      19,
+      28,
+      [
+        "FATHER WE BRING",
+        "OUR EMPTY CHAIRS",
+        "AND OUR QUIET HALLS",
+        "TO YOU TONIGHT"
+      ],
+      [
+        "EMPTY CHAIRS",
+        "QUIET HALLS"
+      ],
+      "PSALM 68:6"
+    ],
+    [
+      29,
+      39,
+      [
+        "YOU ARE THE ONE",
+        "WHO BINDS THE",
+        "BROKEN PIECES OF",
+        "OUR WEARY HEARTS"
+      ],
+      [
+        "BINDS",
+        "BROKEN PIECES"
+      ],
+      "PSALM 68:6"
+    ],
+    [
+      40,
+      50,
+      [
+        "BREAK THE CHAINS",
+        "OF ISOLATION AND",
+        "LEAD US INTO THE",
+        "SAFETY OF YOUR LOVE"
+      ],
+      [
+        "BREAK THE CHAINS",
+        "SAFETY"
+      ],
+      "PSALM 68:6"
+    ],
+    [
+      51,
+      62,
+      [
+        "FILL OUR ROOMS",
+        "WITH THE WARMTH OF",
+        "YOUR PURPOSE AND THE",
+        "PEACE OF BELONGING"
+      ],
+      [
+        "WARMTH",
+        "BELONGING"
+      ],
+      "PSALM 68:6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the loneliness of this season feels like a wall around your heart, please listen.",
+      "kind": "phrase",
+      "words": [
+        "LONELINESS",
+        "LISTEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "God setteth the solitary in families: he bringeth out those which are bound with chains: but the rebellious dwell in a dry land.",
+      "kind": "phrase",
+      "words": [
+        "SOLITARY",
+        "CHAINS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we bring our empty chairs and our quiet halls to You tonight.",
+      "kind": "phrase",
+      "words": [
+        "EMPTY",
+        "CHAIRS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are the one who binds the broken pieces of our weary hearts together.",
+      "kind": "phrase",
+      "words": [
+        "BINDS",
+        "BROKEN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Break the chains of isolation and lead us into the safety of Your love.",
+      "kind": "phrase",
+      "words": [
+        "BREAK",
+        "SAFETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Fill our rooms with the warmth of Your purpose and the peace of belonging.",
+      "kind": "phrase",
+      "words": [
+        "WARMTH",
+        "BELONGING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 68:6"
+}
