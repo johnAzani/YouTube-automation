@@ -2,7 +2,7 @@
 id: '0313'
 title: 'Guiding Children in the Way They Should Go: Proverbs 22:6'
 slug: guiding-children-proverbs-22-6-the-family-altar
-status: approved
+status: published
 channel: prayer5
 privacy: public
 format: longform
@@ -77,6 +77,15 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-18"
+published_at: "2026-11-18T17:22:59Z"
+youtube_video_id: "ZQLqChOfkvU"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — The Table and the Promise

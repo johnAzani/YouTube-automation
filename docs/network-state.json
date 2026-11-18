@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T17:07:38Z",
+  "generated_at": "2026-11-18T17:23:57Z",
   "monitor_generated_at": "2026-11-18T11:57:30.409838+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 454,
-    "published_longform": 150,
-    "published_shorts": 304,
-    "public_total": 452,
-    "queued_longform": 57,
-    "queued_shorts": 80,
+    "published_total": 456,
+    "published_longform": 151,
+    "published_shorts": 305,
+    "public_total": 454,
+    "queued_longform": 56,
+    "queued_shorts": 79,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -305,33 +305,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 37,
-        "published_longform": 13,
-        "published_shorts": 24,
-        "thumbnail_pending": 37,
-        "public_total": 37,
-        "queued_longform": 6,
+        "published_total": 39,
+        "published_longform": 14,
+        "published_shorts": 25,
+        "thumbnail_pending": 39,
+        "public_total": 39,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-FAMILYISAIAH59V21",
-        "title": "Pray This Isaiah 59:21 Family Prayer Over Your Home | Their Children #Shorts",
-        "format": "short",
-        "youtube_video_id": "BSmrRuzc-Aw",
-        "watch_url": "https://www.youtube.com/shorts/BSmrRuzc-Aw",
-        "published_on": "2026-11-18",
-        "published_at": "2026-11-18T11:59:26Z"
-      },
-      "next_queued_longform": {
         "id": "0313",
         "title": "Guiding Children in the Way They Should Go: Proverbs 22:6",
-        "words": 2034,
+        "format": "longform",
+        "youtube_video_id": "ZQLqChOfkvU",
+        "watch_url": "https://youtu.be/ZQLqChOfkvU",
+        "published_on": "2026-11-18",
+        "published_at": "2026-11-18T17:22:59Z"
+      },
+      "next_queued_longform": {
+        "id": "0314",
+        "title": "Peace in Your Marriage and Home: Colossians 3:14-15 | The Family Altar",
+        "words": 1745,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familypsalm68v6",
-        "scripture": "Psalm 68:6",
+        "short": "short-familyacts16v31",
+        "scripture": "Acts 16:31-34",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0313",
+      "slug": "guiding-children-proverbs-22-6-the-family-altar",
+      "file": "0313-guiding-children-proverbs-22-6-the-family-altar.md",
+      "title": "Guiding Children in the Way They Should Go: Proverbs 22:6",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T17:22:59Z",
+      "youtube_video_id": "ZQLqChOfkvU",
+      "watch_url": "https://youtu.be/ZQLqChOfkvU",
+      "youtu_be_url": "https://youtu.be/ZQLqChOfkvU",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/ZQLqChOfkvU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ZQLqChOfkvU/hqdefault.jpg",
+      "thumb_text": "GUIDE THEIR STEPS",
+      "thumbnail_pending": true,
+      "duration_label": "~14 min",
+      "words": 2034
+    },
+    {
       "id": "0094",
       "slug": "praying-right-in-the-middle-of-your-work-nehemiah-2-4",
       "file": "0094-praying-right-in-the-middle-of-your-work-nehemiah-2-4.md",
@@ -964,6 +988,30 @@
       "thumbnail_pending": true,
       "duration_label": "42s",
       "words": 617
+    },
+    {
+      "id": "SHORT-FAMILYPSALM68V6",
+      "slug": "short-familypsalm68v6-household-prayer",
+      "file": "short-familypsalm68v6-household-prayer.md",
+      "title": "Pray This Psalm 68:6 Family Prayer Over Your Home | Verse Six #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T15:46:13Z",
+      "youtube_video_id": "vyTWxySRlRc",
+      "watch_url": "https://www.youtube.com/shorts/vyTWxySRlRc",
+      "youtu_be_url": "https://youtu.be/vyTWxySRlRc",
+      "shorts_url": "https://www.youtube.com/shorts/vyTWxySRlRc",
+      "studio_url": "https://studio.youtube.com/video/vyTWxySRlRc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/vyTWxySRlRc/hqdefault.jpg",
+      "thumb_text": "A PRAYER FOR \u00b7 THE FAMILY ALTAR",
+      "thumbnail_pending": true,
+      "duration_label": "43s",
+      "words": 662
     },
     {
       "id": "0808",
@@ -11913,19 +11961,6 @@
         "words": 1323
       },
       {
-        "id": "0313",
-        "slug": "guiding-children-proverbs-22-6-the-family-altar",
-        "file": "0313-guiding-children-proverbs-22-6-the-family-altar.md",
-        "title": "Guiding Children in the Way They Should Go: Proverbs 22:6",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2034
-      },
-      {
         "id": "0314",
         "slug": "peace-in-your-marriage-and-home-colossians-3-14-15",
         "file": "0314-peace-in-your-marriage-and-home-colossians-3-14-15.md",
@@ -12343,17 +12378,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-familypsalm68v6",
-        "file": "0000-short-familypsalm68v6.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 68:6",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
       {
         "short": "short-guidedpsalm25v9",
         "file": "0000-short-guidedpsalm25v9.yml",
