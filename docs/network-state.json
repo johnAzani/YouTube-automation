@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T01:24:58Z",
+  "generated_at": "2026-11-18T01:27:36Z",
   "monitor_generated_at": "2026-11-18T01:02:31.148573+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 425,
+    "published_total": 426,
     "published_longform": 143,
-    "published_shorts": 282,
-    "public_total": 423,
+    "published_shorts": 283,
+    "public_total": 424,
     "queued_longform": 59,
-    "queued_shorts": 73,
+    "queued_shorts": 72,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -645,23 +645,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 26,
+        "published_total": 27,
         "published_longform": 8,
-        "published_shorts": 18,
+        "published_shorts": 19,
         "thumbnail_pending": 12,
-        "public_total": 26,
+        "public_total": 27,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPSALM48V14",
-        "title": "Pray This Psalm 48:14 Prayer for God's Guidance | God Will Not Abandon You #Shorts",
+        "id": "SHORT-GUIDEDPSALM119V105",
+        "title": "Pray This Psalm 119:105 Prayer for God's Guidance | Bring Your Uncertainty To God #Shorts",
         "format": "short",
-        "youtube_video_id": "DRmsINlNfHY",
-        "watch_url": "https://www.youtube.com/shorts/DRmsINlNfHY",
-        "published_on": "2026-11-17",
-        "published_at": "2026-11-17T20:06:32Z"
+        "youtube_video_id": "K0bVs6R0EqM",
+        "watch_url": "https://www.youtube.com/shorts/K0bVs6R0EqM",
+        "published_on": "2026-11-18",
+        "published_at": "2026-11-18T01:26:47Z"
       },
       "next_queued_longform": {
         "id": "0808",
@@ -670,8 +670,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedpsalm119v105",
-        "scripture": "Psalm 119:105",
+        "short": "short-guidedproverbs16v9",
+        "scripture": "Proverbs 16:9",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDPSALM119V105",
+      "slug": "short-guidedpsalm119v105-guidance-prayer",
+      "file": "short-guidedpsalm119v105-guidance-prayer.md",
+      "title": "Pray This Psalm 119:105 Prayer for God's Guidance | Bring Your Uncertainty To God #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T01:26:47Z",
+      "youtube_video_id": "K0bVs6R0EqM",
+      "watch_url": "https://www.youtube.com/shorts/K0bVs6R0EqM",
+      "youtu_be_url": "https://youtu.be/K0bVs6R0EqM",
+      "shorts_url": "https://www.youtube.com/shorts/K0bVs6R0EqM",
+      "studio_url": "https://studio.youtube.com/video/K0bVs6R0EqM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/K0bVs6R0EqM/hqdefault.jpg",
+      "thumb_text": "WHEN YOU NEED \u00b7 WISDOM FOR THE",
+      "thumbnail_pending": false,
+      "duration_label": "59s",
+      "words": 632
+    },
     {
       "id": "SHORT-GARDENPSALM66V1",
       "slug": "short-gardenpsalm66v1-thanksgiving-prayer",
@@ -12387,17 +12411,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedpsalm119v105",
-        "file": "0806-short-guidedpsalm119v105.yml",
-        "companion_longform_id": "0806",
-        "scripture": "Psalm 119:105",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedproverbs16v9",
