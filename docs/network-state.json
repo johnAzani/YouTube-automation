@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T01:20:00Z",
+  "generated_at": "2026-11-18T01:24:58Z",
   "monitor_generated_at": "2026-11-18T01:02:31.148573+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 424,
+    "published_total": 425,
     "published_longform": 143,
-    "published_shorts": 281,
-    "public_total": 422,
+    "published_shorts": 282,
+    "public_total": 423,
     "queued_longform": 59,
-    "queued_shorts": 74,
+    "queued_shorts": 73,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 28,
+        "published_total": 29,
         "published_longform": 8,
-        "published_shorts": 20,
-        "thumbnail_pending": 28,
-        "public_total": 28,
+        "published_shorts": 21,
+        "thumbnail_pending": 29,
+        "public_total": 29,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM147V1",
-        "title": "Pray This Psalm 147:1 Prayer of Thanksgiving | Lift Your Heart In Praise #Shorts",
+        "id": "SHORT-GARDENPSALM66V1",
+        "title": "Pray This Psalm 66:1-4 Prayer of Thanksgiving | Find Strength In His Presence #Shorts",
         "format": "short",
-        "youtube_video_id": "BskWO55-GgA",
-        "watch_url": "https://www.youtube.com/shorts/BskWO55-GgA",
-        "published_on": "2026-11-17",
-        "published_at": "2026-11-17T20:02:37Z"
+        "youtube_video_id": "DK-T7MjcqxA",
+        "watch_url": "https://www.youtube.com/shorts/DK-T7MjcqxA",
+        "published_on": "2026-11-18",
+        "published_at": "2026-11-18T01:24:11Z"
       },
       "next_queued_longform": {
         "id": "0708",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm66v1",
-        "scripture": "Psalm 66:1-4",
+        "short": "short-gardenpsalm150v6",
+        "scripture": "Psalm 150:6",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM66V1",
+      "slug": "short-gardenpsalm66v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm66v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 66:1-4 Prayer of Thanksgiving | Find Strength In His Presence #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T01:24:11Z",
+      "youtube_video_id": "DK-T7MjcqxA",
+      "watch_url": "https://www.youtube.com/shorts/DK-T7MjcqxA",
+      "youtu_be_url": "https://youtu.be/DK-T7MjcqxA",
+      "shorts_url": "https://www.youtube.com/shorts/DK-T7MjcqxA",
+      "studio_url": "https://studio.youtube.com/video/DK-T7MjcqxA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/DK-T7MjcqxA/hqdefault.jpg",
+      "thumb_text": "A PRAYER \u00b7 OF PRAISE",
+      "thumbnail_pending": true,
+      "duration_label": "50s",
+      "words": 642
+    },
     {
       "id": "SHORT-PROVISIONPSALM5V12",
       "slug": "short-provisionpsalm5v12-stewardship-prayer",
@@ -11649,17 +11673,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-gardenpsalm66v1",
-        "file": "0000-short-gardenpsalm66v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 66:1-4",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
       {
         "short": "short-midnightpsalm126v1",
         "file": "0000-short-midnightpsalm126v1.yml",
