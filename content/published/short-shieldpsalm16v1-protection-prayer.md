@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["PSALM 16:1", "DIVINE PROTECTION", "UNDER GOD'S WINGS", "THE COVENANT SHIELD"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-25T17:26:01Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When an unexpected threat stirs your heart today, turn instantly to your true strong tower. Hear God's Word in Psalm 16, verse 1: Preserve me, O God: for in thee do I put my trust. Lord, cover this soul right now in the divine shelter of Your wings. When unseen troubles rise or anxious thoughts press in, be their ultimate shield and refuge. Guard their steps from subtle traps, clear their path of danger, and fill their mind with unshakable peace. We declare that their life rests securely in Your holy hands. Subscribe to walk daily under the Covenant Shield.

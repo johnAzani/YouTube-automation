@@ -24,8 +24,8 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE COVENANT SHIELD", "GUARD MY STEPS", "PSALM 121:7-8", "PROTECTION PRAYER"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_attempts: 6
-thumbnail_retry_after: "2026-11-18T15:18:41Z"
+thumbnail_attempts: 7
+thumbnail_retry_after: "2026-11-25T17:26:00Z"
 thumbnail_retry_reason: "permission"
 ---
 

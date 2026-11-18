@@ -79,7 +79,7 @@ youtube_video_id: "4NMgWbS5Bu8"
 metadata_revision: "selar-seo-v1"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-18T15:18:22Z"
+thumbnail_retry_after: "2026-11-25T17:25:10Z"
 thumbnail_retry_reason: "permission"
 title_before: "Acts 16:25-26 Midnight Prayer | The Midnight Watch"
 retitled_at: "2026-11-17"

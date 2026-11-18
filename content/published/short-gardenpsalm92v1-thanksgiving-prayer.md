@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["GIVE THANKS", "TO THE LORD", "FOR HIS MERCY", "IS EVERLASTING"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-25T17:26:07Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If that restlessness in your heart has followed you into this quiet space, stay here. It is a good thing to give thanks unto the Lord, and to sing praises unto thy name, O most High: To show forth thy lovingkindness in the morning, and thy faithfulness every night, Lord, help me hold these words as a lantern in the shadows of my own uncertainty. Teach my spirit to recognize your hand in the light of dawn and the dark. May my heart become a garden of perpetual praise, rooted deeply in your unchanging truth, Amen.

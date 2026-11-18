@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["A PRAYER", "FOR THE", "WEARY SOUL", "AT NIGHT"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 As you turn off the lamp to quiet your restless mind, you are not alone. The eternal God is thy refuge, and underneath are the everlasting arms: and he shall thrust out the enemy from before thee; and shall say, Destroy them. Father, carry every weight that kept my heart racing today into the silence of tonight. Let Your peace fall upon my heavy shoulders like a soft, comforting blanket of grace. May my spirit sleep knowing that You are holding me through the dark and quiet. Thank You for being my steady anchor as the world fades away into deep rest.

@@ -24,8 +24,8 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE MIDNIGHT WATCH", "RISE AT MIDNIGHT", "PSALM 119:62", "MIDNIGHT PRAYER"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_attempts: 6
-thumbnail_retry_after: "2026-11-18T15:18:30Z"
+thumbnail_attempts: 7
+thumbnail_retry_after: "2026-11-25T17:25:18Z"
 thumbnail_retry_reason: "permission"
 ---
 
