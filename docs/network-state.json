@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T21:26:24Z",
+  "generated_at": "2026-11-18T21:33:28Z",
   "monitor_generated_at": "2026-11-18T20:43:16.368466+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 465,
-    "published_longform": 152,
-    "published_shorts": 313,
-    "public_total": 463,
-    "queued_longform": 55,
-    "queued_shorts": 71,
+    "published_total": 467,
+    "published_longform": 153,
+    "published_shorts": 314,
+    "public_total": 465,
+    "queued_longform": 54,
+    "queued_shorts": 70,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -373,33 +373,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 39,
-        "published_longform": 12,
-        "published_shorts": 27,
+        "published_total": 41,
+        "published_longform": 13,
+        "published_shorts": 28,
         "thumbnail_pending": 5,
-        "public_total": 39,
-        "queued_longform": 6,
+        "public_total": 41,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-HEALINGISAIAH57V18",
-        "title": "Pray This Isaiah 57:18-19 Healing Prayer for Peace & Strength | God Sees Your Heart #Shorts",
-        "format": "short",
-        "youtube_video_id": "yCGQZILyygo",
-        "watch_url": "https://www.youtube.com/shorts/yCGQZILyygo",
-        "published_on": "2026-11-18",
-        "published_at": "2026-11-18T15:54:35Z"
-      },
-      "next_queued_longform": {
         "id": "0412",
         "title": "Prosper and Be in Health: 3 John 1:2 | The Healing Balm",
-        "words": 1312,
+        "format": "longform",
+        "youtube_video_id": "Xyf6CXcB0PY",
+        "watch_url": "https://youtu.be/Xyf6CXcB0PY",
+        "published_on": "2026-11-18",
+        "published_at": "2026-11-18T21:32:40Z"
+      },
+      "next_queued_longform": {
+        "id": "0413",
+        "title": "When Your Strength Is Gone: 2 Corinthians 12:9 | The Healing Balm",
+        "words": 1334,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingisaiah53v4",
-        "scripture": "Isaiah 53:4-5",
+        "short": "short-healingpsalm30v2",
+        "scripture": "Psalm 30:2",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0412",
+      "slug": "prosper-and-be-in-health-3-john-1-2-the-healing-balm",
+      "file": "0412-prosper-and-be-in-health-3-john-1-2-the-healing-balm.md",
+      "title": "Prosper and Be in Health: 3 John 1:2 | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T21:32:40Z",
+      "youtube_video_id": "Xyf6CXcB0PY",
+      "watch_url": "https://youtu.be/Xyf6CXcB0PY",
+      "youtu_be_url": "https://youtu.be/Xyf6CXcB0PY",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/Xyf6CXcB0PY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Xyf6CXcB0PY/hqdefault.jpg",
+      "thumb_text": "HEALTH AND PEACE",
+      "thumbnail_pending": false,
+      "duration_label": "~9 min",
+      "words": 1312
+    },
+    {
       "id": "0028",
       "slug": "matthew-11-28-30-rest-for-the-weary-soul",
       "file": "0028-matthew-11-28-30-rest-for-the-weary-soul.md",
@@ -796,6 +820,30 @@
       "thumbnail_pending": false,
       "duration_label": "50s",
       "words": 638
+    },
+    {
+      "id": "SHORT-HEALINGISAIAH53V4",
+      "slug": "short-healingisaiah53v4-restoration-prayer",
+      "file": "short-healingisaiah53v4-restoration-prayer.md",
+      "title": "Pray This Isaiah 53:4-5 Healing Prayer for Peace & Strength | God Hears Your Cry #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T20:59:30Z",
+      "youtube_video_id": "iUdzVFERGdU",
+      "watch_url": "https://www.youtube.com/shorts/iUdzVFERGdU",
+      "youtu_be_url": "https://youtu.be/iUdzVFERGdU",
+      "shorts_url": "https://www.youtube.com/shorts/iUdzVFERGdU",
+      "studio_url": "https://studio.youtube.com/video/iUdzVFERGdU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/iUdzVFERGdU/hqdefault.jpg",
+      "thumb_text": "BY HIS STRIPES \u00b7 WE ARE HEALED",
+      "thumbnail_pending": false,
+      "duration_label": "57s",
+      "words": 647
     },
     {
       "id": "SHORT-FAMILYACTS16V31",
@@ -12229,19 +12277,6 @@
         "words": 1208
       },
       {
-        "id": "0412",
-        "slug": "prosper-and-be-in-health-3-john-1-2-the-healing-balm",
-        "file": "0412-prosper-and-be-in-health-3-john-1-2-the-healing-balm.md",
-        "title": "Prosper and Be in Health: 3 John 1:2 | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1312
-      },
-      {
         "id": "0413",
         "slug": "when-your-strength-is-gone-2-corinthians-12-9-the-healing-balm",
         "file": "0413-when-your-strength-is-gone-2-corinthians-12-9-the-healing-balm.md",
@@ -12965,17 +13000,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healingisaiah53v4",
-        "file": "0410-short-healingisaiah53v4.yml",
-        "companion_longform_id": "0410",
-        "scripture": "Isaiah 53:4-5",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingpsalm30v2",
