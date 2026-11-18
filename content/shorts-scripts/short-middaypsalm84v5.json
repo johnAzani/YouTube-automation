@@ -1,0 +1,296 @@
+{
+  "key": "short-middaypsalm84v5",
+  "channel": "prayer3",
+  "psalm": 84,
+  "title": [
+    "STRENGTH",
+    "FOR THE ROAD"
+  ],
+  "poster": [
+    "THE",
+    "MIDDAY",
+    "WATCH",
+    "PSALM 84"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright midday sun shining through tall window onto empty wooden desk",
+    "golden afternoon light over dry valley landscape and distant hills",
+    "clear spring water filling a stone basin in bright daylight",
+    "sunlit mountain trail ascending upward into bright open sky",
+    "quiet ancient stone wall bathed in warm midday sunlight",
+    "peaceful high noon wilderness landscape with soft natural light",
+    "strong stone fortress wall standing firm under bright midday sun"
+  ],
+  "scenes": [
+    {
+      "a": "That looming decision on your desk is testing the very limits of your endurance.",
+      "img": "short-middaypsalm84v5-scene-01.jpg",
+      "kicker": "PSALM 84:5",
+      "sub": "FIND YOUR STRENGTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, when the road ahead feels dry and weary, let your presence be our inner resolve.",
+      "img": "short-middaypsalm84v5-scene-02.jpg",
+      "kicker": "PSALM 84:5",
+      "sub": "BLESSED IS THE MAN",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Blessed is the man whose strength is in thee; in whose heart are the ways of them.",
+      "img": "short-middaypsalm84v5-scene-03.jpg",
+      "kicker": "PSALM 84:5",
+      "sub": "WHOSE STRENGTH IS IN THEE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Transform every dry and difficult place we must walk through today.",
+      "img": "short-middaypsalm84v5-scene-04.jpg",
+      "kicker": "PSALM 84:6",
+      "sub": "THE VALLEY OF BACA",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Who passing through the valley of Baca make it a well; the rain also filleth the pools.",
+      "img": "short-middaypsalm84v5-scene-05.jpg",
+      "kicker": "PSALM 84:6",
+      "sub": "MAKE IT A WELL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father, lead us onward through every trial by your unfailing grace.",
+      "img": "short-middaypsalm84v5-scene-06.jpg",
+      "kicker": "PSALM 84:7",
+      "sub": "FROM STRENGTH TO STRENGTH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "They go from strength to strength, every one of them in Zion appeareth before God.",
+      "img": "short-middaypsalm84v5-scene-07.jpg",
+      "kicker": "PSALM 84:7",
+      "sub": "APPEARETH BEFORE GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "That looming decision on your desk is testing the very limits of your endurance."
+    ],
+    [
+      13,
+      25,
+      "Lord, when the road ahead feels dry and weary, let your presence be our inner resolve."
+    ],
+    [
+      26,
+      39,
+      "Blessed is the man whose strength is in thee; in whose heart are the ways of them."
+    ],
+    [
+      40,
+      52,
+      "Transform every dry and difficult place we must walk through today."
+    ],
+    [
+      53,
+      68,
+      "Who passing through the valley of Baca make it a well; the rain also filleth the pools."
+    ],
+    [
+      69,
+      81,
+      "Father, lead us onward through every trial by your unfailing grace."
+    ],
+    [
+      82,
+      98,
+      "They go from strength to strength, every one of them in Zion appeareth before God."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "THAT LOOMING DECISION",
+        "ON YOUR DESK IS",
+        "TESTING YOUR ENDURANCE"
+      ],
+      "ENDURANCE",
+      "PSALM 84 : 5"
+    ],
+    [
+      13,
+      25,
+      [
+        "LORD WHEN THE ROAD",
+        "AHEAD FEELS DRY",
+        "BE OUR INNER RESOLVE"
+      ],
+      "RESOLVE",
+      "PSALM 84 : 5"
+    ],
+    [
+      26,
+      39,
+      [
+        "BLESSED IS THE MAN",
+        "WHOSE STRENGTH IS IN THEE",
+        "IN WHOSE HEART"
+      ],
+      "THEE",
+      "PSALM 84 : 5"
+    ],
+    [
+      40,
+      52,
+      [
+        "TRANSFORM EVERY DRY",
+        "AND DIFFICULT PLACE",
+        "WE WALK TODAY"
+      ],
+      "TODAY",
+      "PSALM 84 : 6"
+    ],
+    [
+      53,
+      68,
+      [
+        "WHO PASSING THROUGH",
+        "THE VALLEY OF BACA",
+        "THE RAIN FILLETH POOLS"
+      ],
+      "WELL",
+      "PSALM 84 : 6"
+    ],
+    [
+      69,
+      81,
+      [
+        "FATHER LEAD US",
+        "ONWARD THROUGH TRIAL",
+        "BY UNFAILING GRACE"
+      ],
+      "GRACE",
+      "PSALM 84 : 7"
+    ],
+    [
+      82,
+      98,
+      [
+        "THEY GO FROM",
+        "STRENGTH TO STRENGTH",
+        "APPEARETH BEFORE GOD"
+      ],
+      "GOD",
+      "PSALM 84 : 7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That looming decision on your desk is testing the very limits of your endurance.",
+      "kind": "phrase",
+      "words": [
+        "LOOMING",
+        "DECISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when the road ahead feels dry and weary, let your presence be our inner resolve.",
+      "kind": "phrase",
+      "words": [
+        "DRY",
+        "WEARY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed is the man whose strength is in thee; in whose heart are the ways of them.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "THEE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Transform every dry and difficult place we must walk through today.",
+      "kind": "phrase",
+      "words": [
+        "TRANSFORM",
+        "DIFFICULT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Who passing through the valley of Baca make it a well; the rain also filleth the pools.",
+      "kind": "phrase",
+      "words": [
+        "BACA",
+        "WELL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, lead us onward through every trial by your unfailing grace.",
+      "kind": "phrase",
+      "words": [
+        "ONWARD",
+        "TRIAL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "They go from strength to strength, every one of them in Zion appeareth before God.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "ZION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 84:5-7"
+}

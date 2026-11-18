@@ -1,0 +1,334 @@
+{
+  "key": "short-middayjeremiah17v7",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "JEREMIAH 17:7-8",
+    "THE MIDDAY WATCH"
+  ],
+  "poster": [
+    "MIDDAY PRAYER",
+    "JEREMIAH SEVENTEEN",
+    "ROOTED BY WATER",
+    "UNSHAKABLE FAITH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright midday sun shining through a high study window",
+    "quiet wooden desk with a single open journal in daylight",
+    "sunlight on a deep river flowing past strong green trees",
+    "tall green tree standing firm by a flowing stream under high noon sun",
+    "fresh green leaves thriving under bright open daylight",
+    "peaceful riverbank under a clear midday sky with tall green trees",
+    "gentle river water flowing steadily past tree roots in bright sunlight",
+    "calm open field bathed in warm bright midday light"
+  ],
+  "scenes": [
+    {
+      "a": "That relentless pressure building in your chest right now demands your attention.",
+      "img": "short-middayjeremiah17v7-scene-01.jpg",
+      "kicker": "JEREMIAH 17 : 7",
+      "sub": "REST YOUR HEART IN GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Let us turn our minds to the unchanging promise found in scripture.",
+      "img": "short-middayjeremiah17v7-scene-02.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "SEEK THE LORD TODAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Blessed is the man that trusteth in the LORD, and whose hope the LORD is.",
+      "img": "short-middayjeremiah17v7-scene-03.jpg",
+      "kicker": "BLESSED IS THE MAN",
+      "sub": "TRUST IN THE LORD",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "For he shall be as a tree planted by the waters, and that spreadeth out her roots by the river,",
+      "img": "short-middayjeremiah17v7-scene-04.jpg",
+      "kicker": "PLANTED BY WATERS",
+      "sub": "DEEP ROOTS BY THE RIVER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "and shall not see when heat cometh, but her leaf shall be green;",
+      "img": "short-middayjeremiah17v7-scene-05.jpg",
+      "kicker": "GREEN LEAF",
+      "sub": "UNMOVED BY THE HEAT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "and shall not be careful in the year of drought, neither shall cease from yielding fruit.",
+      "img": "short-middayjeremiah17v7-scene-06.jpg",
+      "kicker": "NO FEAR OF DROUGHT",
+      "sub": "YIELDING FRUIT ALWAYS",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, anchor our lives deeply in your enduring grace during this midday hour.",
+      "img": "short-middayjeremiah17v7-scene-07.jpg",
+      "kicker": "ENDURING GRACE",
+      "sub": "ANCHOR OUR LIVES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Grant us steadfast trust when dry seasons surround us.",
+      "img": "short-middayjeremiah17v7-scene-08.jpg",
+      "kicker": "STEADFAST TRUST",
+      "sub": "WALK IN FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "That relentless pressure building in your chest right now demands your attention."
+    ],
+    [
+      12,
+      23,
+      "Let us turn our minds to the unchanging promise found in scripture."
+    ],
+    [
+      23,
+      36,
+      "Blessed is the man that trusteth in the LORD, and whose hope the LORD is."
+    ],
+    [
+      36,
+      50,
+      "For he shall be as a tree planted by the waters, and that spreadeth out her roots by the river,"
+    ],
+    [
+      50,
+      63,
+      "and shall not see when heat cometh, but her leaf shall be green;"
+    ],
+    [
+      63,
+      78,
+      "and shall not be careful in the year of drought, neither shall cease from yielding fruit."
+    ],
+    [
+      78,
+      90,
+      "Lord, anchor our lives deeply in your enduring grace during this midday hour."
+    ],
+    [
+      90,
+      102,
+      "Grant us steadfast trust when dry seasons surround us."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "THAT RELENTLESS PRESSURE",
+        "BUILDING IN YOUR CHEST",
+        "RIGHT NOW DEMANDS ATTENTION"
+      ],
+      "PRESSURE",
+      "JEREMIAH 17 : 7"
+    ],
+    [
+      12,
+      23,
+      [
+        "LET US TURN OUR MINDS",
+        "TO THE UNCHANGING PROMISE",
+        "FOUND IN SCRIPTURE"
+      ],
+      "PROMISE",
+      "MIDDAY PRAYER"
+    ],
+    [
+      23,
+      36,
+      [
+        "BLESSED IS THE MAN",
+        "THAT TRUSTETH IN THE LORD",
+        "AND WHOSE HOPE IS HE"
+      ],
+      "TRUSTETH",
+      "JEREMIAH 17 : 7"
+    ],
+    [
+      36,
+      50,
+      [
+        "FOR HE SHALL BE",
+        "AS A TREE PLANTED BY",
+        "THE WATERS BY THE RIVER"
+      ],
+      "PLANTED",
+      "JEREMIAH 17 : 8"
+    ],
+    [
+      50,
+      63,
+      [
+        "AND SHALL NOT SEE",
+        "WHEN HEAT COMETH",
+        "HER LEAF SHALL BE GREEN"
+      ],
+      "GREEN",
+      "JEREMIAH 17 : 8"
+    ],
+    [
+      63,
+      78,
+      [
+        "AND SHALL NOT BE CAREFUL",
+        "IN THE YEAR OF DROUGHT",
+        "YIELDING FRUIT ALWAYS"
+      ],
+      "DROUGHT",
+      "JEREMIAH 17 : 8"
+    ],
+    [
+      78,
+      90,
+      [
+        "LORD ANCHOR OUR LIVES",
+        "DEEPLY IN YOUR GRACE",
+        "DURING THIS MIDDAY HOUR"
+      ],
+      "ANCHOR",
+      "MIDDAY WATCH"
+    ],
+    [
+      90,
+      102,
+      [
+        "GRANT US STEADFAST TRUST",
+        "WHEN DRY SEASONS",
+        "SURROUND US TODAY"
+      ],
+      "STEADFAST",
+      "MIDDAY WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That relentless pressure building in your chest right now demands your attention.",
+      "kind": "phrase",
+      "words": [
+        "RELENTLESS",
+        "PRESSURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let us turn our minds to the unchanging promise found in scripture.",
+      "kind": "phrase",
+      "words": [
+        "UNCHANGING",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed is the man that trusteth in the LORD, and whose hope the LORD is.",
+      "kind": "phrase",
+      "words": [
+        "BLESSED",
+        "TRUSTETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For he shall be as a tree planted by the waters, and that spreadeth out her roots by the river,",
+      "kind": "phrase",
+      "words": [
+        "PLANTED",
+        "WATERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and shall not see when heat cometh, but her leaf shall be green;",
+      "kind": "phrase",
+      "words": [
+        "HEAT",
+        "GREEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and shall not be careful in the year of drought, neither shall cease from yielding fruit.",
+      "kind": "phrase",
+      "words": [
+        "DROUGHT",
+        "FRUIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor our lives deeply in your enduring grace during this midday hour.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us steadfast trust when dry seasons surround us.",
+      "kind": "phrase",
+      "words": [
+        "STEADFAST",
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Jeremiah 17:7-8"
+}

@@ -1,0 +1,337 @@
+{
+  "key": "short-middayjohn4v13",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "JOHN 4:13-14",
+    "THE MIDDAY WATCH"
+  ],
+  "poster": [
+    "THE",
+    "MIDDAY",
+    "WATCH",
+    "PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright midday sun filtering through tall trees",
+    "sparkling clear water flowing in a quiet brook",
+    "warm noon sunlight on an empty wooden table",
+    "sunlit ripples on a calm river surface",
+    "open field under bright noon sky with no clouds",
+    "clear glass of water catching bright midday light",
+    "serene mountain stream flowing in afternoon sun",
+    "peaceful sunlight streaming through a clean window"
+  ],
+  "scenes": [
+    {
+      "a": "That bone-deep exhaustion sitting on your shoulders right now is whispering that you have nothing left to give.",
+      "img": "short-middayjohn4v13-scene-01.jpg",
+      "kicker": "JOHN 4 : 13-14",
+      "sub": "PAUSE AND PRAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You have spent the morning running on empty, trying to quench a thirst that never quite goes away with temporary things.",
+      "img": "short-middayjohn4v13-scene-02.jpg",
+      "kicker": "THE LIVING WATER",
+      "sub": "FIND RENEWAL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Listen to the promise given to your weary soul in the middle of this busy day.",
+      "img": "short-middayjohn4v13-scene-03.jpg",
+      "kicker": "HIS PROMISE",
+      "sub": "LISTEN CLOSELY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Jesus answered and said unto her, Whosoever drinketh of this water shall thirst again:",
+      "img": "short-middayjohn4v13-scene-04.jpg",
+      "kicker": "JOHN 4 : 13",
+      "sub": "READ THE WORD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "But whosoever drinketh of the water that I shall give him shall never thirst;",
+      "img": "short-middayjohn4v13-scene-05.jpg",
+      "kicker": "JOHN 4 : 14",
+      "sub": "NEVER THIRST",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "but the water that I shall give him shall be in him a well of water springing up into everlasting life.",
+      "img": "short-middayjohn4v13-scene-06.jpg",
+      "kicker": "EVERLASTING LIFE",
+      "sub": "SPRINGING UP",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, let that eternal well rise up inside this quiet room and flood every dry place in my heart.",
+      "img": "short-middayjohn4v13-scene-07.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "POUR OUT YOUR HEART",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Give me this living water today so I may walk in your peace until the sun goes down. Amen.",
+      "img": "short-middayjohn4v13-scene-08.jpg",
+      "kicker": "WALK IN PEACE",
+      "sub": "UNTIL EVENING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That bone-deep exhaustion sitting on your shoulders right now is whispering that you have nothing left to give."
+    ],
+    [
+      8,
+      17,
+      "You have spent the morning running on empty, trying to quench a thirst that never quite goes away with temporary things."
+    ],
+    [
+      17,
+      25,
+      "Listen to the promise given to your weary soul in the middle of this busy day."
+    ],
+    [
+      25,
+      35,
+      "Jesus answered and said unto her, Whosoever drinketh of this water shall thirst again:"
+    ],
+    [
+      35,
+      46,
+      "But whosoever drinketh of the water that I shall give him shall never thirst;"
+    ],
+    [
+      46,
+      57,
+      "but the water that I shall give him shall be in him a well of water springing up into everlasting life."
+    ],
+    [
+      57,
+      66,
+      "Lord, let that eternal well rise up inside this quiet room and flood every dry place in my heart."
+    ],
+    [
+      66,
+      76,
+      "Give me this living water today so I may walk in your peace until the sun goes down. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT BONE-DEEP EXHAUSTION",
+        "SITTING ON YOUR SHOULDERS",
+        "RIGHT NOW"
+      ],
+      "EXHAUSTION",
+      "JOHN 4 : 13-14"
+    ],
+    [
+      8,
+      17,
+      [
+        "RUNNING ON EMPTY",
+        "TRYING TO QUENCH A THIRST",
+        "WITH TEMPORARY THINGS"
+      ],
+      "EMPTY",
+      "JOHN 4 : 13-14"
+    ],
+    [
+      17,
+      25,
+      [
+        "LISTEN TO THE PROMISE",
+        "GIVEN TO YOUR WEARY SOUL",
+        "IN THE MIDDLE OF THE DAY"
+      ],
+      "PROMISE",
+      "JOHN 4 : 13-14"
+    ],
+    [
+      25,
+      35,
+      [
+        "JESUS ANSWERED AND SAID",
+        "WHOSOEVER DRINKETH",
+        "SHALL THIRST AGAIN"
+      ],
+      "THIRST",
+      "JOHN 4 : 13"
+    ],
+    [
+      35,
+      46,
+      [
+        "THE WATER THAT I SHALL GIVE",
+        "SHALL NEVER THIRST",
+        "HIS ETERNAL GIFT"
+      ],
+      "NEVER",
+      "JOHN 4 : 14"
+    ],
+    [
+      46,
+      57,
+      [
+        "A WELL OF WATER",
+        "SPRINGING UP",
+        "INTO EVERLASTING LIFE"
+      ],
+      "SPRINGING",
+      "JOHN 4 : 14"
+    ],
+    [
+      57,
+      66,
+      [
+        "LET THAT ETERNAL WELL",
+        "RISE UP INSIDE THIS ROOM",
+        "FLOOD EVERY DRY PLACE"
+      ],
+      "WELL",
+      "MIDDAY PRAYER"
+    ],
+    [
+      66,
+      76,
+      [
+        "GIVE ME THIS LIVING WATER",
+        "WALK IN YOUR PEACE",
+        "UNTIL THE SUN GOES DOWN"
+      ],
+      "PEACE",
+      "AMEN"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That bone-deep exhaustion sitting on your shoulders right now is whispering that you have nothing left to give.",
+      "kind": "phrase",
+      "words": [
+        "BONE-DEEP",
+        "EXHAUSTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You have spent the morning running on empty, trying to quench a thirst that never quite goes away with temporary things.",
+      "kind": "phrase",
+      "words": [
+        "RUNNING",
+        "ON",
+        "EMPTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Listen to the promise given to your weary soul in the middle of this busy day.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "SOUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Jesus answered and said unto her, Whosoever drinketh of this water shall thirst again:",
+      "kind": "phrase",
+      "words": [
+        "WHOSOEVER",
+        "DRINKETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But whosoever drinketh of the water that I shall give him shall never thirst;",
+      "kind": "phrase",
+      "words": [
+        "SHALL",
+        "NEVER",
+        "THIRST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "but the water that I shall give him shall be in him a well of water springing up into everlasting life.",
+      "kind": "phrase",
+      "words": [
+        "WELL",
+        "OF",
+        "WATER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, let that eternal well rise up inside this quiet room and flood every dry place in my heart.",
+      "kind": "phrase",
+      "words": [
+        "ETERNAL",
+        "WELL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give me this living water today so I may walk in your peace until the sun goes down. Amen.",
+      "kind": "phrase",
+      "words": [
+        "LIVING",
+        "WATER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "John 4:13-14"
+}
