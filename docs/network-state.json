@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T16:56:59Z",
+  "generated_at": "2026-11-18T17:07:38Z",
   "monitor_generated_at": "2026-11-18T11:57:30.409838+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 452,
-    "published_longform": 149,
-    "published_shorts": 303,
-    "public_total": 450,
-    "queued_longform": 58,
-    "queued_shorts": 81,
+    "published_total": 454,
+    "published_longform": 150,
+    "published_shorts": 304,
+    "public_total": 452,
+    "queued_longform": 57,
+    "queued_shorts": 80,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -169,33 +169,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 55,
-        "published_longform": 19,
-        "published_shorts": 36,
+        "published_total": 57,
+        "published_longform": 20,
+        "published_shorts": 37,
         "thumbnail_pending": 0,
-        "public_total": 55,
-        "queued_longform": 6,
+        "public_total": 57,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYJEREMIAH17V7",
-        "title": "Say This Jeremiah 17:7-8 Prayer at Noon | Unshakable Faith #Shorts",
-        "format": "short",
-        "youtube_video_id": "aVGgFPKWgcY",
-        "watch_url": "https://www.youtube.com/shorts/aVGgFPKWgcY",
-        "published_on": "2026-11-18",
-        "published_at": "2026-11-18T11:58:19Z"
-      },
-      "next_queued_longform": {
         "id": "0094",
         "title": "Praying Right in the Middle of Your Work: Nehemiah 2:4",
-        "words": 1784,
+        "format": "longform",
+        "youtube_video_id": "En2HZKRkFbg",
+        "watch_url": "https://youtu.be/En2HZKRkFbg",
+        "published_on": "2026-11-18",
+        "published_at": "2026-11-18T17:06:30Z"
+      },
+      "next_queued_longform": {
+        "id": "0095",
+        "title": "Strength for the Unfinished Work: Nehemiah 6:9 | The Midday Watch",
+        "words": 1374,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayjohn4v13",
-        "scripture": "John 4:13-14",
+        "short": "short-midday1corinthians15v58",
+        "scripture": "1 Corinthians 15:58",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0094",
+      "slug": "praying-right-in-the-middle-of-your-work-nehemiah-2-4",
+      "file": "0094-praying-right-in-the-middle-of-your-work-nehemiah-2-4.md",
+      "title": "Praying Right in the Middle of Your Work: Nehemiah 2:4",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T17:06:30Z",
+      "youtube_video_id": "En2HZKRkFbg",
+      "watch_url": "https://youtu.be/En2HZKRkFbg",
+      "youtu_be_url": "https://youtu.be/En2HZKRkFbg",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/En2HZKRkFbg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/En2HZKRkFbg/hqdefault.jpg",
+      "thumb_text": "PRAYER IN DUTY",
+      "thumbnail_pending": false,
+      "duration_label": "~12 min",
+      "words": 1784
+    },
+    {
       "id": "0708",
       "slug": "when-every-day-depends-on-grace-psalm-136-1-the-praise-garden",
       "file": "0708-when-every-day-depends-on-grace-psalm-136-1-the-praise-garden.md",
@@ -868,6 +892,30 @@
       "thumbnail_pending": true,
       "duration_label": "58s",
       "words": 649
+    },
+    {
+      "id": "SHORT-MIDDAYJOHN4V13",
+      "slug": "short-middayjohn4v13-midday-prayer",
+      "file": "short-middayjohn4v13-midday-prayer.md",
+      "title": "Say This John 4:13-14 Prayer at Noon | Pause And Pray #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T15:48:57Z",
+      "youtube_video_id": "JjIoTlPxpow",
+      "watch_url": "https://www.youtube.com/shorts/JjIoTlPxpow",
+      "youtu_be_url": "https://youtu.be/JjIoTlPxpow",
+      "shorts_url": "https://www.youtube.com/shorts/JjIoTlPxpow",
+      "studio_url": "https://studio.youtube.com/video/JjIoTlPxpow/edit",
+      "thumb_url": "https://i.ytimg.com/vi/JjIoTlPxpow/hqdefault.jpg",
+      "thumb_text": "THE \u00b7 MIDDAY",
+      "thumbnail_pending": false,
+      "duration_label": "61s",
+      "words": 648
     },
     {
       "id": "SHORT-MORNINGJAMES1V5",
@@ -11722,19 +11770,6 @@
         "words": 1078
       },
       {
-        "id": "0094",
-        "slug": "praying-right-in-the-middle-of-your-work-nehemiah-2-4",
-        "file": "0094-praying-right-in-the-middle-of-your-work-nehemiah-2-4.md",
-        "title": "Praying Right in the Middle of Your Work: Nehemiah 2:4",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1784
-      },
-      {
         "id": "0095",
         "slug": "strength-for-the-unfinished-work-nehemiah-69",
         "file": "0095-strength-for-the-unfinished-work-nehemiah-69.md",
@@ -12329,17 +12364,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-middayjohn4v13",
-        "file": "0000-short-middayjohn4v13.yml",
-        "companion_longform_id": "",
-        "scripture": "John 4:13-14",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-morningpsalm139v17",
