@@ -1,6 +1,6 @@
 ---
 id: 0059
-title: Psalm 108:2 Morning Prayer | The Morning Altar
+title: "To Wake With a Grateful Heart: Psalm 108:2 | The Morning Altar"
 slug: psalm-108-2-morning-prayer
 status: published
 channel: prayer2
@@ -78,10 +78,13 @@ originality:
 published_on: "2026-11-11"
 published_at: "2026-11-11T18:58:47Z"
 youtube_video_id: "wXUTRMZFbf8"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Psalm 108:2 Morning Prayer | The Morning Altar"
+retitled_at: "2026-11-18"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Call to Awake
