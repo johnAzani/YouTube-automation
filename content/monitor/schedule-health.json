@@ -2,9 +2,9 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 309,
+      "late_minutes": 338,
       "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-13T23:50:26+00:00",
+      "ran_at": "2026-11-14T00:19:33+00:00",
       "slot": "2026-11-13T18:41:00+00:00",
       "workflow": "metrics.yml"
     },
@@ -30,8 +30,8 @@
       "workflow": "automation-health.yml"
     }
   ],
-  "generated_at": "2026-11-18T01:19:25.529894+00:00",
-  "last_run_at": "2026-11-18T01:18:19+00:00",
+  "generated_at": "2026-11-18T02:27:29.768811+00:00",
+  "last_run_at": "2026-11-18T02:26:41+00:00",
   "on_time": [
     {
       "late_minutes": 90,
@@ -53,13 +53,6 @@
       "ran_at": "2026-11-17T05:04:35+00:00",
       "slot": "2026-11-17T03:14:00+00:00",
       "workflow": "gemini_brain.yml"
-    },
-    {
-      "late_minutes": 108,
-      "name": "Growth autopilot",
-      "ran_at": "2026-11-17T04:02:47+00:00",
-      "slot": "2026-11-17T02:14:00+00:00",
-      "workflow": "growth-autopilot.yml"
     },
     {
       "late_minutes": 38,
@@ -97,6 +90,6 @@
       "workflow": "tests-on-main.yml"
     }
   ],
-  "silence_minutes": 1,
+  "silence_minutes": 0,
   "warn_minutes": 120
 }
