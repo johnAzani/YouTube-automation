@@ -10,3 +10,8 @@ replace: false
 target_window_utc: 09:44
 notes: "Companion Short for Psalm 103:1-5 Thanksgiving Prayer | The Praise Garden\
   \ \u2014 spec authored by the brain (100 narration words)"
+alignment_failures: 1
+last_alignment_error: 'cannot prepare Charon narration for short-gardenpsalm103v1
+  (Short speech alignment unavailable or incomplete; refusing to render [ValueError:
+  Narration does not match the script: only 32% of the 100 script words were recognised
+  (floor 85%); the audio is not this script]); refusing to render'
