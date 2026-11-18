@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-17T10:41:26.900418+00:00",
-  "as_of": "2026-11-17",
+  "generated_at": "2026-11-18T04:18:51.617998+00:00",
+  "as_of": "2026-11-18",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 18,
+  "total_longform_videos": 16,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 49,
+    "receipt_video_ids": 54,
     "matched_video_ids": 49,
-    "longform_below_view_threshold": 18,
+    "longform_below_view_threshold": 16,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 2,
     "minimum_views": 25,
@@ -18,7 +18,7 @@
   "themes": [
     {
       "theme": "midday_strength_endurance",
-      "videos": 14,
+      "videos": 13,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -39,124 +39,124 @@
       "avg_score": 0.0,
       "avg_engagement": 0.0,
       "top_scripture": ""
-    },
-    {
-      "theme": "protection",
-      "videos": 1,
-      "measured_videos": 0,
-      "avg_score": 0.0,
-      "avg_engagement": 0.0,
-      "top_scripture": ""
     }
   ],
   "shorts": {
-    "measured_shorts": 25,
-    "total_shorts": 31,
+    "measured_shorts": 28,
+    "total_shorts": 33,
     "sufficient_data": true,
-    "avg_views": 90.6,
-    "median_views": 89,
-    "total_views": 2264,
+    "avg_views": 89.9,
+    "median_views": 91,
+    "total_views": 2518,
     "minimum_age_days": 2,
     "by_book": {
       "1 corinthians": {
         "shorts": 1,
         "avg_views": 115.0,
-        "ratio": 1.09
+        "ratio": 1.093
+      },
+      "2 corinthians": {
+        "shorts": 1,
+        "avg_views": 76.0,
+        "ratio": 0.948
       },
       "acts": {
         "shorts": 1,
         "avg_views": 71.0,
-        "ratio": 0.928
+        "ratio": 0.93
+      },
+      "colossians": {
+        "shorts": 1,
+        "avg_views": 110.0,
+        "ratio": 1.074
       },
       "daniel": {
         "shorts": 1,
         "avg_views": 86.0,
-        "ratio": 0.983
+        "ratio": 0.985
       },
       "deuteronomy": {
         "shorts": 1,
-        "avg_views": 181.0,
-        "ratio": 1.333
+        "avg_views": 178.0,
+        "ratio": 1.326
       },
       "galatians": {
         "shorts": 1,
         "avg_views": 92.0,
-        "ratio": 1.005
+        "ratio": 1.008
       },
       "isaiah": {
         "shorts": 5,
-        "avg_views": 80.6,
+        "avg_views": 80.0,
         "ratio": 0.921
       },
       "mark": {
         "shorts": 1,
         "avg_views": 76.0,
-        "ratio": 0.946
+        "ratio": 0.948
       },
       "matthew": {
         "shorts": 1,
         "avg_views": 114.0,
-        "ratio": 1.086
+        "ratio": 1.089
       },
       "nehemiah": {
         "shorts": 1,
         "avg_views": 68.0,
-        "ratio": 0.917
+        "ratio": 0.919
       },
       "proverbs": {
         "shorts": 1,
         "avg_views": 40.0,
-        "ratio": 0.814
+        "ratio": 0.815
       },
       "psalm": {
-        "shorts": 9,
-        "avg_views": 93.8,
-        "ratio": 1.029
+        "shorts": 10,
+        "avg_views": 91.2,
+        "ratio": 1.012
       },
       "romans": {
         "shorts": 1,
         "avg_views": 89.0,
-        "ratio": 0.994
+        "ratio": 0.997
       },
       "zechariah": {
         "shorts": 1,
-        "avg_views": 85.0,
-        "ratio": 0.98
+        "avg_views": 91.0,
+        "ratio": 1.004
       }
     },
     "by_theme": {
       "daily_guidance_wisdom": {
-        "shorts": 2,
-        "avg_views": 86.0,
-        "ratio": 0.975
+        "shorts": 4,
+        "avg_views": 90.8,
+        "ratio": 1.006
       },
       "midday_strength_endurance": {
         "shorts": 19,
-        "avg_views": 92.1,
-        "ratio": 1.015
+        "avg_views": 90.7,
+        "ratio": 1.008
       },
       "peace_rest": {
-        "shorts": 2,
-        "avg_views": 62.0,
-        "ratio": 0.842
+        "shorts": 3,
+        "avg_views": 66.7,
+        "ratio": 0.845
       },
-      "protection": {
+      "stillness_refuge": {
         "shorts": 1,
-        "avg_views": 113.0,
-        "ratio": 1.083
+        "avg_views": 126.0,
+        "ratio": 1.134
       },
       "trust_surrender": {
         "shorts": 1,
         "avg_views": 106.0,
-        "ratio": 1.057
+        "ratio": 1.06
       }
     },
     "guidance": []
   },
   "guidance": [
-    "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real.",
-    "Lesson 'morning prayer' (titles of the most-watched videos of this kind): now being tried in new long-prayer titles.",
-    "Lesson 'start your day' (titles of the most-watched videos of this kind): now being tried in new long-prayer titles."
+    "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
   ],
   "cost_lock": "$0.00 \u2014 public Data API statistics only; no new quota or secret.",
   "privacy": "Aggregate theme scores only; raw per-video snapshot stays an Actions artifact.",
