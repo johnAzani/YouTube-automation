@@ -1,0 +1,285 @@
+{
+  "key": "short-midnightrevelation3v7",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "THE KEY OF DAVID",
+    "A DOOR OPENS"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "THE KEY OF DAVID",
+    "DIVINE OPENING",
+    "REVELATION 3:7-8"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "silhouette of ancient stone archway at midnight",
+    "starry night sky over a quiet mountain peak",
+    "flickering candlelight in a dark prayer room",
+    "winding path through a deep blue forest at night",
+    "glowing lantern on a stone floor",
+    "starlit horizon reflecting on calm dark water"
+  ],
+  "scenes": [
+    {
+      "a": "The lock on your future is breaking because the One who holds the key arrives.",
+      "img": "short-midnightrevelation3v7-scene-01.jpg",
+      "kicker": "REVELATION 3:7",
+      "sub": "THE ONE WHO HOLDS THE KEY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "These things saith he that is holy, he that is true, he that hath the key of David.",
+      "img": "short-midnightrevelation3v7-scene-02.jpg",
+      "kicker": "REVELATION 3:7",
+      "sub": "HE THAT HATH THE KEY",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "He that openeth, and no man shutteth; and shutteth, and no man openeth;",
+      "img": "short-midnightrevelation3v7-scene-03.jpg",
+      "kicker": "REVELATION 3:7",
+      "sub": "NO MAN CAN SHUT IT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "I know thy works: behold, I have set before thee an open door, and no man can shut it:",
+      "img": "short-midnightrevelation3v7-scene-04.jpg",
+      "kicker": "REVELATION 3:8",
+      "sub": "A DOOR IS OPENED",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "For thou hast a little strength, and hast kept my word, and hast not denied my name.",
+      "img": "short-midnightrevelation3v7-scene-05.jpg",
+      "kicker": "REVELATION 3:8",
+      "sub": "FAITHFUL IN THE MIDNIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, walk through this space and establish the path you have prepared for this soul.",
+      "img": "short-midnightrevelation3v7-scene-06.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "WALK IN THE LIGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "The lock on your future is breaking because the One who holds the key arrives."
+    ],
+    [
+      10,
+      22,
+      "These things saith he that is holy, he that is true, he that hath the key of David."
+    ],
+    [
+      22,
+      33,
+      "He that openeth, and no man shutteth; and shutteth, and no man openeth;"
+    ],
+    [
+      33,
+      48,
+      "I know thy works: behold, I have set before thee an open door, and no man can shut it:"
+    ],
+    [
+      48,
+      60,
+      "For thou hast a little strength, and hast kept my word, and hast not denied my name."
+    ],
+    [
+      60,
+      75,
+      "Lord, walk through this space and establish the path you have prepared for this soul. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "THE LOCK ON",
+        "YOUR FUTURE IS",
+        "BREAKING BECAUSE THE",
+        "ONE WHO HOLDS",
+        "THE KEY ARRIVES"
+      ],
+      [
+        "KEY"
+      ],
+      "REV 3:7"
+    ],
+    [
+      10,
+      22,
+      [
+        "THESE THINGS SAITH",
+        "HE THAT IS HOLY",
+        "HE THAT IS TRUE",
+        "HE HATH THE",
+        "KEY OF DAVID"
+      ],
+      [
+        "KEY OF DAVID"
+      ],
+      "REV 3:7"
+    ],
+    [
+      22,
+      33,
+      [
+        "HE THAT OPENETH",
+        "AND NO MAN SHUTTETH",
+        "AND SHUTTETH",
+        "AND NO MAN OPENETH"
+      ],
+      [
+        "NO MAN SHUTTETH"
+      ],
+      "REV 3:7"
+    ],
+    [
+      33,
+      48,
+      [
+        "I KNOW THY WORKS",
+        "BEHOLD I HAVE SET",
+        "BEFORE THEE AN",
+        "OPEN DOOR AND",
+        "NO MAN CAN SHUT"
+      ],
+      [
+        "OPEN DOOR"
+      ],
+      "REV 3:8"
+    ],
+    [
+      48,
+      60,
+      [
+        "FOR THOU HAST",
+        "A LITTLE STRENGTH",
+        "AND HAST KEPT",
+        "MY WORD AND",
+        "NOT DENIED MY NAME"
+      ],
+      [
+        "KEPT MY WORD"
+      ],
+      "REV 3:8"
+    ],
+    [
+      60,
+      75,
+      [
+        "LORD WALK THROUGH",
+        "THIS SPACE AND",
+        "ESTABLISH THE PATH",
+        "YOU HAVE PREPARED",
+        "FOR THIS SOUL AMEN"
+      ],
+      [
+        "ESTABLISH"
+      ],
+      "MIDNIGHT PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The lock on your future is breaking because the One who holds the key arrives.",
+      "kind": "phrase",
+      "words": [
+        "KEY",
+        "ARRIVES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "These things saith he that is holy, he that is true, he that hath the key of David.",
+      "kind": "phrase",
+      "words": [
+        "KEY",
+        "OF",
+        "DAVID"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He that openeth, and no man shutteth; and shutteth, and no man openeth;",
+      "kind": "phrase",
+      "words": [
+        "NO",
+        "MAN",
+        "SHUTTETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I know thy works: behold, I have set before thee an open door, and no man can shut it:",
+      "kind": "phrase",
+      "words": [
+        "OPEN",
+        "DOOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For thou hast a little strength, and hast kept my word, and hast not denied my name.",
+      "kind": "phrase",
+      "words": [
+        "KEPT",
+        "MY",
+        "WORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, walk through this space and establish the path you have prepared for this soul.",
+      "kind": "phrase",
+      "words": [
+        "ESTABLISH",
+        "THE",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Revelation 3:7-8"
+}

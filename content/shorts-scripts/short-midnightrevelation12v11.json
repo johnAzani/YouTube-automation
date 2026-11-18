@@ -1,0 +1,354 @@
+{
+  "key": "short-midnightrevelation12v11",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "OVERCOME AT",
+    "MIDNIGHT"
+  ],
+  "poster": [
+    "THE BLOOD",
+    "OF THE LAMB",
+    "STAND VICTORIOUS",
+    "IN PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette starry heavens",
+    "ancient lantern light in dark stone sanctuary",
+    "deep night sky filled with radiant stars",
+    "glowing altar fire in stone chapel midnight",
+    "dramatic night mountain peak under stars",
+    "solitary lantern burning at midnight sanctuary"
+  ],
+  "scenes": [
+    {
+      "a": "The accusation whispered in your silent dark bedroom tonight ends at the feet of Jesus.",
+      "img": "short-midnightrevelation12v11-scene-01.jpg",
+      "kicker": "REVELATION 12:11",
+      "sub": "OVERCOME BY THE BLOOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And they overcame him by the blood of the Lamb, and by the word of their testimony;",
+      "img": "short-midnightrevelation12v11-scene-02.jpg",
+      "kicker": "REVELATION 12:11",
+      "sub": "THE WORD OF TESTIMONY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, in this midnight hour, we declare that every spiritual accusation against you is silenced.",
+      "img": "short-midnightrevelation12v11-scene-03.jpg",
+      "kicker": "REVELATION 12:11",
+      "sub": "SILENCE THE ACCUSER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "The precious blood cleanses your past and seals your ultimate victory.",
+      "img": "short-midnightrevelation12v11-scene-04.jpg",
+      "kicker": "REVELATION 12:11",
+      "sub": "VICTORY IS SEALED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Break every hidden chain of guilt and fear keeping you awake tonight.",
+      "img": "short-midnightrevelation12v11-scene-05.jpg",
+      "kicker": "REVELATION 12:11",
+      "sub": "CHAINS ARE BROKEN",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to join The Midnight Watch in prayer.",
+      "img": "short-midnightrevelation12v11-scene-06.jpg",
+      "kicker": "REVELATION 12:11",
+      "sub": "STAND IN MIDNIGHT PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "The accusation whispered in your silent dark bedroom tonight ends at the feet of Jesus."
+    ],
+    [
+      6,
+      13,
+      "And they overcame him by the blood of the Lamb, and by the word of their testimony;"
+    ],
+    [
+      13,
+      18,
+      "and they loved not their lives unto the death."
+    ],
+    [
+      18,
+      24,
+      "Lord, in this midnight hour, we declare that every spiritual accusation against you is silenced."
+    ],
+    [
+      24,
+      29,
+      "The precious blood cleanses your past and seals your ultimate victory."
+    ],
+    [
+      29,
+      34,
+      "We stand unshaken, placing full trust in His eternal promise."
+    ],
+    [
+      34,
+      40,
+      "Break every hidden chain of guilt and fear keeping you awake tonight."
+    ],
+    [
+      40,
+      46,
+      "Receive His holy peace, surrender all worries, and rest secure in His almighty arms."
+    ],
+    [
+      46,
+      51,
+      "Subscribe to join The Midnight Watch in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "ACCUSATIONS IN THE DARK",
+        "END AT JESUS FEET"
+      ],
+      [
+        "JESUS"
+      ],
+      "REVELATION 12 : 11"
+    ],
+    [
+      6,
+      13,
+      [
+        "OVERCAME BY THE BLOOD",
+        "AND THEIR TESTIMONY"
+      ],
+      [
+        "BLOOD"
+      ],
+      "REVELATION 12 : 11"
+    ],
+    [
+      13,
+      18,
+      [
+        "LOVED NOT THEIR LIVES",
+        "UNTO THE DEATH"
+      ],
+      [
+        "DEATH"
+      ],
+      "REVELATION 12 : 11"
+    ],
+    [
+      18,
+      24,
+      [
+        "EVERY ACCUSATION IS",
+        "SILENCED AT MIDNIGHT"
+      ],
+      [
+        "SILENCED"
+      ],
+      "REVELATION 12 : 11"
+    ],
+    [
+      24,
+      29,
+      [
+        "HIS BLOOD CLEANSES",
+        "YOUR ULTIMATE VICTORY"
+      ],
+      [
+        "VICTORY"
+      ],
+      "REVELATION 12 : 11"
+    ],
+    [
+      29,
+      34,
+      [
+        "WE STAND UNSHAKEN",
+        "IN HIS ETERNAL PROMISE"
+      ],
+      [
+        "UNSHAKEN"
+      ],
+      "REVELATION 12 : 11"
+    ],
+    [
+      34,
+      40,
+      [
+        "BREAK EVERY CHAIN OF",
+        "GUILT AND FEAR TONIGHT"
+      ],
+      [
+        "CHAIN"
+      ],
+      "REVELATION 12 : 11"
+    ],
+    [
+      40,
+      46,
+      [
+        "REST SECURE IN HIS",
+        "ALMIGHTY PROTECTING ARMS"
+      ],
+      [
+        "REST"
+      ],
+      "REVELATION 12 : 11"
+    ],
+    [
+      46,
+      51,
+      [
+        "JOIN THE MIDNIGHT WATCH",
+        "STAND IN PRAYER"
+      ],
+      [
+        "PRAYER"
+      ],
+      "REVELATION 12 : 11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The accusation whispered in your silent dark bedroom tonight ends at the feet of Jesus.",
+      "kind": "phrase",
+      "words": [
+        "ACCUSATION",
+        "BEDROOM",
+        "JESUS"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "And they overcame him by the blood of the Lamb, and by the word of their testimony;",
+      "kind": "phrase",
+      "words": [
+        "OVERCAME",
+        "BLOOD",
+        "LAMB"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "and they loved not their lives unto the death.",
+      "kind": "phrase",
+      "words": [
+        "LOVED",
+        "LIVES",
+        "DEATH"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, in this midnight hour, we declare that every spiritual accusation against you is silenced.",
+      "kind": "phrase",
+      "words": [
+        "MIDNIGHT",
+        "ACCUSATION",
+        "SILENCED"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "The precious blood cleanses your past and seals your ultimate victory.",
+      "kind": "phrase",
+      "words": [
+        "BLOOD",
+        "CLEANSES",
+        "VICTORY"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "We stand unshaken, placing full trust in His eternal promise.",
+      "kind": "phrase",
+      "words": [
+        "STAND",
+        "UNSHAKEN",
+        "PROMISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Break every hidden chain of guilt and fear keeping you awake tonight.",
+      "kind": "phrase",
+      "words": [
+        "BREAK",
+        "CHAIN",
+        "AWAKE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Receive His holy peace, surrender all worries, and rest secure in His almighty arms.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "SURRENDER",
+        "REST"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join The Midnight Watch in prayer.",
+      "kind": "phrase",
+      "words": [
+        "JOIN",
+        "MIDNIGHT",
+        "WATCH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Revelation 12:11"
+}

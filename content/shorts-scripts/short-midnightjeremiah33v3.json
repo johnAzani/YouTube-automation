@@ -1,0 +1,375 @@
+{
+  "key": "short-midnightjeremiah33v3",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "BREAKTHROUGH AT MIDNIGHT",
+    "JEREMIAH 33:3 PRAYER"
+  ],
+  "poster": [
+    "CALL UNTO ME",
+    "AND I WILL ANSWER",
+    "GREAT & MIGHTY THINGS",
+    "JEREMIAH 33:3"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette starry sky moon",
+    "ancient stone lantern glowing deep night mountains",
+    "deep starry heavens ancient sanctuary open window night",
+    "dimly lit stone chapel altar candlelight midnight glow",
+    "misty midnight mountain valley illuminated by starlight",
+    "quiet sanctuary bell tower night sky stars glowing"
+  ],
+  "scenes": [
+    {
+      "a": "When a tough decision leaves you awake at midnight, God is ready to reveal answers.",
+      "img": "short-midnightjeremiah33v3-scene-01.jpg",
+      "kicker": "JEREMIAH 33:3",
+      "sub": "GOD REVEALS ANSWERS AT MIDNIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Call unto me, and I will answer thee, and show thee great and mighty things, which thou knowest not.",
+      "img": "short-midnightjeremiah33v3-scene-02.jpg",
+      "kicker": "JEREMIAH 33:3",
+      "sub": "CALL UNTO HIM AND HE WILL ANSWER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we reach out to You in this quiet hour when confusion clouds our mind.",
+      "img": "short-midnightjeremiah33v3-scene-03.jpg",
+      "kicker": "JEREMIAH 33:3",
+      "sub": "REACHING OUT IN SILENCE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "You hold the hidden paths and the wisdom we cannot see on our own. Speak clarity into our confusion and unveil Your divine direction for tomorrow.",
+      "img": "short-midnightjeremiah33v3-scene-04.jpg",
+      "kicker": "JEREMIAH 33:3",
+      "sub": "UNVEILING DIVINE DIRECTION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Let Your peace settle over every pressing doubt tonight. Deliver us from fear and guide our next steps by Your unseen hand.",
+      "img": "short-midnightjeremiah33v3-scene-05.jpg",
+      "kicker": "JEREMIAH 33:3",
+      "sub": "GUIDED BY HIS UNSEEN HAND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to stand with us in midnight prayer.",
+      "img": "short-midnightjeremiah33v3-scene-06.jpg",
+      "kicker": "JEREMIAH 33:3",
+      "sub": "STAND IN MIDNIGHT PRAYER",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "When a tough decision leaves you awake at midnight, God is ready to reveal answers."
+    ],
+    [
+      8,
+      18,
+      "Call unto me, and I will answer thee, and show thee great and mighty things, which thou knowest not."
+    ],
+    [
+      18,
+      26,
+      "Lord, we reach out to You in this quiet hour when confusion clouds our mind."
+    ],
+    [
+      26,
+      38,
+      "You hold the hidden paths and the wisdom we cannot see on our own. Speak clarity into our confusion and unveil Your divine direction for tomorrow."
+    ],
+    [
+      38,
+      48,
+      "Let Your peace settle over every pressing doubt tonight. Deliver us from fear and guide our next steps by Your unseen hand."
+    ],
+    [
+      48,
+      54,
+      "Subscribe to stand with us in midnight prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "WHEN A TOUGH DECISION",
+        "LEAVES YOU AWAKE AT MIDNIGHT",
+        "GOD IS READY TO REVEAL ANSWERS"
+      ],
+      [
+        "MIDNIGHT",
+        "REVEAL",
+        "ANSWERS"
+      ],
+      "JEREMIAH 33:3"
+    ],
+    [
+      8,
+      18,
+      [
+        "CALL UNTO ME AND I WILL ANSWER THEE",
+        "AND SHOW THEE GREAT AND MIGHTY THINGS",
+        "WHICH THOU KNOWEST NOT"
+      ],
+      [
+        "CALL",
+        "ANSWER",
+        "MIGHTY"
+      ],
+      "JEREMIAH 33:3"
+    ],
+    [
+      18,
+      26,
+      [
+        "LORD WE REACH OUT TO YOU",
+        "IN THIS QUIET HOUR",
+        "WHEN CONFUSION CLOUDS OUR MIND"
+      ],
+      [
+        "REACH OUT",
+        "QUIET HOUR",
+        "CONFUSION"
+      ],
+      "JEREMIAH 33:3"
+    ],
+    [
+      26,
+      38,
+      [
+        "YOU HOLD THE HIDDEN PATHS",
+        "AND WISDOM WE CANNOT SEE",
+        "SPEAK CLARITY AND UNVEIL",
+        "YOUR DIVINE DIRECTION FOR TOMORROW"
+      ],
+      [
+        "HIDDEN PATHS",
+        "CLARITY",
+        "DIVINE DIRECTION"
+      ],
+      "JEREMIAH 33:3"
+    ],
+    [
+      38,
+      48,
+      [
+        "LET YOUR PEACE SETTLE",
+        "OVER EVERY PRESSING DOUBT",
+        "DELIVER US FROM FEAR",
+        "AND GUIDE OUR NEXT STEPS"
+      ],
+      [
+        "PEACE",
+        "DELIVER",
+        "UNSEEN HAND"
+      ],
+      "JEREMIAH 33:3"
+    ],
+    [
+      48,
+      54,
+      [
+        "SUBSCRIBE TO STAND WITH US",
+        "IN MIDNIGHT PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "MIDNIGHT PRAYER"
+      ],
+      "JEREMIAH 33:3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When a tough decision leaves you awake at midnight, God is ready to reveal answers.",
+      "kind": "phrase",
+      "words": [
+        "WHEN",
+        "A",
+        "TOUGH",
+        "DECISION",
+        "LEAVES",
+        "YOU",
+        "AWAKE",
+        "AT",
+        "MIDNIGHT,",
+        "GOD",
+        "IS",
+        "READY",
+        "TO",
+        "REVEAL",
+        "ANSWERS."
+      ],
+      "hi": 8,
+      "slot": "C"
+    },
+    {
+      "a": "Call unto me, and I will answer thee, and show thee great and mighty things, which thou knowest not.",
+      "kind": "phrase",
+      "words": [
+        "CALL",
+        "UNTO",
+        "ME,",
+        "AND",
+        "I",
+        "WILL",
+        "ANSWER",
+        "THEE,",
+        "AND",
+        "SHOW",
+        "THEE",
+        "GREAT",
+        "AND",
+        "MIGHTY",
+        "THINGS,",
+        "WHICH",
+        "THOU",
+        "KNOWEST",
+        "NOT."
+      ],
+      "hi": 6,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we reach out to You in this quiet hour when confusion clouds our mind.",
+      "kind": "phrase",
+      "words": [
+        "LORD,",
+        "WE",
+        "REACH",
+        "OUT",
+        "TO",
+        "YOU",
+        "IN",
+        "THIS",
+        "QUIET",
+        "HOUR",
+        "WHEN",
+        "CONFUSION",
+        "CLOUDS",
+        "OUR",
+        "MIND."
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "You hold the hidden paths and the wisdom we cannot see on our own. Speak clarity into our confusion and unveil Your divine direction for tomorrow.",
+      "kind": "phrase",
+      "words": [
+        "YOU",
+        "HOLD",
+        "THE",
+        "HIDDEN",
+        "PATHS",
+        "AND",
+        "THE",
+        "WISDOM",
+        "WE",
+        "CANNOT",
+        "SEE",
+        "ON",
+        "OUR",
+        "OWN.",
+        "SPEAK",
+        "CLARITY",
+        "INTO",
+        "OUR",
+        "CONFUSION",
+        "AND",
+        "UNVEIL",
+        "YOUR",
+        "DIVINE",
+        "DIRECTION",
+        "FOR",
+        "TOMORROW."
+      ],
+      "hi": 15,
+      "slot": "C"
+    },
+    {
+      "a": "Let Your peace settle over every pressing doubt tonight. Deliver us from fear and guide our next steps by Your unseen hand.",
+      "kind": "phrase",
+      "words": [
+        "LET",
+        "YOUR",
+        "PEACE",
+        "SETTLE",
+        "OVER",
+        "EVERY",
+        "PRESSING",
+        "DOUBT",
+        "TONIGHT.",
+        "DELIVER",
+        "US",
+        "FROM",
+        "FEAR",
+        "AND",
+        "GUIDE",
+        "OUR",
+        "NEXT",
+        "STEPS",
+        "BY",
+        "YOUR",
+        "UNSEEN",
+        "HAND."
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to stand with us in midnight prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "TO",
+        "STAND",
+        "WITH",
+        "US",
+        "IN",
+        "MIDNIGHT",
+        "PRAYER."
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Jeremiah 33:3"
+}
