@@ -1,0 +1,323 @@
+{
+  "key": "short-shieldproverbs30v5",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "EVERY WORD OF GOD IS PURE",
+    "PROVERBS 30:5 PRAYER"
+  ],
+  "poster": [
+    "PROVERBS 30:5",
+    "EVERY WORD IS PURE",
+    "DIVINE SHIELD PRAYER",
+    "THE COVENANT SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "sunlit mountain peak dawn fog",
+    "golden light rays through dramatic clouds mountain pass",
+    "ancient stone watchtower on green mountain hill",
+    "peaceful river flowing through pine forest sunlight",
+    "majestic mountain ridge warm sunrise sky",
+    "ancient fortress stone wall scenic sunset light",
+    "calm mountain lake glowing golden twilight"
+  ],
+  "scenes": [
+    {
+      "a": "In this quiet room where worry about tomorrow is pressing in, hear this promise.",
+      "img": "short-shieldproverbs30v5-scene-01.jpg",
+      "kicker": "PROVERBS 30:5",
+      "sub": "HEAR HIS PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Every word of God is pure: he is a shield unto them that put their trust in him.",
+      "img": "short-shieldproverbs30v5-scene-02.jpg",
+      "kicker": "PROVERBS 30:5",
+      "sub": "EVERY WORD IS PURE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we anchor our heart in the absolute truth of Your holy word today.",
+      "img": "short-shieldproverbs30v5-scene-03.jpg",
+      "kicker": "PROVERBS 30:5",
+      "sub": "ANCHOR YOUR HEART",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "When fear threatens your peace or accusations arise, remember that God's spoken promise cannot fail.",
+      "img": "short-shieldproverbs30v5-scene-04.jpg",
+      "kicker": "PROVERBS 30:5",
+      "sub": "HIS PROMISE CANNOT FAIL",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "He surrounds you with divine protection, guarding your thoughts and securing every step you take.",
+      "img": "short-shieldproverbs30v5-scene-05.jpg",
+      "kicker": "PROVERBS 30:5",
+      "sub": "DIVINE PROTECTION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Put your full trust in Him, for He is your invincible fortress against every fiery dart.",
+      "img": "short-shieldproverbs30v5-scene-06.jpg",
+      "kicker": "PROVERBS 30:5",
+      "sub": "YOUR INVINCIBLE FORTRESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Covenant Shield to walk daily under His divine protection.",
+      "img": "short-shieldproverbs30v5-scene-07.jpg",
+      "kicker": "PROVERBS 30:5",
+      "sub": "WALK UNDER HIS SHIELD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "In this quiet room where worry about tomorrow is pressing in, hear this promise."
+    ],
+    [
+      6,
+      13,
+      "Every word of God is pure: he is a shield unto them that put their trust in him."
+    ],
+    [
+      13,
+      19,
+      "Lord, we anchor our heart in the absolute truth of Your holy word today."
+    ],
+    [
+      19,
+      27,
+      "When fear threatens your peace or accusations arise, remember that God's spoken promise cannot fail."
+    ],
+    [
+      27,
+      34,
+      "He surrounds you with divine protection, guarding your thoughts and securing every step you take."
+    ],
+    [
+      34,
+      41,
+      "Put your full trust in Him, for He is your invincible fortress against every fiery dart."
+    ],
+    [
+      41,
+      47,
+      "Subscribe to The Covenant Shield to walk daily under His divine protection."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IN THIS QUIET ROOM",
+        "WORRY PRESSES IN",
+        "HEAR THIS PROMISE"
+      ],
+      [
+        "QUIET",
+        "PROMISE"
+      ],
+      "PROVERBS 30:5"
+    ],
+    [
+      6,
+      13,
+      [
+        "EVERY WORD OF GOD IS PURE",
+        "HE IS A SHIELD",
+        "UNTO THEM THAT TRUST HIM"
+      ],
+      [
+        "PURE",
+        "SHIELD",
+        "TRUST"
+      ],
+      "PROVERBS 30:5"
+    ],
+    [
+      13,
+      19,
+      [
+        "WE ANCHOR OUR HEART",
+        "IN THE ABSOLUTE TRUTH",
+        "OF YOUR HOLY WORD"
+      ],
+      [
+        "ANCHOR",
+        "TRUTH"
+      ],
+      "PROVERBS 30:5"
+    ],
+    [
+      19,
+      27,
+      [
+        "WHEN FEAR THREATENS PEACE",
+        "GOD'S SPOKEN PROMISE",
+        "CANNOT FAIL"
+      ],
+      [
+        "FEAR",
+        "PROMISE",
+        "CANNOT FAIL"
+      ],
+      "PROVERBS 30:5"
+    ],
+    [
+      27,
+      34,
+      [
+        "HE SURROUNDS YOU WITH",
+        "DIVINE PROTECTION",
+        "SECURING EVERY STEP"
+      ],
+      [
+        "SURROUNDS",
+        "PROTECTION",
+        "SECURING"
+      ],
+      "PROVERBS 30:5"
+    ],
+    [
+      34,
+      41,
+      [
+        "PUT YOUR FULL TRUST IN HIM",
+        "YOUR INVINCIBLE FORTRESS",
+        "AGAINST EVERY FIERY DART"
+      ],
+      [
+        "TRUST",
+        "FORTRESS"
+      ],
+      "PROVERBS 30:5"
+    ],
+    [
+      41,
+      47,
+      [
+        "SUBSCRIBE TO THE COVENANT SHIELD",
+        "WALK DAILY UNDER HIS",
+        "DIVINE PROTECTION"
+      ],
+      [
+        "COVENANT SHIELD",
+        "PROTECTION"
+      ],
+      "PROVERBS 30:5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "In this quiet room where worry about tomorrow is pressing in, hear this promise.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Every word of God is pure: he is a shield unto them that put their trust in him.",
+      "kind": "phrase",
+      "words": [
+        "PURE",
+        "SHIELD",
+        "TRUST"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we anchor our heart in the absolute truth of Your holy word today.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When fear threatens your peace or accusations arise, remember that God's spoken promise cannot fail.",
+      "kind": "phrase",
+      "words": [
+        "PROMISE",
+        "CANNOT",
+        "FAIL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He surrounds you with divine protection, guarding your thoughts and securing every step you take.",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "PROTECTION"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Put your full trust in Him, for He is your invincible fortress against every fiery dart.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "FORTRESS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Covenant Shield to walk daily under His divine protection.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "COVENANT",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 30:5"
+}

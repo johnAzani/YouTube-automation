@@ -1,0 +1,278 @@
+{
+  "key": "short-shieldpsalm5v11",
+  "channel": "prayer8",
+  "psalm": 5,
+  "title": [
+    "DIVINE",
+    "REFUGE"
+  ],
+  "poster": [
+    "FIND",
+    "REST",
+    "IN",
+    "HIM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower sunrise",
+    "golden light rays through forest canopy",
+    "calm mountain lake at twilight",
+    "glowing stone fortress wall",
+    "peaceful river flowing through canyon",
+    "shadowed path leading to high mountain"
+  ],
+  "scenes": [
+    {
+      "a": "If you are feeling surrounded by the weight of silence in this empty room, stay.",
+      "img": "short-shieldpsalm5v11-scene-01.jpg",
+      "kicker": "PSALM 5:11",
+      "sub": "YOUR REFUGE IS SECURE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We seek the shadow of your wings to find our place of safety and strength.",
+      "img": "short-shieldpsalm5v11-scene-02.jpg",
+      "kicker": "DIVINE COVERING",
+      "sub": "SAFE UNDER HIS SHADOW",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "But let all those that put their trust in thee rejoice: let them ever shout for joy, because thou defendest them: let them also that love thy name be joyful in thee.",
+      "img": "short-shieldpsalm5v11-scene-03.jpg",
+      "kicker": "THE WORD",
+      "sub": "TRUST IN THE LORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, defend every heart that trusts in your holy name tonight as we rest.",
+      "img": "short-shieldpsalm5v11-scene-04.jpg",
+      "kicker": "STRENGTHEN US",
+      "sub": "DEFENDED BY THE ALMIGHTY",
+      "cam": "pull_out",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Keep our minds anchored in your peace, shielded from every doubt that seeks entry.",
+      "img": "short-shieldpsalm5v11-scene-05.jpg",
+      "kicker": "PEACEFUL ANCHOR",
+      "sub": "SHIELDED FROM EVERY DOUBT",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant us the quiet confidence that only comes from knowing we dwell under you.",
+      "img": "short-shieldpsalm5v11-scene-06.jpg",
+      "kicker": "CONFIDENCE",
+      "sub": "DWELLING IN HIS MIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      5,
+      "If you are feeling surrounded by the weight of silence in this empty room, stay."
+    ],
+    [
+      5,
+      12,
+      "We seek the shadow of your wings to find our place of safety and strength."
+    ],
+    [
+      12,
+      24,
+      "But let all those that put their trust in thee rejoice: let them ever shout for joy, because thou defendest them: let them also that love thy name be joyful in thee."
+    ],
+    [
+      24,
+      31,
+      "Lord, defend every heart that trusts in your holy name tonight as we rest."
+    ],
+    [
+      31,
+      38,
+      "Keep our minds anchored in your peace, shielded from every doubt that seeks entry."
+    ],
+    [
+      38,
+      45,
+      "Grant us the quiet confidence that only comes from knowing we dwell under you."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      5,
+      [
+        "FEELING SURROUNDED BY",
+        "WEIGHT OF SILENCE",
+        "IN THIS EMPTY ROOM"
+      ],
+      [
+        "SURROUNDED",
+        "STAY"
+      ],
+      "PSALM 5 : 11"
+    ],
+    [
+      5,
+      12,
+      [
+        "SEEKING THE SHADOW",
+        "OF YOUR WINGS",
+        "FOR SAFETY AND STRENGTH"
+      ],
+      [
+        "SAFETY",
+        "STRENGTH"
+      ],
+      "PSALM 5 : 11"
+    ],
+    [
+      12,
+      24,
+      [
+        "TRUST IN THEE REJOICE",
+        "EVER SHOUT FOR JOY",
+        "BECAUSE THOU DEFENDEST THEM"
+      ],
+      [
+        "TRUST",
+        "REJOICE",
+        "DEFENDEST"
+      ],
+      "PSALM 5 : 11"
+    ],
+    [
+      24,
+      31,
+      [
+        "DEFEND EVERY HEART",
+        "THAT TRUSTS IN",
+        "YOUR HOLY NAME"
+      ],
+      [
+        "DEFEND",
+        "HOLY"
+      ],
+      "PSALM 5 : 11"
+    ],
+    [
+      31,
+      38,
+      [
+        "MINDS ANCHORED IN",
+        "YOUR PEACE SHIELDED",
+        "FROM EVERY DOUBT"
+      ],
+      [
+        "ANCHORED",
+        "SHIELDED"
+      ],
+      "PSALM 5 : 11"
+    ],
+    [
+      38,
+      45,
+      [
+        "QUIET CONFIDENCE THAT",
+        "ONLY COMES FROM",
+        "DWELLING UNDER YOU"
+      ],
+      [
+        "CONFIDENCE",
+        "DWELLING"
+      ],
+      "PSALM 5 : 11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are feeling surrounded by the weight of silence in this empty room, stay.",
+      "kind": "phrase",
+      "words": [
+        "SURROUNDED",
+        "STAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We seek the shadow of your wings to find our place of safety and strength.",
+      "kind": "phrase",
+      "words": [
+        "SAFETY",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But let all those that put their trust in thee rejoice: let them ever shout for joy, because thou defendest them: let them also that love thy name be joyful in thee.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "REJOICE",
+        "DEFENDEST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, defend every heart that trusts in your holy name tonight as we rest.",
+      "kind": "phrase",
+      "words": [
+        "DEFEND",
+        "HOLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Keep our minds anchored in your peace, shielded from every doubt that seeks entry.",
+      "kind": "phrase",
+      "words": [
+        "ANCHORED",
+        "SHIELDED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us the quiet confidence that only comes from knowing we dwell under you.",
+      "kind": "phrase",
+      "words": [
+        "CONFIDENCE",
+        "DWELLING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 5:11"
+}

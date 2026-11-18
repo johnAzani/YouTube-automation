@@ -1,0 +1,282 @@
+{
+  "key": "short-shieldpsalm16v1",
+  "channel": "prayer8",
+  "psalm": 16,
+  "title": [
+    "PRESERVE ME O GOD",
+    "PSALM 16:1 PRAYER"
+  ],
+  "poster": [
+    "PSALM 16:1",
+    "DIVINE PROTECTION",
+    "UNDER GOD'S WINGS",
+    "THE COVENANT SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower on green hill sunset",
+    "golden sun rays breaking through storm clouds over mountains",
+    "peaceful mountain valley golden morning mist",
+    "majestic granite peak under soft sunlight river",
+    "sunlit mountain forest path safe passage",
+    "calm mountain lake glowing golden sunset reflection"
+  ],
+  "scenes": [
+    {
+      "a": "When an unexpected threat stirs your heart today, turn instantly to your true strong tower.",
+      "img": "short-shieldpsalm16v1-scene-01.jpg",
+      "kicker": "PSALM 16:1",
+      "sub": "GOD IS YOUR STRONG TOWER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear God's Word in Psalm 16, verse 1: Preserve me, O God: for in thee do I put my trust.",
+      "img": "short-shieldpsalm16v1-scene-02.jpg",
+      "kicker": "PSALM 16:1",
+      "sub": "IN THEE DO I PUT MY TRUST",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, cover this soul right now in the divine shelter of Your wings.",
+      "img": "short-shieldpsalm16v1-scene-03.jpg",
+      "kicker": "DIVINE COVERING",
+      "sub": "SHELTER OF HIS WINGS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "When unseen troubles rise or anxious thoughts press in, be their ultimate shield and refuge.",
+      "img": "short-shieldpsalm16v1-scene-04.jpg",
+      "kicker": "UNSHAKABLE REFUGE",
+      "sub": "HE IS YOUR SHIELD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Guard their steps from subtle traps, clear their path of danger, and fill their mind with unshakable peace.",
+      "img": "short-shieldpsalm16v1-scene-05.jpg",
+      "kicker": "DIVINE PROTECTION",
+      "sub": "PATHWAYS OF PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We declare that their life rests securely in Your holy hands. Subscribe to walk daily under the Covenant Shield.",
+      "img": "short-shieldpsalm16v1-scene-06.jpg",
+      "kicker": "THE COVENANT SHIELD",
+      "sub": "REST SECURELY IN HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "When an unexpected threat stirs your heart today, turn instantly to your true strong tower."
+    ],
+    [
+      8,
+      17,
+      "Hear God's Word in Psalm 16, verse 1: Preserve me, O God: for in thee do I put my trust."
+    ],
+    [
+      17,
+      26,
+      "Lord, cover this soul right now in the divine shelter of Your wings."
+    ],
+    [
+      26,
+      36,
+      "When unseen troubles rise or anxious thoughts press in, be their ultimate shield and refuge."
+    ],
+    [
+      36,
+      46,
+      "Guard their steps from subtle traps, clear their path of danger, and fill their mind with unshakable peace."
+    ],
+    [
+      46,
+      54,
+      "We declare that their life rests securely in Your holy hands. Subscribe to walk daily under the Covenant Shield."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "WHEN AN UNEXPECTED THREAT",
+        "STIRS YOUR HEART TODAY",
+        "TURN INSTANTLY TO GOD"
+      ],
+      [
+        "UNEXPECTED",
+        "STIRS",
+        "TURN"
+      ],
+      "PSALM 16 : 1"
+    ],
+    [
+      8,
+      17,
+      [
+        "PRESERVE ME O GOD",
+        "FOR IN THEE DO I",
+        "PUT MY TRUST"
+      ],
+      [
+        "PRESERVE",
+        "THEE",
+        "TRUST"
+      ],
+      "PSALM 16 : 1"
+    ],
+    [
+      17,
+      26,
+      [
+        "COVER THIS SOUL NOW",
+        "IN THE DIVINE SHELTER",
+        "OF YOUR WINGS"
+      ],
+      [
+        "COVER",
+        "SHELTER",
+        "WINGS"
+      ],
+      "PSALM 16 : 1"
+    ],
+    [
+      26,
+      36,
+      [
+        "WHEN UNSEEN TROUBLES RISE",
+        "BE THEIR ULTIMATE SHIELD",
+        "AND STRONG REFUGE"
+      ],
+      [
+        "TROUBLES",
+        "SHIELD",
+        "REFUGE"
+      ],
+      "PSALM 16 : 1"
+    ],
+    [
+      36,
+      46,
+      [
+        "GUARD THEIR STEPS TODAY",
+        "CLEAR PATHS OF DANGER",
+        "FILL WITH UNSHAKABLE PEACE"
+      ],
+      [
+        "GUARD",
+        "CLEAR",
+        "PEACE"
+      ],
+      "PSALM 16 : 1"
+    ],
+    [
+      46,
+      54,
+      [
+        "THEIR LIFE RESTS SECURELY",
+        "IN YOUR HOLY HANDS",
+        "WALK UNDER GODS COVERING"
+      ],
+      [
+        "SECURELY",
+        "HANDS",
+        "COVERING"
+      ],
+      "PSALM 16 : 1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When an unexpected threat stirs your heart today, turn instantly to your true strong tower.",
+      "kind": "phrase",
+      "words": [
+        "UNEXPECTED",
+        "STRONG"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear God's Word in Psalm 16, verse 1: Preserve me, O God: for in thee do I put my trust.",
+      "kind": "phrase",
+      "words": [
+        "PRESERVE",
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, cover this soul right now in the divine shelter of Your wings.",
+      "kind": "phrase",
+      "words": [
+        "COVER",
+        "SHELTER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When unseen troubles rise or anxious thoughts press in, be their ultimate shield and refuge.",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "REFUGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guard their steps from subtle traps, clear their path of danger, and fill their mind with unshakable peace.",
+      "kind": "phrase",
+      "words": [
+        "GUARD",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We declare that their life rests securely in Your holy hands. Subscribe to walk daily under the Covenant Shield.",
+      "kind": "phrase",
+      "words": [
+        "SECURELY",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 16:1"
+}
