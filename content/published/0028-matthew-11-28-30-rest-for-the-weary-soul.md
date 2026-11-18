@@ -2,7 +2,7 @@
 id: 0028
 title: "Bedtime Prayer When You Are Worn Out: Matthew 11:28-30"
 slug: matthew-11-28-30-rest-for-the-weary-soul
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -85,6 +85,16 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this Matthew 11:28-30 KJV bedtime prayer to lay every heavy burden at Christ's feet and receive deep rest for your weary soul.
 category_id: '22'
+published_on: "2026-11-18"
+published_at: "2026-11-18T21:25:33Z"
+youtube_video_id: "EmLY_qhrc7c"
+metadata_revision: "selar-seo-v1"
+prayer_seconds: 370.1
+duration_seconds: 11170.5
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Come Unto Me, All Ye That Labour and Are Heavy Laden (Verse 28a)
