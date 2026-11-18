@@ -1,0 +1,283 @@
+{
+  "key": "short-morningpsalm139v17",
+  "channel": "prayer2",
+  "psalm": 139,
+  "title": [
+    "GOD'S THOUGHTS",
+    "FOR YOUR MORNING"
+  ],
+  "poster": [
+    "PSALM 139:17-18",
+    "GOD REMEMBERS YOU",
+    "START YOUR DAY IN PRAYER",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "soft morning golden hour sunrise light over peaceful misty meadow",
+    "dawn sunlight breaking over calm lake waters and hills",
+    "golden sunlight illuminating calm ocean beach sand at dawn",
+    "open sunlit window looking out at gentle morning forest fog",
+    "morning sky filled with soft golden clouds at sunrise",
+    "serene mountain horizon bathed in warm morning light"
+  ],
+  "scenes": [
+    {
+      "a": "If you woke up feeling forgotten in a room full of unanswered questions, listen closely.",
+      "img": "short-morningpsalm139v17-scene-01.jpg",
+      "kicker": "PSALM 139:17-18",
+      "sub": "GOD REMEMBERS YOU TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "How precious also are thy thoughts unto me, O God! how great is the sum of them!",
+      "img": "short-morningpsalm139v17-scene-02.jpg",
+      "kicker": "PSALM 139:17",
+      "sub": "HIS THOUGHTS ARE PRECIOUS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "If I should count them, they are more in number than the sand: when I awake, I am still with thee.",
+      "img": "short-morningpsalm139v17-scene-03.jpg",
+      "kicker": "PSALM 139:18",
+      "sub": "STILL WITH THEE AT DAWN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Heavenly Father, before the heavy worries of today steal my peace, anchor my soul in your boundless grace.",
+      "img": "short-morningpsalm139v17-scene-04.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "ANCHOR MY SOUL IN PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You have not forgotten me; your mind is filled with thoughts of peace toward my life. I walk forward knowing I am never alone.",
+      "img": "short-morningpsalm139v17-scene-05.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "YOU ARE NEVER ALONE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Amen. Subscribe to The Morning Altar to pray together every sunrise.",
+      "img": "short-morningpsalm139v17-scene-06.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you woke up feeling forgotten in a room full of unanswered questions, listen closely."
+    ],
+    [
+      8,
+      18,
+      "How precious also are thy thoughts unto me, O God! how great is the sum of them!"
+    ],
+    [
+      18,
+      28,
+      "If I should count them, they are more in number than the sand: when I awake, I am still with thee."
+    ],
+    [
+      28,
+      38,
+      "Heavenly Father, before the heavy worries of today steal my peace, anchor my soul in your boundless grace."
+    ],
+    [
+      38,
+      48,
+      "You have not forgotten me; your mind is filled with thoughts of peace toward my life. I walk forward knowing I am never alone."
+    ],
+    [
+      48,
+      56,
+      "Amen. Subscribe to The Morning Altar to pray together every sunrise."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF YOU WOKE UP FEELING FORGOTTEN",
+        "IN A ROOM OF UNANSWERED QUESTIONS",
+        "LISTEN CLOSELY TO THIS TRUTH"
+      ],
+      [
+        "FORGOTTEN",
+        "UNANSWERED",
+        "TRUTH"
+      ],
+      "PSALM 139 : 17-18"
+    ],
+    [
+      8,
+      18,
+      [
+        "HOW PRECIOUS ALSO ARE THY THOUGHTS",
+        "UNTO ME O GOD HOW GREAT IS",
+        "THE SUM OF THEM"
+      ],
+      [
+        "PRECIOUS",
+        "THOUGHTS",
+        "SUM"
+      ],
+      "PSALM 139 : 17"
+    ],
+    [
+      18,
+      28,
+      [
+        "IF I SHOULD COUNT THEM THEY ARE",
+        "MORE IN NUMBER THAN THE SAND",
+        "WHEN I AWAKE I AM STILL WITH THEE"
+      ],
+      [
+        "COUNT",
+        "SAND",
+        "STILL WITH THEE"
+      ],
+      "PSALM 139 : 18"
+    ],
+    [
+      28,
+      38,
+      [
+        "HEAVENLY FATHER BEFORE HEAVY WORRIES",
+        "STEAL MY PEACE ANCHOR MY SOUL",
+        "IN YOUR BOUNDLESS GRACE"
+      ],
+      [
+        "HEAVY WORRIES",
+        "PEACE",
+        "BOUNDLESS GRACE"
+      ],
+      "MORNING PRAYER"
+    ],
+    [
+      38,
+      48,
+      [
+        "YOU HAVE NOT FORGOTTEN ME",
+        "YOUR MIND IS FILLED WITH PEACE",
+        "I WALK FORWARD NEVER ALONE"
+      ],
+      [
+        "NOT FORGOTTEN",
+        "PEACE",
+        "NEVER ALONE"
+      ],
+      "MORNING PRAYER"
+    ],
+    [
+      48,
+      56,
+      [
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "TO PRAY TOGETHER EVERY SUNRISE"
+      ],
+      [
+        "SUBSCRIBE",
+        "EVERY SUNRISE"
+      ],
+      "THE MORNING ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you woke up feeling forgotten in a room full of unanswered questions, listen closely.",
+      "kind": "phrase",
+      "words": [
+        "forgotten",
+        "unanswered"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "How precious also are thy thoughts unto me, O God! how great is the sum of them!",
+      "kind": "phrase",
+      "words": [
+        "precious",
+        "thoughts"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "If I should count them, they are more in number than the sand: when I awake, I am still with thee.",
+      "kind": "phrase",
+      "words": [
+        "count",
+        "sand",
+        "awake"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, before the heavy worries of today steal my peace, anchor my soul in your boundless grace.",
+      "kind": "phrase",
+      "words": [
+        "worries",
+        "peace",
+        "grace"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You have not forgotten me; your mind is filled with thoughts of peace toward my life. I walk forward knowing I am never alone.",
+      "kind": "phrase",
+      "words": [
+        "forgotten",
+        "peace",
+        "alone"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Subscribe to The Morning Altar to pray together every sunrise.",
+      "kind": "phrase",
+      "words": [
+        "Subscribe",
+        "sunrise"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 139:17-18"
+}

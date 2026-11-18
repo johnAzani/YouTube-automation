@@ -1,0 +1,284 @@
+{
+  "key": "short-morningjames1v5",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "SEEKING CLARITY",
+    "IN THE LIGHT"
+  ],
+  "poster": [
+    "A PRAYER FOR",
+    "DIVINE WISDOM",
+    "AT THE",
+    "BREAK OF DAWN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "soft morning sunlight through window",
+    "misty forest sunrise",
+    "golden light on mountain peaks",
+    "dew on morning grass",
+    "calm horizon sunrise",
+    "sunlight breaking over calm lake"
+  ],
+  "scenes": [
+    {
+      "a": "That decision pulling at your spirit feels too heavy to carry alone this morning.",
+      "img": "short-morningjames1v5-scene-01.jpg",
+      "kicker": "JAMES 1:5",
+      "sub": "HEAR HIS WORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
+      "img": "short-morningjames1v5-scene-02.jpg",
+      "kicker": "DIVINE GUIDANCE",
+      "sub": "ASK OF GOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, the path ahead is obscured by my own doubts and the noise of this world.",
+      "img": "short-morningjames1v5-scene-03.jpg",
+      "kicker": "DAILY SURRENDER",
+      "sub": "CLEAR THE WAY",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "I come to you now, humble and ready to receive the understanding I so desperately need.",
+      "img": "short-morningjames1v5-scene-04.jpg",
+      "kicker": "SEEKING TRUTH",
+      "sub": "GRANT ME CLARITY",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Open my eyes to see the direction you have prepared for me in this unfolding hour.",
+      "img": "short-morningjames1v5-scene-05.jpg",
+      "kicker": "MORNING LIGHT",
+      "sub": "LEAD MY STEPS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Thank you for the promise that your light will illuminate every shadow I encounter today. Amen.",
+      "img": "short-morningjames1v5-scene-06.jpg",
+      "kicker": "A PRAYERFUL START",
+      "sub": "TRUST HIS PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That decision pulling at your spirit feels too heavy to carry alone this morning."
+    ],
+    [
+      8,
+      22,
+      "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him."
+    ],
+    [
+      22,
+      32,
+      "Lord, the path ahead is obscured by my own doubts and the noise of this world."
+    ],
+    [
+      32,
+      42,
+      "I come to you now, humble and ready to receive the understanding I so desperately need."
+    ],
+    [
+      42,
+      52,
+      "Open my eyes to see the direction you have prepared for me in this unfolding hour."
+    ],
+    [
+      52,
+      60,
+      "Thank you for the promise that your light will illuminate every shadow I encounter today. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE DECISION",
+        "PULLING AT YOU",
+        "FEELS TOO HEAVY"
+      ],
+      [
+        "HEAVY",
+        "ALONE"
+      ],
+      "JAMES 1:5"
+    ],
+    [
+      8,
+      22,
+      [
+        "IF ANY LACK WISDOM",
+        "LET HIM ASK",
+        "OF GOD",
+        "GIVETH LIBERALLY",
+        "IT SHALL BE GIVEN"
+      ],
+      [
+        "WISDOM",
+        "ASK",
+        "LIBERALLY"
+      ],
+      "JAMES 1:5"
+    ],
+    [
+      22,
+      32,
+      [
+        "LORD",
+        "THE PATH IS",
+        "OBSCURED BY DOUBT",
+        "AND THE NOISE"
+      ],
+      [
+        "OBSCURED",
+        "DOUBT"
+      ],
+      "JAMES 1:5"
+    ],
+    [
+      32,
+      42,
+      [
+        "I COME HUMBLE",
+        "READY TO RECEIVE",
+        "THE UNDERSTANDING",
+        "I DESPERATELY NEED"
+      ],
+      [
+        "HUMBLE",
+        "UNDERSTANDING"
+      ],
+      "JAMES 1:5"
+    ],
+    [
+      42,
+      52,
+      [
+        "OPEN MY EYES",
+        "TO SEE",
+        "THE DIRECTION",
+        "PREPARED FOR ME"
+      ],
+      [
+        "OPEN",
+        "DIRECTION"
+      ],
+      "JAMES 1:5"
+    ],
+    [
+      52,
+      60,
+      [
+        "THANK YOU",
+        "FOR THE PROMISE",
+        "OF YOUR LIGHT",
+        "AMEN"
+      ],
+      [
+        "PROMISE",
+        "LIGHT"
+      ],
+      "JAMES 1:5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That decision pulling at your spirit feels too heavy to carry alone this morning.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "ALONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "ASK",
+        "LIBERALLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, the path ahead is obscured by my own doubts and the noise of this world.",
+      "kind": "phrase",
+      "words": [
+        "OBSCURED",
+        "DOUBT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I come to you now, humble and ready to receive the understanding I so desperately need.",
+      "kind": "phrase",
+      "words": [
+        "HUMBLE",
+        "UNDERSTANDING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Open my eyes to see the direction you have prepared for me in this unfolding hour.",
+      "kind": "phrase",
+      "words": [
+        "OPEN",
+        "DIRECTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thank you for the promise that your light will illuminate every shadow I encounter today. Amen.",
+      "kind": "phrase",
+      "words": [
+        "PROMISE",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "James 1:5"
+}
