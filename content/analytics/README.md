@@ -23,7 +23,7 @@ Where viewers came from, last 28 days:
 | :--- | ---: | ---: |
 | Shorts feed | 3,885 | 20.3 |
 | YouTube search | 178 | 0.63 |
-| Other YouTube pages | 54 | 0.25 |
+| Other YouTube pages | 53 | 0.23 |
 | Suggested videos | 43 | 4 |
 | Channel page | 42 | 0.48 |
 | Other sites and apps | 35 | 0.37 |
