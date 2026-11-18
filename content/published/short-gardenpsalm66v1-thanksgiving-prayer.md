@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["A PRAYER", "OF PRAISE", "AND THANKS", "PSALM 66"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-25T02:27:34Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If the weight of this morning feels too heavy to carry alone, please stay here. Make a joyful noise unto God, all ye lands: Sing forth the honor of his name: make his praise glorious. Say unto God, How terrible art thou in thy works! through the greatness of thy power shall thine enemies submit themselves unto thee. All the earth shall worship thee, and shall sing unto thee; they shall sing to thy name. Lord, my heart is yours today. I trust your hand. Please subscribe to The Praise Garden. Let every worry fade as I offer you this sacrifice of genuine, honest thanksgiving, amen.

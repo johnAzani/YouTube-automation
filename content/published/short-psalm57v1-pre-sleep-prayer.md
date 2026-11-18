@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["THE SECRET PLACE", "FINDING SAFETY", "IN THE SHADOW", "OF HIS WINGS"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If the weight of this day feels too heavy to carry into your sleep, stay here. Be merciful unto me, O God, be merciful unto me: for my soul trusteth in thee: yea, in the shadow of thy wings will I make my refuge, until these calamities be overpast. Lord, grant that I might leave these burdens at the edge of this resting place tonight. Quiet every racing thought so that I might find peace in your deep, steady grace. May my spirit rest entirely in the protection you promise to those who seek you.

@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["SAFE STEPS", "SWEET REST", "PROVERBS 3:23-26", "DIVINE PROTECTION"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-25T02:27:33Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If you are stepping onto an uncertain path today, hear God's promise over your journey. Then shalt thou walk in thy way safely, and thy foot shall not stumble. When thou liest down, thou shalt not be afraid: yea, thou shalt lie down, and thy sleep shall be sweet. Heavenly Father, guard this precious soul wherever their steps may lead. Protect them from unseen traps, shield their heart from sudden alarm, and anchor their mind in your unwavering peace. May your presence surround them by day and cover them through the night. Let no fear overtake them, for you are their refuge and strength. Subscribe to walk daily under God's holy covering.
