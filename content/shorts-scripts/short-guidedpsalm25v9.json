@@ -1,0 +1,337 @@
+{
+  "key": "short-guidedpsalm25v9",
+  "channel": "prayer10",
+  "psalm": 25,
+  "title": [
+    "THE MEEK HE GUIDES",
+    "PSALM 25:9 WISDOM"
+  ],
+  "poster": [
+    "THE MEEK",
+    "WILL HE GUIDE",
+    "IN JUDGMENT",
+    "PSALM 25:9"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley early morning light",
+    "quiet mountain valley peaceful river morning mist",
+    "calm reflection lake alpine mountain range",
+    "foggy mountain pass stillness early sunrise",
+    "peaceful winding river mountain landscape morning",
+    "serene alpine meadow mist sunlight rays"
+  ],
+  "scenes": [
+    {
+      "a": "If pride tells you to force your own answer today, surrender that urge right now.",
+      "img": "short-guidedpsalm25v9-scene-01.jpg",
+      "kicker": "PSALM 25:9",
+      "sub": "SURRENDER YOUR PRIDE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The meek will he guide in judgment: and the meek will he teach his way.",
+      "img": "short-guidedpsalm25v9-scene-02.jpg",
+      "kicker": "PSALM 25:9",
+      "sub": "THE MEEK WILL HE GUIDE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, we lay down our stubborn self-reliance and yield our hearts to Your divine wisdom.",
+      "img": "short-guidedpsalm25v9-scene-03.jpg",
+      "kicker": "PSALM 25:9",
+      "sub": "YIELD TO DIVINE WISDOM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Strip away our need to control every outcome, and give us the humility to be led by You.",
+      "img": "short-guidedpsalm25v9-scene-04.jpg",
+      "kicker": "PSALM 25:9",
+      "sub": "EMBRACE TRUE HUMILITY",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "When the next step seems unclear, teach us Your holy way and quiet our anxious heart.",
+      "img": "short-guidedpsalm25v9-scene-05.jpg",
+      "kicker": "PSALM 25:9",
+      "sub": "TEACH US YOUR HOLY WAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Guided Path to seek God's wisdom daily.",
+      "img": "short-guidedpsalm25v9-scene-06.jpg",
+      "kicker": "THE GUIDED PATH",
+      "sub": "SEEK GOD'S WISDOM DAILY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If pride tells you to force your own answer today, surrender that urge right now."
+    ],
+    [
+      6,
+      11,
+      "The Word of God promises in Psalm 25:9,"
+    ],
+    [
+      11,
+      19,
+      "The meek will he guide in judgment: and the meek will he teach his way."
+    ],
+    [
+      19,
+      26,
+      "Heavenly Father, we lay down our stubborn self-reliance and yield our hearts to Your divine wisdom."
+    ],
+    [
+      26,
+      33,
+      "Strip away our need to control every outcome, and give us the humility to be led by You."
+    ],
+    [
+      33,
+      40,
+      "When the next step seems unclear, teach us Your holy way and quiet our anxious heart."
+    ],
+    [
+      40,
+      45,
+      "Guide our judgment according to Your righteous truth."
+    ],
+    [
+      45,
+      50,
+      "Subscribe to The Guided Path to seek God's wisdom daily."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF PRIDE TELLS YOU TO FORCE",
+        "YOUR OWN ANSWER TODAY",
+        "SURRENDER THAT URGE RIGHT NOW"
+      ],
+      [
+        "SURRENDER",
+        "URGE"
+      ],
+      "PSALM 25:9"
+    ],
+    [
+      6,
+      11,
+      [
+        "THE WORD OF GOD PROMISES",
+        "IN PSALM TWENTY FIVE NINE"
+      ],
+      [
+        "GOD",
+        "PROMISES"
+      ],
+      "PSALM 25:9"
+    ],
+    [
+      11,
+      19,
+      [
+        "THE MEEK WILL HE GUIDE",
+        "IN JUDGMENT AND THE MEEK",
+        "WILL HE TEACH HIS WAY"
+      ],
+      [
+        "MEEK",
+        "GUIDE",
+        "TEACH"
+      ],
+      "PSALM 25:9"
+    ],
+    [
+      19,
+      26,
+      [
+        "HEAVENLY FATHER WE LAY DOWN",
+        "OUR STUBBORN SELF RELIANCE",
+        "AND YIELD TO DIVINE WISDOM"
+      ],
+      [
+        "YIELD",
+        "DIVINE",
+        "WISDOM"
+      ],
+      "PSALM 25:9"
+    ],
+    [
+      26,
+      33,
+      [
+        "STRIP AWAY OUR NEED TO CONTROL",
+        "EVERY OUTCOME AND GIVE US",
+        "HUMILITY TO BE LED BY YOU"
+      ],
+      [
+        "HUMILITY",
+        "LED"
+      ],
+      "PSALM 25:9"
+    ],
+    [
+      33,
+      40,
+      [
+        "WHEN THE NEXT STEP SEEMS UNCLEAR",
+        "TEACH US YOUR HOLY WAY",
+        "AND QUIET OUR ANXIOUS HEART"
+      ],
+      [
+        "TEACH",
+        "HOLY",
+        "WAY"
+      ],
+      "PSALM 25:9"
+    ],
+    [
+      40,
+      45,
+      [
+        "GUIDE OUR JUDGMENT ACCORDING",
+        "TO YOUR RIGHTEOUS TRUTH"
+      ],
+      [
+        "RIGHTEOUS",
+        "TRUTH"
+      ],
+      "PSALM 25:9"
+    ],
+    [
+      45,
+      50,
+      [
+        "SUBSCRIBE TO THE GUIDED PATH",
+        "TO SEEK GODS WISDOM DAILY"
+      ],
+      [
+        "SEEK",
+        "WISDOM"
+      ],
+      "PSALM 25:9"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If pride tells you to force your own answer today, surrender that urge right now.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "URGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Word of God promises in Psalm 25:9,",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "PROMISES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The meek will he guide in judgment: and the meek will he teach his way.",
+      "kind": "phrase",
+      "words": [
+        "MEEK",
+        "GUIDE",
+        "TEACH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we lay down our stubborn self-reliance and yield our hearts to Your divine wisdom.",
+      "kind": "phrase",
+      "words": [
+        "YIELD",
+        "DIVINE",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Strip away our need to control every outcome, and give us the humility to be led by You.",
+      "kind": "phrase",
+      "words": [
+        "HUMILITY",
+        "LED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When the next step seems unclear, teach us Your holy way and quiet our anxious heart.",
+      "kind": "phrase",
+      "words": [
+        "TEACH",
+        "HOLY",
+        "WAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guide our judgment according to Your righteous truth.",
+      "kind": "phrase",
+      "words": [
+        "RIGHTEOUS",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Guided Path to seek God's wisdom daily.",
+      "kind": "phrase",
+      "words": [
+        "SEEK",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 25:9"
+}

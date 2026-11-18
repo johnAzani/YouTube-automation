@@ -1,0 +1,13 @@
+short: short-guidedpsalm107v7
+channel: prayer10
+standalone: true
+source: evergreen
+scripture: Psalm 107:7
+status: approved
+renderer_ready: true
+authored_by_brain: true
+privacy: public
+replace: false
+target_window_utc: '18:44'
+notes: "Standalone Short on Psalm 107:7 (evergreen list) \u2014 spec authored by the\
+  \ brain (107 narration words)"

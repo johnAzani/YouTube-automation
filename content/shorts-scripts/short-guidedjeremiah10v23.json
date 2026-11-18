@@ -1,0 +1,238 @@
+{
+  "key": "short-guidedjeremiah10v23",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "THE PATH AHEAD",
+    "SEEKING GODS GUIDANCE"
+  ],
+  "poster": [
+    "SURRENDER YOUR PLANS",
+    "TRUSTING THE FATHER",
+    "FINDING TRUE DIRECTION",
+    "A PRAYER FOR WISDOM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley at dawn",
+    "calm river flowing through silent forest",
+    "soft light over mountain pass",
+    "tranquil morning field with dew",
+    "distant peaks under morning sky",
+    "slow moving clouds over mountain range"
+  ],
+  "scenes": [
+    {
+      "a": "That heavy uncertainty about your next move is exactly where the Lord desires to lead.",
+      "img": "short-guidedjeremiah10v23-scene-01.jpg",
+      "kicker": "JEREMIAH 10:23",
+      "sub": "SURRENDER YOUR UNCERTAINTY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Listen to the word of the Lord, for He knows the limitations of our own understanding.",
+      "img": "short-guidedjeremiah10v23-scene-02.jpg",
+      "kicker": "JEREMIAH 10:23",
+      "sub": "HEAR HIS VOICE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "O LORD, I know that the way of man is not in himself: it is not in man that walketh to direct his steps.",
+      "img": "short-guidedjeremiah10v23-scene-03.jpg",
+      "kicker": "JEREMIAH 10:23",
+      "sub": "THE TRUTH OF OUR WAY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, my heart is prone to wander and my sight is clouded by my own desires.",
+      "img": "short-guidedjeremiah10v23-scene-04.jpg",
+      "kicker": "JEREMIAH 10:23",
+      "sub": "ADMITTING OUR NEED",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Please take my hand and guide me away from the paths that lead to nowhere.",
+      "img": "short-guidedjeremiah10v23-scene-05.jpg",
+      "kicker": "JEREMIAH 10:23",
+      "sub": "WALK WITH ME",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Give me the grace to follow your lead, trusting that your wisdom is far greater.",
+      "img": "short-guidedjeremiah10v23-scene-06.jpg",
+      "kicker": "JEREMIAH 10:23",
+      "sub": "TRUST HIS GUIDANCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That heavy uncertainty about your next move is exactly where the Lord desires to lead."
+    ],
+    [
+      8,
+      16,
+      "Listen to the word of the Lord, for He knows the limitations of our own understanding."
+    ],
+    [
+      16,
+      28,
+      "O LORD, I know that the way of man is not in himself: it is not in man that walketh to direct his steps."
+    ],
+    [
+      28,
+      38,
+      "Lord, my heart is prone to wander and my sight is clouded by my own desires."
+    ],
+    [
+      38,
+      48,
+      "Please take my hand and guide me away from the paths that lead to nowhere."
+    ],
+    [
+      48,
+      60,
+      "Give me the grace to follow your lead, trusting that your wisdom is far greater. Subscribe."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "HEAVY UNCERTAINTY",
+        "ABOUT YOUR NEXT MOVE",
+        "WHERE THE LORD",
+        "DESIRES TO LEAD"
+      ],
+      [
+        "HEAVY UNCERTAINTY"
+      ],
+      "JEREMIAH 10:23"
+    ],
+    [
+      8,
+      16,
+      [
+        "LISTEN TO THE WORD",
+        "OF THE LORD",
+        "KNOWS THE LIMITATIONS",
+        "OF OUR UNDERSTANDING"
+      ],
+      [
+        "LIMITATIONS"
+      ],
+      "JEREMIAH 10:23"
+    ],
+    [
+      16,
+      28,
+      [
+        "O LORD I KNOW",
+        "THE WAY OF MAN",
+        "IS NOT IN HIMSELF",
+        "NOT IN MAN THAT WALKETH",
+        "TO DIRECT HIS STEPS"
+      ],
+      [
+        "NOT IN HIMSELF"
+      ],
+      "JEREMIAH 10:23"
+    ],
+    [
+      28,
+      38,
+      [
+        "LORD MY HEART",
+        "PRONE TO WANDER",
+        "SIGHT CLOUDED",
+        "BY MY DESIRES"
+      ],
+      [
+        "PRONE TO WANDER"
+      ],
+      "JEREMIAH 10:23"
+    ],
+    [
+      38,
+      48,
+      [
+        "TAKE MY HAND",
+        "GUIDE ME AWAY",
+        "FROM PATHS",
+        "THAT LEAD TO NOWHERE"
+      ],
+      [
+        "GUIDE ME"
+      ],
+      "JEREMIAH 10:23"
+    ],
+    [
+      48,
+      60,
+      [
+        "GRACE TO FOLLOW",
+        "TRUSTING YOUR WISDOM",
+        "IS FAR GREATER",
+        "SUBSCRIBE NOW"
+      ],
+      [
+        "TRUSTING"
+      ],
+      "JEREMIAH 10:23"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That heavy uncertainty about your next move is exactly where the Lord desires to lead.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "UNCERTAINTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "O LORD, I know that the way of man is not in himself: it is not in man that walketh to direct his steps.",
+      "kind": "phrase",
+      "words": [
+        "NOT",
+        "IN",
+        "HIMSELF"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Jeremiah 10:23"
+}

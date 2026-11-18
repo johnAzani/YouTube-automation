@@ -1,0 +1,358 @@
+{
+  "key": "short-guidedpsalm107v7",
+  "channel": "prayer10",
+  "psalm": 107,
+  "title": [
+    "HE LED THEM FORTH",
+    "BY THE RIGHT WAY"
+  ],
+  "poster": [
+    "PSALM 107:7",
+    "GOD GUIDES YOUR STEPS",
+    "THE GUIDED PATH",
+    "WISDOM & GUIDANCE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley early morning sunbeam",
+    "winding mountain pass gravel trail dramatic landscape",
+    "quiet foggy valley surrounded by pine trees",
+    "rocky mountain peak overlooking vast wilderness sunrise",
+    "calm river flowing through quiet forest morning fog",
+    "peaceful sunlit valley scenic mountain vista dawn",
+    "golden light shining through misty pine forest path",
+    "tranquil mountain lake reflection still waters morning"
+  ],
+  "scenes": [
+    {
+      "a": "When your path feels aimless today, hear the promise of God.",
+      "img": "short-guidedpsalm107v7-scene-01.jpg",
+      "kicker": "PSALM 107:7",
+      "sub": "GOD GUIDES YOUR STEPS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And he led them forth by the right way, that they might go to a city of habitation.",
+      "img": "short-guidedpsalm107v7-scene-02.jpg",
+      "kicker": "PSALM 107:7",
+      "sub": "HE LEADS BY THE RIGHT WAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we confess how easily we wander when we rely on our own counsel.",
+      "img": "short-guidedpsalm107v7-scene-03.jpg",
+      "kicker": "PSALM 107:7",
+      "sub": "SEEK HIS DIVINE COUNSEL",
+      "cam": "pan_right",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "When the terrain ahead looks unfamiliar and wild, remind us that You see the end from the beginning.",
+      "img": "short-guidedpsalm107v7-scene-04.jpg",
+      "kicker": "PSALM 107:7",
+      "sub": "HE SEES BEYOND THE WILDERNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Direct our feet along Your true path, clearing away all confusion and fear.",
+      "img": "short-guidedpsalm107v7-scene-05.jpg",
+      "kicker": "PSALM 107:7",
+      "sub": "CLEARING CONFUSION AND FEAR",
+      "cam": "pan_left",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "Lead us out of the wilderness into the secure place You have prepared for us.",
+      "img": "short-guidedpsalm107v7-scene-06.jpg",
+      "kicker": "PSALM 107:7",
+      "sub": "A SECURE CITY OF HABITATION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Teach us to trust Your guidance, knowing You never lead Your children astray.",
+      "img": "short-guidedpsalm107v7-scene-07.jpg",
+      "kicker": "PSALM 107:7",
+      "sub": "TRUST HIS FAITHFUL DIRECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Subscribe to The Guided Path.",
+      "img": "short-guidedpsalm107v7-scene-08.jpg",
+      "kicker": "THE GUIDED PATH",
+      "sub": "SEEK GOD'S WISDOM TODAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      5,
+      "When your path feels aimless today, hear the promise of God."
+    ],
+    [
+      5,
+      13,
+      "And he led them forth by the right way, that they might go to a city of habitation."
+    ],
+    [
+      13,
+      19,
+      "Lord, we confess how easily we wander when we rely on our own counsel."
+    ],
+    [
+      19,
+      26,
+      "When the terrain ahead looks unfamiliar and wild, remind us that You see the end from the beginning."
+    ],
+    [
+      26,
+      32,
+      "Direct our feet along Your true path, clearing away all confusion and fear."
+    ],
+    [
+      32,
+      38,
+      "Lead us out of the wilderness into the secure place You have prepared for us."
+    ],
+    [
+      38,
+      44,
+      "Teach us to trust Your guidance, knowing You never lead Your children astray."
+    ],
+    [
+      44,
+      48,
+      "Subscribe to The Guided Path."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      5,
+      [
+        "WHEN YOUR PATH",
+        "FEELS AIMLESS TODAY",
+        "HEAR GOD'S PROMISE"
+      ],
+      [
+        "AIMLESS",
+        "PROMISE"
+      ],
+      "PSALM 107 : 7"
+    ],
+    [
+      5,
+      13,
+      [
+        "AND HE LED THEM FORTH",
+        "BY THE RIGHT WAY",
+        "TO A CITY OF HABITATION"
+      ],
+      [
+        "RIGHT WAY",
+        "HABITATION"
+      ],
+      "PSALM 107 : 7"
+    ],
+    [
+      13,
+      19,
+      [
+        "WE CONFESS HOW EASILY",
+        "WE WANDER WHEN WE RELY",
+        "ON OUR OWN COUNSEL"
+      ],
+      [
+        "WANDER",
+        "COUNSEL"
+      ],
+      "PSALM 107 : 7"
+    ],
+    [
+      19,
+      26,
+      [
+        "WHEN TERRAIN AHEAD",
+        "LOOKS UNFAMILIAR AND WILD",
+        "YOU SEE THE END"
+      ],
+      [
+        "UNFAMILIAR",
+        "SEE THE END"
+      ],
+      "PSALM 107 : 7"
+    ],
+    [
+      26,
+      32,
+      [
+        "DIRECT OUR FEET",
+        "ALONG YOUR TRUE PATH",
+        "CLEARING ALL CONFUSION"
+      ],
+      [
+        "TRUE PATH",
+        "CONFUSION"
+      ],
+      "PSALM 107 : 7"
+    ],
+    [
+      32,
+      38,
+      [
+        "LEAD US OUT OF WILDERNESS",
+        "INTO THE SECURE PLACE",
+        "YOU HAVE PREPARED"
+      ],
+      [
+        "WILDERNESS",
+        "SECURE PLACE"
+      ],
+      "PSALM 107 : 7"
+    ],
+    [
+      38,
+      44,
+      [
+        "TEACH US TO TRUST",
+        "YOUR DIVINE GUIDANCE",
+        "NEVER LEADING ASTRAY"
+      ],
+      [
+        "TRUST",
+        "GUIDANCE"
+      ],
+      "PSALM 107 : 7"
+    ],
+    [
+      44,
+      48,
+      [
+        "SUBSCRIBE TO",
+        "THE GUIDED PATH",
+        "FOR DAILY WISDOM"
+      ],
+      [
+        "SUBSCRIBE",
+        "GUIDED PATH"
+      ],
+      "PSALM 107 : 7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When your path feels aimless today, hear the promise of God.",
+      "kind": "phrase",
+      "words": [
+        "AIMLESS",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And he led them forth by the right way, that they might go to a city of habitation.",
+      "kind": "phrase",
+      "words": [
+        "RIGHT",
+        "WAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we confess how easily we wander when we rely on our own counsel.",
+      "kind": "phrase",
+      "words": [
+        "WANDER",
+        "COUNSEL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When the terrain ahead looks unfamiliar and wild, remind us that You see the end from the beginning.",
+      "kind": "phrase",
+      "words": [
+        "UNFAMILIAR",
+        "BEGINNING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Direct our feet along Your true path, clearing away all confusion and fear.",
+      "kind": "phrase",
+      "words": [
+        "TRUE",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lead us out of the wilderness into the secure place You have prepared for us.",
+      "kind": "phrase",
+      "words": [
+        "WILDERNESS",
+        "SECURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach us to trust Your guidance, knowing You never lead Your children astray.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "GUIDANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Guided Path.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 107:7"
+}
