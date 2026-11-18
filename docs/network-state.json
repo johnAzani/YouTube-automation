@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T20:44:35Z",
+  "generated_at": "2026-11-18T20:53:39Z",
   "monitor_generated_at": "2026-11-18T20:43:16.368466+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 456,
+    "published_total": 457,
     "published_longform": 151,
-    "published_shorts": 305,
-    "public_total": 454,
+    "published_shorts": 306,
+    "public_total": 455,
     "queued_longform": 56,
-    "queued_shorts": 79,
+    "queued_shorts": 78,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -237,23 +237,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 48,
+        "published_total": 49,
         "published_longform": 16,
-        "published_shorts": 32,
-        "thumbnail_pending": 47,
-        "public_total": 48,
+        "published_shorts": 33,
+        "thumbnail_pending": 48,
+        "public_total": 49,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTREVELATION3V7",
-        "title": "Pray This Revelation 3:7-8 Midnight Prayer | The One Who Holds The Key #Shorts",
+        "id": "SHORT-MIDNIGHTPSALM24V7",
+        "title": "Pray This Psalm 24:7-10 Midnight Prayer | Heavy Doors Are Opening #Shorts",
         "format": "short",
-        "youtube_video_id": "7KKuz7KBZZg",
-        "watch_url": "https://www.youtube.com/shorts/7KKuz7KBZZg",
+        "youtube_video_id": "NQIACs96aDE",
+        "watch_url": "https://www.youtube.com/shorts/NQIACs96aDE",
         "published_on": "2026-11-18",
-        "published_at": "2026-11-18T15:46:29Z"
+        "published_at": "2026-11-18T20:52:42Z"
       },
       "next_queued_longform": {
         "id": "0216",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightpsalm24v7",
-        "scripture": "Psalm 24:7-10",
+        "short": "short-midnightpsalm35v1",
+        "scripture": "Psalm 35:1-4",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTPSALM24V7",
+      "slug": "short-midnightpsalm24v7-midnight-prayer",
+      "file": "short-midnightpsalm24v7-midnight-prayer.md",
+      "title": "Pray This Psalm 24:7-10 Midnight Prayer | Heavy Doors Are Opening #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T20:52:42Z",
+      "youtube_video_id": "NQIACs96aDE",
+      "watch_url": "https://www.youtube.com/shorts/NQIACs96aDE",
+      "youtu_be_url": "https://youtu.be/NQIACs96aDE",
+      "shorts_url": "https://www.youtube.com/shorts/NQIACs96aDE",
+      "studio_url": "https://studio.youtube.com/video/NQIACs96aDE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/NQIACs96aDE/hqdefault.jpg",
+      "thumb_text": "LIFT UP \u00b7 YOUR HEADS",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 636
+    },
     {
       "id": "0313",
       "slug": "guiding-children-proverbs-22-6-the-family-altar",
@@ -12663,17 +12687,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightpsalm24v7",
-        "file": "0214-short-midnightpsalm24v7.yml",
-        "companion_longform_id": "0214",
-        "scripture": "Psalm 24:7-10",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightpsalm35v1",
