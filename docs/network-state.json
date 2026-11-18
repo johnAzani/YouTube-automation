@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T21:03:16Z",
+  "generated_at": "2026-11-18T21:06:46Z",
   "monitor_generated_at": "2026-11-18T20:43:16.368466+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 462,
+    "published_total": 463,
     "published_longform": 151,
-    "published_shorts": 311,
-    "public_total": 460,
+    "published_shorts": 312,
+    "public_total": 461,
     "queued_longform": 56,
-    "queued_shorts": 73,
+    "queued_shorts": 72,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -645,23 +645,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 30,
+        "published_total": 31,
         "published_longform": 9,
-        "published_shorts": 21,
+        "published_shorts": 22,
         "thumbnail_pending": 12,
-        "public_total": 30,
+        "public_total": 31,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPSALM107V7",
-        "title": "Pray This Psalm 107:7 Prayer for God's Guidance | Wisdom & Guidance #Shorts",
+        "id": "SHORT-GUIDEDPSALM25V9",
+        "title": "Pray This Psalm 25:9 Prayer for God's Guidance | Surrender Your Pride #Shorts",
         "format": "short",
-        "youtube_video_id": "K95OFtzT6Nc",
-        "watch_url": "https://www.youtube.com/shorts/K95OFtzT6Nc",
+        "youtube_video_id": "Uwd3QeNEIxw",
+        "watch_url": "https://www.youtube.com/shorts/Uwd3QeNEIxw",
         "published_on": "2026-11-18",
-        "published_at": "2026-11-18T16:03:14Z"
+        "published_at": "2026-11-18T21:05:54Z"
       },
       "next_queued_longform": {
         "id": "0809",
@@ -670,8 +670,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedpsalm25v9",
-        "scripture": "Psalm 25:9",
+        "short": "short-guidedproverbs16v9",
+        "scripture": "Proverbs 16:9",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDPSALM25V9",
+      "slug": "short-guidedpsalm25v9-guidance-prayer",
+      "file": "short-guidedpsalm25v9-guidance-prayer.md",
+      "title": "Pray This Psalm 25:9 Prayer for God's Guidance | Surrender Your Pride #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T21:05:54Z",
+      "youtube_video_id": "Uwd3QeNEIxw",
+      "watch_url": "https://www.youtube.com/shorts/Uwd3QeNEIxw",
+      "youtu_be_url": "https://youtu.be/Uwd3QeNEIxw",
+      "shorts_url": "https://www.youtube.com/shorts/Uwd3QeNEIxw",
+      "studio_url": "https://studio.youtube.com/video/Uwd3QeNEIxw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Uwd3QeNEIxw/hqdefault.jpg",
+      "thumb_text": "THE MEEK \u00b7 WILL HE GUIDE",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 632
+    },
     {
       "id": "SHORT-SHIELDPSALM46V1",
       "slug": "short-shieldpsalm46v1-protection-prayer",
@@ -12522,17 +12546,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-guidedpsalm25v9",
-        "file": "0000-short-guidedpsalm25v9.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 25:9",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
-      },
       {
         "short": "short-psalm61v2",
         "file": "0000-short-psalm61v2.yml",
