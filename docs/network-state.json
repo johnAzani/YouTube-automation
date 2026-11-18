@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T16:01:06Z",
+  "generated_at": "2026-11-18T16:04:04Z",
   "monitor_generated_at": "2026-11-18T11:57:30.409838+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 449,
+    "published_total": 450,
     "published_longform": 148,
-    "published_shorts": 301,
-    "public_total": 447,
+    "published_shorts": 302,
+    "public_total": 448,
     "queued_longform": 59,
-    "queued_shorts": 83,
+    "queued_shorts": 82,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -645,23 +645,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 29,
+        "published_total": 30,
         "published_longform": 9,
-        "published_shorts": 20,
+        "published_shorts": 21,
         "thumbnail_pending": 12,
-        "public_total": 29,
+        "public_total": 30,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0808",
-        "title": "Steady Steps on an Uncertain Road: Psalm 37:23-24 | The Guided Path",
-        "format": "longform",
-        "youtube_video_id": "OicdZJhdQhI",
-        "watch_url": "https://youtu.be/OicdZJhdQhI",
+        "id": "SHORT-GUIDEDPSALM107V7",
+        "title": "Pray This Psalm 107:7 Prayer for God's Guidance | Wisdom & Guidance #Shorts",
+        "format": "short",
+        "youtube_video_id": "K95OFtzT6Nc",
+        "watch_url": "https://www.youtube.com/shorts/K95OFtzT6Nc",
         "published_on": "2026-11-18",
-        "published_at": "2026-11-18T13:35:04Z"
+        "published_at": "2026-11-18T16:03:14Z"
       },
       "next_queued_longform": {
         "id": "0809",
@@ -670,8 +670,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedpsalm107v7",
-        "scripture": "Psalm 107:7",
+        "short": "short-guidedpsalm25v9",
+        "scripture": "Psalm 25:9",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDPSALM107V7",
+      "slug": "short-guidedpsalm107v7-guidance-prayer",
+      "file": "short-guidedpsalm107v7-guidance-prayer.md",
+      "title": "Pray This Psalm 107:7 Prayer for God's Guidance | Wisdom & Guidance #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T16:03:14Z",
+      "youtube_video_id": "K95OFtzT6Nc",
+      "watch_url": "https://www.youtube.com/shorts/K95OFtzT6Nc",
+      "youtu_be_url": "https://youtu.be/K95OFtzT6Nc",
+      "shorts_url": "https://www.youtube.com/shorts/K95OFtzT6Nc",
+      "studio_url": "https://studio.youtube.com/video/K95OFtzT6Nc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/K95OFtzT6Nc/hqdefault.jpg",
+      "thumb_text": "PSALM 107:7 \u00b7 GOD GUIDES YOUR STEPS",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 633
+    },
     {
       "id": "SHORT-SHIELDPSALM5V11",
       "slug": "short-shieldpsalm5v11-protection-prayer",
@@ -12270,17 +12294,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedpsalm107v7",
-        "file": "0000-short-guidedpsalm107v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 107:7",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedpsalm25v9",
