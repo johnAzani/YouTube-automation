@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T01:11:54Z",
+  "generated_at": "2026-11-18T01:12:26Z",
   "monitor_generated_at": "2026-11-18T01:02:31.148573+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 420,
+    "published_total": 421,
     "published_longform": 143,
-    "published_shorts": 277,
-    "public_total": 418,
+    "published_shorts": 278,
+    "public_total": 419,
     "queued_longform": 59,
-    "queued_shorts": 78,
+    "queued_shorts": 77,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 68,
+        "published_total": 69,
         "published_longform": 26,
-        "published_shorts": 42,
+        "published_shorts": 43,
         "thumbnail_pending": 1,
-        "public_total": 67,
+        "public_total": 68,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM63V1",
-        "title": "Say This Psalm 63:1 Prayer at Sunrise | Quiet Your Heart #Shorts",
+        "id": "SHORT-MORNINGROMANS12V1",
+        "title": "Say This Romans 12:1-2 Prayer at Sunrise | God's Perfect Will #Shorts",
         "format": "short",
-        "youtube_video_id": "q6K4Ghwwqa8",
-        "watch_url": "https://www.youtube.com/shorts/q6K4Ghwwqa8",
-        "published_on": "2026-11-17",
-        "published_at": "2026-11-17T19:51:50Z"
+        "youtube_video_id": "OYt2sxQB_Y4",
+        "watch_url": "https://www.youtube.com/shorts/OYt2sxQB_Y4",
+        "published_on": "2026-11-18",
+        "published_at": "2026-11-18T01:11:26Z"
       },
       "next_queued_longform": {
         "id": "0070",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningromans12v1",
-        "scripture": "Romans 12:1-2",
+        "short": "short-morningpsalm119v105",
+        "scripture": "Psalm 119:105",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGROMANS12V1",
+      "slug": "short-morningromans12v1-sunrise-prayer",
+      "file": "short-morningromans12v1-sunrise-prayer.md",
+      "title": "Say This Romans 12:1-2 Prayer at Sunrise | God's Perfect Will #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T01:11:26Z",
+      "youtube_video_id": "OYt2sxQB_Y4",
+      "watch_url": "https://www.youtube.com/shorts/OYt2sxQB_Y4",
+      "youtu_be_url": "https://youtu.be/OYt2sxQB_Y4",
+      "shorts_url": "https://www.youtube.com/shorts/OYt2sxQB_Y4",
+      "studio_url": "https://studio.youtube.com/video/OYt2sxQB_Y4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/OYt2sxQB_Y4/hqdefault.jpg",
+      "thumb_text": "WHEN THE WORLD \u00b7 PRESSURES YOU",
+      "thumbnail_pending": false,
+      "duration_label": "49s",
+      "words": 599
+    },
     {
       "id": "SHORT-FAMILYPROVERBS3V33",
       "slug": "short-familyproverbs3v33-household-prayer",
@@ -11596,17 +11620,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningromans12v1",
-        "file": "0000-short-morningromans12v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Romans 12:1-2",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-psalm61v2",
