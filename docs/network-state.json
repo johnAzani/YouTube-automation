@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T20:54:24Z",
+  "generated_at": "2026-11-18T20:54:58Z",
   "monitor_generated_at": "2026-11-18T20:43:16.368466+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 459,
+    "published_total": 460,
     "published_longform": 151,
-    "published_shorts": 308,
-    "public_total": 457,
+    "published_shorts": 309,
+    "public_total": 458,
     "queued_longform": 56,
-    "queued_shorts": 76,
+    "queued_shorts": 75,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -305,23 +305,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 39,
+        "published_total": 40,
         "published_longform": 14,
-        "published_shorts": 25,
-        "thumbnail_pending": 39,
-        "public_total": 39,
+        "published_shorts": 26,
+        "thumbnail_pending": 40,
+        "public_total": 40,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "0313",
-        "title": "Guiding Children in the Way They Should Go: Proverbs 22:6",
-        "format": "longform",
-        "youtube_video_id": "ZQLqChOfkvU",
-        "watch_url": "https://youtu.be/ZQLqChOfkvU",
+        "id": "SHORT-FAMILYACTS16V31",
+        "title": "Pray This Acts 16:31-34 Family Prayer Over Your Home | A Promise For Your Household #Shorts",
+        "format": "short",
+        "youtube_video_id": "TzmFfvxGMqU",
+        "watch_url": "https://www.youtube.com/shorts/TzmFfvxGMqU",
         "published_on": "2026-11-18",
-        "published_at": "2026-11-18T17:22:59Z"
+        "published_at": "2026-11-18T20:54:07Z"
       },
       "next_queued_longform": {
         "id": "0314",
@@ -330,8 +330,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyacts16v31",
-        "scripture": "Acts 16:31-34",
+        "short": "short-familypsalm112v1",
+        "scripture": "Psalm 112:1-3",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYACTS16V31",
+      "slug": "short-familyacts16v31-household-prayer",
+      "file": "short-familyacts16v31-household-prayer.md",
+      "title": "Pray This Acts 16:31-34 Family Prayer Over Your Home | A Promise For Your Household #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T20:54:07Z",
+      "youtube_video_id": "TzmFfvxGMqU",
+      "watch_url": "https://www.youtube.com/shorts/TzmFfvxGMqU",
+      "youtu_be_url": "https://youtu.be/TzmFfvxGMqU",
+      "shorts_url": "https://www.youtube.com/shorts/TzmFfvxGMqU",
+      "studio_url": "https://studio.youtube.com/video/TzmFfvxGMqU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/TzmFfvxGMqU/hqdefault.jpg",
+      "thumb_text": "PRAYER FOR YOUR \u00b7 HOUSEHOLD AND FAMILY",
+      "thumbnail_pending": true,
+      "duration_label": "54s",
+      "words": 670
+    },
     {
       "id": "SHORT-MIDDAY1CORINTHIANS15V58",
       "slug": "short-midday1corinthians15v58-midday-prayer",
@@ -12790,17 +12814,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-familyacts16v31",
-        "file": "0311-short-familyacts16v31.yml",
-        "companion_longform_id": "0311",
-        "scripture": "Acts 16:31-34",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-familypsalm112v1",
