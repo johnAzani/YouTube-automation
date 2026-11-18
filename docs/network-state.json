@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T15:52:25Z",
+  "generated_at": "2026-11-18T15:55:27Z",
   "monitor_generated_at": "2026-11-18T11:57:30.409838+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 446,
+    "published_total": 447,
     "published_longform": 148,
-    "published_shorts": 298,
-    "public_total": 444,
+    "published_shorts": 299,
+    "public_total": 445,
     "queued_longform": 59,
-    "queued_shorts": 86,
+    "queued_shorts": 85,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 40,
+        "published_total": 41,
         "published_longform": 14,
-        "published_shorts": 26,
+        "published_shorts": 27,
         "thumbnail_pending": 7,
-        "public_total": 40,
+        "public_total": 41,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0513",
-        "title": "All Grace Abound Toward You: 2 Corinthians 9:8 | The Provision Table",
-        "format": "longform",
-        "youtube_video_id": "5qGTsJYfI6Q",
-        "watch_url": "https://youtu.be/5qGTsJYfI6Q",
+        "id": "SHORT-PROVISIONMATTHEW6V11",
+        "title": "Pray This Matthew 6:11 Prayer for Open Doors & Provision | Pray With Us #Shorts",
+        "format": "short",
+        "youtube_video_id": "cMZhAgRlutw",
+        "watch_url": "https://www.youtube.com/shorts/cMZhAgRlutw",
         "published_on": "2026-11-18",
-        "published_at": "2026-11-18T13:20:06Z"
+        "published_at": "2026-11-18T15:54:37Z"
       },
       "next_queued_longform": {
         "id": "0514",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionmatthew6v11",
-        "scripture": "Matthew 6:11",
+        "short": "short-provisionpsalm132v15",
+        "scripture": "Psalm 132:15",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONMATTHEW6V11",
+      "slug": "short-provisionmatthew6v11-stewardship-prayer",
+      "file": "short-provisionmatthew6v11-stewardship-prayer.md",
+      "title": "Pray This Matthew 6:11 Prayer for Open Doors & Provision | Pray With Us #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T15:54:37Z",
+      "youtube_video_id": "cMZhAgRlutw",
+      "watch_url": "https://www.youtube.com/shorts/cMZhAgRlutw",
+      "youtu_be_url": "https://youtu.be/cMZhAgRlutw",
+      "shorts_url": "https://www.youtube.com/shorts/cMZhAgRlutw",
+      "studio_url": "https://studio.youtube.com/video/cMZhAgRlutw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/cMZhAgRlutw/hqdefault.jpg",
+      "thumb_text": "AS YOU \u00b7 SEEK DAILY",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 644
+    },
     {
       "id": "SHORT-JEREMIAH31V25",
       "slug": "short-jeremiah31v25-pre-sleep-prayer",
@@ -12253,17 +12277,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisionmatthew6v11",
-        "file": "0000-short-provisionmatthew6v11.yml",
-        "companion_longform_id": "",
-        "scripture": "Matthew 6:11",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionpsalm132v15",
