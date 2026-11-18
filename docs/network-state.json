@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T16:04:04Z",
+  "generated_at": "2026-11-18T16:56:59Z",
   "monitor_generated_at": "2026-11-18T11:57:30.409838+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 450,
-    "published_longform": 148,
-    "published_shorts": 302,
-    "public_total": 448,
-    "queued_longform": 59,
-    "queued_shorts": 82,
+    "published_total": 452,
+    "published_longform": 149,
+    "published_shorts": 303,
+    "public_total": 450,
+    "queued_longform": 58,
+    "queued_shorts": 81,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -577,33 +577,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 30,
-        "published_longform": 8,
-        "published_shorts": 22,
-        "thumbnail_pending": 30,
-        "public_total": 30,
-        "queued_longform": 6,
+        "published_total": 32,
+        "published_longform": 9,
+        "published_shorts": 23,
+        "thumbnail_pending": 32,
+        "public_total": 32,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-GARDENISAIAH25V1",
-        "title": "Pray This Isaiah 25:1 Prayer of Thanksgiving | Faithfulness And Truth #Shorts",
-        "format": "short",
-        "youtube_video_id": "4yo1okRFLaQ",
-        "watch_url": "https://www.youtube.com/shorts/4yo1okRFLaQ",
-        "published_on": "2026-11-18",
-        "published_at": "2026-11-18T12:12:58Z"
-      },
-      "next_queued_longform": {
         "id": "0708",
         "title": "When Every Day Depends on Grace: Psalm 136:1 | The Praise Garden",
-        "words": 1507,
+        "format": "longform",
+        "youtube_video_id": "M9amno4qpCg",
+        "watch_url": "https://youtu.be/M9amno4qpCg",
+        "published_on": "2026-11-18",
+        "published_at": "2026-11-18T16:56:15Z"
+      },
+      "next_queued_longform": {
+        "id": "0709",
+        "title": "Finding Mercy When Hope Is Weary: Lamentations 3:22-23",
+        "words": 1355,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm92v1",
-        "scripture": "Psalm 92:1-2",
+        "short": "short-gardenpsalm103v1",
+        "scripture": "Psalm 103:1-5",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,54 @@
     }
   ],
   "videos": [
+    {
+      "id": "0708",
+      "slug": "when-every-day-depends-on-grace-psalm-136-1-the-praise-garden",
+      "file": "0708-when-every-day-depends-on-grace-psalm-136-1-the-praise-garden.md",
+      "title": "When Every Day Depends on Grace: Psalm 136:1 | The Praise Garden",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T16:56:15Z",
+      "youtube_video_id": "M9amno4qpCg",
+      "watch_url": "https://youtu.be/M9amno4qpCg",
+      "youtu_be_url": "https://youtu.be/M9amno4qpCg",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/M9amno4qpCg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/M9amno4qpCg/hqdefault.jpg",
+      "thumb_text": "MERCY ENDURES",
+      "thumbnail_pending": true,
+      "duration_label": "~10 min",
+      "words": 1507
+    },
+    {
+      "id": "SHORT-GARDENPSALM92V1",
+      "slug": "short-gardenpsalm92v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm92v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 92:1-2 Prayer of Thanksgiving | Find Peace In The Quiet #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T16:07:06Z",
+      "youtube_video_id": "tDHpId6Yxuw",
+      "watch_url": "https://www.youtube.com/shorts/tDHpId6Yxuw",
+      "youtu_be_url": "https://youtu.be/tDHpId6Yxuw",
+      "shorts_url": "https://www.youtube.com/shorts/tDHpId6Yxuw",
+      "studio_url": "https://studio.youtube.com/video/tDHpId6Yxuw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/tDHpId6Yxuw/hqdefault.jpg",
+      "thumb_text": "GIVE THANKS \u00b7 TO THE LORD",
+      "thumbnail_pending": true,
+      "duration_label": "44s",
+      "words": 633
+    },
     {
       "id": "SHORT-GUIDEDPSALM107V7",
       "slug": "short-guidedpsalm107v7-guidance-prayer",
@@ -12129,19 +12177,6 @@
         "words": 1559
       },
       {
-        "id": "0708",
-        "slug": "when-every-day-depends-on-grace-psalm-136-1-the-praise-garden",
-        "file": "0708-when-every-day-depends-on-grace-psalm-136-1-the-praise-garden.md",
-        "title": "When Every Day Depends on Grace: Psalm 136:1 | The Praise Garden",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1507
-      },
-      {
         "id": "0709",
         "slug": "finding-mercy-when-hope-is-weary-lamentations-3-22-23",
         "file": "0709-finding-mercy-when-hope-is-weary-lamentations-3-22-23.md",
@@ -12283,17 +12318,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-gardenpsalm92v1",
-        "file": "0000-short-gardenpsalm92v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 92:1-2",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-guidedpsalm25v9",

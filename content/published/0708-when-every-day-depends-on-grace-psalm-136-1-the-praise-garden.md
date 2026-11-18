@@ -2,7 +2,7 @@
 id: 0708
 title: 'When Every Day Depends on Grace: Psalm 136:1 | The Praise Garden'
 slug: when-every-day-depends-on-grace-psalm-136-1-the-praise-garden
-status: approved
+status: published
 channel: prayer9
 privacy: public
 format: longform
@@ -71,6 +71,15 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-18"
+published_at: "2026-11-18T16:56:15Z"
+youtube_video_id: "M9amno4qpCg"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Entering His Gates With Thanksgiving
