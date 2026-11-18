@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE MIDNIGHT WATCH", "THE KEY OF DAVID", "DIVINE OPENING", "REVELATION 3:7-8"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-25T18:51:19Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 The lock on your future is breaking because the One who holds the key arrives. These things saith he that is holy, he that is true, he that hath the key of David. He that openeth, and no man shutteth; and shutteth, and no man openeth; I know thy works: behold, I have set before thee an open door, and no man can shut it: For thou hast a little strength, and hast kept my word, and hast not denied my name. Lord, walk through this space and establish the path you have prepared for this soul. Amen.
