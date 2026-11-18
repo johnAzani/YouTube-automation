@@ -2,9 +2,9 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 338,
+      "late_minutes": 1139,
       "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-14T00:19:33+00:00",
+      "ran_at": "2026-11-14T13:40:38+00:00",
       "slot": "2026-11-13T18:41:00+00:00",
       "workflow": "metrics.yml"
     },
@@ -30,16 +30,9 @@
       "workflow": "automation-health.yml"
     }
   ],
-  "generated_at": "2026-11-18T02:27:29.768811+00:00",
-  "last_run_at": "2026-11-18T02:26:41+00:00",
+  "generated_at": "2026-11-18T04:15:30.713893+00:00",
+  "last_run_at": "2026-11-18T04:14:27+00:00",
   "on_time": [
-    {
-      "late_minutes": 90,
-      "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
-      "ran_at": "2026-11-17T05:07:13+00:00",
-      "slot": "2026-11-17T03:37:00+00:00",
-      "workflow": "channel-analytics.yml"
-    },
     {
       "late_minutes": 91,
       "name": "Autonomous Community Tab Automation",
@@ -48,17 +41,10 @@
       "workflow": "community.yml"
     },
     {
-      "late_minutes": 110,
-      "name": "Gemini Brain Autonomous Queue Replenishment",
-      "ran_at": "2026-11-17T05:04:35+00:00",
-      "slot": "2026-11-17T03:14:00+00:00",
-      "workflow": "gemini_brain.yml"
-    },
-    {
-      "late_minutes": 38,
+      "late_minutes": 51,
       "name": "Automation monitor",
-      "ran_at": "2026-11-18T01:01:46+00:00",
-      "slot": "2026-11-18T00:23:00+00:00",
+      "ran_at": "2026-11-18T04:14:27+00:00",
+      "slot": "2026-11-18T03:23:00+00:00",
       "workflow": "monitor.yml"
     },
     {
@@ -76,10 +62,10 @@
       "workflow": "reporting-jobs.yml"
     },
     {
-      "late_minutes": 16,
+      "late_minutes": 27,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-18T01:03:39+00:00",
-      "slot": "2026-11-18T00:47:00+00:00",
+      "ran_at": "2026-11-18T04:14:27+00:00",
+      "slot": "2026-11-18T03:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     },
     {
@@ -90,6 +76,6 @@
       "workflow": "tests-on-main.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 1,
   "warn_minutes": 120
 }
