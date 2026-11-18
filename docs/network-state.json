@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T15:47:44Z",
+  "generated_at": "2026-11-18T15:52:25Z",
   "monitor_generated_at": "2026-11-18T11:57:30.409838+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 445,
+    "published_total": 446,
     "published_longform": 148,
-    "published_shorts": 297,
-    "public_total": 443,
+    "published_shorts": 298,
+    "public_total": 444,
     "queued_longform": 59,
-    "queued_shorts": 87,
+    "queued_shorts": 86,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 64,
+        "published_total": 65,
         "published_longform": 19,
-        "published_shorts": 45,
-        "thumbnail_pending": 5,
-        "public_total": 63,
+        "published_shorts": 46,
+        "thumbnail_pending": 6,
+        "public_total": 64,
         "queued_longform": 8,
         "queued_other": 5,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-DEUTERONOMY33V27",
-        "title": "Say This Deuteronomy 33:27 Prayer Before You Sleep | Find Rest In His Presence #Shorts",
+        "id": "SHORT-JEREMIAH31V25",
+        "title": "Say This Jeremiah 31:25-26 Prayer Before You Sleep | Rest For The Weary Soul #Shorts",
         "format": "short",
-        "youtube_video_id": "pyvJBTG4TLw",
-        "watch_url": "https://www.youtube.com/shorts/pyvJBTG4TLw",
+        "youtube_video_id": "FMhQDpgKtsk",
+        "watch_url": "https://www.youtube.com/shorts/FMhQDpgKtsk",
         "published_on": "2026-11-18",
-        "published_at": "2026-11-18T11:58:16Z"
+        "published_at": "2026-11-18T15:51:28Z"
       },
       "next_queued_longform": {
         "id": "0028",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-jeremiah31v25",
-        "scripture": "Jeremiah 31:25-26",
+        "short": "short-psalm61v2",
+        "scripture": "Psalm 61:2-4",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-JEREMIAH31V25",
+      "slug": "short-jeremiah31v25-pre-sleep-prayer",
+      "file": "short-jeremiah31v25-pre-sleep-prayer.md",
+      "title": "Say This Jeremiah 31:25-26 Prayer Before You Sleep | Rest For The Weary Soul #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T15:51:28Z",
+      "youtube_video_id": "FMhQDpgKtsk",
+      "watch_url": "https://www.youtube.com/shorts/FMhQDpgKtsk",
+      "youtu_be_url": "https://youtu.be/FMhQDpgKtsk",
+      "shorts_url": "https://www.youtube.com/shorts/FMhQDpgKtsk",
+      "studio_url": "https://studio.youtube.com/video/FMhQDpgKtsk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/FMhQDpgKtsk/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "58s",
+      "words": 649
+    },
     {
       "id": "SHORT-MORNINGJAMES1V5",
       "slug": "short-morningjames1v5-sunrise-prayer",
@@ -12207,17 +12231,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-jeremiah31v25",
-        "file": "0000-short-jeremiah31v25.yml",
-        "companion_longform_id": "",
-        "scripture": "Jeremiah 31:25-26",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-middayjohn4v13",
