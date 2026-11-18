@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T12:21:21Z",
+  "generated_at": "2026-11-18T12:45:40Z",
   "monitor_generated_at": "2026-11-18T11:57:30.409838+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 437,
-    "published_longform": 145,
-    "published_shorts": 292,
-    "public_total": 435,
-    "queued_longform": 62,
-    "queued_shorts": 92,
+    "published_total": 439,
+    "published_longform": 146,
+    "published_shorts": 293,
+    "public_total": 437,
+    "queued_longform": 61,
+    "queued_shorts": 91,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,33 +101,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 69,
-        "published_longform": 26,
-        "published_shorts": 43,
+        "published_total": 71,
+        "published_longform": 27,
+        "published_shorts": 44,
         "thumbnail_pending": 1,
-        "public_total": 68,
-        "queued_longform": 6,
+        "public_total": 70,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MORNINGROMANS12V1",
-        "title": "Say This Romans 12:1-2 Prayer at Sunrise | God's Perfect Will #Shorts",
-        "format": "short",
-        "youtube_video_id": "OYt2sxQB_Y4",
-        "watch_url": "https://www.youtube.com/shorts/OYt2sxQB_Y4",
-        "published_on": "2026-11-18",
-        "published_at": "2026-11-18T01:11:26Z"
-      },
-      "next_queued_longform": {
         "id": "0070",
         "title": "Early Morning Prayer Before the Day Begins: Psalm 119:147",
-        "words": 1150,
+        "format": "longform",
+        "youtube_video_id": "yb7OGFMHUc0",
+        "watch_url": "https://youtu.be/yb7OGFMHUc0",
+        "published_on": "2026-11-18",
+        "published_at": "2026-11-18T12:44:35Z"
+      },
+      "next_queued_longform": {
+        "id": "0071",
+        "title": "Walking in the Light of His Guidance: Proverbs 4:18",
+        "words": 1029,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningdeuteronomy33v25",
-        "scripture": "Deuteronomy 33:25",
+        "short": "short-morningjames1v5",
+        "scripture": "James 1:5",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0070",
+      "slug": "psalm-119-147-morning-prayer",
+      "file": "0070-psalm-119-147-morning-prayer.md",
+      "title": "Early Morning Prayer Before the Day Begins: Psalm 119:147",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T12:44:35Z",
+      "youtube_video_id": "yb7OGFMHUc0",
+      "watch_url": "https://youtu.be/yb7OGFMHUc0",
+      "youtu_be_url": "https://youtu.be/yb7OGFMHUc0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/yb7OGFMHUc0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/yb7OGFMHUc0/hqdefault.jpg",
+      "thumb_text": "HOPE IN HIS WORD",
+      "thumbnail_pending": false,
+      "duration_label": "~8 min",
+      "words": 1150
+    },
+    {
       "id": "SHORT-GARDENISAIAH25V1",
       "slug": "short-gardenisaiah25v1-thanksgiving-prayer",
       "file": "short-gardenisaiah25v1-thanksgiving-prayer.md",
@@ -820,6 +844,30 @@
       "thumbnail_pending": true,
       "duration_label": "58s",
       "words": 627
+    },
+    {
+      "id": "SHORT-MORNINGDEUTERONOMY33V25",
+      "slug": "short-morningdeuteronomy33v25-sunrise-prayer",
+      "file": "short-morningdeuteronomy33v25-sunrise-prayer.md",
+      "title": "Say This Deuteronomy 33:25 Prayer at Sunrise | Finding God's Promise #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T11:58:25Z",
+      "youtube_video_id": "WqGbsQO1TOg",
+      "watch_url": "https://www.youtube.com/shorts/WqGbsQO1TOg",
+      "youtu_be_url": "https://youtu.be/WqGbsQO1TOg",
+      "shorts_url": "https://www.youtube.com/shorts/WqGbsQO1TOg",
+      "studio_url": "https://studio.youtube.com/video/WqGbsQO1TOg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/WqGbsQO1TOg/hqdefault.jpg",
+      "thumb_text": "FINDING STEADFAST \u00b7 STRENGTH IN THE",
+      "thumbnail_pending": false,
+      "duration_label": "46s",
+      "words": 594
     },
     {
       "id": "SHORT-MIDDAYJEREMIAH17V7",
@@ -11297,19 +11345,6 @@
         "words": 1025
       },
       {
-        "id": "0070",
-        "slug": "psalm-119-147-morning-prayer",
-        "file": "0070-psalm-119-147-morning-prayer.md",
-        "title": "Early Morning Prayer Before the Day Begins: Psalm 119:147",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1150
-      },
-      {
         "id": "0071",
         "slug": "walking-in-the-light-of-his-guidance-proverbs-4-18",
         "file": "0071-walking-in-the-light-of-his-guidance-proverbs-4-18.md",
@@ -12098,17 +12133,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningdeuteronomy33v25",
-        "file": "0000-short-morningdeuteronomy33v25.yml",
-        "companion_longform_id": "",
-        "scripture": "Deuteronomy 33:25",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningjames1v5",
