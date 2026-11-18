@@ -30,8 +30,8 @@
       "workflow": "automation-health.yml"
     }
   ],
-  "generated_at": "2026-11-17T22:28:51.499465+00:00",
-  "last_run_at": "2026-11-17T22:28:11+00:00",
+  "generated_at": "2026-11-18T01:04:25.467119+00:00",
+  "last_run_at": "2026-11-18T01:03:39+00:00",
   "on_time": [
     {
       "late_minutes": 90,
@@ -62,18 +62,11 @@
       "workflow": "growth-autopilot.yml"
     },
     {
-      "late_minutes": 62,
+      "late_minutes": 38,
       "name": "Automation monitor",
-      "ran_at": "2026-11-17T22:25:42+00:00",
-      "slot": "2026-11-17T21:23:00+00:00",
+      "ran_at": "2026-11-18T01:01:46+00:00",
+      "slot": "2026-11-18T00:23:00+00:00",
       "workflow": "monitor.yml"
-    },
-    {
-      "late_minutes": 30,
-      "name": "Produce video",
-      "ran_at": "2026-11-17T19:44:38+00:00",
-      "slot": "2026-11-17T19:14:00+00:00",
-      "workflow": "produce.yml"
     },
     {
       "late_minutes": 102,
@@ -83,10 +76,10 @@
       "workflow": "reporting-jobs.yml"
     },
     {
-      "late_minutes": 38,
+      "late_minutes": 16,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-17T22:25:42+00:00",
-      "slot": "2026-11-17T21:47:00+00:00",
+      "ran_at": "2026-11-18T01:03:39+00:00",
+      "slot": "2026-11-18T00:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     },
     {
