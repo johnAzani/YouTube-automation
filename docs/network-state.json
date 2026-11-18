@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T21:01:55Z",
+  "generated_at": "2026-11-18T21:03:16Z",
   "monitor_generated_at": "2026-11-18T20:43:16.368466+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 461,
+    "published_total": 462,
     "published_longform": 151,
-    "published_shorts": 310,
-    "public_total": 459,
+    "published_shorts": 311,
+    "public_total": 460,
     "queued_longform": 56,
-    "queued_shorts": 74,
+    "queued_shorts": 73,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 33,
+        "published_total": 34,
         "published_longform": 11,
-        "published_shorts": 22,
-        "thumbnail_pending": 33,
-        "public_total": 33,
+        "published_shorts": 23,
+        "thumbnail_pending": 34,
+        "public_total": 34,
         "queued_longform": 6,
         "queued_other": 2,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM5V11",
-        "title": "Pray This Psalm 5:11 Prayer for Divine Protection | Your Refuge Is Secure #Shorts",
+        "id": "SHORT-SHIELDPSALM46V1",
+        "title": "Pray This Psalm 46:1-2 Prayer for Divine Protection | A Prayer For Peace #Shorts",
         "format": "short",
-        "youtube_video_id": "kJRE1F3xBUw",
-        "watch_url": "https://www.youtube.com/shorts/kJRE1F3xBUw",
+        "youtube_video_id": "dhW00V5pGwE",
+        "watch_url": "https://www.youtube.com/shorts/dhW00V5pGwE",
         "published_on": "2026-11-18",
-        "published_at": "2026-11-18T16:00:01Z"
+        "published_at": "2026-11-18T21:02:17Z"
       },
       "next_queued_longform": {
         "id": "0611",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm46v1",
-        "scripture": "Psalm 46:1-2",
+        "short": "short-shieldpsalm18v2",
+        "scripture": "Psalm 18:2",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM46V1",
+      "slug": "short-shieldpsalm46v1-protection-prayer",
+      "file": "short-shieldpsalm46v1-protection-prayer.md",
+      "title": "Pray This Psalm 46:1-2 Prayer for Divine Protection | A Prayer For Peace #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T21:02:17Z",
+      "youtube_video_id": "dhW00V5pGwE",
+      "watch_url": "https://www.youtube.com/shorts/dhW00V5pGwE",
+      "youtu_be_url": "https://youtu.be/dhW00V5pGwE",
+      "shorts_url": "https://www.youtube.com/shorts/dhW00V5pGwE",
+      "studio_url": "https://studio.youtube.com/video/dhW00V5pGwE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/dhW00V5pGwE/hqdefault.jpg",
+      "thumb_text": "THE COVENANT SHIELD \u00b7 GOD IS OUR REFUGE",
+      "thumbnail_pending": true,
+      "duration_label": "48s",
+      "words": 651
+    },
     {
       "id": "SHORT-PROVISIONPSALM132V15",
       "slug": "short-provisionpsalm132v15-stewardship-prayer",
@@ -13058,17 +13082,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldpsalm46v1",
-        "file": "0610-short-shieldpsalm46v1.yml",
-        "companion_longform_id": "0610",
-        "scripture": "Psalm 46:1-2",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm18v2",
