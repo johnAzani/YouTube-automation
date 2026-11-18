@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T12:07:53Z",
+  "generated_at": "2026-11-18T12:21:21Z",
   "monitor_generated_at": "2026-11-18T11:57:30.409838+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 436,
+    "published_total": 437,
     "published_longform": 145,
-    "published_shorts": 291,
-    "public_total": 434,
+    "published_shorts": 292,
+    "public_total": 435,
     "queued_longform": 62,
-    "queued_shorts": 93,
+    "queued_shorts": 92,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 29,
+        "published_total": 30,
         "published_longform": 8,
-        "published_shorts": 21,
-        "thumbnail_pending": 29,
-        "public_total": 29,
+        "published_shorts": 22,
+        "thumbnail_pending": 30,
+        "public_total": 30,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM66V1",
-        "title": "Pray This Psalm 66:1-4 Prayer of Thanksgiving | Find Strength In His Presence #Shorts",
+        "id": "SHORT-GARDENISAIAH25V1",
+        "title": "Pray This Isaiah 25:1 Prayer of Thanksgiving | Faithfulness And Truth #Shorts",
         "format": "short",
-        "youtube_video_id": "DK-T7MjcqxA",
-        "watch_url": "https://www.youtube.com/shorts/DK-T7MjcqxA",
+        "youtube_video_id": "4yo1okRFLaQ",
+        "watch_url": "https://www.youtube.com/shorts/4yo1okRFLaQ",
         "published_on": "2026-11-18",
-        "published_at": "2026-11-18T01:24:11Z"
+        "published_at": "2026-11-18T12:12:58Z"
       },
       "next_queued_longform": {
         "id": "0708",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenisaiah25v1",
-        "scripture": "Isaiah 25:1",
+        "short": "short-gardenpsalm92v1",
+        "scripture": "Psalm 92:1-2",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENISAIAH25V1",
+      "slug": "short-gardenisaiah25v1-thanksgiving-prayer",
+      "file": "short-gardenisaiah25v1-thanksgiving-prayer.md",
+      "title": "Pray This Isaiah 25:1 Prayer of Thanksgiving | Faithfulness And Truth #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T12:12:58Z",
+      "youtube_video_id": "4yo1okRFLaQ",
+      "watch_url": "https://www.youtube.com/shorts/4yo1okRFLaQ",
+      "youtu_be_url": "https://youtu.be/4yo1okRFLaQ",
+      "shorts_url": "https://www.youtube.com/shorts/4yo1okRFLaQ",
+      "studio_url": "https://studio.youtube.com/video/4yo1okRFLaQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/4yo1okRFLaQ/hqdefault.jpg",
+      "thumb_text": "O LORD THOU ART MY GOD \u00b7 I WILL EXALT THEE",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 644
+    },
     {
       "id": "SHORT-SHIELDPSALM16V1",
       "slug": "short-shieldpsalm16v1-protection-prayer",
@@ -11986,17 +12010,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-gardenisaiah25v1",
-        "file": "0000-short-gardenisaiah25v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 25:1",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm92v1",
