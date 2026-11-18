@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["FINDING THE ROCK", "A PRAYER FOR", "THE WEARY SOUL", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If the silence in your room feels heavier than the day you just finished, listen. From the end of the earth will I cry unto thee, when my heart is overwhelmed: lead me to the rock that is higher than I. For thou hast been a shelter for me, and a strong tower from the enemy. I will abide in thy tabernacle for ever: I will trust in the covert of thy wings. Lord, pull my heavy thoughts into your quiet safety where no panic can follow me tonight. Let my spirit rest beneath the shadow of your wings until the morning light breaks through.

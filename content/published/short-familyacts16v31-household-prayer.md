@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["PRAYER FOR YOUR", "HOUSEHOLD AND FAMILY", "ACTS 16:31", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-25T22:10:08Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If you carry a silent ache tonight for your family's salvation, hear God's promise. And they said, Believe on the Lord Jesus Christ, and thou shalt be saved, and thy house. Heavenly Father, we bring our entire household before Your throne in prayer. We pray for every child, spouse, and parent under this roof. Lord, break every heavy burden, draw their hearts to You, and cover our home in Your divine peace. Save our loved ones, wash away our fears, and fill our rooms with Your Holy Spirit. May our whole family rejoice together in Your salvation. Amen. Subscribe to cover your home in prayer.
