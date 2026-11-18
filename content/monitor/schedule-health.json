@@ -16,13 +16,6 @@
       "workflow": "keepalive.yml"
     },
     {
-      "late_minutes": 192,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-17T22:26:36+00:00",
-      "slot": "2026-11-17T19:14:00+00:00",
-      "workflow": "comments.yml"
-    },
-    {
       "late_minutes": 131,
       "name": "automation-health",
       "ran_at": "2026-11-17T22:25:42+00:00",
@@ -37,8 +30,8 @@
       "workflow": "growth-autopilot.yml"
     }
   ],
-  "generated_at": "2026-11-18T04:17:31.899259+00:00",
-  "last_run_at": "2026-11-18T04:16:32+00:00",
+  "generated_at": "2026-11-18T10:14:54.725816+00:00",
+  "last_run_at": "2026-11-18T10:14:06+00:00",
   "on_time": [
     {
       "late_minutes": 91,
@@ -48,39 +41,11 @@
       "workflow": "community.yml"
     },
     {
-      "late_minutes": 51,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-18T04:14:27+00:00",
-      "slot": "2026-11-18T03:23:00+00:00",
-      "workflow": "monitor.yml"
-    },
-    {
-      "late_minutes": 110,
-      "name": "Produce video",
-      "ran_at": "2026-11-18T01:04:34+00:00",
-      "slot": "2026-11-17T23:14:00+00:00",
-      "workflow": "produce.yml"
-    },
-    {
-      "late_minutes": 102,
-      "name": "YouTube reporting jobs (thumbnail impressions)",
-      "ran_at": "2026-11-17T07:29:01+00:00",
-      "slot": "2026-11-17T05:47:00+00:00",
-      "workflow": "reporting-jobs.yml"
-    },
-    {
       "late_minutes": 27,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-18T04:14:27+00:00",
-      "slot": "2026-11-18T03:47:00+00:00",
+      "ran_at": "2026-11-18T10:14:06+00:00",
+      "slot": "2026-11-18T09:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
-    },
-    {
-      "late_minutes": 62,
-      "name": "Tests on main (daily)",
-      "ran_at": "2026-11-17T05:54:17+00:00",
-      "slot": "2026-11-17T04:52:00+00:00",
-      "workflow": "tests-on-main.yml"
     }
   ],
   "silence_minutes": 0,
