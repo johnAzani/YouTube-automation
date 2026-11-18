@@ -1,6 +1,6 @@
 ---
 id: '0204'
-title: Exodus 12:29-31 Midnight Prayer | The Midnight Watch
+title: "Deliverance From Nightly Bondage: Exodus 12:29-31 | The Midnight Watch"
 slug: exodus-12-29-31-midnight-prayer-the-midnight-watch
 status: published
 channel: prayer4
@@ -83,11 +83,14 @@ originality:
 published_on: "2026-11-11"
 published_at: "2026-11-11T23:53:16Z"
 youtube_video_id: "VmK6eRMwpHU"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_retry_after: "2026-11-19T00:52:14Z"
 thumbnail_retry_reason: "permission"
+title_before: "Exodus 12:29-31 Midnight Prayer | The Midnight Watch"
+retitled_at: "2026-11-18"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Movement 1: Rising at the Midnight Hour
