@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T12:45:40Z",
+  "generated_at": "2026-11-18T13:21:05Z",
   "monitor_generated_at": "2026-11-18T11:57:30.409838+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 439,
-    "published_longform": 146,
-    "published_shorts": 293,
-    "public_total": 437,
-    "queued_longform": 61,
-    "queued_shorts": 91,
+    "published_total": 441,
+    "published_longform": 147,
+    "published_shorts": 294,
+    "public_total": 439,
+    "queued_longform": 60,
+    "queued_shorts": 90,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -441,33 +441,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 38,
-        "published_longform": 13,
-        "published_shorts": 25,
+        "published_total": 40,
+        "published_longform": 14,
+        "published_shorts": 26,
         "thumbnail_pending": 7,
-        "public_total": 38,
-        "queued_longform": 6,
+        "public_total": 40,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPSALM5V12",
-        "title": "Pray This Psalm 5:12 Prayer for Open Doors & Provision | God Hears Your Daily Care #Shorts",
-        "format": "short",
-        "youtube_video_id": "aA8mGrmfZms",
-        "watch_url": "https://www.youtube.com/shorts/aA8mGrmfZms",
-        "published_on": "2026-11-18",
-        "published_at": "2026-11-18T01:19:07Z"
-      },
-      "next_queued_longform": {
         "id": "0513",
         "title": "All Grace Abound Toward You: 2 Corinthians 9:8 | The Provision Table",
-        "words": 1974,
+        "format": "longform",
+        "youtube_video_id": "5qGTsJYfI6Q",
+        "watch_url": "https://youtu.be/5qGTsJYfI6Q",
+        "published_on": "2026-11-18",
+        "published_at": "2026-11-18T13:20:06Z"
+      },
+      "next_queued_longform": {
+        "id": "0514",
+        "title": "Steps Ordered by the Lord: Psalm 37:23-25 | The Provision Table",
+        "words": 1346,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionhaggai2v8",
-        "scripture": "Haggai 2:8",
+        "short": "short-provisionmatthew6v11",
+        "scripture": "Matthew 6:11",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0513",
+      "slug": "all-grace-abound-toward-you-2-corinthians-9-8",
+      "file": "0513-all-grace-abound-toward-you-2-corinthians-9-8.md",
+      "title": "All Grace Abound Toward You: 2 Corinthians 9:8 | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T13:20:06Z",
+      "youtube_video_id": "5qGTsJYfI6Q",
+      "watch_url": "https://youtu.be/5qGTsJYfI6Q",
+      "youtu_be_url": "https://youtu.be/5qGTsJYfI6Q",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/5qGTsJYfI6Q/edit",
+      "thumb_url": "https://i.ytimg.com/vi/5qGTsJYfI6Q/hqdefault.jpg",
+      "thumb_text": "ALL GRACE ABOUND",
+      "thumbnail_pending": false,
+      "duration_label": "~14 min",
+      "words": 1974
+    },
+    {
       "id": "0070",
       "slug": "psalm-119-147-morning-prayer",
       "file": "0070-psalm-119-147-morning-prayer.md",
@@ -796,6 +820,30 @@
       "thumbnail_pending": false,
       "duration_label": "51s",
       "words": 633
+    },
+    {
+      "id": "SHORT-PROVISIONHAGGAI2V8",
+      "slug": "short-provisionhaggai2v8-stewardship-prayer",
+      "file": "short-provisionhaggai2v8-stewardship-prayer.md",
+      "title": "Pray This Haggai 2:8 Prayer for Open Doors & Provision | The Provider #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T12:06:51Z",
+      "youtube_video_id": "9XLwpPJcoJs",
+      "watch_url": "https://www.youtube.com/shorts/9XLwpPJcoJs",
+      "youtu_be_url": "https://youtu.be/9XLwpPJcoJs",
+      "shorts_url": "https://www.youtube.com/shorts/9XLwpPJcoJs",
+      "studio_url": "https://studio.youtube.com/video/9XLwpPJcoJs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/9XLwpPJcoJs/hqdefault.jpg",
+      "thumb_text": "ALL WEALTH \u00b7 IS HIS",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 647
     },
     {
       "id": "SHORT-FAMILYISAIAH59V21",
@@ -11722,19 +11770,6 @@
         "words": 1163
       },
       {
-        "id": "0513",
-        "slug": "all-grace-abound-toward-you-2-corinthians-9-8",
-        "file": "0513-all-grace-abound-toward-you-2-corinthians-9-8.md",
-        "title": "All Grace Abound Toward You: 2 Corinthians 9:8 | The Provision Table",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1974
-      },
-      {
         "id": "0514",
         "slug": "steps-ordered-by-the-lord-psalm-37-23-25",
         "file": "0514-steps-ordered-by-the-lord-psalm-37-23-25.md",
@@ -12155,17 +12190,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisionhaggai2v8",
-        "file": "0000-short-provisionhaggai2v8.yml",
-        "companion_longform_id": "",
-        "scripture": "Haggai 2:8",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionmatthew6v11",
