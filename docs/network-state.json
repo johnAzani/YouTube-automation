@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T11:58:33Z",
+  "generated_at": "2026-11-18T11:59:08Z",
   "monitor_generated_at": "2026-11-18T11:57:30.409838+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 430,
+    "published_total": 431,
     "published_longform": 145,
-    "published_shorts": 285,
-    "public_total": 428,
+    "published_shorts": 286,
+    "public_total": 429,
     "queued_longform": 62,
-    "queued_shorts": 100,
+    "queued_shorts": 99,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 63,
+        "published_total": 64,
         "published_longform": 19,
-        "published_shorts": 44,
+        "published_shorts": 45,
         "thumbnail_pending": 5,
-        "public_total": 62,
+        "public_total": 63,
         "queued_longform": 8,
         "queued_other": 5,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PSALM57V1",
-        "title": "Say This Psalm 57:1 Prayer Before You Sleep | Finding Your Refuge #Shorts",
+        "id": "SHORT-DEUTERONOMY33V27",
+        "title": "Say This Deuteronomy 33:27 Prayer Before You Sleep | Find Rest In His Presence #Shorts",
         "format": "short",
-        "youtube_video_id": "phNTH4rKbnQ",
-        "watch_url": "https://www.youtube.com/shorts/phNTH4rKbnQ",
+        "youtube_video_id": "pyvJBTG4TLw",
+        "watch_url": "https://www.youtube.com/shorts/pyvJBTG4TLw",
         "published_on": "2026-11-18",
-        "published_at": "2026-11-18T01:09:41Z"
+        "published_at": "2026-11-18T11:58:16Z"
       },
       "next_queued_longform": {
         "id": "0028",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-deuteronomy33v27",
-        "scripture": "Deuteronomy 33:27",
+        "short": "short-jeremiah31v25",
+        "scripture": "Jeremiah 31:25-26",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-DEUTERONOMY33V27",
+      "slug": "short-deuteronomy33v27-pre-sleep-prayer",
+      "file": "short-deuteronomy33v27-pre-sleep-prayer.md",
+      "title": "Say This Deuteronomy 33:27 Prayer Before You Sleep | Find Rest In His Presence #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T11:58:16Z",
+      "youtube_video_id": "pyvJBTG4TLw",
+      "watch_url": "https://www.youtube.com/shorts/pyvJBTG4TLw",
+      "youtu_be_url": "https://youtu.be/pyvJBTG4TLw",
+      "shorts_url": "https://www.youtube.com/shorts/pyvJBTG4TLw",
+      "studio_url": "https://studio.youtube.com/video/pyvJBTG4TLw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/pyvJBTG4TLw/hqdefault.jpg",
+      "thumb_text": "A PRAYER \u00b7 FOR THE",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 621
+    },
     {
       "id": "0610",
       "slug": "when-trouble-surrounds-you-psalm-46-1-2-the-covenant-shield",
@@ -11832,17 +11856,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-deuteronomy33v27",
-        "file": "0000-short-deuteronomy33v27.yml",
-        "companion_longform_id": "",
-        "scripture": "Deuteronomy 33:27",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-familyisaiah59v21",
         "file": "0000-short-familyisaiah59v21.yml",
