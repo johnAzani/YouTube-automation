@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T21:33:28Z",
+  "generated_at": "2026-11-18T22:09:10Z",
   "monitor_generated_at": "2026-11-18T20:43:16.368466+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 467,
+    "published_total": 468,
     "published_longform": 153,
-    "published_shorts": 314,
-    "public_total": 465,
+    "published_shorts": 315,
+    "public_total": 466,
     "queued_longform": 54,
-    "queued_shorts": 70,
+    "queued_shorts": 69,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 32,
+        "published_total": 33,
         "published_longform": 9,
-        "published_shorts": 23,
-        "thumbnail_pending": 32,
-        "public_total": 32,
+        "published_shorts": 24,
+        "thumbnail_pending": 33,
+        "public_total": 33,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "0708",
-        "title": "When Every Day Depends on Grace: Psalm 136:1 | The Praise Garden",
-        "format": "longform",
-        "youtube_video_id": "M9amno4qpCg",
-        "watch_url": "https://youtu.be/M9amno4qpCg",
+        "id": "SHORT-GARDENPSALM103V1",
+        "title": "Pray This Psalm 103:1-5 Prayer of Thanksgiving | Bless The Lord O My Soul #Shorts",
+        "format": "short",
+        "youtube_video_id": "YvFOv9QRJIw",
+        "watch_url": "https://www.youtube.com/shorts/YvFOv9QRJIw",
         "published_on": "2026-11-18",
-        "published_at": "2026-11-18T16:56:15Z"
+        "published_at": "2026-11-18T22:08:27Z"
       },
       "next_queued_longform": {
         "id": "0709",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm103v1",
-        "scripture": "Psalm 103:1-5",
+        "short": "short-gardenpsalm150v6",
+        "scripture": "Psalm 150:6",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM103V1",
+      "slug": "short-gardenpsalm103v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm103v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 103:1-5 Prayer of Thanksgiving | Bless The Lord O My Soul #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T22:08:27Z",
+      "youtube_video_id": "YvFOv9QRJIw",
+      "watch_url": "https://www.youtube.com/shorts/YvFOv9QRJIw",
+      "youtu_be_url": "https://youtu.be/YvFOv9QRJIw",
+      "shorts_url": "https://www.youtube.com/shorts/YvFOv9QRJIw",
+      "studio_url": "https://studio.youtube.com/video/YvFOv9QRJIw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/YvFOv9QRJIw/hqdefault.jpg",
+      "thumb_text": "BLESS THE LORD \u00b7 O MY SOUL",
+      "thumbnail_pending": true,
+      "duration_label": "48s",
+      "words": 642
+    },
     {
       "id": "0412",
       "slug": "prosper-and-be-in-health-3-john-1-2-the-healing-balm",
@@ -13220,17 +13244,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-gardenpsalm103v1",
-        "file": "0701-short-gardenpsalm103v1.yml",
-        "companion_longform_id": "0701",
-        "scripture": "Psalm 103:1-5",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm150v6",
