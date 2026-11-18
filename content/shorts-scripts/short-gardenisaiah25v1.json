@@ -1,0 +1,283 @@
+{
+  "key": "short-gardenisaiah25v1",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "HEARTFELT PRAISE",
+    "ISAIAH TWENTY-FIVE"
+  ],
+  "poster": [
+    "O LORD THOU ART MY GOD",
+    "I WILL EXALT THEE",
+    "I WILL PRAISE THY NAME",
+    "ISAIAH 25:1"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "golden sunbeams filtering through ancient oak forest canopy",
+    "mist rising slowly off a quiet morning meadow",
+    "soft light reflecting on a calm winding river",
+    "dappled sunlight on mossy stone in a peaceful garden",
+    "dew drops resting on blades of grass in soft morning light",
+    "gentle river flowing through a sun-drenched valley"
+  ],
+  "scenes": [
+    {
+      "a": "If that recurring anxiety is pulling your thoughts away from peace right now, stay here.",
+      "img": "short-gardenisaiah25v1-scene-01.jpg",
+      "kicker": "ISAIAH 25:1",
+      "sub": "A PRAYER OF THANKSGIVING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "O Lord, thou art my God; I will exalt thee, I will praise thy name; for thou hast done wonderful things; thy counsels of old are faithfulness and truth.",
+      "img": "short-gardenisaiah25v1-scene-02.jpg",
+      "kicker": "ISAIAH 25:1",
+      "sub": "FAITHFULNESS AND TRUTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I bring this heavy heart before You knowing that Your works remain perfect and unchanging always.",
+      "img": "short-gardenisaiah25v1-scene-03.jpg",
+      "kicker": "A PRAYER",
+      "sub": "STILLNESS IN HIS PRESENCE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Your hand has guided me through shadows I never thought I would survive until this hour.",
+      "img": "short-gardenisaiah25v1-scene-04.jpg",
+      "kicker": "GRACE OBSERVED",
+      "sub": "GOD IS FAITHFUL",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Thank You for the mercy that meets me in the silence when my words feel small.",
+      "img": "short-gardenisaiah25v1-scene-05.jpg",
+      "kicker": "DEEP GRATITUDE",
+      "sub": "HIS MERCY IS NEW",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Help me walk forward in the confidence of Your truth, anchored by Your unfailing love alone.",
+      "img": "short-gardenisaiah25v1-scene-06.jpg",
+      "kicker": "RESTING IN HIM",
+      "sub": "HIS COUNSEL STANDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If that recurring anxiety is pulling your thoughts away from peace right now, stay here."
+    ],
+    [
+      8,
+      20,
+      "O Lord, thou art my God; I will exalt thee, I will praise thy name; for thou hast done wonderful things; thy counsels of old are faithfulness and truth."
+    ],
+    [
+      20,
+      30,
+      "I bring this heavy heart before You knowing that Your works remain perfect and unchanging always."
+    ],
+    [
+      30,
+      40,
+      "Your hand has guided me through shadows I never thought I would survive until this hour."
+    ],
+    [
+      40,
+      50,
+      "Thank You for the mercy that meets me in the silence when my words feel small."
+    ],
+    [
+      50,
+      60,
+      "Help me walk forward in the confidence of Your truth, anchored by Your unfailing love alone."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF THAT RECURRING",
+        "ANXIETY IS PULLING",
+        "YOUR THOUGHTS AWAY",
+        "STAY HERE"
+      ],
+      [
+        "STAY HERE"
+      ],
+      "ISAIAH 25:1"
+    ],
+    [
+      8,
+      20,
+      [
+        "O LORD THOU ART",
+        "MY GOD I WILL",
+        "EXALT THEE I WILL",
+        "PRAISE THY NAME"
+      ],
+      [
+        "FAITHFULNESS",
+        "AND TRUTH"
+      ],
+      "ISAIAH 25:1"
+    ],
+    [
+      20,
+      30,
+      [
+        "I BRING THIS",
+        "HEAVY HEART",
+        "BEFORE YOU KNOWING",
+        "WORKS REMAIN PERFECT"
+      ],
+      [
+        "PERFECT"
+      ],
+      "ISAIAH 25:1"
+    ],
+    [
+      30,
+      40,
+      [
+        "YOUR HAND HAS",
+        "GUIDED ME THROUGH",
+        "SHADOWS I NEVER",
+        "THOUGHT I WOULD"
+      ],
+      [
+        "SURVIVE"
+      ],
+      "ISAIAH 25:1"
+    ],
+    [
+      40,
+      50,
+      [
+        "THANK YOU FOR THE",
+        "MERCY THAT MEETS ME",
+        "IN THE SILENCE",
+        "WORDS FEEL SMALL"
+      ],
+      [
+        "MERCY"
+      ],
+      "ISAIAH 25:1"
+    ],
+    [
+      50,
+      60,
+      [
+        "WALK FORWARD IN",
+        "THE CONFIDENCE OF",
+        "YOUR TRUTH ANCHORED",
+        "BY UNFAILING LOVE"
+      ],
+      [
+        "UNFAILING LOVE"
+      ],
+      "ISAIAH 25:1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that recurring anxiety is pulling your thoughts away from peace right now, stay here.",
+      "kind": "phrase",
+      "words": [
+        "STAY",
+        "HERE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "O Lord, thou art my God; I will exalt thee, I will praise thy name; for thou hast done wonderful things; thy counsels of old are faithfulness and truth.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFULNESS",
+        "AND",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I bring this heavy heart before You knowing that Your works remain perfect and unchanging always.",
+      "kind": "phrase",
+      "words": [
+        "WORKS",
+        "REMAIN",
+        "PERFECT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your hand has guided me through shadows I never thought I would survive until this hour.",
+      "kind": "phrase",
+      "words": [
+        "GUIDED",
+        "ME",
+        "THROUGH",
+        "SHADOWS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thank You for the mercy that meets me in the silence when my words feel small.",
+      "kind": "phrase",
+      "words": [
+        "MERCY",
+        "MEETS",
+        "ME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help me walk forward in the confidence of Your truth, anchored by Your unfailing love alone.",
+      "kind": "phrase",
+      "words": [
+        "UNFAILING",
+        "LOVE",
+        "ALONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 25:1"
+}

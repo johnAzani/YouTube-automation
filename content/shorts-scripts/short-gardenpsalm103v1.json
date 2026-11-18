@@ -1,0 +1,218 @@
+{
+  "key": "short-gardenpsalm103v1",
+  "channel": "prayer9",
+  "psalm": 103,
+  "title": [
+    "A HEART OF",
+    "THANKSGIVING"
+  ],
+  "poster": [
+    "BLESS THE LORD",
+    "O MY SOUL",
+    "PSALM 103",
+    "THE PRAISE GARDEN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit morning forest glade",
+    "golden light over misty meadow",
+    "soft light reflecting on calm lake",
+    "peaceful river flowing through trees",
+    "dappled sunlight on forest floor",
+    "gentle breeze over golden hills"
+  ],
+  "scenes": [
+    {
+      "a": "If the silence of this moment feels empty, allow these words to anchor your spirit.",
+      "img": "short-gardenpsalm103v1-scene-01.jpg",
+      "kicker": "PSALM 103:1",
+      "sub": "BLESS THE LORD O MY SOUL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Bless the LORD, O my soul: and all that is within me, bless his holy name.",
+      "img": "short-gardenpsalm103v1-scene-02.jpg",
+      "kicker": "PSALM 103:1",
+      "sub": "BLESS HIS HOLY NAME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Bless the LORD, O my soul, and forget not all his benefits:",
+      "img": "short-gardenpsalm103v1-scene-03.jpg",
+      "kicker": "PSALM 103:2",
+      "sub": "FORGET NOT ALL HIS BENEFITS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Who forgiveth all thine iniquities; who healeth all thy diseases;",
+      "img": "short-gardenpsalm103v1-scene-04.jpg",
+      "kicker": "PSALM 103:3",
+      "sub": "HEALETH ALL THY DISEASES",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Who redeemeth thy life from destruction; who crowneth thee with lovingkindness and tender mercies;",
+      "img": "short-gardenpsalm103v1-scene-05.jpg",
+      "kicker": "PSALM 103:4",
+      "sub": "TENDER MERCIES OVER YOU",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Who satisfieth thy mouth with good things; so that thy youth is renewed like the eagle’s. We offer You our deepest thanks for this renewing grace. Please subscribe for more daily scripture prayer.",
+      "img": "short-gardenpsalm103v1-scene-06.jpg",
+      "kicker": "PSALM 103:5",
+      "sub": "YOUTH RENEWED LIKE THE EAGLE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the silence of this moment feels empty, allow these words to anchor your spirit."
+    ],
+    [
+      8,
+      16,
+      "Bless the LORD, O my soul: and all that is within me, bless his holy name."
+    ],
+    [
+      16,
+      24,
+      "Bless the LORD, O my soul, and forget not all his benefits:"
+    ],
+    [
+      24,
+      32,
+      "Who forgiveth all thine iniquities; who healeth all thy diseases;"
+    ],
+    [
+      32,
+      40,
+      "Who redeemeth thy life from destruction; who crowneth thee with lovingkindness and tender mercies;"
+    ],
+    [
+      40,
+      50,
+      "Who satisfieth thy mouth with good things; so that thy youth is renewed like the eagle’s. We offer You our deepest thanks for this renewing grace. Please subscribe for more daily scripture prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "ANCHOR YOUR SPIRIT",
+        "IN THE SILENCE"
+      ],
+      [
+        "ANCHOR"
+      ],
+      "PSALM 103:1"
+    ],
+    [
+      8,
+      16,
+      [
+        "BLESS THE LORD",
+        "ALL WITHIN ME",
+        "BLESS HIS HOLY NAME"
+      ],
+      [
+        "BLESS"
+      ],
+      "PSALM 103:1"
+    ],
+    [
+      16,
+      24,
+      [
+        "BLESS THE LORD",
+        "FORGET NOT",
+        "ALL HIS BENEFITS"
+      ],
+      [
+        "BENEFITS"
+      ],
+      "PSALM 103:2"
+    ],
+    [
+      24,
+      32,
+      [
+        "FORGIVETH INIQUITIES",
+        "HEALETH DISEASES"
+      ],
+      [
+        "HEALETH"
+      ],
+      "PSALM 103:3"
+    ],
+    [
+      32,
+      40,
+      [
+        "REDEEMETH THY LIFE",
+        "CROWNETH WITH",
+        "TENDER MERCIES"
+      ],
+      [
+        "MERCIES"
+      ],
+      "PSALM 103:4"
+    ],
+    [
+      40,
+      50,
+      [
+        "SATISFIETH WITH GOOD",
+        "YOUTH RENEWED",
+        "LIKE THE EAGLE"
+      ],
+      [
+        "RENEWED"
+      ],
+      "PSALM 103:5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the silence of this moment feels empty, allow these words to anchor your spirit.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 103:1-5"
+}
