@@ -1,24 +1,34 @@
 {
-  "generated_at": "2026-11-18T04:16:41.458801+00:00",
+  "generated_at": "2026-11-18T10:05:14.187880+00:00",
   "as_of": "2026-11-18",
   "sufficient_data": false,
-  "measured_longform_videos": 0,
+  "measured_longform_videos": 1,
   "total_longform_videos": 13,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
     "receipt_video_ids": 63,
     "matched_video_ids": 50,
-    "longform_below_view_threshold": 13,
+    "longform_below_view_threshold": 12,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 2,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
-  "ranked_themes": [],
+  "ranked_themes": [
+    "protection"
+  ],
   "themes": [
     {
       "theme": "protection",
       "videos": 2,
+      "measured_videos": 1,
+      "avg_score": 1.0,
+      "avg_engagement": 0.08,
+      "top_scripture": "Psalm 91"
+    },
+    {
+      "theme": "anxiety_peace",
+      "videos": 3,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -27,14 +37,6 @@
     {
       "theme": "morning_mercy_renewal",
       "videos": 1,
-      "measured_videos": 0,
-      "avg_score": 0.0,
-      "avg_engagement": 0.0,
-      "top_scripture": ""
-    },
-    {
-      "theme": "anxiety_peace",
-      "videos": 3,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -77,40 +79,40 @@
     "measured_shorts": 32,
     "total_shorts": 37,
     "sufficient_data": true,
-    "avg_views": 98.7,
+    "avg_views": 99.0,
     "median_views": 85,
-    "total_views": 3159,
+    "total_views": 3167,
     "minimum_age_days": 2,
     "by_book": {
       "1 peter": {
         "shorts": 1,
         "avg_views": 120.0,
-        "ratio": 1.072
+        "ratio": 1.071
       },
       "2 timothy": {
         "shorts": 1,
         "avg_views": 77.0,
-        "ratio": 0.927
+        "ratio": 0.926
       },
       "isaiah": {
         "shorts": 4,
         "avg_views": 80.0,
-        "ratio": 0.874
+        "ratio": 0.872
       },
       "john": {
         "shorts": 2,
         "avg_views": 207.5,
-        "ratio": 1.551
+        "ratio": 1.548
       },
       "matthew": {
         "shorts": 3,
         "avg_views": 83.0,
-        "ratio": 0.904
+        "ratio": 0.903
       },
       "philippians": {
         "shorts": 2,
         "avg_views": 88.0,
-        "ratio": 0.946
+        "ratio": 0.945
       },
       "proverbs": {
         "shorts": 1,
@@ -119,53 +121,53 @@
       },
       "psalm": {
         "shorts": 18,
-        "avg_views": 97.6,
-        "ratio": 0.989
+        "avg_views": 98.0,
+        "ratio": 0.991
       }
     },
     "by_theme": {
       "anxiety_peace": {
         "shorts": 11,
         "avg_views": 103.5,
-        "ratio": 1.041
+        "ratio": 1.038
       },
       "daily_guidance_wisdom": {
         "shorts": 3,
         "avg_views": 72.3,
-        "ratio": 0.84
+        "ratio": 0.839
       },
       "midday_strength_endurance": {
         "shorts": 4,
         "avg_views": 65.5,
-        "ratio": 0.776
+        "ratio": 0.775
       },
       "morning_mercy_renewal": {
         "shorts": 2,
         "avg_views": 117.0,
-        "ratio": 1.093
+        "ratio": 1.091
       },
       "peace_rest": {
         "shorts": 7,
-        "avg_views": 105.6,
-        "ratio": 1.054
+        "avg_views": 106.7,
+        "ratio": 1.061
       },
       "protection": {
         "shorts": 2,
         "avg_views": 103.5,
-        "ratio": 1.024
+        "ratio": 1.023
       },
       "trust_surrender": {
         "shorts": 3,
         "avg_views": 120.7,
-        "ratio": 1.133
+        "ratio": 1.132
       }
     },
     "guidance": [
-      "Shorts: John runs 1.6x this channel's average Short (99 views over 32 Shorts); its passages are written first."
+      "Shorts: John runs 1.5x this channel's average Short (99 views over 32 Shorts); its passages are written first."
     ]
   },
   "guidance": [
-    "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
+    "Only 1 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
   ],
   "cost_lock": "$0.00 \u2014 public Data API statistics only; no new quota or secret.",
   "privacy": "Aggregate theme scores only; raw per-video snapshot stays an Actions artifact.",
