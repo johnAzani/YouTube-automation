@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T20:53:39Z",
+  "generated_at": "2026-11-18T20:54:15Z",
   "monitor_generated_at": "2026-11-18T20:43:16.368466+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 457,
+    "published_total": 458,
     "published_longform": 151,
-    "published_shorts": 306,
-    "public_total": 455,
+    "published_shorts": 307,
+    "public_total": 456,
     "queued_longform": 56,
-    "queued_shorts": 78,
+    "queued_shorts": 77,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 72,
+        "published_total": 73,
         "published_longform": 27,
-        "published_shorts": 45,
+        "published_shorts": 46,
         "thumbnail_pending": 1,
-        "public_total": 71,
+        "public_total": 72,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MORNINGJAMES1V5",
-        "title": "Say This James 1:5 Prayer at Sunrise | Break Of Dawn #Shorts",
+        "id": "SHORT-MORNINGPSALM139V17",
+        "title": "Say This Psalm 139:17-18 Prayer at Sunrise | God Remembers You Today #Shorts",
         "format": "short",
-        "youtube_video_id": "nydohdodRpI",
-        "watch_url": "https://www.youtube.com/shorts/nydohdodRpI",
+        "youtube_video_id": "dDe8f_nWSPg",
+        "watch_url": "https://www.youtube.com/shorts/dDe8f_nWSPg",
         "published_on": "2026-11-18",
-        "published_at": "2026-11-18T15:46:50Z"
+        "published_at": "2026-11-18T20:53:25Z"
       },
       "next_queued_longform": {
         "id": "0071",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm139v17",
-        "scripture": "Psalm 139:17-18",
+        "short": "short-morningpsalm119v105",
+        "scripture": "Psalm 119:105",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM139V17",
+      "slug": "short-morningpsalm139v17-sunrise-prayer",
+      "file": "short-morningpsalm139v17-sunrise-prayer.md",
+      "title": "Say This Psalm 139:17-18 Prayer at Sunrise | God Remembers You Today #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T20:53:25Z",
+      "youtube_video_id": "dDe8f_nWSPg",
+      "watch_url": "https://www.youtube.com/shorts/dDe8f_nWSPg",
+      "youtu_be_url": "https://youtu.be/dDe8f_nWSPg",
+      "shorts_url": "https://www.youtube.com/shorts/dDe8f_nWSPg",
+      "studio_url": "https://studio.youtube.com/video/dDe8f_nWSPg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/dDe8f_nWSPg/hqdefault.jpg",
+      "thumb_text": "PSALM 139:17-18 \u00b7 GOD REMEMBERS YOU",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 607
+    },
     {
       "id": "SHORT-MIDNIGHTPSALM24V7",
       "slug": "short-midnightpsalm24v7-midnight-prayer",
@@ -12412,17 +12436,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-morningpsalm139v17",
-        "file": "0000-short-morningpsalm139v17.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 139:17-18",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-provisionpsalm132v15",
