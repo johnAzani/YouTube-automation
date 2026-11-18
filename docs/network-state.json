@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T15:47:31Z",
+  "generated_at": "2026-11-18T15:47:44Z",
   "monitor_generated_at": "2026-11-18T11:57:30.409838+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 444,
+    "published_total": 445,
     "published_longform": 148,
-    "published_shorts": 296,
-    "public_total": 442,
+    "published_shorts": 297,
+    "public_total": 443,
     "queued_longform": 59,
-    "queued_shorts": 88,
+    "queued_shorts": 87,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 71,
+        "published_total": 72,
         "published_longform": 27,
-        "published_shorts": 44,
+        "published_shorts": 45,
         "thumbnail_pending": 1,
-        "public_total": 70,
+        "public_total": 71,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0070",
-        "title": "Early Morning Prayer Before the Day Begins: Psalm 119:147",
-        "format": "longform",
-        "youtube_video_id": "yb7OGFMHUc0",
-        "watch_url": "https://youtu.be/yb7OGFMHUc0",
+        "id": "SHORT-MORNINGJAMES1V5",
+        "title": "Say This James 1:5 Prayer at Sunrise | Break Of Dawn #Shorts",
+        "format": "short",
+        "youtube_video_id": "nydohdodRpI",
+        "watch_url": "https://www.youtube.com/shorts/nydohdodRpI",
         "published_on": "2026-11-18",
-        "published_at": "2026-11-18T12:44:35Z"
+        "published_at": "2026-11-18T15:46:50Z"
       },
       "next_queued_longform": {
         "id": "0071",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningjames1v5",
-        "scripture": "James 1:5",
+        "short": "short-morningpsalm139v17",
+        "scripture": "Psalm 139:17-18",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGJAMES1V5",
+      "slug": "short-morningjames1v5-sunrise-prayer",
+      "file": "short-morningjames1v5-sunrise-prayer.md",
+      "title": "Say This James 1:5 Prayer at Sunrise | Break Of Dawn #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T15:46:50Z",
+      "youtube_video_id": "nydohdodRpI",
+      "watch_url": "https://www.youtube.com/shorts/nydohdodRpI",
+      "youtu_be_url": "https://youtu.be/nydohdodRpI",
+      "shorts_url": "https://www.youtube.com/shorts/nydohdodRpI",
+      "studio_url": "https://studio.youtube.com/video/nydohdodRpI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/nydohdodRpI/hqdefault.jpg",
+      "thumb_text": "A PRAYER FOR \u00b7 DIVINE WISDOM",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 602
+    },
     {
       "id": "SHORT-MIDNIGHTREVELATION3V7",
       "slug": "short-midnightrevelation3v7-midnight-prayer",
@@ -12205,17 +12229,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-morningjames1v5",
-        "file": "0000-short-morningjames1v5.yml",
-        "companion_longform_id": "",
-        "scripture": "James 1:5",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm139v17",
