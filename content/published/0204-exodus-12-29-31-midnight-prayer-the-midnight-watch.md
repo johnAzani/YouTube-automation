@@ -83,7 +83,7 @@ originality:
 published_on: "2026-11-11"
 published_at: "2026-11-11T23:53:16Z"
 youtube_video_id: "VmK6eRMwpHU"
-metadata_revision: "retitle-pending"
+metadata_revision: "selar-seo-v1"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_retry_after: "2026-11-19T00:52:14Z"
