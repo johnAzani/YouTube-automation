@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T01:27:36Z",
+  "generated_at": "2026-11-18T01:54:27Z",
   "monitor_generated_at": "2026-11-18T01:02:31.148573+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 426,
-    "published_longform": 143,
-    "published_shorts": 283,
-    "public_total": 424,
-    "queued_longform": 59,
-    "queued_shorts": 72,
+    "published_total": 428,
+    "published_longform": 144,
+    "published_shorts": 284,
+    "public_total": 426,
+    "queued_longform": 58,
+    "queued_shorts": 71,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -237,33 +237,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 44,
-        "published_longform": 15,
-        "published_shorts": 29,
-        "thumbnail_pending": 43,
-        "public_total": 44,
-        "queued_longform": 6,
+        "published_total": 46,
+        "published_longform": 16,
+        "published_shorts": 30,
+        "thumbnail_pending": 45,
+        "public_total": 46,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTPSALM124V7",
-        "title": "Pray This Psalm 124:7 Midnight Prayer | The Watch Is Open #Shorts",
-        "format": "short",
-        "youtube_video_id": "RwRCNp_yv-0",
-        "watch_url": "https://www.youtube.com/shorts/RwRCNp_yv-0",
-        "published_on": "2026-11-17",
-        "published_at": "2026-11-17T19:52:30Z"
-      },
-      "next_queued_longform": {
         "id": "0215",
         "title": "Plead My Cause Against Them That Strive: Psalm 35:1-4",
-        "words": 1176,
+        "format": "longform",
+        "youtube_video_id": "SEWYw11kS1M",
+        "watch_url": "https://youtu.be/SEWYw11kS1M",
+        "published_on": "2026-11-18",
+        "published_at": "2026-11-18T01:53:33Z"
+      },
+      "next_queued_longform": {
+        "id": "0216",
+        "title": "When Darkness Presses Hard: Psalm 68:1-3 | The Midnight Watch",
+        "words": 1957,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightpsalm126v1",
-        "scripture": "Psalm 126:1-3",
+        "short": "short-midnightpsalm24v7",
+        "scripture": "Psalm 24:7-10",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0215",
+      "slug": "plead-my-cause-psalm-35-breakthrough",
+      "file": "0215-plead-my-cause-psalm-35-breakthrough.md",
+      "title": "Plead My Cause Against Them That Strive: Psalm 35:1-4",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T01:53:33Z",
+      "youtube_video_id": "SEWYw11kS1M",
+      "watch_url": "https://youtu.be/SEWYw11kS1M",
+      "youtu_be_url": "https://youtu.be/SEWYw11kS1M",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/SEWYw11kS1M/edit",
+      "thumb_url": "https://i.ytimg.com/vi/SEWYw11kS1M/hqdefault.jpg",
+      "thumb_text": "PLEAD MY CAUSE",
+      "thumbnail_pending": true,
+      "duration_label": "~8 min",
+      "words": 1176
+    },
+    {
       "id": "SHORT-GUIDEDPSALM119V105",
       "slug": "short-guidedpsalm119v105-guidance-prayer",
       "file": "short-guidedpsalm119v105-guidance-prayer.md",
@@ -868,6 +892,30 @@
       "thumbnail_pending": true,
       "duration_label": "46s",
       "words": 657
+    },
+    {
+      "id": "SHORT-MIDNIGHTPSALM126V1",
+      "slug": "short-midnightpsalm126v1-midnight-prayer",
+      "file": "short-midnightpsalm126v1-midnight-prayer.md",
+      "title": "Pray This Psalm 126:1-3 Midnight Prayer | Hear This Promise #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T01:11:06Z",
+      "youtube_video_id": "8dT16gHjDj4",
+      "watch_url": "https://www.youtube.com/shorts/8dT16gHjDj4",
+      "youtu_be_url": "https://youtu.be/8dT16gHjDj4",
+      "shorts_url": "https://www.youtube.com/shorts/8dT16gHjDj4",
+      "studio_url": "https://studio.youtube.com/video/8dT16gHjDj4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/8dT16gHjDj4/hqdefault.jpg",
+      "thumb_text": "THE LORD \u00b7 HAS DONE",
+      "thumbnail_pending": true,
+      "duration_label": "49s",
+      "words": 615
     },
     {
       "id": "SHORT-PSALM57V1",
@@ -11176,19 +11224,6 @@
         "words": 1464
       },
       {
-        "id": "0215",
-        "slug": "plead-my-cause-psalm-35-breakthrough",
-        "file": "0215-plead-my-cause-psalm-35-breakthrough.md",
-        "title": "Plead My Cause Against Them That Strive: Psalm 35:1-4",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1176
-      },
-      {
         "id": "0216",
         "slug": "when-darkness-presses-hard-psalm-68-1-3-the-midnight-watch",
         "file": "0216-when-darkness-presses-hard-psalm-68-1-3-the-midnight-watch.md",
@@ -11697,17 +11732,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-midnightpsalm126v1",
-        "file": "0000-short-midnightpsalm126v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 126:1-3",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
-      },
       {
         "short": "short-psalm61v2",
         "file": "0000-short-psalm61v2.yml",

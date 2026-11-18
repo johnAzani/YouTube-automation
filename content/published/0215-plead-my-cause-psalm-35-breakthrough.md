@@ -2,7 +2,7 @@
 id: '0215'
 title: 'Plead My Cause Against Them That Strive: Psalm 35:1-4'
 slug: plead-my-cause-psalm-35-breakthrough
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -77,6 +77,15 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-18"
+published_at: "2026-11-18T01:53:33Z"
+youtube_video_id: "SEWYw11kS1M"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Rising at the Midnight Hour to Plead Your Cause
