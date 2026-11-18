@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T01:12:26Z",
+  "generated_at": "2026-11-18T01:16:47Z",
   "monitor_generated_at": "2026-11-18T01:02:31.148573+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 421,
+    "published_total": 422,
     "published_longform": 143,
-    "published_shorts": 278,
-    "public_total": 419,
+    "published_shorts": 279,
+    "public_total": 420,
     "queued_longform": 59,
-    "queued_shorts": 77,
+    "queued_shorts": 76,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 53,
+        "published_total": 54,
         "published_longform": 19,
-        "published_shorts": 34,
+        "published_shorts": 35,
         "thumbnail_pending": 0,
-        "public_total": 53,
+        "public_total": 54,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYPSALM27V13",
-        "title": "Say This Psalm 27:13-14 Prayer at Noon | Finding Strength At Noon #Shorts",
+        "id": "SHORT-MIDDAYPSALM34V4",
+        "title": "Say This Psalm 34:4-8 Prayer at Noon | Lift Up Your Heart #Shorts",
         "format": "short",
-        "youtube_video_id": "EkOquPVpM40",
-        "watch_url": "https://www.youtube.com/shorts/EkOquPVpM40",
-        "published_on": "2026-11-17",
-        "published_at": "2026-11-17T19:52:02Z"
+        "youtube_video_id": "YTFvgsHpixA",
+        "watch_url": "https://www.youtube.com/shorts/YTFvgsHpixA",
+        "published_on": "2026-11-18",
+        "published_at": "2026-11-18T01:16:00Z"
       },
       "next_queued_longform": {
         "id": "0094",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm34v4",
-        "scripture": "Psalm 34:4-8",
+        "short": "short-midday1corinthians15v58",
+        "scripture": "1 Corinthians 15:58",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYPSALM34V4",
+      "slug": "short-middaypsalm34v4-midday-prayer",
+      "file": "short-middaypsalm34v4-midday-prayer.md",
+      "title": "Say This Psalm 34:4-8 Prayer at Noon | Lift Up Your Heart #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T01:16:00Z",
+      "youtube_video_id": "YTFvgsHpixA",
+      "watch_url": "https://www.youtube.com/shorts/YTFvgsHpixA",
+      "youtu_be_url": "https://youtu.be/YTFvgsHpixA",
+      "shorts_url": "https://www.youtube.com/shorts/YTFvgsHpixA",
+      "studio_url": "https://studio.youtube.com/video/YTFvgsHpixA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/YTFvgsHpixA/hqdefault.jpg",
+      "thumb_text": "THE MIDDAY WATCH \u00b7 PSALM 34",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 604
+    },
     {
       "id": "SHORT-MORNINGROMANS12V1",
       "slug": "short-morningromans12v1-sunrise-prayer",
@@ -11598,17 +11622,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-middaypsalm34v4",
-        "file": "0000-short-middaypsalm34v4.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 34:4-8",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-midnightpsalm126v1",
