@@ -1,0 +1,269 @@
+{
+  "key": "short-healingisaiah57v18",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "GOD SEES YOUR HURT",
+    "ISAIAH 57:18-19"
+  ],
+  "poster": [
+    "PEACE TO HIM",
+    "THAT IS FAR OFF",
+    "I WILL HEAL HIM",
+    "ISAIAH 57:18-19"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters soft light",
+    "warm golden sanctuary light soft glow",
+    "white dove flying calm morning sky",
+    "peaceful turquoise ocean gently rippling",
+    "warm golden sunlight through cathedral window",
+    "tranquil turquoise lake calm reflection"
+  ],
+  "scenes": [
+    {
+      "a": "When tears flow",
+      "img": "short-healingisaiah57v18-scene-01.jpg",
+      "kicker": "ISAIAH 57:18",
+      "sub": "GOD SEES YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "I have seen his ways",
+      "img": "short-healingisaiah57v18-scene-02.jpg",
+      "kicker": "ISAIAH 57:18",
+      "sub": "I WILL HEAL HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Peace, peace to him",
+      "img": "short-healingisaiah57v18-scene-03.jpg",
+      "kicker": "ISAIAH 57:19",
+      "sub": "PEACE TO THE FAR OFF",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "reach into every broken place",
+      "img": "short-healingisaiah57v18-scene-04.jpg",
+      "kicker": "HEALING PRAYER",
+      "sub": "REACH INTO BROKEN PLACES",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Speak your divine peace",
+      "img": "short-healingisaiah57v18-scene-05.jpg",
+      "kicker": "HEALING PRAYER",
+      "sub": "RESTORE GOD'S COMFORT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Subscribe to receive",
+      "img": "short-healingisaiah57v18-scene-06.jpg",
+      "kicker": "THE HEALING BALM",
+      "sub": "RECEIVE GOD'S PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "When tears flow silently in the quiet dark tonight, God sees your heavy heart."
+    ],
+    [
+      8,
+      17,
+      "I have seen his ways, and will heal him: I will lead him also, and restore comforts unto him and to his mourners."
+    ],
+    [
+      17,
+      26,
+      "I create the fruit of the lips; Peace, peace to him that is far off, and to him that is near, saith the LORD; and I will heal him."
+    ],
+    [
+      26,
+      35,
+      "Father, reach into every broken place right now. You see every hidden ache and every weary step."
+    ],
+    [
+      35,
+      44,
+      "Speak your divine peace over this weary soul today. Restore comfort where sorrow has lingered, and bring your gentle healing touch."
+    ],
+    [
+      44,
+      52,
+      "Subscribe to receive God's daily peace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "WHEN TEARS FLOW SILENTLY",
+        "IN THE QUIET DARK TONIGHT",
+        "GOD SEES YOUR HEART"
+      ],
+      [
+        "GOD SEES"
+      ],
+      "ISAIAH 57:18"
+    ],
+    [
+      8,
+      17,
+      [
+        "I HAVE SEEN HIS WAYS",
+        "AND WILL HEAL HIM",
+        "AND RESTORE COMFORTS"
+      ],
+      [
+        "HEAL HIM"
+      ],
+      "ISAIAH 57:18"
+    ],
+    [
+      17,
+      26,
+      [
+        "PEACE PEACE TO HIM",
+        "THAT IS FAR OFF AND NEAR",
+        "SAITH THE LORD"
+      ],
+      [
+        "PEACE PEACE"
+      ],
+      "ISAIAH 57:19"
+    ],
+    [
+      26,
+      35,
+      [
+        "FATHER REACH INTO",
+        "EVERY BROKEN PLACE",
+        "YOU SEE EVERY ACHE"
+      ],
+      [
+        "BROKEN PLACE"
+      ],
+      "HEALING PRAYER"
+    ],
+    [
+      35,
+      44,
+      [
+        "SPEAK YOUR DIVINE PEACE",
+        "RESTORE COMFORT HERE",
+        "BRING HEALING TOUCH"
+      ],
+      [
+        "DIVINE PEACE"
+      ],
+      "HEALING PRAYER"
+    ],
+    [
+      44,
+      52,
+      [
+        "SUBSCRIBE TO RECEIVE",
+        "GOD'S DAILY PEACE"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "THE HEALING BALM"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When tears flow",
+      "kind": "phrase",
+      "words": [
+        "TEARS",
+        "FLOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I have seen his ways",
+      "kind": "phrase",
+      "words": [
+        "HEAL",
+        "HIM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Peace, peace to him",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "reach into every broken place",
+      "kind": "phrase",
+      "words": [
+        "BROKEN",
+        "PLACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Speak your divine peace",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to receive",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 57:18-19"
+}

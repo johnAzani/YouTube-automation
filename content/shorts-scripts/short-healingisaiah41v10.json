@@ -1,0 +1,271 @@
+{
+  "key": "short-healingisaiah41v10",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALING STRENGTH",
+    "GOD IS NEAR"
+  ],
+  "poster": [
+    "FEAR NOT",
+    "FOR I AM",
+    "WITH THEE",
+    "ISAIAH 41:10"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters",
+    "warm golden sanctuary light",
+    "peaceful white dove flying",
+    "soft sunbeams through trees",
+    "calm flowing river rocks",
+    "gentle ripples on water"
+  ],
+  "scenes": [
+    {
+      "a": "If the weight of this uncertainty keeps you awake tonight, stay in this holy quiet.",
+      "img": "short-healingisaiah41v10-scene-01.jpg",
+      "kicker": "ISAIAH 41:10",
+      "sub": "HE IS WITH YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Fear thou not; for I am with thee: be not dismayed; for I am thy God:",
+      "img": "short-healingisaiah41v10-scene-02.jpg",
+      "kicker": "ISAIAH 41:10",
+      "sub": "HIS PROMISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.",
+      "img": "short-healingisaiah41v10-scene-03.jpg",
+      "kicker": "ISAIAH 41:10",
+      "sub": "HIS RIGHT HAND",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, breathe your restorative peace into this weary heart as the night draws deep.",
+      "img": "short-healingisaiah41v10-scene-04.jpg",
+      "kicker": "RESTORE",
+      "sub": "PEACE BE STILL",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant a gentle stillness to the mind and comfort the aches that linger within.",
+      "img": "short-healingisaiah41v10-scene-05.jpg",
+      "kicker": "COMFORT",
+      "sub": "HEALING PRESENCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Trust in your sustaining love, finding rest under the shadow of your perfect grace.",
+      "img": "short-healingisaiah41v10-scene-06.jpg",
+      "kicker": "GRACE",
+      "sub": "REST IN HIM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the weight of this uncertainty keeps you awake tonight, stay in this holy quiet."
+    ],
+    [
+      8,
+      17,
+      "Fear thou not; for I am with thee: be not dismayed; for I am thy God:"
+    ],
+    [
+      17,
+      26,
+      "I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness."
+    ],
+    [
+      26,
+      34,
+      "Lord, breathe your restorative peace into this weary heart as the night draws deep."
+    ],
+    [
+      34,
+      42,
+      "Grant a gentle stillness to the mind and comfort the aches that linger within."
+    ],
+    [
+      42,
+      50,
+      "Trust in your sustaining love, finding rest under the shadow of your perfect grace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "STAY IN THIS",
+        "HOLY QUIET",
+        "OF THE NIGHT"
+      ],
+      [
+        "HOLY QUIET"
+      ],
+      "ISAIAH 41 : 10"
+    ],
+    [
+      8,
+      17,
+      [
+        "FEAR THOU NOT",
+        "FOR I AM",
+        "WITH THEE"
+      ],
+      [
+        "FEAR THOU NOT"
+      ],
+      "ISAIAH 41 : 10"
+    ],
+    [
+      17,
+      26,
+      [
+        "I WILL STRENGTHEN",
+        "AND UPHOLD THEE",
+        "WITH HIS HAND"
+      ],
+      [
+        "UPHOLD THEE"
+      ],
+      "ISAIAH 41 : 10"
+    ],
+    [
+      26,
+      34,
+      [
+        "BREATHE HIS PEACE",
+        "INTO YOUR WEARY",
+        "HEART NOW"
+      ],
+      [
+        "HIS PEACE"
+      ],
+      "ISAIAH 41 : 10"
+    ],
+    [
+      34,
+      42,
+      [
+        "GRANT A STILLNESS",
+        "TO THE MIND",
+        "AND COMFORT ACHES"
+      ],
+      [
+        "STILLNESS"
+      ],
+      "ISAIAH 41 : 10"
+    ],
+    [
+      42,
+      50,
+      [
+        "TRUST IN LOVE",
+        "FINDING REST IN",
+        "HIS PERFECT GRACE"
+      ],
+      [
+        "PERFECT GRACE"
+      ],
+      "ISAIAH 41 : 10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the weight of this uncertainty keeps you awake tonight, stay in this holy quiet.",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "QUIET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Fear thou not; for I am with thee: be not dismayed; for I am thy God:",
+      "kind": "phrase",
+      "words": [
+        "FEAR",
+        "THOU",
+        "NOT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.",
+      "kind": "phrase",
+      "words": [
+        "UPHOLD",
+        "THEE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, breathe your restorative peace into this weary heart as the night draws deep.",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant a gentle stillness to the mind and comfort the aches that linger within.",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Trust in your sustaining love, finding rest under the shadow of your perfect grace.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 41:10"
+}
