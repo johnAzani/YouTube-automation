@@ -1,0 +1,258 @@
+{
+  "key": "short-provisionmatthew6v11",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "DAILY PROVISION",
+    "MATTHEW 6:11"
+  ],
+  "poster": [
+    "AS YOU",
+    "SEEK DAILY",
+    "BREAD",
+    "PRAY WITH US"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit mountain valley mist morning",
+    "golden morning light river stone table",
+    "sunlight through trees peaceful forest path",
+    "calm river water reflection sunrise",
+    "sunlit green meadow quiet landscape",
+    "peaceful mountain landscape sunrise light"
+  ],
+  "scenes": [
+    {
+      "a": "As you calculate tonight's exact shortfall and wonder how the table will remain full, listen closely to His voice.",
+      "img": "short-provisionmatthew6v11-scene-01.jpg",
+      "kicker": "MATTHEW 6:11",
+      "sub": "SURRENDER EVERY CARE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we come before You acknowledging that every good gift and every necessary provision comes from Your open hand.",
+      "img": "short-provisionmatthew6v11-scene-02.jpg",
+      "kicker": "DAILY BREAD",
+      "sub": "TRUST HIS TIMING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We lay down the frantic striving of tomorrow and quiet our anxious thoughts right here in Your holy presence.",
+      "img": "short-provisionmatthew6v11-scene-03.jpg",
+      "kicker": "QUIET CONFIDENCE",
+      "sub": "REST IN HIS PROMISE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Your holy word guides our lips and anchors our faith as we pray together:",
+      "img": "short-provisionmatthew6v11-scene-04.jpg",
+      "kicker": "HIS PROMISE",
+      "sub": "SPOKEN IN FAITH",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.45
+      ]
+    },
+    {
+      "a": "Give us this day our daily bread.",
+      "img": "short-provisionmatthew6v11-scene-05.jpg",
+      "kicker": "MATTHEW 6:11",
+      "sub": "OUR DAILY PORTION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Sustain us through every trial, fill our hands with what we need, and strengthen our trust in Your unfailing faithfulness.",
+      "img": "short-provisionmatthew6v11-scene-06.jpg",
+      "kicker": "STEWARDSHIP",
+      "sub": "WALK IN GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "As you calculate tonight's exact shortfall and wonder how the table will remain full, listen closely to His voice."
+    ],
+    [
+      13,
+      25,
+      "Father, we come before You acknowledging that every good gift and every necessary provision comes from Your open hand."
+    ],
+    [
+      26,
+      38,
+      "We lay down the frantic striving of tomorrow and quiet our anxious thoughts right here in Your holy presence."
+    ],
+    [
+      39,
+      48,
+      "Your holy word guides our lips and anchors our faith as we pray together:"
+    ],
+    [
+      49,
+      58,
+      "Give us this day our daily bread."
+    ],
+    [
+      59,
+      72,
+      "Sustain us through every trial, fill our hands with what we need, and strengthen our trust in Your unfailing faithfulness."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "AS YOU CALCULATE",
+        "TONIGHT'S EXACT SHORTFALL",
+        "LISTEN TO HIS VOICE"
+      ],
+      "SHORTFALL",
+      "MATTHEW 6 : 11"
+    ],
+    [
+      13,
+      25,
+      [
+        "FATHER WE COME",
+        "BEFORE YOUR OPEN HAND",
+        "EVERY PROVISION COMES"
+      ],
+      "PROVISION",
+      "MATTHEW 6 : 11"
+    ],
+    [
+      26,
+      38,
+      [
+        "WE LAY DOWN",
+        "FRANTIC STRIVING TODAY",
+        "IN YOUR HOLY PRESENCE"
+      ],
+      "PRESENCE",
+      "MATTHEW 6 : 11"
+    ],
+    [
+      39,
+      48,
+      [
+        "YOUR HOLY WORD",
+        "GUIDES OUR LIPS",
+        "AS WE PRAY TOGETHER"
+      ],
+      "GUIDES",
+      "MATTHEW 6 : 11"
+    ],
+    [
+      49,
+      58,
+      [
+        "GIVE US THIS DAY",
+        "OUR DAILY BREAD",
+        "MATTHEW SIX ELEVEN"
+      ],
+      "BREAD",
+      "MATTHEW 6 : 11"
+    ],
+    [
+      59,
+      72,
+      [
+        "SUSTAIN US THROUGH",
+        "EVERY SINGLE TRIAL",
+        "UNFAILING FAITHFULNESS"
+      ],
+      "FAITHFULNESS",
+      "MATTHEW 6 : 11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you calculate tonight's exact shortfall and wonder how the table will remain full, listen closely to His voice.",
+      "kind": "phrase",
+      "words": [
+        "CALCULATE",
+        "SHORTFALL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we come before You acknowledging that every good gift and every necessary provision comes from Your open hand.",
+      "kind": "phrase",
+      "words": [
+        "FATHER",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We lay down the frantic striving of tomorrow and quiet our anxious thoughts right here in Your holy presence.",
+      "kind": "phrase",
+      "words": [
+        "FRANTIC",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your holy word guides our lips and anchors our faith as we pray together:",
+      "kind": "phrase",
+      "words": [
+        "GUIDES",
+        "FAITH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give us this day our daily bread.",
+      "kind": "phrase",
+      "words": [
+        "GIVE",
+        "BREAD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Sustain us through every trial, fill our hands with what we need, and strengthen our trust in Your unfailing faithfulness.",
+      "kind": "phrase",
+      "words": [
+        "SUSTAIN",
+        "FAITHFULNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 6:11"
+}

@@ -1,0 +1,258 @@
+{
+  "key": "short-provisionpsalm132v15",
+  "channel": "prayer7",
+  "psalm": 132,
+  "title": [
+    "ABUNDANT PROVISION",
+    "GOD SATISFIES"
+  ],
+  "poster": [
+    "THE PROVISION TABLE",
+    "DAILY PRAYER",
+    "PSALM 132:15",
+    "WALK IN PROVISION"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit valley mist morning",
+    "peaceful river flowing gently trees",
+    "sunlit sanctuary stone table wood",
+    "quiet mountain pass golden hour",
+    "calm river at sunset golden light",
+    "serene mountain lake morning sun"
+  ],
+  "scenes": [
+    {
+      "a": "As you calculate tonight's deficit and wonder where the next meal comes from, listen to God.",
+      "img": "short-provisionpsalm132v15-scene-01.jpg",
+      "kicker": "PSALM 132:15",
+      "sub": "HE SEES YOUR NEED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we bring every empty pantry and unpaid bill before Your holy throne right now.",
+      "img": "short-provisionpsalm132v15-scene-02.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "BRING YOUR CARES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We trust in Your unfailing promise spoken in Your holy word for our daily sustenance.",
+      "img": "short-provisionpsalm132v15-scene-03.jpg",
+      "kicker": "HIS PROMISE",
+      "sub": "TRUST IN THE LORD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Your word declares, I will abundantly bless her provision: I will satisfy her poor with bread.",
+      "img": "short-provisionpsalm132v15-scene-04.jpg",
+      "kicker": "SCRIPTURE",
+      "sub": "ABUNDANT BLESSING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.35
+      ]
+    },
+    {
+      "a": "Lord, grant us this daily bread and remove the paralyzing grip of scarcity from our minds.",
+      "img": "short-provisionpsalm132v15-scene-05.jpg",
+      "kicker": "DAILY BREAD",
+      "sub": "REMOVE ANXIETY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We rest in Your faithfulness today, knowing You provide for all our needs in Christ.",
+      "img": "short-provisionpsalm132v15-scene-06.jpg",
+      "kicker": "REST IN HIM",
+      "sub": "FAITHFUL GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "As you calculate tonight's deficit and wonder where the next meal comes from, listen to God."
+    ],
+    [
+      12,
+      25,
+      "Father, we bring every empty pantry and unpaid bill before Your holy throne right now."
+    ],
+    [
+      25,
+      38,
+      "We trust in Your unfailing promise spoken in Your holy word for our daily sustenance."
+    ],
+    [
+      38,
+      52,
+      "Your word declares, I will abundantly bless her provision: I will satisfy her poor with bread."
+    ],
+    [
+      52,
+      65,
+      "Lord, grant us this daily bread and remove the paralyzing grip of scarcity from our minds."
+    ],
+    [
+      65,
+      78,
+      "We rest in Your faithfulness today, knowing You provide for all our needs in Christ."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "CALCULATE TONIGHT'S DEFICIT",
+        "WONDER WHERE MEAL COMES",
+        "LISTEN TO GOD"
+      ],
+      "DEFICIT",
+      "PSALM 132 : 15"
+    ],
+    [
+      12,
+      25,
+      [
+        "FATHER WE BRING",
+        "EMPTY PANTRY UNPAID BILL",
+        "BEFORE YOUR THRONE"
+      ],
+      "PANTRY",
+      "PSALM 132 : 15"
+    ],
+    [
+      25,
+      38,
+      [
+        "TRUST IN YOUR PROMISE",
+        "SPOKEN IN HOLY WORD",
+        "DAILY SUSTENANCE"
+      ],
+      "PROMISE",
+      "PSALM 132 : 15"
+    ],
+    [
+      38,
+      52,
+      [
+        "I WILL ABUNDANTLY BLESS",
+        "HER PROVISION I WILL",
+        "SATISFY HER POOR WITH BREAD"
+      ],
+      "ABUNDANTLY",
+      "PSALM 132 : 15"
+    ],
+    [
+      52,
+      65,
+      [
+        "GRANT US THIS BREAD",
+        "REMOVE PARALYZING GRIP",
+        "SCARCITY FROM OUR MINDS"
+      ],
+      "BREAD",
+      "PSALM 132 : 15"
+    ],
+    [
+      65,
+      78,
+      [
+        "REST IN YOUR FAITHFULNESS",
+        "KNOWING YOU PROVIDE",
+        "FOR ALL OUR NEEDS"
+      ],
+      "FAITHFULNESS",
+      "PSALM 132 : 15"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you calculate tonight's deficit and wonder where the next meal comes from, listen to God.",
+      "kind": "phrase",
+      "words": [
+        "CALCULATE",
+        "DEFICIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we bring every empty pantry and unpaid bill before Your holy throne right now.",
+      "kind": "phrase",
+      "words": [
+        "EMPTY",
+        "PANTRY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We trust in Your unfailing promise spoken in Your holy word for our daily sustenance.",
+      "kind": "phrase",
+      "words": [
+        "UNFAILING",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your word declares, I will abundantly bless her provision: I will satisfy her poor with bread.",
+      "kind": "phrase",
+      "words": [
+        "ABUNDANTLY",
+        "BLESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, grant us this daily bread and remove the paralyzing grip of scarcity from our minds.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "BREAD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We rest in Your faithfulness today, knowing You provide for all our needs in Christ.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "FAITHFULNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 132:15"
+}

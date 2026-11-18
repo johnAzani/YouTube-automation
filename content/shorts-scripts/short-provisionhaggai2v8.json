@@ -1,0 +1,288 @@
+{
+  "key": "short-provisionhaggai2v8",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "THE SOURCE",
+    "OF PROVISION"
+  ],
+  "poster": [
+    "ALL WEALTH",
+    "IS HIS",
+    "TRUST IN",
+    "THE PROVIDER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit mountain valley",
+    "peaceful river flowing at sunrise",
+    "ancient stone table in soft light",
+    "tranquil forest path with morning mist",
+    "sunlit sanctuary stone architecture",
+    "golden wheat field in late afternoon"
+  ],
+  "scenes": [
+    {
+      "a": "As you face that looming expense that seems far greater than your current means, remember this.",
+      "img": "short-provisionhaggai2v8-scene-01.jpg",
+      "kicker": "HAGGAI 2:8",
+      "sub": "GOD OWNS IT ALL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The silver is mine, and the gold is mine, saith the LORD of hosts.",
+      "img": "short-provisionhaggai2v8-scene-02.jpg",
+      "kicker": "HAGGAI 2:8",
+      "sub": "THE LORD OF HOSTS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, we acknowledge that every resource we manage is entrusted to us by Your hand.",
+      "img": "short-provisionhaggai2v8-scene-03.jpg",
+      "kicker": "STEWARDSHIP",
+      "sub": "TRUST HIS HAND",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Release the grip of anxiety over our lack, and replace it with a firm, settled peace.",
+      "img": "short-provisionhaggai2v8-scene-04.jpg",
+      "kicker": "PROVISION",
+      "sub": "SETTLED PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Guide our hands as we work, so that we honor You with every coin and effort.",
+      "img": "short-provisionhaggai2v8-scene-05.jpg",
+      "kicker": "FAITHFULNESS",
+      "sub": "HONORING THE LORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May our hearts remain open to Your direction, knowing You sustain us through every single day.",
+      "img": "short-provisionhaggai2v8-scene-06.jpg",
+      "kicker": "PROVISION",
+      "sub": "SUSTAINED BY HIM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "As you face that looming expense that seems far greater than your current means, remember this."
+    ],
+    [
+      10,
+      22,
+      "The silver is mine, and the gold is mine, saith the LORD of hosts."
+    ],
+    [
+      22,
+      38,
+      "Father, we acknowledge that every resource we manage is entrusted to us by Your hand."
+    ],
+    [
+      38,
+      55,
+      "Release the grip of anxiety over our lack, and replace it with a firm, settled peace."
+    ],
+    [
+      55,
+      75,
+      "Guide our hands as we work, so that we honor You with every coin and effort."
+    ],
+    [
+      75,
+      98,
+      "May our hearts remain open to Your direction, knowing You sustain us through every single day."
+    ],
+    [
+      98,
+      105,
+      "Subscribe to The Provision Table."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "FACE THAT LOOMING EXPENSE",
+        "GREATER THAN MEANS",
+        "REMEMBER THIS"
+      ],
+      [
+        "LOOMING EXPENSE"
+      ],
+      "HAGGAI 2:8"
+    ],
+    [
+      10,
+      22,
+      [
+        "THE SILVER IS MINE",
+        "AND THE GOLD",
+        "IS MINE SAITH",
+        "THE LORD OF HOSTS"
+      ],
+      [
+        "SILVER",
+        "GOLD"
+      ],
+      "HAGGAI 2:8"
+    ],
+    [
+      22,
+      38,
+      [
+        "FATHER WE ACKNOWLEDGE",
+        "EVERY RESOURCE IS",
+        "ENTRUSTED BY YOUR HAND"
+      ],
+      [
+        "ENTRUSTED"
+      ],
+      "HAGGAI 2:8"
+    ],
+    [
+      38,
+      55,
+      [
+        "RELEASE THE GRIP",
+        "OF ANXIETY",
+        "REPLACE WITH PEACE"
+      ],
+      [
+        "RELEASE ANXIETY",
+        "PEACE"
+      ],
+      "HAGGAI 2:8"
+    ],
+    [
+      55,
+      75,
+      [
+        "GUIDE OUR HANDS",
+        "HONOR YOU WITH",
+        "EVERY COIN AND EFFORT"
+      ],
+      [
+        "GUIDE",
+        "HONOR"
+      ],
+      "HAGGAI 2:8"
+    ],
+    [
+      75,
+      98,
+      [
+        "HEARTS REMAIN OPEN",
+        "YOU SUSTAIN US",
+        "THROUGH EVERY DAY"
+      ],
+      [
+        "SUSTAIN"
+      ],
+      "HAGGAI 2:8"
+    ],
+    [
+      98,
+      105,
+      [
+        "SUBSCRIBE TO",
+        "THE PROVISION TABLE"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "HAGGAI 2:8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you face that looming expense that seems far greater than your current means, remember this.",
+      "kind": "phrase",
+      "words": [
+        "LOOMING EXPENSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The silver is mine, and the gold is mine, saith the LORD of hosts.",
+      "kind": "phrase",
+      "words": [
+        "SILVER",
+        "GOLD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we acknowledge that every resource we manage is entrusted to us by Your hand.",
+      "kind": "phrase",
+      "words": [
+        "ENTRUSTED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Release the grip of anxiety over our lack, and replace it with a firm, settled peace.",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guide our hands as we work, so that we honor You with every coin and effort.",
+      "kind": "phrase",
+      "words": [
+        "GUIDE",
+        "HONOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May our hearts remain open to Your direction, knowing You sustain us through every single day.",
+      "kind": "phrase",
+      "words": [
+        "SUSTAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Haggai 2:8"
+}
