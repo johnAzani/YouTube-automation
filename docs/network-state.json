@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T13:35:57Z",
+  "generated_at": "2026-11-18T15:47:31Z",
   "monitor_generated_at": "2026-11-18T11:57:30.409838+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 443,
+    "published_total": 444,
     "published_longform": 148,
-    "published_shorts": 295,
-    "public_total": 441,
+    "published_shorts": 296,
+    "public_total": 442,
     "queued_longform": 59,
-    "queued_shorts": 89,
+    "queued_shorts": 88,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -237,23 +237,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 47,
+        "published_total": 48,
         "published_longform": 16,
-        "published_shorts": 31,
-        "thumbnail_pending": 46,
-        "public_total": 47,
+        "published_shorts": 32,
+        "thumbnail_pending": 47,
+        "public_total": 48,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTREVELATION12V11",
-        "title": "Pray This Revelation 12:11 Midnight Prayer | Overcome By The Blood #Shorts",
+        "id": "SHORT-MIDNIGHTREVELATION3V7",
+        "title": "Pray This Revelation 3:7-8 Midnight Prayer | The One Who Holds The Key #Shorts",
         "format": "short",
-        "youtube_video_id": "uV3ppZ30Jvw",
-        "watch_url": "https://www.youtube.com/shorts/uV3ppZ30Jvw",
+        "youtube_video_id": "7KKuz7KBZZg",
+        "watch_url": "https://www.youtube.com/shorts/7KKuz7KBZZg",
         "published_on": "2026-11-18",
-        "published_at": "2026-11-18T11:58:46Z"
+        "published_at": "2026-11-18T15:46:29Z"
       },
       "next_queued_longform": {
         "id": "0216",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightrevelation3v7",
-        "scripture": "Revelation 3:7-8",
+        "short": "short-midnightpsalm24v7",
+        "scripture": "Psalm 24:7-10",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTREVELATION3V7",
+      "slug": "short-midnightrevelation3v7-midnight-prayer",
+      "file": "short-midnightrevelation3v7-midnight-prayer.md",
+      "title": "Pray This Revelation 3:7-8 Midnight Prayer | The One Who Holds The Key #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T15:46:29Z",
+      "youtube_video_id": "7KKuz7KBZZg",
+      "watch_url": "https://www.youtube.com/shorts/7KKuz7KBZZg",
+      "youtu_be_url": "https://youtu.be/7KKuz7KBZZg",
+      "shorts_url": "https://www.youtube.com/shorts/7KKuz7KBZZg",
+      "studio_url": "https://studio.youtube.com/video/7KKuz7KBZZg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/7KKuz7KBZZg/hqdefault.jpg",
+      "thumb_text": "THE MIDNIGHT WATCH \u00b7 THE KEY OF DAVID",
+      "thumbnail_pending": true,
+      "duration_label": "42s",
+      "words": 617
+    },
     {
       "id": "0808",
       "slug": "when-your-steps-feel-uncertain-psalm-37-23-24",
@@ -12181,17 +12205,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightrevelation3v7",
-        "file": "0000-short-midnightrevelation3v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Revelation 3:7-8",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-morningjames1v5",
