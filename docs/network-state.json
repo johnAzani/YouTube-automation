@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T15:55:35Z",
+  "generated_at": "2026-11-18T16:01:06Z",
   "monitor_generated_at": "2026-11-18T11:57:30.409838+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 448,
+    "published_total": 449,
     "published_longform": 148,
-    "published_shorts": 300,
-    "public_total": 446,
+    "published_shorts": 301,
+    "public_total": 447,
     "queued_longform": 59,
-    "queued_shorts": 84,
+    "queued_shorts": 83,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 32,
+        "published_total": 33,
         "published_longform": 11,
-        "published_shorts": 21,
-        "thumbnail_pending": 32,
-        "public_total": 32,
+        "published_shorts": 22,
+        "thumbnail_pending": 33,
+        "public_total": 33,
         "queued_longform": 6,
         "queued_other": 2,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM16V1",
-        "title": "Pray This Psalm 16:1 Prayer for Divine Protection | God Is Your Strong Tower #Shorts",
+        "id": "SHORT-SHIELDPSALM5V11",
+        "title": "Pray This Psalm 5:11 Prayer for Divine Protection | Your Refuge Is Secure #Shorts",
         "format": "short",
-        "youtube_video_id": "KYXp5sIsOjM",
-        "watch_url": "https://www.youtube.com/shorts/KYXp5sIsOjM",
+        "youtube_video_id": "kJRE1F3xBUw",
+        "watch_url": "https://www.youtube.com/shorts/kJRE1F3xBUw",
         "published_on": "2026-11-18",
-        "published_at": "2026-11-18T12:07:06Z"
+        "published_at": "2026-11-18T16:00:01Z"
       },
       "next_queued_longform": {
         "id": "0611",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm5v11",
-        "scripture": "Psalm 5:11",
+        "short": "short-shieldpsalm46v1",
+        "scripture": "Psalm 46:1-2",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM5V11",
+      "slug": "short-shieldpsalm5v11-protection-prayer",
+      "file": "short-shieldpsalm5v11-protection-prayer.md",
+      "title": "Pray This Psalm 5:11 Prayer for Divine Protection | Your Refuge Is Secure #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T16:00:01Z",
+      "youtube_video_id": "kJRE1F3xBUw",
+      "watch_url": "https://www.youtube.com/shorts/kJRE1F3xBUw",
+      "youtu_be_url": "https://youtu.be/kJRE1F3xBUw",
+      "shorts_url": "https://www.youtube.com/shorts/kJRE1F3xBUw",
+      "studio_url": "https://studio.youtube.com/video/kJRE1F3xBUw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/kJRE1F3xBUw/hqdefault.jpg",
+      "thumb_text": "FIND \u00b7 REST",
+      "thumbnail_pending": true,
+      "duration_label": "49s",
+      "words": 652
+    },
     {
       "id": "SHORT-PROVISIONMATTHEW6V11",
       "slug": "short-provisionmatthew6v11-stewardship-prayer",
@@ -12334,17 +12358,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldpsalm5v11",
-        "file": "0000-short-shieldpsalm5v11.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 5:11",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-zephaniah3v17",
