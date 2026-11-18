@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T01:03:32Z",
+  "generated_at": "2026-11-18T01:10:30Z",
   "monitor_generated_at": "2026-11-18T01:02:31.148573+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 418,
+    "published_total": 419,
     "published_longform": 143,
-    "published_shorts": 275,
-    "public_total": 416,
+    "published_shorts": 276,
+    "public_total": 417,
     "queued_longform": 59,
-    "queued_shorts": 80,
+    "queued_shorts": 79,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 62,
+        "published_total": 63,
         "published_longform": 19,
-        "published_shorts": 43,
+        "published_shorts": 44,
         "thumbnail_pending": 5,
-        "public_total": 61,
+        "public_total": 62,
         "queued_longform": 8,
         "queued_other": 5,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "0027",
-        "title": "Night Prayer When You Feel Afraid: Isaiah 41:10 | The Secret Place",
-        "format": "longform",
-        "youtube_video_id": "nBujp4zoTCk",
-        "watch_url": "https://youtu.be/nBujp4zoTCk",
-        "published_on": "2026-11-17",
-        "published_at": "2026-11-17T20:40:50Z"
+        "id": "SHORT-PSALM57V1",
+        "title": "Say This Psalm 57:1 Prayer Before You Sleep | Finding Your Refuge #Shorts",
+        "format": "short",
+        "youtube_video_id": "phNTH4rKbnQ",
+        "watch_url": "https://www.youtube.com/shorts/phNTH4rKbnQ",
+        "published_on": "2026-11-18",
+        "published_at": "2026-11-18T01:09:41Z"
       },
       "next_queued_longform": {
         "id": "0028",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm57v1",
-        "scripture": "Psalm 57:1",
+        "short": "short-psalm61v2",
+        "scripture": "Psalm 61:2-4",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM57V1",
+      "slug": "short-psalm57v1-pre-sleep-prayer",
+      "file": "short-psalm57v1-pre-sleep-prayer.md",
+      "title": "Say This Psalm 57:1 Prayer Before You Sleep | Finding Your Refuge #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-18",
+      "published_at": "2026-11-18T01:09:41Z",
+      "youtube_video_id": "phNTH4rKbnQ",
+      "watch_url": "https://www.youtube.com/shorts/phNTH4rKbnQ",
+      "youtu_be_url": "https://youtu.be/phNTH4rKbnQ",
+      "shorts_url": "https://www.youtube.com/shorts/phNTH4rKbnQ",
+      "studio_url": "https://studio.youtube.com/video/phNTH4rKbnQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/phNTH4rKbnQ/hqdefault.jpg",
+      "thumb_text": "THE SECRET PLACE \u00b7 FINDING SAFETY",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 612
+    },
     {
       "id": "0411",
       "slug": "when-you-need-the-great-physician-psalm-30-2",
@@ -11559,17 +11583,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-psalm57v1",
-        "file": "0000-short-psalm57v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 57:1",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm61v2",
