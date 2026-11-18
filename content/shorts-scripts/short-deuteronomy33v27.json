@@ -1,0 +1,276 @@
+{
+  "key": "short-deuteronomy33v27",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "THE ETERNAL GOD",
+    "IS THY REFUGE"
+  ],
+  "poster": [
+    "A PRAYER",
+    "FOR THE",
+    "WEARY SOUL",
+    "AT NIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "misty mountain forest moonlight",
+    "glowing candle in dark room",
+    "calm starry night sky",
+    "flowing river under moonlight",
+    "soft golden embers in fireplace",
+    "rain falling on window pane"
+  ],
+  "scenes": [
+    {
+      "a": "As you turn off the lamp to quiet your restless mind, you are not alone.",
+      "img": "short-deuteronomy33v27-scene-01.jpg",
+      "kicker": "DEUTERONOMY 33:27",
+      "sub": "FIND REST IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The eternal God is thy refuge, and underneath are the everlasting arms: and he shall thrust out the enemy from before thee; and shall say, Destroy them.",
+      "img": "short-deuteronomy33v27-scene-02.jpg",
+      "kicker": "GOD IS YOUR REFUGE",
+      "sub": "REST IN HIS EVERLASTING ARMS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, carry every weight that kept my heart racing today into the silence of tonight.",
+      "img": "short-deuteronomy33v27-scene-03.jpg",
+      "kicker": "GIVE HIM YOUR WORRY",
+      "sub": "RELEASE YOUR BURDEN NOW",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Let Your peace fall upon my heavy shoulders like a soft, comforting blanket of grace.",
+      "img": "short-deuteronomy33v27-scene-04.jpg",
+      "kicker": "HEAR HIS SOFT WHISPER",
+      "sub": "RECEIVE THE GIFT OF PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "May my spirit sleep knowing that You are holding me through the dark and quiet.",
+      "img": "short-deuteronomy33v27-scene-05.jpg",
+      "kicker": "SLEEP SECURELY TONIGHT",
+      "sub": "HE HOLDS YOU FAST",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Thank You for being my steady anchor as the world fades away into deep rest.",
+      "img": "short-deuteronomy33v27-scene-06.jpg",
+      "kicker": "SUBSCRIBE TO PRAYER",
+      "sub": "JOIN US EVERY SINGLE DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "As you turn off the lamp to quiet your restless mind, you are not alone."
+    ],
+    [
+      8,
+      20,
+      "The eternal God is thy refuge, and underneath are the everlasting arms: and he shall thrust out the enemy from before thee; and shall say, Destroy them."
+    ],
+    [
+      20,
+      32,
+      "Father, carry every weight that kept my heart racing today into the silence of tonight."
+    ],
+    [
+      32,
+      44,
+      "Let Your peace fall upon my heavy shoulders like a soft, comforting blanket of grace."
+    ],
+    [
+      44,
+      56,
+      "May my spirit sleep knowing that You are holding me through the dark and quiet."
+    ],
+    [
+      56,
+      68,
+      "Thank You for being my steady anchor as the world fades away into deep rest."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "AS YOU TURN OFF",
+        "THE LAMP TO QUIET",
+        "YOUR RESTLESS MIND,",
+        "YOU ARE NOT",
+        "ALONE."
+      ],
+      [
+        "NOT ALONE"
+      ],
+      "DEUTERONOMY 33:27"
+    ],
+    [
+      8,
+      20,
+      [
+        "THE ETERNAL GOD IS",
+        "THY REFUGE, AND UNDERNEATH",
+        "ARE THE EVERLASTING ARMS",
+        "HE SHALL THRUST OUT",
+        "THE ENEMY FROM THEE."
+      ],
+      [
+        "EVERLASTING ARMS"
+      ],
+      "DEUTERONOMY 33:27"
+    ],
+    [
+      20,
+      32,
+      [
+        "CARRY EVERY WEIGHT THAT",
+        "KEPT MY HEART RACING",
+        "INTO THE SILENCE",
+        "OF TONIGHT."
+      ],
+      [
+        "SILENCE"
+      ],
+      "DEUTERONOMY 33:27"
+    ],
+    [
+      32,
+      44,
+      [
+        "LET YOUR PEACE FALL",
+        "UPON MY HEAVY SHOULDERS",
+        "LIKE A SOFT",
+        "COMFORTING BLANKET"
+      ],
+      [
+        "PEACE"
+      ],
+      "DEUTERONOMY 33:27"
+    ],
+    [
+      44,
+      56,
+      [
+        "MAY MY SPIRIT SLEEP",
+        "KNOWING YOU ARE",
+        "HOLDING ME THROUGH",
+        "THE DARK."
+      ],
+      [
+        "HOLDING ME"
+      ],
+      "DEUTERONOMY 33:27"
+    ],
+    [
+      56,
+      68,
+      [
+        "THANK YOU FOR BEING",
+        "MY STEADY ANCHOR",
+        "AS THE WORLD FADES",
+        "INTO DEEP REST."
+      ],
+      [
+        "STEADY ANCHOR"
+      ],
+      "DEUTERONOMY 33:27"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you turn off the lamp to quiet your restless mind, you are not alone.",
+      "kind": "phrase",
+      "words": [
+        "NOT",
+        "ALONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The eternal God is thy refuge, and underneath are the everlasting arms: and he shall thrust out the enemy from before thee; and shall say, Destroy them.",
+      "kind": "phrase",
+      "words": [
+        "EVERLASTING",
+        "ARMS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, carry every weight that kept my heart racing today into the silence of tonight.",
+      "kind": "phrase",
+      "words": [
+        "SILENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let Your peace fall upon my heavy shoulders like a soft, comforting blanket of grace.",
+      "kind": "phrase",
+      "words": [
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May my spirit sleep knowing that You are holding me through the dark and quiet.",
+      "kind": "phrase",
+      "words": [
+        "HOLDING",
+        "ME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thank You for being my steady anchor as the world fades away into deep rest.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "ANCHOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Deuteronomy 33:27"
+}

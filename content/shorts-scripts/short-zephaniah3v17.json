@@ -1,0 +1,317 @@
+{
+  "key": "short-zephaniah3v17",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "HE RESTS IN",
+    "HIS LOVE FOR YOU"
+  ],
+  "poster": [
+    "BEDTIME PRAYER",
+    "ZEPHANIAH 3:17",
+    "GOD IS WITH YOU",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm candle flame night dark room",
+    "calm starlit sky mountain lake night",
+    "soft glowing lamp serene bedroom dark",
+    "peaceful misty forest night twilight",
+    "quiet moonlit ocean water night",
+    "warm lantern light dark night window",
+    "gentle starlit lake trees night"
+  ],
+  "scenes": [
+    {
+      "a": "If worry about tomorrow's decision is keeping your eyes open tonight, rest now.",
+      "img": "short-zephaniah3v17-scene-01.jpg",
+      "kicker": "ZEPHANIAH 3:17",
+      "sub": "LAY DOWN YOUR WORRY TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The LORD thy God in the midst of thee is mighty;",
+      "img": "short-zephaniah3v17-scene-02.jpg",
+      "kicker": "ZEPHANIAH 3:17",
+      "sub": "HE IS MIGHTY IN YOUR MIDST",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "he will rest in his love, he will joy over thee with singing.",
+      "img": "short-zephaniah3v17-scene-03.jpg",
+      "kicker": "ZEPHANIAH 3:17",
+      "sub": "REST IN HIS PERFECT LOVE",
+      "cam": "pull_out",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "You do not need to carry the weight of this quiet hour alone.",
+      "img": "short-zephaniah3v17-scene-04.jpg",
+      "kicker": "ZEPHANIAH 3:17",
+      "sub": "YOU ARE NOT ALONE TONIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "holding you in perfect peace and quietness.",
+      "img": "short-zephaniah3v17-scene-05.jpg",
+      "kicker": "ZEPHANIAH 3:17",
+      "sub": "PERFECT PEACE TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Let His love calm your anxious heart as you lay your head down.",
+      "img": "short-zephaniah3v17-scene-06.jpg",
+      "kicker": "ZEPHANIAH 3:17",
+      "sub": "HIS LOVE CALMS YOUR HEART",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He delights in you and watches over your sleep tonight.",
+      "img": "short-zephaniah3v17-scene-07.jpg",
+      "kicker": "ZEPHANIAH 3:17",
+      "sub": "HE WATCHES OVER YOUR SLEEP",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If worry about tomorrow's decision is keeping your eyes open tonight, rest now."
+    ],
+    [
+      6,
+      14,
+      "Zephaniah three verse seventeen tells us, The LORD thy God in the midst of thee is mighty;"
+    ],
+    [
+      14,
+      23,
+      "he will save, he will rejoice over thee with joy; he will rest in his love, he will joy over thee with singing."
+    ],
+    [
+      23,
+      30,
+      "You do not need to carry the weight of this quiet hour alone."
+    ],
+    [
+      30,
+      39,
+      "The Almighty is present in your room right now, holding you in perfect peace and quietness."
+    ],
+    [
+      39,
+      46,
+      "Let His love calm your anxious heart as you lay your head down."
+    ],
+    [
+      46,
+      54,
+      "He delights in you and watches over your sleep tonight. Subscribe to join us in prayer every night."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF WORRY ABOUT TOMORROW",
+        "KEEPING YOUR EYES OPEN",
+        "REST NOW IN PEACE"
+      ],
+      [
+        "WORRY",
+        "REST NOW"
+      ],
+      "ZEPHANIAH 3 : 17"
+    ],
+    [
+      6,
+      14,
+      [
+        "THE LORD THY GOD",
+        "IN THE MIDST OF THEE",
+        "IS MIGHTY"
+      ],
+      [
+        "LORD THY GOD",
+        "MIGHTY"
+      ],
+      "ZEPHANIAH 3 : 17"
+    ],
+    [
+      14,
+      23,
+      [
+        "HE WILL SAVE AND REJOICE",
+        "HE WILL REST IN HIS LOVE",
+        "WITH SINGING OVER YOU"
+      ],
+      [
+        "SAVE",
+        "REST IN HIS LOVE"
+      ],
+      "ZEPHANIAH 3 : 17"
+    ],
+    [
+      23,
+      30,
+      [
+        "YOU DO NOT NEED TO CARRY",
+        "THE WEIGHT OF THIS HOUR",
+        "ALL BY YOURSELF"
+      ],
+      [
+        "WEIGHT",
+        "HOUR"
+      ],
+      "ZEPHANIAH 3 : 17"
+    ],
+    [
+      30,
+      39,
+      [
+        "THE ALMIGHTY IS PRESENT",
+        "HOLDING YOU IN PERFECT",
+        "PEACE AND QUIETNESS"
+      ],
+      [
+        "PRESENT",
+        "PERFECT PEACE"
+      ],
+      "ZEPHANIAH 3 : 17"
+    ],
+    [
+      39,
+      46,
+      [
+        "LET HIS LOVE CALM",
+        "YOUR ANXIOUS HEART",
+        "AS YOU LAY DOWN"
+      ],
+      [
+        "HIS LOVE",
+        "CALM"
+      ],
+      "ZEPHANIAH 3 : 17"
+    ],
+    [
+      46,
+      54,
+      [
+        "HE DELIGHTS IN YOU",
+        "WATCHES OVER YOUR SLEEP",
+        "SUBSCRIBE FOR DAILY PRAYERS"
+      ],
+      [
+        "DELIGHTS",
+        "WATCHES"
+      ],
+      "ZEPHANIAH 3 : 17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If worry about tomorrow's decision is keeping your eyes open tonight, rest now.",
+      "kind": "phrase",
+      "words": [
+        "WORRY",
+        "REST NOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD thy God in the midst of thee is mighty;",
+      "kind": "phrase",
+      "words": [
+        "LORD THY GOD",
+        "MIGHTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "he will rest in his love, he will joy over thee with singing.",
+      "kind": "phrase",
+      "words": [
+        "REST IN HIS LOVE",
+        "SINGING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You do not need to carry the weight of this quiet hour alone.",
+      "kind": "phrase",
+      "words": [
+        "WEIGHT",
+        "ALONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "holding you in perfect peace and quietness.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT PEACE",
+        "QUIETNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let His love calm your anxious heart as you lay your head down.",
+      "kind": "phrase",
+      "words": [
+        "HIS LOVE",
+        "CALM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He delights in you and watches over your sleep tonight.",
+      "kind": "phrase",
+      "words": [
+        "DELIGHTS",
+        "WATCHES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Zephaniah 3:17"
+}

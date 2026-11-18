@@ -1,0 +1,282 @@
+{
+  "key": "short-jeremiah31v25",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "WHEN EXHAUSTION TAKES OVER",
+    "JEREMIAH 31:25-26 PRAYER"
+  ],
+  "poster": [
+    "WHEN YOU ARE DRAINED",
+    "LET GOD REPLENISH YOUR SOUL",
+    "BEDTIME PRAYER FOR REST",
+    "JEREMIAH 31:25-26"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake night",
+    "candle glowing in dark room",
+    "starry night sky forest",
+    "gentle ocean waves at night",
+    "misty moonlight forest night",
+    "cozy warm cabin window night"
+  ],
+  "scenes": [
+    {
+      "a": "Lay down the heavy exhaustion",
+      "img": "short-jeremiah31v25-scene-01.jpg",
+      "kicker": "JEREMIAH 31:25-26",
+      "sub": "REST FOR THE WEARY SOUL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "satiated the weary soul",
+      "img": "short-jeremiah31v25-scene-02.jpg",
+      "kicker": "JEREMIAH 31:25",
+      "sub": "GOD REPLENISHES THE SORROWFUL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "my sleep was sweet",
+      "img": "short-jeremiah31v25-scene-03.jpg",
+      "kicker": "JEREMIAH 31:26",
+      "sub": "SWEET AND PEACEFUL SLEEP",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "reach into this quiet room",
+      "img": "short-jeremiah31v25-scene-04.jpg",
+      "kicker": "JEREMIAH 31:25-26",
+      "sub": "HEAR OUR EVENING PRAYER",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "replenish every depleted place",
+      "img": "short-jeremiah31v25-scene-05.jpg",
+      "kicker": "JEREMIAH 31:25-26",
+      "sub": "HEAVENLY REST TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Secret Place",
+      "img": "short-jeremiah31v25-scene-06.jpg",
+      "kicker": "THE SECRET PLACE",
+      "sub": "BEDTIME PRAYERS EVERY NIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "Lay down the heavy exhaustion that followed you into this dark room tonight."
+    ],
+    [
+      10,
+      23,
+      "Scripture promises, For I have satiated the weary soul, and I have replenished every sorrowful soul."
+    ],
+    [
+      23,
+      34,
+      "Upon this I awaked, and beheld; and my sleep was sweet unto me."
+    ],
+    [
+      34,
+      48,
+      "Lord, reach into this quiet room tonight and touch this weary heart. You see the silent burdens carried through the day, and the deep sorrow that lingers in the dark."
+    ],
+    [
+      48,
+      60,
+      "Satiate this soul with Your gentle comfort, replenish every depleted place, and cover this bed with heavenly rest. May sleep be sweet, peaceful, and restoring tonight."
+    ],
+    [
+      60,
+      66,
+      "Subscribe to The Secret Place for quiet prayers every night."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "LAY DOWN THE HEAVY EXHAUSTION",
+        "THAT FOLLOWED YOU INTO THIS",
+        "DARK ROOM TONIGHT"
+      ],
+      [
+        "EXHAUSTION",
+        "DARK",
+        "TONIGHT"
+      ],
+      "JEREMIAH 31:25-26"
+    ],
+    [
+      10,
+      23,
+      [
+        "FOR I HAVE SATIATED",
+        "THE WEARY SOUL AND REPLENISHED",
+        "EVERY SORROWFUL SOUL"
+      ],
+      [
+        "SATIATED",
+        "WEARY",
+        "REPLENISHED",
+        "SORROWFUL"
+      ],
+      "JEREMIAH 31:25"
+    ],
+    [
+      23,
+      34,
+      [
+        "UPON THIS I AWAKED AND BEHELD",
+        "AND MY SLEEP WAS SWEET",
+        "UNTO ME"
+      ],
+      [
+        "AWAKED",
+        "SLEEP",
+        "SWEET"
+      ],
+      "JEREMIAH 31:26"
+    ],
+    [
+      34,
+      48,
+      [
+        "LORD REACH INTO THIS QUIET ROOM",
+        "TOUCH THIS WEARY HEART AND SEE",
+        "THE BURDENS CARRIED TODAY"
+      ],
+      [
+        "QUIET",
+        "TOUCH",
+        "BURDENS",
+        "SORROW"
+      ],
+      "JEREMIAH 31:25-26"
+    ],
+    [
+      48,
+      60,
+      [
+        "SATIATE THIS SOUL WITH COMFORT",
+        "REPLENISH EVERY DEPLETED PLACE",
+        "MAY SLEEP BE SWEET AND PEACEFUL"
+      ],
+      [
+        "SATIATE",
+        "REPLENISH",
+        "PEACEFUL",
+        "RESTORING"
+      ],
+      "JEREMIAH 31:25-26"
+    ],
+    [
+      60,
+      66,
+      [
+        "SUBSCRIBE TO THE SECRET PLACE",
+        "FOR QUIET PRAYERS EVERY NIGHT"
+      ],
+      [
+        "SUBSCRIBE",
+        "SECRET",
+        "PLACE",
+        "PRAYERS"
+      ],
+      "JEREMIAH 31:25-26"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Lay down the heavy exhaustion",
+      "kind": "phrase",
+      "words": [
+        "EXHAUSTION"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "satiated the weary soul",
+      "kind": "phrase",
+      "words": [
+        "SATIATED",
+        "WEARY"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "my sleep was sweet",
+      "kind": "phrase",
+      "words": [
+        "SLEEP",
+        "SWEET"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "reach into this quiet room",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "ROOM"
+      ],
+      "hi": 0,
+      "slot": "D"
+    },
+    {
+      "a": "replenish every depleted place",
+      "kind": "phrase",
+      "words": [
+        "REPLENISH"
+      ],
+      "hi": 0,
+      "slot": "E"
+    },
+    {
+      "a": "Subscribe to The Secret Place",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "F"
+    }
+  ],
+  "scripture": "Jeremiah 31:25-26"
+}
