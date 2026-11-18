@@ -1,6 +1,6 @@
 ---
 id: '0017'
-title: Psalm 4:8 Bedtime Prayer | In Peace I Will Lie Down & Sleep
+title: "When You Can Not Quiet Your Thoughts: Psalm 4:8"
 slug: psalm-4-8-in-peace-i-will-lie-down-and-sleep
 status: published
 privacy: public
@@ -88,11 +88,14 @@ category_id: '22'
 published_on: "2026-11-11"
 published_at: "2026-11-11T21:57:13Z"
 youtube_video_id: "fiPJAX_pNgs"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
 live_handle: "@SecretPlaceSanctuary"
+title_before: "Psalm 4:8 Bedtime Prayer | In Peace I Will Lie Down & Sleep"
+retitled_at: "2026-11-18"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — I Will Both Lay Me Down in Peace (Verse 8a)
