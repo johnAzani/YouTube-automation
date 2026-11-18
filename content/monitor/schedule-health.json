@@ -44,20 +44,6 @@
       "workflow": "keepalive.yml"
     },
     {
-      "late_minutes": 181,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-18T10:15:08+00:00",
-      "slot": "2026-11-18T07:14:00+00:00",
-      "workflow": "comments.yml"
-    },
-    {
-      "late_minutes": 153,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-18T11:56:21+00:00",
-      "slot": "2026-11-18T09:23:00+00:00",
-      "workflow": "monitor.yml"
-    },
-    {
       "late_minutes": 131,
       "name": "automation-health",
       "ran_at": "2026-11-17T22:25:42+00:00",
@@ -72,9 +58,16 @@
       "workflow": "growth-autopilot.yml"
     }
   ],
-  "generated_at": "2026-11-18T11:59:32.955033+00:00",
-  "last_run_at": "2026-11-18T11:58:42+00:00",
+  "generated_at": "2026-11-18T16:32:16.372941+00:00",
+  "last_run_at": "2026-11-18T16:31:21+00:00",
   "on_time": [
+    {
+      "late_minutes": 69,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-18T16:23:57+00:00",
+      "slot": "2026-11-18T15:14:00+00:00",
+      "workflow": "comments.yml"
+    },
     {
       "late_minutes": 91,
       "name": "Autonomous Community Tab Automation",
@@ -83,17 +76,17 @@
       "workflow": "community.yml"
     },
     {
-      "late_minutes": 96,
+      "late_minutes": 85,
       "name": "Produce video",
-      "ran_at": "2026-11-18T11:50:49+00:00",
-      "slot": "2026-11-18T10:14:00+00:00",
+      "ran_at": "2026-11-18T15:39:21+00:00",
+      "slot": "2026-11-18T14:14:00+00:00",
       "workflow": "produce.yml"
     },
     {
-      "late_minutes": 27,
+      "late_minutes": 44,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-18T10:14:06+00:00",
-      "slot": "2026-11-18T09:47:00+00:00",
+      "ran_at": "2026-11-18T16:31:21+00:00",
+      "slot": "2026-11-18T15:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
