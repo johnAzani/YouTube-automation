@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T15:44:07Z",
+  "generated_at": "2026-11-19T15:46:43Z",
   "monitor_generated_at": "2026-11-19T11:54:23.137750+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 495,
+    "published_total": 496,
     "published_longform": 159,
-    "published_shorts": 336,
-    "public_total": 493,
+    "published_shorts": 337,
+    "public_total": 494,
     "queued_longform": 61,
-    "queued_shorts": 98,
+    "queued_shorts": 97,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 45,
+        "published_total": 46,
         "published_longform": 15,
-        "published_shorts": 30,
+        "published_shorts": 31,
         "thumbnail_pending": 3,
-        "public_total": 45,
+        "public_total": 46,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0514",
-        "title": "Steps Ordered by the Lord: Psalm 37:23-25 | The Provision Table",
-        "format": "longform",
-        "youtube_video_id": "6dLKJ8dZ8bw",
-        "watch_url": "https://youtu.be/6dLKJ8dZ8bw",
+        "id": "SHORT-PROVISIONPSALM34V9",
+        "title": "Pray This Psalm 34:9-10 Prayer for Open Doors & Provision | Good Thing #Shorts",
+        "format": "short",
+        "youtube_video_id": "Vh9SS9KjKSY",
+        "watch_url": "https://www.youtube.com/shorts/Vh9SS9KjKSY",
         "published_on": "2026-11-19",
-        "published_at": "2026-11-19T12:37:14Z"
+        "published_at": "2026-11-19T15:45:51Z"
       },
       "next_queued_longform": {
         "id": "0515",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionpsalm34v9",
-        "scripture": "Psalm 34:9-10",
+        "short": "short-provisionpsalm37v3",
+        "scripture": "Psalm 37:3-5",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONPSALM34V9",
+      "slug": "short-provisionpsalm34v9-stewardship-prayer",
+      "file": "short-provisionpsalm34v9-stewardship-prayer.md",
+      "title": "Pray This Psalm 34:9-10 Prayer for Open Doors & Provision | Good Thing #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T15:45:51Z",
+      "youtube_video_id": "Vh9SS9KjKSY",
+      "watch_url": "https://www.youtube.com/shorts/Vh9SS9KjKSY",
+      "youtu_be_url": "https://youtu.be/Vh9SS9KjKSY",
+      "shorts_url": "https://www.youtube.com/shorts/Vh9SS9KjKSY",
+      "studio_url": "https://studio.youtube.com/video/Vh9SS9KjKSY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Vh9SS9KjKSY/hqdefault.jpg",
+      "thumb_text": "FEAR THE LORD \u00b7 HIS SAINTS SHALL",
+      "thumbnail_pending": false,
+      "duration_label": "43s",
+      "words": 641
+    },
     {
       "id": "SHORT-HEALING2TIMOTHY1V7",
       "slug": "short-healing2timothy1v7-restoration-prayer",
@@ -13587,17 +13611,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisionpsalm34v9",
-        "file": "0000-short-provisionpsalm34v9.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 34:9-10",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionpsalm37v3",
