@@ -1,0 +1,358 @@
+{
+  "key": "short-healingjeremiah33v6",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "GOD'S PROMISE OF CURE",
+    "JEREMIAH 33:6 PRAYER"
+  ],
+  "poster": [
+    "GOD BRINGS HEALTH",
+    "AND CURE TO YOU",
+    "A PRAYER FOR RESTORATION",
+    "JEREMIAH 33:6"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters soft light",
+    "warm golden sanctuary light peaceful waters",
+    "white dove peace glowing divine sunlight soft lake",
+    "warm golden light beam quiet restoration calm water",
+    "turquoise clear living spring peaceful reflections warm sunset",
+    "serene turquoise living waters golden morning light rays",
+    "calm tranquil river sunset golden aura white dove peace",
+    "golden light shining through peaceful waters warm glow"
+  ],
+  "scenes": [
+    {
+      "a": "If a quiet diagnosis in your hand is keeping you awake tonight, stay a moment.",
+      "img": "short-healingjeremiah33v6-scene-01.jpg",
+      "kicker": "A QUIET MOMENT",
+      "sub": "REST FOR THE WEARY HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Behold, I will bring it health and cure, and I will cure them,",
+      "img": "short-healingjeremiah33v6-scene-02.jpg",
+      "kicker": "JEREMIAH 33:6",
+      "sub": "GOD PROMISES HEALTH AND CURE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "and will reveal unto them the abundance of peace and truth.",
+      "img": "short-healingjeremiah33v6-scene-03.jpg",
+      "kicker": "JEREMIAH 33:6",
+      "sub": "ABUNDANCE OF PEACE AND TRUTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, reach into every broken place of this faithful heart.",
+      "img": "short-healingjeremiah33v6-scene-04.jpg",
+      "kicker": "HEALING PRAYER",
+      "sub": "REACH INTO EVERY BROKEN PLACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Bring your deep restoration where medical answers fall short. Cure every hidden pain, restore weary mind and body,",
+      "img": "short-healingjeremiah33v6-scene-05.jpg",
+      "kicker": "RESTORATION",
+      "sub": "CURE EVERY HIDDEN PAIN",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "and pour out your overflowing peace. Let your unwavering truth quiet every fear and steady every step today.",
+      "img": "short-healingjeremiah33v6-scene-06.jpg",
+      "kicker": "OVERFLOWING PEACE",
+      "sub": "UNWAVERING TRUTH QUIETS FEAR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your presence surround this home like quiet living waters. In Jesus' name we pray, Amen.",
+      "img": "short-healingjeremiah33v6-scene-07.jpg",
+      "kicker": "DIVINE PRESENCE",
+      "sub": "QUIET LIVING WATERS SURROUND YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Subscribe to The Healing Balm to pray together daily.",
+      "img": "short-healingjeremiah33v6-scene-08.jpg",
+      "kicker": "THE HEALING BALM",
+      "sub": "RECEIVE GOD'S HEALING PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If a quiet diagnosis in your hand is keeping you awake tonight, stay a moment."
+    ],
+    [
+      8,
+      17,
+      "Behold, I will bring it health and cure, and I will cure them,"
+    ],
+    [
+      17,
+      26,
+      "and will reveal unto them the abundance of peace and truth."
+    ],
+    [
+      26,
+      35,
+      "Lord, reach into every broken place of this faithful heart."
+    ],
+    [
+      35,
+      46,
+      "Bring your deep restoration where medical answers fall short. Cure every hidden pain, restore weary mind and body,"
+    ],
+    [
+      46,
+      57,
+      "and pour out your overflowing peace. Let your unwavering truth quiet every fear and steady every step today."
+    ],
+    [
+      57,
+      68,
+      "May your presence surround this home like quiet living waters. In Jesus' name we pray, Amen."
+    ],
+    [
+      68,
+      75,
+      "Subscribe to The Healing Balm to pray together daily."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF A QUIET DIAGNOSIS IN YOUR HAND",
+        "IS KEEPING YOU AWAKE TONIGHT",
+        "STAY A MOMENT"
+      ],
+      [
+        "DIAGNOSIS",
+        "AWAKE"
+      ],
+      "JEREMIAH 33 : 6"
+    ],
+    [
+      8,
+      17,
+      [
+        "BEHOLD I WILL BRING IT",
+        "HEALTH AND CURE",
+        "AND I WILL CURE THEM"
+      ],
+      [
+        "HEALTH",
+        "CURE"
+      ],
+      "JEREMIAH 33 : 6"
+    ],
+    [
+      17,
+      26,
+      [
+        "AND WILL REVEAL UNTO THEM",
+        "THE ABUNDANCE OF PEACE",
+        "AND TRUTH"
+      ],
+      [
+        "ABUNDANCE",
+        "PEACE"
+      ],
+      "JEREMIAH 33 : 6"
+    ],
+    [
+      26,
+      35,
+      [
+        "LORD REACH INTO EVERY",
+        "BROKEN PLACE OF THIS",
+        "FAITHFUL HEART"
+      ],
+      [
+        "REACH",
+        "FAITHFUL"
+      ],
+      "JEREMIAH 33 : 6"
+    ],
+    [
+      35,
+      46,
+      [
+        "BRING YOUR DEEP RESTORATION",
+        "WHERE MEDICAL ANSWERS FALL SHORT",
+        "CURE EVERY HIDDEN PAIN"
+      ],
+      [
+        "RESTORATION",
+        "CURE"
+      ],
+      "JEREMIAH 33 : 6"
+    ],
+    [
+      46,
+      57,
+      [
+        "POUR OUT YOUR OVERFLOWING PEACE",
+        "LET YOUR UNWAVERING TRUTH",
+        "QUIET EVERY FEAR AND STEADY"
+      ],
+      [
+        "OVERFLOWING",
+        "UNWAVERING"
+      ],
+      "JEREMIAH 33 : 6"
+    ],
+    [
+      57,
+      68,
+      [
+        "MAY YOUR PRESENCE SURROUND THIS HOME",
+        "LIKE QUIET LIVING WATERS",
+        "IN JESUS NAME WE PRAY AMEN"
+      ],
+      [
+        "PRESENCE",
+        "LIVING WATERS"
+      ],
+      "JEREMIAH 33 : 6"
+    ],
+    [
+      68,
+      75,
+      [
+        "SUBSCRIBE TO THE HEALING BALM",
+        "TO PRAY TOGETHER DAILY",
+        "GOD BLESS YOU"
+      ],
+      [
+        "SUBSCRIBE",
+        "HEALING BALM"
+      ],
+      "JEREMIAH 33 : 6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If a quiet diagnosis in your hand is keeping you awake tonight, stay a moment.",
+      "kind": "phrase",
+      "words": [
+        "DIAGNOSIS",
+        "AWAKE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Behold, I will bring it health and cure, and I will cure them,",
+      "kind": "phrase",
+      "words": [
+        "HEALTH",
+        "CURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and will reveal unto them the abundance of peace and truth.",
+      "kind": "phrase",
+      "words": [
+        "ABUNDANCE",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, reach into every broken place of this faithful heart.",
+      "kind": "phrase",
+      "words": [
+        "REACH",
+        "FAITHFUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Bring your deep restoration where medical answers fall short. Cure every hidden pain, restore weary mind and body,",
+      "kind": "phrase",
+      "words": [
+        "RESTORATION",
+        "CURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and pour out your overflowing peace. Let your unwavering truth quiet every fear and steady every step today.",
+      "kind": "phrase",
+      "words": [
+        "OVERFLOWING",
+        "UNWAVERING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your presence surround this home like quiet living waters. In Jesus' name we pray, Amen.",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE",
+        "LIVING WATERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Healing Balm to pray together daily.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "HEALING BALM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Jeremiah 33:6"
+}
