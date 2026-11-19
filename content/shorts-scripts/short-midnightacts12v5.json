@@ -1,0 +1,276 @@
+{
+  "key": "short-midnightacts12v5",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "THE IRON GATE",
+    "OPENS AT MIDNIGHT"
+  ],
+  "poster": [
+    "MIDNIGHT VIGIL",
+    "ACTS CHAPTER TWELVE",
+    "THE CHAINS FALL",
+    "THE GATE OPENS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "deep starry night sky over mountains",
+    "ancient stone prison corridor lantern light",
+    "silhouette of iron gate moonlight",
+    "angelic light glowing in dark space",
+    "glowing pathway in silent dark woods",
+    "stars moving over horizon"
+  ],
+  "scenes": [
+    {
+      "a": "The locked door you are staring at right now is not the end of your story.",
+      "img": "short-midnightacts12v5-scene-01.jpg",
+      "kicker": "ACTS 12:5",
+      "sub": "GOD HEARS YOUR PLEA",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Peter therefore was kept in prison: but prayer was made without ceasing of the church unto God for him.",
+      "img": "short-midnightacts12v5-scene-02.jpg",
+      "kicker": "ACTS 12:6",
+      "sub": "THE CHAINS FALL AWAY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And when they were past the first and the second ward, they came unto the iron gate that leadeth unto the city; which opened to them of his own accord.",
+      "img": "short-midnightacts12v5-scene-03.jpg",
+      "kicker": "ACTS 12:10",
+      "sub": "THE WAY IS OPENED",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Father, move in the quiet of this night as only You can.",
+      "img": "short-midnightacts12v5-scene-04.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Break every chain that restricts your path and lead your weary heart into the light.",
+      "img": "short-midnightacts12v5-scene-05.jpg",
+      "kicker": "DIVINE DELIVERANCE",
+      "sub": "WALK INTO THE LIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May the peace of the Lord carry you safely through this hour and beyond.",
+      "img": "short-midnightacts12v5-scene-06.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "BE STILL AND KNOW",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "The locked door you are staring at right now is not the end of your story."
+    ],
+    [
+      10,
+      25,
+      "Peter therefore was kept in prison: but prayer was made without ceasing of the church unto God for him."
+    ],
+    [
+      25,
+      42,
+      "And when they were past the first and the second ward, they came unto the iron gate that leadeth unto the city; which opened to them of his own accord."
+    ],
+    [
+      42,
+      58,
+      "Father, move in the quiet of this night as only You can."
+    ],
+    [
+      58,
+      76,
+      "Break every chain that restricts your path and lead your weary heart into the light."
+    ],
+    [
+      76,
+      96,
+      "May the peace of the Lord carry you safely through this hour and beyond."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "THE LOCKED DOOR",
+        "YOU ARE STARING AT",
+        "NOT THE END",
+        "OF YOUR STORY"
+      ],
+      [
+        "LOCKED DOOR"
+      ],
+      "ACTS 12:5"
+    ],
+    [
+      10,
+      25,
+      [
+        "PETER WAS KEPT",
+        "IN PRISON BUT",
+        "PRAYER WAS MADE",
+        "WITHOUT CEASING"
+      ],
+      [
+        "WITHOUT CEASING"
+      ],
+      "ACTS 12:5"
+    ],
+    [
+      25,
+      42,
+      [
+        "THE IRON GATE",
+        "THAT LEADETH UNTO",
+        "THE CITY OPENED",
+        "OF HIS OWN ACCORD"
+      ],
+      [
+        "IRON GATE"
+      ],
+      "ACTS 12:10"
+    ],
+    [
+      42,
+      58,
+      [
+        "FATHER MOVE",
+        "IN THE QUIET",
+        "OF THIS NIGHT",
+        "AS ONLY YOU CAN"
+      ],
+      [
+        "ONLY YOU"
+      ],
+      "ACTS 12:10"
+    ],
+    [
+      58,
+      76,
+      [
+        "BREAK EVERY CHAIN",
+        "THAT RESTRICTS YOUR PATH",
+        "LEAD YOUR WEARY HEART",
+        "INTO THE LIGHT"
+      ],
+      [
+        "BREAK CHAIN"
+      ],
+      "ACTS 12:11"
+    ],
+    [
+      76,
+      96,
+      [
+        "MAY THE PEACE",
+        "OF THE LORD",
+        "CARRY YOU SAFELY",
+        "THROUGH THIS HOUR"
+      ],
+      [
+        "THE LORD"
+      ],
+      "ACTS 12:11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The locked door you are staring at right now is not the end of your story.",
+      "kind": "phrase",
+      "words": [
+        "LOCKED DOOR",
+        "NOT THE END"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Peter therefore was kept in prison: but prayer was made without ceasing of the church unto God for him.",
+      "kind": "phrase",
+      "words": [
+        "WITHOUT CEASING",
+        "GOD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "And when they were past the first and the second ward, they came unto the iron gate that leadeth unto the city; which opened to them of his own accord.",
+      "kind": "phrase",
+      "words": [
+        "IRON GATE",
+        "OWN ACCORD"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Father, move in the quiet of this night as only You can.",
+      "kind": "phrase",
+      "words": [
+        "FATHER",
+        "ONLY YOU"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Break every chain that restricts your path and lead your weary heart into the light.",
+      "kind": "phrase",
+      "words": [
+        "BREAK",
+        "LIGHT"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "May the peace of the Lord carry you safely through this hour and beyond.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "THE LORD"
+      ],
+      "hi": 5,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Acts 12:5-11"
+}
