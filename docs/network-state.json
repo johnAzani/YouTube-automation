@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T21:02:19Z",
+  "generated_at": "2026-11-19T21:09:34Z",
   "monitor_generated_at": "2026-11-19T20:50:27.857648+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 509,
+    "published_total": 510,
     "published_longform": 162,
-    "published_shorts": 347,
-    "public_total": 507,
+    "published_shorts": 348,
+    "public_total": 508,
     "queued_longform": 58,
-    "queued_shorts": 87,
+    "queued_shorts": 86,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 46,
+        "published_total": 47,
         "published_longform": 15,
-        "published_shorts": 31,
+        "published_shorts": 32,
         "thumbnail_pending": 3,
-        "public_total": 46,
+        "public_total": 47,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPSALM34V9",
-        "title": "Pray This Psalm 34:9-10 Prayer for Open Doors & Provision | Good Thing #Shorts",
+        "id": "SHORT-PROVISIONPSALM37V3",
+        "title": "Pray This Psalm 37:3-5 Prayer for Open Doors & Provision | Walk In Faith #Shorts",
         "format": "short",
-        "youtube_video_id": "Vh9SS9KjKSY",
-        "watch_url": "https://www.youtube.com/shorts/Vh9SS9KjKSY",
+        "youtube_video_id": "f5ATY64kMAE",
+        "watch_url": "https://www.youtube.com/shorts/f5ATY64kMAE",
         "published_on": "2026-11-19",
-        "published_at": "2026-11-19T15:45:51Z"
+        "published_at": "2026-11-19T21:08:31Z"
       },
       "next_queued_longform": {
         "id": "0515",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionpsalm37v3",
-        "scripture": "Psalm 37:3-5",
+        "short": "short-provision2corinthians9v8",
+        "scripture": "2 Corinthians 9:8",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONPSALM37V3",
+      "slug": "short-provisionpsalm37v3-stewardship-prayer",
+      "file": "short-provisionpsalm37v3-stewardship-prayer.md",
+      "title": "Pray This Psalm 37:3-5 Prayer for Open Doors & Provision | Walk In Faith #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T21:08:31Z",
+      "youtube_video_id": "f5ATY64kMAE",
+      "watch_url": "https://www.youtube.com/shorts/f5ATY64kMAE",
+      "youtu_be_url": "https://youtu.be/f5ATY64kMAE",
+      "shorts_url": "https://www.youtube.com/shorts/f5ATY64kMAE",
+      "studio_url": "https://studio.youtube.com/video/f5ATY64kMAE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/f5ATY64kMAE/hqdefault.jpg",
+      "thumb_text": "THE PROVISION TABLE \u00b7 DAILY PRAYER",
+      "thumbnail_pending": false,
+      "duration_label": "53s",
+      "words": 653
+    },
     {
       "id": "SHORT-MIDDAYHEBREWS4V16",
       "slug": "short-middayhebrews4v16-midday-prayer",
@@ -13796,17 +13820,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisionpsalm37v3",
-        "file": "0000-short-provisionpsalm37v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 37:3-5",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-psalm119v55",
