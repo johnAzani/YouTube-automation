@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["A PRAYER OF", "GLADNESS", "FOR YOUR HEART", "PSALM 30:11-12"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-26T22:14:26Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If that recurring worry is shadowing your thoughts, turn your heart toward the light of His truth. Thou hast turned for me my mourning into dancing: thou hast put off my sackcloth, and girded me with gladness; To the end that my glory may sing praise to thee, and not be silent. O LORD my God, I will give thanks unto thee for ever. Father, let this joy settle deep within. May your spirit rest in this holy promise today. You are held by the Almighty. In the quiet, I give You thanks for Your faithfulness. May Your peace guard my steps as I walk in this gladness You have provided.
