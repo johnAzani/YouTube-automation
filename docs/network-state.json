@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T12:00:12Z",
+  "generated_at": "2026-11-19T12:06:05Z",
   "monitor_generated_at": "2026-11-19T11:54:23.137750+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 484,
+    "published_total": 485,
     "published_longform": 156,
-    "published_shorts": 328,
-    "public_total": 482,
+    "published_shorts": 329,
+    "public_total": 483,
     "queued_longform": 60,
-    "queued_shorts": 94,
+    "queued_shorts": 93,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 36,
+        "published_total": 37,
         "published_longform": 12,
-        "published_shorts": 24,
-        "thumbnail_pending": 36,
-        "public_total": 36,
+        "published_shorts": 25,
+        "thumbnail_pending": 37,
+        "public_total": 37,
         "queued_longform": 5,
         "queued_other": 3,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0611",
-        "title": "The Lord Is My Rock and Fortress: Psalm 18:2 | The Covenant Shield",
-        "format": "longform",
-        "youtube_video_id": "NwsmA331vTA",
-        "watch_url": "https://youtu.be/NwsmA331vTA",
+        "id": "SHORT-SHIELDPROVERBS1V33",
+        "title": "Pray This Proverbs 1:33 Prayer for Divine Protection | Walk In Peace #Shorts",
+        "format": "short",
+        "youtube_video_id": "pvdM16aDZTg",
+        "watch_url": "https://www.youtube.com/shorts/pvdM16aDZTg",
         "published_on": "2026-11-19",
-        "published_at": "2026-11-19T02:19:37Z"
+        "published_at": "2026-11-19T12:05:04Z"
       },
       "next_queued_longform": {
         "id": "0612",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldproverbs1v33",
-        "scripture": "Proverbs 1:33",
+        "short": "short-shieldpsalm31v20",
+        "scripture": "Psalm 31:20",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPROVERBS1V33",
+      "slug": "short-shieldproverbs1v33-protection-prayer",
+      "file": "short-shieldproverbs1v33-protection-prayer.md",
+      "title": "Pray This Proverbs 1:33 Prayer for Divine Protection | Walk In Peace #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T12:05:04Z",
+      "youtube_video_id": "pvdM16aDZTg",
+      "watch_url": "https://www.youtube.com/shorts/pvdM16aDZTg",
+      "youtu_be_url": "https://youtu.be/pvdM16aDZTg",
+      "shorts_url": "https://www.youtube.com/shorts/pvdM16aDZTg",
+      "studio_url": "https://studio.youtube.com/video/pvdM16aDZTg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/pvdM16aDZTg/hqdefault.jpg",
+      "thumb_text": "DIVINE PROTECTION \u00b7 PROVERBS 1:33",
+      "thumbnail_pending": true,
+      "duration_label": "43s",
+      "words": 643
+    },
     {
       "id": "SHORT-FAMILYPSALM101V2",
       "slug": "short-familypsalm101v2-household-prayer",
@@ -13354,17 +13378,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldproverbs1v33",
-        "file": "0000-short-shieldproverbs1v33.yml",
-        "companion_longform_id": "",
-        "scripture": "Proverbs 1:33",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm31v20",
