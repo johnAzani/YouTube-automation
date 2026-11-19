@@ -2,9 +2,9 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 3003,
+      "late_minutes": 3239,
       "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-15T20:44:09+00:00",
+      "ran_at": "2026-11-16T00:40:29+00:00",
       "slot": "2026-11-13T18:41:00+00:00",
       "workflow": "metrics.yml"
     },
@@ -44,9 +44,16 @@
       "workflow": "reporting-jobs.yml"
     }
   ],
-  "generated_at": "2026-11-19T20:58:40.350053+00:00",
-  "last_run_at": "2026-11-19T20:57:56+00:00",
+  "generated_at": "2026-11-19T22:13:45.189361+00:00",
+  "last_run_at": "2026-11-19T22:12:41+00:00",
   "on_time": [
+    {
+      "late_minutes": 118,
+      "name": "automation-health",
+      "ran_at": "2026-11-19T22:12:41+00:00",
+      "slot": "2026-11-19T20:14:00+00:00",
+      "workflow": "automation-health.yml"
+    },
     {
       "late_minutes": 99,
       "name": "Autonomous Comment Replies",
@@ -69,10 +76,10 @@
       "workflow": "growth-autopilot.yml"
     },
     {
-      "late_minutes": 35,
+      "late_minutes": 49,
       "name": "Automation monitor",
-      "ran_at": "2026-11-19T18:58:23+00:00",
-      "slot": "2026-11-19T18:23:00+00:00",
+      "ran_at": "2026-11-19T22:12:41+00:00",
+      "slot": "2026-11-19T21:23:00+00:00",
       "workflow": "monitor.yml"
     },
     {
@@ -83,13 +90,13 @@
       "workflow": "produce.yml"
     },
     {
-      "late_minutes": 11,
+      "late_minutes": 25,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-19T18:58:24+00:00",
-      "slot": "2026-11-19T18:47:00+00:00",
+      "ran_at": "2026-11-19T22:12:41+00:00",
+      "slot": "2026-11-19T21:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 1,
   "warn_minutes": 120
 }
