@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T21:02:03Z",
+  "generated_at": "2026-11-19T21:02:19Z",
   "monitor_generated_at": "2026-11-19T20:50:27.857648+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 508,
+    "published_total": 509,
     "published_longform": 162,
-    "published_shorts": 346,
-    "public_total": 506,
+    "published_shorts": 347,
+    "public_total": 507,
     "queued_longform": 58,
-    "queued_shorts": 88,
+    "queued_shorts": 87,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 62,
+        "published_total": 63,
         "published_longform": 21,
-        "published_shorts": 41,
+        "published_shorts": 42,
         "thumbnail_pending": 0,
-        "public_total": 62,
+        "public_total": 63,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0095",
-        "title": "Strength for the Unfinished Work: Nehemiah 6:9 | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "JlfsN87mtCg",
-        "watch_url": "https://youtu.be/JlfsN87mtCg",
+        "id": "SHORT-MIDDAYHEBREWS4V16",
+        "title": "Say This Hebrews 4:16 Prayer at Noon | Approach God With Confidence #Shorts",
+        "format": "short",
+        "youtube_video_id": "SnUez4tHw4A",
+        "watch_url": "https://www.youtube.com/shorts/SnUez4tHw4A",
         "published_on": "2026-11-19",
-        "published_at": "2026-11-19T16:14:50Z"
+        "published_at": "2026-11-19T21:01:27Z"
       },
       "next_queued_longform": {
         "id": "0096",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayhebrews4v16",
-        "scripture": "Hebrews 4:16",
+        "short": "short-middayphilippians4v13",
+        "scripture": "Philippians 4:13",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYHEBREWS4V16",
+      "slug": "short-middayhebrews4v16-midday-prayer",
+      "file": "short-middayhebrews4v16-midday-prayer.md",
+      "title": "Say This Hebrews 4:16 Prayer at Noon | Approach God With Confidence #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T21:01:27Z",
+      "youtube_video_id": "SnUez4tHw4A",
+      "watch_url": "https://www.youtube.com/shorts/SnUez4tHw4A",
+      "youtu_be_url": "https://youtu.be/SnUez4tHw4A",
+      "shorts_url": "https://www.youtube.com/shorts/SnUez4tHw4A",
+      "studio_url": "https://studio.youtube.com/video/SnUez4tHw4A/edit",
+      "thumb_url": "https://i.ytimg.com/vi/SnUez4tHw4A/hqdefault.jpg",
+      "thumb_text": "MIDDAY PRAYER \u00b7 HEBREWS 4:16",
+      "thumbnail_pending": false,
+      "duration_label": "49s",
+      "words": 616
+    },
     {
       "id": "SHORT-FAMILYPSALM112V1",
       "slug": "short-familypsalm112v1-household-prayer",
@@ -13728,17 +13752,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-middayhebrews4v16",
-        "file": "0000-short-middayhebrews4v16.yml",
-        "companion_longform_id": "",
-        "scripture": "Hebrews 4:16",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middayphilippians4v13",
