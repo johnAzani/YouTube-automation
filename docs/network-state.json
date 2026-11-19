@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T21:49:24Z",
+  "generated_at": "2026-11-19T22:11:37Z",
   "monitor_generated_at": "2026-11-19T20:50:27.857648+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 516,
-    "published_longform": 164,
-    "published_shorts": 352,
-    "public_total": 514,
-    "queued_longform": 56,
-    "queued_shorts": 82,
+    "published_total": 518,
+    "published_longform": 165,
+    "published_shorts": 353,
+    "public_total": 516,
+    "queued_longform": 55,
+    "queued_shorts": 81,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -577,33 +577,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 36,
-        "published_longform": 9,
-        "published_shorts": 27,
-        "thumbnail_pending": 36,
-        "public_total": 36,
-        "queued_longform": 6,
+        "published_total": 38,
+        "published_longform": 10,
+        "published_shorts": 28,
+        "thumbnail_pending": 38,
+        "public_total": 38,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-GARDENLUKE17V15",
-        "title": "Pray This Luke 17:15-16 Prayer of Thanksgiving | Enter His Gates #Shorts",
-        "format": "short",
-        "youtube_video_id": "nqmLfwe8ano",
-        "watch_url": "https://www.youtube.com/shorts/nqmLfwe8ano",
-        "published_on": "2026-11-19",
-        "published_at": "2026-11-19T15:53:19Z"
-      },
-      "next_queued_longform": {
         "id": "0709",
         "title": "Finding Mercy When Hope Is Weary: Lamentations 3:22-23",
-        "words": 1355,
+        "format": "longform",
+        "youtube_video_id": "nrAzoS3z5-o",
+        "watch_url": "https://youtu.be/nrAzoS3z5-o",
+        "published_on": "2026-11-19",
+        "published_at": "2026-11-19T22:10:40Z"
+      },
+      "next_queued_longform": {
+        "id": "0710",
+        "title": "Finding Peace Through Gratitude: Psalm 95:1-2 | The Praise Garden",
+        "words": 1444,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm30v11",
-        "scripture": "Psalm 30:11-12",
+        "short": "short-gardenpsalm63v3",
+        "scripture": "Psalm 63:3-4",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0709",
+      "slug": "finding-mercy-when-hope-is-weary-lamentations-3-22-23",
+      "file": "0709-finding-mercy-when-hope-is-weary-lamentations-3-22-23.md",
+      "title": "Finding Mercy When Hope Is Weary: Lamentations 3:22-23",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T22:10:40Z",
+      "youtube_video_id": "nrAzoS3z5-o",
+      "watch_url": "https://youtu.be/nrAzoS3z5-o",
+      "youtu_be_url": "https://youtu.be/nrAzoS3z5-o",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/nrAzoS3z5-o/edit",
+      "thumb_url": "https://i.ytimg.com/vi/nrAzoS3z5-o/hqdefault.jpg",
+      "thumb_text": "FAITHFUL GOD",
+      "thumbnail_pending": true,
+      "duration_label": "~9 min",
+      "words": 1355
+    },
+    {
       "id": "0029",
       "slug": "john-14-27-my-peace-i-give-unto-you",
       "file": "0029-john-14-27-my-peace-i-give-unto-you.md",
@@ -772,6 +796,30 @@
       "thumbnail_pending": false,
       "duration_label": "56s",
       "words": 629
+    },
+    {
+      "id": "SHORT-GARDENPSALM30V11",
+      "slug": "short-gardenpsalm30v11-thanksgiving-prayer",
+      "file": "short-gardenpsalm30v11-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 30:11-12 Prayer of Thanksgiving | A Prayer Of Gladness #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T21:10:39Z",
+      "youtube_video_id": "Bd4AQv-wLRc",
+      "watch_url": "https://www.youtube.com/shorts/Bd4AQv-wLRc",
+      "youtu_be_url": "https://youtu.be/Bd4AQv-wLRc",
+      "shorts_url": "https://www.youtube.com/shorts/Bd4AQv-wLRc",
+      "studio_url": "https://studio.youtube.com/video/Bd4AQv-wLRc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Bd4AQv-wLRc/hqdefault.jpg",
+      "thumb_text": "A PRAYER OF \u00b7 GLADNESS",
+      "thumbnail_pending": true,
+      "duration_label": "52s",
+      "words": 658
     },
     {
       "id": "SHORT-SHIELDPSALM97V10",
@@ -13661,19 +13709,6 @@
         "words": 1309
       },
       {
-        "id": "0709",
-        "slug": "finding-mercy-when-hope-is-weary-lamentations-3-22-23",
-        "file": "0709-finding-mercy-when-hope-is-weary-lamentations-3-22-23.md",
-        "title": "Finding Mercy When Hope Is Weary: Lamentations 3:22-23",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1355
-      },
-      {
         "id": "0710",
         "slug": "finding-peace-through-gratitude-psalm-95-1-2",
         "file": "0710-finding-peace-through-gratitude-psalm-95-1-2.md",
@@ -13818,17 +13853,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-gardenpsalm30v11",
-        "file": "0000-short-gardenpsalm30v11.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 30:11-12",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
       {
         "short": "short-gardenpsalm63v3",
         "file": "0000-short-gardenpsalm63v3.yml",

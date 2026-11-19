@@ -2,7 +2,7 @@
 id: 0709
 title: 'Finding Mercy When Hope Is Weary: Lamentations 3:22-23'
 slug: finding-mercy-when-hope-is-weary-lamentations-3-22-23
-status: approved
+status: published
 channel: prayer9
 privacy: public
 format: longform
@@ -71,6 +71,15 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-19"
+published_at: "2026-11-19T22:10:40Z"
+youtube_video_id: "nrAzoS3z5-o"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Entering His Gates With Thanksgiving
