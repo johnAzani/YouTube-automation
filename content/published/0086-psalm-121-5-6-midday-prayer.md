@@ -1,6 +1,6 @@
 ---
 id: 0086
-title: Psalm 121:5-6 Midday Prayer | The Midday Watch
+title: "Protection From the Heat of the Day: Psalm 121:5-6 | The Midday Watch"
 slug: psalm-121-5-6-midday-prayer
 status: published
 channel: prayer3
@@ -79,10 +79,13 @@ originality:
 published_on: "2026-11-12"
 published_at: "2026-11-12T17:49:38Z"
 youtube_video_id: "5DeUVP_OJSQ"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Psalm 121:5-6 Midday Prayer | The Midday Watch"
+retitled_at: "2026-11-19"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Noonday Pause and the Midday Heat
