@@ -1,0 +1,358 @@
+{
+  "key": "short-shieldpsalm97v10",
+  "channel": "prayer8",
+  "psalm": 97,
+  "title": [
+    "DELIVERED FROM THE",
+    "HAND OF THE WICKED"
+  ],
+  "poster": [
+    "WHEN MALICE THREATENS",
+    "GOD IS YOUR FORTRESS",
+    "PSALM 97:10",
+    "THE COVENANT SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "foggy forest sun rays dark light cinematic",
+    "ancient stone fortress mountain sunset golden hour",
+    "peaceful mountain river flowing clear waters sunlit",
+    "golden sunbeams breaking through storm clouds mountains",
+    "majestic mountain watchtower high peak sunlight",
+    "calm lake reflection high mountain pass dusk",
+    "dramatic sun rays over mountain valley mist",
+    "sunlight filtering through ancient pine canopy mountains"
+  ],
+  "scenes": [
+    {
+      "a": "If someone's malice or quiet hostility has made you fearful today, listen to this promise.",
+      "img": "short-shieldpsalm97v10-scene-01.jpg",
+      "kicker": "PSALM 97:10",
+      "sub": "A COVERING IN HOSTILITY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Ye that love the LORD, hate evil: he preserveth the souls of his saints;",
+      "img": "short-shieldpsalm97v10-scene-02.jpg",
+      "kicker": "PSALM 97:10",
+      "sub": "HE PRESERVES YOUR SOUL",
+      "cam": "pan_right",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "he delivereth them out of the hand of the wicked.",
+      "img": "short-shieldpsalm97v10-scene-03.jpg",
+      "kicker": "PSALM 97:10",
+      "sub": "DELIVERED FROM EVIL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, cover this beloved soul who seeks to walk uprightly in Your sight.",
+      "img": "short-shieldpsalm97v10-scene-04.jpg",
+      "kicker": "PSALM 97:10",
+      "sub": "WALK IN GOD'S LIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "When hidden traps are set or sharp words are spoken against them, be their fortress and shield.",
+      "img": "short-shieldpsalm97v10-scene-05.jpg",
+      "kicker": "PSALM 97:10",
+      "sub": "FORTRESS AND SHIELD",
+      "cam": "push_in",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Guard their inner spirit from all corruption, and pull them safely out of every snare crafted by deceitful hands.",
+      "img": "short-shieldpsalm97v10-scene-06.jpg",
+      "kicker": "PSALM 97:10",
+      "sub": "RESCUED FROM SNARES",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Let no weapon formed in secret stand against Your chosen ones.",
+      "img": "short-shieldpsalm97v10-scene-07.jpg",
+      "kicker": "PSALM 97:10",
+      "sub": "PROTECTED IN SECRET",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Covenant Shield to rest under God's protection every day.",
+      "img": "short-shieldpsalm97v10-scene-08.jpg",
+      "kicker": "PSALM 97:10",
+      "sub": "THE COVENANT SHIELD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If someone's malice or quiet hostility has made you fearful today, listen to this promise."
+    ],
+    [
+      8,
+      17,
+      "Ye that love the LORD, hate evil: he preserveth the souls of his saints;"
+    ],
+    [
+      17,
+      25,
+      "he delivereth them out of the hand of the wicked."
+    ],
+    [
+      25,
+      33,
+      "Lord, cover this beloved soul who seeks to walk uprightly in Your sight."
+    ],
+    [
+      33,
+      42,
+      "When hidden traps are set or sharp words are spoken against them, be their fortress and shield."
+    ],
+    [
+      42,
+      50,
+      "Guard their inner spirit from all corruption, and pull them safely out of every snare crafted by deceitful hands."
+    ],
+    [
+      50,
+      58,
+      "Let no weapon formed in secret stand against Your chosen ones."
+    ],
+    [
+      58,
+      65,
+      "Subscribe to The Covenant Shield to rest under God's protection every day."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF SOMEONES MALICE",
+        "HAS MADE YOU FEARFUL",
+        "LISTEN TO THIS PROMISE"
+      ],
+      [
+        "MALICE",
+        "PROMISE"
+      ],
+      "PSALM 97 : 10"
+    ],
+    [
+      8,
+      17,
+      [
+        "YE THAT LOVE THE LORD",
+        "HATE EVIL HE PRESERVETH",
+        "THE SOULS OF HIS SAINTS"
+      ],
+      [
+        "LOVE",
+        "PRESERVETH"
+      ],
+      "PSALM 97 : 10"
+    ],
+    [
+      17,
+      25,
+      [
+        "HE DELIVERETH THEM",
+        "OUT OF THE HAND",
+        "OF THE WICKED"
+      ],
+      [
+        "DELIVERETH",
+        "HAND"
+      ],
+      "PSALM 97 : 10"
+    ],
+    [
+      25,
+      33,
+      [
+        "LORD COVER THIS SOUL",
+        "WHO SEEKS TO WALK",
+        "UPRIGHTLY IN YOUR SIGHT"
+      ],
+      [
+        "COVER",
+        "UPRIGHTLY"
+      ],
+      "PSALM 97 : 10"
+    ],
+    [
+      33,
+      42,
+      [
+        "WHEN HIDDEN TRAPS SET",
+        "BE THEIR FORTRESS",
+        "AND THEIR STRONG SHIELD"
+      ],
+      [
+        "FORTRESS",
+        "SHIELD"
+      ],
+      "PSALM 97 : 10"
+    ],
+    [
+      42,
+      50,
+      [
+        "PULL THEM SAFELY OUT",
+        "OF EVERY SNARE CRAFTED",
+        "BY DECEITFUL HANDS"
+      ],
+      [
+        "SAFELY",
+        "SNARE"
+      ],
+      "PSALM 97 : 10"
+    ],
+    [
+      50,
+      58,
+      [
+        "LET NO WEAPON FORMED",
+        "IN SECRET STAND AGAINST",
+        "YOUR CHOSEN ONES"
+      ],
+      [
+        "SECRET",
+        "CHOSEN"
+      ],
+      "PSALM 97 : 10"
+    ],
+    [
+      58,
+      65,
+      [
+        "SUBSCRIBE TO COVENANT SHIELD",
+        "REST UNDER GODS PROTECTION",
+        "EVERY SINGLE DAY"
+      ],
+      [
+        "COVENANT",
+        "PROTECTION"
+      ],
+      "PSALM 97 : 10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If someone's malice or quiet hostility has made you fearful today, listen to this promise.",
+      "kind": "phrase",
+      "words": [
+        "MALICE",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Ye that love the LORD, hate evil: he preserveth the souls of his saints;",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "PRESERVETH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "he delivereth them out of the hand of the wicked.",
+      "kind": "phrase",
+      "words": [
+        "DELIVERETH",
+        "WICKED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, cover this beloved soul who seeks to walk uprightly in Your sight.",
+      "kind": "phrase",
+      "words": [
+        "COVER",
+        "UPRIGHTLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When hidden traps are set or sharp words are spoken against them, be their fortress and shield.",
+      "kind": "phrase",
+      "words": [
+        "FORTRESS",
+        "SHIELD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Guard their inner spirit from all corruption, and pull them safely out of every snare crafted by deceitful hands.",
+      "kind": "phrase",
+      "words": [
+        "SAFELY",
+        "SNARE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Let no weapon formed in secret stand against Your chosen ones.",
+      "kind": "phrase",
+      "words": [
+        "WEAPON",
+        "CHOSEN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Covenant Shield to rest under God's protection every day.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PROTECTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 97:10"
+}

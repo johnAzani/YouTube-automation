@@ -1,0 +1,301 @@
+{
+  "key": "short-shieldproverbs1v33",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "DWELL SAFELY",
+    "THE STRONG TOWER"
+  ],
+  "poster": [
+    "DIVINE PROTECTION",
+    "PROVERBS 1:33",
+    "THE COVENANT SHIELD",
+    "WALK IN PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower misty mountains sunrise",
+    "golden sun rays piercing dark storm clouds",
+    "peaceful river flowing through quiet mountain valley",
+    "majestic rocky fortress under amber morning light",
+    "serene high alpine lake mirroring calm blue sky",
+    "strong fortress walls rising above deep mountain mist",
+    "steady lighthouse beam cutting through gathering dusk"
+  ],
+  "scenes": [
+    {
+      "a": "If that looming deadline is tightening its grip on your chest right now, stay and listen.",
+      "img": "short-shieldproverbs1v33-scene-01.jpg",
+      "kicker": "PROVERBS 1:33",
+      "sub": "FIND YOUR REFUGE HERE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we bring every racing thought and every unspoken worry into your holy presence.",
+      "img": "short-shieldproverbs1v33-scene-02.jpg",
+      "kicker": "DIVINE SHIELD",
+      "sub": "LAY DOWN YOUR BURDEN",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "We ask for your mighty hand to guard our hearts against the noise of panic.",
+      "img": "short-shieldproverbs1v33-scene-03.jpg",
+      "kicker": "STRONG TOWER",
+      "sub": "SAFE IN HIS ARMS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Your word declares the unchanging promise that we lean our souls upon today.",
+      "img": "short-shieldproverbs1v33-scene-04.jpg",
+      "kicker": "HOLY TRUTH",
+      "sub": "STAND ON THE WORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "But whoso hearkeneth unto me shall dwell safely, and shall be quiet from fear of evil.",
+      "img": "short-shieldproverbs1v33-scene-05.jpg",
+      "kicker": "PROVERBS 1:33",
+      "sub": "DWELL SAFELY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, let this quiet confidence settle deep inside our bones as we walk forward.",
+      "img": "short-shieldproverbs1v33-scene-06.jpg",
+      "kicker": "PEACE OF GOD",
+      "sub": "QUIET FROM FEAR",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "In Jesus name, amen.",
+      "img": "short-shieldproverbs1v33-scene-07.jpg",
+      "kicker": "AMEN",
+      "sub": "REST IN HIS COVERING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      4,
+      "If that looming deadline is tightening its grip on your chest right now, stay and listen."
+    ],
+    [
+      4,
+      8,
+      "Father, we bring every racing thought and every unspoken worry into your holy presence."
+    ],
+    [
+      8,
+      12,
+      "We ask for your mighty hand to guard our hearts against the noise of panic."
+    ],
+    [
+      12,
+      16,
+      "Your word declares the unchanging promise that we lean our souls upon today."
+    ],
+    [
+      16,
+      22,
+      "But whoso hearkeneth unto me shall dwell safely, and shall be quiet from fear of evil."
+    ],
+    [
+      22,
+      27,
+      "Lord, let this quiet confidence settle deep inside our bones as we walk forward."
+    ],
+    [
+      27,
+      30,
+      "In Jesus name, amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      4,
+      [
+        "IF THAT LOOMING",
+        "DEADLINE IS TIGHTENING",
+        "ITS GRIP ON YOUR",
+        "CHEST RIGHT NOW"
+      ],
+      "DEADLINE",
+      "PROVERBS 1 : 33"
+    ],
+    [
+      4,
+      8,
+      [
+        "FATHER WE BRING",
+        "EVERY RACING THOUGHT",
+        "AND EVERY WORRY",
+        "INTO YOUR PRESENCE"
+      ],
+      "PRESENCE",
+      "PROVERBS 1 : 33"
+    ],
+    [
+      8,
+      12,
+      [
+        "WE ASK FOR YOUR",
+        "MIGHTY HAND TO GUARD",
+        "OUR HEARTS AGAINST",
+        "THE NOISE OF PANIC"
+      ],
+      "GUARD",
+      "PROVERBS 1 : 33"
+    ],
+    [
+      12,
+      16,
+      [
+        "YOUR WORD DECLARES",
+        "THE UNCHANGING PROMISE",
+        "THAT WE LEAN",
+        "OUR SOULS UPON"
+      ],
+      "PROMISE",
+      "PROVERBS 1 : 33"
+    ],
+    [
+      16,
+      22,
+      [
+        "BUT WHOSO HEARKENETH",
+        "UNTO ME SHALL",
+        "DWELL SAFELY AND",
+        "BE QUIET FROM EVIL"
+      ],
+      "SAFELY",
+      "PROVERBS 1 : 33"
+    ],
+    [
+      22,
+      27,
+      [
+        "LORD LET THIS",
+        "QUIET CONFIDENCE SETTLE",
+        "DEEP INSIDE OUR",
+        "BONES AS WE WALK"
+      ],
+      "CONFIDENCE",
+      "PROVERBS 1 : 33"
+    ],
+    [
+      27,
+      30,
+      [
+        "IN JESUS NAME",
+        "AMEN"
+      ],
+      "AMEN",
+      "PROVERBS 1 : 33"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that looming deadline is tightening its grip on your chest right now, stay and listen.",
+      "kind": "phrase",
+      "words": [
+        "LOOMING",
+        "DEADLINE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we bring every racing thought and every unspoken worry into your holy presence.",
+      "kind": "phrase",
+      "words": [
+        "RACING",
+        "THOUGHT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "We ask for your mighty hand to guard our hearts against the noise of panic.",
+      "kind": "phrase",
+      "words": [
+        "MIGHTY",
+        "HAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your word declares the unchanging promise that we lean our souls upon today.",
+      "kind": "phrase",
+      "words": [
+        "UNCHANGING",
+        "PROMISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "But whoso hearkeneth unto me shall dwell safely, and shall be quiet from fear of evil.",
+      "kind": "phrase",
+      "words": [
+        "DWELL",
+        "SAFELY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, let this quiet confidence settle deep inside our bones as we walk forward.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "CONFIDENCE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus name, amen.",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "NAME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 1:33"
+}

@@ -1,0 +1,365 @@
+{
+  "key": "short-shieldpsalm31v20",
+  "channel": "prayer8",
+  "psalm": 31,
+  "title": [
+    "HIDDEN FROM THE",
+    "STRIFE OF TONGUES"
+  ],
+  "poster": [
+    "SECRET PRESENCE",
+    "GOD'S DIVINE COVERING",
+    "DIVINE REFUGE",
+    "PSALM 31:20"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "sunlit mountain ridge foggy valley morning quiet",
+    "golden rays of sunlight through ancient forest canopy",
+    "ancient stone pavilion misty mountain summit sunrise",
+    "calm alpine lake reflecting golden glowing sunset sky",
+    "dramatic light rays breaking through storm clouds over fortress",
+    "peaceful river flowing softly through quiet green valley",
+    "serene mountain peak bathed in warm glowing sunlight",
+    "majestic mountain watchtower warm sunset horizon light"
+  ],
+  "scenes": [
+    {
+      "a": "If harsh words and sharp opinions are surrounding you today",
+      "img": "short-shieldpsalm31v20-scene-01.jpg",
+      "kicker": "PSALM 31:20",
+      "sub": "SURROUNDED BY GOD'S PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Thou shalt hide them in the secret of thy presence",
+      "img": "short-shieldpsalm31v20-scene-02.jpg",
+      "kicker": "PSALM 31:20",
+      "sub": "THE SECRET OF HIS PRESENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "thou shalt keep them secretly in a pavilion",
+      "img": "short-shieldpsalm31v20-scene-03.jpg",
+      "kicker": "PSALM 31:20",
+      "sub": "HIDDEN IN HIS PAVILION",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, cover this precious soul in the quiet shelter",
+      "img": "short-shieldpsalm31v20-scene-04.jpg",
+      "kicker": "PSALM 31:20",
+      "sub": "SHELTER OF DIVINE CLOSENESS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "where no weapon of words can reach",
+      "img": "short-shieldpsalm31v20-scene-05.jpg",
+      "kicker": "PSALM 31:20",
+      "sub": "PROTECTED FROM HARSH WORDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "shield their mind from malice, and guard their heart",
+      "img": "short-shieldpsalm31v20-scene-06.jpg",
+      "kicker": "PSALM 31:20",
+      "sub": "GUARDED IN SAFE KEEPING",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "May Your stillness reign over every chaotic voice today",
+      "img": "short-shieldpsalm31v20-scene-07.jpg",
+      "kicker": "PSALM 31:20",
+      "sub": "DIVINE STILLNESS REIGNS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to walk under God's daily covering",
+      "img": "short-shieldpsalm31v20-scene-08.jpg",
+      "kicker": "PSALM 31:20",
+      "sub": "WALK IN GOD'S COVERING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If harsh words and sharp opinions are surrounding you today, stay here and receive peace."
+    ],
+    [
+      6,
+      14,
+      "Thou shalt hide them in the secret of thy presence from the pride of man:"
+    ],
+    [
+      14,
+      22,
+      "thou shalt keep them secretly in a pavilion from the strife of tongues."
+    ],
+    [
+      22,
+      31,
+      "Lord, cover this precious soul in the quiet shelter of Your divine closeness."
+    ],
+    [
+      31,
+      41,
+      "When proud voices threaten and cruel arguments rage around them, pull them into Your hidden holy sanctuary where no weapon of words can reach."
+    ],
+    [
+      41,
+      50,
+      "Grant them quietness within Your secret place, shield their mind from malice, and guard their heart in safe keeping."
+    ],
+    [
+      50,
+      58,
+      "May Your stillness reign over every chaotic voice today."
+    ],
+    [
+      58,
+      64,
+      "Subscribe to walk under God's daily covering."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF HARSH WORDS SURROUND YOU",
+        "STAY HERE AND RECEIVE PEACE"
+      ],
+      [
+        "HARSH WORDS",
+        "RECEIVE PEACE"
+      ],
+      "PSALM 31 : 20"
+    ],
+    [
+      6,
+      14,
+      [
+        "THOU SHALT HIDE THEM",
+        "IN THE SECRET OF THY PRESENCE",
+        "FROM THE PRIDE OF MAN"
+      ],
+      [
+        "SECRET",
+        "THY PRESENCE"
+      ],
+      "PSALM 31 : 20"
+    ],
+    [
+      14,
+      22,
+      [
+        "THOU SHALT KEEP THEM SECRETLY",
+        "IN A PAVILION FROM THE",
+        "STRIFE OF TONGUES"
+      ],
+      [
+        "PAVILION",
+        "STRIFE OF TONGUES"
+      ],
+      "PSALM 31 : 20"
+    ],
+    [
+      22,
+      31,
+      [
+        "LORD COVER THIS PRECIOUS SOUL",
+        "IN THE QUIET SHELTER OF",
+        "YOUR DIVINE CLOSENESS"
+      ],
+      [
+        "QUIET SHELTER",
+        "DIVINE CLOSENESS"
+      ],
+      "PSALM 31 : 20"
+    ],
+    [
+      31,
+      41,
+      [
+        "PULL THEM INTO YOUR",
+        "HIDDEN HOLY SANCTUARY",
+        "WHERE NO WEAPON REACHES"
+      ],
+      [
+        "HOLY SANCTUARY",
+        "NO WEAPON"
+      ],
+      "PSALM 31 : 20"
+    ],
+    [
+      41,
+      50,
+      [
+        "SHIELD THEIR MIND FROM MALICE",
+        "AND GUARD THEIR HEART",
+        "IN SAFE KEEPING"
+      ],
+      [
+        "SHIELD",
+        "SAFE KEEPING"
+      ],
+      "PSALM 31 : 20"
+    ],
+    [
+      50,
+      58,
+      [
+        "MAY YOUR STILLNESS REIGN",
+        "OVER EVERY CHAOTIC VOICE TODAY"
+      ],
+      [
+        "STILLNESS REIGNS",
+        "CHAOTIC VOICE"
+      ],
+      "PSALM 31 : 20"
+    ],
+    [
+      58,
+      64,
+      [
+        "SUBSCRIBE TO WALK UNDER",
+        "GODS DAILY COVERING"
+      ],
+      [
+        "SUBSCRIBE",
+        "DAILY COVERING"
+      ],
+      "PSALM 31 : 20"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If harsh words and sharp opinions are surrounding you today",
+      "kind": "phrase",
+      "words": [
+        "HARSH",
+        "WORDS",
+        "RECEIVE",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thou shalt hide them in the secret of thy presence",
+      "kind": "phrase",
+      "words": [
+        "SECRET",
+        "THY",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "thou shalt keep them secretly in a pavilion",
+      "kind": "phrase",
+      "words": [
+        "PAVILION",
+        "STRIFE",
+        "TONGUES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, cover this precious soul in the quiet shelter",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "SHELTER",
+        "DIVINE",
+        "CLOSENESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "where no weapon of words can reach",
+      "kind": "phrase",
+      "words": [
+        "HIDDEN",
+        "HOLY",
+        "SANCTUARY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "shield their mind from malice, and guard their heart",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "SAFE",
+        "KEEPING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May Your stillness reign over every chaotic voice today",
+      "kind": "phrase",
+      "words": [
+        "STILLNESS",
+        "CHAOTIC",
+        "VOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to walk under God's daily covering",
+      "kind": "phrase",
+      "words": [
+        "WALK",
+        "DAILY",
+        "COVERING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 31:20"
+}

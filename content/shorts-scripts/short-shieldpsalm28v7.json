@@ -1,0 +1,276 @@
+{
+  "key": "short-shieldpsalm28v7",
+  "channel": "prayer8",
+  "psalm": 28,
+  "title": [
+    "DIVINE SHIELD",
+    "UNSHAKABLE PEACE"
+  ],
+  "poster": [
+    "THE LORD IS",
+    "MY STRENGTH AND",
+    "MY SHIELD",
+    "TRUST IN HIM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower at sunset",
+    "golden light rays through storm clouds",
+    "peaceful river flowing through forest",
+    "serene mountain lake at dusk",
+    "deep valley with morning mist",
+    "majestic cliffside overlooking ocean"
+  ],
+  "scenes": [
+    {
+      "a": "If you are bracing for the outcome of that decision, stay and find refuge here.",
+      "img": "short-shieldpsalm28v7-scene-01.jpg",
+      "kicker": "DIVINE REFUGE",
+      "sub": "YOUR HEART IS KNOWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "The LORD is my strength and my shield; my heart trusted in him, and I am helped: therefore my heart greatly rejoiceth; and with my song will I praise him.",
+      "img": "short-shieldpsalm28v7-scene-02.jpg",
+      "kicker": "PSALM 28:7",
+      "sub": "THE WORD OF THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, anchor the soul of this person within Your impenetrable sanctuary today.",
+      "img": "short-shieldpsalm28v7-scene-03.jpg",
+      "kicker": "CONSTANT PROTECTION",
+      "sub": "ABIDE UNDER HIS WING",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant them the grace to release the burden of their worry into Your hands.",
+      "img": "short-shieldpsalm28v7-scene-04.jpg",
+      "kicker": "DAILY COVERING",
+      "sub": "RELEASE EVERY WEIGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Let Your light dispel the shadows of doubt that linger in their quiet moments.",
+      "img": "short-shieldpsalm28v7-scene-05.jpg",
+      "kicker": "DIVINE GUIDANCE",
+      "sub": "WALK IN RADIANT PEACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Establish their steps upon the solid rock of Your eternal and unchanging faithfulness.",
+      "img": "short-shieldpsalm28v7-scene-06.jpg",
+      "kicker": "SECURE FOUNDATION",
+      "sub": "REST IN HIS STRENGTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are bracing for the outcome of that decision, stay and find refuge here."
+    ],
+    [
+      8,
+      25,
+      "The LORD is my strength and my shield; my heart trusted in him, and I am helped: therefore my heart greatly rejoiceth; and with my song will I praise him."
+    ],
+    [
+      25,
+      38,
+      "Lord, anchor the soul of this person within Your impenetrable sanctuary today."
+    ],
+    [
+      38,
+      52,
+      "Grant them the grace to release the burden of their worry into Your hands."
+    ],
+    [
+      52,
+      66,
+      "Let Your light dispel the shadows of doubt that linger in their quiet moments."
+    ],
+    [
+      66,
+      80,
+      "Establish their steps upon the solid rock of Your eternal and unchanging faithfulness."
+    ],
+    [
+      80,
+      95,
+      "We seek Your covering over every unseen worry that clouds their path forward today."
+    ],
+    [
+      95,
+      105,
+      "Amen. May Your presence be their constant shelter through the unfolding of this day."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF YOU ARE",
+        "BRACING FOR THE",
+        "OUTCOME OF THAT",
+        "DECISION",
+        "STAY HERE"
+      ],
+      [
+        "DECISION",
+        "STAY HERE"
+      ],
+      "PSALM 28:7"
+    ],
+    [
+      8,
+      25,
+      [
+        "THE LORD IS",
+        "MY STRENGTH AND MY SHIELD",
+        "MY HEART TRUSTED IN HIM",
+        "AND I AM HELPED"
+      ],
+      [
+        "STRENGTH",
+        "SHIELD",
+        "HELPED"
+      ],
+      "PSALM 28:7"
+    ],
+    [
+      25,
+      38,
+      [
+        "ANCHOR THEIR SOUL",
+        "WITHIN YOUR",
+        "IMPENETRABLE",
+        "SANCTUARY"
+      ],
+      [
+        "ANCHOR",
+        "SANCTUARY"
+      ],
+      "PSALM 28:7"
+    ],
+    [
+      38,
+      52,
+      [
+        "RELEASE THE BURDEN",
+        "OF WORRY INTO",
+        "YOUR HANDS",
+        "LORD"
+      ],
+      [
+        "RELEASE",
+        "YOUR HANDS"
+      ],
+      "PSALM 28:7"
+    ],
+    [
+      52,
+      66,
+      [
+        "DISPEL THE",
+        "SHADOWS OF DOUBT",
+        "IN QUIET",
+        "MOMENTS"
+      ],
+      [
+        "DISPEL",
+        "DOUBT"
+      ],
+      "PSALM 28:7"
+    ],
+    [
+      66,
+      80,
+      [
+        "ESTABLISH THEIR",
+        "STEPS UPON THE",
+        "SOLID ROCK",
+        "OF FAITHFULNESS"
+      ],
+      [
+        "SOLID ROCK",
+        "FAITHFULNESS"
+      ],
+      "PSALM 28:7"
+    ],
+    [
+      80,
+      95,
+      [
+        "COVER EVERY",
+        "UNSEEN WORRY",
+        "THAT CLOUDS",
+        "THEIR PATH"
+      ],
+      [
+        "COVER",
+        "UNSEEN"
+      ],
+      "PSALM 28:7"
+    ],
+    [
+      95,
+      105,
+      [
+        "MAY YOUR",
+        "PRESENCE BE",
+        "THEIR CONSTANT",
+        "SHELTER"
+      ],
+      [
+        "PRESENCE",
+        "SHELTER"
+      ],
+      "PSALM 28:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The LORD is my strength and my shield; my heart trusted in him, and I am helped: therefore my heart greatly rejoiceth; and with my song will I praise him.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "SHIELD",
+        "TRUSTED",
+        "HELPED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 28:7"
+}
