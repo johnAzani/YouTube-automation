@@ -1,0 +1,232 @@
+{
+  "key": "short-morningexodus33v14",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "HE PROMISED",
+    "HIS PRESENCE"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "EXODUS 33:14",
+    "DIVINE REST",
+    "FOR YOUR DAY"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden sunrise over misty mountains",
+    "soft morning light through open window",
+    "dew drops on morning grass",
+    "peaceful sun rays breaking through clouds",
+    "calm ocean waves at dawn",
+    "sunlight hitting calm forest floor"
+  ],
+  "scenes": [
+    {
+      "a": "The worry over that looming meeting sits heavy in your chest before you even move.",
+      "img": "short-morningexodus33v14-scene-01.jpg",
+      "kicker": "EXODUS 33:14",
+      "sub": "FINDING STRENGTH AT DAWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In this moment of transition, hear the promise whispered into your spirit by the Creator.",
+      "img": "short-morningexodus33v14-scene-02.jpg",
+      "kicker": "HIS WORD",
+      "sub": "THE DIVINE PROMISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And he said, My presence shall go with thee, and I will give thee rest.",
+      "img": "short-morningexodus33v14-scene-03.jpg",
+      "kicker": "THE PROMISE",
+      "sub": "REST FOR YOUR SOUL",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, let this truth anchor my heart when the noise of the world grows loud.",
+      "img": "short-morningexodus33v14-scene-04.jpg",
+      "kicker": "PRAYER",
+      "sub": "ANCHORED IN HIS PEACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "I choose to walk in the confidence that I do not travel this path alone today.",
+      "img": "short-morningexodus33v14-scene-05.jpg",
+      "kicker": "FAITH",
+      "sub": "WALKING IN HIS PRESENCE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your grace be the foundation for every decision I make and every word spoken.",
+      "img": "short-morningexodus33v14-scene-06.jpg",
+      "kicker": "SURRENDER",
+      "sub": "GUIDED BY HIS LIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The worry over that looming meeting sits heavy in your chest before you even move."
+    ],
+    [
+      9,
+      16,
+      "In this moment of transition, hear the promise whispered into your spirit by the Creator."
+    ],
+    [
+      17,
+      26,
+      "And he said, My presence shall go with thee, and I will give thee rest."
+    ],
+    [
+      27,
+      36,
+      "Father, let this truth anchor my heart when the noise of the world grows loud."
+    ],
+    [
+      37,
+      46,
+      "I choose to walk in the confidence that I do not travel this path alone today."
+    ],
+    [
+      47,
+      56,
+      "May your grace be the foundation for every decision I make and every word spoken."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE WORRY SITS",
+        "HEAVY IN YOUR",
+        "CHEST BEFORE YOU",
+        "EVEN MOVE"
+      ],
+      [
+        "HEAVY",
+        "CHEST"
+      ],
+      "EXODUS 33:14"
+    ],
+    [
+      9,
+      16,
+      [
+        "HEAR THE PROMISE",
+        "WHISPERED INTO YOUR",
+        "SPIRIT BY THE",
+        "CREATOR TODAY"
+      ],
+      [
+        "WHISPERED",
+        "CREATOR"
+      ],
+      "EXODUS 33:14"
+    ],
+    [
+      17,
+      26,
+      [
+        "MY PRESENCE SHALL GO",
+        "WITH THEE AND I",
+        "WILL GIVE THEE",
+        "REST"
+      ],
+      [
+        "PRESENCE",
+        "REST"
+      ],
+      "EXODUS 33:14"
+    ],
+    [
+      27,
+      36,
+      [
+        "LET THIS TRUTH",
+        "ANCHOR MY HEART",
+        "WHEN THE NOISE",
+        "GROWS LOUD"
+      ],
+      [
+        "ANCHOR",
+        "HEART"
+      ],
+      "EXODUS 33:14"
+    ],
+    [
+      37,
+      46,
+      [
+        "I DO NOT",
+        "TRAVEL THIS PATH",
+        "ALONE TODAY",
+        "I AM WITH YOU"
+      ],
+      [
+        "ALONE",
+        "WITH YOU"
+      ],
+      "EXODUS 33:14"
+    ],
+    [
+      47,
+      56,
+      [
+        "MAY YOUR GRACE",
+        "BE THE FOUNDATION",
+        "FOR EVERY DECISION",
+        "I MAKE NOW"
+      ],
+      [
+        "GRACE",
+        "FOUNDATION"
+      ],
+      "EXODUS 33:14"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "And he said, My presence shall go with thee, and I will give thee rest.",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Exodus 33:14"
+}

@@ -1,0 +1,276 @@
+{
+  "key": "short-morningpsalm104v22",
+  "channel": "prayer2",
+  "psalm": 104,
+  "title": [
+    "THE RHYTHM OF",
+    "YOUR DAILY LABOR"
+  ],
+  "poster": [
+    "FINDING PURPOSE",
+    "IN THE WORK",
+    "OF YOUR HANDS",
+    "PSALM 104:22-23"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "soft morning sunlight hitting wooden desk",
+    "mist rising off a calm meadow",
+    "golden light through open window",
+    "dew on morning leaves",
+    "distant sunrise over quiet hills",
+    "soft light filtering through curtains"
+  ],
+  "scenes": [
+    {
+      "a": "That sharp tightness in your chest at the thought of today's to-do list is seen.",
+      "img": "short-morningpsalm104v22-scene-01.jpg",
+      "kicker": "GOD IN YOUR WORK",
+      "sub": "FINDING PURPOSE TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "The sun ariseth, they gather themselves together, and lay them down in their dens.",
+      "img": "short-morningpsalm104v22-scene-02.jpg",
+      "kicker": "PSALM 104:22",
+      "sub": "HIS NATURAL ORDER",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Man goeth forth unto his work and to his labor until the evening.",
+      "img": "short-morningpsalm104v22-scene-03.jpg",
+      "kicker": "PSALM 104:23",
+      "sub": "YOUR DAILY CALLING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Father, grant me grace to step into these duties not as a burden but as service.",
+      "img": "short-morningpsalm104v22-scene-04.jpg",
+      "kicker": "A MORNING PETITION",
+      "sub": "STRENGTH FOR THE TASK",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Align my spirit with your steady pace so that I might honor you in every detail.",
+      "img": "short-morningpsalm104v22-scene-05.jpg",
+      "kicker": "WALKING IN FAITH",
+      "sub": "STEADY PACE FOR LIFE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "May my work be a reflection of your care until the evening shadows begin to fall.",
+      "img": "short-morningpsalm104v22-scene-06.jpg",
+      "kicker": "RESTING IN HIM",
+      "sub": "HIS ENDLESS GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That sharp tightness in your chest at the thought of today's to-do list is seen."
+    ],
+    [
+      8,
+      18,
+      "The sun ariseth, they gather themselves together, and lay them down in their dens."
+    ],
+    [
+      18,
+      26,
+      "Man goeth forth unto his work and to his labor until the evening."
+    ],
+    [
+      26,
+      36,
+      "Father, grant me grace to step into these duties not as a burden but as service."
+    ],
+    [
+      36,
+      46,
+      "Align my spirit with your steady pace so that I might honor you in every detail."
+    ],
+    [
+      46,
+      56,
+      "May my work be a reflection of your care until the evening shadows begin to fall."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT SHARP TIGHTNESS",
+        "IN YOUR CHEST",
+        "TODAY IS SEEN"
+      ],
+      [
+        "TIGHTNESS",
+        "SEEN"
+      ],
+      "PSALM 104:22"
+    ],
+    [
+      8,
+      18,
+      [
+        "THE SUN ARISETH",
+        "THEY GATHER TOGETHER",
+        "THEY LAY DOWN"
+      ],
+      [
+        "SUN ARISETH",
+        "GATHER"
+      ],
+      "PSALM 104:22"
+    ],
+    [
+      18,
+      26,
+      [
+        "MAN GOETH FORTH",
+        "UNTO HIS WORK",
+        "UNTIL THE EVENING"
+      ],
+      [
+        "MAN GOETH",
+        "WORK"
+      ],
+      "PSALM 104:23"
+    ],
+    [
+      26,
+      36,
+      [
+        "GRANT ME GRACE",
+        "NOT AS A BURDEN",
+        "BUT AS SERVICE"
+      ],
+      [
+        "GRACE",
+        "SERVICE"
+      ],
+      "PSALM 104:23"
+    ],
+    [
+      36,
+      46,
+      [
+        "ALIGN MY SPIRIT",
+        "WITH YOUR PACE",
+        "HONOR YOU IN ALL"
+      ],
+      [
+        "ALIGN",
+        "HONOR"
+      ],
+      "PSALM 104:23"
+    ],
+    [
+      46,
+      56,
+      [
+        "MAY MY WORK",
+        "BE A REFLECTION",
+        "OF YOUR CARE"
+      ],
+      [
+        "WORK",
+        "REFLECTION"
+      ],
+      "PSALM 104:23"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That sharp tightness in your chest at the thought of today's to-do list is seen.",
+      "kind": "phrase",
+      "words": [
+        "TIGHTNESS",
+        "SEEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The sun ariseth, they gather themselves together, and lay them down in their dens.",
+      "kind": "phrase",
+      "words": [
+        "SUN ARISETH",
+        "GATHER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Man goeth forth unto his work and to his labor until the evening.",
+      "kind": "phrase",
+      "words": [
+        "MAN GOETH",
+        "WORK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, grant me grace to step into these duties not as a burden but as service.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "SERVICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Align my spirit with your steady pace so that I might honor you in every detail.",
+      "kind": "phrase",
+      "words": [
+        "ALIGN",
+        "HONOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May my work be a reflection of your care until the evening shadows begin to fall.",
+      "kind": "phrase",
+      "words": [
+        "WORK",
+        "REFLECTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 104:22-23"
+}

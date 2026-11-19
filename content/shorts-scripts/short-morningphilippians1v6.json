@@ -1,0 +1,300 @@
+{
+  "key": "short-morningphilippians1v6",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "HE WILL FINISH",
+    "WHAT HE STARTED"
+  ],
+  "poster": [
+    "STILLNESS AT DAWN",
+    "A PROMISE FOR YOU",
+    "PHILIPPIANS 1:6",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden sun rays hitting mountain mist",
+    "soft light through morning window",
+    "dew on grass at golden hour",
+    "calm forest clearing at sunrise",
+    "gentle light over tranquil lake",
+    "soft morning mist in valley",
+    "sun peeking over horizon silhouette"
+  ],
+  "scenes": [
+    {
+      "a": "That persistent doubt about your future is fading as the light hits your bedroom walls.",
+      "img": "short-morningphilippians1v6-scene-01.jpg",
+      "kicker": "PHILIPPIANS 1:6",
+      "sub": "FAITH IN THE MORNING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Listen now to the assurance of your Creator.",
+      "img": "short-morningphilippians1v6-scene-02.jpg",
+      "kicker": "GOD IS AT WORK",
+      "sub": "HE IS FAITHFUL",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:",
+      "img": "short-morningphilippians1v6-scene-03.jpg",
+      "kicker": "THE PROMISE",
+      "sub": "HIS WORD STANDS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, thank You for the truth that my life is not in my own hands.",
+      "img": "short-morningphilippians1v6-scene-04.jpg",
+      "kicker": "PRAYER",
+      "sub": "SURRENDER TO HIM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "I often worry that I am falling behind or losing my way, but You are steady.",
+      "img": "short-morningphilippians1v6-scene-05.jpg",
+      "kicker": "HE GUIDES",
+      "sub": "YOU ARE HELD",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Please grant me the grace to trust Your timing and Your plan through this day.",
+      "img": "short-morningphilippians1v6-scene-06.jpg",
+      "kicker": "STRENGTH",
+      "sub": "REST IN HIS GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I place my unfinished tasks and heavy concerns at Your altar, knowing You sustain me.",
+      "img": "short-morningphilippians1v6-scene-07.jpg",
+      "kicker": "PEACE",
+      "sub": "HE SUSTAINS YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That persistent doubt about your future is fading as the light hits your bedroom walls."
+    ],
+    [
+      8,
+      14,
+      "Listen now to the assurance of your Creator."
+    ],
+    [
+      14,
+      28,
+      "Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:"
+    ],
+    [
+      28,
+      36,
+      "Lord, thank You for the truth that my life is not in my own hands."
+    ],
+    [
+      36,
+      46,
+      "I often worry that I am falling behind or losing my way, but You are steady."
+    ],
+    [
+      46,
+      55,
+      "Please grant me the grace to trust Your timing and Your plan through this day."
+    ],
+    [
+      55,
+      65,
+      "I place my unfinished tasks and heavy concerns at Your altar, knowing You sustain me."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "DOUBT IS FADING",
+        "IN THIS LIGHT"
+      ],
+      [
+        "DOUBT IS FADING"
+      ],
+      "PHILIPPIANS 1:6"
+    ],
+    [
+      8,
+      14,
+      [
+        "HEAR THE ASSURANCE",
+        "OF YOUR CREATOR"
+      ],
+      [
+        "ASSURANCE"
+      ],
+      "PHILIPPIANS 1:6"
+    ],
+    [
+      14,
+      28,
+      [
+        "HE BEGAN A WORK",
+        "HE WILL PERFORM IT"
+      ],
+      [
+        "PERFORM IT"
+      ],
+      "PHILIPPIANS 1:6"
+    ],
+    [
+      28,
+      36,
+      [
+        "MY LIFE IS",
+        "NOT IN MY HANDS"
+      ],
+      [
+        "NOT IN MY HANDS"
+      ],
+      "PHILIPPIANS 1:6"
+    ],
+    [
+      36,
+      46,
+      [
+        "I WORRY",
+        "BUT YOU ARE STEADY"
+      ],
+      [
+        "STEADY"
+      ],
+      "PHILIPPIANS 1:6"
+    ],
+    [
+      46,
+      55,
+      [
+        "TRUST YOUR TIMING",
+        "THROUGH THIS DAY"
+      ],
+      [
+        "TRUST"
+      ],
+      "PHILIPPIANS 1:6"
+    ],
+    [
+      55,
+      65,
+      [
+        "UNFINISHED TASKS",
+        "AT YOUR ALTAR"
+      ],
+      [
+        "ALTAR"
+      ],
+      "PHILIPPIANS 1:6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That persistent doubt about your future is fading as the light hits your bedroom walls.",
+      "kind": "phrase",
+      "words": [
+        "DOUBT",
+        "FADING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Listen now to the assurance of your Creator.",
+      "kind": "phrase",
+      "words": [
+        "ASSURANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:",
+      "kind": "phrase",
+      "words": [
+        "PERFORM",
+        "IT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, thank You for the truth that my life is not in my own hands.",
+      "kind": "phrase",
+      "words": [
+        "NOT",
+        "MY",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I often worry that I am falling behind or losing my way, but You are steady.",
+      "kind": "phrase",
+      "words": [
+        "STEADY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Please grant me the grace to trust Your timing and Your plan through this day.",
+      "kind": "phrase",
+      "words": [
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I place my unfinished tasks and heavy concerns at Your altar, knowing You sustain me.",
+      "kind": "phrase",
+      "words": [
+        "ALTAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Philippians 1:6"
+}
