@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T11:55:38Z",
+  "generated_at": "2026-11-19T11:55:56Z",
   "monitor_generated_at": "2026-11-19T11:54:23.137750+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 481,
+    "published_total": 482,
     "published_longform": 156,
-    "published_shorts": 325,
-    "public_total": 479,
+    "published_shorts": 326,
+    "public_total": 480,
     "queued_longform": 60,
-    "queued_shorts": 98,
+    "queued_shorts": 97,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 68,
+        "published_total": 69,
         "published_longform": 20,
-        "published_shorts": 48,
+        "published_shorts": 49,
         "thumbnail_pending": 6,
-        "public_total": 67,
+        "public_total": 68,
         "queued_longform": 7,
         "queued_other": 5,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PSALM94V19",
-        "title": "Say This Psalm 94:19 Prayer Before You Sleep | Still Your Racing Mind #Shorts",
+        "id": "SHORT-1JOHN4V18",
+        "title": "Say This 1 John 4:18 Prayer Before You Sleep | Heart Tonight #Shorts",
         "format": "short",
-        "youtube_video_id": "YUQ0HbqHMzc",
-        "watch_url": "https://www.youtube.com/shorts/YUQ0HbqHMzc",
+        "youtube_video_id": "vilvm36veNc",
+        "watch_url": "https://www.youtube.com/shorts/vilvm36veNc",
         "published_on": "2026-11-19",
-        "published_at": "2026-11-19T01:18:44Z"
+        "published_at": "2026-11-19T11:55:03Z"
       },
       "next_queued_longform": {
         "id": "0029",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-1john4v18",
-        "scripture": "1 John 4:18",
+        "short": "short-hebrews13v5",
+        "scripture": "Hebrews 13:5-6",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-1JOHN4V18",
+      "slug": "short-1john4v18-pre-sleep-prayer",
+      "file": "short-1john4v18-pre-sleep-prayer.md",
+      "title": "Say This 1 John 4:18 Prayer Before You Sleep | Heart Tonight #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T11:55:03Z",
+      "youtube_video_id": "vilvm36veNc",
+      "watch_url": "https://www.youtube.com/shorts/vilvm36veNc",
+      "youtu_be_url": "https://youtu.be/vilvm36veNc",
+      "shorts_url": "https://www.youtube.com/shorts/vilvm36veNc",
+      "studio_url": "https://studio.youtube.com/video/vilvm36veNc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/vilvm36veNc/hqdefault.jpg",
+      "thumb_text": "THE SECRET PLACE \u00b7 A PRAYER FOR",
+      "thumbnail_pending": false,
+      "duration_label": "82s",
+      "words": 628
+    },
     {
       "id": "SHORT-MIDDAY2CORINTHIANS12V9",
       "slug": "short-midday2corinthians12v9-midday-prayer",
@@ -13030,17 +13054,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-1john4v18",
-        "file": "0000-short-1john4v18.yml",
-        "companion_longform_id": "",
-        "scripture": "1 John 4:18",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-familypsalm101v2",
         "file": "0000-short-familypsalm101v2.yml",
