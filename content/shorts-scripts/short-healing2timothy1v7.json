@@ -1,0 +1,279 @@
+{
+  "key": "short-healing2timothy1v7",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALING FROM",
+    "THE SPIRIT OF FEAR"
+  ],
+  "poster": [
+    "REST IN",
+    "GOD'S POWER",
+    "AND HIS",
+    "SOUND MIND"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters",
+    "warm golden sanctuary light",
+    "white dove wings in slow motion",
+    "ethereal light reflecting on water",
+    "soft glowing embers in darkness",
+    "peaceful ripples on still lake"
+  ],
+  "scenes": [
+    {
+      "a": "If the racing thoughts regarding your health are keeping you trapped in this moment, stay.",
+      "img": "short-healing2timothy1v7-scene-01.jpg",
+      "kicker": "2 TIMOTHY 1:7",
+      "sub": "FINDING GOD'S PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",
+      "img": "short-healing2timothy1v7-scene-02.jpg",
+      "kicker": "2 TIMOTHY 1:7",
+      "sub": "GOD'S WORD IS TRUTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, replace these trembling nerves with your holy presence and restore calm to this aching soul.",
+      "img": "short-healing2timothy1v7-scene-03.jpg",
+      "kicker": "HEALING PRAYER",
+      "sub": "MAY HIS PEACE REMAIN",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let every anxiety dissolve under the weight of your mercy and grace during this quiet hour.",
+      "img": "short-healing2timothy1v7-scene-04.jpg",
+      "kicker": "HEALING PRAYER",
+      "sub": "RELEASE YOUR BURDEN",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant a peaceful rest that settles deep into every tissue and bone needing your divine touch.",
+      "img": "short-healing2timothy1v7-scene-05.jpg",
+      "kicker": "RESTORATION",
+      "sub": "RESTING IN HIM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We trust in your gentle restorative power, standing firmly in your promise of a sound mind.",
+      "img": "short-healing2timothy1v7-scene-06.jpg",
+      "kicker": "DIVINE HEALING",
+      "sub": "TRUST IN THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the racing thoughts regarding your health are keeping you trapped in this moment, stay."
+    ],
+    [
+      8,
+      22,
+      "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind."
+    ],
+    [
+      22,
+      35,
+      "Father, replace these trembling nerves with your holy presence and restore calm to this aching soul."
+    ],
+    [
+      35,
+      50,
+      "Let every anxiety dissolve under the weight of your mercy and grace during this quiet hour."
+    ],
+    [
+      50,
+      65,
+      "Grant a peaceful rest that settles deep into every tissue and bone needing your divine touch."
+    ],
+    [
+      65,
+      80,
+      "We trust in your gentle restorative power, standing firmly in your promise of a sound mind."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THOUGHTS REGARDING HEALTH",
+        "ARE KEEPING YOU",
+        "TRAPPED IN THIS MOMENT"
+      ],
+      [
+        "TRAPPED"
+      ],
+      "2 TIMOTHY 1:7"
+    ],
+    [
+      8,
+      22,
+      [
+        "GOD HATH NOT GIVEN",
+        "US THE SPIRIT",
+        "OF FEAR BUT POWER",
+        "LOVE AND SOUND MIND"
+      ],
+      [
+        "POWER",
+        "LOVE",
+        "SOUND MIND"
+      ],
+      "2 TIMOTHY 1:7"
+    ],
+    [
+      22,
+      35,
+      [
+        "FATHER REPLACE NERVES",
+        "WITH YOUR PRESENCE",
+        "RESTORE CALM TO",
+        "THIS ACHING SOUL"
+      ],
+      [
+        "RESTORE CALM"
+      ],
+      "2 TIMOTHY 1:7"
+    ],
+    [
+      35,
+      50,
+      [
+        "EVERY ANXIETY DISSOLVE",
+        "UNDER YOUR MERCY",
+        "DURING THIS QUIET",
+        "HOLY HOUR"
+      ],
+      [
+        "MERCY"
+      ],
+      "2 TIMOTHY 1:7"
+    ],
+    [
+      50,
+      65,
+      [
+        "GRANT A PEACEFUL REST",
+        "INTO EVERY TISSUE",
+        "AND BONE NEEDING",
+        "DIVINE TOUCH"
+      ],
+      [
+        "PEACEFUL REST"
+      ],
+      "2 TIMOTHY 1:7"
+    ],
+    [
+      65,
+      80,
+      [
+        "TRUSTING RESTORATIVE POWER",
+        "STANDING FIRMLY IN",
+        "YOUR PROMISE OF",
+        "A SOUND MIND"
+      ],
+      [
+        "SOUND MIND"
+      ],
+      "2 TIMOTHY 1:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the racing thoughts regarding your health are keeping you trapped in this moment, stay.",
+      "kind": "phrase",
+      "words": [
+        "THOUGHTS",
+        "TRAPPED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",
+      "kind": "phrase",
+      "words": [
+        "POWER",
+        "LOVE",
+        "SOUND",
+        "MIND"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Father, replace these trembling nerves with your holy presence and restore calm to this aching soul.",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "CALM"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Let every anxiety dissolve under the weight of your mercy and grace during this quiet hour.",
+      "kind": "phrase",
+      "words": [
+        "MERCY",
+        "GRACE"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Grant a peaceful rest that settles deep into every tissue and bone needing your divine touch.",
+      "kind": "phrase",
+      "words": [
+        "PEACEFUL",
+        "REST"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "We trust in your gentle restorative power, standing firmly in your promise of a sound mind.",
+      "kind": "phrase",
+      "words": [
+        "SOUND",
+        "MIND"
+      ],
+      "hi": 5,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Timothy 1:7"
+}

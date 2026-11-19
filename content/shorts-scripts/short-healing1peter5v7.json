@@ -1,0 +1,284 @@
+{
+  "key": "short-healing1peter5v7",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "CAST YOUR CARES",
+    "FIND HIS PEACE"
+  ],
+  "poster": [
+    "RELEASE THE WEIGHT",
+    "TRUST IN HIS CARE",
+    "FIND QUIET REST",
+    "HEALING FOR YOU"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters",
+    "warm golden sanctuary light",
+    "white dove peace imagery",
+    "soft morning light on calm water",
+    "gently flowing crystal stream",
+    "still pond at dawn golden hour"
+  ],
+  "scenes": [
+    {
+      "a": "Right now, the crushing weight of that specific decision is keeping your heart from true rest.",
+      "img": "short-healing1peter5v7-scene-01.jpg",
+      "kicker": "1 PETER 5:7",
+      "sub": "RELEASE YOUR BURDEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You are carrying more than you were ever intended to hold alone in this heavy silence.",
+      "img": "short-healing1peter5v7-scene-02.jpg",
+      "kicker": "1 PETER 5:7",
+      "sub": "LAY IT DOWN NOW",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Casting all your care upon him; for he careth for you.",
+      "img": "short-healing1peter5v7-scene-03.jpg",
+      "kicker": "1 PETER 5:7",
+      "sub": "HIS CARE IS FOR YOU",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, remove the anxiety from this dear one's soul and wash their spirit in deep tranquility.",
+      "img": "short-healing1peter5v7-scene-04.jpg",
+      "kicker": "1 PETER 5:7",
+      "sub": "RECEIVE DIVINE CALM",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Let every sharp edge of worry soften under the touch of your gentle and restorative presence.",
+      "img": "short-healing1peter5v7-scene-05.jpg",
+      "kicker": "1 PETER 5:7",
+      "sub": "HEALING IN HIS LIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "May they know they are not alone and that your love covers every single hidden need.",
+      "img": "short-healing1peter5v7-scene-06.jpg",
+      "kicker": "1 PETER 5:7",
+      "sub": "REST IN HIS LOVE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Right now, the crushing weight of that specific decision is keeping your heart from true rest."
+    ],
+    [
+      8,
+      16,
+      "You are carrying more than you were ever intended to hold alone in this heavy silence."
+    ],
+    [
+      16,
+      24,
+      "Casting all your care upon him; for he careth for you."
+    ],
+    [
+      24,
+      32,
+      "Lord, remove the anxiety from this dear one's soul and wash their spirit in deep tranquility."
+    ],
+    [
+      32,
+      40,
+      "Let every sharp edge of worry soften under the touch of your gentle and restorative presence."
+    ],
+    [
+      40,
+      48,
+      "May they know they are not alone and that your love covers every single hidden need."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "RIGHT NOW THE",
+        "CRUSHING WEIGHT IS",
+        "KEEPING YOUR HEART",
+        "FROM TRUE REST"
+      ],
+      [
+        "CRUSHING WEIGHT",
+        "TRUE REST"
+      ],
+      "1 PETER 5:7"
+    ],
+    [
+      8,
+      16,
+      [
+        "YOU ARE CARRYING",
+        "MORE THAN YOU WERE",
+        "INTENDED TO HOLD",
+        "ALONE IN SILENCE"
+      ],
+      [
+        "MORE THAN",
+        "INTENDED"
+      ],
+      "1 PETER 5:7"
+    ],
+    [
+      16,
+      24,
+      [
+        "CASTING ALL YOUR CARE",
+        "UPON HIM FOR",
+        "HE CARETH FOR YOU"
+      ],
+      [
+        "CASTING ALL",
+        "HE CARETH"
+      ],
+      "1 PETER 5:7"
+    ],
+    [
+      24,
+      32,
+      [
+        "LORD REMOVE ANXIETY",
+        "AND WASH THEIR",
+        "SOUL IN DEEP",
+        "TRANQUILITY"
+      ],
+      [
+        "REMOVE ANXIETY",
+        "TRANQUILITY"
+      ],
+      "1 PETER 5:7"
+    ],
+    [
+      32,
+      40,
+      [
+        "LET EVERY WORRY",
+        "SOFTEN UNDER THE",
+        "TOUCH OF YOUR",
+        "RESTORATIVE PRESENCE"
+      ],
+      [
+        "SOFTEN",
+        "RESTORATIVE"
+      ],
+      "1 PETER 5:7"
+    ],
+    [
+      40,
+      48,
+      [
+        "KNOW YOU ARE NOT",
+        "ALONE AND YOUR",
+        "LOVE COVERS EVERY",
+        "SINGLE HIDDEN NEED"
+      ],
+      [
+        "NOT ALONE",
+        "LOVE COVERS"
+      ],
+      "1 PETER 5:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Right now, the crushing weight of that specific decision is keeping your heart from true rest.",
+      "kind": "phrase",
+      "words": [
+        "CRUSHING",
+        "WEIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are carrying more than you were ever intended to hold alone in this heavy silence.",
+      "kind": "phrase",
+      "words": [
+        "INTENDED",
+        "TO",
+        "HOLD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Casting all your care upon him; for he careth for you.",
+      "kind": "phrase",
+      "words": [
+        "CASTING",
+        "ALL",
+        "CARE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, remove the anxiety from this dear one's soul and wash their spirit in deep tranquility.",
+      "kind": "phrase",
+      "words": [
+        "WASH",
+        "THEIR",
+        "SPIRIT"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Let every sharp edge of worry soften under the touch of your gentle and restorative presence.",
+      "kind": "phrase",
+      "words": [
+        "RESTORATIVE",
+        "PRESENCE"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "May they know they are not alone and that your love covers every single hidden need.",
+      "kind": "phrase",
+      "words": [
+        "NOT",
+        "ALONE"
+      ],
+      "hi": 5,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 Peter 5:7"
+}

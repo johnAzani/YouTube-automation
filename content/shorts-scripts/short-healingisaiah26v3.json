@@ -1,0 +1,266 @@
+{
+  "key": "short-healingisaiah26v3",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "FINDING PERFECT PEACE",
+    "IN HIS PRESENCE"
+  ],
+  "poster": [
+    "ISAIH 26:3-4",
+    "HIS PERFECT PEACE",
+    "A PRAYER FOR",
+    "THE WEARY MIND"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters",
+    "warm golden sanctuary light",
+    "white dove resting in soft light",
+    "gentle flowing stream in sun",
+    "soft golden dust motes in church",
+    "floating lotus flower on pond"
+  ],
+  "scenes": [
+    {
+      "a": "If the thoughts racing through your mind feel heavy tonight, please stay here for prayer.",
+      "img": "short-healingisaiah26v3-scene-01.jpg",
+      "kicker": "ISAIAH 26:3",
+      "sub": "HEALING FOR THE WEARY MIND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee.",
+      "img": "short-healingisaiah26v3-scene-02.jpg",
+      "kicker": "ISAIAH 26:3",
+      "sub": "HIS PERFECT PEACE",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Trust ye in the LORD for ever: for in the LORD JEHOVAH is everlasting strength:",
+      "img": "short-healingisaiah26v3-scene-03.jpg",
+      "kicker": "ISAIAH 26:4",
+      "sub": "EVERLASTING STRENGTH",
+      "cam": "pull_out",
+      "focus": [
+        0.7,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, anchor my heart in this moment as I release the tension I have been holding.",
+      "img": "short-healingisaiah26v3-scene-04.jpg",
+      "kicker": "PRAYER",
+      "sub": "RESTING IN HIM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "I bring my scattered thoughts to you, asking for the stillness that only you provide.",
+      "img": "short-healingisaiah26v3-scene-05.jpg",
+      "kicker": "PRAYER",
+      "sub": "STILLNESS IN SPIRIT",
+      "cam": "pan_right",
+      "focus": [
+        0.2,
+        0.5
+      ]
+    },
+    {
+      "a": "May your presence settle over my spirit as I rest in your promise, amen.",
+      "img": "short-healingisaiah26v3-scene-06.jpg",
+      "kicker": "AMEN",
+      "sub": "RECEIVING HIS PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the thoughts racing through your mind feel heavy tonight, please stay here for prayer."
+    ],
+    [
+      8,
+      20,
+      "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee."
+    ],
+    [
+      20,
+      32,
+      "Trust ye in the LORD for ever: for in the LORD JEHOVAH is everlasting strength:"
+    ],
+    [
+      32,
+      45,
+      "Lord, anchor my heart in this moment as I release the tension I have been holding."
+    ],
+    [
+      45,
+      58,
+      "I bring my scattered thoughts to you, asking for the stillness that only you provide."
+    ],
+    [
+      58,
+      70,
+      "May your presence settle over my spirit as I rest in your promise, amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THOUGHTS RACING",
+        "HEAVY TONIGHT",
+        "STAY FOR PRAYER"
+      ],
+      [
+        "HEAVY TONIGHT"
+      ],
+      "ISAIAH 26:3"
+    ],
+    [
+      8,
+      20,
+      [
+        "PERFECT PEACE",
+        "MIND STAYED ON THEE",
+        "HE TRUSTETH IN THEE"
+      ],
+      [
+        "PERFECT PEACE"
+      ],
+      "ISAIAH 26:3"
+    ],
+    [
+      20,
+      32,
+      [
+        "TRUST YE",
+        "IN THE LORD",
+        "EVERLASTING STRENGTH"
+      ],
+      [
+        "EVERLASTING STRENGTH"
+      ],
+      "ISAIAH 26:4"
+    ],
+    [
+      32,
+      45,
+      [
+        "ANCHOR MY HEART",
+        "RELEASE THE TENSION"
+      ],
+      [
+        "ANCHOR MY HEART"
+      ],
+      "PRAYER"
+    ],
+    [
+      45,
+      58,
+      [
+        "SCATTERED THOUGHTS",
+        "STILLNESS PROVIDED"
+      ],
+      [
+        "STILLNESS"
+      ],
+      "PRAYER"
+    ],
+    [
+      58,
+      70,
+      [
+        "PRESENCE SETTLE",
+        "REST IN PROMISE"
+      ],
+      [
+        "REST"
+      ],
+      "AMEN"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the thoughts racing through your mind feel heavy tonight, please stay here for prayer.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "TONIGHT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Trust ye in the LORD for ever: for in the LORD JEHOVAH is everlasting strength:",
+      "kind": "phrase",
+      "words": [
+        "EVERLASTING",
+        "STRENGTH"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor my heart in this moment as I release the tension I have been holding.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "MY",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I bring my scattered thoughts to you, asking for the stillness that only you provide.",
+      "kind": "phrase",
+      "words": [
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your presence settle over my spirit as I rest in your promise, amen.",
+      "kind": "phrase",
+      "words": [
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 26:3-4"
+}

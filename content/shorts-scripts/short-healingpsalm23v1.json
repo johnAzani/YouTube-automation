@@ -1,0 +1,306 @@
+{
+  "key": "short-healingpsalm23v1",
+  "channel": "prayer6",
+  "psalm": 23,
+  "title": [
+    "HE RESTORETH",
+    "YOUR SOUL"
+  ],
+  "poster": [
+    "PSALM 23",
+    "HE RESTORETH",
+    "YOUR WEARY SOUL",
+    "THE HEALING BALM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters gently flowing river golden hour sunlight cinematic 4k",
+    "serene emerald green meadow still turquoise stream morning mist sunbeams cinematic",
+    "white dove flying above warm golden light sanctuary peace rays transcendent cinematic",
+    "warm golden sanctuary light beams falling on calm crystal water peaceful healing glow",
+    "gentle turquoise stream ripples warm sunset glow reflections tranquility sacred",
+    "tranquil mountain lake turquoise water soft golden sunset clouds dove soaring peace"
+  ],
+  "scenes": [
+    {
+      "a": "lay your trembling hands down right now",
+      "img": "short-healingpsalm23v1-scene-01.jpg",
+      "kicker": "PSALM 23:2-3",
+      "sub": "SURRENDER YOUR EXHAUSTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "beside the still waters",
+      "img": "short-healingpsalm23v1-scene-02.jpg",
+      "kicker": "PSALM 23:2",
+      "sub": "REST BESIDE STILL WATERS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He restoreth my soul",
+      "img": "short-healingpsalm23v1-scene-03.jpg",
+      "kicker": "PSALM 23:3",
+      "sub": "HE RESTORETH YOUR SOUL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "soothe the persistent ache",
+      "img": "short-healingpsalm23v1-scene-04.jpg",
+      "kicker": "HEALING PRAYER",
+      "sub": "COMFORT FOR TIRED MINDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "renewing fragile strength",
+      "img": "short-healingpsalm23v1-scene-05.jpg",
+      "kicker": "GENTLE HEALING",
+      "sub": "RENEWING FRAGILE STRENGTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Subscribe to The Healing Balm",
+      "img": "short-healingpsalm23v1-scene-06.jpg",
+      "kicker": "THE HEALING BALM",
+      "sub": "RECEIVE GOD'S HEALING PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "When your spirit feels drained by chronic exhaustion, lay your trembling hands down right now."
+    ],
+    [
+      10,
+      20,
+      "He maketh me to lie down in green pastures: he leadeth me beside the still waters."
+    ],
+    [
+      20,
+      30,
+      "He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake."
+    ],
+    [
+      30,
+      41,
+      "Lord, soothe the persistent ache within their frame and loosen the heavy knot of distress gripping their tired mind."
+    ],
+    [
+      41,
+      53,
+      "Bathe every weary muscle in Your deep, calm presence, renewing fragile strength and steadying strained breathing under Your gentle touch."
+    ],
+    [
+      53,
+      62,
+      "Guide their steps into quiet, lasting safety today. Subscribe to The Healing Balm to receive daily restoration prayers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "WHEN YOUR SPIRIT FEELS DRAINED",
+        "BY CHRONIC EXHAUSTION",
+        "LAY YOUR TREMBLING HANDS",
+        "DOWN RIGHT NOW"
+      ],
+      [
+        "SPIRIT",
+        "EXHAUSTION",
+        "TREMBLING",
+        "HANDS"
+      ],
+      "PSALM 23 : 2-3"
+    ],
+    [
+      10,
+      20,
+      [
+        "HE MAKETH ME TO LIE DOWN",
+        "IN GREEN PASTURES",
+        "HE LEADETH ME BESIDE",
+        "THE STILL WATERS"
+      ],
+      [
+        "LIE",
+        "DOWN",
+        "GREEN",
+        "PASTURES",
+        "STILL",
+        "WATERS"
+      ],
+      "PSALM 23 : 2"
+    ],
+    [
+      20,
+      30,
+      [
+        "HE RESTORETH MY SOUL",
+        "HE LEADETH ME IN THE PATHS",
+        "OF RIGHTEOUSNESS FOR HIS",
+        "NAME'S SAKE"
+      ],
+      [
+        "RESTORETH",
+        "SOUL",
+        "PATHS",
+        "RIGHTEOUSNESS"
+      ],
+      "PSALM 23 : 3"
+    ],
+    [
+      30,
+      41,
+      [
+        "LORD SOOTHE THE PERSISTENT ACHE",
+        "WITHIN THEIR FRAME AND LOOSEN",
+        "THE HEAVY KNOT OF DISTRESS",
+        "GRIPPING THEIR TIRED MIND"
+      ],
+      [
+        "SOOTHE",
+        "ACHE",
+        "FRAME",
+        "HEAVY",
+        "KNOT",
+        "DISTRESS"
+      ],
+      "HEALING PRAYER"
+    ],
+    [
+      41,
+      53,
+      [
+        "BATHE EVERY WEARY MUSCLE",
+        "IN YOUR DEEP CALM PRESENCE",
+        "RENEWING FRAGILE STRENGTH",
+        "AND STEADYING STRAINED BREATHING",
+        "UNDER YOUR GENTLE TOUCH"
+      ],
+      [
+        "BATHE",
+        "WEARY",
+        "CALM",
+        "PRESENCE",
+        "RENEWING",
+        "STRENGTH"
+      ],
+      "RESTORATION"
+    ],
+    [
+      53,
+      62,
+      [
+        "GUIDE THEIR STEPS INTO QUIET",
+        "LASTING SAFETY TODAY",
+        "SUBSCRIBE TO THE HEALING BALM",
+        "TO RECEIVE DAILY RESTORATION PRAYERS"
+      ],
+      [
+        "GUIDE",
+        "SAFETY",
+        "SUBSCRIBE",
+        "HEALING",
+        "BALM"
+      ],
+      "THE HEALING BALM"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "lay your trembling hands down right now",
+      "kind": "phrase",
+      "words": [
+        "TREMBLING",
+        "HANDS",
+        "DOWN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "beside the still waters",
+      "kind": "phrase",
+      "words": [
+        "STILL",
+        "WATERS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "He restoreth my soul",
+      "kind": "phrase",
+      "words": [
+        "RESTORETH",
+        "SOUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "soothe the persistent ache",
+      "kind": "phrase",
+      "words": [
+        "SOOTHE",
+        "PERSISTENT",
+        "ACHE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "renewing fragile strength",
+      "kind": "phrase",
+      "words": [
+        "RENEWING",
+        "FRAGILE",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Healing Balm",
+      "kind": "phrase",
+      "words": [
+        "THE",
+        "HEALING",
+        "BALM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 23:1-3"
+}

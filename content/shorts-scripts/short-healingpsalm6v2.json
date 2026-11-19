@@ -1,0 +1,276 @@
+{
+  "key": "short-healingpsalm6v2",
+  "channel": "prayer6",
+  "psalm": 6,
+  "title": [
+    "HEALING PRAYER",
+    "PSALM 6:2-4"
+  ],
+  "poster": [
+    "GOD HEARS",
+    "YOUR WEAKNESS",
+    "HE BRINGS",
+    "HIS MERCY"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "glowing golden sanctuary light particles",
+    "soft turquoise flowing river water",
+    "peaceful white dove in flight",
+    "sunlight filtering through stained glass",
+    "calm ripples on a blue lake",
+    "gentle dust motes in warm light"
+  ],
+  "scenes": [
+    {
+      "a": "If the pain in your body feels like a constant shadow, stay here for prayer.",
+      "img": "short-healingpsalm6v2-scene-01.jpg",
+      "kicker": "GOD HEARS YOU",
+      "sub": "HE IS NEAR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Have mercy upon me, O LORD; for I am weak: O LORD, heal me; for my bones are vexed.",
+      "img": "short-healingpsalm6v2-scene-02.jpg",
+      "kicker": "PSALM 6:2",
+      "sub": "HEALING FOR YOUR BONES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "My soul is also sore vexed: but thou, O LORD, how long?",
+      "img": "short-healingpsalm6v2-scene-03.jpg",
+      "kicker": "PSALM 6:3",
+      "sub": "YOUR SOUL IS KNOWN",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Return, O LORD, deliver my soul: oh save me for thy mercies’ sake.",
+      "img": "short-healingpsalm6v2-scene-04.jpg",
+      "kicker": "PSALM 6:4",
+      "sub": "HIS MERCY REMAINS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, touch the areas that ache with your restorative presence and grant relief to this heart.",
+      "img": "short-healingpsalm6v2-scene-05.jpg",
+      "kicker": "HIS PRESENCE",
+      "sub": "CALMING YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I place this life in your hands, trusting your timing and your unfailing love for us.",
+      "img": "short-healingpsalm6v2-scene-06.jpg",
+      "kicker": "TRUSTING HIM",
+      "sub": "HIS UNFALING LOVE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the pain in your body feels like a constant shadow, stay here for prayer."
+    ],
+    [
+      8,
+      22,
+      "Have mercy upon me, O LORD; for I am weak: O LORD, heal me; for my bones are vexed."
+    ],
+    [
+      22,
+      34,
+      "My soul is also sore vexed: but thou, O LORD, how long?"
+    ],
+    [
+      34,
+      46,
+      "Return, O LORD, deliver my soul: oh save me for thy mercies’ sake."
+    ],
+    [
+      46,
+      60,
+      "Lord, touch the areas that ache with your restorative presence and grant relief to this heart."
+    ],
+    [
+      60,
+      72,
+      "I place this life in your hands, trusting your timing and your unfailing love for us."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF THE PAIN",
+        "FEELS LIKE A SHADOW",
+        "STAY FOR PRAYER"
+      ],
+      [
+        "PAIN",
+        "PRAYER"
+      ],
+      "HEALING PRAYER"
+    ],
+    [
+      8,
+      22,
+      [
+        "HAVE MERCY O LORD",
+        "FOR I AM WEAK",
+        "HEAL ME LORD"
+      ],
+      [
+        "MERCY",
+        "HEAL"
+      ],
+      "PSALM 6:2"
+    ],
+    [
+      22,
+      34,
+      [
+        "MY SOUL IS",
+        "SORE VEXED",
+        "BUT THOU O LORD"
+      ],
+      [
+        "SOUL",
+        "VEXED"
+      ],
+      "PSALM 6:3"
+    ],
+    [
+      34,
+      46,
+      [
+        "RETURN O LORD",
+        "DELIVER MY SOUL",
+        "SAVE ME"
+      ],
+      [
+        "RETURN",
+        "DELIVER"
+      ],
+      "PSALM 6:4"
+    ],
+    [
+      46,
+      60,
+      [
+        "TOUCH THE AREAS",
+        "THAT ACHE",
+        "GRANT RELIEF NOW"
+      ],
+      [
+        "TOUCH",
+        "RELIEF"
+      ],
+      "GOD RESTORES"
+    ],
+    [
+      60,
+      72,
+      [
+        "I PLACE THIS LIFE",
+        "IN YOUR HANDS",
+        "TRUSTING YOUR LOVE"
+      ],
+      [
+        "TRUSTING",
+        "LOVE"
+      ],
+      "HIS GRACE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the pain in your body feels like a constant shadow, stay here for prayer.",
+      "kind": "phrase",
+      "words": [
+        "PAIN",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Have mercy upon me, O LORD; for I am weak: O LORD, heal me; for my bones are vexed.",
+      "kind": "phrase",
+      "words": [
+        "MERCY",
+        "HEAL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "My soul is also sore vexed: but thou, O LORD, how long?",
+      "kind": "phrase",
+      "words": [
+        "SOUL",
+        "VEXED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Return, O LORD, deliver my soul: oh save me for thy mercies’ sake.",
+      "kind": "phrase",
+      "words": [
+        "RETURN",
+        "DELIVER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, touch the areas that ache with your restorative presence and grant relief to this heart.",
+      "kind": "phrase",
+      "words": [
+        "TOUCH",
+        "RELIEF"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I place this life in your hands, trusting your timing and your unfailing love for us.",
+      "kind": "phrase",
+      "words": [
+        "TRUSTING",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 6:2-4"
+}
