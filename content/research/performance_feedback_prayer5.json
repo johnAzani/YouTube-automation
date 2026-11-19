@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T04:14:34.845150+00:00",
+  "generated_at": "2026-11-19T10:20:08.341717+00:00",
   "as_of": "2026-11-19",
   "sufficient_data": false,
   "measured_longform_videos": 0,
@@ -25,7 +25,7 @@
       "top_scripture": ""
     },
     {
-      "theme": "anxiety_peace",
+      "theme": "daily_guidance_wisdom",
       "videos": 2,
       "measured_videos": 0,
       "avg_score": 0.0,
@@ -33,7 +33,7 @@
       "top_scripture": ""
     },
     {
-      "theme": "daily_guidance_wisdom",
+      "theme": "anxiety_peace",
       "videos": 2,
       "measured_videos": 0,
       "avg_score": 0.0,
@@ -149,8 +149,8 @@
       },
       "philippians": {
         "shorts": 1,
-        "avg_views": 52.0,
-        "ratio": 0.893
+        "avg_views": 53.0,
+        "ratio": 0.897
       },
       "proverbs": {
         "shorts": 1,
@@ -159,15 +159,15 @@
       },
       "psalm": {
         "shorts": 4,
-        "avg_views": 44.0,
-        "ratio": 0.716
+        "avg_views": 43.8,
+        "ratio": 0.714
       }
     },
     "by_theme": {
       "anxiety_peace": {
         "shorts": 1,
-        "avg_views": 52.0,
-        "ratio": 0.893
+        "avg_views": 53.0,
+        "ratio": 0.897
       },
       "blessing_benediction": {
         "shorts": 1,
@@ -201,8 +201,8 @@
       },
       "protection": {
         "shorts": 2,
-        "avg_views": 135.0,
-        "ratio": 1.38
+        "avg_views": 134.5,
+        "ratio": 1.377
       }
     },
     "guidance": []
