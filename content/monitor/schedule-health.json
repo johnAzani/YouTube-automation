@@ -9,29 +9,29 @@
       "workflow": "metrics.yml"
     },
     {
-      "late_minutes": 323,
-      "name": "Tests on main (daily)",
-      "ran_at": "2026-11-18T10:15:04+00:00",
-      "slot": "2026-11-18T04:52:00+00:00",
-      "workflow": "tests-on-main.yml"
-    },
-    {
-      "late_minutes": 268,
-      "name": "YouTube reporting jobs (thumbnail impressions)",
-      "ran_at": "2026-11-18T10:15:06+00:00",
-      "slot": "2026-11-18T05:47:00+00:00",
-      "workflow": "reporting-jobs.yml"
-    },
-    {
       "late_minutes": 208,
       "name": "Keepalive",
       "ran_at": "2026-11-16T06:51:47+00:00",
       "slot": "2026-11-16T03:23:00+00:00",
       "workflow": "keepalive.yml"
+    },
+    {
+      "late_minutes": 170,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-19T09:13:52+00:00",
+      "slot": "2026-11-19T06:23:00+00:00",
+      "workflow": "monitor.yml"
+    },
+    {
+      "late_minutes": 146,
+      "name": "Scheduler supervisor",
+      "ran_at": "2026-11-19T09:13:52+00:00",
+      "slot": "2026-11-19T06:47:00+00:00",
+      "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "generated_at": "2026-11-19T04:11:57.703453+00:00",
-  "last_run_at": "2026-11-19T04:11:05+00:00",
+  "generated_at": "2026-11-19T09:14:40.467879+00:00",
+  "last_run_at": "2026-11-19T09:13:52+00:00",
   "on_time": [
     {
       "late_minutes": 115,
@@ -39,13 +39,6 @@
       "ran_at": "2026-11-18T22:09:25+00:00",
       "slot": "2026-11-18T20:14:00+00:00",
       "workflow": "automation-health.yml"
-    },
-    {
-      "late_minutes": 91,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-18T20:45:49+00:00",
-      "slot": "2026-11-18T19:14:00+00:00",
-      "workflow": "comments.yml"
     },
     {
       "late_minutes": 91,
@@ -60,27 +53,6 @@
       "ran_at": "2026-11-19T04:09:38+00:00",
       "slot": "2026-11-19T02:14:00+00:00",
       "workflow": "growth-autopilot.yml"
-    },
-    {
-      "late_minutes": 45,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-19T04:08:47+00:00",
-      "slot": "2026-11-19T03:23:00+00:00",
-      "workflow": "monitor.yml"
-    },
-    {
-      "late_minutes": 116,
-      "name": "Produce video",
-      "ran_at": "2026-11-19T01:10:22+00:00",
-      "slot": "2026-11-18T23:14:00+00:00",
-      "workflow": "produce.yml"
-    },
-    {
-      "late_minutes": 21,
-      "name": "Scheduler supervisor",
-      "ran_at": "2026-11-19T04:08:47+00:00",
-      "slot": "2026-11-19T03:47:00+00:00",
-      "workflow": "scheduler-supervisor.yml"
     }
   ],
   "silence_minutes": 0,
