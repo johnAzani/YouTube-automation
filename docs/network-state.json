@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T01:25:50Z",
+  "generated_at": "2026-11-19T01:26:06Z",
   "monitor_generated_at": "2026-11-18T22:10:18.325379+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 472,
+    "published_total": 473,
     "published_longform": 153,
-    "published_shorts": 319,
-    "public_total": 470,
+    "published_shorts": 320,
+    "public_total": 471,
     "queued_longform": 54,
-    "queued_shorts": 65,
+    "queued_shorts": 64,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 42,
+        "published_total": 43,
         "published_longform": 14,
-        "published_shorts": 28,
+        "published_shorts": 29,
         "thumbnail_pending": 5,
-        "public_total": 42,
+        "public_total": 43,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPSALM132V15",
-        "title": "Pray This Psalm 132:15 Prayer for Open Doors & Provision | Walk In Provision #Shorts",
+        "id": "SHORT-PROVISIONRUTH2V12",
+        "title": "Pray This Ruth 2:12 Prayer for Open Doors & Provision | His Wings Are Your Refuge #Shorts",
         "format": "short",
-        "youtube_video_id": "A547xdDnWtQ",
-        "watch_url": "https://www.youtube.com/shorts/A547xdDnWtQ",
-        "published_on": "2026-11-18",
-        "published_at": "2026-11-18T21:01:07Z"
+        "youtube_video_id": "cbo2sEp1ouI",
+        "watch_url": "https://www.youtube.com/shorts/cbo2sEp1ouI",
+        "published_on": "2026-11-19",
+        "published_at": "2026-11-19T01:25:21Z"
       },
       "next_queued_longform": {
         "id": "0514",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionruth2v12",
-        "scripture": "Ruth 2:12",
+        "short": "short-provision2corinthians9v8",
+        "scripture": "2 Corinthians 9:8",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONRUTH2V12",
+      "slug": "short-provisionruth2v12-stewardship-prayer",
+      "file": "short-provisionruth2v12-stewardship-prayer.md",
+      "title": "Pray This Ruth 2:12 Prayer for Open Doors & Provision | His Wings Are Your Refuge #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T01:25:21Z",
+      "youtube_video_id": "cbo2sEp1ouI",
+      "watch_url": "https://www.youtube.com/shorts/cbo2sEp1ouI",
+      "youtu_be_url": "https://youtu.be/cbo2sEp1ouI",
+      "shorts_url": "https://www.youtube.com/shorts/cbo2sEp1ouI",
+      "studio_url": "https://studio.youtube.com/video/cbo2sEp1ouI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/cbo2sEp1ouI/hqdefault.jpg",
+      "thumb_text": "RUTH 2:12 \u00b7 PROVISION",
+      "thumbnail_pending": false,
+      "duration_label": "38s",
+      "words": 634
+    },
     {
       "id": "SHORT-HEALINGPSALM30V2",
       "slug": "short-healingpsalm30v2-restoration-prayer",
@@ -13142,17 +13166,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-provisionruth2v12",
-        "file": "0512-short-provisionruth2v12.yml",
-        "companion_longform_id": "0512",
-        "scripture": "Ruth 2:12",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provision2corinthians9v8",
