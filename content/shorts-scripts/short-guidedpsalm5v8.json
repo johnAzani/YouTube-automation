@@ -1,0 +1,263 @@
+{
+  "key": "short-guidedpsalm5v8",
+  "channel": "prayer10",
+  "psalm": 5,
+  "title": [
+    "LEAD ME",
+    "LORD"
+  ],
+  "poster": [
+    "GUIDANCE",
+    "IN HIS",
+    "RIGHTEOUS",
+    "PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain pass at sunrise",
+    "calm river flowing through quiet forest",
+    "golden light over high alpine valley",
+    "peaceful forest path in early morning",
+    "soft sunlight through dense pine trees",
+    "still lake reflecting mountain peak",
+    "gentle stream winding through valley"
+  ],
+  "scenes": [
+    {
+      "a": "As you stand at this crossroads wondering which step to take, hear this quiet truth.",
+      "img": "short-guidedpsalm5v8-scene-01.jpg",
+      "kicker": "FINDING HIS WAY",
+      "sub": "HEAR HIS VOICE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "There is a path designed for your spirit that honors the Lord in all things.",
+      "img": "short-guidedpsalm5v8-scene-02.jpg",
+      "kicker": "HIS DIRECTION",
+      "sub": "FOLLOW HIS LIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lead me, O LORD, in thy righteousness because of mine enemies; make thy way straight before my face.",
+      "img": "short-guidedpsalm5v8-scene-03.jpg",
+      "kicker": "PSALM 5:8",
+      "sub": "TRUST IN HIS WORD",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, clear the fog from my perspective so I see the path You have prepared.",
+      "img": "short-guidedpsalm5v8-scene-04.jpg",
+      "kicker": "SEEKING WISDOM",
+      "sub": "CLEAR THE FOG",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Quiet my anxious heart so I might recognize Your gentle guidance in this complex situation.",
+      "img": "short-guidedpsalm5v8-scene-05.jpg",
+      "kicker": "HIS PEACE",
+      "sub": "BE STILL AND KNOW",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "May Your light illuminate the next move I make and guard my steps from error.",
+      "img": "short-guidedpsalm5v8-scene-06.jpg",
+      "kicker": "DIVINE GUIDANCE",
+      "sub": "WALK IN HIS LIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I surrender my confusion to You, trusting that You alone know the perfect way forward.",
+      "img": "short-guidedpsalm5v8-scene-07.jpg",
+      "kicker": "TOTAL SURRENDER",
+      "sub": "HE IS YOUR GUIDE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "As you stand at this crossroads wondering which step to take, hear this quiet truth."
+    ],
+    [
+      8,
+      15,
+      "There is a path designed for your spirit that honors the Lord in all things."
+    ],
+    [
+      16,
+      26,
+      "Lead me, O LORD, in thy righteousness because of mine enemies; make thy way straight before my face."
+    ],
+    [
+      27,
+      36,
+      "Father, clear the fog from my perspective so I see the path You have prepared."
+    ],
+    [
+      37,
+      46,
+      "Quiet my anxious heart so I might recognize Your gentle guidance in this complex situation."
+    ],
+    [
+      47,
+      56,
+      "May Your light illuminate the next move I make and guard my steps from error."
+    ],
+    [
+      57,
+      65,
+      "I surrender my confusion to You, trusting that You alone know the perfect way forward."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "AS YOU STAND AT",
+        "THIS CROSSROADS",
+        "WONDERING WHICH STEP",
+        "TO TAKE"
+      ],
+      [
+        "CROSSROADS",
+        "STEP"
+      ],
+      "TRUTH"
+    ],
+    [
+      8,
+      15,
+      [
+        "A PATH DESIGNED FOR",
+        "YOUR SPIRIT",
+        "THAT HONORS THE LORD"
+      ],
+      [
+        "DESIGNED",
+        "SPIRIT"
+      ],
+      "GUIDANCE"
+    ],
+    [
+      16,
+      26,
+      [
+        "LEAD ME O LORD",
+        "IN THY RIGHTEOUSNESS",
+        "BECAUSE OF MINE ENEMIES",
+        "MAKE THY WAY",
+        "STRAIGHT BEFORE MY FACE"
+      ],
+      [
+        "RIGHTEOUSNESS",
+        "STRAIGHT"
+      ],
+      "PSALM 5:8"
+    ],
+    [
+      27,
+      36,
+      [
+        "CLEAR THE FOG",
+        "FROM MY PERSPECTIVE",
+        "SO I SEE",
+        "THE PATH"
+      ],
+      [
+        "CLEAR",
+        "PERSPECTIVE"
+      ],
+      "PRAYER"
+    ],
+    [
+      37,
+      46,
+      [
+        "QUIET MY ANXIOUS HEART",
+        "SO I MIGHT",
+        "RECOGNIZE YOUR",
+        "GENTLE GUIDANCE"
+      ],
+      [
+        "QUIET",
+        "GUIDANCE"
+      ],
+      "PEACE"
+    ],
+    [
+      47,
+      56,
+      [
+        "MAY YOUR LIGHT",
+        "ILLUMINATE THE",
+        "NEXT MOVE I MAKE"
+      ],
+      [
+        "LIGHT",
+        "ILLUMINATE"
+      ],
+      "DIRECTION"
+    ],
+    [
+      57,
+      65,
+      [
+        "I SURRENDER MY",
+        "CONFUSION TO YOU",
+        "TRUSTING THAT YOU",
+        "KNOW THE WAY"
+      ],
+      [
+        "SURRENDER",
+        "TRUSTING"
+      ],
+      "WISDOM"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Lead me, O LORD, in thy righteousness because of mine enemies; make thy way straight before my face.",
+      "kind": "phrase",
+      "words": [
+        "RIGHTEOUSNESS",
+        "STRAIGHT"
+      ],
+      "hi": 16,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 5:8"
+}

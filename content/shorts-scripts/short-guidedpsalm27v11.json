@@ -1,0 +1,269 @@
+{
+  "key": "short-guidedpsalm27v11",
+  "channel": "prayer10",
+  "psalm": 27,
+  "title": [
+    "TEACH ME THY WAY",
+    "A PRAYER FOR GUIDANCE"
+  ],
+  "poster": [
+    "THE PATH AHEAD",
+    "SEEKING HIS WILL",
+    "PRAYER FOR DIRECTION",
+    "KJV WISDOM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain pass at dawn",
+    "still river flowing through forest",
+    "golden light over quiet valley",
+    "path winding through pine trees",
+    "peaceful lake at twilight",
+    "soft morning fog in alpine meadow"
+  ],
+  "scenes": [
+    {
+      "a": "When that decision keeps circling your mind, pause and ask for the Lord's clear direction.",
+      "img": "short-guidedpsalm27v11-scene-01.jpg",
+      "kicker": "PSALM 27:11",
+      "sub": "HEAR HIS VOICE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach me thy way, O LORD, and lead me in a plain path, because of mine enemies.",
+      "img": "short-guidedpsalm27v11-scene-02.jpg",
+      "kicker": "PSALM 27:11",
+      "sub": "HIS WORD IS TRUTH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, I surrender my heavy uncertainty to You now, for my own wisdom is far limited.",
+      "img": "short-guidedpsalm27v11-scene-03.jpg",
+      "kicker": "PSALM 27:11",
+      "sub": "SURRENDER THE BURDEN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Open my eyes to see the route that aligns with Your perfect and holy purposes today.",
+      "img": "short-guidedpsalm27v11-scene-04.jpg",
+      "kicker": "PSALM 27:11",
+      "sub": "CLEAR SIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Remove the confusion that clouds my view and replace it with Your calm, steady assurance instead.",
+      "img": "short-guidedpsalm27v11-scene-05.jpg",
+      "kicker": "PSALM 27:11",
+      "sub": "STEADY ASSURANCE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Guide my every step forward into the light of Your grace, as I trust You alone.",
+      "img": "short-guidedpsalm27v11-scene-06.jpg",
+      "kicker": "PSALM 27:11",
+      "sub": "WALK IN GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "When that decision keeps circling your mind, pause and ask for the Lord's clear direction."
+    ],
+    [
+      8,
+      20,
+      "Teach me thy way, O LORD, and lead me in a plain path, because of mine enemies."
+    ],
+    [
+      20,
+      32,
+      "Lord, I surrender my heavy uncertainty to You now, for my own wisdom is far limited."
+    ],
+    [
+      32,
+      44,
+      "Open my eyes to see the route that aligns with Your perfect and holy purposes today."
+    ],
+    [
+      44,
+      56,
+      "Remove the confusion that clouds my view and replace it with Your calm, steady assurance instead."
+    ],
+    [
+      56,
+      68,
+      "Guide my every step forward into the light of Your grace, as I trust You alone."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "DECISION CIRCLING MIND",
+        "PAUSE AND ASK",
+        "LORD'S CLEAR DIRECTION"
+      ],
+      [
+        "CLEAR DIRECTION"
+      ],
+      "PSALM 27:11"
+    ],
+    [
+      8,
+      20,
+      [
+        "TEACH ME THY WAY",
+        "LEAD ME IN A",
+        "PLAIN PATH"
+      ],
+      [
+        "PLAIN PATH"
+      ],
+      "PSALM 27:11"
+    ],
+    [
+      20,
+      32,
+      [
+        "SURRENDER HEAVY UNCERTAINTY",
+        "MY WISDOM IS",
+        "FAR LIMITED"
+      ],
+      [
+        "SURRENDER"
+      ],
+      "PSALM 27:11"
+    ],
+    [
+      32,
+      44,
+      [
+        "OPEN MY EYES",
+        "ALIGN WITH YOUR",
+        "PERFECT PURPOSES"
+      ],
+      [
+        "PERFECT PURPOSES"
+      ],
+      "PSALM 27:11"
+    ],
+    [
+      44,
+      56,
+      [
+        "REMOVE THE CONFUSION",
+        "CALM STEADY",
+        "ASSURANCE"
+      ],
+      [
+        "STEADY ASSURANCE"
+      ],
+      "PSALM 27:11"
+    ],
+    [
+      56,
+      68,
+      [
+        "GUIDE EVERY STEP",
+        "LIGHT OF GRACE",
+        "TRUST YOU ALONE"
+      ],
+      [
+        "TRUST YOU"
+      ],
+      "PSALM 27:11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When that decision keeps circling your mind, pause and ask for the Lord's clear direction.",
+      "kind": "phrase",
+      "words": [
+        "CLEAR",
+        "DIRECTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach me thy way, O LORD, and lead me in a plain path, because of mine enemies.",
+      "kind": "phrase",
+      "words": [
+        "PLAIN",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, I surrender my heavy uncertainty to You now, for my own wisdom is far limited.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Open my eyes to see the route that aligns with Your perfect and holy purposes today.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT",
+        "PURPOSES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Remove the confusion that clouds my view and replace it with Your calm, steady assurance instead.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "ASSURANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guide my every step forward into the light of Your grace, as I trust You alone.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 27:11"
+}

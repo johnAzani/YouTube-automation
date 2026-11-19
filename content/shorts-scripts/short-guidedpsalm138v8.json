@@ -1,0 +1,271 @@
+{
+  "key": "short-guidedpsalm138v8",
+  "channel": "prayer10",
+  "psalm": 138,
+  "title": [
+    "GOD WILL PERFECT",
+    "EVERY CONCERN"
+  ],
+  "poster": [
+    "A PRAYER FOR",
+    "YOUR WORRIES",
+    "TRUSTING HIS HAND",
+    "THE GUIDED PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "calm mountain lake at twilight",
+    "misty alpine valley dawn",
+    "peaceful river flowing through trees",
+    "golden light on mountain peaks",
+    "still forest reflection in water",
+    "wide shot of vast quiet wilderness"
+  ],
+  "scenes": [
+    {
+      "a": "When that heavy weight of uncertainty presses upon you, remember that you are His creation.",
+      "img": "short-guidedpsalm138v8-scene-01.jpg",
+      "kicker": "PSALM 138:8",
+      "sub": "FINDING STRENGTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The LORD will perfect that which concerneth me: thy mercy, O LORD, endureth for ever: forsake not the works of thine own hands.",
+      "img": "short-guidedpsalm138v8-scene-02.jpg",
+      "kicker": "THE PROMISE",
+      "sub": "HIS MERCY ENDURES",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Lord, I bring this situation before You because my own strength is failing me right now.",
+      "img": "short-guidedpsalm138v8-scene-03.jpg",
+      "kicker": "SURRENDER",
+      "sub": "SEEKING DIVINE WISDOM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Guide my thoughts and steady my hands as I move forward through this difficult season ahead.",
+      "img": "short-guidedpsalm138v8-scene-04.jpg",
+      "kicker": "PRAYER",
+      "sub": "HE IS THE ARCHITECT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let Your perfect will be done in the matter that keeps me awake and searching today.",
+      "img": "short-guidedpsalm138v8-scene-05.jpg",
+      "kicker": "TRUST",
+      "sub": "PEACE IN HIS HANDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "In Your sovereign name, I rest in the truth that You are working behind the scenes.",
+      "img": "short-guidedpsalm138v8-scene-06.jpg",
+      "kicker": "REST",
+      "sub": "GOD IS WORKING",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "When that heavy weight of uncertainty presses upon you, remember that you are His creation."
+    ],
+    [
+      11,
+      26,
+      "The LORD will perfect that which concerneth me: thy mercy, O LORD, endureth for ever: forsake not the works of thine own hands."
+    ],
+    [
+      27,
+      40,
+      "Lord, I bring this situation before You because my own strength is failing me right now."
+    ],
+    [
+      41,
+      55,
+      "Guide my thoughts and steady my hands as I move forward through this difficult season ahead."
+    ],
+    [
+      56,
+      70,
+      "Let Your perfect will be done in the matter that keeps me awake and searching today."
+    ],
+    [
+      71,
+      85,
+      "In Your sovereign name, I rest in the truth that You are working behind the scenes."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "HEAVY WEIGHT",
+        "PRESSING UPON YOU",
+        "REMEMBER HIS CREATION"
+      ],
+      [
+        "HEAVY WEIGHT"
+      ],
+      "PSALM 138:8"
+    ],
+    [
+      11,
+      26,
+      [
+        "THE LORD WILL PERFECT",
+        "THAT WHICH CONCERNETH ME",
+        "THY MERCY ENDURETH FOREVER",
+        "FORSAKE NOT HIS WORKS"
+      ],
+      [
+        "THE LORD WILL PERFECT"
+      ],
+      "PSALM 138:8"
+    ],
+    [
+      27,
+      40,
+      [
+        "I BRING THIS",
+        "BEFORE YOU NOW",
+        "MY STRENGTH FAILS"
+      ],
+      [
+        "I BRING THIS"
+      ],
+      "PSALM 138:8"
+    ],
+    [
+      41,
+      55,
+      [
+        "GUIDE MY THOUGHTS",
+        "STEADY MY HANDS",
+        "THROUGH THIS SEASON"
+      ],
+      [
+        "STEADY MY HANDS"
+      ],
+      "PSALM 138:8"
+    ],
+    [
+      56,
+      70,
+      [
+        "LET YOUR WILL",
+        "BE DONE IN",
+        "THE MATTER TODAY"
+      ],
+      [
+        "LET YOUR WILL"
+      ],
+      "PSALM 138:8"
+    ],
+    [
+      71,
+      85,
+      [
+        "I REST IN TRUTH",
+        "YOU ARE WORKING",
+        "BEHIND THE SCENES"
+      ],
+      [
+        "I REST"
+      ],
+      "PSALM 138:8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When that heavy weight of uncertainty presses upon you, remember that you are His creation.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY WEIGHT",
+        "UNCERTAINTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD will perfect that which concerneth me: thy mercy, O LORD, endureth for ever: forsake not the works of thine own hands.",
+      "kind": "phrase",
+      "words": [
+        "LORD WILL PERFECT",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, I bring this situation before You because my own strength is failing me right now.",
+      "kind": "phrase",
+      "words": [
+        "BRING THIS",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guide my thoughts and steady my hands as I move forward through this difficult season ahead.",
+      "kind": "phrase",
+      "words": [
+        "GUIDE",
+        "STEADY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let Your perfect will be done in the matter that keeps me awake and searching today.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT WILL",
+        "SEARCHING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Your sovereign name, I rest in the truth that You are working behind the scenes.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "WORKING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 138:8"
+}

@@ -1,0 +1,337 @@
+{
+  "key": "short-guidedpsalm73v23",
+  "channel": "prayer10",
+  "psalm": 73,
+  "title": [
+    "HELD BY HIS HAND",
+    "PSALM 73:23-24 WISDOM"
+  ],
+  "poster": [
+    "THE GUIDED PATH",
+    "PRAYER FOR WISDOM",
+    "PSALM 73:23-24",
+    "GOD HOLDS YOUR HAND"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley early morning light",
+    "calm mountain pass sunrise clouds",
+    "quiet river flowing through forest valley",
+    "peaceful mountain peak bathed in morning sun",
+    "misty pine forest mountain valley stream",
+    "dramatic mountain valley sunlight breaking clouds",
+    "serene mountain lake golden hour reflection"
+  ],
+  "scenes": [
+    {
+      "a": "When your own strength feels exhausted and every step ahead seems uncertain, pause right now.",
+      "img": "short-guidedpsalm73v23-scene-01.jpg",
+      "kicker": "PSALM 73:23-24",
+      "sub": "WHEN YOU FEEL UNCERTAIN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear God's Word: Nevertheless I am continually with thee: thou hast holden me by my right hand.",
+      "img": "short-guidedpsalm73v23-scene-02.jpg",
+      "kicker": "PSALM 73:23",
+      "sub": "CONTINUALLY WITH THEE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Thou shalt guide me with thy counsel, and afterward receive me to glory.",
+      "img": "short-guidedpsalm73v23-scene-03.jpg",
+      "kicker": "PSALM 73:24",
+      "sub": "GUIDE ME WITH THY COUNSEL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, when our minds are clouded with confusion and we do not know which way to turn, hold us fast.",
+      "img": "short-guidedpsalm73v23-scene-04.jpg",
+      "kicker": "GUIDANCE PRAYER",
+      "sub": "HOLD US FAST IN CONFUSION",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Clear away our pride, quiet our anxious thoughts, and direct our steps by Your truth.",
+      "img": "short-guidedpsalm73v23-scene-05.jpg",
+      "kicker": "WISDOM & PEACE",
+      "sub": "DIRECT OUR STEPS BY TRUTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Grant us spiritual discernment for every decision we face today, so that we walk securely in Your holy counsel.",
+      "img": "short-guidedpsalm73v23-scene-06.jpg",
+      "kicker": "DISCERNMENT",
+      "sub": "WALK SECURELY IN HIS COUNSEL",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Guided Path for daily wisdom.",
+      "img": "short-guidedpsalm73v23-scene-07.jpg",
+      "kicker": "THE GUIDED PATH",
+      "sub": "SEEK HIS WISDOM DAILY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      9,
+      "When your own strength feels exhausted and every step ahead seems uncertain, pause right now."
+    ],
+    [
+      9,
+      20,
+      "Hear God's Word: Nevertheless I am continually with thee: thou hast holden me by my right hand."
+    ],
+    [
+      20,
+      30,
+      "Thou shalt guide me with thy counsel, and afterward receive me to glory."
+    ],
+    [
+      30,
+      45,
+      "Lord, when our minds are clouded with confusion and we do not know which way to turn, hold us fast."
+    ],
+    [
+      45,
+      60,
+      "Clear away our pride, quiet our anxious thoughts, and direct our steps by Your truth."
+    ],
+    [
+      60,
+      74,
+      "Grant us spiritual discernment for every decision we face today, so that we walk securely in Your holy counsel."
+    ],
+    [
+      74,
+      80,
+      "Subscribe to The Guided Path for daily wisdom."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      9,
+      [
+        "WHEN YOUR STRENGTH",
+        "FEELS EXHAUSTED",
+        "AND EVERY STEP",
+        "SEEMS UNCERTAIN",
+        "PAUSE RIGHT NOW"
+      ],
+      [
+        "EXHAUSTED",
+        "UNCERTAIN",
+        "PAUSE"
+      ],
+      "PSALM 73:23-24"
+    ],
+    [
+      9,
+      20,
+      [
+        "NEVERTHELESS I AM",
+        "CONTINUALLY WITH THEE",
+        "THOU HAST HOLDEN ME",
+        "BY MY RIGHT HAND"
+      ],
+      [
+        "CONTINUALLY",
+        "HOLDEN",
+        "RIGHT HAND"
+      ],
+      "PSALM 73:23"
+    ],
+    [
+      20,
+      30,
+      [
+        "THOU SHALT GUIDE ME",
+        "WITH THY COUNSEL",
+        "AND AFTERWARD",
+        "RECEIVE ME TO GLORY"
+      ],
+      [
+        "GUIDE",
+        "COUNSEL",
+        "GLORY"
+      ],
+      "PSALM 73:24"
+    ],
+    [
+      30,
+      45,
+      [
+        "LORD WHEN OUR MINDS",
+        "ARE CLOUDED WITH CONFUSION",
+        "AND WE DO NOT KNOW",
+        "WHICH WAY TO TURN",
+        "HOLD US FAST"
+      ],
+      [
+        "CLOUDED",
+        "CONFUSION",
+        "HOLD US FAST"
+      ],
+      "GUIDANCE PRAYER"
+    ],
+    [
+      45,
+      60,
+      [
+        "CLEAR AWAY OUR PRIDE",
+        "QUIET ANXIOUS THOUGHTS",
+        "DIRECT OUR STEPS",
+        "BY YOUR TRUTH"
+      ],
+      [
+        "QUIET",
+        "DIRECT",
+        "TRUTH"
+      ],
+      "WISDOM & PEACE"
+    ],
+    [
+      60,
+      74,
+      [
+        "GRANT US DISCERNMENT",
+        "FOR EVERY DECISION",
+        "THAT WE WALK SECURELY",
+        "IN YOUR HOLY COUNSEL"
+      ],
+      [
+        "DISCERNMENT",
+        "SECURELY",
+        "HOLY COUNSEL"
+      ],
+      "DISCERNMENT"
+    ],
+    [
+      74,
+      80,
+      [
+        "SUBSCRIBE TO",
+        "THE GUIDED PATH",
+        "FOR DAILY WISDOM"
+      ],
+      [
+        "SUBSCRIBE",
+        "DAILY WISDOM"
+      ],
+      "THE GUIDED PATH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When your own strength feels exhausted and every step ahead seems uncertain, pause right now.",
+      "kind": "phrase",
+      "words": [
+        "EXHAUSTED",
+        "UNCERTAIN",
+        "PAUSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear God's Word: Nevertheless I am continually with thee: thou hast holden me by my right hand.",
+      "kind": "phrase",
+      "words": [
+        "CONTINUALLY",
+        "HOLDEN",
+        "HAND"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Thou shalt guide me with thy counsel, and afterward receive me to glory.",
+      "kind": "phrase",
+      "words": [
+        "GUIDE",
+        "COUNSEL",
+        "GLORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when our minds are clouded with confusion and we do not know which way to turn, hold us fast.",
+      "kind": "phrase",
+      "words": [
+        "CLOUDED",
+        "CONFUSION",
+        "HOLD"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Clear away our pride, quiet our anxious thoughts, and direct our steps by Your truth.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "DIRECT",
+        "TRUTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us spiritual discernment for every decision we face today, so that we walk securely in Your holy counsel.",
+      "kind": "phrase",
+      "words": [
+        "DISCERNMENT",
+        "SECURELY",
+        "COUNSEL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Guided Path for daily wisdom.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 73:23-24"
+}
