@@ -1,6 +1,6 @@
 ---
 id: '0403'
-title: Isaiah 40:29-31 Healing Prayer | The Healing Balm
+title: "When You Are Faint and Weary: Isaiah 40:29-31 | The Healing Balm"
 slug: isaiah-40-29-31-healing-prayer
 status: published
 channel: prayer6
@@ -76,10 +76,13 @@ originality:
 published_on: "2026-11-12"
 published_at: "2026-11-12T20:40:46Z"
 youtube_video_id: "qdnrS9W0XtQ"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Isaiah 40:29-31 Healing Prayer | The Healing Balm"
+retitled_at: "2026-11-19"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith
