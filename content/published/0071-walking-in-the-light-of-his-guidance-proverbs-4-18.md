@@ -2,7 +2,7 @@
 id: '0071'
 title: 'Walking in the Light of His Guidance: Proverbs 4:18'
 slug: walking-in-the-light-of-his-guidance-proverbs-4-18
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -73,6 +73,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-19"
+published_at: "2026-11-19T16:09:12Z"
+youtube_video_id: "Nf5Ghz7lLMw"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Sunrise Hook and Directing the Prayer

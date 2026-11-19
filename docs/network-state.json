@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T16:08:15Z",
+  "generated_at": "2026-11-19T16:09:56Z",
   "monitor_generated_at": "2026-11-19T11:54:23.137750+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 499,
-    "published_longform": 159,
-    "published_shorts": 340,
-    "public_total": 497,
-    "queued_longform": 61,
-    "queued_shorts": 94,
+    "published_total": 501,
+    "published_longform": 160,
+    "published_shorts": 341,
+    "public_total": 499,
+    "queued_longform": 60,
+    "queued_shorts": 93,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,33 +101,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 75,
-        "published_longform": 27,
-        "published_shorts": 48,
+        "published_total": 77,
+        "published_longform": 28,
+        "published_shorts": 49,
         "thumbnail_pending": 1,
-        "public_total": 74,
-        "queued_longform": 6,
+        "public_total": 76,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MORNINGEXODUS33V14",
-        "title": "Say This Exodus 33:14 Prayer at Sunrise | Finding Strength At Dawn #Shorts",
-        "format": "short",
-        "youtube_video_id": "1radoGUITes",
-        "watch_url": "https://www.youtube.com/shorts/1radoGUITes",
-        "published_on": "2026-11-19",
-        "published_at": "2026-11-19T11:56:23Z"
-      },
-      "next_queued_longform": {
         "id": "0071",
         "title": "Walking in the Light of His Guidance: Proverbs 4:18",
-        "words": 1029,
+        "format": "longform",
+        "youtube_video_id": "Nf5Ghz7lLMw",
+        "watch_url": "https://youtu.be/Nf5Ghz7lLMw",
+        "published_on": "2026-11-19",
+        "published_at": "2026-11-19T16:09:12Z"
+      },
+      "next_queued_longform": {
+        "id": "0072",
+        "title": "Giving God Your Day: Proverbs 16:9 | The Morning Altar",
+        "words": 1746,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morning1chronicles4v10",
-        "scripture": "1 Chronicles 4:10",
+        "short": "short-morningjob38v12",
+        "scripture": "Job 38:12",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0071",
+      "slug": "walking-in-the-light-of-his-guidance-proverbs-4-18",
+      "file": "0071-walking-in-the-light-of-his-guidance-proverbs-4-18.md",
+      "title": "Walking in the Light of His Guidance: Proverbs 4:18",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T16:09:12Z",
+      "youtube_video_id": "Nf5Ghz7lLMw",
+      "watch_url": "https://youtu.be/Nf5Ghz7lLMw",
+      "youtu_be_url": "https://youtu.be/Nf5Ghz7lLMw",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/Nf5Ghz7lLMw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Nf5Ghz7lLMw/hqdefault.jpg",
+      "thumb_text": "SHINING MORE AND MORE",
+      "thumbnail_pending": false,
+      "duration_label": "~7 min",
+      "words": 1029
+    },
+    {
       "id": "SHORT-GUIDEDPSALM27V11",
       "slug": "short-guidedpsalm27v11-guidance-prayer",
       "file": "short-guidedpsalm27v11-guidance-prayer.md",
@@ -820,6 +844,30 @@
       "thumbnail_pending": false,
       "duration_label": "51s",
       "words": 649
+    },
+    {
+      "id": "SHORT-MORNING1CHRONICLES4V10",
+      "slug": "short-morning1chronicles4v10-sunrise-prayer",
+      "file": "short-morning1chronicles4v10-sunrise-prayer.md",
+      "title": "Say This 1 Chronicles 4:10 Prayer at Sunrise | Surrender Your Ambitions #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T15:36:17Z",
+      "youtube_video_id": "CM073cs4AmY",
+      "watch_url": "https://www.youtube.com/shorts/CM073cs4AmY",
+      "youtu_be_url": "https://youtu.be/CM073cs4AmY",
+      "shorts_url": "https://www.youtube.com/shorts/CM073cs4AmY",
+      "studio_url": "https://studio.youtube.com/video/CM073cs4AmY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/CM073cs4AmY/hqdefault.jpg",
+      "thumb_text": "JABEZ'S PRAYER \u00b7 FOR EXPANSION",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 602
     },
     {
       "id": "SHORT-HEBREWS13V5",
@@ -12772,19 +12820,6 @@
         "words": 1025
       },
       {
-        "id": "0071",
-        "slug": "walking-in-the-light-of-his-guidance-proverbs-4-18",
-        "file": "0071-walking-in-the-light-of-his-guidance-proverbs-4-18.md",
-        "title": "Walking in the Light of His Guidance: Proverbs 4:18",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1029
-      },
-      {
         "id": "0072",
         "slug": "when-your-plans-change-at-dawn-proverbs-16-9-the-morning-altar",
         "file": "0072-when-your-plans-change-at-dawn-proverbs-16-9-the-morning-altar.md",
@@ -13617,17 +13652,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morning1chronicles4v10",
-        "file": "0000-short-morning1chronicles4v10.yml",
-        "companion_longform_id": "",
-        "scripture": "1 Chronicles 4:10",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningjob38v12",
