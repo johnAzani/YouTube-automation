@@ -1,0 +1,279 @@
+{
+  "key": "short-middayhebrews4v16",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "COME BOLDLY TO",
+    "THE THRONE OF GRACE"
+  ],
+  "poster": [
+    "MIDDAY PRAYER",
+    "HEBREWS 4:16",
+    "FIND GRACE IN NEED",
+    "THE MIDDAY WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sun beaming through office window quiet desk",
+    "bright sunlight on calm outdoor open meadow",
+    "soft midday light streaming onto clean wooden table",
+    "bright noon sun shining through sheer curtains",
+    "sunlit peaceful courtyard midday shadow",
+    "warm midday light on open Bible notebook desk"
+  ],
+  "scenes": [
+    {
+      "a": "If the weight of this midday decision is draining your strength",
+      "img": "short-middayhebrews4v16-scene-01.jpg",
+      "kicker": "HEBREWS 4:16",
+      "sub": "APPROACH GOD WITH CONFIDENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Let us therefore come boldly unto the throne of grace",
+      "img": "short-middayhebrews4v16-scene-02.jpg",
+      "kicker": "HEBREWS 4:16",
+      "sub": "THE THRONE OF GRACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "we bring our tired minds and mounting pressure straight to You",
+      "img": "short-middayhebrews4v16-scene-03.jpg",
+      "kicker": "HEBREWS 4:16",
+      "sub": "MIDDAY STRENGTH AND PEACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We do not tiptoe into Your presence",
+      "img": "short-middayhebrews4v16-scene-04.jpg",
+      "kicker": "HEBREWS 4:16",
+      "sub": "DRAW NEAR WITHOUT FEAR",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant us mercy for our stumbles and timely grace",
+      "img": "short-middayhebrews4v16-scene-05.jpg",
+      "kicker": "HEBREWS 4:16",
+      "sub": "GRACE IN TIME OF NEED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Calm our hearts and fill this room with Your peace",
+      "img": "short-middayhebrews4v16-scene-06.jpg",
+      "kicker": "HEBREWS 4:16",
+      "sub": "MIDDAY PRAYER WATCH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If the weight of this midday decision is draining your strength, do not suffer alone."
+    ],
+    [
+      7,
+      16,
+      "Let us therefore come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need."
+    ],
+    [
+      16,
+      24,
+      "Lord, at this high noon hour, we bring our tired minds and mounting pressure straight to You."
+    ],
+    [
+      24,
+      32,
+      "We do not tiptoe into Your presence, but step forward with confidence in Your love."
+    ],
+    [
+      32,
+      40,
+      "Grant us mercy for our stumbles and timely grace for the tasks remaining today."
+    ],
+    [
+      40,
+      48,
+      "Calm our hearts and fill this room with Your peace. Subscribe to pray with us every midday on The Midday Watch."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF THE WEIGHT OF THIS MIDDAY DECISION",
+        "IS DRAINING YOUR STRENGTH",
+        "DO NOT SUFFER ALONE"
+      ],
+      [
+        "MIDDAY DECISION",
+        "STRENGTH"
+      ],
+      "HEBREWS 4:16"
+    ],
+    [
+      7,
+      16,
+      [
+        "LET US THEREFORE COME BOLDLY",
+        "UNTO THE THRONE OF GRACE",
+        "THAT WE MAY OBTAIN MERCY",
+        "AND FIND GRACE TO HELP"
+      ],
+      [
+        "BOLDLY",
+        "THRONE OF GRACE",
+        "MERCY"
+      ],
+      "HEBREWS 4:16"
+    ],
+    [
+      16,
+      24,
+      [
+        "AT THIS HIGH NOON HOUR",
+        "WE BRING OUR TIRED MINDS",
+        "AND MOUNTING PRESSURE",
+        "STRAIGHT TO YOU"
+      ],
+      [
+        "HIGH NOON HOUR",
+        "TIRED MINDS"
+      ],
+      "HEBREWS 4:16"
+    ],
+    [
+      24,
+      32,
+      [
+        "WE DO NOT TIPTOE",
+        "INTO YOUR PRESENCE",
+        "BUT STEP FORWARD WITH CONFIDENCE",
+        "IN YOUR LOVE"
+      ],
+      [
+        "CONFIDENCE",
+        "YOUR LOVE"
+      ],
+      "HEBREWS 4:16"
+    ],
+    [
+      32,
+      40,
+      [
+        "GRANT US MERCY FOR OUR STUMBLES",
+        "AND TIMELY GRACE FOR THE TASKS",
+        "REMAINING TODAY"
+      ],
+      [
+        "MERCY",
+        "TIMELY GRACE"
+      ],
+      "HEBREWS 4:16"
+    ],
+    [
+      40,
+      48,
+      [
+        "CALM OUR HEARTS AND FILL THIS ROOM",
+        "WITH YOUR PEACE",
+        "SUBSCRIBE TO PRAY WITH US",
+        "EVERY MIDDAY"
+      ],
+      [
+        "PEACE",
+        "EVERY MIDDAY"
+      ],
+      "HEBREWS 4:16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the weight of this midday decision is draining your strength",
+      "kind": "phrase",
+      "words": [
+        "MIDDAY DECISION",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let us therefore come boldly unto the throne of grace",
+      "kind": "phrase",
+      "words": [
+        "BOLDLY",
+        "THRONE OF GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "we bring our tired minds and mounting pressure straight to You",
+      "kind": "phrase",
+      "words": [
+        "TIRED MINDS",
+        "MOUNTING PRESSURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We do not tiptoe into Your presence",
+      "kind": "phrase",
+      "words": [
+        "INTO YOUR PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us mercy for our stumbles and timely grace",
+      "kind": "phrase",
+      "words": [
+        "MERCY",
+        "TIMELY GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Calm our hearts and fill this room with Your peace",
+      "kind": "phrase",
+      "words": [
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Hebrews 4:16"
+}

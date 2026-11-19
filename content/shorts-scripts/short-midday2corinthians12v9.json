@@ -1,0 +1,276 @@
+{
+  "key": "short-midday2corinthians12v9",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "GOD'S STRENGTH",
+    "IN YOUR WEAKNESS"
+  ],
+  "poster": [
+    "THE MIDDAY WATCH",
+    "2 CORINTHIANS 12:9",
+    "A MIDDAY PRAYER",
+    "FOR THE WEARY"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "soft sunbeams on wooden desk",
+    "abstract motion of golden light",
+    "close up of indoor plant leaves",
+    "calm view of clouds through window",
+    "bright empty office space",
+    "warm afternoon light on white wall"
+  ],
+  "scenes": [
+    {
+      "a": "That stubborn limitation",
+      "img": "short-midday2corinthians12v9-scene-01.jpg",
+      "kicker": "2 CORINTHIANS 12:9",
+      "sub": "FINDING STRENGTH AT MIDDAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "you have been carrying",
+      "img": "short-midday2corinthians12v9-scene-02.jpg",
+      "kicker": "2 CORINTHIANS 12:9",
+      "sub": "HIS GRACE IS SUFFICIENT",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "My grace is sufficient",
+      "img": "short-midday2corinthians12v9-scene-03.jpg",
+      "kicker": "2 CORINTHIANS 12:9",
+      "sub": "THE PROMISE OF CHRIST",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "for my strength is",
+      "img": "short-midday2corinthians12v9-scene-04.jpg",
+      "kicker": "2 CORINTHIANS 12:9",
+      "sub": "PERFECTED IN WEAKNESS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "that the power of",
+      "img": "short-midday2corinthians12v9-scene-05.jpg",
+      "kicker": "2 CORINTHIANS 12:9",
+      "sub": "RESTING IN HIS POWER",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to stay",
+      "img": "short-midday2corinthians12v9-scene-06.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "PAUSE AND PRAY AT NOON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That stubborn limitation you have been carrying is exactly where Christ meets you today."
+    ],
+    [
+      9,
+      18,
+      "And he said unto me, My grace is sufficient for thee: for my strength is made perfect in weakness."
+    ],
+    [
+      19,
+      27,
+      "Most gladly therefore will I rather glory in my infirmities, that the power of Christ may rest upon me."
+    ],
+    [
+      28,
+      36,
+      "Lord, help me stop fighting my limits and start trusting the sufficiency of your divine grace."
+    ],
+    [
+      37,
+      46,
+      "Let your power settle over my restless heart as I continue through this busy afternoon hour."
+    ],
+    [
+      47,
+      55,
+      "Subscribe to stay connected to these prayers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT STUBBORN LIMITATION",
+        "YOU HAVE BEEN",
+        "CARRYING TODAY"
+      ],
+      [
+        "LIMITATION",
+        "CARRYING"
+      ],
+      "2 COR 12:9"
+    ],
+    [
+      9,
+      18,
+      [
+        "MY GRACE IS SUFFICIENT",
+        "FOR MY STRENGTH",
+        "IS MADE PERFECT"
+      ],
+      [
+        "GRACE",
+        "SUFFICIENT",
+        "PERFECT"
+      ],
+      "2 COR 12:9"
+    ],
+    [
+      19,
+      27,
+      [
+        "GLORY IN MY INFIRMITIES",
+        "THAT THE POWER",
+        "OF CHRIST MAY REST"
+      ],
+      [
+        "GLORY",
+        "POWER",
+        "REST"
+      ],
+      "2 COR 12:9"
+    ],
+    [
+      28,
+      36,
+      [
+        "STOP FIGHTING LIMITS",
+        "TRUSTING THE SUFFICIENCY",
+        "OF DIVINE GRACE"
+      ],
+      [
+        "TRUSTING",
+        "SUFFICIENCY"
+      ],
+      "2 COR 12:9"
+    ],
+    [
+      37,
+      46,
+      [
+        "LET YOUR POWER",
+        "SETTLE OVER MY",
+        "RESTLESS HEART NOW"
+      ],
+      [
+        "POWER",
+        "RESTLESS"
+      ],
+      "2 COR 12:9"
+    ],
+    [
+      47,
+      55,
+      [
+        "SUBSCRIBE TO STAY",
+        "CONNECTED TO THESE",
+        "PRAYERS EACH DAY"
+      ],
+      [
+        "SUBSCRIBE",
+        "CONNECTED"
+      ],
+      "2 COR 12:9"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That stubborn limitation",
+      "kind": "phrase",
+      "words": [
+        "LIMITATION",
+        "CARRYING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "you have been carrying",
+      "kind": "phrase",
+      "words": [
+        "CARRYING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "My grace is sufficient",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "SUFFICIENT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "for my strength is",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "PERFECT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "that the power of",
+      "kind": "phrase",
+      "words": [
+        "POWER",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to stay",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Corinthians 12:9"
+}

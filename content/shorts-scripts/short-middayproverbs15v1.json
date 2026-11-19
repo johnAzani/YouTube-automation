@@ -1,0 +1,286 @@
+{
+  "key": "short-middayproverbs15v1",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "A SOFT ANSWER",
+    "TURNS AWAY WRATH"
+  ],
+  "poster": [
+    "PROVERBS 15:1",
+    "A SOFT ANSWER",
+    "TURNETH AWAY WRATH",
+    "THE MIDDAY WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sun shining through office window onto wooden desk",
+    "bright sunlight illuminating quiet open Bible on wooden table",
+    "calm sunlit garden courtyard midday light silent stillness",
+    "high midday sun casting soft light over peaceful valley",
+    "gentle sunlight filtering through quiet room window",
+    "bright midday sky above calm blue water reflection"
+  ],
+  "scenes": [
+    {
+      "a": "Before you send that sharp reply",
+      "img": "short-middayproverbs15v1-scene-01.jpg",
+      "kicker": "PROVERBS 15:1",
+      "sub": "BRING YOUR ANGER TO THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "A soft answer turneth away wrath",
+      "img": "short-middayproverbs15v1-scene-02.jpg",
+      "kicker": "PROVERBS 15:1",
+      "sub": "A SOFT ANSWER TURNETH AWAY WRATH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "guard our words when frustrated tempers flare",
+      "img": "short-middayproverbs15v1-scene-03.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "GUARD OUR WORDS TODAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "give us gentle wisdom to respond with steady patience",
+      "img": "short-middayproverbs15v1-scene-04.jpg",
+      "kicker": "GENTLE RESPONSE",
+      "sub": "RESPOND WITH PATIENCE NOT PRIDE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "peace may reign over heated words",
+      "img": "short-middayproverbs15v1-scene-05.jpg",
+      "kicker": "HEAVENLY PEACE",
+      "sub": "LET PEACE GOVERN YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to join us every day as we pray at noon",
+      "img": "short-middayproverbs15v1-scene-06.jpg",
+      "kicker": "THE MIDDAY WATCH",
+      "sub": "PAUSE AND PRAY AT NOON",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Before you send that sharp reply, bring your rising anger to the Lord."
+    ],
+    [
+      8,
+      17,
+      "God's Word tells us in Proverbs fifteen verse one: A soft answer turneth away wrath: but grievous words stir up anger."
+    ],
+    [
+      17,
+      26,
+      "Heavenly Father, in this midday hour, guard our words when frustrated tempers flare."
+    ],
+    [
+      26,
+      36,
+      "When an unfair comment burns or tension rises in the room, give us gentle wisdom to respond with steady patience rather than pride."
+    ],
+    [
+      36,
+      45,
+      "Cool our hearts with your Holy Spirit so that peace may reign over heated words."
+    ],
+    [
+      45,
+      52,
+      "Subscribe to join us every day as we pray at noon on The Midday Watch."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "BEFORE YOU SEND",
+        "THAT SHARP REPLY",
+        "BRING YOUR ANGER",
+        "TO THE LORD"
+      ],
+      [
+        "SHARP",
+        "REPLY",
+        "LORD"
+      ],
+      "PROVERBS 15 : 1"
+    ],
+    [
+      8,
+      17,
+      [
+        "A SOFT ANSWER",
+        "TURNETH AWAY WRATH",
+        "BUT GRIEVOUS WORDS",
+        "STIR UP ANGER"
+      ],
+      [
+        "SOFT",
+        "ANSWER",
+        "WRATH"
+      ],
+      "PROVERBS 15 : 1"
+    ],
+    [
+      17,
+      26,
+      [
+        "GUARD OUR WORDS",
+        "WHEN FRUSTRATED",
+        "TEMPERS FLARE"
+      ],
+      [
+        "GUARD",
+        "WORDS",
+        "FLARE"
+      ],
+      "PROVERBS 15 : 1"
+    ],
+    [
+      26,
+      36,
+      [
+        "GIVE US GENTLE",
+        "WISDOM TO RESPOND",
+        "WITH PATIENCE",
+        "NOT PRIDE"
+      ],
+      [
+        "GENTLE",
+        "WISDOM",
+        "PATIENCE"
+      ],
+      "PROVERBS 15 : 1"
+    ],
+    [
+      36,
+      45,
+      [
+        "COOL OUR HEARTS",
+        "THAT PEACE MAY",
+        "REIGN OVER",
+        "HEATED WORDS"
+      ],
+      [
+        "PEACE",
+        "REIGN",
+        "HEARTS"
+      ],
+      "PROVERBS 15 : 1"
+    ],
+    [
+      45,
+      52,
+      [
+        "SUBSCRIBE TO JOIN US",
+        "EVERY DAY AT NOON",
+        "ON THE MIDDAY WATCH"
+      ],
+      [
+        "SUBSCRIBE",
+        "NOON",
+        "MIDDAY"
+      ],
+      "PROVERBS 15 : 1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Before you send that sharp reply",
+      "kind": "phrase",
+      "words": [
+        "SHARP",
+        "REPLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "A soft answer turneth away wrath",
+      "kind": "phrase",
+      "words": [
+        "SOFT",
+        "ANSWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "guard our words when frustrated tempers flare",
+      "kind": "phrase",
+      "words": [
+        "GUARD",
+        "WORDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "give us gentle wisdom to respond with steady patience",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "peace may reign over heated words",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "REIGN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join us every day as we pray at noon",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "MIDDAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 15:1"
+}
