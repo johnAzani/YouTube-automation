@@ -2,7 +2,7 @@
 id: 0029
 title: "Bedtime Prayer for a Troubled Heart: John 14:27 | The Secret Place"
 slug: john-14-27-my-peace-i-give-unto-you
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -85,6 +85,16 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this John 14:27 KJV bedtime prayer before sleep to receive Christ's deep peace and calm a troubled or anxious heart tonight.
 category_id: '22'
+published_on: "2026-11-19"
+published_at: "2026-11-19T21:48:38Z"
+youtube_video_id: "uGkV42GvplM"
+metadata_revision: "selar-seo-v1"
+prayer_seconds: 478.2
+duration_seconds: 11278.7
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Peace I Leave with You (Verse 27a)

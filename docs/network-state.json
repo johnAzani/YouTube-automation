@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T21:40:39Z",
+  "generated_at": "2026-11-19T21:49:24Z",
   "monitor_generated_at": "2026-11-19T20:50:27.857648+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 514,
-    "published_longform": 163,
-    "published_shorts": 351,
-    "public_total": 512,
-    "queued_longform": 57,
-    "queued_shorts": 83,
+    "published_total": 516,
+    "published_longform": 164,
+    "published_shorts": 352,
+    "public_total": 514,
+    "queued_longform": 56,
+    "queued_shorts": 82,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,33 +33,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 70,
-        "published_longform": 20,
-        "published_shorts": 50,
+        "published_total": 72,
+        "published_longform": 21,
+        "published_shorts": 51,
         "thumbnail_pending": 6,
-        "public_total": 69,
-        "queued_longform": 7,
+        "public_total": 71,
+        "queued_longform": 6,
         "queued_other": 5,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-HEBREWS13V5",
-        "title": "Say This Hebrews 13:5-6 Prayer Before You Sleep | You Always #Shorts",
-        "format": "short",
-        "youtube_video_id": "OLctySAFnJw",
-        "watch_url": "https://www.youtube.com/shorts/OLctySAFnJw",
-        "published_on": "2026-11-19",
-        "published_at": "2026-11-19T15:32:56Z"
-      },
-      "next_queued_longform": {
         "id": "0029",
         "title": "Bedtime Prayer for a Troubled Heart: John 14:27 | The Secret Place",
-        "words": 1075,
+        "format": "longform",
+        "youtube_video_id": "uGkV42GvplM",
+        "watch_url": "https://youtu.be/uGkV42GvplM",
+        "published_on": "2026-11-19",
+        "published_at": "2026-11-19T21:48:38Z"
+      },
+      "next_queued_longform": {
+        "id": "0030",
+        "title": "Bedtime Prayer for Anxiety and Overthinking: Philippians 4:6-7",
+        "words": 895,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-isaiah40v28",
-        "scripture": "Isaiah 40:28-31",
+        "short": "short-psalm119v55",
+        "scripture": "Psalm 119:55",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0029",
+      "slug": "john-14-27-my-peace-i-give-unto-you",
+      "file": "0029-john-14-27-my-peace-i-give-unto-you.md",
+      "title": "Bedtime Prayer for a Troubled Heart: John 14:27 | The Secret Place",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T21:48:38Z",
+      "youtube_video_id": "uGkV42GvplM",
+      "watch_url": "https://youtu.be/uGkV42GvplM",
+      "youtu_be_url": "https://youtu.be/uGkV42GvplM",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/uGkV42GvplM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/uGkV42GvplM/hqdefault.jpg",
+      "thumb_text": "HIS DEEP PEACE",
+      "thumbnail_pending": false,
+      "duration_label": "187m 59s",
+      "words": 1075
+    },
+    {
       "id": "0413",
       "slug": "when-your-strength-is-gone-2-corinthians-12-9-the-healing-balm",
       "file": "0413-when-your-strength-is-gone-2-corinthians-12-9-the-healing-balm.md",
@@ -868,6 +892,30 @@
       "thumbnail_pending": true,
       "duration_label": "50s",
       "words": 657
+    },
+    {
+      "id": "SHORT-ISAIAH40V28",
+      "slug": "short-isaiah40v28-pre-sleep-prayer",
+      "file": "short-isaiah40v28-pre-sleep-prayer.md",
+      "title": "Say This Isaiah 40:28-31 Prayer Before You Sleep | Rest In His Power #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T21:00:49Z",
+      "youtube_video_id": "f8o4zsaFDQ4",
+      "watch_url": "https://www.youtube.com/shorts/f8o4zsaFDQ4",
+      "youtu_be_url": "https://youtu.be/f8o4zsaFDQ4",
+      "shorts_url": "https://www.youtube.com/shorts/f8o4zsaFDQ4",
+      "studio_url": "https://studio.youtube.com/video/f8o4zsaFDQ4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/f8o4zsaFDQ4/hqdefault.jpg",
+      "thumb_text": "ISAIAH 40:28-31 \u00b7 THE SECRET PLACE",
+      "thumbnail_pending": false,
+      "duration_label": "56s",
+      "words": 638
     },
     {
       "id": "SHORT-MIDNIGHTGENESIS32V24",
@@ -13041,19 +13089,6 @@
   "queues": {
     "longform": [
       {
-        "id": "0029",
-        "slug": "john-14-27-my-peace-i-give-unto-you",
-        "file": "0029-john-14-27-my-peace-i-give-unto-you.md",
-        "title": "Bedtime Prayer for a Troubled Heart: John 14:27 | The Secret Place",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1075
-      },
-      {
         "id": "0030",
         "slug": "philippians-4-6-7-the-peace-that-guards-heart-and-mind",
         "file": "0030-philippians-4-6-7-the-peace-that-guards-heart-and-mind.md",
@@ -13826,17 +13861,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-isaiah40v28",
-        "file": "0000-short-isaiah40v28.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 40:28-31",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-middayphilippians4v13",
