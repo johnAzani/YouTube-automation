@@ -1,0 +1,221 @@
+{
+  "key": "short-familyproverbs14v26",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "STRONG CONFIDENCE",
+    "FOR YOUR HOME"
+  ],
+  "poster": [
+    "GOD IS YOUR",
+    "SHELTER",
+    "IN THE FEAR",
+    "OF THE LORD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp light on an open leather bible on a wooden table",
+    "gentle morning sunlight streaming through a kitchen window",
+    "soft golden light illuminating olive branches in a ceramic vase",
+    "peaceful rolling hills at dusk through a rustic window frame",
+    "quiet home interior with soft shadows and glowing hearth",
+    "empty wooden dining table with a steaming cup of tea"
+  ],
+  "scenes": [
+    {
+      "a": "If you are bracing yourself for a difficult conversation within your home, listen to this.",
+      "img": "short-familyproverbs14v26-scene-01.jpg",
+      "kicker": "PROVERBS 14:26",
+      "sub": "GOD IS OUR REFUGE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, we bring our household before You, seeking Your wisdom to anchor our hearts.",
+      "img": "short-familyproverbs14v26-scene-02.jpg",
+      "kicker": "PROVERBS 14:26",
+      "sub": "GUIDANCE FOR THE HOUSEHOLD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "In the fear of the LORD is strong confidence: and his children shall have a place of refuge.",
+      "img": "short-familyproverbs14v26-scene-03.jpg",
+      "kicker": "PROVERBS 14:26",
+      "sub": "HIS WORD IS TRUTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "May this confidence define how we speak to one another and how we face our fears.",
+      "img": "short-familyproverbs14v26-scene-04.jpg",
+      "kicker": "PROVERBS 14:26",
+      "sub": "FINDING STRENGTH TOGETHER",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Let our home be a sanctuary where Your peace dwells, sheltering every soul beneath Your grace.",
+      "img": "short-familyproverbs14v26-scene-05.jpg",
+      "kicker": "PROVERBS 14:26",
+      "sub": "A SANCTUARY OF PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "We rest in You, trusting that You hold our future and protect our quiet dwelling place.",
+      "img": "short-familyproverbs14v26-scene-06.jpg",
+      "kicker": "PROVERBS 14:26",
+      "sub": "TRUSTING IN HIS CARE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "If you are bracing yourself for a difficult conversation within your home, listen to this."
+    ],
+    [
+      10,
+      25,
+      "Heavenly Father, we bring our household before You, seeking Your wisdom to anchor our hearts."
+    ],
+    [
+      25,
+      45,
+      "In the fear of the LORD is strong confidence: and his children shall have a place of refuge."
+    ],
+    [
+      45,
+      60,
+      "May this confidence define how we speak to one another and how we face our fears."
+    ],
+    [
+      60,
+      78,
+      "Let our home be a sanctuary where Your peace dwells, sheltering every soul beneath Your grace."
+    ],
+    [
+      78,
+      95,
+      "We rest in You, trusting that You hold our future and protect our quiet dwelling place."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "BRACING FOR A",
+        "DIFFICULT CONVERSATION",
+        "WITHIN YOUR HOME"
+      ],
+      [
+        "DIFFICULT CONVERSATION"
+      ],
+      "PROVERBS 14:26"
+    ],
+    [
+      10,
+      25,
+      [
+        "BRINGING OUR HOUSEHOLD",
+        "BEFORE YOU",
+        "SEEKING YOUR WISDOM"
+      ],
+      [
+        "SEEKING YOUR WISDOM"
+      ],
+      "PROVERBS 14:26"
+    ],
+    [
+      25,
+      45,
+      [
+        "IN THE FEAR OF",
+        "THE LORD",
+        "IS STRONG CONFIDENCE",
+        "A PLACE OF REFUGE"
+      ],
+      [
+        "STRONG CONFIDENCE"
+      ],
+      "PROVERBS 14:26"
+    ],
+    [
+      45,
+      60,
+      [
+        "THIS CONFIDENCE DEFINES",
+        "HOW WE SPEAK",
+        "HOW WE FACE FEARS"
+      ],
+      [
+        "THIS CONFIDENCE"
+      ],
+      "PROVERBS 14:26"
+    ],
+    [
+      60,
+      78,
+      [
+        "A SANCTUARY",
+        "WHERE PEACE DWELLS",
+        "SHELTERING EVERY SOUL"
+      ],
+      [
+        "SANCTUARY"
+      ],
+      "PROVERBS 14:26"
+    ],
+    [
+      78,
+      95,
+      [
+        "WE REST IN YOU",
+        "TRUSTING YOUR PROTECTION",
+        "OF OUR DWELLING"
+      ],
+      [
+        "REST IN YOU"
+      ],
+      "PROVERBS 14:26"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "In the fear of the LORD is strong confidence: and his children shall have a place of refuge.",
+      "kind": "phrase",
+      "words": [
+        "STRONG",
+        "CONFIDENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 14:26"
+}
