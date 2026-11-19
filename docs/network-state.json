@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T15:46:43Z",
+  "generated_at": "2026-11-19T15:54:22Z",
   "monitor_generated_at": "2026-11-19T11:54:23.137750+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 496,
+    "published_total": 497,
     "published_longform": 159,
-    "published_shorts": 337,
-    "public_total": 494,
+    "published_shorts": 338,
+    "public_total": 495,
     "queued_longform": 61,
-    "queued_shorts": 97,
+    "queued_shorts": 96,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 35,
+        "published_total": 36,
         "published_longform": 9,
-        "published_shorts": 26,
-        "thumbnail_pending": 35,
-        "public_total": 35,
+        "published_shorts": 27,
+        "thumbnail_pending": 36,
+        "public_total": 36,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-GARDENISAIAH12V2",
-        "title": "Pray This Isaiah 12:2-5 Prayer of Thanksgiving | Trust In The Lord #Shorts",
+        "id": "SHORT-GARDENLUKE17V15",
+        "title": "Pray This Luke 17:15-16 Prayer of Thanksgiving | Enter His Gates #Shorts",
         "format": "short",
-        "youtube_video_id": "A-GuAfEFIdQ",
-        "watch_url": "https://www.youtube.com/shorts/A-GuAfEFIdQ",
+        "youtube_video_id": "nqmLfwe8ano",
+        "watch_url": "https://www.youtube.com/shorts/nqmLfwe8ano",
         "published_on": "2026-11-19",
-        "published_at": "2026-11-19T12:06:11Z"
+        "published_at": "2026-11-19T15:53:19Z"
       },
       "next_queued_longform": {
         "id": "0709",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenluke17v15",
-        "scripture": "Luke 17:15-16",
+        "short": "short-gardenpsalm30v11",
+        "scripture": "Psalm 30:11-12",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENLUKE17V15",
+      "slug": "short-gardenluke17v15-thanksgiving-prayer",
+      "file": "short-gardenluke17v15-thanksgiving-prayer.md",
+      "title": "Pray This Luke 17:15-16 Prayer of Thanksgiving | Enter His Gates #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T15:53:19Z",
+      "youtube_video_id": "nqmLfwe8ano",
+      "watch_url": "https://www.youtube.com/shorts/nqmLfwe8ano",
+      "youtu_be_url": "https://youtu.be/nqmLfwe8ano",
+      "shorts_url": "https://www.youtube.com/shorts/nqmLfwe8ano",
+      "studio_url": "https://studio.youtube.com/video/nqmLfwe8ano/edit",
+      "thumb_url": "https://i.ytimg.com/vi/nqmLfwe8ano/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 656
+    },
     {
       "id": "SHORT-PROVISIONPSALM34V9",
       "slug": "short-provisionpsalm34v9-stewardship-prayer",
@@ -13413,17 +13437,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-gardenluke17v15",
-        "file": "0000-short-gardenluke17v15.yml",
-        "companion_longform_id": "",
-        "scripture": "Luke 17:15-16",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm30v11",
