@@ -44,6 +44,13 @@
       "workflow": "reporting-jobs.yml"
     },
     {
+      "late_minutes": 150,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-19T11:53:30+00:00",
+      "slot": "2026-11-19T09:23:00+00:00",
+      "workflow": "monitor.yml"
+    },
+    {
       "late_minutes": 120,
       "name": "Autonomous Comment Replies",
       "ran_at": "2026-11-19T09:14:58+00:00",
@@ -51,8 +58,8 @@
       "workflow": "comments.yml"
     }
   ],
-  "generated_at": "2026-11-19T10:25:30.887039+00:00",
-  "last_run_at": "2026-11-19T10:24:41+00:00",
+  "generated_at": "2026-11-19T11:56:34.169093+00:00",
+  "last_run_at": "2026-11-19T11:55:45+00:00",
   "on_time": [
     {
       "late_minutes": 115,
