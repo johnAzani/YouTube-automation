@@ -25,6 +25,8 @@ narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
 thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (67, 783, 1012, 832); shorten the authored lockup or reduce its size"
+thumbnail_retry_after: "2026-11-19T15:19:04Z"
+thumbnail_retry_reason: "rate_limit"
 ---
 
 Bring every weary burden and healing need before the Lord today, for He cares deeply for your soul. In your quiet moments of pain, remember the timeless promise written in Malachi four, verse two: But unto you that fear my name shall the Sun of righteousness arise with healing in his wings. Heavenly Father, we pray for gentle restoration to flow through every broken area of this weary body and heart. Touch every hidden hurt with Your warm golden light and cover this precious life with Your peaceful presence. May Your calm living waters wash away all fear, sorrow, and exhaustion tonight. If this restoration prayer brought rest to your soul, subscribe to join us at The Healing Balm. Amen.
