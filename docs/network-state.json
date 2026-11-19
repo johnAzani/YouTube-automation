@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T15:32:43Z",
+  "generated_at": "2026-11-19T15:33:57Z",
   "monitor_generated_at": "2026-11-19T11:54:23.137750+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 493,
+    "published_total": 494,
     "published_longform": 159,
-    "published_shorts": 334,
-    "public_total": 491,
+    "published_shorts": 335,
+    "public_total": 492,
     "queued_longform": 61,
-    "queued_shorts": 100,
+    "queued_shorts": 99,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 69,
+        "published_total": 70,
         "published_longform": 20,
-        "published_shorts": 49,
+        "published_shorts": 50,
         "thumbnail_pending": 6,
-        "public_total": 68,
+        "public_total": 69,
         "queued_longform": 7,
         "queued_other": 5,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-1JOHN4V18",
-        "title": "Say This 1 John 4:18 Prayer Before You Sleep | Heart Tonight #Shorts",
+        "id": "SHORT-HEBREWS13V5",
+        "title": "Say This Hebrews 13:5-6 Prayer Before You Sleep | You Always #Shorts",
         "format": "short",
-        "youtube_video_id": "vilvm36veNc",
-        "watch_url": "https://www.youtube.com/shorts/vilvm36veNc",
+        "youtube_video_id": "OLctySAFnJw",
+        "watch_url": "https://www.youtube.com/shorts/OLctySAFnJw",
         "published_on": "2026-11-19",
-        "published_at": "2026-11-19T11:55:03Z"
+        "published_at": "2026-11-19T15:32:56Z"
       },
       "next_queued_longform": {
         "id": "0029",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-hebrews13v5",
-        "scripture": "Hebrews 13:5-6",
+        "short": "short-isaiah40v28",
+        "scripture": "Isaiah 40:28-31",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEBREWS13V5",
+      "slug": "short-hebrews13v5-pre-sleep-prayer",
+      "file": "short-hebrews13v5-pre-sleep-prayer.md",
+      "title": "Say This Hebrews 13:5-6 Prayer Before You Sleep | You Always #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T15:32:56Z",
+      "youtube_video_id": "OLctySAFnJw",
+      "watch_url": "https://www.youtube.com/shorts/OLctySAFnJw",
+      "youtu_be_url": "https://youtu.be/OLctySAFnJw",
+      "shorts_url": "https://www.youtube.com/shorts/OLctySAFnJw",
+      "studio_url": "https://studio.youtube.com/video/OLctySAFnJw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/OLctySAFnJw/hqdefault.jpg",
+      "thumb_text": "YOU ARE NOT \u00b7 ALONE TONIGHT",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 626
+    },
     {
       "id": "SHORT-MIDNIGHTEXODUS14V13",
       "slug": "short-midnightexodus14v13-midnight-prayer",
@@ -13440,17 +13464,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-hebrews13v5",
-        "file": "0000-short-hebrews13v5.yml",
-        "companion_longform_id": "",
-        "scripture": "Hebrews 13:5-6",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-isaiah40v28",
