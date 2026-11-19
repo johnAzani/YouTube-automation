@@ -2,9 +2,9 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 2595,
+      "late_minutes": 2795,
       "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-15T13:56:22+00:00",
+      "ran_at": "2026-11-15T17:16:04+00:00",
       "slot": "2026-11-13T18:41:00+00:00",
       "workflow": "metrics.yml"
     },
@@ -44,8 +44,8 @@
       "workflow": "reporting-jobs.yml"
     }
   ],
-  "generated_at": "2026-11-19T16:40:27.233665+00:00",
-  "last_run_at": "2026-11-19T16:39:43+00:00",
+  "generated_at": "2026-11-19T16:53:43.809878+00:00",
+  "last_run_at": "2026-11-19T16:52:45+00:00",
   "on_time": [
     {
       "late_minutes": 115,
@@ -74,6 +74,13 @@
       "ran_at": "2026-11-19T04:09:38+00:00",
       "slot": "2026-11-19T02:14:00+00:00",
       "workflow": "growth-autopilot.yml"
+    },
+    {
+      "late_minutes": 89,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-19T16:52:45+00:00",
+      "slot": "2026-11-19T15:23:00+00:00",
+      "workflow": "monitor.yml"
     },
     {
       "late_minutes": 70,
