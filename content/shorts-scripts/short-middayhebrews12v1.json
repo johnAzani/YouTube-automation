@@ -1,0 +1,298 @@
+{
+  "key": "short-middayhebrews12v1",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "HEBREWS 12:1-2",
+    "THE MIDDAY WATCH"
+  ],
+  "poster": [
+    "MIDDAY",
+    "PRAYER",
+    "HEBREWS",
+    "TWELVE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright midday sun through window blinds",
+    "empty desk in bright afternoon light",
+    "high noon light over green hills",
+    "sunlight streaming through quiet chapel",
+    "bright midday shadows on clean wall",
+    "peaceful open field at high noon",
+    "golden midday light on quiet lake"
+  ],
+  "scenes": [
+    {
+      "a": "That rising fatigue pulling your focus away from your work deserves a moment of quiet today.",
+      "img": "short-middayhebrews12v1-scene-01.jpg",
+      "kicker": "HEBREWS 12:1",
+      "sub": "LAY ASIDE EVERY WEIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, help us to release every burden we carry into this noon hour.",
+      "img": "short-middayhebrews12v1-scene-02.jpg",
+      "kicker": "HEBREWS 12:1",
+      "sub": "RUN WITH PATIENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us, and let us run with patience the race that is set before us,",
+      "img": "short-middayhebrews12v1-scene-03.jpg",
+      "kicker": "HEBREWS 12:1",
+      "sub": "CLOUD OF WITNESSES",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant us the grace to keep walking when the path ahead feels steep and long.",
+      "img": "short-middayhebrews12v1-scene-04.jpg",
+      "kicker": "HEBREWS 12:2",
+      "sub": "LOOKING UNTO JESUS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Looking unto Jesus the author and finisher of our faith; who for the joy that was set before him endured the cross, despising the shame, and is set down at the right hand of the throne of God.",
+      "img": "short-middayhebrews12v1-scene-05.jpg",
+      "kicker": "HEBREWS 12:2",
+      "sub": "AUTHOR OF OUR FAITH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Direct our eyes back to Your strength as we finish this day.",
+      "img": "short-middayhebrews12v1-scene-06.jpg",
+      "kicker": "HEBREWS 12:2",
+      "sub": "THE THRONE OF GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Subscribe to The Midday Watch for daily prayer.",
+      "img": "short-middayhebrews12v1-scene-07.jpg",
+      "kicker": "MIDDAY WATCH",
+      "sub": "PAUSE AND PRAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      14,
+      "That rising fatigue pulling your focus away from your work deserves a moment of quiet today."
+    ],
+    [
+      14,
+      28,
+      "Lord, help us to release every burden we carry into this noon hour."
+    ],
+    [
+      28,
+      50,
+      "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us, and let us run with patience the race that is set before us,"
+    ],
+    [
+      50,
+      64,
+      "Grant us the grace to keep walking when the path ahead feels steep and long."
+    ],
+    [
+      64,
+      88,
+      "Looking unto Jesus the author and finisher of our faith; who for the joy that was set before him endured the cross, despising the shame, and is set down at the right hand of the throne of God."
+    ],
+    [
+      88,
+      100,
+      "Direct our eyes back to Your strength as we finish this day."
+    ],
+    [
+      100,
+      112,
+      "Subscribe to The Midday Watch for daily prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      14,
+      [
+        "THAT RISING FATIGUE",
+        "PULLING YOUR FOCUS",
+        "AWAY FROM WORK"
+      ],
+      "FATIGUE",
+      "HEBREWS 12:1"
+    ],
+    [
+      14,
+      28,
+      [
+        "LORD HELP US",
+        "TO RELEASE EVERY",
+        "BURDEN WE CARRY"
+      ],
+      "BURDEN",
+      "HEBREWS 12:1"
+    ],
+    [
+      28,
+      50,
+      [
+        "COMPASSED ABOUT WITH",
+        "SO GREAT A CLOUD",
+        "OF WITNESSES"
+      ],
+      "WITNESSES",
+      "HEBREWS 12:1"
+    ],
+    [
+      50,
+      64,
+      [
+        "GRANT US GRACE",
+        "TO KEEP WALKING",
+        "THROUGH THIS DAY"
+      ],
+      "GRACE",
+      "HEBREWS 12:2"
+    ],
+    [
+      64,
+      88,
+      [
+        "LOOKING UNTO JESUS",
+        "THE AUTHOR AND",
+        "FINISHER OF FAITH"
+      ],
+      "JESUS",
+      "HEBREWS 12:2"
+    ],
+    [
+      88,
+      100,
+      [
+        "DIRECT OUR EYES",
+        "BACK TO YOUR",
+        "STRENGTH TODAY"
+      ],
+      "STRENGTH",
+      "HEBREWS 12:2"
+    ],
+    [
+      100,
+      112,
+      [
+        "SUBSCRIBE TO THE",
+        "MIDDAY WATCH FOR",
+        "DAILY PRAYER"
+      ],
+      "SUBSCRIBE",
+      "THE MIDDAY WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That rising fatigue pulling your focus away from your work deserves a moment of quiet today.",
+      "kind": "phrase",
+      "words": [
+        "RISING",
+        "FATIGUE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help us to release every burden we carry into this noon hour.",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "BURDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us, and let us run with patience the race that is set before us,",
+      "kind": "phrase",
+      "words": [
+        "CLOUD",
+        "OF",
+        "WITNESSES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us the grace to keep walking when the path ahead feels steep and long.",
+      "kind": "phrase",
+      "words": [
+        "KEEP",
+        "WALKING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Looking unto Jesus the author and finisher of our faith; who for the joy that was set before him endured the cross, despising the shame, and is set down at the right hand of the throne of God.",
+      "kind": "phrase",
+      "words": [
+        "AUTHOR",
+        "AND",
+        "FINISHER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Direct our eyes back to Your strength as we finish this day.",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Midday Watch for daily prayer.",
+      "kind": "phrase",
+      "words": [
+        "MIDDAY",
+        "WATCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Hebrews 12:1-2"
+}

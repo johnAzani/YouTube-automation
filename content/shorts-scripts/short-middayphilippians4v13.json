@@ -1,0 +1,331 @@
+{
+  "key": "short-middayphilippians4v13",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "STRENGTH AT NOON",
+    "PHILIPPIANS 4:13"
+  ],
+  "poster": [
+    "WHEN TASKS FEEL",
+    "TOO HEAVY TO BEAR",
+    "CHRIST GIVES STRENGTH",
+    "AT THE NOONDAY HOUR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "warm midday sunlight across wooden work desk shadows",
+    "sunbeams through high window onto open desk table",
+    "bright midday sun illuminating calm wheat field",
+    "gentle dust motes floating in bright noon window light",
+    "sunlit empty stone path through quiet peaceful garden",
+    "clear blue noon sky over distant rolling hills",
+    "soft afternoon light on quiet notebook beside window"
+  ],
+  "scenes": [
+    {
+      "a": "Your energy is fading at this midday desk",
+      "img": "short-middayphilippians4v13-scene-01.jpg",
+      "kicker": "PHILIPPIANS 4:13",
+      "sub": "STRENGTH FOR THE WEARY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Scripture reminds you: I can do all things through Christ which strengtheneth me.",
+      "img": "short-middayphilippians4v13-scene-02.jpg",
+      "kicker": "PHILIPPIANS 4:13",
+      "sub": "CHRIST OUR STRENGTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, when resolve falters under the noon sun",
+      "img": "short-middayphilippians4v13-scene-03.jpg",
+      "kicker": "PHILIPPIANS 4:13",
+      "sub": "DIVINE HELP AT NOON",
+      "cam": "tilt_up",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "Quiet the urgent panic that whispers you are not enough",
+      "img": "short-middayphilippians4v13-scene-04.jpg",
+      "kicker": "PHILIPPIANS 4:13",
+      "sub": "SURRENDER THE PRESSURE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Grant patience to meet every demand",
+      "img": "short-middayphilippians4v13-scene-05.jpg",
+      "kicker": "PHILIPPIANS 4:13",
+      "sub": "ENDURING BY HIS GRACE",
+      "cam": "pan_right",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "Steady this weary mind with divine assurance",
+      "img": "short-middayphilippians4v13-scene-06.jpg",
+      "kicker": "PHILIPPIANS 4:13",
+      "sub": "PEACE FOR THE AFTERNOON",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Walk in His sufficient peace this afternoon.",
+      "img": "short-middayphilippians4v13-scene-07.jpg",
+      "kicker": "PHILIPPIANS 4:13",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Your energy is fading at this midday desk, and the tasks ahead feel impossible."
+    ],
+    [
+      6,
+      13,
+      "Scripture reminds you: I can do all things through Christ which strengtheneth me."
+    ],
+    [
+      13,
+      20,
+      "Lord, when resolve falters under the noon sun, supply what human effort cannot provide."
+    ],
+    [
+      20,
+      27,
+      "Quiet the urgent panic that whispers you are not enough for this assignment."
+    ],
+    [
+      27,
+      36,
+      "Grant patience to meet every demand, moving forward not in exhaustion, but resting in Your faithful endurance."
+    ],
+    [
+      36,
+      43,
+      "Steady this weary mind with divine assurance for the remaining hours of this day."
+    ],
+    [
+      43,
+      50,
+      "Walk in His sufficient peace this afternoon. Subscribe to The Midday Watch and pause to pray with us tomorrow at noon."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "YOUR ENERGY IS FADING",
+        "AT THIS MIDDAY DESK",
+        "AND THE TASKS AHEAD",
+        "FEEL IMPOSSIBLE"
+      ],
+      [
+        "ENERGY",
+        "IMPOSSIBLE"
+      ],
+      "PHILIPPIANS 4 : 13"
+    ],
+    [
+      6,
+      13,
+      [
+        "SCRIPTURE REMINDS YOU",
+        "I CAN DO ALL THINGS",
+        "THROUGH CHRIST",
+        "WHICH STRENGTHENETH ME"
+      ],
+      [
+        "ALL THINGS",
+        "STRENGTHENETH"
+      ],
+      "PHILIPPIANS 4 : 13"
+    ],
+    [
+      13,
+      20,
+      [
+        "LORD WHEN RESOLVE FALTERS",
+        "UNDER THE NOON SUN",
+        "SUPPLY WHAT HUMAN EFFORT",
+        "CANNOT PROVIDE"
+      ],
+      [
+        "RESOLVE",
+        "SUPPLY"
+      ],
+      "PHILIPPIANS 4 : 13"
+    ],
+    [
+      20,
+      27,
+      [
+        "QUIET THE URGENT PANIC",
+        "THAT WHISPERS YOU ARE NOT",
+        "ENOUGH FOR THIS ASSIGNMENT"
+      ],
+      [
+        "QUIET",
+        "ENOUGH"
+      ],
+      "PHILIPPIANS 4 : 13"
+    ],
+    [
+      27,
+      36,
+      [
+        "GRANT PATIENCE TO MEET",
+        "EVERY DEMAND MOVING FORWARD",
+        "NOT IN EXHAUSTION BUT",
+        "RESTING IN YOUR ENDURANCE"
+      ],
+      [
+        "PATIENCE",
+        "ENDURANCE"
+      ],
+      "PHILIPPIANS 4 : 13"
+    ],
+    [
+      36,
+      43,
+      [
+        "STEADY THIS WEARY MIND",
+        "WITH DIVINE ASSURANCE",
+        "FOR THE REMAINING HOURS",
+        "OF THIS DAY"
+      ],
+      [
+        "STEADY",
+        "ASSURANCE"
+      ],
+      "PHILIPPIANS 4 : 13"
+    ],
+    [
+      43,
+      50,
+      [
+        "WALK IN SUFFICIENT PEACE",
+        "SUBSCRIBE TO THE MIDDAY WATCH",
+        "AND PAUSE TO PRAY WITH US",
+        "TOMORROW AT NOON"
+      ],
+      [
+        "PEACE",
+        "SUBSCRIBE"
+      ],
+      "PHILIPPIANS 4 : 13"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your energy is fading at this midday desk, and the tasks ahead feel impossible.",
+      "kind": "phrase",
+      "words": [
+        "ENERGY",
+        "FADING",
+        "IMPOSSIBLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I can do all things through Christ which strengtheneth me.",
+      "kind": "phrase",
+      "words": [
+        "ALL",
+        "THINGS",
+        "THROUGH",
+        "CHRIST"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when resolve falters under the noon sun, supply what human effort cannot provide.",
+      "kind": "phrase",
+      "words": [
+        "SUPPLY",
+        "HUMAN",
+        "EFFORT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Quiet the urgent panic that whispers you are not enough for this assignment.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "URGENT",
+        "PANIC"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant patience to meet every demand, moving forward not in exhaustion, but resting in Your faithful endurance.",
+      "kind": "phrase",
+      "words": [
+        "RESTING",
+        "FAITHFUL",
+        "ENDURANCE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Steady this weary mind with divine assurance for the remaining hours of this day.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "DIVINE",
+        "ASSURANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Walk in His sufficient peace this afternoon. Subscribe to The Midday Watch and pause to pray with us tomorrow at noon.",
+      "kind": "phrase",
+      "words": [
+        "SUFFICIENT",
+        "PEACE",
+        "AFTERNOON"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Philippians 4:13"
+}
