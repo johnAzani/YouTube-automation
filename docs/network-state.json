@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T01:26:06Z",
+  "generated_at": "2026-11-19T01:36:25Z",
   "monitor_generated_at": "2026-11-18T22:10:18.325379+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 473,
+    "published_total": 474,
     "published_longform": 153,
-    "published_shorts": 320,
-    "public_total": 471,
+    "published_shorts": 321,
+    "public_total": 472,
     "queued_longform": 54,
-    "queued_shorts": 64,
+    "queued_shorts": 63,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -645,23 +645,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 31,
+        "published_total": 32,
         "published_longform": 9,
-        "published_shorts": 22,
+        "published_shorts": 23,
         "thumbnail_pending": 12,
-        "public_total": 31,
+        "public_total": 32,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPSALM25V9",
-        "title": "Pray This Psalm 25:9 Prayer for God's Guidance | Surrender Your Pride #Shorts",
+        "id": "SHORT-GUIDEDPROVERBS16V9",
+        "title": "Pray This Proverbs 16:9 Prayer for God's Guidance | Guidance In Every Step #Shorts",
         "format": "short",
-        "youtube_video_id": "Uwd3QeNEIxw",
-        "watch_url": "https://www.youtube.com/shorts/Uwd3QeNEIxw",
-        "published_on": "2026-11-18",
-        "published_at": "2026-11-18T21:05:54Z"
+        "youtube_video_id": "pkGr0fvEW1o",
+        "watch_url": "https://www.youtube.com/shorts/pkGr0fvEW1o",
+        "published_on": "2026-11-19",
+        "published_at": "2026-11-19T01:35:37Z"
       },
       "next_queued_longform": {
         "id": "0809",
@@ -670,8 +670,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedproverbs16v9",
-        "scripture": "Proverbs 16:9",
+        "short": "short-guidedpsalm37v23",
+        "scripture": "Psalm 37:23-24",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDPROVERBS16V9",
+      "slug": "short-guidedproverbs16v9-guidance-prayer",
+      "file": "short-guidedproverbs16v9-guidance-prayer.md",
+      "title": "Pray This Proverbs 16:9 Prayer for God's Guidance | Guidance In Every Step #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T01:35:37Z",
+      "youtube_video_id": "pkGr0fvEW1o",
+      "watch_url": "https://www.youtube.com/shorts/pkGr0fvEW1o",
+      "youtu_be_url": "https://youtu.be/pkGr0fvEW1o",
+      "shorts_url": "https://www.youtube.com/shorts/pkGr0fvEW1o",
+      "studio_url": "https://studio.youtube.com/video/pkGr0fvEW1o/edit",
+      "thumb_url": "https://i.ytimg.com/vi/pkGr0fvEW1o/hqdefault.jpg",
+      "thumb_text": "SEEK GOD'S \u00b7 WISDOM FOR",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 622
+    },
     {
       "id": "SHORT-PROVISIONRUTH2V12",
       "slug": "short-provisionruth2v12-stewardship-prayer",
@@ -13386,17 +13410,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedproverbs16v9",
-        "file": "0807-short-guidedproverbs16v9.yml",
-        "companion_longform_id": "0807",
-        "scripture": "Proverbs 16:9",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedpsalm37v23",
