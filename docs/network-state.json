@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T12:06:51Z",
+  "generated_at": "2026-11-19T12:07:02Z",
   "monitor_generated_at": "2026-11-19T11:54:23.137750+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 486,
+    "published_total": 487,
     "published_longform": 156,
-    "published_shorts": 330,
-    "public_total": 484,
+    "published_shorts": 331,
+    "public_total": 485,
     "queued_longform": 60,
-    "queued_shorts": 92,
+    "queued_shorts": 91,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 34,
+        "published_total": 35,
         "published_longform": 9,
-        "published_shorts": 25,
-        "thumbnail_pending": 34,
-        "public_total": 34,
+        "published_shorts": 26,
+        "thumbnail_pending": 35,
+        "public_total": 35,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM150V6",
-        "title": "Pray This Psalm 150:6 Prayer of Thanksgiving | Every Breath Is His Mercy #Shorts",
+        "id": "SHORT-GARDENISAIAH12V2",
+        "title": "Pray This Isaiah 12:2-5 Prayer of Thanksgiving | Trust In The Lord #Shorts",
         "format": "short",
-        "youtube_video_id": "p9yzYNU1W3w",
-        "watch_url": "https://www.youtube.com/shorts/p9yzYNU1W3w",
+        "youtube_video_id": "A-GuAfEFIdQ",
+        "watch_url": "https://www.youtube.com/shorts/A-GuAfEFIdQ",
         "published_on": "2026-11-19",
-        "published_at": "2026-11-19T01:37:30Z"
+        "published_at": "2026-11-19T12:06:11Z"
       },
       "next_queued_longform": {
         "id": "0709",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenisaiah12v2",
-        "scripture": "Isaiah 12:2-5",
+        "short": "short-gardenluke17v15",
+        "scripture": "Luke 17:15-16",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENISAIAH12V2",
+      "slug": "short-gardenisaiah12v2-thanksgiving-prayer",
+      "file": "short-gardenisaiah12v2-thanksgiving-prayer.md",
+      "title": "Pray This Isaiah 12:2-5 Prayer of Thanksgiving | Trust In The Lord #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T12:06:11Z",
+      "youtube_video_id": "A-GuAfEFIdQ",
+      "watch_url": "https://www.youtube.com/shorts/A-GuAfEFIdQ",
+      "youtu_be_url": "https://youtu.be/A-GuAfEFIdQ",
+      "shorts_url": "https://www.youtube.com/shorts/A-GuAfEFIdQ",
+      "studio_url": "https://studio.youtube.com/video/A-GuAfEFIdQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/A-GuAfEFIdQ/hqdefault.jpg",
+      "thumb_text": "HIS STRENGTH \u00b7 AND SONG",
+      "thumbnail_pending": true,
+      "duration_label": "56s",
+      "words": 661
+    },
     {
       "id": "SHORT-HEALING1PETER5V7",
       "slug": "short-healing1peter5v7-restoration-prayer",
@@ -13150,17 +13174,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-gardenisaiah12v2",
-        "file": "0000-short-gardenisaiah12v2.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 12:2-5",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
       {
         "short": "short-gardenluke17v15",
         "file": "0000-short-gardenluke17v15.yml",
