@@ -76,7 +76,7 @@ originality:
 published_on: "2026-11-12"
 published_at: "2026-11-12T20:40:46Z"
 youtube_video_id: "qdnrS9W0XtQ"
-metadata_revision: "retitle-pending"
+metadata_revision: "selar-seo-v1"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
