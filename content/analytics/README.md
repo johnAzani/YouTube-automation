@@ -88,38 +88,38 @@ Videos by watch time, 365 days (up to 50):
 | [Say This Isaiah 41:13 Prayer Before You Sleep / Tonight #Shorts](https://youtu.be/pyEYBZEyuZA) | 0.23 | 118 | 0:19 (45.3%) |
 | [Night Prayer When You Lie Awake: Psalm 63:6-7 / The Secret Place](https://youtu.be/P2JDAtPkryI) | 0.22 | 5 | 3:23 (51.3%) |
 
-Thumbnails, 2026-10-15 to 2026-11-16 (30 days of YouTube's daily reach files): shown 5,285 times, clicked 64 times, a click rate of 1.2%.
+Thumbnails, 2026-10-15 to 2026-11-17 (31 days of YouTube's daily reach files): shown 6,299 times, clicked 74 times, a click rate of 1.2%.
 A thumbnail is counted where YouTube shows one (search, home, suggested, the channel page). The Shorts feed shows none, so Shorts watched there are not in these figures.
 
 Videos by times shown (up to 25):
 
 | Video | Thumbnail shown | Clicks | Click rate |
 | :--- | ---: | ---: | ---: |
-| [When the Night Feels Too Dark: Psalm 139:11-12 / The Secret Place](https://youtu.be/VPAFfGNkCGs) | 1,355 | 10 | 0.74% |
-| [Psalm 91:11-12 Night Prayer / Angels Guard Your Home & Sleep](https://youtu.be/dgvGl0EZyYE) | 573 | 17 | 3% |
-| [Night Prayer to Quiet a Racing Mind: Isaiah 26:3-4 / The Secret Place](https://youtu.be/t00bsmMtC-s) | 525 | 4 | 0.76% |
+| [Night Prayer to Quiet a Racing Mind: Isaiah 26:3-4 / The Secret Place](https://youtu.be/t00bsmMtC-s) | 1,364 | 13 | 0.95% |
+| [When the Night Feels Too Dark: Psalm 139:11-12 / The Secret Place](https://youtu.be/VPAFfGNkCGs) | 1,361 | 10 | 0.73% |
+| [Psalm 91:11-12 Night Prayer / Angels Guard Your Home & Sleep](https://youtu.be/dgvGl0EZyYE) | 576 | 17 | 3% |
 | [Psalm 37:7 Bedtime Prayer / Rest in the Lord & Fret Not](https://youtu.be/sAyMduXhoeQ) | 203 | 6 | 3% |
 | [pbpPdG7_DQk](https://youtu.be/pbpPdG7_DQk) | 167 | 3 | 1.8% |
 | [Zw0pjLM5hEI](https://youtu.be/Zw0pjLM5hEI) | 131 | 3 | 2.3% |
 | [Psalm 91:5-6 Night Prayer / Deliverance From Terror by Night](https://youtu.be/rb6X37vQt7o) | 128 | 0 | 0% |
 | [Psalm 31:5 Bedtime Prayer / Into Your Hands I Commit My Spirit](https://youtu.be/r3nA7BgZpP4) | 117 | 1 | 0.85% |
-| [Say This Psalm 121 Prayer Before You Sleep / He Who Keeps You #Shorts](https://youtu.be/xkpfupurX-0) | 111 | 0 | 0% |
-| [Say This Psalm 37:7 Prayer Before You Sleep / The Secret Place #Shorts](https://youtu.be/5ekShDmycic) | 107 | 0 | 0% |
+| [Say This Psalm 121 Prayer Before You Sleep / He Who Keeps You #Shorts](https://youtu.be/xkpfupurX-0) | 115 | 0 | 0% |
+| [Say This Psalm 37:7 Prayer Before You Sleep / The Secret Place #Shorts](https://youtu.be/5ekShDmycic) | 109 | 0 | 0% |
 | [Say This Psalm 91 Prayer Before You Sleep / Divine Protection #Shorts](https://youtu.be/SG69BbNlfRw) | 103 | 1 | 0.97% |
-| [Say This Psalm 27 Prayer Before You Sleep / Fear No Evil #Shorts](https://youtu.be/KkPAtMLoGf4) | 92 | 0 | 0% |
+| [Say This Psalm 27 Prayer Before You Sleep / Fear No Evil #Shorts](https://youtu.be/KkPAtMLoGf4) | 93 | 0 | 0% |
+| [Say This Psalm 34 Prayer Before You Sleep / Angels Stand Watch #Shorts](https://youtu.be/fTYu1V5GHUE) | 86 | 0 | 0% |
+| [Say This Psalm 18:2 Prayer Before You Sleep / Safe Stronghold #Shorts](https://youtu.be/jhOlEJvNg-0) | 85 | 0 | 0% |
 | [Night Prayer When You Lie Awake: Psalm 63:6-7 / The Secret Place](https://youtu.be/P2JDAtPkryI) | 83 | 2 | 2.4% |
-| [Say This Psalm 34 Prayer Before You Sleep / Angels Stand Watch #Shorts](https://youtu.be/fTYu1V5GHUE) | 82 | 0 | 0% |
-| [Say This Psalm 18:2 Prayer Before You Sleep / Safe Stronghold #Shorts](https://youtu.be/jhOlEJvNg-0) | 78 | 0 | 0% |
-| [Say This Psalm 91:11-12 Prayer Before You Sleep / Angelic Night Guard…](https://youtu.be/dqKjQaJbU0c) | 76 | 0 | 0% |
+| [Say This Psalm 91:11-12 Prayer Before You Sleep / Angelic Night Guard…](https://youtu.be/dqKjQaJbU0c) | 77 | 0 | 0% |
+| [Bedtime Prayer for Sleep Without Fear: Proverbs 3:24-26](https://youtu.be/3xrS2BqNeWA) | 75 | 0 | 0% |
 | [Uhd7uMYo9Mo](https://youtu.be/Uhd7uMYo9Mo) | 73 | 0 | 0% |
-| [Bedtime Prayer for Sleep Without Fear: Proverbs 3:24-26](https://youtu.be/3xrS2BqNeWA) | 71 | 0 | 0% |
 | [When You Need a Safe Place to Rest: Psalm 18:2 / The Secret Place](https://youtu.be/oiLCbx4-wMA) | 71 | 0 | 0% |
+| [Say This Psalm 91:5-6 Prayer Before You Sleep / Fear No Night Shadow…](https://youtu.be/SVhby9Yv0Wg) | 64 | 0 | 0% |
 | [Psalm 46: God Is Our Refuge & Strength — Be Still & Know / The Secret…](https://youtu.be/1g8TXHD0Xks) | 62 | 3 | 4.8% |
-| [Say This Psalm 91:5-6 Prayer Before You Sleep / Fear No Night Shadow…](https://youtu.be/SVhby9Yv0Wg) | 60 | 0 | 0% |
-| [Say This Psalm 23 Prayer Before You Sleep / Divine Peace #Shorts](https://youtu.be/kLgHN57fb1w) | 52 | 2 | 3.9% |
-| [Say This Psalm 31:5 Prayer Before You Sleep / Redeemed In Peace #Shor…](https://youtu.be/nHTVsgHaLpE) | 52 | 0 | 0% |
+| [Say This Matthew 6:34 Prayer Before You Sleep / The Secret Place #Sho…](https://youtu.be/EiF_FNNAhCU) | 59 | 1 | 1.7% |
+| [Say This Psalm 23 Prayer Before You Sleep / Divine Peace #Shorts](https://youtu.be/kLgHN57fb1w) | 55 | 2 | 3.6% |
+| [Say This Psalm 31:5 Prayer Before You Sleep / Redeemed In Peace #Shor…](https://youtu.be/nHTVsgHaLpE) | 54 | 0 | 0% |
 | [When Your Heart Feels Restless: Psalm 16:7-8 / The Secret Place](https://youtu.be/nVLhEVO7ROw) | 52 | 1 | 1.9% |
-| [Say This Matthew 6:34 Prayer Before You Sleep / The Secret Place #Sho…](https://youtu.be/EiF_FNNAhCU) | 51 | 1 | 2% |
 
 ## What each channel is trying in its titles
 
