@@ -1,6 +1,6 @@
 ---
 id: '0061'
-title: Isaiah 33:2 Morning Prayer | The Morning Altar
+title: "Strength for Every New Morning: Isaiah 33:2 | The Morning Altar"
 slug: isaiah-33-2-morning-prayer
 status: published
 channel: prayer2
@@ -79,10 +79,13 @@ originality:
 published_on: "2026-11-12"
 published_at: "2026-11-12T11:10:28Z"
 youtube_video_id: "bw9zxOtzHww"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Isaiah 33:2 Morning Prayer | The Morning Altar"
+retitled_at: "2026-11-19"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer

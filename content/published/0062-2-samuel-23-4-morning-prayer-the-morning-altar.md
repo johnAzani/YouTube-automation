@@ -1,6 +1,6 @@
 ---
 id: '0062'
-title: 2 Samuel 23:4 Morning Prayer | The Morning Altar
+title: "Walking in the Light of His Morning: 2 Samuel 23:4 | The Morning Altar"
 slug: 2-samuel-23-4-morning-prayer-the-morning-altar
 status: published
 channel: prayer2
@@ -75,10 +75,13 @@ originality:
 published_on: "2026-11-12"
 published_at: "2026-11-12T16:45:30Z"
 youtube_video_id: "SsWigDMo520"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "2 Samuel 23:4 Morning Prayer | The Morning Altar"
+retitled_at: "2026-11-19"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The First Light of the Morning
