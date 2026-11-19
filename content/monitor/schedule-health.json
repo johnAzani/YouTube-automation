@@ -44,9 +44,16 @@
       "workflow": "reporting-jobs.yml"
     }
   ],
-  "generated_at": "2026-11-19T20:53:02.541963+00:00",
-  "last_run_at": "2026-11-19T20:51:55+00:00",
+  "generated_at": "2026-11-19T20:58:40.350053+00:00",
+  "last_run_at": "2026-11-19T20:57:56+00:00",
   "on_time": [
+    {
+      "late_minutes": 99,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-19T20:53:07+00:00",
+      "slot": "2026-11-19T19:14:00+00:00",
+      "workflow": "comments.yml"
+    },
     {
       "late_minutes": 91,
       "name": "Autonomous Community Tab Automation",
@@ -69,6 +76,13 @@
       "workflow": "monitor.yml"
     },
     {
+      "late_minutes": 99,
+      "name": "Produce video",
+      "ran_at": "2026-11-19T20:53:10+00:00",
+      "slot": "2026-11-19T19:14:00+00:00",
+      "workflow": "produce.yml"
+    },
+    {
       "late_minutes": 11,
       "name": "Scheduler supervisor",
       "ran_at": "2026-11-19T18:58:24+00:00",
@@ -76,6 +90,6 @@
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 1,
+  "silence_minutes": 0,
   "warn_minutes": 120
 }
