@@ -1,6 +1,6 @@
 ---
 id: 0019
-title: Psalm 16:7-8 Night Prayer | God's Quiet Counsel Before Sleep
+title: "When Your Heart Feels Restless: Psalm 16:7-8 | The Secret Place"
 slug: psalm-16-7-8-counsel-in-the-night-seasons
 status: published
 privacy: public
@@ -88,11 +88,14 @@ category_id: '22'
 published_on: "2026-11-12"
 published_at: "2026-11-12T03:05:00Z"
 youtube_video_id: "nVLhEVO7ROw"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
 live_handle: "@SecretPlaceSanctuary"
+title_before: "Psalm 16:7-8 Night Prayer | God's Quiet Counsel Before Sleep"
+retitled_at: "2026-11-19"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — I Will Bless the LORD, Who Hath Given Me Counsel (Verse 7a)

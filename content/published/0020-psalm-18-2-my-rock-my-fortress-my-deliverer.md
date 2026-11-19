@@ -1,6 +1,6 @@
 ---
 id: '0020'
-title: Psalm 18:2 Night Prayer for Strength | My Rock & Fortress
+title: "When You Need a Safe Place to Rest: Psalm 18:2 | The Secret Place"
 slug: psalm-18-2-my-rock-my-fortress-my-deliverer
 status: published
 privacy: public
@@ -88,11 +88,14 @@ category_id: '22'
 published_on: "2026-11-12"
 published_at: "2026-11-12T22:52:44Z"
 youtube_video_id: "oiLCbx4-wMA"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
 live_handle: "@SecretPlaceSanctuary"
+title_before: "Psalm 18:2 Night Prayer for Strength | My Rock & Fortress"
+retitled_at: "2026-11-19"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The LORD Is My Rock (Verse 2a)
