@@ -1,0 +1,317 @@
+{
+  "key": "short-provisionisaiah48v17",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "TEACHETH THEE",
+    "TO PROFIT"
+  ],
+  "poster": [
+    "HE LEADETH THEE",
+    "BY THE WAY",
+    "THOU SHOULDEST GO",
+    "ISAIAH 48:17"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit mountain pass trail morning mist",
+    "sunlit stone sanctuary table glowing morning light",
+    "peaceful river flowing through golden sunlit valley",
+    "golden sunlight beaming over calm river canyon",
+    "sunlit pathway winding through golden valley forest",
+    "quiet mountain pass overlooking radiant sunlit valley",
+    "peaceful sunlit river glowing in golden morning light"
+  ],
+  "scenes": [
+    {
+      "a": "Right now, as you weigh this critical choice",
+      "img": "short-provisionisaiah48v17-scene-01.jpg",
+      "kicker": "ISAIAH 48:17",
+      "sub": "SEEK GOD'S GUIDANCE TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Thus saith the LORD, thy Redeemer",
+      "img": "short-provisionisaiah48v17-scene-02.jpg",
+      "kicker": "ISAIAH 48:17",
+      "sub": "THUS SAITH THE LORD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "teacheth thee to profit",
+      "img": "short-provisionisaiah48v17-scene-03.jpg",
+      "kicker": "ISAIAH 48:17",
+      "sub": "HE TEACHETH THEE TO PROFIT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, we bring our decisions",
+      "img": "short-provisionisaiah48v17-scene-04.jpg",
+      "kicker": "ISAIAH 48:17",
+      "sub": "COMMIT YOUR WORK UNTO GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant us wisdom to follow Your guidance",
+      "img": "short-provisionisaiah48v17-scene-05.jpg",
+      "kicker": "ISAIAH 48:17",
+      "sub": "TRUST HIS DAILY PROVISION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Teach us the way to true increase",
+      "img": "short-provisionisaiah48v17-scene-06.jpg",
+      "kicker": "ISAIAH 48:17",
+      "sub": "WALK IN OBEDIENCE AND TRUTH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to walk in God's daily direction",
+      "img": "short-provisionisaiah48v17-scene-07.jpg",
+      "kicker": "ISAIAH 48:17",
+      "sub": "WALK IN HIS DAILY DIRECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Right now, as you weigh this critical choice, hear the word of your Heavenly Father."
+    ],
+    [
+      7,
+      13,
+      "Thus saith the LORD, thy Redeemer, the Holy One of Israel;"
+    ],
+    [
+      14,
+      21,
+      "I am the LORD thy God which teacheth thee to profit, which leadeth thee by the way that thou shouldest go."
+    ],
+    [
+      22,
+      28,
+      "Lord, we bring our decisions, our work, and our daily needs before You today."
+    ],
+    [
+      29,
+      35,
+      "Grant us wisdom to follow Your guidance and trust Your provision in every step."
+    ],
+    [
+      36,
+      42,
+      "Teach us the way to true increase and righteous prosperity as we walk in obedience to Your voice."
+    ],
+    [
+      43,
+      50,
+      "Amen. Subscribe to walk in God's daily direction and endless provision today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "RIGHT NOW AS YOU WEIGH",
+        "THIS CRITICAL CHOICE HEAR",
+        "THE WORD OF YOUR FATHER"
+      ],
+      [
+        "CRITICAL",
+        "CHOICE"
+      ],
+      "ISAIAH 48:17"
+    ],
+    [
+      7,
+      13,
+      [
+        "THUS SAITH THE LORD",
+        "THY REDEEMER THE HOLY",
+        "ONE OF ISRAEL"
+      ],
+      [
+        "LORD",
+        "REDEEMER"
+      ],
+      "ISAIAH 48:17"
+    ],
+    [
+      14,
+      21,
+      [
+        "I AM THE LORD THY GOD",
+        "WHICH TEACHETH THEE TO PROFIT",
+        "WHICH LEADETH THEE"
+      ],
+      [
+        "TEACHETH",
+        "PROFIT"
+      ],
+      "ISAIAH 48:17"
+    ],
+    [
+      22,
+      28,
+      [
+        "LORD WE BRING OUR DECISIONS",
+        "OUR WORK AND OUR DAILY",
+        "NEEDS BEFORE YOU TODAY"
+      ],
+      [
+        "DECISIONS",
+        "WORK"
+      ],
+      "ISAIAH 48:17"
+    ],
+    [
+      29,
+      35,
+      [
+        "GRANT US WISDOM TO FOLLOW",
+        "YOUR GUIDANCE AND TRUST",
+        "YOUR PROVISION IN EVERY STEP"
+      ],
+      [
+        "WISDOM",
+        "PROVISION"
+      ],
+      "ISAIAH 48:17"
+    ],
+    [
+      36,
+      42,
+      [
+        "TEACH US THE WAY TO TRUE",
+        "INCREASE AND RIGHTEOUS PROSPERITY",
+        "AS WE WALK IN OBEDIENCE"
+      ],
+      [
+        "TRUE",
+        "INCREASE"
+      ],
+      "ISAIAH 48:17"
+    ],
+    [
+      43,
+      50,
+      [
+        "AMEN SUBSCRIBE TO WALK",
+        "IN GODS DAILY DIRECTION",
+        "AND ENDLESS PROVISION TODAY"
+      ],
+      [
+        "SUBSCRIBE",
+        "DAILY"
+      ],
+      "ISAIAH 48:17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Right now, as you weigh this critical choice",
+      "kind": "phrase",
+      "words": [
+        "CRITICAL",
+        "CHOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thus saith the LORD, thy Redeemer",
+      "kind": "phrase",
+      "words": [
+        "THUS",
+        "SAITH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "teacheth thee to profit",
+      "kind": "phrase",
+      "words": [
+        "TEACHETH",
+        "PROFIT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we bring our decisions",
+      "kind": "phrase",
+      "words": [
+        "BRING",
+        "DECISIONS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us wisdom to follow Your guidance",
+      "kind": "phrase",
+      "words": [
+        "GRANT",
+        "WISDOM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Teach us the way to true increase",
+      "kind": "phrase",
+      "words": [
+        "TRUE",
+        "INCREASE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to walk in God's daily direction",
+      "kind": "phrase",
+      "words": [
+        "WALK",
+        "DIRECTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 48:17"
+}
