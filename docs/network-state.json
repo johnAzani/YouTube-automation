@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T12:38:14Z",
+  "generated_at": "2026-11-19T12:43:55Z",
   "monitor_generated_at": "2026-11-19T11:54:23.137750+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 489,
-    "published_longform": 157,
+    "published_total": 490,
+    "published_longform": 158,
     "published_shorts": 332,
-    "public_total": 487,
-    "queued_longform": 59,
+    "public_total": 488,
+    "queued_longform": 58,
     "queued_shorts": 90,
     "automations_ok": 13,
     "automations_total": 13,
@@ -237,28 +237,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 51,
-        "published_longform": 17,
+        "published_total": 52,
+        "published_longform": 18,
         "published_shorts": 34,
-        "thumbnail_pending": 50,
-        "public_total": 51,
-        "queued_longform": 6,
+        "thumbnail_pending": 51,
+        "public_total": 52,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 10
       },
       "latest_video": {
-        "id": "0216",
-        "title": "When Darkness Presses Hard: Psalm 68:1-3 | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "WrV5cGnjk_M",
-        "watch_url": "https://youtu.be/WrV5cGnjk_M",
-        "published_on": "2026-11-19",
-        "published_at": "2026-11-19T02:02:31Z"
-      },
-      "next_queued_longform": {
         "id": "0217",
         "title": "He Hath Broken the Gates of Brass: Psalm 107:13-16",
-        "words": 1471,
+        "format": "longform",
+        "youtube_video_id": "EuBvm2P4dB0",
+        "watch_url": "https://youtu.be/EuBvm2P4dB0",
+        "published_on": "2026-11-19",
+        "published_at": "2026-11-19T12:43:11Z"
+      },
+      "next_queued_longform": {
+        "id": "0218",
+        "title": "When You Need a Defender: Psalm 144:1-2 | The Midnight Watch",
+        "words": 1251,
         "status": "approved"
       },
       "next_queued_short": {
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0217",
+      "slug": "gates-of-brass-psalm-107-psalm-107-13-16-the-midnight-watch",
+      "file": "0217-gates-of-brass-psalm-107-psalm-107-13-16-the-midnight-watch.md",
+      "title": "He Hath Broken the Gates of Brass: Psalm 107:13-16",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T12:43:11Z",
+      "youtube_video_id": "EuBvm2P4dB0",
+      "watch_url": "https://youtu.be/EuBvm2P4dB0",
+      "youtu_be_url": "https://youtu.be/EuBvm2P4dB0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/EuBvm2P4dB0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/EuBvm2P4dB0/hqdefault.jpg",
+      "thumb_text": "GATES OF BRASS",
+      "thumbnail_pending": true,
+      "duration_label": "~10 min",
+      "words": 1471
+    },
     {
       "id": "0514",
       "slug": "steps-ordered-by-the-lord-psalm-37-23-25",
@@ -12686,19 +12710,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1333
-      },
-      {
-        "id": "0217",
-        "slug": "gates-of-brass-psalm-107-psalm-107-13-16-the-midnight-watch",
-        "file": "0217-gates-of-brass-psalm-107-psalm-107-13-16-the-midnight-watch.md",
-        "title": "He Hath Broken the Gates of Brass: Psalm 107:13-16",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1471
       },
       {
         "id": "0218",

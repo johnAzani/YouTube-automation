@@ -2,7 +2,7 @@
 id: '0217'
 title: 'He Hath Broken the Gates of Brass: Psalm 107:13-16'
 slug: gates-of-brass-psalm-107-psalm-107-13-16-the-midnight-watch
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -75,6 +75,15 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-19"
+published_at: "2026-11-19T12:43:11Z"
+youtube_video_id: "EuBvm2P4dB0"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Rising at the Midnight Hour
