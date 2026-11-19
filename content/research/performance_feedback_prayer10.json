@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T04:19:18.276633+00:00",
+  "generated_at": "2026-11-19T10:24:30.856513+00:00",
   "as_of": "2026-11-19",
   "sufficient_data": false,
   "measured_longform_videos": 0,
@@ -61,85 +61,87 @@
     "measured_shorts": 18,
     "total_shorts": 23,
     "sufficient_data": true,
-    "avg_views": 126.6,
-    "median_views": 123,
-    "total_views": 2278,
+    "avg_views": 127.2,
+    "median_views": 131,
+    "total_views": 2289,
     "minimum_age_days": 2,
     "by_book": {
       "ecclesiastes": {
         "shorts": 1,
         "avg_views": 95.0,
-        "ratio": 0.917
+        "ratio": 0.916
       },
       "isaiah": {
         "shorts": 2,
         "avg_views": 131.0,
-        "ratio": 1.018
+        "ratio": 1.015
       },
       "james": {
         "shorts": 2,
         "avg_views": 167.0,
-        "ratio": 1.16
+        "ratio": 1.157
       },
       "jeremiah": {
         "shorts": 1,
-        "avg_views": 150.0,
-        "ratio": 1.062
+        "avg_views": 148.0,
+        "ratio": 1.055
       },
       "john": {
         "shorts": 2,
-        "avg_views": 84.0,
+        "avg_views": 84.5,
         "ratio": 0.832
       },
       "micah": {
         "shorts": 1,
-        "avg_views": 84.0,
-        "ratio": 0.888
+        "avg_views": 83.0,
+        "ratio": 0.884
       },
       "proverbs": {
         "shorts": 4,
         "avg_views": 95.2,
-        "ratio": 0.835
+        "ratio": 0.833
       },
       "psalm": {
         "shorts": 5,
-        "avg_views": 160.8,
-        "ratio": 1.193
+        "avg_views": 163.4,
+        "ratio": 1.204
       }
     },
     "by_theme": {
       "anxiety_peace": {
         "shorts": 3,
-        "avg_views": 113.3,
-        "ratio": 0.937
+        "avg_views": 113.7,
+        "ratio": 0.936
       },
       "daily_guidance_wisdom": {
         "shorts": 10,
-        "avg_views": 114.4,
-        "ratio": 0.92
+        "avg_views": 113.7,
+        "ratio": 0.912
       },
       "midday_strength_endurance": {
         "shorts": 1,
         "avg_views": 108.0,
-        "ratio": 0.951
+        "ratio": 0.95
       },
       "peace_rest": {
         "shorts": 2,
-        "avg_views": 109.0,
-        "ratio": 0.931
+        "avg_views": 113.0,
+        "ratio": 0.944
       },
       "protection": {
         "shorts": 1,
         "avg_views": 313.0,
-        "ratio": 1.491
+        "ratio": 1.487
       },
       "trust_surrender": {
         "shorts": 1,
-        "avg_views": 155.0,
-        "ratio": 1.075
+        "avg_views": 164.0,
+        "ratio": 1.097
       }
     },
-    "guidance": []
+    "guidance": [
+      "Shorts: Psalm runs 1.2x this channel's average Short (127 views over 18 Shorts); its passages are written first."
+    ]
   },
   "guidance": [
     "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
