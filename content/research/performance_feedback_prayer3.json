@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T04:12:51.267405+00:00",
+  "generated_at": "2026-11-19T10:18:26.511207+00:00",
   "as_of": "2026-11-19",
   "sufficient_data": false,
   "measured_longform_videos": 0,
@@ -47,7 +47,7 @@
     "sufficient_data": true,
     "avg_views": 90.1,
     "median_views": 90,
-    "total_views": 2703,
+    "total_views": 2704,
     "minimum_age_days": 2,
     "by_book": {
       "1 corinthians": {
@@ -87,13 +87,13 @@
       },
       "isaiah": {
         "shorts": 4,
-        "avg_views": 74.5,
-        "ratio": 0.885
+        "avg_views": 74.8,
+        "ratio": 0.886
       },
       "mark": {
         "shorts": 1,
-        "avg_views": 76.0,
-        "ratio": 0.948
+        "avg_views": 75.0,
+        "ratio": 0.944
       },
       "matthew": {
         "shorts": 1,
@@ -112,7 +112,7 @@
       },
       "psalm": {
         "shorts": 12,
-        "avg_views": 91.2,
+        "avg_views": 91.3,
         "ratio": 1.011
       },
       "romans": {
@@ -130,7 +130,7 @@
       "daily_guidance_wisdom": {
         "shorts": 6,
         "avg_views": 98.3,
-        "ratio": 1.069
+        "ratio": 1.068
       },
       "light_courage": {
         "shorts": 1,
@@ -144,8 +144,8 @@
       },
       "peace_rest": {
         "shorts": 3,
-        "avg_views": 66.7,
-        "ratio": 0.844
+        "avg_views": 66.3,
+        "ratio": 0.842
       },
       "stillness_refuge": {
         "shorts": 1,
@@ -154,8 +154,8 @@
       },
       "trust_surrender": {
         "shorts": 1,
-        "avg_views": 107.0,
-        "ratio": 1.063
+        "avg_views": 108.0,
+        "ratio": 1.066
       }
     },
     "guidance": []
