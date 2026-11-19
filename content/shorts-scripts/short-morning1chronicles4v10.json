@@ -1,0 +1,274 @@
+{
+  "key": "short-morning1chronicles4v10",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "A PRAYER FOR",
+    "NEW BORDERS"
+  ],
+  "poster": [
+    "JABEZ'S PRAYER",
+    "FOR EXPANSION",
+    "DIVINE GUIDANCE",
+    "MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden sunrise over dew covered meadow",
+    "soft morning light through sheer white curtains",
+    "mist rising off a calm forest lake",
+    "first rays of sun touching mountain peaks",
+    "sunlight reflecting on moving stream water",
+    "warm sun glow through autumn leaves"
+  ],
+  "scenes": [
+    {
+      "a": "The quiet weight of",
+      "img": "short-morning1chronicles4v10-scene-01.jpg",
+      "kicker": "1 CHRONICLES 4:10",
+      "sub": "SURRENDER YOUR AMBITIONS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Oh that thou",
+      "img": "short-morning1chronicles4v10-scene-02.jpg",
+      "kicker": "1 CHRONICLES 4:10",
+      "sub": "A BOLD PETITION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "keep me from",
+      "img": "short-morning1chronicles4v10-scene-03.jpg",
+      "kicker": "1 CHRONICLES 4:10",
+      "sub": "SHELTER FROM THE STORM",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.7
+      ]
+    },
+    {
+      "a": "God granted him",
+      "img": "short-morning1chronicles4v10-scene-04.jpg",
+      "kicker": "1 CHRONICLES 4:10",
+      "sub": "FAITHFUL PROVISION",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.3
+      ]
+    },
+    {
+      "a": "Father, expand my",
+      "img": "short-morning1chronicles4v10-scene-05.jpg",
+      "kicker": "1 CHRONICLES 4:10",
+      "sub": "TRUSTING IN HIS PLAN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Please subscribe to",
+      "img": "short-morning1chronicles4v10-scene-06.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "FIND PEACE AT DAWN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "The quiet weight of this unspoken limitation is pressing against your heart right now."
+    ],
+    [
+      15,
+      35,
+      "Oh that thou wouldest bless me indeed, and enlarge my coast, and that thine hand might be with me,"
+    ],
+    [
+      35,
+      55,
+      "and that thou wouldest keep me from evil, that it may not grieve me! And God granted him that which he requested."
+    ],
+    [
+      55,
+      75,
+      "Father, expand my influence for your glory as I walk through this door today."
+    ],
+    [
+      75,
+      95,
+      "Hold my hand, shield me from sorrow, and let your sovereign presence anchor my soul."
+    ],
+    [
+      95,
+      110,
+      "Please subscribe to The Morning Altar — begin every sunrise in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "THE QUIET WEIGHT",
+        "OF THIS LIMITATION",
+        "PRESSING AGAINST",
+        "YOUR HEART"
+      ],
+      [
+        "QUIET WEIGHT"
+      ],
+      "1 CHRONICLES 4:10"
+    ],
+    [
+      15,
+      35,
+      [
+        "OH THAT THOU",
+        "WOULDEST BLESS ME",
+        "ENLARGE MY COAST",
+        "THINE HAND WITH ME"
+      ],
+      [
+        "BLESS ME"
+      ],
+      "1 CHRONICLES 4:10"
+    ],
+    [
+      35,
+      55,
+      [
+        "KEEP ME FROM EVIL",
+        "THAT IT MAY",
+        "NOT GRIEVE ME",
+        "GOD GRANTED HIM"
+      ],
+      [
+        "KEEP ME"
+      ],
+      "1 CHRONICLES 4:10"
+    ],
+    [
+      55,
+      75,
+      [
+        "FATHER EXPAND",
+        "MY INFLUENCE",
+        "FOR YOUR GLORY",
+        "WALK THROUGH"
+      ],
+      [
+        "EXPAND"
+      ],
+      "1 CHRONICLES 4:10"
+    ],
+    [
+      75,
+      95,
+      [
+        "HOLD MY HAND",
+        "SHIELD ME",
+        "FROM SORROW",
+        "ANCHOR MY SOUL"
+      ],
+      [
+        "SOVEREIGN"
+      ],
+      "1 CHRONICLES 4:10"
+    ],
+    [
+      95,
+      110,
+      [
+        "PLEASE SUBSCRIBE",
+        "TO THE",
+        "MORNING ALTAR",
+        "BEGIN EVERY SUNRISE"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "1 CHRONICLES 4:10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The quiet weight of",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "WEIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Oh that thou",
+      "kind": "phrase",
+      "words": [
+        "BLESS",
+        "ME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "keep me from",
+      "kind": "phrase",
+      "words": [
+        "KEEP",
+        "ME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "God granted him",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "GRANTED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, expand my",
+      "kind": "phrase",
+      "words": [
+        "EXPAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Please subscribe to",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 Chronicles 4:10"
+}

@@ -1,0 +1,283 @@
+{
+  "key": "short-morningjob38v12",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "THE MORNING COMMAND",
+    "FINDING STILLNESS"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "GOD COMMANDS THE LIGHT",
+    "A MOMENT OF PEACE",
+    "FOR YOUR NEW DAY"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "soft morning light through window",
+    "golden hour mountain horizon",
+    "mist rising over forest sunrise",
+    "calm ocean water at dawn",
+    "sun breaking over clouds",
+    "dew on morning leaves"
+  ],
+  "scenes": [
+    {
+      "a": "The heavy uncertainty holding your heart hostage this morning finds its resolve in God's authority.",
+      "img": "short-morningjob38v12-scene-01.jpg",
+      "kicker": "HIS AUTHORITY",
+      "sub": "FINDING STRENGTH AT DAWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hast thou commanded the morning since thy days; and caused the dayspring to know his place;",
+      "img": "short-morningjob38v12-scene-02.jpg",
+      "kicker": "JOB 38:12",
+      "sub": "THE DIVINE COMMAND",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we acknowledge that You govern the dawn and set the sun in its course.",
+      "img": "short-morningjob38v12-scene-03.jpg",
+      "kicker": "SOVEREIGN LIGHT",
+      "sub": "RESTING IN HIS DESIGN",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "You alone hold the transition from dark to light, and You hold my life today.",
+      "img": "short-morningjob38v12-scene-04.jpg",
+      "kicker": "FAITHFUL GUIDANCE",
+      "sub": "TRUSTING THE PROCESS",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "May this morning light remind me that Your plans for my hours are perfectly ordered.",
+      "img": "short-morningjob38v12-scene-05.jpg",
+      "kicker": "DIVINE ORDER",
+      "sub": "SURRENDERING CONTROL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Help me walk in the confidence that the One who commands the morning governs my steps.",
+      "img": "short-morningjob38v12-scene-06.jpg",
+      "kicker": "STEADY FEET",
+      "sub": "WALKING IN GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The heavy uncertainty holding your heart hostage this morning finds its resolve in God's authority."
+    ],
+    [
+      9,
+      21,
+      "Hast thou commanded the morning since thy days; and caused the dayspring to know his place;"
+    ],
+    [
+      22,
+      33,
+      "Lord, we acknowledge that You govern the dawn and set the sun in its course."
+    ],
+    [
+      34,
+      45,
+      "You alone hold the transition from dark to light, and You hold my life today."
+    ],
+    [
+      46,
+      57,
+      "May this morning light remind me that Your plans for my hours are perfectly ordered."
+    ],
+    [
+      58,
+      68,
+      "Help me walk in the confidence that the One who commands the morning governs my steps."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE UNCERTAINTY",
+        "HOLDING YOUR HEART",
+        "RESOLVE IN",
+        "GODS AUTHORITY"
+      ],
+      [
+        "UNCERTAINTY",
+        "AUTHORITY"
+      ],
+      "JOB 38:12"
+    ],
+    [
+      9,
+      21,
+      [
+        "HAST THOU COMMANDED",
+        "THE MORNING",
+        "AND CAUSED THE",
+        "DAYSPRING TO KNOW",
+        "HIS PLACE"
+      ],
+      [
+        "COMMANDED",
+        "DAYSPRING"
+      ],
+      "JOB 38:12"
+    ],
+    [
+      22,
+      33,
+      [
+        "LORD WE",
+        "ACKNOWLEDGE YOUR",
+        "GOVERNANCE OVER",
+        "THE DAWNING SUN"
+      ],
+      [
+        "ACKNOWLEDGE",
+        "GOVERNANCE"
+      ],
+      "JOB 38:12"
+    ],
+    [
+      34,
+      45,
+      [
+        "YOU ALONE HOLD",
+        "THE LIGHT",
+        "AND MY LIFE",
+        "THROUGH TODAY"
+      ],
+      [
+        "ALONE",
+        "MY LIFE"
+      ],
+      "JOB 38:12"
+    ],
+    [
+      46,
+      57,
+      [
+        "YOUR PLANS FOR",
+        "MY HOURS",
+        "ARE PERFECTLY",
+        "ORDERED BY YOU"
+      ],
+      [
+        "PERFECTLY",
+        "ORDERED"
+      ],
+      "JOB 38:12"
+    ],
+    [
+      58,
+      68,
+      [
+        "CONFIDENCE THAT",
+        "HE GOVERNS",
+        "MY EVERY STEP",
+        "THIS MORNING"
+      ],
+      [
+        "CONFIDENCE",
+        "GOVERNS"
+      ],
+      "JOB 38:12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The heavy uncertainty holding your heart hostage this morning finds its resolve in God's authority.",
+      "kind": "phrase",
+      "words": [
+        "UNCERTAINTY",
+        "AUTHORITY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hast thou commanded the morning since thy days; and caused the dayspring to know his place;",
+      "kind": "phrase",
+      "words": [
+        "COMMANDED",
+        "DAYSPRING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we acknowledge that You govern the dawn and set the sun in its course.",
+      "kind": "phrase",
+      "words": [
+        "ACKNOWLEDGE",
+        "GOVERNANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You alone hold the transition from dark to light, and You hold my life today.",
+      "kind": "phrase",
+      "words": [
+        "ALONE",
+        "LIFE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May this morning light remind me that Your plans for my hours are perfectly ordered.",
+      "kind": "phrase",
+      "words": [
+        "PERFECTLY",
+        "ORDERED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help me walk in the confidence that the One who commands the morning governs my steps.",
+      "kind": "phrase",
+      "words": [
+        "CONFIDENCE",
+        "GOVERNS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Job 38:12"
+}
