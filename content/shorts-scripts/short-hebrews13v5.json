@@ -1,0 +1,272 @@
+{
+  "key": "short-hebrews13v5",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "HEBREWS 13:5-6",
+    "FIND YOUR PEACE"
+  ],
+  "poster": [
+    "YOU ARE NOT",
+    "ALONE TONIGHT",
+    "HE IS WITH",
+    "YOU ALWAYS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake night",
+    "glowing candle in dark room",
+    "slow flowing dark river",
+    "moonlight reflecting on still water",
+    "mist moving over forest floor",
+    "dusk sky with faint stars"
+  ],
+  "scenes": [
+    {
+      "a": "If the financial worry gripping your chest makes sleep feel impossible, stay right here.",
+      "img": "short-hebrews13v5-scene-01.jpg",
+      "kicker": "HEBREWS 13:5-6",
+      "sub": "FIND REST IN HIS PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your conversation be without covetousness; and be content with such things as ye have: for he hath said, I will never leave thee, nor forsake thee.",
+      "img": "short-hebrews13v5-scene-02.jpg",
+      "kicker": "HEBREWS 13:5",
+      "sub": "HE IS WITH YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "So that we may boldly say, The Lord is my helper, and I will not fear what man shall do unto me.",
+      "img": "short-hebrews13v5-scene-03.jpg",
+      "kicker": "HEBREWS 13:6",
+      "sub": "THE LORD IS YOUR HELPER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, quiet this anxious heart and remind me that Your presence is my true wealth.",
+      "img": "short-hebrews13v5-scene-04.jpg",
+      "kicker": "PRAYER",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Replace my fear of the future with a deep, unshakable trust in Your constant care.",
+      "img": "short-hebrews13v5-scene-05.jpg",
+      "kicker": "PRAYER",
+      "sub": "TRUST IN HIS CARE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant me the grace to sleep soundly, knowing I am held in Your loving hand.",
+      "img": "short-hebrews13v5-scene-06.jpg",
+      "kicker": "PEACE",
+      "sub": "YOU ARE HELD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the financial worry gripping your chest makes sleep feel impossible, stay right here."
+    ],
+    [
+      8,
+      20,
+      "Let your conversation be without covetousness; and be content with such things as ye have: for he hath said, I will never leave thee, nor forsake thee."
+    ],
+    [
+      20,
+      28,
+      "So that we may boldly say, The Lord is my helper, and I will not fear what man shall do unto me."
+    ],
+    [
+      28,
+      38,
+      "Father, quiet this anxious heart and remind me that Your presence is my true wealth."
+    ],
+    [
+      38,
+      48,
+      "Replace my fear of the future with a deep, unshakable trust in Your constant care."
+    ],
+    [
+      48,
+      56,
+      "Grant me the grace to sleep soundly, knowing I am held in Your loving hand."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF THE WORRY",
+        "GRIPPING YOUR CHEST",
+        "STAY RIGHT HERE"
+      ],
+      [
+        "GRIPPING YOUR CHEST"
+      ],
+      "HEBREWS 13:5-6"
+    ],
+    [
+      8,
+      20,
+      [
+        "HE HATH SAID",
+        "I WILL NEVER",
+        "LEAVE THEE",
+        "NOR FORSAKE THEE"
+      ],
+      [
+        "NEVER LEAVE THEE"
+      ],
+      "HEBREWS 13:5"
+    ],
+    [
+      20,
+      28,
+      [
+        "THE LORD IS",
+        "MY HELPER",
+        "I WILL NOT FEAR"
+      ],
+      [
+        "MY HELPER"
+      ],
+      "HEBREWS 13:6"
+    ],
+    [
+      28,
+      38,
+      [
+        "QUIET THIS HEART",
+        "YOUR PRESENCE IS",
+        "MY TRUE WEALTH"
+      ],
+      [
+        "TRUE WEALTH"
+      ],
+      "PRAYER"
+    ],
+    [
+      38,
+      48,
+      [
+        "REPLACE MY FEAR",
+        "WITH A DEEP",
+        "UNSHAKABLE TRUST"
+      ],
+      [
+        "UNSHAKABLE TRUST"
+      ],
+      "PRAYER"
+    ],
+    [
+      48,
+      56,
+      [
+        "GRANT ME GRACE",
+        "I AM HELD",
+        "IN YOUR HAND"
+      ],
+      [
+        "HELD"
+      ],
+      "PEACE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the financial worry gripping your chest makes sleep feel impossible, stay right here.",
+      "kind": "phrase",
+      "words": [
+        "GRIPPING",
+        "YOUR",
+        "CHEST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your conversation be without covetousness; and be content with such things as ye have: for he hath said, I will never leave thee, nor forsake thee.",
+      "kind": "phrase",
+      "words": [
+        "NEVER",
+        "LEAVE",
+        "THEE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "So that we may boldly say, The Lord is my helper, and I will not fear what man shall do unto me.",
+      "kind": "phrase",
+      "words": [
+        "MY",
+        "HELPER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, quiet this anxious heart and remind me that Your presence is my true wealth.",
+      "kind": "phrase",
+      "words": [
+        "TRUE",
+        "WEALTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Replace my fear of the future with a deep, unshakable trust in Your constant care.",
+      "kind": "phrase",
+      "words": [
+        "UNSHAKABLE",
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the grace to sleep soundly, knowing I am held in Your loving hand.",
+      "kind": "phrase",
+      "words": [
+        "HELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Hebrews 13:5-6"
+}

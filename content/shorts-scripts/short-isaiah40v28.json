@@ -1,0 +1,311 @@
+{
+  "key": "short-isaiah40v28",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "RENEW YOUR STRENGTH",
+    "IN THE QUIET NIGHT"
+  ],
+  "poster": [
+    "ISAIAH 40:28-31",
+    "THE SECRET PLACE",
+    "A BEDTIME PRAYER",
+    "REST IN HIS POWER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake night",
+    "starlit night sky peaceful forest",
+    "gentle river flowing in moonlight",
+    "quiet ocean waves under stars",
+    "misty valley at night peaceful",
+    "silent snow covered pines night",
+    "moonlit clouds drifting slowly"
+  ],
+  "scenes": [
+    {
+      "a": "If your body aches from carrying more than you can bear today, rest here.",
+      "img": "short-isaiah40v28-scene-01.jpg",
+      "kicker": "ISAIAH 40:28",
+      "sub": "FIND REST TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, you know the exhaustion that lingers in this room.",
+      "img": "short-isaiah40v28-scene-02.jpg",
+      "kicker": "ISAIAH 40:29",
+      "sub": "HIS EYE IS ON YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Hast thou not known? hast thou not heard, that the everlasting God, the LORD, the Creator of the ends of the earth, fainteth not, neither is weary?",
+      "img": "short-isaiah40v28-scene-03.jpg",
+      "kicker": "ISAIAH 40:28",
+      "sub": "THE CREATOR NEVER FAINTS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "there is no searching of his understanding.",
+      "img": "short-isaiah40v28-scene-04.jpg",
+      "kicker": "ISAIAH 40:28",
+      "sub": "HIS WISDOM IS DEEP",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "He giveth power to the faint; and to them that have no might he increaseth strength.",
+      "img": "short-isaiah40v28-scene-05.jpg",
+      "kicker": "ISAIAH 40:29",
+      "sub": "STRENGTH FOR THE WEARY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, grant this weary soul the quiet assurance of your grace tonight.",
+      "img": "short-isaiah40v28-scene-06.jpg",
+      "kicker": "ISAIAH 40:30",
+      "sub": "REST IN HIS GRACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.35
+      ]
+    },
+    {
+      "a": "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+      "img": "short-isaiah40v28-scene-07.jpg",
+      "kicker": "ISAIAH 40:31",
+      "sub": "RENEW YOUR STRENGTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "If your body aches from carrying more than you can bear today, rest here."
+    ],
+    [
+      12,
+      23,
+      "Lord, you know the exhaustion that lingers in this room."
+    ],
+    [
+      23,
+      38,
+      "Hast thou not known? hast thou not heard, that the everlasting God, the LORD, the Creator of the ends of the earth, fainteth not, neither is weary?"
+    ],
+    [
+      38,
+      48,
+      "there is no searching of his understanding."
+    ],
+    [
+      48,
+      62,
+      "He giveth power to the faint; and to them that have no might he increaseth strength."
+    ],
+    [
+      62,
+      74,
+      "Father, grant this weary soul the quiet assurance of your grace tonight."
+    ],
+    [
+      74,
+      95,
+      "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "IF YOUR BODY ACHES",
+        "FROM CARRYING MORE",
+        "THAN YOU CAN BEAR",
+        "TODAY, REST HERE."
+      ],
+      [
+        "REST HERE"
+      ],
+      "ISAIAH 40 : 28"
+    ],
+    [
+      12,
+      23,
+      [
+        "LORD, YOU KNOW",
+        "THE EXHAUSTION THAT",
+        "LINGERS IN THIS ROOM."
+      ],
+      [
+        "EXHAUSTION"
+      ],
+      "ISAIAH 40 : 29"
+    ],
+    [
+      23,
+      38,
+      [
+        "HAST THOU NOT KNOWN?",
+        "THE EVERLASTING GOD,",
+        "FAINTETH NOT,"
+      ],
+      [
+        "EVERLASTING GOD"
+      ],
+      "ISAIAH 40 : 28"
+    ],
+    [
+      38,
+      48,
+      [
+        "THERE IS NO",
+        "SEARCHING OF",
+        "HIS UNDERSTANDING."
+      ],
+      [
+        "HIS UNDERSTANDING"
+      ],
+      "ISAIAH 40 : 28"
+    ],
+    [
+      48,
+      62,
+      [
+        "HE GIVETH POWER",
+        "TO THE FAINT;",
+        "HE INCREASETH STRENGTH."
+      ],
+      [
+        "INCREASETH STRENGTH"
+      ],
+      "ISAIAH 40 : 29"
+    ],
+    [
+      62,
+      74,
+      [
+        "FATHER, GRANT THIS",
+        "WEARY SOUL",
+        "YOUR GRACE TONIGHT."
+      ],
+      [
+        "WEARY SOUL"
+      ],
+      "ISAIAH 40 : 30"
+    ],
+    [
+      74,
+      95,
+      [
+        "THEY THAT WAIT",
+        "SHALL RENEW STRENGTH;",
+        "MOUNT UP AS EAGLES,"
+      ],
+      [
+        "RENEW STRENGTH"
+      ],
+      "ISAIAH 40 : 31"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If your body aches from carrying more than you can bear today, rest here.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "HERE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, you know the exhaustion that lingers in this room.",
+      "kind": "phrase",
+      "words": [
+        "EXHAUSTION",
+        "LINGERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hast thou not known? hast thou not heard, that the everlasting God, the LORD, the Creator of the ends of the earth, fainteth not, neither is weary?",
+      "kind": "phrase",
+      "words": [
+        "EVERLASTING",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "there is no searching of his understanding.",
+      "kind": "phrase",
+      "words": [
+        "NO",
+        "SEARCHING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He giveth power to the faint; and to them that have no might he increaseth strength.",
+      "kind": "phrase",
+      "words": [
+        "INCREASETH",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, grant this weary soul the quiet assurance of your grace tonight.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "SOUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+      "kind": "phrase",
+      "words": [
+        "RENEW",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 40:28-31"
+}

@@ -1,0 +1,230 @@
+{
+  "key": "short-psalm77v6",
+  "channel": "secret-place",
+  "psalm": 77,
+  "title": [
+    "A SONG",
+    "IN THE NIGHT"
+  ],
+  "poster": [
+    "FINDING PEACE",
+    "IN THE DARK",
+    "A MIDNIGHT",
+    "PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "misty moonlit forest path",
+    "glowing candle in dark room",
+    "ripples on still lake night",
+    "starry night sky over mountains",
+    "soft lantern light on wooden table",
+    "waves washing on quiet shore"
+  ],
+  "scenes": [
+    {
+      "a": "If the weight of your past mistakes keeps you from drifting into sleep, listen.",
+      "img": "short-psalm77v6-scene-01.jpg",
+      "kicker": "PSALM 77:6",
+      "sub": "FINDING YOUR SONG",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "It is time to quiet the noise of your regrets.",
+      "img": "short-psalm77v6-scene-02.jpg",
+      "kicker": "PSALM 77:6",
+      "sub": "LET GO OF THE NOISE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I call to remembrance my song in the night: I commune with mine own heart: and my spirit made diligent search.",
+      "img": "short-psalm77v6-scene-03.jpg",
+      "kicker": "PSALM 77:6",
+      "sub": "REMEMBERING HIS GRACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, replace these restless thoughts with the memory of Your unfailing presence within my weary soul.",
+      "img": "short-psalm77v6-scene-04.jpg",
+      "kicker": "PSALM 77:6",
+      "sub": "HIS PRESENCE IS NEAR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Search my heart tonight and show me how to rest in the stillness of Your perfect grace.",
+      "img": "short-psalm77v6-scene-05.jpg",
+      "kicker": "PSALM 77:6",
+      "sub": "REST IN HIS GRACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May You be my anchor as I finally close my eyes to find true peace tonight.",
+      "img": "short-psalm77v6-scene-06.jpg",
+      "kicker": "PSALM 77:6",
+      "sub": "FIND TRUE PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "If the weight of your past mistakes keeps you from drifting into sleep, listen."
+    ],
+    [
+      10,
+      18,
+      "It is time to quiet the noise of your regrets."
+    ],
+    [
+      18,
+      35,
+      "I call to remembrance my song in the night: I commune with mine own heart: and my spirit made diligent search."
+    ],
+    [
+      35,
+      52,
+      "Lord, replace these restless thoughts with the memory of Your unfailing presence within my weary soul."
+    ],
+    [
+      52,
+      68,
+      "Search my heart tonight and show me how to rest in the stillness of Your perfect grace."
+    ],
+    [
+      68,
+      80,
+      "May You be my anchor as I finally close my eyes to find true peace tonight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "WEIGHT OF PAST",
+        "MISTAKES KEEPS YOU",
+        "AWAKE"
+      ],
+      [
+        "MISTAKES"
+      ],
+      "PSALM 77:6"
+    ],
+    [
+      10,
+      18,
+      [
+        "QUIET THE NOISE",
+        "OF YOUR",
+        "REGRETS"
+      ],
+      [
+        "QUIET"
+      ],
+      "PSALM 77:6"
+    ],
+    [
+      18,
+      35,
+      [
+        "I CALL TO",
+        "REMEMBRANCE MY",
+        "SONG IN THE NIGHT"
+      ],
+      [
+        "REMEMBRANCE"
+      ],
+      "PSALM 77:6"
+    ],
+    [
+      35,
+      52,
+      [
+        "UNFAILING PRESENCE",
+        "WITHIN MY WEARY",
+        "SOUL"
+      ],
+      [
+        "UNFAILING"
+      ],
+      "PSALM 77:6"
+    ],
+    [
+      52,
+      68,
+      [
+        "REST IN THE",
+        "STILLNESS OF",
+        "PERFECT GRACE"
+      ],
+      [
+        "STILLNESS"
+      ],
+      "PSALM 77:6"
+    ],
+    [
+      68,
+      80,
+      [
+        "MY ANCHOR",
+        "TO FIND TRUE",
+        "PEACE TONIGHT"
+      ],
+      [
+        "ANCHOR"
+      ],
+      "PSALM 77:6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the weight of your past mistakes keeps you from drifting into sleep, listen.",
+      "kind": "phrase",
+      "words": [
+        "MISTAKES",
+        "LISTEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I call to remembrance my song in the night: I commune with mine own heart: and my spirit made diligent search.",
+      "kind": "phrase",
+      "words": [
+        "REMEMBRANCE",
+        "SONG"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 77:6"
+}

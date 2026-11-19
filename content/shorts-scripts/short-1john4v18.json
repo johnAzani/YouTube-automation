@@ -1,0 +1,266 @@
+{
+  "key": "short-1john4v18",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "RELEASE YOUR FEAR",
+    "REST IN LOVE"
+  ],
+  "poster": [
+    "THE SECRET PLACE",
+    "A PRAYER FOR",
+    "YOUR RESTLESS",
+    "HEART TONIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "glowing candle in a dark room",
+    "mist over a still mountain lake at dusk",
+    "fire embers cooling in a fireplace",
+    "soft moonlight on calm water",
+    "deep blue shadows in a forest",
+    "close up of a single white lily"
+  ],
+  "scenes": [
+    {
+      "a": "Release the grip of that recurring worry that has followed you into your bed tonight.",
+      "img": "short-1john4v18-scene-01.jpg",
+      "kicker": "1 JOHN 4:18",
+      "sub": "RELEASE YOUR BURDEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The scripture tells us clearly that there is no fear in love; but perfect love casteth out fear: because fear hath torment. He that feareth is not made perfect in love.",
+      "img": "short-1john4v18-scene-02.jpg",
+      "kicker": "1 JOHN 4:18",
+      "sub": "REST IN HIS LOVE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, let this truth anchor my spirit as the darkness gathers around my weary body.",
+      "img": "short-1john4v18-scene-03.jpg",
+      "kicker": "1 JOHN 4:18",
+      "sub": "ANCHOR YOUR SOUL",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Drive away the shadows of doubt that keep me awake and quiet my racing mind.",
+      "img": "short-1john4v18-scene-04.jpg",
+      "kicker": "1 JOHN 4:18",
+      "sub": "QUIET YOUR MIND",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May I be held tonight by a love that is deeper than my own fragile understanding.",
+      "img": "short-1john4v18-scene-05.jpg",
+      "kicker": "1 JOHN 4:18",
+      "sub": "BE HELD IN PEACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I surrender my night into your care, confident that your light remains even in darkness.",
+      "img": "short-1john4v18-scene-06.jpg",
+      "kicker": "1 JOHN 4:18",
+      "sub": "SURRENDER YOUR NIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "Release the grip of that recurring worry that has followed you into your bed tonight."
+    ],
+    [
+      12,
+      32,
+      "The scripture tells us clearly that there is no fear in love; but perfect love casteth out fear: because fear hath torment. He that feareth is not made perfect in love."
+    ],
+    [
+      32,
+      48,
+      "Father, let this truth anchor my spirit as the darkness gathers around my weary body."
+    ],
+    [
+      48,
+      62,
+      "Drive away the shadows of doubt that keep me awake and quiet my racing mind."
+    ],
+    [
+      62,
+      78,
+      "May I be held tonight by a love that is deeper than my own fragile understanding."
+    ],
+    [
+      78,
+      98,
+      "I surrender my night into your care, confident that your light remains even in darkness."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "RELEASE THE GRIP",
+        "OF THAT RECURRING WORRY"
+      ],
+      [
+        "RELEASE",
+        "GRIP"
+      ],
+      "1 JOHN 4:18"
+    ],
+    [
+      12,
+      32,
+      [
+        "NO FEAR IN LOVE",
+        "PERFECT LOVE CASTETH OUT FEAR"
+      ],
+      [
+        "PERFECT LOVE",
+        "CASTETH OUT"
+      ],
+      "1 JOHN 4:18"
+    ],
+    [
+      32,
+      48,
+      [
+        "FATHER LET THIS TRUTH",
+        "ANCHOR MY SPIRIT"
+      ],
+      [
+        "ANCHOR"
+      ],
+      "1 JOHN 4:18"
+    ],
+    [
+      48,
+      62,
+      [
+        "DRIVE AWAY THE SHADOWS",
+        "QUIET MY RACING MIND"
+      ],
+      [
+        "QUIET"
+      ],
+      "1 JOHN 4:18"
+    ],
+    [
+      62,
+      78,
+      [
+        "HELD BY A LOVE",
+        "DEEPER THAN UNDERSTANDING"
+      ],
+      [
+        "HELD",
+        "LOVE"
+      ],
+      "1 JOHN 4:18"
+    ],
+    [
+      78,
+      98,
+      [
+        "I SURRENDER MY NIGHT",
+        "YOUR LIGHT REMAINS"
+      ],
+      [
+        "SURRENDER",
+        "LIGHT"
+      ],
+      "1 JOHN 4:18"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Release the grip of that recurring worry that has followed you into your bed tonight.",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "GRIP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The scripture tells us clearly that there is no fear in love; but perfect love casteth out fear: because fear hath torment. He that feareth is not made perfect in love.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT LOVE",
+        "CASTETH OUT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, let this truth anchor my spirit as the darkness gathers around my weary body.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Drive away the shadows of doubt that keep me awake and quiet my racing mind.",
+      "kind": "phrase",
+      "words": [
+        "QUIET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May I be held tonight by a love that is deeper than my own fragile understanding.",
+      "kind": "phrase",
+      "words": [
+        "HELD",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I surrender my night into your care, confident that your light remains even in darkness.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 John 4:18"
+}
