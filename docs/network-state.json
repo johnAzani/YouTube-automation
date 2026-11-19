@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T16:15:46Z",
+  "generated_at": "2026-11-19T16:51:55Z",
   "monitor_generated_at": "2026-11-19T11:54:23.137750+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 503,
-    "published_longform": 161,
-    "published_shorts": 342,
-    "public_total": 501,
-    "queued_longform": 59,
-    "queued_shorts": 92,
+    "published_total": 505,
+    "published_longform": 162,
+    "published_shorts": 343,
+    "public_total": 503,
+    "queued_longform": 58,
+    "queued_shorts": 91,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -305,33 +305,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 42,
-        "published_longform": 15,
-        "published_shorts": 27,
-        "thumbnail_pending": 42,
-        "public_total": 42,
-        "queued_longform": 6,
+        "published_total": 44,
+        "published_longform": 16,
+        "published_shorts": 28,
+        "thumbnail_pending": 44,
+        "public_total": 44,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-FAMILYPSALM101V2",
-        "title": "Pray This Psalm 101:2 Family Prayer Over Your Home | A Prayer For Your Home #Shorts",
-        "format": "short",
-        "youtube_video_id": "E2aoMj_uqZA",
-        "watch_url": "https://www.youtube.com/shorts/E2aoMj_uqZA",
-        "published_on": "2026-11-19",
-        "published_at": "2026-11-19T11:59:26Z"
-      },
-      "next_queued_longform": {
         "id": "0315",
         "title": "Mercy Over Generations: Psalm 103:17-18 | The Family Altar",
-        "words": 1900,
+        "format": "longform",
+        "youtube_video_id": "ZQpEqCCpBWg",
+        "watch_url": "https://youtu.be/ZQpEqCCpBWg",
+        "published_on": "2026-11-19",
+        "published_at": "2026-11-19T16:51:04Z"
+      },
+      "next_queued_longform": {
+        "id": "0316",
+        "title": "The Lord Will Bless You and Your Children: Psalm 115:12-15",
+        "words": 1053,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyproverbs14v26",
-        "scripture": "Proverbs 14:26",
+        "short": "short-familypsalm112v1",
+        "scripture": "Psalm 112:1-3",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0315",
+      "slug": "mercy-over-generations-psalm-103-17-18",
+      "file": "0315-mercy-over-generations-psalm-103-17-18.md",
+      "title": "Mercy Over Generations: Psalm 103:17-18 | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T16:51:04Z",
+      "youtube_video_id": "ZQpEqCCpBWg",
+      "watch_url": "https://youtu.be/ZQpEqCCpBWg",
+      "youtu_be_url": "https://youtu.be/ZQpEqCCpBWg",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/ZQpEqCCpBWg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ZQpEqCCpBWg/hqdefault.jpg",
+      "thumb_text": "MERCY OVER",
+      "thumbnail_pending": true,
+      "duration_label": "~13 min",
+      "words": 1900
+    },
+    {
       "id": "0095",
       "slug": "strength-for-the-unfinished-work-nehemiah-69",
       "file": "0095-strength-for-the-unfinished-work-nehemiah-69.md",
@@ -940,6 +964,30 @@
       "thumbnail_pending": false,
       "duration_label": "71s",
       "words": 657
+    },
+    {
+      "id": "SHORT-FAMILYPROVERBS14V26",
+      "slug": "short-familyproverbs14v26-household-prayer",
+      "file": "short-familyproverbs14v26-household-prayer.md",
+      "title": "Pray This Proverbs 14:26 Family Prayer Over Your Home | God Is Our Refuge #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T15:32:23Z",
+      "youtube_video_id": "9awjCYPUKJY",
+      "watch_url": "https://www.youtube.com/shorts/9awjCYPUKJY",
+      "youtu_be_url": "https://youtu.be/9awjCYPUKJY",
+      "shorts_url": "https://www.youtube.com/shorts/9awjCYPUKJY",
+      "studio_url": "https://studio.youtube.com/video/9awjCYPUKJY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/9awjCYPUKJY/hqdefault.jpg",
+      "thumb_text": "GOD IS YOUR \u00b7 SHELTER",
+      "thumbnail_pending": true,
+      "duration_label": "47s",
+      "words": 661
     },
     {
       "id": "SHORT-MIDNIGHTEXODUS14V13",
@@ -13076,19 +13124,6 @@
         "words": 1509
       },
       {
-        "id": "0315",
-        "slug": "mercy-over-generations-psalm-103-17-18",
-        "file": "0315-mercy-over-generations-psalm-103-17-18.md",
-        "title": "Mercy Over Generations: Psalm 103:17-18 | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1900
-      },
-      {
         "id": "0316",
         "slug": "the-lord-will-bless-you-and-your-children-psalm-115-12-15",
         "file": "0316-the-lord-will-bless-you-and-your-children-psalm-115-12-15.md",
@@ -13545,17 +13580,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-familyproverbs14v26",
-        "file": "0000-short-familyproverbs14v26.yml",
-        "companion_longform_id": "",
-        "scripture": "Proverbs 14:26",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
       {
         "short": "short-gardenpsalm30v11",
         "file": "0000-short-gardenpsalm30v11.yml",
