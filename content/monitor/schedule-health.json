@@ -30,8 +30,8 @@
       "workflow": "keepalive.yml"
     }
   ],
-  "generated_at": "2026-11-19T04:09:34.701716+00:00",
-  "last_run_at": "2026-11-19T04:08:47+00:00",
+  "generated_at": "2026-11-19T04:11:57.703453+00:00",
+  "last_run_at": "2026-11-19T04:11:05+00:00",
   "on_time": [
     {
       "late_minutes": 115,
@@ -53,6 +53,13 @@
       "ran_at": "2026-11-18T20:45:51+00:00",
       "slot": "2026-11-18T19:14:00+00:00",
       "workflow": "community.yml"
+    },
+    {
+      "late_minutes": 115,
+      "name": "Growth autopilot",
+      "ran_at": "2026-11-19T04:09:38+00:00",
+      "slot": "2026-11-19T02:14:00+00:00",
+      "workflow": "growth-autopilot.yml"
     },
     {
       "late_minutes": 45,
