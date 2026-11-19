@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T21:09:34Z",
+  "generated_at": "2026-11-19T21:10:58Z",
   "monitor_generated_at": "2026-11-19T20:50:27.857648+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 510,
+    "published_total": 511,
     "published_longform": 162,
-    "published_shorts": 348,
-    "public_total": 508,
+    "published_shorts": 349,
+    "public_total": 509,
     "queued_longform": 58,
-    "queued_shorts": 86,
+    "queued_shorts": 85,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 38,
+        "published_total": 39,
         "published_longform": 12,
-        "published_shorts": 26,
-        "thumbnail_pending": 38,
-        "public_total": 38,
+        "published_shorts": 27,
+        "thumbnail_pending": 39,
+        "public_total": 39,
         "queued_longform": 6,
         "queued_other": 3,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM31V20",
-        "title": "Pray This Psalm 31:20 Prayer for Divine Protection | Surrounded By God's Peace #Shorts",
+        "id": "SHORT-SHIELDPSALM97V10",
+        "title": "Pray This Psalm 97:10 Prayer for Divine Protection | A Covering In Hostility #Shorts",
         "format": "short",
-        "youtube_video_id": "sT6PzKD_fD8",
-        "watch_url": "https://www.youtube.com/shorts/sT6PzKD_fD8",
+        "youtube_video_id": "bzro3wi1pAc",
+        "watch_url": "https://www.youtube.com/shorts/bzro3wi1pAc",
         "published_on": "2026-11-19",
-        "published_at": "2026-11-19T15:56:05Z"
+        "published_at": "2026-11-19T21:10:03Z"
       },
       "next_queued_longform": {
         "id": "0612",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm97v10",
-        "scripture": "Psalm 97:10",
+        "short": "short-shielddeuteronomy33v27",
+        "scripture": "Deuteronomy 33:27",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM97V10",
+      "slug": "short-shieldpsalm97v10-protection-prayer",
+      "file": "short-shieldpsalm97v10-protection-prayer.md",
+      "title": "Pray This Psalm 97:10 Prayer for Divine Protection | A Covering In Hostility #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T21:10:03Z",
+      "youtube_video_id": "bzro3wi1pAc",
+      "watch_url": "https://www.youtube.com/shorts/bzro3wi1pAc",
+      "youtu_be_url": "https://youtu.be/bzro3wi1pAc",
+      "shorts_url": "https://www.youtube.com/shorts/bzro3wi1pAc",
+      "studio_url": "https://studio.youtube.com/video/bzro3wi1pAc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/bzro3wi1pAc/hqdefault.jpg",
+      "thumb_text": "WHEN MALICE THREATENS \u00b7 GOD IS YOUR FORTRESS",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 664
+    },
     {
       "id": "SHORT-PROVISIONPSALM37V3",
       "slug": "short-provisionpsalm37v3-stewardship-prayer",
@@ -13853,17 +13877,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldpsalm97v10",
-        "file": "0000-short-shieldpsalm97v10.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 97:10",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-zephaniah3v17",
