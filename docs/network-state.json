@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T21:18:22Z",
+  "generated_at": "2026-11-19T21:40:39Z",
   "monitor_generated_at": "2026-11-19T20:50:27.857648+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 512,
-    "published_longform": 162,
-    "published_shorts": 350,
-    "public_total": 510,
-    "queued_longform": 58,
-    "queued_shorts": 84,
+    "published_total": 514,
+    "published_longform": 163,
+    "published_shorts": 351,
+    "public_total": 512,
+    "queued_longform": 57,
+    "queued_shorts": 83,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -373,33 +373,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 44,
-        "published_longform": 13,
-        "published_shorts": 31,
+        "published_total": 46,
+        "published_longform": 14,
+        "published_shorts": 32,
         "thumbnail_pending": 1,
-        "public_total": 44,
-        "queued_longform": 6,
+        "public_total": 46,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-HEALING2TIMOTHY1V7",
-        "title": "Pray This 2 Timothy 1:7 Healing Prayer for Peace & Strength | Sound Mind #Shorts",
-        "format": "short",
-        "youtube_video_id": "x2yGPUIJkPU",
-        "watch_url": "https://www.youtube.com/shorts/x2yGPUIJkPU",
-        "published_on": "2026-11-19",
-        "published_at": "2026-11-19T15:43:15Z"
-      },
-      "next_queued_longform": {
         "id": "0413",
         "title": "When Your Strength Is Gone: 2 Corinthians 12:9 | The Healing Balm",
-        "words": 1334,
+        "format": "longform",
+        "youtube_video_id": "h9MCS1_p58w",
+        "watch_url": "https://youtu.be/h9MCS1_p58w",
+        "published_on": "2026-11-19",
+        "published_at": "2026-11-19T21:39:48Z"
+      },
+      "next_queued_longform": {
+        "id": "0414",
+        "title": "When Your Heart Is Heavy and Broken: Psalm 34:17-19 | The Healing Balm",
+        "words": 1748,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingisaiah26v3",
-        "scripture": "Isaiah 26:3-4",
+        "short": "short-healingjeremiah33v6",
+        "scripture": "Jeremiah 33:6",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0413",
+      "slug": "when-your-strength-is-gone-2-corinthians-12-9-the-healing-balm",
+      "file": "0413-when-your-strength-is-gone-2-corinthians-12-9-the-healing-balm.md",
+      "title": "When Your Strength Is Gone: 2 Corinthians 12:9 | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T21:39:48Z",
+      "youtube_video_id": "h9MCS1_p58w",
+      "watch_url": "https://youtu.be/h9MCS1_p58w",
+      "youtu_be_url": "https://youtu.be/h9MCS1_p58w",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/h9MCS1_p58w/edit",
+      "thumb_url": "https://i.ytimg.com/vi/h9MCS1_p58w/hqdefault.jpg",
+      "thumb_text": "SUFFICIENT GRACE",
+      "thumbnail_pending": false,
+      "duration_label": "~9 min",
+      "words": 1334
+    },
+    {
       "id": "SHORT-GUIDEDPSALM5V8",
       "slug": "short-guidedpsalm5v8-guidance-prayer",
       "file": "short-guidedpsalm5v8-guidance-prayer.md",
@@ -772,6 +796,30 @@
       "thumbnail_pending": false,
       "duration_label": "53s",
       "words": 653
+    },
+    {
+      "id": "SHORT-HEALINGISAIAH26V3",
+      "slug": "short-healingisaiah26v3-restoration-prayer",
+      "file": "short-healingisaiah26v3-restoration-prayer.md",
+      "title": "Pray This Isaiah 26:3-4 Healing Prayer for Peace & Strength | The Weary Mind #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T21:04:38Z",
+      "youtube_video_id": "t_ZAGryfX8o",
+      "watch_url": "https://www.youtube.com/shorts/t_ZAGryfX8o",
+      "youtu_be_url": "https://youtu.be/t_ZAGryfX8o",
+      "shorts_url": "https://www.youtube.com/shorts/t_ZAGryfX8o",
+      "studio_url": "https://studio.youtube.com/video/t_ZAGryfX8o/edit",
+      "thumb_url": "https://i.ytimg.com/vi/t_ZAGryfX8o/hqdefault.jpg",
+      "thumb_text": "ISAIH 26:3-4 \u00b7 HIS PERFECT PEACE",
+      "thumbnail_pending": false,
+      "duration_label": "43s",
+      "words": 643
     },
     {
       "id": "SHORT-MIDDAYHEBREWS4V16",
@@ -13357,19 +13405,6 @@
         "words": 1608
       },
       {
-        "id": "0413",
-        "slug": "when-your-strength-is-gone-2-corinthians-12-9-the-healing-balm",
-        "file": "0413-when-your-strength-is-gone-2-corinthians-12-9-the-healing-balm.md",
-        "title": "When Your Strength Is Gone: 2 Corinthians 12:9 | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1334
-      },
-      {
         "id": "0414",
         "slug": "when-your-heart-is-heavy-and-broken-psalm-34-17-19",
         "file": "0414-when-your-heart-is-heavy-and-broken-psalm-34-17-19.md",
@@ -13769,17 +13804,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-healingisaiah26v3",
-        "file": "0000-short-healingisaiah26v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 26:3-4",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingjeremiah33v6",
