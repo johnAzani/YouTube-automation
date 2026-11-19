@@ -2,7 +2,7 @@
 id: '0216'
 title: 'When Darkness Presses Hard: Psalm 68:1-3 | The Midnight Watch'
 slug: when-darkness-presses-hard-psalm-68-1-3-the-midnight-watch
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -73,6 +73,15 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-19"
+published_at: "2026-11-19T02:02:31Z"
+youtube_video_id: "WrV5cGnjk_M"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — The Midnight Watchtower and the Awakening Spirit
