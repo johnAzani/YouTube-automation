@@ -77,10 +77,9 @@ published_on: "2026-11-12"
 published_at: "2026-11-12T02:17:58Z"
 youtube_video_id: "qrOFQ37peYc"
 metadata_revision: "selar-seo-v1"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCkWrcJB6-q_K0r8KSja8ALw; auth_channel_title=The Provision Table; long_uploads_status=eligible; video_channel_id=UCkWrcJB6-q_K0r8KSja8ALw; video_channel_title=The Provision Table; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-19T07:00:51Z"
-thumbnail_retry_reason: "permission"
+thumbnail_pending: false
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Approaching Jehovah-Jireh With the Work of Our Hands

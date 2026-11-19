@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-19T04:10:57Z",
-  "monitor_generated_at": "2026-11-19T04:09:36.543090+00:00",
+  "generated_at": "2026-11-19T09:17:53Z",
+  "monitor_generated_at": "2026-11-19T09:16:31.006635+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -133,13 +133,13 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-18",
+        "as_of": "2026-11-19",
         "measured_longform_videos": 0,
         "total_longform_videos": 16,
         "top_themes": [
           {
             "theme": "morning_mercy_renewal",
-            "videos": 8,
+            "videos": 7,
             "top_scripture": ""
           },
           {
@@ -149,7 +149,7 @@
           },
           {
             "theme": "daily_guidance_wisdom",
-            "videos": 7,
+            "videos": 8,
             "top_scripture": ""
           }
         ]
@@ -201,18 +201,18 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-18",
+        "as_of": "2026-11-19",
         "measured_longform_videos": 0,
-        "total_longform_videos": 16,
+        "total_longform_videos": 14,
         "top_themes": [
           {
             "theme": "midday_strength_endurance",
-            "videos": 13,
+            "videos": 12,
             "top_scripture": ""
           },
           {
             "theme": "daily_guidance_wisdom",
-            "videos": 2,
+            "videos": 1,
             "top_scripture": ""
           },
           {
@@ -269,13 +269,13 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-18",
+        "as_of": "2026-11-19",
         "measured_longform_videos": 0,
-        "total_longform_videos": 15,
+        "total_longform_videos": 16,
         "top_themes": [
           {
             "theme": "protection",
-            "videos": 3,
+            "videos": 4,
             "top_scripture": ""
           },
           {
@@ -337,9 +337,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-18",
+        "as_of": "2026-11-19",
         "measured_longform_videos": 0,
-        "total_longform_videos": 13,
+        "total_longform_videos": 15,
         "top_themes": [
           {
             "theme": "general_prayer",
@@ -352,8 +352,8 @@
             "top_scripture": ""
           },
           {
-            "theme": "light_courage",
-            "videos": 1,
+            "theme": "daily_guidance_wisdom",
+            "videos": 2,
             "top_scripture": ""
           }
         ]
@@ -376,7 +376,7 @@
         "published_total": 42,
         "published_longform": 13,
         "published_shorts": 29,
-        "thumbnail_pending": 3,
+        "thumbnail_pending": 2,
         "public_total": 42,
         "queued_longform": 5,
         "queued_other": 0,
@@ -405,9 +405,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-18",
+        "as_of": "2026-11-19",
         "measured_longform_videos": 0,
-        "total_longform_videos": 12,
+        "total_longform_videos": 13,
         "top_themes": [
           {
             "theme": "general_prayer",
@@ -415,13 +415,13 @@
             "top_scripture": ""
           },
           {
-            "theme": "anxiety_peace",
-            "videos": 2,
+            "theme": "peace_rest",
+            "videos": 4,
             "top_scripture": ""
           },
           {
-            "theme": "peace_rest",
-            "videos": 3,
+            "theme": "anxiety_peace",
+            "videos": 2,
             "top_scripture": ""
           }
         ]
@@ -444,7 +444,7 @@
         "published_total": 43,
         "published_longform": 14,
         "published_shorts": 29,
-        "thumbnail_pending": 5,
+        "thumbnail_pending": 2,
         "public_total": 43,
         "queued_longform": 5,
         "queued_other": 0,
@@ -473,23 +473,23 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-18",
-        "measured_longform_videos": 1,
-        "total_longform_videos": 13,
+        "as_of": "2026-11-19",
+        "measured_longform_videos": 2,
+        "total_longform_videos": 14,
         "top_themes": [
+          {
+            "theme": "morning_mercy_renewal",
+            "videos": 1,
+            "top_scripture": "Psalm 5"
+          },
           {
             "theme": "daily_guidance_wisdom",
             "videos": 2,
             "top_scripture": "Matthew 6"
           },
           {
-            "theme": "morning_mercy_renewal",
-            "videos": 1,
-            "top_scripture": ""
-          },
-          {
             "theme": "general_prayer",
-            "videos": 5,
+            "videos": 6,
             "top_scripture": ""
           }
         ]
@@ -541,9 +541,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-18",
+        "as_of": "2026-11-19",
         "measured_longform_videos": 0,
-        "total_longform_videos": 11,
+        "total_longform_videos": 12,
         "top_themes": [
           {
             "theme": "peace_rest",
@@ -609,13 +609,13 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-18",
+        "as_of": "2026-11-19",
         "measured_longform_videos": 0,
-        "total_longform_videos": 8,
+        "total_longform_videos": 9,
         "top_themes": [
           {
             "theme": "general_prayer",
-            "videos": 5,
+            "videos": 6,
             "top_scripture": ""
           },
           {
@@ -677,9 +677,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-18",
+        "as_of": "2026-11-19",
         "measured_longform_videos": 0,
-        "total_longform_videos": 8,
+        "total_longform_videos": 9,
         "top_themes": [
           {
             "theme": "daily_guidance_wisdom",
@@ -9081,7 +9081,7 @@
       "id": "0086",
       "slug": "psalm-121-5-6-midday-prayer",
       "file": "0086-psalm-121-5-6-midday-prayer.md",
-      "title": "Psalm 121:5-6 Midday Prayer | The Midday Watch",
+      "title": "Protection From the Heat of the Day: Psalm 121:5-6 | The Midday Watch",
       "channel": "prayer3",
       "channel_name": "The Midday Watch",
       "channel_handle": "@TheMiddayWatch",
@@ -9129,7 +9129,7 @@
       "id": "0062",
       "slug": "2-samuel-23-4-morning-prayer-the-morning-altar",
       "file": "0062-2-samuel-23-4-morning-prayer-the-morning-altar.md",
-      "title": "2 Samuel 23:4 Morning Prayer | The Morning Altar",
+      "title": "Walking in the Light of His Morning: 2 Samuel 23:4 | The Morning Altar",
       "channel": "prayer2",
       "channel_name": "The Morning Altar",
       "channel_handle": "@TheMorningAltarDaily",
@@ -9249,7 +9249,7 @@
       "id": "0061",
       "slug": "isaiah-33-2-morning-prayer",
       "file": "0061-isaiah-33-2-morning-prayer.md",
-      "title": "Isaiah 33:2 Morning Prayer | The Morning Altar",
+      "title": "Strength for Every New Morning: Isaiah 33:2 | The Morning Altar",
       "channel": "prayer2",
       "channel_name": "The Morning Altar",
       "channel_handle": "@TheMorningAltarDaily",
@@ -9337,7 +9337,7 @@
       "studio_url": "https://studio.youtube.com/video/lgBIMzFepLg/edit",
       "thumb_url": "https://i.ytimg.com/vi/lgBIMzFepLg/hqdefault.jpg",
       "thumb_text": "ALL YOUR NEED",
-      "thumbnail_pending": true,
+      "thumbnail_pending": false,
       "duration_label": "~6 min",
       "words": 917
     },
@@ -9345,7 +9345,7 @@
       "id": "0402",
       "slug": "psalm-147-3-healing-prayer",
       "file": "0402-psalm-147-3-healing-prayer.md",
-      "title": "Psalm 147:3 Healing Prayer | The Healing Balm",
+      "title": "For a Heart That Still Aches: Psalm 147:3 | The Healing Balm",
       "channel": "prayer6",
       "channel_name": "The Healing Balm",
       "channel_handle": "@TheHealingBalmDaily",
@@ -9361,7 +9361,7 @@
       "studio_url": "https://studio.youtube.com/video/9JVBBIA5UtI/edit",
       "thumb_url": "https://i.ytimg.com/vi/9JVBBIA5UtI/hqdefault.jpg",
       "thumb_text": "HEAL THIS HEART",
-      "thumbnail_pending": true,
+      "thumbnail_pending": false,
       "duration_label": "~6 min",
       "words": 860
     },
@@ -9441,7 +9441,7 @@
       "id": "0205",
       "slug": "zechariah-2-5-midnight-prayer-the-midnight-watch",
       "file": "0205-zechariah-2-5-midnight-prayer-the-midnight-watch.md",
-      "title": "Zechariah 2:5 Midnight Prayer | The Midnight Watch",
+      "title": "When You Need Divine Protection: Zechariah 2:5 | The Midnight Watch",
       "channel": "prayer4",
       "channel_name": "The Midnight Watch",
       "channel_handle": "@TheMidnightWatchDaily",
@@ -9601,7 +9601,7 @@
       "studio_url": "https://studio.youtube.com/video/qrOFQ37peYc/edit",
       "thumb_url": "https://i.ytimg.com/vi/qrOFQ37peYc/hqdefault.jpg",
       "thumb_text": "BLESS OUR HANDS",
-      "thumbnail_pending": true,
+      "thumbnail_pending": false,
       "duration_label": "~6 min",
       "words": 911
     },
@@ -9625,7 +9625,7 @@
       "studio_url": "https://studio.youtube.com/video/XYztSYJyOY4/edit",
       "thumb_url": "https://i.ytimg.com/vi/XYztSYJyOY4/hqdefault.jpg",
       "thumb_text": "THE PROVISION TABLE \u00b7 BLESS OUR HANDS",
-      "thumbnail_pending": true,
+      "thumbnail_pending": false,
       "duration_label": "63s",
       "words": 296
     },
@@ -9633,7 +9633,7 @@
       "id": "0401",
       "slug": "psalm-103-1-5-healing-prayer",
       "file": "0401-psalm-103-1-5-healing-prayer.md",
-      "title": "Psalm 103:1-5 Healing Prayer | The Healing Balm",
+      "title": "Strength For A Weary Body: Psalm 103:1-5 | The Healing Balm",
       "channel": "prayer6",
       "channel_name": "The Healing Balm",
       "channel_handle": "@TheHealingBalmDaily",
@@ -13557,10 +13557,10 @@
       "name": "automation-health",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.8h ago",
-      "last_conclusion": "",
+      "detail": "last success 5.1h ago",
+      "last_conclusion": "success",
       "last_run": "2026-11-19T04:08:47+00:00",
-      "last_success": "2026-11-19T02:20:58+00:00",
+      "last_success": "2026-11-19T04:08:47+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -13571,11 +13571,11 @@
       "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 16.0h ago",
+      "detail": "last success 0.0h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-18T12:08:44+00:00",
-      "last_success": "2026-11-18T12:08:44+00:00",
-      "runs_14d": 19,
+      "last_run": "2026-11-19T09:14:48+00:00",
+      "last_success": "2026-11-19T09:14:48+00:00",
+      "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
       "effect": ""
@@ -13585,10 +13585,10 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.9h ago",
+      "detail": "last success 0.0h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-19T01:12:46+00:00",
-      "last_success": "2026-11-19T01:12:46+00:00",
+      "last_run": "2026-11-19T09:14:58+00:00",
+      "last_success": "2026-11-19T09:14:58+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -13599,7 +13599,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.9h ago",
+      "detail": "last success 8.1h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-19T01:13:34+00:00",
       "last_success": "2026-11-19T01:13:34+00:00",
@@ -13613,9 +13613,9 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 16.5h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-18T11:39:14+00:00",
+      "detail": "last success 21.6h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-19T09:14:47+00:00",
       "last_success": "2026-11-18T11:39:14+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -13627,10 +13627,10 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 18.1h ago",
-      "last_conclusion": "",
+      "detail": "last success 5.1h ago",
+      "last_conclusion": "success",
       "last_run": "2026-11-19T04:09:38+00:00",
-      "last_success": "2026-11-18T10:04:05+00:00",
+      "last_success": "2026-11-19T04:09:38+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -13641,7 +13641,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 64.4h ago",
+      "detail": "last success 69.5h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-16T11:44:57+00:00",
       "last_success": "2026-11-16T11:44:57+00:00",
@@ -13655,10 +13655,10 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.8h ago",
-      "last_conclusion": "",
+      "detail": "last success 5.1h ago",
+      "last_conclusion": "success",
       "last_run": "2026-11-19T04:08:47+00:00",
-      "last_success": "2026-11-19T02:20:58+00:00",
+      "last_success": "2026-11-19T04:08:47+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -13669,10 +13669,10 @@
       "name": "Automation monitor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.5h ago",
+      "detail": "last success 5.1h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-19T04:08:47+00:00",
-      "last_success": "2026-11-19T02:39:43+00:00",
+      "last_run": "2026-11-19T09:13:52+00:00",
+      "last_success": "2026-11-19T04:08:47+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -13683,9 +13683,9 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.0h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-19T04:08:15+00:00",
+      "detail": "last success 5.1h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-19T09:14:57+00:00",
       "last_success": "2026-11-19T04:08:15+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -13697,11 +13697,11 @@
       "name": "YouTube reporting jobs (thumbnail impressions)",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 13.6h ago",
+      "detail": "last success 0.0h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-18T14:34:49+00:00",
-      "last_success": "2026-11-18T14:34:49+00:00",
-      "runs_14d": 10,
+      "last_run": "2026-11-19T09:14:52+00:00",
+      "last_success": "2026-11-19T09:14:52+00:00",
+      "runs_14d": 11,
       "missed_slots": 0,
       "failures_5": 0,
       "effect": ""
@@ -13713,8 +13713,8 @@
       "severity": "ok",
       "detail": "last success 0.0h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-19T04:08:47+00:00",
-      "last_success": "2026-11-19T04:08:47+00:00",
+      "last_run": "2026-11-19T09:13:52+00:00",
+      "last_success": "2026-11-19T09:13:52+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -13725,9 +13725,9 @@
       "name": "Tests on main (daily)",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 14.7h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-18T13:29:46+00:00",
+      "detail": "last success 19.8h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-19T09:14:50+00:00",
       "last_success": "2026-11-18T13:29:46+00:00",
       "runs_14d": 20,
       "missed_slots": 0,

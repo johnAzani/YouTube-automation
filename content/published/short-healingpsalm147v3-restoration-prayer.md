@@ -20,12 +20,12 @@ height: 1280
 duration_seconds: 59.17
 scenes_verified: 7
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; auth_channel_title=The Healing Balm; long_uploads_status=eligible; video_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; video_channel_title=The Healing Balm; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; auth_channel_title=The Healing Balm; long_uploads_status=allowed; video_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; video_channel_title=The Healing Balm; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE HEALING BALM", "HEAL THIS HEART", "PSALM 147:3", "HEALING PRAYER"]
 thumbnail_kicker: "RECEIVE GOD'S HEALING PEACE"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-19T07:00:48Z"
-thumbnail_retry_reason: "permission"
+thumbnail_retry_after: "2026-11-19T15:15:58Z"
+thumbnail_retry_reason: "rate_limit"
 thumbnail_attempts: 1
 ---
 
