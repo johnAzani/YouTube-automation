@@ -5,6 +5,14 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-17 — Like, comment, share and subscribe — in the comment
+
+- **The four YouTube actions still matter.** Help counts likes (and surveys) after average % viewed. They were not being asked for in one place: the Short's last frame said SUBSCRIBE (a closer), the first comment said write AMEN, the description said subscribe.
+- **Changed.** Every channel's first comment, and the Short/long-form description, now asks once: like it, write Amen or a first name in the comments, share it with one person who needs this verse, and subscribe to *this* channel. The invite is named per channel so ten comments are not the same sentence. It is appended once.
+- **Unchanged on purpose:** the prayer Short still ends on the last spoken word. Spoken subscribe stays an authoring defect. The subscribe card is still not painted. Scene-1 kickers and ranking by loop-ratio are untouched.
+- **Unproven:** that a comment invite lifts likes or subscribes — `content/analytics/` has no engagement breakdown. **Owner-only:** unchanged. **Next step:** `top_comment: ok` on the next upload still lands, now with the four asks.
+- Tests: `tests/test_engagement_invite.py` (new, 4).
+
 ## 2026-11-17 — The last frame was a subscribe card
 
 - **Two Shorts sat at 98.8% and 99.6% viewed and then left.** Psalm 18:2 (125 views, 54.3s) and Psalm 139:11-12 (52 views, 62.2s). YouTube Help ranks Shorts on average % viewed after the swipe. A loop is 100% or more.

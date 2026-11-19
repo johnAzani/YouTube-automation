@@ -363,7 +363,7 @@ def build_description(
         # A channel without its own resource funnel yet (e.g. The Morning
         # Altar at launch): invite subscription to *this* channel only —
         # never borrow The Secret Place's Selar/store links.
-        from .channel_capabilities import subscribe_heading_for
+        from .channel_capabilities import engagement_invite, subscribe_heading_for
 
         profile = doc_channel
         profile_subscribe_heading = subscribe_heading_for(profile.id)
@@ -379,6 +379,7 @@ def build_description(
                 "\n".join(
                     [
                         profile_subscribe_heading,
+                        engagement_invite(profile.id),
                         f"• Subscribe to {channel_name}: "
                         f"https://www.youtube.com/{channel_handle}?sub_confirmation=1",
                         "",
