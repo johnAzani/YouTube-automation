@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T20:59:31Z",
+  "generated_at": "2026-11-19T21:00:01Z",
   "monitor_generated_at": "2026-11-19T20:50:27.857648+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 506,
+    "published_total": 507,
     "published_longform": 162,
-    "published_shorts": 344,
-    "public_total": 504,
+    "published_shorts": 345,
+    "public_total": 505,
     "queued_longform": 58,
-    "queued_shorts": 90,
+    "queued_shorts": 89,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -237,23 +237,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 53,
+        "published_total": 54,
         "published_longform": 18,
-        "published_shorts": 35,
-        "thumbnail_pending": 52,
-        "public_total": 53,
+        "published_shorts": 36,
+        "thumbnail_pending": 53,
+        "public_total": 54,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTEXODUS14V13",
-        "title": "Pray This Exodus 14:13-14 Midnight Prayer | Unfolding For You #Shorts",
+        "id": "SHORT-MIDNIGHTGENESIS32V24",
+        "title": "Pray This Genesis 32:24-28 Midnight Prayer | A Threshold In The Dark #Shorts",
         "format": "short",
-        "youtube_video_id": "aXWDS8cMwCU",
-        "watch_url": "https://www.youtube.com/shorts/aXWDS8cMwCU",
+        "youtube_video_id": "cXCSW31QUcM",
+        "watch_url": "https://www.youtube.com/shorts/cXCSW31QUcM",
         "published_on": "2026-11-19",
-        "published_at": "2026-11-19T15:31:48Z"
+        "published_at": "2026-11-19T20:59:14Z"
       },
       "next_queued_longform": {
         "id": "0218",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightgenesis32v24",
-        "scripture": "Genesis 32:24-28",
+        "short": "short-midnightzechariah4v7",
+        "scripture": "Zechariah 4:7",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTGENESIS32V24",
+      "slug": "short-midnightgenesis32v24-midnight-prayer",
+      "file": "short-midnightgenesis32v24-midnight-prayer.md",
+      "title": "Pray This Genesis 32:24-28 Midnight Prayer | A Threshold In The Dark #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T20:59:14Z",
+      "youtube_video_id": "cXCSW31QUcM",
+      "watch_url": "https://www.youtube.com/shorts/cXCSW31QUcM",
+      "youtu_be_url": "https://youtu.be/cXCSW31QUcM",
+      "shorts_url": "https://www.youtube.com/shorts/cXCSW31QUcM",
+      "studio_url": "https://studio.youtube.com/video/cXCSW31QUcM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/cXCSW31QUcM/hqdefault.jpg",
+      "thumb_text": "WILL NOT LET GO \u00b7 UNTIL BLESSED",
+      "thumbnail_pending": true,
+      "duration_label": "39s",
+      "words": 616
+    },
     {
       "id": "SHORT-MORNINGJOB38V12",
       "slug": "short-morningjob38v12-sunrise-prayer",
@@ -13702,17 +13726,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightgenesis32v24",
-        "file": "0000-short-midnightgenesis32v24.yml",
-        "companion_longform_id": "",
-        "scripture": "Genesis 32:24-28",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightzechariah4v7",
