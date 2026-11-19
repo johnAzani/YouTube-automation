@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T04:17:16.828331+00:00",
+  "generated_at": "2026-11-19T10:22:56.255386+00:00",
   "as_of": "2026-11-19",
   "sufficient_data": false,
   "measured_longform_videos": 0,
@@ -77,9 +77,9 @@
     "measured_shorts": 19,
     "total_shorts": 24,
     "sufficient_data": true,
-    "avg_views": 234.4,
+    "avg_views": 234.8,
     "median_views": 227,
-    "total_views": 4454,
+    "total_views": 4461,
     "minimum_age_days": 2,
     "by_book": {
       "2 kings": {
@@ -90,7 +90,7 @@
       "2 samuel": {
         "shorts": 1,
         "avg_views": 239.0,
-        "ratio": 1.007
+        "ratio": 1.006
       },
       "2 thessalonians": {
         "shorts": 1,
@@ -100,12 +100,12 @@
       "ephesians": {
         "shorts": 1,
         "avg_views": 504.0,
-        "ratio": 1.383
+        "ratio": 1.382
       },
       "exodus": {
         "shorts": 1,
-        "avg_views": 321.0,
-        "ratio": 1.123
+        "avg_views": 323.0,
+        "ratio": 1.125
       },
       "genesis": {
         "shorts": 1,
@@ -114,35 +114,35 @@
       },
       "isaiah": {
         "shorts": 2,
-        "avg_views": 80.0,
-        "ratio": 0.671
+        "avg_views": 81.0,
+        "ratio": 0.672
       },
       "john": {
         "shorts": 1,
         "avg_views": 636.0,
-        "ratio": 1.571
+        "ratio": 1.57
       },
       "proverbs": {
         "shorts": 1,
-        "avg_views": 184.0,
-        "ratio": 0.928
+        "avg_views": 182.0,
+        "ratio": 0.925
       },
       "psalm": {
         "shorts": 9,
-        "avg_views": 208.8,
-        "ratio": 0.91
+        "avg_views": 209.3,
+        "ratio": 0.911
       }
     },
     "by_theme": {
       "daily_guidance_wisdom": {
         "shorts": 2,
         "avg_views": 309.0,
-        "ratio": 1.159
+        "ratio": 1.158
       },
       "midday_strength_endurance": {
         "shorts": 1,
-        "avg_views": 184.0,
-        "ratio": 0.928
+        "avg_views": 182.0,
+        "ratio": 0.925
       },
       "peace_rest": {
         "shorts": 3,
@@ -151,8 +151,8 @@
       },
       "protection": {
         "shorts": 13,
-        "avg_views": 239.8,
-        "ratio": 1.02
+        "avg_views": 240.5,
+        "ratio": 1.021
       }
     },
     "guidance": []
