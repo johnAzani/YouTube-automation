@@ -443,6 +443,17 @@ def enrich_short_description_with_bridge(description: str, short_key_or_title: s
 
     out = description if (url in description) else (header + description)
 
+    from .channel_capabilities import engagement_invite
+
+    invite = engagement_invite(owner)
+    if invite not in out:
+        block = "\n\n" + invite
+        lines = out.rstrip().splitlines()
+        if lines and lines[-1].lstrip().startswith("#"):
+            hashtag_line = lines.pop()
+            out = "\n".join(lines).rstrip() + block + "\n\n" + hashtag_line
+        else:
+            out = out.rstrip() + block
     if not get_channel(owner).include_sanctuary_links:
         return out
     if SELAR_JOURNAL_URL and SELAR_JOURNAL_URL not in out:

@@ -101,6 +101,7 @@ class TestEscalationAcrossModels(unittest.TestCase):
         # the scripture check (tests/test_scripture_text.py covers that).
         with mock.patch.object(gemini_brain, "_TRANSIENT_BACKOFF", ()), \
              mock.patch("pipeline.scripture_text.quote_problems", return_value=[]), \
+             mock.patch("pipeline.short_script.authoring_defects", return_value=[]), \
              mock.patch("builtins.print"):
             spec = brain.author_short_spec(doc, key="short-isaiah26v3")
         self.assertEqual(spec.key, "short-isaiah26v3")

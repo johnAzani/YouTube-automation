@@ -38,7 +38,7 @@ def _spec(channel: str = "secret-place", *, poster_last: str = "A QUIET MIND",
           subs: tuple[str, ...] = ("REST IN WHAT HE SAID",), line: str = "") -> dict:
     key, scripture = "short-psalm55v22", "Psalm 55:22"
     lines = [
-        "When the weight you carried all day will not lift, this word is for you.",
+        "The weight will not lift.",
         KJV_5522,
         line or "Father, I bring You the thing I have carried all day and could not put down.",
         "I thank You that nothing in it is hidden from You, and nothing in it is too heavy.",
@@ -47,11 +47,12 @@ def _spec(channel: str = "secret-place", *, poster_last: str = "A QUIET MIND",
     ]
     captions, phrases, scenes, start = [], [], [], 0
     for index, text in enumerate(lines):
-        stop = start + 6
+        stop = 3 if index == 0 else start + 6
         captions.append([start, stop, text])
         phrases.append([start, stop, [" ".join(text.split()[:3]).upper()], ["WORD"], scripture.upper()])
         scenes.append({"a": " ".join(text.split()[:4]), "img": f"{key}-scene-{index + 1:02d}.jpg",
-                       "kicker": "PSALM 55:22", "sub": subs[min(index, len(subs) - 1)],
+                       "kicker": "THE WEIGHT" if index == 0 else "PSALM 55:22",
+                       "sub": subs[min(index, len(subs) - 1)],
                        "cam": "push_in", "focus": [0.5, 0.5]})
         start = stop + 1
     return {
