@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T12:43:55Z",
+  "generated_at": "2026-11-19T13:37:35Z",
   "monitor_generated_at": "2026-11-19T11:54:23.137750+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 490,
-    "published_longform": 158,
-    "published_shorts": 332,
-    "public_total": 488,
-    "queued_longform": 58,
-    "queued_shorts": 90,
+    "published_total": 492,
+    "published_longform": 159,
+    "published_shorts": 333,
+    "public_total": 490,
+    "queued_longform": 57,
+    "queued_shorts": 89,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -645,33 +645,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 32,
-        "published_longform": 9,
-        "published_shorts": 23,
+        "published_total": 34,
+        "published_longform": 10,
+        "published_shorts": 24,
         "thumbnail_pending": 12,
-        "public_total": 32,
-        "queued_longform": 6,
+        "public_total": 34,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPROVERBS16V9",
-        "title": "Pray This Proverbs 16:9 Prayer for God's Guidance | Guidance In Every Step #Shorts",
-        "format": "short",
-        "youtube_video_id": "pkGr0fvEW1o",
-        "watch_url": "https://www.youtube.com/shorts/pkGr0fvEW1o",
-        "published_on": "2026-11-19",
-        "published_at": "2026-11-19T01:35:37Z"
-      },
-      "next_queued_longform": {
         "id": "0809",
         "title": "Committing Your Work to God: Proverbs 16:3 | The Guided Path",
-        "words": 1728,
+        "format": "longform",
+        "youtube_video_id": "EO1knXs2WVk",
+        "watch_url": "https://youtu.be/EO1knXs2WVk",
+        "published_on": "2026-11-19",
+        "published_at": "2026-11-19T13:36:43Z"
+      },
+      "next_queued_longform": {
+        "id": "0810",
+        "title": "Guidance for a Season of Dry Ground: Isaiah 58:11 | The Guided Path",
+        "words": 1056,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedpsalm138v8",
-        "scripture": "Psalm 138:8",
+        "short": "short-guidedpsalm27v11",
+        "scripture": "Psalm 27:11",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0809",
+      "slug": "when-every-plan-feels-heavy-proverbs-16-3-the-guided-path",
+      "file": "0809-when-every-plan-feels-heavy-proverbs-16-3-the-guided-path.md",
+      "title": "Committing Your Work to God: Proverbs 16:3 | The Guided Path",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T13:36:43Z",
+      "youtube_video_id": "EO1knXs2WVk",
+      "watch_url": "https://youtu.be/EO1knXs2WVk",
+      "youtu_be_url": "https://youtu.be/EO1knXs2WVk",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/EO1knXs2WVk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/EO1knXs2WVk/hqdefault.jpg",
+      "thumb_text": "COMMIT YOUR WAY",
+      "thumbnail_pending": false,
+      "duration_label": "~12 min",
+      "words": 1728
+    },
     {
       "id": "0217",
       "slug": "gates-of-brass-psalm-107-psalm-107-13-16-the-midnight-watch",
@@ -748,6 +772,30 @@
       "thumbnail_pending": false,
       "duration_label": "~9 min",
       "words": 1346
+    },
+    {
+      "id": "SHORT-GUIDEDPSALM138V8",
+      "slug": "short-guidedpsalm138v8-guidance-prayer",
+      "file": "short-guidedpsalm138v8-guidance-prayer.md",
+      "title": "Pray This Psalm 138:8 Prayer for God's Guidance | Finding Strength #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T12:18:33Z",
+      "youtube_video_id": "-OE0BEzVmcQ",
+      "watch_url": "https://www.youtube.com/shorts/-OE0BEzVmcQ",
+      "youtu_be_url": "https://youtu.be/-OE0BEzVmcQ",
+      "shorts_url": "https://www.youtube.com/shorts/-OE0BEzVmcQ",
+      "studio_url": "https://studio.youtube.com/video/-OE0BEzVmcQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/-OE0BEzVmcQ/hqdefault.jpg",
+      "thumb_text": "A PRAYER FOR \u00b7 YOUR WORRIES",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 631
     },
     {
       "id": "SHORT-GARDENISAIAH12V2",
@@ -13141,19 +13189,6 @@
         "words": 1725
       },
       {
-        "id": "0809",
-        "slug": "when-every-plan-feels-heavy-proverbs-16-3-the-guided-path",
-        "file": "0809-when-every-plan-feels-heavy-proverbs-16-3-the-guided-path.md",
-        "title": "Committing Your Work to God: Proverbs 16:3 | The Guided Path",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1728
-      },
-      {
         "id": "0810",
         "slug": "when-the-way-ahead-is-dry-isaiah-58-11",
         "file": "0810-when-the-way-ahead-is-dry-isaiah-58-11.md",
@@ -13241,17 +13276,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedpsalm138v8",
-        "file": "0000-short-guidedpsalm138v8.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 138:8",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedpsalm27v11",
