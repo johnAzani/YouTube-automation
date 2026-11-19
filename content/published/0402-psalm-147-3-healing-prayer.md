@@ -1,6 +1,6 @@
 ---
 id: '0402'
-title: Psalm 147:3 Healing Prayer | The Healing Balm
+title: "For a Heart That Still Aches: Psalm 147:3 | The Healing Balm"
 slug: psalm-147-3-healing-prayer
 status: published
 channel: prayer6
@@ -76,11 +76,14 @@ originality:
 published_on: "2026-11-12"
 published_at: "2026-11-12T06:08:05Z"
 youtube_video_id: "9JVBBIA5UtI"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; auth_channel_title=The Healing Balm; long_uploads_status=eligible; video_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; video_channel_title=The Healing Balm; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_retry_after: "2026-11-19T07:00:47Z"
 thumbnail_retry_reason: "permission"
+title_before: "Psalm 147:3 Healing Prayer | The Healing Balm"
+retitled_at: "2026-11-19"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith
