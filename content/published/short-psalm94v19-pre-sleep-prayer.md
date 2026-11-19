@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["NIGHTTIME PRAYER", "PSALM 94:19", "PEACE FOR A RACING MIND", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 When bedtime comes but your mind keeps running through every conversation from today, stay still. In the multitude of my thoughts within me thy comforts delight my soul. Lord, tonight my heart is crowded with endless thoughts, unanswered questions, and subtle fears. Every thought tries to demand my attention when I should be sleeping. Replace these noisy worries with your gentle presence. Let your peace quiet the storm inside my heart. Teach me to leave every care at your feet and rest safely in your unfailing love. You are my safe refuge in the dark hours of this night. Subscribe to The Secret Place for prayers every night.
