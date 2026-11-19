@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T20:51:44Z",
+  "generated_at": "2026-11-19T20:59:31Z",
   "monitor_generated_at": "2026-11-19T20:50:27.857648+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 505,
+    "published_total": 506,
     "published_longform": 162,
-    "published_shorts": 343,
-    "public_total": 503,
+    "published_shorts": 344,
+    "public_total": 504,
     "queued_longform": 58,
-    "queued_shorts": 91,
+    "queued_shorts": 90,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 77,
+        "published_total": 78,
         "published_longform": 28,
-        "published_shorts": 49,
+        "published_shorts": 50,
         "thumbnail_pending": 1,
-        "public_total": 76,
+        "public_total": 77,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0071",
-        "title": "Walking in the Light of His Guidance: Proverbs 4:18",
-        "format": "longform",
-        "youtube_video_id": "Nf5Ghz7lLMw",
-        "watch_url": "https://youtu.be/Nf5Ghz7lLMw",
+        "id": "SHORT-MORNINGJOB38V12",
+        "title": "Say This Job 38:12 Prayer at Sunrise | Finding Strength At Dawn #Shorts",
+        "format": "short",
+        "youtube_video_id": "72rKTNGQG5E",
+        "watch_url": "https://www.youtube.com/shorts/72rKTNGQG5E",
         "published_on": "2026-11-19",
-        "published_at": "2026-11-19T16:09:12Z"
+        "published_at": "2026-11-19T20:58:45Z"
       },
       "next_queued_longform": {
         "id": "0072",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningjob38v12",
-        "scripture": "Job 38:12",
+        "short": "short-morningphilippians1v6",
+        "scripture": "Philippians 1:6",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGJOB38V12",
+      "slug": "short-morningjob38v12-sunrise-prayer",
+      "file": "short-morningjob38v12-sunrise-prayer.md",
+      "title": "Say This Job 38:12 Prayer at Sunrise | Finding Strength At Dawn #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T20:58:45Z",
+      "youtube_video_id": "72rKTNGQG5E",
+      "watch_url": "https://www.youtube.com/shorts/72rKTNGQG5E",
+      "youtu_be_url": "https://youtu.be/72rKTNGQG5E",
+      "shorts_url": "https://www.youtube.com/shorts/72rKTNGQG5E",
+      "studio_url": "https://studio.youtube.com/video/72rKTNGQG5E/edit",
+      "thumb_url": "https://i.ytimg.com/vi/72rKTNGQG5E/hqdefault.jpg",
+      "thumb_text": "THE MORNING ALTAR \u00b7 GOD COMMANDS THE LIGHT",
+      "thumbnail_pending": false,
+      "duration_label": "41s",
+      "words": 594
+    },
     {
       "id": "0315",
       "slug": "mercy-over-generations-psalm-103-17-18",
@@ -13700,17 +13724,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningjob38v12",
-        "file": "0000-short-morningjob38v12.yml",
-        "companion_longform_id": "",
-        "scripture": "Job 38:12",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningphilippians1v6",
