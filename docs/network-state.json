@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T01:17:31Z",
+  "generated_at": "2026-11-19T01:19:17Z",
   "monitor_generated_at": "2026-11-18T22:10:18.325379+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 469,
+    "published_total": 470,
     "published_longform": 153,
-    "published_shorts": 316,
-    "public_total": 467,
+    "published_shorts": 317,
+    "public_total": 468,
     "queued_longform": 54,
-    "queued_shorts": 68,
+    "queued_shorts": 67,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 58,
+        "published_total": 59,
         "published_longform": 20,
-        "published_shorts": 38,
+        "published_shorts": 39,
         "thumbnail_pending": 0,
-        "public_total": 58,
+        "public_total": 59,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MIDDAY1CORINTHIANS15V58",
-        "title": "Say This 1 Corinthians 15:58 Prayer at Noon | Stay Rooted In Truth #Shorts",
+        "id": "SHORT-MIDDAY2CHRONICLES20V12",
+        "title": "Say This 2 Chronicles 20:12 Prayer at Noon | God Is Your Defense #Shorts",
         "format": "short",
-        "youtube_video_id": "zh6dDgS7LVg",
-        "watch_url": "https://www.youtube.com/shorts/zh6dDgS7LVg",
-        "published_on": "2026-11-18",
-        "published_at": "2026-11-18T20:53:26Z"
+        "youtube_video_id": "djrrVFtXepE",
+        "watch_url": "https://www.youtube.com/shorts/djrrVFtXepE",
+        "published_on": "2026-11-19",
+        "published_at": "2026-11-19T01:18:15Z"
       },
       "next_queued_longform": {
         "id": "0095",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midday2chronicles20v12",
-        "scripture": "2 Chronicles 20:12",
+        "short": "short-middaynehemiah2v4",
+        "scripture": "Nehemiah 2:4",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAY2CHRONICLES20V12",
+      "slug": "short-midday2chronicles20v12-midday-prayer",
+      "file": "short-midday2chronicles20v12-midday-prayer.md",
+      "title": "Say This 2 Chronicles 20:12 Prayer at Noon | God Is Your Defense #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T01:18:15Z",
+      "youtube_video_id": "djrrVFtXepE",
+      "watch_url": "https://www.youtube.com/shorts/djrrVFtXepE",
+      "youtu_be_url": "https://youtu.be/djrrVFtXepE",
+      "shorts_url": "https://www.youtube.com/shorts/djrrVFtXepE",
+      "studio_url": "https://studio.youtube.com/video/djrrVFtXepE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/djrrVFtXepE/hqdefault.jpg",
+      "thumb_text": "SURRENDER \u00b7 YOUR",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 618
+    },
     {
       "id": "SHORT-MORNINGPSALM119V105",
       "slug": "short-morningpsalm119v105-sunrise-prayer",
@@ -12806,17 +12830,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-midday2chronicles20v12",
-        "file": "0093-short-midday2chronicles20v12.yml",
-        "companion_longform_id": "0093",
-        "scripture": "2 Chronicles 20:12",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaynehemiah2v4",
