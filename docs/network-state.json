@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T16:09:56Z",
+  "generated_at": "2026-11-19T16:15:46Z",
   "monitor_generated_at": "2026-11-19T11:54:23.137750+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 501,
-    "published_longform": 160,
-    "published_shorts": 341,
-    "public_total": 499,
-    "queued_longform": 60,
-    "queued_shorts": 93,
+    "published_total": 503,
+    "published_longform": 161,
+    "published_shorts": 342,
+    "public_total": 501,
+    "queued_longform": 59,
+    "queued_shorts": 92,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -169,33 +169,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 60,
-        "published_longform": 20,
-        "published_shorts": 40,
+        "published_total": 62,
+        "published_longform": 21,
+        "published_shorts": 41,
         "thumbnail_pending": 0,
-        "public_total": 60,
-        "queued_longform": 6,
+        "public_total": 62,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MIDDAY2CORINTHIANS12V9",
-        "title": "Say This 2 Corinthians 12:9 Prayer at Noon | Finding Strength At Midday #Shorts",
-        "format": "short",
-        "youtube_video_id": "LkIbKJGOL5c",
-        "watch_url": "https://www.youtube.com/shorts/LkIbKJGOL5c",
-        "published_on": "2026-11-19",
-        "published_at": "2026-11-19T11:53:10Z"
-      },
-      "next_queued_longform": {
         "id": "0095",
         "title": "Strength for the Unfinished Work: Nehemiah 6:9 | The Midday Watch",
-        "words": 1374,
+        "format": "longform",
+        "youtube_video_id": "JlfsN87mtCg",
+        "watch_url": "https://youtu.be/JlfsN87mtCg",
+        "published_on": "2026-11-19",
+        "published_at": "2026-11-19T16:14:50Z"
+      },
+      "next_queued_longform": {
+        "id": "0096",
+        "title": "Finding Quiet in the Midday Rush: Psalm 46:10 | The Midday Watch",
+        "words": 1849,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayhebrews12v1",
-        "scripture": "Hebrews 12:1-2",
+        "short": "short-middayhebrews4v16",
+        "scripture": "Hebrews 4:16",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0095",
+      "slug": "strength-for-the-unfinished-work-nehemiah-69",
+      "file": "0095-strength-for-the-unfinished-work-nehemiah-69.md",
+      "title": "Strength for the Unfinished Work: Nehemiah 6:9 | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T16:14:50Z",
+      "youtube_video_id": "JlfsN87mtCg",
+      "watch_url": "https://youtu.be/JlfsN87mtCg",
+      "youtu_be_url": "https://youtu.be/JlfsN87mtCg",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/JlfsN87mtCg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/JlfsN87mtCg/hqdefault.jpg",
+      "thumb_text": "MY HANDS",
+      "thumbnail_pending": false,
+      "duration_label": "~9 min",
+      "words": 1374
+    },
+    {
       "id": "0071",
       "slug": "walking-in-the-light-of-his-guidance-proverbs-4-18",
       "file": "0071-walking-in-the-light-of-his-guidance-proverbs-4-18.md",
@@ -892,6 +916,30 @@
       "thumbnail_pending": false,
       "duration_label": "52s",
       "words": 626
+    },
+    {
+      "id": "SHORT-MIDDAYHEBREWS12V1",
+      "slug": "short-middayhebrews12v1-midday-prayer",
+      "file": "short-middayhebrews12v1-midday-prayer.md",
+      "title": "Say This Hebrews 12:1-2 Prayer at Noon | Lay Aside Every Weight #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T15:32:35Z",
+      "youtube_video_id": "5TgwnSDnyy0",
+      "watch_url": "https://www.youtube.com/shorts/5TgwnSDnyy0",
+      "youtu_be_url": "https://youtu.be/5TgwnSDnyy0",
+      "shorts_url": "https://www.youtube.com/shorts/5TgwnSDnyy0",
+      "studio_url": "https://studio.youtube.com/video/5TgwnSDnyy0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/5TgwnSDnyy0/hqdefault.jpg",
+      "thumb_text": "MIDDAY \u00b7 PRAYER",
+      "thumbnail_pending": false,
+      "duration_label": "71s",
+      "words": 657
     },
     {
       "id": "SHORT-MIDNIGHTEXODUS14V13",
@@ -12885,19 +12933,6 @@
         "words": 1661
       },
       {
-        "id": "0095",
-        "slug": "strength-for-the-unfinished-work-nehemiah-69",
-        "file": "0095-strength-for-the-unfinished-work-nehemiah-69.md",
-        "title": "Strength for the Unfinished Work: Nehemiah 6:9 | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1374
-      },
-      {
         "id": "0096",
         "slug": "finding-quiet-in-the-midday-rush-psalm-46-10",
         "file": "0096-finding-quiet-in-the-midday-rush-psalm-46-10.md",
@@ -13597,17 +13632,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-middayhebrews12v1",
-        "file": "0000-short-middayhebrews12v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Hebrews 12:1-2",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middayhebrews4v16",
