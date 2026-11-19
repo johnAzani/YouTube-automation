@@ -1,6 +1,6 @@
 ---
 id: '0063'
-title: Hosea 6:3 His Going Forth Is Prepared as the Morning
+title: "Certain as the Morning Light: Hosea 6:3 | The Morning Altar"
 slug: hosea-6-3-his-going-forth-is-prepared-as-the-morning
 status: published
 channel: prayer2
@@ -79,10 +79,13 @@ originality:
 published_on: "2026-11-12"
 published_at: "2026-11-12T23:41:37Z"
 youtube_video_id: "Cm8RyYGgkgE"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Hosea 6:3 His Going Forth Is Prepared as the Morning"
+retitled_at: "2026-11-19"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer
