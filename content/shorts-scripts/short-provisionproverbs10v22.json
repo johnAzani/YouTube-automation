@@ -1,0 +1,353 @@
+{
+  "key": "short-provisionproverbs10v22",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "THE BLESSING THAT",
+    "BRINGS NO SORROW"
+  ],
+  "poster": [
+    "PROVERBS 10:22",
+    "GOD'S BLESSING",
+    "MAKES RICH",
+    "WITHOUT SORROW"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit valley golden light morning mist calm",
+    "sunlit sanctuary stone table peaceful light golden",
+    "calm river golden hour mountain pass sunrise",
+    "golden wheat field sunlight peaceful valley morning",
+    "calm mountain lake sunbeams majestic scenery morning",
+    "sunlit forest path golden light peaceful nature morning",
+    "sunlit stone altar quiet mountain valley golden hour",
+    "peaceful golden sunrise mountain lake mirror reflection"
+  ],
+  "scenes": [
+    {
+      "a": "Staring at a heavy financial ledger tonight, fearful of hidden costs, hear God's promise.",
+      "img": "short-provisionproverbs10v22-scene-01.jpg",
+      "kicker": "PROVERBS 10:22",
+      "sub": "HEAR GOD'S PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The blessing of the LORD, it maketh rich, and he addeth no sorrow with it.",
+      "img": "short-provisionproverbs10v22-scene-02.jpg",
+      "kicker": "PROVERBS 10:22",
+      "sub": "NO SORROW ADDED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we bring our daily work, our decisions, and our accounts into Your steady care.",
+      "img": "short-provisionproverbs10v22-scene-03.jpg",
+      "kicker": "PROVERBS 10:22",
+      "sub": "INTO YOUR CARE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "You know the exact measure of our daily bread and the honest desires of our hearts.",
+      "img": "short-provisionproverbs10v22-scene-04.jpg",
+      "kicker": "PROVERBS 10:22",
+      "sub": "OUR DAILY BREAD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Deliver us from wealth gained through endless anxiety, grief, or compromised truth.",
+      "img": "short-provisionproverbs10v22-scene-05.jpg",
+      "kicker": "PROVERBS 10:22",
+      "sub": "DELIVER US FROM ANXIETY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Establish the work of our hands with Your quiet peace, providing all that we truly need.",
+      "img": "short-provisionproverbs10v22-scene-06.jpg",
+      "kicker": "PROVERBS 10:22",
+      "sub": "QUIET PEACE",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Let Your divine favor rest upon our home, filling every quiet corner with lasting rest.",
+      "img": "short-provisionproverbs10v22-scene-07.jpg",
+      "kicker": "PROVERBS 10:22",
+      "sub": "LASTING REST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Subscribe to The Provision Table to walk in God's daily provision.",
+      "img": "short-provisionproverbs10v22-scene-08.jpg",
+      "kicker": "PROVERBS 10:22",
+      "sub": "DAILY PROVISION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "Staring at a heavy financial ledger tonight, fearful of hidden costs, hear God's promise."
+    ],
+    [
+      7,
+      14,
+      "The blessing of the LORD, it maketh rich, and he addeth no sorrow with it."
+    ],
+    [
+      14,
+      21,
+      "Lord, we bring our daily work, our decisions, and our accounts into Your steady care."
+    ],
+    [
+      21,
+      28,
+      "You know the exact measure of our daily bread and the honest desires of our hearts."
+    ],
+    [
+      28,
+      34,
+      "Deliver us from wealth gained through endless anxiety, grief, or compromised truth."
+    ],
+    [
+      34,
+      41,
+      "Establish the work of our hands with Your quiet peace, providing all that we truly need."
+    ],
+    [
+      41,
+      48,
+      "Let Your divine favor rest upon our home, filling every quiet corner with lasting rest."
+    ],
+    [
+      48,
+      53,
+      "Subscribe to The Provision Table to walk in God's daily provision."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "STARING AT A",
+        "HEAVY LEDGER TONIGHT",
+        "FEARFUL OF HIDDEN COSTS",
+        "HEAR GOD'S PROMISE"
+      ],
+      [
+        "HEAVY LEDGER",
+        "GOD'S PROMISE"
+      ],
+      "PROVERBS 10 : 22"
+    ],
+    [
+      7,
+      14,
+      [
+        "THE BLESSING OF THE LORD",
+        "IT MAKETH RICH",
+        "AND HE ADDETH NO SORROW WITH IT"
+      ],
+      [
+        "BLESSING",
+        "NO SORROW"
+      ],
+      "PROVERBS 10 : 22"
+    ],
+    [
+      14,
+      21,
+      [
+        "LORD WE BRING OUR DAILY WORK",
+        "OUR DECISIONS AND ACCOUNTS",
+        "INTO YOUR STEADY CARE"
+      ],
+      [
+        "STEADY CARE"
+      ],
+      "PROVERBS 10 : 22"
+    ],
+    [
+      21,
+      28,
+      [
+        "YOU KNOW THE EXACT MEASURE",
+        "OF OUR DAILY BREAD",
+        "AND HONEST DESIRES"
+      ],
+      [
+        "DAILY BREAD"
+      ],
+      "PROVERBS 10 : 22"
+    ],
+    [
+      28,
+      34,
+      [
+        "DELIVER US FROM WEALTH",
+        "GAINED THROUGH ANXIETY",
+        "GRIEF OR COMPROMISED TRUTH"
+      ],
+      [
+        "DELIVER US"
+      ],
+      "PROVERBS 10 : 22"
+    ],
+    [
+      34,
+      41,
+      [
+        "ESTABLISH THE WORK",
+        "OF OUR HANDS WITH PEACE",
+        "PROVIDING ALL WE NEED"
+      ],
+      [
+        "QUIET PEACE"
+      ],
+      "PROVERBS 10 : 22"
+    ],
+    [
+      41,
+      48,
+      [
+        "LET YOUR DIVINE FAVOR",
+        "REST UPON OUR HOME",
+        "FILLING CORNERS WITH REST"
+      ],
+      [
+        "DIVINE FAVOR"
+      ],
+      "PROVERBS 10 : 22"
+    ],
+    [
+      48,
+      53,
+      [
+        "WALK IN GOD'S",
+        "DAILY PROVISION",
+        "SUBSCRIBE TODAY"
+      ],
+      [
+        "DAILY PROVISION"
+      ],
+      "PROVERBS 10 : 22"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Staring at a heavy financial ledger tonight, fearful of hidden costs, hear God's promise.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "LEDGER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The blessing of the LORD, it maketh rich, and he addeth no sorrow with it.",
+      "kind": "phrase",
+      "words": [
+        "BLESSING",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we bring our daily work, our decisions, and our accounts into Your steady care.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "CARE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You know the exact measure of our daily bread and the honest desires of our hearts.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "BREAD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Deliver us from wealth gained through endless anxiety, grief, or compromised truth.",
+      "kind": "phrase",
+      "words": [
+        "DELIVER",
+        "US"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Establish the work of our hands with Your quiet peace, providing all that we truly need.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let Your divine favor rest upon our home, filling every quiet corner with lasting rest.",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "FAVOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Provision Table to walk in God's daily provision.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 10:22"
+}

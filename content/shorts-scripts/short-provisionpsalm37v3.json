@@ -1,0 +1,299 @@
+{
+  "key": "short-provisionpsalm37v3",
+  "channel": "prayer7",
+  "psalm": 37,
+  "title": [
+    "WALK IN FAITH",
+    "GOD PROVIDES"
+  ],
+  "poster": [
+    "THE PROVISION TABLE",
+    "DAILY PRAYER",
+    "TRUST IN THE LORD",
+    "WALK IN FAITH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit mountain valley mist morning",
+    "peaceful river flowing through green hills",
+    "golden hour sunlight over quiet hills",
+    "calm mountain lake at sunrise",
+    "sunlit ancient stone table in forest",
+    "open door light streaming through nature",
+    "vast peaceful landscape under blue sky"
+  ],
+  "scenes": [
+    {
+      "a": "As you calculate that looming financial deficit with a heavy heart, listen to God.",
+      "img": "short-provisionpsalm37v3-scene-01.jpg",
+      "kicker": "PSALM 37:3",
+      "sub": "TRUST IN THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Trust in the LORD, and do good; so shalt thou dwell in the land, and verily thou shalt be fed.",
+      "img": "short-provisionpsalm37v3-scene-02.jpg",
+      "kicker": "PSALM 37:3",
+      "sub": "VERILY THOU SHALT BE FED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, we lean upon Your unfailing promise today when our own strength fails us.",
+      "img": "short-provisionpsalm37v3-scene-03.jpg",
+      "kicker": "PSALM 37:4",
+      "sub": "DELIGHT THYSELF",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Delight thyself also in the LORD: and he shall give thee the desires of thine heart.",
+      "img": "short-provisionpsalm37v3-scene-04.jpg",
+      "kicker": "PSALM 37:4",
+      "sub": "DESIRES OF THINE HEART",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we place every anxious burden and every uncertain step directly into Your hands.",
+      "img": "short-provisionpsalm37v3-scene-05.jpg",
+      "kicker": "PSALM 37:5",
+      "sub": "COMMIT THY WAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Commit thy way unto the LORD; trust also in him; and he shall bring it to pass.",
+      "img": "short-provisionpsalm37v3-scene-06.jpg",
+      "kicker": "PSALM 37:5",
+      "sub": "HE SHALL BRING IT TO PASS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Grant us quiet confidence in Your provision this day, in Jesus name, amen.",
+      "img": "short-provisionpsalm37v3-scene-07.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "WALK IN FAITH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      4,
+      "As you calculate that looming financial deficit with a heavy heart, listen to God."
+    ],
+    [
+      4,
+      9,
+      "Trust in the LORD, and do good; so shalt thou dwell in the land, and verily thou shalt be fed."
+    ],
+    [
+      9,
+      13,
+      "Lord, we lean upon Your unfailing promise today when our own strength fails us."
+    ],
+    [
+      13,
+      17,
+      "Delight thyself also in the LORD: and he shall give thee the desires of thine heart."
+    ],
+    [
+      17,
+      21,
+      "Father, we place every anxious burden and every uncertain step directly into Your hands."
+    ],
+    [
+      21,
+      26,
+      "Commit thy way unto the LORD; trust also in him; and he shall bring it to pass."
+    ],
+    [
+      26,
+      30,
+      "Grant us quiet confidence in Your provision this day, in Jesus name, amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      4,
+      [
+        "CALCULATE THAT LOOMING",
+        "FINANCIAL DEFICIT",
+        "LISTEN TO GOD"
+      ],
+      "DEFICIT",
+      "PSALM 37 : 3"
+    ],
+    [
+      4,
+      9,
+      [
+        "TRUST IN THE LORD",
+        "AND DO GOOD",
+        "VERILY THOU SHALT BE FED"
+      ],
+      "FED",
+      "PSALM 37 : 3"
+    ],
+    [
+      9,
+      13,
+      [
+        "WE LEAN UPON",
+        "YOUR UNFAILING PROMISE",
+        "WHEN STRENGTH FAILS"
+      ],
+      "PROMISE",
+      "PSALM 37 : 4"
+    ],
+    [
+      13,
+      17,
+      [
+        "DELIGHT THYSELF ALSO",
+        "IN THE LORD",
+        "DESIRES OF THINE HEART"
+      ],
+      "HEART",
+      "PSALM 37 : 4"
+    ],
+    [
+      17,
+      21,
+      [
+        "PLACE EVERY ANXIOUS BURDEN",
+        "INTO YOUR HANDS",
+        "WALK IN FAITH"
+      ],
+      "HANDS",
+      "PSALM 37 : 5"
+    ],
+    [
+      21,
+      26,
+      [
+        "COMMIT THY WAY",
+        "UNTO THE LORD",
+        "HE SHALL BRING IT TO PASS"
+      ],
+      "PASS",
+      "PSALM 37 : 5"
+    ],
+    [
+      26,
+      30,
+      [
+        "GRANT US QUIET CONFIDENCE",
+        "IN YOUR PROVISION",
+        "IN JESUS NAME"
+      ],
+      "PROVISION",
+      "DAILY PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you calculate that looming financial deficit with a heavy heart, listen to God.",
+      "kind": "phrase",
+      "words": [
+        "FINANCIAL",
+        "DEFICIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Trust in the LORD, and do good; so shalt thou dwell in the land, and verily thou shalt be fed.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "IN",
+        "THE",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we lean upon Your unfailing promise today when our own strength fails us.",
+      "kind": "phrase",
+      "words": [
+        "UNFAILING",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Delight thyself also in the LORD: and he shall give thee the desires of thine heart.",
+      "kind": "phrase",
+      "words": [
+        "DELIGHT",
+        "THYSELF"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we place every anxious burden and every uncertain step directly into Your hands.",
+      "kind": "phrase",
+      "words": [
+        "ANXIOUS",
+        "BURDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Commit thy way unto the LORD; trust also in him; and he shall bring it to pass.",
+      "kind": "phrase",
+      "words": [
+        "COMMIT",
+        "THY",
+        "WAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us quiet confidence in Your provision this day, in Jesus name, amen.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "CONFIDENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 37:3-5"
+}

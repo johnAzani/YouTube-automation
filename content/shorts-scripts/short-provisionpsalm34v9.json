@@ -1,0 +1,284 @@
+{
+  "key": "short-provisionpsalm34v9",
+  "channel": "prayer7",
+  "psalm": 34,
+  "title": [
+    "GOD'S PROVISION",
+    "IN EVERY NEED"
+  ],
+  "poster": [
+    "FEAR THE LORD",
+    "HIS SAINTS SHALL",
+    "NOT WANT ANY",
+    "GOOD THING"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "peaceful golden sunlit mountain valley",
+    "still river at dawn with soft mist",
+    "ancient stone table in sunlit sanctuary",
+    "calm mountain pass at golden hour",
+    "gentle stream flowing over smooth rocks",
+    "soft light through old stone archway"
+  ],
+  "scenes": [
+    {
+      "a": "As you calculate that mounting pressure of your daily expenses, stillness is your strength.",
+      "img": "short-provisionpsalm34v9-scene-01.jpg",
+      "kicker": "PSALM 34:9",
+      "sub": "STILLNESS IS YOUR STRENGTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "O fear the LORD, ye his saints: for there is no want to them that fear him.",
+      "img": "short-provisionpsalm34v9-scene-02.jpg",
+      "kicker": "PSALM 34:9",
+      "sub": "THERE IS NO WANT",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The young lions do lack, and suffer hunger: but they that seek the LORD shall not want any good thing.",
+      "img": "short-provisionpsalm34v9-scene-03.jpg",
+      "kicker": "PSALM 34:10",
+      "sub": "SEEK THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, quiet the anxious heart that wonders how the bills will be met this week.",
+      "img": "short-provisionpsalm34v9-scene-04.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "TRUST HIS FAITHFULNESS",
+      "cam": "tilt_up",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "You are the Shepherd who provides for every sincere desire placed in Your holy hands.",
+      "img": "short-provisionpsalm34v9-scene-05.jpg",
+      "kicker": "HIS HOLY HANDS",
+      "sub": "REST IN HIS CARE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "May our hearts remain focused on Your righteousness, confident that You supply our daily bread.",
+      "img": "short-provisionpsalm34v9-scene-06.jpg",
+      "kicker": "SUBSCRIBE",
+      "sub": "WALK IN HIS PROVISION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "As you calculate that mounting pressure of your daily expenses, stillness is your strength."
+    ],
+    [
+      11,
+      22,
+      "O fear the LORD, ye his saints: for there is no want to them that fear him."
+    ],
+    [
+      23,
+      38,
+      "The young lions do lack, and suffer hunger: but they that seek the LORD shall not want any good thing."
+    ],
+    [
+      39,
+      52,
+      "Lord, quiet the anxious heart that wonders how the bills will be met this week."
+    ],
+    [
+      53,
+      67,
+      "You are the Shepherd who provides for every sincere desire placed in Your holy hands."
+    ],
+    [
+      68,
+      80,
+      "May our hearts remain focused on Your righteousness, confident that You supply our daily bread."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "CALCULATE MOUNTING PRESSURE",
+        "STILLNESS IS",
+        "YOUR STRENGTH"
+      ],
+      [
+        "STILLNESS"
+      ],
+      "PSALM 34:9"
+    ],
+    [
+      11,
+      22,
+      [
+        "FEAR THE LORD",
+        "YE HIS SAINTS",
+        "NO WANT TO THEM"
+      ],
+      [
+        "NO WANT"
+      ],
+      "PSALM 34:9"
+    ],
+    [
+      23,
+      38,
+      [
+        "YOUNG LIONS LACK",
+        "SEEK THE LORD",
+        "NOT WANT ANY",
+        "GOOD THING"
+      ],
+      [
+        "NOT WANT"
+      ],
+      "PSALM 34:10"
+    ],
+    [
+      39,
+      52,
+      [
+        "QUIET ANXIOUS HEARTS",
+        "BILLS WILL BE",
+        "MET THIS WEEK"
+      ],
+      [
+        "QUIET"
+      ],
+      "PSALM 34:10"
+    ],
+    [
+      53,
+      67,
+      [
+        "SHEPHERD PROVIDES",
+        "SINCERE DESIRE",
+        "IN HOLY HANDS"
+      ],
+      [
+        "PROVIDES"
+      ],
+      "PSALM 34:10"
+    ],
+    [
+      68,
+      80,
+      [
+        "HEARTS FOCUSED",
+        "SUPPLY DAILY",
+        "BREAD ALWAYS"
+      ],
+      [
+        "SUPPLY"
+      ],
+      "PSALM 34:10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you calculate that mounting pressure of your daily expenses, stillness is your strength.",
+      "kind": "phrase",
+      "words": [
+        "STILLNESS",
+        "IS",
+        "YOUR",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "O fear the LORD, ye his saints: for there is no want to them that fear him.",
+      "kind": "phrase",
+      "words": [
+        "NO",
+        "WANT",
+        "TO",
+        "THEM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The young lions do lack, and suffer hunger: but they that seek the LORD shall not want any good thing.",
+      "kind": "phrase",
+      "words": [
+        "NOT",
+        "WANT",
+        "ANY",
+        "GOOD",
+        "THING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, quiet the anxious heart that wonders how the bills will be met this week.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "THE",
+        "ANXIOUS",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are the Shepherd who provides for every sincere desire placed in Your holy hands.",
+      "kind": "phrase",
+      "words": [
+        "PROVIDES",
+        "FOR",
+        "EVERY",
+        "DESIRE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May our hearts remain focused on Your righteousness, confident that You supply our daily bread.",
+      "kind": "phrase",
+      "words": [
+        "SUPPLY",
+        "OUR",
+        "DAILY",
+        "BREAD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 34:9-10"
+}
