@@ -1,0 +1,270 @@
+{
+  "key": "short-gardenpsalm63v3",
+  "channel": "prayer9",
+  "psalm": 63,
+  "title": [
+    "THY LOVINGKINDNESS",
+    "IS BETTER THAN LIFE"
+  ],
+  "poster": [
+    "PSALM 63:3-4",
+    "LOVINGKINDNESS",
+    "BETTER THAN LIFE",
+    "THE PRAISE GARDEN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade soft golden light peaceful",
+    "misty mountain meadow sunrise calm nature",
+    "golden sunlight beaming through forest trees river",
+    "calm tranquil river flowing through lush countryside",
+    "soft morning light over quiet green valley",
+    "peaceful meadow bathed in golden warm sun rays"
+  ],
+  "scenes": [
+    {
+      "a": "shadowing your heart right now",
+      "img": "short-gardenpsalm63v3-scene-01.jpg",
+      "kicker": "PSALM 63:3-4",
+      "sub": "LIFT YOUR EYES TO GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "thy lovingkindness is better than life",
+      "img": "short-gardenpsalm63v3-scene-02.jpg",
+      "kicker": "PSALM 63:3",
+      "sub": "THY LOVINGKINDNESS IS BETTER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "lift up my hands in thy name",
+      "img": "short-gardenpsalm63v3-scene-03.jpg",
+      "kicker": "PSALM 63:4",
+      "sub": "LIFT UP MY HANDS IN THY NAME",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Your steadfast presence restores us",
+      "img": "short-gardenpsalm63v3-scene-04.jpg",
+      "kicker": "PSALM 63:3-4",
+      "sub": "YOUR MERCY RESTORES US",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "walk faithfully in Your abundant grace",
+      "img": "short-gardenpsalm63v3-scene-05.jpg",
+      "kicker": "PSALM 63:3-4",
+      "sub": "WALK IN ABUNDANT GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Praise Garden",
+      "img": "short-gardenpsalm63v3-scene-06.jpg",
+      "kicker": "THE PRAISE GARDEN",
+      "sub": "ENTER HIS GATES WITH THANKS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If a quiet sorrow is shadowing your heart right now, lift your eyes to God."
+    ],
+    [
+      7,
+      15,
+      "Because thy lovingkindness is better than life, my lips shall praise thee."
+    ],
+    [
+      15,
+      23,
+      "Thus will I bless thee while I live: I will lift up my hands in thy name."
+    ],
+    [
+      23,
+      34,
+      "Lord, we thank You that Your mercy is sweeter than any earthly joy. When our spirits grow faint, Your steadfast presence restores us."
+    ],
+    [
+      34,
+      46,
+      "We offer You our praise with joyful hearts, trusting Your tender care in every moment. Strengthen us today to walk faithfully in Your abundant grace and truth."
+    ],
+    [
+      46,
+      52,
+      "Subscribe to The Praise Garden for daily thanksgiving, praise, and worship."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF A QUIET SORROW",
+        "SHADOWS YOUR HEART",
+        "LIFT YOUR EYES TO GOD"
+      ],
+      [
+        "LIFT YOUR EYES"
+      ],
+      "PSALM 63 : 3-4"
+    ],
+    [
+      7,
+      15,
+      [
+        "BECAUSE THY LOVINGKINDNESS",
+        "IS BETTER THAN LIFE",
+        "MY LIPS SHALL PRAISE THEE"
+      ],
+      [
+        "LOVINGKINDNESS"
+      ],
+      "PSALM 63 : 3"
+    ],
+    [
+      15,
+      23,
+      [
+        "THUS WILL I BLESS THEE",
+        "WHILE I LIVE",
+        "I WILL LIFT UP MY HANDS"
+      ],
+      [
+        "LIFT UP MY HANDS"
+      ],
+      "PSALM 63 : 4"
+    ],
+    [
+      23,
+      34,
+      [
+        "YOUR MERCY IS SWEETER",
+        "THAN ANY EARTHLY JOY",
+        "YOUR PRESENCE RESTORES US"
+      ],
+      [
+        "PRESENCE RESTORES"
+      ],
+      "PSALM 63 : 3-4"
+    ],
+    [
+      34,
+      46,
+      [
+        "WE OFFER YOU PRAISE",
+        "WITH JOYFUL HEARTS",
+        "WALK IN ABUNDANT GRACE"
+      ],
+      [
+        "ABUNDANT GRACE"
+      ],
+      "PSALM 63 : 3-4"
+    ],
+    [
+      46,
+      52,
+      [
+        "SUBSCRIBE TO",
+        "THE PRAISE GARDEN",
+        "FOR DAILY THANKSGIVING"
+      ],
+      [
+        "THE PRAISE GARDEN"
+      ],
+      "PSALM 63 : 3-4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "shadowing your heart right now",
+      "kind": "phrase",
+      "words": [
+        "SHADOWING",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "thy lovingkindness is better than life",
+      "kind": "phrase",
+      "words": [
+        "LOVINGKINDNESS",
+        "BETTER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "lift up my hands in thy name",
+      "kind": "phrase",
+      "words": [
+        "LIFT",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your steadfast presence restores us",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE",
+        "RESTORES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "walk faithfully in Your abundant grace",
+      "kind": "phrase",
+      "words": [
+        "ABUNDANT",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Praise Garden",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "GARDEN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 63:3-4"
+}
