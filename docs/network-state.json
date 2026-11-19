@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T02:13:28Z",
+  "generated_at": "2026-11-19T02:20:33Z",
   "monitor_generated_at": "2026-11-18T22:10:18.325379+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 478,
-    "published_longform": 155,
-    "published_shorts": 323,
-    "public_total": 476,
-    "queued_longform": 52,
-    "queued_shorts": 61,
+    "published_total": 480,
+    "published_longform": 156,
+    "published_shorts": 324,
+    "public_total": 478,
+    "queued_longform": 51,
+    "queued_shorts": 60,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,33 +509,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 34,
-        "published_longform": 11,
-        "published_shorts": 23,
-        "thumbnail_pending": 34,
-        "public_total": 34,
-        "queued_longform": 6,
+        "published_total": 36,
+        "published_longform": 12,
+        "published_shorts": 24,
+        "thumbnail_pending": 36,
+        "public_total": 36,
+        "queued_longform": 5,
         "queued_other": 2,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM46V1",
-        "title": "Pray This Psalm 46:1-2 Prayer for Divine Protection | A Prayer For Peace #Shorts",
-        "format": "short",
-        "youtube_video_id": "dhW00V5pGwE",
-        "watch_url": "https://www.youtube.com/shorts/dhW00V5pGwE",
-        "published_on": "2026-11-18",
-        "published_at": "2026-11-18T21:02:17Z"
-      },
-      "next_queued_longform": {
         "id": "0611",
         "title": "The Lord Is My Rock and Fortress: Psalm 18:2 | The Covenant Shield",
-        "words": 1496,
+        "format": "longform",
+        "youtube_video_id": "NwsmA331vTA",
+        "watch_url": "https://youtu.be/NwsmA331vTA",
+        "published_on": "2026-11-19",
+        "published_at": "2026-11-19T02:19:37Z"
+      },
+      "next_queued_longform": {
+        "id": "0612",
+        "title": "The Eternal God Is Thy Refuge: Deuteronomy 33:27 | The Covenant Shield",
+        "words": 1626,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm18v2",
-        "scripture": "Psalm 18:2",
+        "short": "short-shielddeuteronomy33v27",
+        "scripture": "Deuteronomy 33:27",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0611",
+      "slug": "the-lord-is-my-rock-and-fortress-psalm-18-2-the-covenant-shield",
+      "file": "0611-the-lord-is-my-rock-and-fortress-psalm-18-2-the-covenant-shield.md",
+      "title": "The Lord Is My Rock and Fortress: Psalm 18:2 | The Covenant Shield",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T02:19:37Z",
+      "youtube_video_id": "NwsmA331vTA",
+      "watch_url": "https://youtu.be/NwsmA331vTA",
+      "youtu_be_url": "https://youtu.be/NwsmA331vTA",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/NwsmA331vTA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/NwsmA331vTA/hqdefault.jpg",
+      "thumb_text": "MY HIGH",
+      "thumbnail_pending": true,
+      "duration_label": "~10 min",
+      "words": 1496
+    },
+    {
       "id": "0314",
       "slug": "peace-in-your-marriage-and-home-colossians-3-14-15",
       "file": "0314-peace-in-your-marriage-and-home-colossians-3-14-15.md",
@@ -796,6 +820,30 @@
       "thumbnail_pending": false,
       "duration_label": "48s",
       "words": 622
+    },
+    {
+      "id": "SHORT-SHIELDPSALM18V2",
+      "slug": "short-shieldpsalm18v2-protection-prayer",
+      "file": "short-shieldpsalm18v2-protection-prayer.md",
+      "title": "Pray This Psalm 18:2 Prayer for Divine Protection | Find Strength In The Lord #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T01:25:59Z",
+      "youtube_video_id": "QfBw4tyRPpw",
+      "watch_url": "https://www.youtube.com/shorts/QfBw4tyRPpw",
+      "youtu_be_url": "https://youtu.be/QfBw4tyRPpw",
+      "shorts_url": "https://www.youtube.com/shorts/QfBw4tyRPpw",
+      "studio_url": "https://studio.youtube.com/video/QfBw4tyRPpw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/QfBw4tyRPpw/hqdefault.jpg",
+      "thumb_text": "THE LORD IS MY ROCK \u00b7 MY FORTRESS",
+      "thumbnail_pending": true,
+      "duration_label": "49s",
+      "words": 646
     },
     {
       "id": "SHORT-PROVISIONRUTH2V12",
@@ -12645,19 +12693,6 @@
         "words": 1149
       },
       {
-        "id": "0611",
-        "slug": "the-lord-is-my-rock-and-fortress-psalm-18-2-the-covenant-shield",
-        "file": "0611-the-lord-is-my-rock-and-fortress-psalm-18-2-the-covenant-shield.md",
-        "title": "The Lord Is My Rock and Fortress: Psalm 18:2 | The Covenant Shield",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1496
-      },
-      {
         "id": "0612",
         "slug": "eternal-refuge-deuteronomy-33-27-the-covenant-shield",
         "file": "0612-eternal-refuge-deuteronomy-33-27-the-covenant-shield.md",
@@ -13315,17 +13350,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldpsalm18v2",
-        "file": "0611-short-shieldpsalm18v2.yml",
-        "companion_longform_id": "0611",
-        "scripture": "Psalm 18:2",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shielddeuteronomy33v27",
