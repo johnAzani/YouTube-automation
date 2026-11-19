@@ -9,11 +9,46 @@
       "workflow": "metrics.yml"
     },
     {
+      "late_minutes": 360,
+      "name": "Gemini Brain Autonomous Queue Replenishment",
+      "ran_at": "2026-11-19T09:14:47+00:00",
+      "slot": "2026-11-19T03:14:00+00:00",
+      "workflow": "gemini_brain.yml"
+    },
+    {
+      "late_minutes": 337,
+      "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
+      "ran_at": "2026-11-19T09:14:48+00:00",
+      "slot": "2026-11-19T03:37:00+00:00",
+      "workflow": "channel-analytics.yml"
+    },
+    {
+      "late_minutes": 262,
+      "name": "Tests on main (daily)",
+      "ran_at": "2026-11-19T09:14:50+00:00",
+      "slot": "2026-11-19T04:52:00+00:00",
+      "workflow": "tests-on-main.yml"
+    },
+    {
       "late_minutes": 208,
       "name": "Keepalive",
       "ran_at": "2026-11-16T06:51:47+00:00",
       "slot": "2026-11-16T03:23:00+00:00",
       "workflow": "keepalive.yml"
+    },
+    {
+      "late_minutes": 207,
+      "name": "YouTube reporting jobs (thumbnail impressions)",
+      "ran_at": "2026-11-19T09:14:52+00:00",
+      "slot": "2026-11-19T05:47:00+00:00",
+      "workflow": "reporting-jobs.yml"
+    },
+    {
+      "late_minutes": 180,
+      "name": "Produce video",
+      "ran_at": "2026-11-19T09:14:57+00:00",
+      "slot": "2026-11-19T06:14:00+00:00",
+      "workflow": "produce.yml"
     },
     {
       "late_minutes": 170,
@@ -28,10 +63,17 @@
       "ran_at": "2026-11-19T09:13:52+00:00",
       "slot": "2026-11-19T06:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
+    },
+    {
+      "late_minutes": 120,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-19T09:14:58+00:00",
+      "slot": "2026-11-19T07:14:00+00:00",
+      "workflow": "comments.yml"
     }
   ],
-  "generated_at": "2026-11-19T09:14:40.467879+00:00",
-  "last_run_at": "2026-11-19T09:13:52+00:00",
+  "generated_at": "2026-11-19T09:18:32.385647+00:00",
+  "last_run_at": "2026-11-19T09:18:01+00:00",
   "on_time": [
     {
       "late_minutes": 115,
