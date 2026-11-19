@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["SECRET PRESENCE", "GOD'S DIVINE COVERING", "DIVINE REFUGE", "PSALM 31:20"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-26T16:53:53Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If harsh words and sharp opinions are surrounding you today, stay here and receive peace. Thou shalt hide them in the secret of thy presence from the pride of man: thou shalt keep them secretly in a pavilion from the strife of tongues. Lord, cover this precious soul in the quiet shelter of Your divine closeness. When proud voices threaten and cruel arguments rage around them, pull them into Your hidden holy sanctuary where no weapon of words can reach. Grant them quietness within Your secret place, shield their mind from malice, and guard their heart in safe keeping. May Your stillness reign over every chaotic voice today. Subscribe to walk under God's daily covering.

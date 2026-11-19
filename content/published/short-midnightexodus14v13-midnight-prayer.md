@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE MIDNIGHT WATCH", "STAND STILL AND SEE", "HIS SALVATION", "UNFOLDING FOR YOU"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-26T16:53:34Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 The crushing weight of that unsolvable problem keeps you awake in the dark right now. And Moses said unto the people, Fear ye not, stand still, and see the salvation of the LORD, which he will show to you to day: for the Egyptians whom ye have seen to day, ye shall see them again no more for ever. The LORD shall fight for you, and ye shall hold your peace. Father, we surrender the battles we cannot win to your mighty and capable hands tonight. Release the anxiety of what tomorrow brings and trust in the silence of this hour. You are held by the creator of the stars while you rest in his deep grace. May your spirit settle into the victory that he has already secured for your soul.

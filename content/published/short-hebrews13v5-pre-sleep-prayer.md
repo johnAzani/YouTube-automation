@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["YOU ARE NOT", "ALONE TONIGHT", "HE IS WITH YOU ALWAYS", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If the financial worry gripping your chest makes sleep feel impossible, stay right here. Let your conversation be without covetousness; and be content with such things as ye have: for he hath said, I will never leave thee, nor forsake thee. So that we may boldly say, The Lord is my helper, and I will not fear what man shall do unto me. Father, quiet this anxious heart and remind me that Your presence is my true wealth. Replace my fear of the future with a deep, unshakable trust in Your constant care. Grant me the grace to sleep soundly, knowing I am held in Your loving hand.

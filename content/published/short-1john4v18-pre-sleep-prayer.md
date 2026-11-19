@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["THE SECRET PLACE", "A PRAYER FOR", "YOUR RESTLESS", "HEART TONIGHT"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Release the grip of that recurring worry that has followed you into your bed tonight. The scripture tells us clearly that there is no fear in love; but perfect love casteth out fear: because fear hath torment. He that feareth is not made perfect in love. Father, let this truth anchor my spirit as the darkness gathers around my weary body. Drive away the shadows of doubt that keep me awake and quiet my racing mind. May I be held tonight by a love that is deeper than my own fragile understanding. I surrender my night into your care, confident that your light remains even in darkness.

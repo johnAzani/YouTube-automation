@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["WALK WITH A", "PERFECT HEART", "IN YOUR HOME", "PSALM 101:2"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-26T16:53:38Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If an argument almost started in your hallway just now, let God rule your words. I will behave myself wisely in a perfect way. O when wilt thou come unto me? I will walk within my house with a perfect heart. Lord, cover our home with your quiet presence today. When tempers flare or quiet choices must be made behind closed doors, teach us wisdom. Let integrity guide how we speak to those we love most, making our household a sanctuary of peace and truth. Help us guard our hearts so your holy spirit feels truly welcome under this roof. Subscribe to cover your home in daily prayer.

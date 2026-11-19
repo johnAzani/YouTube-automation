@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["DIVINE PROTECTION", "PROVERBS 1:33", "THE COVENANT SHIELD", "WALK IN PEACE"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-26T16:53:52Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If that looming deadline is tightening its grip on your chest right now, stay and listen. Father, we bring every racing thought and every unspoken worry into your holy presence. We ask for your mighty hand to guard our hearts against the noise of panic. Your word declares the unchanging promise that we lean our souls upon today. But whoso hearkeneth unto me shall dwell safely, and shall be quiet from fear of evil. Lord, let this quiet confidence settle deep inside our bones as we walk forward. In Jesus name, amen.
