@@ -24,9 +24,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["A WALL OF FIRE", "ROUND ABOUT HER", "GLORY IN THE MIDST", "ZECHARIAH 2:5"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-19T20:09:42Z"
+thumbnail_retry_after: "2026-11-26T20:50:11Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 As midnight arrives, rise in spirit and step into the holy presence of the Almighty. In this quiet hour, open your heart to hear the promise of Zechariah 2:5. 'For I, saith the LORD, will be unto her a wall of fire round about, and will be the glory in the midst of her.' Heavenly Father, surround our lives and homes with your holy fire. Be a divine shield against every unseen danger tonight. Let your glorious light dwell deep within our souls, casting out all fear, trouble, and heaviness. Stand guard over our loved ones as we sleep peacefully in your care. May your sacred presence burn brightly around us until the morning comes. Subscribe to join The Midnight Watch in nightly prayer.
