@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T01:19:34Z",
+  "generated_at": "2026-11-19T01:25:50Z",
   "monitor_generated_at": "2026-11-18T22:10:18.325379+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 471,
+    "published_total": 472,
     "published_longform": 153,
-    "published_shorts": 318,
-    "public_total": 469,
+    "published_shorts": 319,
+    "public_total": 470,
     "queued_longform": 54,
-    "queued_shorts": 66,
+    "queued_shorts": 65,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -373,23 +373,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 41,
+        "published_total": 42,
         "published_longform": 13,
-        "published_shorts": 28,
+        "published_shorts": 29,
         "thumbnail_pending": 5,
-        "public_total": 41,
+        "public_total": 42,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0412",
-        "title": "Prosper and Be in Health: 3 John 1:2 | The Healing Balm",
-        "format": "longform",
-        "youtube_video_id": "Xyf6CXcB0PY",
-        "watch_url": "https://youtu.be/Xyf6CXcB0PY",
-        "published_on": "2026-11-18",
-        "published_at": "2026-11-18T21:32:40Z"
+        "id": "SHORT-HEALINGPSALM30V2",
+        "title": "Pray This Psalm 30:2 Healing Prayer for Peace & Strength | Rest In His Mercy #Shorts",
+        "format": "short",
+        "youtube_video_id": "bDyFw0IZacY",
+        "watch_url": "https://www.youtube.com/shorts/bDyFw0IZacY",
+        "published_on": "2026-11-19",
+        "published_at": "2026-11-19T01:24:55Z"
       },
       "next_queued_longform": {
         "id": "0413",
@@ -398,8 +398,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingpsalm30v2",
-        "scripture": "Psalm 30:2",
+        "short": "short-healing3john1v2",
+        "scripture": "3 John 1:2",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGPSALM30V2",
+      "slug": "short-healingpsalm30v2-restoration-prayer",
+      "file": "short-healingpsalm30v2-restoration-prayer.md",
+      "title": "Pray This Psalm 30:2 Healing Prayer for Peace & Strength | Rest In His Mercy #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T01:24:55Z",
+      "youtube_video_id": "bDyFw0IZacY",
+      "watch_url": "https://www.youtube.com/shorts/bDyFw0IZacY",
+      "youtu_be_url": "https://youtu.be/bDyFw0IZacY",
+      "shorts_url": "https://www.youtube.com/shorts/bDyFw0IZacY",
+      "studio_url": "https://studio.youtube.com/video/bDyFw0IZacY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/bDyFw0IZacY/hqdefault.jpg",
+      "thumb_text": "RESTORE \u00b7 YOUR SOUL",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 643
+    },
     {
       "id": "SHORT-PSALM94V19",
       "slug": "short-psalm94v19-pre-sleep-prayer",
@@ -13063,17 +13087,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healingpsalm30v2",
-        "file": "0411-short-healingpsalm30v2.yml",
-        "companion_longform_id": "0411",
-        "scripture": "Psalm 30:2",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healing3john1v2",
