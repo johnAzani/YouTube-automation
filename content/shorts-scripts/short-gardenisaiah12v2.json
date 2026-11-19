@@ -1,0 +1,270 @@
+{
+  "key": "short-gardenisaiah12v2",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "GOD IS MY",
+    "SALVATION"
+  ],
+  "poster": [
+    "HIS STRENGTH",
+    "AND SONG",
+    "IN THE QUIET",
+    "OF HIS GRACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "misty morning forest",
+    "sunlight filtering through trees",
+    "calm flowing river",
+    "golden hour meadow",
+    "dew on forest leaves",
+    "peaceful lake at sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "If that restlessness in your heart won't settle, stay here in this moment of quiet.",
+      "img": "short-gardenisaiah12v2-scene-01.jpg",
+      "kicker": "ISAIAH 12:2",
+      "sub": "TRUST IN THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Behold, God is my salvation; I will trust, and not be afraid: for the LORD JEHOVAH is my strength and my song; he also is become my salvation.",
+      "img": "short-gardenisaiah12v2-scene-02.jpg",
+      "kicker": "ISAIAH 12:2",
+      "sub": "HE IS MY STRENGTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Therefore with joy shall ye draw water out of the wells of salvation.",
+      "img": "short-gardenisaiah12v2-scene-03.jpg",
+      "kicker": "ISAIAH 12:3",
+      "sub": "DRAW FROM THE WELL",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And in that day shall ye say, Praise the LORD, call upon his name, declare his doings among the people, make mention that his name is exalted.",
+      "img": "short-gardenisaiah12v2-scene-04.jpg",
+      "kicker": "ISAIAH 12:4",
+      "sub": "HIS NAME IS EXALTED",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Sing unto the LORD; for he hath done excellent things: this is known in all the earth.",
+      "img": "short-gardenisaiah12v2-scene-05.jpg",
+      "kicker": "ISAIAH 12:5",
+      "sub": "EXCELLENT THINGS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, fill my spirit with this truth, let my heart overflow with praise for You today.",
+      "img": "short-gardenisaiah12v2-scene-06.jpg",
+      "kicker": "HE IS WORTHY",
+      "sub": "THANK YOU LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If that restlessness in your heart won't settle, stay here in this moment of quiet."
+    ],
+    [
+      8,
+      28,
+      "Behold, God is my salvation; I will trust, and not be afraid: for the LORD JEHOVAH is my strength and my song; he also is become my salvation."
+    ],
+    [
+      29,
+      40,
+      "Therefore with joy shall ye draw water out of the wells of salvation."
+    ],
+    [
+      41,
+      65,
+      "And in that day shall ye say, Praise the LORD, call upon his name, declare his doings among the people, make mention that his name is exalted."
+    ],
+    [
+      66,
+      80,
+      "Sing unto the LORD; for he hath done excellent things: this is known in all the earth."
+    ],
+    [
+      81,
+      106,
+      "Lord, fill my spirit with this truth, let my heart overflow with praise for You today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "RESTLESSNESS",
+        "WON'T SETTLE",
+        "STAY HERE"
+      ],
+      [
+        "RESTLESSNESS"
+      ],
+      "ISAIAH 12:2"
+    ],
+    [
+      8,
+      28,
+      [
+        "BEHOLD GOD",
+        "IS MY SALVATION",
+        "I WILL TRUST",
+        "NOT BE AFRAID"
+      ],
+      [
+        "SALVATION"
+      ],
+      "ISAIAH 12:2"
+    ],
+    [
+      29,
+      40,
+      [
+        "WITH JOY",
+        "DRAW WATER",
+        "WELLS OF SALVATION"
+      ],
+      [
+        "JOY"
+      ],
+      "ISAIAH 12:3"
+    ],
+    [
+      41,
+      65,
+      [
+        "PRAISE THE LORD",
+        "CALL HIS NAME",
+        "HIS NAME EXALTED"
+      ],
+      [
+        "EXALTED"
+      ],
+      "ISAIAH 12:4"
+    ],
+    [
+      66,
+      80,
+      [
+        "SING UNTO THE LORD",
+        "DONE EXCELLENT THINGS"
+      ],
+      [
+        "EXCELLENT"
+      ],
+      "ISAIAH 12:5"
+    ],
+    [
+      81,
+      106,
+      [
+        "FILL MY SPIRIT",
+        "HEART OVERFLOW",
+        "PRAISE YOU TODAY"
+      ],
+      [
+        "PRAISE"
+      ],
+      "ISAIAH 12:5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that restlessness in your heart won't settle, stay here in this moment of quiet.",
+      "kind": "phrase",
+      "words": [
+        "RESTLESSNESS",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Behold, God is my salvation; I will trust, and not be afraid: for the LORD JEHOVAH is my strength and my song; he also is become my salvation.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "SALVATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Therefore with joy shall ye draw water out of the wells of salvation.",
+      "kind": "phrase",
+      "words": [
+        "JOY",
+        "WATER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And in that day shall ye say, Praise the LORD, call upon his name, declare his doings among the people, make mention that his name is exalted.",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "EXALTED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Sing unto the LORD; for he hath done excellent things: this is known in all the earth.",
+      "kind": "phrase",
+      "words": [
+        "SING",
+        "EXCELLENT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, fill my spirit with this truth, let my heart overflow with praise for You today.",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 12:2-5"
+}

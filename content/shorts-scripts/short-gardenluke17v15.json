@@ -1,0 +1,298 @@
+{
+  "key": "short-gardenluke17v15",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "THE GRACE OF THANKS",
+    "LUKE 17:15-16"
+  ],
+  "poster": [
+    "THE PRAISE GARDEN",
+    "A KJV THANKSGIVING PRAYER",
+    "LUKE 17:15-16",
+    "ENTER HIS GATES"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glades peaceful nature",
+    "misty countryside in soft morning light",
+    "golden light over calm river landscape",
+    "peaceful green valley with soft sunlight",
+    "morning mist rising over quiet meadow",
+    "sunlight filtering through ancient trees",
+    "serene woodland stream in golden hour"
+  ],
+  "scenes": [
+    {
+      "a": "If that lingering ache in your chest has made it hard to look up today, stay right here.",
+      "img": "short-gardenluke17v15-scene-01.jpg",
+      "kicker": "LUKE 17:15",
+      "sub": "TURN BACK AND GIVE THANKS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we confess how easily our blessings are consumed without a second glance backward.",
+      "img": "short-gardenluke17v15-scene-02.jpg",
+      "kicker": "LUKE 17:15",
+      "sub": "A LOUD VOICE GLORIFIED GOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach our spirits to remember Your mercy when the noise of the day tries to drown it out.",
+      "img": "short-gardenluke17v15-scene-03.jpg",
+      "kicker": "LUKE 17:15",
+      "sub": "TURN BACK IN PRAISE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "And one of them, when he saw that he was healed, turned back, and with a loud voice glorified God,",
+      "img": "short-gardenluke17v15-scene-04.jpg",
+      "kicker": "LUKE 17:15",
+      "sub": "GLORIFIED GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "And fell down on his face at his feet, giving him thanks: and he was a Samaritan.",
+      "img": "short-gardenluke17v15-scene-05.jpg",
+      "kicker": "LUKE 17:16",
+      "sub": "FALL DOWN IN GRATITUDE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, give us this humble posture, recognizing every good gift comes straight from Your hand.",
+      "img": "short-gardenluke17v15-scene-06.jpg",
+      "kicker": "LUKE 17:16",
+      "sub": "EVERY GOOD GIFT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "May our lips not just receive kindness, but return to offer genuine praise to Your holy name.",
+      "img": "short-gardenluke17v15-scene-07.jpg",
+      "kicker": "LUKE 17:16",
+      "sub": "OFFER GENUINE PRAISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "If that lingering ache in your chest has made it hard to look up today, stay right here."
+    ],
+    [
+      12,
+      25,
+      "Father, we confess how easily our blessings are consumed without a second glance backward."
+    ],
+    [
+      25,
+      38,
+      "Teach our spirits to remember Your mercy when the noise of the day tries to drown it out."
+    ],
+    [
+      38,
+      54,
+      "And one of them, when he saw that he was healed, turned back, and with a loud voice glorified God,"
+    ],
+    [
+      54,
+      70,
+      "And fell down on his face at his feet, giving him thanks: and he was a Samaritan."
+    ],
+    [
+      70,
+      83,
+      "Lord, give us this humble posture, recognizing every good gift comes straight from Your hand."
+    ],
+    [
+      83,
+      98,
+      "May our lips not just receive kindness, but return to offer genuine praise to Your holy name."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "IF THAT LINGERING",
+        "ACHE IN YOUR CHEST",
+        "STAY RIGHT HERE"
+      ],
+      "ACHE",
+      "LUKE 17 : 15"
+    ],
+    [
+      12,
+      25,
+      [
+        "FATHER WE CONFESS",
+        "OUR BLESSINGS ARE",
+        "CONSUMED TODAY"
+      ],
+      "CONFESS",
+      "LUKE 17 : 15"
+    ],
+    [
+      25,
+      38,
+      [
+        "TEACH OUR SPIRITS",
+        "TO REMEMBER MERCY",
+        "IN THE QUIET"
+      ],
+      "MERCY",
+      "LUKE 17 : 15"
+    ],
+    [
+      38,
+      54,
+      [
+        "TURNED BACK AND",
+        "WITH A LOUD VOICE",
+        "GLORIFIED GOD"
+      ],
+      "GLORIFIED",
+      "LUKE 17 : 15"
+    ],
+    [
+      54,
+      70,
+      [
+        "FELL DOWN ON HIS",
+        "FACE AT HIS FEET",
+        "GIVING HIM THANKS"
+      ],
+      "THANKS",
+      "LUKE 17 : 16"
+    ],
+    [
+      70,
+      83,
+      [
+        "LORD GIVE US THIS",
+        "HUMBLE POSTURE OF",
+        "GRATEFUL HEARTS"
+      ],
+      "POSTURE",
+      "LUKE 17 : 16"
+    ],
+    [
+      83,
+      98,
+      [
+        "MAY OUR LIPS RETURN",
+        "TO OFFER PRAISE",
+        "TO YOUR NAME"
+      ],
+      "PRAISE",
+      "LUKE 17 : 16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that lingering ache in your chest has made it hard to look up today, stay right here.",
+      "kind": "phrase",
+      "words": [
+        "LINGERING",
+        "ACHE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we confess how easily our blessings are consumed without a second glance backward.",
+      "kind": "phrase",
+      "words": [
+        "CONFESS",
+        "BLESSINGS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach our spirits to remember Your mercy when the noise of the day tries to drown it out.",
+      "kind": "phrase",
+      "words": [
+        "REMEMBER",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And one of them, when he saw that he was healed, turned back, and with a loud voice glorified God,",
+      "kind": "phrase",
+      "words": [
+        "TURNED",
+        "BACK",
+        "GLORIFIED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And fell down on his face at his feet, giving him thanks: and he was a Samaritan.",
+      "kind": "phrase",
+      "words": [
+        "FELL",
+        "DOWN",
+        "THANKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, give us this humble posture, recognizing every good gift comes straight from Your hand.",
+      "kind": "phrase",
+      "words": [
+        "HUMBLE",
+        "POSTURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May our lips not just receive kindness, but return to offer genuine praise to Your holy name.",
+      "kind": "phrase",
+      "words": [
+        "GENUINE",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Luke 17:15-16"
+}

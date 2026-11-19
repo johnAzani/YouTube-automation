@@ -1,0 +1,270 @@
+{
+  "key": "short-gardenpsalm30v11",
+  "channel": "prayer9",
+  "psalm": 30,
+  "title": [
+    "HE TURNED YOUR",
+    "MOURNING INTO DANCING"
+  ],
+  "poster": [
+    "A PRAYER OF",
+    "GLADNESS",
+    "FOR YOUR HEART",
+    "PSALM 30:11-12"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "misty forest dawn soft light",
+    "golden sunlight over calm lake",
+    "peaceful river flowing through trees",
+    "dappled light on forest floor",
+    "morning dew on meadow grass",
+    "soft sunset over distant hills"
+  ],
+  "scenes": [
+    {
+      "a": "If that recurring worry is shadowing your thoughts",
+      "img": "short-gardenpsalm30v11-scene-01.jpg",
+      "kicker": "PSALM 30:11-12",
+      "sub": "A PRAYER OF GLADNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "turn your heart toward the light of His truth",
+      "img": "short-gardenpsalm30v11-scene-02.jpg",
+      "kicker": "PSALM 30:11-12",
+      "sub": "HE TURNS MOURNING TO DANCING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Thou hast turned for me my mourning into dancing",
+      "img": "short-gardenpsalm30v11-scene-03.jpg",
+      "kicker": "PSALM 30:11-12",
+      "sub": "GIRDED WITH GLADNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "thou hast put off my sackcloth, and girded me with gladness",
+      "img": "short-gardenpsalm30v11-scene-04.jpg",
+      "kicker": "PSALM 30:11-12",
+      "sub": "HE IS YOUR STRENGTH",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "To the end that my glory may sing praise to thee, and not be silent. O LORD my God, I will give thanks unto thee for ever.",
+      "img": "short-gardenpsalm30v11-scene-05.jpg",
+      "kicker": "PSALM 30:11-12",
+      "sub": "I WILL GIVE THANKS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "May your spirit rest in this holy promise today",
+      "img": "short-gardenpsalm30v11-scene-06.jpg",
+      "kicker": "PSALM 30:11-12",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If that recurring worry is shadowing your thoughts, turn your heart toward the light of His truth."
+    ],
+    [
+      8,
+      18,
+      "Thou hast turned for me my mourning into dancing: thou hast put off my sackcloth, and girded me with gladness;"
+    ],
+    [
+      18,
+      30,
+      "To the end that my glory may sing praise to thee, and not be silent. O LORD my God, I will give thanks unto thee for ever."
+    ],
+    [
+      30,
+      40,
+      "Father, let this joy settle deep within. May your spirit rest in this holy promise today."
+    ],
+    [
+      40,
+      50,
+      "You are held by the Almighty. In the quiet, I give You thanks for Your faithfulness."
+    ],
+    [
+      50,
+      58,
+      "May Your peace guard my steps as I walk in this gladness You have provided."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF THAT RECURRING WORRY",
+        "IS SHADOWING YOUR THOUGHTS",
+        "TURN YOUR HEART",
+        "TOWARD THE LIGHT"
+      ],
+      [
+        "HEART",
+        "LIGHT"
+      ],
+      "PSALM 30:11"
+    ],
+    [
+      8,
+      18,
+      [
+        "THOU HAST TURNED",
+        "MY MOURNING INTO",
+        "DANCING",
+        "GIRDED ME",
+        "WITH GLADNESS"
+      ],
+      [
+        "DANCING",
+        "GLADNESS"
+      ],
+      "PSALM 30:11"
+    ],
+    [
+      18,
+      30,
+      [
+        "MY GLORY MAY",
+        "SING PRAISE TO THEE",
+        "O LORD MY GOD",
+        "I WILL GIVE THANKS"
+      ],
+      [
+        "SING PRAISE",
+        "THANKS"
+      ],
+      "PSALM 30:12"
+    ],
+    [
+      30,
+      40,
+      [
+        "FATHER LET THIS JOY",
+        "SETTLE DEEP",
+        "REST IN THIS",
+        "HOLY PROMISE"
+      ],
+      [
+        "JOY",
+        "PROMISE"
+      ],
+      "PSALM 30:12"
+    ],
+    [
+      40,
+      50,
+      [
+        "YOU ARE HELD BY",
+        "THE ALMIGHTY",
+        "I GIVE YOU",
+        "THANKS"
+      ],
+      [
+        "HELD",
+        "THANKS"
+      ],
+      "PSALM 30:12"
+    ],
+    [
+      50,
+      58,
+      [
+        "MAY YOUR PEACE",
+        "GUARD MY STEPS",
+        "WALK IN THIS",
+        "GLADNESS"
+      ],
+      [
+        "PEACE",
+        "GLADNESS"
+      ],
+      "PSALM 30:12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that recurring worry is shadowing your thoughts",
+      "kind": "phrase",
+      "words": [
+        "HEART",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thou hast turned for me my mourning into dancing",
+      "kind": "phrase",
+      "words": [
+        "DANCING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "thou hast put off my sackcloth, and girded me with gladness",
+      "kind": "phrase",
+      "words": [
+        "GLADNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "To the end that my glory may sing praise to thee, and not be silent. O LORD my God, I will give thanks unto thee for ever.",
+      "kind": "phrase",
+      "words": [
+        "SING PRAISE",
+        "THANKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your spirit rest in this holy promise today",
+      "kind": "phrase",
+      "words": [
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 30:11-12"
+}

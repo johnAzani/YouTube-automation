@@ -1,0 +1,276 @@
+{
+  "key": "short-gardenpsalm9v1",
+  "channel": "prayer9",
+  "psalm": 9,
+  "title": [
+    "A HEART OF",
+    "THANKSGIVING"
+  ],
+  "poster": [
+    "GIVE THANKS",
+    "TO THE LORD",
+    "WITH YOUR",
+    "WHOLE HEART"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit ancient forest glade",
+    "misty green valley morning",
+    "golden light over peaceful river",
+    "soft sunbeams through oak trees",
+    "ripples on a clear mountain lake",
+    "dappled light on forest floor"
+  ],
+  "scenes": [
+    {
+      "a": "If that worry about tomorrow is keeping you awake, stay here for this quiet prayer.",
+      "img": "short-gardenpsalm9v1-scene-01.jpg",
+      "kicker": "PSALM 9:1",
+      "sub": "A PRAYER OF PRAISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I will praise thee, O LORD, with my whole heart;",
+      "img": "short-gardenpsalm9v1-scene-02.jpg",
+      "kicker": "PSALM 9:1",
+      "sub": "THE WHOLE HEART",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "I will show forth all thy marvelous works.",
+      "img": "short-gardenpsalm9v1-scene-03.jpg",
+      "kicker": "PSALM 9:1",
+      "sub": "HIS MARVELOUS WORKS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "I will be glad and rejoice in thee:",
+      "img": "short-gardenpsalm9v1-scene-04.jpg",
+      "kicker": "PSALM 9:2",
+      "sub": "REJOICE IN THEE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "I will sing praise to thy name, O thou most High.",
+      "img": "short-gardenpsalm9v1-scene-05.jpg",
+      "kicker": "PSALM 9:2",
+      "sub": "O THOU MOST HIGH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Lord, help me trust your grace today. Amen.",
+      "img": "short-gardenpsalm9v1-scene-06.jpg",
+      "kicker": "THE PRAISE GARDEN",
+      "sub": "SUBSCRIBE FOR MORE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If that worry about tomorrow is keeping you awake, stay here for this quiet prayer."
+    ],
+    [
+      8,
+      16,
+      "I will praise thee, O LORD, with my whole heart; I will show forth all thy marvelous works."
+    ],
+    [
+      16,
+      24,
+      "I will be glad and rejoice in thee: I will sing praise to thy name, O thou most High."
+    ],
+    [
+      24,
+      32,
+      "Lord, I give you every heavy thought, choosing to fix my gaze upon your goodness instead."
+    ],
+    [
+      32,
+      40,
+      "Help me carry this joy into the hours ahead and rest in your sovereign, loving care."
+    ],
+    [
+      40,
+      48,
+      "Lord, help me trust your grace today. Amen. Subscribe to The Praise Garden for more."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF THAT WORRY",
+        "ABOUT TOMORROW IS",
+        "KEEPING YOU AWAKE",
+        "STAY HERE"
+      ],
+      [
+        "STAY HERE"
+      ],
+      "PSALM 9:1"
+    ],
+    [
+      8,
+      16,
+      [
+        "I WILL PRAISE THEE",
+        "O LORD WITH MY",
+        "WHOLE HEART I WILL",
+        "SHOW FORTH HIS WORKS"
+      ],
+      [
+        "WHOLE HEART"
+      ],
+      "PSALM 9:1"
+    ],
+    [
+      16,
+      24,
+      [
+        "I WILL BE GLAD",
+        "AND REJOICE IN THEE",
+        "I WILL SING PRAISE",
+        "TO THY NAME"
+      ],
+      [
+        "REJOICE IN THEE"
+      ],
+      "PSALM 9:2"
+    ],
+    [
+      24,
+      32,
+      [
+        "LORD I GIVE YOU",
+        "EVERY HEAVY THOUGHT",
+        "FIXING MY GAZE",
+        "UPON YOUR GOODNESS"
+      ],
+      [
+        "YOUR GOODNESS"
+      ],
+      "PSALM 9:2"
+    ],
+    [
+      32,
+      40,
+      [
+        "HELP ME CARRY",
+        "THIS JOY AHEAD",
+        "RESTING IN YOUR",
+        "SOVEREIGN LOVING CARE"
+      ],
+      [
+        "SOVEREIGN CARE"
+      ],
+      "PSALM 9:2"
+    ],
+    [
+      40,
+      48,
+      [
+        "LORD HELP ME",
+        "TRUST YOUR GRACE",
+        "TODAY AMEN",
+        "SUBSCRIBE NOW"
+      ],
+      [
+        "TRUST YOUR GRACE"
+      ],
+      "PSALM 9:2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that worry about tomorrow is keeping you awake, stay here for this quiet prayer.",
+      "kind": "phrase",
+      "words": [
+        "STAY",
+        "HERE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will praise thee, O LORD, with my whole heart;",
+      "kind": "phrase",
+      "words": [
+        "WHOLE",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will show forth all thy marvelous works.",
+      "kind": "phrase",
+      "words": [
+        "MARVELOUS",
+        "WORKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will be glad and rejoice in thee:",
+      "kind": "phrase",
+      "words": [
+        "GLAD",
+        "REJOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will sing praise to thy name, O thou most High.",
+      "kind": "phrase",
+      "words": [
+        "SING",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help me trust your grace today. Amen.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 9:1-2"
+}
