@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T01:19:17Z",
+  "generated_at": "2026-11-19T01:19:34Z",
   "monitor_generated_at": "2026-11-18T22:10:18.325379+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 470,
+    "published_total": 471,
     "published_longform": 153,
-    "published_shorts": 317,
-    "public_total": 468,
+    "published_shorts": 318,
+    "public_total": 469,
     "queued_longform": 54,
-    "queued_shorts": 67,
+    "queued_shorts": 66,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 67,
+        "published_total": 68,
         "published_longform": 20,
-        "published_shorts": 47,
+        "published_shorts": 48,
         "thumbnail_pending": 6,
-        "public_total": 66,
+        "public_total": 67,
         "queued_longform": 7,
         "queued_other": 5,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0028",
-        "title": "Bedtime Prayer When You Are Worn Out: Matthew 11:28-30",
-        "format": "longform",
-        "youtube_video_id": "EmLY_qhrc7c",
-        "watch_url": "https://youtu.be/EmLY_qhrc7c",
-        "published_on": "2026-11-18",
-        "published_at": "2026-11-18T21:25:33Z"
+        "id": "SHORT-PSALM94V19",
+        "title": "Say This Psalm 94:19 Prayer Before You Sleep | Still Your Racing Mind #Shorts",
+        "format": "short",
+        "youtube_video_id": "YUQ0HbqHMzc",
+        "watch_url": "https://www.youtube.com/shorts/YUQ0HbqHMzc",
+        "published_on": "2026-11-19",
+        "published_at": "2026-11-19T01:18:44Z"
       },
       "next_queued_longform": {
         "id": "0029",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm94v19",
-        "scripture": "Psalm 94:19",
+        "short": "short-romans8v28",
+        "scripture": "Romans 8:28",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM94V19",
+      "slug": "short-psalm94v19-pre-sleep-prayer",
+      "file": "short-psalm94v19-pre-sleep-prayer.md",
+      "title": "Say This Psalm 94:19 Prayer Before You Sleep | Still Your Racing Mind #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T01:18:44Z",
+      "youtube_video_id": "YUQ0HbqHMzc",
+      "watch_url": "https://www.youtube.com/shorts/YUQ0HbqHMzc",
+      "youtu_be_url": "https://youtu.be/YUQ0HbqHMzc",
+      "shorts_url": "https://www.youtube.com/shorts/YUQ0HbqHMzc",
+      "studio_url": "https://studio.youtube.com/video/YUQ0HbqHMzc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/YUQ0HbqHMzc/hqdefault.jpg",
+      "thumb_text": "NIGHTTIME PRAYER \u00b7 PSALM 94:19",
+      "thumbnail_pending": false,
+      "duration_label": "54s",
+      "words": 630
+    },
     {
       "id": "SHORT-MIDDAY2CHRONICLES20V12",
       "slug": "short-midday2chronicles20v12-midday-prayer",
@@ -12688,17 +12712,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-psalm94v19",
-        "file": "0000-short-psalm94v19.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 94:19",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-romans8v28",
         "file": "0000-short-romans8v28.yml",
