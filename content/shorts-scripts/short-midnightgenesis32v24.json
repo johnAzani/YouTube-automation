@@ -1,0 +1,223 @@
+{
+  "key": "short-midnightgenesis32v24",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "THE WRESTLING",
+    "OF THE SOUL"
+  ],
+  "poster": [
+    "WILL NOT LET GO",
+    "UNTIL BLESSED",
+    "MIDNIGHT VIGIL",
+    "GENESIS 32"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "dark silhouette of a man praying against starry midnight sky",
+    "glowing oil lamp on ancient stone table in dark room",
+    "stormy night clouds parting with moonlight",
+    "steep mountain path under starlight",
+    "ancient stone archway in deep shadow",
+    "shimmering starlight over a silent landscape"
+  ],
+  "scenes": [
+    {
+      "a": "That stubborn silence in your heart tonight is not a dead end but a threshold.",
+      "img": "short-midnightgenesis32v24-scene-01.jpg",
+      "kicker": "GENESIS 32:24",
+      "sub": "A THRESHOLD IN THE DARK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And Jacob was left alone; and there wrestled a man with him until the breaking of the day.",
+      "img": "short-midnightgenesis32v24-scene-02.jpg",
+      "kicker": "GENESIS 32:24",
+      "sub": "WRESTLING TILL DAYBREAK",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And when he saw that he prevailed not against him, he touched the hollow of his thigh.",
+      "img": "short-midnightgenesis32v24-scene-03.jpg",
+      "kicker": "GENESIS 32:25",
+      "sub": "THE TOUCH OF TRANSFORMATION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I will not let thee go, except thou bless me.",
+      "img": "short-midnightgenesis32v24-scene-04.jpg",
+      "kicker": "GENESIS 32:26",
+      "sub": "HOLDING ON TO GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Thy name shall be called no more Jacob, but Israel: for as a prince hast thou power.",
+      "img": "short-midnightgenesis32v24-scene-05.jpg",
+      "kicker": "GENESIS 32:28",
+      "sub": "A NEW IDENTITY BORN",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, grant me the strength to hold on until the dawn reveals Your holy purpose.",
+      "img": "short-midnightgenesis32v24-scene-06.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "STEADFAST IN THE SPIRIT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "That stubborn silence in your heart tonight is not a dead end but a threshold."
+    ],
+    [
+      13,
+      30,
+      "And Jacob was left alone; and there wrestled a man with him until the breaking of the day."
+    ],
+    [
+      31,
+      45,
+      "And when he saw that he prevailed not against him, he touched the hollow of his thigh."
+    ],
+    [
+      46,
+      60,
+      "I will not let thee go, except thou bless me."
+    ],
+    [
+      61,
+      85,
+      "Thy name shall be called no more Jacob, but Israel: for as a prince hast thou power."
+    ],
+    [
+      86,
+      105,
+      "Father, grant me the strength to hold on until the dawn reveals Your holy purpose."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "STUBBORN SILENCE",
+        "IN YOUR HEART",
+        "IS A THRESHOLD"
+      ],
+      [
+        "THRESHOLD"
+      ],
+      "GENESIS 32:24"
+    ],
+    [
+      13,
+      30,
+      [
+        "JACOB WAS",
+        "LEFT ALONE",
+        "WRESTLED UNTIL",
+        "BREAKING OF DAY"
+      ],
+      [
+        "WRESTLED"
+      ],
+      "GENESIS 32:24"
+    ],
+    [
+      31,
+      45,
+      [
+        "HE PREVAILED NOT",
+        "TOUCHED THE HOLLOW",
+        "OF HIS THIGH"
+      ],
+      [
+        "TOUCHED"
+      ],
+      "GENESIS 32:25"
+    ],
+    [
+      46,
+      60,
+      [
+        "I WILL NOT",
+        "LET THEE GO",
+        "EXCEPT THOU",
+        "BLESS ME"
+      ],
+      [
+        "BLESS ME"
+      ],
+      "GENESIS 32:26"
+    ],
+    [
+      61,
+      85,
+      [
+        "THY NAME IS",
+        "NO MORE JACOB",
+        "BUT ISRAEL",
+        "PRINCE WITH POWER"
+      ],
+      [
+        "ISRAEL"
+      ],
+      "GENESIS 32:28"
+    ],
+    [
+      86,
+      105,
+      [
+        "GRANT ME STRENGTH",
+        "TO HOLD ON",
+        "UNTIL THE DAWN",
+        "REVEALS PURPOSE"
+      ],
+      [
+        "HOLD ON"
+      ],
+      "GENESIS 32:28"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That stubborn silence in your heart tonight is not a dead end but a threshold.",
+      "kind": "phrase",
+      "words": [
+        "THRESHOLD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Genesis 32:24-28"
+}

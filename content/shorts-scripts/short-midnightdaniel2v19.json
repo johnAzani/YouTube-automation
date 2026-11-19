@@ -1,0 +1,265 @@
+{
+  "key": "short-midnightdaniel2v19",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "THE SECRET REVEALED",
+    "AT MIDNIGHT"
+  ],
+  "poster": [
+    "DANIEL 2:19",
+    "THE NIGHT VISION",
+    "WISDOM FROM ABOVE",
+    "GOD KNOWS ALL"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight silhouette of an ancient stone watchtower against starry sky",
+    "deep blue twilight over a calm mystical mountain lake",
+    "flickering candle flame inside a dark stone room",
+    "vast galaxy night sky with swirling nebulas",
+    "open ancient leather bible on a dark wooden table in moonlight",
+    "serene silhouette of prayer hands against dark night sky"
+  ],
+  "scenes": [
+    {
+      "a": "That question you cannot answer is being solved by the light of heaven right now.",
+      "img": "short-midnightdaniel2v19-scene-01.jpg",
+      "kicker": "DANIEL 2:19",
+      "sub": "HEAVEN ANSWERS IN THE NIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Then was the secret revealed unto Daniel in a night vision.",
+      "img": "short-midnightdaniel2v19-scene-02.jpg",
+      "kicker": "DANIEL 2:19",
+      "sub": "THE REVELATION COMES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Then Daniel blessed the God of heaven.",
+      "img": "short-midnightdaniel2v19-scene-03.jpg",
+      "kicker": "DANIEL 2:19",
+      "sub": "A HEART OF GRATITUDE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "He revealeth the deep and secret things: he knoweth what is in the darkness, and the light dwelleth with him.",
+      "img": "short-midnightdaniel2v19-scene-04.jpg",
+      "kicker": "DANIEL 2:22",
+      "sub": "LIGHT IN THE DARKNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, bring your clarity into this hidden struggle that weighs upon my spirit tonight.",
+      "img": "short-midnightdaniel2v19-scene-05.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "SEEKING HIS WISDOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your peace rest upon this room and guide my thoughts toward your perfect truth.",
+      "img": "short-midnightdaniel2v19-scene-06.jpg",
+      "kicker": "STILLNESS",
+      "sub": "RESTING IN HIM",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That question you cannot answer is being solved by the light of heaven right now."
+    ],
+    [
+      8,
+      16,
+      "Then was the secret revealed unto Daniel in a night vision. Then Daniel blessed the God of heaven."
+    ],
+    [
+      16,
+      24,
+      "He revealeth the deep and secret things: he knoweth what is in the darkness, and the light dwelleth with him."
+    ],
+    [
+      24,
+      32,
+      "Father, bring your clarity into this hidden struggle that weighs upon my spirit tonight."
+    ],
+    [
+      32,
+      40,
+      "Let your peace rest upon this room and guide my thoughts toward your perfect truth."
+    ],
+    [
+      40,
+      48,
+      "Subscribe to join us for our next midnight watch."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "QUESTION YOU CANNOT ANSWER",
+        "SOLVED BY THE",
+        "LIGHT OF HEAVEN",
+        "RIGHT NOW"
+      ],
+      [
+        "LIGHT OF HEAVEN"
+      ],
+      "DANIEL 2:19"
+    ],
+    [
+      8,
+      16,
+      [
+        "SECRET REVEALED",
+        "IN A NIGHT VISION",
+        "DANIEL BLESSED THE",
+        "GOD OF HEAVEN"
+      ],
+      [
+        "SECRET REVEALED"
+      ],
+      "DANIEL 2:19"
+    ],
+    [
+      16,
+      24,
+      [
+        "REVEALETH DEEP THINGS",
+        "KNOWETH DARKNESS",
+        "LIGHT DWELLETH",
+        "WITH HIM"
+      ],
+      [
+        "LIGHT DWELLETH"
+      ],
+      "DANIEL 2:22"
+    ],
+    [
+      24,
+      32,
+      [
+        "BRING CLARITY",
+        "INTO HIDDEN STRUGGLE",
+        "WEIGHS UPON",
+        "MY SPIRIT TONIGHT"
+      ],
+      [
+        "BRING CLARITY"
+      ],
+      "DANIEL 2:20"
+    ],
+    [
+      32,
+      40,
+      [
+        "PEACE REST UPON",
+        "THIS ROOM",
+        "GUIDE MY THOUGHTS",
+        "TOWARD PERFECT TRUTH"
+      ],
+      [
+        "PERFECT TRUTH"
+      ],
+      "DANIEL 2:21"
+    ],
+    [
+      40,
+      48,
+      [
+        "SUBSCRIBE",
+        "MIDNIGHT WATCH"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "THE MIDNIGHT WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That question you cannot answer is being solved by the light of heaven right now.",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "OF",
+        "HEAVEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Then was the secret revealed unto Daniel in a night vision.",
+      "kind": "phrase",
+      "words": [
+        "SECRET",
+        "REVEALED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He revealeth the deep and secret things: he knoweth what is in the darkness, and the light dwelleth with him.",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "DWELLETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, bring your clarity into this hidden struggle that weighs upon my spirit tonight.",
+      "kind": "phrase",
+      "words": [
+        "BRING",
+        "CLARITY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your peace rest upon this room and guide my thoughts toward your perfect truth.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Daniel 2:19-22"
+}

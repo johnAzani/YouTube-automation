@@ -1,0 +1,287 @@
+{
+  "key": "short-midnightzechariah4v7",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "EVERY MOUNTAIN FLATTENED",
+    "MIDNIGHT BREAKTHROUGH PRAYER"
+  ],
+  "poster": [
+    "WHO ART THOU",
+    "O GREAT MOUNTAIN",
+    "BECOME A PLAIN",
+    "AT MIDNIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "dark midnight watchtower silhouette dramatic starry sky",
+    "rugged mountain peak silhouette midnight starry night sky",
+    "ancient stone sanctuary vigil warm oil lamp glowing night",
+    "vast misty plateau beneath celestial starlight midnight",
+    "solitary candle flame burning brightly stone alcove midnight vigil",
+    "ancient watchtower window looking out to starry cosmic night sky"
+  ],
+  "scenes": [
+    {
+      "a": "The immovable obstacle towering over your midnight thoughts",
+      "img": "short-midnightzechariah4v7-scene-01.jpg",
+      "kicker": "ZECHARIAH 4:7",
+      "sub": "A PLAIN BEFORE HIM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Who art thou, O great mountain?",
+      "img": "short-midnightzechariah4v7-scene-02.jpg",
+      "kicker": "ZECHARIAH 4:7",
+      "sub": "EVERY MOUNTAIN FLATTENED",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we surrender every overwhelming problem",
+      "img": "short-midnightzechariah4v7-scene-03.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "PEACE IN THE SANCTUARY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "What feels like a permanent cliff in the dark",
+      "img": "short-midnightzechariah4v7-scene-04.jpg",
+      "kicker": "LEVEL GROUND",
+      "sub": "HIS SOVEREIGN HAND",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Dissolve every shadow of defeat",
+      "img": "short-midnightzechariah4v7-scene-05.jpg",
+      "kicker": "FRESH STRENGTH",
+      "sub": "STILLNESS AT MIDNIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Subscribe to stand with The Midnight Watch in prayer.",
+      "img": "short-midnightzechariah4v7-scene-06.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "STAND IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The immovable obstacle towering over your midnight thoughts will not survive this prayer."
+    ],
+    [
+      8,
+      22,
+      "Who art thou, O great mountain? before Zerubbabel thou shalt become a plain: and he shall bring forth the headstone thereof with shoutings, crying, Grace, grace unto it."
+    ],
+    [
+      22,
+      29,
+      "Lord, we surrender every overwhelming problem keeping watch against our peace tonight."
+    ],
+    [
+      29,
+      38,
+      "What feels like a permanent cliff in the dark becomes flat earth before Your mighty presence."
+    ],
+    [
+      38,
+      49,
+      "Dissolve every shadow of defeat, silence the accusations in this quiet room, and release fresh strength over this weary soul."
+    ],
+    [
+      49,
+      58,
+      "May divine mercy guard your heart with unshakeable stillness. Subscribe to stand with The Midnight Watch in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE IMMOVABLE OBSTACLE",
+        "TOWERING OVER YOUR",
+        "MIDNIGHT THOUGHTS WILL NOT",
+        "SURVIVE THIS PRAYER"
+      ],
+      [
+        "IMMOVABLE OBSTACLE",
+        "WILL NOT SURVIVE"
+      ],
+      "ZECHARIAH 4 : 7"
+    ],
+    [
+      8,
+      22,
+      [
+        "WHO ART THOU",
+        "O GREAT MOUNTAIN",
+        "THOU SHALT BECOME A PLAIN",
+        "BRING FORTH THE HEADSTONE",
+        "CRYING GRACE GRACE UNTO IT"
+      ],
+      [
+        "O GREAT MOUNTAIN",
+        "BECOME A PLAIN",
+        "GRACE GRACE"
+      ],
+      "ZECHARIAH 4 : 7"
+    ],
+    [
+      22,
+      29,
+      [
+        "LORD WE SURRENDER",
+        "EVERY OVERWHELMING PROBLEM",
+        "KEEPING WATCH AGAINST",
+        "OUR PEACE TONIGHT"
+      ],
+      [
+        "WE SURRENDER",
+        "OUR PEACE"
+      ],
+      "ZECHARIAH 4 : 7"
+    ],
+    [
+      29,
+      38,
+      [
+        "WHAT FEELS LIKE",
+        "A PERMANENT CLIFF",
+        "BECOMES FLAT EARTH",
+        "BEFORE YOUR MIGHTY PRESENCE"
+      ],
+      [
+        "PERMANENT CLIFF",
+        "FLAT EARTH"
+      ],
+      "ZECHARIAH 4 : 7"
+    ],
+    [
+      38,
+      49,
+      [
+        "DISSOLVE EVERY SHADOW",
+        "OF DEFEAT AND SILENCE",
+        "THE ACCUSATIONS IN THIS ROOM",
+        "RELEASE FRESH STRENGTH",
+        "OVER THIS WEARY SOUL"
+      ],
+      [
+        "DISSOLVE EVERY SHADOW",
+        "FRESH STRENGTH"
+      ],
+      "ZECHARIAH 4 : 7"
+    ],
+    [
+      49,
+      58,
+      [
+        "MAY DIVINE MERCY GUARD",
+        "YOUR HEART WITH STILLNESS",
+        "SUBSCRIBE TO STAND WITH",
+        "THE MIDNIGHT WATCH"
+      ],
+      [
+        "DIVINE MERCY",
+        "MIDNIGHT WATCH"
+      ],
+      "ZECHARIAH 4 : 7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The immovable obstacle towering over your midnight thoughts",
+      "kind": "phrase",
+      "words": [
+        "IMMOVABLE",
+        "OBSTACLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Who art thou, O great mountain?",
+      "kind": "phrase",
+      "words": [
+        "O",
+        "GREAT",
+        "MOUNTAIN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we surrender every overwhelming problem",
+      "kind": "phrase",
+      "words": [
+        "WE",
+        "SURRENDER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "What feels like a permanent cliff in the dark",
+      "kind": "phrase",
+      "words": [
+        "FLAT",
+        "EARTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Dissolve every shadow of defeat",
+      "kind": "phrase",
+      "words": [
+        "FRESH",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to stand with The Midnight Watch in prayer.",
+      "kind": "phrase",
+      "words": [
+        "THE",
+        "MIDNIGHT",
+        "WATCH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Zechariah 4:7"
+}

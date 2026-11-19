@@ -1,0 +1,268 @@
+{
+  "key": "short-midnightexodus14v13",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "FEAR NOT",
+    "STAND STILL"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "STAND STILL AND SEE",
+    "HIS SALVATION",
+    "UNFOLDING FOR YOU"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette starry night",
+    "deep blue starry heaven",
+    "flickering lamp light dark sanctuary",
+    "calm ocean waves under full moon",
+    "glowing horizon silhouette mountain night",
+    "intricate stone arches at midnight",
+    "serene candlelight in shadows"
+  ],
+  "scenes": [
+    {
+      "a": "The crushing weight of that unsolvable problem keeps you awake in the dark right now.",
+      "img": "short-midnightexodus14v13-scene-01.jpg",
+      "kicker": "EXODUS 14:13",
+      "sub": "THE LORD IS NEAR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And Moses said unto the people, Fear ye not, stand still, and see the salvation of the LORD, which he will show to you to day: for the Egyptians whom ye have seen to day, ye shall see them again no more for ever.",
+      "img": "short-midnightexodus14v13-scene-02.jpg",
+      "kicker": "EXODUS 14:13",
+      "sub": "STAND STILL AND SEE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "The LORD shall fight for you, and ye shall hold your peace.",
+      "img": "short-midnightexodus14v13-scene-03.jpg",
+      "kicker": "EXODUS 14:14",
+      "sub": "HE FIGHTS FOR YOU",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, we surrender the battles we cannot win to your mighty and capable hands tonight.",
+      "img": "short-midnightexodus14v13-scene-04.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "SURRENDER THE BATTLE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Release the anxiety of what tomorrow brings and trust in the silence of this hour.",
+      "img": "short-midnightexodus14v13-scene-05.jpg",
+      "kicker": "FAITH IN SILENCE",
+      "sub": "PEACE IN THE STRUGGLE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You are held by the creator of the stars while you rest in his deep grace.",
+      "img": "short-midnightexodus14v13-scene-06.jpg",
+      "kicker": "REST IN GRACE",
+      "sub": "HE HOLDS YOU NOW",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "May your spirit settle into the victory that he has already secured for your soul.",
+      "img": "short-midnightexodus14v13-scene-07.jpg",
+      "kicker": "MIDNIGHT WATCH",
+      "sub": "VICTORY SECURED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The crushing weight of that unsolvable problem keeps you awake in the dark right now."
+    ],
+    [
+      8,
+      16,
+      "And Moses said unto the people, Fear ye not, stand still, and see the salvation of the LORD,"
+    ],
+    [
+      16,
+      24,
+      "which he will show to you to day: for the Egyptians whom ye have seen to day,"
+    ],
+    [
+      24,
+      32,
+      "ye shall see them again no more for ever. The LORD shall fight for you, and ye shall hold your peace."
+    ],
+    [
+      32,
+      40,
+      "Father, we surrender the battles we cannot win to your mighty and capable hands tonight."
+    ],
+    [
+      40,
+      48,
+      "Release the anxiety of what tomorrow brings and trust in the silence of this hour."
+    ],
+    [
+      48,
+      56,
+      "You are held by the creator of the stars while you rest in his deep grace."
+    ],
+    [
+      56,
+      64,
+      "May your spirit settle into the victory that he has already secured for your soul."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE CRUSHING WEIGHT",
+        "OF THAT PROBLEM",
+        "KEEPS YOU AWAKE"
+      ],
+      [
+        "CRUSHING WEIGHT"
+      ],
+      "EXODUS 14:13"
+    ],
+    [
+      8,
+      16,
+      [
+        "FEAR YE NOT",
+        "STAND STILL AND SEE",
+        "HIS GREAT SALVATION"
+      ],
+      [
+        "STAND STILL"
+      ],
+      "EXODUS 14:13"
+    ],
+    [
+      16,
+      24,
+      [
+        "WHICH HE SHOWS",
+        "TO YOU TO DAY",
+        "THEY ARE GONE"
+      ],
+      [
+        "SHOWS TO YOU"
+      ],
+      "EXODUS 14:13"
+    ],
+    [
+      24,
+      32,
+      [
+        "THE LORD FIGHTS",
+        "FOR YOU ALWAYS",
+        "HOLD YOUR PEACE"
+      ],
+      [
+        "HOLD YOUR PEACE"
+      ],
+      "EXODUS 14:14"
+    ],
+    [
+      32,
+      40,
+      [
+        "SURRENDER EVERY BATTLE",
+        "INTO MIGHTY HANDS",
+        "IN THIS HOUR"
+      ],
+      [
+        "SURRENDER"
+      ],
+      "EXODUS 14:14"
+    ],
+    [
+      40,
+      48,
+      [
+        "RELEASE THE ANXIETY",
+        "TRUST IN SILENCE",
+        "HE IS NEAR"
+      ],
+      [
+        "RELEASE"
+      ],
+      "EXODUS 14:14"
+    ],
+    [
+      48,
+      56,
+      [
+        "HELD BY CREATOR",
+        "REST IN GRACE",
+        "IN DEEP CALM"
+      ],
+      [
+        "HELD"
+      ],
+      "EXODUS 14:14"
+    ],
+    [
+      56,
+      64,
+      [
+        "SPIRIT SETTLE NOW",
+        "VICTORY SECURED",
+        "IN YOUR SOUL"
+      ],
+      [
+        "VICTORY"
+      ],
+      "EXODUS 14:14"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The crushing weight of that unsolvable problem keeps you awake in the dark right now.",
+      "kind": "phrase",
+      "words": [
+        "CRUSHING",
+        "WEIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Exodus 14:13-14"
+}
