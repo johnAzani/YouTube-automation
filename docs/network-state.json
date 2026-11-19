@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T22:11:29Z",
+  "generated_at": "2026-11-19T01:17:31Z",
   "monitor_generated_at": "2026-11-18T22:10:18.325379+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 468,
+    "published_total": 469,
     "published_longform": 153,
-    "published_shorts": 315,
-    "public_total": 466,
+    "published_shorts": 316,
+    "public_total": 467,
     "queued_longform": 54,
-    "queued_shorts": 69,
+    "queued_shorts": 68,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 73,
+        "published_total": 74,
         "published_longform": 27,
-        "published_shorts": 46,
+        "published_shorts": 47,
         "thumbnail_pending": 1,
-        "public_total": 72,
+        "public_total": 73,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM139V17",
-        "title": "Say This Psalm 139:17-18 Prayer at Sunrise | God Remembers You Today #Shorts",
+        "id": "SHORT-MORNINGPSALM119V105",
+        "title": "Say This Psalm 119:105 Prayer at Sunrise | A Lamp For Your Feet #Shorts",
         "format": "short",
-        "youtube_video_id": "dDe8f_nWSPg",
-        "watch_url": "https://www.youtube.com/shorts/dDe8f_nWSPg",
-        "published_on": "2026-11-18",
-        "published_at": "2026-11-18T20:53:25Z"
+        "youtube_video_id": "_0E4z7T_W3g",
+        "watch_url": "https://www.youtube.com/shorts/_0E4z7T_W3g",
+        "published_on": "2026-11-19",
+        "published_at": "2026-11-19T01:16:38Z"
       },
       "next_queued_longform": {
         "id": "0071",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm119v105",
-        "scripture": "Psalm 119:105",
+        "short": "short-morningpsalm119v147",
+        "scripture": "Psalm 119:147",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM119V105",
+      "slug": "short-morningpsalm119v105-sunrise-prayer",
+      "file": "short-morningpsalm119v105-sunrise-prayer.md",
+      "title": "Say This Psalm 119:105 Prayer at Sunrise | A Lamp For Your Feet #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T01:16:38Z",
+      "youtube_video_id": "_0E4z7T_W3g",
+      "watch_url": "https://www.youtube.com/shorts/_0E4z7T_W3g",
+      "youtu_be_url": "https://youtu.be/_0E4z7T_W3g",
+      "shorts_url": "https://www.youtube.com/shorts/_0E4z7T_W3g",
+      "studio_url": "https://studio.youtube.com/video/_0E4z7T_W3g/edit",
+      "thumb_url": "https://i.ytimg.com/vi/_0E4z7T_W3g/hqdefault.jpg",
+      "thumb_text": "LIGHT FOR \u00b7 THE UNCERTAIN",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 598
+    },
     {
       "id": "SHORT-GARDENPSALM103V1",
       "slug": "short-gardenpsalm103v1-thanksgiving-prayer",
@@ -12716,17 +12740,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-morningpsalm119v105",
-        "file": "0069-short-morningpsalm119v105.yml",
-        "companion_longform_id": "0069",
-        "scripture": "Psalm 119:105",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm119v147",
