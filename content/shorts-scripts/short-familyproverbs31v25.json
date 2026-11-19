@@ -1,0 +1,285 @@
+{
+  "key": "short-familyproverbs31v25",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "STRENGTH AND HONOR",
+    "FOR YOUR HOME"
+  ],
+  "poster": [
+    "PROVERBS 31:25",
+    "CLOTHED IN",
+    "QUIET DIGNITY",
+    "AND PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm kitchen table morning sunlight bible olive branch steam tea calm home",
+    "open bible rustic wooden table linen cloth soft morning window light",
+    "gentle sunrise glowing through rustic wooden window peaceful farmhouse interior",
+    "warm lit candle on wooden dinner table quiet peaceful evening room",
+    "peaceful living room glowing hearth warm lamplight Bible and olive leaves",
+    "warm lamplight Bible wooden prayer altar quiet peaceful family home"
+  ],
+  "scenes": [
+    {
+      "a": "tomorrow's burdens",
+      "img": "short-familyproverbs31v25-scene-01.jpg",
+      "kicker": "PROVERBS 31:25",
+      "sub": "TRUST GOD WITH TOMORROW",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Strength and honor",
+      "img": "short-familyproverbs31v25-scene-02.jpg",
+      "kicker": "PROVERBS 31:25",
+      "sub": "CLOTHED IN STRENGTH AND HONOR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "law of kindness",
+      "img": "short-familyproverbs31v25-scene-03.jpg",
+      "kicker": "PROVERBS 31:26",
+      "sub": "THE LAW OF KINDNESS",
+      "cam": "pan_right",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "weary heart",
+      "img": "short-familyproverbs31v25-scene-04.jpg",
+      "kicker": "FAMILY PRAYER",
+      "sub": "GRANT US STEADY STRENGTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "patient grace",
+      "img": "short-familyproverbs31v25-scene-05.jpg",
+      "kicker": "FAMILY PRAYER",
+      "sub": "FILL OUR DWELLING WITH PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "cover our households",
+      "img": "short-familyproverbs31v25-scene-06.jpg",
+      "kicker": "THE FAMILY ALTAR",
+      "sub": "COVER YOUR HOME IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "When tomorrow's burdens feel heavy across your quiet kitchen, remember who sustains your household today."
+    ],
+    [
+      8,
+      16,
+      "Strength and honor are her clothing; and she shall rejoice in time to come."
+    ],
+    [
+      16,
+      24,
+      "She openeth her mouth with wisdom; and in her tongue is the law of kindness."
+    ],
+    [
+      24,
+      33,
+      "Lord, grant every weary heart in this home Your enduring peace, Your steady strength, and a quiet, steadfast resolve."
+    ],
+    [
+      33,
+      44,
+      "Clothe our family with patient grace, removing all anxious dread about tomorrow and filling every room with joyful trust in Your faithful provision."
+    ],
+    [
+      44,
+      52,
+      "Subscribe to The Family Altar, and join our family as we cover our households in daily prayer together."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "WHEN TOMORROW'S BURDENS FEEL HEAVY",
+        "ACROSS YOUR QUIET KITCHEN,",
+        "REMEMBER WHO SUSTAINS",
+        "YOUR HOUSEHOLD TODAY."
+      ],
+      [
+        "HEAVY",
+        "SUSTAINS"
+      ],
+      "PROVERBS 31 : 25"
+    ],
+    [
+      8,
+      16,
+      [
+        "STRENGTH AND HONOR",
+        "ARE HER CLOTHING;",
+        "AND SHE SHALL REJOICE",
+        "IN TIME TO COME."
+      ],
+      [
+        "STRENGTH",
+        "REJOICE"
+      ],
+      "PROVERBS 31 : 25"
+    ],
+    [
+      16,
+      24,
+      [
+        "SHE OPENETH HER MOUTH",
+        "WITH WISDOM; AND IN",
+        "HER TONGUE IS THE",
+        "LAW OF KINDNESS."
+      ],
+      [
+        "WISDOM",
+        "KINDNESS"
+      ],
+      "PROVERBS 31 : 26"
+    ],
+    [
+      24,
+      33,
+      [
+        "LORD, GRANT EVERY WEARY HEART",
+        "IN THIS HOME YOUR",
+        "ENDURING PEACE, YOUR STEADY",
+        "STRENGTH, AND A QUIET,",
+        "STEADFAST RESOLVE."
+      ],
+      [
+        "PEACE",
+        "STRENGTH"
+      ],
+      "HOUSEHOLD PRAYER"
+    ],
+    [
+      33,
+      44,
+      [
+        "CLOTHE OUR FAMILY WITH",
+        "PATIENT GRACE, REMOVING ALL",
+        "ANXIOUS DREAD ABOUT TOMORROW",
+        "AND FILLING EVERY ROOM",
+        "WITH JOYFUL TRUST IN",
+        "YOUR FAITHFUL PROVISION."
+      ],
+      [
+        "PATIENT GRACE",
+        "JOYFUL TRUST"
+      ],
+      "HOUSEHOLD PRAYER"
+    ],
+    [
+      44,
+      52,
+      [
+        "SUBSCRIBE TO THE FAMILY ALTAR,",
+        "AND JOIN OUR FAMILY",
+        "AS WE COVER OUR HOUSEHOLDS",
+        "IN DAILY PRAYER TOGETHER."
+      ],
+      [
+        "THE FAMILY ALTAR",
+        "DAILY PRAYER"
+      ],
+      "THE FAMILY ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "tomorrow's burdens",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "BURDENS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Strength and honor",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "HONOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "law of kindness",
+      "kind": "phrase",
+      "words": [
+        "LAW",
+        "KINDNESS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "weary heart",
+      "kind": "phrase",
+      "words": [
+        "ENDURING",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "patient grace",
+      "kind": "phrase",
+      "words": [
+        "JOYFUL",
+        "TRUST"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "cover our households",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "PRAYER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 31:25-28"
+}

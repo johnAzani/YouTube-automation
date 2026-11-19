@@ -1,0 +1,308 @@
+{
+  "key": "short-familyephesians3v14",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "STRENGTH FOR",
+    "YOUR HOUSEHOLD"
+  ],
+  "poster": [
+    "STRENGTHEN",
+    "YOUR HOME",
+    "EPHESIANS 3:14",
+    "FAMILY PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit wooden table open bible rustic home evening",
+    "open holy bible on wooden table warm glowing lantern sunlight",
+    "peaceful countryside cottage window sunlight olive branch on sill",
+    "warm cozy living room bible on table gentle window light",
+    "rustic wooden table open bible olive leaves warm morning light",
+    "peaceful home garden sunlight golden hour quiet courtyard",
+    "cozy room warm lamplight bible on wooden table peaceful home"
+  ],
+  "scenes": [
+    {
+      "a": "Sitting at your kitchen table",
+      "img": "short-familyephesians3v14-scene-01.jpg",
+      "kicker": "EPHESIANS 3:14",
+      "sub": "STRENGTH FOR YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "For this cause I bow my knees",
+      "img": "short-familyephesians3v14-scene-02.jpg",
+      "kicker": "EPHESIANS 3:14",
+      "sub": "BOWING BEFORE GOD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Of whom the whole family",
+      "img": "short-familyephesians3v14-scene-03.jpg",
+      "kicker": "EPHESIANS 3:15",
+      "sub": "NAMED IN HEAVEN AND EARTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "strengthened with might by his Spirit",
+      "img": "short-familyephesians3v14-scene-04.jpg",
+      "kicker": "EPHESIANS 3:16",
+      "sub": "STRENGTHENED IN INNER MAN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord God, fortify this home",
+      "img": "short-familyephesians3v14-scene-05.jpg",
+      "kicker": "EPHESIANS 3:16",
+      "sub": "FORTIFY OUR HOUSEHOLD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Root our family deeply in Your endless love",
+      "img": "short-familyephesians3v14-scene-06.jpg",
+      "kicker": "EPHESIANS 3:17",
+      "sub": "ROOTED IN HIS LOVE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to cover your home in prayer.",
+      "img": "short-familyephesians3v14-scene-07.jpg",
+      "kicker": "EPHESIANS 3:14-19",
+      "sub": "PRAY FOR YOUR FAMILY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "Sitting at your kitchen table worrying if your household will weather this storm, listen."
+    ],
+    [
+      7,
+      14,
+      "For this cause I bow my knees unto the Father of our Lord Jesus Christ,"
+    ],
+    [
+      14,
+      20,
+      "Of whom the whole family in heaven and earth is named,"
+    ],
+    [
+      20,
+      29,
+      "That he would grant you, according to the riches of his glory, to be strengthened with might by his Spirit in the inner man;"
+    ],
+    [
+      29,
+      38,
+      "Lord God, fortify this home with Your Holy Spirit. Strengthen each heart under this roof,"
+    ],
+    [
+      38,
+      48,
+      "Root our family deeply in Your endless love, and grant us Your heavenly peace today. Amen."
+    ],
+    [
+      48,
+      54,
+      "Subscribe to cover your home in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "SITTING AT YOUR KITCHEN TABLE",
+        "WORRYING IF YOUR HOUSEHOLD",
+        "WILL WEATHER THIS STORM LISTEN"
+      ],
+      [
+        "WEATHER THIS STORM"
+      ],
+      "EPHESIANS 3:14"
+    ],
+    [
+      7,
+      14,
+      [
+        "FOR THIS CAUSE I BOW MY KNEES",
+        "UNTO THE FATHER OF OUR",
+        "LORD JESUS CHRIST"
+      ],
+      [
+        "BOW MY KNEES"
+      ],
+      "EPHESIANS 3:14"
+    ],
+    [
+      14,
+      20,
+      [
+        "OF WHOM THE WHOLE FAMILY",
+        "IN HEAVEN AND EARTH IS NAMED"
+      ],
+      [
+        "WHOLE FAMILY"
+      ],
+      "EPHESIANS 3:15"
+    ],
+    [
+      20,
+      29,
+      [
+        "STRENGTHENED WITH MIGHT",
+        "BY HIS SPIRIT IN THE INNER MAN",
+        "ACCORDING TO HIS GLORY"
+      ],
+      [
+        "STRENGTHENED WITH MIGHT"
+      ],
+      "EPHESIANS 3:16"
+    ],
+    [
+      29,
+      38,
+      [
+        "LORD GOD FORTIFY THIS HOME",
+        "WITH YOUR HOLY SPIRIT",
+        "STRENGTHEN EACH HEART"
+      ],
+      [
+        "FORTIFY THIS HOME"
+      ],
+      "EPHESIANS 3:16"
+    ],
+    [
+      38,
+      48,
+      [
+        "ROOT OUR FAMILY DEEPLY IN",
+        "YOUR ENDLESS LOVE AND GRANT US",
+        "HEAVENLY PEACE TODAY AMEN"
+      ],
+      [
+        "ROOTED IN LOVE"
+      ],
+      "EPHESIANS 3:17"
+    ],
+    [
+      48,
+      54,
+      [
+        "SUBSCRIBE TO COVER YOUR",
+        "HOME IN PRAYER TODAY"
+      ],
+      [
+        "COVER YOUR HOME"
+      ],
+      "EPHESIANS 3:14-19"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Sitting at your kitchen table",
+      "kind": "phrase",
+      "words": [
+        "WEATHER",
+        "STORM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For this cause I bow my knees",
+      "kind": "phrase",
+      "words": [
+        "BOW",
+        "KNEES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Of whom the whole family",
+      "kind": "phrase",
+      "words": [
+        "WHOLE",
+        "FAMILY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "strengthened with might by his Spirit",
+      "kind": "phrase",
+      "words": [
+        "STRENGTHENED",
+        "MIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord God, fortify this home",
+      "kind": "phrase",
+      "words": [
+        "FORTIFY",
+        "HOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Root our family deeply in Your endless love",
+      "kind": "phrase",
+      "words": [
+        "ROOT",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to cover your home in prayer.",
+      "kind": "phrase",
+      "words": [
+        "COVER",
+        "HOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ephesians 3:14-19"
+}

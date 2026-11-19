@@ -1,0 +1,350 @@
+{
+  "key": "short-familypsalm101v2",
+  "channel": "prayer5",
+  "psalm": 101,
+  "title": [
+    "WALK WISELY IN",
+    "YOUR HOUSEHOLD"
+  ],
+  "poster": [
+    "WALK WITH A",
+    "PERFECT HEART",
+    "IN YOUR HOME",
+    "PSALM 101:2"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit hallway in wooden cottage cozy evening",
+    "open bible on rustic table next to olive branches",
+    "cozy living room with warm golden glow from lamp",
+    "peaceful country home exterior warm light in window",
+    "open Bible with soft sunlight on wooden table",
+    "warm lit family dining table with cozy interior view",
+    "peaceful sunbeams streaming into cozy rustic home interior",
+    "warm lit prayer room with open scriptures and candle"
+  ],
+  "scenes": [
+    {
+      "a": "If an argument almost started in your hallway",
+      "img": "short-familypsalm101v2-scene-01.jpg",
+      "kicker": "PSALM 101:2",
+      "sub": "A PRAYER FOR YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I will behave myself wisely in a perfect way",
+      "img": "short-familypsalm101v2-scene-02.jpg",
+      "kicker": "PSALM 101:2",
+      "sub": "WALK WISELY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "I will walk within my house with a perfect heart",
+      "img": "short-familypsalm101v2-scene-03.jpg",
+      "kicker": "PSALM 101:2",
+      "sub": "A PERFECT HEART",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, cover our home with your quiet presence today",
+      "img": "short-familypsalm101v2-scene-04.jpg",
+      "kicker": "PSALM 101:2",
+      "sub": "GOD'S PRESENCE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "When tempers flare or quiet choices must be made",
+      "img": "short-familypsalm101v2-scene-05.jpg",
+      "kicker": "PSALM 101:2",
+      "sub": "SEEK HIS WISDOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let integrity guide how we speak to those we love most",
+      "img": "short-familypsalm101v2-scene-06.jpg",
+      "kicker": "PSALM 101:2",
+      "sub": "HOUSEHOLD SANCTUARY",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Help us guard our hearts so your holy spirit feels truly welcome",
+      "img": "short-familypsalm101v2-scene-07.jpg",
+      "kicker": "PSALM 101:2",
+      "sub": "GUARD YOUR HEART",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to cover your home in daily prayer",
+      "img": "short-familypsalm101v2-scene-08.jpg",
+      "kicker": "THE FAMILY ALTAR",
+      "sub": "JOIN OUR PRAYER CIRCLE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If an argument almost started in your hallway just now, let God rule your words."
+    ],
+    [
+      6,
+      14,
+      "I will behave myself wisely in a perfect way. O when wilt thou come unto me?"
+    ],
+    [
+      14,
+      20,
+      "I will walk within my house with a perfect heart."
+    ],
+    [
+      20,
+      26,
+      "Lord, cover our home with your quiet presence today."
+    ],
+    [
+      26,
+      34,
+      "When tempers flare or quiet choices must be made behind closed doors, teach us wisdom."
+    ],
+    [
+      34,
+      43,
+      "Let integrity guide how we speak to those we love most, making our household a sanctuary of peace and truth."
+    ],
+    [
+      43,
+      50,
+      "Help us guard our hearts so your holy spirit feels truly welcome under this roof."
+    ],
+    [
+      50,
+      55,
+      "Subscribe to cover your home in daily prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF AN ARGUMENT ALMOST STARTED",
+        "LET GOD RULE YOUR WORDS"
+      ],
+      [
+        "ARGUMENT",
+        "RULE"
+      ],
+      "PSALM 101:2"
+    ],
+    [
+      6,
+      14,
+      [
+        "I WILL BEHAVE MYSELF WISELY",
+        "IN A PERFECT WAY"
+      ],
+      [
+        "BEHAVE",
+        "WISELY"
+      ],
+      "PSALM 101:2"
+    ],
+    [
+      14,
+      20,
+      [
+        "I WILL WALK WITHIN MY HOUSE",
+        "WITH A PERFECT HEART"
+      ],
+      [
+        "WALK",
+        "PERFECT HEART"
+      ],
+      "PSALM 101:2"
+    ],
+    [
+      20,
+      26,
+      [
+        "COVER OUR HOME WITH YOUR",
+        "QUIET PRESENCE TODAY"
+      ],
+      [
+        "COVER",
+        "PRESENCE"
+      ],
+      "PSALM 101:2"
+    ],
+    [
+      26,
+      34,
+      [
+        "WHEN TEMPERS FLARE TEACH US",
+        "YOUR HEAVENLY WISDOM"
+      ],
+      [
+        "TEACH",
+        "WISDOM"
+      ],
+      "PSALM 101:2"
+    ],
+    [
+      34,
+      43,
+      [
+        "LET INTEGRITY GUIDE OUR SPEAKING",
+        "A SANCTUARY OF PEACE"
+      ],
+      [
+        "INTEGRITY",
+        "SANCTUARY"
+      ],
+      "PSALM 101:2"
+    ],
+    [
+      43,
+      50,
+      [
+        "GUARD OUR HEARTS FOR",
+        "YOUR HOLY SPIRIT"
+      ],
+      [
+        "GUARD",
+        "HOLY SPIRIT"
+      ],
+      "PSALM 101:2"
+    ],
+    [
+      50,
+      55,
+      [
+        "SUBSCRIBE TO COVER YOUR HOME",
+        "IN DAILY PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "DAILY PRAYER"
+      ],
+      "PSALM 101:2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If an argument almost started",
+      "kind": "phrase",
+      "words": [
+        "ARGUMENT",
+        "HALLWAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "behave myself wisely",
+      "kind": "phrase",
+      "words": [
+        "BEHAVE",
+        "WISELY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "walk within my house",
+      "kind": "phrase",
+      "words": [
+        "WALK",
+        "HOUSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "cover our home",
+      "kind": "phrase",
+      "words": [
+        "COVER",
+        "HOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "teach us wisdom",
+      "kind": "phrase",
+      "words": [
+        "TEACH",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "sanctuary of peace",
+      "kind": "phrase",
+      "words": [
+        "SANCTUARY",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "truly welcome under this roof",
+      "kind": "phrase",
+      "words": [
+        "TRULY",
+        "WELCOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to cover your home",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 101:2"
+}
