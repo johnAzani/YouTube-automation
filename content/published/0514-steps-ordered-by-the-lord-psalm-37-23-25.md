@@ -2,7 +2,7 @@
 id: '0514'
 title: 'Steps Ordered by the Lord: Psalm 37:23-25 | The Provision Table'
 slug: steps-ordered-by-the-lord-psalm-37-23-25
-status: approved
+status: published
 channel: prayer7
 privacy: public
 format: longform
@@ -75,6 +75,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-19"
+published_at: "2026-11-19T12:37:14Z"
+youtube_video_id: "6dLKJ8dZ8bw"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Shepherd Who Directs Our Daily Labour

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T12:07:02Z",
+  "generated_at": "2026-11-19T12:38:14Z",
   "monitor_generated_at": "2026-11-19T11:54:23.137750+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 487,
-    "published_longform": 156,
-    "published_shorts": 331,
-    "public_total": 485,
-    "queued_longform": 60,
-    "queued_shorts": 91,
+    "published_total": 489,
+    "published_longform": 157,
+    "published_shorts": 332,
+    "public_total": 487,
+    "queued_longform": 59,
+    "queued_shorts": 90,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -441,33 +441,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 43,
-        "published_longform": 14,
-        "published_shorts": 29,
-        "thumbnail_pending": 2,
-        "public_total": 43,
-        "queued_longform": 6,
+        "published_total": 45,
+        "published_longform": 15,
+        "published_shorts": 30,
+        "thumbnail_pending": 3,
+        "public_total": 45,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONRUTH2V12",
-        "title": "Pray This Ruth 2:12 Prayer for Open Doors & Provision | His Wings Are Your Refuge #Shorts",
-        "format": "short",
-        "youtube_video_id": "cbo2sEp1ouI",
-        "watch_url": "https://www.youtube.com/shorts/cbo2sEp1ouI",
-        "published_on": "2026-11-19",
-        "published_at": "2026-11-19T01:25:21Z"
-      },
-      "next_queued_longform": {
         "id": "0514",
         "title": "Steps Ordered by the Lord: Psalm 37:23-25 | The Provision Table",
-        "words": 1346,
+        "format": "longform",
+        "youtube_video_id": "6dLKJ8dZ8bw",
+        "watch_url": "https://youtu.be/6dLKJ8dZ8bw",
+        "published_on": "2026-11-19",
+        "published_at": "2026-11-19T12:37:14Z"
+      },
+      "next_queued_longform": {
+        "id": "0515",
+        "title": "God Goes Before You: Isaiah 45:2-3 | The Provision Table",
+        "words": 1438,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provision1kings17v14",
-        "scripture": "1 Kings 17:14-16",
+        "short": "short-provisionpsalm34v9",
+        "scripture": "Psalm 34:9-10",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0514",
+      "slug": "steps-ordered-by-the-lord-psalm-37-23-25",
+      "file": "0514-steps-ordered-by-the-lord-psalm-37-23-25.md",
+      "title": "Steps Ordered by the Lord: Psalm 37:23-25 | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T12:37:14Z",
+      "youtube_video_id": "6dLKJ8dZ8bw",
+      "watch_url": "https://youtu.be/6dLKJ8dZ8bw",
+      "youtu_be_url": "https://youtu.be/6dLKJ8dZ8bw",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/6dLKJ8dZ8bw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/6dLKJ8dZ8bw/hqdefault.jpg",
+      "thumb_text": "ORDERED BY THE LORD",
+      "thumbnail_pending": false,
+      "duration_label": "~9 min",
+      "words": 1346
+    },
+    {
       "id": "SHORT-GARDENISAIAH12V2",
       "slug": "short-gardenisaiah12v2-thanksgiving-prayer",
       "file": "short-gardenisaiah12v2-thanksgiving-prayer.md",
@@ -772,6 +796,30 @@
       "thumbnail_pending": true,
       "duration_label": "43s",
       "words": 643
+    },
+    {
+      "id": "SHORT-PROVISION1KINGS17V14",
+      "slug": "short-provision1kings17v14-stewardship-prayer",
+      "file": "short-provision1kings17v14-stewardship-prayer.md",
+      "title": "Pray This 1 Kings 17:14-16 Prayer for Open Doors & Provision | His Word Stands Sure #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-19",
+      "published_at": "2026-11-19T12:01:07Z",
+      "youtube_video_id": "aRYNyKsRjVU",
+      "watch_url": "https://www.youtube.com/shorts/aRYNyKsRjVU",
+      "youtu_be_url": "https://youtu.be/aRYNyKsRjVU",
+      "shorts_url": "https://www.youtube.com/shorts/aRYNyKsRjVU",
+      "studio_url": "https://studio.youtube.com/video/aRYNyKsRjVU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/aRYNyKsRjVU/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "49s",
+      "words": 673
     },
     {
       "id": "SHORT-FAMILYPSALM101V2",
@@ -12874,19 +12922,6 @@
         "words": 1369
       },
       {
-        "id": "0514",
-        "slug": "steps-ordered-by-the-lord-psalm-37-23-25",
-        "file": "0514-steps-ordered-by-the-lord-psalm-37-23-25.md",
-        "title": "Steps Ordered by the Lord: Psalm 37:23-25 | The Provision Table",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1346
-      },
-      {
         "id": "0515",
         "slug": "when-the-path-ahead-is-blocked-isaiah-45-2-3",
         "file": "0515-when-the-path-ahead-is-blocked-isaiah-45-2-3.md",
@@ -13349,17 +13384,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provision1kings17v14",
-        "file": "0000-short-provision1kings17v14.yml",
-        "companion_longform_id": "",
-        "scripture": "1 Kings 17:14-16",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionpsalm34v9",
