@@ -1,0 +1,281 @@
+{
+  "key": "short-guidedjeremiah6v16",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "THE ANCIENT PATH",
+    "FINDING REST"
+  ],
+  "poster": [
+    "A PRAYER FOR GUIDANCE",
+    "JEREMIAH 6:16",
+    "THE GUIDED PATH",
+    "SEEK GOD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley at dawn",
+    "quiet mountain river flowing slowly",
+    "winding path through a dark forest",
+    "soft sunlight breaking over hills",
+    "peaceful lake reflecting mountain peaks",
+    "golden light on a stone pathway"
+  ],
+  "scenes": [
+    {
+      "a": "That heavy uncertainty",
+      "img": "short-guidedjeremiah6v16-scene-01.jpg",
+      "kicker": "JEREMIAH 6:16",
+      "sub": "HEAR HIS VOICE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Thus saith the Lord",
+      "img": "short-guidedjeremiah6v16-scene-02.jpg",
+      "kicker": "THE WORD",
+      "sub": "THE OLD PATHS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "walk therein and ye",
+      "img": "short-guidedjeremiah6v16-scene-03.jpg",
+      "kicker": "HIS PROMISE",
+      "sub": "REST FOR YOUR SOULS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord we are tired",
+      "img": "short-guidedjeremiah6v16-scene-04.jpg",
+      "kicker": "A HUMBLE PRAYER",
+      "sub": "GUIDE OUR FOOTSTEPS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "help us to turn",
+      "img": "short-guidedjeremiah6v16-scene-05.jpg",
+      "kicker": "SEEKING TRUTH",
+      "sub": "YOUR WILL BE DONE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "establish our ways",
+      "img": "short-guidedjeremiah6v16-scene-06.jpg",
+      "kicker": "THE GUIDED PATH",
+      "sub": "WALK IN LIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That heavy uncertainty about your future is exactly where God invites you to be still."
+    ],
+    [
+      8,
+      16,
+      "Thus saith the LORD, Stand ye in the ways, and see, and ask for the old paths."
+    ],
+    [
+      16,
+      24,
+      "Where is the good way, and walk therein, and ye shall find rest for your souls."
+    ],
+    [
+      24,
+      32,
+      "Lord we are tired of our own confusion and the noise that distracts our hearts."
+    ],
+    [
+      32,
+      40,
+      "Help us to turn away from the rushing crowd and find the good way today."
+    ],
+    [
+      40,
+      50,
+      "Establish our ways in Your truth and let us rest in Your presence forevermore. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT HEAVY UNCERTAINTY",
+        "ABOUT YOUR FUTURE IS",
+        "WHERE GOD INVITES",
+        "YOU TO BE STILL"
+      ],
+      [
+        "HEAVY UNCERTAINTY",
+        "GOD INVITES"
+      ],
+      "JEREMIAH 6:16"
+    ],
+    [
+      8,
+      16,
+      [
+        "THUS SAITH THE LORD",
+        "STAND YE IN THE WAYS",
+        "AND SEE AND ASK",
+        "FOR THE OLD PATHS"
+      ],
+      [
+        "THUS SAITH THE LORD",
+        "OLD PATHS"
+      ],
+      "JEREMIAH 6:16"
+    ],
+    [
+      16,
+      24,
+      [
+        "WHERE IS THE GOOD WAY",
+        "AND WALK THEREIN AND YE",
+        "SHALL FIND REST",
+        "FOR YOUR SOULS"
+      ],
+      [
+        "GOOD WAY",
+        "REST"
+      ],
+      "JEREMIAH 6:16"
+    ],
+    [
+      24,
+      32,
+      [
+        "LORD WE ARE TIRED",
+        "OF OUR OWN CONFUSION",
+        "AND THE NOISE THAT",
+        "DISTRACTS OUR HEARTS"
+      ],
+      [
+        "TIRED",
+        "CONFUSION"
+      ],
+      "JEREMIAH 6:16"
+    ],
+    [
+      32,
+      40,
+      [
+        "HELP US TO TURN",
+        "AWAY FROM THE RUSHING CROWD",
+        "AND FIND THE GOOD WAY",
+        "TODAY"
+      ],
+      [
+        "TURN AWAY",
+        "GOOD WAY"
+      ],
+      "JEREMIAH 6:16"
+    ],
+    [
+      40,
+      50,
+      [
+        "ESTABLISH OUR WAYS IN YOUR",
+        "TRUTH AND LET US REST IN",
+        "YOUR PRESENCE FOREVERMORE",
+        "AMEN"
+      ],
+      [
+        "ESTABLISH",
+        "REST"
+      ],
+      "JEREMIAH 6:16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That heavy uncertainty",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "UNCERTAINTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thus saith the Lord",
+      "kind": "phrase",
+      "words": [
+        "THUS",
+        "SAITH",
+        "THE",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "walk therein and ye",
+      "kind": "phrase",
+      "words": [
+        "WALK",
+        "THEREIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord we are tired",
+      "kind": "phrase",
+      "words": [
+        "TIRED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "help us to turn",
+      "kind": "phrase",
+      "words": [
+        "TURN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "establish our ways",
+      "kind": "phrase",
+      "words": [
+        "ESTABLISH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Jeremiah 6:16"
+}
