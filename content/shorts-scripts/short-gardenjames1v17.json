@@ -1,0 +1,318 @@
+{
+  "key": "short-gardenjames1v17",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "EVERY GOOD GIFT",
+    "THE FATHER OF LIGHTS"
+  ],
+  "poster": [
+    "EVERY GOOD GIFT",
+    "AND PERFECT GIFT",
+    "COMETH FROM ABOVE",
+    "JAMES 1:17"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "misty sunlit forest glade morning light",
+    "golden light over calm lake sunrise",
+    "peaceful meadow in warm sunlight soft breeze",
+    "calm mountain river golden hour reflections",
+    "sunbeams filtering through green trees calm nature",
+    "soft twilight sky over quiet countryside hills",
+    "golden autumn woods gentle river peaceful sunlight"
+  ],
+  "scenes": [
+    {
+      "a": "gentle peace",
+      "img": "short-gardenjames1v17-scene-01.jpg",
+      "kicker": "JAMES 1:17",
+      "sub": "REST IN GOD'S UNCHANGING GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Every good gift",
+      "img": "short-gardenjames1v17-scene-02.jpg",
+      "kicker": "JAMES 1:17",
+      "sub": "EVERY GOOD GIFT IS FROM ABOVE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father of lights",
+      "img": "short-gardenjames1v17-scene-03.jpg",
+      "kicker": "JAMES 1:17",
+      "sub": "NO VARIABLENESS OR SHADOW",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "neither shadow of turning",
+      "img": "short-gardenjames1v17-scene-04.jpg",
+      "kicker": "JAMES 1:17",
+      "sub": "THANKSGIVING FOR HIS MERCY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Your loving grace",
+      "img": "short-gardenjames1v17-scene-05.jpg",
+      "kicker": "JAMES 1:17",
+      "sub": "EVERY BREATH FROM HIS HAND",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "every unseen blessing",
+      "img": "short-gardenjames1v17-scene-06.jpg",
+      "kicker": "JAMES 1:17",
+      "sub": "HONEST PRAISE FOR HIS GOODNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "honest praise",
+      "img": "short-gardenjames1v17-scene-07.jpg",
+      "kicker": "JAMES 1:17",
+      "sub": "ENTER HIS GATES WITH THANKS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If you fear the gentle peace you felt today will fade by morning, rest in God."
+    ],
+    [
+      6,
+      14,
+      "Scripture promises, Every good gift and every perfect gift is from above, and cometh down from the Father of lights,"
+    ],
+    [
+      14,
+      20,
+      "with whom is no variableness, neither shadow of turning."
+    ],
+    [
+      20,
+      27,
+      "Heavenly Father, we thank You that Your loving grace never shifts with changing seasons."
+    ],
+    [
+      27,
+      34,
+      "Every quiet comfort, every unseen blessing, and every breath we draw flows directly from Your holy hand."
+    ],
+    [
+      34,
+      41,
+      "You do not withdraw Your kindness when our strength fails. We give You honest praise today for Your unearned goodness."
+    ],
+    [
+      41,
+      48,
+      "Teach us to notice Your constant light in all things. Subscribe to join us in daily thanksgiving."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF YOU FEAR PEACE WILL FADE",
+        "REST IN GOD TODAY"
+      ],
+      [
+        "PEACE",
+        "REST"
+      ],
+      "JAMES 1:17"
+    ],
+    [
+      6,
+      14,
+      [
+        "EVERY GOOD GIFT",
+        "AND EVERY PERFECT GIFT",
+        "IS FROM ABOVE"
+      ],
+      [
+        "GOOD GIFT",
+        "PERFECT GIFT",
+        "FROM ABOVE"
+      ],
+      "JAMES 1:17"
+    ],
+    [
+      14,
+      20,
+      [
+        "WITH WHOM IS NO VARIABLENESS",
+        "NEITHER SHADOW OF TURNING"
+      ],
+      [
+        "NO VARIABLENESS",
+        "NO SHADOW"
+      ],
+      "JAMES 1:17"
+    ],
+    [
+      20,
+      27,
+      [
+        "YOUR LOVING GRACE",
+        "NEVER SHIFTS WITH SEASONS"
+      ],
+      [
+        "LOVING GRACE",
+        "NEVER SHIFTS"
+      ],
+      "JAMES 1:17"
+    ],
+    [
+      27,
+      34,
+      [
+        "EVERY UNSEEN BLESSING",
+        "FLOWS FROM YOUR HAND"
+      ],
+      [
+        "BLESSING",
+        "HOLY HAND"
+      ],
+      "JAMES 1:17"
+    ],
+    [
+      34,
+      41,
+      [
+        "WE GIVE YOU HONEST PRAISE",
+        "FOR YOUR UNEARNED GOODNESS"
+      ],
+      [
+        "HONEST PRAISE",
+        "GOODNESS"
+      ],
+      "JAMES 1:17"
+    ],
+    [
+      41,
+      48,
+      [
+        "NOTICE HIS CONSTANT LIGHT",
+        "ENTER HIS GATES WITH PRAISE"
+      ],
+      [
+        "CONSTANT LIGHT",
+        "PRAISE"
+      ],
+      "JAMES 1:17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "gentle peace",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Every good gift",
+      "kind": "phrase",
+      "words": [
+        "EVERY",
+        "GOOD",
+        "GIFT"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Father of lights",
+      "kind": "phrase",
+      "words": [
+        "FATHER",
+        "OF",
+        "LIGHTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "neither shadow of turning",
+      "kind": "phrase",
+      "words": [
+        "NEITHER",
+        "SHADOW",
+        "OF",
+        "TURNING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Your loving grace",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "LOVING",
+        "GRACE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "every unseen blessing",
+      "kind": "phrase",
+      "words": [
+        "EVERY",
+        "UNSEEN",
+        "BLESSING"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "honest praise",
+      "kind": "phrase",
+      "words": [
+        "HONEST",
+        "PRAISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "James 1:17"
+}
