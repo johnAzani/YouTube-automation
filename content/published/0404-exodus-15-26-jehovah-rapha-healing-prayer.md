@@ -1,6 +1,6 @@
 ---
 id: '0404'
-title: Exodus 15:26 Jehovah Rapha Healing Prayer | The Healing Balm
+title: "Restoring Strength To Weary Limbs: Exodus 15:26 | The Healing Balm"
 slug: exodus-15-26-jehovah-rapha-healing-prayer
 status: published
 channel: prayer6
@@ -79,10 +79,13 @@ originality:
 published_on: "2026-11-13"
 published_at: "2026-11-13T03:44:08Z"
 youtube_video_id: "H-ygSB-1i1M"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Exodus 15:26 Jehovah Rapha Healing Prayer | The Healing Balm"
+retitled_at: "2026-11-20"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith

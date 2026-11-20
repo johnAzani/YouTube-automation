@@ -1,7 +1,7 @@
 ---
 release_ticket_opened: true
 id: '0406'
-title: Philippians 4:6-7 Peace That Passeth Understanding Prayer
+title: "Peace When Your Mind Won't Rest: Philippians 4:6-7 | The Healing Balm"
 slug: philippians-4-6-7-peace-that-passeth-understanding-prayer
 status: published
 channel: prayer6
@@ -82,7 +82,7 @@ originality:
 published_on: "2026-11-13"
 published_at: "2026-11-13T19:14:00Z"
 youtube_video_id: "jaeiK1qh8Wk"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 uploaded_at: "2026-11-13T17:32:45Z"
 scheduled_publish: false
 privacy_status: "public"
@@ -91,6 +91,9 @@ narration_voice: "Charon"
 thumbnail_pending: false
 publish_confirmed_at: "2026-11-13T19:53:54Z"
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Philippians 4:6-7 Peace That Passeth Understanding Prayer"
+retitled_at: "2026-11-20"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith
