@@ -1,0 +1,318 @@
+{
+  "key": "short-morningpsalm86v11",
+  "channel": "prayer2",
+  "psalm": 86,
+  "title": [
+    "UNITE MY HEART",
+    "PRAYER FOR GUIDANCE"
+  ],
+  "poster": [
+    "TEACH ME THY WAY",
+    "UNITE MY HEART",
+    "PSALM 86:11",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "sunrise over misty mountain forest landscape",
+    "early morning sunbeam shining through pine trees",
+    "calm golden sunrise over tranquil lake water",
+    "soft morning light falling on empty winding dirt road",
+    "scenic morning horizon with gentle pink clouds",
+    "golden hour light filtering through green meadow grass",
+    "peaceful morning dawn over rolling green hills"
+  ],
+  "scenes": [
+    {
+      "a": "If your mind feels divided between two choices this morning, bring your indecision to God.",
+      "img": "short-morningpsalm86v11-scene-01.jpg",
+      "kicker": "PSALM 86:11",
+      "sub": "BRING YOUR INDECISION TO GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Teach me thy way, O LORD; I will walk in thy truth: unite my heart to fear thy name.",
+      "img": "short-morningpsalm86v11-scene-02.jpg",
+      "kicker": "PSALM 86:11",
+      "sub": "TEACH ME THY WAY O LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, as this morning begins, gather my scattered thoughts and calm every voice pushing me toward fear.",
+      "img": "short-morningpsalm86v11-scene-03.jpg",
+      "kicker": "PSALM 86:11",
+      "sub": "GATHER MY SCATTERED THOUGHTS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Show me clearly which path to take today, and steady my feet upon Your holy truth.",
+      "img": "short-morningpsalm86v11-scene-04.jpg",
+      "kicker": "PSALM 86:11",
+      "sub": "STEADY MY FEET IN TRUTH",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Unite my divided heart so that every decision I make honors You completely.",
+      "img": "short-morningpsalm86v11-scene-05.jpg",
+      "kicker": "PSALM 86:11",
+      "sub": "UNITE MY DIVIDED HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Give me single-minded faith to follow where You lead.",
+      "img": "short-morningpsalm86v11-scene-06.jpg",
+      "kicker": "PSALM 86:11",
+      "sub": "SINGLE MINDED FAITH",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Morning Altar to begin every sunrise in quiet prayer.",
+      "img": "short-morningpsalm86v11-scene-07.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If your mind feels divided between two choices this morning, bring your indecision to God."
+    ],
+    [
+      6,
+      15,
+      "Teach me thy way, O LORD; I will walk in thy truth: unite my heart to fear thy name."
+    ],
+    [
+      15,
+      24,
+      "Lord, as this morning begins, gather my scattered thoughts and calm every voice pushing me toward fear."
+    ],
+    [
+      24,
+      32,
+      "Show me clearly which path to take today, and steady my feet upon Your holy truth."
+    ],
+    [
+      32,
+      40,
+      "Unite my divided heart so that every decision I make honors You completely."
+    ],
+    [
+      40,
+      48,
+      "Give me single-minded faith to follow where You lead."
+    ],
+    [
+      48,
+      55,
+      "Subscribe to The Morning Altar to begin every sunrise in quiet prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF YOUR MIND FEELS DIVIDED",
+        "BETWEEN TWO CHOICES THIS MORNING",
+        "BRING YOUR INDECISION TO GOD"
+      ],
+      [
+        "DIVIDED",
+        "INDECISION"
+      ],
+      "PSALM 86 : 11"
+    ],
+    [
+      6,
+      15,
+      [
+        "TEACH ME THY WAY O LORD",
+        "I WILL WALK IN THY TRUTH",
+        "UNITE MY HEART TO FEAR THY NAME"
+      ],
+      [
+        "TEACH ME",
+        "TRUTH",
+        "UNITE MY HEART"
+      ],
+      "PSALM 86 : 11"
+    ],
+    [
+      15,
+      24,
+      [
+        "GATHER MY SCATTERED THOUGHTS",
+        "AND CALM EVERY VOICE PUSHING",
+        "ME TOWARD FEAR"
+      ],
+      [
+        "GATHER",
+        "CALM"
+      ],
+      "PSALM 86 : 11"
+    ],
+    [
+      24,
+      32,
+      [
+        "SHOW ME CLEARLY WHICH PATH",
+        "TO TAKE TODAY AND STEADY",
+        "MY FEET UPON YOUR TRUTH"
+      ],
+      [
+        "CLEARLY",
+        "STEADY"
+      ],
+      "PSALM 86 : 11"
+    ],
+    [
+      32,
+      40,
+      [
+        "UNITE MY DIVIDED HEART",
+        "SO THAT EVERY DECISION I MAKE",
+        "HONORS YOU COMPLETELY"
+      ],
+      [
+        "UNITE",
+        "HONORS"
+      ],
+      "PSALM 86 : 11"
+    ],
+    [
+      40,
+      48,
+      [
+        "GIVE ME SINGLE MINDED FAITH",
+        "TO FOLLOW WHERE YOU LEAD"
+      ],
+      [
+        "FAITH",
+        "FOLLOW"
+      ],
+      "PSALM 86 : 11"
+    ],
+    [
+      48,
+      55,
+      [
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "TO BEGIN EVERY SUNRISE",
+        "IN QUIET PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "SUNRISE"
+      ],
+      "PSALM 86 : 11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If your mind feels divided between two choices this morning, bring your indecision to God.",
+      "kind": "phrase",
+      "words": [
+        "DIVIDED",
+        "INDECISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach me thy way, O LORD; I will walk in thy truth: unite my heart to fear thy name.",
+      "kind": "phrase",
+      "words": [
+        "TEACH ME",
+        "TRUTH",
+        "UNITE MY HEART"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, as this morning begins, gather my scattered thoughts and calm every voice pushing me toward fear.",
+      "kind": "phrase",
+      "words": [
+        "GATHER",
+        "CALM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Show me clearly which path to take today, and steady my feet upon Your holy truth.",
+      "kind": "phrase",
+      "words": [
+        "CLEARLY",
+        "STEADY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Unite my divided heart so that every decision I make honors You completely.",
+      "kind": "phrase",
+      "words": [
+        "UNITE",
+        "HONORS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give me single-minded faith to follow where You lead.",
+      "kind": "phrase",
+      "words": [
+        "FAITH",
+        "FOLLOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Morning Altar to begin every sunrise in quiet prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "SUNRISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 86:11"
+}

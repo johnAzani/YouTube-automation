@@ -1,0 +1,249 @@
+{
+  "key": "short-morningpsalm143v10",
+  "channel": "prayer2",
+  "psalm": 143,
+  "title": [
+    "TEACH ME",
+    "TO DO THY WILL"
+  ],
+  "poster": [
+    "DAWN PRAYER",
+    "PSALM 143:10",
+    "GUIDANCE FOR",
+    "YOUR MORNING"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "misty mountain forest sunrise",
+    "golden light hitting pine needles",
+    "dew on morning grass close up",
+    "soft sunlight through window blinds",
+    "ripples on a quiet pond at dawn",
+    "sunlight breaking over horizon"
+  ],
+  "scenes": [
+    {
+      "a": "The confusion about which path to take right now is resting heavy upon your heart.",
+      "img": "short-morningpsalm143v10-scene-01.jpg",
+      "kicker": "PSALM 143:10",
+      "sub": "SEEKING HIS DIRECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You feel paralyzed by the weight of decisions that must be made before this day concludes.",
+      "img": "short-morningpsalm143v10-scene-02.jpg",
+      "kicker": "PSALM 143:10",
+      "sub": "FINDING CLARITY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach me to do thy will; for thou art my God: thy spirit is good; lead me into the land of uprightness.",
+      "img": "short-morningpsalm143v10-scene-03.jpg",
+      "kicker": "PSALM 143:10",
+      "sub": "GOD'S STEADFAST WORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Lord, quiet the noise of my own desires so I might hear your gentle leading clearly.",
+      "img": "short-morningpsalm143v10-scene-04.jpg",
+      "kicker": "PSALM 143:10",
+      "sub": "SURRENDERING CONTROL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Remove the hesitation from my spirit and replace it with your profound sense of perfect peace.",
+      "img": "short-morningpsalm143v10-scene-05.jpg",
+      "kicker": "PSALM 143:10",
+      "sub": "WALKING IN TRUTH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Guide my every step today into the upright path you have lovingly laid out before me.",
+      "img": "short-morningpsalm143v10-scene-06.jpg",
+      "kicker": "PSALM 143:10",
+      "sub": "TRUSTING HIS PROMISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The confusion about which path to take right now is resting heavy upon your heart."
+    ],
+    [
+      9,
+      18,
+      "You feel paralyzed by the weight of decisions that must be made before this day concludes."
+    ],
+    [
+      19,
+      32,
+      "Teach me to do thy will; for thou art my God: thy spirit is good; lead me into the land of uprightness."
+    ],
+    [
+      33,
+      44,
+      "Lord, quiet the noise of my own desires so I might hear your gentle leading clearly."
+    ],
+    [
+      45,
+      56,
+      "Remove the hesitation from my spirit and replace it with your profound sense of perfect peace."
+    ],
+    [
+      57,
+      68,
+      "Guide my every step today into the upright path you have lovingly laid out before me."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE CONFUSION",
+        "ABOUT WHICH PATH",
+        "TO TAKE",
+        "RESTS ON YOUR",
+        "HEART"
+      ],
+      [
+        "CONFUSION",
+        "PATH"
+      ],
+      "PSALM 143 : 10"
+    ],
+    [
+      9,
+      18,
+      [
+        "YOU FEEL",
+        "PARALYZED BY",
+        "THE WEIGHT",
+        "OF DECISIONS",
+        "THIS MORNING"
+      ],
+      [
+        "PARALYZED",
+        "DECISIONS"
+      ],
+      "PSALM 143 : 10"
+    ],
+    [
+      19,
+      32,
+      [
+        "TEACH ME",
+        "TO DO THY WILL",
+        "THY SPIRIT IS GOOD",
+        "LEAD ME INTO",
+        "THE LAND"
+      ],
+      [
+        "WILL",
+        "GOOD",
+        "LEAD"
+      ],
+      "PSALM 143 : 10"
+    ],
+    [
+      33,
+      44,
+      [
+        "LORD QUIET",
+        "THE NOISE OF",
+        "MY OWN DESIRES",
+        "TO HEAR YOUR",
+        "LEADING"
+      ],
+      [
+        "QUIET",
+        "LEADING"
+      ],
+      "PSALM 143 : 10"
+    ],
+    [
+      45,
+      56,
+      [
+        "REMOVE THE",
+        "HESITATION AND",
+        "REPLACE IT WITH",
+        "YOUR PERFECT",
+        "PEACE"
+      ],
+      [
+        "HESITATION",
+        "PEACE"
+      ],
+      "PSALM 143 : 10"
+    ],
+    [
+      57,
+      68,
+      [
+        "GUIDE MY",
+        "EVERY STEP",
+        "INTO THE",
+        "UPRIGHT PATH",
+        "TODAY"
+      ],
+      [
+        "GUIDE",
+        "UPRIGHT"
+      ],
+      "PSALM 143 : 10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The confusion about which path to take right now is resting heavy upon your heart.",
+      "kind": "phrase",
+      "words": [
+        "CONFUSION",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach me to do thy will; for thou art my God: thy spirit is good; lead me into the land of uprightness.",
+      "kind": "phrase",
+      "words": [
+        "WILL",
+        "GOOD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 143:10"
+}
