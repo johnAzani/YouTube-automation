@@ -298,3 +298,11 @@ reopen one, run `python scripts/view_analytics.py --retention-video VIDEO_ID`.
 Recollecting the same video replaces its saved report; unsuccessful retention
 queries leave the previous successful report in place. Check the displayed
 video ID and date window before comparing.
+
+To see two saved baselines side by side without fetching anything again, run
+`python scripts/view_analytics.py --compare-retention FIRST_VIDEO_ID SECOND_VIDEO_ID`.
+The table shows each report's date range and the same playback landmarks.
+Check that the videos are from the same channel, are similar in length and
+format, and cover similar ages since release; the command cannot verify those
+conditions. Look for the first point where the curves differ, then check Studio
+around that timestamp before editing the script.

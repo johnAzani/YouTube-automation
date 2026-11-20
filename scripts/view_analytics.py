@@ -269,12 +269,52 @@ def display_public_snapshot(csv_path: Path = PUBLIC_CSV, json_path: Path = PUBLI
     return found
 
 
+def compare_saved_retention(video_ids):
+    """Display two saved curves side by side without claiming causation."""
+    profiles = []
+    windows = []
+    for video_id in video_ids:
+        path = PRIVATE_REPORT.with_name(f"retention-{video_id}.json")
+        try:
+            report = json.loads(path.read_text(encoding="utf-8"))
+            retention = report["reports"]["retention"]
+            if retention["status"] != "collected" or retention["video_id"] != video_id:
+                raise ValueError("wrong or unavailable profile")
+            columns = [column["name"] if isinstance(column, dict) else column
+                       for column in retention["columns"]]
+            profile = retention_landmarks(columns, retention["rows"])
+            if not profile or all(value == "—" for _, value in profile):
+                raise ValueError("no reported landmarks")
+            windows.append(f"{video_id}: {report['start_date']} to {report['end_date']}")
+        except (OSError, ValueError, KeyError, TypeError):
+            print(f"No usable saved retention report for {video_id}.", file=sys.stderr)
+            return 1
+        profiles.append(profile)
+    print("[Audience watch ratio comparison]")
+    print("\n".join(windows))
+    print(format_table(["Video position", *video_ids],
+                       [[position, first, second]
+                        for (position, first), (_, second) in zip(*profiles)]))
+    print("Compare similar videos from the same channel and format at similar ages. "
+          "— means unavailable; watch ratios include replays and are not completion rates.")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--private", action="store_true", help="Display private Analytics report only")
     ap.add_argument("--public", action="store_true", help="Display public metrics snapshot only")
     ap.add_argument("--retention-video", help="Display a saved private report for a video ID")
+    ap.add_argument("--compare-retention", nargs=2, metavar="VIDEO_ID",
+                    help="Compare two saved private video retention profiles")
     args = ap.parse_args()
+    if args.compare_retention:
+        if (args.public or args.retention_video is not None
+                or len(set(args.compare_retention)) != 2
+                or not all(re.fullmatch(r"[A-Za-z0-9_-]{11}", v) for v in args.compare_retention)):
+            ap.error("--compare-retention requires two distinct video IDs and cannot be combined "
+                     "with --public or --retention-video.")
+        return compare_saved_retention(args.compare_retention)
     if args.retention_video is not None:
         if args.public or not re.fullmatch(r"[A-Za-z0-9_-]{11}", args.retention_video):
             ap.error("--retention-video needs an 11-character video ID and cannot be used with --public.")
