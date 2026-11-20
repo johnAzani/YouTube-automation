@@ -258,3 +258,6 @@ average view duration and long-form watch time as secondary measures. Retention
 measures whether people stayed, not how they felt: use voluntary, unsolicited
 viewer feedback about the prayer as qualitative context, without collecting names
 or private prayer details into the repository.
+
+For a worked example and a pre-release checklist, see the
+[prayer read-aloud review](PRAYER_READ_ALOUD_REVIEW.md).
