@@ -37,22 +37,22 @@
       "workflow": "tests-on-main.yml"
     },
     {
+      "late_minutes": 173,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-20T10:07:41+00:00",
+      "slot": "2026-11-20T07:14:00+00:00",
+      "workflow": "comments.yml"
+    },
+    {
       "late_minutes": 150,
       "name": "YouTube reporting jobs (thumbnail impressions)",
       "ran_at": "2026-11-20T08:17:27+00:00",
       "slot": "2026-11-20T05:47:00+00:00",
       "workflow": "reporting-jobs.yml"
-    },
-    {
-      "late_minutes": 123,
-      "name": "Produce video",
-      "ran_at": "2026-11-20T08:17:32+00:00",
-      "slot": "2026-11-20T06:14:00+00:00",
-      "workflow": "produce.yml"
     }
   ],
-  "generated_at": "2026-11-20T10:07:38.302525+00:00",
-  "last_run_at": "2026-11-20T10:06:50+00:00",
+  "generated_at": "2026-11-20T10:27:35.137658+00:00",
+  "last_run_at": "2026-11-20T10:26:44+00:00",
   "on_time": [
     {
       "late_minutes": 118,
@@ -74,6 +74,13 @@
       "ran_at": "2026-11-20T03:45:03+00:00",
       "slot": "2026-11-20T02:14:00+00:00",
       "workflow": "growth-autopilot.yml"
+    },
+    {
+      "late_minutes": 63,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-20T10:26:44+00:00",
+      "slot": "2026-11-20T09:23:00+00:00",
+      "workflow": "monitor.yml"
     },
     {
       "late_minutes": 19,
