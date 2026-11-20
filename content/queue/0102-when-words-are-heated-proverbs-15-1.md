@@ -76,11 +76,11 @@ originality:
 
 ## Scene 1 — The Noonday Pause and the Heat of the Day
 
-The middle of the day has a way of bringing out the heat in human exchanges. By noon, the margin for error has shrunk, patience has worn thin, and an email, a sharp remark, or a sudden demand can push anyone toward a quick retort. You might be sitting at a desk with a screen full of unresolved problems, or standing in a workspace where voices have already risen over matters that should have been settled hours ago. Step away from that friction for a moment. This is the hour when the Psalmist vowed to pray and cry aloud, knowing that God hears the voice lifted from the middle of the working day.
+The reply is typed, but you haven’t sent it. Before you do, hear Proverbs fifteen, verse one: A soft answer turneth away wrath: but grievous words stir up anger.
 
-We turn now to the wisdom of the King James Version in Proverbs 15, verse 1: A soft answer turneth away wrath: but grievous words stir up anger.
+Lord, You know why those words upset me. Help me say what is true without trying to wound the person who will read it. Give me the patience to take out the line I wrote just to get even.
 
-Matthew Henry notes in his commentary that human passion is like fire; it needs fuel to keep it burning, and harsh words are the dry wood thrown onto the flame. When someone comes toward you with anger, the natural instinct of the human heart is to meet force with force, to match volume with volume, and to win the argument. But the wisdom of God offers a different path entirely. A soft answer — a voice lowered, a calm spirit, a refusal to take the bait — acts like water poured on glowing coals. It requires immense strength to be gentle when you have every right to be sharp. This midday pause is not a retreat from your responsibilities; it is an appointment with the God who grants that exact kind of disciplined grace. Let us bring the friction of your morning and the conversations that left a mark into His presence right now.
+A soft answer does not mean saying that nothing happened. You can name what was wrong without making the other person the target. And if they answer sharply again, that does not mean you were wrong to ask God for gentleness. Let us pray about the words we can choose, even when we cannot choose the answer we receive.
 
 ## Scene 2 — Guarding Your Speech Under Pressure
 
@@ -116,6 +116,6 @@ Before we turn back to the work waiting on your desk or in your home, take this 
 
 ## Scene 6 — The Blessing and Return to the Day
 
-We stand now at the close of this midday watch, ready to step back into the flow of the afternoon. You do not return to your duties with the same weariness you brought into this prayer; you return upheld by the promise of God's word and enveloped in His peace. The Lord bless you and keep you. The Lord make His face shine upon you and be gracious unto you during the hours that remain.
+May the Lord steady your words when it’s time to answer. If the reply still feels hard to write, may He give you patience to wait and courage to speak plainly. The Lord bless you and keep you through the hours that remain.
 
-If there is a name or a difficult conversation you are carrying into this afternoon, type Amen to agree with this prayer, and subscribe to The Midday Watch to pause and pray with us at noon.
+If you’d like us to pray with you, you can share a general need in the comments without naming anyone. Subscribe to The Midday Watch to pause and pray with us at noon.
