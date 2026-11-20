@@ -27,9 +27,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["RISE IN SPIRIT", "THE MIDNIGHT VIGIL", "PROTECTION FOUND", "STAY VIGILANT"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-20T21:40:14Z"
+thumbnail_retry_after: "2026-11-27T21:59:58Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 Rise in spirit as the clock strikes twelve, turning your heart toward the quiet strength of the midnight hour. No weapon formed against you shall prosper, and every tongue that rises against you in judgment you shall condemn. This is the heritage of the servants of the Lord, for your peace remains untouchable in the shelter of his presence. God defends you in the deep stillness, covering your path with a grace that transcends the darkness around you. Rest in stillness tonight, knowing that the promise of your salvation is written in the heavens above you. Walk in light through this midnight watch, guarded by the sovereign word, and please subscribe to join our prayer.

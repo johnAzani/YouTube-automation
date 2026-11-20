@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["WALK IN INTEGRITY", "BLESS YOUR CHILDREN", "A HOUSEHOLD PRAYER", "PROVERBS 20:7"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-27T22:00:03Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When choosing quiet honesty over easy shortcuts at work today, remember your legacy. Proverbs twenty verse seven declares, The just man walketh in his integrity: his children are blessed after him. Heavenly Father, grant us the strength to walk with upright hearts in every small decision. May the quiet truth of our daily lives build a secure foundation for our children. Protect our household from deception, and let your righteousness guide our family through every single generation. We pray that our steadfast faith becomes a lasting inheritance for those we love. Subscribe to cover your home in daily prayer.

@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["FINDING PEACE", "IN THE DARK", "A MIDNIGHT", "PRAYER"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If the weight of your past mistakes keeps you from drifting into sleep, listen. It is time to quiet the noise of your regrets. I call to remembrance my song in the night: I commune with mine own heart: and my spirit made diligent search. Lord, replace these restless thoughts with the memory of Your unfailing presence within my weary soul. Search my heart tonight and show me how to rest in the stillness of Your perfect grace. May You be my anchor as I finally close my eyes to find true peace tonight.

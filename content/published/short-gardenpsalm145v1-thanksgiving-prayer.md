@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE PRAISE GARDEN", "EXALTING HIS NAME", "DAILY WORSHIP", "KJV SCRIPTURE"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-27T22:00:13Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If the decision weighing on your mind feels too complex to navigate, stay right here. I will extol thee, my God, O king; and I will bless thy name for ever and ever. Every day will I bless thee; and I will praise thy name for ever and ever. Great is the LORD, and greatly to be praised; and his greatness is unsearchable. Lord, help me trust Your path when my own understanding fails to see the way forward. May this quiet reflection lead me to honor Your sovereignty in everything I do today, Amen.
