@@ -30,13 +30,6 @@
       "workflow": "reporting-jobs.yml"
     },
     {
-      "late_minutes": 165,
-      "name": "Scheduler supervisor",
-      "ran_at": "2026-11-20T03:32:18+00:00",
-      "slot": "2026-11-20T00:47:00+00:00",
-      "workflow": "scheduler-supervisor.yml"
-    },
-    {
       "late_minutes": 121,
       "name": "Produce video",
       "ran_at": "2026-11-20T01:15:00+00:00",
@@ -44,8 +37,8 @@
       "workflow": "produce.yml"
     }
   ],
-  "generated_at": "2026-11-20T03:46:06.400689+00:00",
-  "last_run_at": "2026-11-20T03:45:03+00:00",
+  "generated_at": "2026-11-20T03:48:16.193714+00:00",
+  "last_run_at": "2026-11-20T03:47:19+00:00",
   "on_time": [
     {
       "late_minutes": 118,
@@ -81,8 +74,15 @@
       "ran_at": "2026-11-20T03:23:16+00:00",
       "slot": "2026-11-20T03:23:00+00:00",
       "workflow": "monitor.yml"
+    },
+    {
+      "late_minutes": 0,
+      "name": "Scheduler supervisor",
+      "ran_at": "2026-11-20T03:47:19+00:00",
+      "slot": "2026-11-20T03:47:00+00:00",
+      "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 1,
+  "silence_minutes": 0,
   "warn_minutes": 120
 }
