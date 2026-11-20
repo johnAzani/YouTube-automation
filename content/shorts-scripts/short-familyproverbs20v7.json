@@ -1,0 +1,333 @@
+{
+  "key": "short-familyproverbs20v7",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "A LEGACY OF INTEGRITY",
+    "PROVERBS 20:7 FAMILY PRAYER"
+  ],
+  "poster": [
+    "WALK IN INTEGRITY",
+    "BLESS YOUR CHILDREN",
+    "A HOUSEHOLD PRAYER",
+    "PROVERBS 20:7"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "open bible on warm lamp lit wooden table with olive branches",
+    "sunlight beaming through rustic window onto open bible",
+    "peaceful wooden countryside home surrounded by green trees",
+    "warm cozy living room table light with quiet morning glow",
+    "olive branch resting on open scripture pages soft lighting",
+    "sun rays shining over calm green pasture and morning mist",
+    "warm lantern glowing on rustic wooden table next to bible"
+  ],
+  "scenes": [
+    {
+      "a": "When choosing quiet honesty over easy shortcuts at work today, remember your legacy.",
+      "img": "short-familyproverbs20v7-scene-01.jpg",
+      "kicker": "PROVERBS 20:7",
+      "sub": "REMEMBER YOUR LEGACY TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Proverbs twenty verse seven declares, The just man walketh in his integrity: his children are blessed after him.",
+      "img": "short-familyproverbs20v7-scene-02.jpg",
+      "kicker": "PROVERBS 20:7",
+      "sub": "THE JUST MAN WALKETH IN INTEGRITY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, grant us the strength to walk with upright hearts in every small decision.",
+      "img": "short-familyproverbs20v7-scene-03.jpg",
+      "kicker": "PROVERBS 20:7",
+      "sub": "WALK WITH UPRIGHT HEARTS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "May the quiet truth of our daily lives build a secure foundation for our children.",
+      "img": "short-familyproverbs20v7-scene-04.jpg",
+      "kicker": "PROVERBS 20:7",
+      "sub": "BUILD A SECURE FOUNDATION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Protect our household from deception, and let your righteousness guide our family through every single generation.",
+      "img": "short-familyproverbs20v7-scene-05.jpg",
+      "kicker": "PROVERBS 20:7",
+      "sub": "GUIDE OUR FAMILY GENERATIONS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We pray that our steadfast faith becomes a lasting inheritance for those we love.",
+      "img": "short-familyproverbs20v7-scene-06.jpg",
+      "kicker": "PROVERBS 20:7",
+      "sub": "A LASTING INHERITANCE OF FAITH",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to cover your home in daily prayer.",
+      "img": "short-familyproverbs20v7-scene-07.jpg",
+      "kicker": "PROVERBS 20:7",
+      "sub": "COVER YOUR HOME IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "When choosing quiet honesty over easy shortcuts at work today, remember your legacy."
+    ],
+    [
+      7,
+      15,
+      "Proverbs twenty verse seven declares, The just man walketh in his integrity: his children are blessed after him."
+    ],
+    [
+      16,
+      23,
+      "Heavenly Father, grant us the strength to walk with upright hearts in every small decision."
+    ],
+    [
+      24,
+      31,
+      "May the quiet truth of our daily lives build a secure foundation for our children."
+    ],
+    [
+      32,
+      40,
+      "Protect our household from deception, and let your righteousness guide our family through every single generation."
+    ],
+    [
+      41,
+      48,
+      "We pray that our steadfast faith becomes a lasting inheritance for those we love."
+    ],
+    [
+      49,
+      54,
+      "Subscribe to cover your home in daily prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "WHEN CHOOSING QUIET HONESTY",
+        "OVER EASY SHORTCUTS AT WORK TODAY",
+        "REMEMBER YOUR LEGACY"
+      ],
+      [
+        "QUIET",
+        "HONESTY",
+        "LEGACY"
+      ],
+      "PROVERBS 20:7"
+    ],
+    [
+      7,
+      15,
+      [
+        "THE JUST MAN WALKETH",
+        "IN HIS INTEGRITY",
+        "HIS CHILDREN ARE BLESSED"
+      ],
+      [
+        "JUST",
+        "INTEGRITY",
+        "BLESSED"
+      ],
+      "PROVERBS 20:7"
+    ],
+    [
+      16,
+      23,
+      [
+        "GRANT US THE STRENGTH",
+        "TO WALK WITH UPRIGHT HEARTS",
+        "IN EVERY SMALL DECISION"
+      ],
+      [
+        "STRENGTH",
+        "UPRIGHT",
+        "HEARTS"
+      ],
+      "PROVERBS 20:7"
+    ],
+    [
+      24,
+      31,
+      [
+        "MAY THE QUIET TRUTH OF OUR LIVES",
+        "BUILD A SECURE FOUNDATION",
+        "FOR OUR CHILDREN"
+      ],
+      [
+        "TRUTH",
+        "SECURE",
+        "FOUNDATION"
+      ],
+      "PROVERBS 20:7"
+    ],
+    [
+      32,
+      40,
+      [
+        "PROTECT OUR HOUSEHOLD",
+        "LET YOUR RIGHTEOUSNESS GUIDE",
+        "THROUGH EVERY GENERATION"
+      ],
+      [
+        "PROTECT",
+        "RIGHTEOUSNESS",
+        "GUIDE"
+      ],
+      "PROVERBS 20:7"
+    ],
+    [
+      41,
+      48,
+      [
+        "WE PRAY THAT OUR FAITH",
+        "BECOMES A LASTING INHERITANCE",
+        "FOR THOSE WE LOVE"
+      ],
+      [
+        "FAITH",
+        "LASTING",
+        "INHERITANCE"
+      ],
+      "PROVERBS 20:7"
+    ],
+    [
+      49,
+      54,
+      [
+        "SUBSCRIBE TO COVER YOUR HOME",
+        "IN DAILY PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "DAILY",
+        "PRAYER"
+      ],
+      "PROVERBS 20:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "remember your legacy",
+      "kind": "phrase",
+      "words": [
+        "REMEMBER",
+        "LEGACY"
+      ],
+      "hi": 1,
+      "slot": "A"
+    },
+    {
+      "a": "walketh in his integrity",
+      "kind": "phrase",
+      "words": [
+        "WALKETH",
+        "INTEGRITY"
+      ],
+      "hi": 1,
+      "slot": "B"
+    },
+    {
+      "a": "his children are blessed after him",
+      "kind": "phrase",
+      "words": [
+        "CHILDREN",
+        "BLESSED"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "walk with upright hearts",
+      "kind": "phrase",
+      "words": [
+        "UPRIGHT",
+        "HEARTS"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "build a secure foundation",
+      "kind": "phrase",
+      "words": [
+        "SECURE",
+        "FOUNDATION"
+      ],
+      "hi": 1,
+      "slot": "B"
+    },
+    {
+      "a": "let your righteousness guide",
+      "kind": "phrase",
+      "words": [
+        "RIGHTEOUSNESS",
+        "GUIDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "lasting inheritance",
+      "kind": "phrase",
+      "words": [
+        "LASTING",
+        "INHERITANCE"
+      ],
+      "hi": 1,
+      "slot": "A"
+    },
+    {
+      "a": "cover your home in daily prayer",
+      "kind": "phrase",
+      "words": [
+        "COVER",
+        "HOME"
+      ],
+      "hi": 0,
+      "slot": "B"
+    }
+  ],
+  "scripture": "Proverbs 20:7"
+}

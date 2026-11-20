@@ -1,0 +1,329 @@
+{
+  "key": "short-family2samuel7v29",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "BLESS THIS HOUSE",
+    "2 SAMUEL 7:29"
+  ],
+  "poster": [
+    "BLESS THIS HOUSE",
+    "LORD GOD HAS SPOKEN",
+    "EVERLASTING BLESSING",
+    "THE FAMILY ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit open Bible on wooden table peaceful evening home",
+    "rustic cozy living room olive branch on wooden table soft light",
+    "warm sunlight streaming through window onto open Bible on table",
+    "peaceful countryside cottage porch warm golden sunset light",
+    "cozy rustic kitchen wooden table lit candle olive branch warm glow",
+    "serene garden stone wall green foliage warm sunlight peaceful home",
+    "cozy cottage living room fireplace warm glow peaceful atmosphere"
+  ],
+  "scenes": [
+    {
+      "a": "When worry over your family's future fills your heart today, turn to God's eternal word.",
+      "img": "short-family2samuel7v29-scene-01.jpg",
+      "kicker": "2 SAMUEL 7:29",
+      "sub": "BLESS THIS HOUSEHOLD TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Therefore now let it please thee to bless the house of thy servant, that it may continue for ever before thee:",
+      "img": "short-family2samuel7v29-scene-02.jpg",
+      "kicker": "2 SAMUEL 7:29",
+      "sub": "CONTINUE FOR EVER BEFORE THEE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "for thou, O Lord GOD, hast spoken it: and with thy blessing let the house of thy servant be blessed for ever.",
+      "img": "short-family2samuel7v29-scene-03.jpg",
+      "kicker": "2 SAMUEL 7:29",
+      "sub": "BLESSED FOR EVER",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, we bring our home before You today.",
+      "img": "short-family2samuel7v29-scene-04.jpg",
+      "kicker": "HOUSEHOLD PRAYER",
+      "sub": "BRING OUR HOME BEFORE YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Bless every room, protect our family, and let Your abiding presence rule our hearts forever.",
+      "img": "short-family2samuel7v29-scene-05.jpg",
+      "kicker": "HOUSEHOLD PRAYER",
+      "sub": "RULE OUR HEARTS FOREVER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Establish our household in Your truth and shield us from all harm.",
+      "img": "short-family2samuel7v29-scene-06.jpg",
+      "kicker": "HOUSEHOLD PRAYER",
+      "sub": "ESTABLISH US IN TRUTH",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Family Altar to cover your home in prayer every day.",
+      "img": "short-family2samuel7v29-scene-07.jpg",
+      "kicker": "THE FAMILY ALTAR",
+      "sub": "COVER YOUR HOME IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "When worry over your family's future fills your heart today, turn to God's eternal word."
+    ],
+    [
+      6,
+      14,
+      "Therefore now let it please thee to bless the house of thy servant, that it may continue for ever before thee:"
+    ],
+    [
+      14,
+      22,
+      "for thou, O Lord GOD, hast spoken it: and with thy blessing let the house of thy servant be blessed for ever."
+    ],
+    [
+      22,
+      29,
+      "Heavenly Father, we bring our home before You today."
+    ],
+    [
+      29,
+      36,
+      "Bless every room, protect our family, and let Your abiding presence rule our hearts forever."
+    ],
+    [
+      36,
+      43,
+      "Establish our household in Your truth and shield us from all harm."
+    ],
+    [
+      43,
+      50,
+      "Subscribe to The Family Altar to cover your home in prayer every day."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "WHEN WORRY FILLS YOUR HEART",
+        "TURN TO GOD'S WORD"
+      ],
+      [
+        "WORRY",
+        "GOD'S",
+        "WORD"
+      ],
+      "2 SAMUEL 7:29"
+    ],
+    [
+      6,
+      14,
+      [
+        "BLESS THE HOUSE",
+        "OF THY SERVANT",
+        "BEFORE THEE FOR EVER"
+      ],
+      [
+        "BLESS",
+        "HOUSE",
+        "SERVANT"
+      ],
+      "2 SAMUEL 7:29"
+    ],
+    [
+      14,
+      22,
+      [
+        "THOU O LORD GOD",
+        "HAST SPOKEN IT",
+        "BLESSED FOR EVER"
+      ],
+      [
+        "LORD",
+        "GOD",
+        "BLESSED"
+      ],
+      "2 SAMUEL 7:29"
+    ],
+    [
+      22,
+      29,
+      [
+        "HEAVENLY FATHER",
+        "WE BRING OUR HOME",
+        "BEFORE YOU TODAY"
+      ],
+      [
+        "FATHER",
+        "HOME",
+        "TODAY"
+      ],
+      "HOUSEHOLD PRAYER"
+    ],
+    [
+      29,
+      36,
+      [
+        "BLESS EVERY ROOM",
+        "PROTECT OUR FAMILY",
+        "RULE OUR HEARTS"
+      ],
+      [
+        "PROTECT",
+        "FAMILY",
+        "RULE"
+      ],
+      "HOUSEHOLD PRAYER"
+    ],
+    [
+      36,
+      43,
+      [
+        "ESTABLISH OUR HOUSEHOLD",
+        "IN YOUR TRUTH",
+        "SHIELD US FROM HARM"
+      ],
+      [
+        "ESTABLISH",
+        "TRUTH",
+        "SHIELD"
+      ],
+      "HOUSEHOLD PRAYER"
+    ],
+    [
+      43,
+      50,
+      [
+        "SUBSCRIBE TO THE FAMILY ALTAR",
+        "COVER YOUR HOME IN PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "FAMILY",
+        "ALTAR"
+      ],
+      "THE FAMILY ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When worry over your family's future fills your heart today, turn to God's eternal word.",
+      "kind": "phrase",
+      "words": [
+        "WORRY",
+        "FUTURE",
+        "GOD'S"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Therefore now let it please thee to bless the house of thy servant, that it may continue for ever before thee:",
+      "kind": "phrase",
+      "words": [
+        "BLESS",
+        "HOUSE",
+        "SERVANT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "for thou, O Lord GOD, hast spoken it: and with thy blessing let the house of thy servant be blessed for ever.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "GOD",
+        "BLESSED"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we bring our home before You today.",
+      "kind": "phrase",
+      "words": [
+        "HEAVENLY",
+        "FATHER",
+        "HOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Bless every room, protect our family, and let Your abiding presence rule our hearts forever.",
+      "kind": "phrase",
+      "words": [
+        "PROTECT",
+        "FAMILY",
+        "PRESENCE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Establish our household in Your truth and shield us from all harm.",
+      "kind": "phrase",
+      "words": [
+        "ESTABLISH",
+        "TRUTH",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Family Altar to cover your home in prayer every day.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "FAMILY",
+        "ALTAR"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Samuel 7:29"
+}

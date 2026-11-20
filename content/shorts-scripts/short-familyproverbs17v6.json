@@ -1,0 +1,275 @@
+{
+  "key": "short-familyproverbs17v6",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "A LEGACY OF FAITH",
+    "A HOUSEHOLD PRAYER"
+  ],
+  "poster": [
+    "GOD'S DESIGN FOR",
+    "THE FAMILY HEART",
+    "PROVERBS 17:6",
+    "A PRAYER FOR YOU"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp light on open bible",
+    "soft golden light on wooden table",
+    "peaceful countryside home window view",
+    "family photo frame on mantle",
+    "olive branch resting on a table",
+    "warm fireplace in a quiet room"
+  ],
+  "scenes": [
+    {
+      "a": "If the noise of your busy home feels overwhelming right now, find your center here.",
+      "img": "short-familyproverbs17v6-scene-01.jpg",
+      "kicker": "PROVERBS 17:6",
+      "sub": "GOD'S DESIGN FOR THE FAMILY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Children’s children are the crown of old men; and the glory of children are their fathers.",
+      "img": "short-familyproverbs17v6-scene-02.jpg",
+      "kicker": "PROVERBS 17:6",
+      "sub": "THE CROWN OF THE HOME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we lift up every generation currently under our roof to Your loving care today.",
+      "img": "short-familyproverbs17v6-scene-03.jpg",
+      "kicker": "A PRAYER",
+      "sub": "LIFTING UP THE FAMILY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May the grace that binds parents to their children remain strong through every passing season.",
+      "img": "short-familyproverbs17v6-scene-04.jpg",
+      "kicker": "A PRAYER",
+      "sub": "GRACE IN EVERY SEASON",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Protect our hearts from bitterness and fill our common life with Your deep abiding love.",
+      "img": "short-familyproverbs17v6-scene-05.jpg",
+      "kicker": "A PRAYER",
+      "sub": "ABIDING IN LOVE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Please subscribe to support our channel as we seek to honor You in all things.",
+      "img": "short-familyproverbs17v6-scene-06.jpg",
+      "kicker": "THE FAMILY ALTAR",
+      "sub": "WALKING IN FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the noise of your busy home feels overwhelming right now, find your center here."
+    ],
+    [
+      8,
+      18,
+      "Children’s children are the crown of old men; and the glory of children are their fathers."
+    ],
+    [
+      18,
+      28,
+      "Lord, we lift up every generation currently under our roof to Your loving care today."
+    ],
+    [
+      28,
+      38,
+      "May the grace that binds parents to their children remain strong through every passing season."
+    ],
+    [
+      38,
+      48,
+      "Protect our hearts from bitterness and fill our common life with Your deep abiding love."
+    ],
+    [
+      48,
+      55,
+      "Please subscribe to support our channel as we seek to honor You in all things."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "NOISE OF HOME",
+        "FEELS OVERWHELMING",
+        "FIND YOUR CENTER"
+      ],
+      [
+        "OVERWHELMING"
+      ],
+      "PROVERBS 17:6"
+    ],
+    [
+      8,
+      18,
+      [
+        "CHILDREN'S CHILDREN",
+        "ARE THE CROWN",
+        "OF OLD MEN",
+        "GLORY OF CHILDREN"
+      ],
+      [
+        "CROWN"
+      ],
+      "PROVERBS 17:6"
+    ],
+    [
+      18,
+      28,
+      [
+        "LIFT UP",
+        "EVERY GENERATION",
+        "UNDER OUR ROOF",
+        "LOVING CARE"
+      ],
+      [
+        "GENERATION"
+      ],
+      "PROVERBS 17:6"
+    ],
+    [
+      28,
+      38,
+      [
+        "GRACE THAT BINDS",
+        "PARENTS AND CHILDREN",
+        "REMAIN STRONG",
+        "PASSING SEASON"
+      ],
+      [
+        "GRACE"
+      ],
+      "PROVERBS 17:6"
+    ],
+    [
+      38,
+      48,
+      [
+        "PROTECT OUR HEARTS",
+        "FROM BITTERNESS",
+        "FILL OUR LIFE",
+        "WITH LOVE"
+      ],
+      [
+        "LOVE"
+      ],
+      "PROVERBS 17:6"
+    ],
+    [
+      48,
+      55,
+      [
+        "PLEASE SUBSCRIBE",
+        "SUPPORT OUR CHANNEL",
+        "HONOR YOU",
+        "IN ALL THINGS"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "PROVERBS 17:6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the noise of your busy home feels overwhelming right now, find your center here.",
+      "kind": "phrase",
+      "words": [
+        "OVERWHELMING",
+        "CENTER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Children’s children are the crown of old men; and the glory of children are their fathers.",
+      "kind": "phrase",
+      "words": [
+        "CROWN",
+        "GLORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we lift up every generation currently under our roof to Your loving care today.",
+      "kind": "phrase",
+      "words": [
+        "GENERATION",
+        "LOVING CARE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May the grace that binds parents to their children remain strong through every passing season.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "STRONG"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Protect our hearts from bitterness and fill our common life with Your deep abiding love.",
+      "kind": "phrase",
+      "words": [
+        "PROTECT",
+        "ABIDING LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Please subscribe to support our channel as we seek to honor You in all things.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "HONOR YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 17:6"
+}
