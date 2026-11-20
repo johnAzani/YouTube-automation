@@ -12,6 +12,7 @@ import argparse
 import datetime as dt
 import json
 import os
+import re
 from pathlib import Path
 import sys
 
@@ -85,6 +86,8 @@ def collect(service, start: str, end: str, *, revenue: bool = False,
                      filters=f'video=={retention_video}')
         if retention_video else dict(status='not_requested', reason='Supply --retention-video VIDEO_ID; retention is a per-video report.')
     )
+    if retention_video:
+        reports['retention']['video_id'] = retention_video
     return dict(start_date=start, end_date=end,
                 collected_at=dt.datetime.now(dt.timezone.utc).isoformat(),
                 reports=reports, studio_exports_required=STUDIO_EXPORTS,
@@ -121,6 +124,8 @@ def main() -> int:
         ap.error('Private Analytics collection is disabled in Actions until private storage is configured.')
     if args.start > args.end:
         ap.error('--start must not be after --end')
+    if args.retention_video is not None and not re.fullmatch(r'[A-Za-z0-9_-]{11}', args.retention_video):
+        ap.error('--retention-video needs an 11-character YouTube video ID, not a URL.')
     names = ('ANALYTICS_CLIENT_ID', 'ANALYTICS_CLIENT_SECRET', 'ANALYTICS_REFRESH_TOKEN')
     if not all(os.environ.get(name) for name in names):
         ap.error('Missing ANALYTICS_* credentials. Use the separate read-only OAuth flow; never put tokens in chat.')
@@ -139,7 +144,10 @@ def main() -> int:
     except Exception:
         print('Analytics connection failed. Check credentials and API enablement; details withheld for privacy.', file=sys.stderr)
         return 1
-    write_private(report, ROOT / 'output' / 'private-analytics' / 'report.json')
+    private_dir = ROOT / 'output' / 'private-analytics'
+    if args.retention_video and report['reports']['retention']['status'] == 'collected':
+        write_private(report, private_dir / f'retention-{args.retention_video}.json')
+    write_private(report, private_dir / 'report.json')
     # Statuses only. No audience/revenue values in logs.
     for name, result in report['reports'].items():
         print(f"{name}: {result['status']}")

@@ -17,6 +17,7 @@ from datetime import date, timedelta
 import csv
 import json
 import math
+import re
 from pathlib import Path
 import sys
 
@@ -197,6 +198,7 @@ def display_private_report(path: Path = PRIVATE_REPORT) -> bool:
     if retention.get("status") == "collected" and retention.get("rows"):
         cols = [c.get("name", f"col_{i}") if isinstance(c, dict) else str(c) for i, c in enumerate(retention.get("columns", []))]
         print("\n[Audience Retention Profile]")
+        print(f"Video: {retention.get('video_id') or 'unknown (older report)'}")
         landmarks = retention_landmarks(cols, retention["rows"])
         if landmarks:
             print(format_table(["Video position", "Audience watch ratio"], landmarks))
@@ -271,7 +273,16 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--private", action="store_true", help="Display private Analytics report only")
     ap.add_argument("--public", action="store_true", help="Display public metrics snapshot only")
+    ap.add_argument("--retention-video", help="Display a saved private report for a video ID")
     args = ap.parse_args()
+    if args.retention_video is not None:
+        if args.public or not re.fullmatch(r"[A-Za-z0-9_-]{11}", args.retention_video):
+            ap.error("--retention-video needs an 11-character video ID and cannot be used with --public.")
+        path = PRIVATE_REPORT.with_name(f"retention-{args.retention_video}.json")
+        if not display_private_report(path):
+            print("No readable saved report. Collect retention for this video first.", file=sys.stderr)
+            return 1
+        return 0
 
     displayed_any = False
 

@@ -291,3 +291,10 @@ as a near-end signal and check the full curve in Studio before revising a scene.
 Missing points are not interpolated. A ratio above 100% can reflect rewatches;
 this is not a unique-viewer completion rate. Collect each channel separately
 using its own authorized local read-only account and compare like formats.
+
+Successful retention collections also save a private report per video, so
+collecting another video does not replace the previous video's baseline. To
+reopen one, run `python scripts/view_analytics.py --retention-video VIDEO_ID`.
+Recollecting the same video replaces its saved report; unsuccessful retention
+queries leave the previous successful report in place. Check the displayed
+video ID and date window before comparing.

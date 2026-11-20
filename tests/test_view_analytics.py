@@ -8,6 +8,12 @@ from scripts import view_analytics
 
 
 class ViewAnalyticsTests(unittest.TestCase):
+    def test_saved_video_report_uses_video_specific_path(self):
+        with patch("sys.argv", ["view_analytics.py", "--retention-video", "7RDX0fbIOtQ"]), \
+                patch.object(view_analytics, "display_private_report", return_value=True) as display:
+            self.assertEqual(view_analytics.main(), 0)
+        display.assert_called_once_with(view_analytics.PRIVATE_REPORT.with_name("retention-7RDX0fbIOtQ.json"))
+
     def test_retention_landmarks_include_ending_and_do_not_invent_missing_values(self):
         columns = ["audienceWatchRatio", "elapsedVideoTimeRatio"]
         rows = [[0.31, 1], [1.25, 0.01], [0.4, 0.95], [0.5, 0.95], [0.6, 0.49]]
