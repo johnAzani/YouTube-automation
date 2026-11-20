@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T13:34:39Z",
+  "generated_at": "2026-11-20T13:36:01Z",
   "monitor_generated_at": "2026-11-20T12:51:12.234843+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 550,
+    "published_total": 551,
     "published_longform": 171,
-    "published_shorts": 379,
-    "public_total": 548,
+    "published_shorts": 380,
+    "public_total": 549,
     "queued_longform": 60,
-    "queued_shorts": 94,
+    "queued_shorts": 93,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 42,
+        "published_total": 43,
         "published_longform": 13,
-        "published_shorts": 29,
-        "thumbnail_pending": 42,
-        "public_total": 42,
+        "published_shorts": 30,
+        "thumbnail_pending": 43,
+        "public_total": 43,
         "queued_longform": 6,
         "queued_other": 3,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-SHIELDEPHESIANS6V10",
-        "title": "Pray This Ephesians 6:10-11 Prayer for Divine Protection | Daily Prayer #Shorts",
+        "id": "SHORT-SHIELDZECHARIAH2V5",
+        "title": "Pray This Zechariah 2:5 Prayer for Divine Protection | A Wall Of Fire Round About #Shorts",
         "format": "short",
-        "youtube_video_id": "sgc8bMFvESA",
-        "watch_url": "https://www.youtube.com/shorts/sgc8bMFvESA",
+        "youtube_video_id": "nmDeBp074Hk",
+        "watch_url": "https://www.youtube.com/shorts/nmDeBp074Hk",
         "published_on": "2026-11-20",
-        "published_at": "2026-11-20T09:20:40Z"
+        "published_at": "2026-11-20T13:35:08Z"
       },
       "next_queued_longform": {
         "id": "0614",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldzechariah2v5",
-        "scripture": "Zechariah 2:5",
+        "short": "short-shieldpsalm27v1",
+        "scripture": "Psalm 27:1",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDZECHARIAH2V5",
+      "slug": "short-shieldzechariah2v5-protection-prayer",
+      "file": "short-shieldzechariah2v5-protection-prayer.md",
+      "title": "Pray This Zechariah 2:5 Prayer for Divine Protection | A Wall Of Fire Round About #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T13:35:08Z",
+      "youtube_video_id": "nmDeBp074Hk",
+      "watch_url": "https://www.youtube.com/shorts/nmDeBp074Hk",
+      "youtu_be_url": "https://youtu.be/nmDeBp074Hk",
+      "shorts_url": "https://www.youtube.com/shorts/nmDeBp074Hk",
+      "studio_url": "https://studio.youtube.com/video/nmDeBp074Hk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/nmDeBp074Hk/hqdefault.jpg",
+      "thumb_text": "DIVINE PROTECTION \u00b7 WALL OF FIRE",
+      "thumbnail_pending": true,
+      "duration_label": "52s",
+      "words": 658
+    },
     {
       "id": "SHORT-HEALINGACTS10V38",
       "slug": "short-healingacts10v38-restoration-prayer",
@@ -14894,17 +14918,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldzechariah2v5",
-        "file": "0000-short-shieldzechariah2v5.yml",
-        "companion_longform_id": "",
-        "scripture": "Zechariah 2:5",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-zephaniah3v17",
