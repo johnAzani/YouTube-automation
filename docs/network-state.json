@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T15:39:03Z",
+  "generated_at": "2026-11-20T15:40:49Z",
   "monitor_generated_at": "2026-11-20T12:51:12.234843+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 552,
+    "published_total": 553,
     "published_longform": 171,
-    "published_shorts": 381,
-    "public_total": 550,
+    "published_shorts": 382,
+    "public_total": 551,
     "queued_longform": 60,
-    "queued_shorts": 91,
+    "queued_shorts": 90,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -645,23 +645,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 39,
+        "published_total": 40,
         "published_longform": 11,
-        "published_shorts": 28,
+        "published_shorts": 29,
         "thumbnail_pending": 11,
-        "public_total": 39,
+        "public_total": 40,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0810",
-        "title": "Guidance for a Season of Dry Ground: Isaiah 58:11 | The Guided Path",
-        "format": "longform",
-        "youtube_video_id": "LzCEM00drpc",
-        "watch_url": "https://youtu.be/LzCEM00drpc",
+        "id": "SHORT-GUIDEDPSALM23V3",
+        "title": "Pray This Psalm 23:3 Prayer for God's Guidance | Finding Strength In Him #Shorts",
+        "format": "short",
+        "youtube_video_id": "NifES9alYAU",
+        "watch_url": "https://www.youtube.com/shorts/NifES9alYAU",
         "published_on": "2026-11-20",
-        "published_at": "2026-11-20T12:20:17Z"
+        "published_at": "2026-11-20T15:39:54Z"
       },
       "next_queued_longform": {
         "id": "0811",
@@ -670,8 +670,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedpsalm23v3",
-        "scripture": "Psalm 23:3",
+        "short": "short-guidedromans12v2",
+        "scripture": "Romans 12:2",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDPSALM23V3",
+      "slug": "short-guidedpsalm23v3-guidance-prayer",
+      "file": "short-guidedpsalm23v3-guidance-prayer.md",
+      "title": "Pray This Psalm 23:3 Prayer for God's Guidance | Finding Strength In Him #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T15:39:54Z",
+      "youtube_video_id": "NifES9alYAU",
+      "watch_url": "https://www.youtube.com/shorts/NifES9alYAU",
+      "youtu_be_url": "https://youtu.be/NifES9alYAU",
+      "shorts_url": "https://www.youtube.com/shorts/NifES9alYAU",
+      "studio_url": "https://studio.youtube.com/video/NifES9alYAU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/NifES9alYAU/hqdefault.jpg",
+      "thumb_text": "RESTORE \u00b7 AND",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 615
+    },
     {
       "id": "SHORT-PROVISIONLUKE5V4",
       "slug": "short-provisionluke5v4-stewardship-prayer",
@@ -14766,17 +14790,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedpsalm23v3",
-        "file": "0000-short-guidedpsalm23v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 23:3",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedromans12v2",
