@@ -1,0 +1,277 @@
+{
+  "key": "short-middaypsalm71v16",
+  "channel": "prayer3",
+  "psalm": 71,
+  "title": [
+    "GOD IS YOUR STRENGTH",
+    "IN THIS MIDDAY HOUR"
+  ],
+  "poster": [
+    "STRENGTH IN",
+    "THE MIDDAY",
+    "QUIET",
+    "PSALM 71:16"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sun rays through wooden blinds",
+    "empty workspace with soft light",
+    "calm wheat field under high noon sun",
+    "dust motes dancing in bright window light",
+    "clear blue sky over a still meadow",
+    "open leather journal on a desk"
+  ],
+  "scenes": [
+    {
+      "a": "That decision sitting heavy on your desk requires more than your own tired resolve today.",
+      "img": "short-middaypsalm71v16-scene-01.jpg",
+      "kicker": "PSALM 71:16",
+      "sub": "YOUR OWN RESOLVE IS NOT ENOUGH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "I will go in the strength of the Lord GOD: I will make mention of thy righteousness, even of thine only.",
+      "img": "short-middaypsalm71v16-scene-02.jpg",
+      "kicker": "HIS STRENGTH",
+      "sub": "HE IS THE ONLY WAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, remove the desire to rely upon my limited wisdom when yours is infinite and perfect.",
+      "img": "short-middaypsalm71v16-scene-03.jpg",
+      "kicker": "LIMITLESS GRACE",
+      "sub": "LAY DOWN YOUR LIMITED WISDOM",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Let this midday reset remind me that I walk not in my ability but in yours.",
+      "img": "short-middaypsalm71v16-scene-04.jpg",
+      "kicker": "WALK IN HIM",
+      "sub": "HE GUIDES YOUR STEPS",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "May the truth of your righteousness be the anchor that holds me through this coming afternoon.",
+      "img": "short-middaypsalm71v16-scene-05.jpg",
+      "kicker": "ANCHORED IN TRUTH",
+      "sub": "STEADY IN THE AFTERNOON",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "I surrender my agenda to your sovereign plan, finding peace in your presence right now, Amen.",
+      "img": "short-middaypsalm71v16-scene-06.jpg",
+      "kicker": "SURRENDER",
+      "sub": "FIND PEACE IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That decision sitting heavy on your desk requires more than your own tired resolve today."
+    ],
+    [
+      8,
+      18,
+      "I will go in the strength of the Lord GOD: I will make mention of thy righteousness, even of thine only."
+    ],
+    [
+      18,
+      26,
+      "Lord, remove the desire to rely upon my limited wisdom when yours is infinite and perfect."
+    ],
+    [
+      26,
+      34,
+      "Let this midday reset remind me that I walk not in my ability but in yours."
+    ],
+    [
+      34,
+      42,
+      "May the truth of your righteousness be the anchor that holds me through this coming afternoon."
+    ],
+    [
+      42,
+      50,
+      "I surrender my agenda to your sovereign plan, finding peace in your presence right now, Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT DECISION SITTING",
+        "HEAVY ON YOUR DESK",
+        "REQUIRES MORE THAN YOUR",
+        "OWN TIRED RESOLVE"
+      ],
+      [
+        "TIRED RESOLVE"
+      ],
+      "PSALM 71:16"
+    ],
+    [
+      8,
+      18,
+      [
+        "I WILL GO",
+        "IN THE STRENGTH",
+        "OF THE LORD GOD",
+        "HIS RIGHTEOUSNESS ALONE"
+      ],
+      [
+        "STRENGTH"
+      ],
+      "PSALM 71:16"
+    ],
+    [
+      18,
+      26,
+      [
+        "REMOVE THE DESIRE",
+        "TO RELY UPON",
+        "MY LIMITED WISDOM",
+        "YOURS IS INFINITE"
+      ],
+      [
+        "LIMITED WISDOM"
+      ],
+      "PSALM 71:16"
+    ],
+    [
+      26,
+      34,
+      [
+        "REMIND ME THAT",
+        "I WALK NOT",
+        "IN MY ABILITY",
+        "BUT IN YOURS"
+      ],
+      [
+        "HIS ABILITY"
+      ],
+      "PSALM 71:16"
+    ],
+    [
+      34,
+      42,
+      [
+        "MAY THE TRUTH",
+        "BE THE ANCHOR",
+        "THAT HOLDS ME",
+        "THROUGH THIS AFTERNOON"
+      ],
+      [
+        "ANCHOR"
+      ],
+      "PSALM 71:16"
+    ],
+    [
+      42,
+      50,
+      [
+        "I SURRENDER MY",
+        "AGENDA TO YOUR",
+        "PLAN, FINDING PEACE",
+        "IN YOUR PRESENCE"
+      ],
+      [
+        "SURRENDER"
+      ],
+      "PSALM 71:16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That decision sitting heavy on your desk requires more than your own tired resolve today.",
+      "kind": "phrase",
+      "words": [
+        "TIRED",
+        "RESOLVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will go in the strength of the Lord GOD: I will make mention of thy righteousness, even of thine only.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, remove the desire to rely upon my limited wisdom when yours is infinite and perfect.",
+      "kind": "phrase",
+      "words": [
+        "LIMITED",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let this midday reset remind me that I walk not in my ability but in yours.",
+      "kind": "phrase",
+      "words": [
+        "WALK",
+        "IN",
+        "YOURS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May the truth of your righteousness be the anchor that holds me through this coming afternoon.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "HOLDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I surrender my agenda to your sovereign plan, finding peace in your presence right now, Amen.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 71:16"
+}

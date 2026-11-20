@@ -1,0 +1,281 @@
+{
+  "key": "short-middaypsalm20v7",
+  "channel": "prayer3",
+  "psalm": 20,
+  "title": [
+    "TRUST IN GOD",
+    "PSALM 20:7 MIDDAY PRAYER"
+  ],
+  "poster": [
+    "THE MIDDAY WATCH",
+    "PSALM 20:7",
+    "SOME TRUST IN CHARIOTS",
+    "WE REMEMBER THE LORD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright midday sunlight streaming onto empty quiet wooden desk setup",
+    "high midday sun shining brightly over wide open grass field horizon",
+    "calm sunbeam filtering through glass office window at noon",
+    "quiet cozy room bathed in bright noon sunlight clear shadow",
+    "scenic mountain ridge under glowing noon clear sky",
+    "calm still water under direct midday sunlight soft beam"
+  ],
+  "scenes": [
+    {
+      "a": "You are staring at that bank balance right now, wondering how you will overcome.",
+      "img": "short-middaypsalm20v7-scene-01.jpg",
+      "kicker": "MIDDAY WATCH",
+      "sub": "WHERE DO YOU PLACE YOUR TRUST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Scripture says, \"Some trust in chariots, and some in horses: but we will remember the name of the LORD our God.\"",
+      "img": "short-middaypsalm20v7-scene-02.jpg",
+      "kicker": "PSALM 20:7",
+      "sub": "WE REMEMBER THE NAME OF THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, when financial pressures or human plans fail to secure our hearts, reorient our spirit toward You.",
+      "img": "short-middaypsalm20v7-scene-03.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "REORIENT YOUR SPIRIT TODAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "We lay down our reliance on self-made shields and temporary strength in this middle hour.",
+      "img": "short-middaypsalm20v7-scene-04.jpg",
+      "kicker": "SURRENDER CONTROL",
+      "sub": "LAY DOWN YOUR HEAVY BURDENS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Anchor our mind in Your steadfast presence, knowing Your name carries more power than any worldly strategy.",
+      "img": "short-middaypsalm20v7-scene-05.jpg",
+      "kicker": "STEADFAST PEACE",
+      "sub": "HIS NAME IS OUR STRONG TOWER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Guard our decisions today with divine wisdom, grace, and quiet confidence. Subscribe to pray with us every day at noon.",
+      "img": "short-middaypsalm20v7-scene-06.jpg",
+      "kicker": "PAUSE AND PRAY",
+      "sub": "JOIN US DAILY AT NOON",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "You are staring at that bank balance right now, wondering how you will overcome."
+    ],
+    [
+      8,
+      18,
+      "Scripture says, \"Some trust in chariots, and some in horses: but we will remember the name of the LORD our God.\""
+    ],
+    [
+      18,
+      28,
+      "Lord, when financial pressures or human plans fail to secure our hearts, reorient our spirit toward You."
+    ],
+    [
+      28,
+      38,
+      "We lay down our reliance on self-made shields and temporary strength in this middle hour."
+    ],
+    [
+      38,
+      48,
+      "Anchor our mind in Your steadfast presence, knowing Your name carries more power than any worldly strategy."
+    ],
+    [
+      48,
+      58,
+      "Guard our decisions today with divine wisdom, grace, and quiet confidence. Subscribe to pray with us every day at noon."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "YOU ARE STARING AT THAT",
+        "BANK BALANCE RIGHT NOW",
+        "WONDERING HOW YOU WILL OVERCOME"
+      ],
+      [
+        "BANK BALANCE",
+        "OVERCOME"
+      ],
+      "MIDDAY WATCH"
+    ],
+    [
+      8,
+      18,
+      [
+        "SOME TRUST IN CHARIOTS",
+        "AND SOME IN HORSES",
+        "BUT WE WILL REMEMBER THE NAME",
+        "OF THE LORD OUR GOD"
+      ],
+      [
+        "CHARIOTS",
+        "HORSES",
+        "REMEMBER",
+        "LORD OUR GOD"
+      ],
+      "PSALM 20:7"
+    ],
+    [
+      18,
+      28,
+      [
+        "WHEN FINANCIAL PRESSURES FAIL",
+        "TO SECURE OUR HEARTS",
+        "REORIENT OUR SPIRIT TOWARD YOU"
+      ],
+      [
+        "FINANCIAL PRESSURES",
+        "REORIENT OUR SPIRIT"
+      ],
+      "MIDDAY PRAYER"
+    ],
+    [
+      28,
+      38,
+      [
+        "WE LAY DOWN OUR RELIANCE",
+        "ON SELF-MADE SHIELDS",
+        "AND TEMPORARY STRENGTH"
+      ],
+      [
+        "LAY DOWN",
+        "TEMPORARY STRENGTH"
+      ],
+      "SURRENDER CONTROL"
+    ],
+    [
+      38,
+      48,
+      [
+        "ANCHOR OUR MIND IN YOUR",
+        "STEADFAST PRESENCE",
+        "MORE POWER THAN ANY STRATEGY"
+      ],
+      [
+        "STEADFAST PRESENCE",
+        "MORE POWER"
+      ],
+      "STEADFAST PEACE"
+    ],
+    [
+      48,
+      58,
+      [
+        "GUARD OUR DECISIONS TODAY",
+        "WITH DIVINE WISDOM AND GRACE",
+        "SUBSCRIBE TO PRAY DAILY AT NOON"
+      ],
+      [
+        "DIVINE WISDOM",
+        "SUBSCRIBE"
+      ],
+      "PAUSE AND PRAY"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You are staring at that bank balance right now, wondering how you will overcome.",
+      "kind": "phrase",
+      "words": [
+        "BANK BALANCE",
+        "OVERCOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture says, \"Some trust in chariots, and some in horses: but we will remember the name of the LORD our God.\"",
+      "kind": "phrase",
+      "words": [
+        "CHARIOTS",
+        "HORSES",
+        "REMEMBER",
+        "LORD OUR GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when financial pressures or human plans fail to secure our hearts, reorient our spirit toward You.",
+      "kind": "phrase",
+      "words": [
+        "FINANCIAL PRESSURES",
+        "REORIENT OUR SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We lay down our reliance on self-made shields and temporary strength in this middle hour.",
+      "kind": "phrase",
+      "words": [
+        "LAY DOWN",
+        "TEMPORARY STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Anchor our mind in Your steadfast presence, knowing Your name carries more power than any worldly strategy.",
+      "kind": "phrase",
+      "words": [
+        "STEADFAST PRESENCE",
+        "MORE POWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guard our decisions today with divine wisdom, grace, and quiet confidence. Subscribe to pray with us every day at noon.",
+      "kind": "phrase",
+      "words": [
+        "DIVINE WISDOM",
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 20:7"
+}
