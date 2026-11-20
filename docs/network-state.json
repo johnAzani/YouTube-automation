@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T13:29:30Z",
+  "generated_at": "2026-11-20T13:31:22Z",
   "monitor_generated_at": "2026-11-20T12:51:12.234843+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 548,
+    "published_total": 549,
     "published_longform": 171,
-    "published_shorts": 377,
-    "public_total": 546,
+    "published_shorts": 378,
+    "public_total": 547,
     "queued_longform": 60,
-    "queued_shorts": 96,
+    "queued_shorts": 95,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 81,
+        "published_total": 82,
         "published_longform": 29,
-        "published_shorts": 52,
+        "published_shorts": 53,
         "thumbnail_pending": 1,
-        "public_total": 80,
+        "public_total": 81,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0072",
-        "title": "Giving God Your Day: Proverbs 16:9 | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "FPsXWsypdSQ",
-        "watch_url": "https://youtu.be/FPsXWsypdSQ",
+        "id": "SHORT-MORNINGPSALM104V22",
+        "title": "Say This Psalm 104:22-23 Prayer at Sunrise | Finding Purpose Today #Shorts",
+        "format": "short",
+        "youtube_video_id": "z3b6gvUsC2M",
+        "watch_url": "https://www.youtube.com/shorts/z3b6gvUsC2M",
         "published_on": "2026-11-20",
-        "published_at": "2026-11-20T10:11:11Z"
+        "published_at": "2026-11-20T13:30:34Z"
       },
       "next_queued_longform": {
         "id": "0073",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm104v22",
-        "scripture": "Psalm 104:22-23",
+        "short": "short-morningpsalm143v10",
+        "scripture": "Psalm 143:10",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM104V22",
+      "slug": "short-morningpsalm104v22-sunrise-prayer",
+      "file": "short-morningpsalm104v22-sunrise-prayer.md",
+      "title": "Say This Psalm 104:22-23 Prayer at Sunrise | Finding Purpose Today #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T13:30:34Z",
+      "youtube_video_id": "z3b6gvUsC2M",
+      "watch_url": "https://www.youtube.com/shorts/z3b6gvUsC2M",
+      "youtu_be_url": "https://youtu.be/z3b6gvUsC2M",
+      "shorts_url": "https://www.youtube.com/shorts/z3b6gvUsC2M",
+      "studio_url": "https://studio.youtube.com/video/z3b6gvUsC2M/edit",
+      "thumb_url": "https://i.ytimg.com/vi/z3b6gvUsC2M/hqdefault.jpg",
+      "thumb_text": "FINDING PURPOSE \u00b7 IN THE WORK",
+      "thumbnail_pending": false,
+      "duration_label": "41s",
+      "words": 591
+    },
     {
       "id": "SHORT-MIDDAY1KINGS19V5",
       "slug": "short-midday1kings19v5-midday-prayer",
@@ -14758,17 +14782,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningpsalm104v22",
-        "file": "0000-short-morningpsalm104v22.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 104:22-23",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm143v10",
