@@ -416,6 +416,10 @@ THE PRAYER — give the listener words to pray with you:
 - Make the title and poster promise something the narration actually prays for.
   Once the verse has been read, move straight into prayer; no second hook or
   recap. Let the petition finish before the single subscribe invitation.
+- Silently read the captions in order before returning. Fix lines that sound
+  breathless or repeat an idea, while preserving exact Scripture and the word
+  and timing requirements. The last prayer line should finish the thought in
+  the opening even for a viewer who never watches the companion long-form.
 - Keep the petition honest even if nothing changes today. Don't tell listeners
   what they must feel or imply that subscribing makes the prayer more effective.
 

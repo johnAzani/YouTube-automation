@@ -68,3 +68,19 @@ steady your words when it’s time to answer.”
 Check whether the earlier verse and petition make the midday prayer easier to
 join without losing the quiet pace. Use the revised script for both narration
 and captions; do not reuse either from an older render.
+
+## What happens automatically on subsequent authoring runs
+
+For both formats, the writer checks the spoken flow before returning its
+script: the packaging should match the prayer, the petition should arrive
+early, and engagement requests should not interrupt the ending. The
+`[prayer-pacing]` authoring log points out long sentences, repeated prose and
+possible keep-watching cues. These are review hints, not upload blockers or
+retention predictions; for example, a repeated Scripture quotation may be
+intentional. They add no model calls or changes to upload frequency.
+
+Use the first releases after rollout as a cohort: compare within channel and
+format against similar earlier releases at the same age, not a mixture of new
+and old videos at different ages. Record views, first-30-second retention for
+long-form (stayed-to-watch for Shorts), and watch ratio near the end when data
+is available. See [the analytics guide](ANALYTICS.md) for retention comparison.
