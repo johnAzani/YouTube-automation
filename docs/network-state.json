@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T02:05:44Z",
+  "generated_at": "2026-11-20T02:12:45Z",
   "monitor_generated_at": "2026-11-19T22:14:33.904388+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 528,
-    "published_longform": 166,
-    "published_shorts": 362,
-    "public_total": 526,
-    "queued_longform": 54,
-    "queued_shorts": 72,
+    "published_total": 530,
+    "published_longform": 167,
+    "published_shorts": 363,
+    "public_total": 528,
+    "queued_longform": 53,
+    "queued_shorts": 71,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,33 +509,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 39,
-        "published_longform": 12,
-        "published_shorts": 27,
-        "thumbnail_pending": 39,
-        "public_total": 39,
-        "queued_longform": 6,
+        "published_total": 41,
+        "published_longform": 13,
+        "published_shorts": 28,
+        "thumbnail_pending": 41,
+        "public_total": 41,
+        "queued_longform": 5,
         "queued_other": 3,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM97V10",
-        "title": "Pray This Psalm 97:10 Prayer for Divine Protection | A Covering In Hostility #Shorts",
-        "format": "short",
-        "youtube_video_id": "bzro3wi1pAc",
-        "watch_url": "https://www.youtube.com/shorts/bzro3wi1pAc",
-        "published_on": "2026-11-19",
-        "published_at": "2026-11-19T21:10:03Z"
-      },
-      "next_queued_longform": {
         "id": "0612",
         "title": "The Eternal God Is Thy Refuge: Deuteronomy 33:27 | The Covenant Shield",
-        "words": 1626,
+        "format": "longform",
+        "youtube_video_id": "VI5SZ7x-uwU",
+        "watch_url": "https://youtu.be/VI5SZ7x-uwU",
+        "published_on": "2026-11-20",
+        "published_at": "2026-11-20T02:11:53Z"
+      },
+      "next_queued_longform": {
+        "id": "0614",
+        "title": "As the Mountains Are Round About Jerusalem: Psalm 125:2",
+        "words": 2005,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shielddeuteronomy33v27",
-        "scripture": "Deuteronomy 33:27",
+        "short": "short-shieldpsalm27v1",
+        "scripture": "Psalm 27:1",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0612",
+      "slug": "eternal-refuge-deuteronomy-33-27-the-covenant-shield",
+      "file": "0612-eternal-refuge-deuteronomy-33-27-the-covenant-shield.md",
+      "title": "The Eternal God Is Thy Refuge: Deuteronomy 33:27 | The Covenant Shield",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T02:11:53Z",
+      "youtube_video_id": "VI5SZ7x-uwU",
+      "watch_url": "https://youtu.be/VI5SZ7x-uwU",
+      "youtu_be_url": "https://youtu.be/VI5SZ7x-uwU",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/VI5SZ7x-uwU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/VI5SZ7x-uwU/hqdefault.jpg",
+      "thumb_text": "ETERNAL REFUGE",
+      "thumbnail_pending": true,
+      "duration_label": "~11 min",
+      "words": 1626
+    },
+    {
       "id": "0218",
       "slug": "when-you-need-a-defender-psalm-144",
       "file": "0218-when-you-need-a-defender-psalm-144.md",
@@ -796,6 +820,30 @@
       "thumbnail_pending": true,
       "duration_label": "51s",
       "words": 651
+    },
+    {
+      "id": "SHORT-SHIELDDEUTERONOMY33V27",
+      "slug": "short-shielddeuteronomy33v27-protection-prayer",
+      "file": "short-shielddeuteronomy33v27-protection-prayer.md",
+      "title": "Pray This Deuteronomy 33:27 Prayer for Divine Protection | Your Refuge Is Eternal #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T01:30:38Z",
+      "youtube_video_id": "QnUIdu6aDMA",
+      "watch_url": "https://www.youtube.com/shorts/QnUIdu6aDMA",
+      "youtu_be_url": "https://youtu.be/QnUIdu6aDMA",
+      "shorts_url": "https://www.youtube.com/shorts/QnUIdu6aDMA",
+      "studio_url": "https://studio.youtube.com/video/QnUIdu6aDMA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/QnUIdu6aDMA/hqdefault.jpg",
+      "thumb_text": "REST IN HIS ARMS \u00b7 UNDER HIS PROTECTION",
+      "thumbnail_pending": true,
+      "duration_label": "53s",
+      "words": 664
     },
     {
       "id": "SHORT-HEALINGJEREMIAH33V6",
@@ -13858,19 +13906,6 @@
         "words": 1762
       },
       {
-        "id": "0612",
-        "slug": "eternal-refuge-deuteronomy-33-27-the-covenant-shield",
-        "file": "0612-eternal-refuge-deuteronomy-33-27-the-covenant-shield.md",
-        "title": "The Eternal God Is Thy Refuge: Deuteronomy 33:27 | The Covenant Shield",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1626
-      },
-      {
         "id": "0614",
         "slug": "as-the-mountains-are-round-about-jerusalem-psalm-125-2-the-covenant-shield",
         "file": "0614-as-the-mountains-are-round-about-jerusalem-psalm-125-2-the-covenant-shield.md",
@@ -14629,17 +14664,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shielddeuteronomy33v27",
-        "file": "0612-short-shielddeuteronomy33v27.yml",
-        "companion_longform_id": "0612",
-        "scripture": "Deuteronomy 33:27",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm27v1",

@@ -2,7 +2,7 @@
 id: '0612'
 title: 'The Eternal God Is Thy Refuge: Deuteronomy 33:27 | The Covenant Shield'
 slug: eternal-refuge-deuteronomy-33-27-the-covenant-shield
-status: approved
+status: published
 channel: prayer8
 privacy: public
 format: longform
@@ -74,6 +74,15 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-20"
+published_at: "2026-11-20T02:11:53Z"
+youtube_video_id: "VI5SZ7x-uwU"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — The Strong Tower of Eternal Refuge
