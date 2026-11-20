@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T01:24:23Z",
+  "generated_at": "2026-11-20T01:24:47Z",
   "monitor_generated_at": "2026-11-19T22:14:33.904388+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 520,
+    "published_total": 521,
     "published_longform": 165,
-    "published_shorts": 355,
-    "public_total": 518,
+    "published_shorts": 356,
+    "public_total": 519,
     "queued_longform": 55,
-    "queued_shorts": 79,
+    "queued_shorts": 78,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 78,
+        "published_total": 79,
         "published_longform": 28,
-        "published_shorts": 50,
+        "published_shorts": 51,
         "thumbnail_pending": 1,
-        "public_total": 77,
+        "public_total": 78,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MORNINGJOB38V12",
-        "title": "Say This Job 38:12 Prayer at Sunrise | Finding Strength At Dawn #Shorts",
+        "id": "SHORT-MORNINGPHILIPPIANS1V6",
+        "title": "Say This Philippians 1:6 Prayer at Sunrise | Faith In The Morning #Shorts",
         "format": "short",
-        "youtube_video_id": "72rKTNGQG5E",
-        "watch_url": "https://www.youtube.com/shorts/72rKTNGQG5E",
-        "published_on": "2026-11-19",
-        "published_at": "2026-11-19T20:58:45Z"
+        "youtube_video_id": "yqJBjD9vWCg",
+        "watch_url": "https://www.youtube.com/shorts/yqJBjD9vWCg",
+        "published_on": "2026-11-20",
+        "published_at": "2026-11-20T01:23:56Z"
       },
       "next_queued_longform": {
         "id": "0072",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningphilippians1v6",
-        "scripture": "Philippians 1:6",
+        "short": "short-morningpsalm104v22",
+        "scripture": "Psalm 104:22-23",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPHILIPPIANS1V6",
+      "slug": "short-morningphilippians1v6-sunrise-prayer",
+      "file": "short-morningphilippians1v6-sunrise-prayer.md",
+      "title": "Say This Philippians 1:6 Prayer at Sunrise | Faith In The Morning #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T01:23:56Z",
+      "youtube_video_id": "yqJBjD9vWCg",
+      "watch_url": "https://www.youtube.com/shorts/yqJBjD9vWCg",
+      "youtu_be_url": "https://youtu.be/yqJBjD9vWCg",
+      "shorts_url": "https://www.youtube.com/shorts/yqJBjD9vWCg",
+      "studio_url": "https://studio.youtube.com/video/yqJBjD9vWCg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/yqJBjD9vWCg/hqdefault.jpg",
+      "thumb_text": "STILLNESS AT DAWN \u00b7 A PROMISE FOR YOU",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 611
+    },
     {
       "id": "SHORT-PSALM119V55",
       "slug": "short-psalm119v55-pre-sleep-prayer",
@@ -13955,17 +13979,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningphilippians1v6",
-        "file": "0000-short-morningphilippians1v6.yml",
-        "companion_longform_id": "",
-        "scripture": "Philippians 1:6",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm104v22",
