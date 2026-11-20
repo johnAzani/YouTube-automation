@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-20T03:46:10.363980+00:00",
+  "generated_at": "2026-11-20T09:58:55.161717+00:00",
   "as_of": "2026-11-20",
-  "sufficient_data": false,
-  "measured_longform_videos": 2,
+  "sufficient_data": true,
+  "measured_longform_videos": 3,
   "total_longform_videos": 14,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 73,
+    "receipt_video_ids": 74,
     "matched_video_ids": 50,
-    "longform_below_view_threshold": 12,
+    "longform_below_view_threshold": 11,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 2,
     "minimum_views": 25,
@@ -22,16 +22,16 @@
     {
       "theme": "anxiety_peace",
       "videos": 5,
-      "measured_videos": 1,
-      "avg_score": 0.875,
-      "avg_engagement": 0.06,
+      "measured_videos": 2,
+      "avg_score": 0.6813,
+      "avg_engagement": 0.0451,
       "top_scripture": "Isaiah 26"
     },
     {
       "theme": "protection",
       "videos": 2,
       "measured_videos": 1,
-      "avg_score": 0.6111,
+      "avg_score": 0.5958,
       "avg_engagement": 0.08,
       "top_scripture": "Psalm 91"
     },
@@ -69,23 +69,23 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 31,
+    "measured_shorts": 30,
     "total_shorts": 36,
     "sufficient_data": true,
-    "avg_views": 86.1,
-    "median_views": 78,
-    "total_views": 2670,
+    "avg_views": 87.6,
+    "median_views": 79,
+    "total_views": 2627,
     "minimum_age_days": 2,
     "by_book": {
       "1 peter": {
         "shorts": 1,
         "avg_views": 120.0,
-        "ratio": 1.131
+        "ratio": 1.123
       },
       "2 timothy": {
         "shorts": 1,
         "avg_views": 77.0,
-        "ratio": 0.965
+        "ratio": 0.96
       },
       "deuteronomy": {
         "shorts": 1,
@@ -94,73 +94,69 @@
       },
       "isaiah": {
         "shorts": 4,
-        "avg_views": 79.0,
-        "ratio": 0.945
+        "avg_views": 79.5,
+        "ratio": 0.939
       },
       "jeremiah": {
         "shorts": 1,
-        "avg_views": 9.0,
-        "ratio": 0.701
+        "avg_views": 10.0,
+        "ratio": 0.705
       },
       "john": {
         "shorts": 2,
         "avg_views": 207.5,
-        "ratio": 1.705
+        "ratio": 1.685
       },
       "matthew": {
         "shorts": 3,
         "avg_views": 83.7,
-        "ratio": 0.983
+        "ratio": 0.973
       },
       "philippians": {
         "shorts": 2,
         "avg_views": 86.5,
-        "ratio": 1.002
-      },
-      "proverbs": {
-        "shorts": 1,
-        "avg_views": 46.0,
-        "ratio": 0.845
+        "ratio": 0.994
       },
       "psalm": {
         "shorts": 15,
         "avg_views": 83.9,
-        "ratio": 0.977
+        "ratio": 0.963
       }
     },
     "by_theme": {
       "anxiety_peace": {
-        "shorts": 11,
-        "avg_views": 103.1,
-        "ratio": 1.167
+        "shorts": 10,
+        "avg_views": 109.0,
+        "ratio": 1.204
       },
       "daily_guidance_wisdom": {
         "shorts": 4,
         "avg_views": 55.8,
-        "ratio": 0.765
+        "ratio": 0.758
       },
       "midday_strength_endurance": {
         "shorts": 2,
         "avg_views": 82.0,
-        "ratio": 0.976
+        "ratio": 0.968
       },
       "morning_mercy_renewal": {
         "shorts": 2,
         "avg_views": 89.5,
-        "ratio": 1.02
+        "ratio": 1.011
       },
       "peace_rest": {
         "shorts": 12,
-        "avg_views": 80.8,
-        "ratio": 0.947
+        "avg_views": 80.9,
+        "ratio": 0.935
       }
     },
     "guidance": [
-      "Shorts: John runs 1.7x this channel's average Short (86 views over 31 Shorts); its passages are written first."
+      "Shorts: John runs 1.7x this channel's average Short (88 views over 30 Shorts); its passages are written first."
     ]
   },
   "guidance": [
-    "Only 2 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
+    "'anxiety_peace' is the strongest measured theme (avg score 0.68, 2 measured video(s)). Favour it when choosing the next devotional.",
+    "'protection' is currently the weakest measured theme; deprioritise it until the audience signal changes."
   ],
   "cost_lock": "$0.00 \u2014 public Data API statistics only; no new quota or secret.",
   "privacy": "Aggregate theme scores only; raw per-video snapshot stays an Actions artifact.",
