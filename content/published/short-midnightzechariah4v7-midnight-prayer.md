@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["WHO ART THOU", "O GREAT MOUNTAIN", "BECOME A PLAIN", "AT MIDNIGHT"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-27T02:14:08Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 The immovable obstacle towering over your midnight thoughts will not survive this prayer. Who art thou, O great mountain? before Zerubbabel thou shalt become a plain: and he shall bring forth the headstone thereof with shoutings, crying, Grace, grace unto it. Lord, we surrender every overwhelming problem keeping watch against our peace tonight. What feels like a permanent cliff in the dark becomes flat earth before Your mighty presence. Dissolve every shadow of defeat, silence the accusations in this quiet room, and release fresh strength over this weary soul. May divine mercy guard your heart with unshakeable stillness. Subscribe to stand with The Midnight Watch in prayer.

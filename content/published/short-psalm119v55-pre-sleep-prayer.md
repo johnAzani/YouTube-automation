@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["WHEN SLEEP", "FEELS DISTANT", "CALL UPON", "HIS NAME"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 As midnight shadows stretch across your dark ceiling and sleep delays, recall who holds you. The psalmist whispers, I have remembered thy name, O LORD, in the night, and have kept thy law. Lord, as quiet hours settle upon this weary room, I speak Your holy name into every hidden fear. Clear away the racing thoughts of tomorrow and quiet the restless aches of today. Your steadfast truth anchors my heart when the world sleeps. Wrap this soul in heavenly peace, guarding every breath until morning light breaks. Rest deeply tonight in His unfailing presence, held safe in everlasting grace. Subscribe to rest in daily prayer.

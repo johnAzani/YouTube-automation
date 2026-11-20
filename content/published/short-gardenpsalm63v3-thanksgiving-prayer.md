@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["PSALM 63:3-4", "LOVINGKINDNESS", "BETTER THAN LIFE", "THE PRAISE GARDEN"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-27T02:14:17Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If a quiet sorrow is shadowing your heart right now, lift your eyes to God. Because thy lovingkindness is better than life, my lips shall praise thee. Thus will I bless thee while I live: I will lift up my hands in thy name. Lord, we thank You that Your mercy is sweeter than any earthly joy. When our spirits grow faint, Your steadfast presence restores us. We offer You our praise with joyful hearts, trusting Your tender care in every moment. Strengthen us today to walk faithfully in Your abundant grace and truth. Subscribe to The Praise Garden for daily thanksgiving, praise, and worship.
