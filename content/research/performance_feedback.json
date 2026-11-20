@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-19T10:16:13.862232+00:00",
-  "as_of": "2026-11-19",
+  "generated_at": "2026-11-20T03:46:10.363980+00:00",
+  "as_of": "2026-11-20",
   "sufficient_data": false,
   "measured_longform_videos": 2,
-  "total_longform_videos": 13,
+  "total_longform_videos": 14,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 68,
+    "receipt_video_ids": 73,
     "matched_video_ids": 50,
-    "longform_below_view_threshold": 11,
+    "longform_below_view_threshold": 12,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 2,
     "minimum_views": 25,
@@ -21,17 +21,17 @@
   "themes": [
     {
       "theme": "anxiety_peace",
-      "videos": 4,
+      "videos": 5,
       "measured_videos": 1,
-      "avg_score": 0.9464,
-      "avg_engagement": 0.0714,
+      "avg_score": 0.875,
+      "avg_engagement": 0.06,
       "top_scripture": "Isaiah 26"
     },
     {
       "theme": "protection",
       "videos": 2,
       "measured_videos": 1,
-      "avg_score": 0.6116,
+      "avg_score": 0.6111,
       "avg_engagement": 0.08,
       "top_scripture": "Psalm 91"
     },
@@ -69,89 +69,94 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 32,
-    "total_shorts": 37,
+    "measured_shorts": 31,
+    "total_shorts": 36,
     "sufficient_data": true,
-    "avg_views": 94.0,
-    "median_views": 80,
-    "total_views": 3008,
+    "avg_views": 86.1,
+    "median_views": 78,
+    "total_views": 2670,
     "minimum_age_days": 2,
     "by_book": {
       "1 peter": {
         "shorts": 1,
         "avg_views": 120.0,
-        "ratio": 1.092
+        "ratio": 1.131
       },
       "2 timothy": {
         "shorts": 1,
         "avg_views": 77.0,
-        "ratio": 0.94
+        "ratio": 0.965
+      },
+      "deuteronomy": {
+        "shorts": 1,
+        "avg_views": 5.0,
+        "ratio": 0.686
       },
       "isaiah": {
         "shorts": 4,
         "avg_views": 79.0,
-        "ratio": 0.894
+        "ratio": 0.945
+      },
+      "jeremiah": {
+        "shorts": 1,
+        "avg_views": 9.0,
+        "ratio": 0.701
       },
       "john": {
         "shorts": 2,
         "avg_views": 207.5,
-        "ratio": 1.604
+        "ratio": 1.705
       },
       "matthew": {
         "shorts": 3,
-        "avg_views": 82.7,
-        "ratio": 0.928
+        "avg_views": 83.7,
+        "ratio": 0.983
       },
       "philippians": {
         "shorts": 2,
-        "avg_views": 87.5,
-        "ratio": 0.965
+        "avg_views": 86.5,
+        "ratio": 1.002
       },
       "proverbs": {
         "shorts": 1,
         "avg_views": 46.0,
-        "ratio": 0.83
+        "ratio": 0.845
       },
       "psalm": {
-        "shorts": 18,
-        "avg_views": 89.5,
-        "ratio": 0.957
+        "shorts": 15,
+        "avg_views": 83.9,
+        "ratio": 0.977
       }
     },
     "by_theme": {
       "anxiety_peace": {
         "shorts": 11,
-        "avg_views": 103.2,
-        "ratio": 1.083
+        "avg_views": 103.1,
+        "ratio": 1.167
       },
       "daily_guidance_wisdom": {
-        "shorts": 3,
-        "avg_views": 72.3,
-        "ratio": 0.862
+        "shorts": 4,
+        "avg_views": 55.8,
+        "ratio": 0.765
       },
       "midday_strength_endurance": {
-        "shorts": 4,
-        "avg_views": 64.5,
-        "ratio": 0.791
+        "shorts": 2,
+        "avg_views": 82.0,
+        "ratio": 0.976
       },
       "morning_mercy_renewal": {
         "shorts": 2,
-        "avg_views": 114.5,
-        "ratio": 1.109
+        "avg_views": 89.5,
+        "ratio": 1.02
       },
       "peace_rest": {
-        "shorts": 10,
-        "avg_views": 94.6,
-        "ratio": 1.005
-      },
-      "trust_surrender": {
-        "shorts": 2,
-        "avg_views": 111.5,
-        "ratio": 1.093
+        "shorts": 12,
+        "avg_views": 80.8,
+        "ratio": 0.947
       }
     },
     "guidance": [
-      "Shorts: John runs 1.6x this channel's average Short (94 views over 32 Shorts); its passages are written first."
+      "Shorts: John runs 1.7x this channel's average Short (86 views over 31 Shorts); its passages are written first."
     ]
   },
   "guidance": [
