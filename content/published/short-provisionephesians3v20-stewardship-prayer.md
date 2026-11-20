@@ -27,7 +27,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (56, 775, 1023, 824); shorten the authored lockup or reduce its size"
 ---
 
 While you stare at an empty ledger and wonder how bills will be paid, listen. The Word of God declares in Ephesians chapter three, verse twenty: Now unto him that is able to do exceeding abundantly above all that we ask or think, according to the power that worketh in us, Lord, we bring our small provisions and limited vision into Your capable hands today. Expand our understanding, unlock unseen doors, and provide far beyond our human calculations. Work within us by Your Spirit to steward every gift and trust Your infinite supply. In Jesus' name, Amen. Subscribe to walk in God's daily provision with us.

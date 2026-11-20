@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE COVENANT SHIELD", "DIVINE PROTECTION", "STRONG TOWER REFUGE", "DAILY PRAYER"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-27T10:27:32Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If that unseen opposition in your workplace is testing your resolve today, stay and take refuge. Father, we come before Your throne seeking the mighty covering of Your spiritual armor right now. Your holy word commands us saying, Finally, my brethren, be strong in the Lord, and in the power of his might. Grant us the steadfast courage to stand firm when discouragement tries to undermine our faith. We heed Your instruction to Put on the whole armor of God, that ye may be able to stand against the wiles of the devil. Surround our minds with truth and guard our hearts with righteousness throughout every hour ahead. In Jesus name we pray, Amen.

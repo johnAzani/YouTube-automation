@@ -80,7 +80,7 @@ youtube_video_id: "uVx6ay-zB1c"
 metadata_revision: "selar-seo-v1"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-20T08:42:14Z"
+thumbnail_retry_after: "2026-11-27T10:27:22Z"
 thumbnail_retry_reason: "permission"
 ---
 

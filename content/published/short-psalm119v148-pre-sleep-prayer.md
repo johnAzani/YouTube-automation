@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["PSALM 119:148", "PRAYER FOR THE AWAKE", "MEDITATE ON HIS WORD", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If you cannot sleep because your mind keeps retracing today's hard decisions, rest now. Psalm 119 says, Mine eyes prevent the night watches, that I might meditate in thy word. Lord, when sleep feels far away and the quiet hours grow long, anchor this heart in your unfailing truth. Instead of replaying every worry, give us grace to fill the darkness with your steady promise. Soften the tension lingering in this room and quiet the thoughts that will not settle. We place tomorrow completely into your loving hands and choose to rest in your gentle presence. Subscribe to pray with us every night.

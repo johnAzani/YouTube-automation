@@ -24,9 +24,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["PEACEFUL DWELLINGS", "ISAIAH 32:18", "BLESS YOUR HOME", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-20T10:09:56Z"
+thumbnail_retry_after: "2026-11-27T10:27:28Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 Gather your home and loved ones in faith tonight as we seek the Lord's presence over your household. Scripture declares in Isaiah 32:18, my people will live in peaceful dwelling places, in secure homes, in undisturbed places of rest. Heavenly Father, we dedicate this home to Your holy presence and ask You to fill every room with quiet grace. Guard our doors from discord, protect our hearts from anxiety, and let Your peace rest upon everyone who enters here. Keep our family united in Your truth, rooted in love, and safe under the shadow of Your almighty wings tonight. We place our sanctuary into Your faithful hands, trusting You for quiet rest. Subscribe to cover your family home in daily prayer.
