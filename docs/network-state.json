@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T15:41:50Z",
+  "generated_at": "2026-11-20T16:15:38Z",
   "monitor_generated_at": "2026-11-20T12:51:12.234843+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 554,
-    "published_longform": 171,
+    "published_total": 555,
+    "published_longform": 172,
     "published_shorts": 383,
-    "public_total": 552,
-    "queued_longform": 60,
+    "public_total": 553,
+    "queued_longform": 59,
     "queued_shorts": 88,
     "automations_ok": 13,
     "automations_total": 13,
@@ -305,28 +305,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 48,
-        "published_longform": 16,
+        "published_total": 49,
+        "published_longform": 17,
         "published_shorts": 32,
-        "thumbnail_pending": 48,
-        "public_total": 48,
-        "queued_longform": 6,
+        "thumbnail_pending": 49,
+        "public_total": 49,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-FAMILYDEUTERONOMY11V18",
-        "title": "Pray This Deuteronomy 11:18-21 Family Prayer Over Your Home | God's Promise #Shorts",
-        "format": "short",
-        "youtube_video_id": "FnC0IFyse7Y",
-        "watch_url": "https://www.youtube.com/shorts/FnC0IFyse7Y",
-        "published_on": "2026-11-20",
-        "published_at": "2026-11-20T13:27:02Z"
-      },
-      "next_queued_longform": {
         "id": "0316",
         "title": "The Lord Will Bless You and Your Children: Psalm 115:12-15",
-        "words": 1053,
+        "format": "longform",
+        "youtube_video_id": "ozA_GimxTNE",
+        "watch_url": "https://youtu.be/ozA_GimxTNE",
+        "published_on": "2026-11-20",
+        "published_at": "2026-11-20T16:14:44Z"
+      },
+      "next_queued_longform": {
+        "id": "0317",
+        "title": "Walking Out the Door in Faith: Deuteronomy 28:3-6 | The Family Altar",
+        "words": 2058,
         "status": "approved"
       },
       "next_queued_short": {
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0316",
+      "slug": "the-lord-will-bless-you-and-your-children-psalm-115-12-15",
+      "file": "0316-the-lord-will-bless-you-and-your-children-psalm-115-12-15.md",
+      "title": "The Lord Will Bless You and Your Children: Psalm 115:12-15",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T16:14:44Z",
+      "youtube_video_id": "ozA_GimxTNE",
+      "watch_url": "https://youtu.be/ozA_GimxTNE",
+      "youtu_be_url": "https://youtu.be/ozA_GimxTNE",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/ozA_GimxTNE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ozA_GimxTNE/hqdefault.jpg",
+      "thumb_text": "INCREASE AND PEACE",
+      "thumbnail_pending": true,
+      "duration_label": "~7 min",
+      "words": 1053
+    },
     {
       "id": "SHORT-GARDENJAMES1V17",
       "slug": "short-gardenjames1v17-thanksgiving-prayer",
@@ -14311,19 +14335,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1546
-      },
-      {
-        "id": "0316",
-        "slug": "the-lord-will-bless-you-and-your-children-psalm-115-12-15",
-        "file": "0316-the-lord-will-bless-you-and-your-children-psalm-115-12-15.md",
-        "title": "The Lord Will Bless You and Your Children: Psalm 115:12-15",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1053
       },
       {
         "id": "0317",
