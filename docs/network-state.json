@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T21:51:39Z",
+  "generated_at": "2026-11-20T21:58:35Z",
   "monitor_generated_at": "2026-11-20T20:33:33.603383+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 572,
+    "published_total": 573,
     "published_longform": 175,
-    "published_shorts": 397,
-    "public_total": 570,
+    "published_shorts": 398,
+    "public_total": 571,
     "queued_longform": 56,
-    "queued_shorts": 74,
+    "queued_shorts": 73,
     "automations_ok": 11,
     "automations_total": 13,
     "network_healthy": false
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 44,
+        "published_total": 45,
         "published_longform": 13,
-        "published_shorts": 31,
-        "thumbnail_pending": 44,
-        "public_total": 44,
+        "published_shorts": 32,
+        "thumbnail_pending": 45,
+        "public_total": 45,
         "queued_longform": 6,
         "queued_other": 3,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM27V1",
-        "title": "Pray This Psalm 27:1 Prayer for Divine Protection | God Is Your Safe Refuge #Shorts",
+        "id": "SHORT-SHIELDPSALM125V2",
+        "title": "Pray This Psalm 125:2 Prayer for Divine Protection | God Is Your Defense #Shorts",
         "format": "short",
-        "youtube_video_id": "5g4TraVNpO0",
-        "watch_url": "https://www.youtube.com/shorts/5g4TraVNpO0",
+        "youtube_video_id": "ZJIpovaOor0",
+        "watch_url": "https://www.youtube.com/shorts/ZJIpovaOor0",
         "published_on": "2026-11-20",
-        "published_at": "2026-11-20T18:41:35Z"
+        "published_at": "2026-11-20T21:57:37Z"
       },
       "next_queued_longform": {
         "id": "0614",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm125v2",
-        "scripture": "Psalm 125:2",
+        "short": "short-shieldpsalm61v3",
+        "scripture": "Psalm 61:3",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM125V2",
+      "slug": "short-shieldpsalm125v2-protection-prayer",
+      "file": "short-shieldpsalm125v2-protection-prayer.md",
+      "title": "Pray This Psalm 125:2 Prayer for Divine Protection | God Is Your Defense #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T21:57:37Z",
+      "youtube_video_id": "ZJIpovaOor0",
+      "watch_url": "https://www.youtube.com/shorts/ZJIpovaOor0",
+      "youtu_be_url": "https://youtu.be/ZJIpovaOor0",
+      "shorts_url": "https://www.youtube.com/shorts/ZJIpovaOor0",
+      "studio_url": "https://studio.youtube.com/video/ZJIpovaOor0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ZJIpovaOor0/hqdefault.jpg",
+      "thumb_text": "AS THE MOUNTAINS \u00b7 ARE ROUND ABOUT",
+      "thumbnail_pending": true,
+      "duration_label": "48s",
+      "words": 657
+    },
     {
       "id": "0414",
       "slug": "when-your-heart-is-heavy-and-broken-psalm-34-17-19",
@@ -15722,17 +15746,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldpsalm125v2",
-        "file": "0614-short-shieldpsalm125v2.yml",
-        "companion_longform_id": "0614",
-        "scripture": "Psalm 125:2",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm61v3",
