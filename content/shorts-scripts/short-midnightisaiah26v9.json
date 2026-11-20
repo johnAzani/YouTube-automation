@@ -1,0 +1,284 @@
+{
+  "key": "short-midnightisaiah26v9",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "MIDNIGHT SPIRIT",
+    "SEEKING HIS PRESENCE"
+  ],
+  "poster": [
+    "THE MIDNIGHT",
+    "WATCH",
+    "ISAIAH 26:9",
+    "STILLNESS IN PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "silhouette of ancient stone watchtower at night",
+    "deep starry night sky over mountain range",
+    "flickering oil lamp light in dark sanctuary",
+    "serene blue moonlight over a silent forest",
+    "distant horizon at night with soft glow",
+    "prayer vigil light on dark wooden altar"
+  ],
+  "scenes": [
+    {
+      "a": "That relentless weight of worry pressing against your chest is fading as you seek light.",
+      "img": "short-midnightisaiah26v9-scene-01.jpg",
+      "kicker": "ISAIAH 26:9",
+      "sub": "SEEKING HIM IN THE NIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "With my soul have I desired thee in the night;",
+      "img": "short-midnightisaiah26v9-scene-02.jpg",
+      "kicker": "ISAIAH 26:9",
+      "sub": "SOUL DESIRES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "yea, with my spirit within me will I seek thee early:",
+      "img": "short-midnightisaiah26v9-scene-03.jpg",
+      "kicker": "ISAIAH 26:9",
+      "sub": "SPIRIT SEEKS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "for when thy judgments are in the earth, the inhabitants of the world will learn righteousness.",
+      "img": "short-midnightisaiah26v9-scene-04.jpg",
+      "kicker": "ISAIAH 26:9",
+      "sub": "LEARNING RIGHTEOUSNESS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Lord, anchor this weary heart in your sovereign truth during these quiet, shadowed hours of waiting.",
+      "img": "short-midnightisaiah26v9-scene-05.jpg",
+      "kicker": "ISAIAH 26:9",
+      "sub": "ANCHORED IN TRUTH",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant clarity where there is confusion and bring peace that surpasses human understanding to this soul.",
+      "img": "short-midnightisaiah26v9-scene-06.jpg",
+      "kicker": "ISAIAH 26:9",
+      "sub": "PEACE IN THE DARK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "That relentless weight of worry pressing against your chest is fading as you seek light."
+    ],
+    [
+      16,
+      32,
+      "With my soul have I desired thee in the night; yea, with my spirit within me will I seek thee early:"
+    ],
+    [
+      33,
+      48,
+      "for when thy judgments are in the earth, the inhabitants of the world will learn righteousness."
+    ],
+    [
+      49,
+      65,
+      "Lord, anchor this weary heart in your sovereign truth during these quiet, shadowed hours of waiting."
+    ],
+    [
+      66,
+      82,
+      "Grant clarity where there is confusion and bring peace that surpasses human understanding to this soul."
+    ],
+    [
+      83,
+      105,
+      "Let your presence remain the steady foundation upon which I rest as the midnight tide turns."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "RELENTLESS WEIGHT",
+        "OF WORRY",
+        "FADING NOW",
+        "SEEKING LIGHT"
+      ],
+      [
+        "RELENTLESS",
+        "LIGHT"
+      ],
+      "ISAIAH 26:9"
+    ],
+    [
+      16,
+      32,
+      [
+        "WITH MY SOUL",
+        "DESIRED THEE",
+        "IN THE NIGHT",
+        "SPIRIT WITHIN",
+        "SEEK THEE EARLY"
+      ],
+      [
+        "SOUL",
+        "SPIRIT",
+        "SEEK"
+      ],
+      "ISAIAH 26:9"
+    ],
+    [
+      33,
+      48,
+      [
+        "THY JUDGMENTS",
+        "IN THE EARTH",
+        "INHABITANTS LEARN",
+        "RIGHTEOUSNESS"
+      ],
+      [
+        "JUDGMENTS",
+        "RIGHTEOUSNESS"
+      ],
+      "ISAIAH 26:9"
+    ],
+    [
+      49,
+      65,
+      [
+        "ANCHOR THIS",
+        "WEARY HEART",
+        "SOVEREIGN TRUTH",
+        "QUIET HOURS"
+      ],
+      [
+        "ANCHOR",
+        "TRUTH"
+      ],
+      "ISAIAH 26:9"
+    ],
+    [
+      66,
+      82,
+      [
+        "CLARITY GRANTED",
+        "BEYOND CONFUSION",
+        "PEACE SURPASSES",
+        "UNDERSTANDING"
+      ],
+      [
+        "CLARITY",
+        "PEACE"
+      ],
+      "ISAIAH 26:9"
+    ],
+    [
+      83,
+      105,
+      [
+        "STEADY FOUNDATION",
+        "RESTING NOW",
+        "MIDNIGHT TIDE",
+        "TURNING"
+      ],
+      [
+        "FOUNDATION",
+        "MIDNIGHT"
+      ],
+      "ISAIAH 26:9"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That relentless weight of worry pressing against your chest is fading as you seek light.",
+      "kind": "phrase",
+      "words": [
+        "RELENTLESS",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "With my soul have I desired thee in the night;",
+      "kind": "phrase",
+      "words": [
+        "SOUL",
+        "DESIRED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "yea, with my spirit within me will I seek thee early:",
+      "kind": "phrase",
+      "words": [
+        "SPIRIT",
+        "SEEK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "for when thy judgments are in the earth, the inhabitants of the world will learn righteousness.",
+      "kind": "phrase",
+      "words": [
+        "JUDGMENTS",
+        "RIGHTEOUSNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor this weary heart in your sovereign truth during these quiet, shadowed hours of waiting.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant clarity where there is confusion and bring peace that surpasses human understanding to this soul.",
+      "kind": "phrase",
+      "words": [
+        "CLARITY",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 26:9"
+}
