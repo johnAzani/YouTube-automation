@@ -1,0 +1,271 @@
+{
+  "key": "short-shieldzechariah2v5",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "A WALL OF FIRE",
+    "ZECHARIAH 2:5"
+  ],
+  "poster": [
+    "DIVINE PROTECTION",
+    "WALL OF FIRE",
+    "ZECHARIAH 2:5",
+    "THE COVENANT SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower glowing fire evening",
+    "golden light rays through dark storm clouds mountains",
+    "calm mountain lake glowing golden sunset peaceful",
+    "sunlit mountain pass canyon golden hour misty",
+    "peaceful river flowing through forest sunbeams",
+    "dramatic mountain peak golden sunlight clouds"
+  ],
+  "scenes": [
+    {
+      "a": "If fear for your home enters your mind",
+      "img": "short-shieldzechariah2v5-scene-01.jpg",
+      "kicker": "ZECHARIAH 2:5",
+      "sub": "A WALL OF FIRE ROUND ABOUT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "For I, saith the LORD, will be unto her a wall of fire round about",
+      "img": "short-shieldzechariah2v5-scene-02.jpg",
+      "kicker": "ZECHARIAH 2:5",
+      "sub": "THE GLORY IN THE MIDST OF HER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Heavenly Father, enclose this household with your holy consuming presence",
+      "img": "short-shieldzechariah2v5-scene-03.jpg",
+      "kicker": "ZECHARIAH 2:5",
+      "sub": "ENCLOSE THIS HOUSEHOLD IN PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Be an impenetrable ring of divine defense",
+      "img": "short-shieldzechariah2v5-scene-04.jpg",
+      "kicker": "ZECHARIAH 2:5",
+      "sub": "AN IMPENETRABLE RING OF DEFENSE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Dwell in our midst with your radiant glory",
+      "img": "short-shieldzechariah2v5-scene-05.jpg",
+      "kicker": "ZECHARIAH 2:5",
+      "sub": "DRIVING OUT ALL DARKNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to walk under God's covenant shield.",
+      "img": "short-shieldzechariah2v5-scene-06.jpg",
+      "kicker": "ZECHARIAH 2:5",
+      "sub": "WALK UNDER GOD'S COVERING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If fear for your home enters your mind as evening settles, let this word protect you."
+    ],
+    [
+      8,
+      22,
+      "Hear what the Lord declares over your life today: For I, saith the LORD, will be unto her a wall of fire round about, and will be the glory in the midst of her."
+    ],
+    [
+      22,
+      33,
+      "Heavenly Father, enclose this household with your holy consuming presence against every silent danger."
+    ],
+    [
+      33,
+      44,
+      "Be an impenetrable ring of divine defense surrounding every room and every quiet corner."
+    ],
+    [
+      44,
+      54,
+      "Dwell in our midst with your radiant glory, driving out darkness and granting deep peace."
+    ],
+    [
+      54,
+      60,
+      "Subscribe to walk under God's covenant shield."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF FEAR FOR YOUR HOME",
+        "ENTERS YOUR MIND AS EVENING SETTLES",
+        "LET THIS WORD PROTECT YOU"
+      ],
+      [
+        "PROTECT YOU"
+      ],
+      "ZECHARIAH 2:5"
+    ],
+    [
+      8,
+      22,
+      [
+        "HEAR WHAT THE LORD DECLARES TODAY",
+        "FOR I SAITH THE LORD WILL BE UNTO HER",
+        "A WALL OF FIRE ROUND ABOUT AND",
+        "THE GLORY IN THE MIDST OF HER"
+      ],
+      [
+        "WALL OF FIRE",
+        "GLORY"
+      ],
+      "ZECHARIAH 2:5"
+    ],
+    [
+      22,
+      33,
+      [
+        "HEAVENLY FATHER ENCLOSE THIS HOUSEHOLD",
+        "WITH YOUR HOLY CONSUMING PRESENCE",
+        "AGAINST EVERY SILENT DANGER"
+      ],
+      [
+        "CONSUMING PRESENCE"
+      ],
+      "ZECHARIAH 2:5"
+    ],
+    [
+      33,
+      44,
+      [
+        "BE AN IMPENETRABLE RING OF",
+        "DIVINE DEFENSE SURROUNDING EVERY ROOM",
+        "AND EVERY QUIET CORNER"
+      ],
+      [
+        "DIVINE DEFENSE"
+      ],
+      "ZECHARIAH 2:5"
+    ],
+    [
+      44,
+      54,
+      [
+        "DWELL IN OUR MIDST WITH YOUR",
+        "RADIANT GLORY DRIVING OUT DARKNESS",
+        "AND GRANTING DEEP PEACE"
+      ],
+      [
+        "RADIANT GLORY"
+      ],
+      "ZECHARIAH 2:5"
+    ],
+    [
+      54,
+      60,
+      [
+        "SUBSCRIBE TO WALK UNDER",
+        "GOD'S COVENANT SHIELD"
+      ],
+      [
+        "COVENANT SHIELD"
+      ],
+      "ZECHARIAH 2:5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If fear for your home enters your mind",
+      "kind": "phrase",
+      "words": [
+        "FEAR",
+        "HOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For I, saith the LORD, will be unto her a wall of fire round about",
+      "kind": "phrase",
+      "words": [
+        "WALL",
+        "FIRE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, enclose this household with your holy consuming presence",
+      "kind": "phrase",
+      "words": [
+        "CONSUMING",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be an impenetrable ring of divine defense",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "DEFENSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Dwell in our midst with your radiant glory",
+      "kind": "phrase",
+      "words": [
+        "RADIANT",
+        "GLORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to walk under God's covenant shield.",
+      "kind": "phrase",
+      "words": [
+        "COVENANT",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Zechariah 2:5"
+}
