@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T09:12:25Z",
+  "generated_at": "2026-11-20T09:12:46Z",
   "monitor_generated_at": "2026-11-20T08:19:40.591520+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 531,
+    "published_total": 532,
     "published_longform": 167,
-    "published_shorts": 364,
-    "public_total": 529,
+    "published_shorts": 365,
+    "public_total": 530,
     "queued_longform": 60,
-    "queued_shorts": 99,
+    "queued_shorts": 97,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 64,
+        "published_total": 65,
         "published_longform": 21,
-        "published_shorts": 43,
+        "published_shorts": 44,
         "thumbnail_pending": 0,
-        "public_total": 64,
+        "public_total": 65,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYPHILIPPIANS4V13",
-        "title": "Say This Philippians 4:13 Prayer at Noon | Strength For The Weary #Shorts",
+        "id": "SHORT-MIDDAYPSALM20V7",
+        "title": "Say This Psalm 20:7 Prayer at Noon | We Remember The Lord #Shorts",
         "format": "short",
-        "youtube_video_id": "VbCV0NJ50vs",
-        "watch_url": "https://www.youtube.com/shorts/VbCV0NJ50vs",
+        "youtube_video_id": "GMvkYqx1CHQ",
+        "watch_url": "https://www.youtube.com/shorts/GMvkYqx1CHQ",
         "published_on": "2026-11-20",
-        "published_at": "2026-11-20T01:24:05Z"
+        "published_at": "2026-11-20T09:11:54Z"
       },
       "next_queued_longform": {
         "id": "0096",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm20v7",
-        "scripture": "Psalm 20:7",
+        "short": "short-middaypsalm71v16",
+        "scripture": "Psalm 71:16",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYPSALM20V7",
+      "slug": "short-middaypsalm20v7-midday-prayer",
+      "file": "short-middaypsalm20v7-midday-prayer.md",
+      "title": "Say This Psalm 20:7 Prayer at Noon | We Remember The Lord #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T09:11:54Z",
+      "youtube_video_id": "GMvkYqx1CHQ",
+      "watch_url": "https://www.youtube.com/shorts/GMvkYqx1CHQ",
+      "youtu_be_url": "https://youtu.be/GMvkYqx1CHQ",
+      "shorts_url": "https://www.youtube.com/shorts/GMvkYqx1CHQ",
+      "studio_url": "https://studio.youtube.com/video/GMvkYqx1CHQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/GMvkYqx1CHQ/hqdefault.jpg",
+      "thumb_text": "THE MIDDAY WATCH \u00b7 PSALM 20:7",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 614
+    },
     {
       "id": "SHORT-FAMILYPROVERBS17V6",
       "slug": "short-familyproverbs17v6-household-prayer",
@@ -14330,17 +14354,6 @@
         "target_window_utc": "15:44"
       },
       {
-        "short": "short-middaypsalm20v7",
-        "file": "0000-short-middaypsalm20v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 20:7",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
-      {
         "short": "short-middaypsalm71v16",
         "file": "0000-short-middaypsalm71v16.yml",
         "companion_longform_id": "",
@@ -14697,17 +14710,6 @@
         "file": "0102-short-middayproverbs15v1.yml",
         "companion_longform_id": "0102",
         "scripture": "Proverbs 15:1",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-middayjeremiah17v7",
-        "file": "0104-short-middayjeremiah17v7.yml",
-        "companion_longform_id": "0104",
-        "scripture": "Jeremiah 17:7-8",
         "channel": "prayer3",
         "channel_name": "The Midday Watch",
         "status": "approved",
