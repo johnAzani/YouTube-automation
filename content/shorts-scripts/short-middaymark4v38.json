@@ -1,0 +1,275 @@
+{
+  "key": "short-middaymark4v38",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "PEACE BE",
+    "STILL NOW"
+  ],
+  "poster": [
+    "MIDDAY",
+    "QUIET",
+    "FAITH",
+    "CALM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sunlight streaming through office window",
+    "calm open field under bright high noon sun",
+    "dust motes dancing in shaft of light",
+    "empty wooden desk with warm window glow",
+    "gentle ripples on surface of clear pond",
+    "soft light filtering through green leaves"
+  ],
+  "scenes": [
+    {
+      "a": "That recurring doubt about your future is weighing heavy on your heart this midday hour.",
+      "img": "short-middaymark4v38-scene-01.jpg",
+      "kicker": "MARK 4:38",
+      "sub": "HEAR HIS VOICE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And he was in the hinder part of the ship, asleep on a pillow: and they awake him, and say unto him, Master, carest thou not that we perish?",
+      "img": "short-middaymark4v38-scene-02.jpg",
+      "kicker": "MARK 4:38",
+      "sub": "THE MASTER SLEEPS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "And he arose, and rebuked the wind, and said unto the sea, Peace, be still. And the wind ceased, and there was a great calm.",
+      "img": "short-middaymark4v38-scene-03.jpg",
+      "kicker": "MARK 4:39",
+      "sub": "THE WIND CEASED",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "And he said unto them, Why are ye so fearful? how is it that ye have no faith?",
+      "img": "short-middaymark4v38-scene-04.jpg",
+      "kicker": "MARK 4:40",
+      "sub": "WHY SO FEARFUL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, replace my internal storm with your divine stillness during this middle part of today.",
+      "img": "short-middaymark4v38-scene-05.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "SURRENDER THE FEAR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Help me trust that you are present even when the world feels loud and chaotic.",
+      "img": "short-middaymark4v38-scene-06.jpg",
+      "kicker": "THE MIDDAY WATCH",
+      "sub": "REST IN HIS GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That recurring doubt about your future is weighing heavy on your heart this midday hour."
+    ],
+    [
+      8,
+      20,
+      "And he was in the hinder part of the ship, asleep on a pillow: and they awake him, and say unto him, Master, carest thou not that we perish?"
+    ],
+    [
+      20,
+      32,
+      "And he arose, and rebuked the wind, and said unto the sea, Peace, be still. And the wind ceased, and there was a great calm."
+    ],
+    [
+      32,
+      42,
+      "And he said unto them, Why are ye so fearful? how is it that ye have no faith?"
+    ],
+    [
+      42,
+      52,
+      "Lord, replace my internal storm with your divine stillness during this middle part of today."
+    ],
+    [
+      52,
+      60,
+      "Help me trust that you are present even when the world feels loud and chaotic."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "RECURRING DOUBT",
+        "WEIGHING HEAVY",
+        "MIDDAY HOUR"
+      ],
+      [
+        "DOUBT",
+        "HEAVY"
+      ],
+      "MARK 4:38"
+    ],
+    [
+      8,
+      20,
+      [
+        "MASTER",
+        "CAREST THOU NOT",
+        "THAT WE",
+        "PERISH"
+      ],
+      [
+        "MASTER",
+        "PERISH"
+      ],
+      "MARK 4:38"
+    ],
+    [
+      20,
+      32,
+      [
+        "PEACE BE STILL",
+        "WIND CEASED",
+        "GREAT CALM"
+      ],
+      [
+        "PEACE",
+        "CALM"
+      ],
+      "MARK 4:39"
+    ],
+    [
+      32,
+      42,
+      [
+        "WHY ARE YE",
+        "SO FEARFUL",
+        "NO FAITH"
+      ],
+      [
+        "FEARFUL",
+        "FAITH"
+      ],
+      "MARK 4:40"
+    ],
+    [
+      42,
+      52,
+      [
+        "REPLACE STORM",
+        "DIVINE STILLNESS",
+        "MIDDLE OF TODAY"
+      ],
+      [
+        "STILLNESS"
+      ],
+      "MARK 4:40"
+    ],
+    [
+      52,
+      60,
+      [
+        "TRUST YOU",
+        "PRESENT NOW",
+        "LOUD AND CHAOTIC"
+      ],
+      [
+        "TRUST",
+        "PRESENT"
+      ],
+      "MARK 4:40"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That recurring doubt about your future is weighing heavy on your heart this midday hour.",
+      "kind": "phrase",
+      "words": [
+        "DOUBT",
+        "HEAVY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And he was in the hinder part of the ship, asleep on a pillow: and they awake him, and say unto him, Master, carest thou not that we perish?",
+      "kind": "phrase",
+      "words": [
+        "MASTER",
+        "PERISH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And he arose, and rebuked the wind, and said unto the sea, Peace, be still. And the wind ceased, and there was a great calm.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "CALM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And he said unto them, Why are ye so fearful? how is it that ye have no faith?",
+      "kind": "phrase",
+      "words": [
+        "FEARFUL",
+        "FAITH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, replace my internal storm with your divine stillness during this middle part of today.",
+      "kind": "phrase",
+      "words": [
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help me trust that you are present even when the world feels loud and chaotic.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "PRESENT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Mark 4:38-40"
+}

@@ -1,0 +1,280 @@
+{
+  "key": "short-midday1kings19v5",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "THE STRENGTH",
+    "FOR YOUR JOURNEY"
+  ],
+  "poster": [
+    "REST UNDER",
+    "THE JUNIPER",
+    "MIDDAY GRACE",
+    "1 KINGS 19"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright midday sun through office window",
+    "empty wooden desk with warm light",
+    "soft shadows on a stone path",
+    "wide mountain landscape at midday",
+    "glass of water on a rustic table",
+    "sunlight filtering through green leaves"
+  ],
+  "scenes": [
+    {
+      "a": "That persistent feeling of total exhaustion is telling you that your current pace is unsustainable.",
+      "img": "short-midday1kings19v5-scene-01.jpg",
+      "kicker": "1 KINGS 19:5",
+      "sub": "GOD SEES YOUR WEARINESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And as he lay and slept under a juniper tree, behold, then an angel touched him, and said unto him, Arise and eat.",
+      "img": "short-midday1kings19v5-scene-02.jpg",
+      "kicker": "1 KINGS 19:5",
+      "sub": "THE ANGEL TOUCHES HIM",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "And he looked, and, behold, there was a cake baken on the coals, and a cruse of water at his head.",
+      "img": "short-midday1kings19v5-scene-03.jpg",
+      "kicker": "1 KINGS 19:6",
+      "sub": "PROVISION IS READY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "And the angel of the LORD came again the second time, and touched him, and said, Arise and eat; because the journey is too great for thee.",
+      "img": "short-midday1kings19v5-scene-04.jpg",
+      "kicker": "1 KINGS 19:7",
+      "sub": "THE JOURNEY IS TOO GREAT",
+      "cam": "pull_out",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "And he arose, and did eat and drink, and went in the strength of that meat forty days and forty nights unto Horeb the mount of God.",
+      "img": "short-midday1kings19v5-scene-05.jpg",
+      "kicker": "1 KINGS 19:8",
+      "sub": "STRENGTH FOR THE ROAD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Lord, grant me that same sustaining power to meet the demands of this very long day.",
+      "img": "short-midday1kings19v5-scene-06.jpg",
+      "kicker": "A MIDDAY PRAYER",
+      "sub": "GIVE ME STRENGTH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "That persistent feeling of total exhaustion is telling you that your current pace is unsustainable."
+    ],
+    [
+      16,
+      28,
+      "And as he lay and slept under a juniper tree, behold, then an angel touched him, and said unto him, Arise and eat."
+    ],
+    [
+      29,
+      41,
+      "And he looked, and, behold, there was a cake baken on the coals, and a cruse of water at his head."
+    ],
+    [
+      42,
+      58,
+      "And the angel of the LORD came again the second time, and touched him, and said, Arise and eat; because the journey is too great for thee."
+    ],
+    [
+      59,
+      75,
+      "And he arose, and did eat and drink, and went in the strength of that meat forty days and forty nights unto Horeb the mount of God."
+    ],
+    [
+      76,
+      96,
+      "Lord, grant me that same sustaining power to meet the demands of this very long day. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "TOTAL EXHAUSTION IS",
+        "TELLING YOU THAT",
+        "YOUR CURRENT PACE",
+        "IS UNSUSTAINABLE"
+      ],
+      [
+        "EXHAUSTION",
+        "UNSUSTAINABLE"
+      ],
+      "1 KINGS 19 : 5"
+    ],
+    [
+      16,
+      28,
+      [
+        "HE LAY AND SLEPT",
+        "UNDER A JUNIPER TREE",
+        "AN ANGEL TOUCHED HIM",
+        "ARISE AND EAT"
+      ],
+      [
+        "TOUCHED",
+        "ARISE"
+      ],
+      "1 KINGS 19 : 5"
+    ],
+    [
+      29,
+      41,
+      [
+        "HE LOOKED AND BEHOLD",
+        "A CAKE BAKEN",
+        "AND A CRUSE",
+        "OF WATER"
+      ],
+      [
+        "BEHOLD",
+        "PROVISION"
+      ],
+      "1 KINGS 19 : 6"
+    ],
+    [
+      42,
+      58,
+      [
+        "THE JOURNEY IS",
+        "TOO GREAT FOR THEE",
+        "ARISE AND EAT"
+      ],
+      [
+        "TOO GREAT",
+        "ARISE"
+      ],
+      "1 KINGS 19 : 7"
+    ],
+    [
+      59,
+      75,
+      [
+        "HE AROSE AND DID EAT",
+        "IN THE STRENGTH OF",
+        "THAT MEAT UNTO",
+        "THE MOUNT OF GOD"
+      ],
+      [
+        "STRENGTH",
+        "MOUNT"
+      ],
+      "1 KINGS 19 : 8"
+    ],
+    [
+      76,
+      96,
+      [
+        "GRANT ME SUSTAINING POWER",
+        "TO MEET THE DEMANDS",
+        "OF THIS LONG DAY"
+      ],
+      [
+        "SUSTAINING",
+        "DEMANDS"
+      ],
+      "MIDDAY PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That persistent feeling of total exhaustion is telling you that your current pace is unsustainable.",
+      "kind": "phrase",
+      "words": [
+        "TOTAL",
+        "EXHAUSTION"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "And as he lay and slept under a juniper tree, behold, then an angel touched him, and said unto him, Arise and eat.",
+      "kind": "phrase",
+      "words": [
+        "ANGEL",
+        "TOUCHED"
+      ],
+      "hi": 1,
+      "slot": "B"
+    },
+    {
+      "a": "And he looked, and, behold, there was a cake baken on the coals, and a cruse of water at his head.",
+      "kind": "phrase",
+      "words": [
+        "CAKE",
+        "WATER"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "And the angel of the LORD came again the second time, and touched him, and said, Arise and eat; because the journey is too great for thee.",
+      "kind": "phrase",
+      "words": [
+        "TOO",
+        "GREAT"
+      ],
+      "hi": 3,
+      "slot": "D"
+    },
+    {
+      "a": "And he arose, and did eat and drink, and went in the strength of that meat forty days and forty nights unto Horeb the mount of God.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "MOUNT"
+      ],
+      "hi": 4,
+      "slot": "E"
+    },
+    {
+      "a": "Lord, grant me that same sustaining power to meet the demands of this very long day.",
+      "kind": "phrase",
+      "words": [
+        "SUSTAINING",
+        "POWER"
+      ],
+      "hi": 5,
+      "slot": "F"
+    }
+  ],
+  "scripture": "1 Kings 19:5-8"
+}
