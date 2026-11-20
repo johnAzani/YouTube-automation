@@ -306,3 +306,22 @@ Check that the videos are from the same channel, are similar in length and
 format, and cover similar ages since release; the command cannot verify those
 conditions. Look for the first point where the curves differ, then check Studio
 around that timestamp before editing the script.
+
+### Compare the first releases after rollout
+
+Keep the public snapshot CSVs locally (they are not committed). For a same-age
+view of all ten channels, put the daily rows in one CSV with their original
+headers and run:
+
+```bash
+python -m scripts.rollout_impact --cutoff YYYY-MM-DD --metrics path/to/metrics.csv
+```
+
+The report joins snapshots to published receipts and compares median views,
+likes and comments seven calendar days after release, separately for each
+channel and format. It shows sample sizes, flags sparse groups, and excludes
+missing, conflicting or wrong-age readings rather than substituting a later
+snapshot. Select a cutoff after verifying which drafts used the new prompts;
+pre-existing queued drafts can still publish after deployment. A calendar
+comparison is descriptive, not causal. Pair the table with Studio retention,
+shares, subscribers and long-form watch time at comparable release ages.
