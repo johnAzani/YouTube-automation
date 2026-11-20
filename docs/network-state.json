@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T16:15:38Z",
+  "generated_at": "2026-11-20T16:28:50Z",
   "monitor_generated_at": "2026-11-20T12:51:12.234843+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 555,
-    "published_longform": 172,
+    "published_total": 556,
+    "published_longform": 173,
     "published_shorts": 383,
-    "public_total": 553,
-    "queued_longform": 59,
+    "public_total": 554,
+    "queued_longform": 58,
     "queued_shorts": 88,
     "automations_ok": 13,
     "automations_total": 13,
@@ -169,28 +169,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 66,
-        "published_longform": 21,
+        "published_total": 67,
+        "published_longform": 22,
         "published_shorts": 45,
         "thumbnail_pending": 0,
-        "public_total": 66,
-        "queued_longform": 6,
+        "public_total": 67,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MIDDAY1KINGS19V5",
-        "title": "Say This 1 Kings 19:5-8 Prayer at Noon | God Sees Your Weariness #Shorts",
-        "format": "short",
-        "youtube_video_id": "XG1ht66YGdk",
-        "watch_url": "https://www.youtube.com/shorts/XG1ht66YGdk",
-        "published_on": "2026-11-20",
-        "published_at": "2026-11-20T13:28:35Z"
-      },
-      "next_queued_longform": {
         "id": "0096",
         "title": "Finding Quiet in the Midday Rush: Psalm 46:10 | The Midday Watch",
-        "words": 1849,
+        "format": "longform",
+        "youtube_video_id": "o1M-2sdcWBI",
+        "watch_url": "https://youtu.be/o1M-2sdcWBI",
+        "published_on": "2026-11-20",
+        "published_at": "2026-11-20T16:28:02Z"
+      },
+      "next_queued_longform": {
+        "id": "0097",
+        "title": "Pour Out Your Heart Before Him: Psalm 62:5-8 | The Midday Watch",
+        "words": 2357,
         "status": "approved"
       },
       "next_queued_short": {
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0096",
+      "slug": "finding-quiet-in-the-midday-rush-psalm-46-10",
+      "file": "0096-finding-quiet-in-the-midday-rush-psalm-46-10.md",
+      "title": "Finding Quiet in the Midday Rush: Psalm 46:10 | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T16:28:02Z",
+      "youtube_video_id": "o1M-2sdcWBI",
+      "watch_url": "https://youtu.be/o1M-2sdcWBI",
+      "youtu_be_url": "https://youtu.be/o1M-2sdcWBI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/o1M-2sdcWBI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/o1M-2sdcWBI/hqdefault.jpg",
+      "thumb_text": "BE STILL AND KNOW",
+      "thumbnail_pending": false,
+      "duration_label": "~13 min",
+      "words": 1849
+    },
     {
       "id": "0316",
       "slug": "the-lord-will-bless-you-and-your-children-psalm-115-12-15",
@@ -14179,19 +14203,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1417
-      },
-      {
-        "id": "0096",
-        "slug": "finding-quiet-in-the-midday-rush-psalm-46-10",
-        "file": "0096-finding-quiet-in-the-midday-rush-psalm-46-10.md",
-        "title": "Finding Quiet in the Midday Rush: Psalm 46:10 | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1849
       },
       {
         "id": "0097",
