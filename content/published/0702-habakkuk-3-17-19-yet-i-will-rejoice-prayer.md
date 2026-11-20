@@ -78,7 +78,7 @@ originality:
 published_on: "2026-11-13"
 published_at: "2026-11-13T17:27:36Z"
 youtube_video_id: "hz-XLt9f_oo"
-metadata_revision: "retitle-pending"
+metadata_revision: "selar-seo-v1"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
