@@ -1,0 +1,368 @@
+{
+  "key": "short-healinglamentations3v22",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HIS MERCIES ARE NEW",
+    "EVERY SINGLE MORNING"
+  ],
+  "poster": [
+    "GREAT IS THY FAITHFULNESS",
+    "LAMENTATIONS 3:22-23",
+    "PRAYER FOR RESTORATION",
+    "THE HEALING BALM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters glowing in morning sun",
+    "warm golden sanctuary light streaming through high windows",
+    "soft white dove flying over peaceful turquoise waters",
+    "golden dawn light illuminating peaceful calm waters",
+    "gentle rays of warm golden light in tranquil chapel",
+    "turquoise crystal clear living water flowing softly",
+    "white dove soaring gracefully in warm golden sunlight",
+    "calm turquoise lake at dawn with golden horizon light"
+  ],
+  "scenes": [
+    {
+      "a": "As you sit alone trying to swallow the tears you hid all day, know this truth.",
+      "img": "short-healinglamentations3v22-scene-01.jpg",
+      "kicker": "LAMENTATIONS 3:22-23",
+      "sub": "GOD'S MERCIES NEVER FAIL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "It is of the LORD’s mercies that we are not consumed, because his compassions fail not.",
+      "img": "short-healinglamentations3v22-scene-02.jpg",
+      "kicker": "LAMENTATIONS 3:22",
+      "sub": "HIS COMPASSIONS FAIL NOT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "They are new every morning: great is thy faithfulness.",
+      "img": "short-healinglamentations3v22-scene-03.jpg",
+      "kicker": "LAMENTATIONS 3:23",
+      "sub": "NEW EVERY MORNING",
+      "cam": "tilt_up",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "Lord, cover this weary child with your restoring peace right now.",
+      "img": "short-healinglamentations3v22-scene-04.jpg",
+      "kicker": "A PRAYER FOR HEALING",
+      "sub": "RECEIVE GOD'S PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Where strength has failed and heartaches linger, let your tender mercy break through the darkness.",
+      "img": "short-healinglamentations3v22-scene-05.jpg",
+      "kicker": "LAMENTATIONS 3:22-23",
+      "sub": "LIGHT IN THE DARKNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "Renew their body, calm their anxious spirit, and remind them that your love will never leave them.",
+      "img": "short-healinglamentations3v22-scene-06.jpg",
+      "kicker": "RESTORATION & PEACE",
+      "sub": "GOD IS WITH YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "May your gentle presence bring complete rest to their soul today.",
+      "img": "short-healinglamentations3v22-scene-07.jpg",
+      "kicker": "DIVINE COMFORT",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Healing Balm to rest in God's peace.",
+      "img": "short-healinglamentations3v22-scene-08.jpg",
+      "kicker": "THE HEALING BALM",
+      "sub": "SUBSCRIBE FOR DAILY PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      9,
+      "As you sit alone trying to swallow the tears you hid all day, know this truth."
+    ],
+    [
+      9,
+      20,
+      "It is of the LORD’s mercies that we are not consumed, because his compassions fail not."
+    ],
+    [
+      20,
+      28,
+      "They are new every morning: great is thy faithfulness."
+    ],
+    [
+      28,
+      41,
+      "Lord, cover this weary child with your restoring peace right now."
+    ],
+    [
+      41,
+      54,
+      "Where strength has failed and heartaches linger, let your tender mercy break through the darkness."
+    ],
+    [
+      54,
+      68,
+      "Renew their body, calm their anxious spirit, and remind them that your love will never leave them."
+    ],
+    [
+      68,
+      82,
+      "May your gentle presence bring complete rest to their soul today."
+    ],
+    [
+      82,
+      92,
+      "Subscribe to The Healing Balm to rest in God's peace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      9,
+      [
+        "AS YOU SIT ALONE",
+        "TRYING TO SWALLOW TEARS",
+        "YOU HID ALL DAY",
+        "KNOW THIS TRUTH"
+      ],
+      [
+        "SWALLOW",
+        "TEARS"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      9,
+      20,
+      [
+        "IT IS OF THE LORDS MERCIES",
+        "THAT WE ARE NOT CONSUMED",
+        "BECAUSE HIS COMPASSIONS",
+        "FAIL NOT"
+      ],
+      [
+        "LORDS",
+        "MERCIES",
+        "FAIL",
+        "NOT"
+      ],
+      "LAMENTATIONS 3:22"
+    ],
+    [
+      20,
+      28,
+      [
+        "THEY ARE NEW",
+        "EVERY MORNING",
+        "GREAT IS THY",
+        "FAITHFULNESS"
+      ],
+      [
+        "NEW",
+        "EVERY",
+        "MORNING"
+      ],
+      "LAMENTATIONS 3:23"
+    ],
+    [
+      28,
+      41,
+      [
+        "LORD COVER THIS WEARY CHILD",
+        "WITH YOUR RESTORING PEACE",
+        "RIGHT NOW"
+      ],
+      [
+        "RESTORING",
+        "PEACE"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      41,
+      54,
+      [
+        "WHERE STRENGTH HAS FAILED",
+        "AND HEARTACHES LINGER",
+        "LET YOUR TENDER MERCY",
+        "BREAK THROUGH DARKNESS"
+      ],
+      [
+        "TENDER",
+        "MERCY"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      54,
+      68,
+      [
+        "RENEW THEIR BODY",
+        "CALM ANXIOUS SPIRIT",
+        "REMIND THEM YOUR LOVE",
+        "WILL NEVER LEAVE THEM"
+      ],
+      [
+        "NEVER",
+        "LEAVE"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      68,
+      82,
+      [
+        "MAY YOUR GENTLE PRESENCE",
+        "BRING COMPLETE REST",
+        "TO THEIR SOUL TODAY"
+      ],
+      [
+        "COMPLETE",
+        "REST"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      82,
+      92,
+      [
+        "SUBSCRIBE TO THE HEALING BALM",
+        "TO REST IN GODS PEACE"
+      ],
+      [
+        "HEALING",
+        "BALM"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you sit alone trying to swallow the tears you hid all day, know this truth.",
+      "kind": "phrase",
+      "words": [
+        "TEARS",
+        "YOU",
+        "HID"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "It is of the LORD’s mercies that we are not consumed, because his compassions fail not.",
+      "kind": "phrase",
+      "words": [
+        "LORD'S",
+        "MERCIES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "They are new every morning: great is thy faithfulness.",
+      "kind": "phrase",
+      "words": [
+        "NEW",
+        "EVERY",
+        "MORNING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, cover this weary child with your restoring peace right now.",
+      "kind": "phrase",
+      "words": [
+        "RESTORING",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Where strength has failed and heartaches linger, let your tender mercy break through the darkness.",
+      "kind": "phrase",
+      "words": [
+        "TENDER",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Renew their body, calm their anxious spirit, and remind them that your love will never leave them.",
+      "kind": "phrase",
+      "words": [
+        "NEVER",
+        "LEAVE",
+        "THEM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your gentle presence bring complete rest to their soul today.",
+      "kind": "phrase",
+      "words": [
+        "COMPLETE",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Healing Balm to rest in God's peace.",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "BALM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Lamentations 3:22-23"
+}

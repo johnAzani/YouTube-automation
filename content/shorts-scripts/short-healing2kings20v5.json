@@ -1,0 +1,277 @@
+{
+  "key": "short-healing2kings20v5",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEAR THE PROMISE",
+    "OF DIVINE RESTORATION"
+  ],
+  "poster": [
+    "THE LORD HAS",
+    "HEARD YOUR PRAYER",
+    "AND SEEN THE",
+    "TEARS YOU CRY"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "glowing golden sanctuary light",
+    "calm turquoise living waters",
+    "white dove in soft flight",
+    "sunbeams through morning mist",
+    "gentle ripples on clear water",
+    "soft light on stone walls"
+  ],
+  "scenes": [
+    {
+      "a": "If the weight of this uncertainty follows you into your quiet bedroom tonight, stay here.",
+      "img": "short-healing2kings20v5-scene-01.jpg",
+      "kicker": "2 KINGS 20:5",
+      "sub": "GOD HEARS YOUR VOICE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Thus saith the LORD, the God of David thy father, I have heard thy prayer, I have seen thy tears: behold, I will heal thee.",
+      "img": "short-healing2kings20v5-scene-02.jpg",
+      "kicker": "2 KINGS 20:5",
+      "sub": "HE SEES YOUR TEARS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "On the third day thou shalt go up unto the house of the LORD.",
+      "img": "short-healing2kings20v5-scene-03.jpg",
+      "kicker": "2 KINGS 20:5",
+      "sub": "HIS PROMISE IS FIRM",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, bring your comforting hand over this weary heart.",
+      "img": "short-healing2kings20v5-scene-04.jpg",
+      "kicker": "PRAYER",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Steady the soul that trembles and quiet the mind that races against the shadows.",
+      "img": "short-healing2kings20v5-scene-05.jpg",
+      "kicker": "PRAYER",
+      "sub": "PEACE BE STILL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your restoration flow like a river, washing away the remnants of doubt and bringing profound peace to this tired spirit tonight.",
+      "img": "short-healing2kings20v5-scene-06.jpg",
+      "kicker": "RESTORE",
+      "sub": "TRUST IN THE LORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the weight of this uncertainty follows you into your quiet bedroom tonight, stay here."
+    ],
+    [
+      8,
+      18,
+      "Thus saith the LORD, the God of David thy father, I have heard thy prayer, I have seen thy tears: behold, I will heal thee."
+    ],
+    [
+      18,
+      26,
+      "On the third day thou shalt go up unto the house of the LORD."
+    ],
+    [
+      26,
+      35,
+      "Father, bring your comforting hand over this weary heart."
+    ],
+    [
+      35,
+      45,
+      "Steady the soul that trembles and quiet the mind that races against the shadows."
+    ],
+    [
+      45,
+      58,
+      "May your restoration flow like a river, washing away the remnants of doubt and bringing profound peace to this tired spirit tonight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF THE WEIGHT",
+        "OF UNCERTAINTY",
+        "FOLLOWS YOU",
+        "STAY HERE"
+      ],
+      [
+        "UNCERTAINTY",
+        "STAY HERE"
+      ],
+      "2 KINGS 20:5"
+    ],
+    [
+      8,
+      18,
+      [
+        "I HAVE HEARD",
+        "THY PRAYER",
+        "SEEN THY TEARS",
+        "I WILL HEAL"
+      ],
+      [
+        "HEARD",
+        "HEAL"
+      ],
+      "2 KINGS 20:5"
+    ],
+    [
+      18,
+      26,
+      [
+        "ON THE THIRD DAY",
+        "THOU SHALT GO UP",
+        "UNTO THE HOUSE"
+      ],
+      [
+        "THIRD DAY",
+        "HOUSE"
+      ],
+      "2 KINGS 20:5"
+    ],
+    [
+      26,
+      35,
+      [
+        "BRING YOUR HAND",
+        "OVER THIS",
+        "WEARY HEART"
+      ],
+      [
+        "WEARY HEART"
+      ],
+      "PRAYER"
+    ],
+    [
+      35,
+      45,
+      [
+        "STEADY THE SOUL",
+        "QUIET THE MIND",
+        "AGAINST SHADOWS"
+      ],
+      [
+        "STEADY",
+        "QUIET"
+      ],
+      "PRAYER"
+    ],
+    [
+      45,
+      58,
+      [
+        "MAY RESTORATION FLOW",
+        "WASHING AWAY DOUBT",
+        "BRINGING PEACE",
+        "TO THIS SPIRIT"
+      ],
+      [
+        "RESTORATION",
+        "PEACE"
+      ],
+      "RESTORE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the weight of this uncertainty follows you into your quiet bedroom tonight, stay here.",
+      "kind": "phrase",
+      "words": [
+        "UNCERTAINTY",
+        "STAY HERE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thus saith the LORD, the God of David thy father, I have heard thy prayer, I have seen thy tears: behold, I will heal thee.",
+      "kind": "phrase",
+      "words": [
+        "HEARD",
+        "HEAL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "On the third day thou shalt go up unto the house of the LORD.",
+      "kind": "phrase",
+      "words": [
+        "THIRD DAY",
+        "HOUSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, bring your comforting hand over this weary heart.",
+      "kind": "phrase",
+      "words": [
+        "WEARY HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Steady the soul that trembles and quiet the mind that races against the shadows.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "QUIET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your restoration flow like a river, washing away the remnants of doubt and bringing profound peace to this tired spirit tonight.",
+      "kind": "phrase",
+      "words": [
+        "RESTORATION",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Kings 20:5"
+}

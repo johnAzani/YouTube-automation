@@ -1,0 +1,281 @@
+{
+  "key": "short-healingisaiah61v1",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "ISAIAH 61",
+    "HEALING RESTORATION"
+  ],
+  "poster": [
+    "THE SPIRIT",
+    "OF THE LORD",
+    "IS UPON YOU",
+    "RECEIVE PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters",
+    "warm golden sanctuary light",
+    "white dove wings in sunlight",
+    "sunlight filtering through trees",
+    "still lake at sunrise",
+    "soft morning fog over water"
+  ],
+  "scenes": [
+    {
+      "a": "If you are struggling to quiet the racing thoughts that keep you from finding rest.",
+      "img": "short-healingisaiah61v1-scene-01.jpg",
+      "kicker": "ISAIAH 61:1",
+      "sub": "HEAR THIS WORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The Spirit of the Lord GOD is upon me; because the LORD hath anointed me to preach good tidings unto the meek; he hath sent me to bind up the brokenhearted, to proclaim liberty to the captives, and the opening of the prison to them that are bound;",
+      "img": "short-healingisaiah61v1-scene-02.jpg",
+      "kicker": "ISAIAH 61:1",
+      "sub": "BINDING THE BROKEN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "To proclaim the acceptable year of the LORD, and the day of vengeance of our God; to comfort all that mourn;",
+      "img": "short-healingisaiah61v1-scene-03.jpg",
+      "kicker": "ISAIAH 61:2",
+      "sub": "COMFORT FOR YOU",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "To appoint unto them that mourn in Zion, to give unto them beauty for ashes, the oil of joy for mourning, the garment of praise for the spirit of heaviness; that they might be called trees of righteousness, the planting of the LORD, that he might be glorified.",
+      "img": "short-healingisaiah61v1-scene-04.jpg",
+      "kicker": "ISAIAH 61:3",
+      "sub": "BEAUTY FOR ASHES",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, touch this weary heart with your stillness, lifting every weight that hinders their peace tonight.",
+      "img": "short-healingisaiah61v1-scene-05.jpg",
+      "kicker": "RESTORATION",
+      "sub": "FINDING REST",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "May your grace settle upon them, replacing heaviness with your strength as they trust in you.",
+      "img": "short-healingisaiah61v1-scene-06.jpg",
+      "kicker": "PEACE",
+      "sub": "REST IN HIS LOVE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are struggling to quiet the racing thoughts that keep you from finding rest."
+    ],
+    [
+      9,
+      25,
+      "The Spirit of the Lord GOD is upon me; because the LORD hath anointed me to preach good tidings unto the meek; he hath sent me to bind up the brokenhearted, to proclaim liberty to the captives, and the opening of the prison to them that are bound;"
+    ],
+    [
+      26,
+      35,
+      "To proclaim the acceptable year of the LORD, and the day of vengeance of our God; to comfort all that mourn;"
+    ],
+    [
+      36,
+      55,
+      "To appoint unto them that mourn in Zion, to give unto them beauty for ashes, the oil of joy for mourning, the garment of praise for the spirit of heaviness; that they might be called trees of righteousness, the planting of the LORD, that he might be glorified."
+    ],
+    [
+      56,
+      65,
+      "Lord, touch this weary heart with your stillness, lifting every weight that hinders their peace tonight."
+    ],
+    [
+      66,
+      75,
+      "May your grace settle upon them, replacing heaviness with your strength as they trust in you."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "QUIET THE RACING",
+        "THOUGHTS",
+        "FINDING REST"
+      ],
+      [
+        "RACING",
+        "REST"
+      ],
+      "ISAIAH 61:1"
+    ],
+    [
+      9,
+      25,
+      [
+        "THE SPIRIT",
+        "BINDING THE",
+        "BROKENHEARTED",
+        "LIBERTY TO CAPTIVES"
+      ],
+      [
+        "SPIRIT",
+        "LIBERTY"
+      ],
+      "ISAIAH 61:1"
+    ],
+    [
+      26,
+      35,
+      [
+        "PROCLAIM THE YEAR",
+        "OF THE LORD",
+        "COMFORT ALL",
+        "THAT MOURN"
+      ],
+      [
+        "COMFORT",
+        "LORD"
+      ],
+      "ISAIAH 61:2"
+    ],
+    [
+      36,
+      55,
+      [
+        "BEAUTY FOR ASHES",
+        "JOY FOR MOURNING",
+        "GARMENT OF PRAISE",
+        "TREES OF RIGHTEOUSNESS"
+      ],
+      [
+        "BEAUTY",
+        "JOY"
+      ],
+      "ISAIAH 61:3"
+    ],
+    [
+      56,
+      65,
+      [
+        "TOUCH THIS",
+        "WEARY HEART",
+        "LIFTING EVERY",
+        "WEIGHT"
+      ],
+      [
+        "TOUCH",
+        "LIFTING"
+      ],
+      "PRAYER"
+    ],
+    [
+      66,
+      75,
+      [
+        "GRACE SETTLE UPON",
+        "REPLACING HEAVINESS",
+        "WITH STRENGTH",
+        "TRUST IN YOU"
+      ],
+      [
+        "GRACE",
+        "STRENGTH"
+      ],
+      "PEACE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are struggling to quiet the racing thoughts that keep you from finding rest.",
+      "kind": "phrase",
+      "words": [
+        "RACING",
+        "THOUGHTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Spirit of the Lord GOD is upon me; because the LORD hath anointed me to preach good tidings unto the meek; he hath sent me to bind up the brokenhearted, to proclaim liberty to the captives, and the opening of the prison to them that are bound;",
+      "kind": "phrase",
+      "words": [
+        "SPIRIT",
+        "LIBERTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "To proclaim the acceptable year of the LORD, and the day of vengeance of our God; to comfort all that mourn;",
+      "kind": "phrase",
+      "words": [
+        "COMFORT",
+        "MOURN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "To appoint unto them that mourn in Zion, to give unto them beauty for ashes, the oil of joy for mourning, the garment of praise for the spirit of heaviness; that they might be called trees of righteousness, the planting of the LORD, that he might be glorified.",
+      "kind": "phrase",
+      "words": [
+        "BEAUTY",
+        "JOY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, touch this weary heart with your stillness, lifting every weight that hinders their peace tonight.",
+      "kind": "phrase",
+      "words": [
+        "TOUCH",
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your grace settle upon them, replacing heaviness with your strength as they trust in you.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 61:1-3"
+}
