@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T20:50:35Z",
+  "generated_at": "2026-11-20T20:53:31Z",
   "monitor_generated_at": "2026-11-20T20:33:33.603383+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 565,
+    "published_total": 566,
     "published_longform": 173,
-    "published_shorts": 392,
-    "public_total": 563,
+    "published_shorts": 393,
+    "public_total": 564,
     "queued_longform": 58,
-    "queued_shorts": 79,
+    "queued_shorts": 78,
     "automations_ok": 11,
     "automations_total": 13,
     "network_healthy": false
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 51,
+        "published_total": 52,
         "published_longform": 16,
-        "published_shorts": 35,
+        "published_shorts": 36,
         "thumbnail_pending": 4,
-        "public_total": 51,
+        "public_total": 52,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONLUKE5V4",
-        "title": "Pray This Luke 5:4-6 Prayer for Open Doors & Provision | Trust His Word #Shorts",
+        "id": "SHORT-PROVISIONPSALM75V6",
+        "title": "Pray This Psalm 75:6-7 Prayer for Open Doors & Provision | But God Is The Judge #Shorts",
         "format": "short",
-        "youtube_video_id": "gAiOuWP6Xig",
-        "watch_url": "https://www.youtube.com/shorts/gAiOuWP6Xig",
+        "youtube_video_id": "AUj8Yk1PYSI",
+        "watch_url": "https://www.youtube.com/shorts/AUj8Yk1PYSI",
         "published_on": "2026-11-20",
-        "published_at": "2026-11-20T15:37:57Z"
+        "published_at": "2026-11-20T20:52:40Z"
       },
       "next_queued_longform": {
         "id": "0516",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionpsalm75v6",
-        "scripture": "Psalm 75:6-7",
+        "short": "short-provisionpsalm37v23",
+        "scripture": "Psalm 37:23-25",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONPSALM75V6",
+      "slug": "short-provisionpsalm75v6-stewardship-prayer",
+      "file": "short-provisionpsalm75v6-stewardship-prayer.md",
+      "title": "Pray This Psalm 75:6-7 Prayer for Open Doors & Provision | But God Is The Judge #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T20:52:40Z",
+      "youtube_video_id": "AUj8Yk1PYSI",
+      "watch_url": "https://www.youtube.com/shorts/AUj8Yk1PYSI",
+      "youtu_be_url": "https://youtu.be/AUj8Yk1PYSI",
+      "shorts_url": "https://www.youtube.com/shorts/AUj8Yk1PYSI",
+      "studio_url": "https://studio.youtube.com/video/AUj8Yk1PYSI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/AUj8Yk1PYSI/hqdefault.jpg",
+      "thumb_text": "FOR PROMOTION COMETH \u00b7 NEITHER FROM THE EAST",
+      "thumbnail_pending": false,
+      "duration_label": "59s",
+      "words": 650
+    },
     {
       "id": "SHORT-FAMILYPROVERBS20V7",
       "slug": "short-familyproverbs20v7-household-prayer",
@@ -15074,17 +15098,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisionpsalm75v6",
-        "file": "0000-short-provisionpsalm75v6.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 75:6-7",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-psalm77v6",
