@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T01:24:47Z",
+  "generated_at": "2026-11-20T01:24:54Z",
   "monitor_generated_at": "2026-11-19T22:14:33.904388+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 521,
+    "published_total": 522,
     "published_longform": 165,
-    "published_shorts": 356,
-    "public_total": 519,
+    "published_shorts": 357,
+    "public_total": 520,
     "queued_longform": 55,
-    "queued_shorts": 78,
+    "queued_shorts": 77,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 63,
+        "published_total": 64,
         "published_longform": 21,
-        "published_shorts": 42,
+        "published_shorts": 43,
         "thumbnail_pending": 0,
-        "public_total": 63,
+        "public_total": 64,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYHEBREWS4V16",
-        "title": "Say This Hebrews 4:16 Prayer at Noon | Approach God With Confidence #Shorts",
+        "id": "SHORT-MIDDAYPHILIPPIANS4V13",
+        "title": "Say This Philippians 4:13 Prayer at Noon | Strength For The Weary #Shorts",
         "format": "short",
-        "youtube_video_id": "SnUez4tHw4A",
-        "watch_url": "https://www.youtube.com/shorts/SnUez4tHw4A",
-        "published_on": "2026-11-19",
-        "published_at": "2026-11-19T21:01:27Z"
+        "youtube_video_id": "VbCV0NJ50vs",
+        "watch_url": "https://www.youtube.com/shorts/VbCV0NJ50vs",
+        "published_on": "2026-11-20",
+        "published_at": "2026-11-20T01:24:05Z"
       },
       "next_queued_longform": {
         "id": "0096",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayphilippians4v13",
-        "scripture": "Philippians 4:13",
+        "short": "short-middaynehemiah2v4",
+        "scripture": "Nehemiah 2:4",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYPHILIPPIANS4V13",
+      "slug": "short-middayphilippians4v13-midday-prayer",
+      "file": "short-middayphilippians4v13-midday-prayer.md",
+      "title": "Say This Philippians 4:13 Prayer at Noon | Strength For The Weary #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T01:24:05Z",
+      "youtube_video_id": "VbCV0NJ50vs",
+      "watch_url": "https://www.youtube.com/shorts/VbCV0NJ50vs",
+      "youtu_be_url": "https://youtu.be/VbCV0NJ50vs",
+      "shorts_url": "https://www.youtube.com/shorts/VbCV0NJ50vs",
+      "studio_url": "https://studio.youtube.com/video/VbCV0NJ50vs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/VbCV0NJ50vs/hqdefault.jpg",
+      "thumb_text": "WHEN TASKS FEEL \u00b7 TOO HEAVY TO BEAR",
+      "thumbnail_pending": false,
+      "duration_label": "55s",
+      "words": 616
+    },
     {
       "id": "SHORT-MORNINGPHILIPPIANS1V6",
       "slug": "short-morningphilippians1v6-sunrise-prayer",
@@ -13957,17 +13981,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-middayphilippians4v13",
-        "file": "0000-short-middayphilippians4v13.yml",
-        "companion_longform_id": "",
-        "scripture": "Philippians 4:13",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-midnightzechariah4v7",
