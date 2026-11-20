@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T01:29:31Z",
+  "generated_at": "2026-11-20T01:33:03Z",
   "monitor_generated_at": "2026-11-19T22:14:33.904388+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 523,
+    "published_total": 524,
     "published_longform": 165,
-    "published_shorts": 358,
-    "public_total": 521,
+    "published_shorts": 359,
+    "public_total": 522,
     "queued_longform": 55,
-    "queued_shorts": 76,
+    "queued_shorts": 75,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 38,
+        "published_total": 39,
         "published_longform": 10,
-        "published_shorts": 28,
-        "thumbnail_pending": 38,
-        "public_total": 38,
+        "published_shorts": 29,
+        "thumbnail_pending": 39,
+        "public_total": 39,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "0709",
-        "title": "Finding Mercy When Hope Is Weary: Lamentations 3:22-23",
-        "format": "longform",
-        "youtube_video_id": "nrAzoS3z5-o",
-        "watch_url": "https://youtu.be/nrAzoS3z5-o",
-        "published_on": "2026-11-19",
-        "published_at": "2026-11-19T22:10:40Z"
+        "id": "SHORT-GARDENPSALM63V3",
+        "title": "Pray This Psalm 63:3-4 Prayer of Thanksgiving | Lift Your Eyes To God #Shorts",
+        "format": "short",
+        "youtube_video_id": "37mcgMRBQ2A",
+        "watch_url": "https://www.youtube.com/shorts/37mcgMRBQ2A",
+        "published_on": "2026-11-20",
+        "published_at": "2026-11-20T01:32:20Z"
       },
       "next_queued_longform": {
         "id": "0710",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm63v3",
-        "scripture": "Psalm 63:3-4",
+        "short": "short-gardenpsalm136v1",
+        "scripture": "Psalm 136:1",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM63V3",
+      "slug": "short-gardenpsalm63v3-thanksgiving-prayer",
+      "file": "short-gardenpsalm63v3-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 63:3-4 Prayer of Thanksgiving | Lift Your Eyes To God #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T01:32:20Z",
+      "youtube_video_id": "37mcgMRBQ2A",
+      "watch_url": "https://www.youtube.com/shorts/37mcgMRBQ2A",
+      "youtu_be_url": "https://youtu.be/37mcgMRBQ2A",
+      "shorts_url": "https://www.youtube.com/shorts/37mcgMRBQ2A",
+      "studio_url": "https://studio.youtube.com/video/37mcgMRBQ2A/edit",
+      "thumb_url": "https://i.ytimg.com/vi/37mcgMRBQ2A/hqdefault.jpg",
+      "thumb_text": "PSALM 63:3-4 \u00b7 LOVINGKINDNESS",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 651
+    },
     {
       "id": "SHORT-HEALINGJEREMIAH33V6",
       "slug": "short-healingjeremiah33v6-restoration-prayer",
@@ -13973,17 +13997,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-gardenpsalm63v3",
-        "file": "0000-short-gardenpsalm63v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 63:3-4",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
       {
         "short": "short-healingpsalm23v1",
         "file": "0000-short-healingpsalm23v1.yml",
