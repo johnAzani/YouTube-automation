@@ -413,6 +413,9 @@ THE PRAYER — give the listener words to pray with you:
 - Carry the opening's specific need into one direct petition to God grounded
   in the quoted verse. Keep the channel's mood and speak to one listener;
   don't spend the remaining time explaining or repeating the opening.
+- Make the title and poster promise something the narration actually prays for.
+  Once the verse has been read, move straight into prayer; no second hook or
+  recap. Let the petition finish before the single subscribe invitation.
 - Keep the petition honest even if nothing changes today. Don't tell listeners
   what they must feel or imply that subscribing makes the prayer more effective.
 

@@ -148,6 +148,8 @@ class TestModelContract(unittest.TestCase):
         prompt = ss.build_prompt("Psalm 121")
         self.assertIn("one direct petition to God grounded", prompt)
         self.assertIn("even if nothing changes today", prompt)
+        self.assertIn("move straight into prayer; no second hook", prompt)
+        self.assertIn("petition finish before the single subscribe invitation", prompt)
 
     def test_parses_bare_json(self):
         self.assertEqual(ss.parse_model_json('{"a": 1}'), {"a": 1})

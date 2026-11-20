@@ -261,3 +261,24 @@ or private prayer details into the repository.
 
 For a worked example and a pre-release checklist, see the
 [prayer read-aloud review](PRAYER_READ_ALOUD_REVIEW.md).
+
+### Review views and completion across channels
+
+Compare within the same channel and format, using videos of similar length at
+similar ages after release. Record dates, number of videos and views. Do not
+pool Shorts and long-form or use one channel's baseline for another.
+
+| Question | Review in YouTube Studio |
+| --- | --- |
+| Are viewers choosing the long-form video? | Views, impressions and impressions click-through rate. Low views alone don't tell you whether the issue was reach or packaging. |
+| Does the opening deliver what viewers clicked for? | Long-form first-30-second retention; for Shorts, check stayed-to-watch alongside engaged views. |
+| Where does the prayer lose people? | Mark the first direct petition, major scene transitions and closing blessing. Compare retention at those moments and near the end. Average percentage viewed is a separate measure, not a completion rate. |
+
+For the first review on each channel, keep cadence fixed and compare one new
+prayer against a small set of similar releases. If impressions are low, avoid
+rewriting a prayer based on a few views. If opening retention is lower than
+usual, check whether the title's promise is met early. If a later scene dips,
+listen for a repeated point before cutting length. Leave metrics that Studio
+does not show blank. See [YouTube's retention guide](https://support.google.com/youtube/answer/9314415)
+for the limits of key moments. The checked-in analytics cover The Secret Place;
+use each other channel's own Studio data before drawing conclusions about it.

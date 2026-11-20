@@ -37,8 +37,17 @@ The first words spoken must be about the listener, not about the channel.
 
 ### 5. Hold attention to the end without tricks
 
-- Each scene ends by turning the listener toward the next one in a single natural sentence that says what is still to come ("There is one more thing this psalm asks of us before we rest"). Never "stay to the end", never "don't click away".
-- Vary the texture between scenes: scripture reading, plain explanation, direct prayer, a short stillness. No two consecutive scenes begin the same way.
+- Deliver the title and thumbnail's specific promise early. By the end of the
+  opening, the listener should know how the verse speaks to the need they clicked
+  for. Do not save the first meaningful petition for the final scene.
+- Give each scene a distinct reason to exist. If two scenes ask for the same
+  thing in different words, use one to pray for a different part of that same
+  need, drawn from the passage and this channel's purpose. Keep the production
+  length by developing the prayer, not by adding another introduction or recap.
+- Between scenes, carry a thought or unresolved need forward naturally. Do not
+  announce the next section, withhold the promised prayer, or ask people to keep
+  watching. Vary scripture, plain explanation, direct prayer and stillness where
+  they serve the prayer; do not insert a pattern break just to make noise.
 - One specific human moment in every script: a concrete picture of a real situation the verse speaks to, described without naming a real person.
 - Keep sentences speakable. Most under 22 words; no sentence over 40. Write numbers and references the way they are said aloud.
 - The final scene gives the benediction first and the call-to-action last, once, in the channel's required wording. Before it, one sentence invites the listener to write a first name or the need they are praying for in the comments, so the channel can pray with them.

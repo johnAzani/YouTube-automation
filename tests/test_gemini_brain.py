@@ -29,6 +29,8 @@ class TestGeminiBrain(unittest.TestCase):
         for channel_id in CHANNELS:
             with self.subTest(channel=channel_id):
                 prompt = compile_full_brain_prompt(channel_id)
+                self.assertIn("Give each scene a distinct reason to exist", prompt)
+                self.assertIn("Deliver the title and thumbnail's specific promise early", prompt)
                 self.assertIn("Carry the opening's concrete burden", prompt)
                 self.assertIn("return to the opening situation with a quiet blessing", prompt)
 
