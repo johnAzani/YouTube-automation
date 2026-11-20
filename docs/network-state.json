@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T16:41:01Z",
+  "generated_at": "2026-11-20T18:42:29Z",
   "monitor_generated_at": "2026-11-20T16:30:32.192629+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 560,
+    "published_total": 561,
     "published_longform": 173,
-    "published_shorts": 387,
-    "public_total": 558,
+    "published_shorts": 388,
+    "public_total": 559,
     "queued_longform": 58,
-    "queued_shorts": 84,
+    "queued_shorts": 83,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 43,
+        "published_total": 44,
         "published_longform": 13,
-        "published_shorts": 30,
-        "thumbnail_pending": 43,
-        "public_total": 43,
+        "published_shorts": 31,
+        "thumbnail_pending": 44,
+        "public_total": 44,
         "queued_longform": 6,
         "queued_other": 3,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-SHIELDZECHARIAH2V5",
-        "title": "Pray This Zechariah 2:5 Prayer for Divine Protection | A Wall Of Fire Round About #Shorts",
+        "id": "SHORT-SHIELDPSALM27V1",
+        "title": "Pray This Psalm 27:1 Prayer for Divine Protection | God Is Your Safe Refuge #Shorts",
         "format": "short",
-        "youtube_video_id": "nmDeBp074Hk",
-        "watch_url": "https://www.youtube.com/shorts/nmDeBp074Hk",
+        "youtube_video_id": "5g4TraVNpO0",
+        "watch_url": "https://www.youtube.com/shorts/5g4TraVNpO0",
         "published_on": "2026-11-20",
-        "published_at": "2026-11-20T13:35:08Z"
+        "published_at": "2026-11-20T18:41:35Z"
       },
       "next_queued_longform": {
         "id": "0614",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm27v1",
-        "scripture": "Psalm 27:1",
+        "short": "short-shieldpsalm125v2",
+        "scripture": "Psalm 125:2",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM27V1",
+      "slug": "short-shieldpsalm27v1-protection-prayer",
+      "file": "short-shieldpsalm27v1-protection-prayer.md",
+      "title": "Pray This Psalm 27:1 Prayer for Divine Protection | God Is Your Safe Refuge #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T18:41:35Z",
+      "youtube_video_id": "5g4TraVNpO0",
+      "watch_url": "https://www.youtube.com/shorts/5g4TraVNpO0",
+      "youtu_be_url": "https://youtu.be/5g4TraVNpO0",
+      "shorts_url": "https://www.youtube.com/shorts/5g4TraVNpO0",
+      "studio_url": "https://studio.youtube.com/video/5g4TraVNpO0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/5g4TraVNpO0/hqdefault.jpg",
+      "thumb_text": "PSALM 27:1 \u00b7 THE LORD IS MY LIGHT",
+      "thumbnail_pending": true,
+      "duration_label": "47s",
+      "words": 654
+    },
     {
       "id": "SHORT-MIDNIGHTROMANS16V20",
       "slug": "short-midnightromans16v20-midnight-prayer",
@@ -15559,17 +15583,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldpsalm27v1",
-        "file": "0613-short-shieldpsalm27v1.yml",
-        "companion_longform_id": "0613",
-        "scripture": "Psalm 27:1",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm125v2",
