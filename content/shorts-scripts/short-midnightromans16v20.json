@@ -1,0 +1,338 @@
+{
+  "key": "short-midnightromans16v20",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "GOD SHALL BRUISE SATAN",
+    "VICTORY IN MIDNIGHT PRAYER"
+  ],
+  "poster": [
+    "VICTORY AT MIDNIGHT",
+    "THE GOD OF PEACE",
+    "CRUSHES ALL DARKNESS",
+    "STAND IN FAITH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette under starry sky",
+    "dramatic night sky starry heavens glowing light",
+    "lamp lit sanctuary altar midnight vigil peaceful",
+    "dark stormy night ocean dark horizon midnight",
+    "mountain peak midnight starry night glowing horizon",
+    "calm night lake reflection starry sky midnight quiet",
+    "soft candlelight in ancient stone sanctuary midnight",
+    "ancient watchtower beneath deep blue night sky filled with stars"
+  ],
+  "scenes": [
+    {
+      "a": "If the conflict in your mind reached breaking point tonight, listen closely right now.",
+      "img": "short-midnightromans16v20-scene-01.jpg",
+      "kicker": "ROMANS 16:20",
+      "sub": "STAND STRONG IN FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And the God of peace shall bruise Satan under your feet shortly. The grace of our Lord Jesus Christ be with you. Amen.",
+      "img": "short-midnightromans16v20-scene-02.jpg",
+      "kicker": "ROMANS 16:20",
+      "sub": "GOD OF PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we stand in the stillness of midnight, weary from battles fought in silence.",
+      "img": "short-midnightromans16v20-scene-03.jpg",
+      "kicker": "ROMANS 16:20",
+      "sub": "SILENT MIDNIGHT VIGIL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "The spiritual enemy has tried to steal your quiet assurance and leave only fear in this room.",
+      "img": "short-midnightromans16v20-scene-04.jpg",
+      "kicker": "ROMANS 16:20",
+      "sub": "OVERCOME ALL FEAR",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "But your divine promise is sure: your peace is a force that crushes all darkness beneath our feet.",
+      "img": "short-midnightromans16v20-scene-05.jpg",
+      "kicker": "ROMANS 16:20",
+      "sub": "VICTORY OVER DARKNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We surrender every lingering tension, stepping boldly into your complete victory tonight.",
+      "img": "short-midnightromans16v20-scene-06.jpg",
+      "kicker": "ROMANS 16:20",
+      "sub": "SURRENDER EVERY BURDEN",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "May your unmerited grace fill every corner of this quiet space.",
+      "img": "short-midnightromans16v20-scene-07.jpg",
+      "kicker": "ROMANS 16:20",
+      "sub": "ABUNDANT GRACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to stand in prayer with The Midnight Watch.",
+      "img": "short-midnightromans16v20-scene-08.jpg",
+      "kicker": "ROMANS 16:20",
+      "sub": "THE MIDNIGHT WATCH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If the conflict in your mind reached breaking point tonight, listen closely right now."
+    ],
+    [
+      6,
+      14,
+      "And the God of peace shall bruise Satan under your feet shortly. The grace of our Lord Jesus Christ be with you. Amen."
+    ],
+    [
+      14,
+      23,
+      "Lord, we stand in the stillness of midnight, weary from battles fought in silence."
+    ],
+    [
+      23,
+      33,
+      "The spiritual enemy has tried to steal your quiet assurance and leave only fear in this room."
+    ],
+    [
+      33,
+      45,
+      "But your divine promise is sure: your peace is a force that crushes all darkness beneath our feet."
+    ],
+    [
+      45,
+      56,
+      "We surrender every lingering tension, stepping boldly into your complete victory tonight."
+    ],
+    [
+      56,
+      68,
+      "May your unmerited grace fill every corner of this quiet space."
+    ],
+    [
+      68,
+      76,
+      "Subscribe to stand in prayer with The Midnight Watch."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF THE CONFLICT IN YOUR MIND",
+        "REACHED BREAKING POINT TONIGHT",
+        "LISTEN CLOSELY RIGHT NOW"
+      ],
+      [
+        "BREAKING POINT",
+        "LISTEN CLOSELY"
+      ],
+      "ROMANS 16 : 20"
+    ],
+    [
+      6,
+      14,
+      [
+        "AND THE GOD OF PEACE SHALL BRUISE",
+        "SATAN UNDER YOUR FEET SHORTLY",
+        "THE GRACE OF OUR LORD JESUS",
+        "CHRIST BE WITH YOU AMEN"
+      ],
+      [
+        "GOD OF PEACE",
+        "BRUISE SATAN",
+        "GRACE"
+      ],
+      "ROMANS 16 : 20"
+    ],
+    [
+      14,
+      23,
+      [
+        "LORD WE STAND IN THE STILLNESS",
+        "OF MIDNIGHT WEARY FROM BATTLES",
+        "FOUGHT IN SILENCE"
+      ],
+      [
+        "STILLNESS",
+        "BATTLES FOUGHT"
+      ],
+      "ROMANS 16 : 20"
+    ],
+    [
+      23,
+      33,
+      [
+        "THE SPIRITUAL ENEMY HAS TRIED",
+        "TO STEAL YOUR QUIET ASSURANCE",
+        "AND LEAVE ONLY FEAR IN THIS ROOM"
+      ],
+      [
+        "QUIET ASSURANCE",
+        "LEAVE ONLY FEAR"
+      ],
+      "ROMANS 16 : 20"
+    ],
+    [
+      33,
+      45,
+      [
+        "BUT YOUR DIVINE PROMISE IS SURE",
+        "YOUR PEACE IS A FORCE THAT CRUSHES",
+        "ALL DARKNESS BENEATH OUR FEET"
+      ],
+      [
+        "PROMISE IS SURE",
+        "CRUSHES ALL DARKNESS"
+      ],
+      "ROMANS 16 : 20"
+    ],
+    [
+      45,
+      56,
+      [
+        "WE SURRENDER EVERY LINGERING TENSION",
+        "STEPPING BOLDLY INTO YOUR",
+        "COMPLETE VICTORY TONIGHT"
+      ],
+      [
+        "SURRENDER TENSION",
+        "COMPLETE VICTORY"
+      ],
+      "ROMANS 16 : 20"
+    ],
+    [
+      56,
+      68,
+      [
+        "MAY YOUR UNMERITED GRACE FILL",
+        "EVERY CORNER OF THIS QUIET SPACE"
+      ],
+      [
+        "UNMERITED GRACE",
+        "QUIET SPACE"
+      ],
+      "ROMANS 16 : 20"
+    ],
+    [
+      68,
+      76,
+      [
+        "SUBSCRIBE TO STAND IN PRAYER",
+        "WITH THE MIDNIGHT WATCH"
+      ],
+      [
+        "STAND IN PRAYER",
+        "MIDNIGHT WATCH"
+      ],
+      "ROMANS 16 : 20"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the conflict in your mind reached breaking point tonight, listen closely right now.",
+      "kind": "phrase",
+      "words": [
+        "BREAKING",
+        "POINT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And the God of peace shall bruise Satan under your feet shortly.",
+      "kind": "phrase",
+      "words": [
+        "BRUISE",
+        "SATAN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The grace of our Lord Jesus Christ be with you. Amen.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "JESUS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we stand in the stillness of midnight, weary from battles fought in silence.",
+      "kind": "phrase",
+      "words": [
+        "BATTLES",
+        "FOUGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But your divine promise is sure: your peace is a force that crushes all darkness beneath our feet.",
+      "kind": "phrase",
+      "words": [
+        "CRUSHES",
+        "DARKNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We surrender every lingering tension, stepping boldly into your complete victory tonight.",
+      "kind": "phrase",
+      "words": [
+        "COMPLETE",
+        "VICTORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Romans 16:20"
+}

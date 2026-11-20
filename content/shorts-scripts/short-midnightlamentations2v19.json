@@ -1,0 +1,316 @@
+{
+  "key": "short-midnightlamentations2v19",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "POUR OUT",
+    "YOUR HEART"
+  ],
+  "poster": [
+    "MIDNIGHT VIGIL",
+    "A QUIET CRY",
+    "THE WATCH",
+    "LAMENTATIONS 2:19"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "silhouette of ancient stone watchtower under starlit night sky",
+    "glowing oil lamp on wooden table in dark sanctuary",
+    "distant moon reflecting on calm midnight lake",
+    "deep velvet night sky with slow moving stars",
+    "steeple silhouette against dark blue twilight",
+    "dimly lit prayer chapel empty wooden benches",
+    "breathtaking starry nebula in deep midnight sky"
+  ],
+  "scenes": [
+    {
+      "a": "The heavy burden you are carrying in the silence of this room is finally being seen.",
+      "img": "short-midnightlamentations2v19-scene-01.jpg",
+      "kicker": "LAMENTATIONS 2:19",
+      "sub": "POUR OUT YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Arise, cry out in the night: in the beginning of the watches pour out thine heart like water before the face of the LORD:",
+      "img": "short-midnightlamentations2v19-scene-02.jpg",
+      "kicker": "LAMENTATIONS 2:19",
+      "sub": "CRY OUT IN THE NIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "lift up thy hands toward him for the life of thy young children, that faint for hunger in the top of every street.",
+      "img": "short-midnightlamentations2v19-scene-03.jpg",
+      "kicker": "LAMENTATIONS 2:19",
+      "sub": "LIFT UP YOUR HANDS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, in this hour of deep shadow, we bring our exhausted spirits and our aching needs.",
+      "img": "short-midnightlamentations2v19-scene-04.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "WE BRING OUR NEEDS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You see the hunger and the fragility within our walls that we cannot fix alone tonight.",
+      "img": "short-midnightlamentations2v19-scene-05.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "YOU SEE THE FRAGILITY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We trust that your presence is the water that refreshes our dry and weary souls today.",
+      "img": "short-midnightlamentations2v19-scene-06.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "REFRESH OUR WEARY SOULS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Please subscribe to walk with us as we stand in prayer at this midnight hour.",
+      "img": "short-midnightlamentations2v19-scene-07.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "STAND IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The heavy burden you are carrying in the silence of this room is finally being seen."
+    ],
+    [
+      8,
+      16,
+      "Arise, cry out in the night: in the beginning of the watches pour out thine heart like water before the face of the LORD:"
+    ],
+    [
+      16,
+      24,
+      "lift up thy hands toward him for the life of thy young children, that faint for hunger in the top of every street."
+    ],
+    [
+      24,
+      32,
+      "Lord, in this hour of deep shadow, we bring our exhausted spirits and our aching needs."
+    ],
+    [
+      32,
+      40,
+      "You see the hunger and the fragility within our walls that we cannot fix alone tonight."
+    ],
+    [
+      40,
+      48,
+      "We trust that your presence is the water that refreshes our dry and weary souls today."
+    ],
+    [
+      48,
+      56,
+      "Please subscribe to walk with us as we stand in prayer at this midnight hour."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE HEAVY BURDEN",
+        "YOU CARRYING",
+        "SILENCE",
+        "BEING SEEN"
+      ],
+      [
+        "HEAVY BURDEN"
+      ],
+      "LAM 2:19"
+    ],
+    [
+      8,
+      16,
+      [
+        "ARISE CRY OUT",
+        "POUR OUT",
+        "THINE HEART",
+        "BEFORE THE LORD"
+      ],
+      [
+        "POUR OUT"
+      ],
+      "LAM 2:19"
+    ],
+    [
+      16,
+      24,
+      [
+        "LIFT UP HANDS",
+        "FOR THE LIFE",
+        "OF YOUR CHILDREN",
+        "FAINT FOR HUNGER"
+      ],
+      [
+        "LIFT UP"
+      ],
+      "LAM 2:19"
+    ],
+    [
+      24,
+      32,
+      [
+        "LORD",
+        "DEEP SHADOW",
+        "BRING OUR SPIRITS",
+        "ACHING NEEDS"
+      ],
+      [
+        "DEEP SHADOW"
+      ],
+      "LAM 2:19"
+    ],
+    [
+      32,
+      40,
+      [
+        "YOU SEE",
+        "HUNGER",
+        "FRAGILITY",
+        "CANNOT FIX ALONE"
+      ],
+      [
+        "FRAGILITY"
+      ],
+      "LAM 2:19"
+    ],
+    [
+      40,
+      48,
+      [
+        "TRUST",
+        "YOUR PRESENCE",
+        "WATER",
+        "REFRESH SOULS"
+      ],
+      [
+        "REFRESH"
+      ],
+      "LAM 2:19"
+    ],
+    [
+      48,
+      56,
+      [
+        "PLEASE SUBSCRIBE",
+        "WALK WITH US",
+        "STAND IN PRAYER",
+        "MIDNIGHT HOUR"
+      ],
+      [
+        "STAND IN PRAYER"
+      ],
+      "LAM 2:19"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The heavy burden you are carrying in the silence of this room is finally being seen.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "BURDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Arise, cry out in the night: in the beginning of the watches pour out thine heart like water before the face of the LORD:",
+      "kind": "phrase",
+      "words": [
+        "POUR",
+        "OUT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "lift up thy hands toward him for the life of thy young children, that faint for hunger in the top of every street.",
+      "kind": "phrase",
+      "words": [
+        "LIFT",
+        "UP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, in this hour of deep shadow, we bring our exhausted spirits and our aching needs.",
+      "kind": "phrase",
+      "words": [
+        "DEEP",
+        "SHADOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You see the hunger and the fragility within our walls that we cannot fix alone tonight.",
+      "kind": "phrase",
+      "words": [
+        "FRAGILITY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We trust that your presence is the water that refreshes our dry and weary souls today.",
+      "kind": "phrase",
+      "words": [
+        "REFRESH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Please subscribe to walk with us as we stand in prayer at this midnight hour.",
+      "kind": "phrase",
+      "words": [
+        "STAND",
+        "IN",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Lamentations 2:19"
+}
