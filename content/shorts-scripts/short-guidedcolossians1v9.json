@@ -1,0 +1,279 @@
+{
+  "key": "short-guidedcolossians1v9",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "SEEKING WISDOM",
+    "IN HIS WILL"
+  ],
+  "poster": [
+    "GIVE ME",
+    "YOUR SPIRITUAL",
+    "UNDERSTANDING",
+    "OH LORD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "serene misty mountain forest morning",
+    "calm river flowing through quiet valley",
+    "soft light over alpine meadow",
+    "golden hour rays through ancient trees",
+    "tranquil lake reflecting morning sky",
+    "peaceful path winding through cedar woods"
+  ],
+  "scenes": [
+    {
+      "a": "That recurring thought about your future",
+      "img": "short-guidedcolossians1v9-scene-01.jpg",
+      "kicker": "COLOSSIANS 1:9",
+      "sub": "FINDING HIS PERFECT WILL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For this cause we also",
+      "img": "short-guidedcolossians1v9-scene-02.jpg",
+      "kicker": "COLOSSIANS 1:9",
+      "sub": "THE PRAYER FOR WISDOM",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "do not cease to pray for you",
+      "img": "short-guidedcolossians1v9-scene-03.jpg",
+      "kicker": "COLOSSIANS 1:9",
+      "sub": "SPIRITUAL UNDERSTANDING",
+      "cam": "pull_out",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "and to desire that ye might be",
+      "img": "short-guidedcolossians1v9-scene-04.jpg",
+      "kicker": "COLOSSIANS 1:9",
+      "sub": "FILLED WITH HIS KNOWLEDGE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "filled with the knowledge of his will",
+      "img": "short-guidedcolossians1v9-scene-05.jpg",
+      "kicker": "COLOSSIANS 1:9",
+      "sub": "HEAR HIS VOICE CLEARLY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "in all wisdom and spiritual understanding",
+      "img": "short-guidedcolossians1v9-scene-06.jpg",
+      "kicker": "COLOSSIANS 1:10",
+      "sub": "WALK WORTHY OF HIM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That recurring thought about your future needs heaven's perspective before you take another step forward."
+    ],
+    [
+      8,
+      16,
+      "For this cause we also, since the day we heard it, do not cease to pray for you,"
+    ],
+    [
+      16,
+      24,
+      "and to desire that ye might be filled with the knowledge of his will in all wisdom and spiritual understanding;"
+    ],
+    [
+      24,
+      32,
+      "That ye might walk worthy of the Lord unto all pleasing, being fruitful in every good work,"
+    ],
+    [
+      32,
+      40,
+      "and increasing in the knowledge of God; Lord, let these ancient words settle deep within my heart."
+    ],
+    [
+      40,
+      48,
+      "Grant me the discernment to recognize your path when it appears and the grace to follow."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THOUGHTS OF YOUR",
+        "FUTURE NEED",
+        "HEAVENLY",
+        "PERSPECTIVE"
+      ],
+      [
+        "HEAVENLY"
+      ],
+      "COLOSSIANS 1:9"
+    ],
+    [
+      8,
+      16,
+      [
+        "FOR THIS CAUSE",
+        "WE ALSO",
+        "DO NOT",
+        "CEASE TO PRAY"
+      ],
+      [
+        "DO NOT CEASE"
+      ],
+      "COLOSSIANS 1:9"
+    ],
+    [
+      16,
+      24,
+      [
+        "FILLED WITH",
+        "HIS WILL",
+        "IN ALL WISDOM",
+        "AND UNDERSTANDING"
+      ],
+      [
+        "SPIRITUAL"
+      ],
+      "COLOSSIANS 1:9"
+    ],
+    [
+      24,
+      32,
+      [
+        "WALK WORTHY",
+        "OF THE LORD",
+        "FRUITFUL IN",
+        "EVERY WORK"
+      ],
+      [
+        "WALK WORTHY"
+      ],
+      "COLOSSIANS 1:10"
+    ],
+    [
+      32,
+      40,
+      [
+        "INCREASING IN THE",
+        "KNOWLEDGE OF GOD",
+        "LET THESE WORDS",
+        "SETTLE WITHIN"
+      ],
+      [
+        "KNOWLEDGE"
+      ],
+      "COLOSSIANS 1:10"
+    ],
+    [
+      40,
+      48,
+      [
+        "GRANT ME THE",
+        "DISCERNMENT",
+        "TO RECOGNIZE",
+        "YOUR PATH"
+      ],
+      [
+        "DISCERNMENT"
+      ],
+      "COLOSSIANS 1:10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That recurring thought about your future",
+      "kind": "phrase",
+      "words": [
+        "HEAVENLY",
+        "PERSPECTIVE"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "For this cause we also",
+      "kind": "phrase",
+      "words": [
+        "DO",
+        "NOT",
+        "CEASE"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "do not cease to pray for you",
+      "kind": "phrase",
+      "words": [
+        "PRAY",
+        "FOR",
+        "YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and to desire that ye might be",
+      "kind": "phrase",
+      "words": [
+        "DESIRE",
+        "KNOWLEDGE"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "filled with the knowledge of his will",
+      "kind": "phrase",
+      "words": [
+        "FILLED",
+        "HIS",
+        "WILL"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "in all wisdom and spiritual understanding",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "UNDERSTANDING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Colossians 1:9-10"
+}

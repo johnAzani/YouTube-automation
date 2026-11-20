@@ -1,0 +1,274 @@
+{
+  "key": "short-guidedromans12v2",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "RENEW YOUR MIND",
+    "FIND GOD'S WILL"
+  ],
+  "poster": [
+    "TRANSFORM YOUR SPIRIT",
+    "SEEK DIVINE WISDOM",
+    "LEAVE WORLDLY WAYS",
+    "FIND PERFECT PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain valley at sunrise",
+    "peaceful river flowing through forest",
+    "soft morning light on alpine meadow",
+    "calm mountain lake reflection",
+    "dusk in a silent mountain pass",
+    "slow clouds over distant peaks"
+  ],
+  "scenes": [
+    {
+      "a": "That feeling that you are being pulled by every passing opinion is exhausting you today.",
+      "img": "short-guidedromans12v2-scene-01.jpg",
+      "kicker": "ROMANS 12:2",
+      "sub": "RENEWING THE MIND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Hear the instruction of the Lord:",
+      "img": "short-guidedromans12v2-scene-02.jpg",
+      "kicker": "ROMANS 12:2",
+      "sub": "THE WORD OF GOD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God.",
+      "img": "short-guidedromans12v2-scene-03.jpg",
+      "kicker": "ROMANS 12:2",
+      "sub": "WALKING IN HIS WILL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, help me step away from the noise of the world that distracts my focus.",
+      "img": "short-guidedromans12v2-scene-04.jpg",
+      "kicker": "A PRAYER",
+      "sub": "SEEKING HIS GUIDANCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "I yield my understanding to You, trusting that Your perfect will is far better than my own.",
+      "img": "short-guidedromans12v2-scene-05.jpg",
+      "kicker": "A PRAYER",
+      "sub": "DIVINE CLARITY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant me the discernment to recognize the path You have prepared for my life tonight.",
+      "img": "short-guidedromans12v2-scene-06.jpg",
+      "kicker": "A PRAYER",
+      "sub": "FOLLOWING HIS LEAD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That feeling that you are being pulled by every passing opinion is exhausting you today."
+    ],
+    [
+      8,
+      15,
+      "Hear the instruction of the Lord:"
+    ],
+    [
+      15,
+      35,
+      "And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God."
+    ],
+    [
+      35,
+      45,
+      "Lord, help me step away from the noise of the world that distracts my focus."
+    ],
+    [
+      45,
+      55,
+      "I yield my understanding to You, trusting that Your perfect will is far better than my own."
+    ],
+    [
+      55,
+      65,
+      "Grant me the discernment to recognize the path You have prepared for my life tonight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT FEELING OF",
+        "BEING PULLED",
+        "IS EXHAUSTING YOU"
+      ],
+      [
+        "EXHAUSTING"
+      ],
+      "ROMANS 12:2"
+    ],
+    [
+      8,
+      15,
+      [
+        "HEAR THE",
+        "INSTRUCTION",
+        "OF THE LORD"
+      ],
+      [
+        "INSTRUCTION"
+      ],
+      "ROMANS 12:2"
+    ],
+    [
+      15,
+      35,
+      [
+        "BE NOT CONFORMED",
+        "BUT BE TRANSFORMED",
+        "BY THE RENEWING",
+        "OF YOUR MIND"
+      ],
+      [
+        "TRANSFORMED",
+        "RENEWING"
+      ],
+      "ROMANS 12:2"
+    ],
+    [
+      35,
+      45,
+      [
+        "STEP AWAY FROM",
+        "THE NOISE",
+        "OF THE WORLD"
+      ],
+      [
+        "NOISE"
+      ],
+      "ROMANS 12:2"
+    ],
+    [
+      45,
+      55,
+      [
+        "YIELD TO",
+        "YOUR PERFECT",
+        "WILL OF GOD"
+      ],
+      [
+        "PERFECT WILL"
+      ],
+      "ROMANS 12:2"
+    ],
+    [
+      55,
+      65,
+      [
+        "GRANT ME THE",
+        "DISCERNMENT",
+        "TO RECOGNIZE",
+        "THE PATH"
+      ],
+      [
+        "DISCERNMENT"
+      ],
+      "ROMANS 12:2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That feeling that you are being pulled by every passing opinion is exhausting you today.",
+      "kind": "phrase",
+      "words": [
+        "EXHAUSTING",
+        "YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the instruction of the Lord:",
+      "kind": "phrase",
+      "words": [
+        "INSTRUCTION",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God.",
+      "kind": "phrase",
+      "words": [
+        "TRANSFORMED",
+        "RENEWING",
+        "PERFECT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help me step away from the noise of the world that distracts my focus.",
+      "kind": "phrase",
+      "words": [
+        "STEP",
+        "AWAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I yield my understanding to You, trusting that Your perfect will is far better than my own.",
+      "kind": "phrase",
+      "words": [
+        "YIELD",
+        "PERFECT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the discernment to recognize the path You have prepared for my life tonight.",
+      "kind": "phrase",
+      "words": [
+        "DISCERNMENT",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Romans 12:2"
+}

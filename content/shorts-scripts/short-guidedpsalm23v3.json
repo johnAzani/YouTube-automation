@@ -1,0 +1,276 @@
+{
+  "key": "short-guidedpsalm23v3",
+  "channel": "prayer10",
+  "psalm": 23,
+  "title": [
+    "HE RESTORETH",
+    "MY SOUL"
+  ],
+  "poster": [
+    "RESTORE",
+    "AND",
+    "RIGHTEOUS",
+    "PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley at dawn",
+    "gentle flowing river at dusk",
+    "solitary mountain pass under clouds",
+    "golden light hitting forest floor",
+    "still lake reflection mountain",
+    "narrow path through quiet woods"
+  ],
+  "scenes": [
+    {
+      "a": "When the confusion of that choice clouds your vision, you need not walk alone tonight.",
+      "img": "short-guidedpsalm23v3-scene-01.jpg",
+      "kicker": "PSALM 23:3",
+      "sub": "FINDING STRENGTH IN HIM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake.",
+      "img": "short-guidedpsalm23v3-scene-02.jpg",
+      "kicker": "THE PROMISE",
+      "sub": "HIS GUIDANCE IS PERFECT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Lord, my heart feels weary from the weight of this decision and I am seeking clarity.",
+      "img": "short-guidedpsalm23v3-scene-03.jpg",
+      "kicker": "A HUMBLE PETITION",
+      "sub": "SEEKING HIS WISDOM",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Quiet the noise within my spirit so I can discern the way that honors You.",
+      "img": "short-guidedpsalm23v3-scene-04.jpg",
+      "kicker": "HEARING HIS VOICE",
+      "sub": "ALIGNING WITH HIS WILL",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "I trust Your hand to guide my feet, even when the path ahead remains hidden now.",
+      "img": "short-guidedpsalm23v3-scene-05.jpg",
+      "kicker": "TRUSTING THE LORD",
+      "sub": "SURRENDERING THE UNKNOWN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Thank You for the peace that comes when I finally lay my own desires aside.",
+      "img": "short-guidedpsalm23v3-scene-06.jpg",
+      "kicker": "RESTING IN FAITH",
+      "sub": "PEACE IN SURRENDER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "When the confusion of that choice clouds your vision, you need not walk alone tonight."
+    ],
+    [
+      8,
+      18,
+      "He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake."
+    ],
+    [
+      18,
+      28,
+      "Lord, my heart feels weary from the weight of this decision and I am seeking clarity."
+    ],
+    [
+      28,
+      38,
+      "Quiet the noise within my spirit so I can discern the way that honors You."
+    ],
+    [
+      38,
+      48,
+      "I trust Your hand to guide my feet, even when the path ahead remains hidden now."
+    ],
+    [
+      48,
+      58,
+      "Thank You for the peace that comes when I finally lay my own desires aside."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "CONFUSION CLOUDS",
+        "YOUR VISION",
+        "WALK ALONE"
+      ],
+      [
+        "CONFUSION",
+        "ALONE"
+      ],
+      "PSALM 23 : 3"
+    ],
+    [
+      8,
+      18,
+      [
+        "HE RESTORETH MY SOUL",
+        "HE LEADETH ME",
+        "RIGHTEOUS PATHS"
+      ],
+      [
+        "RESTORETH",
+        "RIGHTEOUS"
+      ],
+      "PSALM 23 : 3"
+    ],
+    [
+      18,
+      28,
+      [
+        "HEART FEELS WEARY",
+        "SEEKING CLARITY",
+        "WEIGHT OF DECISION"
+      ],
+      [
+        "WEARY",
+        "CLARITY"
+      ],
+      "PSALM 23 : 3"
+    ],
+    [
+      28,
+      38,
+      [
+        "QUIET THE NOISE",
+        "DISCERN THE WAY",
+        "HONORS YOU"
+      ],
+      [
+        "QUIET",
+        "DISCERN"
+      ],
+      "PSALM 23 : 3"
+    ],
+    [
+      38,
+      48,
+      [
+        "TRUST YOUR HAND",
+        "GUIDE MY FEET",
+        "REMAINS HIDDEN"
+      ],
+      [
+        "TRUST",
+        "GUIDE"
+      ],
+      "PSALM 23 : 3"
+    ],
+    [
+      48,
+      58,
+      [
+        "PEACE THAT COMES",
+        "LAY DESIRES ASIDE",
+        "THANK YOU"
+      ],
+      [
+        "PEACE",
+        "ASIDE"
+      ],
+      "PSALM 23 : 3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When the confusion of that choice clouds your vision, you need not walk alone tonight.",
+      "kind": "phrase",
+      "words": [
+        "CONFUSION",
+        "ALONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake.",
+      "kind": "phrase",
+      "words": [
+        "RESTORETH",
+        "RIGHTEOUS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, my heart feels weary from the weight of this decision and I am seeking clarity.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "CLARITY"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Quiet the noise within my spirit so I can discern the way that honors You.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "DISCERN"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "I trust Your hand to guide my feet, even when the path ahead remains hidden now.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "GUIDE"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "Thank You for the peace that comes when I finally lay my own desires aside.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "ASIDE"
+      ],
+      "hi": 5,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 23:3"
+}
