@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T03:58:51.013801+00:00",
+  "generated_at": "2026-11-20T08:17:42.998614+00:00",
   "healthy": true,
   "automations": [
     {
@@ -9,8 +9,8 @@
         "14 20 * * *"
       ],
       "last_run": "2026-11-20T03:57:52+00:00",
-      "last_conclusion": null,
-      "last_success": "2026-11-20T02:13:09+00:00",
+      "last_conclusion": "success",
+      "last_success": "2026-11-20T03:57:52+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-17T13:00:49+00:00",
       "last_slot": "2026-11-19T20:14:00+00:00",
@@ -18,7 +18,7 @@
       "failures_5": 0,
       "effect": "reports and files stalls",
       "verdict": "OK",
-      "detail": "last success 1.8h ago",
+      "detail": "last success 4.3h ago",
       "severity": "ok"
     },
     {
@@ -27,8 +27,8 @@
       "crons": [
         "37 3 * * *"
       ],
-      "last_run": "2026-11-19T12:02:36+00:00",
-      "last_conclusion": "success",
+      "last_run": "2026-11-20T08:17:23+00:00",
+      "last_conclusion": null,
       "last_success": "2026-11-19T12:02:36+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-16T11:08:00+00:00",
@@ -37,7 +37,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 15.9h ago",
+      "detail": "last success 20.3h ago",
       "severity": "ok"
     },
     {
@@ -53,12 +53,12 @@
       "last_success": "2026-11-20T01:15:44+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-13T12:10:31+00:00",
-      "last_slot": "2026-11-19T19:14:00+00:00",
+      "last_slot": "2026-11-20T07:14:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "posts replies and records them in content/comments/replied.json",
       "verdict": "OK",
-      "detail": "last success 2.7h ago",
+      "detail": "last success 7.0h ago",
       "severity": "ok"
     },
     {
@@ -77,7 +77,7 @@
       "failures_5": 0,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "OK",
-      "detail": "last success 26.8h ago",
+      "detail": "last success 31.1h ago",
       "severity": "ok"
     },
     {
@@ -86,8 +86,8 @@
       "crons": [
         "14 3 * * *"
       ],
-      "last_run": "2026-11-19T11:37:26+00:00",
-      "last_conclusion": "success",
+      "last_run": "2026-11-20T08:17:22+00:00",
+      "last_conclusion": null,
       "last_success": "2026-11-19T11:37:26+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-17T07:19:53+00:00",
@@ -96,7 +96,7 @@
       "failures_5": 0,
       "effect": "writes content/queue/ or content/shorts-scripts/",
       "verdict": "OK",
-      "detail": "last success 16.4h ago",
+      "detail": "last success 20.7h ago",
       "severity": "ok"
     },
     {
@@ -115,7 +115,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 0.2h ago",
+      "detail": "last success 4.5h ago",
       "severity": "ok"
     },
     {
@@ -134,7 +134,7 @@
       "failures_5": 0,
       "effect": "re-arms scheduled workflows",
       "verdict": "OK",
-      "detail": "last success 88.2h ago",
+      "detail": "last success 92.5h ago",
       "severity": "ok"
     },
     {
@@ -144,8 +144,8 @@
         "41 18 * * 5"
       ],
       "last_run": "2026-11-20T03:57:52+00:00",
-      "last_conclusion": null,
-      "last_success": "2026-11-20T02:13:09+00:00",
+      "last_conclusion": "success",
+      "last_success": "2026-11-20T03:57:52+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-17T13:00:49+00:00",
       "last_slot": "2026-11-13T18:41:00+00:00",
@@ -153,7 +153,7 @@
       "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
       "verdict": "OK",
-      "detail": "last success 1.8h ago",
+      "detail": "last success 4.3h ago",
       "severity": "ok"
     },
     {
@@ -162,17 +162,17 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-20T03:57:52+00:00",
+      "last_run": "2026-11-20T08:17:07+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-20T03:52:14+00:00",
+      "last_success": "2026-11-20T03:57:52+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-17T13:00:49+00:00",
-      "last_slot": "2026-11-20T03:23:00+00:00",
+      "last_slot": "2026-11-20T06:23:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "this report",
       "verdict": "OK",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 4.3h ago",
       "severity": "ok"
     },
     {
@@ -185,17 +185,17 @@
         "14 19 * * *",
         "14 23 * * *"
       ],
-      "last_run": "2026-11-20T03:57:31+00:00",
-      "last_conclusion": "success",
+      "last_run": "2026-11-20T08:17:32+00:00",
+      "last_conclusion": null,
       "last_success": "2026-11-20T03:57:31+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-17T15:15:02+00:00",
-      "last_slot": "2026-11-19T23:14:00+00:00",
+      "last_slot": "2026-11-20T06:14:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
       "verdict": "OK",
-      "detail": "last success 0.0h ago",
+      "detail": "last success 4.3h ago",
       "severity": "ok"
     },
     {
@@ -204,17 +204,17 @@
       "crons": [
         "47 5 * * *"
       ],
-      "last_run": "2026-11-19T14:42:06+00:00",
-      "last_conclusion": "success",
+      "last_run": "2026-11-20T08:17:27+00:00",
+      "last_conclusion": null,
       "last_success": "2026-11-19T14:42:06+00:00",
-      "runs_14d": 12,
+      "runs_14d": 13,
       "last_edited": "2026-11-14T16:30:10+00:00",
-      "last_slot": "2026-11-19T05:47:00+00:00",
+      "last_slot": "2026-11-20T05:47:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 13.3h ago",
+      "detail": "last success 17.6h ago",
       "severity": "ok"
     },
     {
@@ -223,12 +223,12 @@
       "crons": [
         "47 0,3,6,9,12,15,18,21 * * *"
       ],
-      "last_run": "2026-11-20T03:57:52+00:00",
-      "last_conclusion": "success",
-      "last_success": "2026-11-20T03:57:52+00:00",
+      "last_run": "2026-11-20T08:17:07+00:00",
+      "last_conclusion": null,
+      "last_success": "2026-11-20T08:16:26+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-07T19:31:06+00:00",
-      "last_slot": "2026-11-20T03:47:00+00:00",
+      "last_slot": "2026-11-20T06:47:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "",
@@ -242,74 +242,74 @@
       "crons": [
         "52 4 * * *"
       ],
-      "last_run": "2026-11-19T13:57:27+00:00",
-      "last_conclusion": "success",
+      "last_run": "2026-11-20T08:17:25+00:00",
+      "last_conclusion": null,
       "last_success": "2026-11-19T13:57:27+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-15T19:27:27+00:00",
-      "last_slot": "2026-11-19T04:52:00+00:00",
+      "last_slot": "2026-11-20T04:52:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "proves main still passes its own unit tests (queue and publish commits skip them)",
       "verdict": "OK",
-      "detail": "last success 14.0h ago",
+      "detail": "last success 18.3h ago",
       "severity": "ok"
     }
   ],
   "outcomes": [
     {
       "outcome": "last upload",
-      "detail": "2026-11-20 (2h ago)",
+      "detail": "2026-11-20 (6h ago)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (secret-place)",
-      "detail": "The Secret Place: 2026-11-20 (3h ago \u2014 short-psalm119v55-pre-sleep-prayer.md)",
+      "detail": "The Secret Place: 2026-11-20 (7h ago \u2014 short-psalm119v55-pre-sleep-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer2)",
-      "detail": "The Morning Altar: 2026-11-20 (3h ago \u2014 short-morningphilippians1v6-sunrise-prayer.md)",
+      "detail": "The Morning Altar: 2026-11-20 (7h ago \u2014 short-morningphilippians1v6-sunrise-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer3)",
-      "detail": "The Midday Watch: 2026-11-20 (3h ago \u2014 short-middayphilippians4v13-midday-prayer.md)",
+      "detail": "The Midday Watch: 2026-11-20 (7h ago \u2014 short-middayphilippians4v13-midday-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer4)",
-      "detail": "The Midnight Watch: 2026-11-20 (2h ago \u2014 0218-when-you-need-a-defender-psalm-144.md)",
+      "detail": "The Midnight Watch: 2026-11-20 (6h ago \u2014 0218-when-you-need-a-defender-psalm-144.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer5)",
-      "detail": "The Family Altar: 2026-11-20 (3h ago \u2014 short-familyproverbs22v6-household-prayer.md)",
+      "detail": "The Family Altar: 2026-11-20 (7h ago \u2014 short-familyproverbs22v6-household-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer6)",
-      "detail": "The Healing Balm: 2026-11-20 (3h ago \u2014 short-healingjeremiah33v6-restoration-prayer.md)",
+      "detail": "The Healing Balm: 2026-11-20 (7h ago \u2014 short-healingjeremiah33v6-restoration-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer7)",
-      "detail": "The Provision Table: 2026-11-20 (2h ago \u2014 short-provision2corinthians9v8-stewardship-prayer.md)",
+      "detail": "The Provision Table: 2026-11-20 (7h ago \u2014 short-provision2corinthians9v8-stewardship-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer8)",
-      "detail": "The Covenant Shield: 2026-11-20 (2h ago \u2014 0612-eternal-refuge-deuteronomy-33-27-the-covenant-shield.md)",
+      "detail": "The Covenant Shield: 2026-11-20 (6h ago \u2014 0612-eternal-refuge-deuteronomy-33-27-the-covenant-shield.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer9)",
-      "detail": "The Praise Garden: 2026-11-20 (2h ago \u2014 short-gardenpsalm63v3-thanksgiving-prayer.md)",
+      "detail": "The Praise Garden: 2026-11-20 (7h ago \u2014 short-gardenpsalm63v3-thanksgiving-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer10)",
-      "detail": "The Guided Path: 2026-11-20 (2h ago \u2014 short-guidedpsalm37v23-guidance-prayer.md)",
+      "detail": "The Guided Path: 2026-11-20 (7h ago \u2014 short-guidedpsalm37v23-guidance-prayer.md)",
       "severity": "ok"
     },
     {
@@ -319,7 +319,7 @@
     },
     {
       "outcome": "api budget",
-      "detail": "the last 7 days priced from the receipts: 381 uploads spending ~121905 units (320 each); 257 caption track(s) at 400 are 102800 of that, 105 replies 50 apiece are 5250 \u2014 the shared pool is 10000 units a day and an upload is one unit of a separate 100-a-day allowance; 136 first comment(s) at 50",
+      "detail": "the last 7 days priced from the receipts: 381 uploads spending ~121955 units (320 each); 257 caption track(s) at 400 are 102800 of that, 105 replies 50 apiece are 5250 \u2014 the shared pool is 10000 units a day and an upload is one unit of a separate 100-a-day allowance; 136 first comment(s) at 50",
       "severity": "ok"
     },
     {
