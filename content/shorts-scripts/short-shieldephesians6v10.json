@@ -1,0 +1,296 @@
+{
+  "key": "short-shieldephesians6v10",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "EPHESIANS",
+    "SIX : TEN"
+  ],
+  "poster": [
+    "THE COVENANT SHIELD",
+    "DIVINE PROTECTION",
+    "STRONG TOWER REFUGE",
+    "DAILY PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower sunrise mountain mist",
+    "golden light rays piercing through heavy storm clouds",
+    "peaceful river flowing through rugged mountain valley",
+    "dramatic cliffside fortress overlook at sunset light",
+    "tall pine forest bathed in soft morning fog",
+    "solid granite mountain peaks standing firm in the sky",
+    "calm serene highland lake reflecting evening clouds"
+  ],
+  "scenes": [
+    {
+      "a": "If that unseen opposition in your workplace is testing your resolve today, stay and take refuge.",
+      "img": "short-shieldephesians6v10-scene-01.jpg",
+      "kicker": "EPHESIANS 6:10",
+      "sub": "BE STRONG IN THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we come before Your throne seeking the mighty covering of Your spiritual armor right now.",
+      "img": "short-shieldephesians6v10-scene-02.jpg",
+      "kicker": "DIVINE SHIELD",
+      "sub": "THE POWER OF HIS MIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Your holy word commands us saying, Finally, my brethren, be strong in the Lord, and in the power of his might.",
+      "img": "short-shieldephesians6v10-scene-03.jpg",
+      "kicker": "HIS MIGHT",
+      "sub": "STAND IN HIS STRENGTH",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant us the steadfast courage to stand firm when discouragement tries to undermine our faith.",
+      "img": "short-shieldephesians6v10-scene-04.jpg",
+      "kicker": "STRONG TOWER",
+      "sub": "UNSHAKABLE REFUGE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "We heed Your instruction to Put on the whole armor of God, that ye may be able to stand against the wiles of the devil.",
+      "img": "short-shieldephesians6v10-scene-05.jpg",
+      "kicker": "ARMOR OF GOD",
+      "sub": "STAND AGAINST WILES",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Surround our minds with truth and guard our hearts with righteousness throughout every hour ahead.",
+      "img": "short-shieldephesians6v10-scene-06.jpg",
+      "kicker": "DAILY COVERING",
+      "sub": "WALK IN TRUTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In Jesus name we pray, Amen.",
+      "img": "short-shieldephesians6v10-scene-07.jpg",
+      "kicker": "AMEN",
+      "sub": "REST IN HIS PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "If that unseen opposition in your workplace is testing your resolve today, stay and take refuge."
+    ],
+    [
+      15,
+      30,
+      "Father, we come before Your throne seeking the mighty covering of Your spiritual armor right now."
+    ],
+    [
+      30,
+      48,
+      "Your holy word commands us saying, Finally, my brethren, be strong in the Lord, and in the power of his might."
+    ],
+    [
+      48,
+      63,
+      "Grant us the steadfast courage to stand firm when discouragement tries to undermine our faith."
+    ],
+    [
+      63,
+      85,
+      "We heed Your instruction to Put on the whole armor of God, that ye may be able to stand against the wiles of the devil."
+    ],
+    [
+      85,
+      100,
+      "Surround our minds with truth and guard our hearts with righteousness throughout every hour ahead."
+    ],
+    [
+      100,
+      110,
+      "In Jesus name we pray, Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "IF THAT UNSEEN OPPOSITION",
+        "IN YOUR WORKPLACE IS TESTING",
+        "YOUR RESOLVE TODAY"
+      ],
+      "OPPOSITION",
+      "EPHESIANS 6:10"
+    ],
+    [
+      15,
+      30,
+      [
+        "FATHER WE COME BEFORE",
+        "YOUR THRONE SEEKING",
+        "THE MIGHTY COVERING"
+      ],
+      "COVERING",
+      "DIVINE SHIELD"
+    ],
+    [
+      30,
+      48,
+      [
+        "FINALLY MY BRETHREN",
+        "BE STRONG IN THE LORD",
+        "AND IN THE POWER OF HIS MIGHT"
+      ],
+      "MIGHT",
+      "EPHESIANS 6:10"
+    ],
+    [
+      48,
+      63,
+      [
+        "GRANT US THE STEADFAST COURAGE",
+        "TO STAND FIRM WHEN",
+        "DISCOURAGEMENT TRIES TO HARM"
+      ],
+      "COURAGE",
+      "STRONG TOWER"
+    ],
+    [
+      63,
+      85,
+      [
+        "PUT ON THE WHOLE ARMOR OF GOD",
+        "THAT YE MAY BE ABLE TO STAND",
+        "AGAINST THE WILES OF THE DEVIL"
+      ],
+      "ARMOR",
+      "EPHESIANS 6:11"
+    ],
+    [
+      85,
+      100,
+      [
+        "SURROUND OUR MINDS WITH TRUTH",
+        "AND GUARD OUR HEARTS",
+        "THROUGHOUT EVERY HOUR AHEAD"
+      ],
+      "TRUTH",
+      "DAILY COVERING"
+    ],
+    [
+      100,
+      110,
+      [
+        "IN JESUS NAME",
+        "WE PRAY",
+        "AMEN"
+      ],
+      "AMEN",
+      "REST IN PEACE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that unseen opposition in your workplace is testing your resolve today, stay and take refuge.",
+      "kind": "phrase",
+      "words": [
+        "UNSEEN",
+        "OPPOSITION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we come before Your throne seeking the mighty covering of Your spiritual armor right now.",
+      "kind": "phrase",
+      "words": [
+        "MIGHTY",
+        "COVERING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your holy word commands us saying, Finally, my brethren, be strong in the Lord, and in the power of his might.",
+      "kind": "phrase",
+      "words": [
+        "BE STRONG",
+        "IN THE LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us the steadfast courage to stand firm when discouragement tries to undermine our faith.",
+      "kind": "phrase",
+      "words": [
+        "STEADFAST",
+        "COURAGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We heed Your instruction to Put on the whole armor of God, that ye may be able to stand against the wiles of the devil.",
+      "kind": "phrase",
+      "words": [
+        "WHOLE ARMOR",
+        "OF GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Surround our minds with truth and guard our hearts with righteousness throughout every hour ahead.",
+      "kind": "phrase",
+      "words": [
+        "MINDS WITH TRUTH",
+        "GUARD HEARTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus name we pray, Amen.",
+      "kind": "phrase",
+      "words": [
+        "IN JESUS NAME",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ephesians 6:10-11"
+}

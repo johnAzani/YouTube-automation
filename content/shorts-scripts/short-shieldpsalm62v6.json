@@ -1,0 +1,242 @@
+{
+  "key": "short-shieldpsalm62v6",
+  "channel": "prayer8",
+  "psalm": 62,
+  "title": [
+    "STRENGTH",
+    "SECURE"
+  ],
+  "poster": [
+    "GOD",
+    "IS",
+    "MY",
+    "REFUGE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "majestic ancient stone fortress on cliff",
+    "golden sun rays through thick storm clouds",
+    "calm mountain lake at twilight",
+    "glowing light over tranquil river",
+    "vast peaceful valley at dawn",
+    "stable mountain peak against blue sky"
+  ],
+  "scenes": [
+    {
+      "a": "If the outcome of this specific situation keeps you awake, find your sanctuary here.",
+      "img": "short-shieldpsalm62v6-scene-01.jpg",
+      "kicker": "PSALM 62:6",
+      "sub": "FIND YOUR SANCTUARY HERE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He only is my rock and my salvation: he is my defence; I shall not be moved.",
+      "img": "short-shieldpsalm62v6-scene-02.jpg",
+      "kicker": "PSALM 62:6",
+      "sub": "HE IS MY DEFENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "In God is my salvation and my glory: the rock of my strength, and my refuge, is in God.",
+      "img": "short-shieldpsalm62v6-scene-03.jpg",
+      "kicker": "PSALM 62:7",
+      "sub": "MY REFUGE IS IN GOD",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, let this truth anchor my wandering spirit when the world feels loud and shifting.",
+      "img": "short-shieldpsalm62v6-scene-04.jpg",
+      "kicker": "PRAYER OF TRUST",
+      "sub": "ANCHOR MY SPIRIT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Quiet the noise of my restless thoughts and replace my fear with your solid presence.",
+      "img": "short-shieldpsalm62v6-scene-05.jpg",
+      "kicker": "STEADFAST PEACE",
+      "sub": "REPLACE FEAR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "May I rest completely in your shadow today, knowing that in you, I am shielded.",
+      "img": "short-shieldpsalm62v6-scene-06.jpg",
+      "kicker": "DIVINE SHIELD",
+      "sub": "REST IN YOUR SHADOW",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the outcome of this specific situation keeps you awake, find your sanctuary here."
+    ],
+    [
+      8,
+      16,
+      "He only is my rock and my salvation: he is my defence; I shall not be moved."
+    ],
+    [
+      16,
+      24,
+      "In God is my salvation and my glory: the rock of my strength, and my refuge, is in God."
+    ],
+    [
+      24,
+      32,
+      "Lord, let this truth anchor my wandering spirit when the world feels loud and shifting."
+    ],
+    [
+      32,
+      40,
+      "Quiet the noise of my restless thoughts and replace my fear with your solid presence."
+    ],
+    [
+      40,
+      48,
+      "May I rest completely in your shadow today, knowing that in you, I am shielded."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF THE OUTCOME",
+        "OF THIS SITUATION",
+        "KEEPS YOU AWAKE,",
+        "FIND SANCTUARY HERE"
+      ],
+      [
+        "FIND",
+        "SANCTUARY"
+      ],
+      "PSALM 62:6"
+    ],
+    [
+      8,
+      16,
+      [
+        "HE ONLY IS MY ROCK",
+        "AND MY SALVATION:",
+        "HE IS MY DEFENCE;",
+        "I SHALL NOT BE MOVED"
+      ],
+      [
+        "ROCK",
+        "DEFENCE"
+      ],
+      "PSALM 62:6"
+    ],
+    [
+      16,
+      24,
+      [
+        "IN GOD IS MY",
+        "SALVATION AND GLORY:",
+        "THE ROCK OF STRENGTH,",
+        "AND REFUGE IS IN GOD"
+      ],
+      [
+        "REFUGE",
+        "STRENGTH"
+      ],
+      "PSALM 62:7"
+    ],
+    [
+      24,
+      32,
+      [
+        "LORD, ANCHOR MY",
+        "WANDERING SPIRIT",
+        "WHEN THE WORLD",
+        "FEELS LOUD AND SHIFTING"
+      ],
+      [
+        "ANCHOR",
+        "SPIRIT"
+      ],
+      "PSALM 62:7"
+    ],
+    [
+      32,
+      40,
+      [
+        "QUIET THE NOISE",
+        "OF RESTLESS THOUGHTS",
+        "REPLACE MY FEAR",
+        "WITH SOLID PRESENCE"
+      ],
+      [
+        "QUIET",
+        "PRESENCE"
+      ],
+      "PSALM 62:7"
+    ],
+    [
+      40,
+      48,
+      [
+        "REST COMPLETELY",
+        "IN YOUR SHADOW,",
+        "KNOWING THAT IN YOU,",
+        "I AM SHIELDED"
+      ],
+      [
+        "REST",
+        "SHIELDED"
+      ],
+      "PSALM 62:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "He only is my rock and my salvation: he is my defence; I shall not be moved.",
+      "kind": "phrase",
+      "words": [
+        "ROCK",
+        "DEFENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In God is my salvation and my glory: the rock of my strength, and my refuge, is in God.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "REFUGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 62:6-7"
+}

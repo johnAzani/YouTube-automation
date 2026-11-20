@@ -1,0 +1,263 @@
+{
+  "key": "short-shieldisaiah43v2",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "HE IS WITH YOU",
+    "IN EVERY FIRE"
+  ],
+  "poster": [
+    "A REFUGE IN THE STORM",
+    "STRENGTH FOR THE WEARY",
+    "ISAIAH FORTY THREE",
+    "THE COVENANT SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "majestic mountain pass golden hour",
+    "glowing embers in ancient stone hearth",
+    "peaceful river flowing through canyon",
+    "thick storm clouds with light breaking through",
+    "high stone watchtower overlooking valley",
+    "sunlight rays piercing through dark clouds"
+  ],
+  "scenes": [
+    {
+      "a": "If the outcome of that restless situation is keeping you awake, stay here in stillness.",
+      "img": "short-shieldisaiah43v2-scene-01.jpg",
+      "kicker": "ISAIAH 43:2",
+      "sub": "FIND YOUR REFUGE NOW",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we bring every trembling thought into Your presence, asking that You steady the heart.",
+      "img": "short-shieldisaiah43v2-scene-02.jpg",
+      "kicker": "A PRAYER FOR PEACE",
+      "sub": "HEAR HIS PROMISE",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "When thou passest through the waters, I will be with thee; and through the rivers, they shall not overflow thee:",
+      "img": "short-shieldisaiah43v2-scene-03.jpg",
+      "kicker": "HIS WORD IS TRUE",
+      "sub": "WALK WITHOUT FEAR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "when thou walkest through the fire, thou shalt not be burned; neither shall the flame kindle upon thee.",
+      "img": "short-shieldisaiah43v2-scene-04.jpg",
+      "kicker": "BEYOND THE FLAME",
+      "sub": "COVERED BY HIS GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant us the quiet confidence that even in the most intense trials, Your protection remains absolute.",
+      "img": "short-shieldisaiah43v2-scene-05.jpg",
+      "kicker": "DIVINE COVERING",
+      "sub": "REST IN HIS MIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "May every step we take today be guided by Your hand until we reach rest.",
+      "img": "short-shieldisaiah43v2-scene-06.jpg",
+      "kicker": "THE SHIELD REMAINS",
+      "sub": "AMEN",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the outcome of that restless situation is keeping you awake, stay here in stillness."
+    ],
+    [
+      8,
+      18,
+      "Lord, we bring every trembling thought into Your presence, asking that You steady the heart."
+    ],
+    [
+      18,
+      35,
+      "When thou passest through the waters, I will be with thee; and through the rivers, they shall not overflow thee:"
+    ],
+    [
+      35,
+      52,
+      "when thou walkest through the fire, thou shalt not be burned; neither shall the flame kindle upon thee."
+    ],
+    [
+      52,
+      68,
+      "Grant us the quiet confidence that even in the most intense trials, Your protection remains absolute."
+    ],
+    [
+      68,
+      80,
+      "May every step we take today be guided by Your hand until we reach rest."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "RESTLESS SITUATION",
+        "STAY HERE",
+        "IN STILLNESS"
+      ],
+      [
+        "STILLNESS"
+      ],
+      "ISAIAH 43:2"
+    ],
+    [
+      8,
+      18,
+      [
+        "TREMBLING THOUGHT",
+        "STEADY THE HEART"
+      ],
+      [
+        "STEADY"
+      ],
+      "ISAIAH 43:2"
+    ],
+    [
+      18,
+      35,
+      [
+        "WATERS AND RIVERS",
+        "SHALL NOT",
+        "OVERFLOW THEE"
+      ],
+      [
+        "NOT OVERFLOW"
+      ],
+      "ISAIAH 43:2"
+    ],
+    [
+      35,
+      52,
+      [
+        "WALK THROUGH FIRE",
+        "SHALT NOT",
+        "BE BURNED"
+      ],
+      [
+        "NOT BURNED"
+      ],
+      "ISAIAH 43:2"
+    ],
+    [
+      52,
+      68,
+      [
+        "QUIET CONFIDENCE",
+        "PROTECTION REMAINS",
+        "ABSOLUTE"
+      ],
+      [
+        "ABSOLUTE"
+      ],
+      "ISAIAH 43:2"
+    ],
+    [
+      68,
+      80,
+      [
+        "EVERY STEP",
+        "GUIDED BY HIS HAND",
+        "REACH REST"
+      ],
+      [
+        "REACH REST"
+      ],
+      "ISAIAH 43:2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the outcome of that restless situation is keeping you awake, stay here in stillness.",
+      "kind": "phrase",
+      "words": [
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we bring every trembling thought into Your presence, asking that You steady the heart.",
+      "kind": "phrase",
+      "words": [
+        "STEADY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When thou passest through the waters, I will be with thee; and through the rivers, they shall not overflow thee:",
+      "kind": "phrase",
+      "words": [
+        "NOT OVERFLOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "when thou walkest through the fire, thou shalt not be burned; neither shall the flame kindle upon thee.",
+      "kind": "phrase",
+      "words": [
+        "NOT BURNED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us the quiet confidence that even in the most intense trials, Your protection remains absolute.",
+      "kind": "phrase",
+      "words": [
+        "ABSOLUTE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May every step we take today be guided by Your hand until we reach rest.",
+      "kind": "phrase",
+      "words": [
+        "REACH REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 43:2"
+}
