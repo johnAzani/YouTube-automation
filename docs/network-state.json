@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T16:40:53Z",
+  "generated_at": "2026-11-20T16:41:01Z",
   "monitor_generated_at": "2026-11-20T16:30:32.192629+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 559,
+    "published_total": 560,
     "published_longform": 173,
-    "published_shorts": 386,
-    "public_total": 557,
+    "published_shorts": 387,
+    "public_total": 558,
     "queued_longform": 58,
-    "queued_shorts": 85,
+    "queued_shorts": 84,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -237,23 +237,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 58,
+        "published_total": 59,
         "published_longform": 19,
-        "published_shorts": 39,
-        "thumbnail_pending": 57,
-        "public_total": 58,
+        "published_shorts": 40,
+        "thumbnail_pending": 58,
+        "public_total": 59,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTLAMENTATIONS2V19",
-        "title": "Pray This Lamentations 2:19 Midnight Prayer | Pour Out Your Heart #Shorts",
+        "id": "SHORT-MIDNIGHTROMANS16V20",
+        "title": "Pray This Romans 16:20 Midnight Prayer | Stand In Faith #Shorts",
         "format": "short",
-        "youtube_video_id": "Jz0TeLczZvU",
-        "watch_url": "https://www.youtube.com/shorts/Jz0TeLczZvU",
+        "youtube_video_id": "DJF-aCjoYYU",
+        "watch_url": "https://www.youtube.com/shorts/DJF-aCjoYYU",
         "published_on": "2026-11-20",
-        "published_at": "2026-11-20T13:28:07Z"
+        "published_at": "2026-11-20T16:40:04Z"
       },
       "next_queued_longform": {
         "id": "0219",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightromans16v20",
-        "scripture": "Romans 16:20",
+        "short": "short-midnightpsalm68v1",
+        "scripture": "Psalm 68:1-3",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTROMANS16V20",
+      "slug": "short-midnightromans16v20-midnight-prayer",
+      "file": "short-midnightromans16v20-midnight-prayer.md",
+      "title": "Pray This Romans 16:20 Midnight Prayer | Stand In Faith #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T16:40:04Z",
+      "youtube_video_id": "DJF-aCjoYYU",
+      "watch_url": "https://www.youtube.com/shorts/DJF-aCjoYYU",
+      "youtu_be_url": "https://youtu.be/DJF-aCjoYYU",
+      "shorts_url": "https://www.youtube.com/shorts/DJF-aCjoYYU",
+      "studio_url": "https://studio.youtube.com/video/DJF-aCjoYYU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/DJF-aCjoYYU/hqdefault.jpg",
+      "thumb_text": "VICTORY AT MIDNIGHT \u00b7 THE GOD OF PEACE",
+      "thumbnail_pending": true,
+      "duration_label": "59s",
+      "words": 641
+    },
     {
       "id": "SHORT-HEALINGLAMENTATIONS3V22",
       "slug": "short-healinglamentations3v22-restoration-prayer",
@@ -14941,17 +14965,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightromans16v20",
-        "file": "0000-short-midnightromans16v20.yml",
-        "companion_longform_id": "",
-        "scripture": "Romans 16:20",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-morningpsalm65v8",
