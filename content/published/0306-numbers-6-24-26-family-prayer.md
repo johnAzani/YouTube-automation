@@ -1,6 +1,6 @@
 ---
 id: '0306'
-title: Numbers 6:24-26 Family Prayer | The Family Altar
+title: "Asking God to Keep Your Household: Numbers 6:24-26 | The Family Altar"
 slug: numbers-6-24-26-family-prayer
 status: published
 channel: prayer5
@@ -78,13 +78,16 @@ originality:
 published_on: "2026-11-13"
 published_at: "2026-11-13T17:13:25Z"
 youtube_video_id: "cKtWm7V0r-8"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_retry_after: "2026-11-20T17:17:30Z"
 thumbnail_retry_reason: "permission"
+title_before: "Numbers 6:24-26 Family Prayer | The Family Altar"
+retitled_at: "2026-11-20"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar
