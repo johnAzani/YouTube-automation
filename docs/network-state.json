@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T20:55:00Z",
+  "generated_at": "2026-11-20T20:59:57Z",
   "monitor_generated_at": "2026-11-20T20:33:33.603383+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 567,
+    "published_total": 568,
     "published_longform": 173,
-    "published_shorts": 394,
-    "public_total": 565,
+    "published_shorts": 395,
+    "public_total": 566,
     "queued_longform": 58,
-    "queued_shorts": 77,
+    "queued_shorts": 76,
     "automations_ok": 11,
     "automations_total": 13,
     "network_healthy": false
@@ -645,23 +645,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 40,
+        "published_total": 41,
         "published_longform": 11,
-        "published_shorts": 29,
+        "published_shorts": 30,
         "thumbnail_pending": 9,
-        "public_total": 40,
+        "public_total": 41,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPSALM23V3",
-        "title": "Pray This Psalm 23:3 Prayer for God's Guidance | Finding Strength In Him #Shorts",
+        "id": "SHORT-GUIDEDROMANS12V2",
+        "title": "Pray This Romans 12:2 Prayer for God's Guidance | Find Perfect Peace #Shorts",
         "format": "short",
-        "youtube_video_id": "NifES9alYAU",
-        "watch_url": "https://www.youtube.com/shorts/NifES9alYAU",
+        "youtube_video_id": "SKove0EpU64",
+        "watch_url": "https://www.youtube.com/shorts/SKove0EpU64",
         "published_on": "2026-11-20",
-        "published_at": "2026-11-20T15:39:54Z"
+        "published_at": "2026-11-20T20:58:55Z"
       },
       "next_queued_longform": {
         "id": "0811",
@@ -670,8 +670,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedromans12v2",
-        "scripture": "Romans 12:2",
+        "short": "short-guidedproverbs16v3",
+        "scripture": "Proverbs 16:3",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDROMANS12V2",
+      "slug": "short-guidedromans12v2-guidance-prayer",
+      "file": "short-guidedromans12v2-guidance-prayer.md",
+      "title": "Pray This Romans 12:2 Prayer for God's Guidance | Find Perfect Peace #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T20:58:55Z",
+      "youtube_video_id": "SKove0EpU64",
+      "watch_url": "https://www.youtube.com/shorts/SKove0EpU64",
+      "youtu_be_url": "https://youtu.be/SKove0EpU64",
+      "shorts_url": "https://www.youtube.com/shorts/SKove0EpU64",
+      "studio_url": "https://studio.youtube.com/video/SKove0EpU64/edit",
+      "thumb_url": "https://i.ytimg.com/vi/SKove0EpU64/hqdefault.jpg",
+      "thumb_text": "TRANSFORM YOUR SPIRIT \u00b7 SEEK DIVINE WISDOM",
+      "thumbnail_pending": false,
+      "duration_label": "47s",
+      "words": 620
+    },
     {
       "id": "SHORT-GARDENPSALM145V1",
       "slug": "short-gardenpsalm145v1-thanksgiving-prayer",
@@ -15068,17 +15092,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-guidedromans12v2",
-        "file": "0000-short-guidedromans12v2.yml",
-        "companion_longform_id": "",
-        "scripture": "Romans 12:2",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
-      },
       {
         "short": "short-healingpsalm23v1",
         "file": "0000-short-healingpsalm23v1.yml",
