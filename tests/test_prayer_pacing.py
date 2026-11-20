@@ -14,3 +14,9 @@ class PrayerPacingTests(unittest.TestCase):
         self.assertIn("1 sentence(s) over 40 words", notes[0])
         self.assertIn("1 repeated sentence(s)", notes[1])
         self.assertNotIn(phrase, " ".join(notes))
+
+    def test_flags_essay_transition_but_not_ordinary_prayer(self):
+        notes = pacing_notes("Father, help me listen. In conclusion, we ask for peace.")
+        self.assertEqual(len(notes), 1)
+        self.assertIn("essay-style transition", notes[0])
+        self.assertEqual(pacing_notes("Lord, help me notice the good I overlooked today."), [])

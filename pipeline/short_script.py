@@ -409,6 +409,7 @@ THE OPENING SENTENCE — a viewer decides in the first two seconds:
 - Do not reuse the opening of an earlier Short on this channel.{avoid_block}
 - Honest only: no "don't scroll", no "watch to the end", no promised outcome.
 
+{spoken_prayer_guidance}
 THE PRAYER — give the listener words to pray with you:
 - Carry the opening's specific need into one direct petition to God grounded
   in the quoted verse. Keep the channel's mood and speak to one listener;
@@ -538,7 +539,10 @@ def build_prompt(scripture: str, key: str = "short-psalmNN", words: int = TARGET
         foreign_block = ("- These words belong to other channels. Do not use them, spoken or on\n"
                          "  screen, unless the scripture itself says them: "
                          + "; ".join(f'"{phrase}"' for phrase in theirs) + ".\n")
+    from .prayer_pacing import SPOKEN_PRAYER_GUIDANCE
+
     return PROMPT.format(
+        spoken_prayer_guidance=SPOKEN_PRAYER_GUIDANCE,
         key=key, scripture=scripture, words=words, foreign_block=foreign_block,
         scripture_block=prompt_block(scripture) + occasion_block,
         floor=max(MIN_WORDS, TARGET_WORDS_RANGE[0]), ceiling=TARGET_WORDS_RANGE[1],

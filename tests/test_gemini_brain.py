@@ -105,6 +105,9 @@ It is of the LORD's mercies that we are not consumed, because his compassions fa
 
         cand = {"id": "0010", "scripture": "Psalm 121", "theme": "The Lord Is Your Keeper", "hook": "KEEPER"}
         result_text = brain.author_longform_script(cand)
+        contents = brain._client.models.generate_content.call_args.kwargs["contents"]
+        self.assertIn("WRITE FOR THE EAR, NOT THE PAGE", contents)
+        self.assertIn("Leave the exact KJV quotation untouched", contents)
         self.assertIn('id: "0010"', result_text)
         self.assertIn("Psalm 121", result_text)
 

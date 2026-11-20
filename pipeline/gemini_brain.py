@@ -1140,6 +1140,7 @@ class GeminiBrain:
         from .scripture_text import check_quote, exists as scripture_exists, prompt_block
         scripture_block = prompt_block(str(scripture)) + scripture_name_note(
             self.channel_id, str(scripture))
+        from .prayer_pacing import SPOKEN_PRAYER_GUIDANCE
         user_prompt = f"""
 Please author the official, complete long-form devotional script for:
 - Job ID: {job_id}
@@ -1158,6 +1159,7 @@ refuses anything under {MIN_NARRATION_SECONDS} seconds, so {MIN_LONGFORM_WORDS} 
 length that can actually be published. Do not pad with repeated
 sentences; write more prayer, more scripture exposition, more stillness.
 
+{SPOKEN_PRAYER_GUIDANCE}
 Before returning, silently read the opening, scene transitions and closing as spoken aloud.
 Check that the title and thumbnail name the same need the prayer actually addresses.
 Replace repeated commentary with a distinct petition, not shorter filler. Keep quoted

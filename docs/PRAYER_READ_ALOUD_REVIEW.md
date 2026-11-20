@@ -84,3 +84,22 @@ format against similar earlier releases at the same age, not a mixture of new
 and old videos at different ages. Record views, first-30-second retention for
 long-form (stayed-to-watch for Shorts), and watch ratio near the end when data
 is available. See [the analytics guide](ANALYTICS.md) for retention comparison.
+
+### Listen for speech, not an essay
+
+The same spoken-writing guidance now reaches both generation paths. It asks
+for the channel's own everyday language, one plausible detail instead of a
+claim about the listener, and a clear turn from addressing the listener to
+praying to God. Spoken prose can use contractions and varied sentence lengths;
+KJV quotations stay verbatim. The pacing log also notes common essay-style
+transitions. That heuristic is an editorial hint, not an AI detector.
+
+For example, a mid-day draft might replace “Let us now turn our attention to
+the cultivation of patience” with “Lord, help me listen before I answer.”
+A thanksgiving prayer needs its own detail, not the same sentence in a
+different voice. Never invent a testimony or imply human authorship.
+
+For the first new drafts after deployment, listen to a Short and a long-form
+preview with the configured voice. Review the line into direct prayer and a
+later transition with the captions on. Use matched-age comparisons once the
+videos have run normally; a smoother preview does not prove a retention lift.
