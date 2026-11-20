@@ -13,6 +13,7 @@ Run:
 from __future__ import annotations
 
 import argparse
+from datetime import date, timedelta
 import csv
 import json
 from pathlib import Path
@@ -52,6 +53,55 @@ def format_table(headers: list[str], rows: list[list[str]], max_col_width: int =
     return "\n".join(lines) + "\n"
 
 
+ENGAGEMENT = (
+    ("Views", "views"), ("Subscribers gained", "subscribersGained"),
+    ("Subscribers lost", "subscribersLost"), ("Net subscribers", None),
+    ("Comments", "comments"), ("Likes", "likes"), ("Shares", "shares"),
+)
+
+
+def engagement_comparison(columns, rows):
+    """Compare the latest 14 returned calendar days; never fill gaps with zero."""
+    if "day" not in columns:
+        return None
+    by_day = {}
+    for row in rows:
+        if len(row) != len(columns):
+            return None
+        record = dict(zip(columns, row))
+        try:
+            day = date.fromisoformat(record["day"])
+        except (ValueError, TypeError):
+            return None
+        if day in by_day:
+            return None
+        by_day[day] = record
+    if len(by_day) < 14:
+        return None
+    end = max(by_day)
+    days = [end - timedelta(days=i) for i in range(13, -1, -1)]
+    if any(day not in by_day for day in days):
+        return None
+
+    def totals(window):
+        data = {}
+        for _, key in ENGAGEMENT:
+            if key is not None:
+                values = [by_day[day].get(key) for day in window]
+                data[key] = sum(values) if all(type(v) is int and v >= 0 for v in values) else None
+        gained, lost = data["subscribersGained"], data["subscribersLost"]
+        data[None] = gained - lost if gained is not None and lost is not None else None
+        return data
+
+    prior, latest = totals(days[:7]), totals(days[7:])
+    table = []
+    for label, key in ENGAGEMENT:
+        a, b = prior[key], latest[key]
+        table.append([label, "—" if a is None else str(a), "—" if b is None else str(b),
+                      "—" if a is None or b is None else f"{b - a:+d}"])
+    return days, table
+
+
 def display_private_report(path: Path = PRIVATE_REPORT) -> bool:
     """Read and format the private Analytics report JSON."""
     if not path.is_file():
@@ -80,6 +130,17 @@ def display_private_report(path: Path = PRIVATE_REPORT) -> bool:
         print(format_table(cols, rows))
     else:
         print(f"\n[Daily Performance]: {daily.get('status', 'not_collected')} ({daily.get('reason', '')})")
+
+    print("\n[Audience Growth: Week over Week]")
+    comparison = (engagement_comparison(cols, daily["rows"])
+                  if daily.get("status") == "collected" and daily.get("rows") else None)
+    if comparison is None:
+        print("Not enough data: need 14 consecutive, unique reported days.")
+    else:
+        days, table = comparison
+        print(f"Previous: {days[0]} to {days[6]} | Latest: {days[7]} to {days[-1]}")
+        print(format_table(["Metric", "Previous", "Latest", "Change"], table))
+        print("— means unavailable, not zero. These totals mix video formats; changes do not prove cause.")
 
     # 2. Top Videos
     videos = reports.get("videos", {})

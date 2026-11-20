@@ -8,6 +8,18 @@ from scripts import view_analytics
 
 
 class ViewAnalyticsTests(unittest.TestCase):
+    def test_growth_compares_equal_windows_and_preserves_missing_metrics(self):
+        columns = ["day", "views", "subscribersGained", "subscribersLost", "shares"]
+        rows = [[f"2026-11-{i:02d}", i, 0, 1, 0] for i in range(1, 15)]
+        _, table = view_analytics.engagement_comparison(columns, rows[::-1])
+        metrics = {label: values for label, *values in table}
+        self.assertEqual(metrics["Views"], ["28", "77", "+49"])
+        self.assertEqual(metrics["Net subscribers"], ["-7", "-7", "+0"])
+        self.assertEqual(metrics["Shares"], ["0", "0", "+0"])
+        self.assertEqual(metrics["Likes"], ["—", "—", "—"])
+        self.assertIsNone(view_analytics.engagement_comparison(columns, rows[:7] + rows[8:]))
+        self.assertIsNone(view_analytics.engagement_comparison(columns, rows + rows[:1]))
+
     def test_format_table_renders_aligned_text(self):
         headers = ["Col A", "Col B"]
         rows = [["Val 1", "Val 2"], ["100", "200"]]
