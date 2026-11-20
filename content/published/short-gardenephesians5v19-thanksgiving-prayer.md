@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["GIVING THANKS ALWAYS", "SINGING IN YOUR HEART", "A PRAYER OF PRAISE", "THE PRAISE GARDEN"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-27T11:35:27Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If a heavy silence hangs over your room while your mind races tonight, pause right here. Speaking to yourselves in psalms and hymns and spiritual songs, singing and making melody in your heart to the Lord; Giving thanks always for all things unto God and the Father in the name of our Lord Jesus Christ; Father God, we lift our hearts in humble gratitude for Your steadfast love that surrounds us right now. Even in these quiet moments when worry whispers in the dark, we offer You our honest praise. Fill our spirits with joy and teach us to give thanks always. Subscribe to join our daily prayer garden.
