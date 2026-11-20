@@ -37,13 +37,6 @@
       "workflow": "tests-on-main.yml"
     },
     {
-      "late_minutes": 173,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-20T10:07:41+00:00",
-      "slot": "2026-11-20T07:14:00+00:00",
-      "workflow": "comments.yml"
-    },
-    {
       "late_minutes": 150,
       "name": "YouTube reporting jobs (thumbnail impressions)",
       "ran_at": "2026-11-20T08:17:27+00:00",
@@ -51,8 +44,8 @@
       "workflow": "reporting-jobs.yml"
     }
   ],
-  "generated_at": "2026-11-20T12:48:10.543283+00:00",
-  "last_run_at": "2026-11-20T12:47:20+00:00",
+  "generated_at": "2026-11-20T16:12:18.151373+00:00",
+  "last_run_at": "2026-11-20T16:11:30+00:00",
   "on_time": [
     {
       "late_minutes": 118,
@@ -60,6 +53,13 @@
       "ran_at": "2026-11-19T22:12:41+00:00",
       "slot": "2026-11-19T20:14:00+00:00",
       "workflow": "automation-health.yml"
+    },
+    {
+      "late_minutes": 50,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-20T16:04:07+00:00",
+      "slot": "2026-11-20T15:14:00+00:00",
+      "workflow": "comments.yml"
     },
     {
       "late_minutes": 91,
@@ -76,24 +76,17 @@
       "workflow": "growth-autopilot.yml"
     },
     {
-      "late_minutes": 24,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-20T12:47:20+00:00",
-      "slot": "2026-11-20T12:23:00+00:00",
-      "workflow": "monitor.yml"
-    },
-    {
-      "late_minutes": 78,
+      "late_minutes": 73,
       "name": "Produce video",
-      "ran_at": "2026-11-20T11:32:54+00:00",
-      "slot": "2026-11-20T10:14:00+00:00",
+      "ran_at": "2026-11-20T15:27:01+00:00",
+      "slot": "2026-11-20T14:14:00+00:00",
       "workflow": "produce.yml"
     },
     {
-      "late_minutes": 0,
+      "late_minutes": 24,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-20T12:47:20+00:00",
-      "slot": "2026-11-20T12:47:00+00:00",
+      "ran_at": "2026-11-20T16:11:30+00:00",
+      "slot": "2026-11-20T15:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
