@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-20T03:47:11Z",
-  "monitor_generated_at": "2026-11-20T03:45:51.736390+00:00",
+  "generated_at": "2026-11-20T03:52:51Z",
+  "monitor_generated_at": "2026-11-20T03:51:47.175218+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -133,13 +133,13 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-19",
+        "as_of": "2026-11-20",
         "measured_longform_videos": 0,
-        "total_longform_videos": 16,
+        "total_longform_videos": 14,
         "top_themes": [
           {
             "theme": "morning_mercy_renewal",
-            "videos": 7,
+            "videos": 5,
             "top_scripture": ""
           },
           {
@@ -201,13 +201,13 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-19",
+        "as_of": "2026-11-20",
         "measured_longform_videos": 0,
-        "total_longform_videos": 14,
+        "total_longform_videos": 13,
         "top_themes": [
           {
             "theme": "midday_strength_endurance",
-            "videos": 12,
+            "videos": 11,
             "top_scripture": ""
           },
           {
@@ -269,9 +269,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-19",
+        "as_of": "2026-11-20",
         "measured_longform_videos": 0,
-        "total_longform_videos": 16,
+        "total_longform_videos": 15,
         "top_themes": [
           {
             "theme": "protection",
@@ -280,7 +280,7 @@
           },
           {
             "theme": "general_prayer",
-            "videos": 6,
+            "videos": 7,
             "top_scripture": ""
           },
           {
@@ -337,13 +337,13 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-19",
+        "as_of": "2026-11-20",
         "measured_longform_videos": 0,
-        "total_longform_videos": 15,
+        "total_longform_videos": 16,
         "top_themes": [
           {
             "theme": "general_prayer",
-            "videos": 7,
+            "videos": 8,
             "top_scripture": ""
           },
           {
@@ -405,9 +405,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-19",
+        "as_of": "2026-11-20",
         "measured_longform_videos": 0,
-        "total_longform_videos": 13,
+        "total_longform_videos": 14,
         "top_themes": [
           {
             "theme": "general_prayer",
@@ -420,8 +420,8 @@
             "top_scripture": ""
           },
           {
-            "theme": "anxiety_peace",
-            "videos": 2,
+            "theme": "midday_strength_endurance",
+            "videos": 3,
             "top_scripture": ""
           }
         ]
@@ -473,9 +473,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-19",
+        "as_of": "2026-11-20",
         "measured_longform_videos": 2,
-        "total_longform_videos": 14,
+        "total_longform_videos": 15,
         "top_themes": [
           {
             "theme": "morning_mercy_renewal",
@@ -9057,7 +9057,7 @@
       "id": "0088",
       "slug": "isaiah-25-4-midday-prayer",
       "file": "0088-isaiah-25-4-midday-prayer.md",
-      "title": "Isaiah 25:4 Midday Prayer | The Midday Watch",
+      "title": "When the Afternoon Heat Is Too Heavy: Isaiah 25:4 | The Midday Watch",
       "channel": "prayer3",
       "channel_name": "The Midday Watch",
       "channel_handle": "@TheMiddayWatch",
@@ -9273,7 +9273,7 @@
       "id": "0306",
       "slug": "numbers-6-24-26-family-prayer",
       "file": "0306-numbers-6-24-26-family-prayer.md",
-      "title": "Numbers 6:24-26 Family Prayer | The Family Altar",
+      "title": "Asking God to Keep Your Household: Numbers 6:24-26 | The Family Altar",
       "channel": "prayer5",
       "channel_name": "The Family Altar",
       "channel_handle": "@TheFamilyAltarDaily",
@@ -9345,7 +9345,7 @@
       "id": "0087",
       "slug": "isaiah-49-10-midday-prayer",
       "file": "0087-isaiah-49-10-midday-prayer.md",
-      "title": "Isaiah 49:10 Midday Prayer | The Midday Watch",
+      "title": "When the Heat of the Day Is Heavy: Isaiah 49:10 | The Midday Watch",
       "channel": "prayer3",
       "channel_name": "The Midday Watch",
       "channel_handle": "@TheMiddayWatch",
@@ -9561,7 +9561,7 @@
       "id": "0405",
       "slug": "jeremiah-17-14-healing-and-restoration-prayer",
       "file": "0405-jeremiah-17-14-healing-and-restoration-prayer.md",
-      "title": "Jeremiah 17:14 Healing and Restoration Prayer | The Healing Balm",
+      "title": "When Your Health Fails: Jeremiah 17:14 | The Healing Balm",
       "channel": "prayer6",
       "channel_name": "The Healing Balm",
       "channel_handle": "@TheHealingBalmDaily",
@@ -9873,7 +9873,7 @@
       "id": "0304",
       "slug": "isaiah-32-18-household-peace-prayer",
       "file": "0304-isaiah-32-18-household-peace-prayer.md",
-      "title": "Isaiah 32:18 Household Peace Prayer | The Family Altar",
+      "title": "When Contentious Words Fill Your Home: Isaiah 32:18 | The Family Altar",
       "channel": "prayer5",
       "channel_name": "The Family Altar",
       "channel_handle": "@TheFamilyAltarDaily",
@@ -9921,7 +9921,7 @@
       "id": "0207",
       "slug": "ephesians-6-10-18-midnight-prayer",
       "file": "0207-ephesians-6-10-18-midnight-prayer.md",
-      "title": "Ephesians 6:10-18 Midnight Prayer | The Midnight Watch",
+      "title": "Strength to Stand in the Dark: Ephesians 6:10-18 | The Midnight Watch",
       "channel": "prayer4",
       "channel_name": "The Midnight Watch",
       "channel_handle": "@TheMidnightWatchDaily",
@@ -14904,7 +14904,7 @@
       "name": "automation-health",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.5h ago",
+      "detail": "last success 1.6h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-20T02:13:09+00:00",
       "last_success": "2026-11-20T02:13:09+00:00",
@@ -14918,7 +14918,7 @@
       "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 15.7h ago",
+      "detail": "last success 15.8h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-19T12:02:36+00:00",
       "last_success": "2026-11-19T12:02:36+00:00",
@@ -14932,7 +14932,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.5h ago",
+      "detail": "last success 2.6h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-20T01:15:44+00:00",
       "last_success": "2026-11-20T01:15:44+00:00",
@@ -14946,7 +14946,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 26.5h ago",
+      "detail": "last success 26.6h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-19T01:13:34+00:00",
       "last_success": "2026-11-19T01:13:34+00:00",
@@ -14960,7 +14960,7 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 16.1h ago",
+      "detail": "last success 16.2h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-19T11:37:26+00:00",
       "last_success": "2026-11-19T11:37:26+00:00",
@@ -14974,7 +14974,7 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 17.5h ago",
+      "detail": "last success 17.6h ago",
       "last_conclusion": "",
       "last_run": "2026-11-20T03:45:03+00:00",
       "last_success": "2026-11-19T10:15:16+00:00",
@@ -14988,7 +14988,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 88.0h ago",
+      "detail": "last success 88.1h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-16T11:44:57+00:00",
       "last_success": "2026-11-16T11:44:57+00:00",
@@ -15002,7 +15002,7 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.5h ago",
+      "detail": "last success 1.6h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-20T02:13:09+00:00",
       "last_success": "2026-11-20T02:13:09+00:00",
@@ -15018,8 +15018,8 @@
       "severity": "ok",
       "detail": "last success 0.1h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-20T03:43:01+00:00",
-      "last_success": "2026-11-20T03:43:00+00:00",
+      "last_run": "2026-11-20T03:50:48+00:00",
+      "last_success": "2026-11-20T03:43:01+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -15030,7 +15030,7 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.5h ago",
+      "detail": "last success 2.6h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-20T01:15:00+00:00",
       "last_success": "2026-11-20T01:15:00+00:00",
@@ -15044,7 +15044,7 @@
       "name": "YouTube reporting jobs (thumbnail impressions)",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 13.1h ago",
+      "detail": "last success 13.2h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-19T14:42:06+00:00",
       "last_success": "2026-11-19T14:42:06+00:00",
@@ -15059,9 +15059,9 @@
       "verdict": "OK",
       "severity": "ok",
       "detail": "last success 0.0h ago",
-      "last_conclusion": "",
-      "last_run": "2026-11-20T03:44:56+00:00",
-      "last_success": "2026-11-20T03:43:01+00:00",
+      "last_conclusion": "success",
+      "last_run": "2026-11-20T03:50:48+00:00",
+      "last_success": "2026-11-20T03:50:48+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -15072,7 +15072,7 @@
       "name": "Tests on main (daily)",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 13.8h ago",
+      "detail": "last success 13.9h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-19T13:57:27+00:00",
       "last_success": "2026-11-19T13:57:27+00:00",
