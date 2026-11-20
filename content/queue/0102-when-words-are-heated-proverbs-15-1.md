@@ -88,7 +88,7 @@ Noon is the time when the sun is highest and shadows are shortest, and it is als
 
 When we consider the instruction that a soft answer turneth away wrath, we are not being asked to adopt a passive weakness or to accept injustice. Rather, we are learning the art of godly restraint. According to Charles Spurgeon, a tongue governed by grace does not need to shout to be heard, nor does it need to strike back to defend its own dignity. God is your defender in the middle of the workplace and the family home. When you lower your voice and choose clarity over conflict, you are stepping out of the way so that God's own patience can fill the room. 
 
-Think for a moment about the conversations you have walked through since this morning began, and the ones waiting for you this afternoon. If there is a dispute, a misunderstanding, or a sharp word hanging in the air, do not try to fix it tonight with your own exhausted strength. Hand it over to the Lord of the harvest now. Ask Him to place a watch over your lips and to replace any rising annoyance with a quiet, steady assurance that He is governing your cause.
+Father, if I have to answer a sharp word this afternoon, help me hear what was actually said before I answer what I fear was meant. Give me the courage to name what was wrong without sharpening the truth into an insult. If I need time before I speak, help me ask for it plainly. Let that same care go with me into the work I still have to do.
 
 ## Scene 3 — Committing Your Daily Labor and Speech
 
@@ -96,7 +96,7 @@ The work of the afternoon requires more than technical skill or physical enduran
 
 When you offer a soft answer in the face of another person's irritation, you are participating in a quiet form of peacemaking that reflects the character of Christ. It does not come naturally. It runs against every instinct of self-preservation and pride. That is precisely why we need this midday watch. We come to God precisely because we cannot manufacture this kind of grace on our own. We ask Him to take our thoughts, our frustrations, and our desire to be right, and to steady them until our minds are quiet again.
 
-Let us pause here and name before God any specific person or situation today where words have felt heavy or sharp. Give the irritation to Him. Let His peace replace the defensiveness that tried to rise up in your chest.
+Lord, I bring You the conversation I keep replaying. I may not be able to clear it up before the next task begins. Help me give the person in front of me the attention they deserve, rather than making them carry the weight of a conversation they weren’t part of.
 
 ## Scene 4 — Renewal for the Hours That Remain
 
@@ -104,7 +104,7 @@ The afternoon stretch can feel long when the morning has been difficult. Isaiah 
 
 Renewal comes when we stop leaning on our own understanding and our own emotional reserves. When the day has already drained your patience, God's supply does not run low. He is the God of the sixth hour, the God who meets His people right in the heat of the day, beside the well, in the middle of the marketplace, and at the office desk. He understands the pressure you are under. He knows the exact weight of the responsibility you are carrying and the specific provocation you faced this morning. 
 
-Ask Him now for the grace to walk through the remaining hours of the day without bitterness. Ask Him for the steady, unshakeable calm that comes from knowing your worth does not depend on winning an argument or having the last word.
+Lord, I am tired, and there is still work left to do. Give me enough patience for the next conversation. When nobody else sees the effort it takes to answer kindly, help me choose the gentler word anyway.
 
 ## Scene 5 — Integrity in the Unseen Moments
 
@@ -112,7 +112,7 @@ Character is revealed most clearly when no one is watching, and when the pressur
 
 Integrity in conversation means your words remain truthful, kind, and measured even when the atmosphere around you is turbulent. It means refusing to participate in gossip, refusing to return insult for insult, and refusing to let the fatigue of the afternoon turn you into a source of division. Matthew Henry reminds us that a gentle spirit is one of the greatest ornaments of a Christian life, exercising an invisible, calming influence on everyone in its orbit.
 
-Before we turn back to the work waiting on your desk or in your home, take this moment to let your heart be quieted. If there is an apology you need to make later, or an email you need to rewrite with grace, ask the Holy Spirit to give you the wisdom and the courage to do it.
+Holy Spirit, show me if there is an apology I owe. Help me name what I did without adding an excuse or asking the other person to make me feel better. If I need to correct what I wrote, give me the humility to do it plainly. Amen.
 
 ## Scene 6 — The Blessing and Return to the Day
 
