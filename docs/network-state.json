@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T11:56:50Z",
+  "generated_at": "2026-11-20T12:21:10Z",
   "monitor_generated_at": "2026-11-20T11:55:42.580432+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 542,
-    "published_longform": 169,
+    "published_total": 543,
+    "published_longform": 170,
     "published_shorts": 373,
-    "public_total": 540,
-    "queued_longform": 58,
+    "public_total": 541,
+    "queued_longform": 57,
     "queued_shorts": 86,
     "automations_ok": 13,
     "automations_total": 13,
@@ -645,28 +645,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 38,
-        "published_longform": 10,
+        "published_total": 39,
+        "published_longform": 11,
         "published_shorts": 28,
         "thumbnail_pending": 11,
-        "public_total": 38,
-        "queued_longform": 6,
+        "public_total": 39,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDCOLOSSIANS1V9",
-        "title": "Pray This Colossians 1:9-10 Prayer for God's Guidance | Oh Lord #Shorts",
-        "format": "short",
-        "youtube_video_id": "pz4LjzOXFic",
-        "watch_url": "https://www.youtube.com/shorts/pz4LjzOXFic",
-        "published_on": "2026-11-20",
-        "published_at": "2026-11-20T09:26:42Z"
-      },
-      "next_queued_longform": {
         "id": "0810",
         "title": "Guidance for a Season of Dry Ground: Isaiah 58:11 | The Guided Path",
-        "words": 1056,
+        "format": "longform",
+        "youtube_video_id": "LzCEM00drpc",
+        "watch_url": "https://youtu.be/LzCEM00drpc",
+        "published_on": "2026-11-20",
+        "published_at": "2026-11-20T12:20:17Z"
+      },
+      "next_queued_longform": {
+        "id": "0811",
+        "title": "Learning Which Way to Walk: Psalm 143:8 | The Guided Path",
+        "words": 2029,
         "status": "approved"
       },
       "next_queued_short": {
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0810",
+      "slug": "when-the-way-ahead-is-dry-isaiah-58-11",
+      "file": "0810-when-the-way-ahead-is-dry-isaiah-58-11.md",
+      "title": "Guidance for a Season of Dry Ground: Isaiah 58:11 | The Guided Path",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T12:20:17Z",
+      "youtube_video_id": "LzCEM00drpc",
+      "watch_url": "https://youtu.be/LzCEM00drpc",
+      "youtu_be_url": "https://youtu.be/LzCEM00drpc",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/LzCEM00drpc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/LzCEM00drpc/hqdefault.jpg",
+      "thumb_text": "GUIDED ALWAYS",
+      "thumbnail_pending": false,
+      "duration_label": "~7 min",
+      "words": 1056
+    },
     {
       "id": "0710",
       "slug": "finding-peace-through-gratitude-psalm-95-1-2",
@@ -14387,19 +14411,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1710
-      },
-      {
-        "id": "0810",
-        "slug": "when-the-way-ahead-is-dry-isaiah-58-11",
-        "file": "0810-when-the-way-ahead-is-dry-isaiah-58-11.md",
-        "title": "Guidance for a Season of Dry Ground: Isaiah 58:11 | The Guided Path",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1056
       },
       {
         "id": "0811",
