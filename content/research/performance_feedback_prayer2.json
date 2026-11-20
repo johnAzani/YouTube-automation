@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T03:47:12.091429+00:00",
+  "generated_at": "2026-11-20T09:59:46.283552+00:00",
   "as_of": "2026-11-20",
   "sufficient_data": false,
   "measured_longform_videos": 0,
@@ -7,7 +7,7 @@
   "input_diagnostics": {
     "snapshot_video_ids": 50,
     "receipt_video_ids": 79,
-    "matched_video_ids": 50,
+    "matched_video_ids": 49,
     "longform_below_view_threshold": 14,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 2,
@@ -25,16 +25,16 @@
       "top_scripture": ""
     },
     {
-      "theme": "midday_strength_endurance",
-      "videos": 1,
+      "theme": "daily_guidance_wisdom",
+      "videos": 8,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
       "top_scripture": ""
     },
     {
-      "theme": "daily_guidance_wisdom",
-      "videos": 8,
+      "theme": "midday_strength_endurance",
+      "videos": 1,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -42,120 +42,120 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 31,
-    "total_shorts": 36,
+    "measured_shorts": 30,
+    "total_shorts": 35,
     "sufficient_data": true,
-    "avg_views": 28.5,
+    "avg_views": 27.9,
     "median_views": 20,
-    "total_views": 883,
+    "total_views": 836,
     "minimum_age_days": 2,
     "by_book": {
       "2 corinthians": {
         "shorts": 1,
         "avg_views": 23.0,
-        "ratio": 0.936
+        "ratio": 0.942
       },
       "2 samuel": {
         "shorts": 1,
         "avg_views": 34.0,
-        "ratio": 1.065
+        "ratio": 1.073
       },
       "deuteronomy": {
         "shorts": 2,
         "avg_views": 13.0,
-        "ratio": 0.728
+        "ratio": 0.733
       },
       "ephesians": {
         "shorts": 1,
-        "avg_views": 16.0,
-        "ratio": 0.854
+        "avg_views": 17.0,
+        "ratio": 0.87
       },
       "exodus": {
         "shorts": 1,
         "avg_views": 32.0,
-        "ratio": 1.041
+        "ratio": 1.049
       },
       "hosea": {
         "shorts": 1,
         "avg_views": 42.0,
-        "ratio": 1.158
+        "ratio": 1.169
       },
       "isaiah": {
         "shorts": 3,
         "avg_views": 35.7,
-        "ratio": 1.151
+        "ratio": 1.168
       },
       "james": {
         "shorts": 1,
         "avg_views": 12.0,
-        "ratio": 0.807
+        "ratio": 0.81
       },
       "jeremiah": {
         "shorts": 1,
         "avg_views": 17.0,
-        "ratio": 0.866
+        "ratio": 0.87
       },
       "joshua": {
         "shorts": 1,
         "avg_views": 43.0,
-        "ratio": 1.17
+        "ratio": 1.181
       },
       "matthew": {
         "shorts": 2,
         "avg_views": 20.5,
-        "ratio": 0.86
+        "ratio": 0.868
       },
       "psalm": {
-        "shorts": 14,
-        "avg_views": 33.7,
-        "ratio": 1.161
+        "shorts": 13,
+        "avg_views": 32.6,
+        "ratio": 1.148
       },
       "romans": {
         "shorts": 1,
         "avg_views": 2.0,
-        "ratio": 0.69
+        "ratio": 0.691
       },
       "zephaniah": {
         "shorts": 1,
         "avg_views": 16.0,
-        "ratio": 0.854
+        "ratio": 0.858
       }
     },
     "by_theme": {
       "daily_guidance_wisdom": {
         "shorts": 9,
-        "avg_views": 27.7,
-        "ratio": 0.977
+        "avg_views": 27.8,
+        "ratio": 0.997
       },
       "light_courage": {
         "shorts": 1,
         "avg_views": 15.0,
-        "ratio": 0.842
+        "ratio": 0.846
       },
       "midday_strength_endurance": {
         "shorts": 4,
         "avg_views": 51.0,
-        "ratio": 1.527
+        "ratio": 1.553
       },
       "morning_mercy_renewal": {
-        "shorts": 13,
-        "avg_views": 26.8,
-        "ratio": 0.948
+        "shorts": 12,
+        "avg_views": 25.0,
+        "ratio": 0.912
       },
       "peace_rest": {
         "shorts": 2,
         "avg_views": 21.0,
-        "ratio": 0.869
+        "ratio": 0.877
       },
       "stillness_refuge": {
         "shorts": 1,
         "avg_views": 9.0,
-        "ratio": 0.772
+        "ratio": 0.774
       },
       "trust_surrender": {
         "shorts": 1,
         "avg_views": 16.0,
-        "ratio": 0.854
+        "ratio": 0.858
       }
     },
     "guidance": []
