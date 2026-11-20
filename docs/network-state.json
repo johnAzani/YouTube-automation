@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T01:33:03Z",
+  "generated_at": "2026-11-20T01:33:33Z",
   "monitor_generated_at": "2026-11-19T22:14:33.904388+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 524,
+    "published_total": 525,
     "published_longform": 165,
-    "published_shorts": 359,
-    "public_total": 522,
+    "published_shorts": 360,
+    "public_total": 523,
     "queued_longform": 55,
-    "queued_shorts": 75,
+    "queued_shorts": 74,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 47,
+        "published_total": 48,
         "published_longform": 15,
-        "published_shorts": 32,
+        "published_shorts": 33,
         "thumbnail_pending": 3,
-        "public_total": 47,
+        "public_total": 48,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPSALM37V3",
-        "title": "Pray This Psalm 37:3-5 Prayer for Open Doors & Provision | Walk In Faith #Shorts",
+        "id": "SHORT-PROVISION2CORINTHIANS9V8",
+        "title": "Pray This 2 Corinthians 9:8 Prayer for Open Doors & Provision | Daily Provision #Shorts",
         "format": "short",
-        "youtube_video_id": "f5ATY64kMAE",
-        "watch_url": "https://www.youtube.com/shorts/f5ATY64kMAE",
-        "published_on": "2026-11-19",
-        "published_at": "2026-11-19T21:08:31Z"
+        "youtube_video_id": "ap4gQ67X4SI",
+        "watch_url": "https://www.youtube.com/shorts/ap4gQ67X4SI",
+        "published_on": "2026-11-20",
+        "published_at": "2026-11-20T01:32:50Z"
       },
       "next_queued_longform": {
         "id": "0515",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provision2corinthians9v8",
-        "scripture": "2 Corinthians 9:8",
+        "short": "short-provisionpsalm37v23",
+        "scripture": "Psalm 37:23-25",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISION2CORINTHIANS9V8",
+      "slug": "short-provision2corinthians9v8-stewardship-prayer",
+      "file": "short-provision2corinthians9v8-stewardship-prayer.md",
+      "title": "Pray This 2 Corinthians 9:8 Prayer for Open Doors & Provision | Daily Provision #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T01:32:50Z",
+      "youtube_video_id": "ap4gQ67X4SI",
+      "watch_url": "https://www.youtube.com/shorts/ap4gQ67X4SI",
+      "youtu_be_url": "https://youtu.be/ap4gQ67X4SI",
+      "shorts_url": "https://www.youtube.com/shorts/ap4gQ67X4SI",
+      "studio_url": "https://studio.youtube.com/video/ap4gQ67X4SI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ap4gQ67X4SI/hqdefault.jpg",
+      "thumb_text": "ALL SUFFICIENCY \u00b7 IN ALL THINGS",
+      "thumbnail_pending": false,
+      "duration_label": "53s",
+      "words": 654
+    },
     {
       "id": "SHORT-GARDENPSALM63V3",
       "slug": "short-gardenpsalm63v3-thanksgiving-prayer",
@@ -14480,17 +14504,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-provision2corinthians9v8",
-        "file": "0513-short-provision2corinthians9v8.yml",
-        "companion_longform_id": "0513",
-        "scripture": "2 Corinthians 9:8",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionpsalm37v23",
