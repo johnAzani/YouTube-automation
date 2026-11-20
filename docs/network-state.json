@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T10:28:48Z",
+  "generated_at": "2026-11-20T10:29:09Z",
   "monitor_generated_at": "2026-11-20T10:27:39.551243+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 540,
-    "published_longform": 168,
-    "published_shorts": 372,
-    "public_total": 538,
-    "queued_longform": 59,
-    "queued_shorts": 88,
+    "published_total": 542,
+    "published_longform": 169,
+    "published_shorts": 373,
+    "public_total": 540,
+    "queued_longform": 58,
+    "queued_shorts": 86,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -577,33 +577,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 39,
-        "published_longform": 10,
-        "published_shorts": 29,
-        "thumbnail_pending": 39,
-        "public_total": 39,
-        "queued_longform": 6,
+        "published_total": 41,
+        "published_longform": 11,
+        "published_shorts": 30,
+        "thumbnail_pending": 41,
+        "public_total": 41,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM63V3",
-        "title": "Pray This Psalm 63:3-4 Prayer of Thanksgiving | Lift Your Eyes To God #Shorts",
-        "format": "short",
-        "youtube_video_id": "37mcgMRBQ2A",
-        "watch_url": "https://www.youtube.com/shorts/37mcgMRBQ2A",
-        "published_on": "2026-11-20",
-        "published_at": "2026-11-20T01:32:20Z"
-      },
-      "next_queued_longform": {
         "id": "0710",
         "title": "Finding Peace Through Gratitude: Psalm 95:1-2 | The Praise Garden",
-        "words": 1444,
+        "format": "longform",
+        "youtube_video_id": "HbsnODjXCaQ",
+        "watch_url": "https://youtu.be/HbsnODjXCaQ",
+        "published_on": "2026-11-20",
+        "published_at": "2026-11-20T10:28:19Z"
+      },
+      "next_queued_longform": {
+        "id": "0711",
+        "title": "Rejoicing in the Day He Made: Psalm 118:24 | The Praise Garden",
+        "words": 1919,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenephesians5v19",
-        "scripture": "Ephesians 5:19-20",
+        "short": "short-gardenpsalm145v1",
+        "scripture": "Psalm 145:1-3",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0710",
+      "slug": "finding-peace-through-gratitude-psalm-95-1-2",
+      "file": "0710-finding-peace-through-gratitude-psalm-95-1-2.md",
+      "title": "Finding Peace Through Gratitude: Psalm 95:1-2 | The Praise Garden",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T10:28:19Z",
+      "youtube_video_id": "HbsnODjXCaQ",
+      "watch_url": "https://youtu.be/HbsnODjXCaQ",
+      "youtu_be_url": "https://youtu.be/HbsnODjXCaQ",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/HbsnODjXCaQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/HbsnODjXCaQ/hqdefault.jpg",
+      "thumb_text": "COME AND SING",
+      "thumbnail_pending": true,
+      "duration_label": "~10 min",
+      "words": 1444
+    },
+    {
       "id": "0072",
       "slug": "when-your-plans-change-at-dawn-proverbs-16-9-the-morning-altar",
       "file": "0072-when-your-plans-change-at-dawn-proverbs-16-9-the-morning-altar.md",
@@ -748,6 +772,30 @@
       "thumbnail_pending": false,
       "duration_label": "47s",
       "words": 621
+    },
+    {
+      "id": "SHORT-GARDENEPHESIANS5V19",
+      "slug": "short-gardenephesians5v19-thanksgiving-prayer",
+      "file": "short-gardenephesians5v19-thanksgiving-prayer.md",
+      "title": "Pray This Ephesians 5:19-20 Prayer of Thanksgiving | Pause In His Presence #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T09:22:28Z",
+      "youtube_video_id": "MHnRWBXEeHA",
+      "watch_url": "https://www.youtube.com/shorts/MHnRWBXEeHA",
+      "youtu_be_url": "https://youtu.be/MHnRWBXEeHA",
+      "shorts_url": "https://www.youtube.com/shorts/MHnRWBXEeHA",
+      "studio_url": "https://studio.youtube.com/video/MHnRWBXEeHA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/MHnRWBXEeHA/hqdefault.jpg",
+      "thumb_text": "GIVING THANKS ALWAYS \u00b7 SINGING IN YOUR HEART",
+      "thumbnail_pending": true,
+      "duration_label": "53s",
+      "words": 657
     },
     {
       "id": "SHORT-HEALINGISAIAH61V1",
@@ -14276,19 +14324,6 @@
         "words": 1419
       },
       {
-        "id": "0710",
-        "slug": "finding-peace-through-gratitude-psalm-95-1-2",
-        "file": "0710-finding-peace-through-gratitude-psalm-95-1-2.md",
-        "title": "Finding Peace Through Gratitude: Psalm 95:1-2 | The Praise Garden",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1444
-      },
-      {
         "id": "0711",
         "slug": "when-every-day-feels-heavy-psalm-118-24-the-praise-garden",
         "file": "0711-when-every-day-feels-heavy-psalm-118-24-the-praise-garden.md",
@@ -14443,17 +14478,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-gardenephesians5v19",
-        "file": "0000-short-gardenephesians5v19.yml",
-        "companion_longform_id": "",
-        "scripture": "Ephesians 5:19-20",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm145v1",
@@ -15307,17 +15331,6 @@
         "file": "0715-short-gardenpsalm9v1.yml",
         "companion_longform_id": "0715",
         "scripture": "Psalm 9:1-2",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-gardenluke17v15",
-        "file": "0716-short-gardenluke17v15.yml",
-        "companion_longform_id": "0716",
-        "scripture": "Luke 17:15-16",
         "channel": "prayer9",
         "channel_name": "The Praise Garden",
         "status": "approved",
