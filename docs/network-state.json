@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T16:31:58Z",
+  "generated_at": "2026-11-20T16:39:13Z",
   "monitor_generated_at": "2026-11-20T16:30:32.192629+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 556,
+    "published_total": 557,
     "published_longform": 173,
-    "published_shorts": 383,
-    "public_total": 554,
+    "published_shorts": 384,
+    "public_total": 555,
     "queued_longform": 58,
-    "queued_shorts": 88,
+    "queued_shorts": 87,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 82,
+        "published_total": 83,
         "published_longform": 29,
-        "published_shorts": 53,
+        "published_shorts": 54,
         "thumbnail_pending": 1,
-        "public_total": 81,
+        "public_total": 82,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM104V22",
-        "title": "Say This Psalm 104:22-23 Prayer at Sunrise | Finding Purpose Today #Shorts",
+        "id": "SHORT-MORNINGPSALM143V10",
+        "title": "Say This Psalm 143:10 Prayer at Sunrise | Your Morning #Shorts",
         "format": "short",
-        "youtube_video_id": "z3b6gvUsC2M",
-        "watch_url": "https://www.youtube.com/shorts/z3b6gvUsC2M",
+        "youtube_video_id": "Fn_0k23S-Nw",
+        "watch_url": "https://www.youtube.com/shorts/Fn_0k23S-Nw",
         "published_on": "2026-11-20",
-        "published_at": "2026-11-20T13:30:34Z"
+        "published_at": "2026-11-20T16:38:16Z"
       },
       "next_queued_longform": {
         "id": "0073",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm143v10",
-        "scripture": "Psalm 143:10",
+        "short": "short-morningpsalm65v8",
+        "scripture": "Psalm 65:8",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM143V10",
+      "slug": "short-morningpsalm143v10-sunrise-prayer",
+      "file": "short-morningpsalm143v10-sunrise-prayer.md",
+      "title": "Say This Psalm 143:10 Prayer at Sunrise | Your Morning #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T16:38:16Z",
+      "youtube_video_id": "Fn_0k23S-Nw",
+      "watch_url": "https://www.youtube.com/shorts/Fn_0k23S-Nw",
+      "youtu_be_url": "https://youtu.be/Fn_0k23S-Nw",
+      "shorts_url": "https://www.youtube.com/shorts/Fn_0k23S-Nw",
+      "studio_url": "https://studio.youtube.com/video/Fn_0k23S-Nw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Fn_0k23S-Nw/hqdefault.jpg",
+      "thumb_text": "DAWN PRAYER \u00b7 PSALM 143:10",
+      "thumbnail_pending": false,
+      "duration_label": "53s",
+      "words": 601
+    },
     {
       "id": "0096",
       "slug": "finding-quiet-in-the-midday-rush-psalm-46-10",
@@ -14891,17 +14915,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningpsalm143v10",
-        "file": "0000-short-morningpsalm143v10.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 143:10",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm65v8",
