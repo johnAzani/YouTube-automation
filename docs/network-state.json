@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T20:59:57Z",
+  "generated_at": "2026-11-20T21:12:43Z",
   "monitor_generated_at": "2026-11-20T20:33:33.603383+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 568,
-    "published_longform": 173,
-    "published_shorts": 395,
-    "public_total": 566,
-    "queued_longform": 58,
-    "queued_shorts": 76,
+    "published_total": 570,
+    "published_longform": 174,
+    "published_shorts": 396,
+    "public_total": 568,
+    "queued_longform": 57,
+    "queued_shorts": 75,
     "automations_ok": 11,
     "automations_total": 13,
     "network_healthy": false
@@ -33,33 +33,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 76,
-        "published_longform": 21,
-        "published_shorts": 55,
+        "published_total": 78,
+        "published_longform": 22,
+        "published_shorts": 56,
         "thumbnail_pending": 6,
-        "public_total": 75,
-        "queued_longform": 6,
+        "public_total": 77,
+        "queued_longform": 5,
         "queued_other": 5,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-PSALM134V1",
-        "title": "Say This Psalm 134:1-3 Prayer Before You Sleep | Bedtime Prayer #Shorts",
-        "format": "short",
-        "youtube_video_id": "4GcftT6_7W8",
-        "watch_url": "https://www.youtube.com/shorts/4GcftT6_7W8",
-        "published_on": "2026-11-20",
-        "published_at": "2026-11-20T16:38:51Z"
-      },
-      "next_queued_longform": {
         "id": "0030",
         "title": "Bedtime Prayer for Anxiety and Overthinking: Philippians 4:6-7",
-        "words": 895,
+        "format": "longform",
+        "youtube_video_id": "YsHGDAO8uRE",
+        "watch_url": "https://youtu.be/YsHGDAO8uRE",
+        "published_on": "2026-11-20",
+        "published_at": "2026-11-20T21:11:53Z"
+      },
+      "next_queued_longform": {
+        "id": "0031",
+        "title": "Night Prayer When Dread Keeps You Awake: 2 Timothy 1:7",
+        "words": 880,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm77v6",
-        "scripture": "Psalm 77:6",
+        "short": "short-romans8v28",
+        "scripture": "Romans 8:28",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0030",
+      "slug": "philippians-4-6-7-the-peace-that-guards-heart-and-mind",
+      "file": "0030-philippians-4-6-7-the-peace-that-guards-heart-and-mind.md",
+      "title": "Bedtime Prayer for Anxiety and Overthinking: Philippians 4:6-7",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T21:11:53Z",
+      "youtube_video_id": "YsHGDAO8uRE",
+      "watch_url": "https://youtu.be/YsHGDAO8uRE",
+      "youtu_be_url": "https://youtu.be/YsHGDAO8uRE",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/YsHGDAO8uRE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/YsHGDAO8uRE/hqdefault.jpg",
+      "thumb_text": "GUARD YOUR MIND",
+      "thumbnail_pending": false,
+      "duration_label": "187m 00s",
+      "words": 895
+    },
+    {
       "id": "SHORT-GUIDEDROMANS12V2",
       "slug": "short-guidedromans12v2-guidance-prayer",
       "file": "short-guidedromans12v2-guidance-prayer.md",
@@ -868,6 +892,30 @@
       "thumbnail_pending": false,
       "duration_label": "54s",
       "words": 616
+    },
+    {
+      "id": "SHORT-PSALM77V6",
+      "slug": "short-psalm77v6-pre-sleep-prayer",
+      "file": "short-psalm77v6-pre-sleep-prayer.md",
+      "title": "Say This Psalm 77:6 Prayer Before You Sleep | Finding Your Song #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T20:42:10Z",
+      "youtube_video_id": "NGGRFw8yqIs",
+      "watch_url": "https://www.youtube.com/shorts/NGGRFw8yqIs",
+      "youtu_be_url": "https://youtu.be/NGGRFw8yqIs",
+      "shorts_url": "https://www.youtube.com/shorts/NGGRFw8yqIs",
+      "studio_url": "https://studio.youtube.com/video/NGGRFw8yqIs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/NGGRFw8yqIs/hqdefault.jpg",
+      "thumb_text": "FINDING PEACE \u00b7 IN THE DARK",
+      "thumbnail_pending": false,
+      "duration_label": "43s",
+      "words": 611
     },
     {
       "id": "SHORT-SHIELDPSALM27V1",
@@ -14337,19 +14385,6 @@
   "queues": {
     "longform": [
       {
-        "id": "0030",
-        "slug": "philippians-4-6-7-the-peace-that-guards-heart-and-mind",
-        "file": "0030-philippians-4-6-7-the-peace-that-guards-heart-and-mind.md",
-        "title": "Bedtime Prayer for Anxiety and Overthinking: Philippians 4:6-7",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 895
-      },
-      {
         "id": "0031",
         "slug": "2-timothy-1-7-power-love-and-a-sound-mind",
         "file": "0031-2-timothy-1-7-power-love-and-a-sound-mind.md",
@@ -15124,17 +15159,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-psalm77v6",
-        "file": "0000-short-psalm77v6.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 77:6",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-romans8v28",

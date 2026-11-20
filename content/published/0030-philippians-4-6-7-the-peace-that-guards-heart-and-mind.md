@@ -2,7 +2,7 @@
 id: '0030'
 title: "Bedtime Prayer for Anxiety and Overthinking: Philippians 4:6-7"
 slug: philippians-4-6-7-the-peace-that-guards-heart-and-mind
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -85,6 +85,16 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this Philippians 4:6-7 KJV bedtime prayer to release nighttime anxiety and let the peace of God guard your heart and mind.
 category_id: '22'
+published_on: "2026-11-20"
+published_at: "2026-11-20T21:11:53Z"
+youtube_video_id: "YsHGDAO8uRE"
+metadata_revision: "selar-seo-v1"
+prayer_seconds: 420.1
+duration_seconds: 11220.5
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Be Careful for Nothing (Verse 6a)
