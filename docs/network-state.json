@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T15:40:49Z",
+  "generated_at": "2026-11-20T15:41:50Z",
   "monitor_generated_at": "2026-11-20T12:51:12.234843+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 553,
+    "published_total": 554,
     "published_longform": 171,
-    "published_shorts": 382,
-    "public_total": 551,
+    "published_shorts": 383,
+    "public_total": 552,
     "queued_longform": 60,
-    "queued_shorts": 90,
+    "queued_shorts": 88,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 41,
+        "published_total": 42,
         "published_longform": 11,
-        "published_shorts": 30,
-        "thumbnail_pending": 41,
-        "public_total": 41,
+        "published_shorts": 31,
+        "thumbnail_pending": 42,
+        "public_total": 42,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0710",
-        "title": "Finding Peace Through Gratitude: Psalm 95:1-2 | The Praise Garden",
-        "format": "longform",
-        "youtube_video_id": "HbsnODjXCaQ",
-        "watch_url": "https://youtu.be/HbsnODjXCaQ",
+        "id": "SHORT-GARDENJAMES1V17",
+        "title": "Pray This James 1:17 Prayer of Thanksgiving | Rest In God's Unchanging Grace #Shorts",
+        "format": "short",
+        "youtube_video_id": "pcVWNWTX-XU",
+        "watch_url": "https://www.youtube.com/shorts/pcVWNWTX-XU",
         "published_on": "2026-11-20",
-        "published_at": "2026-11-20T10:28:19Z"
+        "published_at": "2026-11-20T15:41:00Z"
       },
       "next_queued_longform": {
         "id": "0711",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenjames1v17",
-        "scripture": "James 1:17",
+        "short": "short-gardenpsalm145v1",
+        "scripture": "Psalm 145:1-3",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENJAMES1V17",
+      "slug": "short-gardenjames1v17-thanksgiving-prayer",
+      "file": "short-gardenjames1v17-thanksgiving-prayer.md",
+      "title": "Pray This James 1:17 Prayer of Thanksgiving | Rest In God's Unchanging Grace #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T15:41:00Z",
+      "youtube_video_id": "pcVWNWTX-XU",
+      "watch_url": "https://www.youtube.com/shorts/pcVWNWTX-XU",
+      "youtu_be_url": "https://youtu.be/pcVWNWTX-XU",
+      "shorts_url": "https://www.youtube.com/shorts/pcVWNWTX-XU",
+      "studio_url": "https://studio.youtube.com/video/pcVWNWTX-XU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/pcVWNWTX-XU/hqdefault.jpg",
+      "thumb_text": "EVERY GOOD GIFT \u00b7 AND PERFECT GIFT",
+      "thumbnail_pending": true,
+      "duration_label": "57s",
+      "words": 658
+    },
     {
       "id": "SHORT-GUIDEDPSALM23V3",
       "slug": "short-guidedpsalm23v3-guidance-prayer",
@@ -14770,17 +14794,6 @@
         "target_window_utc": "17:14"
       },
       {
-        "short": "short-gardenjames1v17",
-        "file": "0000-short-gardenjames1v17.yml",
-        "companion_longform_id": "",
-        "scripture": "James 1:17",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
         "short": "short-gardenpsalm145v1",
         "file": "0000-short-gardenpsalm145v1.yml",
         "companion_longform_id": "",
@@ -15643,17 +15656,6 @@
         "file": "0715-short-gardenpsalm9v1.yml",
         "companion_longform_id": "0715",
         "scripture": "Psalm 9:1-2",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-gardenpsalm30v11",
-        "file": "0717-short-gardenpsalm30v11.yml",
-        "companion_longform_id": "0717",
-        "scripture": "Psalm 30:11-12",
         "channel": "prayer9",
         "channel_name": "The Praise Garden",
         "status": "approved",
