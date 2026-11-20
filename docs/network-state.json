@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T01:39:50Z",
+  "generated_at": "2026-11-20T02:05:44Z",
   "monitor_generated_at": "2026-11-19T22:14:33.904388+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 526,
-    "published_longform": 165,
-    "published_shorts": 361,
-    "public_total": 524,
-    "queued_longform": 55,
-    "queued_shorts": 73,
+    "published_total": 528,
+    "published_longform": 166,
+    "published_shorts": 362,
+    "public_total": 526,
+    "queued_longform": 54,
+    "queued_shorts": 72,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -237,33 +237,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 54,
-        "published_longform": 18,
-        "published_shorts": 36,
-        "thumbnail_pending": 53,
-        "public_total": 54,
-        "queued_longform": 6,
+        "published_total": 56,
+        "published_longform": 19,
+        "published_shorts": 37,
+        "thumbnail_pending": 55,
+        "public_total": 56,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTGENESIS32V24",
-        "title": "Pray This Genesis 32:24-28 Midnight Prayer | A Threshold In The Dark #Shorts",
-        "format": "short",
-        "youtube_video_id": "cXCSW31QUcM",
-        "watch_url": "https://www.youtube.com/shorts/cXCSW31QUcM",
-        "published_on": "2026-11-19",
-        "published_at": "2026-11-19T20:59:14Z"
-      },
-      "next_queued_longform": {
         "id": "0218",
         "title": "When You Need a Defender: Psalm 144:1-2 | The Midnight Watch",
-        "words": 1251,
+        "format": "longform",
+        "youtube_video_id": "o-0EnxGNQng",
+        "watch_url": "https://youtu.be/o-0EnxGNQng",
+        "published_on": "2026-11-20",
+        "published_at": "2026-11-20T02:05:03Z"
+      },
+      "next_queued_longform": {
+        "id": "0219",
+        "title": "Crooked Places Made Straight: Isaiah 45:2-3 | The Midnight Watch",
+        "words": 1592,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightzechariah4v7",
-        "scripture": "Zechariah 4:7",
+        "short": "short-midnightpsalm68v1",
+        "scripture": "Psalm 68:1-3",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0218",
+      "slug": "when-you-need-a-defender-psalm-144",
+      "file": "0218-when-you-need-a-defender-psalm-144.md",
+      "title": "When You Need a Defender: Psalm 144:1-2 | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T02:05:03Z",
+      "youtube_video_id": "o-0EnxGNQng",
+      "watch_url": "https://youtu.be/o-0EnxGNQng",
+      "youtu_be_url": "https://youtu.be/o-0EnxGNQng",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/o-0EnxGNQng/edit",
+      "thumb_url": "https://i.ytimg.com/vi/o-0EnxGNQng/hqdefault.jpg",
+      "thumb_text": "MY HIGH TOWER",
+      "thumbnail_pending": true,
+      "duration_label": "~9 min",
+      "words": 1251
+    },
+    {
       "id": "SHORT-GUIDEDPSALM37V23",
       "slug": "short-guidedpsalm37v23-guidance-prayer",
       "file": "short-guidedpsalm37v23-guidance-prayer.md",
@@ -796,6 +820,30 @@
       "thumbnail_pending": false,
       "duration_label": "64s",
       "words": 658
+    },
+    {
+      "id": "SHORT-MIDNIGHTZECHARIAH4V7",
+      "slug": "short-midnightzechariah4v7-midnight-prayer",
+      "file": "short-midnightzechariah4v7-midnight-prayer.md",
+      "title": "Pray This Zechariah 4:7 Midnight Prayer | A Plain Before Him #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T01:26:56Z",
+      "youtube_video_id": "Endg5fp6g-M",
+      "watch_url": "https://www.youtube.com/shorts/Endg5fp6g-M",
+      "youtu_be_url": "https://youtu.be/Endg5fp6g-M",
+      "shorts_url": "https://www.youtube.com/shorts/Endg5fp6g-M",
+      "studio_url": "https://studio.youtube.com/video/Endg5fp6g-M/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Endg5fp6g-M/hqdefault.jpg",
+      "thumb_text": "WHO ART THOU \u00b7 O GREAT MOUNTAIN",
+      "thumbnail_pending": true,
+      "duration_label": "58s",
+      "words": 630
     },
     {
       "id": "SHORT-MIDDAYPHILIPPIANS4V13",
@@ -13537,19 +13585,6 @@
         "words": 1333
       },
       {
-        "id": "0218",
-        "slug": "when-you-need-a-defender-psalm-144",
-        "file": "0218-when-you-need-a-defender-psalm-144.md",
-        "title": "When You Need a Defender: Psalm 144:1-2 | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1251
-      },
-      {
         "id": "0219",
         "slug": "when-the-path-ahead-is-twisted-isaiah-45-2-3-the-midnight-watch",
         "file": "0219-when-the-path-ahead-is-twisted-isaiah-45-2-3-the-midnight-watch.md",
@@ -14055,17 +14090,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-midnightzechariah4v7",
-        "file": "0000-short-midnightzechariah4v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Zechariah 4:7",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-morningpsalm104v22",
