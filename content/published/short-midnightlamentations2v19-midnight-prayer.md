@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["MIDNIGHT VIGIL", "A QUIET CRY", "THE WATCH", "LAMENTATIONS 2:19"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-27T16:30:06Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 The heavy burden you are carrying in the silence of this room is finally being seen. Arise, cry out in the night: in the beginning of the watches pour out thine heart like water before the face of the LORD: lift up thy hands toward him for the life of thy young children, that faint for hunger in the top of every street. Lord, in this hour of deep shadow, we bring our exhausted spirits and our aching needs. You see the hunger and the fragility within our walls that we cannot fix alone tonight. We trust that your presence is the water that refreshes our dry and weary souls today. Please subscribe to walk with us as we stand in prayer at this midnight hour.

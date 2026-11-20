@@ -19,11 +19,11 @@ receipt_recovered_from_youtube: true
 metadata_retrofit_approved: false
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 thumbnail_poster: ["THE COVENANT SHIELD", "GOD IS MY SHIELD", "GENESIS 15:1", "PROTECTION PRAYER"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-20T13:02:19Z"
+thumbnail_retry_after: "2026-11-27T16:30:18Z"
 thumbnail_retry_reason: "permission"
 ---
 

@@ -76,7 +76,7 @@ youtube_video_id: "29otMiYSWYE"
 metadata_revision: "selar-seo-v1"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-20T13:59:19Z"
+thumbnail_retry_after: "2026-11-27T16:30:25Z"
 thumbnail_retry_reason: "permission"
 title_before: "Psalm 103:1-5 Thanksgiving Prayer | The Praise Garden"
 retitled_at: "2026-11-20"

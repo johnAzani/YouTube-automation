@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["AT MIDNIGHT", "I WILL RISE", "TO GIVE THANKS", "UNTO THEE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If you are staring into the dark while the rest of the house sleeps, listen. Father, when sleep refuses to come and my mind drifts back over the troubles of this day, I want my first waking thought in the quiet shadows to reach toward you. Your word reminds my restless spirit of the ancient devotion written in the dark. At midnight I will rise to give thanks unto thee because of thy righteous judgments. Calm every racing thought in this bedroom and grant me your deep, abiding peace. In Jesus' name, amen.
