@@ -43,6 +43,26 @@ The first words spoken must be about the listener, not about the channel.
 - Keep sentences speakable. Most under 22 words; no sentence over 40. Write numbers and references the way they are said aloud.
 - The final scene gives the benediction first and the call-to-action last, once, in the channel's required wording. Before it, one sentence invites the listener to write a first name or the need they are praying for in the comments, so the channel can pray with them.
 
-### 6. What never changes
+### 6. Make the listener feel prayed with, not talked at
+
+- Carry the opening's concrete burden into the prayer itself. After the exact
+  KJV reading, connect one image or phrase from the verse to that burden in
+  your own words, then address God directly with a specific petition. Do not
+  turn the whole middle into a sermon about prayer.
+- Make room for honest feelings without assuming them. The listener does not
+  have to stop grieving, feel peaceful, or prove their faith to join in. Ask
+  for what the passage leads you to ask for; never predict the result or its timing.
+- Let each prayer scene develop a different part of this same need, rather
+  than repeating the same petition in louder or more dramatic language.
+  Let a short, speakable sentence give the listener room to pray along. Never
+  put stage directions into the spoken words.
+- In the benediction, return to the opening situation with a quiet blessing,
+  not a recap or a claim that the situation has changed. Derive the imagery
+  and language from this passage and this channel's purpose. These are
+  writing intentions, not a phrase bank or a new scene template.
+- If the closing invites a comment, make sharing optional and a general need
+  enough. Never imply that a comment or subscription makes prayer more effective.
+
+### 7. What never changes
 
 Scripture is quoted exactly from the King James Version. No promise of healing, money or outcomes. No medical, legal or financial advice. Every other rule in this prompt about theology, sources, originality and the required front matter still applies in full.

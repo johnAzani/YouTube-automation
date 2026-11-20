@@ -7,6 +7,7 @@ from pipeline.brain_equipment.equipment_registry import (
     compile_full_brain_prompt,
     list_equipped_modules,
 )
+from pipeline.channels import CHANNELS
 from pipeline.gemini_brain import GeminiBrain
 from pipeline.script_doc import parse_script
 
@@ -23,6 +24,13 @@ class TestGeminiBrain(unittest.TestCase):
         self.assertIn("Charon", prompt)
         self.assertIn("DOCOGA REELS v2", prompt)
         self.assertIn("Spurgeon", prompt)
+
+    def test_prayer_writing_guidance_is_loaded_for_all_channels(self):
+        for channel_id in CHANNELS:
+            with self.subTest(channel=channel_id):
+                prompt = compile_full_brain_prompt(channel_id)
+                self.assertIn("Carry the opening's concrete burden", prompt)
+                self.assertIn("return to the opening situation with a quiet blessing", prompt)
 
     def test_select_next_scripture_picks_valid_candidate(self):
         brain = GeminiBrain()

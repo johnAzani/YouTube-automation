@@ -243,3 +243,18 @@ video-specific question for comments. Try one change at a time and use Studio
 for a same-format comparison; the weekly report mixes formats and cannot
 attribute changes to any one video. Check long-form watch time separately so
 a rise in Shorts views does not mask a decline in long-form viewing.
+
+### Review the prayer itself
+
+The authoring prompts ask for a specific petition rooted in the verse and the
+listener's opening situation, not a promise that the situation will change.
+Before release, read the draft aloud and check that the petition would still
+make sense to someone whose circumstances are unchanged. After release, use
+[YouTube Studio's key moments for audience retention](https://support.google.com/youtube/answer/9314415)
+to check the first 30 seconds and the transition into direct prayer on comparable
+long-form videos from the same channel. Record the number of videos and views;
+if Studio does not show key moments, do not assume they were good or bad. Compare
+average view duration and long-form watch time as secondary measures. Retention
+measures whether people stayed, not how they felt: use voluntary, unsolicited
+viewer feedback about the prayer as qualitative context, without collecting names
+or private prayer details into the repository.

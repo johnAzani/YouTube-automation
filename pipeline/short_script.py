@@ -409,6 +409,13 @@ THE OPENING SENTENCE — a viewer decides in the first two seconds:
 - Do not reuse the opening of an earlier Short on this channel.{avoid_block}
 - Honest only: no "don't scroll", no "watch to the end", no promised outcome.
 
+THE PRAYER — give the listener words to pray with you:
+- Carry the opening's specific need into one direct petition to God grounded
+  in the quoted verse. Keep the channel's mood and speak to one listener;
+  don't spend the remaining time explaining or repeating the opening.
+- Keep the petition honest even if nothing changes today. Don't tell listeners
+  what they must feel or imply that subscribing makes the prayer more effective.
+
 - Quote ONLY {scripture}. Never quote another psalm or verse reference.
 {scripture_block}- One `stock_queries` entry per scene, describing {imagery} imagery suitable for
   a {prayer_kind} prayer (no people's faces, no text in the image).

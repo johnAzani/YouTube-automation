@@ -144,6 +144,11 @@ class TestStorage(unittest.TestCase):
 
 
 class TestModelContract(unittest.TestCase):
+    def test_prompt_carries_the_opening_need_into_the_petition(self):
+        prompt = ss.build_prompt("Psalm 121")
+        self.assertIn("one direct petition to God grounded", prompt)
+        self.assertIn("even if nothing changes today", prompt)
+
     def test_parses_bare_json(self):
         self.assertEqual(ss.parse_model_json('{"a": 1}'), {"a": 1})
 
