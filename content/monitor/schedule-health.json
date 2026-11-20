@@ -2,9 +2,9 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 4277,
+      "late_minutes": 4463,
       "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-16T17:58:51+00:00",
+      "ran_at": "2026-11-16T21:04:34+00:00",
       "slot": "2026-11-13T18:41:00+00:00",
       "workflow": "metrics.yml"
     },
@@ -44,8 +44,8 @@
       "workflow": "reporting-jobs.yml"
     }
   ],
-  "generated_at": "2026-11-20T16:12:18.151373+00:00",
-  "last_run_at": "2026-11-20T16:11:30+00:00",
+  "generated_at": "2026-11-20T16:30:23.687229+00:00",
+  "last_run_at": "2026-11-20T16:29:10+00:00",
   "on_time": [
     {
       "late_minutes": 118,
@@ -76,6 +76,13 @@
       "workflow": "growth-autopilot.yml"
     },
     {
+      "late_minutes": 66,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-20T16:29:10+00:00",
+      "slot": "2026-11-20T15:23:00+00:00",
+      "workflow": "monitor.yml"
+    },
+    {
       "late_minutes": 73,
       "name": "Produce video",
       "ran_at": "2026-11-20T15:27:01+00:00",
@@ -90,6 +97,6 @@
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 1,
   "warn_minutes": 120
 }
