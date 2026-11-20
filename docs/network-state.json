@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T09:13:50Z",
+  "generated_at": "2026-11-20T09:14:33Z",
   "monitor_generated_at": "2026-11-20T08:19:40.591520+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 533,
+    "published_total": 534,
     "published_longform": 167,
-    "published_shorts": 366,
-    "public_total": 531,
+    "published_shorts": 367,
+    "public_total": 532,
     "queued_longform": 60,
-    "queued_shorts": 96,
+    "queued_shorts": 94,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -237,23 +237,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 56,
+        "published_total": 57,
         "published_longform": 19,
-        "published_shorts": 37,
-        "thumbnail_pending": 55,
-        "public_total": 56,
+        "published_shorts": 38,
+        "thumbnail_pending": 56,
+        "public_total": 57,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0218",
-        "title": "When You Need a Defender: Psalm 144:1-2 | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "o-0EnxGNQng",
-        "watch_url": "https://youtu.be/o-0EnxGNQng",
+        "id": "SHORT-MIDNIGHTISAIAH26V9",
+        "title": "Pray This Isaiah 26:9 Midnight Prayer | Stillness In Prayer #Shorts",
+        "format": "short",
+        "youtube_video_id": "r93ogczWJpA",
+        "watch_url": "https://www.youtube.com/shorts/r93ogczWJpA",
         "published_on": "2026-11-20",
-        "published_at": "2026-11-20T02:05:03Z"
+        "published_at": "2026-11-20T09:13:40Z"
       },
       "next_queued_longform": {
         "id": "0219",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightisaiah26v9",
-        "scripture": "Isaiah 26:9",
+        "short": "short-midnightpsalm68v1",
+        "scripture": "Psalm 68:1-3",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTISAIAH26V9",
+      "slug": "short-midnightisaiah26v9-midnight-prayer",
+      "file": "short-midnightisaiah26v9-midnight-prayer.md",
+      "title": "Pray This Isaiah 26:9 Midnight Prayer | Stillness In Prayer #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T09:13:40Z",
+      "youtube_video_id": "r93ogczWJpA",
+      "watch_url": "https://www.youtube.com/shorts/r93ogczWJpA",
+      "youtu_be_url": "https://youtu.be/r93ogczWJpA",
+      "shorts_url": "https://www.youtube.com/shorts/r93ogczWJpA",
+      "studio_url": "https://studio.youtube.com/video/r93ogczWJpA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/r93ogczWJpA/hqdefault.jpg",
+      "thumb_text": "THE MIDNIGHT \u00b7 WATCH",
+      "thumbnail_pending": true,
+      "duration_label": "50s",
+      "words": 623
+    },
     {
       "id": "SHORT-PSALM119V148",
       "slug": "short-psalm119v148-pre-sleep-prayer",
@@ -14389,17 +14413,6 @@
         "target_window_utc": "12:14"
       },
       {
-        "short": "short-midnightisaiah26v9",
-        "file": "0000-short-midnightisaiah26v9.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 26:9",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
-      },
-      {
         "short": "short-morningecclesiastes11v6",
         "file": "0000-short-morningecclesiastes11v6.yml",
         "companion_longform_id": "",
@@ -14811,17 +14824,6 @@
         "file": "0223-short-midnightacts12v5.yml",
         "companion_longform_id": "0223",
         "scripture": "Acts 12:5-11",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-midnightluke18v1",
-        "file": "0224-short-midnightluke18v1.yml",
-        "companion_longform_id": "0224",
-        "scripture": "Luke 18:1-8",
         "channel": "prayer4",
         "channel_name": "The Midnight Watch",
         "status": "approved",
