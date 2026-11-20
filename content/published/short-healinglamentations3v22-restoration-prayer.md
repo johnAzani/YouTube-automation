@@ -27,7 +27,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (66, 703, 1013, 752); shorten the authored lockup or reduce its size"
 ---
 
 As you sit alone trying to swallow the tears you hid all day, know this truth. It is of the LORD’s mercies that we are not consumed, because his compassions fail not. They are new every morning: great is thy faithfulness. Lord, cover this weary child with your restoring peace right now. Where strength has failed and heartaches linger, let your tender mercy break through the darkness. Renew their body, calm their anxious spirit, and remind them that your love will never leave them. May your gentle presence bring complete rest to their soul today. Subscribe to The Healing Balm to rest in God's peace.

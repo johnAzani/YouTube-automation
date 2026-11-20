@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["STAND BY NIGHT", "LIFT UP YOUR HANDS", "BLESSINGS FROM ZION", "BEDTIME PRAYER"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If you are lying awake wondering how tomorrow will unfold, rest your mind right now. Behold, bless ye the LORD, all ye servants of the LORD, which by night stand in the house of the LORD. Lift up your hands in the sanctuary, and bless the LORD. The LORD that made heaven and earth bless thee out of Zion. Lord, as midnight surrounds this bed, we lift our hands to You. You made heaven and earth, yet You watch over this quiet room tonight. Cover this heart with Your deep peace and grant sweet sleep. Subscribe to join us at The Secret Place for daily prayer.
