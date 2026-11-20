@@ -1,0 +1,258 @@
+{
+  "key": "short-healingacts10v38",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "ACTS TEN THIRTY EIGHT",
+    "THE HEALING BALM"
+  ],
+  "poster": [
+    "ACTS TEN THIRTY EIGHT",
+    "THE HEALING BALM",
+    "RESTORE YOUR SOUL",
+    "PEACE IN CHRIST"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters flowing gently",
+    "warm golden sanctuary light filtering through leaves",
+    "white dove soaring over serene calm waters",
+    "gentle morning light on still mountain lake",
+    "soft golden rays resting on tranquil forest stream",
+    "peaceful turquoise river flowing through quiet valley"
+  ],
+  "scenes": [
+    {
+      "a": "If you are sitting alone in the quiet waiting for relief, listen to this promise.",
+      "img": "short-healingacts10v38-scene-01.jpg",
+      "kicker": "ACTS 10:38",
+      "sub": "HEALING POWER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we come before you acknowledging our weariness and physical pain today.",
+      "img": "short-healingacts10v38-scene-02.jpg",
+      "kicker": "ACTS 10:38",
+      "sub": "DIVINE PRESENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Your word reminds us of how God anointed Jesus of Nazareth with the Holy Ghost and with power:",
+      "img": "short-healingacts10v38-scene-03.jpg",
+      "kicker": "ACTS 10:38",
+      "sub": "ANOINTED WITH POWER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "who went about doing good, and healing all that were oppressed of the devil; for God was with him.",
+      "img": "short-healingacts10v38-scene-04.jpg",
+      "kicker": "ACTS 10:38",
+      "sub": "HEALING ALL OPPRESSED",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, touch every aching muscle, every struggling breath, and every weary mind in this very moment.",
+      "img": "short-healingacts10v38-scene-05.jpg",
+      "kicker": "ACTS 10:38",
+      "sub": "RESTORE STRENGTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Grant your quiet comfort and deep restorative peace to everyone receiving this prayer today.",
+      "img": "short-healingacts10v38-scene-06.jpg",
+      "kicker": "ACTS 10:38",
+      "sub": "RECEIVE HIS PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "If you are sitting alone in the quiet waiting for relief, listen to this promise."
+    ],
+    [
+      10,
+      20,
+      "Father, we come before you acknowledging our weariness and physical pain today."
+    ],
+    [
+      20,
+      30,
+      "Your word reminds us of how God anointed Jesus of Nazareth with the Holy Ghost and with power:"
+    ],
+    [
+      30,
+      40,
+      "who went about doing good, and healing all that were oppressed of the devil; for God was with him."
+    ],
+    [
+      40,
+      50,
+      "Lord, touch every aching muscle, every struggling breath, and every weary mind in this very moment."
+    ],
+    [
+      50,
+      60,
+      "Grant your quiet comfort and deep restorative peace to everyone receiving this prayer today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "SITTING ALONE IN THE QUIET",
+        "WAITING FOR RELIEF",
+        "LISTEN TO THIS PROMISE"
+      ],
+      "PROMISE",
+      "ACTS 10 : 38"
+    ],
+    [
+      10,
+      20,
+      [
+        "FATHER WE COME BEFORE YOU",
+        "ACKNOWLEDGING OUR WEARINESS",
+        "AND PHYSICAL PAIN TODAY"
+      ],
+      "WEARINESS",
+      "ACTS 10 : 38"
+    ],
+    [
+      20,
+      30,
+      [
+        "HOW GOD ANOINTED JESUS",
+        "OF NAZARETH WITH THE",
+        "HOLY GHOST AND WITH POWER"
+      ],
+      "POWER",
+      "ACTS 10 : 38"
+    ],
+    [
+      30,
+      40,
+      [
+        "WHO WENT ABOUT DOING GOOD",
+        "AND HEALING ALL THAT WERE",
+        "OPPRESSED OF THE DEVIL"
+      ],
+      "HEALING",
+      "ACTS 10 : 38"
+    ],
+    [
+      40,
+      50,
+      [
+        "LORD TOUCH EVERY ACHING",
+        "MUSCLE AND EVERY WEARY",
+        "MIND IN THIS MOMENT"
+      ],
+      "TOUCH",
+      "ACTS 10 : 38"
+    ],
+    [
+      50,
+      60,
+      [
+        "GRANT YOUR QUIET COMFORT",
+        "AND DEEP RESTORATIVE PEACE",
+        "TO EVERYONE PRAYING TODAY"
+      ],
+      "PEACE",
+      "ACTS 10 : 38"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are sitting alone in the quiet waiting for relief, listen to this promise.",
+      "kind": "phrase",
+      "words": [
+        "SITTING",
+        "ALONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we come before you acknowledging our weariness and physical pain today.",
+      "kind": "phrase",
+      "words": [
+        "WEARINESS",
+        "PAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your word reminds us of how God anointed Jesus of Nazareth with the Holy Ghost and with power:",
+      "kind": "phrase",
+      "words": [
+        "ANOINTED",
+        "POWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "who went about doing good, and healing all that were oppressed of the devil; for God was with him.",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "OPPRESSED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, touch every aching muscle, every struggling breath, and every weary mind in this very moment.",
+      "kind": "phrase",
+      "words": [
+        "ACHING",
+        "MUSCLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant your quiet comfort and deep restorative peace to everyone receiving this prayer today.",
+      "kind": "phrase",
+      "words": [
+        "COMFORT",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Acts 10:38"
+}
