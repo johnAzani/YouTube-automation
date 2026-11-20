@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T09:20:20Z",
+  "generated_at": "2026-11-20T09:21:29Z",
   "monitor_generated_at": "2026-11-20T08:19:40.591520+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 535,
+    "published_total": 536,
     "published_longform": 167,
-    "published_shorts": 368,
-    "public_total": 533,
+    "published_shorts": 369,
+    "public_total": 534,
     "queued_longform": 60,
-    "queued_shorts": 93,
+    "queued_shorts": 92,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 41,
+        "published_total": 42,
         "published_longform": 13,
-        "published_shorts": 28,
-        "thumbnail_pending": 41,
-        "public_total": 41,
+        "published_shorts": 29,
+        "thumbnail_pending": 42,
+        "public_total": 42,
         "queued_longform": 6,
         "queued_other": 3,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0612",
-        "title": "The Eternal God Is Thy Refuge: Deuteronomy 33:27 | The Covenant Shield",
-        "format": "longform",
-        "youtube_video_id": "VI5SZ7x-uwU",
-        "watch_url": "https://youtu.be/VI5SZ7x-uwU",
+        "id": "SHORT-SHIELDEPHESIANS6V10",
+        "title": "Pray This Ephesians 6:10-11 Prayer for Divine Protection | Daily Prayer #Shorts",
+        "format": "short",
+        "youtube_video_id": "sgc8bMFvESA",
+        "watch_url": "https://www.youtube.com/shorts/sgc8bMFvESA",
         "published_on": "2026-11-20",
-        "published_at": "2026-11-20T02:11:53Z"
+        "published_at": "2026-11-20T09:20:40Z"
       },
       "next_queued_longform": {
         "id": "0614",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldephesians6v10",
-        "scripture": "Ephesians 6:10-11",
+        "short": "short-shieldpsalm27v1",
+        "scripture": "Psalm 27:1",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDEPHESIANS6V10",
+      "slug": "short-shieldephesians6v10-protection-prayer",
+      "file": "short-shieldephesians6v10-protection-prayer.md",
+      "title": "Pray This Ephesians 6:10-11 Prayer for Divine Protection | Daily Prayer #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T09:20:40Z",
+      "youtube_video_id": "sgc8bMFvESA",
+      "watch_url": "https://www.youtube.com/shorts/sgc8bMFvESA",
+      "youtu_be_url": "https://youtu.be/sgc8bMFvESA",
+      "shorts_url": "https://www.youtube.com/shorts/sgc8bMFvESA",
+      "studio_url": "https://studio.youtube.com/video/sgc8bMFvESA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/sgc8bMFvESA/hqdefault.jpg",
+      "thumb_text": "THE COVENANT SHIELD \u00b7 DIVINE PROTECTION",
+      "thumbnail_pending": true,
+      "duration_label": "53s",
+      "words": 669
+    },
     {
       "id": "SHORT-PROVISIONEPHESIANS3V20",
       "slug": "short-provisionephesians3v20-stewardship-prayer",
@@ -14534,17 +14558,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldephesians6v10",
-        "file": "0000-short-shieldephesians6v10.yml",
-        "companion_longform_id": "",
-        "scripture": "Ephesians 6:10-11",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-zephaniah3v17",
