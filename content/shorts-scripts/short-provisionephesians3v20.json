@@ -1,0 +1,331 @@
+{
+  "key": "short-provisionephesians3v20",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "EXCEEDING ABUNDANTLY",
+    "GOD'S DAILY PROVISION"
+  ],
+  "poster": [
+    "EXCEEDING ABUNDANTLY",
+    "ABOVE ALL WE ASK OR THINK",
+    "EPHESIANS 3:20",
+    "THE PROVISION TABLE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit stone sanctuary table with morning light beam",
+    "golden sunlit mountain valley with tranquil river",
+    "peaceful golden light shining through mountain pass",
+    "calm valley lake at sunrise with golden reflections",
+    "ancient stone doorway overlooking sunlit valley",
+    "quiet sunlit forest path with soft golden light"
+  ],
+  "scenes": [
+    {
+      "a": "While you stare at an empty ledger",
+      "img": "short-provisionephesians3v20-scene-01.jpg",
+      "kicker": "EPHESIANS 3:20",
+      "sub": "EXCEEDING ABUNDANTLY ABOVE ALL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The Word of God declares",
+      "img": "short-provisionephesians3v20-scene-02.jpg",
+      "kicker": "EPHESIANS 3:20",
+      "sub": "EXCEEDING ABUNDANTLY ABOVE ALL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "exceeding abundantly above all",
+      "img": "short-provisionephesians3v20-scene-03.jpg",
+      "kicker": "EPHESIANS 3:20",
+      "sub": "EXCEEDING ABUNDANTLY ABOVE ALL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "capable hands today",
+      "img": "short-provisionephesians3v20-scene-04.jpg",
+      "kicker": "EPHESIANS 3:20",
+      "sub": "EXCEEDING ABUNDANTLY ABOVE ALL",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "unlock unseen doors",
+      "img": "short-provisionephesians3v20-scene-05.jpg",
+      "kicker": "EPHESIANS 3:20",
+      "sub": "EXCEEDING ABUNDANTLY ABOVE ALL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "infinite supply",
+      "img": "short-provisionephesians3v20-scene-06.jpg",
+      "kicker": "EPHESIANS 3:20",
+      "sub": "EXCEEDING ABUNDANTLY ABOVE ALL",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "While you stare at an empty ledger and wonder how bills will be paid, listen."
+    ],
+    [
+      8,
+      14,
+      "The Word of God declares in Ephesians chapter three, verse twenty:"
+    ],
+    [
+      14,
+      24,
+      "Now unto him that is able to do exceeding abundantly above all that we ask or think, according to the power that worketh in us,"
+    ],
+    [
+      24,
+      32,
+      "Lord, we bring our small provisions and limited vision into Your capable hands today."
+    ],
+    [
+      32,
+      40,
+      "Expand our understanding, unlock unseen doors, and provide far beyond our human calculations."
+    ],
+    [
+      40,
+      48,
+      "Work within us by Your Spirit to steward every gift and trust Your infinite supply."
+    ],
+    [
+      48,
+      52,
+      "In Jesus' name, Amen."
+    ],
+    [
+      52,
+      58,
+      "Subscribe to walk in God's daily provision with us."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "WHILE YOU STARE AT AN EMPTY LEDGER",
+        "AND WONDER HOW BILLS WILL BE PAID",
+        "LISTEN TO GOD"
+      ],
+      [
+        "EMPTY LEDGER",
+        "LISTEN"
+      ],
+      "EPHESIANS 3 : 20"
+    ],
+    [
+      8,
+      14,
+      [
+        "THE WORD OF GOD DECLARES",
+        "IN EPHESIANS CHAPTER THREE",
+        "VERSE TWENTY"
+      ],
+      [
+        "WORD OF GOD",
+        "EPHESIANS"
+      ],
+      "EPHESIANS 3 : 20"
+    ],
+    [
+      14,
+      24,
+      [
+        "NOW UNTO HIM THAT IS ABLE TO DO",
+        "EXCEEDING ABUNDANTLY ABOVE ALL",
+        "THAT WE ASK OR THINK ACCORDING TO",
+        "THE POWER THAT WORKETH IN US"
+      ],
+      [
+        "EXCEEDING ABUNDANTLY",
+        "POWER THAT WORKETH"
+      ],
+      "EPHESIANS 3 : 20"
+    ],
+    [
+      24,
+      32,
+      [
+        "LORD WE BRING OUR SMALL PROVISIONS",
+        "AND LIMITED VISION INTO YOUR",
+        "CAPABLE HANDS TODAY"
+      ],
+      [
+        "SMALL PROVISIONS",
+        "CAPABLE HANDS"
+      ],
+      "EPHESIANS 3 : 20"
+    ],
+    [
+      32,
+      40,
+      [
+        "EXPAND OUR UNDERSTANDING UNLOCK UNSEEN DOORS",
+        "AND PROVIDE FAR BEYOND OUR",
+        "HUMAN CALCULATIONS"
+      ],
+      [
+        "UNSEEN DOORS",
+        "BEYOND"
+      ],
+      "EPHESIANS 3 : 20"
+    ],
+    [
+      40,
+      48,
+      [
+        "WORK WITHIN US BY YOUR SPIRIT",
+        "TO STEWARD EVERY GIFT AND TRUST",
+        "YOUR INFINITE SUPPLY"
+      ],
+      [
+        "STEWARD EVERY GIFT",
+        "INFINITE SUPPLY"
+      ],
+      "EPHESIANS 3 : 20"
+    ],
+    [
+      48,
+      52,
+      [
+        "IN JESUS NAME",
+        "AMEN"
+      ],
+      [
+        "AMEN"
+      ],
+      "EPHESIANS 3 : 20"
+    ],
+    [
+      52,
+      58,
+      [
+        "SUBSCRIBE TO WALK IN GODS",
+        "DAILY PROVISION WITH US"
+      ],
+      [
+        "DAILY PROVISION"
+      ],
+      "EPHESIANS 3 : 20"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "empty ledger",
+      "kind": "phrase",
+      "words": [
+        "EMPTY",
+        "LEDGER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Ephesians chapter three",
+      "kind": "phrase",
+      "words": [
+        "EPHESIANS",
+        "THREE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "exceeding abundantly above all",
+      "kind": "phrase",
+      "words": [
+        "EXCEEDING",
+        "ABUNDANTLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "power that worketh in us",
+      "kind": "phrase",
+      "words": [
+        "POWER",
+        "WORKETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "capable hands today",
+      "kind": "phrase",
+      "words": [
+        "CAPABLE",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "unlock unseen doors",
+      "kind": "phrase",
+      "words": [
+        "UNSEEN",
+        "DOORS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "human calculations",
+      "kind": "phrase",
+      "words": [
+        "HUMAN",
+        "CALCULATIONS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "infinite supply",
+      "kind": "phrase",
+      "words": [
+        "INFINITE",
+        "SUPPLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ephesians 3:20"
+}

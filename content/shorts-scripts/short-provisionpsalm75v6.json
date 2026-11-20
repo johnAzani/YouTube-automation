@@ -1,0 +1,358 @@
+{
+  "key": "short-provisionpsalm75v6",
+  "channel": "prayer7",
+  "psalm": 75,
+  "title": [
+    "GOD CONTROLS YOUR",
+    "NEXT PROMOTION"
+  ],
+  "poster": [
+    "FOR PROMOTION COMETH",
+    "NEITHER FROM THE EAST",
+    "NOR FROM THE WEST",
+    "BUT GOD IS THE JUDGE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit mountain pass misty morning",
+    "sunlight filtering through ancient forest valley river",
+    "sunlit sanctuary stone table peaceful river valley",
+    "golden hour light over calm mountain lake",
+    "peaceful sunlit valley open mountain landscape",
+    "golden sunlight over vast peaceful stone riverbank",
+    "warm sunbeams over quiet mountain ridge sunrise",
+    "calm sunlit valley meadow golden light"
+  ],
+  "scenes": [
+    {
+      "a": "While you wait for a manager to recognize your hard work today, hear God's word.",
+      "img": "short-provisionpsalm75v6-scene-01.jpg",
+      "kicker": "PSALM 75:6-7",
+      "sub": "GOD SEES YOUR FAITHFUL WORK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "For promotion cometh neither from the east, nor from the west, nor from the south.",
+      "img": "short-provisionpsalm75v6-scene-02.jpg",
+      "kicker": "PSALM 75:6",
+      "sub": "PROMOTION COMES NOT FROM EARTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "But God is the judge: he putteth down one, and setteth up another.",
+      "img": "short-provisionpsalm75v6-scene-03.jpg",
+      "kicker": "PSALM 75:7",
+      "sub": "GOD SOVEREIGNLY ELEVATES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, we acknowledge that true advancement comes from Your sovereign hand alone.",
+      "img": "short-provisionpsalm75v6-scene-04.jpg",
+      "kicker": "STEWARDSHIP PRAYER",
+      "sub": "ADVANCEMENT BELONGS TO GOD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You see every unseen effort and every closed door. Break our reliance on human favor.",
+      "img": "short-provisionpsalm75v6-scene-05.jpg",
+      "kicker": "OPEN DOORS",
+      "sub": "TRUST NOT IN HUMAN FAVOR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Grant us quiet confidence in Your perfect timing, knowing that You elevate whom You will.",
+      "img": "short-provisionpsalm75v6-scene-06.jpg",
+      "kicker": "PERFECT TIMING",
+      "sub": "REST IN DIVINE PROVISION",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We yield our career, our daily work, and our future unto Your faithful care.",
+      "img": "short-provisionpsalm75v6-scene-07.jpg",
+      "kicker": "DAILY SURRENDER",
+      "sub": "COMMIT YOUR WORK UNTO HIM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to join us daily at The Provision Table.",
+      "img": "short-provisionpsalm75v6-scene-08.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "WALK IN FAITHFUL STEWARDSHIP",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "While you wait for a manager to recognize your hard work today, hear God's word."
+    ],
+    [
+      6,
+      13,
+      "For promotion cometh neither from the east, nor from the west, nor from the south."
+    ],
+    [
+      13,
+      20,
+      "But God is the judge: he putteth down one, and setteth up another."
+    ],
+    [
+      20,
+      27,
+      "Lord, we acknowledge that true advancement comes from Your sovereign hand alone."
+    ],
+    [
+      27,
+      34,
+      "You see every unseen effort and every closed door. Break our reliance on human favor."
+    ],
+    [
+      34,
+      41,
+      "Grant us quiet confidence in Your perfect timing, knowing that You elevate whom You will."
+    ],
+    [
+      41,
+      49,
+      "We yield our career, our daily work, and our future unto Your faithful care."
+    ],
+    [
+      49,
+      55,
+      "Subscribe to join us daily at The Provision Table."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "WHILE YOU WAIT FOR",
+        "A MANAGER TO RECOGNIZE",
+        "YOUR HARD WORK TODAY"
+      ],
+      [
+        "RECOGNIZE",
+        "HARD WORK"
+      ],
+      "PSALM 75 : 6-7"
+    ],
+    [
+      6,
+      13,
+      [
+        "FOR PROMOTION COMETH",
+        "NEITHER FROM THE EAST",
+        "NOR WEST NOR SOUTH"
+      ],
+      [
+        "PROMOTION",
+        "COMETH"
+      ],
+      "PSALM 75 : 6"
+    ],
+    [
+      13,
+      20,
+      [
+        "BUT GOD IS THE JUDGE",
+        "HE PUTTETH DOWN ONE",
+        "AND SETTETH UP ANOTHER"
+      ],
+      [
+        "GOD IS THE JUDGE",
+        "SETTETH UP"
+      ],
+      "PSALM 75 : 7"
+    ],
+    [
+      20,
+      27,
+      [
+        "TRUE ADVANCEMENT COMES",
+        "FROM YOUR SOVEREIGN",
+        "HAND ALONE"
+      ],
+      [
+        "SOVEREIGN HAND",
+        "ADVANCEMENT"
+      ],
+      "PSALM 75 : 6-7"
+    ],
+    [
+      27,
+      34,
+      [
+        "YOU SEE EVERY UNSEEN EFFORT",
+        "AND CLOSED DOOR",
+        "BREAK RELIANCE ON FAVOR"
+      ],
+      [
+        "UNSEEN EFFORT",
+        "CLOSED DOOR"
+      ],
+      "PSALM 75 : 6-7"
+    ],
+    [
+      34,
+      41,
+      [
+        "GRANT US QUIET CONFIDENCE",
+        "IN YOUR PERFECT TIMING",
+        "YOU ELEVATE WHOM YOU WILL"
+      ],
+      [
+        "PERFECT TIMING",
+        "ELEVATE"
+      ],
+      "PSALM 75 : 6-7"
+    ],
+    [
+      41,
+      49,
+      [
+        "WE YIELD OUR CAREER",
+        "OUR DAILY WORK",
+        "UNTO YOUR FAITHFUL CARE"
+      ],
+      [
+        "YIELD OUR CAREER",
+        "FAITHFUL CARE"
+      ],
+      "PSALM 75 : 6-7"
+    ],
+    [
+      49,
+      55,
+      [
+        "SUBSCRIBE TO JOIN US",
+        "DAILY AT THE",
+        "PROVISION TABLE"
+      ],
+      [
+        "PROVISION TABLE",
+        "SUBSCRIBE"
+      ],
+      "PSALM 75 : 6-7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "While you wait for a manager to recognize your hard work today, hear God's word.",
+      "kind": "phrase",
+      "words": [
+        "RECOGNIZE",
+        "HARD WORK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For promotion cometh neither from the east, nor from the west, nor from the south.",
+      "kind": "phrase",
+      "words": [
+        "PROMOTION",
+        "COMETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But God is the judge: he putteth down one, and setteth up another.",
+      "kind": "phrase",
+      "words": [
+        "GOD IS THE JUDGE",
+        "SETTETH UP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we acknowledge that true advancement comes from Your sovereign hand alone.",
+      "kind": "phrase",
+      "words": [
+        "SOVEREIGN HAND",
+        "ADVANCEMENT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You see every unseen effort and every closed door. Break our reliance on human favor.",
+      "kind": "phrase",
+      "words": [
+        "UNSEEN EFFORT",
+        "CLOSED DOOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us quiet confidence in Your perfect timing, knowing that You elevate whom You will.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT TIMING",
+        "ELEVATE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We yield our career, our daily work, and our future unto Your faithful care.",
+      "kind": "phrase",
+      "words": [
+        "YIELD OUR CAREER",
+        "FAITHFUL CARE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join us daily at The Provision Table.",
+      "kind": "phrase",
+      "words": [
+        "PROVISION TABLE",
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 75:6-7"
+}

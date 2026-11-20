@@ -1,0 +1,276 @@
+{
+  "key": "short-provisionluke5v4",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "LANCING OUT",
+    "INTO THE DEEP"
+  ],
+  "poster": [
+    "GOD PROVIDES",
+    "BEYOND YOUR",
+    "OWN TOIL",
+    "AND EFFORT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "wide sunlit mountain valley",
+    "gentle river at sunrise",
+    "ancient stone table in soft light",
+    "golden grain field at dawn",
+    "misty forest path at morning",
+    "calm lake reflecting morning sky"
+  ],
+  "scenes": [
+    {
+      "a": "As you consider that task that has yielded you nothing, listen to the Master.",
+      "img": "short-provisionluke5v4-scene-01.jpg",
+      "kicker": "LUKE 5:4",
+      "sub": "TRUST HIS WORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Now when he had left speaking, he said unto Simon, Launch out into the deep, and let down your nets for a draught.",
+      "img": "short-provisionluke5v4-scene-02.jpg",
+      "kicker": "LUKE 5:4",
+      "sub": "LAUNCH INTO THE DEEP",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And Simon answering said unto him, Master, we have toiled all the night, and have taken nothing: nevertheless at thy word I will let down the net.",
+      "img": "short-provisionluke5v4-scene-03.jpg",
+      "kicker": "LUKE 5:5",
+      "sub": "NEVERTHELESS AT THY WORD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And when they had this done, they inclosed a great multitude of fishes: and their net brake.",
+      "img": "short-provisionluke5v4-scene-04.jpg",
+      "kicker": "LUKE 5:6",
+      "sub": "A GREAT MULTITUDE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, where my own labor feels empty, move me to cast my nets by your direction.",
+      "img": "short-provisionluke5v4-scene-05.jpg",
+      "kicker": "PRAYER",
+      "sub": "GUIDE MY WORK",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant me the courage to obey your instruction, knowing your provision overflows my limits today.",
+      "img": "short-provisionluke5v4-scene-06.jpg",
+      "kicker": "PROVISION",
+      "sub": "BEYOND ALL LIMITS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "As you consider that task that has yielded you nothing, listen to the Master."
+    ],
+    [
+      8,
+      22,
+      "Now when he had left speaking, he said unto Simon, Launch out into the deep, and let down your nets for a draught."
+    ],
+    [
+      22,
+      40,
+      "And Simon answering said unto him, Master, we have toiled all the night, and have taken nothing: nevertheless at thy word I will let down the net."
+    ],
+    [
+      40,
+      52,
+      "And when they had this done, they inclosed a great multitude of fishes: and their net brake."
+    ],
+    [
+      52,
+      65,
+      "Lord, where my own labor feels empty, move me to cast my nets by your direction."
+    ],
+    [
+      65,
+      80,
+      "Grant me the courage to obey your instruction, knowing your provision overflows my limits today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "CONSIDER THAT TASK",
+        "YIELDED NOTHING",
+        "LISTEN TO THE MASTER"
+      ],
+      [
+        "LISTEN",
+        "MASTER"
+      ],
+      "LUKE 5:4"
+    ],
+    [
+      8,
+      22,
+      [
+        "LAUNCH OUT",
+        "INTO THE DEEP",
+        "LET DOWN NETS"
+      ],
+      [
+        "LAUNCH",
+        "DEEP"
+      ],
+      "LUKE 5:4"
+    ],
+    [
+      22,
+      40,
+      [
+        "WE HAVE TOILED",
+        "TAKEN NOTHING",
+        "NEVERTHELESS AT THY WORD"
+      ],
+      [
+        "NEVERTHELESS",
+        "THY WORD"
+      ],
+      "LUKE 5:5"
+    ],
+    [
+      40,
+      52,
+      [
+        "INCLOSED A GREAT",
+        "MULTITUDE OF FISHES",
+        "AND THEIR NET BRAKE"
+      ],
+      [
+        "GREAT",
+        "MULTITUDE"
+      ],
+      "LUKE 5:6"
+    ],
+    [
+      52,
+      65,
+      [
+        "LABOR FEELS EMPTY",
+        "CAST MY NETS",
+        "BY YOUR DIRECTION"
+      ],
+      [
+        "EMPTY",
+        "DIRECTION"
+      ],
+      "PRAYER"
+    ],
+    [
+      65,
+      80,
+      [
+        "OBEY YOUR INSTRUCTION",
+        "PROVISION OVERFLOWS",
+        "BEYOND MY LIMITS"
+      ],
+      [
+        "OBEY",
+        "OVERFLOWS"
+      ],
+      "PROVISION"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you consider that task that has yielded you nothing, listen to the Master.",
+      "kind": "phrase",
+      "words": [
+        "LISTEN",
+        "MASTER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Now when he had left speaking, he said unto Simon, Launch out into the deep, and let down your nets for a draught.",
+      "kind": "phrase",
+      "words": [
+        "LAUNCH",
+        "DEEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And Simon answering said unto him, Master, we have toiled all the night, and have taken nothing: nevertheless at thy word I will let down the net.",
+      "kind": "phrase",
+      "words": [
+        "NEVERTHELESS",
+        "THY WORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And when they had this done, they inclosed a great multitude of fishes: and their net brake.",
+      "kind": "phrase",
+      "words": [
+        "GREAT",
+        "MULTITUDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, where my own labor feels empty, move me to cast my nets by your direction.",
+      "kind": "phrase",
+      "words": [
+        "EMPTY",
+        "DIRECTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the courage to obey your instruction, knowing your provision overflows my limits today.",
+      "kind": "phrase",
+      "words": [
+        "OBEY",
+        "OVERFLOWS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Luke 5:4-6"
+}
