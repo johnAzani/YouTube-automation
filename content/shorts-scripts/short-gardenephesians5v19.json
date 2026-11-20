@@ -1,0 +1,317 @@
+{
+  "key": "short-gardenephesians5v19",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "SING WITH THANKSGIVING",
+    "EPHESIANS 5:19-20"
+  ],
+  "poster": [
+    "GIVING THANKS ALWAYS",
+    "SINGING IN YOUR HEART",
+    "A PRAYER OF PRAISE",
+    "THE PRAISE GARDEN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade soft golden light",
+    "misty countryside sunrise golden beams",
+    "calm river flowing through forest sunlight",
+    "golden morning light over peaceful meadow",
+    "gentle sunlight filtering through green trees",
+    "peaceful mountain lake misty morning",
+    "sunlit woodland path soft warm glow"
+  ],
+  "scenes": [
+    {
+      "a": "If a heavy silence hangs over your room while your mind races tonight, pause right here.",
+      "img": "short-gardenephesians5v19-scene-01.jpg",
+      "kicker": "EPHESIANS 5:19",
+      "sub": "PAUSE IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Speaking to yourselves in psalms and hymns and spiritual songs,",
+      "img": "short-gardenephesians5v19-scene-02.jpg",
+      "kicker": "EPHESIANS 5:19",
+      "sub": "PSALMS AND HYMNS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "singing and making melody in your heart to the Lord;",
+      "img": "short-gardenephesians5v19-scene-03.jpg",
+      "kicker": "EPHESIANS 5:19",
+      "sub": "MELODY IN YOUR HEART",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Giving thanks always for all things unto God and the Father in the name of our Lord Jesus Christ;",
+      "img": "short-gardenephesians5v19-scene-04.jpg",
+      "kicker": "EPHESIANS 5:20",
+      "sub": "GIVING THANKS ALWAYS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father God, we lift our hearts in humble gratitude for Your steadfast love that surrounds us right now.",
+      "img": "short-gardenephesians5v19-scene-05.jpg",
+      "kicker": "EPHESIANS 5:20",
+      "sub": "HUMBLE GRATITUDE",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Even in these quiet moments when worry whispers in the dark, we offer You our honest praise.",
+      "img": "short-gardenephesians5v19-scene-06.jpg",
+      "kicker": "EPHESIANS 5:20",
+      "sub": "OUR HONEST PRAISE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Fill our spirits with joy and teach us to give thanks always. Subscribe to join our daily prayer garden.",
+      "img": "short-gardenephesians5v19-scene-07.jpg",
+      "kicker": "EPHESIANS 5:20",
+      "sub": "ENTER HIS GATES",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If a heavy silence hangs over your room while your mind races tonight, pause right here."
+    ],
+    [
+      6,
+      11,
+      "Speaking to yourselves in psalms and hymns and spiritual songs,"
+    ],
+    [
+      11,
+      16,
+      "singing and making melody in your heart to the Lord;"
+    ],
+    [
+      16,
+      23,
+      "Giving thanks always for all things unto God and the Father in the name of our Lord Jesus Christ;"
+    ],
+    [
+      23,
+      29,
+      "Father God, we lift our hearts in humble gratitude for Your steadfast love that surrounds us right now."
+    ],
+    [
+      29,
+      35,
+      "Even in these quiet moments when worry whispers in the dark, we offer You our honest praise."
+    ],
+    [
+      35,
+      42,
+      "Fill our spirits with joy and teach us to give thanks always. Subscribe to join our daily prayer garden."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF A HEAVY SILENCE HANGS",
+        "OVER YOUR ROOM TONIGHT",
+        "PAUSE RIGHT HERE"
+      ],
+      [
+        "HEAVY SILENCE",
+        "PAUSE"
+      ],
+      "EPHESIANS 5:19"
+    ],
+    [
+      6,
+      11,
+      [
+        "SPEAKING TO YOURSELVES",
+        "IN PSALMS AND HYMNS",
+        "AND SPIRITUAL SONGS"
+      ],
+      [
+        "PSALMS AND HYMNS",
+        "SPIRITUAL SONGS"
+      ],
+      "EPHESIANS 5:19"
+    ],
+    [
+      11,
+      16,
+      [
+        "SINGING AND MAKING MELODY",
+        "IN YOUR HEART",
+        "TO THE LORD"
+      ],
+      [
+        "MAKING MELODY",
+        "IN YOUR HEART"
+      ],
+      "EPHESIANS 5:19"
+    ],
+    [
+      16,
+      23,
+      [
+        "GIVING THANKS ALWAYS",
+        "FOR ALL THINGS UNTO GOD",
+        "IN THE NAME OF JESUS"
+      ],
+      [
+        "GIVING THANKS ALWAYS",
+        "ALL THINGS"
+      ],
+      "EPHESIANS 5:20"
+    ],
+    [
+      23,
+      29,
+      [
+        "WE LIFT OUR HEARTS",
+        "IN HUMBLE GRATITUDE FOR YOUR",
+        "STEADFAST LOVE TODAY"
+      ],
+      [
+        "HUMBLE GRATITUDE",
+        "STEADFAST LOVE"
+      ],
+      "EPHESIANS 5:20"
+    ],
+    [
+      29,
+      35,
+      [
+        "EVEN IN QUIET MOMENTS",
+        "WHEN WORRY WHISPERS",
+        "WE OFFER HONEST PRAISE"
+      ],
+      [
+        "WORRY WHISPERS",
+        "HONEST PRAISE"
+      ],
+      "EPHESIANS 5:20"
+    ],
+    [
+      35,
+      42,
+      [
+        "FILL OUR SPIRITS WITH JOY",
+        "GIVE THANKS ALWAYS",
+        "SUBSCRIBE TO PRAY DAILY"
+      ],
+      [
+        "GIVE THANKS ALWAYS",
+        "SUBSCRIBE"
+      ],
+      "EPHESIANS 5:20"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If a heavy silence hangs over your room while your mind races tonight, pause right here.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "SILENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Speaking to yourselves in psalms and hymns and spiritual songs,",
+      "kind": "phrase",
+      "words": [
+        "PSALMS",
+        "HYMNS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "singing and making melody in your heart to the Lord;",
+      "kind": "phrase",
+      "words": [
+        "MELODY",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Giving thanks always for all things unto God and the Father in the name of our Lord Jesus Christ;",
+      "kind": "phrase",
+      "words": [
+        "GIVING",
+        "THANKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father God, we lift our hearts in humble gratitude for Your steadfast love that surrounds us right now.",
+      "kind": "phrase",
+      "words": [
+        "HUMBLE",
+        "GRATITUDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Even in these quiet moments when worry whispers in the dark, we offer You our honest praise.",
+      "kind": "phrase",
+      "words": [
+        "HONEST",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Fill our spirits with joy and teach us to give thanks always. Subscribe to join our daily prayer garden.",
+      "kind": "phrase",
+      "words": [
+        "THANKS",
+        "ALWAYS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ephesians 5:19-20"
+}
