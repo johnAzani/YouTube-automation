@@ -1,0 +1,318 @@
+{
+  "key": "short-psalm119v148",
+  "channel": "secret-place",
+  "psalm": 119,
+  "title": [
+    "BEFORE YOU SLEEP",
+    "MEDITATE IN HIS WORD"
+  ],
+  "poster": [
+    "PSALM 119:148",
+    "PRAYER FOR THE AWAKE",
+    "MEDITATE ON HIS WORD",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm dark room lantern light evening",
+    "misty night forest starry sky silent",
+    "peaceful night lake reflecting stars moon",
+    "dim candlelight flickering warm room dark",
+    "gentle night ocean waves under moonlight",
+    "calm mountain lake under starry night",
+    "soft candle glow dark peaceful room"
+  ],
+  "scenes": [
+    {
+      "a": "If you cannot sleep because your mind keeps retracing today's hard decisions, rest now.",
+      "img": "short-psalm119v148-scene-01.jpg",
+      "kicker": "PSALM 119:148",
+      "sub": "PEACE FOR THE AWAKE HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Psalm 119 says, Mine eyes prevent the night watches, that I might meditate in thy word.",
+      "img": "short-psalm119v148-scene-02.jpg",
+      "kicker": "PSALM 119:148",
+      "sub": "MEDITATE IN THY WORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, when sleep feels far away and the quiet hours grow long, anchor this heart in your unfailing truth.",
+      "img": "short-psalm119v148-scene-03.jpg",
+      "kicker": "PSALM 119:148",
+      "sub": "ANCHOR IN UNFAILING TRUTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Instead of replaying every worry, give us grace to fill the darkness with your steady promise.",
+      "img": "short-psalm119v148-scene-04.jpg",
+      "kicker": "PSALM 119:148",
+      "sub": "STEADY PROMISE IN DARKNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Soften the tension lingering in this room and quiet the thoughts that will not settle.",
+      "img": "short-psalm119v148-scene-05.jpg",
+      "kicker": "PSALM 119:148",
+      "sub": "QUIET EVERY THOUGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We place tomorrow completely into your loving hands and choose to rest in your gentle presence.",
+      "img": "short-psalm119v148-scene-06.jpg",
+      "kicker": "PSALM 119:148",
+      "sub": "REST IN GENTLE PRESENCE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to pray with us every night.",
+      "img": "short-psalm119v148-scene-07.jpg",
+      "kicker": "PSALM 119:148",
+      "sub": "BEDTIME PRAYERS DAILY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If you cannot sleep because your mind keeps retracing today's hard decisions, rest now."
+    ],
+    [
+      7,
+      15,
+      "Psalm 119 says, Mine eyes prevent the night watches, that I might meditate in thy word."
+    ],
+    [
+      15,
+      23,
+      "Lord, when sleep feels far away and the quiet hours grow long, anchor this heart in your unfailing truth."
+    ],
+    [
+      23,
+      30,
+      "Instead of replaying every worry, give us grace to fill the darkness with your steady promise."
+    ],
+    [
+      30,
+      37,
+      "Soften the tension lingering in this room and quiet the thoughts that will not settle."
+    ],
+    [
+      37,
+      45,
+      "We place tomorrow completely into your loving hands and choose to rest in your gentle presence."
+    ],
+    [
+      45,
+      49,
+      "Subscribe to pray with us every night."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF YOU CANNOT SLEEP",
+        "RETRACING TODAY DECISIONS",
+        "REST NOW IN PEACE"
+      ],
+      [
+        "CANNOT SLEEP",
+        "REST NOW"
+      ],
+      "PSALM 119:148"
+    ],
+    [
+      7,
+      15,
+      [
+        "MINE EYES PREVENT",
+        "THE NIGHT WATCHES",
+        "MEDITATE IN THY WORD"
+      ],
+      [
+        "NIGHT WATCHES",
+        "MEDITATE"
+      ],
+      "PSALM 119:148"
+    ],
+    [
+      15,
+      23,
+      [
+        "WHEN SLEEP FEELS FAR",
+        "QUIET HOURS GROW LONG",
+        "ANCHOR THIS HEART"
+      ],
+      [
+        "QUIET HOURS",
+        "ANCHOR"
+      ],
+      "PSALM 119:148"
+    ],
+    [
+      23,
+      30,
+      [
+        "INSTEAD OF EVERY WORRY",
+        "FILL THE DARKNESS WITH",
+        "YOUR STEADY PROMISE"
+      ],
+      [
+        "STEADY PROMISE"
+      ],
+      "PSALM 119:148"
+    ],
+    [
+      30,
+      37,
+      [
+        "SOFTEN THE TENSION",
+        "IN THIS ROOM AND",
+        "QUIET UNSETTLED THOUGHTS"
+      ],
+      [
+        "QUIET UNSETTLED THOUGHTS"
+      ],
+      "PSALM 119:148"
+    ],
+    [
+      37,
+      45,
+      [
+        "WE PLACE TOMORROW",
+        "INTO YOUR LOVING HANDS",
+        "REST IN GENTLE PRESENCE"
+      ],
+      [
+        "LOVING HANDS",
+        "REST"
+      ],
+      "PSALM 119:148"
+    ],
+    [
+      45,
+      49,
+      [
+        "SUBSCRIBE TO PRAY",
+        "WITH US EVERY NIGHT"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "PSALM 119:148"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you cannot sleep because your mind keeps retracing today's hard decisions, rest now.",
+      "kind": "phrase",
+      "words": [
+        "cannot",
+        "sleep",
+        "rest"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm 119 says, Mine eyes prevent the night watches, that I might meditate in thy word.",
+      "kind": "phrase",
+      "words": [
+        "night",
+        "watches",
+        "meditate"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when sleep feels far away and the quiet hours grow long, anchor this heart in your unfailing truth.",
+      "kind": "phrase",
+      "words": [
+        "quiet",
+        "hours",
+        "anchor"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Instead of replaying every worry, give us grace to fill the darkness with your steady promise.",
+      "kind": "phrase",
+      "words": [
+        "steady",
+        "promise"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Soften the tension lingering in this room and quiet the thoughts that will not settle.",
+      "kind": "phrase",
+      "words": [
+        "soften",
+        "tension",
+        "quiet"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We place tomorrow completely into your loving hands and choose to rest in your gentle presence.",
+      "kind": "phrase",
+      "words": [
+        "loving",
+        "hands",
+        "presence"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to pray with us every night.",
+      "kind": "phrase",
+      "words": [
+        "Subscribe",
+        "pray"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 119:148"
+}

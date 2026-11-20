@@ -1,0 +1,295 @@
+{
+  "key": "short-psalm119v62",
+  "channel": "secret-place",
+  "psalm": 119,
+  "title": [
+    "MIDNIGHT PRAISE",
+    "THE SECRET PLACE"
+  ],
+  "poster": [
+    "AT MIDNIGHT",
+    "I WILL RISE",
+    "TO GIVE THANKS",
+    "UNTO THEE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake night",
+    "midnight stars pine trees",
+    "moonlit forest path calm",
+    "night sky and quiet river",
+    "dark mountain ridge starlight",
+    "peaceful night water reflection",
+    "starry sky over still valley"
+  ],
+  "scenes": [
+    {
+      "a": "If you are staring into the dark while the rest of the house sleeps, listen.",
+      "img": "short-psalm119v62-scene-01.jpg",
+      "kicker": "PSALM 119:62",
+      "sub": "QUIET HOURS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, when sleep refuses to come and my mind drifts back over the troubles of this day,",
+      "img": "short-psalm119v62-scene-02.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "RESTLESS THOUGHTS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I want my first waking thought in the quiet shadows to reach toward you.",
+      "img": "short-psalm119v62-scene-03.jpg",
+      "kicker": "SEEKING GOD",
+      "sub": "IN THE SHADOWS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Your word reminds my restless spirit of the ancient devotion written in the dark.",
+      "img": "short-psalm119v62-scene-04.jpg",
+      "kicker": "HOLY WORD",
+      "sub": "ANCIENT DEVOTION",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "At midnight I will rise to give thanks unto thee because of thy righteous judgments.",
+      "img": "short-psalm119v62-scene-05.jpg",
+      "kicker": "PSALM 119:62",
+      "sub": "RIGHTEOUS JUDGMENTS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Calm every racing thought in this bedroom and grant me your deep, abiding peace.",
+      "img": "short-psalm119v62-scene-06.jpg",
+      "kicker": "DEEP PEACE",
+      "sub": "BEDROOM REST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In Jesus' name, amen.",
+      "img": "short-psalm119v62-scene-07.jpg",
+      "kicker": "AMEN",
+      "sub": "REST IN HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "If you are staring into the dark while the rest of the house sleeps, listen."
+    ],
+    [
+      13,
+      27,
+      "Father, when sleep refuses to come and my mind drifts back over the troubles of this day,"
+    ],
+    [
+      28,
+      40,
+      "I want my first waking thought in the quiet shadows to reach toward you."
+    ],
+    [
+      41,
+      54,
+      "Your word reminds my restless spirit of the ancient devotion written in the dark."
+    ],
+    [
+      55,
+      68,
+      "At midnight I will rise to give thanks unto thee because of thy righteous judgments."
+    ],
+    [
+      69,
+      84,
+      "Calm every racing thought in this bedroom and grant me your deep, abiding peace."
+    ],
+    [
+      85,
+      95,
+      "In Jesus' name, amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "IF YOU ARE",
+        "STARING INTO THE DARK",
+        "WHILE OTHERS SLEEP"
+      ],
+      "DARK",
+      "PSALM 119 : 62"
+    ],
+    [
+      13,
+      27,
+      [
+        "FATHER WHEN SLEEP",
+        "REFUSES TO COME",
+        "AND MY MIND DRIFTS"
+      ],
+      "SLEEP",
+      "PSALM 119 : 62"
+    ],
+    [
+      28,
+      40,
+      [
+        "I WANT MY FIRST",
+        "WAKING THOUGHT",
+        "TO REACH TOWARD YOU"
+      ],
+      "THOUGHT",
+      "PSALM 119 : 62"
+    ],
+    [
+      41,
+      54,
+      [
+        "YOUR WORD REMINDS",
+        "MY RESTLESS SPIRIT",
+        "OF ANCIENT DEVOTION"
+      ],
+      "DEVOTION",
+      "PSALM 119 : 62"
+    ],
+    [
+      55,
+      68,
+      [
+        "AT MIDNIGHT I WILL RISE",
+        "TO GIVE THANKS",
+        "UNTO THEE"
+      ],
+      "THANKS",
+      "PSALM 119 : 62"
+    ],
+    [
+      69,
+      84,
+      [
+        "CALM EVERY RACING",
+        "THOUGHT IN THIS ROOM",
+        "AND GRANT ME PEACE"
+      ],
+      "PEACE",
+      "PSALM 119 : 62"
+    ],
+    [
+      85,
+      95,
+      [
+        "IN JESUS NAME",
+        "AMEN"
+      ],
+      "AMEN",
+      "PSALM 119 : 62"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are staring into the dark while the rest of the house sleeps, listen.",
+      "kind": "phrase",
+      "words": [
+        "STARING",
+        "DARK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, when sleep refuses to come and my mind drifts back over the troubles of this day,",
+      "kind": "phrase",
+      "words": [
+        "SLEEP",
+        "REFUSES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I want my first waking thought in the quiet shadows to reach toward you.",
+      "kind": "phrase",
+      "words": [
+        "WAKING",
+        "THOUGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your word reminds my restless spirit of the ancient devotion written in the dark.",
+      "kind": "phrase",
+      "words": [
+        "RESTLESS",
+        "SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "At midnight I will rise to give thanks unto thee because of thy righteous judgments.",
+      "kind": "phrase",
+      "words": [
+        "MIDNIGHT",
+        "RISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Calm every racing thought in this bedroom and grant me your deep, abiding peace.",
+      "kind": "phrase",
+      "words": [
+        "RACING",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus' name, amen.",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 119:62"
+}

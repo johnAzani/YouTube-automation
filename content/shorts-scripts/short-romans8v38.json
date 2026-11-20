@@ -1,0 +1,266 @@
+{
+  "key": "short-romans8v38",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "NOTHING CAN",
+    "SEPARATE YOU"
+  ],
+  "poster": [
+    "HIS UNENDING",
+    "LOVE FOR YOU",
+    "A PRAYER FOR",
+    "REST TONIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "misty forest at twilight",
+    "glowing candle in dark room",
+    "calm ocean waves at night",
+    "soft moonlight through window",
+    "empty wooden prayer bench",
+    "starry night sky over hills"
+  ],
+  "scenes": [
+    {
+      "a": "If that recurring doubt about your worth keeps you awake, simply listen to this promise.",
+      "img": "short-romans8v38-scene-01.jpg",
+      "kicker": "ROMANS 8:38",
+      "sub": "HE IS PERSUADED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,",
+      "img": "short-romans8v38-scene-02.jpg",
+      "kicker": "ROMANS 8:38",
+      "sub": "NOTHING CAN REMOVE HIS LOVE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.",
+      "img": "short-romans8v38-scene-03.jpg",
+      "kicker": "ROMANS 8:39",
+      "sub": "HE REMAINS WITH YOU",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, anchor my soul in this truth while the world is quiet and I am still.",
+      "img": "short-romans8v38-scene-04.jpg",
+      "kicker": "A PRAYER",
+      "sub": "REST IN HIS PROMISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May every fear fade away as I rest in the depth of your unending, perfect grace.",
+      "img": "short-romans8v38-scene-05.jpg",
+      "kicker": "HEAR HIS VOICE",
+      "sub": "YOU ARE NEVER ALONE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In this holy space, I trust that your presence is the final word over my heart.",
+      "img": "short-romans8v38-scene-06.jpg",
+      "kicker": "THE SECRET PLACE",
+      "sub": "HIS PEACE IS HERE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If that recurring doubt about your worth keeps you awake, simply listen to this promise."
+    ],
+    [
+      8,
+      28,
+      "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,"
+    ],
+    [
+      28,
+      48,
+      "Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord."
+    ],
+    [
+      48,
+      65,
+      "Lord, anchor my soul in this truth while the world is quiet and I am still."
+    ],
+    [
+      65,
+      85,
+      "May every fear fade away as I rest in the depth of your unending, perfect grace."
+    ],
+    [
+      85,
+      105,
+      "In this holy space, I trust that your presence is the final word over my heart."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "RECURRING DOUBT",
+        "KEEPS YOU AWAKE"
+      ],
+      [
+        "DOUBT"
+      ],
+      "ROMANS 8:38"
+    ],
+    [
+      8,
+      28,
+      [
+        "NEITHER DEATH",
+        "NOR LIFE",
+        "NOR ANGELS"
+      ],
+      [
+        "NEITHER DEATH"
+      ],
+      "ROMANS 8:38"
+    ],
+    [
+      28,
+      48,
+      [
+        "NOR HEIGHT",
+        "NOR DEPTH",
+        "SHALL SEPARATE US"
+      ],
+      [
+        "SEPARATE US"
+      ],
+      "ROMANS 8:39"
+    ],
+    [
+      48,
+      65,
+      [
+        "ANCHOR MY SOUL",
+        "IN THIS TRUTH"
+      ],
+      [
+        "ANCHOR"
+      ],
+      "PRAYER"
+    ],
+    [
+      65,
+      85,
+      [
+        "EVERY FEAR FADE",
+        "REST IN GRACE"
+      ],
+      [
+        "REST"
+      ],
+      "PRAYER"
+    ],
+    [
+      85,
+      105,
+      [
+        "YOUR PRESENCE",
+        "IS THE FINAL WORD"
+      ],
+      [
+        "FINAL WORD"
+      ],
+      "PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that recurring doubt about your worth keeps you awake, simply listen to this promise.",
+      "kind": "phrase",
+      "words": [
+        "RECURRING",
+        "DOUBT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,",
+      "kind": "phrase",
+      "words": [
+        "NEITHER",
+        "DEATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.",
+      "kind": "phrase",
+      "words": [
+        "SEPARATE",
+        "US"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor my soul in this truth while the world is quiet and I am still.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "SOUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May every fear fade away as I rest in the depth of your unending, perfect grace.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In this holy space, I trust that your presence is the final word over my heart.",
+      "kind": "phrase",
+      "words": [
+        "FINAL",
+        "WORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Romans 8:38-39"
+}
