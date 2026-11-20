@@ -1,0 +1,272 @@
+{
+  "key": "short-familydeuteronomy11v18",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "GOD'S WORD",
+    "IN YOUR HOME"
+  ],
+  "poster": [
+    "A PRAYER FOR",
+    "YOUR HOUSEHOLD",
+    "DEUTERONOMY 11",
+    "GOD'S PROMISE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit table with open bible",
+    "olive branches on wooden table",
+    "peaceful countryside home view",
+    "warm sunlight through window",
+    "cozy fireplace in living room",
+    "evening light on house door"
+  ],
+  "scenes": [
+    {
+      "a": "If the weight of tomorrow presses against your spirit, anchor your heart in truth today.",
+      "img": "short-familydeuteronomy11v18-scene-01.jpg",
+      "kicker": "ANCHOR YOUR HEART",
+      "sub": "FIND PEACE IN HIS PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Therefore shall ye lay up these my words in your heart and in your soul,",
+      "img": "short-familydeuteronomy11v18-scene-02.jpg",
+      "kicker": "HIS WORD IS LIFE",
+      "sub": "KEEP IT IN YOUR SOUL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "and bind them for a sign upon your hand, that they may be as frontlets between your eyes.",
+      "img": "short-familydeuteronomy11v18-scene-03.jpg",
+      "kicker": "ALWAYS REMEMBER",
+      "sub": "SIGN UPON YOUR HAND",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "And ye shall teach them your children, speaking of them when thou sittest in thine house,",
+      "img": "short-familydeuteronomy11v18-scene-04.jpg",
+      "kicker": "TEACH YOUR CHILDREN",
+      "sub": "IN THE HOUSEHOLD",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "and when thou walkest by the way, when thou liest down, and when thou risest up.",
+      "img": "short-familydeuteronomy11v18-scene-05.jpg",
+      "kicker": "IN EVERY MOMENT",
+      "sub": "LIFTING UP YOUR FAMILY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, may Your promises remain our firm foundation, guarding our doorways and sanctifying our family life.",
+      "img": "short-familydeuteronomy11v18-scene-06.jpg",
+      "kicker": "HEAR OUR PRAYER",
+      "sub": "STRENGTHEN OUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "If the weight of tomorrow presses against your spirit, anchor your heart in truth today."
+    ],
+    [
+      11,
+      22,
+      "Therefore shall ye lay up these my words in your heart and in your soul,"
+    ],
+    [
+      23,
+      35,
+      "and bind them for a sign upon your hand, that they may be as frontlets between your eyes."
+    ],
+    [
+      36,
+      48,
+      "And ye shall teach them your children, speaking of them when thou sittest in thine house,"
+    ],
+    [
+      49,
+      60,
+      "and when thou walkest by the way, when thou liest down, and when thou risest up."
+    ],
+    [
+      61,
+      75,
+      "Lord, may Your promises remain our firm foundation, guarding our doorways and sanctifying our family life."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "WEIGHT OF TOMORROW",
+        "ANCHOR YOUR HEART",
+        "IN TRUTH TODAY"
+      ],
+      [
+        "ANCHOR"
+      ],
+      "DEUTERONOMY 11:18"
+    ],
+    [
+      11,
+      22,
+      [
+        "LAY UP",
+        "THESE WORDS",
+        "IN YOUR HEART",
+        "AND YOUR SOUL"
+      ],
+      [
+        "WORDS"
+      ],
+      "DEUTERONOMY 11:18"
+    ],
+    [
+      23,
+      35,
+      [
+        "BIND THEM",
+        "SIGN UPON HAND",
+        "FRONTLETS BETWEEN",
+        "YOUR EYES"
+      ],
+      [
+        "BIND"
+      ],
+      "DEUTERONOMY 11:18"
+    ],
+    [
+      36,
+      48,
+      [
+        "TEACH YOUR CHILDREN",
+        "SPEAKING OF THEM",
+        "IN THINE HOUSE"
+      ],
+      [
+        "TEACH"
+      ],
+      "DEUTERONOMY 11:19"
+    ],
+    [
+      49,
+      60,
+      [
+        "WALK BY THE WAY",
+        "LIE DOWN",
+        "AND RISE UP"
+      ],
+      [
+        "RISE UP"
+      ],
+      "DEUTERONOMY 11:19"
+    ],
+    [
+      61,
+      75,
+      [
+        "FIRM FOUNDATION",
+        "GUARDING DOORWAYS",
+        "SANCTIFY OUR HOME"
+      ],
+      [
+        "FOUNDATION"
+      ],
+      "DEUTERONOMY 11:21"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the weight of tomorrow presses against your spirit, anchor your heart in truth today.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "HEART"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Therefore shall ye lay up these my words in your heart and in your soul,",
+      "kind": "phrase",
+      "words": [
+        "WORDS",
+        "SOUL"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "and bind them for a sign upon your hand, that they may be as frontlets between your eyes.",
+      "kind": "phrase",
+      "words": [
+        "BIND",
+        "SIGN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And ye shall teach them your children, speaking of them when thou sittest in thine house,",
+      "kind": "phrase",
+      "words": [
+        "TEACH",
+        "CHILDREN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and when thou walkest by the way, when thou liest down, and when thou risest up.",
+      "kind": "phrase",
+      "words": [
+        "WAY",
+        "RISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, may Your promises remain our firm foundation, guarding our doorways and sanctifying our family life.",
+      "kind": "phrase",
+      "words": [
+        "FIRM",
+        "FOUNDATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Deuteronomy 11:18-21"
+}
