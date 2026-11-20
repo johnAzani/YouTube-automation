@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T03:33:13.180267+00:00",
+  "generated_at": "2026-11-20T03:35:14.040725+00:00",
   "healthy": true,
   "automations": [
     {
@@ -18,7 +18,7 @@
       "failures_5": 0,
       "effect": "reports and files stalls",
       "verdict": "OK",
-      "detail": "last success 1.3h ago",
+      "detail": "last success 1.4h ago",
       "severity": "ok"
     },
     {
@@ -77,7 +77,7 @@
       "failures_5": 0,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "OK",
-      "detail": "last success 26.3h ago",
+      "detail": "last success 26.4h ago",
       "severity": "ok"
     },
     {
@@ -96,7 +96,7 @@
       "failures_5": 0,
       "effect": "writes content/queue/ or content/shorts-scripts/",
       "verdict": "OK",
-      "detail": "last success 15.9h ago",
+      "detail": "last success 16.0h ago",
       "severity": "ok"
     },
     {
@@ -153,7 +153,7 @@
       "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
       "verdict": "OK",
-      "detail": "last success 1.3h ago",
+      "detail": "last success 1.4h ago",
       "severity": "ok"
     },
     {
@@ -162,9 +162,9 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-20T03:32:32+00:00",
+      "last_run": "2026-11-20T03:34:39+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-20T03:28:13+00:00",
+      "last_success": "2026-11-20T03:32:31+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-17T13:00:49+00:00",
       "last_slot": "2026-11-20T03:23:00+00:00",
@@ -172,7 +172,7 @@
       "failures_5": 0,
       "effect": "this report",
       "verdict": "OK",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 0.0h ago",
       "severity": "ok"
     },
     {
@@ -223,9 +223,9 @@
       "crons": [
         "47 0,3,6,9,12,15,18,21 * * *"
       ],
-      "last_run": "2026-11-20T03:32:32+00:00",
+      "last_run": "2026-11-20T03:34:44+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-20T03:32:18+00:00",
+      "last_success": "2026-11-20T03:32:32+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-07T19:31:06+00:00",
       "last_slot": "2026-11-20T00:47:00+00:00",
@@ -279,7 +279,7 @@
     },
     {
       "outcome": "last upload (prayer4)",
-      "detail": "The Midnight Watch: 2026-11-20 (1h ago \u2014 0218-when-you-need-a-defender-psalm-144.md)",
+      "detail": "The Midnight Watch: 2026-11-20 (2h ago \u2014 0218-when-you-need-a-defender-psalm-144.md)",
       "severity": "ok"
     },
     {
