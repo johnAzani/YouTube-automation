@@ -1,6 +1,6 @@
 ---
 id: 0088
-title: Isaiah 25:4 Midday Prayer | The Midday Watch
+title: "When the Afternoon Heat Is Too Heavy: Isaiah 25:4 | The Midday Watch"
 slug: isaiah-25-4-midday-prayer
 status: published
 channel: prayer3
@@ -77,10 +77,13 @@ originality:
 published_on: "2026-11-13"
 published_at: "2026-11-13T21:04:22Z"
 youtube_video_id: "OviIQu6zbY4"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Isaiah 25:4 Midday Prayer | The Midday Watch"
+retitled_at: "2026-11-20"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Noonday Hook and the Pause

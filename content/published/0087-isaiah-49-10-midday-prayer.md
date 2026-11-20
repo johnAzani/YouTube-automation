@@ -1,6 +1,6 @@
 ---
 id: 0087
-title: Isaiah 49:10 Midday Prayer | The Midday Watch
+title: "When the Heat of the Day Is Heavy: Isaiah 49:10 | The Midday Watch"
 slug: isaiah-49-10-midday-prayer
 status: published
 channel: prayer3
@@ -79,10 +79,13 @@ originality:
 published_on: "2026-11-13"
 published_at: "2026-11-13T16:57:49Z"
 youtube_video_id: "rkh7ebkH3pM"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Isaiah 49:10 Midday Prayer | The Midday Watch"
+retitled_at: "2026-11-20"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Noonday Pause
