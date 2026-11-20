@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T20:53:31Z",
+  "generated_at": "2026-11-20T20:55:00Z",
   "monitor_generated_at": "2026-11-20T20:33:33.603383+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 566,
+    "published_total": 567,
     "published_longform": 173,
-    "published_shorts": 393,
-    "public_total": 564,
+    "published_shorts": 394,
+    "public_total": 565,
     "queued_longform": 58,
-    "queued_shorts": 78,
+    "queued_shorts": 77,
     "automations_ok": 11,
     "automations_total": 13,
     "network_healthy": false
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 42,
+        "published_total": 43,
         "published_longform": 11,
-        "published_shorts": 31,
-        "thumbnail_pending": 42,
-        "public_total": 42,
+        "published_shorts": 32,
+        "thumbnail_pending": 43,
+        "public_total": 43,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-GARDENJAMES1V17",
-        "title": "Pray This James 1:17 Prayer of Thanksgiving | Rest In God's Unchanging Grace #Shorts",
+        "id": "SHORT-GARDENPSALM145V1",
+        "title": "Pray This Psalm 145:1-3 Prayer of Thanksgiving | KJV Scripture #Shorts",
         "format": "short",
-        "youtube_video_id": "pcVWNWTX-XU",
-        "watch_url": "https://www.youtube.com/shorts/pcVWNWTX-XU",
+        "youtube_video_id": "gjkvP1kVk5U",
+        "watch_url": "https://www.youtube.com/shorts/gjkvP1kVk5U",
         "published_on": "2026-11-20",
-        "published_at": "2026-11-20T15:41:00Z"
+        "published_at": "2026-11-20T20:54:08Z"
       },
       "next_queued_longform": {
         "id": "0711",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm145v1",
-        "scripture": "Psalm 145:1-3",
+        "short": "short-gardenpsalm136v1",
+        "scripture": "Psalm 136:1",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM145V1",
+      "slug": "short-gardenpsalm145v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm145v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 145:1-3 Prayer of Thanksgiving | KJV Scripture #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T20:54:08Z",
+      "youtube_video_id": "gjkvP1kVk5U",
+      "watch_url": "https://www.youtube.com/shorts/gjkvP1kVk5U",
+      "youtu_be_url": "https://youtu.be/gjkvP1kVk5U",
+      "shorts_url": "https://www.youtube.com/shorts/gjkvP1kVk5U",
+      "studio_url": "https://studio.youtube.com/video/gjkvP1kVk5U/edit",
+      "thumb_url": "https://i.ytimg.com/vi/gjkvP1kVk5U/hqdefault.jpg",
+      "thumb_text": "THE PRAISE GARDEN \u00b7 EXALTING HIS NAME",
+      "thumbnail_pending": true,
+      "duration_label": "44s",
+      "words": 637
+    },
     {
       "id": "SHORT-PROVISIONPSALM75V6",
       "slug": "short-provisionpsalm75v6-stewardship-prayer",
@@ -15044,17 +15068,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-gardenpsalm145v1",
-        "file": "0000-short-gardenpsalm145v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 145:1-3",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
       {
         "short": "short-guidedromans12v2",
         "file": "0000-short-guidedromans12v2.yml",
