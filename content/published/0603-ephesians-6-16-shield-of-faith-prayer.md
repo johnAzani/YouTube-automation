@@ -1,6 +1,6 @@
 ---
 id: '0603'
-title: Ephesians 6:16 Shield of Faith Prayer | The Covenant Shield
+title: "When Fiery Darts Come Your Way: Ephesians 6:16 | The Covenant Shield"
 slug: ephesians-6-16-shield-of-faith-prayer
 status: published
 channel: prayer8
@@ -72,13 +72,16 @@ originality:
 published_on: "2026-11-13"
 published_at: "2026-11-13T17:42:08Z"
 youtube_video_id: "S7i2vZMHgE0"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_retry_after: "2026-11-20T17:50:36Z"
 thumbnail_retry_reason: "permission"
+title_before: "Ephesians 6:16 Shield of Faith Prayer | The Covenant Shield"
+retitled_at: "2026-11-20"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Standing Strong in the Lord & the Power of His Might
