@@ -89,7 +89,7 @@ THEME_KEYWORDS: dict[str, list[str]] = {
         "isaiah 30", "isaiah 33", "isaiah 50", "joshua 1", "matthew 6",
         "james 1", "micah 7", "2 samuel 23", "exodus 33", "deuteronomy 33",
         "romans 12", "ephesians 6", "colossians 3", "direct my",
-        "ordered steps", "wisdom", "guidance", "lamp unto my feet",
+        "ordered steps", "giving god your day", "wisdom", "guidance", "lamp unto my feet",
         "seek ye first", "armour of god",
     ],
     "midday_strength_endurance": [

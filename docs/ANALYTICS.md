@@ -325,3 +325,23 @@ snapshot. Select a cutoff after verifying which drafts used the new prompts;
 pre-existing queued drafts can still publish after deployment. A calendar
 comparison is descriptive, not causal. Pair the table with Studio retention,
 shares, subscribers and long-form watch time at comparable release ages.
+
+### Monetization planning for all ten channels
+
+Run `python -m scripts.monetization_plan` to see gaps for both the earlier
+fan-funding tier and ads/Premium. It uses existing snapshots without querying
+YouTube. Run it again with `--as-of 2027-02-01` to plan against the upcoming
+new-applicant thresholds. The dates and targets were verified on 20 November
+2026 against [current YPP eligibility](https://support.google.com/youtube/answer/72851)
+and the [February changes](https://support.google.com/youtube/answer/12843009).
+Analytics counts are proxies; use Studio → Earn for qualified counters and
+eligibility, including prerequisites and channel review. Missing reports are
+unknown, not zero. Do not infer a timeline from a small sample or count
+Shorts-feed watch time against the long-form route.
+
+Keep publishing cadence fixed. For a channel with too few long-form hours,
+prioritize a complete, original prayer with an honest opening and review its
+watch time. When a Short and a longer prayer serve the same listener need,
+verify the related video is the right same-channel companion. In Studio,
+compare the affected releases separately by format at the same age; do not
+credit a Shorts view as a long-form viewing session.
