@@ -41,3 +41,31 @@ similar-length prayers on the same channel and note the number of videos and
 views. If data is sparse, call the result inconclusive. Retention tells you
 whether viewers stayed; it does not tell you whether they felt comforted.
 Treat voluntary viewer feedback as individual experience, not proof of impact.
+
+## Applied review: The Midday Watch, Proverbs 15:1 (draft 0102)
+
+The queued draft already has a strong subject: the words we choose under
+pressure at work. Its opener surveys several situations before reading the
+verse, and its first scene invites prayer without yet giving the listener
+words to pray. For an editorial preview, try this opening and first petition
+instead. This is a proposed excerpt, not a replacement production script.
+
+> The reply is typed, but you haven’t sent it. Before you do, hear Proverbs
+> fifteen, verse one: “A soft answer turneth away wrath: but grievous words
+> stir up anger.”
+>
+> Lord, You know why those words upset me. Help me say what is true without
+> trying to wound the person who will read it. Give me the patience to take
+> out the line I wrote just to get even.
+
+Keep the draft’s distinction between gentleness and accepting injustice.
+A later petition can ask for courage to speak clearly about what was wrong,
+even if the other person does not respond well. For the closing blessing,
+return to the unsent reply without promising reconciliation: “May the Lord
+steady your words when it’s time to answer.”
+
+**Review decision:** Listen to the excerpt against the original opening.
+Check whether the earlier verse and petition make the midday prayer easier to
+join without losing the quiet pace. If selected for production, revise the
+full scene without padding, re-run the normal script checks, and render fresh
+narration and captions together. The queued draft is unchanged by this review.
