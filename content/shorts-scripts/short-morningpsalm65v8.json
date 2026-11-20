@@ -1,0 +1,386 @@
+{
+  "key": "short-morningpsalm65v8",
+  "channel": "prayer2",
+  "psalm": 65,
+  "title": [
+    "THE OUTGOINGS OF MORNING",
+    "PSALM 65:8 PRAYER"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "BEGIN EVERY SUNRISE",
+    "IN FAITH AND PRAYER",
+    "PSALM 65:8"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "misty mountain sunrise golden light dawn",
+    "dramatic sunrise over ocean waves horizon",
+    "sunlight breaking through forest trees early morning",
+    "serene mountain peak bathed in dawn twilight",
+    "golden light over rolling hills early morning mist",
+    "soft morning light shining through quiet room window",
+    "glowing horizon dawn sky calm valley"
+  ],
+  "scenes": [
+    {
+      "a": "If a distant fear woke you before sunrise today",
+      "img": "short-morningpsalm65v8-scene-01.jpg",
+      "kicker": "PSALM 65:8",
+      "sub": "BRING YOUR TREMBLING HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "They also that dwell in the uttermost parts are afraid at thy tokens",
+      "img": "short-morningpsalm65v8-scene-02.jpg",
+      "kicker": "PSALM 65:8",
+      "sub": "GOD MAKES THE DAWN REJOICE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, from the furthest edges of the earth to this very room",
+      "img": "short-morningpsalm65v8-scene-03.jpg",
+      "kicker": "PSALM 65:8",
+      "sub": "YOUR SIGNS STIR HOLY WONDER",
+      "cam": "tilt_up",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "When fear tries to claim our thoughts",
+      "img": "short-morningpsalm65v8-scene-04.jpg",
+      "kicker": "PSALM 65:8",
+      "sub": "YOU HOLD DAWN AND DUSK",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You tune the sunrise to joy",
+      "img": "short-morningpsalm65v8-scene-05.jpg",
+      "kicker": "PSALM 65:8",
+      "sub": "EVENING SINGS YOUR PRAISE",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Turn our quiet anxiety into deep delight",
+      "img": "short-morningpsalm65v8-scene-06.jpg",
+      "kicker": "PSALM 65:8",
+      "sub": "LIGHT BREAKS ON OUR PATH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Morning Altar",
+      "img": "short-morningpsalm65v8-scene-07.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If a distant fear woke you before sunrise today, bring your trembling heart to God."
+    ],
+    [
+      7,
+      15,
+      "They also that dwell in the uttermost parts are afraid at thy tokens: thou makest the outgoings of the morning and evening to rejoice."
+    ],
+    [
+      16,
+      22,
+      "Lord, from the furthest edges of the earth to this very room, Your signs stir holy wonder."
+    ],
+    [
+      23,
+      29,
+      "When fear tries to claim our thoughts, remind us that You hold both the dawn and the dusk."
+    ],
+    [
+      30,
+      36,
+      "You tune the sunrise to joy and command the evening to sing of Your praise."
+    ],
+    [
+      37,
+      43,
+      "Turn our quiet anxiety into deep delight as this new light breaks across our path."
+    ],
+    [
+      44,
+      49,
+      "Subscribe to The Morning Altar to begin every sunrise in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF A DISTANT FEAR WOKE YOU",
+        "BEFORE SUNRISE TODAY",
+        "BRING YOUR TREMBLING HEART TO GOD"
+      ],
+      [
+        "FEAR",
+        "SUNRISE",
+        "GOD"
+      ],
+      "PSALM 65 : 8"
+    ],
+    [
+      7,
+      15,
+      [
+        "THEY ALSO THAT DWELL",
+        "IN THE UTTERMOST PARTS",
+        "ARE AFRAID AT THY TOKENS",
+        "THOU MAKEST THE OUTGOINGS",
+        "OF MORNING AND EVENING REJOICE"
+      ],
+      [
+        "UTTERMOST",
+        "TOKENS",
+        "OUTGOINGS",
+        "REJOICE"
+      ],
+      "PSALM 65 : 8"
+    ],
+    [
+      16,
+      22,
+      [
+        "LORD FROM THE FURTHEST EDGES",
+        "OF THE EARTH TO THIS ROOM",
+        "YOUR SIGNS STIR HOLY WONDER"
+      ],
+      [
+        "FURTHEST",
+        "EARTH",
+        "WONDER"
+      ],
+      "PSALM 65 : 8"
+    ],
+    [
+      23,
+      29,
+      [
+        "WHEN FEAR TRIES TO CLAIM",
+        "OUR QUIET THOUGHTS TODAY",
+        "YOU HOLD BOTH DAWN AND DUSK"
+      ],
+      [
+        "FEAR",
+        "HOLD",
+        "DAWN"
+      ],
+      "PSALM 65 : 8"
+    ],
+    [
+      30,
+      36,
+      [
+        "YOU TUNE THE SUNRISE TO JOY",
+        "AND COMMAND THE EVENING",
+        "TO SING OF YOUR PRAISE"
+      ],
+      [
+        "SUNRISE",
+        "JOY",
+        "PRAISE"
+      ],
+      "PSALM 65 : 8"
+    ],
+    [
+      37,
+      43,
+      [
+        "TURN OUR QUIET ANXIETY",
+        "INTO DEEP DELIGHT AS LIGHT",
+        "BREAKS ACROSS OUR PATH"
+      ],
+      [
+        "ANXIETY",
+        "DELIGHT",
+        "LIGHT"
+      ],
+      "PSALM 65 : 8"
+    ],
+    [
+      44,
+      49,
+      [
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "BEGIN EVERY SUNRISE IN PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "SUNRISE",
+        "PRAYER"
+      ],
+      "THE MORNING ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If a distant fear woke you before sunrise today",
+      "kind": "phrase",
+      "words": [
+        "DISTANT",
+        "FEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "bring your trembling heart to God.",
+      "kind": "phrase",
+      "words": [
+        "TREMBLING",
+        "HEART"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "They also that dwell in the uttermost parts are afraid at thy tokens:",
+      "kind": "phrase",
+      "words": [
+        "UTTERMOST",
+        "TOKENS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "thou makest the outgoings of the morning and evening to rejoice.",
+      "kind": "phrase",
+      "words": [
+        "OUTGOINGS",
+        "REJOICE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, from the furthest edges of the earth to this very room,",
+      "kind": "phrase",
+      "words": [
+        "FURTHEST",
+        "EDGES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your signs stir holy wonder.",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "WONDER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "When fear tries to claim our thoughts,",
+      "kind": "phrase",
+      "words": [
+        "FEAR",
+        "THOUGHTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "remind us that You hold both the dawn and the dusk.",
+      "kind": "phrase",
+      "words": [
+        "HOLD",
+        "DAWN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "You tune the sunrise to joy",
+      "kind": "phrase",
+      "words": [
+        "SUNRISE",
+        "JOY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and command the evening to sing of Your praise.",
+      "kind": "phrase",
+      "words": [
+        "SING",
+        "PRAISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Turn our quiet anxiety into deep delight",
+      "kind": "phrase",
+      "words": [
+        "ANXIETY",
+        "DELIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "as this new light breaks across our path.",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "PATH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Morning Altar to begin every sunrise in prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "SUNRISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 65:8"
+}

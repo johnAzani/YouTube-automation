@@ -1,0 +1,314 @@
+{
+  "key": "short-morningecclesiastes11v6",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "SOW YOUR SEED",
+    "IN THE MORNING"
+  ],
+  "poster": [
+    "SOW YOUR SEED",
+    "IN THE MORNING",
+    "A PRAYER FOR",
+    "THE UNCERTAIN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "soft golden sunrise light on dew drops",
+    "misty pine forest at dawn",
+    "sunlight breaking through morning clouds",
+    "golden hour light on morning garden",
+    "peaceful sun rays across open fields",
+    "soft light reflecting on lake water"
+  ],
+  "scenes": [
+    {
+      "a": "That project weighing on your heart needs your effort even before you see the outcome.",
+      "img": "short-morningecclesiastes11v6-scene-01.jpg",
+      "kicker": "ECCLESIASTES 11:6",
+      "sub": "YOUR LABOR IS NOT WASTED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In the morning sow thy seed,",
+      "img": "short-morningecclesiastes11v6-scene-02.jpg",
+      "kicker": "SCRIPTURE",
+      "sub": "FAITHFUL PLANTING",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "and in the evening withhold not thine hand:",
+      "img": "short-morningecclesiastes11v6-scene-03.jpg",
+      "kicker": "SCRIPTURE",
+      "sub": "CONSISTENT SERVICE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "for thou knowest not whether shall prosper, either this or that,",
+      "img": "short-morningecclesiastes11v6-scene-04.jpg",
+      "kicker": "SCRIPTURE",
+      "sub": "TRUSTING THE HARVEST",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "or whether they both shall be alike good.",
+      "img": "short-morningecclesiastes11v6-scene-05.jpg",
+      "kicker": "SCRIPTURE",
+      "sub": "HIS GOODNESS REMAINS",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, quiet my frantic soul as I plant these small seeds of humble obedience.",
+      "img": "short-morningecclesiastes11v6-scene-06.jpg",
+      "kicker": "PRAYER",
+      "sub": "SURRENDER THE OUTCOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That project weighing on your heart needs your effort even before you see the outcome."
+    ],
+    [
+      8,
+      16,
+      "In the morning sow thy seed, and in the evening withhold not thine hand:"
+    ],
+    [
+      16,
+      24,
+      "for thou knowest not whether shall prosper, either this or that, or whether they both shall be alike good."
+    ],
+    [
+      24,
+      32,
+      "Heavenly Father, quiet my frantic soul as I plant these small seeds of humble obedience."
+    ],
+    [
+      32,
+      40,
+      "Help me to labor with hope, trusting that You oversee every result of my work."
+    ],
+    [
+      40,
+      48,
+      "Grant me the patience to keep sowing while resting entirely in Your sovereign, perfect timing."
+    ],
+    [
+      48,
+      56,
+      "Let my hands stay busy for Your glory regardless of what blooms later this day."
+    ],
+    [
+      56,
+      64,
+      "Amen. Subscribe for more moments of morning prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT PROJECT WEIGHING",
+        "ON YOUR HEART",
+        "NEEDS YOUR EFFORT"
+      ],
+      [
+        "WEIGHING",
+        "EFFORT"
+      ],
+      "ECCLESIASTES 11:6"
+    ],
+    [
+      8,
+      16,
+      [
+        "IN THE MORNING",
+        "SOW THY SEED",
+        "WITHHOLD NOT THINE HAND"
+      ],
+      [
+        "SOW",
+        "THY SEED"
+      ],
+      "ECCLESIASTES 11:6"
+    ],
+    [
+      16,
+      24,
+      [
+        "THOU KNOWEST NOT",
+        "WHETHER SHALL PROSPER",
+        "ALIKE GOOD"
+      ],
+      [
+        "KNOWEST NOT",
+        "PROSPER"
+      ],
+      "ECCLESIASTES 11:6"
+    ],
+    [
+      24,
+      32,
+      [
+        "QUIET MY SOUL",
+        "PLANT SEEDS",
+        "HUMBLE OBEDIENCE"
+      ],
+      [
+        "QUIET",
+        "OBEDIENCE"
+      ],
+      "ECCLESIASTES 11:6"
+    ],
+    [
+      32,
+      40,
+      [
+        "LABOR WITH HOPE",
+        "TRUSTING YOU",
+        "OVERSEE THE WORK"
+      ],
+      [
+        "LABOR",
+        "TRUSTING"
+      ],
+      "ECCLESIASTES 11:6"
+    ],
+    [
+      40,
+      48,
+      [
+        "GRANT ME PATIENCE",
+        "KEEP SOWING",
+        "RESTING IN TIMING"
+      ],
+      [
+        "PATIENCE",
+        "RESTING"
+      ],
+      "ECCLESIASTES 11:6"
+    ],
+    [
+      48,
+      56,
+      [
+        "HANDS BUSY",
+        "FOR YOUR GLORY",
+        "DESPITE THE BLOOM"
+      ],
+      [
+        "BUSY",
+        "GLORY"
+      ],
+      "ECCLESIASTES 11:6"
+    ],
+    [
+      56,
+      64,
+      [
+        "AMEN",
+        "SUBSCRIBE FOR",
+        "MORNING PRAYER"
+      ],
+      [
+        "AMEN",
+        "SUBSCRIBE"
+      ],
+      "ECCLESIASTES 11:6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That project weighing on your heart needs your effort even before you see the outcome.",
+      "kind": "phrase",
+      "words": [
+        "WEIGHING",
+        "EFFORT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In the morning sow thy seed,",
+      "kind": "phrase",
+      "words": [
+        "SOW",
+        "THY SEED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and in the evening withhold not thine hand:",
+      "kind": "phrase",
+      "words": [
+        "WITHHOLD",
+        "NOT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "for thou knowest not whether shall prosper, either this or that,",
+      "kind": "phrase",
+      "words": [
+        "KNOWEST NOT",
+        "PROSPER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "or whether they both shall be alike good.",
+      "kind": "phrase",
+      "words": [
+        "ALIKE",
+        "GOOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, quiet my frantic soul as I plant these small seeds of humble obedience.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "OBEDIENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ecclesiastes 11:6"
+}
