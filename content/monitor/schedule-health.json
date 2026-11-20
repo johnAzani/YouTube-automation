@@ -9,13 +9,6 @@
       "workflow": "metrics.yml"
     },
     {
-      "late_minutes": 337,
-      "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
-      "ran_at": "2026-11-19T09:14:48+00:00",
-      "slot": "2026-11-19T03:37:00+00:00",
-      "workflow": "channel-analytics.yml"
-    },
-    {
       "late_minutes": 262,
       "name": "Tests on main (daily)",
       "ran_at": "2026-11-19T09:14:50+00:00",
@@ -39,7 +32,7 @@
     {
       "late_minutes": 156,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-20T03:23:16+00:00",
+      "ran_at": "2026-11-20T03:23:29+00:00",
       "slot": "2026-11-20T00:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     },
@@ -51,8 +44,8 @@
       "workflow": "produce.yml"
     }
   ],
-  "generated_at": "2026-11-20T03:35:23.374166+00:00",
-  "last_run_at": "2026-11-20T03:34:44+00:00",
+  "generated_at": "2026-11-20T03:37:22.897172+00:00",
+  "last_run_at": "2026-11-20T03:36:37+00:00",
   "on_time": [
     {
       "late_minutes": 118,
