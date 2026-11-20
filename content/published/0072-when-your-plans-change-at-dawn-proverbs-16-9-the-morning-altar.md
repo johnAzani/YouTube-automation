@@ -2,7 +2,7 @@
 id: '0072'
 title: "Giving God Your Day: Proverbs 16:9 | The Morning Altar"
 slug: when-your-plans-change-at-dawn-proverbs-16-9-the-morning-altar
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -73,6 +73,14 @@ originality:
   source_notes: true
 title_before: "When Your Plans Change at Dawn: Proverbs 16:9 | The Morning Altar"
 queue_title_fixed_at: "2026-11-16"
+published_on: "2026-11-20"
+published_at: "2026-11-20T10:11:11Z"
+youtube_video_id: "FPsXWsypdSQ"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer

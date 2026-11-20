@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T09:27:29Z",
+  "generated_at": "2026-11-20T10:11:54Z",
   "monitor_generated_at": "2026-11-20T08:19:40.591520+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 538,
-    "published_longform": 167,
-    "published_shorts": 371,
-    "public_total": 536,
-    "queued_longform": 60,
-    "queued_shorts": 90,
+    "published_total": 540,
+    "published_longform": 168,
+    "published_shorts": 372,
+    "public_total": 538,
+    "queued_longform": 59,
+    "queued_shorts": 88,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -66,7 +66,7 @@
       "feedback": {
         "available": true,
         "as_of": "2026-11-20",
-        "measured_longform_videos": 2,
+        "measured_longform_videos": 3,
         "total_longform_videos": 14,
         "top_themes": [
           {
@@ -101,33 +101,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 79,
-        "published_longform": 28,
-        "published_shorts": 51,
+        "published_total": 81,
+        "published_longform": 29,
+        "published_shorts": 52,
         "thumbnail_pending": 1,
-        "public_total": 78,
-        "queued_longform": 6,
+        "public_total": 80,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPHILIPPIANS1V6",
-        "title": "Say This Philippians 1:6 Prayer at Sunrise | Faith In The Morning #Shorts",
-        "format": "short",
-        "youtube_video_id": "yqJBjD9vWCg",
-        "watch_url": "https://www.youtube.com/shorts/yqJBjD9vWCg",
-        "published_on": "2026-11-20",
-        "published_at": "2026-11-20T01:23:56Z"
-      },
-      "next_queued_longform": {
         "id": "0072",
         "title": "Giving God Your Day: Proverbs 16:9 | The Morning Altar",
-        "words": 1746,
+        "format": "longform",
+        "youtube_video_id": "FPsXWsypdSQ",
+        "watch_url": "https://youtu.be/FPsXWsypdSQ",
+        "published_on": "2026-11-20",
+        "published_at": "2026-11-20T10:11:11Z"
+      },
+      "next_queued_longform": {
+        "id": "0073",
+        "title": "Prayer for Today's First Decision: Isaiah 30:21 | The Morning Altar",
+        "words": 1727,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningecclesiastes11v6",
-        "scripture": "Ecclesiastes 11:6",
+        "short": "short-morningpsalm104v22",
+        "scripture": "Psalm 104:22-23",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -143,13 +143,13 @@
             "top_scripture": ""
           },
           {
-            "theme": "midday_strength_endurance",
-            "videos": 1,
+            "theme": "daily_guidance_wisdom",
+            "videos": 8,
             "top_scripture": ""
           },
           {
-            "theme": "daily_guidance_wisdom",
-            "videos": 8,
+            "theme": "midday_strength_endurance",
+            "videos": 1,
             "top_scripture": ""
           }
         ]
@@ -271,7 +271,7 @@
         "available": true,
         "as_of": "2026-11-20",
         "measured_longform_videos": 0,
-        "total_longform_videos": 15,
+        "total_longform_videos": 14,
         "top_themes": [
           {
             "theme": "protection",
@@ -280,7 +280,7 @@
           },
           {
             "theme": "general_prayer",
-            "videos": 7,
+            "videos": 6,
             "top_scripture": ""
           },
           {
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0072",
+      "slug": "when-your-plans-change-at-dawn-proverbs-16-9-the-morning-altar",
+      "file": "0072-when-your-plans-change-at-dawn-proverbs-16-9-the-morning-altar.md",
+      "title": "Giving God Your Day: Proverbs 16:9 | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T10:11:11Z",
+      "youtube_video_id": "FPsXWsypdSQ",
+      "watch_url": "https://youtu.be/FPsXWsypdSQ",
+      "youtu_be_url": "https://youtu.be/FPsXWsypdSQ",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/FPsXWsypdSQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/FPsXWsypdSQ/hqdefault.jpg",
+      "thumb_text": "DIRECT MY STEPS",
+      "thumbnail_pending": false,
+      "duration_label": "~12 min",
+      "words": 1746
+    },
+    {
       "id": "SHORT-GUIDEDCOLOSSIANS1V9",
       "slug": "short-guidedcolossians1v9-guidance-prayer",
       "file": "short-guidedcolossians1v9-guidance-prayer.md",
@@ -820,6 +844,30 @@
       "thumbnail_pending": true,
       "duration_label": "50s",
       "words": 623
+    },
+    {
+      "id": "SHORT-MORNINGECCLESIASTES11V6",
+      "slug": "short-morningecclesiastes11v6-sunrise-prayer",
+      "file": "short-morningecclesiastes11v6-sunrise-prayer.md",
+      "title": "Say This Ecclesiastes 11:6 Prayer at Sunrise | The Uncertain #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T09:13:35Z",
+      "youtube_video_id": "Um7_Z_lWecU",
+      "watch_url": "https://www.youtube.com/shorts/Um7_Z_lWecU",
+      "youtu_be_url": "https://youtu.be/Um7_Z_lWecU",
+      "shorts_url": "https://www.youtube.com/shorts/Um7_Z_lWecU",
+      "studio_url": "https://studio.youtube.com/video/Um7_Z_lWecU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Um7_Z_lWecU/hqdefault.jpg",
+      "thumb_text": "SOW YOUR SEED \u00b7 IN THE MORNING",
+      "thumbnail_pending": false,
+      "duration_label": "55s",
+      "words": 618
     },
     {
       "id": "SHORT-PSALM119V148",
@@ -9369,7 +9417,7 @@
       "id": "0406",
       "slug": "philippians-4-6-7-peace-that-passeth-understanding-prayer",
       "file": "0406-philippians-4-6-7-peace-that-passeth-understanding-prayer.md",
-      "title": "Philippians 4:6-7 Peace That Passeth Understanding Prayer",
+      "title": "Peace When Your Mind Won't Rest: Philippians 4:6-7 | The Healing Balm",
       "channel": "prayer6",
       "channel_name": "The Healing Balm",
       "channel_handle": "@TheHealingBalmDaily",
@@ -10017,7 +10065,7 @@
       "id": "0404",
       "slug": "exodus-15-26-jehovah-rapha-healing-prayer",
       "file": "0404-exodus-15-26-jehovah-rapha-healing-prayer.md",
-      "title": "Exodus 15:26 Jehovah Rapha Healing Prayer | The Healing Balm",
+      "title": "Restoring Strength To Weary Limbs: Exodus 15:26 | The Healing Balm",
       "channel": "prayer6",
       "channel_name": "The Healing Balm",
       "channel_handle": "@TheHealingBalmDaily",
@@ -13695,19 +13743,6 @@
         "words": 1025
       },
       {
-        "id": "0072",
-        "slug": "when-your-plans-change-at-dawn-proverbs-16-9-the-morning-altar",
-        "file": "0072-when-your-plans-change-at-dawn-proverbs-16-9-the-morning-altar.md",
-        "title": "Giving God Your Day: Proverbs 16:9 | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1746
-      },
-      {
         "id": "0073",
         "slug": "when-you-need-direction-for-today-isaiah-30-21-the-morning-altar",
         "file": "0073-when-you-need-direction-for-today-isaiah-30-21-the-morning-altar.md",
@@ -14487,17 +14522,6 @@
         "target_window_utc": "12:14"
       },
       {
-        "short": "short-morningecclesiastes11v6",
-        "file": "0000-short-morningecclesiastes11v6.yml",
-        "companion_longform_id": "",
-        "scripture": "Ecclesiastes 11:6",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
-      {
         "short": "short-morningpsalm104v22",
         "file": "0000-short-morningpsalm104v22.yml",
         "companion_longform_id": "",
@@ -14700,17 +14724,6 @@
         "file": "0075-short-morningcolossians3v17.yml",
         "companion_longform_id": "0075",
         "scripture": "Colossians 3:17",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-morningpsalm139v17",
-        "file": "0079-short-morningpsalm139v17.yml",
-        "companion_longform_id": "0079",
-        "scripture": "Psalm 139:17-18",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
