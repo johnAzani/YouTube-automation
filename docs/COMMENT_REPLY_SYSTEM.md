@@ -7,36 +7,27 @@
 
 ---
 
-## 1. Executive Summary & Algorithmic Value in 2026
+## 1. Make viewers feel heard without asking them to overshare
 
-Replying to viewer comments is one of the single most under-utilized algorithmic growth levers on YouTube. In 2026, YouTube's Deep Neural Candidate Generation Tower evaluates engagement velocity not just by raw views, but by **community interaction density** and **co-visitation return loops**.
+A good reply responds to the concern or gratitude the viewer chose to share.
+Do not assume a past relationship or guarantee a follow-up. Use a specific
+prayer or acknowledgment for sensitive disclosures, not a question asking for
+details. An optional question about the verse can be useful for an ordinary,
+low-stakes reflection. Listening quietly is welcome, too.
 
-```
-                   THE COMMENT RE-ENTRY FLYWHEEL (2026)
-                                     │
-    1. Viewer watches video & leaves comment ("Amen, praying for peace...")
-                                     │
-                                     ▼
-    2. Autonomous Comment Engine audits thread via YouTube Data API v3
-                                     │
-                                     ▼
-    3. Google Gemini Brain drafts unique, warm pastoral reply ($0.00 Free Tier)
-                                     │
-                                     ▼
-    4. YouTube Data API posts reply (`comments().insert`) with anti-spam jitter
-                                     │
-                                     ▼
-    5. YouTube pushes notification to viewer device ("The Secret Place replied: ...")
-                                     │
-                                     ▼
-    6. THE RE-ENTRY LOOP: Viewer taps notification, re-opens video session,
-       re-engages with community, and generates a SECOND watch session.
-```
+New Shorts and long-form owner comments invite optional, channel-specific
+participation without requiring names or an “Amen.” YouTube comments are
+public; see [YouTube's privacy guidance](https://support.google.com/youtube/answer/2801895).
+Recognized email addresses and phone-like numbers bypass the drafting model.
+This narrow pattern check does not identify every kind of private information.
+New ledger rows no longer copy original comment text, and new crisis alerts
+use opaque references instead of republishing the disclosure. Review held
+comments in YouTube Studio. This does not remove older copies.
 
-### Key Algorithmic & Community Benefits:
-1. **The Second-Session Return Loop:** When the creator replies to a comment, YouTube dispatches an immediate high-priority push notification and bell notification to the user's smartphone. Opening this notification drives the user back into the video, doubling the session engagement signal.
-2. **Returning Viewer Loyalty:** Data across faith and devotional channels shows viewers who receive a personal, pastoral response have an **85% higher 30-day return rate** than unresponded viewers.
-3. **Algorithmic Candidate Boost:** Videos with active two-way dialogue receive higher recommendation priority in the "Suggested Videos" column.
+Measure reply coverage and voluntary follow-up in Studio by channel and format
+using comparable release windows. Report counts and sample sizes without
+copying viewer stories. A reply or notification is not proof of an increase
+in returning viewers, watch time, or recommendation traffic.
 
 ---
 
@@ -222,7 +213,7 @@ after it, so the ledger is never a guess:
 | `posted` | reply id recorded; never touched again |
 | `pending` | reserved by a run that is inserting right now |
 | `unconfirmed` | the insert raised and may or may not have landed. The next live run calls `reconcile_unconfirmed()`: if the thread carries a reply from our channel the row becomes `posted`, otherwise the row is dropped so the comment can be answered. |
-| `held_for_human` | a crisis disclosure; recorded with the unposted draft, never answered in public unless `--reply-to-crisis` |
+| `held_for_human` | a crisis disclosure; recorded as held, never answered in public unless `--reply-to-crisis` |
 | `held` | the fallback sentence had already been used twice |
 
 Rows that are deliberately *not* replies also carry their reason in `category`:

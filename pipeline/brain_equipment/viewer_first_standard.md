@@ -50,7 +50,7 @@ The first words spoken must be about the listener, not about the channel.
   they serve the prayer; do not insert a pattern break just to make noise.
 - One specific human moment in every script: a concrete picture of a real situation the verse speaks to, described without naming a real person.
 - Keep sentences speakable. Most under 22 words; no sentence over 40. Write numbers and references the way they are said aloud.
-- The final scene gives the benediction first and the call-to-action last, once, in the channel's required wording. Before it, one sentence invites the listener to write a first name or the need they are praying for in the comments, so the channel can pray with them.
+- The final scene gives the benediction first and the call-to-action last, once, in the channel's required wording. Before it, one optional, video-specific invitation can welcome a general prayer need or reflection. Never ask for names or sensitive details in public comments.
 
 ### 6. Make the listener feel prayed with, not talked at
 

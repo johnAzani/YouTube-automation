@@ -55,6 +55,30 @@ class TestCommentClassification(unittest.TestCase):
 
 
 class TestReplySafetyAndInvariants(unittest.TestCase):
+    def test_contact_details_do_not_go_to_model_or_public_reply(self):
+        from unittest.mock import MagicMock
+
+        client = MagicMock()
+        item = CommentItem(comment_id="private", video_id="video", author_name="Viewer",
+                           author_channel_id="viewer", published_at="",
+                           text="Please pray for me. Email me at test@example.com.",
+                           category="PRAYER_REQUEST")
+        reply = generate_reply_with_gemini(item, gemini_client=client)
+        client.models.generate_content.assert_not_called()
+        self.assertNotIn("test@example.com", reply)
+        self.assertIn("public comment", reply)
+        for unsafe in ("Please share your diagnosis", "Post your first name", "Call 080 1234 5678"):
+            self.assertFalse(_reply_is_safe(unsafe))
+
+    def test_crisis_alert_uses_only_an_opaque_reference(self):
+        from scripts.reply_comments import _crisis_body, unreported
+
+        rows = [{"comment_id": "real-id", "author": "Real Name", "text": "Private story", "draft": "Private draft"}]
+        text = _crisis_body(rows)
+        for private in ("real-id", "Real Name", "Private story", "Private draft"):
+            self.assertNotIn(private, text)
+        self.assertEqual(unreported(text, rows), [])
+
     def test_zero_mention_of_creator_names(self):
         categories = ["PRAYER_REQUEST", "AMEN_AFFIRMATION", "TESTIMONY_REST", "INQUIRY", "CRISIS_DISTRESS"]
         for cat in categories:
@@ -268,7 +292,8 @@ class TestCrisisIsHeldNotPosted(unittest.TestCase):
         youtube.comments().insert.assert_not_called()
         saved = load_replied_log(self.log)
         self.assertEqual(saved["c_crisis"]["category"], "CRISIS_ESCALATED")
-        self.assertIn("988", saved["c_crisis"]["draft_reply"])
+        self.assertNotIn("draft_reply", saved["c_crisis"])
+        self.assertNotIn("comment_text", saved["c_crisis"])
 
     def test_opting_in_still_posts_when_asked_explicitly(self):
         youtube = MagicMock()
@@ -363,7 +388,8 @@ class CrisisEscalationIsFiledOnce(unittest.TestCase):
         self.assertNotIn("issue", [c[0] for c in calls if c[:2] == ("issue", "create")])
         comment = [c for c in calls if c[:2] == ("issue", "comment")]
         self.assertEqual(len(comment), 1)
-        self.assertIn("c-2", comment[0][-1])
+        self.assertIn(rc._crisis_reference("c-2"), comment[0][-1])
+        self.assertNotIn("c-2", comment[0][-1])
         self.assertNotIn("c-1", comment[0][-1].split("### viewer-two")[0])
 
     def test_it_says_so_and_does_nothing_when_everything_is_known(self):
