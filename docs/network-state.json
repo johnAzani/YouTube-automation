@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T09:14:33Z",
+  "generated_at": "2026-11-20T09:20:20Z",
   "monitor_generated_at": "2026-11-20T08:19:40.591520+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 534,
+    "published_total": 535,
     "published_longform": 167,
-    "published_shorts": 367,
-    "public_total": 532,
+    "published_shorts": 368,
+    "public_total": 533,
     "queued_longform": 60,
-    "queued_shorts": 94,
+    "queued_shorts": 93,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 48,
+        "published_total": 49,
         "published_longform": 15,
-        "published_shorts": 33,
-        "thumbnail_pending": 3,
-        "public_total": 48,
+        "published_shorts": 34,
+        "thumbnail_pending": 4,
+        "public_total": 49,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PROVISION2CORINTHIANS9V8",
-        "title": "Pray This 2 Corinthians 9:8 Prayer for Open Doors & Provision | Daily Provision #Shorts",
+        "id": "SHORT-PROVISIONEPHESIANS3V20",
+        "title": "Pray This Ephesians 3:20 Prayer for Open Doors & Provision #Shorts",
         "format": "short",
-        "youtube_video_id": "ap4gQ67X4SI",
-        "watch_url": "https://www.youtube.com/shorts/ap4gQ67X4SI",
+        "youtube_video_id": "HvcYPwce3sc",
+        "watch_url": "https://www.youtube.com/shorts/HvcYPwce3sc",
         "published_on": "2026-11-20",
-        "published_at": "2026-11-20T01:32:50Z"
+        "published_at": "2026-11-20T09:19:31Z"
       },
       "next_queued_longform": {
         "id": "0515",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionephesians3v20",
-        "scripture": "Ephesians 3:20",
+        "short": "short-provisionluke5v4",
+        "scripture": "Luke 5:4-6",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONEPHESIANS3V20",
+      "slug": "short-provisionephesians3v20-stewardship-prayer",
+      "file": "short-provisionephesians3v20-stewardship-prayer.md",
+      "title": "Pray This Ephesians 3:20 Prayer for Open Doors & Provision #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T09:19:31Z",
+      "youtube_video_id": "HvcYPwce3sc",
+      "watch_url": "https://www.youtube.com/shorts/HvcYPwce3sc",
+      "youtu_be_url": "https://youtu.be/HvcYPwce3sc",
+      "shorts_url": "https://www.youtube.com/shorts/HvcYPwce3sc",
+      "studio_url": "https://studio.youtube.com/video/HvcYPwce3sc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/HvcYPwce3sc/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "56s",
+      "words": 669
+    },
     {
       "id": "SHORT-MIDNIGHTISAIAH26V9",
       "slug": "short-midnightisaiah26v9-midnight-prayer",
@@ -14444,17 +14468,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisionephesians3v20",
-        "file": "0000-short-provisionephesians3v20.yml",
-        "companion_longform_id": "",
-        "scripture": "Ephesians 3:20",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionluke5v4",
