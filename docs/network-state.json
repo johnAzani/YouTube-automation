@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T13:28:01Z",
+  "generated_at": "2026-11-20T13:29:02Z",
   "monitor_generated_at": "2026-11-20T12:51:12.234843+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 546,
+    "published_total": 547,
     "published_longform": 171,
-    "published_shorts": 375,
-    "public_total": 544,
+    "published_shorts": 376,
+    "public_total": 545,
     "queued_longform": 60,
-    "queued_shorts": 98,
+    "queued_shorts": 97,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -237,23 +237,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 57,
+        "published_total": 58,
         "published_longform": 19,
-        "published_shorts": 38,
-        "thumbnail_pending": 56,
-        "public_total": 57,
+        "published_shorts": 39,
+        "thumbnail_pending": 57,
+        "public_total": 58,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTISAIAH26V9",
-        "title": "Pray This Isaiah 26:9 Midnight Prayer | Stillness In Prayer #Shorts",
+        "id": "SHORT-MIDNIGHTLAMENTATIONS2V19",
+        "title": "Pray This Lamentations 2:19 Midnight Prayer | Pour Out Your Heart #Shorts",
         "format": "short",
-        "youtube_video_id": "r93ogczWJpA",
-        "watch_url": "https://www.youtube.com/shorts/r93ogczWJpA",
+        "youtube_video_id": "Jz0TeLczZvU",
+        "watch_url": "https://www.youtube.com/shorts/Jz0TeLczZvU",
         "published_on": "2026-11-20",
-        "published_at": "2026-11-20T09:13:40Z"
+        "published_at": "2026-11-20T13:28:07Z"
       },
       "next_queued_longform": {
         "id": "0219",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightlamentations2v19",
-        "scripture": "Lamentations 2:19",
+        "short": "short-midnightromans16v20",
+        "scripture": "Romans 16:20",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTLAMENTATIONS2V19",
+      "slug": "short-midnightlamentations2v19-midnight-prayer",
+      "file": "short-midnightlamentations2v19-midnight-prayer.md",
+      "title": "Pray This Lamentations 2:19 Midnight Prayer | Pour Out Your Heart #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T13:28:07Z",
+      "youtube_video_id": "Jz0TeLczZvU",
+      "watch_url": "https://www.youtube.com/shorts/Jz0TeLczZvU",
+      "youtu_be_url": "https://youtu.be/Jz0TeLczZvU",
+      "shorts_url": "https://www.youtube.com/shorts/Jz0TeLczZvU",
+      "studio_url": "https://studio.youtube.com/video/Jz0TeLczZvU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Jz0TeLczZvU/hqdefault.jpg",
+      "thumb_text": "MIDNIGHT VIGIL \u00b7 A QUIET CRY",
+      "thumbnail_pending": true,
+      "duration_label": "54s",
+      "words": 650
+    },
     {
       "id": "SHORT-FAMILYDEUTERONOMY11V18",
       "slug": "short-familydeuteronomy11v18-household-prayer",
@@ -14710,17 +14734,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightlamentations2v19",
-        "file": "0000-short-midnightlamentations2v19.yml",
-        "companion_longform_id": "",
-        "scripture": "Lamentations 2:19",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightromans16v20",
