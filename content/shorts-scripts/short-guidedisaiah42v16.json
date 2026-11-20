@@ -1,0 +1,285 @@
+{
+  "key": "short-guidedisaiah42v16",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "WHEN THE ROAD AHEAD",
+    "FEELS UNCERTAIN"
+  ],
+  "poster": [
+    "WHEN THE WAY",
+    "AHEAD IS UNKNOWN",
+    "GOD WILL LEAD",
+    "ISAIAH 42:16"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley at dawn",
+    "calm mountain lake glowing at sunrise",
+    "peaceful valley river early light fog",
+    "foggy forest pathway morning sunbeam",
+    "quiet mountain pass illuminated by sun light",
+    "scenic mountain peak sunrise clouds"
+  ],
+  "scenes": [
+    {
+      "a": "If you are stepping into a strange room today without knowing how to proceed, pause.",
+      "img": "short-guidedisaiah42v16-scene-01.jpg",
+      "kicker": "ISAIAH 42:16",
+      "sub": "WALKING INTO THE UNKNOWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And I will bring the blind by a way that they knew not; I will lead them in paths that they have not known:",
+      "img": "short-guidedisaiah42v16-scene-02.jpg",
+      "kicker": "ISAIAH 42:16",
+      "sub": "GOD LEADS UNBEATEN PATHS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "I will make darkness light before them, and crooked things straight. These things will I do unto them, and not forsake them.",
+      "img": "short-guidedisaiah42v16-scene-03.jpg",
+      "kicker": "ISAIAH 42:16",
+      "sub": "LIGHT BEFORE THE DARKNESS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, when the road before us feels obscured, guide our steps into Your truth.",
+      "img": "short-guidedisaiah42v16-scene-04.jpg",
+      "kicker": "ISAIAH 42:16",
+      "sub": "SEEKING HIS HOLY DIRECTION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Reveal the light where shadows linger, and smooth every rough path. Give us discernment to follow Your leading, trusting that You will never abandon us.",
+      "img": "short-guidedisaiah42v16-scene-05.jpg",
+      "kicker": "ISAIAH 42:16",
+      "sub": "TRUSTING HIS ETERNAL PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to join us in seeking His wisdom daily.",
+      "img": "short-guidedisaiah42v16-scene-06.jpg",
+      "kicker": "ISAIAH 42:16",
+      "sub": "WALK IN WISDOM DAILY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are stepping into a strange room today without knowing how to proceed, pause."
+    ],
+    [
+      8,
+      20,
+      "And I will bring the blind by a way that they knew not; I will lead them in paths that they have not known:"
+    ],
+    [
+      20,
+      32,
+      "I will make darkness light before them, and crooked things straight. These things will I do unto them, and not forsake them."
+    ],
+    [
+      32,
+      40,
+      "Lord, when the road before us feels obscured, guide our steps into Your truth."
+    ],
+    [
+      40,
+      52,
+      "Reveal the light where shadows linger, and smooth every rough path. Give us discernment to follow Your leading, trusting that You will never abandon us."
+    ],
+    [
+      52,
+      57,
+      "Subscribe to join us in seeking His wisdom daily."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "STEPPING INTO A STRANGE ROOM",
+        "WITHOUT KNOWING HOW TO PROCEED"
+      ],
+      [
+        "STRANGE ROOM",
+        "PROCEED"
+      ],
+      "ISAIAH 42 : 16"
+    ],
+    [
+      8,
+      20,
+      [
+        "BRING THE BLIND BY A WAY",
+        "THEY KNEW NOT IN UNKNOWN PATHS"
+      ],
+      [
+        "BRING",
+        "BLIND",
+        "PATHS"
+      ],
+      "ISAIAH 42 : 16"
+    ],
+    [
+      20,
+      32,
+      [
+        "MAKE DARKNESS LIGHT BEFORE THEM",
+        "AND CROOKED THINGS STRAIGHT"
+      ],
+      [
+        "DARKNESS",
+        "LIGHT",
+        "STRAIGHT"
+      ],
+      "ISAIAH 42 : 16"
+    ],
+    [
+      32,
+      40,
+      [
+        "WHEN THE ROAD FEELS OBSCURED",
+        "GUIDE OUR STEPS INTO YOUR TRUTH"
+      ],
+      [
+        "GUIDE",
+        "STEPS",
+        "TRUTH"
+      ],
+      "ISAIAH 42 : 16"
+    ],
+    [
+      40,
+      52,
+      [
+        "REVEAL THE LIGHT WHERE SHADOWS LINGER",
+        "GIVE US DISCERNMENT TO FOLLOW"
+      ],
+      [
+        "REVEAL",
+        "LIGHT",
+        "DISCERNMENT"
+      ],
+      "ISAIAH 42 : 16"
+    ],
+    [
+      52,
+      57,
+      [
+        "SUBSCRIBE TO JOIN US",
+        "SEEKING HIS WISDOM DAILY"
+      ],
+      [
+        "SUBSCRIBE",
+        "WISDOM"
+      ],
+      "ISAIAH 42 : 16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are stepping into a strange room today without knowing how to proceed, pause.",
+      "kind": "phrase",
+      "words": [
+        "STEPPING",
+        "STRANGE",
+        "ROOM",
+        "PAUSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And I will bring the blind by a way that they knew not; I will lead them in paths that they have not known:",
+      "kind": "phrase",
+      "words": [
+        "BRING",
+        "BLIND",
+        "LEAD",
+        "PATHS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will make darkness light before them, and crooked things straight. These things will I do unto them, and not forsake them.",
+      "kind": "phrase",
+      "words": [
+        "DARKNESS",
+        "LIGHT",
+        "CROOKED",
+        "STRAIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when the road before us feels obscured, guide our steps into Your truth.",
+      "kind": "phrase",
+      "words": [
+        "ROAD",
+        "OBSCURED",
+        "GUIDE",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Reveal the light where shadows linger, and smooth every rough path. Give us discernment to follow Your leading, trusting that You will never abandon us.",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "SMOOTH",
+        "DISCERNMENT",
+        "ABANDON"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join us in seeking His wisdom daily.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "WISDOM",
+        "DAILY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 42:16"
+}
