@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T01:33:33Z",
+  "generated_at": "2026-11-20T01:39:50Z",
   "monitor_generated_at": "2026-11-19T22:14:33.904388+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 525,
+    "published_total": 526,
     "published_longform": 165,
-    "published_shorts": 360,
-    "public_total": 523,
+    "published_shorts": 361,
+    "public_total": 524,
     "queued_longform": 55,
-    "queued_shorts": 74,
+    "queued_shorts": 73,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -645,23 +645,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 36,
+        "published_total": 37,
         "published_longform": 10,
-        "published_shorts": 26,
+        "published_shorts": 27,
         "thumbnail_pending": 12,
-        "public_total": 36,
+        "public_total": 37,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPSALM5V8",
-        "title": "Pray This Psalm 5:8 Prayer for God's Guidance | Hear His Voice #Shorts",
+        "id": "SHORT-GUIDEDPSALM37V23",
+        "title": "Pray This Psalm 37:23-24 Prayer for God's Guidance | Steps Ordered #Shorts",
         "format": "short",
-        "youtube_video_id": "A4dTsqyjkmk",
-        "watch_url": "https://www.youtube.com/shorts/A4dTsqyjkmk",
-        "published_on": "2026-11-19",
-        "published_at": "2026-11-19T21:17:28Z"
+        "youtube_video_id": "wVUS9-a5sfE",
+        "watch_url": "https://www.youtube.com/shorts/wVUS9-a5sfE",
+        "published_on": "2026-11-20",
+        "published_at": "2026-11-20T01:38:44Z"
       },
       "next_queued_longform": {
         "id": "0810",
@@ -670,8 +670,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedpsalm37v23",
-        "scripture": "Psalm 37:23-24",
+        "short": "short-guidedproverbs16v3",
+        "scripture": "Proverbs 16:3",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDPSALM37V23",
+      "slug": "short-guidedpsalm37v23-guidance-prayer",
+      "file": "short-guidedpsalm37v23-guidance-prayer.md",
+      "title": "Pray This Psalm 37:23-24 Prayer for God's Guidance | Steps Ordered #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-20",
+      "published_at": "2026-11-20T01:38:44Z",
+      "youtube_video_id": "wVUS9-a5sfE",
+      "watch_url": "https://www.youtube.com/shorts/wVUS9-a5sfE",
+      "youtu_be_url": "https://youtu.be/wVUS9-a5sfE",
+      "shorts_url": "https://www.youtube.com/shorts/wVUS9-a5sfE",
+      "studio_url": "https://studio.youtube.com/video/wVUS9-a5sfE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/wVUS9-a5sfE/hqdefault.jpg",
+      "thumb_text": "THE GUIDED PATH \u00b7 KJV WISDOM",
+      "thumbnail_pending": false,
+      "duration_label": "62s",
+      "words": 646
+    },
     {
       "id": "SHORT-PROVISION2CORINTHIANS9V8",
       "slug": "short-provision2corinthians9v8-stewardship-prayer",
@@ -14746,17 +14770,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedpsalm37v23",
-        "file": "0808-short-guidedpsalm37v23.yml",
-        "companion_longform_id": "0808",
-        "scripture": "Psalm 37:23-24",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedproverbs16v3",
