@@ -1,6 +1,6 @@
 ---
 id: '0021'
-title: Psalm 31:5 Bedtime Prayer | Into Your Hands I Commit My Spirit
+title: "Surrendering Every Heavy Burden: Psalm 31:5 | The Secret Place"
 slug: psalm-31-1-5-committing-my-spirit-to-his-hand
 status: published
 privacy: public
@@ -98,11 +98,14 @@ category_id: '22'
 published_on: "2026-11-13"
 published_at: "2026-11-13T16:49:01Z"
 youtube_video_id: "r3nA7BgZpP4"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
 live_handle: "@SecretPlaceSanctuary"
+title_before: "Psalm 31:5 Bedtime Prayer | Into Your Hands I Commit My Spirit"
+retitled_at: "2026-11-20"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — In Thee, O LORD, Do I Put My Trust (Verse 1a)
