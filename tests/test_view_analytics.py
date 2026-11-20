@@ -8,6 +8,16 @@ from scripts import view_analytics
 
 
 class ViewAnalyticsTests(unittest.TestCase):
+    def test_retention_landmarks_include_ending_and_do_not_invent_missing_values(self):
+        columns = ["audienceWatchRatio", "elapsedVideoTimeRatio"]
+        rows = [[0.31, 1], [1.25, 0.01], [0.4, 0.95], [0.5, 0.95], [0.6, 0.49]]
+        values = dict(view_analytics.retention_landmarks(columns, rows))
+        self.assertEqual(values["100%"], "31.0%")
+        self.assertEqual(values["1%"], "125.0%")
+        self.assertEqual(values["50%"], "—")
+        self.assertEqual(values["95%"], "—")
+        self.assertEqual(view_analytics.retention_landmarks(["day"], []), [])
+
     def test_growth_compares_equal_windows_and_preserves_missing_metrics(self):
         columns = ["day", "views", "subscribersGained", "subscribersLost", "shares"]
         rows = [[f"2026-11-{i:02d}", i, 0, 1, 0] for i in range(1, 15)]

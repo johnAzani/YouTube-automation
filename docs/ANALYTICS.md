@@ -282,3 +282,12 @@ listen for a repeated point before cutting length. Leave metrics that Studio
 does not show blank. See [YouTube's retention guide](https://support.google.com/youtube/answer/9314415)
 for the limits of key moments. The checked-in analytics cover The Secret Place;
 use each other channel's own Studio data before drawing conclusions about it.
+
+For a local check on one owned video, collect with
+`python scripts/channel_analytics.py --retention-video VIDEO_ID` and view with
+`python scripts/view_analytics.py --private`. The viewer shows the reported
+watch ratio at 1%, 25%, 50%, 75%, 95% and 100% of the video. Use the 95% point
+as a near-end signal and check the full curve in Studio before revising a scene.
+Missing points are not interpolated. A ratio above 100% can reflect rewatches;
+this is not a unique-viewer completion rate. Collect each channel separately
+using its own authorized local read-only account and compare like formats.

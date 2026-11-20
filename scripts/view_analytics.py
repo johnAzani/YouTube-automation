@@ -16,6 +16,7 @@ import argparse
 from datetime import date, timedelta
 import csv
 import json
+import math
 from pathlib import Path
 import sys
 
@@ -102,6 +103,25 @@ def engagement_comparison(columns, rows):
     return days, table
 
 
+def retention_landmarks(columns, rows):
+    """Show reported playback ratios at fixed points, without interpolation."""
+    required = ("elapsedVideoTimeRatio", "audienceWatchRatio")
+    if not all(key in columns for key in required):
+        return []
+    position, audience = (columns.index(key) for key in required)
+    points = {}
+    for row in rows:
+        if len(row) != len(columns):
+            continue
+        x, y = row[position], row[audience]
+        if type(x) not in (int, float) or not 0 < x <= 1:
+            continue
+        value = (f"{y:.1%}" if type(y) in (int, float) and math.isfinite(y) and y >= 0
+                 else "—")
+        points[x] = "—" if x in points else value
+    return [[f"{x:.0%}", points.get(x, "—")] for x in (0.01, 0.25, 0.5, 0.75, 0.95, 1)]
+
+
 def display_private_report(path: Path = PRIVATE_REPORT) -> bool:
     """Read and format the private Analytics report JSON."""
     if not path.is_file():
@@ -177,7 +197,13 @@ def display_private_report(path: Path = PRIVATE_REPORT) -> bool:
     if retention.get("status") == "collected" and retention.get("rows"):
         cols = [c.get("name", f"col_{i}") if isinstance(c, dict) else str(c) for i, c in enumerate(retention.get("columns", []))]
         print("\n[Audience Retention Profile]")
-        print(format_table(cols, retention["rows"][:15]))
+        landmarks = retention_landmarks(cols, retention["rows"])
+        if landmarks:
+            print(format_table(["Video position", "Audience watch ratio"], landmarks))
+            print("— means unavailable. Replays can push the ratio over 100%; "
+                  "it is not the percentage of unique viewers who finished.")
+        else:
+            print(format_table(cols, retention["rows"][:15]))
     elif retention.get("status") != "not_requested":
         print(f"\n[Audience Retention]: {retention.get('status')} ({retention.get('reason', '')})")
 
