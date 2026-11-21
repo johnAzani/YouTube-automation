@@ -1,28 +1,30 @@
 {
-  "generated_at": "2026-11-21T04:00:51.744830+00:00",
+  "generated_at": "2026-11-21T09:45:52.125306+00:00",
   "as_of": "2026-11-21",
   "sufficient_data": false,
-  "measured_longform_videos": 0,
+  "measured_longform_videos": 1,
   "total_longform_videos": 13,
   "input_diagnostics": {
     "snapshot_video_ids": 49,
     "receipt_video_ids": 62,
     "matched_video_ids": 49,
-    "longform_below_view_threshold": 13,
+    "longform_below_view_threshold": 12,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 4,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
-  "ranked_themes": [],
+  "ranked_themes": [
+    "protection"
+  ],
   "themes": [
     {
       "theme": "protection",
       "videos": 3,
-      "measured_videos": 0,
-      "avg_score": 0.0,
-      "avg_engagement": 0.0,
-      "top_scripture": ""
+      "measured_videos": 1,
+      "avg_score": 1.0,
+      "avg_engagement": 0.12,
+      "top_scripture": "Psalm 35"
     },
     {
       "theme": "general_prayer",
@@ -61,9 +63,9 @@
     "measured_shorts": 30,
     "total_shorts": 36,
     "sufficient_data": true,
-    "avg_views": 180.0,
+    "avg_views": 180.2,
     "median_views": 157,
-    "total_views": 5400,
+    "total_views": 5405,
     "minimum_age_days": 2,
     "by_book": {
       "1 john": {
@@ -78,8 +80,8 @@
       },
       "2 corinthians": {
         "shorts": 1,
-        "avg_views": 106.0,
-        "ratio": 0.863
+        "avg_views": 108.0,
+        "ratio": 0.866
       },
       "2 timothy": {
         "shorts": 1,
@@ -94,7 +96,7 @@
       "deuteronomy": {
         "shorts": 1,
         "avg_views": 602.0,
-        "ratio": 1.781
+        "ratio": 1.78
       },
       "ephesians": {
         "shorts": 1,
@@ -124,12 +126,12 @@
       "job": {
         "shorts": 1,
         "avg_views": 102.0,
-        "ratio": 0.856
+        "ratio": 0.855
       },
       "joel": {
         "shorts": 1,
         "avg_views": 183.0,
-        "ratio": 1.006
+        "ratio": 1.005
       },
       "judges": {
         "shorts": 1,
@@ -139,7 +141,7 @@
       "luke": {
         "shorts": 2,
         "avg_views": 191.5,
-        "ratio": 1.032
+        "ratio": 1.031
       },
       "mark": {
         "shorts": 1,
@@ -154,12 +156,12 @@
       "psalm": {
         "shorts": 7,
         "avg_views": 168.6,
-        "ratio": 0.951
+        "ratio": 0.95
       },
       "revelation": {
         "shorts": 2,
-        "avg_views": 42.0,
-        "ratio": 0.617
+        "avg_views": 43.5,
+        "ratio": 0.621
       },
       "romans": {
         "shorts": 1,
@@ -180,23 +182,23 @@
       },
       "general_prayer": {
         "shorts": 22,
-        "avg_views": 173.6,
-        "ratio": 0.967
+        "avg_views": 173.8,
+        "ratio": 0.968
       },
       "midday_strength_endurance": {
         "shorts": 2,
         "avg_views": 231.0,
-        "ratio": 1.142
+        "ratio": 1.141
       },
       "morning_mercy_renewal": {
         "shorts": 2,
         "avg_views": 227.5,
-        "ratio": 1.132
+        "ratio": 1.131
       },
       "peace_rest": {
         "shorts": 1,
         "avg_views": 183.0,
-        "ratio": 1.006
+        "ratio": 1.005
       },
       "protection": {
         "shorts": 1,
@@ -214,7 +216,7 @@
     ]
   },
   "guidance": [
-    "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
+    "Only 1 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
   ],
   "cost_lock": "$0.00 \u2014 public Data API statistics only; no new quota or secret.",
   "privacy": "Aggregate theme scores only; raw per-video snapshot stays an Actions artifact.",
