@@ -1,0 +1,319 @@
+{
+  "key": "short-psalm85v8",
+  "channel": "secret-place",
+  "psalm": 85,
+  "title": [
+    "HE WILL SPEAK PEACE",
+    "BEDTIME PRAYER"
+  ],
+  "poster": [
+    "HE WILL",
+    "SPEAK PEACE",
+    "TO HIS PEOPLE",
+    "PSALM 85:8"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm dark bedroom lantern warm light cozy atmosphere",
+    "silent lake reflecting stars night calm blue water",
+    "gentle candle flame glowing dark room soft warm light",
+    "peaceful misty forest night twilight soft glow calm atmosphere",
+    "calm ocean waves gently touching shore at dusk peaceful blue",
+    "starry sky over calm mountains night landscape serenity",
+    "soft lantern light in dark woods peaceful night path"
+  ],
+  "scenes": [
+    {
+      "a": "If tonight's difficult decision",
+      "img": "short-psalm85v8-scene-01.jpg",
+      "kicker": "PSALM 85:8",
+      "sub": "REST IN HIS STILL VOICE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "I will hear what God the LORD will speak",
+      "img": "short-psalm85v8-scene-02.jpg",
+      "kicker": "PSALM 85:8",
+      "sub": "HE WILL SPEAK PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "and to his saints",
+      "img": "short-psalm85v8-scene-03.jpg",
+      "kicker": "PSALM 85:8",
+      "sub": "WALK IN HIS WISDOM",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, quiet the noise",
+      "img": "short-psalm85v8-scene-04.jpg",
+      "kicker": "PSALM 85:8",
+      "sub": "QUIET EVERY WORRY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Speak Your stillness into every",
+      "img": "short-psalm85v8-scene-05.jpg",
+      "kicker": "PSALM 85:8",
+      "sub": "STILLNESS FOR YOUR HEART",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Help me to listen closely",
+      "img": "short-psalm85v8-scene-06.jpg",
+      "kicker": "PSALM 85:8",
+      "sub": "RECEIVE HIS DEEP REST",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "and to walk steadily in Your peace",
+      "img": "short-psalm85v8-scene-07.jpg",
+      "kicker": "PSALM 85:8",
+      "sub": "NEVER WALK ALONE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If tonight's difficult decision is keeping your mind awake in the quiet, rest now."
+    ],
+    [
+      7,
+      15,
+      "I will hear what God the LORD will speak: for he will speak peace unto his people,"
+    ],
+    [
+      15,
+      22,
+      "and to his saints: but let them not turn again to folly."
+    ],
+    [
+      22,
+      30,
+      "Lord, quiet the noise of competing voices as sleep comes to this room."
+    ],
+    [
+      30,
+      38,
+      "Speak Your stillness into every restless corner of this weary heart tonight."
+    ],
+    [
+      38,
+      47,
+      "Help me to listen closely to Your gentle word, to receive the deep rest You offer,"
+    ],
+    [
+      47,
+      56,
+      "and to walk steadily in Your peace without turning back. Subscribe to The Secret Place for nightly prayers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF TONIGHTS DIFFICULT DECISION",
+        "IS KEEPING YOUR MIND AWAKE",
+        "IN THE QUIET REST NOW"
+      ],
+      [
+        "DIFFICULT DECISION",
+        "REST NOW"
+      ],
+      "PSALM 85 : 8"
+    ],
+    [
+      7,
+      15,
+      [
+        "I WILL HEAR WHAT GOD",
+        "THE LORD WILL SPEAK",
+        "FOR HE WILL SPEAK PEACE",
+        "UNTO HIS PEOPLE"
+      ],
+      [
+        "SPEAK PEACE",
+        "HIS PEOPLE"
+      ],
+      "PSALM 85 : 8"
+    ],
+    [
+      15,
+      22,
+      [
+        "AND TO HIS SAINTS",
+        "BUT LET THEM NOT TURN",
+        "AGAIN TO FOLLY"
+      ],
+      [
+        "HIS SAINTS",
+        "NOT TURN"
+      ],
+      "PSALM 85 : 8"
+    ],
+    [
+      22,
+      30,
+      [
+        "LORD QUIET THE NOISE",
+        "OF COMPETING VOICES",
+        "AS SLEEP COMES TO THIS ROOM"
+      ],
+      [
+        "QUIET THE NOISE",
+        "SLEEP COMES"
+      ],
+      "PSALM 85 : 8"
+    ],
+    [
+      30,
+      38,
+      [
+        "SPEAK YOUR STILLNESS",
+        "INTO EVERY RESTLESS CORNER",
+        "OF THIS WEARY HEART TONIGHT"
+      ],
+      [
+        "SPEAK YOUR STILLNESS",
+        "WEARY HEART"
+      ],
+      "PSALM 85 : 8"
+    ],
+    [
+      38,
+      47,
+      [
+        "HELP ME TO LISTEN CLOSELY",
+        "TO YOUR GENTLE WORD",
+        "TO RECEIVE THE DEEP REST",
+        "YOU OFFER"
+      ],
+      [
+        "GENTLE WORD",
+        "DEEP REST"
+      ],
+      "PSALM 85 : 8"
+    ],
+    [
+      47,
+      56,
+      [
+        "AND TO WALK STEADILY",
+        "IN YOUR PEACE WITHOUT TURNING BACK",
+        "SUBSCRIBE FOR NIGHTLY PRAYERS"
+      ],
+      [
+        "YOUR PEACE",
+        "NIGHTLY PRAYERS"
+      ],
+      "PSALM 85 : 8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If tonight's difficult decision",
+      "kind": "phrase",
+      "words": [
+        "DIFFICULT",
+        "DECISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will hear what God the LORD will speak",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and to his saints",
+      "kind": "phrase",
+      "words": [
+        "HIS",
+        "SAINTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, quiet the noise",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "NOISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Speak Your stillness into every",
+      "kind": "phrase",
+      "words": [
+        "SPEAK",
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help me to listen closely",
+      "kind": "phrase",
+      "words": [
+        "LISTEN",
+        "CLOSELY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and to walk steadily in Your peace",
+      "kind": "phrase",
+      "words": [
+        "STEADILY",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 85:8"
+}

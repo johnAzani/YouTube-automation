@@ -1,0 +1,271 @@
+{
+  "key": "short-psalm17v3",
+  "channel": "secret-place",
+  "psalm": 17,
+  "title": [
+    "HEART AT REST",
+    "THE NIGHT WATCH"
+  ],
+  "poster": [
+    "A PRAYER FOR",
+    "THE MIDNIGHT HOUR",
+    "PSALM 17:3",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "glowing candle flame in dark room",
+    "soft moonlight over calm mountain lake",
+    "flickering lantern on wooden table",
+    "slow moving mist over forest floor",
+    "stars visible through dark pine branches",
+    "still water reflecting night sky"
+  ],
+  "scenes": [
+    {
+      "a": "If you are wrestling with a secret restlessness tonight, know that you are deeply known.",
+      "img": "short-psalm17v3-scene-01.jpg",
+      "kicker": "PSALM 17:3",
+      "sub": "KNOWN BY GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Thou hast proved mine heart; thou hast visited me in the night; thou hast tried me, and shalt find nothing; I am purposed that my mouth shall not transgress.",
+      "img": "short-psalm17v3-scene-02.jpg",
+      "kicker": "THE SCRIPTURE",
+      "sub": "A WORD OF TRUTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, search my heart and settle the spirit within me while the world remains silent.",
+      "img": "short-psalm17v3-scene-03.jpg",
+      "kicker": "A PRAYER",
+      "sub": "FINDING INNER STILLNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Help me to guard my tongue and keep my intentions pure before your holy presence.",
+      "img": "short-psalm17v3-scene-04.jpg",
+      "kicker": "THE PETITION",
+      "sub": "WORDS OF GRACE",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your peace rest upon this space and wash away the tension of the day.",
+      "img": "short-psalm17v3-scene-05.jpg",
+      "kicker": "THE REST",
+      "sub": "LAYING BURDENS DOWN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "May my heart find rest in your perfect, unyielding love as sleep claims my eyes.",
+      "img": "short-psalm17v3-scene-06.jpg",
+      "kicker": "FINAL REST",
+      "sub": "RESTING IN FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are wrestling with a secret restlessness tonight, know that you are deeply known."
+    ],
+    [
+      9,
+      25,
+      "Thou hast proved mine heart; thou hast visited me in the night; thou hast tried me, and shalt find nothing; I am purposed that my mouth shall not transgress."
+    ],
+    [
+      26,
+      35,
+      "Father, search my heart and settle the spirit within me while the world remains silent."
+    ],
+    [
+      36,
+      45,
+      "Help me to guard my tongue and keep my intentions pure before your holy presence."
+    ],
+    [
+      46,
+      55,
+      "Let your peace rest upon this space and wash away the tension of the day."
+    ],
+    [
+      56,
+      65,
+      "May my heart find rest in your perfect, unyielding love as sleep claims my eyes."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "YOU ARE WRESTLING",
+        "WITH RESTLESSNESS",
+        "YOU ARE DEEPLY KNOWN"
+      ],
+      [
+        "DEEPLY KNOWN"
+      ],
+      "PSALM 17:3"
+    ],
+    [
+      9,
+      25,
+      [
+        "THOU HAST PROVED",
+        "MINE HEART",
+        "VISITED ME IN THE NIGHT",
+        "SHALT FIND NOTHING"
+      ],
+      [
+        "PROVED MINE HEART"
+      ],
+      "PSALM 17:3"
+    ],
+    [
+      26,
+      35,
+      [
+        "SEARCH MY HEART",
+        "SETTLE THE SPIRIT",
+        "WHILE THE WORLD IS SILENT"
+      ],
+      [
+        "SETTLE THE SPIRIT"
+      ],
+      "PSALM 17:3"
+    ],
+    [
+      36,
+      45,
+      [
+        "GUARD MY TONGUE",
+        "KEEP INTENTIONS PURE",
+        "BEFORE YOUR PRESENCE"
+      ],
+      [
+        "INTENTIONS PURE"
+      ],
+      "PSALM 17:3"
+    ],
+    [
+      46,
+      55,
+      [
+        "LET YOUR PEACE REST",
+        "WASH AWAY THE TENSION",
+        "OF THE DAY"
+      ],
+      [
+        "WASH AWAY"
+      ],
+      "PSALM 17:3"
+    ],
+    [
+      56,
+      65,
+      [
+        "MAY MY HEART",
+        "FIND REST",
+        "IN YOUR PERFECT LOVE"
+      ],
+      [
+        "FIND REST"
+      ],
+      "PSALM 17:3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are wrestling with a secret restlessness tonight, know that you are deeply known.",
+      "kind": "phrase",
+      "words": [
+        "DEEPLY",
+        "KNOWN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thou hast proved mine heart; thou hast visited me in the night; thou hast tried me, and shalt find nothing; I am purposed that my mouth shall not transgress.",
+      "kind": "phrase",
+      "words": [
+        "PROVED",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, search my heart and settle the spirit within me while the world remains silent.",
+      "kind": "phrase",
+      "words": [
+        "SETTLE",
+        "SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help me to guard my tongue and keep my intentions pure before your holy presence.",
+      "kind": "phrase",
+      "words": [
+        "INTENTIONS",
+        "PURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your peace rest upon this space and wash away the tension of the day.",
+      "kind": "phrase",
+      "words": [
+        "WASH",
+        "AWAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May my heart find rest in your perfect, unyielding love as sleep claims my eyes.",
+      "kind": "phrase",
+      "words": [
+        "FIND",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 17:3"
+}
