@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T16:12:50Z",
+  "generated_at": "2026-11-21T16:20:43Z",
   "monitor_generated_at": "2026-11-21T15:04:03.237531+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 606,
-    "published_longform": 182,
-    "published_shorts": 424,
-    "public_total": 604,
-    "queued_longform": 57,
-    "queued_shorts": 91,
+    "published_total": 608,
+    "published_longform": 183,
+    "published_shorts": 425,
+    "public_total": 606,
+    "queued_longform": 56,
+    "queued_shorts": 90,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -169,33 +169,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 70,
-        "published_longform": 22,
-        "published_shorts": 48,
+        "published_total": 72,
+        "published_longform": 23,
+        "published_shorts": 49,
         "thumbnail_pending": 0,
-        "public_total": 70,
-        "queued_longform": 6,
+        "public_total": 72,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYJAMES1V19",
-        "title": "Say This James 1:19-20 Prayer at Noon | Seeking His Peace #Shorts",
-        "format": "short",
-        "youtube_video_id": "4BByj9p-RQ0",
-        "watch_url": "https://www.youtube.com/shorts/4BByj9p-RQ0",
-        "published_on": "2026-11-21",
-        "published_at": "2026-11-21T11:22:26Z"
-      },
-      "next_queued_longform": {
         "id": "0097",
         "title": "Pour Out Your Heart Before Him: Psalm 62:5-8 | The Midday Watch",
-        "words": 2357,
+        "format": "longform",
+        "youtube_video_id": "zVUalKPw_4M",
+        "watch_url": "https://youtu.be/zVUalKPw_4M",
+        "published_on": "2026-11-21",
+        "published_at": "2026-11-21T16:19:51Z"
+      },
+      "next_queued_longform": {
+        "id": "0100",
+        "title": "When You Need Strength to Keep Going: Psalm 73:26 | The Midday Watch",
+        "words": 1464,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayjoshua14v11",
-        "scripture": "Joshua 14:11-12",
+        "short": "short-middaypsalm141v3",
+        "scripture": "Psalm 141:3",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0097",
+      "slug": "pour-out-your-heart-before-him-psalm-62-5-8",
+      "file": "0097-pour-out-your-heart-before-him-psalm-62-5-8.md",
+      "title": "Pour Out Your Heart Before Him: Psalm 62:5-8 | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T16:19:51Z",
+      "youtube_video_id": "zVUalKPw_4M",
+      "watch_url": "https://youtu.be/zVUalKPw_4M",
+      "youtu_be_url": "https://youtu.be/zVUalKPw_4M",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/zVUalKPw_4M/edit",
+      "thumb_url": "https://i.ytimg.com/vi/zVUalKPw_4M/hqdefault.jpg",
+      "thumb_text": "REFUGE AT MIDDAY",
+      "thumbnail_pending": false,
+      "duration_label": "~16 min",
+      "words": 2357
+    },
+    {
       "id": "0317",
       "slug": "walking-out-the-door-in-faith-deuteronomy-28-3-6",
       "file": "0317-walking-out-the-door-in-faith-deuteronomy-28-3-6.md",
@@ -892,6 +916,30 @@
       "thumbnail_pending": false,
       "duration_label": "52s",
       "words": 624
+    },
+    {
+      "id": "SHORT-MIDDAYJOSHUA14V11",
+      "slug": "short-middayjoshua14v11-midday-prayer",
+      "file": "short-middayjoshua14v11-midday-prayer.md",
+      "title": "Say This Joshua 14:11-12 Prayer at Noon | Strength Remains #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T14:46:51Z",
+      "youtube_video_id": "deSM3-vJv3M",
+      "watch_url": "https://www.youtube.com/shorts/deSM3-vJv3M",
+      "youtu_be_url": "https://youtu.be/deSM3-vJv3M",
+      "shorts_url": "https://www.youtube.com/shorts/deSM3-vJv3M",
+      "studio_url": "https://studio.youtube.com/video/deSM3-vJv3M/edit",
+      "thumb_url": "https://i.ytimg.com/vi/deSM3-vJv3M/hqdefault.jpg",
+      "thumb_text": "GIVE ME \u00b7 THIS MOUNTAIN",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 633
     },
     {
       "id": "SHORT-FAMILYLUKE10V5",
@@ -15392,19 +15440,6 @@
         "words": 1417
       },
       {
-        "id": "0097",
-        "slug": "pour-out-your-heart-before-him-psalm-62-5-8",
-        "file": "0097-pour-out-your-heart-before-him-psalm-62-5-8.md",
-        "title": "Pour Out Your Heart Before Him: Psalm 62:5-8 | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2357
-      },
-      {
         "id": "0100",
         "slug": "strength-when-your-heart-fails-psalm-73-26-the-midday-watch",
         "file": "0100-strength-when-your-heart-fails-psalm-73-26-the-midday-watch.md",
@@ -16078,17 +16113,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-middayjoshua14v11",
-        "file": "0000-short-middayjoshua14v11.yml",
-        "companion_longform_id": "",
-        "scripture": "Joshua 14:11-12",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm141v3",
