@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T00:26:42Z",
+  "generated_at": "2026-11-21T00:27:12Z",
   "monitor_generated_at": "2026-11-20T22:00:20.527326+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 575,
+    "published_total": 576,
     "published_longform": 175,
-    "published_shorts": 400,
-    "public_total": 573,
+    "published_shorts": 401,
+    "public_total": 574,
     "queued_longform": 56,
-    "queued_shorts": 71,
+    "queued_shorts": 70,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": false
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 78,
+        "published_total": 79,
         "published_longform": 22,
-        "published_shorts": 56,
+        "published_shorts": 57,
         "thumbnail_pending": 6,
-        "public_total": 77,
+        "public_total": 78,
         "queued_longform": 5,
         "queued_other": 5,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0030",
-        "title": "Bedtime Prayer for Anxiety and Overthinking: Philippians 4:6-7",
-        "format": "longform",
-        "youtube_video_id": "YsHGDAO8uRE",
-        "watch_url": "https://youtu.be/YsHGDAO8uRE",
-        "published_on": "2026-11-20",
-        "published_at": "2026-11-20T21:11:53Z"
+        "id": "SHORT-ROMANS8V28",
+        "title": "Say This Romans 8:28 Prayer Before You Sleep | Unseen Hand #Shorts",
+        "format": "short",
+        "youtube_video_id": "F2v-wJHTuac",
+        "watch_url": "https://www.youtube.com/shorts/F2v-wJHTuac",
+        "published_on": "2026-11-21",
+        "published_at": "2026-11-21T00:26:24Z"
       },
       "next_queued_longform": {
         "id": "0031",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-romans8v28",
-        "scripture": "Romans 8:28",
+        "short": "short-romans8v38",
+        "scripture": "Romans 8:38-39",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-ROMANS8V28",
+      "slug": "short-romans8v28-pre-sleep-prayer",
+      "file": "short-romans8v28-pre-sleep-prayer.md",
+      "title": "Say This Romans 8:28 Prayer Before You Sleep | Unseen Hand #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T00:26:24Z",
+      "youtube_video_id": "F2v-wJHTuac",
+      "watch_url": "https://www.youtube.com/shorts/F2v-wJHTuac",
+      "youtu_be_url": "https://youtu.be/F2v-wJHTuac",
+      "shorts_url": "https://www.youtube.com/shorts/F2v-wJHTuac",
+      "studio_url": "https://studio.youtube.com/video/F2v-wJHTuac/edit",
+      "thumb_url": "https://i.ytimg.com/vi/F2v-wJHTuac/hqdefault.jpg",
+      "thumb_text": "FINDING PEACE \u00b7 IN THE CHAOS",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 610
+    },
     {
       "id": "SHORT-FAMILYCOLOSSIANS3V14",
       "slug": "short-familycolossians3v14-household-prayer",
@@ -15244,17 +15268,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-romans8v28",
-        "file": "0000-short-romans8v28.yml",
-        "companion_longform_id": "",
-        "scripture": "Romans 8:28",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-romans8v38",
