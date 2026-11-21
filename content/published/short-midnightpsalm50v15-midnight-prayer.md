@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["MIDNIGHT WATCH", "A SACRED VIGIL", "PSALM 50:15", "PRAYER FOR RELEASE"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-21T17:00:26Z"
+thumbnail_retry_after: "2026-11-28T17:27:57Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 That relentless worry keeping you wide awake is why you are hearing this right now. Bring that heavy weight into the light of God as the world remains perfectly still. And call upon me in the day of trouble: I will deliver thee, and thou shalt glorify me. Father, this soul calls out to you in the darkness, seeking your mighty, quiet hand. Take the burden that feels impossible to carry alone and replace it with your peace. May your deliverance be the anchor for a spirit that waits on you through tonight.
