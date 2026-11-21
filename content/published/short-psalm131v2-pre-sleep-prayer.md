@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["FINDING REST", "IN THE QUIET", "OF THE NIGHT", "GOD IS NEAR"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If that restless pattern of thought keeps you awake, you are invited to stillness now. Surely I have behaved and quieted myself, as a child that is weaned of his mother: my soul is even as a weaned child. Lord, help me release the need to strive, and settle into the hollow of your hand. I offer my spirit to you, finding contentment in your shadow rather than my own strength. Let your presence fall over this room, quieting every fear until morning light finally arrives. In your name I rest, trusting you with the morning, the future, and my heart.

@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["PSALM 69:30", "PRAISE GOD WITH A SONG", "MAGNIFY HIM WITH THANKS", "THE PRAISE GARDEN"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-28T21:19:40Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If your spirit feels too weary to sing, bring your quiet heart before God right now. Holy Scripture declares: I will praise the name of God with a song, and will magnify him with thanksgiving. Lord, even when our voices falter, we lift our gratitude to You today. We thank You for Your unseen faithfulness, Your tender care, and the quiet mercies that sustain us in every trial. Help us to magnify Your goodness above our deepest fears, turning every sigh into praise and every breath into thanksgiving. May Your gentle peace guard our minds as we walk step by step in Your grace. Subscribe to join our daily prayer in The Praise Garden.

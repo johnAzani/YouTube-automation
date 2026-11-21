@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["MIDNIGHT WATCH", "1 SAMUEL 17:47", "THE BATTLE IS", "THE LORD'S"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-28T21:19:31Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If an impossible obstacle is keeping you awake in fear tonight, stay right here. Scripture declares, And all this assembly shall know that the LORD saveth not with sword and spear: for the battle is the LORD’s, and he will give you into our hands. Lord, at this midnight hour, we surrender every overwhelming battle facing us into Your hands. We refuse to walk in our own limited strength. Give us courage to stand firm against giant fears, knowing You fight for us. Deliver us from dread and fill us with Your divine peace. Subscribe to join The Midnight Watch in nightly prayer.

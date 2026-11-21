@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["LEAVING A LEGACY", "OF GOD'S WORKS", "IN YOUR HOME", "PRAYING PSALM 78"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-28T21:19:33Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If you are worried that your children will lose their way, hear this truth. We will not hide them from their children, showing to the generation to come the praises of the LORD, and his strength, and his wonderful works that he hath done. For he established a testimony in Jacob, and appointed a law in Israel, which he commanded our fathers, that they should make them known to their children: That the generation to come might know them, even the children which should be born; who should arise and declare them to their children: That they might set their hope in God, and not forget the works of God, but keep his commandments: Lord, help us imprint Your glory upon their hearts so they walk in Your light always. Amen.
