@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T15:58:19Z",
+  "generated_at": "2026-11-21T16:12:50Z",
   "monitor_generated_at": "2026-11-21T15:04:03.237531+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 604,
-    "published_longform": 181,
-    "published_shorts": 423,
-    "public_total": 602,
-    "queued_longform": 58,
-    "queued_shorts": 92,
+    "published_total": 606,
+    "published_longform": 182,
+    "published_shorts": 424,
+    "public_total": 604,
+    "queued_longform": 57,
+    "queued_shorts": 91,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -305,33 +305,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 52,
-        "published_longform": 17,
-        "published_shorts": 35,
-        "thumbnail_pending": 52,
-        "public_total": 52,
-        "queued_longform": 6,
+        "published_total": 54,
+        "published_longform": 18,
+        "published_shorts": 36,
+        "thumbnail_pending": 54,
+        "public_total": 54,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-FAMILYECCLESIASTES4V9",
-        "title": "Pray This Ecclesiastes 4:9-12 Family Prayer Over Your Home | Mutual Strength #Shorts",
-        "format": "short",
-        "youtube_video_id": "ZIWRz_BGONY",
-        "watch_url": "https://www.youtube.com/shorts/ZIWRz_BGONY",
-        "published_on": "2026-11-21",
-        "published_at": "2026-11-21T11:21:57Z"
-      },
-      "next_queued_longform": {
         "id": "0317",
         "title": "Walking Out the Door in Faith: Deuteronomy 28:3-6 | The Family Altar",
-        "words": 2058,
+        "format": "longform",
+        "youtube_video_id": "FmiTNRubtS8",
+        "watch_url": "https://youtu.be/FmiTNRubtS8",
+        "published_on": "2026-11-21",
+        "published_at": "2026-11-21T16:11:56Z"
+      },
+      "next_queued_longform": {
+        "id": "0318",
+        "title": "Blessing Over Sons and Daughters: Psalm 144:12-15 | The Family Altar",
+        "words": 1208,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyluke10v5",
-        "scripture": "Luke 10:5-6",
+        "short": "short-familypsalm78v4",
+        "scripture": "Psalm 78:4-7",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0317",
+      "slug": "walking-out-the-door-in-faith-deuteronomy-28-3-6",
+      "file": "0317-walking-out-the-door-in-faith-deuteronomy-28-3-6.md",
+      "title": "Walking Out the Door in Faith: Deuteronomy 28:3-6 | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T16:11:56Z",
+      "youtube_video_id": "FmiTNRubtS8",
+      "watch_url": "https://youtu.be/FmiTNRubtS8",
+      "youtu_be_url": "https://youtu.be/FmiTNRubtS8",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/FmiTNRubtS8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/FmiTNRubtS8/hqdefault.jpg",
+      "thumb_text": "GUARD EVERY STEP",
+      "thumbnail_pending": true,
+      "duration_label": "~14 min",
+      "words": 2058
+    },
+    {
       "id": "0073",
       "slug": "when-you-need-direction-for-today-isaiah-30-21-the-morning-altar",
       "file": "0073-when-you-need-direction-for-today-isaiah-30-21-the-morning-altar.md",
@@ -868,6 +892,30 @@
       "thumbnail_pending": false,
       "duration_label": "52s",
       "words": 624
+    },
+    {
+      "id": "SHORT-FAMILYLUKE10V5",
+      "slug": "short-familyluke10v5-household-prayer",
+      "file": "short-familyluke10v5-household-prayer.md",
+      "title": "Pray This Luke 10:5-6 Family Prayer Over Your Home | Choose Stillness #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T14:46:47Z",
+      "youtube_video_id": "pQqGh3mJm30",
+      "watch_url": "https://www.youtube.com/shorts/pQqGh3mJm30",
+      "youtu_be_url": "https://youtu.be/pQqGh3mJm30",
+      "shorts_url": "https://www.youtube.com/shorts/pQqGh3mJm30",
+      "studio_url": "https://studio.youtube.com/video/pQqGh3mJm30/edit",
+      "thumb_url": "https://i.ytimg.com/vi/pQqGh3mJm30/hqdefault.jpg",
+      "thumb_text": "PEACE BE \u00b7 TO THIS",
+      "thumbnail_pending": true,
+      "duration_label": "50s",
+      "words": 654
     },
     {
       "id": "SHORT-DEUTERONOMY33V12",
@@ -15487,19 +15535,6 @@
         "words": 1480
       },
       {
-        "id": "0317",
-        "slug": "walking-out-the-door-in-faith-deuteronomy-28-3-6",
-        "file": "0317-walking-out-the-door-in-faith-deuteronomy-28-3-6.md",
-        "title": "Walking Out the Door in Faith: Deuteronomy 28:3-6 | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2058
-      },
-      {
         "id": "0318",
         "slug": "blessing-over-sons-and-daughters-psalm-144",
         "file": "0318-blessing-over-sons-and-daughters-psalm-144.md",
@@ -15956,17 +15991,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-familyluke10v5",
-        "file": "0000-short-familyluke10v5.yml",
-        "companion_longform_id": "",
-        "scripture": "Luke 10:5-6",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
       {
         "short": "short-familypsalm78v4",
         "file": "0000-short-familypsalm78v4.yml",
