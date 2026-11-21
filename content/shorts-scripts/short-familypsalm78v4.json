@@ -1,0 +1,276 @@
+{
+  "key": "short-familypsalm78v4",
+  "channel": "prayer5",
+  "psalm": 78,
+  "title": [
+    "PASSING FAITH",
+    "TO THE FUTURE"
+  ],
+  "poster": [
+    "LEAVING A LEGACY",
+    "OF GOD'S WORKS",
+    "IN YOUR HOME",
+    "PRAYING PSALM 78"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "open leather bible on rustic wooden table with soft lamplight",
+    "warm sun rays hitting a cozy home living room corner",
+    "dried olive branches in a ceramic vase near a window",
+    "peaceful rolling hills at golden hour from a porch",
+    "soft focus candle glowing beside an old wooden cross",
+    "gentle morning light on a quiet family dining table"
+  ],
+  "scenes": [
+    {
+      "a": "If you are worried that your children will lose their way,",
+      "img": "short-familypsalm78v4-scene-01.jpg",
+      "kicker": "PSALM 78:4",
+      "sub": "YOUR FAITH MATTERS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We will not hide them from their children, showing to the generation to come the praises of the LORD, and his strength, and his wonderful works that he hath done.",
+      "img": "short-familypsalm78v4-scene-02.jpg",
+      "kicker": "GOD'S TESTIMONY",
+      "sub": "TELLING THE STORIES",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For he established a testimony in Jacob, and appointed a law in Israel, which he commanded our fathers, that they should make them known to their children:",
+      "img": "short-familypsalm78v4-scene-03.jpg",
+      "kicker": "A SACRED COMMAND",
+      "sub": "KNOWN TO OUR CHILDREN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "That the generation to come might know them, even the children which should be born; who should arise and declare them to their children:",
+      "img": "short-familypsalm78v4-scene-04.jpg",
+      "kicker": "GENERATION TO COME",
+      "sub": "THE FAITH CONTINUES",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "That they might set their hope in God, and not forget the works of God, but keep his commandments:",
+      "img": "short-familypsalm78v4-scene-05.jpg",
+      "kicker": "SET YOUR HOPE",
+      "sub": "REMEMBERING HIS WORKS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, help us imprint Your glory upon their hearts so they walk in Your light always.",
+      "img": "short-familypsalm78v4-scene-06.jpg",
+      "kicker": "OUR HOUSEHOLD PRAYER",
+      "sub": "MAY THEY WALK IN LIGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are worried that your children will lose their way, hear this truth."
+    ],
+    [
+      8,
+      28,
+      "We will not hide them from their children, showing to the generation to come the praises of the LORD, and his strength, and his wonderful works that he hath done."
+    ],
+    [
+      28,
+      48,
+      "For he established a testimony in Jacob, and appointed a law in Israel, which he commanded our fathers, that they should make them known to their children:"
+    ],
+    [
+      48,
+      68,
+      "That the generation to come might know them, even the children which should be born; who should arise and declare them to their children:"
+    ],
+    [
+      68,
+      88,
+      "That they might set their hope in God, and not forget the works of God, but keep his commandments:"
+    ],
+    [
+      88,
+      105,
+      "Lord, help us imprint Your glory upon their hearts so they walk in Your light always. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF YOU WORRY",
+        "CHILDREN LOSE WAY",
+        "HEAR THIS TRUTH"
+      ],
+      [
+        "WORRY",
+        "TRUTH"
+      ],
+      "PSALM 78:4"
+    ],
+    [
+      8,
+      28,
+      [
+        "WE WILL NOT HIDE",
+        "SHOWING THE PRAISES",
+        "OF THE LORD"
+      ],
+      [
+        "NOT HIDE",
+        "PRAISES"
+      ],
+      "PSALM 78:4"
+    ],
+    [
+      28,
+      48,
+      [
+        "HE ESTABLISHED TESTIMONY",
+        "COMMANDED OUR FATHERS",
+        "KNOWN TO CHILDREN"
+      ],
+      [
+        "TESTIMONY",
+        "KNOWN"
+      ],
+      "PSALM 78:5"
+    ],
+    [
+      48,
+      68,
+      [
+        "GENERATION TO COME",
+        "SHOULD ARISE AND",
+        "DECLARE TO CHILDREN"
+      ],
+      [
+        "GENERATION",
+        "DECLARE"
+      ],
+      "PSALM 78:6"
+    ],
+    [
+      68,
+      88,
+      [
+        "SET HOPE IN GOD",
+        "NOT FORGET WORKS",
+        "KEEP COMMANDMENTS"
+      ],
+      [
+        "SET HOPE",
+        "KEEP"
+      ],
+      "PSALM 78:7"
+    ],
+    [
+      88,
+      105,
+      [
+        "IMPRINT YOUR GLORY",
+        "UPON THEIR HEARTS",
+        "WALK IN LIGHT"
+      ],
+      [
+        "IMPRINT",
+        "LIGHT"
+      ],
+      "PSALM 78:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are worried that your children will lose their way,",
+      "kind": "phrase",
+      "words": [
+        "WORRY",
+        "CHILDREN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We will not hide them from their children, showing to the generation to come the praises of the LORD, and his strength, and his wonderful works that he hath done.",
+      "kind": "phrase",
+      "words": [
+        "NOT HIDE",
+        "PRAISES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For he established a testimony in Jacob, and appointed a law in Israel, which he commanded our fathers, that they should make them known to their children:",
+      "kind": "phrase",
+      "words": [
+        "TESTIMONY",
+        "KNOWN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "That the generation to come might know them, even the children which should be born; who should arise and declare them to their children:",
+      "kind": "phrase",
+      "words": [
+        "GENERATION",
+        "DECLARE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "That they might set their hope in God, and not forget the works of God, but keep his commandments:",
+      "kind": "phrase",
+      "words": [
+        "SET HOPE",
+        "KEEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help us imprint Your glory upon their hearts so they walk in Your light always.",
+      "kind": "phrase",
+      "words": [
+        "IMPRINT",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 78:4-7"
+}
