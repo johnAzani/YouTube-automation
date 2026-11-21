@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T20:02:55Z",
+  "generated_at": "2026-11-21T20:03:37Z",
   "monitor_generated_at": "2026-11-21T19:30:32.776979+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 616,
+    "published_total": 617,
     "published_longform": 184,
-    "published_shorts": 432,
-    "public_total": 614,
+    "published_shorts": 433,
+    "public_total": 615,
     "queued_longform": 55,
-    "queued_shorts": 83,
+    "queued_shorts": 82,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 47,
+        "published_total": 48,
         "published_longform": 12,
-        "published_shorts": 35,
-        "thumbnail_pending": 47,
-        "public_total": 47,
+        "published_shorts": 36,
+        "thumbnail_pending": 48,
+        "public_total": 48,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0711",
-        "title": "Rejoicing in the Day He Made: Psalm 118:24 | The Praise Garden",
-        "format": "longform",
-        "youtube_video_id": "SX9OEau8_NU",
-        "watch_url": "https://youtu.be/SX9OEau8_NU",
+        "id": "SHORT-GARDENPSALM69V30",
+        "title": "Pray This Psalm 69:30 Prayer of Thanksgiving | Bring Your Quiet Heart #Shorts",
+        "format": "short",
+        "youtube_video_id": "DbelIaYuzQw",
+        "watch_url": "https://www.youtube.com/shorts/DbelIaYuzQw",
         "published_on": "2026-11-21",
-        "published_at": "2026-11-21T16:48:47Z"
+        "published_at": "2026-11-21T20:02:52Z"
       },
       "next_queued_longform": {
         "id": "0712",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm69v30",
-        "scripture": "Psalm 69:30",
+        "short": "short-gardenpsalm86v12",
+        "scripture": "Psalm 86:12",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM69V30",
+      "slug": "short-gardenpsalm69v30-thanksgiving-prayer",
+      "file": "short-gardenpsalm69v30-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 69:30 Prayer of Thanksgiving | Bring Your Quiet Heart #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T20:02:52Z",
+      "youtube_video_id": "DbelIaYuzQw",
+      "watch_url": "https://www.youtube.com/shorts/DbelIaYuzQw",
+      "youtu_be_url": "https://youtu.be/DbelIaYuzQw",
+      "shorts_url": "https://www.youtube.com/shorts/DbelIaYuzQw",
+      "studio_url": "https://studio.youtube.com/video/DbelIaYuzQw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/DbelIaYuzQw/hqdefault.jpg",
+      "thumb_text": "PSALM 69:30 \u00b7 PRAISE GOD WITH A SONG",
+      "thumbnail_pending": true,
+      "duration_label": "49s",
+      "words": 651
+    },
     {
       "id": "SHORT-PROVISIONEXODUS16V4",
       "slug": "short-provisionexodus16v4-stewardship-prayer",
@@ -16205,17 +16229,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-gardenpsalm69v30",
-        "file": "0000-short-gardenpsalm69v30.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 69:30",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
       {
         "short": "short-gardenpsalm86v12",
         "file": "0000-short-gardenpsalm86v12.yml",
