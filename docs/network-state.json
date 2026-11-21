@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T15:56:39Z",
+  "generated_at": "2026-11-21T15:58:19Z",
   "monitor_generated_at": "2026-11-21T15:04:03.237531+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 602,
-    "published_longform": 180,
-    "published_shorts": 422,
-    "public_total": 600,
-    "queued_longform": 59,
-    "queued_shorts": 93,
+    "published_total": 604,
+    "published_longform": 181,
+    "published_shorts": 423,
+    "public_total": 602,
+    "queued_longform": 58,
+    "queued_shorts": 92,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -101,33 +101,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 86,
-        "published_longform": 29,
-        "published_shorts": 57,
+        "published_total": 88,
+        "published_longform": 30,
+        "published_shorts": 58,
         "thumbnail_pending": 1,
-        "public_total": 85,
-        "queued_longform": 6,
+        "public_total": 87,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MORNINGGENESIS28V16",
-        "title": "Say This Genesis 28:16-18 Prayer at Sunrise | He Is Here #Shorts",
-        "format": "short",
-        "youtube_video_id": "jQ1vBn8TUUE",
-        "watch_url": "https://www.youtube.com/shorts/jQ1vBn8TUUE",
-        "published_on": "2026-11-21",
-        "published_at": "2026-11-21T11:24:23Z"
-      },
-      "next_queued_longform": {
         "id": "0073",
         "title": "Prayer for Today's First Decision: Isaiah 30:21 | The Morning Altar",
-        "words": 1727,
+        "format": "longform",
+        "youtube_video_id": "9uqol03qBtI",
+        "watch_url": "https://youtu.be/9uqol03qBtI",
+        "published_on": "2026-11-21",
+        "published_at": "2026-11-21T15:57:29Z"
+      },
+      "next_queued_longform": {
+        "id": "0074",
+        "title": "Looking unto the Lord at Daybreak: Micah 7:7 | The Morning Altar",
+        "words": 2160,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morning2peter1v19",
-        "scripture": "2 Peter 1:19",
+        "short": "short-morningpsalm130v5",
+        "scripture": "Psalm 130:5-6",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0073",
+      "slug": "when-you-need-direction-for-today-isaiah-30-21-the-morning-altar",
+      "file": "0073-when-you-need-direction-for-today-isaiah-30-21-the-morning-altar.md",
+      "title": "Prayer for Today's First Decision: Isaiah 30:21 | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T15:57:29Z",
+      "youtube_video_id": "9uqol03qBtI",
+      "watch_url": "https://youtu.be/9uqol03qBtI",
+      "youtu_be_url": "https://youtu.be/9uqol03qBtI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/9uqol03qBtI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/9uqol03qBtI/hqdefault.jpg",
+      "thumb_text": "WALK YE IN IT",
+      "thumbnail_pending": false,
+      "duration_label": "~12 min",
+      "words": 1727
+    },
+    {
       "id": "SHORT-GUIDEDJAMES3V17",
       "slug": "short-guidedjames3v17-guidance-prayer",
       "file": "short-guidedjames3v17-guidance-prayer.md",
@@ -820,6 +844,30 @@
       "thumbnail_pending": false,
       "duration_label": "52s",
       "words": 661
+    },
+    {
+      "id": "SHORT-MORNING2PETER1V19",
+      "slug": "short-morning2peter1v19-sunrise-prayer",
+      "file": "short-morning2peter1v19-sunrise-prayer.md",
+      "title": "Say This 2 Peter 1:19 Prayer at Sunrise | A Light In Darkness #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T14:47:12Z",
+      "youtube_video_id": "WuicGaKBAxQ",
+      "watch_url": "https://www.youtube.com/shorts/WuicGaKBAxQ",
+      "youtu_be_url": "https://youtu.be/WuicGaKBAxQ",
+      "shorts_url": "https://www.youtube.com/shorts/WuicGaKBAxQ",
+      "studio_url": "https://studio.youtube.com/video/WuicGaKBAxQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/WuicGaKBAxQ/hqdefault.jpg",
+      "thumb_text": "THE MORNING ALTAR \u00b7 UNTIL THE DAY DAWN",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 624
     },
     {
       "id": "SHORT-DEUTERONOMY33V12",
@@ -15231,19 +15279,6 @@
         "words": 1025
       },
       {
-        "id": "0073",
-        "slug": "when-you-need-direction-for-today-isaiah-30-21-the-morning-altar",
-        "file": "0073-when-you-need-direction-for-today-isaiah-30-21-the-morning-altar.md",
-        "title": "Prayer for Today's First Decision: Isaiah 30:21 | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1727
-      },
-      {
         "id": "0074",
         "slug": "looking-unto-the-lord-at-daybreak-micah-7-7",
         "file": "0074-looking-unto-the-lord-at-daybreak-micah-7-7.md",
@@ -16096,17 +16131,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morning2peter1v19",
-        "file": "0000-short-morning2peter1v19.yml",
-        "companion_longform_id": "",
-        "scripture": "2 Peter 1:19",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm130v5",

@@ -2,7 +2,7 @@
 id: '0073'
 title: "Prayer for Today's First Decision: Isaiah 30:21 | The Morning Altar"
 slug: when-you-need-direction-for-today-isaiah-30-21-the-morning-altar
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -73,6 +73,14 @@ originality:
   source_notes: true
 title_before: "When You Need Direction for Today: Isaiah 30:21 | The Morning Altar"
 queue_title_fixed_at: "2026-11-16"
+published_on: "2026-11-21"
+published_at: "2026-11-21T15:57:29Z"
+youtube_video_id: "9uqol03qBtI"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The First Light and the Cry for Guidance
