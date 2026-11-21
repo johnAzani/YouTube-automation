@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T19:54:18Z",
+  "generated_at": "2026-11-21T19:54:27Z",
   "monitor_generated_at": "2026-11-21T19:30:32.776979+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 612,
+    "published_total": 613,
     "published_longform": 184,
-    "published_shorts": 428,
-    "public_total": 610,
+    "published_shorts": 429,
+    "public_total": 611,
     "queued_longform": 55,
-    "queued_shorts": 87,
+    "queued_shorts": 86,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 88,
+        "published_total": 89,
         "published_longform": 30,
-        "published_shorts": 58,
+        "published_shorts": 59,
         "thumbnail_pending": 1,
-        "public_total": 87,
+        "public_total": 88,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0073",
-        "title": "Prayer for Today's First Decision: Isaiah 30:21 | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "9uqol03qBtI",
-        "watch_url": "https://youtu.be/9uqol03qBtI",
+        "id": "SHORT-MORNINGPSALM130V5",
+        "title": "Say This Psalm 130:5-6 Prayer at Sunrise | Finding Patience In The Dark #Shorts",
+        "format": "short",
+        "youtube_video_id": "nQHGCQiHVcc",
+        "watch_url": "https://www.youtube.com/shorts/nQHGCQiHVcc",
         "published_on": "2026-11-21",
-        "published_at": "2026-11-21T15:57:29Z"
+        "published_at": "2026-11-21T19:53:41Z"
       },
       "next_queued_longform": {
         "id": "0074",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm130v5",
-        "scripture": "Psalm 130:5-6",
+        "short": "short-morningpsalm17v15",
+        "scripture": "Psalm 17:15",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM130V5",
+      "slug": "short-morningpsalm130v5-sunrise-prayer",
+      "file": "short-morningpsalm130v5-sunrise-prayer.md",
+      "title": "Say This Psalm 130:5-6 Prayer at Sunrise | Finding Patience In The Dark #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T19:53:41Z",
+      "youtube_video_id": "nQHGCQiHVcc",
+      "watch_url": "https://www.youtube.com/shorts/nQHGCQiHVcc",
+      "youtu_be_url": "https://youtu.be/nQHGCQiHVcc",
+      "shorts_url": "https://www.youtube.com/shorts/nQHGCQiHVcc",
+      "studio_url": "https://studio.youtube.com/video/nQHGCQiHVcc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/nQHGCQiHVcc/hqdefault.jpg",
+      "thumb_text": "PATIENTLY WAITING \u00b7 FOR THE DAWNING",
+      "thumbnail_pending": false,
+      "duration_label": "44s",
+      "words": 607
+    },
     {
       "id": "SHORT-FAMILYPSALM78V4",
       "slug": "short-familypsalm78v4-household-prayer",
@@ -16229,17 +16253,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningpsalm130v5",
-        "file": "0000-short-morningpsalm130v5.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 130:5-6",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm17v15",
