@@ -1,6 +1,6 @@
 ---
 id: 0408
-title: "Prayer for Healing and Restoration: Malachi 4:2 | The Healing Balm"
+title: "Healing When the Morning Breaks: Malachi 4:2 | The Healing Balm"
 slug: malachi-4-2-sun-of-righteousness-healing-prayer
 status: published
 channel: prayer6
@@ -80,10 +80,13 @@ originality:
 published_on: "2026-11-14"
 published_at: "2026-11-14T21:16:18Z"
 youtube_video_id: "pCo9x0WUBzw"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Prayer for Healing and Restoration: Malachi 4:2 | The Healing Balm"
+retitled_at: "2026-11-21"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith

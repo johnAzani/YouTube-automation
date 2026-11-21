@@ -1,6 +1,6 @@
 ---
 id: '0407'
-title: "Prayer for Strength When You Are Sick: Psalm 41:1-3 | The Healing Balm"
+title: "When You Are Sick on Your Bed: Psalm 41:1-3 | The Healing Balm"
 slug: psalm-41-1-3-restoration-prayer
 status: published
 channel: prayer6
@@ -80,10 +80,13 @@ originality:
 published_on: "2026-11-14"
 published_at: "2026-11-14T05:32:43Z"
 youtube_video_id: "FXLZDqND66w"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Prayer for Strength When You Are Sick: Psalm 41:1-3 | The Healing Balm"
+retitled_at: "2026-11-21"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith
