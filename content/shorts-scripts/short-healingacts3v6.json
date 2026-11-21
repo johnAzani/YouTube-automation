@@ -1,0 +1,351 @@
+{
+  "key": "short-healingacts3v6",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "RISE UP AND WALK",
+    "GOD'S HEALING POWER"
+  ],
+  "poster": [
+    "IN JESUS NAME",
+    "RISE AND WALK",
+    "RESTORATION",
+    "ACTS 3:6-8"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters gently flowing in soft morning light",
+    "warm golden sanctuary light streaming through high arch windows",
+    "soft white dove gliding over calm pristine turquoise waters",
+    "golden sunlight illuminating clear pure mountain stream",
+    "tranquil sanctuary candle glowing in warm golden light",
+    "peaceful turquoise water ripples reflecting golden sun rays",
+    "warm golden light surrounding peaceful calm waters",
+    "soft white dove silhouette in warm sanctuary light"
+  ],
+  "scenes": [
+    {
+      "a": "If you are sitting in pain",
+      "img": "short-healingacts3v6-scene-01.jpg",
+      "kicker": "ACTS 3:6-8",
+      "sub": "HEALING IN HIS NAME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Then Peter said, Silver and gold",
+      "img": "short-healingacts3v6-scene-02.jpg",
+      "kicker": "ACTS 3:6",
+      "sub": "RISE UP AND WALK",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord Jesus, when human help",
+      "img": "short-healingacts3v6-scene-03.jpg",
+      "kicker": "ACTS 3:6-8",
+      "sub": "GOD OF ALL POWER",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Reach down into every area",
+      "img": "short-healingacts3v6-scene-04.jpg",
+      "kicker": "ACTS 3:6-8",
+      "sub": "TOUCH OF RESTORATION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Strengthen every weary ankle",
+      "img": "short-healingacts3v6-scene-05.jpg",
+      "kicker": "ACTS 3:6-8",
+      "sub": "RENEWED STRENGTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lift up this weary spirit",
+      "img": "short-healingacts3v6-scene-06.jpg",
+      "kicker": "ACTS 3:6-8",
+      "sub": "PEACE AND RECOVERY",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant strength to stand",
+      "img": "short-healingacts3v6-scene-07.jpg",
+      "kicker": "ACTS 3:6-8",
+      "sub": "PRAISING HIS NAME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to receive God's",
+      "img": "short-healingacts3v6-scene-08.jpg",
+      "kicker": "ACTS 3:6-8",
+      "sub": "THE HEALING BALM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If you are sitting in pain wondering how to take your very next step, listen."
+    ],
+    [
+      6,
+      14,
+      "Then Peter said, Silver and gold have I none; but such as I have give I thee: In the name of Jesus Christ of Nazareth rise up and walk."
+    ],
+    [
+      14,
+      20,
+      "Lord Jesus, when human help falls short, your holy name remains full of healing power."
+    ],
+    [
+      20,
+      26,
+      "Reach down into every area of physical weakness and restore what is broken."
+    ],
+    [
+      26,
+      32,
+      "Strengthen every weary ankle and joint, placing your authority over all sickness."
+    ],
+    [
+      32,
+      38,
+      "Lift up this weary spirit and fill this room with your quiet restoration."
+    ],
+    [
+      38,
+      44,
+      "Grant strength to stand again, praising your matchless name."
+    ],
+    [
+      44,
+      48,
+      "Subscribe to receive God's healing peace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF YOU ARE SITTING IN PAIN",
+        "WONDERING HOW TO TAKE",
+        "YOUR VERY NEXT STEP LISTEN"
+      ],
+      [
+        "VERY NEXT STEP"
+      ],
+      "ACTS 3:6-8"
+    ],
+    [
+      6,
+      14,
+      [
+        "THEN PETER SAID SILVER AND GOLD",
+        "HAVE I NONE BUT SUCH AS I HAVE",
+        "GIVE I THEE IN THE NAME OF JESUS",
+        "CHRIST OF NAZARETH RISE UP AND WALK"
+      ],
+      [
+        "RISE UP AND WALK"
+      ],
+      "ACTS 3 : 6"
+    ],
+    [
+      14,
+      20,
+      [
+        "LORD JESUS WHEN HUMAN HELP",
+        "FALLS SHORT YOUR HOLY NAME",
+        "REMAINS FULL OF HEALING POWER"
+      ],
+      [
+        "HEALING POWER"
+      ],
+      "ACTS 3:6-8"
+    ],
+    [
+      20,
+      26,
+      [
+        "REACH DOWN INTO EVERY AREA",
+        "OF PHYSICAL WEAKNESS AND RESTORE",
+        "WHAT IS BROKEN TODAY"
+      ],
+      [
+        "RESTORE WHAT IS BROKEN"
+      ],
+      "ACTS 3:6-8"
+    ],
+    [
+      26,
+      32,
+      [
+        "STRENGTHEN EVERY WEARY ANKLE",
+        "AND JOINT PLACING YOUR AUTHORITY",
+        "OVER ALL SICKNESS NOW"
+      ],
+      [
+        "STRENGTHEN EVERY WEARY ANKLE"
+      ],
+      "ACTS 3:6-8"
+    ],
+    [
+      32,
+      38,
+      [
+        "LIFT UP THIS WEARY SPIRIT",
+        "AND FILL THIS ROOM WITH",
+        "YOUR QUIET RESTORATION"
+      ],
+      [
+        "QUIET RESTORATION"
+      ],
+      "ACTS 3:6-8"
+    ],
+    [
+      38,
+      44,
+      [
+        "GRANT STRENGTH TO STAND AGAIN",
+        "PRAISING YOUR MATCHLESS NAME"
+      ],
+      [
+        "MATCHLESS NAME"
+      ],
+      "ACTS 3:6-8"
+    ],
+    [
+      44,
+      48,
+      [
+        "SUBSCRIBE TO RECEIVE",
+        "GODS HEALING PEACE"
+      ],
+      [
+        "HEALING PEACE"
+      ],
+      "ACTS 3:6-8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are sitting in pain",
+      "kind": "phrase",
+      "words": [
+        "NEXT",
+        "STEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Then Peter said, Silver and gold",
+      "kind": "phrase",
+      "words": [
+        "RISE",
+        "UP",
+        "AND",
+        "WALK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord Jesus, when human help",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "POWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Reach down into every area",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "BROKEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Strengthen every weary ankle",
+      "kind": "phrase",
+      "words": [
+        "STRENGTHEN",
+        "ANKLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lift up this weary spirit",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "RESTORATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant strength to stand",
+      "kind": "phrase",
+      "words": [
+        "MATCHLESS",
+        "NAME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to receive God's",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Acts 3:6-8"
+}
