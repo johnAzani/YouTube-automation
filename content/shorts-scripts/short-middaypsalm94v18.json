@@ -1,0 +1,276 @@
+{
+  "key": "short-middaypsalm94v18",
+  "channel": "prayer3",
+  "psalm": 94,
+  "title": [
+    "THY MERCY HELD ME UP",
+    "NOON PRAYER | PSALM 94:18"
+  ],
+  "poster": [
+    "WHEN YOU FEEL",
+    "UNSTEADY TODAY",
+    "GOD'S MERCY",
+    "HOLDS YOU UP"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "sunlight filtering through office window on wooden desk midday",
+    "bright sun shining over calm mountain lake midday",
+    "high noon sun illuminating quiet forest pathway",
+    "sunbeams resting on empty stone bench midday sun",
+    "warm midday sunlight on clear calm ocean water",
+    "bright open sky with warm midday sun rays clouds"
+  ],
+  "scenes": [
+    {
+      "a": "If your footing felt unsteady in that last decision, God sees your trembling steps.",
+      "img": "short-middaypsalm94v18-scene-01.jpg",
+      "kicker": "PSALM 94:18",
+      "sub": "GOD SEES YOUR TREMBLING STEPS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "His word declares: When I said, My foot slippeth; thy mercy, O LORD, held me up.",
+      "img": "short-middaypsalm94v18-scene-02.jpg",
+      "kicker": "PSALM 94:18",
+      "sub": "THY MERCY HELD ME UP",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, in this midday hour, when momentum falters and our strength wavers, grab hold of our hand.",
+      "img": "short-middaypsalm94v18-scene-03.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "GRAB HOLD OF OUR HAND",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Where we feel ourselves slipping into panic or fatigue, let your unfailing love uphold us right now.",
+      "img": "short-middaypsalm94v18-scene-04.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "UNFAILING LOVE UPHOLDS YOU",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Establish our steps, clear our thoughts, and ground our heart in your steady presence today.",
+      "img": "short-middaypsalm94v18-scene-05.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "STEADY PRESENCE TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Thank you for catching us before we fall. Subscribe to The Midday Watch to pause and pray with us at noon.",
+      "img": "short-middaypsalm94v18-scene-06.jpg",
+      "kicker": "THE MIDDAY WATCH",
+      "sub": "PAUSE AND PRAY AT NOON",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If your footing felt unsteady in that last decision, God sees your trembling steps."
+    ],
+    [
+      8,
+      17,
+      "His word declares: When I said, My foot slippeth; thy mercy, O LORD, held me up."
+    ],
+    [
+      17,
+      26,
+      "Lord, in this midday hour, when momentum falters and our strength wavers, grab hold of our hand."
+    ],
+    [
+      26,
+      35,
+      "Where we feel ourselves slipping into panic or fatigue, let your unfailing love uphold us right now."
+    ],
+    [
+      35,
+      44,
+      "Establish our steps, clear our thoughts, and ground our heart in your steady presence today."
+    ],
+    [
+      44,
+      53,
+      "Thank you for catching us before we fall. Subscribe to The Midday Watch to pause and pray with us at noon."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF YOUR FOOTING FELT UNSTEADY",
+        "IN THAT LAST DECISION",
+        "GOD SEES YOUR TREMBLING STEPS"
+      ],
+      [
+        "UNSTEADY",
+        "GOD SEES"
+      ],
+      "PSALM 94:18"
+    ],
+    [
+      8,
+      17,
+      [
+        "HIS WORD DECLARES WHEN I SAID",
+        "MY FOOT SLIPPETH THY MERCY",
+        "O LORD HELD ME UP"
+      ],
+      [
+        "MY FOOT SLIPPETH",
+        "HELD ME UP"
+      ],
+      "PSALM 94:18"
+    ],
+    [
+      17,
+      26,
+      [
+        "LORD IN THIS MIDDAY HOUR",
+        "WHEN MOMENTUM FALTERS AND STRENGTH WAVERS",
+        "GRAB HOLD OF OUR HAND"
+      ],
+      [
+        "MIDDAY HOUR",
+        "GRAB HOLD"
+      ],
+      "MIDDAY PRAYER"
+    ],
+    [
+      26,
+      35,
+      [
+        "WHERE WE FEEL OURSELVES SLIPPING",
+        "INTO PANIC OR FATIGUE",
+        "LET YOUR UNFAILING LOVE UPHOLD US"
+      ],
+      [
+        "UNFAILING LOVE",
+        "UPHOLD US"
+      ],
+      "MIDDAY PRAYER"
+    ],
+    [
+      35,
+      44,
+      [
+        "ESTABLISH OUR STEPS CLEAR OUR THOUGHTS",
+        "AND GROUND OUR HEART IN YOUR",
+        "STEADY PRESENCE TODAY"
+      ],
+      [
+        "ESTABLISH OUR STEPS",
+        "STEADY PRESENCE"
+      ],
+      "MIDDAY PRAYER"
+    ],
+    [
+      44,
+      53,
+      [
+        "THANK YOU FOR CATCHING US",
+        "BEFORE WE FALL SUBSCRIBE TO",
+        "THE MIDDAY WATCH AT NOON"
+      ],
+      [
+        "CATCHING US",
+        "SUBSCRIBE"
+      ],
+      "THE MIDDAY WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If your footing felt unsteady in that last decision, God sees your trembling steps.",
+      "kind": "phrase",
+      "words": [
+        "UNSTEADY",
+        "GOD SEES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "His word declares: When I said, My foot slippeth; thy mercy, O LORD, held me up.",
+      "kind": "phrase",
+      "words": [
+        "MY FOOT SLIPPETH",
+        "HELD ME UP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, in this midday hour, when momentum falters and our strength wavers, grab hold of our hand.",
+      "kind": "phrase",
+      "words": [
+        "MIDDAY HOUR",
+        "GRAB HOLD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Where we feel ourselves slipping into panic or fatigue, let your unfailing love uphold us right now.",
+      "kind": "phrase",
+      "words": [
+        "UNFAILING LOVE",
+        "UPHOLD US"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Establish our steps, clear our thoughts, and ground our heart in your steady presence today.",
+      "kind": "phrase",
+      "words": [
+        "ESTABLISH OUR STEPS",
+        "STEADY PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thank you for catching us before we fall. Subscribe to The Midday Watch to pause and pray with us at noon.",
+      "kind": "phrase",
+      "words": [
+        "CATCHING US",
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 94:18"
+}

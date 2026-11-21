@@ -1,0 +1,280 @@
+{
+  "key": "short-middayjames1v19",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "SLOW TO ANGER",
+    "SWIFT TO HEAR"
+  ],
+  "poster": [
+    "MIDDAY PRAYER",
+    "JAMES 1:19-20",
+    "THE MIDDAY WATCH",
+    "SEEKING HIS PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sun streaming through wooden blinds",
+    "empty workspace with soft natural light",
+    "still mountain pond at high noon",
+    "dust motes dancing in warm sunbeam",
+    "open window with gentle breeze moving curtains",
+    "closed notebook on a clean desk at noon"
+  ],
+  "scenes": [
+    {
+      "a": "That frustration bubbling up during your meeting is pushing you away from your true center.",
+      "img": "short-middayjames1v19-scene-01.jpg",
+      "kicker": "MIDDAY REFLECTION",
+      "sub": "CENTER YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Wherefore, my beloved brethren, let every man be swift to hear, slow to speak, slow to wrath:",
+      "img": "short-middayjames1v19-scene-02.jpg",
+      "kicker": "JAMES 1:19",
+      "sub": "THE WORD OF GOD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For the wrath of man worketh not the righteousness of God.",
+      "img": "short-middayjames1v19-scene-03.jpg",
+      "kicker": "JAMES 1:20",
+      "sub": "HIS RIGHTEOUSNESS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, quiet the storm of my own reactions so that I might hear Your soft voice.",
+      "img": "short-middayjames1v19-scene-04.jpg",
+      "kicker": "A PRAYER",
+      "sub": "FINDING STILLNESS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Grant me the patience to withhold my tongue when my spirit feels provoked or misunderstood today.",
+      "img": "short-middayjames1v19-scene-05.jpg",
+      "kicker": "A PRAYER",
+      "sub": "GUARDING THE TONGUE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lead me into the space where Your peace dwells above the noise of my own irritation.",
+      "img": "short-middayjames1v19-scene-06.jpg",
+      "kicker": "THE MIDDAY WATCH",
+      "sub": "WALKING IN PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      9,
+      "That frustration bubbling up during your meeting is pushing you away from your true center."
+    ],
+    [
+      10,
+      24,
+      "Wherefore, my beloved brethren, let every man be swift to hear, slow to speak, slow to wrath:"
+    ],
+    [
+      25,
+      33,
+      "For the wrath of man worketh not the righteousness of God."
+    ],
+    [
+      34,
+      44,
+      "Lord, quiet the storm of my own reactions so that I might hear Your soft voice."
+    ],
+    [
+      45,
+      55,
+      "Grant me the patience to withhold my tongue when my spirit feels provoked or misunderstood today."
+    ],
+    [
+      56,
+      65,
+      "Lead me into the space where Your peace dwells above the noise of my own irritation."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      9,
+      [
+        "THAT FRUSTRATION",
+        "BUBBLING UP",
+        "IS PUSHING YOU",
+        "AWAY FROM CENTER"
+      ],
+      [
+        "FRUSTRATION",
+        "CENTER"
+      ],
+      "MIDDAY REFLECTION"
+    ],
+    [
+      10,
+      24,
+      [
+        "SWIFT TO HEAR",
+        "SLOW TO SPEAK",
+        "SLOW TO WRATH"
+      ],
+      [
+        "SWIFT",
+        "SLOW"
+      ],
+      "JAMES 1:19"
+    ],
+    [
+      25,
+      33,
+      [
+        "WRATH OF MAN",
+        "WORKETH NOT",
+        "GOD'S RIGHTEOUSNESS"
+      ],
+      [
+        "WRATH",
+        "RIGHTEOUSNESS"
+      ],
+      "JAMES 1:20"
+    ],
+    [
+      34,
+      44,
+      [
+        "QUIET THE STORM",
+        "OF REACTIONS",
+        "TO HEAR",
+        "HIS VOICE"
+      ],
+      [
+        "QUIET",
+        "VOICE"
+      ],
+      "A PRAYER"
+    ],
+    [
+      45,
+      55,
+      [
+        "GRANT ME PATIENCE",
+        "TO WITHHOLD",
+        "MY TONGUE",
+        "WHEN PROVOKED"
+      ],
+      [
+        "PATIENCE",
+        "TONGUE"
+      ],
+      "A PRAYER"
+    ],
+    [
+      56,
+      65,
+      [
+        "LEAD ME INTO",
+        "YOUR PEACE",
+        "ABOVE THE NOISE",
+        "OF IRRITATION"
+      ],
+      [
+        "PEACE",
+        "NOISE"
+      ],
+      "THE MIDDAY WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That frustration bubbling up during your meeting is pushing you away from your true center.",
+      "kind": "phrase",
+      "words": [
+        "FRUSTRATION",
+        "CENTER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Wherefore, my beloved brethren, let every man be swift to hear, slow to speak, slow to wrath:",
+      "kind": "phrase",
+      "words": [
+        "SWIFT",
+        "SLOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For the wrath of man worketh not the righteousness of God.",
+      "kind": "phrase",
+      "words": [
+        "WRATH",
+        "RIGHTEOUSNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, quiet the storm of my own reactions so that I might hear Your soft voice.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "VOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the patience to withhold my tongue when my spirit feels provoked or misunderstood today.",
+      "kind": "phrase",
+      "words": [
+        "PATIENCE",
+        "TONGUE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lead me into the space where Your peace dwells above the noise of my own irritation.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "NOISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "James 1:19-20"
+}
