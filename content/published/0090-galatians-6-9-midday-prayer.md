@@ -1,6 +1,6 @@
 ---
 id: 0090
-title: "Prayer for When You Feel Like Giving Up: Galatians 6:9"
+title: "Strength to Finish the Day: Galatians 6:9 | The Midday Watch"
 slug: galatians-6-9-midday-prayer
 status: published
 channel: prayer3
@@ -80,10 +80,13 @@ originality:
 published_on: "2026-11-14"
 published_at: "2026-11-14T16:01:28Z"
 youtube_video_id: "o2GQgMUGA7Y"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Prayer for When You Feel Like Giving Up: Galatians 6:9"
+retitled_at: "2026-11-21"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Noonday Pause and the Midday Weight
