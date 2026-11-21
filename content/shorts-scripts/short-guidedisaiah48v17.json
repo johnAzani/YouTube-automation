@@ -1,0 +1,281 @@
+{
+  "key": "short-guidedisaiah48v17",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "ISAIAH 48:17",
+    "FINDING HIS DIRECTION"
+  ],
+  "poster": [
+    "THE LORD YOUR",
+    "REDEEMER",
+    "IS LEADING YOUR",
+    "NEXT STEP"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley dawn",
+    "calm mountain lake sunset",
+    "flowing river forest light",
+    "distant snow capped peak",
+    "golden hour mountain pass",
+    "tranquil forest stream"
+  ],
+  "scenes": [
+    {
+      "a": "The confusion clouding your mind right now is not where your journey is meant to end.",
+      "img": "short-guidedisaiah48v17-scene-01.jpg",
+      "kicker": "ISAIAH 48:17",
+      "sub": "HE TEACHES YOU TO PROFIT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Thus saith the LORD, thy Redeemer, the Holy One of Israel; I am the LORD thy God which teacheth thee to profit, which leadeth thee by the way that thou shouldest go.",
+      "img": "short-guidedisaiah48v17-scene-02.jpg",
+      "kicker": "HIS HOLY WORD",
+      "sub": "THE WAY YOU SHOULD GO",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.6
+      ]
+    },
+    {
+      "a": "Father, please steady the heart that feels pulled in too many directions by worldly noise.",
+      "img": "short-guidedisaiah48v17-scene-03.jpg",
+      "kicker": "A PRAYER FOR CLARITY",
+      "sub": "STEADY MY HEART O LORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "We ask that You reveal the path prepared for us, moving us away from hesitation.",
+      "img": "short-guidedisaiah48v17-scene-04.jpg",
+      "kicker": "SEEKING HIS COUNSEL",
+      "sub": "REVEAL THE PREPARED PATH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Grant us the quiet confidence to follow Your lead even when the destination is hidden.",
+      "img": "short-guidedisaiah48v17-scene-05.jpg",
+      "kicker": "WALKING IN FAITH",
+      "sub": "CONFIDENCE IN HIS LEAD",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "May Your wisdom anchor every choice we make this day. Amen.",
+      "img": "short-guidedisaiah48v17-scene-06.jpg",
+      "kicker": "WISDOM IN EVERY STEP",
+      "sub": "MAY YOUR WISDOM ANCHOR US",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The confusion clouding your mind right now is not where your journey is meant to end."
+    ],
+    [
+      8,
+      28,
+      "Thus saith the LORD, thy Redeemer, the Holy One of Israel; I am the LORD thy God which teacheth thee to profit, which leadeth thee by the way that thou shouldest go."
+    ],
+    [
+      28,
+      40,
+      "Father, please steady the heart that feels pulled in too many directions by worldly noise."
+    ],
+    [
+      40,
+      52,
+      "We ask that You reveal the path prepared for us, moving us away from hesitation."
+    ],
+    [
+      52,
+      65,
+      "Grant us the quiet confidence to follow Your lead even when the destination is hidden."
+    ],
+    [
+      65,
+      75,
+      "May Your wisdom anchor every choice we make this day. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE CONFUSION",
+        "CLOUDING YOUR MIND",
+        "IS NOT",
+        "YOUR FINAL DESTINATION"
+      ],
+      [
+        "CONFUSION",
+        "DESTINATION"
+      ],
+      "ISAIAH 48:17"
+    ],
+    [
+      8,
+      28,
+      [
+        "THUS SAITH THE LORD",
+        "THY REDEEMER",
+        "TEACHETH THEE TO PROFIT",
+        "LEADETH THEE BY THE WAY"
+      ],
+      [
+        "REDEEMER",
+        "LEADETH"
+      ],
+      "ISAIAH 48:17"
+    ],
+    [
+      28,
+      40,
+      [
+        "FATHER STEADY",
+        "THE HEART PULLED",
+        "BY WORLDLY NOISE"
+      ],
+      [
+        "STEADY",
+        "WORLDLY"
+      ],
+      "ISAIAH 48:17"
+    ],
+    [
+      40,
+      52,
+      [
+        "REVEAL THE PATH",
+        "PREPARED FOR US",
+        "AWAY FROM",
+        "HESITATION"
+      ],
+      [
+        "REVEAL",
+        "PREPARED"
+      ],
+      "ISAIAH 48:17"
+    ],
+    [
+      52,
+      65,
+      [
+        "GRANT US CONFIDENCE",
+        "TO FOLLOW YOUR LEAD",
+        "EVEN WHEN",
+        "HIDDEN"
+      ],
+      [
+        "CONFIDENCE",
+        "HIDDEN"
+      ],
+      "ISAIAH 48:17"
+    ],
+    [
+      65,
+      75,
+      [
+        "MAY YOUR WISDOM",
+        "ANCHOR EVERY CHOICE",
+        "MADE THIS DAY",
+        "AMEN"
+      ],
+      [
+        "WISDOM",
+        "ANCHOR"
+      ],
+      "ISAIAH 48:17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The confusion clouding your mind right now is not where your journey is meant to end.",
+      "kind": "phrase",
+      "words": [
+        "CONFUSION",
+        "DESTINATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thus saith the LORD, thy Redeemer, the Holy One of Israel; I am the LORD thy God which teacheth thee to profit, which leadeth thee by the way that thou shouldest go.",
+      "kind": "phrase",
+      "words": [
+        "REDEEMER",
+        "LEADETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, please steady the heart that feels pulled in too many directions by worldly noise.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "WORLDLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We ask that You reveal the path prepared for us, moving us away from hesitation.",
+      "kind": "phrase",
+      "words": [
+        "REVEAL",
+        "PREPARED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us the quiet confidence to follow Your lead even when the destination is hidden.",
+      "kind": "phrase",
+      "words": [
+        "CONFIDENCE",
+        "HIDDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May Your wisdom anchor every choice we make this day. Amen.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "ANCHOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 48:17"
+}

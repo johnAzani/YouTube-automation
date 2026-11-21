@@ -1,0 +1,290 @@
+{
+  "key": "short-guidedjames3v17",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "SEEK HEAVENLY WISDOM",
+    "JAMES 3:17 PRAYER"
+  ],
+  "poster": [
+    "HEAVENLY WISDOM",
+    "PURE AND PEACEABLE",
+    "JAMES 3:17",
+    "THE GUIDED PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley at dawn calm river",
+    "peaceful mountain valley early morning light",
+    "calm mountain river flowing gently pine forest",
+    "foggy mountain pass stillness early morning",
+    "serene mountain meadow with winding stream",
+    "quiet mountain lake surrounded by pine trees twilight"
+  ],
+  "scenes": [
+    {
+      "a": "If a bitter argument is tempting you to act harshly today, seek heavenly wisdom.",
+      "img": "short-guidedjames3v17-scene-01.jpg",
+      "kicker": "JAMES 3:17",
+      "sub": "SEEK GOD'S WISDOM TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "But the wisdom that is from above is first pure, then peaceable, gentle, and easy to be intreated,",
+      "img": "short-guidedjames3v17-scene-02.jpg",
+      "kicker": "JAMES 3:17",
+      "sub": "WISDOM FROM ABOVE IS PURE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "full of mercy and good fruits, without partiality, and without hypocrisy.",
+      "img": "short-guidedjames3v17-scene-03.jpg",
+      "kicker": "JAMES 3:17",
+      "sub": "FULL OF MERCY AND GOOD FRUITS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, deliver us from pride and selfish ambition. Wash away the urge to win with harsh words or deceitful motives.",
+      "img": "short-guidedjames3v17-scene-04.jpg",
+      "kicker": "JAMES 3:17",
+      "sub": "DELIVER US FROM PRIDE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Grant us a gentle heart that listens, a spirit rich in mercy, and actions that bear holy fruit in every decision we face.",
+      "img": "short-guidedjames3v17-scene-05.jpg",
+      "kicker": "JAMES 3:17",
+      "sub": "GRANT US A GENTLE HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Let your peace rule our choices today. Subscribe to The Guided Path to seek God's wisdom for every step.",
+      "img": "short-guidedjames3v17-scene-06.jpg",
+      "kicker": "JAMES 3:17",
+      "sub": "WALK IN GOD'S PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If a bitter argument is tempting you to act harshly today, seek heavenly wisdom."
+    ],
+    [
+      7,
+      15,
+      "But the wisdom that is from above is first pure, then peaceable, gentle, and easy to be intreated,"
+    ],
+    [
+      15,
+      22,
+      "full of mercy and good fruits, without partiality, and without hypocrisy."
+    ],
+    [
+      22,
+      31,
+      "Lord, deliver us from pride and selfish ambition. Wash away the urge to win with harsh words or deceitful motives."
+    ],
+    [
+      31,
+      41,
+      "Grant us a gentle heart that listens, a spirit rich in mercy, and actions that bear holy fruit in every decision we face."
+    ],
+    [
+      41,
+      50,
+      "Let your peace rule our choices today. Subscribe to The Guided Path to seek God's wisdom for every step."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF A BITTER ARGUMENT",
+        "TEMPTS YOU TODAY",
+        "SEEK HEAVENLY WISDOM"
+      ],
+      [
+        "HEAVENLY",
+        "WISDOM"
+      ],
+      "JAMES 3:17"
+    ],
+    [
+      7,
+      15,
+      [
+        "WISDOM FROM ABOVE",
+        "IS FIRST PURE",
+        "PEACEABLE AND GENTLE"
+      ],
+      [
+        "FIRST",
+        "PURE"
+      ],
+      "JAMES 3:17"
+    ],
+    [
+      15,
+      22,
+      [
+        "FULL OF MERCY",
+        "AND GOOD FRUITS",
+        "WITHOUT HYPOCRISY"
+      ],
+      [
+        "MERCY",
+        "GOOD",
+        "FRUITS"
+      ],
+      "JAMES 3:17"
+    ],
+    [
+      22,
+      31,
+      [
+        "DELIVER US FROM PRIDE",
+        "AND SELFISH AMBITION",
+        "WASH AWAY HARSH WORDS"
+      ],
+      [
+        "DELIVER",
+        "PRIDE"
+      ],
+      "JAMES 3:17"
+    ],
+    [
+      31,
+      41,
+      [
+        "GRANT US A GENTLE HEART",
+        "RICH IN MERCY",
+        "BEARING HOLY FRUIT"
+      ],
+      [
+        "GENTLE",
+        "HEART"
+      ],
+      "JAMES 3:17"
+    ],
+    [
+      41,
+      50,
+      [
+        "LET YOUR PEACE RULE",
+        "OUR CHOICES TODAY",
+        "SEEK GODS WISDOM"
+      ],
+      [
+        "PEACE",
+        "WISDOM"
+      ],
+      "JAMES 3:17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If a bitter argument is tempting you to act harshly today, seek heavenly wisdom.",
+      "kind": "phrase",
+      "words": [
+        "BITTER",
+        "ARGUMENT",
+        "HEAVENLY",
+        "WISDOM"
+      ],
+      "hi": 3,
+      "slot": "A"
+    },
+    {
+      "a": "But the wisdom that is from above is first pure, then peaceable, gentle, and easy to be intreated,",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "ABOVE",
+        "PURE",
+        "PEACEABLE"
+      ],
+      "hi": 2,
+      "slot": "B"
+    },
+    {
+      "a": "full of mercy and good fruits, without partiality, and without hypocrisy.",
+      "kind": "phrase",
+      "words": [
+        "MERCY",
+        "GOOD",
+        "FRUITS",
+        "HYPOCRISY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, deliver us from pride and selfish ambition. Wash away the urge to win with harsh words or deceitful motives.",
+      "kind": "phrase",
+      "words": [
+        "DELIVER",
+        "PRIDE",
+        "HARSH",
+        "MOTIVES"
+      ],
+      "hi": 1,
+      "slot": "D"
+    },
+    {
+      "a": "Grant us a gentle heart that listens, a spirit rich in mercy, and actions that bear holy fruit in every decision we face.",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "HEART",
+        "MERCY",
+        "HOLY",
+        "FRUIT"
+      ],
+      "hi": 0,
+      "slot": "E"
+    },
+    {
+      "a": "Let your peace rule our choices today. Subscribe to The Guided Path to seek God's wisdom for every step.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "CHOICES",
+        "GOD'S",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "F"
+    }
+  ],
+  "scripture": "James 3:17"
+}

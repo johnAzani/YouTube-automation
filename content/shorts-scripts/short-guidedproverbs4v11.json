@@ -1,0 +1,250 @@
+{
+  "key": "short-guidedproverbs4v11",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "GOD'S PATH",
+    "FOR YOU"
+  ],
+  "poster": [
+    "WISDOM FOR",
+    "THE UNCERTAIN",
+    "STEP AHEAD",
+    "PROVERBS 4:11"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine mountain pass",
+    "tranquil river at dawn",
+    "sunlight breaking through clouds",
+    "calm path in forest at sunrise",
+    "winding trail in valley",
+    "soft light over open field"
+  ],
+  "scenes": [
+    {
+      "a": "That recurring doubt about your next move is exactly where you must pause right now.",
+      "img": "short-guidedproverbs4v11-scene-01.jpg",
+      "kicker": "PROVERBS 4:11",
+      "sub": "FINDING YOUR WAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, clear the noise from my heart so I might hear Your instruction clearly today.",
+      "img": "short-guidedproverbs4v11-scene-02.jpg",
+      "kicker": "PROVERBS 4:11",
+      "sub": "SEEKING HIS GUIDANCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I have taught thee in the way of wisdom; I have led thee in right paths.",
+      "img": "short-guidedproverbs4v11-scene-03.jpg",
+      "kicker": "PROVERBS 4:11",
+      "sub": "DIVINE WISDOM",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "When thou goest, thy steps shall not be straitened; and when thou runnest, thou shalt not stumble.",
+      "img": "short-guidedproverbs4v11-scene-04.jpg",
+      "kicker": "PROVERBS 4:12",
+      "sub": "WALKING IN TRUTH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Strengthen my resolve to follow where You lead, trusting Your light in the darkness.",
+      "img": "short-guidedproverbs4v11-scene-05.jpg",
+      "kicker": "PROVERBS 4:12",
+      "sub": "TRUSTING THE LORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Grant me the grace to move with confidence, knowing You order my every single step.",
+      "img": "short-guidedproverbs4v11-scene-06.jpg",
+      "kicker": "PROVERBS 4:12",
+      "sub": "PEACE IN HIS PLAN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "That recurring doubt about your next move is exactly where you must pause right now."
+    ],
+    [
+      16,
+      32,
+      "Lord, clear the noise from my heart so I might hear Your instruction clearly today."
+    ],
+    [
+      33,
+      49,
+      "I have taught thee in the way of wisdom; I have led thee in right paths."
+    ],
+    [
+      50,
+      68,
+      "When thou goest, thy steps shall not be straitened; and when thou runnest, thou shalt not stumble."
+    ],
+    [
+      69,
+      85,
+      "Strengthen my resolve to follow where You lead, trusting Your light in the darkness."
+    ],
+    [
+      86,
+      105,
+      "Grant me the grace to move with confidence, knowing You order my every single step."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "RECURRING DOUBT",
+        "ABOUT YOUR NEXT MOVE",
+        "PAUSE RIGHT NOW"
+      ],
+      [
+        "DOUBT",
+        "PAUSE"
+      ],
+      "PROVERBS 4:11"
+    ],
+    [
+      16,
+      32,
+      [
+        "CLEAR THE NOISE",
+        "HEAR YOUR INSTRUCTION",
+        "CLEARLY TODAY"
+      ],
+      [
+        "CLEAR",
+        "INSTRUCTION"
+      ],
+      "PROVERBS 4:11"
+    ],
+    [
+      33,
+      49,
+      [
+        "TAUGHT THEE",
+        "IN THE WAY",
+        "OF WISDOM",
+        "LED THEE",
+        "IN RIGHT PATHS"
+      ],
+      [
+        "WISDOM",
+        "RIGHT PATHS"
+      ],
+      "PROVERBS 4:11"
+    ],
+    [
+      50,
+      68,
+      [
+        "THY STEPS",
+        "NOT STRAITENED",
+        "THOU SHALT",
+        "NOT STUMBLE"
+      ],
+      [
+        "NOT STRAITENED",
+        "NOT STUMBLE"
+      ],
+      "PROVERBS 4:12"
+    ],
+    [
+      69,
+      85,
+      [
+        "STRENGTHEN MY RESOLVE",
+        "FOLLOW WHERE YOU LEAD",
+        "LIGHT IN DARKNESS"
+      ],
+      [
+        "STRENGTHEN",
+        "FOLLOW"
+      ],
+      "PROVERBS 4:12"
+    ],
+    [
+      86,
+      105,
+      [
+        "GRACE TO MOVE",
+        "WITH CONFIDENCE",
+        "YOU ORDER",
+        "EVERY SINGLE STEP"
+      ],
+      [
+        "CONFIDENCE",
+        "ORDER"
+      ],
+      "PROVERBS 4:12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That recurring doubt about your next move is exactly where you must pause right now.",
+      "kind": "phrase",
+      "words": [
+        "DOUBT",
+        "PAUSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I have taught thee in the way of wisdom; I have led thee in right paths.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "RIGHT PATHS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When thou goest, thy steps shall not be straitened; and when thou runnest, thou shalt not stumble.",
+      "kind": "phrase",
+      "words": [
+        "NOT STRAITENED",
+        "NOT STUMBLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 4:11-12"
+}
