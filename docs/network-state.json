@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T20:03:37Z",
+  "generated_at": "2026-11-21T20:08:31Z",
   "monitor_generated_at": "2026-11-21T19:30:32.776979+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 617,
+    "published_total": 618,
     "published_longform": 184,
-    "published_shorts": 433,
-    "public_total": 615,
+    "published_shorts": 434,
+    "public_total": 616,
     "queued_longform": 55,
-    "queued_shorts": 82,
+    "queued_shorts": 81,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -645,23 +645,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 45,
+        "published_total": 46,
         "published_longform": 12,
-        "published_shorts": 33,
+        "published_shorts": 34,
         "thumbnail_pending": 4,
-        "public_total": 45,
+        "public_total": 46,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDJAMES3V17",
-        "title": "Pray This James 3:17 Prayer for God's Guidance | Seek God's Wisdom Today #Shorts",
+        "id": "SHORT-GUIDEDPROVERBS4V11",
+        "title": "Pray This Proverbs 4:11-12 Prayer for God's Guidance | Finding Your Way #Shorts",
         "format": "short",
-        "youtube_video_id": "y16x6JhxW4Y",
-        "watch_url": "https://www.youtube.com/shorts/y16x6JhxW4Y",
+        "youtube_video_id": "W1fGR_1Ad7k",
+        "watch_url": "https://www.youtube.com/shorts/W1fGR_1Ad7k",
         "published_on": "2026-11-21",
-        "published_at": "2026-11-21T15:55:44Z"
+        "published_at": "2026-11-21T20:07:43Z"
       },
       "next_queued_longform": {
         "id": "0812",
@@ -670,8 +670,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedproverbs4v11",
-        "scripture": "Proverbs 4:11-12",
+        "short": "short-guidedisaiah58v11",
+        "scripture": "Isaiah 58:11",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDPROVERBS4V11",
+      "slug": "short-guidedproverbs4v11-guidance-prayer",
+      "file": "short-guidedproverbs4v11-guidance-prayer.md",
+      "title": "Pray This Proverbs 4:11-12 Prayer for God's Guidance | Finding Your Way #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T20:07:43Z",
+      "youtube_video_id": "W1fGR_1Ad7k",
+      "watch_url": "https://www.youtube.com/shorts/W1fGR_1Ad7k",
+      "youtu_be_url": "https://youtu.be/W1fGR_1Ad7k",
+      "shorts_url": "https://www.youtube.com/shorts/W1fGR_1Ad7k",
+      "studio_url": "https://studio.youtube.com/video/W1fGR_1Ad7k/edit",
+      "thumb_url": "https://i.ytimg.com/vi/W1fGR_1Ad7k/hqdefault.jpg",
+      "thumb_text": "WISDOM FOR \u00b7 THE UNCERTAIN",
+      "thumbnail_pending": false,
+      "duration_label": "42s",
+      "words": 609
+    },
     {
       "id": "SHORT-GARDENPSALM69V30",
       "slug": "short-gardenpsalm69v30-thanksgiving-prayer",
@@ -16250,17 +16274,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedproverbs4v11",
-        "file": "0000-short-guidedproverbs4v11.yml",
-        "companion_longform_id": "",
-        "scripture": "Proverbs 4:11-12",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-healingluke13v11",
