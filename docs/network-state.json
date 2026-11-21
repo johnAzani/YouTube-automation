@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T00:27:30Z",
+  "generated_at": "2026-11-21T00:31:55Z",
   "monitor_generated_at": "2026-11-20T22:00:20.527326+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 577,
+    "published_total": 578,
     "published_longform": 175,
-    "published_shorts": 402,
-    "public_total": 575,
+    "published_shorts": 403,
+    "public_total": 576,
     "queued_longform": 56,
-    "queued_shorts": 69,
+    "queued_shorts": 68,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": false
@@ -373,23 +373,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 52,
+        "published_total": 53,
         "published_longform": 15,
-        "published_shorts": 37,
+        "published_shorts": 38,
         "thumbnail_pending": 2,
-        "public_total": 52,
+        "public_total": 53,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0414",
-        "title": "When Your Heart Is Heavy and Broken: Psalm 34:17-19 | The Healing Balm",
-        "format": "longform",
-        "youtube_video_id": "WkCwviY7JCM",
-        "watch_url": "https://youtu.be/WkCwviY7JCM",
-        "published_on": "2026-11-20",
-        "published_at": "2026-11-20T21:50:52Z"
+        "id": "SHORT-HEALING3JOHN1V2",
+        "title": "Pray This 3 John 1:2 Healing Prayer for Peace & Strength | He Is Near You #Shorts",
+        "format": "short",
+        "youtube_video_id": "moVPd65dCRk",
+        "watch_url": "https://www.youtube.com/shorts/moVPd65dCRk",
+        "published_on": "2026-11-21",
+        "published_at": "2026-11-21T00:31:09Z"
       },
       "next_queued_longform": {
         "id": "0415",
@@ -398,8 +398,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healing3john1v2",
-        "scripture": "3 John 1:2",
+        "short": "short-healing2corinthians12v9",
+        "scripture": "2 Corinthians 12:9",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALING3JOHN1V2",
+      "slug": "short-healing3john1v2-restoration-prayer",
+      "file": "short-healing3john1v2-restoration-prayer.md",
+      "title": "Pray This 3 John 1:2 Healing Prayer for Peace & Strength | He Is Near You #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T00:31:09Z",
+      "youtube_video_id": "moVPd65dCRk",
+      "watch_url": "https://www.youtube.com/shorts/moVPd65dCRk",
+      "youtu_be_url": "https://youtu.be/moVPd65dCRk",
+      "shorts_url": "https://www.youtube.com/shorts/moVPd65dCRk",
+      "studio_url": "https://studio.youtube.com/video/moVPd65dCRk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/moVPd65dCRk/hqdefault.jpg",
+      "thumb_text": "RESTORE YOUR SOUL \u00b7 GOD'S PROMISE FOR YOU",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 644
+    },
     {
       "id": "SHORT-MORNINGPSALM86V11",
       "slug": "short-morningpsalm86v11-sunrise-prayer",
@@ -15644,17 +15668,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healing3john1v2",
-        "file": "0412-short-healing3john1v2.yml",
-        "companion_longform_id": "0412",
-        "scripture": "3 John 1:2",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healing2corinthians12v9",
