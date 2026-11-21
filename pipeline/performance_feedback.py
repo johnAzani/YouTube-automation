@@ -251,6 +251,9 @@ class VideoPerformance:
     engagement_rate: float = 0.0
     score: float = 0.0
     measured: bool = False
+    #: Average % viewed from YouTube Analytics when the channel has been
+    #: granted it. None when it has not. Over 100 means the Short looped.
+    average_view_percent: float | None = None
 
     def as_dict(self) -> dict:
         return {
@@ -278,10 +281,46 @@ def _parse_date(s: str) -> date | None:
         return None
 
 
+def load_retention_index(channel_id: str | None = None,
+                         analytics_dir: Path | None = None) -> dict[str, float]:
+    """``video_id -> average % viewed`` from this channel's Analytics file.
+
+    Fail-soft: a missing file, unreadable JSON, or a channel that has not been
+    granted Analytics is ``{}``. The file is written by
+    ``scripts/analytics_reader.py`` and never carries a money metric.
+    """
+    if not channel_id:
+        return {}
+    from .channels import normalize_channel_id
+
+    directory = Path(analytics_dir) if analytics_dir else ANALYTICS_DIR
+    path = directory / f"{normalize_channel_id(channel_id)}.json"
+    if not path.is_file():
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8")) or {}
+    except (OSError, json.JSONDecodeError):
+        return {}
+    out: dict[str, float] = {}
+    for row in payload.get("videos_365d") or []:
+        if not isinstance(row, dict):
+            continue
+        vid = str(row.get("video_id") or "").strip()
+        apv = row.get("average_view_percent")
+        if not vid or apv is None:
+            continue
+        try:
+            out[vid] = float(apv)
+        except (TypeError, ValueError):
+            continue
+    return out
+
+
 def compute_video_performance(
     snapshots: list[dict],
     published_index: dict[str, dict],
     today: date | None = None,
+    retention_index: dict[str, float] | None = None,
 ) -> list[VideoPerformance]:
     """Collapse the rolling snapshots to the latest reading per video and score it.
 
@@ -322,6 +361,12 @@ def compute_video_performance(
         velocity = views / max(age_days, 1) if age_days >= MIN_AGE_DAYS_FOR_VELOCITY else 0.0
         engagement = (likes + comments) / views if views >= MIN_VIEWS_FOR_ENGAGEMENT else 0.0
 
+        apv = None
+        if retention_index and vid in retention_index:
+            try:
+                apv = float(retention_index[vid])
+            except (TypeError, ValueError):
+                apv = None
         results.append(VideoPerformance(
             video_id=vid,
             title=title,
@@ -337,6 +382,7 @@ def compute_video_performance(
             engagement_rate=engagement,
             measured=(views_known and views >= MIN_VIEWS_FOR_ENGAGEMENT and valid_dates
                       and age_days >= MIN_AGE_DAYS_FOR_VELOCITY),
+            average_view_percent=apv,
         ))
 
     # Normalise velocity and engagement across the measured long-form cohort, then
@@ -446,6 +492,12 @@ def aggregate_shorts(perf: list[VideoPerformance]) -> dict:
 
     Each bucket carries its count and a ``ratio``: its shrunk average divided by
     the channel's average Short. 1.0 is an average Short for this channel.
+
+    When Analytics has granted average % viewed, a bucket also carries
+    ``avg_apv`` and ``loop_ratio``: how far its Shorts are watched, relative to
+    this channel's average Short. Over 100% viewed means the clip looped.
+    A handful of views at 200% does not crown a book: the same shrinkage as
+    for views, and APV is ignored below ``MIN_VIEWS_FOR_ENGAGEMENT``.
     """
     measured = [v for v in perf if v.format == "short" and v.views_known
                 and v.age_days >= MIN_SHORT_AGE_DAYS]
@@ -453,22 +505,34 @@ def aggregate_shorts(perf: list[VideoPerformance]) -> dict:
     average = total / len(measured) if measured else 0.0
     views_sorted = sorted(v.views for v in measured)
     median = views_sorted[len(views_sorted) // 2] if views_sorted else 0
+    held = [v for v in measured if v.average_view_percent is not None
+            and v.views >= MIN_VIEWS_FOR_ENGAGEMENT]
+    avg_apv = (sum(v.average_view_percent or 0.0 for v in held) / len(held)) if held else 0.0
 
     def buckets(key) -> dict[str, dict]:
-        groups: dict[str, list[int]] = {}
+        groups: dict[str, list[VideoPerformance]] = {}
         for video in measured:
             name = key(video)
             if name:
-                groups.setdefault(name, []).append(video.views)
+                groups.setdefault(name, []).append(video)
         out: dict[str, dict] = {}
-        for name, views in sorted(groups.items()):
+        for name, videos in sorted(groups.items()):
+            views = [v.views for v in videos]
             shrunk = (sum(views) + SHORT_BUCKET_PRIOR * average) / (len(views) + SHORT_BUCKET_PRIOR)
-            out[name] = {"shorts": len(views),
-                         "avg_views": round(sum(views) / len(views), 1),
-                         "ratio": round(shrunk / average, 3) if average > 0 else 1.0}
+            row = {"shorts": len(views),
+                   "avg_views": round(sum(views) / len(views), 1),
+                   "ratio": round(shrunk / average, 3) if average > 0 else 1.0}
+            apvs = [v.average_view_percent for v in videos
+                    if v.average_view_percent is not None and v.views >= MIN_VIEWS_FOR_ENGAGEMENT]
+            if apvs and avg_apv > 0:
+                mean_apv = sum(apvs) / len(apvs)
+                shrunk_apv = (sum(apvs) + SHORT_BUCKET_PRIOR * avg_apv) / (len(apvs) + SHORT_BUCKET_PRIOR)
+                row["avg_apv"] = round(mean_apv, 1)
+                row["loop_ratio"] = round(shrunk_apv / avg_apv, 3)
+            out[name] = row
         return out
 
-    return {
+    report = {
         "measured_shorts": len(measured),
         "total_shorts": sum(1 for v in perf if v.format == "short"),
         "sufficient_data": len(measured) >= MIN_SHORTS_FOR_SIGNAL and average > 0,
@@ -479,6 +543,11 @@ def aggregate_shorts(perf: list[VideoPerformance]) -> dict:
         "by_book": buckets(lambda v: scripture_book(v.title) or scripture_book(v.scripture)),
         "by_theme": buckets(lambda v: v.theme),
     }
+    if held:
+        report["measured_with_apv"] = len(held)
+        report["avg_apv"] = round(avg_apv, 1)
+        report["looped_shorts"] = sum(1 for v in held if (v.average_view_percent or 0) >= 100.0)
+    return report
 
 
 def network_shorts_signal(research_dir: Path | None = None) -> dict | None:
@@ -520,17 +589,31 @@ def network_shorts_signal(research_dir: Path | None = None) -> dict | None:
 
 
 def short_passage_ratio(reference: str, shorts: dict | None) -> float:
-    """Expected views of a Short on this passage, as a multiple of the average Short: 1.0 = unknown or average."""
+    """Expected views of a Short on this passage, as a multiple of the average Short: 1.0 = unknown or average.
+
+    When Analytics has granted average % viewed, the view ratio is averaged with
+    the loop ratio so a book that is watched to the end (or past it) is not
+    outranked by a book that is only clicked. Without Analytics the figure is
+    views alone, as it was.
+    """
     if not shorts or not shorts.get("sufficient_data"):
         return 1.0
     seen: list[float] = []
+    looped: list[float] = []
     book = (shorts.get("by_book") or {}).get(scripture_book(reference))
     if book:
         seen.append(float(book.get("ratio") or 1.0))
+        if "loop_ratio" in book:
+            looped.append(float(book.get("loop_ratio") or 1.0))
     theme = (shorts.get("by_theme") or {}).get(classify_theme(reference))
     if theme and classify_theme(reference) != "general_prayer":
         seen.append(float(theme.get("ratio") or 1.0))
-    return sum(seen) / len(seen) if seen else 1.0
+        if "loop_ratio" in theme:
+            looped.append(float(theme.get("loop_ratio") or 1.0))
+    view = sum(seen) / len(seen) if seen else 1.0
+    if not looped:
+        return view
+    return (view + sum(looped) / len(looped)) / 2.0
 
 
 def rank_short_passages(references: list[str], feedback: dict | None,
@@ -657,7 +740,14 @@ def build_feedback_report(
         snapshots = [r for r in snapshots if r.get("video_id") in published_index]
     today = today or datetime.now(timezone.utc).date()
 
-    perf = compute_video_performance(snapshots, published_index, today)
+    retention_index: dict[str, float] = {}
+    if channel_id:
+        try:
+            retention_index = load_retention_index(channel_id)
+        except Exception:  # noqa: BLE001
+            retention_index = {}
+    perf = compute_video_performance(snapshots, published_index, today,
+                                     retention_index=retention_index)
     themes = aggregate_themes(perf)
     longform = [v for v in perf if v.format != "short"]
     measured = [v for v in longform if v.measured]
@@ -699,6 +789,14 @@ def build_feedback_report(
                 f"Shorts: {strong[0][1].title()} runs {strong[0][0]:.1f}x this channel's average "
                 f"Short ({shorts['avg_views']:.0f} views over {shorts['measured_shorts']} Shorts); "
                 "its passages are written first.")
+        looped = shorts.get("looped_shorts")
+        held = shorts.get("measured_with_apv")
+        if looped and held:
+            shorts_guidance.append(
+                f"Shorts: {looped} of {held} with Analytics retention were watched past "
+                f"the end (average % viewed 100 or more, channel average "
+                f"{shorts.get('avg_apv', 0):.0f}%); looping books share the ranking "
+                "with view counts.")
     else:
         shorts_guidance.append(
             f"Shorts: {shorts['measured_shorts']} measured (need {MIN_SHORTS_FOR_SIGNAL}, each at "

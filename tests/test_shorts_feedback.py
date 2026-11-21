@@ -129,3 +129,67 @@ def test_committed_feedback_files_without_a_shorts_section_are_tolerated():
     listed = list(ev.EVERGREEN["prayer2"])
     stale = {"sufficient_data": False, "themes": []}
     assert pf.rank_short_passages(listed, stale, None) == listed
+
+
+LOOPED = [
+    ("Psalm 27:1 | The Morning Altar", 200, "2026-11-08"),
+    ("Psalm 91:1 | The Morning Altar", 200, "2026-11-08"),
+    ("Psalm 23:1 | The Morning Altar", 200, "2026-11-09"),
+    ("John 14:27 | The Morning Altar", 180, "2026-11-08"),
+    ("John 14:1 | The Morning Altar", 180, "2026-11-08"),
+    ("Proverbs 3:5 | The Morning Altar", 30, "2026-11-09"),
+    ("Proverbs 16:3 | The Morning Altar", 30, "2026-11-10"),
+    ("Isaiah 60:1 | The Morning Altar", 40, "2026-11-10"),
+]
+
+
+def test_a_looping_book_is_not_outranked_by_one_that_is_only_clicked(monkeypatch):
+    """Psalm 27 had the most views at 76% watched; Psalm 16 looped at 191%.
+
+    Views alone would keep writing the clicked book. Analytics average % viewed
+    is what YouTube Help names after 'chose to view'. A 3-view 200% clip is
+    ignored (MIN_VIEWS_FOR_ENGAGEMENT).
+    """
+    snapshots, index = _rows(LOOPED)
+    apv = {f"vid{i:03d}": (160.0 if i in (3, 4) else 55.0) for i in range(8)}
+    monkeypatch.setattr(pf, "load_retention_index", lambda *a, **k: apv)
+    report = pf.build_feedback_report(snapshots, index, today=TODAY, channel_id="prayer2")
+    shorts = report["shorts"]
+    assert shorts["looped_shorts"] == 2
+    assert shorts["by_book"]["john"]["loop_ratio"] > 1.2
+    assert shorts["by_book"]["psalm"]["loop_ratio"] < 1.0
+    ranked = pf.rank_short_passages(["Psalm 46:5", "John 14:27"], report)
+    assert ranked[0] == "John 14:27"
+    text = json.dumps(shorts)
+    assert "vid0" not in text and "vid3" not in text
+
+
+def test_a_handful_of_views_at_200_percent_does_not_crown_a_book(monkeypatch):
+    snapshots, index = _rows(LOOPED + [("Nahum 1:7 | The Morning Altar", 3, "2026-11-09")])
+    apv = {f"vid{i:03d}": 55.0 for i in range(8)}
+    apv["vid008"] = 250.0
+    monkeypatch.setattr(pf, "load_retention_index", lambda *a, **k: apv)
+    shorts = pf.build_feedback_report(snapshots, index, today=TODAY, channel_id="prayer2")["shorts"]
+    assert "loop_ratio" not in shorts["by_book"].get("nahum", {})
+
+
+def test_without_analytics_the_ranking_is_still_views():
+    ranked = pf.rank_short_passages(
+        ["Proverbs 3:6", "Isaiah 43:18-19", "Psalm 46:5", "Jeremiah 29:11", "Psalm 90:14"],
+        _report())
+    assert ranked == ["Psalm 46:5", "Psalm 90:14", "Isaiah 43:18-19", "Jeremiah 29:11", "Proverbs 3:6"]
+
+
+def test_retention_index_reads_the_channel_file_and_swallows_a_broken_one(tmp_path):
+    (tmp_path / "secret-place.json").write_text(json.dumps({
+        "videos_365d": [
+            {"video_id": "kLgHN57fb1w", "average_view_percent": 145.1, "views": 258},
+            {"video_id": "bad", "average_view_percent": "x"},
+            {"views": 1},
+        ]
+    }), encoding="utf-8")
+    got = pf.load_retention_index("secret-place", analytics_dir=tmp_path)
+    assert got == {"kLgHN57fb1w": 145.1}
+    (tmp_path / "prayer2.json").write_text("{not json", encoding="utf-8")
+    assert pf.load_retention_index("prayer2", analytics_dir=tmp_path) == {}
+    assert pf.load_retention_index(None) == {}

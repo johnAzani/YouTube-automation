@@ -2988,16 +2988,44 @@ def channel_for_display_name(channel_name: str | None) -> str | None:
     return None
 
 
+def engagement_invite(channel_id: str | None) -> str:
+    """Ask for like, comment, share and subscribe, in this channel's name.
+
+    YouTube Help counts those after average % viewed. They belong in the first
+    comment and the description, not on the last frame of a Short: a subscribe
+    card is a closer, and the clip has to restart on the hook.
+    """
+    brand = brand_for(channel_id)
+    return (
+        f"If this prayer met you, like it, write Amen or a first name in the "
+        f"comments, share it with one person who needs this verse, and subscribe "
+        f"to {brand.display_name}."
+    )
+
+
+def with_engagement_invite(text: str, channel_id: str | None) -> str:
+    """Append the invite once, so a description pass cannot stack it."""
+    invite = engagement_invite(channel_id)
+    body = (text or "").rstrip()
+    if not body:
+        return invite
+    if invite in body:
+        return body
+    return f"{body}\n\n{invite}"
+
+
 def pinned_comment_for(channel_id: str | None, theme: str, scripture_hook: str,
                        footer: str = "") -> str:
     """The channel's long-form pinned comment, in that channel's voice."""
-    return brand_for(channel_id).longform_pinned_comment.format(
+    body = brand_for(channel_id).longform_pinned_comment.format(
         theme=theme, scripture_hook=scripture_hook, footer=footer)
+    return with_engagement_invite(body, channel_id)
 
 
 def short_pinned_comment_for(channel_id: str | None, url: str, scripture: str,
                              theme: str, footer: str = "") -> str:
     """The channel's Short → long-form bridge comment."""
     brand = brand_for(channel_id)
-    return brand.short_pinned_comment.format(
+    body = brand.short_pinned_comment.format(
         url=url, scripture=scripture, theme=theme, handle=brand.handle, footer=footer)
+    return with_engagement_invite(body, channel_id)

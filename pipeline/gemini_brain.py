@@ -1515,8 +1515,9 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         that renders with mislabelled scripture is worse than a stalled queue.
         """
         from .scripture_text import quote_problems
-        from .short_script import (ShortSpecError, build_prompt, parse_model_json,
-                                   foreign_wording, require_valid, validate_spec)
+        from .short_script import (ShortSpecError, authoring_defects, build_prompt,
+                                   parse_model_json, foreign_wording, require_valid,
+                                   validate_spec)
 
         if scripture is None:
             if longform_doc is None:
@@ -1624,6 +1625,15 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                         print(f"[gemini-brain] Short {key}: {model} used another "
                               f"channel's wording {foreign!r} (attempt {attempt})",
                               flush=True)
+                        continue
+                    # Swipe-window and loop: not in validate_spec, so a queued
+                    # Short with an eight-second first caption still renders.
+                    defects = authoring_defects(spec)
+                    if defects:
+                        last_error = "; ".join(defects[:4])
+                        print(f"[gemini-brain] Short {key}: {model} failed the "
+                              f"first-three-seconds check (attempt {attempt}): "
+                              f"{last_error[:200]}", flush=True)
                         continue
                     if spec.repairs:
                         print(f"[gemini-brain] Short {key}: repaired "

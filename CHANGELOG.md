@@ -5,6 +5,46 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-17 — Like, comment, share and subscribe — in the comment
+
+- **The four YouTube actions still matter.** Help counts likes (and surveys) after average % viewed. They were not being asked for in one place: the Short's last frame said SUBSCRIBE (a closer), the first comment said write AMEN, the description said subscribe.
+- **Changed.** Every channel's first comment, and the Short/long-form description, now asks once: like it, write Amen or a first name in the comments, share it with one person who needs this verse, and subscribe to *this* channel. The invite is named per channel so ten comments are not the same sentence. It is appended once.
+- **Unchanged on purpose:** the prayer Short still ends on the last spoken word. Spoken subscribe stays an authoring defect. The subscribe card is still not painted. Scene-1 kickers and ranking by loop-ratio are untouched.
+- **Unproven:** that a comment invite lifts likes or subscribes — `content/analytics/` has no engagement breakdown. **Owner-only:** unchanged. **Next step:** `top_comment: ok` on the next upload still lands, now with the four asks.
+- Tests: `tests/test_engagement_invite.py` (new, 4).
+
+## 2026-11-17 — The last frame was a subscribe card
+
+- **Two Shorts sat at 98.8% and 99.6% viewed and then left.** Psalm 18:2 (125 views, 54.3s) and Psalm 139:11-12 (52 views, 62.2s). YouTube Help ranks Shorts on average % viewed after the swipe. A loop is 100% or more.
+- **The renderer added 1.6 seconds after the voice so a SUBSCRIBE card could play.** `total = adur + 1.6`. 1.6s is 3% of a 54s clip — the gap between watching to the last word and a loop. Kinetic type was cut 0.4s before that card. Spoken subscribe was already refused at authoring; the card was still painted on every prayer Short, including the 353 waiting in the queue.
+- **Changed, for Shorts rendered from now on.** A prayer Short's encoded length is the narration. The subscribe card in the spec is not painted; the last spoken frame stays on screen so the next frame is the hook. Documentary Shorts keep the 1.6s card. Queued last captions are unaltered — `validate_spec` still loads them. Scene-1 kicker checks and ranking by loop-ratio are untouched.
+- **Unproven:** that the two 99% videos would have looped without the tail — they are already published. **Owner-only:** unchanged. **Next step:** `average_view_percent` on the next rendered Shorts; 100% is a loop.
+- Tests: `tests/test_short_loop_restart.py` (new, 4). Reading: `docs/SHORTS_VIRALITY_RESEARCH_2026-11-17.md` §4d.
+
+## 2026-11-17 — Views are not how long they stayed
+
+- **The brain ranked Shorts by views.** YouTube Help (Shorts search & discovery) names "% who chose to view", then average view duration and average % viewed. The Secret Place's Analytics agrees: Psalm 27 has the most views (393) at 76% watched; Psalm 16:7-8 has 140 views at **191%** and more watch hours. Ranking by views writes the clicked book first.
+- **Average % viewed was already in the repo and never read for ranking.** `content/analytics/secret-place.json` `videos_365d` carries it for 32 videos. Only this channel has been granted Analytics; the other nine are unchanged.
+- **Changed.** `load_retention_index` joins that file by video id. A Short with fewer than 25 views is ignored, so three plays at 200% do not crown a book. When the figure is present, `short_passage_ratio` averages the view ratio with the loop ratio. No video ids enter the committed report. Other channels, and the network pool, still rank by views.
+- **Unproven:** that writing the looping books next raises average % viewed on new Shorts — the first of those will not have had their two days when this lands. **Owner-only:** Analytics on the other nine channels. **Next step:** after the next daily feedback run, `content/research/performance_feedback.json` `shorts.looped_shorts` should read 4 (the four looping Shorts already counted), not missing.
+- Tests: `tests/test_shorts_feedback.py` (+4). Reading: `docs/SHORTS_VIRALITY_RESEARCH_2026-11-17.md` §4c.
+
+## 2026-11-17 — The first picture was a citation
+
+- **285 of 353 Shorts open the HUD on a book+chapter.** `PSALM 23:1`, `PROVERBS 16:3`, `1 PETER 5:7`. Four more open on the channel's name. The prompt's scene example was `"kicker": "PSALM NN:1"`. Kinetic type on frame 0 was already the need; the card a stranger can read by second 0.4 was a reference, the same one on every channel.
+- **The first on-screen phrase matched the eight-second caption.** All 353 end after second 3 (median 8s, 11 words). Caption 1 is now three seconds; the picture has to follow it.
+- **Changed, for Shorts written from now on.** Scene 1 kicker must name the need, not the verse and not the channel. First kinetic phrase must end by second 3 and stay within 8 words. Example kicker is now `STILL HERE`. Queued verse kickers still load — the HUD fade-in at t=0 was left alone on purpose, so a waiting Short does not suddenly put `PSALM NN:1` on frame 0.
+- **Unproven:** that the HUD text moves "% who chose to view". **Owner-only:** unchanged. **Next step:** still `average_view_percent` on the next Shorts.
+- Tests: `tests/test_short_hook_standard.py` (+2). Reading: `docs/SHORTS_VIRALITY_RESEARCH_2026-11-17.md` §4b.
+
+## 2026-11-17 — The swipe happens by second three
+
+- **YouTube ranks a Short on whether a stranger stays.** Help (Shorts search & discovery, read today) names "% of viewers who chose to view", then average view duration and average % viewed. The Secret Place's own Analytics agrees: the four Shorts that looped (145%, 191%, 110%, 129% viewed) produced the most watch hours; Psalm 27 has the most views (393) at 76%.
+- **The prompt was teaching the eight-second first line.** Counted on 353 authored specs: **every** first caption ends after second 3 (median 8s, 15 words). The JSON example was `[[0, 8, "First narrration line."]]`. **193 of 353** last captions speak "subscribe"; the end card already says it. **36** Shorts now open "If you are" — a new template.
+- **Changed, for Shorts written from now on.** Caption 1 is asked for 3–8 words ending by second 3; spoken subscribe/follow/"type amen" is refused; the worn first-three-word skeletons are named. `authoring_defects()` runs only when the brain authors, so a queued eight-second spec still renders. The example in the prompt is now `[0, 3, …]`.
+- **Unproven:** that any of this lifts "% who chose to view" or loops — Studio has the first, `content/analytics/` has the second only for The Secret Place, two days behind. **Owner-only:** phone verification on the seven channels whose thumbnail is a frame YouTube picks; sleep-length long-forms for counted hours. **Next step:** read `average_view_percent` on the next Shorts — a loop is 100% or more.
+- Tests: `tests/test_short_hook_standard.py` (+6). Reading: `docs/SHORTS_VIRALITY_RESEARCH_2026-11-17.md`.
+
 ## 2026-11-17 — The track nobody kept
 
 - **Caption tracks are 85% of the quota spend and leave no artefact.** 149 Short tracks exist (every Short since the field appeared, 14–17 November, all ten channels), **59,600 units**; the same call runs on every long-form and **0 of 139 long-form receipts** has ever recorded whether it worked (~55,600 units unconfirmed). The SRT goes to a gitignored `output/`, the alignment sidecar is gitignored, and the per-word timings survive for six legacy files only — so a Short's whole track, **884–1,131 bytes**, is deleted minutes after YouTube accepts it.
