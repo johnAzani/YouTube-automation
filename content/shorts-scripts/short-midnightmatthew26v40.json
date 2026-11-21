@@ -1,0 +1,247 @@
+{
+  "key": "short-midnightmatthew26v40",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "THE POWER OF",
+    "THE MIDNIGHT WATCH"
+  ],
+  "poster": [
+    "STAY VIGILANT",
+    "BEYOND THE WEARINESS",
+    "HEAR THE CALL",
+    "KEEP THE WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "deep starry night sky over forest",
+    "glowing lantern on stone wall midnight",
+    "silhouette of an ancient watchtower",
+    "soft moonlight reflecting on still water",
+    "candlelight flickering in dark chapel",
+    "distant galaxy in velvet night"
+  ],
+  "scenes": [
+    {
+      "a": "That restlessness keeping you awake",
+      "img": "short-midnightmatthew26v40-scene-01.jpg",
+      "kicker": "MATTHEW 26:40",
+      "sub": "RISE IN SPIRIT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "is the Lord calling you",
+      "img": "short-midnightmatthew26v40-scene-02.jpg",
+      "kicker": "MATTHEW 26:40",
+      "sub": "STAY AWAKE IN PRAYER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And he cometh unto the disciples",
+      "img": "short-midnightmatthew26v40-scene-03.jpg",
+      "kicker": "MATTHEW 26:40",
+      "sub": "THE MASTER IS NEAR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Watch and pray, that ye enter not into temptation",
+      "img": "short-midnightmatthew26v40-scene-04.jpg",
+      "kicker": "MATTHEW 26:41",
+      "sub": "THE SPIRIT IS WILLING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, strengthen my resolve",
+      "img": "short-midnightmatthew26v40-scene-05.jpg",
+      "kicker": "MIDNIGHT VIGIL",
+      "sub": "GRANT ME STRENGTH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "make me a faithful watcher",
+      "img": "short-midnightmatthew26v40-scene-06.jpg",
+      "kicker": "MIDNIGHT VIGIL",
+      "sub": "SEEK HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That restlessness keeping you awake is the Lord calling you to his side."
+    ],
+    [
+      9,
+      22,
+      "And he cometh unto the disciples, and findeth them asleep, and saith unto Peter, What, could ye not watch with me one hour?"
+    ],
+    [
+      23,
+      35,
+      "Watch and pray, that ye enter not into temptation: the spirit indeed is willing, but the flesh is weak."
+    ],
+    [
+      36,
+      48,
+      "Lord, strengthen my resolve in this quiet hour. Keep my heart alert and fixed upon your holy truth."
+    ],
+    [
+      49,
+      60,
+      "Deliver me from wandering thoughts. Make me a faithful watcher who guards the door of my soul."
+    ],
+    [
+      61,
+      72,
+      "Let your grace sustain me when the world grows cold and my spirit finds its rest in you."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT RESTLESSNESS",
+        "KEEPING YOU AWAKE",
+        "IS THE LORD CALLING",
+        "YOU TO HIS SIDE"
+      ],
+      [
+        "THE LORD CALLING"
+      ],
+      "MATTHEW 26:40"
+    ],
+    [
+      9,
+      22,
+      [
+        "AND HE COMETH",
+        "UNT0 THE DISCIPLES",
+        "AND SAITH UNTO PETER",
+        "COULD YE NOT",
+        "WATCH WITH ME ONE HOUR"
+      ],
+      [
+        "WATCH WITH ME"
+      ],
+      "MATTHEW 26:40"
+    ],
+    [
+      23,
+      35,
+      [
+        "WATCH AND PRAY",
+        "THE SPIRIT IS WILLING",
+        "BUT THE FLESH",
+        "IS WEAK"
+      ],
+      [
+        "WATCH AND PRAY"
+      ],
+      "MATTHEW 26:41"
+    ],
+    [
+      36,
+      48,
+      [
+        "LORD STRENGTHEN",
+        "MY RESOLVE",
+        "FIXED UPON YOUR",
+        "HOLY TRUTH"
+      ],
+      [
+        "HOLY TRUTH"
+      ],
+      "MIDNIGHT VIGIL"
+    ],
+    [
+      49,
+      60,
+      [
+        "DELIVER ME",
+        "FROM WANDERING",
+        "MAKE ME A",
+        "FAITHFUL WATCHER"
+      ],
+      [
+        "FAITHFUL WATCHER"
+      ],
+      "MIDNIGHT VIGIL"
+    ],
+    [
+      61,
+      72,
+      [
+        "LET YOUR GRACE",
+        "SUSTAIN ME",
+        "MY SPIRIT FINDS",
+        "ITS REST IN YOU"
+      ],
+      [
+        "REST IN YOU"
+      ],
+      "MIDNIGHT VIGIL"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That restlessness keeping you awake",
+      "kind": "phrase",
+      "words": [
+        "THE LORD CALLING",
+        "YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Watch and pray, that ye enter not into temptation",
+      "kind": "phrase",
+      "words": [
+        "WATCH",
+        "AND PRAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "make me a faithful watcher",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "WATCHER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 26:40-41"
+}

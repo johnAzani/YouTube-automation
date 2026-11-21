@@ -1,0 +1,260 @@
+{
+  "key": "short-midnightmatthew14v25",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "WALKING ON",
+    "THE SEA"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "MATTHEW 14:25-27",
+    "PRAYER AT MIDNIGHT",
+    "STAND IN FAITH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "dark stormy sea at night with distant lighthouse",
+    "waves crashing under starry midnight sky",
+    "lonely mountain watchtower silhouette at night",
+    "stormy ocean waves under pale moonlight",
+    "calm dark water reflecting distant stars",
+    "deep starry night sky over dark ocean horizon"
+  ],
+  "scenes": [
+    {
+      "a": "That storm keeping you awake in the dark right now meets its master tonight.",
+      "img": "short-midnightmatthew14v25-scene-01.jpg",
+      "kicker": "MATTHEW 14:25",
+      "sub": "THE FOURTH WATCH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord Jesus, when our hearts fail us amid the raging waters of this life, draw near.",
+      "img": "short-midnightmatthew14v25-scene-02.jpg",
+      "kicker": "MATTHEW 14:25",
+      "sub": "WALKING ON THE SEA",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "And in the fourth watch of the night Jesus went unto them, walking on the sea.",
+      "img": "short-midnightmatthew14v25-scene-03.jpg",
+      "kicker": "MATTHEW 14:25",
+      "sub": "FOURTH WATCH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And when the disciples saw him walking on the sea, they were troubled, saying, It is a spirit; and they cried out for fear.",
+      "img": "short-midnightmatthew14v25-scene-04.jpg",
+      "kicker": "MATTHEW 14:26",
+      "sub": "THEY CRIED OUT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "But straightway Jesus spake unto them, saying, Be of good cheer; it is I; be not afraid.",
+      "img": "short-midnightmatthew14v25-scene-05.jpg",
+      "kicker": "MATTHEW 14:27",
+      "sub": "BE NOT AFRAID",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Speak your peace into our midnight fears and calm every rolling wave.",
+      "img": "short-midnightmatthew14v25-scene-06.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "REST IN HIS PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      5,
+      "That storm keeping you awake in the dark right now meets its master tonight."
+    ],
+    [
+      5,
+      10,
+      "Lord Jesus, when our hearts fail us amid the raging waters of this life, draw near."
+    ],
+    [
+      10,
+      16,
+      "And in the fourth watch of the night Jesus went unto them, walking on the sea."
+    ],
+    [
+      16,
+      22,
+      "And when the disciples saw him walking on the sea, they were troubled, saying, It is a spirit; and they cried out for fear."
+    ],
+    [
+      22,
+      28,
+      "But straightway Jesus spake unto them, saying, Be of good cheer; it is I; be not afraid."
+    ],
+    [
+      28,
+      34,
+      "Speak your peace into our midnight fears and calm every rolling wave."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      5,
+      [
+        "THAT STORM KEEPING YOU",
+        "AWAKE IN THE DARK RIGHT",
+        "NOW MEETS ITS MASTER"
+      ],
+      "MASTER",
+      "MATTHEW 14 : 25"
+    ],
+    [
+      5,
+      10,
+      [
+        "LORD JESUS WHEN OUR",
+        "HEARTS FAIL US AMID",
+        "THE RAGING WATERS"
+      ],
+      "WATERS",
+      "MATTHEW 14 : 25"
+    ],
+    [
+      10,
+      16,
+      [
+        "AND IN THE FOURTH",
+        "WATCH OF THE NIGHT",
+        "JESUS WENT UNTO THEM",
+        "WALKING ON THE SEA"
+      ],
+      "SEA",
+      "MATTHEW 14 : 25"
+    ],
+    [
+      16,
+      22,
+      [
+        "THEY WERE TROUBLED",
+        "SAYING IT IS A SPIRIT",
+        "AND THEY CRIED",
+        "OUT FOR FEAR"
+      ],
+      "FEAR",
+      "MATTHEW 14 : 26"
+    ],
+    [
+      22,
+      28,
+      [
+        "BE OF GOOD CHEER",
+        "IT IS I",
+        "BE NOT AFRAID"
+      ],
+      "AFRAID",
+      "MATTHEW 14 : 27"
+    ],
+    [
+      28,
+      34,
+      [
+        "SPEAK YOUR PEACE INTO",
+        "OUR MIDNIGHT FEARS",
+        "AND CALM EVERY WAVE"
+      ],
+      "WAVE",
+      "MATTHEW 14 : 27"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That storm keeping you awake in the dark right now meets its master tonight.",
+      "kind": "phrase",
+      "words": [
+        "STORM",
+        "MASTER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord Jesus, when our hearts fail us amid the raging waters of this life, draw near.",
+      "kind": "phrase",
+      "words": [
+        "HEARTS",
+        "WATERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And in the fourth watch of the night Jesus went unto them, walking on the sea.",
+      "kind": "phrase",
+      "words": [
+        "FOURTH",
+        "WATCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And when the disciples saw him walking on the sea, they were troubled, saying, It is a spirit; and they cried out for fear.",
+      "kind": "phrase",
+      "words": [
+        "TROUBLED",
+        "FEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But straightway Jesus spake unto them, saying, Be of good cheer; it is I; be not afraid.",
+      "kind": "phrase",
+      "words": [
+        "CHEER",
+        "AFRAID"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Speak your peace into our midnight fears and calm every rolling wave.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "WAVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 14:25-27"
+}

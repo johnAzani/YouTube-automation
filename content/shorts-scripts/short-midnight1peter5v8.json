@@ -1,0 +1,318 @@
+{
+  "key": "short-midnight1peter5v8",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "STAND FIRM IN THE",
+    "MIDNIGHT WATCH"
+  ],
+  "poster": [
+    "WHEN FEAR PROWLS",
+    "AT MIDNIGHT",
+    "STAND STEADFAST",
+    "IN FAITH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "dark room silhouette looking at midnight starry night sky",
+    "ancient watchtower silhouette under moonlight deep blue night sky",
+    "warm glowing candle lantern inside dark stone sanctuary night vigil",
+    "dramatic dark stormy night sky over quiet mountains starry midnight",
+    "starlight over calm lake ancient stone watchtower silent midnight",
+    "warm lamp light illuminating ancient open bible dark room night",
+    "starry midnight sky above peaceful quiet mountain valley sentinel watch"
+  ],
+  "scenes": [
+    {
+      "a": "If an invisible fear",
+      "img": "short-midnight1peter5v8-scene-01.jpg",
+      "kicker": "1 PETER 5:8",
+      "sub": "STAND FIRM TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Be sober, be vigilant",
+      "img": "short-midnight1peter5v8-scene-02.jpg",
+      "kicker": "1 PETER 5:8",
+      "sub": "THE ROARING LION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, at this midnight watch",
+      "img": "short-midnight1peter5v8-scene-03.jpg",
+      "kicker": "1 PETER 5:8",
+      "sub": "MIDNIGHT SANCTUARY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Shield our weary hearts",
+      "img": "short-midnight1peter5v8-scene-04.jpg",
+      "kicker": "1 PETER 5:8",
+      "sub": "DIVINE PROTECTION",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "We stand steadfast in faith",
+      "img": "short-midnight1peter5v8-scene-05.jpg",
+      "kicker": "1 PETER 5:9",
+      "sub": "UNITED IN SPIRIT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Clothe us with courage",
+      "img": "short-midnight1peter5v8-scene-06.jpg",
+      "kicker": "1 PETER 5:9",
+      "sub": "OVERCOME THE DARK",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Midnight Watch",
+      "img": "short-midnight1peter5v8-scene-07.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "STAND WITH US IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If an invisible fear is threatening to swallow your peace tonight, stand firm right now."
+    ],
+    [
+      8,
+      18,
+      "Be sober, be vigilant; because your adversary the devil, as a roaring lion, walketh about, seeking whom he may devour:"
+    ],
+    [
+      18,
+      26,
+      "Lord, at this midnight watch, we refuse to give place to terror or panic."
+    ],
+    [
+      26,
+      32,
+      "Shield our weary hearts from the enemy's quiet attacks."
+    ],
+    [
+      32,
+      40,
+      "We stand steadfast in faith, knowing that believers across the world fight this same fight tonight."
+    ],
+    [
+      40,
+      46,
+      "Clothe us with courage to resist every dark scheme."
+    ],
+    [
+      46,
+      52,
+      "Subscribe to The Midnight Watch and stand with us in midnight prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF AN INVISIBLE FEAR",
+        "THREATENS YOUR PEACE",
+        "STAND FIRM RIGHT NOW"
+      ],
+      [
+        "STAND",
+        "FIRM"
+      ],
+      "1 PETER 5 : 8"
+    ],
+    [
+      8,
+      18,
+      [
+        "BE SOBER BE VIGILANT",
+        "YOUR ADVERSARY THE DEVIL",
+        "WALKETH ABOUT SEEKING",
+        "WHOM HE MAY DEVOUR"
+      ],
+      [
+        "BE",
+        "VIGILANT"
+      ],
+      "1 PETER 5 : 8"
+    ],
+    [
+      18,
+      26,
+      [
+        "LORD AT THIS MIDNIGHT WATCH",
+        "WE REFUSE TO GIVE PLACE",
+        "TO TERROR OR PANIC"
+      ],
+      [
+        "WE",
+        "REFUSE"
+      ],
+      "1 PETER 5 : 8"
+    ],
+    [
+      26,
+      32,
+      [
+        "SHIELD OUR WEARY HEARTS",
+        "FROM THE ENEMYS",
+        "QUIET ATTACKS"
+      ],
+      [
+        "SHIELD",
+        "HEARTS"
+      ],
+      "1 PETER 5 : 8"
+    ],
+    [
+      32,
+      40,
+      [
+        "WE STAND STEADFAST IN FAITH",
+        "BELIEVERS ACROSS THE WORLD",
+        "FIGHT THIS SAME FIGHT"
+      ],
+      [
+        "STEADFAST",
+        "FAITH"
+      ],
+      "1 PETER 5 : 9"
+    ],
+    [
+      40,
+      46,
+      [
+        "CLOTHE US WITH COURAGE",
+        "TO RESIST EVERY",
+        "DARK SCHEME"
+      ],
+      [
+        "CLOTHE",
+        "COURAGE"
+      ],
+      "1 PETER 5 : 9"
+    ],
+    [
+      46,
+      52,
+      [
+        "SUBSCRIBE TO THE MIDNIGHT WATCH",
+        "STAND WITH US IN",
+        "MIDNIGHT PRAYER"
+      ],
+      [
+        "MIDNIGHT",
+        "PRAYER"
+      ],
+      "THE MIDNIGHT WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If an invisible fear",
+      "kind": "phrase",
+      "words": [
+        "STAND",
+        "FIRM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be sober, be vigilant",
+      "kind": "phrase",
+      "words": [
+        "SOBER",
+        "VIGILANT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, at this midnight watch",
+      "kind": "phrase",
+      "words": [
+        "MIDNIGHT",
+        "REFUSE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Shield our weary hearts",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "HEARTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We stand steadfast in faith",
+      "kind": "phrase",
+      "words": [
+        "STEADFAST",
+        "FAITH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Clothe us with courage",
+      "kind": "phrase",
+      "words": [
+        "CLOTHE",
+        "COURAGE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Midnight Watch",
+      "kind": "phrase",
+      "words": [
+        "MIDNIGHT",
+        "PRAYER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 Peter 5:8-9"
+}
