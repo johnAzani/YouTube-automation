@@ -1,0 +1,215 @@
+{
+  "key": "short-gardenpsalm98v4",
+  "channel": "prayer9",
+  "psalm": 98,
+  "title": [
+    "JOYFUL NOISE",
+    "TO THE LORD"
+  ],
+  "poster": [
+    "A PRAYER OF PRAISE",
+    "THE PRAISE GARDEN",
+    "PSALM 98:4",
+    "FOR YOUR HEART"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "misty sunlit pine forest",
+    "golden light over calm river",
+    "peaceful valley at sunrise",
+    "dappled light in forest glade",
+    "slow flowing mountain stream",
+    "golden hour over rolling meadow"
+  ],
+  "scenes": [
+    {
+      "a": "If that heavy decision weighing on your mind feels impossible to resolve, stay right here.",
+      "img": "short-gardenpsalm98v4-scene-01.jpg",
+      "kicker": "A MOMENT OF PRAISE",
+      "sub": "HEAR HIS TRUTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, we quiet our racing thoughts and turn our attention to Your sovereign goodness today.",
+      "img": "short-gardenpsalm98v4-scene-02.jpg",
+      "kicker": "SURRENDER YOUR HEART",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "As we look to You, we remember Your word that says:",
+      "img": "short-gardenpsalm98v4-scene-03.jpg",
+      "kicker": "THE SCRIPTURE",
+      "sub": "PSALM 98:4",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Make a joyful noise unto the LORD, all the earth: make a loud noise, and rejoice, and sing praise.",
+      "img": "short-gardenpsalm98v4-scene-04.jpg",
+      "kicker": "HIS COMMAND",
+      "sub": "SING UNTO THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We choose to lift a shout of gladness, even when the path ahead seems obscured.",
+      "img": "short-gardenpsalm98v4-scene-05.jpg",
+      "kicker": "AN HONEST OFFERING",
+      "sub": "PRAISE IN THE WAITING",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "May our weary spirits find renewed strength as we offer this sacrifice of thanksgiving now.",
+      "img": "short-gardenpsalm98v4-scene-06.jpg",
+      "kicker": "GIVE THANKS",
+      "sub": "HE IS WORTHY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If that heavy decision weighing on your mind feels impossible to resolve, stay right here."
+    ],
+    [
+      8,
+      18,
+      "Lord, we quiet our racing thoughts and turn our attention to Your sovereign goodness today."
+    ],
+    [
+      18,
+      25,
+      "As we look to You, we remember Your word that says:"
+    ],
+    [
+      25,
+      38,
+      "Make a joyful noise unto the LORD, all the earth: make a loud noise, and rejoice, and sing praise."
+    ],
+    [
+      38,
+      48,
+      "We choose to lift a shout of gladness, even when the path ahead seems obscured."
+    ],
+    [
+      48,
+      58,
+      "May our weary spirits find renewed strength as we offer this sacrifice of thanksgiving now."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "HEAVY DECISION",
+        "STAY RIGHT HERE"
+      ],
+      [
+        "STAY RIGHT HERE"
+      ],
+      "PSALM 98 : 4"
+    ],
+    [
+      8,
+      18,
+      [
+        "QUIET RACING THOUGHTS",
+        "SOVEREIGN GOODNESS"
+      ],
+      [
+        "SOVEREIGN GOODNESS"
+      ],
+      "PSALM 98 : 4"
+    ],
+    [
+      18,
+      25,
+      [
+        "LOOK TO YOU",
+        "REMEMBER HIS WORD"
+      ],
+      [
+        "REMEMBER"
+      ],
+      "PSALM 98 : 4"
+    ],
+    [
+      25,
+      38,
+      [
+        "MAKE A JOYFUL NOISE",
+        "UNTO THE LORD",
+        "SING PRAISE"
+      ],
+      [
+        "JOYFUL NOISE"
+      ],
+      "PSALM 98 : 4"
+    ],
+    [
+      38,
+      48,
+      [
+        "SHOUT OF GLADNESS",
+        "PATH AHEAD"
+      ],
+      [
+        "GLADNESS"
+      ],
+      "PSALM 98 : 4"
+    ],
+    [
+      48,
+      58,
+      [
+        "RENEWED STRENGTH",
+        "OFFER THANKSGIVING"
+      ],
+      [
+        "THANKSGIVING"
+      ],
+      "PSALM 98 : 4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Make a joyful noise unto the LORD, all the earth: make a loud noise, and rejoice, and sing praise.",
+      "kind": "phrase",
+      "words": [
+        "JOYFUL",
+        "NOISE"
+      ],
+      "hi": 25,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 98:4"
+}

@@ -1,0 +1,325 @@
+{
+  "key": "short-gardenpsalm113v3",
+  "channel": "prayer9",
+  "psalm": 113,
+  "title": [
+    "FROM RISING TO SETTING",
+    "PRAISE THE LORD"
+  ],
+  "poster": [
+    "THE PRAISE GARDEN",
+    "PSALM 113:3",
+    "PRAISE HIS NAME",
+    "EVERY HOUR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit golden meadow soft mist morning light landscape",
+    "golden sunrise over calm river forest reflections",
+    "misty countryside sunbeams filtering through trees calm landscape",
+    "soft golden hour light over serene mountain valley",
+    "peaceful forest trail bathed in warm afternoon sunlight",
+    "calm lake with gentle sunset sky soft reflections",
+    "sunlit forest glade soft golden lighting tranquil nature"
+  ],
+  "scenes": [
+    {
+      "a": "If your eyes are weary from screens today, this moment belongs to God.",
+      "img": "short-gardenpsalm113v3-scene-01.jpg",
+      "kicker": "PSALM 113:3",
+      "sub": "PAUSE IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "His word declares in Psalm 113 verse 3, From the rising of the sun unto the going down of the same the LORD’s name is to be praised.",
+      "img": "short-gardenpsalm113v3-scene-02.jpg",
+      "kicker": "PSALM 113:3",
+      "sub": "THE LORD IS PRAISED",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, we thank You that Your goodness spans every hour of our lives.",
+      "img": "short-gardenpsalm113v3-scene-03.jpg",
+      "kicker": "THANKSGIVING",
+      "sub": "YOUR GOODNESS SPANS ALL",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "From our first morning breath to the quiet moments of evening, Your faithfulness never fails.",
+      "img": "short-gardenpsalm113v3-scene-04.jpg",
+      "kicker": "FAITHFULNESS",
+      "sub": "EVERLASTING MERCY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We praise You not just in moments of joy, but in every quiet hour.",
+      "img": "short-gardenpsalm113v3-scene-05.jpg",
+      "kicker": "WORSHIP",
+      "sub": "IN EVERY QUIET HOUR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach us to notice Your grace continually, honoring Your holy name.",
+      "img": "short-gardenpsalm113v3-scene-06.jpg",
+      "kicker": "HONOR HIM",
+      "sub": "NOTICE HIS GRACE",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Praise Garden to walk with us in praise.",
+      "img": "short-gardenpsalm113v3-scene-07.jpg",
+      "kicker": "JOIN IN PRAISE",
+      "sub": "ENTER HIS GATES WITH THANKS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If your eyes are weary from screens today, this moment belongs to God."
+    ],
+    [
+      6,
+      14,
+      "His word declares in Psalm 113 verse 3, From the rising of the sun unto the going down of the same the LORD’s name is to be praised."
+    ],
+    [
+      14,
+      22,
+      "Heavenly Father, we thank You that Your goodness spans every hour of our lives."
+    ],
+    [
+      22,
+      30,
+      "From our first morning breath to the quiet moments of evening, Your faithfulness never fails."
+    ],
+    [
+      30,
+      38,
+      "We praise You not just in moments of joy, but in every quiet hour."
+    ],
+    [
+      38,
+      45,
+      "Teach us to notice Your grace continually, honoring Your holy name."
+    ],
+    [
+      45,
+      52,
+      "Subscribe to The Praise Garden to walk with us in praise."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF YOUR EYES ARE WEARY",
+        "FROM SCREENS TODAY",
+        "THIS MOMENT BELONGS TO GOD"
+      ],
+      [
+        "WEARY",
+        "BELONGS",
+        "GOD"
+      ],
+      "PSALM 113 : 3"
+    ],
+    [
+      6,
+      14,
+      [
+        "FROM THE RISING OF THE SUN",
+        "UNTO THE GOING DOWN",
+        "OF THE SAME THE LORDS NAME",
+        "IS TO BE PRAISED"
+      ],
+      [
+        "RISING",
+        "SUN",
+        "PRAISED"
+      ],
+      "PSALM 113 : 3"
+    ],
+    [
+      14,
+      22,
+      [
+        "HEAVENLY FATHER WE THANK YOU",
+        "THAT YOUR GOODNESS SPANS",
+        "EVERY HOUR OF OUR LIVES"
+      ],
+      [
+        "THANK",
+        "GOODNESS",
+        "SPANS"
+      ],
+      "PSALM 113 : 3"
+    ],
+    [
+      22,
+      30,
+      [
+        "FROM OUR FIRST MORNING BREATH",
+        "TO QUIET MOMENTS OF EVENING",
+        "YOUR FAITHFULNESS NEVER FAILS"
+      ],
+      [
+        "MORNING",
+        "FAITHFULNESS",
+        "FAILS"
+      ],
+      "PSALM 113 : 3"
+    ],
+    [
+      30,
+      38,
+      [
+        "WE PRAISE YOU NOT JUST",
+        "IN MOMENTS OF JOY",
+        "BUT IN EVERY QUIET HOUR"
+      ],
+      [
+        "PRAISE",
+        "JOY",
+        "QUIET"
+      ],
+      "PSALM 113 : 3"
+    ],
+    [
+      38,
+      45,
+      [
+        "TEACH US TO NOTICE",
+        "YOUR GRACE CONTINUALLY",
+        "HONORING YOUR HOLY NAME"
+      ],
+      [
+        "NOTICE",
+        "GRACE",
+        "HONORING"
+      ],
+      "PSALM 113 : 3"
+    ],
+    [
+      45,
+      52,
+      [
+        "SUBSCRIBE TO THE PRAISE GARDEN",
+        "TO WALK WITH US",
+        "IN PRAISE"
+      ],
+      [
+        "SUBSCRIBE",
+        "PRAISE",
+        "GARDEN"
+      ],
+      "PSALM 113 : 3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If your eyes are weary from screens today, this moment belongs to God.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "His word declares in Psalm 113 verse 3, From the rising of the sun unto the going down of the same the LORD’s name is to be praised.",
+      "kind": "phrase",
+      "words": [
+        "RISING",
+        "PRAISED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we thank You that Your goodness spans every hour of our lives.",
+      "kind": "phrase",
+      "words": [
+        "THANK",
+        "GOODNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "From our first morning breath to the quiet moments of evening, Your faithfulness never fails.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFULNESS",
+        "NEVER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We praise You not just in moments of joy, but in every quiet hour.",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "QUIET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach us to notice Your grace continually, honoring Your holy name.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "HONORING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Praise Garden to walk with us in praise.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 113:3"
+}

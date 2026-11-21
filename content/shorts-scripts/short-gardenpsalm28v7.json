@@ -1,0 +1,276 @@
+{
+  "key": "short-gardenpsalm28v7",
+  "channel": "prayer9",
+  "psalm": 28,
+  "title": [
+    "THE LORD IS MY STRENGTH",
+    "PSALM 28:7 PRAYER"
+  ],
+  "poster": [
+    "THE LORD IS",
+    "MY STRENGTH AND SHIELD",
+    "PSALM 28:7",
+    "THE PRAISE GARDEN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade golden morning light mist",
+    "peaceful river calm water reflection sunrise",
+    "misty countryside green hills soft morning light",
+    "golden light over calm meadow flowers",
+    "peaceful mountain valley sunny morning mist",
+    "sunbeams streaming through green forest trees"
+  ],
+  "scenes": [
+    {
+      "a": "If you are facing an anxious decision right now, let your weary heart be still.",
+      "img": "short-gardenpsalm28v7-scene-01.jpg",
+      "kicker": "PSALM 28:7",
+      "sub": "BE STILL IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The LORD is my strength and my shield; my heart trusted in him, and I am helped:",
+      "img": "short-gardenpsalm28v7-scene-02.jpg",
+      "kicker": "PSALM 28:7",
+      "sub": "MY STRENGTH AND MY SHIELD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "therefore my heart greatly rejoiceth; and with my song will I praise him.",
+      "img": "short-gardenpsalm28v7-scene-03.jpg",
+      "kicker": "PSALM 28:7",
+      "sub": "WITH MY SONG WILL I PRAISE HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "We give You thanks, O Lord, for being our constant protector, our shield, and our unfailing support.",
+      "img": "short-gardenpsalm28v7-scene-04.jpg",
+      "kicker": "GIVE THANKS",
+      "sub": "OUR UNFAILING SUPPORT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "In every trial, You guard our steps and gently quiet our fears. We praise You today for every silent mercy and grace.",
+      "img": "short-gardenpsalm28v7-scene-05.jpg",
+      "kicker": "GOD'S FAITHFULNESS",
+      "sub": "EVERY SILENT MERCY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Our hearts overflow with joy in Your holy presence. Subscribe to The Praise Garden as we enter His gates with thanksgiving.",
+      "img": "short-gardenpsalm28v7-scene-06.jpg",
+      "kicker": "THE PRAISE GARDEN",
+      "sub": "ENTER HIS GATES WITH THANKSGIVING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are facing an anxious decision right now, let your weary heart be still."
+    ],
+    [
+      8,
+      18,
+      "The LORD is my strength and my shield; my heart trusted in him, and I am helped:"
+    ],
+    [
+      18,
+      28,
+      "therefore my heart greatly rejoiceth; and with my song will I praise him."
+    ],
+    [
+      28,
+      38,
+      "We give You thanks, O Lord, for being our constant protector, our shield, and our unfailing support."
+    ],
+    [
+      38,
+      48,
+      "In every trial, You guard our steps and gently quiet our fears. We praise You today for every silent mercy and grace."
+    ],
+    [
+      48,
+      58,
+      "Our hearts overflow with joy in Your holy presence. Subscribe to The Praise Garden as we enter His gates with thanksgiving."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF YOU ARE FACING",
+        "AN ANXIOUS DECISION",
+        "LET YOUR WEARY HEART",
+        "BE STILL"
+      ],
+      [
+        "ANXIOUS DECISION"
+      ],
+      "PSALM 28 : 7"
+    ],
+    [
+      8,
+      18,
+      [
+        "THE LORD IS MY",
+        "STRENGTH AND MY SHIELD",
+        "MY HEART TRUSTED IN HIM",
+        "AND I AM HELPED"
+      ],
+      [
+        "STRENGTH AND MY SHIELD"
+      ],
+      "PSALM 28 : 7"
+    ],
+    [
+      18,
+      28,
+      [
+        "THEREFORE MY HEART",
+        "GREATLY REJOICETH",
+        "AND WITH MY SONG",
+        "WILL I PRAISE HIM"
+      ],
+      [
+        "GREATLY REJOICETH"
+      ],
+      "PSALM 28 : 7"
+    ],
+    [
+      28,
+      38,
+      [
+        "WE GIVE YOU THANKS",
+        "FOR BEING OUR",
+        "CONSTANT PROTECTOR",
+        "AND UNFAILING SUPPORT"
+      ],
+      [
+        "CONSTANT PROTECTOR"
+      ],
+      "PSALM 28 : 7"
+    ],
+    [
+      38,
+      48,
+      [
+        "YOU GUARD OUR STEPS",
+        "AND QUIET OUR FEARS",
+        "WE PRAISE YOU TODAY",
+        "FOR EVERY SILENT MERCY"
+      ],
+      [
+        "EVERY SILENT MERCY"
+      ],
+      "PSALM 28 : 7"
+    ],
+    [
+      48,
+      58,
+      [
+        "OUR HEARTS OVERFLOW",
+        "WITH JOY IN YOUR PRESENCE",
+        "SUBSCRIBE TO",
+        "THE PRAISE GARDEN"
+      ],
+      [
+        "THE PRAISE GARDEN"
+      ],
+      "PSALM 28 : 7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are facing an anxious decision right now, let your weary heart be still.",
+      "kind": "phrase",
+      "words": [
+        "ANXIOUS",
+        "DECISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD is my strength and my shield; my heart trusted in him, and I am helped:",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "therefore my heart greatly rejoiceth; and with my song will I praise him.",
+      "kind": "phrase",
+      "words": [
+        "GREATLY",
+        "REJOICETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We give You thanks, O Lord, for being our constant protector, our shield, and our unfailing support.",
+      "kind": "phrase",
+      "words": [
+        "CONSTANT",
+        "PROTECTOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In every trial, You guard our steps and gently quiet our fears. We praise You today for every silent mercy and grace.",
+      "kind": "phrase",
+      "words": [
+        "SILENT",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Our hearts overflow with joy in Your holy presence. Subscribe to The Praise Garden as we enter His gates with thanksgiving.",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "GARDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 28:7"
+}

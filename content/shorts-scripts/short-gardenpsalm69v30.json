@@ -1,0 +1,287 @@
+{
+  "key": "short-gardenpsalm69v30",
+  "channel": "prayer9",
+  "psalm": 69,
+  "title": [
+    "PRAISE GOD WITH SONG",
+    "MAGNIFY HIM WITH THANKS"
+  ],
+  "poster": [
+    "PSALM 69:30",
+    "PRAISE GOD WITH A SONG",
+    "MAGNIFY HIM WITH THANKS",
+    "THE PRAISE GARDEN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade morning light soft mist",
+    "misty countryside calm river golden sunrise",
+    "peaceful meadow wildflower soft sunlight",
+    "calm mountain river glowing warm light",
+    "golden sunlight beaming through forest trees",
+    "serene lake reflection peaceful countryside morning"
+  ],
+  "scenes": [
+    {
+      "a": "If your spirit feels too weary to sing, bring your quiet heart before God right now.",
+      "img": "short-gardenpsalm69v30-scene-01.jpg",
+      "kicker": "PSALM 69:30",
+      "sub": "BRING YOUR QUIET HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Holy Scripture declares: I will praise the name of God with a song, and will magnify him with thanksgiving.",
+      "img": "short-gardenpsalm69v30-scene-02.jpg",
+      "kicker": "PSALM 69:30",
+      "sub": "MAGNIFY HIM WITH THANKSGIVING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, even when our voices falter, we lift our gratitude to You today.",
+      "img": "short-gardenpsalm69v30-scene-03.jpg",
+      "kicker": "PSALM 69:30",
+      "sub": "WE LIFT OUR GRATITUDE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "We thank You for Your unseen faithfulness, Your tender care, and the quiet mercies that sustain us in every trial.",
+      "img": "short-gardenpsalm69v30-scene-04.jpg",
+      "kicker": "PSALM 69:30",
+      "sub": "UNSEEN FAITHFULNESS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Help us to magnify Your goodness above our deepest fears, turning every sigh into praise and every breath into thanksgiving.",
+      "img": "short-gardenpsalm69v30-scene-05.jpg",
+      "kicker": "PSALM 69:30",
+      "sub": "MAGNIFY HIS GOODNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "May Your gentle peace guard our minds as we walk step by step in Your grace. Subscribe to join our daily prayer in The Praise Garden.",
+      "img": "short-gardenpsalm69v30-scene-06.jpg",
+      "kicker": "PSALM 69:30",
+      "sub": "WALK IN HIS GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      9,
+      "If your spirit feels too weary to sing, bring your quiet heart before God right now."
+    ],
+    [
+      9,
+      18,
+      "Holy Scripture declares: I will praise the name of God with a song, and will magnify him with thanksgiving."
+    ],
+    [
+      18,
+      27,
+      "Lord, even when our voices falter, we lift our gratitude to You today."
+    ],
+    [
+      27,
+      37,
+      "We thank You for Your unseen faithfulness, Your tender care, and the quiet mercies that sustain us in every trial."
+    ],
+    [
+      37,
+      47,
+      "Help us to magnify Your goodness above our deepest fears, turning every sigh into praise and every breath into thanksgiving."
+    ],
+    [
+      47,
+      57,
+      "May Your gentle peace guard our minds as we walk step by step in Your grace. Subscribe to join our daily prayer in The Praise Garden."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      9,
+      [
+        "IF YOUR SPIRIT FEELS",
+        "TOO WEARY TO SING",
+        "BRING YOUR QUIET HEART",
+        "BEFORE GOD RIGHT NOW"
+      ],
+      [
+        "WEARY",
+        "QUIET HEART"
+      ],
+      "PSALM 69:30"
+    ],
+    [
+      9,
+      18,
+      [
+        "I WILL PRAISE THE NAME",
+        "OF GOD WITH A SONG",
+        "AND WILL MAGNIFY HIM",
+        "WITH THANKSGIVING"
+      ],
+      [
+        "PRAISE",
+        "MAGNIFY",
+        "THANKSGIVING"
+      ],
+      "PSALM 69:30"
+    ],
+    [
+      18,
+      27,
+      [
+        "EVEN WHEN OUR VOICES FALTER",
+        "WE LIFT OUR GRATITUDE",
+        "TO YOU TODAY"
+      ],
+      [
+        "GRATITUDE",
+        "VOICES"
+      ],
+      "PSALM 69:30"
+    ],
+    [
+      27,
+      37,
+      [
+        "WE THANK YOU FOR YOUR",
+        "UNSEEN FAITHFULNESS AND CARE",
+        "THE QUIET MERCIES THAT",
+        "SUSTAIN US IN EVERY TRIAL"
+      ],
+      [
+        "FAITHFULNESS",
+        "MERCIES"
+      ],
+      "PSALM 69:30"
+    ],
+    [
+      37,
+      47,
+      [
+        "HELP US TO MAGNIFY",
+        "YOUR GOODNESS ABOVE FEARS",
+        "EVERY SIGH INTO PRAISE",
+        "EVERY BREATH THANKSGIVING"
+      ],
+      [
+        "MAGNIFY",
+        "PRAISE",
+        "THANKSGIVING"
+      ],
+      "PSALM 69:30"
+    ],
+    [
+      47,
+      57,
+      [
+        "MAY YOUR GENTLE PEACE",
+        "GUARD OUR MINDS AS WE WALK",
+        "IN YOUR GRACE TODAY",
+        "SUBSCRIBE TO JOIN US"
+      ],
+      [
+        "PEACE",
+        "GRACE",
+        "SUBSCRIBE"
+      ],
+      "PSALM 69:30"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If your spirit feels too weary to sing, bring your quiet heart before God right now.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "QUIET",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Holy Scripture declares: I will praise the name of God with a song, and will magnify him with thanksgiving.",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "MAGNIFY",
+        "THANKSGIVING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, even when our voices falter, we lift our gratitude to You today.",
+      "kind": "phrase",
+      "words": [
+        "LIFT",
+        "GRATITUDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We thank You for Your unseen faithfulness, Your tender care, and the quiet mercies that sustain us in every trial.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFULNESS",
+        "SUSTAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help us to magnify Your goodness above our deepest fears, turning every sigh into praise and every breath into thanksgiving.",
+      "kind": "phrase",
+      "words": [
+        "MAGNIFY",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May Your gentle peace guard our minds as we walk step by step in Your grace. Subscribe to join our daily prayer in The Praise Garden.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "GRACE",
+        "SUBSCRIBE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 69:30"
+}
