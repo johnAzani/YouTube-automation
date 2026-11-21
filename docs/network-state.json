@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T11:30:00Z",
+  "generated_at": "2026-11-21T11:32:59Z",
   "monitor_generated_at": "2026-11-21T11:27:49.289585+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 590,
+    "published_total": 591,
     "published_longform": 177,
-    "published_shorts": 413,
-    "public_total": 588,
+    "published_shorts": 414,
+    "public_total": 589,
     "queued_longform": 60,
-    "queued_shorts": 91,
+    "queued_shorts": 90,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 44,
+        "published_total": 45,
         "published_longform": 11,
-        "published_shorts": 33,
-        "thumbnail_pending": 44,
-        "public_total": 44,
+        "published_shorts": 34,
+        "thumbnail_pending": 45,
+        "public_total": 45,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM136V1",
-        "title": "Pray This Psalm 136:1 Prayer of Thanksgiving | His Mercy Endures #Shorts",
+        "id": "SHORT-GARDENPSALM113V3",
+        "title": "Pray This Psalm 113:3 Prayer of Thanksgiving | Every Hour #Shorts",
         "format": "short",
-        "youtube_video_id": "4zxp20JQz1A",
-        "watch_url": "https://www.youtube.com/shorts/4zxp20JQz1A",
+        "youtube_video_id": "jUm8dQXSbzs",
+        "watch_url": "https://www.youtube.com/shorts/jUm8dQXSbzs",
         "published_on": "2026-11-21",
-        "published_at": "2026-11-21T00:33:06Z"
+        "published_at": "2026-11-21T11:32:11Z"
       },
       "next_queued_longform": {
         "id": "0711",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm113v3",
-        "scripture": "Psalm 113:3",
+        "short": "short-gardenpsalm28v7",
+        "scripture": "Psalm 28:7",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM113V3",
+      "slug": "short-gardenpsalm113v3-thanksgiving-prayer",
+      "file": "short-gardenpsalm113v3-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 113:3 Prayer of Thanksgiving | Every Hour #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T11:32:11Z",
+      "youtube_video_id": "jUm8dQXSbzs",
+      "watch_url": "https://www.youtube.com/shorts/jUm8dQXSbzs",
+      "youtu_be_url": "https://youtu.be/jUm8dQXSbzs",
+      "shorts_url": "https://www.youtube.com/shorts/jUm8dQXSbzs",
+      "studio_url": "https://studio.youtube.com/video/jUm8dQXSbzs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/jUm8dQXSbzs/hqdefault.jpg",
+      "thumb_text": "THE PRAISE GARDEN \u00b7 PSALM 113:3",
+      "thumbnail_pending": true,
+      "duration_label": "49s",
+      "words": 645
+    },
     {
       "id": "SHORT-HEALINGJEREMIAH8V22",
       "slug": "short-healingjeremiah8v22-restoration-prayer",
@@ -15656,17 +15680,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-gardenpsalm113v3",
-        "file": "0000-short-gardenpsalm113v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 113:3",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm28v7",
