@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T19:31:50Z",
+  "generated_at": "2026-11-21T19:53:45Z",
   "monitor_generated_at": "2026-11-21T19:30:32.776979+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 610,
+    "published_total": 611,
     "published_longform": 184,
-    "published_shorts": 426,
-    "public_total": 608,
+    "published_shorts": 427,
+    "public_total": 609,
     "queued_longform": 55,
-    "queued_shorts": 89,
+    "queued_shorts": 88,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 72,
+        "published_total": 73,
         "published_longform": 23,
-        "published_shorts": 49,
+        "published_shorts": 50,
         "thumbnail_pending": 0,
-        "public_total": 72,
+        "public_total": 73,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0097",
-        "title": "Pour Out Your Heart Before Him: Psalm 62:5-8 | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "zVUalKPw_4M",
-        "watch_url": "https://youtu.be/zVUalKPw_4M",
+        "id": "SHORT-MIDDAYPSALM141V3",
+        "title": "Say This Psalm 141:3 Prayer at Noon | Guard Your Speech At Noon #Shorts",
+        "format": "short",
+        "youtube_video_id": "UAPzWQNfjic",
+        "watch_url": "https://www.youtube.com/shorts/UAPzWQNfjic",
         "published_on": "2026-11-21",
-        "published_at": "2026-11-21T16:19:51Z"
+        "published_at": "2026-11-21T19:52:59Z"
       },
       "next_queued_longform": {
         "id": "0100",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm141v3",
-        "scripture": "Psalm 141:3",
+        "short": "short-middaypsalm94v18",
+        "scripture": "Psalm 94:18",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYPSALM141V3",
+      "slug": "short-middaypsalm141v3-midday-prayer",
+      "file": "short-middaypsalm141v3-midday-prayer.md",
+      "title": "Say This Psalm 141:3 Prayer at Noon | Guard Your Speech At Noon #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T19:52:59Z",
+      "youtube_video_id": "UAPzWQNfjic",
+      "watch_url": "https://www.youtube.com/shorts/UAPzWQNfjic",
+      "youtu_be_url": "https://youtu.be/UAPzWQNfjic",
+      "shorts_url": "https://www.youtube.com/shorts/UAPzWQNfjic",
+      "studio_url": "https://studio.youtube.com/video/UAPzWQNfjic/edit",
+      "thumb_url": "https://i.ytimg.com/vi/UAPzWQNfjic/hqdefault.jpg",
+      "thumb_text": "SET A WATCH \u00b7 BEFORE MY MOUTH",
+      "thumbnail_pending": false,
+      "duration_label": "58s",
+      "words": 624
+    },
     {
       "id": "0711",
       "slug": "when-every-day-feels-heavy-psalm-118-24-the-praise-garden",
@@ -16137,17 +16161,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-middaypsalm141v3",
-        "file": "0000-short-middaypsalm141v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 141:3",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm94v18",
