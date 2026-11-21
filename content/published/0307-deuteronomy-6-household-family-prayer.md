@@ -1,6 +1,6 @@
 ---
 id: '0307'
-title: Deuteronomy 6:6-7 Household & Family Prayer | The Family Altar
+title: "Teaching Your Children the Word: Deuteronomy 6:6-7 | The Family Altar"
 slug: deuteronomy-6-household-family-prayer
 status: published
 channel: prayer5
@@ -76,13 +76,16 @@ originality:
 published_on: "2026-11-13"
 published_at: "2026-11-13T21:10:37Z"
 youtube_video_id: "mOoOZPsiobQ"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_retry_after: "2026-11-27T22:00:03Z"
 thumbnail_retry_reason: "permission"
+title_before: "Deuteronomy 6:6-7 Household & Family Prayer | The Family Altar"
+retitled_at: "2026-11-21"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar
