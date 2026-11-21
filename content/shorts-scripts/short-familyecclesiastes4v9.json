@@ -1,0 +1,233 @@
+{
+  "key": "short-familyecclesiastes4v9",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "STRENGTH IN",
+    "TOGETHERNESS"
+  ],
+  "poster": [
+    "GOD'S DESIGN FOR",
+    "OUR HOUSEHOLD",
+    "UNITY AND",
+    "MUTUAL STRENGTH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp light on open vintage bible",
+    "olive branches on rustic wooden table",
+    "soft golden hour sunlight in cozy living room",
+    "two wooden chairs by a fireplace",
+    "peaceful rolling hills at dusk",
+    "blurred interior of a calm home kitchen"
+  ],
+  "scenes": [
+    {
+      "a": "When you feel like you are carrying the burdens of your home entirely alone, listen.",
+      "img": "short-familyecclesiastes4v9-scene-01.jpg",
+      "kicker": "ECCLESIASTES 4:9",
+      "sub": "GOD PROVIDES STRENGTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Two are better than one; because they have a good reward for their labor.",
+      "img": "short-familyecclesiastes4v9-scene-02.jpg",
+      "kicker": "ECCLESIASTES 4:9",
+      "sub": "BETTER TOGETHER",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "For if they fall, the one will lift up his fellow: but woe to him that is alone when he falleth; for he hath not another to help him up.",
+      "img": "short-familyecclesiastes4v9-scene-03.jpg",
+      "kicker": "ECCLESIASTES 4:10",
+      "sub": "LIFTING EACH OTHER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Again, if two lie together, then they have heat: but how can one be warm alone?",
+      "img": "short-familyecclesiastes4v9-scene-04.jpg",
+      "kicker": "ECCLESIASTES 4:11",
+      "sub": "THE WARMTH OF UNITY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And if one prevail against him, two shall withstand him; and a threefold cord is not quickly broken.",
+      "img": "short-familyecclesiastes4v9-scene-05.jpg",
+      "kicker": "ECCLESIASTES 4:12",
+      "sub": "A THREEFOLD CORD",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, bind our hearts together in this sacred union, protecting our family bond with Your grace.",
+      "img": "short-familyecclesiastes4v9-scene-06.jpg",
+      "kicker": "A HOUSEHOLD PRAYER",
+      "sub": "HEAR OUR PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "When you feel like you are carrying the burdens of your home entirely alone, listen."
+    ],
+    [
+      8,
+      16,
+      "Two are better than one; because they have a good reward for their labor."
+    ],
+    [
+      16,
+      26,
+      "For if they fall, the one will lift up his fellow: but woe to him that is alone when he falleth; for he hath not another to help him up."
+    ],
+    [
+      26,
+      34,
+      "Again, if two lie together, then they have heat: but how can one be warm alone?"
+    ],
+    [
+      34,
+      44,
+      "And if one prevail against him, two shall withstand him; and a threefold cord is not quickly broken."
+    ],
+    [
+      44,
+      52,
+      "Lord, bind our hearts together in this sacred union, protecting our family bond with Your grace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "YOU ARE",
+        "CARRYING BURDENS",
+        "OF YOUR HOME",
+        "ALONE",
+        "LISTEN"
+      ],
+      [
+        "CARRYING BURDENS",
+        "ALONE"
+      ],
+      "ECCLESIASTES 4:9"
+    ],
+    [
+      8,
+      16,
+      [
+        "TWO ARE BETTER",
+        "THAN ONE",
+        "GOOD REWARD",
+        "FOR LABOR"
+      ],
+      [
+        "BETTER THAN ONE",
+        "GOOD REWARD"
+      ],
+      "ECCLESIASTES 4:9"
+    ],
+    [
+      16,
+      26,
+      [
+        "LIFT UP",
+        "HIS FELLOW",
+        "WOE TO HIM",
+        "ALONE",
+        "NO HELP"
+      ],
+      [
+        "LIFT UP",
+        "HIS FELLOW"
+      ],
+      "ECCLESIASTES 4:10"
+    ],
+    [
+      26,
+      34,
+      [
+        "TWO LIE TOGETHER",
+        "THEY HAVE HEAT",
+        "HOW CAN ONE",
+        "BE WARM ALONE"
+      ],
+      [
+        "THEY HAVE HEAT"
+      ],
+      "ECCLESIASTES 4:11"
+    ],
+    [
+      34,
+      44,
+      [
+        "TWO SHALL WITHSTAND",
+        "THREEFOLD CORD",
+        "NOT QUICKLY",
+        "BROKEN"
+      ],
+      [
+        "THREEFOLD CORD",
+        "NOT QUICKLY BROKEN"
+      ],
+      "ECCLESIASTES 4:12"
+    ],
+    [
+      44,
+      52,
+      [
+        "LORD BIND",
+        "HEARTS TOGETHER",
+        "PROTECTING OUR",
+        "FAMILY BOND"
+      ],
+      [
+        "HEARTS TOGETHER",
+        "FAMILY BOND"
+      ],
+      "PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When you feel like you are carrying the burdens of your home entirely alone, listen.",
+      "kind": "phrase",
+      "words": [
+        "CARRYING BURDENS",
+        "ALONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ecclesiastes 4:9-12"
+}

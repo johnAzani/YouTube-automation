@@ -1,0 +1,276 @@
+{
+  "key": "short-familypsalm90v16",
+  "channel": "prayer5",
+  "psalm": 90,
+  "title": [
+    "A PRAYER FOR",
+    "GOD'S FAVOR"
+  ],
+  "poster": [
+    "THE GLORY",
+    "OF THE LORD",
+    "UPON OUR",
+    "HOUSEHOLD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm golden hour light on a wooden kitchen table with an open bible",
+    "soft focus olive branch shadows on a white wall",
+    "peaceful country home exterior at twilight with glowing windows",
+    "close up of hands resting on an open vintage bible",
+    "gentle morning light streaming through a clean farmhouse window",
+    "a burning candle on a wooden table in a quiet room"
+  ],
+  "scenes": [
+    {
+      "a": "If the uncertainty of your future feels heavy today, let this prayer settle your heart.",
+      "img": "short-familypsalm90v16-scene-01.jpg",
+      "kicker": "PSALM 90:16",
+      "sub": "GOD'S LIGHT UPON YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let thy work appear unto thy servants, and thy glory unto their children.",
+      "img": "short-familypsalm90v16-scene-02.jpg",
+      "kicker": "PSALM 90:16",
+      "sub": "HIS WORK REVEALED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And let the beauty of the LORD our God be upon us: and establish thou the work of our hands upon us; yea, the work of our hands establish thou it.",
+      "img": "short-familypsalm90v16-scene-03.jpg",
+      "kicker": "PSALM 90:17",
+      "sub": "ESTABLISHING OUR HANDS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, breathe your purpose into our daily labors and guide every decision we make together.",
+      "img": "short-familypsalm90v16-scene-04.jpg",
+      "kicker": "A HOUSEHOLD PRAYER",
+      "sub": "GUIDED BY HIS GRACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May our family reflect your goodness in all that we do as we walk forward.",
+      "img": "short-familypsalm90v16-scene-05.jpg",
+      "kicker": "A HOUSEHOLD PRAYER",
+      "sub": "REFLECTING HIS GOODNESS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We entrust our home and our future into your steady and loving hands today, Amen.",
+      "img": "short-familypsalm90v16-scene-06.jpg",
+      "kicker": "RESTING IN FAITH",
+      "sub": "AMEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "If the uncertainty of your future feels heavy today, let this prayer settle your heart."
+    ],
+    [
+      10,
+      25,
+      "Let thy work appear unto thy servants, and thy glory unto their children."
+    ],
+    [
+      25,
+      45,
+      "And let the beauty of the LORD our God be upon us: and establish thou the work of our hands upon us; yea, the work of our hands establish thou it."
+    ],
+    [
+      45,
+      65,
+      "Lord, breathe your purpose into our daily labors and guide every decision we make together."
+    ],
+    [
+      65,
+      85,
+      "May our family reflect your goodness in all that we do as we walk forward."
+    ],
+    [
+      85,
+      105,
+      "We entrust our home and our future into your steady and loving hands today, Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "HEAVY UNCERTAINTY",
+        "SETTLE YOUR",
+        "HEART TODAY"
+      ],
+      [
+        "HEAVY"
+      ],
+      "PSALM 90:16"
+    ],
+    [
+      10,
+      25,
+      [
+        "LET THY WORK",
+        "APPEAR UNTO",
+        "THY SERVANTS",
+        "THY GLORY"
+      ],
+      [
+        "THY GLORY"
+      ],
+      "PSALM 90:16"
+    ],
+    [
+      25,
+      45,
+      [
+        "BEAUTY OF",
+        "THE LORD",
+        "ESTABLISH THE",
+        "WORK OF",
+        "OUR HANDS"
+      ],
+      [
+        "BEAUTY"
+      ],
+      "PSALM 90:17"
+    ],
+    [
+      45,
+      65,
+      [
+        "BREATHE PURPOSE",
+        "INTO DAILY",
+        "LABORS GUIDE",
+        "EVERY DECISION"
+      ],
+      [
+        "PURPOSE"
+      ],
+      "PRAYER"
+    ],
+    [
+      65,
+      85,
+      [
+        "FAMILY REFLECT",
+        "YOUR GOODNESS",
+        "IN ALL",
+        "WE DO"
+      ],
+      [
+        "GOODNESS"
+      ],
+      "PRAYER"
+    ],
+    [
+      85,
+      105,
+      [
+        "ENTRUST OUR HOME",
+        "INTO YOUR",
+        "STEADY LOVING",
+        "HANDS AMEN"
+      ],
+      [
+        "LOVING"
+      ],
+      "PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the uncertainty of your future feels heavy today, let this prayer settle your heart.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "SETTLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let thy work appear unto thy servants, and thy glory unto their children.",
+      "kind": "phrase",
+      "words": [
+        "THY WORK",
+        "THY GLORY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "And let the beauty of the LORD our God be upon us: and establish thou the work of our hands upon us; yea, the work of our hands establish thou it.",
+      "kind": "phrase",
+      "words": [
+        "BEAUTY",
+        "ESTABLISH"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, breathe your purpose into our daily labors and guide every decision we make together.",
+      "kind": "phrase",
+      "words": [
+        "PURPOSE",
+        "GUIDE"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "May our family reflect your goodness in all that we do as we walk forward.",
+      "kind": "phrase",
+      "words": [
+        "GOODNESS",
+        "WALK FORWARD"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "We entrust our home and our future into your steady and loving hands today, Amen.",
+      "kind": "phrase",
+      "words": [
+        "ENTRUST",
+        "LOVING"
+      ],
+      "hi": 5,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 90:16-17"
+}
