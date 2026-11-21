@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T11:33:25Z",
+  "generated_at": "2026-11-21T12:37:55Z",
   "monitor_generated_at": "2026-11-21T11:27:49.289585+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 592,
-    "published_longform": 177,
-    "published_shorts": 415,
-    "public_total": 590,
-    "queued_longform": 60,
-    "queued_shorts": 89,
+    "published_total": 594,
+    "published_longform": 178,
+    "published_shorts": 416,
+    "public_total": 592,
+    "queued_longform": 59,
+    "queued_shorts": 88,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -645,33 +645,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 42,
-        "published_longform": 11,
-        "published_shorts": 31,
+        "published_total": 44,
+        "published_longform": 12,
+        "published_shorts": 32,
         "thumbnail_pending": 6,
-        "public_total": 42,
-        "queued_longform": 6,
+        "public_total": 44,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPROVERBS16V3",
-        "title": "Pray This Proverbs 16:3 Prayer for God's Guidance | Surrender Your Decision Today #Shorts",
-        "format": "short",
-        "youtube_video_id": "wCXnGsQsvPM",
-        "watch_url": "https://www.youtube.com/shorts/wCXnGsQsvPM",
-        "published_on": "2026-11-21",
-        "published_at": "2026-11-21T00:40:16Z"
-      },
-      "next_queued_longform": {
         "id": "0811",
         "title": "Learning Which Way to Walk: Psalm 143:8 | The Guided Path",
-        "words": 2029,
+        "format": "longform",
+        "youtube_video_id": "voyzxQIfguU",
+        "watch_url": "https://youtu.be/voyzxQIfguU",
+        "published_on": "2026-11-21",
+        "published_at": "2026-11-21T12:37:11Z"
+      },
+      "next_queued_longform": {
+        "id": "0812",
+        "title": "When You Need Truth to Find Your Way: John 16:13 | The Guided Path",
+        "words": 1852,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedisaiah48v17",
-        "scripture": "Isaiah 48:17",
+        "short": "short-guidedjames3v17",
+        "scripture": "James 3:17",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,54 @@
     }
   ],
   "videos": [
+    {
+      "id": "0811",
+      "slug": "when-you-need-to-know-which-way-to-turn-psalm-143-8",
+      "file": "0811-when-you-need-to-know-which-way-to-turn-psalm-143-8.md",
+      "title": "Learning Which Way to Walk: Psalm 143:8 | The Guided Path",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T12:37:11Z",
+      "youtube_video_id": "voyzxQIfguU",
+      "watch_url": "https://youtu.be/voyzxQIfguU",
+      "youtu_be_url": "https://youtu.be/voyzxQIfguU",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/voyzxQIfguU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/voyzxQIfguU/hqdefault.jpg",
+      "thumb_text": "KNOW THE WAY",
+      "thumbnail_pending": false,
+      "duration_label": "~14 min",
+      "words": 2029
+    },
+    {
+      "id": "SHORT-GUIDEDISAIAH48V17",
+      "slug": "short-guidedisaiah48v17-guidance-prayer",
+      "file": "short-guidedisaiah48v17-guidance-prayer.md",
+      "title": "Pray This Isaiah 48:17 Prayer for God's Guidance | Next Step #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T11:33:06Z",
+      "youtube_video_id": "zHyexy38ZfM",
+      "watch_url": "https://www.youtube.com/shorts/zHyexy38ZfM",
+      "youtu_be_url": "https://youtu.be/zHyexy38ZfM",
+      "shorts_url": "https://www.youtube.com/shorts/zHyexy38ZfM",
+      "studio_url": "https://studio.youtube.com/video/zHyexy38ZfM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/zHyexy38ZfM/hqdefault.jpg",
+      "thumb_text": "THE LORD YOUR \u00b7 REDEEMER",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 621
+    },
     {
       "id": "SHORT-SHIELDPSALM3V3",
       "slug": "short-shieldpsalm3v3-protection-prayer",
@@ -15615,19 +15663,6 @@
         "words": 1465
       },
       {
-        "id": "0811",
-        "slug": "when-you-need-to-know-which-way-to-turn-psalm-143-8",
-        "file": "0811-when-you-need-to-know-which-way-to-turn-psalm-143-8.md",
-        "title": "Learning Which Way to Walk: Psalm 143:8 | The Guided Path",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2029
-      },
-      {
         "id": "0812",
         "slug": "when-you-need-truth-to-find-your-way-john-16-13",
         "file": "0812-when-you-need-truth-to-find-your-way-john-16-13.md",
@@ -15737,17 +15772,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedisaiah48v17",
-        "file": "0000-short-guidedisaiah48v17.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 48:17",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedjames3v17",

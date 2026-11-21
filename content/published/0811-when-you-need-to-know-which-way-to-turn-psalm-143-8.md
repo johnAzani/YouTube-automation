@@ -2,7 +2,7 @@
 id: 0811
 title: "Learning Which Way to Walk: Psalm 143:8 | The Guided Path"
 slug: when-you-need-to-know-which-way-to-turn-psalm-143-8
-status: approved
+status: published
 channel: prayer10
 privacy: public
 format: longform
@@ -80,6 +80,14 @@ originality:
   source_notes: true
 title_before: "When You Need to Know Which Way to Turn: Psalm 143:8 | The Guided Path"
 queue_title_fixed_at: "2026-11-16"
+published_on: "2026-11-21"
+published_at: "2026-11-21T12:37:11Z"
+youtube_video_id: "voyzxQIfguU"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Bringing the Decision to the Lord
