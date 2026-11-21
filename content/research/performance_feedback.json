@@ -1,39 +1,30 @@
 {
-  "generated_at": "2026-11-20T09:58:55.161717+00:00",
-  "as_of": "2026-11-20",
-  "sufficient_data": true,
-  "measured_longform_videos": 3,
-  "total_longform_videos": 14,
+  "generated_at": "2026-11-21T03:57:58.536279+00:00",
+  "as_of": "2026-11-21",
+  "sufficient_data": false,
+  "measured_longform_videos": 2,
+  "total_longform_videos": 12,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 74,
+    "receipt_video_ids": 79,
     "matched_video_ids": 50,
-    "longform_below_view_threshold": 11,
+    "longform_below_view_threshold": 10,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 2,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
   "ranked_themes": [
-    "anxiety_peace",
-    "protection"
+    "anxiety_peace"
   ],
   "themes": [
     {
       "theme": "anxiety_peace",
-      "videos": 5,
+      "videos": 6,
       "measured_videos": 2,
-      "avg_score": 0.6813,
-      "avg_engagement": 0.0451,
+      "avg_score": 0.8283,
+      "avg_engagement": 0.0381,
       "top_scripture": "Isaiah 26"
-    },
-    {
-      "theme": "protection",
-      "videos": 2,
-      "measured_videos": 1,
-      "avg_score": 0.5958,
-      "avg_engagement": 0.08,
-      "top_scripture": "Psalm 91"
     },
     {
       "theme": "morning_mercy_renewal",
@@ -58,105 +49,106 @@
       "avg_score": 0.0,
       "avg_engagement": 0.0,
       "top_scripture": ""
-    },
-    {
-      "theme": "peace_rest",
-      "videos": 1,
-      "measured_videos": 0,
-      "avg_score": 0.0,
-      "avg_engagement": 0.0,
-      "top_scripture": ""
     }
   ],
   "shorts": {
-    "measured_shorts": 30,
-    "total_shorts": 36,
+    "measured_shorts": 32,
+    "total_shorts": 38,
     "sufficient_data": true,
-    "avg_views": 87.6,
-    "median_views": 79,
-    "total_views": 2627,
+    "avg_views": 79.7,
+    "median_views": 78,
+    "total_views": 2550,
     "minimum_age_days": 2,
     "by_book": {
+      "1 john": {
+        "shorts": 1,
+        "avg_views": 8.0,
+        "ratio": 0.7
+      },
       "1 peter": {
         "shorts": 1,
         "avg_views": 120.0,
-        "ratio": 1.123
+        "ratio": 1.169
       },
       "2 timothy": {
         "shorts": 1,
-        "avg_views": 77.0,
-        "ratio": 0.96
+        "avg_views": 78.0,
+        "ratio": 0.993
       },
       "deuteronomy": {
         "shorts": 1,
         "avg_views": 5.0,
-        "ratio": 0.686
+        "ratio": 0.688
+      },
+      "hebrews": {
+        "shorts": 1,
+        "avg_views": 8.0,
+        "ratio": 0.7
       },
       "isaiah": {
-        "shorts": 4,
-        "avg_views": 79.5,
-        "ratio": 0.939
+        "shorts": 3,
+        "avg_views": 70.0,
+        "ratio": 0.927
       },
       "jeremiah": {
         "shorts": 1,
-        "avg_views": 10.0,
-        "ratio": 0.705
+        "avg_views": 11.0,
+        "ratio": 0.713
       },
       "john": {
         "shorts": 2,
         "avg_views": 207.5,
-        "ratio": 1.685
+        "ratio": 1.802
       },
       "matthew": {
         "shorts": 3,
         "avg_views": 83.7,
-        "ratio": 0.973
+        "ratio": 1.03
       },
       "philippians": {
         "shorts": 2,
         "avg_views": 86.5,
-        "ratio": 0.994
+        "ratio": 1.043
       },
       "psalm": {
-        "shorts": 15,
-        "avg_views": 83.9,
-        "ratio": 0.963
+        "shorts": 16,
+        "avg_views": 79.4,
+        "ratio": 0.997
       }
     },
     "by_theme": {
       "anxiety_peace": {
-        "shorts": 10,
-        "avg_views": 109.0,
-        "ratio": 1.204
+        "shorts": 8,
+        "avg_views": 121.5,
+        "ratio": 1.42
       },
       "daily_guidance_wisdom": {
         "shorts": 4,
         "avg_views": 55.8,
-        "ratio": 0.758
+        "ratio": 0.8
       },
       "midday_strength_endurance": {
-        "shorts": 2,
-        "avg_views": 82.0,
-        "ratio": 0.968
+        "shorts": 4,
+        "avg_views": 45.8,
+        "ratio": 0.716
       },
       "morning_mercy_renewal": {
         "shorts": 2,
         "avg_views": 89.5,
-        "ratio": 1.011
+        "ratio": 1.062
       },
       "peace_rest": {
-        "shorts": 12,
-        "avg_views": 80.9,
-        "ratio": 0.935
+        "shorts": 14,
+        "avg_views": 70.9,
+        "ratio": 0.904
       }
     },
     "guidance": [
-      "Shorts: John runs 1.7x this channel's average Short (88 views over 30 Shorts); its passages are written first."
+      "Shorts: John runs 1.8x this channel's average Short (80 views over 32 Shorts); its passages are written first."
     ]
   },
   "guidance": [
-    "'anxiety_peace' is the strongest measured theme (avg score 0.68, 2 measured video(s)). Favour it when choosing the next devotional.",
-    "'protection' is currently the weakest measured theme; deprioritise it until the audience signal changes."
+    "Only 2 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
   ],
   "cost_lock": "$0.00 \u2014 public Data API statistics only; no new quota or secret.",
   "privacy": "Aggregate theme scores only; raw per-video snapshot stays an Actions artifact.",
