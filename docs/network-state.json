@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T16:20:43Z",
+  "generated_at": "2026-11-21T16:49:41Z",
   "monitor_generated_at": "2026-11-21T15:04:03.237531+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 608,
-    "published_longform": 183,
-    "published_shorts": 425,
-    "public_total": 606,
-    "queued_longform": 56,
-    "queued_shorts": 90,
+    "published_total": 610,
+    "published_longform": 184,
+    "published_shorts": 426,
+    "public_total": 608,
+    "queued_longform": 55,
+    "queued_shorts": 89,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -577,33 +577,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 45,
-        "published_longform": 11,
-        "published_shorts": 34,
-        "thumbnail_pending": 45,
-        "public_total": 45,
-        "queued_longform": 6,
+        "published_total": 47,
+        "published_longform": 12,
+        "published_shorts": 35,
+        "thumbnail_pending": 47,
+        "public_total": 47,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM113V3",
-        "title": "Pray This Psalm 113:3 Prayer of Thanksgiving | Every Hour #Shorts",
-        "format": "short",
-        "youtube_video_id": "jUm8dQXSbzs",
-        "watch_url": "https://www.youtube.com/shorts/jUm8dQXSbzs",
-        "published_on": "2026-11-21",
-        "published_at": "2026-11-21T11:32:11Z"
-      },
-      "next_queued_longform": {
         "id": "0711",
         "title": "Rejoicing in the Day He Made: Psalm 118:24 | The Praise Garden",
-        "words": 1919,
+        "format": "longform",
+        "youtube_video_id": "SX9OEau8_NU",
+        "watch_url": "https://youtu.be/SX9OEau8_NU",
+        "published_on": "2026-11-21",
+        "published_at": "2026-11-21T16:48:47Z"
+      },
+      "next_queued_longform": {
+        "id": "0712",
+        "title": "Peace That Rules When Hearts Are Troubled: Colossians 3:15-17",
+        "words": 1726,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm28v7",
-        "scripture": "Psalm 28:7",
+        "short": "short-gardenpsalm69v30",
+        "scripture": "Psalm 69:30",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0711",
+      "slug": "when-every-day-feels-heavy-psalm-118-24-the-praise-garden",
+      "file": "0711-when-every-day-feels-heavy-psalm-118-24-the-praise-garden.md",
+      "title": "Rejoicing in the Day He Made: Psalm 118:24 | The Praise Garden",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T16:48:47Z",
+      "youtube_video_id": "SX9OEau8_NU",
+      "watch_url": "https://youtu.be/SX9OEau8_NU",
+      "youtu_be_url": "https://youtu.be/SX9OEau8_NU",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/SX9OEau8_NU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/SX9OEau8_NU/hqdefault.jpg",
+      "thumb_text": "REJOICE TODAY",
+      "thumbnail_pending": true,
+      "duration_label": "~13 min",
+      "words": 1919
+    },
     {
       "id": "0097",
       "slug": "pour-out-your-heart-before-him-psalm-62-5-8",
@@ -820,6 +844,30 @@
       "thumbnail_pending": true,
       "duration_label": "~10 min",
       "words": 1504
+    },
+    {
+      "id": "SHORT-GARDENPSALM28V7",
+      "slug": "short-gardenpsalm28v7-thanksgiving-prayer",
+      "file": "short-gardenpsalm28v7-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 28:7 Prayer of Thanksgiving | Be Still In His Presence #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T15:21:01Z",
+      "youtube_video_id": "XjfivuCQugU",
+      "watch_url": "https://www.youtube.com/shorts/XjfivuCQugU",
+      "youtu_be_url": "https://youtu.be/XjfivuCQugU",
+      "shorts_url": "https://www.youtube.com/shorts/XjfivuCQugU",
+      "studio_url": "https://studio.youtube.com/video/XjfivuCQugU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/XjfivuCQugU/hqdefault.jpg",
+      "thumb_text": "THE LORD IS \u00b7 MY STRENGTH AND SHIELD",
+      "thumbnail_pending": true,
+      "duration_label": "53s",
+      "words": 644
     },
     {
       "id": "SHORT-SHIELDPSALM91V11",
@@ -15869,19 +15917,6 @@
         "words": 1488
       },
       {
-        "id": "0711",
-        "slug": "when-every-day-feels-heavy-psalm-118-24-the-praise-garden",
-        "file": "0711-when-every-day-feels-heavy-psalm-118-24-the-praise-garden.md",
-        "title": "Rejoicing in the Day He Made: Psalm 118:24 | The Praise Garden",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1919
-      },
-      {
         "id": "0712",
         "slug": "peace-that-rules-when-hearts-are-troubled-colossians-3-15-17",
         "file": "0712-peace-that-rules-when-hearts-are-troubled-colossians-3-15-17.md",
@@ -16036,17 +16071,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-gardenpsalm28v7",
-        "file": "0000-short-gardenpsalm28v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 28:7",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm69v30",

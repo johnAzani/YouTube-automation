@@ -2,7 +2,7 @@
 id: '0711'
 title: "Rejoicing in the Day He Made: Psalm 118:24 | The Praise Garden"
 slug: when-every-day-feels-heavy-psalm-118-24-the-praise-garden
-status: approved
+status: published
 channel: prayer9
 privacy: public
 format: longform
@@ -75,6 +75,15 @@ originality:
   source_notes: true
 title_before: "When Every Day Feels Heavy: Psalm 118:24 | The Praise Garden"
 queue_title_fixed_at: "2026-11-16"
+published_on: "2026-11-21"
+published_at: "2026-11-21T16:48:47Z"
+youtube_video_id: "SX9OEau8_NU"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Entering His Gates With Thanksgiving
