@@ -1,0 +1,276 @@
+{
+  "key": "short-provisionproverbs11v24",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "SCATTERING IN FAITH",
+    "GOD'S DIVINE INCREASE"
+  ],
+  "poster": [
+    "THE PROVISION TABLE",
+    "WISDOM FOR PROVISION",
+    "KING JAMES VERSION",
+    "DAILY STEWARDSHIP"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "misty golden mountain pass",
+    "peaceful sunlit river flowing",
+    "ancient stone table in forest",
+    "dappled sunlight on forest floor",
+    "soft golden morning light horizon",
+    "calm flowing stream over rocks"
+  ],
+  "scenes": [
+    {
+      "a": "As you hold back from giving in that area where you feel most empty, hear this.",
+      "img": "short-provisionproverbs11v24-scene-01.jpg",
+      "kicker": "PROVERBS 11:24",
+      "sub": "GOD'S ECONOMY IS DIFFERENT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "There is that scattereth, and yet increaseth; and there is that withholdeth more than is meet, but it tendeth to poverty.",
+      "img": "short-provisionproverbs11v24-scene-02.jpg",
+      "kicker": "PROVERBS 11:24",
+      "sub": "THE WAY OF INCREASE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The liberal soul shall be made fat: and he that watereth shall be watered also himself.",
+      "img": "short-provisionproverbs11v24-scene-03.jpg",
+      "kicker": "PROVERBS 11:25",
+      "sub": "BEING WATERED IN RETURN",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, teach me the holy rhythm of your kingdom when resources feel tight and limited.",
+      "img": "short-provisionproverbs11v24-scene-04.jpg",
+      "kicker": "STEWARDSHIP PRAYER",
+      "sub": "FINDING HOLY RHYTHM",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Break the fear of lack that causes me to hoard what you intended to flow.",
+      "img": "short-provisionproverbs11v24-scene-05.jpg",
+      "kicker": "STEWARDSHIP PRAYER",
+      "sub": "BREAKING FEAR OF LACK",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May my hands be channels of your grace, trusting that you are my true supply.",
+      "img": "short-provisionproverbs11v24-scene-06.jpg",
+      "kicker": "STEWARDSHIP PRAYER",
+      "sub": "TRUSTING YOUR SUPPLY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "As you hold back from giving in that area where you feel most empty, hear this."
+    ],
+    [
+      8,
+      18,
+      "There is that scattereth, and yet increaseth; and there is that withholdeth more than is meet, but it tendeth to poverty."
+    ],
+    [
+      18,
+      28,
+      "The liberal soul shall be made fat: and he that watereth shall be watered also himself."
+    ],
+    [
+      28,
+      38,
+      "Lord, teach me the holy rhythm of your kingdom when resources feel tight and limited."
+    ],
+    [
+      38,
+      48,
+      "Break the fear of lack that causes me to hoard what you intended to flow."
+    ],
+    [
+      48,
+      58,
+      "May my hands be channels of your grace, trusting that you are my true supply."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "HOLD BACK FROM GIVING",
+        "WHERE YOU FEEL EMPTY",
+        "HEAR THIS"
+      ],
+      [
+        "HOLD BACK",
+        "HEAR THIS"
+      ],
+      "PROVERBS 11:24"
+    ],
+    [
+      8,
+      18,
+      [
+        "SCATTERETH AND YET INCREASETH",
+        "WITHHOLDETH MORE THAN MEET",
+        "TENDETH TO POVERTY"
+      ],
+      [
+        "SCATTERETH",
+        "INCREASETH"
+      ],
+      "PROVERBS 11:24"
+    ],
+    [
+      18,
+      28,
+      [
+        "LIBERAL SOUL MADE FAT",
+        "HE THAT WATERETH",
+        "SHALL BE WATERED HIMSELF"
+      ],
+      [
+        "LIBERAL SOUL",
+        "WATERED"
+      ],
+      "PROVERBS 11:25"
+    ],
+    [
+      28,
+      38,
+      [
+        "TEACH ME HOLY RHYTHM",
+        "KINGDOM RESOURCES FEEL TIGHT",
+        "LIMITED RESOURCES"
+      ],
+      [
+        "HOLY RHYTHM",
+        "KINGDOM"
+      ],
+      "PROVERBS 11:25"
+    ],
+    [
+      38,
+      48,
+      [
+        "BREAK FEAR OF LACK",
+        "HOARD WHAT YOU INTENDED",
+        "LET IT FLOW"
+      ],
+      [
+        "BREAK FEAR",
+        "FLOW"
+      ],
+      "PROVERBS 11:25"
+    ],
+    [
+      48,
+      58,
+      [
+        "HANDS ARE CHANNELS",
+        "GRACE TRUSTING SUPPLY",
+        "YOU ARE MY SUPPLY"
+      ],
+      [
+        "CHANNELS",
+        "TRUE SUPPLY"
+      ],
+      "PROVERBS 11:25"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you hold back from giving in that area where you feel most empty, hear this.",
+      "kind": "phrase",
+      "words": [
+        "HOLD BACK",
+        "HEAR THIS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "There is that scattereth, and yet increaseth; and there is that withholdeth more than is meet, but it tendeth to poverty.",
+      "kind": "phrase",
+      "words": [
+        "SCATTERETH",
+        "INCREASETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The liberal soul shall be made fat: and he that watereth shall be watered also himself.",
+      "kind": "phrase",
+      "words": [
+        "LIBERAL SOUL",
+        "WATERED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, teach me the holy rhythm of your kingdom when resources feel tight and limited.",
+      "kind": "phrase",
+      "words": [
+        "HOLY RHYTHM",
+        "KINGDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Break the fear of lack that causes me to hoard what you intended to flow.",
+      "kind": "phrase",
+      "words": [
+        "BREAK FEAR",
+        "FLOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May my hands be channels of your grace, trusting that you are my true supply.",
+      "kind": "phrase",
+      "words": [
+        "CHANNELS",
+        "TRUE SUPPLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 11:24-25"
+}

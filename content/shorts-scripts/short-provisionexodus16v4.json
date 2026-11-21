@@ -1,0 +1,221 @@
+{
+  "key": "short-provisionexodus16v4",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "DAILY PROVISION",
+    "GOD IS FAITHFUL"
+  ],
+  "poster": [
+    "HIS HAND",
+    "PROVIDES",
+    "YOUR DAILY",
+    "MEASURE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "misty mountain valley at sunrise",
+    "ancient stone table in soft light",
+    "flowing river over smooth river rocks",
+    "golden light hitting pine forest floor",
+    "cliffs at sunset with long shadows",
+    "quiet mountain path in morning light"
+  ],
+  "scenes": [
+    {
+      "a": "As you calculate your limited resources for the week ahead, hear this holy promise.",
+      "img": "short-provisionexodus16v4-scene-01.jpg",
+      "kicker": "EXODUS 16:4",
+      "sub": "GOD PROVIDES YOUR DAILY BREAD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Behold, I will rain bread from heaven for you.",
+      "img": "short-provisionexodus16v4-scene-02.jpg",
+      "kicker": "EXODUS 16:4",
+      "sub": "HEAVENLY PROVISION",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And the people shall go out and gather a certain rate every day, that I may prove them, whether they will walk in my law, or no.",
+      "img": "short-provisionexodus16v4-scene-03.jpg",
+      "kicker": "EXODUS 16:4",
+      "sub": "THE DAILY GATHERING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, help me to gather only what I need for today, trusting that your hand will supply my requirements again tomorrow.",
+      "img": "short-provisionexodus16v4-scene-04.jpg",
+      "kicker": "STEWARDSHIP",
+      "sub": "TRUSTING IN HIS MEASURE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Remove my anxiety over the future and quiet my spirit as I walk in your law, resting in your perfect provision.",
+      "img": "short-provisionexodus16v4-scene-05.jpg",
+      "kicker": "STEWARDSHIP",
+      "sub": "RESTING IN FAITH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May my actions today reflect a heart that is fully dependent upon your grace for every single earthly necessity.",
+      "img": "short-provisionexodus16v4-scene-06.jpg",
+      "kicker": "STEWARDSHIP",
+      "sub": "FULLY DEPENDENT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "As you calculate your limited resources for the week ahead, hear this holy promise."
+    ],
+    [
+      8,
+      14,
+      "Behold, I will rain bread from heaven for you."
+    ],
+    [
+      15,
+      26,
+      "And the people shall go out and gather a certain rate every day, that I may prove them, whether they will walk in my law, or no."
+    ],
+    [
+      27,
+      34,
+      "Lord, help me to gather only what I need for today, trusting that your hand will supply my requirements again tomorrow."
+    ],
+    [
+      35,
+      42,
+      "Remove my anxiety over the future and quiet my spirit as I walk in your law, resting in your perfect provision."
+    ],
+    [
+      43,
+      50,
+      "May my actions today reflect a heart that is fully dependent upon your grace for every single earthly necessity."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "CALCULATING YOUR RESOURCES",
+        "HEAR THIS",
+        "HOLY PROMISE"
+      ],
+      [
+        "HOLY PROMISE"
+      ],
+      "EXODUS 16:4"
+    ],
+    [
+      8,
+      14,
+      [
+        "BEHOLD I WILL",
+        "RAIN BREAD FROM",
+        "HEAVEN FOR YOU"
+      ],
+      [
+        "RAIN BREAD"
+      ],
+      "EXODUS 16:4"
+    ],
+    [
+      15,
+      26,
+      [
+        "GATHER A CERTAIN RATE",
+        "EVERY DAY THAT I",
+        "MAY PROVE THEM",
+        "WALK IN MY LAW"
+      ],
+      [
+        "CERTAIN RATE"
+      ],
+      "EXODUS 16:4"
+    ],
+    [
+      27,
+      34,
+      [
+        "HELP ME GATHER",
+        "WHAT I NEED TODAY",
+        "TRUSTING YOUR HAND"
+      ],
+      [
+        "TRUSTING"
+      ],
+      "EXODUS 16:4"
+    ],
+    [
+      35,
+      42,
+      [
+        "REMOVE MY ANXIETY",
+        "RESTING IN YOUR",
+        "PERFECT PROVISION"
+      ],
+      [
+        "PERFECT PROVISION"
+      ],
+      "EXODUS 16:4"
+    ],
+    [
+      43,
+      50,
+      [
+        "HEART FULLY DEPENDENT",
+        "UPON YOUR GRACE",
+        "FOR EVERY NECESSITY"
+      ],
+      [
+        "FULLY DEPENDENT"
+      ],
+      "EXODUS 16:4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you calculate your limited resources for the week ahead, hear this holy promise.",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Exodus 16:4"
+}

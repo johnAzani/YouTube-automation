@@ -1,0 +1,264 @@
+{
+  "key": "short-provisiondeuteronomy28v2",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "DEUTERONOMY 28",
+    "THE PROVISION TABLE"
+  ],
+  "poster": [
+    "WALK IN FAITH",
+    "THE PROVISION TABLE",
+    "DEUTERONOMY 28:2-6",
+    "DAILY PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit valley mist morning",
+    "peaceful river winding through green hills",
+    "sunlit mountain pass quiet landscape",
+    "ancient stone table in sunlight nature",
+    "calm river flowing through peaceful woods",
+    "sunrise over open green fields"
+  ],
+  "scenes": [
+    {
+      "a": "As you sit counting the cost of tomorrow's uncertainties, hear the voice of the Lord.",
+      "img": "short-provisiondeuteronomy28v2-scene-01.jpg",
+      "kicker": "DEUTERONOMY 28:2",
+      "sub": "HEAR HIS VOICE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And all these blessings shall come on thee, and overtake thee, if thou shalt hearken unto the voice of the LORD thy God.",
+      "img": "short-provisiondeuteronomy28v2-scene-02.jpg",
+      "kicker": "DEUTERONOMY 28:3",
+      "sub": "BLESSED IN THE CITY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Blessed shalt thou be in the city, and blessed shalt thou be in the field.",
+      "img": "short-provisiondeuteronomy28v2-scene-03.jpg",
+      "kicker": "DEUTERONOMY 28:4",
+      "sub": "FRUITFUL INCREASE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Blessed shall be the fruit of thy body, and the fruit of thy ground, and the fruit of thy cattle, the increase of thy kine, and the flocks of thy sheep.",
+      "img": "short-provisiondeuteronomy28v2-scene-04.jpg",
+      "kicker": "DEUTERONOMY 28:5",
+      "sub": "BASKET AND STORE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Blessed shall be thy basket and thy store.",
+      "img": "short-provisiondeuteronomy28v2-scene-05.jpg",
+      "kicker": "DEUTERONOMY 28:6",
+      "sub": "COMINGS AND GOINGS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Blessed shalt thou be when thou comest in, and blessed shalt thou be when thou goest out.",
+      "img": "short-provisiondeuteronomy28v2-scene-06.jpg",
+      "kicker": "DAILY PRAYER",
+      "sub": "WALK IN PROVISION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "As you sit counting the cost of tomorrow's uncertainties, hear the voice of the Lord."
+    ],
+    [
+      12,
+      27,
+      "And all these blessings shall come on thee, and overtake thee, if thou shalt hearken unto the voice of the LORD thy God."
+    ],
+    [
+      27,
+      42,
+      "Blessed shalt thou be in the city, and blessed shalt thou be in the field."
+    ],
+    [
+      42,
+      62,
+      "Blessed shall be the fruit of thy body, and the fruit of thy ground, and the fruit of thy cattle, the increase of thy kine, and the flocks of thy sheep."
+    ],
+    [
+      62,
+      74,
+      "Blessed shall be thy basket and thy store."
+    ],
+    [
+      74,
+      90,
+      "Blessed shalt thou be when thou comest in, and blessed shalt thou be when thou goest out."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "AS YOU SIT COUNTING THE COST",
+        "OF TOMORROW'S UNCERTAINTIES",
+        "HEAR THE VOICE OF THE LORD"
+      ],
+      "HEAR",
+      "DEUTERONOMY 28 : 2"
+    ],
+    [
+      12,
+      27,
+      [
+        "AND ALL THESE BLESSINGS",
+        "SHALL COME ON THEE",
+        "IF THOU SHALT HEARKEN"
+      ],
+      "BLESSINGS",
+      "DEUTERONOMY 28 : 2"
+    ],
+    [
+      27,
+      42,
+      [
+        "BLESSED SHALT THOU BE",
+        "IN THE CITY",
+        "AND IN THE FIELD"
+      ],
+      "BLESSED",
+      "DEUTERONOMY 28 : 3"
+    ],
+    [
+      42,
+      62,
+      [
+        "BLESSED SHALL BE THE FRUIT",
+        "OF THY BODY AND GROUND",
+        "AND THE INCREASE OF THY KINE"
+      ],
+      "FRUIT",
+      "DEUTERONOMY 28 : 4"
+    ],
+    [
+      62,
+      74,
+      [
+        "BLESSED SHALL BE",
+        "THY BASKET",
+        "AND THY STORE"
+      ],
+      "STORE",
+      "DEUTERONOMY 28 : 5"
+    ],
+    [
+      74,
+      90,
+      [
+        "BLESSED SHALT THOU BE",
+        "WHEN THOU COMEST IN",
+        "AND WHEN THOU GOEST OUT"
+      ],
+      "COMEST",
+      "DEUTERONOMY 28 : 6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you sit counting the cost of tomorrow's uncertainties, hear the voice of the Lord.",
+      "kind": "phrase",
+      "words": [
+        "HEAR",
+        "THE",
+        "VOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And all these blessings shall come on thee, and overtake thee, if thou shalt hearken unto the voice of the LORD thy God.",
+      "kind": "phrase",
+      "words": [
+        "BLESSINGS",
+        "SHALL",
+        "COME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed shalt thou be in the city, and blessed shalt thou be in the field.",
+      "kind": "phrase",
+      "words": [
+        "BLESSED",
+        "SHALT",
+        "THOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed shall be the fruit of thy body, and the fruit of thy ground, and the fruit of thy cattle, the increase of thy kine, and the flocks of thy sheep.",
+      "kind": "phrase",
+      "words": [
+        "FRUIT",
+        "OF",
+        "THY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed shall be thy basket and thy store.",
+      "kind": "phrase",
+      "words": [
+        "BASKET",
+        "AND",
+        "STORE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed shalt thou be when thou comest in, and blessed shalt thou be when thou goest out.",
+      "kind": "phrase",
+      "words": [
+        "COMEST",
+        "IN",
+        "AND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Deuteronomy 28:2-6"
+}

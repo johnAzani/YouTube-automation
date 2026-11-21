@@ -1,0 +1,276 @@
+{
+  "key": "short-provision2corinthians9v10",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "GOD MULTIPLIES",
+    "YOUR SEED"
+  ],
+  "poster": [
+    "HARVEST OF GRACE",
+    "PROVISION FOR",
+    "THE FAITHFUL HEART",
+    "KJV WISDOM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit golden wheat field",
+    "serene mountain lake at dawn",
+    "flowing river over smooth stones",
+    "ancient stone table in soft light",
+    "misty forest path at sunrise",
+    "peaceful valley under clouds"
+  ],
+  "scenes": [
+    {
+      "a": "As you stare at that empty ledger",
+      "img": "short-provision2corinthians9v10-scene-01.jpg",
+      "kicker": "2 CORINTHIANS 9",
+      "sub": "GOD MULTIPLIES YOUR SEED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Now he that ministereth",
+      "img": "short-provision2corinthians9v10-scene-02.jpg",
+      "kicker": "2 CORINTHIANS 9",
+      "sub": "PROVISION AND GRACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "multiply your seed sown",
+      "img": "short-provision2corinthians9v10-scene-03.jpg",
+      "kicker": "2 CORINTHIANS 9",
+      "sub": "INCREASED FRUITS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Being enriched in every thing",
+      "img": "short-provision2corinthians9v10-scene-04.jpg",
+      "kicker": "2 CORINTHIANS 9",
+      "sub": "BOUNTIFUL PROVISION",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "which causeth through us",
+      "img": "short-provision2corinthians9v10-scene-05.jpg",
+      "kicker": "2 CORINTHIANS 9",
+      "sub": "THANKSGIVING TO GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we thank you",
+      "img": "short-provision2corinthians9v10-scene-06.jpg",
+      "kicker": "2 CORINTHIANS 9",
+      "sub": "FAITHFUL STEWARDSHIP",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "As you stare at that empty ledger, know that God sees your need for tomorrow."
+    ],
+    [
+      16,
+      35,
+      "Now he that ministereth seed to the sower both minister bread for your food, and multiply your seed sown, and increase the fruits of your righteousness;"
+    ],
+    [
+      36,
+      50,
+      "Being enriched in every thing to all bountifulness, which causeth through us thanksgiving to God."
+    ],
+    [
+      51,
+      65,
+      "Lord, we thank you for the promise of your supply, as we commit our harvest."
+    ],
+    [
+      66,
+      85,
+      "Grant us a spirit of trust, that we may steward what you give with faithfulness."
+    ],
+    [
+      86,
+      105,
+      "Help us to live fully in your light today, and please subscribe to walk with us."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "AS YOU STARE",
+        "AT THAT",
+        "EMPTY LEDGER"
+      ],
+      [
+        "EMPTY LEDGER"
+      ],
+      "2 COR 9:10"
+    ],
+    [
+      16,
+      35,
+      [
+        "HE THAT MINISTERETH",
+        "SEED TO THE SOWER",
+        "MULTIPLY YOUR SEED SOWN"
+      ],
+      [
+        "MULTIPLY",
+        "SEED SOWN"
+      ],
+      "2 COR 9:10"
+    ],
+    [
+      36,
+      50,
+      [
+        "BEING ENRICHED",
+        "IN EVERY THING",
+        "TO ALL BOUNTIFULNESS"
+      ],
+      [
+        "BOUNTIFULNESS"
+      ],
+      "2 COR 9:11"
+    ],
+    [
+      51,
+      65,
+      [
+        "THANK YOU",
+        "FOR YOUR SUPPLY",
+        "COMMIT OUR HARVEST"
+      ],
+      [
+        "COMMIT",
+        "HARVEST"
+      ],
+      "2 COR 9:11"
+    ],
+    [
+      66,
+      85,
+      [
+        "GRANT US TRUST",
+        "STEWARD WHAT YOU GIVE",
+        "FAITHFULNESS"
+      ],
+      [
+        "STEWARD",
+        "FAITHFULNESS"
+      ],
+      "2 COR 9:11"
+    ],
+    [
+      86,
+      105,
+      [
+        "LIVE IN YOUR LIGHT",
+        "SUBSCRIBE TO WALK",
+        "WITH US"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "2 COR 9:11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you stare at that empty ledger",
+      "kind": "phrase",
+      "words": [
+        "EMPTY",
+        "LEDGER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Now he that ministereth",
+      "kind": "phrase",
+      "words": [
+        "MINISTERETH",
+        "SEED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "multiply your seed sown",
+      "kind": "phrase",
+      "words": [
+        "MULTIPLY",
+        "SEED",
+        "SOWN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Being enriched in every thing",
+      "kind": "phrase",
+      "words": [
+        "ENRICHED",
+        "EVERY",
+        "THING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "which causeth through us",
+      "kind": "phrase",
+      "words": [
+        "CAUSETH",
+        "THANKSGIVING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we thank you",
+      "kind": "phrase",
+      "words": [
+        "THANK",
+        "YOU",
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Corinthians 9:10-11"
+}
