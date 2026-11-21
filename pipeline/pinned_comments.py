@@ -20,7 +20,7 @@ only ever say "something may be owed", never "posted".
 Cost & Safety Invariants:
   • $0.00 / month hard cost lock (consumes 50 YouTube Data API units per upload).
   • Zero mentions of personal creator names; speaks exclusively as The Secret Place.
-  • Anti-spam compliant; encourages faith declarations ("AMEN") and prayer requests.
+  • Invites optional, general prayer requests and reflections.
 """
 from __future__ import annotations
 
@@ -237,7 +237,7 @@ def generate_pastoral_pinned_comment(doc: ScriptDoc) -> str:
     """Generate an authoritative, comforting pastoral comment for the video.
 
     - For Shorts: builds a Short-to-Longform & Channel-Bio bridge comment.
-    - For Long-Form Faith videos: includes KJV promise, 'AMEN' & prayer-request
+    - For Long-Form Faith videos: includes Scripture and an optional reflection or prayer-request
       invitation, and both live clickable Selar sanctuary links.
     """
     niche = (getattr(doc, "niche", "") or str(doc.meta.get("niche", ""))).lower()

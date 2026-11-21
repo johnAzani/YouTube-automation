@@ -409,6 +409,21 @@ THE OPENING SENTENCE — a viewer decides in the first two seconds:
 - Do not reuse the opening of an earlier Short on this channel.{avoid_block}
 - Honest only: no "don't scroll", no "watch to the end", no promised outcome.
 
+{spoken_prayer_guidance}
+THE PRAYER — give the listener words to pray with you:
+- Carry the opening's specific need into one direct petition to God grounded
+  in the quoted verse. Keep the channel's mood and speak to one listener;
+  don't spend the remaining time explaining or repeating the opening.
+- Make the title and poster promise something the narration actually prays for.
+  Once the verse has been read, move straight into prayer; no second hook or
+  recap. Let the petition finish before the single subscribe invitation.
+- Silently read the captions in order before returning. Fix lines that sound
+  breathless or repeat an idea, while preserving exact Scripture and the word
+  and timing requirements. The last prayer line should finish the thought in
+  the opening even for a viewer who never watches the companion long-form.
+- Keep the petition honest even if nothing changes today. Don't tell listeners
+  what they must feel or imply that subscribing makes the prayer more effective.
+
 - Quote ONLY {scripture}. Never quote another psalm or verse reference.
 {scripture_block}- One `stock_queries` entry per scene, describing {imagery} imagery suitable for
   a {prayer_kind} prayer (no people's faces, no text in the image).
@@ -524,7 +539,10 @@ def build_prompt(scripture: str, key: str = "short-psalmNN", words: int = TARGET
         foreign_block = ("- These words belong to other channels. Do not use them, spoken or on\n"
                          "  screen, unless the scripture itself says them: "
                          + "; ".join(f'"{phrase}"' for phrase in theirs) + ".\n")
+    from .prayer_pacing import SPOKEN_PRAYER_GUIDANCE
+
     return PROMPT.format(
+        spoken_prayer_guidance=SPOKEN_PRAYER_GUIDANCE,
         key=key, scripture=scripture, words=words, foreign_block=foreign_block,
         scripture_block=prompt_block(scripture) + occasion_block,
         floor=max(MIN_WORDS, TARGET_WORDS_RANGE[0]), ceiling=TARGET_WORDS_RANGE[1],

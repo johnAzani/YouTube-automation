@@ -1104,6 +1104,12 @@ class GeminiBrain:
                 and any(row.get("outcome", "").startswith(("branding:", "scripture:")) for row in rows)
                 and not any(row.get("outcome") == "accepted" for row in rows))
 
+    def _report_prayer_pacing(self, label: str, narration: str) -> None:
+        from .prayer_pacing import pacing_notes
+
+        for note in pacing_notes(narration):
+            print(f"[prayer-pacing] {self.channel_id}/{label}: {note}")
+
     def author_longform_script(self, scripture_data: dict[str, Any]) -> str:
         """Call Google Gemini to draft the full markdown script, or use equipped template if offline."""
         job_id = scripture_data.get("id", "0010")
@@ -1134,6 +1140,7 @@ class GeminiBrain:
         from .scripture_text import check_quote, exists as scripture_exists, prompt_block
         scripture_block = prompt_block(str(scripture)) + scripture_name_note(
             self.channel_id, str(scripture))
+        from .prayer_pacing import SPOKEN_PRAYER_GUIDANCE
         user_prompt = f"""
 Please author the official, complete long-form devotional script for:
 - Job ID: {job_id}
@@ -1152,6 +1159,11 @@ refuses anything under {MIN_NARRATION_SECONDS} seconds, so {MIN_LONGFORM_WORDS} 
 length that can actually be published. Do not pad with repeated
 sentences; write more prayer, more scripture exposition, more stillness.
 
+{SPOKEN_PRAYER_GUIDANCE}
+Before returning, silently read the opening, scene transitions and closing as spoken aloud.
+Check that the title and thumbnail name the same need the prayer actually addresses.
+Replace repeated commentary with a distinct petition, not shorter filler. Keep quoted
+Scripture unchanged. Keep the closing blessing uninterrupted by engagement requests.
 Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not include markdown code block backticks.
 """
         if self.is_api_available():
@@ -1229,6 +1241,9 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                         for near in quote.problems:
                             print(f"::warning title=Scripture wording ({self.channel_id} "
                                   f"{job_id})::{near[:300]}")
+                    body = text.split("---", 2)[-1]
+                    narration = "\n".join(line for line in body.splitlines() if not line.lstrip().startswith("##"))
+                    self._report_prayer_pacing(str(job_id), narration)
                     outcomes.append({"model": candidate_model, "outcome": "accepted"})
                     return text
             except BrainAuthoringError:
@@ -1613,6 +1628,7 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                     if spec.repairs:
                         print(f"[gemini-brain] Short {key}: repaired "
                               f"{'; '.join(spec.repairs)}")
+                    self._report_prayer_pacing(key, spec.narration_text)
                     return require_valid(spec)
                 except ShortSpecError as exc:
                     last_error = str(exc)

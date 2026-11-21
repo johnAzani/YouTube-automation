@@ -21,7 +21,7 @@ def test_generate_pastoral_pinned_comment():
         comment = generate_pastoral_pinned_comment(doc)
         assert len(comment) > 50
         assert "AMEN" in comment
-        assert "prayer request" in comment.lower()
+        assert "no obligation to comment" in comment.lower()
         # Invariant: strictly avoid personal creator names
         assert "John Azani" not in comment
         assert "Azani" not in comment

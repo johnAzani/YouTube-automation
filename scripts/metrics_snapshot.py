@@ -28,7 +28,7 @@ from pipeline.config import CONFIG  # noqa: E402
 from pipeline.upload import _credentials  # noqa: E402
 
 CSV_PATH = REPO / "content" / "metrics.csv"
-FIELDS = ["snapshot_date", "video_id", "title", "published_at", "views", "likes", "comments"]
+FIELDS = ["snapshot_date", "video_id", "title", "published_at", "views", "likes", "comments", "observed_at", "channel_key"]
 RETENTION_DAYS = 30
 
 
@@ -46,8 +46,8 @@ def _public_video_rows(items: list[dict], today: str) -> list[dict]:
             "published_at": v["snippet"]["publishedAt"][:10],
             # Missing statistics are unknown, not evidence of zero views.
             "views": s.get("viewCount", ""),
-            "likes": s.get("likeCount", 0),
-            "comments": s.get("commentCount", 0),
+            "likes": s.get("likeCount", ""),
+            "comments": s.get("commentCount", ""),
         })
     return rows
 
@@ -151,8 +151,8 @@ def _post_github_issue(
         v = r.get("views")
         if v is None or v == "":
             v = "unknown"
-        l = r.get("likes", 0)
-        c = r.get("comments", 0)
+        l = r.get("likes") if r.get("likes") not in (None, "") else "unknown"
+        c = r.get("comments") if r.get("comments") not in (None, "") else "unknown"
         watch_link = f"[Watch](https://youtu.be/{vid})"
         lines.append(f"| `{vid}` | {t} | {pub} | {v} | {l} | {c} | {watch_link} |")
 
@@ -297,7 +297,8 @@ def main(argv: list[str] | None = None) -> int:
         if not page or len(video_ids) >= 50:
             break
 
-    today = dt.date.today()
+    observed_at = dt.datetime.now(dt.timezone.utc)
+    today = observed_at.date()
     today_text = today.isoformat()
     channel_snapshot = _subscriber_snapshot(channel, today_text)
     channel_snapshot["channel_key"] = channel_key
@@ -315,6 +316,9 @@ def main(argv: list[str] | None = None) -> int:
             part="snippet,statistics,status", id=",".join(video_ids)
         ).execute()
         rows = _public_video_rows(vresp.get("items", []), today_text)
+
+    for row in rows:
+        row.update(observed_at=observed_at.isoformat(timespec="seconds"), channel_key=channel_key)
 
     # The repository and its workflow pages are public. Keep only public-video
     # metrics, and retain a rolling 30-day window rather than accumulating API data.

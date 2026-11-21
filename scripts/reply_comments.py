@@ -55,23 +55,20 @@ def _summary(rows: dict) -> None:
         pass
 
 
+def _crisis_reference(comment_id: str) -> str:
+    from hashlib import sha256
+
+    return sha256(comment_id.encode()).hexdigest()[:24]
+
+
 def _crisis_body(held: list[dict]) -> str:
     body = [
-        "A viewer disclosed distress in a comment. The reply automation held it "
-        "instead of posting publicly — a hotline reply under someone's self-harm "
-        "disclosure labels them in front of every other viewer.",
-        "",
-        "Please reply personally when you can.",
+        "The reply workflow held comments for human review. Please open the",
+        "channel's YouTube Studio comments inbox; no viewer details are copied here.",
         "",
     ]
     for row in held:
-        body += [
-            f"### {row['author']}",
-            f"- comment: `{row['comment_id']}` on video `{row['video_id']}`",
-            f"- they wrote: \"{row['text'][:400]}\"",
-            f"- suggested reply (unposted): {row['draft']}",
-            "",
-        ]
+        body.append(f"- Review reference: `{_crisis_reference(str(row['comment_id']))}`")
     return "\n".join(body)
 
 
@@ -84,7 +81,8 @@ def unreported(known_text: str, held: list[dict]) -> list[dict]:
     comment already named in an open issue is already reported; anything new is
     appended to that same issue rather than opening another.
     """
-    return [row for row in held if str(row["comment_id"]) not in known_text]
+    return [row for row in held if str(row["comment_id"]) not in known_text
+            and _crisis_reference(str(row["comment_id"])) not in known_text]
 
 
 def _gh(*args: str):
@@ -271,16 +269,12 @@ def main() -> int:
     failures: list[str] = []
     held: list[dict] = []
     for idx, c in enumerate(candidates, 1):
-        print(f"[{idx}/{len(candidates)}] Comment from '{c.author_name}' ({c.category}):")
-        print(f"  Text: \"{c.text}\"")
-
+        print(f"[{idx}/{len(candidates)}] Reviewing comment category: {c.category}")
         reply_text = generate_reply_with_gemini(c, api_key=engine.gemini_api_key,
                                                 channel_id=engine.channel_id)
-        print(f"  Drafted Reply: \"{reply_text}\"")
 
         if c.category == "CRISIS_DISTRESS" and not args.reply_to_crisis:
-            held.append({"comment_id": c.comment_id, "author": c.author_name,
-                         "video_id": c.video_id, "text": c.text, "draft": reply_text})
+            held.append({"comment_id": c.comment_id})
 
         try:
             success = engine.post_reply(c, reply_text, dry_run=is_dry_run,

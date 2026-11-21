@@ -13,8 +13,11 @@ Run:
 from __future__ import annotations
 
 import argparse
+from datetime import date, timedelta
 import csv
 import json
+import math
+import re
 from pathlib import Path
 import sys
 
@@ -52,6 +55,74 @@ def format_table(headers: list[str], rows: list[list[str]], max_col_width: int =
     return "\n".join(lines) + "\n"
 
 
+ENGAGEMENT = (
+    ("Views", "views"), ("Subscribers gained", "subscribersGained"),
+    ("Subscribers lost", "subscribersLost"), ("Net subscribers", None),
+    ("Comments", "comments"), ("Likes", "likes"), ("Shares", "shares"),
+)
+
+
+def engagement_comparison(columns, rows):
+    """Compare the latest 14 returned calendar days; never fill gaps with zero."""
+    if "day" not in columns:
+        return None
+    by_day = {}
+    for row in rows:
+        if len(row) != len(columns):
+            return None
+        record = dict(zip(columns, row))
+        try:
+            day = date.fromisoformat(record["day"])
+        except (ValueError, TypeError):
+            return None
+        if day in by_day:
+            return None
+        by_day[day] = record
+    if len(by_day) < 14:
+        return None
+    end = max(by_day)
+    days = [end - timedelta(days=i) for i in range(13, -1, -1)]
+    if any(day not in by_day for day in days):
+        return None
+
+    def totals(window):
+        data = {}
+        for _, key in ENGAGEMENT:
+            if key is not None:
+                values = [by_day[day].get(key) for day in window]
+                data[key] = sum(values) if all(type(v) is int and v >= 0 for v in values) else None
+        gained, lost = data["subscribersGained"], data["subscribersLost"]
+        data[None] = gained - lost if gained is not None and lost is not None else None
+        return data
+
+    prior, latest = totals(days[:7]), totals(days[7:])
+    table = []
+    for label, key in ENGAGEMENT:
+        a, b = prior[key], latest[key]
+        table.append([label, "—" if a is None else str(a), "—" if b is None else str(b),
+                      "—" if a is None or b is None else f"{b - a:+d}"])
+    return days, table
+
+
+def retention_landmarks(columns, rows):
+    """Show reported playback ratios at fixed points, without interpolation."""
+    required = ("elapsedVideoTimeRatio", "audienceWatchRatio")
+    if not all(key in columns for key in required):
+        return []
+    position, audience = (columns.index(key) for key in required)
+    points = {}
+    for row in rows:
+        if len(row) != len(columns):
+            continue
+        x, y = row[position], row[audience]
+        if type(x) not in (int, float) or not 0 < x <= 1:
+            continue
+        value = (f"{y:.1%}" if type(y) in (int, float) and math.isfinite(y) and y >= 0
+                 else "—")
+        points[x] = "—" if x in points else value
+    return [[f"{x:.0%}", points.get(x, "—")] for x in (0.01, 0.25, 0.5, 0.75, 0.95, 1)]
+
+
 def display_private_report(path: Path = PRIVATE_REPORT) -> bool:
     """Read and format the private Analytics report JSON."""
     if not path.is_file():
@@ -80,6 +151,17 @@ def display_private_report(path: Path = PRIVATE_REPORT) -> bool:
         print(format_table(cols, rows))
     else:
         print(f"\n[Daily Performance]: {daily.get('status', 'not_collected')} ({daily.get('reason', '')})")
+
+    print("\n[Audience Growth: Week over Week]")
+    comparison = (engagement_comparison(cols, daily["rows"])
+                  if daily.get("status") == "collected" and daily.get("rows") else None)
+    if comparison is None:
+        print("Not enough data: need 14 consecutive, unique reported days.")
+    else:
+        days, table = comparison
+        print(f"Previous: {days[0]} to {days[6]} | Latest: {days[7]} to {days[-1]}")
+        print(format_table(["Metric", "Previous", "Latest", "Change"], table))
+        print("— means unavailable, not zero. These totals mix video formats; changes do not prove cause.")
 
     # 2. Top Videos
     videos = reports.get("videos", {})
@@ -116,7 +198,14 @@ def display_private_report(path: Path = PRIVATE_REPORT) -> bool:
     if retention.get("status") == "collected" and retention.get("rows"):
         cols = [c.get("name", f"col_{i}") if isinstance(c, dict) else str(c) for i, c in enumerate(retention.get("columns", []))]
         print("\n[Audience Retention Profile]")
-        print(format_table(cols, retention["rows"][:15]))
+        print(f"Video: {retention.get('video_id') or 'unknown (older report)'}")
+        landmarks = retention_landmarks(cols, retention["rows"])
+        if landmarks:
+            print(format_table(["Video position", "Audience watch ratio"], landmarks))
+            print("— means unavailable. Replays can push the ratio over 100%; "
+                  "it is not the percentage of unique viewers who finished.")
+        else:
+            print(format_table(cols, retention["rows"][:15]))
     elif retention.get("status") != "not_requested":
         print(f"\n[Audience Retention]: {retention.get('status')} ({retention.get('reason', '')})")
 
@@ -180,11 +269,60 @@ def display_public_snapshot(csv_path: Path = PUBLIC_CSV, json_path: Path = PUBLI
     return found
 
 
+def compare_saved_retention(video_ids):
+    """Display two saved curves side by side without claiming causation."""
+    profiles = []
+    windows = []
+    for video_id in video_ids:
+        path = PRIVATE_REPORT.with_name(f"retention-{video_id}.json")
+        try:
+            report = json.loads(path.read_text(encoding="utf-8"))
+            retention = report["reports"]["retention"]
+            if retention["status"] != "collected" or retention["video_id"] != video_id:
+                raise ValueError("wrong or unavailable profile")
+            columns = [column["name"] if isinstance(column, dict) else column
+                       for column in retention["columns"]]
+            profile = retention_landmarks(columns, retention["rows"])
+            if not profile or all(value == "—" for _, value in profile):
+                raise ValueError("no reported landmarks")
+            windows.append(f"{video_id}: {report['start_date']} to {report['end_date']}")
+        except (OSError, ValueError, KeyError, TypeError):
+            print(f"No usable saved retention report for {video_id}.", file=sys.stderr)
+            return 1
+        profiles.append(profile)
+    print("[Audience watch ratio comparison]")
+    print("\n".join(windows))
+    print(format_table(["Video position", *video_ids],
+                       [[position, first, second]
+                        for (position, first), (_, second) in zip(*profiles)]))
+    print("Compare similar videos from the same channel and format at similar ages. "
+          "— means unavailable; watch ratios include replays and are not completion rates.")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--private", action="store_true", help="Display private Analytics report only")
     ap.add_argument("--public", action="store_true", help="Display public metrics snapshot only")
+    ap.add_argument("--retention-video", help="Display a saved private report for a video ID")
+    ap.add_argument("--compare-retention", nargs=2, metavar="VIDEO_ID",
+                    help="Compare two saved private video retention profiles")
     args = ap.parse_args()
+    if args.compare_retention:
+        if (args.public or args.retention_video is not None
+                or len(set(args.compare_retention)) != 2
+                or not all(re.fullmatch(r"[A-Za-z0-9_-]{11}", v) for v in args.compare_retention)):
+            ap.error("--compare-retention requires two distinct video IDs and cannot be combined "
+                     "with --public or --retention-video.")
+        return compare_saved_retention(args.compare_retention)
+    if args.retention_video is not None:
+        if args.public or not re.fullmatch(r"[A-Za-z0-9_-]{11}", args.retention_video):
+            ap.error("--retention-video needs an 11-character video ID and cannot be used with --public.")
+        path = PRIVATE_REPORT.with_name(f"retention-{args.retention_video}.json")
+        if not display_private_report(path):
+            print("No readable saved report. Collect retention for this video first.", file=sys.stderr)
+            return 1
+        return 0
 
     displayed_any = False
 

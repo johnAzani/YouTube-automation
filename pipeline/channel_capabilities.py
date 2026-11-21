@@ -192,90 +192,73 @@ class ChannelCapabilities:
 
 
 _SECRET_PLACE_COMMENT = (
-    "🕊️ Beloved family, if you are listening to this tonight, write 'AMEN' in faith to claim "
-    "God's promise of {theme} over your home, your children, and your mind.\n\n"
+    "As the day quiets, we pray for {theme}.\n\n"
     "📖 {scripture_hook}\n\n"
-    "Drop your prayer requests below — our pastoral editorial team reads and intercedes over "
-    "every single name before this night closes. Rest in holy stillness tonight. You are not "
-    "alone. 🙏✨{footer}"
+    "If you’d like to share what’s keeping you awake, a few general words are enough. Leave names and private details out. "
+    "AMEN is welcome too, and there’s no obligation to comment.{footer}"
 )
 
 _MORNING_ALTAR_COMMENT = (
-    "🌅 Beloved family, if you are beginning this day with us, write 'AMEN' in faith to claim "
-    "God's promise of {theme} over your home, your work, and your mind today.\n\n"
+    "At the start of this day, we ask God for {theme}.\n\n"
     "📖 {scripture_hook}\n\n"
-    "Drop your prayer requests below — our pastoral editorial team reads and intercedes over "
-    "every single name. Go into today covered, calm, and confident. You are not alone. 🙏✨{footer}"
+    "What would you like prayer for before the day gets busy? You can keep it general and leave names out. "
+    "AMEN is welcome too, and there’s no obligation to comment.{footer}"
 )
 
 _MIDDAY_WATCH_COMMENT = (
-    "☀️ Beloved family, if you are pausing your day with us right now, write 'AMEN' in faith to "
-    "claim God's promise of {theme} over your work, your home, and your mind this afternoon.\n\n"
+    "In the middle of the day, there’s room to pray for {theme}.\n\n"
     "📖 {scripture_hook}\n\n"
-    "Drop your prayer request below — our pastoral editorial team reads and intercedes over "
-    "every single name. Whatever this afternoon is asking of you, you are not carrying it "
-    "alone. 🙏✨{footer}"
+    "If the morning left something on your mind, you’re welcome to name the general need without saying who was involved. "
+    "AMEN is welcome too, and there’s no obligation to comment.{footer}"
 )
 
 _MIDNIGHT_WATCH_COMMENT = (
-    "🕯️ Beloved watchmen, if you are standing in prayer at this midnight hour, write 'AMEN' in "
-    "faith to declare God's promise of {theme} over your household, your calling, and your season.\n\n"
+    "In this late hour, we bring our need for {theme} before God.\n\n"
     "📖 {scripture_hook}\n\n"
-    "Leave your midnight prayer request below — our intercessory team stands on the watchtower "
-    "over every petition. Like Paul and Silas at midnight, praise goes before your breakthrough. "
-    "You are not standing alone. 🙏🔥{footer}"
+    "If you’re still awake with a burden, you’re welcome to share a little, without identifying anyone or telling the whole story. "
+    "AMEN is welcome too, and there’s no obligation to comment.{footer}"
 )
 
 _FAMILY_ALTAR_COMMENT = (
-    "🏡 Beloved household of faith, if you are gathering your home and loved ones in prayer with "
-    "us today, write 'AMEN' in faith to claim God's promise of {theme} over your family, your "
-    "children, your marriage, and every room under your roof.\n\n"
+    "Today we hold our households in prayer for {theme}.\n\n"
     "📖 {scripture_hook}\n\n"
-    "Share the first names or family needs you are lifting up below — our pastoral prayer team "
-    "intercedes over every household represented here. As for me and my house, we will serve the "
-    "LORD! 🙏🌿{footer}"
+    "If something is weighing on your family, a general request is welcome. No one’s name or story is needed. "
+    "AMEN is welcome too, and there’s no obligation to comment.{footer}"
 )
 
 _HEALING_BALM_COMMENT = (
-    "🕊️ Beloved friend, if you are praying for healing, peace of mind, or renewed strength for "
-    "yourself or someone you love today, write 'AMEN' in faith to rest upon God's promise of "
-    "{theme}.\n\n"
+    "We come to God asking for {theme}.\n\n"
     "📖 {scripture_hook}\n\n"
-    "Share the first name or healing need on your heart below — our pastoral prayer team lifts "
-    "every petition before the Great Physician who binds up the brokenhearted. May His healing "
-    "peace guard your heart and mind! 🙏💧{footer}"
+    "If you’d like prayer, words like ‘strength’ or ‘comfort’ are enough. Please keep names and medical details private. "
+    "AMEN is welcome too, and there’s no obligation to comment.{footer}"
 )
 
 _PROVISION_TABLE_COMMENT = (
-    "🌾 Beloved friend, if you are committing your work, decisions, and daily needs unto the "
-    "Lord today, write 'AMEN' in faith to stand upon God's promise of {theme}.\n\n"
+    "Today we bring our work and daily needs before God as we ask for {theme}.\n\n"
     "📖 {scripture_hook}\n\n"
-    "Share the work, open door, or household need you are lifting before Jehovah-Jireh below — "
-    "our pastoral prayer team intercedes over every petition. My cup runneth over! 🙏✨{footer}"
+    "You can share a general prayer need if you wish; there’s no need to name an employer or share figures. "
+    "AMEN is welcome too, and there’s no obligation to comment.{footer}"
 )
 
 _COVENANT_SHIELD_COMMENT = (
-    "🛡️ Beloved friend, if you are stepping out today under the shadow of the Almighty, "
-    "write 'AMEN' in faith to stand upon God's promise of {theme}.\n\n"
+    "We turn to God for {theme} as we face what lies ahead.\n\n"
     "📖 {scripture_hook}\n\n"
-    "Share the journey, household step, or concern you are placing under the Lord's shield below — "
-    "our pastoral prayer team intercedes over every petition. The LORD is our strong tower! 🙏✨{footer}"
+    "If you’d like to join the prayer, you can name a general concern without sharing where you are or who’s involved. "
+    "AMEN is welcome too, and there’s no obligation to comment.{footer}"
 )
 
 _PRAISE_GARDEN_COMMENT = (
-    "🌿 Beloved friend, if you are pausing to thank God with us today, write 'AMEN' and name "
-    "one thing you are grateful for as we give thanks for {theme}.\n\n"
+    "Let’s give thanks for {theme}, even in a difficult season.\n\n"
     "📖 {scripture_hook}\n\n"
-    "Share a thanksgiving or a prayer request below, whether this is a glad season or a hard one — "
-    "this community reads and prays together. O give thanks unto the LORD; for he is good! 🙏✨{footer}"
+    "If you’d like, share one small thing you’re grateful for, without naming anyone. It’s fine to just listen. "
+    "AMEN is welcome too, and there’s no obligation to comment.{footer}"
 )
 
 _GUIDED_PATH_COMMENT = (
-    "🧭 Beloved friend, if you are seeking God's direction today, write 'AMEN' in faith as we "
-    "ask the Lord for {theme}.\n\n"
+    "Today we seek the Lord for {theme}.\n\n"
     "📖 {scripture_hook}\n\n"
-    "Share, in general terms, the decision or crossroads you are bringing before the Lord below — "
-    "this community reads and prays together. In all thy ways acknowledge him! 🙏✨{footer}"
+    "If you’re facing a decision, you can ask for wisdom without explaining what the decision is. "
+    "AMEN is welcome too, and there’s no obligation to comment.{footer}"
 )
 
 _BRANDS: dict[str, Brand] = {
@@ -363,8 +346,8 @@ _BRANDS: dict[str, Brand] = {
             "📖 Our printable 30-Night Bedside Prayer Journal & voluntary ministry support links "
             "are clickable directly on our {handle} channel profile.\n\n"
             "Rest under God's covenant of {theme} tonight. "
-            "Write 'AMEN' in faith and leave your prayer request below — we are interceding for "
-            "your household! 🙏🕊️✨{footer}"
+            "Before sleep, a general prayer need is welcome. "
+            "AMEN is welcome too. Share only what you’re comfortable posting publicly.{footer}"
         ),
         longform_prayer_label="Night Prayer",
         seo_hook_template=(
@@ -499,9 +482,8 @@ _BRANDS: dict[str, Brand] = {
             "Tap the linked full-length prayer right above this title (or visit {handle}) "
             "to begin the complete morning prayer of {scripture}:\n"
             "👉 {url}\n\n"
-            "Write 'AMEN' in faith and leave your prayer request below — we are interceding "
-            "over your household before this day begins! Go into today covered, calm, and "
-            "confident. 🙏🌅✨{footer}"
+            "Before the day begins, you can share a general need for prayer. "
+            "AMEN is welcome too. Share only what you’re comfortable posting publicly.{footer}"
         ),
         longform_prayer_label="Morning Prayer",
         seo_hook_template=(
@@ -757,9 +739,8 @@ _BRANDS: dict[str, Brand] = {
             "Tap the linked full-length prayer right above this title (or visit {handle}) "
             "to pray the complete midday prayer of {scripture}:\n"
             "👉 {url}\n\n"
-            "Write 'AMEN' in faith and leave your prayer request below — we are interceding "
-            "over your afternoon right now. Whatever the rest of this day holds, you are not "
-            "carrying it alone. 🙏☀️✨{footer}"
+            "On this midday pause, you’re welcome to say what you need prayer for in general terms. "
+            "AMEN is welcome too. Share only what you’re comfortable posting publicly.{footer}"
         ),
         longform_prayer_label="Midday Prayer",
         seo_hook_template=(
@@ -1011,9 +992,8 @@ _BRANDS: dict[str, Brand] = {
             "Tap the linked full-length prayer right above this title (or visit {handle}) "
             "to stand in the full midnight prayer of {scripture}:\n"
             "👉 {url}\n\n"
-            "Write 'AMEN' in faith and leave your midnight prayer request below — we are "
-            "standing on the watchtower over your household right now. Like Paul and Silas at "
-            "midnight, praise goes before your breakthrough! 🙏🕯️🔥{footer}"
+            "If you’re awake with something on your heart, a few general words are enough. "
+            "AMEN is welcome too. Share only what you’re comfortable posting publicly.{footer}"
         ),
         longform_prayer_label="Midnight Prayer",
         seo_hook_template=(
@@ -1263,8 +1243,8 @@ _BRANDS: dict[str, Brand] = {
             "Tap the linked full-length prayer right above this title (or visit {handle}) "
             "to pray the complete family blessing of {scripture} over your home:\n"
             "👉 {url}\n\n"
-            "Write 'AMEN' in faith and share the family members you are lifting up below — "
-            "as for me and my house, we will serve the LORD! 🙏🌿✨{footer}"
+            "A general prayer for your household is welcome; no names are needed. "
+            "AMEN is welcome too. Share only what you’re comfortable posting publicly.{footer}"
         ),
         longform_prayer_label="Family Prayer",
         seo_hook_template=(
@@ -1516,8 +1496,8 @@ _BRANDS: dict[str, Brand] = {
             "Tap the linked full-length prayer right above this title (or visit {handle}) "
             "to pray the complete healing promise of {scripture} in faith:\n"
             "👉 {url}\n\n"
-            "Write 'AMEN' in faith and share who you are lifting up for healing and peace today — "
-            "the Lord healeth the broken in heart! 🙏💧✨{footer}"
+            "You’re welcome to ask for strength or comfort without sharing medical details. "
+            "AMEN is welcome too. Share only what you’re comfortable posting publicly.{footer}"
         ),
         longform_prayer_label="Healing Prayer",
         seo_hook_template=(
@@ -1774,8 +1754,8 @@ _BRANDS: dict[str, Brand] = {
             "Tap the linked full-length prayer right above this title (or visit {handle}) "
             "to pray the complete covenant promise of {scripture} in faith:\n"
             "👉 {url}\n\n"
-            "Write 'AMEN' in faith and share the work, open door, or household need you are "
-            "committing unto the Lord today — Jehovah-Jireh provides! 🙏🌾✨{footer}"
+            "If you’d like prayer for work or daily needs, you can keep it general. "
+            "AMEN is welcome too. Share only what you’re comfortable posting publicly.{footer}"
         ),
         longform_prayer_label="Provision Prayer",
         seo_hook_template=(
@@ -2033,8 +2013,8 @@ _BRANDS: dict[str, Brand] = {
             "Tap the linked full-length prayer right above this title (or visit {handle}) "
             "to pray the complete covenant promise of {scripture} in faith:\n"
             "👉 {url}\n\n"
-            "Write 'AMEN' in faith and share the journey, step, or need you are placing under "
-            "the Lord's covering today — He neither slumbers nor sleeps! 🙏🛡️✨{footer}"
+            "A general concern is welcome; please leave locations and identifying details out. "
+            "AMEN is welcome too. Share only what you’re comfortable posting publicly.{footer}"
         ),
         longform_prayer_label="Protection Prayer",
         seo_hook_template=(
@@ -2293,8 +2273,8 @@ _BRANDS: dict[str, Brand] = {
             "Tap the linked full-length prayer right above this title (or visit {handle}) "
             "to pray through {scripture} with a grateful heart:\n"
             "👉 {url}\n\n"
-            "Write 'AMEN' and name one thing you are thanking God for today — "
-            "His mercy endureth for ever! 🙏🌿✨{footer}"
+            "If you’d like, share one small thing you’re thankful for. "
+            "AMEN is welcome too. Share only what you’re comfortable posting publicly.{footer}"
         ),
         longform_prayer_label="Thanksgiving Prayer",
         seo_hook_template=(
@@ -2554,8 +2534,8 @@ _BRANDS: dict[str, Brand] = {
             "Tap the linked full-length prayer right above this title (or visit {handle}) "
             "to pray through {scripture} as you seek the Lord's direction:\n"
             "👉 {url}\n\n"
-            "Write 'AMEN' in faith and share, in general terms, the decision you are bringing "
-            "before the Lord today — He giveth wisdom liberally! 🙏🧭✨{footer}"
+            "If you’d like, ask for wisdom without explaining the decision. "
+            "AMEN is welcome too. Share only what you’re comfortable posting publicly.{footer}"
         ),
         longform_prayer_label="Guidance Prayer",
         seo_hook_template=(
