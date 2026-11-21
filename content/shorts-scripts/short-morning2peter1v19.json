@@ -1,0 +1,310 @@
+{
+  "key": "short-morning2peter1v19",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "A LIGHT IN DARKNESS",
+    "2 PETER 1:19 MORNING PRAYER"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "UNTIL THE DAY DAWN",
+    "2 PETER 1:19",
+    "SUNRISE PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "misty valley dawn quiet light",
+    "sunrise golden light pine forest misty morning",
+    "early morning horizon sun rising over hills",
+    "calm mountain lake early sunrise golden glow",
+    "soft morning sunlight breaking through trees",
+    "sunrise over calm ocean horizon golden hour",
+    "scenic morning landscape glowing sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "While you sit in the grey twilight",
+      "img": "short-morning2peter1v19-scene-01.jpg",
+      "kicker": "2 PETER 1:19",
+      "sub": "A LIGHT IN DARKNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We have also a more sure word",
+      "img": "short-morning2peter1v19-scene-02.jpg",
+      "kicker": "2 PETER 1:19",
+      "sub": "TAKE HEED TO HIS WORD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "as unto a light that shineth",
+      "img": "short-morning2peter1v19-scene-03.jpg",
+      "kicker": "2 PETER 1:19",
+      "sub": "UNTIL THE DAY DAWN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, when our surroundings feel dark",
+      "img": "short-morning2peter1v19-scene-04.jpg",
+      "kicker": "2 PETER 1:19",
+      "sub": "FIX YOUR EYES ON TRUTH",
+      "cam": "push_in",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "May Your promise burn steadily",
+      "img": "short-morning2peter1v19-scene-05.jpg",
+      "kicker": "2 PETER 1:19",
+      "sub": "GUIDING EVERY STEP",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Drive away our fear and fill",
+      "img": "short-morning2peter1v19-scene-06.jpg",
+      "kicker": "2 PETER 1:19",
+      "sub": "THE DAY STAR RISES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to begin every sunrise",
+      "img": "short-morning2peter1v19-scene-07.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY DAWN IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "While you sit in the grey twilight dreading the choice ahead of you, remember this."
+    ],
+    [
+      6,
+      17,
+      "We have also a more sure word of prophecy; whereunto ye do well that ye take heed,"
+    ],
+    [
+      17,
+      28,
+      "as unto a light that shineth in a dark place, until the day dawn, and the day star arise in your hearts:"
+    ],
+    [
+      28,
+      37,
+      "Lord, when our surroundings feel dark and uncertain, help us fix our eyes on Your truth."
+    ],
+    [
+      37,
+      46,
+      "May Your promise burn steadily within us like a morning light, guiding our steps through every shadow."
+    ],
+    [
+      46,
+      56,
+      "Drive away our fear and fill our hearts with the steady hope of Your presence as the sun rises."
+    ],
+    [
+      56,
+      62,
+      "Subscribe to begin every sunrise in prayer with us."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "WHILE YOU SIT IN TWILIGHT",
+        "DREADING THE CHOICE AHEAD",
+        "REMEMBER THIS WORD"
+      ],
+      [
+        "CHOICE AHEAD"
+      ],
+      "2 PETER 1 : 19"
+    ],
+    [
+      6,
+      17,
+      [
+        "WE HAVE A MORE SURE",
+        "WORD OF PROPHECY",
+        "TAKE GOOD HEED"
+      ],
+      [
+        "SURE WORD"
+      ],
+      "2 PETER 1 : 19"
+    ],
+    [
+      17,
+      28,
+      [
+        "AS A LIGHT SHINING",
+        "IN A DARK PLACE UNTIL",
+        "THE DAY STAR ARISES"
+      ],
+      [
+        "LIGHT SHINETH"
+      ],
+      "2 PETER 1 : 19"
+    ],
+    [
+      28,
+      37,
+      [
+        "WHEN SURROUNDINGS FEEL DARK",
+        "FIX OUR EYES UPON",
+        "YOUR STEADFAST TRUTH"
+      ],
+      [
+        "YOUR TRUTH"
+      ],
+      "2 PETER 1 : 19"
+    ],
+    [
+      37,
+      46,
+      [
+        "MAY YOUR PROMISE BURN",
+        "LIKE A MORNING LIGHT",
+        "GUIDING EVERY STEP"
+      ],
+      [
+        "MORNING LIGHT"
+      ],
+      "2 PETER 1 : 19"
+    ],
+    [
+      46,
+      56,
+      [
+        "DRIVE AWAY OUR FEAR",
+        "FILL OUR HEARTS WITH",
+        "STEADY DAWN HOPE"
+      ],
+      [
+        "STEADY HOPE"
+      ],
+      "2 PETER 1 : 19"
+    ],
+    [
+      56,
+      62,
+      [
+        "BEGIN EVERY SUNRISE",
+        "IN FAITHFUL PRAYER",
+        "SUBSCRIBE TODAY"
+      ],
+      [
+        "SUNRISE PRAYER"
+      ],
+      "THE MORNING ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "dreading the choice ahead of you",
+      "kind": "phrase",
+      "words": [
+        "CHOICE",
+        "AHEAD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "sure word of prophecy",
+      "kind": "phrase",
+      "words": [
+        "SURE",
+        "WORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "day star arise in your hearts",
+      "kind": "phrase",
+      "words": [
+        "DAY",
+        "STAR"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "fix our eyes on Your truth",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "TRUTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "guiding our steps through every shadow",
+      "kind": "phrase",
+      "words": [
+        "GUIDING",
+        "STEPS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "steady hope of Your presence",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "HOPE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "begin every sunrise in prayer",
+      "kind": "phrase",
+      "words": [
+        "SUNRISE",
+        "PRAYER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Peter 1:19"
+}
