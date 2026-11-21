@@ -37,9 +37,16 @@
       "workflow": "keepalive.yml"
     }
   ],
-  "generated_at": "2026-11-21T21:02:12.390427+00:00",
-  "last_run_at": "2026-11-21T21:01:27+00:00",
+  "generated_at": "2026-11-21T21:19:34.652475+00:00",
+  "last_run_at": "2026-11-21T21:18:47+00:00",
   "on_time": [
+    {
+      "late_minutes": 64,
+      "name": "automation-health",
+      "ran_at": "2026-11-21T21:18:47+00:00",
+      "slot": "2026-11-21T20:14:00+00:00",
+      "workflow": "automation-health.yml"
+    },
     {
       "late_minutes": 100,
       "name": "Autonomous Comment Replies",
