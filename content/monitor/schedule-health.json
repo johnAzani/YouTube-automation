@@ -7,24 +7,10 @@
       "ran_at": "2026-11-16T06:51:47+00:00",
       "slot": "2026-11-16T03:23:00+00:00",
       "workflow": "keepalive.yml"
-    },
-    {
-      "late_minutes": 205,
-      "name": "Tests on main (daily)",
-      "ran_at": "2026-11-20T08:17:25+00:00",
-      "slot": "2026-11-20T04:52:00+00:00",
-      "workflow": "tests-on-main.yml"
-    },
-    {
-      "late_minutes": 150,
-      "name": "YouTube reporting jobs (thumbnail impressions)",
-      "ran_at": "2026-11-20T08:17:27+00:00",
-      "slot": "2026-11-20T05:47:00+00:00",
-      "workflow": "reporting-jobs.yml"
     }
   ],
-  "generated_at": "2026-11-21T03:59:16.943748+00:00",
-  "last_run_at": "2026-11-21T03:58:15+00:00",
+  "generated_at": "2026-11-21T09:52:29.095835+00:00",
+  "last_run_at": "2026-11-21T09:51:36+00:00",
   "on_time": [
     {
       "late_minutes": 105,
@@ -32,13 +18,6 @@
       "ran_at": "2026-11-20T21:59:12+00:00",
       "slot": "2026-11-20T20:14:00+00:00",
       "workflow": "automation-health.yml"
-    },
-    {
-      "late_minutes": 90,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-20T20:44:31+00:00",
-      "slot": "2026-11-20T19:14:00+00:00",
-      "workflow": "comments.yml"
     },
     {
       "late_minutes": 91,
@@ -62,27 +41,13 @@
       "workflow": "metrics.yml"
     },
     {
-      "late_minutes": 33,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-21T03:56:15+00:00",
-      "slot": "2026-11-21T03:23:00+00:00",
-      "workflow": "monitor.yml"
-    },
-    {
-      "late_minutes": 65,
-      "name": "Produce video",
-      "ran_at": "2026-11-21T00:19:18+00:00",
-      "slot": "2026-11-20T23:14:00+00:00",
-      "workflow": "produce.yml"
-    },
-    {
-      "late_minutes": 9,
+      "late_minutes": 4,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-21T03:56:15+00:00",
-      "slot": "2026-11-21T03:47:00+00:00",
+      "ran_at": "2026-11-21T09:51:36+00:00",
+      "slot": "2026-11-21T09:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 1,
+  "silence_minutes": 0,
   "warn_minutes": 120
 }
