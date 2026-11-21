@@ -8,6 +8,53 @@ from scripts import view_analytics
 
 
 class ViewAnalyticsTests(unittest.TestCase):
+    def test_compare_saved_retention_checks_identity_and_displays_both_windows(self):
+        ids = ["7RDX0fbIOtQ", "abcdefghijk"]
+        with tempfile.TemporaryDirectory() as tmp, patch.object(
+                view_analytics, "PRIVATE_REPORT", Path(tmp) / "report.json"):
+            for video_id, ratio in zip(ids, [0.35, 0.42]):
+                report = {"start_date": "2026-11-01", "end_date": "2026-11-08", "reports": {
+                    "retention": {"status": "collected", "video_id": video_id,
+                                  "columns": ["elapsedVideoTimeRatio", "audienceWatchRatio"],
+                                  "rows": [[0.95, ratio]]}}}
+                (Path(tmp) / f"retention-{video_id}.json").write_text(json.dumps(report))
+            with patch("builtins.print") as output:
+                self.assertEqual(view_analytics.compare_saved_retention(ids), 0)
+                text = str(output.call_args_list)
+                for expected in ("35.0%", "42.0%", "95%", "2026-11-01"):
+                    self.assertIn(expected, text)
+            (Path(tmp) / f"retention-{ids[0]}.json").write_text(json.dumps(report))
+            with patch("builtins.print"):
+                self.assertEqual(view_analytics.compare_saved_retention(ids), 1)
+
+    def test_saved_video_report_uses_video_specific_path(self):
+        with patch("sys.argv", ["view_analytics.py", "--retention-video", "7RDX0fbIOtQ"]), \
+                patch.object(view_analytics, "display_private_report", return_value=True) as display:
+            self.assertEqual(view_analytics.main(), 0)
+        display.assert_called_once_with(view_analytics.PRIVATE_REPORT.with_name("retention-7RDX0fbIOtQ.json"))
+
+    def test_retention_landmarks_include_ending_and_do_not_invent_missing_values(self):
+        columns = ["audienceWatchRatio", "elapsedVideoTimeRatio"]
+        rows = [[0.31, 1], [1.25, 0.01], [0.4, 0.95], [0.5, 0.95], [0.6, 0.49]]
+        values = dict(view_analytics.retention_landmarks(columns, rows))
+        self.assertEqual(values["100%"], "31.0%")
+        self.assertEqual(values["1%"], "125.0%")
+        self.assertEqual(values["50%"], "—")
+        self.assertEqual(values["95%"], "—")
+        self.assertEqual(view_analytics.retention_landmarks(["day"], []), [])
+
+    def test_growth_compares_equal_windows_and_preserves_missing_metrics(self):
+        columns = ["day", "views", "subscribersGained", "subscribersLost", "shares"]
+        rows = [[f"2026-11-{i:02d}", i, 0, 1, 0] for i in range(1, 15)]
+        _, table = view_analytics.engagement_comparison(columns, rows[::-1])
+        metrics = {label: values for label, *values in table}
+        self.assertEqual(metrics["Views"], ["28", "77", "+49"])
+        self.assertEqual(metrics["Net subscribers"], ["-7", "-7", "+0"])
+        self.assertEqual(metrics["Shares"], ["0", "0", "+0"])
+        self.assertEqual(metrics["Likes"], ["—", "—", "—"])
+        self.assertIsNone(view_analytics.engagement_comparison(columns, rows[:7] + rows[8:]))
+        self.assertIsNone(view_analytics.engagement_comparison(columns, rows + rows[:1]))
+
     def test_format_table_renders_aligned_text(self):
         headers = ["Col A", "Col B"]
         rows = [["Val 1", "Val 2"], ["100", "200"]]

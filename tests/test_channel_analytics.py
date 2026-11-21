@@ -44,6 +44,12 @@ class AnalyticsTests(unittest.TestCase):
         self.assertEqual(result['reports']['retention']['status'], 'not_requested')
         self.assertTrue(result['studio_exports_required'])
 
+    def test_retention_identifies_the_same_video_as_the_api_filter(self):
+        service = self.service([{}] * (len(analytics.REPORTS) + 1))
+        result = analytics.collect(service, '2026-09-01', '2026-09-30', retention_video='7RDX0fbIOtQ')
+        self.assertEqual(result['reports']['retention']['video_id'], '7RDX0fbIOtQ')
+        self.assertEqual(service.reports.return_value.query.call_args.kwargs['filters'], 'video==7RDX0fbIOtQ')
+
     def test_analytics_token_has_no_upload_permission(self):
         self.assertNotIn('https://www.googleapis.com/auth/youtube.upload', scopes_for('analytics'))
         self.assertNotIn(analytics.MONEY_SCOPE, scopes_for('analytics'))

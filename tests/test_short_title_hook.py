@@ -284,6 +284,17 @@ def test_a_short_whose_title_did_not_change_has_no_earlier_title(monkeypatch, tm
     assert edition.earlier_titles == ()
 
 
+def test_overflow_keeps_hook_and_remembers_the_previously_truncated_title(monkeypatch, tmp_path):
+    from pipeline.metadata import smart_truncate_title
+
+    monkeypatch.setattr(sr, "SHORT_TITLE_LIMIT", 45)
+    edition = _saved(monkeypatch, tmp_path, poster_last="A QUIET MIND")
+    previous = smart_truncate_title(
+        "Say This Psalm 55:22 Prayer at Sunrise | A Quiet Mind", 45) + " #Shorts"
+    assert edition.title == "Psalm 55:22 | A Quiet Mind #Shorts"
+    assert previous in edition.earlier_titles
+
+
 def test_the_upload_looks_for_the_earlier_title_too(monkeypatch):
     from unittest.mock import MagicMock
 

@@ -510,6 +510,11 @@ def resolve_edition(key: str, channel_id: str | None = None) -> ShortEdition | N
     )
     hook = title_hook(spec, brand, label, limit=SHORT_TITLE_LIMIT)
     raw_title = brand.short_title_template.format(label=label, hook=hook)
+    previous_fitted = f"{smart_truncate_title(raw_title, SHORT_TITLE_LIMIT)} #Shorts"
+    if len(raw_title) > SHORT_TITLE_LIMIT:
+        # The generic truncator can drop everything after the bar. Keep the
+        # exact reference and the script's own hook, not an orphaned template.
+        raw_title = f"{label} | {hook}"
     clean_title = f"{smart_truncate_title(raw_title, SHORT_TITLE_LIMIT)} #Shorts"
     # The title this Short had until 16 November 2026 (last poster line, `str.title()`).
     last_line = spec.poster[3] if len(spec.poster) >= 4 and spec.poster[3] else "Divine Peace"
@@ -530,7 +535,7 @@ def resolve_edition(key: str, channel_id: str | None = None) -> ShortEdition | N
             f"{brand.short_hashtags.format(tag_key=tag_key)}"
         ),
         channel=owner,
-        earlier_titles=(before,) if before != clean_title else (),
+        earlier_titles=tuple(t for t in dict.fromkeys((before, previous_fitted)) if t != clean_title),
     )
 
 
