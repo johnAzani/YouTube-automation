@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T03:57:58.536279+00:00",
+  "generated_at": "2026-11-21T09:43:35.180025+00:00",
   "as_of": "2026-11-21",
   "sufficient_data": false,
   "measured_longform_videos": 2,
@@ -8,7 +8,7 @@
     "snapshot_video_ids": 50,
     "receipt_video_ids": 79,
     "matched_video_ids": 50,
-    "longform_below_view_threshold": 10,
+    "longform_below_view_threshold": 9,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 2,
     "minimum_views": 25,
@@ -22,8 +22,8 @@
       "theme": "anxiety_peace",
       "videos": 6,
       "measured_videos": 2,
-      "avg_score": 0.8283,
-      "avg_engagement": 0.0381,
+      "avg_score": 0.8229,
+      "avg_engagement": 0.0349,
       "top_scripture": "Isaiah 26"
     },
     {
@@ -55,20 +55,20 @@
     "measured_shorts": 32,
     "total_shorts": 38,
     "sufficient_data": true,
-    "avg_views": 79.7,
+    "avg_views": 79.8,
     "median_views": 78,
-    "total_views": 2550,
+    "total_views": 2552,
     "minimum_age_days": 2,
     "by_book": {
       "1 john": {
         "shorts": 1,
-        "avg_views": 8.0,
-        "ratio": 0.7
+        "avg_views": 10.0,
+        "ratio": 0.708
       },
       "1 peter": {
         "shorts": 1,
         "avg_views": 120.0,
-        "ratio": 1.169
+        "ratio": 1.168
       },
       "2 timothy": {
         "shorts": 1,
@@ -98,17 +98,17 @@
       "john": {
         "shorts": 2,
         "avg_views": 207.5,
-        "ratio": 1.802
+        "ratio": 1.801
       },
       "matthew": {
         "shorts": 3,
         "avg_views": 83.7,
-        "ratio": 1.03
+        "ratio": 1.029
       },
       "philippians": {
         "shorts": 2,
         "avg_views": 86.5,
-        "ratio": 1.043
+        "ratio": 1.042
       },
       "psalm": {
         "shorts": 16,
@@ -120,27 +120,27 @@
       "anxiety_peace": {
         "shorts": 8,
         "avg_views": 121.5,
-        "ratio": 1.42
+        "ratio": 1.419
       },
       "daily_guidance_wisdom": {
         "shorts": 4,
         "avg_views": 55.8,
-        "ratio": 0.8
+        "ratio": 0.799
       },
       "midday_strength_endurance": {
         "shorts": 4,
-        "avg_views": 45.8,
-        "ratio": 0.716
+        "avg_views": 46.2,
+        "ratio": 0.72
       },
       "morning_mercy_renewal": {
         "shorts": 2,
         "avg_views": 89.5,
-        "ratio": 1.062
+        "ratio": 1.061
       },
       "peace_rest": {
         "shorts": 14,
         "avg_views": 70.9,
-        "ratio": 0.904
+        "ratio": 0.903
       }
     },
     "guidance": [
