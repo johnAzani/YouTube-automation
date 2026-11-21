@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T22:11:43Z",
+  "generated_at": "2026-11-21T23:53:36Z",
   "monitor_generated_at": "2026-11-21T22:10:41.393240+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 622,
+    "published_total": 623,
     "published_longform": 186,
-    "published_shorts": 436,
-    "public_total": 620,
+    "published_shorts": 437,
+    "public_total": 621,
     "queued_longform": 53,
-    "queued_shorts": 79,
+    "queued_shorts": 78,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 89,
+        "published_total": 90,
         "published_longform": 30,
-        "published_shorts": 59,
+        "published_shorts": 60,
         "thumbnail_pending": 1,
-        "public_total": 88,
+        "public_total": 89,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM130V5",
-        "title": "Say This Psalm 130:5-6 Prayer at Sunrise | Finding Patience In The Dark #Shorts",
+        "id": "SHORT-MORNINGPSALM17V15",
+        "title": "Say This Psalm 17:15 Prayer at Sunrise | Find Your Satisfaction In Him #Shorts",
         "format": "short",
-        "youtube_video_id": "nQHGCQiHVcc",
-        "watch_url": "https://www.youtube.com/shorts/nQHGCQiHVcc",
+        "youtube_video_id": "AfIholMcsWs",
+        "watch_url": "https://www.youtube.com/shorts/AfIholMcsWs",
         "published_on": "2026-11-21",
-        "published_at": "2026-11-21T19:53:41Z"
+        "published_at": "2026-11-21T23:52:47Z"
       },
       "next_queued_longform": {
         "id": "0074",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm17v15",
-        "scripture": "Psalm 17:15",
+        "short": "short-morningpsalm3v5",
+        "scripture": "Psalm 3:5",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM17V15",
+      "slug": "short-morningpsalm17v15-sunrise-prayer",
+      "file": "short-morningpsalm17v15-sunrise-prayer.md",
+      "title": "Say This Psalm 17:15 Prayer at Sunrise | Find Your Satisfaction In Him #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T23:52:47Z",
+      "youtube_video_id": "AfIholMcsWs",
+      "watch_url": "https://www.youtube.com/shorts/AfIholMcsWs",
+      "youtu_be_url": "https://youtu.be/AfIholMcsWs",
+      "shorts_url": "https://www.youtube.com/shorts/AfIholMcsWs",
+      "studio_url": "https://studio.youtube.com/video/AfIholMcsWs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/AfIholMcsWs/hqdefault.jpg",
+      "thumb_text": "AS FOR ME \u00b7 I WILL BEHOLD",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 608
+    },
     {
       "id": "0012",
       "slug": "when-exhaustion-weighs-on-your-soul-isaiah-40-28-31",
@@ -16399,17 +16423,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningpsalm17v15",
-        "file": "0000-short-morningpsalm17v15.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 17:15",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm3v5",
