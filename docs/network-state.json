@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T11:32:59Z",
+  "generated_at": "2026-11-21T11:33:25Z",
   "monitor_generated_at": "2026-11-21T11:27:49.289585+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 591,
+    "published_total": 592,
     "published_longform": 177,
-    "published_shorts": 414,
-    "public_total": 589,
+    "published_shorts": 415,
+    "public_total": 590,
     "queued_longform": 60,
-    "queued_shorts": 90,
+    "queued_shorts": 89,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 46,
+        "published_total": 47,
         "published_longform": 14,
-        "published_shorts": 32,
-        "thumbnail_pending": 46,
-        "public_total": 46,
+        "published_shorts": 33,
+        "thumbnail_pending": 47,
+        "public_total": 47,
         "queued_longform": 6,
         "queued_other": 3,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0614",
-        "title": "As the Mountains Are Round About Jerusalem: Psalm 125:2",
-        "format": "longform",
-        "youtube_video_id": "7q08AGLETis",
-        "watch_url": "https://youtu.be/7q08AGLETis",
+        "id": "SHORT-SHIELDPSALM3V3",
+        "title": "Pray This Psalm 3:3 Prayer for Divine Protection | Your Shield #Shorts",
+        "format": "short",
+        "youtube_video_id": "aNtgg3ZJQc8",
+        "watch_url": "https://www.youtube.com/shorts/aNtgg3ZJQc8",
         "published_on": "2026-11-21",
-        "published_at": "2026-11-21T02:01:35Z"
+        "published_at": "2026-11-21T11:32:31Z"
       },
       "next_queued_longform": {
         "id": "0617",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm3v3",
-        "scripture": "Psalm 3:3",
+        "short": "short-shieldpsalm91v11",
+        "scripture": "Psalm 91:11",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM3V3",
+      "slug": "short-shieldpsalm3v3-protection-prayer",
+      "file": "short-shieldpsalm3v3-protection-prayer.md",
+      "title": "Pray This Psalm 3:3 Prayer for Divine Protection | Your Shield #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T11:32:31Z",
+      "youtube_video_id": "aNtgg3ZJQc8",
+      "watch_url": "https://www.youtube.com/shorts/aNtgg3ZJQc8",
+      "youtu_be_url": "https://youtu.be/aNtgg3ZJQc8",
+      "shorts_url": "https://www.youtube.com/shorts/aNtgg3ZJQc8",
+      "studio_url": "https://studio.youtube.com/video/aNtgg3ZJQc8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/aNtgg3ZJQc8/hqdefault.jpg",
+      "thumb_text": "WHEN DESPAIR BENDS \u00b7 YOUR HEAD DOWN",
+      "thumbnail_pending": true,
+      "duration_label": "56s",
+      "words": 653
+    },
     {
       "id": "SHORT-GARDENPSALM113V3",
       "slug": "short-gardenpsalm113v3-thanksgiving-prayer",
@@ -15911,17 +15935,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldpsalm3v3",
-        "file": "0000-short-shieldpsalm3v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 3:3",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm91v11",
