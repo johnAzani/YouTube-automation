@@ -1,6 +1,6 @@
 ---
 id: '0066'
-title: "Morning Prayer for Courage Today: Joshua 1:8-9 | The Morning Altar"
+title: "Facing a Day of Hard Decisions: Joshua 1:8-9 | The Morning Altar"
 slug: joshua-1-8-9-morning-prayer-the-morning-altar
 status: published
 channel: prayer2
@@ -75,12 +75,15 @@ originality:
 published_on: "2026-11-14"
 published_at: "2026-11-14T07:40:51Z"
 youtube_video_id: "nKLjNSKcJGQ"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Morning Prayer for Courage Today: Joshua 1:8-9 | The Morning Altar"
+retitled_at: "2026-11-21"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer
