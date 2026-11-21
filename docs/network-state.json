@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T22:01:39Z",
+  "generated_at": "2026-11-21T00:25:42Z",
   "monitor_generated_at": "2026-11-20T22:00:20.527326+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 573,
+    "published_total": 574,
     "published_longform": 175,
-    "published_shorts": 398,
-    "public_total": 571,
+    "published_shorts": 399,
+    "public_total": 572,
     "queued_longform": 56,
-    "queued_shorts": 73,
+    "queued_shorts": 72,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": false
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 68,
+        "published_total": 69,
         "published_longform": 22,
-        "published_shorts": 46,
+        "published_shorts": 47,
         "thumbnail_pending": 0,
-        "public_total": 68,
+        "public_total": 69,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYMARK4V38",
-        "title": "Say This Mark 4:38-40 Prayer at Noon | Hear His Voice #Shorts",
+        "id": "SHORT-MIDDAYPSALM71V16",
+        "title": "Say This Psalm 71:16 Prayer at Noon | Your Own Resolve Is Not Enough #Shorts",
         "format": "short",
-        "youtube_video_id": "WeZxuxF97W8",
-        "watch_url": "https://www.youtube.com/shorts/WeZxuxF97W8",
-        "published_on": "2026-11-20",
-        "published_at": "2026-11-20T20:44:05Z"
+        "youtube_video_id": "X37HiyRH-98",
+        "watch_url": "https://www.youtube.com/shorts/X37HiyRH-98",
+        "published_on": "2026-11-21",
+        "published_at": "2026-11-21T00:24:51Z"
       },
       "next_queued_longform": {
         "id": "0097",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm71v16",
-        "scripture": "Psalm 71:16",
+        "short": "short-middaynehemiah2v4",
+        "scripture": "Nehemiah 2:4",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYPSALM71V16",
+      "slug": "short-middaypsalm71v16-midday-prayer",
+      "file": "short-middaypsalm71v16-midday-prayer.md",
+      "title": "Say This Psalm 71:16 Prayer at Noon | Your Own Resolve Is Not Enough #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T00:24:51Z",
+      "youtube_video_id": "X37HiyRH-98",
+      "watch_url": "https://www.youtube.com/shorts/X37HiyRH-98",
+      "youtu_be_url": "https://youtu.be/X37HiyRH-98",
+      "shorts_url": "https://www.youtube.com/shorts/X37HiyRH-98",
+      "studio_url": "https://studio.youtube.com/video/X37HiyRH-98/edit",
+      "thumb_url": "https://i.ytimg.com/vi/X37HiyRH-98/hqdefault.jpg",
+      "thumb_text": "STRENGTH IN \u00b7 THE MIDDAY",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 615
+    },
     {
       "id": "SHORT-SHIELDPSALM125V2",
       "slug": "short-shieldpsalm125v2-protection-prayer",
@@ -15186,17 +15210,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-middaypsalm71v16",
-        "file": "0000-short-middaypsalm71v16.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 71:16",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
       {
         "short": "short-morningpsalm86v11",
         "file": "0000-short-morningpsalm86v11.yml",
