@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["FINDING PEACE", "IN THE CHAOS", "TRUSTING THE UNSEEN HAND", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Lay down the burden of your unanswered questions regarding that situation weighing on your soul. As you drift toward sleep, remember the ancient truth that anchors your shifting circumstances. And we know that all things work together for good to them that love God, to them who are the called according to his purpose. Lord, help me trust that even the pieces that seem broken are being mended by You. Release the need to control the outcome and rest in the safety of Your steady love. May Your peace guard my heart throughout this night until I wake to Your grace.

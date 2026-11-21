@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["GIVE THANKS", "UNTO THE LORD", "FOR HE IS GOOD", "HIS MERCY ENDURES"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-28T02:04:13Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 The thought that kept you awake is met by the truth. O give thanks unto the Lord; for he is good: for his mercy endureth forever. Lord I lay my anxiety down and trust your unfailing grace to carry me through this day. Let my heart remain anchored in your kindness as I step forward into these coming hours. You are the foundation beneath my feet and the quiet song in my weary spirit. Thank you for being my constant light in a world that shifts so quickly today. May your goodness be the lens through which I see every single challenge I face. I yield my will to yours and find perfect peace in your holy and sovereign presence.
