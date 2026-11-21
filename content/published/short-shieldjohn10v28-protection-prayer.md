@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["NO ONE CAN", "PLUCK YOU OUT", "SAFE IN GOD", "JOHN 10:28-29"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-21T13:42:34Z"
+thumbnail_retry_after: "2026-11-28T15:01:29Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If you fear losing your place in God's care today, listen to Jesus' promise: And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand. My Father, which gave them me, is greater than all; and no man is able to pluck them out of my Father’s hand. Lord, anchor this soul in Your unbreakable grip. No trial or threat can tear them away or snatch them from Your omnipotent protection. Guard their heart, quiet their fears, and keep them secure now and forever. Subscribe to walk under God's daily covering.

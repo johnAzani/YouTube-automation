@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE PRAISE GARDEN", "PSALM 113:3", "PRAISE HIS NAME", "EVERY HOUR"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-28T15:01:33Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If your eyes are weary from screens today, this moment belongs to God. His word declares in Psalm 113 verse 3, From the rising of the sun unto the going down of the same the LORD’s name is to be praised. Heavenly Father, we thank You that Your goodness spans every hour of our lives. From our first morning breath to the quiet moments of evening, Your faithfulness never fails. We praise You not just in moments of joy, but in every quiet hour. Teach us to notice Your grace continually, honoring Your holy name. Subscribe to The Praise Garden to walk with us in praise.

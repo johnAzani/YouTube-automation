@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["WHEN DESPAIR BENDS", "YOUR HEAD DOWN", "GOD STANDS AS", "YOUR SHIELD"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-28T15:01:30Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When harsh words make your head bow down in sorrow today, hear this divine promise. But thou, O LORD, art a shield for me; my glory, and the lifter up of mine head. Heavenly Father, when opposition surrounds us, be our impenetrable armor against every fear. Lift our eyes above the noise of those who whisper that help is far away. Restore our dignity, quiet our spirit, and cover us under Your everlasting banner of peace. Keep our steps steadfast, for You alone lift our heads in triumph. Subscribe to walk daily with us under God's almighty covenant shield.

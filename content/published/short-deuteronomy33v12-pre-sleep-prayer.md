@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["REST IN HIS CARE", "HE COVERS YOU", "BEDTIME PRAYER", "DEUTERONOMY 33:12"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Before you replay that difficult conversation one more time tonight, rest your mind. Deuteronomy 33:12 says, "And of Benjamin he said, The beloved of the LORD shall dwell in safety by him; and the Lord shall cover him all the day long, and he shall dwell between his shoulders." Father, as night settles over this room, wrap your weary child in quiet peace. You carry every burden they were never meant to bear alone. Let your gentle presence shield them through the dark. You hold them close, keeping every fear far from their heart. Sleep deeply tonight under the shelter of his constant care. Subscribe to The Secret Place for daily bedtime prayers.

@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["COVER YOUR HOME", "IN DAILY PRAYER", "MATTHEW 6:9-13", "THE FAMILY ALTAR"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-21T13:42:29Z"
+thumbnail_retry_after: "2026-11-28T15:01:25Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If you are sitting at your kitchen table carrying a heavy heart for your family, listen. Jesus taught us: Our Father which art in heaven, Hallowed be thy name. Thy kingdom come. Thy will be done in earth, as it is in heaven. Give us this day our daily bread. And forgive us our debts, as we forgive our debtors. And lead us not into temptation, but deliver us from evil: For thine is the kingdom, and the power, and the glory, for ever. Amen. Lord, cover this home under Your grace, grant us peace, and guide our daily steps together. Subscribe to join our family altar.

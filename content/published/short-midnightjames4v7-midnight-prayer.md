@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["MIDNIGHT", "SPIRITUAL", "STRENGTH", "WATCH"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-21T13:42:27Z"
+thumbnail_retry_after: "2026-11-28T15:01:24Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 The heavy thought cycling in your mind right now is not yours to carry alone tonight. James 4:7 says, Submit yourselves therefore to God. Resist the devil, and he will flee from you. Father, we come before you in this stillness to surrender every fear that has taken root. We yield our hearts, our confusion, and our battles into your capable and ever-loving hands now. Give us the courage to resist every lie and every shadow that dares to linger here. Let your peace reign supreme as we rest, knowing you are our protector in the darkness.

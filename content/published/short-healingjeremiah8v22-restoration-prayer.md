@@ -27,7 +27,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (25, 783, 1054, 832); shorten the authored lockup or reduce its size"
 ---
 
 If this lingering ache leaves you wondering where healing is found, stay right here. Lord, we bring every persistent weariness and unspoken hurt into your presence today. We acknowledge the deep questions we carry when restoration feels so distant. Your word asks us directly, saying, Is there no balm in Gilead; is there no physician there? Why then is not the health of the daughter of my people recovered? Father, touch our lives with your restoring grace and bind up every broken place. Grant us quiet trust in your enduring mercy, in Jesus name, amen.
