@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["WHEN FEAR PROWLS", "AT MIDNIGHT", "STAND STEADFAST", "IN FAITH"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-28T11:27:18Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If an invisible fear is threatening to swallow your peace tonight, stand firm right now. Be sober, be vigilant; because your adversary the devil, as a roaring lion, walketh about, seeking whom he may devour: Lord, at this midnight watch, we refuse to give place to terror or panic. Shield our weary hearts from the enemy's quiet attacks. We stand steadfast in faith, knowing that believers across the world fight this same fight tonight. Clothe us with courage to resist every dark scheme. Subscribe to The Midnight Watch and stand with us in midnight prayer.

@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["GOD'S DESIGN FOR", "OUR HOUSEHOLD", "UNITY AND MUTUAL STRENGTH", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-28T11:27:22Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When you feel like you are carrying the burdens of your home entirely alone, listen. Two are better than one; because they have a good reward for their labor. For if they fall, the one will lift up his fellow: but woe to him that is alone when he falleth; for he hath not another to help him up. Again, if two lie together, then they have heat: but how can one be warm alone? And if one prevail against him, two shall withstand him; and a threefold cord is not quickly broken. Lord, bind our hearts together in this sacred union, protecting our family bond with Your grace.

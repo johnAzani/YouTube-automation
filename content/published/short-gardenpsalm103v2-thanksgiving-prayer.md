@@ -27,9 +27,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE PRAISE GARDEN", "FORGET NOT", "PSALM 103:2", "THANKSGIVING PRAYER"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-21T05:12:16Z"
+thumbnail_retry_after: "2026-11-28T11:27:35Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 The heart forgets quickly. One worry can crowd out a hundred kindnesses, so David spoke to his own soul. Psalm one hundred three, verse two says, Bless the LORD, O my soul, and forget not all his benefits. He lists them: sins forgiven, a life redeemed, and a crown of lovingkindness and tender mercies. Father, thank You that You have not dealt with us as our sins deserve, but with mercy in Christ. Thank You for rescue we never saw, for strength renewed, and for good things from Your hand. For anyone grieving today, You know our frame. Let one small mercy be visible, and let it be enough. Type Amen and subscribe to The Praise Garden for daily prayers of thanksgiving and praise.

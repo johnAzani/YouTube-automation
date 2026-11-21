@@ -27,9 +27,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE MIDNIGHT WATCH", "ISAIAH 10:27", "BURDENS ARE LIFTED", "STAND IN PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-21T06:25:12Z"
+thumbnail_retry_after: "2026-11-28T11:27:19Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 Rise in spirit at this midnight hour, stepping away from the heavy noise of the world. You carry unspoken burdens, but tonight heaven pays close attention to your quiet heart. Isaiah ten twenty-seven declares: His burden shall be taken away from off thy shoulder, and the yoke shall be destroyed because of the anointing. Father, in this quiet watch, we ask for Your holy presence to break every chain of fear and exhaustion. Lift the heavy weights off every weary shoulder and restore deep peace to every sleeping home tonight. Let Your sacred anointing destroy every unseen bond, bringing fresh strength and quiet freedom before dawn. Stand with us in night prayer and subscribe to keep the midnight watch.

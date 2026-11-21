@@ -27,9 +27,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE MIDNIGHT WATCH", "1 JOHN 4:4", "MIDNIGHT PRAYER", "QUIET REFLECTION"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-21T08:48:07Z"
+thumbnail_retry_after: "2026-11-28T11:27:17Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If you are wrestling with fear that feels larger than your faith, hear this truth. The scripture says, You, dear children, are from God and have overcome them, because the one who is in you is greater than the one who is in the world. Lord, at this midnight hour, remind us that the spirit dwelling within is stronger than any shadow. Grant us the courage to release our heavy burdens into Your sovereign and loving hands tonight. May Your peace guard our hearts and minds, silencing every whisper of doubt or lingering worry. We rest securely in Your promise, confident that victory belongs to You alone, our faithful King.

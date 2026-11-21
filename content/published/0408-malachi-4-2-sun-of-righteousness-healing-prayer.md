@@ -80,7 +80,7 @@ originality:
 published_on: "2026-11-14"
 published_at: "2026-11-14T21:16:18Z"
 youtube_video_id: "pCo9x0WUBzw"
-metadata_revision: "retitle-pending"
+metadata_revision: "selar-seo-v1"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"

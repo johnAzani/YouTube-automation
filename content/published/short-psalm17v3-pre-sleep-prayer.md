@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["A PRAYER FOR", "THE MIDNIGHT HOUR", "PSALM 17:3", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If you are wrestling with a secret restlessness tonight, know that you are deeply known. Thou hast proved mine heart; thou hast visited me in the night; thou hast tried me, and shalt find nothing; I am purposed that my mouth shall not transgress. Father, search my heart and settle the spirit within me while the world remains silent. Help me to guard my tongue and keep my intentions pure before your holy presence. Let your peace rest upon this space and wash away the tension of the day. May my heart find rest in your perfect, unyielding love as sleep claims my eyes.
