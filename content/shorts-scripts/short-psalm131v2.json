@@ -1,0 +1,298 @@
+{
+  "key": "short-psalm131v2",
+  "channel": "secret-place",
+  "psalm": 131,
+  "title": [
+    "A STILL SOUL",
+    "BEFORE SLEEP"
+  ],
+  "poster": [
+    "FINDING REST",
+    "IN THE QUIET",
+    "OF THE NIGHT",
+    "GOD IS NEAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "gentle waves on dark shore at night",
+    "soft candlelight flickering in dark room",
+    "moonlight reflecting on calm forest pond",
+    "mist moving over quiet mountain valley",
+    "close up of embers glowing in fireplace",
+    "soft rain falling on window pane"
+  ],
+  "scenes": [
+    {
+      "a": "If that restless pattern",
+      "img": "short-psalm131v2-scene-01.jpg",
+      "kicker": "PSALM 131:2",
+      "sub": "FINDING INNER STILLNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Surely I have behaved",
+      "img": "short-psalm131v2-scene-02.jpg",
+      "kicker": "PSALM 131:2",
+      "sub": "LIKE A WEANED CHILD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, help me release",
+      "img": "short-psalm131v2-scene-03.jpg",
+      "kicker": "PSALM 131:2",
+      "sub": "LAYING DOWN EVERY BURDEN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I offer my spirit",
+      "img": "short-psalm131v2-scene-04.jpg",
+      "kicker": "PSALM 131:2",
+      "sub": "SURRENDERING TO PEACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your presence fall",
+      "img": "short-psalm131v2-scene-05.jpg",
+      "kicker": "PSALM 131:2",
+      "sub": "RESTING IN YOUR GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In your name I",
+      "img": "short-psalm131v2-scene-06.jpg",
+      "kicker": "PSALM 131:2",
+      "sub": "AMEN",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If that restless pattern of thought keeps you awake, you are invited to stillness now."
+    ],
+    [
+      8,
+      18,
+      "Surely I have behaved and quieted myself, as a child that is weaned of his mother:"
+    ],
+    [
+      18,
+      26,
+      "my soul is even as a weaned child."
+    ],
+    [
+      26,
+      35,
+      "Lord, help me release the need to strive, and settle into the hollow of your hand."
+    ],
+    [
+      35,
+      43,
+      "I offer my spirit to you, finding contentment in your shadow rather than my own strength."
+    ],
+    [
+      43,
+      50,
+      "Let your presence fall over this room, quieting every fear until morning light finally arrives."
+    ],
+    [
+      50,
+      56,
+      "In your name I rest, trusting you with the morning, the future, and my heart."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF THAT RESTLESS",
+        "PATTERN OF THOUGHT",
+        "YOU ARE INVITED",
+        "TO STILLNESS NOW"
+      ],
+      [
+        "RESTLESS",
+        "STILLNESS"
+      ],
+      "PSALM 131:2"
+    ],
+    [
+      8,
+      18,
+      [
+        "SURELY I HAVE",
+        "BEHAVED AND QUIETED",
+        "MYSELF AS A",
+        "WEANED CHILD"
+      ],
+      [
+        "QUIETED",
+        "CHILD"
+      ],
+      "PSALM 131:2"
+    ],
+    [
+      18,
+      26,
+      [
+        "MY SOUL IS",
+        "EVEN AS A",
+        "WEANED CHILD"
+      ],
+      [
+        "SOUL",
+        "WEANED"
+      ],
+      "PSALM 131:2"
+    ],
+    [
+      26,
+      35,
+      [
+        "RELEASE THE NEED",
+        "TO STRIVE AND",
+        "SETTLE INTO YOUR",
+        "HAND"
+      ],
+      [
+        "RELEASE",
+        "SETTLE"
+      ],
+      "PSALM 131:2"
+    ],
+    [
+      35,
+      43,
+      [
+        "I OFFER MY SPIRIT",
+        "FINDING CONTENTMENT IN",
+        "YOUR SHADOW"
+      ],
+      [
+        "SPIRIT",
+        "CONTENTMENT"
+      ],
+      "PSALM 131:2"
+    ],
+    [
+      43,
+      50,
+      [
+        "LET YOUR PRESENCE",
+        "FALL QUIETING EVERY",
+        "FEAR UNTIL MORNING"
+      ],
+      [
+        "PRESENCE",
+        "QUIETING"
+      ],
+      "PSALM 131:2"
+    ],
+    [
+      50,
+      56,
+      [
+        "IN YOUR NAME",
+        "I REST TRUSTING",
+        "YOU WITH EVERYTHING"
+      ],
+      [
+        "TRUSTING",
+        "REST"
+      ],
+      "PSALM 131:2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that restless pattern",
+      "kind": "phrase",
+      "words": [
+        "RESTLESS",
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Surely I have behaved",
+      "kind": "phrase",
+      "words": [
+        "QUIETED",
+        "CHILD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help me release",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "SETTLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I offer my spirit",
+      "kind": "phrase",
+      "words": [
+        "SPIRIT",
+        "CONTENTMENT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your presence fall",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE",
+        "QUIETING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In your name I",
+      "kind": "phrase",
+      "words": [
+        "TRUSTING",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 131:2"
+}

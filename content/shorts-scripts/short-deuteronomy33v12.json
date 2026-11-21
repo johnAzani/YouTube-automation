@@ -1,0 +1,320 @@
+{
+  "key": "short-deuteronomy33v12",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "DWELL IN SAFETY",
+    "DEUTERONOMY 33:12"
+  ],
+  "poster": [
+    "REST IN HIS CARE",
+    "HE COVERS YOU",
+    "BEDTIME PRAYER",
+    "DEUTERONOMY 33:12"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm night lake reflection moonlight soft mist",
+    "peaceful forest night pine trees starlight fog",
+    "cozy candle flame dark room flickering soft light",
+    "still mountain peak night starry sky blue twilight",
+    "gentle ocean waves dark night soft glow moon",
+    "calm bedroom window dark night stars quiet",
+    "soft candle flickering in dark quiet night stillness"
+  ],
+  "scenes": [
+    {
+      "a": "Before you replay that difficult conversation one more time tonight, rest your mind.",
+      "img": "short-deuteronomy33v12-scene-01.jpg",
+      "kicker": "DEUTERONOMY 33:12",
+      "sub": "REST YOUR MIND TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Deuteronomy 33:12 says, \"And of Benjamin he said, The beloved of the LORD shall dwell in safety by him;",
+      "img": "short-deuteronomy33v12-scene-02.jpg",
+      "kicker": "DEUTERONOMY 33:12",
+      "sub": "DWELL IN SAFETY",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "and the Lord shall cover him all the day long, and he shall dwell between his shoulders.\"",
+      "img": "short-deuteronomy33v12-scene-03.jpg",
+      "kicker": "DEUTERONOMY 33:12",
+      "sub": "COVERED ALL DAY LONG",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, as night settles over this room, wrap your weary child in quiet peace.",
+      "img": "short-deuteronomy33v12-scene-04.jpg",
+      "kicker": "DEUTERONOMY 33:12",
+      "sub": "WRAPPED IN QUIET PEACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "You carry every burden they were never meant to bear alone. Let your gentle presence shield them through the dark.",
+      "img": "short-deuteronomy33v12-scene-05.jpg",
+      "kicker": "DEUTERONOMY 33:12",
+      "sub": "SHIELDED IN THE DARK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "You hold them close, keeping every fear far from their heart. Sleep deeply tonight under the shelter of his constant care.",
+      "img": "short-deuteronomy33v12-scene-06.jpg",
+      "kicker": "DEUTERONOMY 33:12",
+      "sub": "SAFE IN HIS SHELTER",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Secret Place for daily bedtime prayers.",
+      "img": "short-deuteronomy33v12-scene-07.jpg",
+      "kicker": "THE SECRET PLACE",
+      "sub": "DAILY BEDTIME PRAYERS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      9,
+      "Before you replay that difficult conversation one more time tonight, rest your mind."
+    ],
+    [
+      9,
+      20,
+      "Deuteronomy 33:12 says, \"And of Benjamin he said, The beloved of the LORD shall dwell in safety by him;"
+    ],
+    [
+      20,
+      30,
+      "and the Lord shall cover him all the day long, and he shall dwell between his shoulders.\""
+    ],
+    [
+      30,
+      39,
+      "Father, as night settles over this room, wrap your weary child in quiet peace."
+    ],
+    [
+      39,
+      50,
+      "You carry every burden they were never meant to bear alone. Let your gentle presence shield them through the dark."
+    ],
+    [
+      50,
+      62,
+      "You hold them close, keeping every fear far from their heart. Sleep deeply tonight under the shelter of his constant care."
+    ],
+    [
+      62,
+      70,
+      "Subscribe to The Secret Place for daily bedtime prayers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      9,
+      [
+        "BEFORE YOU REPLAY THAT",
+        "DIFFICULT CONVERSATION",
+        "REST YOUR MIND TONIGHT"
+      ],
+      [
+        "REST",
+        "YOUR",
+        "MIND"
+      ],
+      "DEUTERONOMY 33 : 12"
+    ],
+    [
+      9,
+      20,
+      [
+        "THE BELOVED OF THE LORD",
+        "SHALL DWELL IN SAFETY",
+        "BY HIM"
+      ],
+      [
+        "DWELL",
+        "IN",
+        "SAFETY"
+      ],
+      "DEUTERONOMY 33 : 12"
+    ],
+    [
+      20,
+      30,
+      [
+        "THE LORD SHALL COVER HIM",
+        "ALL THE DAY LONG",
+        "BETWEEN HIS SHOULDERS"
+      ],
+      [
+        "COVER",
+        "HIM"
+      ],
+      "DEUTERONOMY 33 : 12"
+    ],
+    [
+      30,
+      39,
+      [
+        "WRAP YOUR WEARY CHILD",
+        "IN QUIET PEACE",
+        "TONIGHT"
+      ],
+      [
+        "QUIET",
+        "PEACE"
+      ],
+      "DEUTERONOMY 33 : 12"
+    ],
+    [
+      39,
+      50,
+      [
+        "YOU CARRY EVERY BURDEN",
+        "LET YOUR GENTLE PRESENCE",
+        "SHIELD THEM"
+      ],
+      [
+        "GENTLE",
+        "PRESENCE"
+      ],
+      "DEUTERONOMY 33 : 12"
+    ],
+    [
+      50,
+      62,
+      [
+        "KEEPING EVERY FEAR",
+        "FAR FROM THEIR HEART",
+        "SLEEP DEEPLY TONIGHT"
+      ],
+      [
+        "SLEEP",
+        "DEEPLY"
+      ],
+      "DEUTERONOMY 33 : 12"
+    ],
+    [
+      62,
+      70,
+      [
+        "SUBSCRIBE TO THE SECRET PLACE",
+        "FOR DAILY BEDTIME PRAYERS"
+      ],
+      [
+        "BEDTIME",
+        "PRAYERS"
+      ],
+      "DEUTERONOMY 33 : 12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Before you replay that difficult conversation one more time tonight, rest your mind.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "YOUR",
+        "MIND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Deuteronomy 33:12 says, \"And of Benjamin he said, The beloved of the LORD shall dwell in safety by him;",
+      "kind": "phrase",
+      "words": [
+        "DWELL",
+        "IN",
+        "SAFETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and the Lord shall cover him all the day long, and he shall dwell between his shoulders.\"",
+      "kind": "phrase",
+      "words": [
+        "COVER",
+        "HIM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, as night settles over this room, wrap your weary child in quiet peace.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You carry every burden they were never meant to bear alone. Let your gentle presence shield them through the dark.",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You hold them close, keeping every fear far from their heart. Sleep deeply tonight under the shelter of his constant care.",
+      "kind": "phrase",
+      "words": [
+        "SLEEP",
+        "DEEPLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Secret Place for daily bedtime prayers.",
+      "kind": "phrase",
+      "words": [
+        "BEDTIME",
+        "PRAYERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Deuteronomy 33:12"
+}
