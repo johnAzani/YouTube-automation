@@ -2,7 +2,7 @@
 id: 0219
 title: "Crooked Places Made Straight: Isaiah 45:2-3 | The Midnight Watch"
 slug: when-the-path-ahead-is-twisted-isaiah-45-2-3-the-midnight-watch
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -78,6 +78,15 @@ originality:
   source_notes: true
 title_before: "When the Path Ahead Is Twisted: Isaiah 45:2-3 | The Midnight Watch"
 queue_title_fixed_at: "2026-11-16"
+published_on: "2026-11-21"
+published_at: "2026-11-21T01:35:17Z"
+youtube_video_id: "OZTf1IzgoB8"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Rising at the Midnight Hour

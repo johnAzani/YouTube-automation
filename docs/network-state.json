@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T00:41:09Z",
+  "generated_at": "2026-11-21T01:36:05Z",
   "monitor_generated_at": "2026-11-20T22:00:20.527326+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 581,
-    "published_longform": 175,
-    "published_shorts": 406,
-    "public_total": 579,
-    "queued_longform": 56,
-    "queued_shorts": 65,
+    "published_total": 583,
+    "published_longform": 176,
+    "published_shorts": 407,
+    "public_total": 581,
+    "queued_longform": 55,
+    "queued_shorts": 64,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": false
@@ -237,33 +237,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 60,
-        "published_longform": 19,
-        "published_shorts": 41,
-        "thumbnail_pending": 59,
-        "public_total": 60,
-        "queued_longform": 6,
+        "published_total": 62,
+        "published_longform": 20,
+        "published_shorts": 42,
+        "thumbnail_pending": 61,
+        "public_total": 62,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTPSALM68V1",
-        "title": "Pray This Psalm 68:1-3 Midnight Prayer | Hear The Word #Shorts",
-        "format": "short",
-        "youtube_video_id": "9eJD53kUWnE",
-        "watch_url": "https://www.youtube.com/shorts/9eJD53kUWnE",
-        "published_on": "2026-11-20",
-        "published_at": "2026-11-20T20:43:03Z"
-      },
-      "next_queued_longform": {
         "id": "0219",
         "title": "Crooked Places Made Straight: Isaiah 45:2-3 | The Midnight Watch",
-        "words": 1592,
+        "format": "longform",
+        "youtube_video_id": "OZTf1IzgoB8",
+        "watch_url": "https://youtu.be/OZTf1IzgoB8",
+        "published_on": "2026-11-21",
+        "published_at": "2026-11-21T01:35:17Z"
+      },
+      "next_queued_longform": {
+        "id": "0220",
+        "title": "The Standard Lifted Against the Flood: Isaiah 59:19",
+        "words": 1504,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightpsalm107v13",
-        "scripture": "Psalm 107:13-16",
+        "short": "short-midnightpsalm144v1",
+        "scripture": "Psalm 144:1-2",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0219",
+      "slug": "when-the-path-ahead-is-twisted-isaiah-45-2-3-the-midnight-watch",
+      "file": "0219-when-the-path-ahead-is-twisted-isaiah-45-2-3-the-midnight-watch.md",
+      "title": "Crooked Places Made Straight: Isaiah 45:2-3 | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T01:35:17Z",
+      "youtube_video_id": "OZTf1IzgoB8",
+      "watch_url": "https://youtu.be/OZTf1IzgoB8",
+      "youtu_be_url": "https://youtu.be/OZTf1IzgoB8",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/OZTf1IzgoB8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/OZTf1IzgoB8/hqdefault.jpg",
+      "thumb_text": "CROOKED MADE STRAIGHT",
+      "thumbnail_pending": true,
+      "duration_label": "~11 min",
+      "words": 1592
+    },
+    {
       "id": "SHORT-GUIDEDPROVERBS16V3",
       "slug": "short-guidedproverbs16v3-guidance-prayer",
       "file": "short-guidedproverbs16v3-guidance-prayer.md",
@@ -844,6 +868,30 @@
       "thumbnail_pending": false,
       "duration_label": "45s",
       "words": 610
+    },
+    {
+      "id": "SHORT-MIDNIGHTPSALM107V13",
+      "slug": "short-midnightpsalm107v13-midnight-prayer",
+      "file": "short-midnightpsalm107v13-midnight-prayer.md",
+      "title": "Pray This Psalm 107:13-16 Midnight Prayer | Hear This Prayer #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T00:26:16Z",
+      "youtube_video_id": "fZMoytqQso4",
+      "watch_url": "https://www.youtube.com/shorts/fZMoytqQso4",
+      "youtu_be_url": "https://youtu.be/fZMoytqQso4",
+      "shorts_url": "https://www.youtube.com/shorts/fZMoytqQso4",
+      "studio_url": "https://studio.youtube.com/video/fZMoytqQso4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/fZMoytqQso4/hqdefault.jpg",
+      "thumb_text": "THE \u00b7 MIDNIGHT",
+      "thumbnail_pending": true,
+      "duration_label": "41s",
+      "words": 621
     },
     {
       "id": "SHORT-FAMILYCOLOSSIANS3V14",
@@ -14857,19 +14905,6 @@
         "words": 1453
       },
       {
-        "id": "0219",
-        "slug": "when-the-path-ahead-is-twisted-isaiah-45-2-3-the-midnight-watch",
-        "file": "0219-when-the-path-ahead-is-twisted-isaiah-45-2-3-the-midnight-watch.md",
-        "title": "Crooked Places Made Straight: Isaiah 45:2-3 | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1592
-      },
-      {
         "id": "0220",
         "slug": "the-standard-lifted-against-the-flood-isaiah-59-19-the-midnight-watch",
         "file": "0220-the-standard-lifted-against-the-flood-isaiah-59-19-the-midnight-watch.md",
@@ -15586,17 +15621,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightpsalm107v13",
-        "file": "0217-short-midnightpsalm107v13.yml",
-        "companion_longform_id": "0217",
-        "scripture": "Psalm 107:13-16",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightpsalm144v1",
