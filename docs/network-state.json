@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T11:22:49Z",
+  "generated_at": "2026-11-21T11:23:24Z",
   "monitor_generated_at": "2026-11-21T03:57:09.854457+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 585,
+    "published_total": 586,
     "published_longform": 177,
-    "published_shorts": 408,
-    "public_total": 583,
+    "published_shorts": 409,
+    "public_total": 584,
     "queued_longform": 60,
-    "queued_shorts": 99,
+    "queued_shorts": 97,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 69,
+        "published_total": 70,
         "published_longform": 22,
-        "published_shorts": 47,
+        "published_shorts": 48,
         "thumbnail_pending": 0,
-        "public_total": 69,
+        "public_total": 70,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYPSALM71V16",
-        "title": "Say This Psalm 71:16 Prayer at Noon | Your Own Resolve Is Not Enough #Shorts",
+        "id": "SHORT-MIDDAYJAMES1V19",
+        "title": "Say This James 1:19-20 Prayer at Noon | Seeking His Peace #Shorts",
         "format": "short",
-        "youtube_video_id": "X37HiyRH-98",
-        "watch_url": "https://www.youtube.com/shorts/X37HiyRH-98",
+        "youtube_video_id": "4BByj9p-RQ0",
+        "watch_url": "https://www.youtube.com/shorts/4BByj9p-RQ0",
         "published_on": "2026-11-21",
-        "published_at": "2026-11-21T00:24:51Z"
+        "published_at": "2026-11-21T11:22:26Z"
       },
       "next_queued_longform": {
         "id": "0097",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayjames1v19",
-        "scripture": "James 1:19-20",
+        "short": "short-middaypsalm94v18",
+        "scripture": "Psalm 94:18",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYJAMES1V19",
+      "slug": "short-middayjames1v19-midday-prayer",
+      "file": "short-middayjames1v19-midday-prayer.md",
+      "title": "Say This James 1:19-20 Prayer at Noon | Seeking His Peace #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T11:22:26Z",
+      "youtube_video_id": "4BByj9p-RQ0",
+      "watch_url": "https://www.youtube.com/shorts/4BByj9p-RQ0",
+      "youtu_be_url": "https://youtu.be/4BByj9p-RQ0",
+      "shorts_url": "https://www.youtube.com/shorts/4BByj9p-RQ0",
+      "studio_url": "https://studio.youtube.com/video/4BByj9p-RQ0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/4BByj9p-RQ0/hqdefault.jpg",
+      "thumb_text": "MIDDAY PRAYER \u00b7 JAMES 1:19-20",
+      "thumbnail_pending": false,
+      "duration_label": "44s",
+      "words": 607
+    },
     {
       "id": "SHORT-FAMILYECCLESIASTES4V9",
       "slug": "short-familyecclesiastes4v9-household-prayer",
@@ -15648,17 +15672,6 @@
         "target_window_utc": "15:44"
       },
       {
-        "short": "short-middayjames1v19",
-        "file": "0000-short-middayjames1v19.yml",
-        "companion_longform_id": "",
-        "scripture": "James 1:19-20",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
-      {
         "short": "short-middaypsalm94v18",
         "file": "0000-short-middaypsalm94v18.yml",
         "companion_longform_id": "",
@@ -16059,17 +16072,6 @@
         "file": "0102-short-middayproverbs15v1.yml",
         "companion_longform_id": "0102",
         "scripture": "Proverbs 15:1",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-middayjohn4v13",
-        "file": "0105-short-middayjohn4v13.yml",
-        "companion_longform_id": "0105",
-        "scripture": "John 4:13-14",
         "channel": "prayer3",
         "channel_name": "The Midday Watch",
         "status": "approved",
