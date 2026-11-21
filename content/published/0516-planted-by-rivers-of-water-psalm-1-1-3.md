@@ -2,7 +2,7 @@
 id: '0516'
 title: 'Planted by Rivers of Water: Psalm 1:1-3 | The Provision Table'
 slug: planted-by-rivers-of-water-psalm-1-1-3
-status: approved
+status: published
 channel: prayer7
 privacy: public
 format: longform
@@ -74,6 +74,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-21"
+published_at: "2026-11-21T12:39:49Z"
+youtube_video_id: "O3FV4myNfzc"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Walk of Wisdom and the Choice of Counsel

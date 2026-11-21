@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T12:37:55Z",
+  "generated_at": "2026-11-21T12:40:37Z",
   "monitor_generated_at": "2026-11-21T11:27:49.289585+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 594,
-    "published_longform": 178,
-    "published_shorts": 416,
-    "public_total": 592,
-    "queued_longform": 59,
-    "queued_shorts": 88,
+    "published_total": 596,
+    "published_longform": 179,
+    "published_shorts": 417,
+    "public_total": 594,
+    "queued_longform": 58,
+    "queued_shorts": 87,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -441,33 +441,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 53,
-        "published_longform": 16,
-        "published_shorts": 37,
+        "published_total": 55,
+        "published_longform": 17,
+        "published_shorts": 38,
         "thumbnail_pending": 4,
-        "public_total": 53,
-        "queued_longform": 6,
+        "public_total": 55,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPSALM37V23",
-        "title": "Pray This Psalm 37:23-25 Prayer for Open Doors & Provision | Walk In Provision #Shorts",
-        "format": "short",
-        "youtube_video_id": "FpdRKWkgqcI",
-        "watch_url": "https://www.youtube.com/shorts/FpdRKWkgqcI",
-        "published_on": "2026-11-21",
-        "published_at": "2026-11-21T00:34:21Z"
-      },
-      "next_queued_longform": {
         "id": "0516",
         "title": "Planted by Rivers of Water: Psalm 1:1-3 | The Provision Table",
-        "words": 1460,
+        "format": "longform",
+        "youtube_video_id": "O3FV4myNfzc",
+        "watch_url": "https://youtu.be/O3FV4myNfzc",
+        "published_on": "2026-11-21",
+        "published_at": "2026-11-21T12:39:49Z"
+      },
+      "next_queued_longform": {
+        "id": "0518",
+        "title": "When Diligent Hands Find Favour: Proverbs 22:29 | The Provision Table",
+        "words": 1210,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provision2corinthians9v10",
-        "scripture": "2 Corinthians 9:10-11",
+        "short": "short-provisiondeuteronomy28v2",
+        "scripture": "Deuteronomy 28:2-6",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0516",
+      "slug": "planted-by-rivers-of-water-psalm-1-1-3",
+      "file": "0516-planted-by-rivers-of-water-psalm-1-1-3.md",
+      "title": "Planted by Rivers of Water: Psalm 1:1-3 | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T12:39:49Z",
+      "youtube_video_id": "O3FV4myNfzc",
+      "watch_url": "https://youtu.be/O3FV4myNfzc",
+      "youtu_be_url": "https://youtu.be/O3FV4myNfzc",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/O3FV4myNfzc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/O3FV4myNfzc/hqdefault.jpg",
+      "thumb_text": "PLANTED BY WATERS",
+      "thumbnail_pending": false,
+      "duration_label": "~10 min",
+      "words": 1460
+    },
+    {
       "id": "0811",
       "slug": "when-you-need-to-know-which-way-to-turn-psalm-143-8",
       "file": "0811-when-you-need-to-know-which-way-to-turn-psalm-143-8.md",
@@ -796,6 +820,30 @@
       "thumbnail_pending": true,
       "duration_label": "49s",
       "words": 645
+    },
+    {
+      "id": "SHORT-PROVISION2CORINTHIANS9V10",
+      "slug": "short-provision2corinthians9v10-stewardship-prayer",
+      "file": "short-provision2corinthians9v10-stewardship-prayer.md",
+      "title": "Pray This 2 Corinthians 9:10-11 Prayer for Open Doors & Provision | KJV Wisdom #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T11:30:40Z",
+      "youtube_video_id": "KuCRpm-eJhQ",
+      "watch_url": "https://www.youtube.com/shorts/KuCRpm-eJhQ",
+      "youtu_be_url": "https://youtu.be/KuCRpm-eJhQ",
+      "shorts_url": "https://www.youtube.com/shorts/KuCRpm-eJhQ",
+      "studio_url": "https://studio.youtube.com/video/KuCRpm-eJhQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/KuCRpm-eJhQ/hqdefault.jpg",
+      "thumb_text": "HARVEST OF GRACE \u00b7 PROVISION FOR",
+      "thumbnail_pending": false,
+      "duration_label": "46s",
+      "words": 644
     },
     {
       "id": "SHORT-HEALINGJEREMIAH8V22",
@@ -15429,19 +15477,6 @@
         "words": 1098
       },
       {
-        "id": "0516",
-        "slug": "planted-by-rivers-of-water-psalm-1-1-3",
-        "file": "0516-planted-by-rivers-of-water-psalm-1-1-3.md",
-        "title": "Planted by Rivers of Water: Psalm 1:1-3 | The Provision Table",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1460
-      },
-      {
         "id": "0518",
         "slug": "when-diligent-hands-find-favour-proverbs-22-29",
         "file": "0518-when-diligent-hands-find-favour-proverbs-22-29.md",
@@ -15882,17 +15917,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provision2corinthians9v10",
-        "file": "0000-short-provision2corinthians9v10.yml",
-        "companion_longform_id": "",
-        "scripture": "2 Corinthians 9:10-11",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisiondeuteronomy28v2",
