@@ -1,0 +1,282 @@
+{
+  "key": "short-gardenpsalm86v12",
+  "channel": "prayer9",
+  "psalm": 86,
+  "title": [
+    "A HEART OF",
+    "WHOLE PRAISE"
+  ],
+  "poster": [
+    "GIVE THANKS",
+    "TO THE LORD",
+    "WITH YOUR",
+    "WHOLE HEART"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlight filtering through ancient oak trees",
+    "misty meadow at dawn with golden light",
+    "peaceful river flowing through a quiet valley",
+    "dew on vibrant green leaves at sunrise",
+    "soft morning light over rolling hills",
+    "still mountain pond reflecting sky"
+  ],
+  "scenes": [
+    {
+      "a": "If that heavy decision weighing on your mind feels impossible to resolve, stay right here.",
+      "img": "short-gardenpsalm86v12-scene-01.jpg",
+      "kicker": "PSALM 86:12",
+      "sub": "A PRAYER OF WHOLEHEARTED PRAISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "I will praise thee, O Lord my God, with all my heart: and I will glorify thy name for evermore.",
+      "img": "short-gardenpsalm86v12-scene-02.jpg",
+      "kicker": "PSALM 86:12",
+      "sub": "GOD IS WORTHY OF ALL PRAISE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, help me to bring this same sincere devotion into my current circumstances right now.",
+      "img": "short-gardenpsalm86v12-scene-03.jpg",
+      "kicker": "PRAYER",
+      "sub": "SURRENDER EVERY WORRY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "When my heart feels divided by fear or doubt, remind me of Your unchanging character.",
+      "img": "short-gardenpsalm86v12-scene-04.jpg",
+      "kicker": "TRUSTING GOD",
+      "sub": "FINDING PEACE IN HIS NAME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I offer You my full attention today, letting go of the need to control outcomes.",
+      "img": "short-gardenpsalm86v12-scene-05.jpg",
+      "kicker": "GRACE",
+      "sub": "RESTING IN HIS FAITHFULNESS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Thank You for the grace that sustains me and for the hope found in Your word.",
+      "img": "short-gardenpsalm86v12-scene-06.jpg",
+      "kicker": "THE PRAISE GARDEN",
+      "sub": "WALK WITH GOD TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If that heavy decision weighing on your mind feels impossible to resolve, stay right here."
+    ],
+    [
+      8,
+      20,
+      "I will praise thee, O Lord my God, with all my heart: and I will glorify thy name for evermore."
+    ],
+    [
+      20,
+      30,
+      "Lord, help me to bring this same sincere devotion into my current circumstances right now."
+    ],
+    [
+      30,
+      42,
+      "When my heart feels divided by fear or doubt, remind me of Your unchanging character."
+    ],
+    [
+      42,
+      52,
+      "I offer You my full attention today, letting go of the need to control outcomes."
+    ],
+    [
+      52,
+      60,
+      "Thank You for the grace that sustains me and for the hope found in Your word."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF THAT HEAVY",
+        "DECISION WEIGHING",
+        "ON YOUR MIND",
+        "FEELS IMPOSSIBLE",
+        "STAY RIGHT HERE"
+      ],
+      [
+        "HEAVY DECISION",
+        "STAY RIGHT HERE"
+      ],
+      "PSALM 86:12"
+    ],
+    [
+      8,
+      20,
+      [
+        "I WILL PRAISE",
+        "THEE O LORD",
+        "WITH ALL MY",
+        "HEART AND WILL",
+        "GLORIFY THY NAME"
+      ],
+      [
+        "I WILL PRAISE",
+        "ALL MY HEART"
+      ],
+      "PSALM 86:12"
+    ],
+    [
+      20,
+      30,
+      [
+        "LORD HELP ME",
+        "TO BRING THIS",
+        "SINCERE DEVOTION",
+        "INTO MY",
+        "CURRENT CIRCUMSTANCES"
+      ],
+      [
+        "SINCERE DEVOTION"
+      ],
+      "PSALM 86:12"
+    ],
+    [
+      30,
+      42,
+      [
+        "WHEN MY HEART",
+        "FEELS DIVIDED BY",
+        "FEAR OR DOUBT",
+        "REMIND ME OF",
+        "YOUR UNCHANGING CHARACTER"
+      ],
+      [
+        "UNCHANGING CHARACTER"
+      ],
+      "PSALM 86:12"
+    ],
+    [
+      42,
+      52,
+      [
+        "I OFFER YOU",
+        "MY FULL ATTENTION",
+        "LETTING GO OF",
+        "THE NEED TO",
+        "CONTROL OUTCOMES"
+      ],
+      [
+        "FULL ATTENTION"
+      ],
+      "PSALM 86:12"
+    ],
+    [
+      52,
+      60,
+      [
+        "THANK YOU FOR",
+        "THE GRACE THAT",
+        "SUSTAINS ME AND",
+        "FOR THE HOPE",
+        "FOUND IN YOUR WORD"
+      ],
+      [
+        "GRACE",
+        "HOPE"
+      ],
+      "PSALM 86:12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that heavy decision weighing on your mind feels impossible to resolve, stay right here.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY DECISION",
+        "STAY RIGHT HERE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will praise thee, O Lord my God, with all my heart: and I will glorify thy name for evermore.",
+      "kind": "phrase",
+      "words": [
+        "I WILL PRAISE",
+        "ALL MY HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help me to bring this same sincere devotion into my current circumstances right now.",
+      "kind": "phrase",
+      "words": [
+        "SINCERE DEVOTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When my heart feels divided by fear or doubt, remind me of Your unchanging character.",
+      "kind": "phrase",
+      "words": [
+        "UNCHANGING CHARACTER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I offer You my full attention today, letting go of the need to control outcomes.",
+      "kind": "phrase",
+      "words": [
+        "FULL ATTENTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thank You for the grace that sustains me and for the hope found in Your word.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "HOPE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 86:12"
+}
