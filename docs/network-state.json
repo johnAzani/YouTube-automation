@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T15:05:13Z",
+  "generated_at": "2026-11-21T15:13:11Z",
   "monitor_generated_at": "2026-11-21T15:04:03.237531+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 599,
+    "published_total": 600,
     "published_longform": 179,
-    "published_shorts": 420,
-    "public_total": 597,
+    "published_shorts": 421,
+    "public_total": 598,
     "queued_longform": 60,
-    "queued_shorts": 96,
+    "queued_shorts": 95,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 47,
+        "published_total": 48,
         "published_longform": 14,
-        "published_shorts": 33,
-        "thumbnail_pending": 47,
-        "public_total": 47,
+        "published_shorts": 34,
+        "thumbnail_pending": 48,
+        "public_total": 48,
         "queued_longform": 6,
         "queued_other": 3,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM3V3",
-        "title": "Pray This Psalm 3:3 Prayer for Divine Protection | Your Shield #Shorts",
+        "id": "SHORT-SHIELDPSALM91V11",
+        "title": "Pray This Psalm 91:11 Prayer for Divine Protection | His Angels Charge #Shorts",
         "format": "short",
-        "youtube_video_id": "aNtgg3ZJQc8",
-        "watch_url": "https://www.youtube.com/shorts/aNtgg3ZJQc8",
+        "youtube_video_id": "mziTpWKcrKc",
+        "watch_url": "https://www.youtube.com/shorts/mziTpWKcrKc",
         "published_on": "2026-11-21",
-        "published_at": "2026-11-21T11:32:31Z"
+        "published_at": "2026-11-21T15:12:21Z"
       },
       "next_queued_longform": {
         "id": "0617",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm91v11",
-        "scripture": "Psalm 91:11",
+        "short": "short-shieldromans8v31",
+        "scripture": "Romans 8:31",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM91V11",
+      "slug": "short-shieldpsalm91v11-protection-prayer",
+      "file": "short-shieldpsalm91v11-protection-prayer.md",
+      "title": "Pray This Psalm 91:11 Prayer for Divine Protection | His Angels Charge #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T15:12:21Z",
+      "youtube_video_id": "mziTpWKcrKc",
+      "watch_url": "https://www.youtube.com/shorts/mziTpWKcrKc",
+      "youtu_be_url": "https://youtu.be/mziTpWKcrKc",
+      "shorts_url": "https://www.youtube.com/shorts/mziTpWKcrKc",
+      "studio_url": "https://studio.youtube.com/video/mziTpWKcrKc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/mziTpWKcrKc/hqdefault.jpg",
+      "thumb_text": "WALK UNDER \u00b7 HIS DAILY",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 648
+    },
     {
       "id": "SHORT-PROVISIONDEUTERONOMY28V2",
       "slug": "short-provisiondeuteronomy28v2-stewardship-prayer",
@@ -16158,17 +16182,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldpsalm91v11",
-        "file": "0000-short-shieldpsalm91v11.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 91:11",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldromans8v31",
