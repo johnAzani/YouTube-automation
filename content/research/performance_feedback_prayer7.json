@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T04:04:04.915226+00:00",
+  "generated_at": "2026-11-21T09:48:54.617891+00:00",
   "as_of": "2026-11-21",
   "sufficient_data": false,
   "measured_longform_videos": 2,
@@ -64,9 +64,9 @@
     "measured_shorts": 30,
     "total_shorts": 35,
     "sufficient_data": true,
-    "avg_views": 90.7,
+    "avg_views": 90.8,
     "median_views": 88,
-    "total_views": 2721,
+    "total_views": 2724,
     "minimum_age_days": 2,
     "by_book": {
       "1 corinthians": {
@@ -102,12 +102,12 @@
       "isaiah": {
         "shorts": 1,
         "avg_views": 145.0,
-        "ratio": 1.2
+        "ratio": 1.199
       },
       "james": {
         "shorts": 1,
         "avg_views": 110.0,
-        "ratio": 1.071
+        "ratio": 1.07
       },
       "luke": {
         "shorts": 1,
@@ -122,7 +122,7 @@
       "matthew": {
         "shorts": 4,
         "avg_views": 134.2,
-        "ratio": 1.32
+        "ratio": 1.319
       },
       "philippians": {
         "shorts": 1,
@@ -132,12 +132,12 @@
       "proverbs": {
         "shorts": 3,
         "avg_views": 72.7,
-        "ratio": 0.881
+        "ratio": 0.88
       },
       "psalm": {
         "shorts": 8,
-        "avg_views": 81.9,
-        "ratio": 0.922
+        "avg_views": 82.2,
+        "ratio": 0.925
       },
       "revelation": {
         "shorts": 1,
@@ -154,17 +154,17 @@
       "anxiety_peace": {
         "shorts": 3,
         "avg_views": 109.0,
-        "ratio": 1.121
+        "ratio": 1.12
       },
       "daily_guidance_wisdom": {
         "shorts": 6,
         "avg_views": 110.8,
-        "ratio": 1.166
+        "ratio": 1.165
       },
       "general_prayer": {
         "shorts": 13,
-        "avg_views": 81.9,
-        "ratio": 0.916
+        "avg_views": 82.2,
+        "ratio": 0.917
       },
       "midday_strength_endurance": {
         "shorts": 3,
@@ -179,7 +179,7 @@
       "peace_rest": {
         "shorts": 1,
         "avg_views": 113.0,
-        "ratio": 1.082
+        "ratio": 1.081
       },
       "protection": {
         "shorts": 2,
