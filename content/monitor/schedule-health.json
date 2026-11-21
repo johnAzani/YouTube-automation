@@ -37,8 +37,8 @@
       "workflow": "reporting-jobs.yml"
     }
   ],
-  "generated_at": "2026-11-20T22:00:06.775357+00:00",
-  "last_run_at": "2026-11-20T21:59:12+00:00",
+  "generated_at": "2026-11-21T00:19:07.469318+00:00",
+  "last_run_at": "2026-11-21T00:18:23+00:00",
   "on_time": [
     {
       "late_minutes": 105,
@@ -81,13 +81,6 @@
       "ran_at": "2026-11-20T21:59:12+00:00",
       "slot": "2026-11-20T21:23:00+00:00",
       "workflow": "monitor.yml"
-    },
-    {
-      "late_minutes": 82,
-      "name": "Produce video",
-      "ran_at": "2026-11-20T20:36:33+00:00",
-      "slot": "2026-11-20T19:14:00+00:00",
-      "workflow": "produce.yml"
     },
     {
       "late_minutes": 12,
