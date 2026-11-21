@@ -23,8 +23,8 @@
       "workflow": "reporting-jobs.yml"
     }
   ],
-  "generated_at": "2026-11-21T03:57:04.383229+00:00",
-  "last_run_at": "2026-11-21T03:56:15+00:00",
+  "generated_at": "2026-11-21T03:59:16.943748+00:00",
+  "last_run_at": "2026-11-21T03:58:15+00:00",
   "on_time": [
     {
       "late_minutes": 105,
@@ -46,6 +46,13 @@
       "ran_at": "2026-11-18T20:45:51+00:00",
       "slot": "2026-11-18T19:14:00+00:00",
       "workflow": "community.yml"
+    },
+    {
+      "late_minutes": 103,
+      "name": "Growth autopilot",
+      "ran_at": "2026-11-21T03:57:08+00:00",
+      "slot": "2026-11-21T02:14:00+00:00",
+      "workflow": "growth-autopilot.yml"
     },
     {
       "late_minutes": 1,
@@ -76,6 +83,6 @@
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 1,
   "warn_minutes": 120
 }
