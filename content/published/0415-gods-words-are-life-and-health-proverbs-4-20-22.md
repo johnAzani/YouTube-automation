@@ -2,7 +2,7 @@
 id: '0415'
 title: "Restoration for a Weary Body: Proverbs 4:20-22 | The Healing Balm"
 slug: gods-words-are-life-and-health-proverbs-4-20-22
-status: approved
+status: published
 channel: prayer6
 privacy: public
 format: longform
@@ -74,6 +74,14 @@ originality:
   source_notes: true
 title_before: "God's Words Are Life and Health: Proverbs 4:20-22 | The Healing Balm"
 queue_title_fixed_at: "2026-11-16"
+published_on: "2026-11-21"
+published_at: "2026-11-21T20:47:49Z"
+youtube_video_id: "orWc3us3OJg"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Approaching the Great Physician

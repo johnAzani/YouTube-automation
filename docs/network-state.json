@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T20:08:31Z",
+  "generated_at": "2026-11-21T20:48:45Z",
   "monitor_generated_at": "2026-11-21T19:30:32.776979+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 618,
-    "published_longform": 184,
-    "published_shorts": 434,
-    "public_total": 616,
-    "queued_longform": 55,
-    "queued_shorts": 81,
+    "published_total": 620,
+    "published_longform": 185,
+    "published_shorts": 435,
+    "public_total": 618,
+    "queued_longform": 54,
+    "queued_shorts": 80,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -373,33 +373,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 55,
-        "published_longform": 15,
-        "published_shorts": 40,
+        "published_total": 57,
+        "published_longform": 16,
+        "published_shorts": 41,
         "thumbnail_pending": 3,
-        "public_total": 55,
-        "queued_longform": 6,
+        "public_total": 57,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-HEALINGACTS3V6",
-        "title": "Pray This Acts 3:6-8 Healing Prayer for Peace & Strength | Healing In His Name #Shorts",
-        "format": "short",
-        "youtube_video_id": "l6U3vwDjdx0",
-        "watch_url": "https://www.youtube.com/shorts/l6U3vwDjdx0",
-        "published_on": "2026-11-21",
-        "published_at": "2026-11-21T14:55:46Z"
-      },
-      "next_queued_longform": {
         "id": "0415",
         "title": "Restoration for a Weary Body: Proverbs 4:20-22 | The Healing Balm",
-        "words": 1316,
+        "format": "longform",
+        "youtube_video_id": "orWc3us3OJg",
+        "watch_url": "https://youtu.be/orWc3us3OJg",
+        "published_on": "2026-11-21",
+        "published_at": "2026-11-21T20:47:49Z"
+      },
+      "next_queued_longform": {
+        "id": "0416",
+        "title": "Healing When the Body Is Weak: Psalm 107:19-20 | The Healing Balm",
+        "words": 1017,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingluke13v11",
-        "scripture": "Luke 13:11-13",
+        "short": "short-healingmatthew9v35",
+        "scripture": "Matthew 9:35",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0415",
+      "slug": "gods-words-are-life-and-health-proverbs-4-20-22",
+      "file": "0415-gods-words-are-life-and-health-proverbs-4-20-22.md",
+      "title": "Restoration for a Weary Body: Proverbs 4:20-22 | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T20:47:49Z",
+      "youtube_video_id": "orWc3us3OJg",
+      "watch_url": "https://youtu.be/orWc3us3OJg",
+      "youtu_be_url": "https://youtu.be/orWc3us3OJg",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/orWc3us3OJg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/orWc3us3OJg/hqdefault.jpg",
+      "thumb_text": "LIFE AND HEALTH",
+      "thumbnail_pending": false,
+      "duration_label": "~9 min",
+      "words": 1316
+    },
+    {
       "id": "SHORT-GUIDEDPROVERBS4V11",
       "slug": "short-guidedproverbs4v11-guidance-prayer",
       "file": "short-guidedproverbs4v11-guidance-prayer.md",
@@ -796,6 +820,30 @@
       "thumbnail_pending": true,
       "duration_label": "44s",
       "words": 645
+    },
+    {
+      "id": "SHORT-HEALINGLUKE13V11",
+      "slug": "short-healingluke13v11-restoration-prayer",
+      "file": "short-healingluke13v11-restoration-prayer.md",
+      "title": "Pray This Luke 13:11-13 Healing Prayer for Peace & Strength | His Word Brings Freedom #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T20:00:05Z",
+      "youtube_video_id": "nW3D_v7NHr4",
+      "watch_url": "https://www.youtube.com/shorts/nW3D_v7NHr4",
+      "youtu_be_url": "https://youtu.be/nW3D_v7NHr4",
+      "shorts_url": "https://www.youtube.com/shorts/nW3D_v7NHr4",
+      "studio_url": "https://studio.youtube.com/video/nW3D_v7NHr4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/nW3D_v7NHr4/hqdefault.jpg",
+      "thumb_text": "RELEASE FROM \u00b7 EVERY INFIRMITY",
+      "thumbnail_pending": false,
+      "duration_label": "44s",
+      "words": 646
     },
     {
       "id": "SHORT-MIDNIGHT1SAMUEL17V45",
@@ -15875,19 +15923,6 @@
         "words": 913
       },
       {
-        "id": "0415",
-        "slug": "gods-words-are-life-and-health-proverbs-4-20-22",
-        "file": "0415-gods-words-are-life-and-health-proverbs-4-20-22.md",
-        "title": "Restoration for a Weary Body: Proverbs 4:20-22 | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1316
-      },
-      {
         "id": "0416",
         "slug": "healing-when-the-body-is-weak-psalm-107-19-20-the-healing-balm",
         "file": "0416-healing-when-the-body-is-weak-psalm-107-19-20-the-healing-balm.md",
@@ -16274,17 +16309,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-healingluke13v11",
-        "file": "0000-short-healingluke13v11.yml",
-        "companion_longform_id": "",
-        "scripture": "Luke 13:11-13",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingmatthew9v35",
