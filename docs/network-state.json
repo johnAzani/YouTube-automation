@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T19:54:27Z",
+  "generated_at": "2026-11-21T19:55:17Z",
   "monitor_generated_at": "2026-11-21T19:30:32.776979+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 613,
+    "published_total": 614,
     "published_longform": 184,
-    "published_shorts": 429,
-    "public_total": 611,
+    "published_shorts": 430,
+    "public_total": 612,
     "queued_longform": 55,
-    "queued_shorts": 86,
+    "queued_shorts": 85,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -237,23 +237,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 64,
+        "published_total": 65,
         "published_longform": 21,
-        "published_shorts": 43,
-        "thumbnail_pending": 63,
-        "public_total": 64,
+        "published_shorts": 44,
+        "thumbnail_pending": 64,
+        "public_total": 65,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0220",
-        "title": "The Standard Lifted Against the Flood: Isaiah 59:19",
-        "format": "longform",
-        "youtube_video_id": "QdbrkspQ2dQ",
-        "watch_url": "https://youtu.be/QdbrkspQ2dQ",
+        "id": "SHORT-MIDNIGHT1SAMUEL17V45",
+        "title": "Pray This 1 Samuel 17:45-47 Midnight Prayer | The Lord's #Shorts",
+        "format": "short",
+        "youtube_video_id": "cL-HI3GZ-uA",
+        "watch_url": "https://www.youtube.com/shorts/cL-HI3GZ-uA",
         "published_on": "2026-11-21",
-        "published_at": "2026-11-21T15:46:40Z"
+        "published_at": "2026-11-21T19:54:31Z"
       },
       "next_queued_longform": {
         "id": "0221",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnight1samuel17v45",
-        "scripture": "1 Samuel 17:45-47",
+        "short": "short-midnightdaniel6v19",
+        "scripture": "Daniel 6:19-22",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHT1SAMUEL17V45",
+      "slug": "short-midnight1samuel17v45-midnight-prayer",
+      "file": "short-midnight1samuel17v45-midnight-prayer.md",
+      "title": "Pray This 1 Samuel 17:45-47 Midnight Prayer | The Lord's #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T19:54:31Z",
+      "youtube_video_id": "cL-HI3GZ-uA",
+      "watch_url": "https://www.youtube.com/shorts/cL-HI3GZ-uA",
+      "youtu_be_url": "https://youtu.be/cL-HI3GZ-uA",
+      "shorts_url": "https://www.youtube.com/shorts/cL-HI3GZ-uA",
+      "studio_url": "https://studio.youtube.com/video/cL-HI3GZ-uA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/cL-HI3GZ-uA/hqdefault.jpg",
+      "thumb_text": "MIDNIGHT WATCH \u00b7 1 SAMUEL 17:47",
+      "thumbnail_pending": true,
+      "duration_label": "48s",
+      "words": 619
+    },
     {
       "id": "SHORT-MORNINGPSALM130V5",
       "slug": "short-morningpsalm130v5-sunrise-prayer",
@@ -16209,17 +16233,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnight1samuel17v45",
-        "file": "0000-short-midnight1samuel17v45.yml",
-        "companion_longform_id": "",
-        "scripture": "1 Samuel 17:45-47",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightdaniel6v19",
