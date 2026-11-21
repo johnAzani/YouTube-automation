@@ -345,3 +345,12 @@ watch time. When a Short and a longer prayer serve the same listener need,
 verify the related video is the right same-channel companion. In Studio,
 compare the affected releases separately by format at the same age; do not
 credit a Shorts view as a long-form viewing session.
+
+For downloaded metrics artifacts, repeat `--metrics` rather than manually
+merging files. New captures include a UTC observation timestamp and a channel
+key. When several runs captured the same video at the requested age, the
+report uses the latest timestamp on that date and rejects rows whose channel
+key conflicts with the receipt. Older conflicting captures without timestamps
+remain unresolved. Likes and comments omitted by YouTube are left blank, not
+reported as zero. This does not add an API request or expand the set of videos
+collected; public snapshots still cover the latest 50 uploads per channel.

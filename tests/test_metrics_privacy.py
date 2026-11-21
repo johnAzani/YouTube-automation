@@ -38,7 +38,8 @@ class MetricsPrivacyTests(unittest.TestCase):
         item = {'id': 'public-id', 'status': {'privacyStatus': 'public'},
                 'snippet': {'title': 'Public', 'publishedAt': '2026-10-01T00:00:00Z'},
                 'statistics': {}}
-        self.assertEqual(_public_video_rows([item], '2026-10-21')[0]['views'], '')
+        row = _public_video_rows([item], '2026-10-21')[0]
+        self.assertEqual([row[k] for k in ('views', 'likes', 'comments')], ['', '', ''])
 
     def test_snapshot_retention_is_30_days_and_discards_future_or_invalid_dates(self) -> None:
         today = dt.date(2026, 10, 21)

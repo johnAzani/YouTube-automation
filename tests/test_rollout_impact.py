@@ -27,3 +27,13 @@ class RolloutImpactTests(unittest.TestCase):
         snapshots.append(dict(c, views="43"))
         self.assertNotIn(("prayer3", "short", True), cohort_rows(
             snapshots, receipts, date(2026, 11, 10), today=date(2026, 11, 20)))
+
+    def test_latest_same_day_observation_wins_without_accepting_other_channel(self):
+        receipt = {"a": {"channel": "prayer2", "format": "short"}}
+        base = dict(video_id="a", published_at="2026-11-10", snapshot_date="2026-11-17",
+                    views="12", channel_key="prayer2")
+        rows = [dict(base, views="18", observed_at="2026-11-17T21:00:00+00:00"),
+                dict(base, observed_at="2026-11-17T09:00:00+00:00"),
+                dict(base, views="600", channel_key="prayer5", observed_at="2026-11-17T22:00:00+00:00")]
+        cohorts = cohort_rows(rows, receipt, date(2026, 11, 10), today=date(2026, 11, 20))
+        self.assertEqual(cohorts["prayer2", "short", True], [(18, None, None)])
