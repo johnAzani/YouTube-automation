@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T19:53:45Z",
+  "generated_at": "2026-11-21T19:54:18Z",
   "monitor_generated_at": "2026-11-21T19:30:32.776979+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 611,
+    "published_total": 612,
     "published_longform": 184,
-    "published_shorts": 427,
-    "public_total": 609,
+    "published_shorts": 428,
+    "public_total": 610,
     "queued_longform": 55,
-    "queued_shorts": 88,
+    "queued_shorts": 87,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -305,23 +305,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 54,
+        "published_total": 55,
         "published_longform": 18,
-        "published_shorts": 36,
-        "thumbnail_pending": 54,
-        "public_total": 54,
+        "published_shorts": 37,
+        "thumbnail_pending": 55,
+        "public_total": 55,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0317",
-        "title": "Walking Out the Door in Faith: Deuteronomy 28:3-6 | The Family Altar",
-        "format": "longform",
-        "youtube_video_id": "FmiTNRubtS8",
-        "watch_url": "https://youtu.be/FmiTNRubtS8",
+        "id": "SHORT-FAMILYPSALM78V4",
+        "title": "Pray This Psalm 78:4-7 Family Prayer Over Your Home | Praying Psalm 78 #Shorts",
+        "format": "short",
+        "youtube_video_id": "olzuu0utPWY",
+        "watch_url": "https://www.youtube.com/shorts/olzuu0utPWY",
         "published_on": "2026-11-21",
-        "published_at": "2026-11-21T16:11:56Z"
+        "published_at": "2026-11-21T19:53:26Z"
       },
       "next_queued_longform": {
         "id": "0318",
@@ -330,8 +330,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familypsalm78v4",
-        "scripture": "Psalm 78:4-7",
+        "short": "short-familypsalm103v17",
+        "scripture": "Psalm 103:17-18",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYPSALM78V4",
+      "slug": "short-familypsalm78v4-household-prayer",
+      "file": "short-familypsalm78v4-household-prayer.md",
+      "title": "Pray This Psalm 78:4-7 Family Prayer Over Your Home | Praying Psalm 78 #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T19:53:26Z",
+      "youtube_video_id": "olzuu0utPWY",
+      "watch_url": "https://www.youtube.com/shorts/olzuu0utPWY",
+      "youtu_be_url": "https://youtu.be/olzuu0utPWY",
+      "shorts_url": "https://www.youtube.com/shorts/olzuu0utPWY",
+      "studio_url": "https://studio.youtube.com/video/olzuu0utPWY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/olzuu0utPWY/hqdefault.jpg",
+      "thumb_text": "LEAVING A LEGACY \u00b7 OF GOD'S WORKS",
+      "thumbnail_pending": true,
+      "duration_label": "57s",
+      "words": 687
+    },
     {
       "id": "SHORT-MIDDAYPSALM141V3",
       "slug": "short-middaypsalm141v3-midday-prayer",
@@ -16085,17 +16109,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-familypsalm78v4",
-        "file": "0000-short-familypsalm78v4.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 78:4-7",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
       {
         "short": "short-gardenpsalm69v30",
         "file": "0000-short-gardenpsalm69v30.yml",
