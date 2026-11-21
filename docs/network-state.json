@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T15:05:03Z",
+  "generated_at": "2026-11-21T15:05:13Z",
   "monitor_generated_at": "2026-11-21T15:04:03.237531+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 598,
+    "published_total": 599,
     "published_longform": 179,
-    "published_shorts": 419,
-    "public_total": 596,
+    "published_shorts": 420,
+    "public_total": 597,
     "queued_longform": 60,
-    "queued_shorts": 98,
+    "queued_shorts": 96,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 55,
+        "published_total": 56,
         "published_longform": 17,
-        "published_shorts": 38,
+        "published_shorts": 39,
         "thumbnail_pending": 4,
-        "public_total": 55,
+        "public_total": 56,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0516",
-        "title": "Planted by Rivers of Water: Psalm 1:1-3 | The Provision Table",
-        "format": "longform",
-        "youtube_video_id": "O3FV4myNfzc",
-        "watch_url": "https://youtu.be/O3FV4myNfzc",
+        "id": "SHORT-PROVISIONDEUTERONOMY28V2",
+        "title": "Pray This Deuteronomy 28:2-6 Prayer for Open Doors & Provision | Daily Prayer #Shorts",
+        "format": "short",
+        "youtube_video_id": "2A6fJlE-E0s",
+        "watch_url": "https://www.youtube.com/shorts/2A6fJlE-E0s",
         "published_on": "2026-11-21",
-        "published_at": "2026-11-21T12:39:49Z"
+        "published_at": "2026-11-21T15:04:08Z"
       },
       "next_queued_longform": {
         "id": "0518",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisiondeuteronomy28v2",
-        "scripture": "Deuteronomy 28:2-6",
+        "short": "short-provisionexodus16v4",
+        "scripture": "Exodus 16:4",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONDEUTERONOMY28V2",
+      "slug": "short-provisiondeuteronomy28v2-stewardship-prayer",
+      "file": "short-provisiondeuteronomy28v2-stewardship-prayer.md",
+      "title": "Pray This Deuteronomy 28:2-6 Prayer for Open Doors & Provision | Daily Prayer #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T15:04:08Z",
+      "youtube_video_id": "2A6fJlE-E0s",
+      "watch_url": "https://www.youtube.com/shorts/2A6fJlE-E0s",
+      "youtu_be_url": "https://youtu.be/2A6fJlE-E0s",
+      "shorts_url": "https://www.youtube.com/shorts/2A6fJlE-E0s",
+      "studio_url": "https://studio.youtube.com/video/2A6fJlE-E0s/edit",
+      "thumb_url": "https://i.ytimg.com/vi/2A6fJlE-E0s/hqdefault.jpg",
+      "thumb_text": "WALK IN FAITH \u00b7 THE PROVISION TABLE",
+      "thumbnail_pending": false,
+      "duration_label": "47s",
+      "words": 648
+    },
     {
       "id": "SHORT-HEALINGACTS3V6",
       "slug": "short-healingacts3v6-restoration-prayer",
@@ -16070,17 +16094,6 @@
         "target_window_utc": "06:14"
       },
       {
-        "short": "short-provisiondeuteronomy28v2",
-        "file": "0000-short-provisiondeuteronomy28v2.yml",
-        "companion_longform_id": "",
-        "scripture": "Deuteronomy 28:2-6",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
-      },
-      {
         "short": "short-provisionexodus16v4",
         "file": "0000-short-provisionexodus16v4.yml",
         "companion_longform_id": "",
@@ -16657,17 +16670,6 @@
         "file": "0521-short-provisionisaiah48v17.yml",
         "companion_longform_id": "0521",
         "scripture": "Isaiah 48:17",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-provisionpsalm75v6",
-        "file": "0525-short-provisionpsalm75v6.yml",
-        "companion_longform_id": "0525",
-        "scripture": "Psalm 75:6-7",
         "channel": "prayer7",
         "channel_name": "The Provision Table",
         "status": "approved",
