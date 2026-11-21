@@ -2,7 +2,7 @@
 id: '0220'
 title: 'The Standard Lifted Against the Flood: Isaiah 59:19'
 slug: the-standard-lifted-against-the-flood-isaiah-59-19-the-midnight-watch
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -80,6 +80,15 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-21"
+published_at: "2026-11-21T15:46:40Z"
+youtube_video_id: "QdbrkspQ2dQ"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — The Silence of the Midnight Watch

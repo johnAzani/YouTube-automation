@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T15:13:11Z",
+  "generated_at": "2026-11-21T15:47:35Z",
   "monitor_generated_at": "2026-11-21T15:04:03.237531+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 600,
-    "published_longform": 179,
+    "published_total": 601,
+    "published_longform": 180,
     "published_shorts": 421,
-    "public_total": 598,
-    "queued_longform": 60,
+    "public_total": 599,
+    "queued_longform": 59,
     "queued_shorts": 95,
     "automations_ok": 10,
     "automations_total": 13,
@@ -237,28 +237,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 63,
-        "published_longform": 20,
+        "published_total": 64,
+        "published_longform": 21,
         "published_shorts": 43,
-        "thumbnail_pending": 62,
-        "public_total": 63,
-        "queued_longform": 6,
+        "thumbnail_pending": 63,
+        "public_total": 64,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 10
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHT1PETER5V8",
-        "title": "Pray This 1 Peter 5:8-9 Midnight Prayer | Stand Firm Tonight #Shorts",
-        "format": "short",
-        "youtube_video_id": "tTbnrKSO9dA",
-        "watch_url": "https://www.youtube.com/shorts/tTbnrKSO9dA",
-        "published_on": "2026-11-21",
-        "published_at": "2026-11-21T11:23:36Z"
-      },
-      "next_queued_longform": {
         "id": "0220",
         "title": "The Standard Lifted Against the Flood: Isaiah 59:19",
-        "words": 1504,
+        "format": "longform",
+        "youtube_video_id": "QdbrkspQ2dQ",
+        "watch_url": "https://youtu.be/QdbrkspQ2dQ",
+        "published_on": "2026-11-21",
+        "published_at": "2026-11-21T15:46:40Z"
+      },
+      "next_queued_longform": {
+        "id": "0221",
+        "title": "The Promise of the Midnight Answer: Jeremiah 33:3 | The Midnight Watch",
+        "words": 1323,
         "status": "approved"
       },
       "next_queued_short": {
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0220",
+      "slug": "the-standard-lifted-against-the-flood-isaiah-59-19-the-midnight-watch",
+      "file": "0220-the-standard-lifted-against-the-flood-isaiah-59-19-the-midnight-watch.md",
+      "title": "The Standard Lifted Against the Flood: Isaiah 59:19",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T15:46:40Z",
+      "youtube_video_id": "QdbrkspQ2dQ",
+      "watch_url": "https://youtu.be/QdbrkspQ2dQ",
+      "youtu_be_url": "https://youtu.be/QdbrkspQ2dQ",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/QdbrkspQ2dQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/QdbrkspQ2dQ/hqdefault.jpg",
+      "thumb_text": "LIFT A STANDARD",
+      "thumbnail_pending": true,
+      "duration_label": "~10 min",
+      "words": 1504
+    },
     {
       "id": "SHORT-SHIELDPSALM91V11",
       "slug": "short-shieldpsalm91v11-protection-prayer",
@@ -15337,19 +15361,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 2104
-      },
-      {
-        "id": "0220",
-        "slug": "the-standard-lifted-against-the-flood-isaiah-59-19-the-midnight-watch",
-        "file": "0220-the-standard-lifted-against-the-flood-isaiah-59-19-the-midnight-watch.md",
-        "title": "The Standard Lifted Against the Flood: Isaiah 59:19",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1504
       },
       {
         "id": "0221",
