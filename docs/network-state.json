@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T20:48:45Z",
+  "generated_at": "2026-11-21T21:17:56Z",
   "monitor_generated_at": "2026-11-21T19:30:32.776979+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 620,
-    "published_longform": 185,
-    "published_shorts": 435,
-    "public_total": 618,
-    "queued_longform": 54,
-    "queued_shorts": 80,
+    "published_total": 622,
+    "published_longform": 186,
+    "published_shorts": 436,
+    "public_total": 620,
+    "queued_longform": 53,
+    "queued_shorts": 79,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -33,33 +33,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 81,
-        "published_longform": 22,
-        "published_shorts": 59,
+        "published_total": 83,
+        "published_longform": 23,
+        "published_shorts": 60,
         "thumbnail_pending": 6,
-        "public_total": 80,
-        "queued_longform": 6,
+        "public_total": 82,
+        "queued_longform": 5,
         "queued_other": 5,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-DEUTERONOMY33V12",
-        "title": "Say This Deuteronomy 33:12 Prayer Before You Sleep | Rest Your Mind Tonight #Shorts",
-        "format": "short",
-        "youtube_video_id": "ni84ue0UYBE",
-        "watch_url": "https://www.youtube.com/shorts/ni84ue0UYBE",
-        "published_on": "2026-11-21",
-        "published_at": "2026-11-21T14:46:40Z"
-      },
-      "next_queued_longform": {
         "id": "0012",
         "title": "When Exhaustion Weighs on Your Soul: Isaiah 40:28-31",
-        "words": 2059,
+        "format": "longform",
+        "youtube_video_id": "XLXi986WZ_k",
+        "watch_url": "https://youtu.be/XLXi986WZ_k",
+        "published_on": "2026-11-21",
+        "published_at": "2026-11-21T21:17:06Z"
+      },
+      "next_queued_longform": {
+        "id": "0031",
+        "title": "Night Prayer When Dread Keeps You Awake: 2 Timothy 1:7",
+        "words": 880,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm131v2",
-        "scripture": "Psalm 131:2",
+        "short": "short-psalm36v7",
+        "scripture": "Psalm 36:7",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0012",
+      "slug": "when-exhaustion-weighs-on-your-soul-isaiah-40-28-31",
+      "file": "0012-when-exhaustion-weighs-on-your-soul-isaiah-40-28-31.md",
+      "title": "When Exhaustion Weighs on Your Soul: Isaiah 40:28-31",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T21:17:06Z",
+      "youtube_video_id": "XLXi986WZ_k",
+      "watch_url": "https://youtu.be/XLXi986WZ_k",
+      "youtu_be_url": "https://youtu.be/XLXi986WZ_k",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/XLXi986WZ_k/edit",
+      "thumb_url": "https://i.ytimg.com/vi/XLXi986WZ_k/hqdefault.jpg",
+      "thumb_text": "HE GIVES POWER",
+      "thumbnail_pending": false,
+      "duration_label": "183m 48s",
+      "words": 2059
+    },
+    {
       "id": "0415",
       "slug": "gods-words-are-life-and-health-proverbs-4-20-22",
       "file": "0415-gods-words-are-life-and-health-proverbs-4-20-22.md",
@@ -868,6 +892,30 @@
       "thumbnail_pending": true,
       "duration_label": "48s",
       "words": 619
+    },
+    {
+      "id": "SHORT-PSALM131V2",
+      "slug": "short-psalm131v2-pre-sleep-prayer",
+      "file": "short-psalm131v2-pre-sleep-prayer.md",
+      "title": "Say This Psalm 131:2 Prayer Before You Sleep | God Is Near #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T19:53:43Z",
+      "youtube_video_id": "8YocUdcF14Q",
+      "watch_url": "https://www.youtube.com/shorts/8YocUdcF14Q",
+      "youtu_be_url": "https://youtu.be/8YocUdcF14Q",
+      "shorts_url": "https://www.youtube.com/shorts/8YocUdcF14Q",
+      "studio_url": "https://studio.youtube.com/video/8YocUdcF14Q/edit",
+      "thumb_url": "https://i.ytimg.com/vi/8YocUdcF14Q/hqdefault.jpg",
+      "thumb_text": "FINDING REST \u00b7 IN THE QUIET",
+      "thumbnail_pending": false,
+      "duration_label": "47s",
+      "words": 614
     },
     {
       "id": "SHORT-MORNINGPSALM130V5",
@@ -15585,19 +15633,6 @@
   "queues": {
     "longform": [
       {
-        "id": "0012",
-        "slug": "when-exhaustion-weighs-on-your-soul-isaiah-40-28-31",
-        "file": "0012-when-exhaustion-weighs-on-your-soul-isaiah-40-28-31.md",
-        "title": "When Exhaustion Weighs on Your Soul: Isaiah 40:28-31",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2059
-      },
-      {
         "id": "0031",
         "slug": "2-timothy-1-7-power-love-and-a-sound-mind",
         "file": "0031-2-timothy-1-7-power-love-and-a-sound-mind.md",
@@ -16397,17 +16432,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-psalm131v2",
-        "file": "0000-short-psalm131v2.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 131:2",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm36v7",

@@ -2,7 +2,7 @@
 id: '0012'
 title: 'When Exhaustion Weighs on Your Soul: Isaiah 40:28-31'
 slug: when-exhaustion-weighs-on-your-soul-isaiah-40-28-31
-status: approved
+status: published
 channel: secret-place
 privacy: public
 format: longform
@@ -73,6 +73,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-21"
+published_at: "2026-11-21T21:17:06Z"
+youtube_video_id: "XLXi986WZ_k"
+metadata_revision: "selar-seo-v1"
+prayer_seconds: 828.1
+duration_seconds: 11028.5
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Midnight Threshold of Rest
