@@ -1,0 +1,276 @@
+{
+  "key": "short-morningpsalm130v5",
+  "channel": "prayer2",
+  "psalm": 130,
+  "title": [
+    "THE WAIT FOR",
+    "HIS LIGHT"
+  ],
+  "poster": [
+    "PATIENTLY WAITING",
+    "FOR THE DAWNING",
+    "OF GOD'S MERCY",
+    "IN YOUR HEART"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "misty mountain sunrise golden light",
+    "soft morning light through sheer curtains",
+    "golden sun rays over calm river",
+    "dew on petals at dawn",
+    "sunlight breaking over forest canopy",
+    "serene golden hour clouds"
+  ],
+  "scenes": [
+    {
+      "a": "That decision weighing on your heart is not too heavy for God to handle today.",
+      "img": "short-morningpsalm130v5-scene-01.jpg",
+      "kicker": "PSALM 130:5",
+      "sub": "FINDING PATIENCE IN THE DARK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I wait for the LORD, my soul doth wait, and in his word do I hope.",
+      "img": "short-morningpsalm130v5-scene-02.jpg",
+      "kicker": "PSALM 130:5",
+      "sub": "TRUSTING IN HIS PROMISE",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.7
+      ]
+    },
+    {
+      "a": "My soul waiteth for the Lord more than they that watch for the morning: I say, more than they that watch for the morning.",
+      "img": "short-morningpsalm130v5-scene-03.jpg",
+      "kicker": "PSALM 130:6",
+      "sub": "HE IS COMING TO YOUR AID",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Lord, quiet the restless parts of me that demand answers before I have even stepped forward.",
+      "img": "short-morningpsalm130v5-scene-04.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "SURRENDERING CONTROL",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Help me trust that you are working in the hidden spaces of this current season.",
+      "img": "short-morningpsalm130v5-scene-05.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "RESTING IN HIS TIMING",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Let your peace anchor my soul as I walk into whatever this new day brings.",
+      "img": "short-morningpsalm130v5-scene-06.jpg",
+      "kicker": "DAILY PRAYER",
+      "sub": "STRENGTH FOR THE JOURNEY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "That decision weighing on your heart is not too heavy for God to handle today."
+    ],
+    [
+      10,
+      22,
+      "I wait for the LORD, my soul doth wait, and in his word do I hope."
+    ],
+    [
+      22,
+      36,
+      "My soul waiteth for the Lord more than they that watch for the morning: I say, more than they that watch for the morning."
+    ],
+    [
+      36,
+      48,
+      "Lord, quiet the restless parts of me that demand answers before I have even stepped forward."
+    ],
+    [
+      48,
+      60,
+      "Help me trust that you are working in the hidden spaces of this current season."
+    ],
+    [
+      60,
+      72,
+      "Let your peace anchor my soul as I walk into whatever this new day brings."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "THAT DECISION WEIGHING",
+        "ON YOUR HEART",
+        "IS NOT TOO HEAVY",
+        "FOR GOD TO HANDLE"
+      ],
+      [
+        "HEAVY",
+        "GOD"
+      ],
+      "PSALM 130:5"
+    ],
+    [
+      10,
+      22,
+      [
+        "I WAIT FOR THE LORD",
+        "MY SOUL DOTH WAIT",
+        "AND IN HIS WORD",
+        "DO I HOPE"
+      ],
+      [
+        "WAIT",
+        "HOPE"
+      ],
+      "PSALM 130:5"
+    ],
+    [
+      22,
+      36,
+      [
+        "MY SOUL WAITETH FOR THE LORD",
+        "MORE THAN THEY THAT",
+        "WATCH FOR THE MORNING",
+        "I SAY MORE THAN THEY"
+      ],
+      [
+        "WATCH",
+        "MORNING"
+      ],
+      "PSALM 130:6"
+    ],
+    [
+      36,
+      48,
+      [
+        "LORD QUIET THE RESTLESS",
+        "PARTS OF ME THAT",
+        "DEMAND ANSWERS BEFORE",
+        "I HAVE STEPPED FORWARD"
+      ],
+      [
+        "RESTLESS",
+        "ANSWERS"
+      ],
+      "PRAYER"
+    ],
+    [
+      48,
+      60,
+      [
+        "HELP ME TRUST THAT",
+        "YOU ARE WORKING IN",
+        "THE HIDDEN SPACES",
+        "OF THIS SEASON"
+      ],
+      [
+        "TRUST",
+        "HIDDEN"
+      ],
+      "PRAYER"
+    ],
+    [
+      60,
+      72,
+      [
+        "LET YOUR PEACE ANCHOR",
+        "MY SOUL AS I",
+        "WALK INTO WHATEVER",
+        "THIS DAY BRINGS"
+      ],
+      [
+        "PEACE",
+        "ANCHOR"
+      ],
+      "PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That decision weighing on your heart is not too heavy for God to handle today.",
+      "kind": "phrase",
+      "words": [
+        "NOT TOO HEAVY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I wait for the LORD, my soul doth wait, and in his word do I hope.",
+      "kind": "phrase",
+      "words": [
+        "IN HIS WORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "My soul waiteth for the Lord more than they that watch for the morning: I say, more than they that watch for the morning.",
+      "kind": "phrase",
+      "words": [
+        "WATCH FOR THE MORNING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, quiet the restless parts of me that demand answers before I have even stepped forward.",
+      "kind": "phrase",
+      "words": [
+        "QUIET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help me trust that you are working in the hidden spaces of this current season.",
+      "kind": "phrase",
+      "words": [
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your peace anchor my soul as I walk into whatever this new day brings.",
+      "kind": "phrase",
+      "words": [
+        "PEACE ANCHOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 130:5-6"
+}

@@ -1,0 +1,277 @@
+{
+  "key": "short-morningpsalm17v15",
+  "channel": "prayer2",
+  "psalm": 17,
+  "title": [
+    "AWAKENING IN HIS",
+    "LIKENESS"
+  ],
+  "poster": [
+    "AS FOR ME",
+    "I WILL BEHOLD",
+    "THY FACE",
+    "IN RIGHTEOUSNESS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden sunrise over misty pine forest",
+    "close up morning dew on wild grass",
+    "soft sunlight entering an empty room",
+    "mountain peak glowing at first light",
+    "sunlight rays through morning forest leaves",
+    "peaceful lake mirror reflection dawn"
+  ],
+  "scenes": [
+    {
+      "a": "That recurring doubt about your worth is ready to be laid down at His feet.",
+      "img": "short-morningpsalm17v15-scene-01.jpg",
+      "kicker": "PSALM 17:15",
+      "sub": "FIND YOUR SATISFACTION IN HIM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "As for me, I will behold thy face in righteousness: I shall be satisfied, when I awake, with thy likeness.",
+      "img": "short-morningpsalm17v15-scene-02.jpg",
+      "kicker": "THE WORD",
+      "sub": "HIS IMAGE IS YOURS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, help me to look past the fleeting shadows of this world and fix my gaze on You.",
+      "img": "short-morningpsalm17v15-scene-03.jpg",
+      "kicker": "A MORNING PRAYER",
+      "sub": "FIX YOUR GAZE ABOVE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "May the peace of Your presence sustain me throughout the demands of the day ahead now.",
+      "img": "short-morningpsalm17v15-scene-04.jpg",
+      "kicker": "HIS PRESENCE",
+      "sub": "STILLNESS FOR THE SOUL",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant me the grace to walk in the light of Your character, reflecting Your love clearly.",
+      "img": "short-morningpsalm17v15-scene-05.jpg",
+      "kicker": "WALKING IN GRACE",
+      "sub": "REFLECT HIS LIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "In the name of Jesus, I rest in the truth that You are my only satisfaction.",
+      "img": "short-morningpsalm17v15-scene-06.jpg",
+      "kicker": "AMEN",
+      "sub": "TRULY SATISFIED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "That recurring doubt about your worth is ready to be laid down at His feet."
+    ],
+    [
+      7,
+      18,
+      "As for me, I will behold thy face in righteousness: I shall be satisfied, when I awake, with thy likeness."
+    ],
+    [
+      19,
+      29,
+      "Lord, help me to look past the fleeting shadows of this world and fix my gaze on You."
+    ],
+    [
+      30,
+      42,
+      "May the peace of Your presence sustain me throughout the demands of the day ahead now."
+    ],
+    [
+      43,
+      53,
+      "Grant me the grace to walk in the light of Your character, reflecting Your love clearly."
+    ],
+    [
+      54,
+      65,
+      "In the name of Jesus, I rest in the truth that You are my only satisfaction."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "DOUBT ABOUT YOUR WORTH",
+        "IS READY TO BE",
+        "LAID AT HIS FEET"
+      ],
+      [
+        "DOUBT",
+        "WORTH"
+      ],
+      "PSALM 17:15"
+    ],
+    [
+      7,
+      18,
+      [
+        "AS FOR ME",
+        "I WILL BEHOLD THY FACE",
+        "I SHALL BE SATISFIED",
+        "WITH THY LIKENESS"
+      ],
+      [
+        "SATISFIED",
+        "LIKENESS"
+      ],
+      "PSALM 17:15"
+    ],
+    [
+      19,
+      29,
+      [
+        "LOOK PAST THE SHADOWS",
+        "FIX YOUR GAZE",
+        "ON THE LORD"
+      ],
+      [
+        "FIX",
+        "GAZE"
+      ],
+      "PSALM 17:15"
+    ],
+    [
+      30,
+      42,
+      [
+        "PEACE OF HIS PRESENCE",
+        "SUSTAINING YOU THROUGH",
+        "THE DAY AHEAD"
+      ],
+      [
+        "PRESENCE",
+        "SUSTAIN"
+      ],
+      "PSALM 17:15"
+    ],
+    [
+      43,
+      53,
+      [
+        "WALK IN THE LIGHT",
+        "OF HIS CHARACTER",
+        "REFLECTING HIS LOVE"
+      ],
+      [
+        "LIGHT",
+        "CHARACTER"
+      ],
+      "PSALM 17:15"
+    ],
+    [
+      54,
+      65,
+      [
+        "REST IN THE TRUTH",
+        "YOU ARE MY",
+        "ONLY SATISFACTION"
+      ],
+      [
+        "REST",
+        "SATISFACTION"
+      ],
+      "PSALM 17:15"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That recurring doubt about your worth is ready to be laid down at His feet.",
+      "kind": "phrase",
+      "words": [
+        "DOUBT",
+        "WORTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As for me, I will behold thy face in righteousness: I shall be satisfied, when I awake, with thy likeness.",
+      "kind": "phrase",
+      "words": [
+        "SATISFIED",
+        "LIKENESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help me to look past the fleeting shadows of this world and fix my gaze on You.",
+      "kind": "phrase",
+      "words": [
+        "FIX",
+        "GAZE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May the peace of Your presence sustain me throughout the demands of the day ahead now.",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE",
+        "SUSTAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the grace to walk in the light of Your character, reflecting Your love clearly.",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "CHARACTER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In the name of Jesus, I rest in the truth that You are my only satisfaction.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "SATISFACTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 17:15"
+}

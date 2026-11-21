@@ -1,0 +1,257 @@
+{
+  "key": "short-morninggenesis28v16",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "GOD IS",
+    "IN THIS PLACE"
+  ],
+  "poster": [
+    "GENESIS 28",
+    "THE DIVINE",
+    "PRESENT",
+    "AT DAWN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "soft sunlight hitting wooden table",
+    "golden morning mist over forest",
+    "sun rising behind distant hills",
+    "dew drops on leaves in soft light",
+    "warm morning light through linen curtain",
+    "serene horizon at sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "That heavy uncertainty weighing on your heart belongs in the presence of the living God.",
+      "img": "short-morninggenesis28v16-scene-01.jpg",
+      "kicker": "GENESIS 28:16",
+      "sub": "HE IS HERE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And Jacob awaked out of his sleep, and he said, Surely the LORD is in this place; and I knew it not.",
+      "img": "short-morninggenesis28v16-scene-02.jpg",
+      "kicker": "GENESIS 28:16",
+      "sub": "THE LORD IS HERE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And he was afraid, and said, How dreadful is this place! this is none other but the house of God, and this is the gate of heaven.",
+      "img": "short-morninggenesis28v16-scene-03.jpg",
+      "kicker": "GENESIS 28:17",
+      "sub": "THE GATE OF HEAVEN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And Jacob rose up early in the morning, and took the stone that he had put for his pillows, and set it up for a pillar, and poured oil upon the top of it.",
+      "img": "short-morninggenesis28v16-scene-04.jpg",
+      "kicker": "GENESIS 28:18",
+      "sub": "A PILLAR OF GRACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, help me see that you are standing exactly where I am today in this struggle.",
+      "img": "short-morninggenesis28v16-scene-05.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "GUIDE MY HEART",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Transform my anxiety into an altar of praise and let me walk in your holy confidence.",
+      "img": "short-morninggenesis28v16-scene-06.jpg",
+      "kicker": "STILLNESS",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That heavy uncertainty weighing on your heart belongs in the presence of the living God."
+    ],
+    [
+      8,
+      18,
+      "And Jacob awaked out of his sleep, and he said, Surely the LORD is in this place; and I knew it not."
+    ],
+    [
+      18,
+      30,
+      "And he was afraid, and said, How dreadful is this place! this is none other but the house of God, and this is the gate of heaven."
+    ],
+    [
+      30,
+      42,
+      "And Jacob rose up early in the morning, and took the stone that he had put for his pillows, and set it up for a pillar, and poured oil upon the top of it."
+    ],
+    [
+      42,
+      52,
+      "Lord, help me see that you are standing exactly where I am today in this struggle."
+    ],
+    [
+      52,
+      60,
+      "Transform my anxiety into an altar of praise and let me walk in your holy confidence."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "HEAVY UNCERTAINTY",
+        "WEIGHTING ON YOU",
+        "BELONGS IN GOD'S"
+      ],
+      [
+        "LIVING GOD"
+      ],
+      "GENESIS 28"
+    ],
+    [
+      8,
+      18,
+      [
+        "JACOB AWAKED",
+        "SURELY THE LORD",
+        "IS IN",
+        "THIS PLACE"
+      ],
+      [
+        "SURELY THE LORD"
+      ],
+      "GENESIS 28"
+    ],
+    [
+      18,
+      30,
+      [
+        "HOW DREADFUL",
+        "IS THIS",
+        "HOUSE OF GOD",
+        "GATE OF HEAVEN"
+      ],
+      [
+        "GATE OF HEAVEN"
+      ],
+      "GENESIS 28"
+    ],
+    [
+      30,
+      42,
+      [
+        "ROSE UP",
+        "EARLY IN MORNING",
+        "POURED OIL",
+        "UPON THE TOP"
+      ],
+      [
+        "POURED OIL"
+      ],
+      "GENESIS 28"
+    ],
+    [
+      42,
+      52,
+      [
+        "LORD HELP ME",
+        "SEE YOU STANDING",
+        "RIGHT WHERE",
+        "I AM TODAY"
+      ],
+      [
+        "STANDING"
+      ],
+      "GENESIS 28"
+    ],
+    [
+      52,
+      60,
+      [
+        "TRANSFORM ANXIETY",
+        "INTO ALTAR",
+        "OF PRAISE",
+        "WALK IN CONFIDENCE"
+      ],
+      [
+        "ALTAR OF PRAISE"
+      ],
+      "GENESIS 28"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That heavy uncertainty weighing on your heart belongs in the presence of the living God.",
+      "kind": "phrase",
+      "words": [
+        "LIVING",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Surely the LORD is in this place; and I knew it not.",
+      "kind": "phrase",
+      "words": [
+        "SURELY",
+        "THE",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "this is none other but the house of God, and this is the gate of heaven.",
+      "kind": "phrase",
+      "words": [
+        "GATE",
+        "OF",
+        "HEAVEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "poured oil upon the top of it.",
+      "kind": "phrase",
+      "words": [
+        "POURED",
+        "OIL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Genesis 28:16-18"
+}
