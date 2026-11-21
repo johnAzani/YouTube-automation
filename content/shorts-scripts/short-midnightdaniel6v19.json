@@ -1,0 +1,260 @@
+{
+  "key": "short-midnightdaniel6v19",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "DANIEL IN THE LIONS DEN",
+    "THE MIDNIGHT WATCH"
+  ],
+  "poster": [
+    "THE LIONS DEN",
+    "GOD SENDS HIS ANGEL",
+    "HIS MOUTH SHUT",
+    "THE MIDNIGHT WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower night sky",
+    "dark cavern entrance starry night",
+    "stone lions silhouette moonlight",
+    "golden sanctuary lamp glowing in dark",
+    "deep starry heavens night sky",
+    "peaceful mountain landscape under stars"
+  ],
+  "scenes": [
+    {
+      "a": "That closing door in your face tonight is not where your story ends.",
+      "img": "short-midnightdaniel6v19-scene-01.jpg",
+      "kicker": "DANIEL 6:19",
+      "sub": "STAND IN FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, when the pit feels deep and the night surrounds us, let our trust remain unshaken.",
+      "img": "short-midnightdaniel6v19-scene-02.jpg",
+      "kicker": "DANIEL 6:20",
+      "sub": "THE SLEEPLESS HOUR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Then the king arose very early in the morning, and went in haste unto the den of lions.",
+      "img": "short-midnightdaniel6v19-scene-03.jpg",
+      "kicker": "DANIEL 6:19",
+      "sub": "EARLY MORNING HASTE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "And when he came to the den, he cried with a lamentable voice unto Daniel: and the king spake and said to Daniel, O Daniel, servant of the living God, is thy God, whom thou servest continually, able to deliver thee from the lions?",
+      "img": "short-midnightdaniel6v19-scene-04.jpg",
+      "kicker": "DANIEL 6:20",
+      "sub": "THE LIVING GOD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "My God hath sent his angel, and hath shut the lions’ mouths, that they have not hurt me: forasmuch as before him innocency was found in me; and also before thee, O king, have I done no hurt.",
+      "img": "short-midnightdaniel6v19-scene-05.jpg",
+      "kicker": "DANIEL 6:22",
+      "sub": "ANGELIC DELIVERANCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, shut every threatening mouth tonight and grant us your steadfast peace.",
+      "img": "short-midnightdaniel6v19-scene-06.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "STEADFAST PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      4,
+      "That closing door in your face tonight is not where your story ends."
+    ],
+    [
+      4,
+      8,
+      "Lord, when the pit feels deep and the night surrounds us, let our trust remain unshaken."
+    ],
+    [
+      8,
+      13,
+      "Then the king arose very early in the morning, and went in haste unto the den of lions."
+    ],
+    [
+      13,
+      20,
+      "And when he came to the den, he cried with a lamentable voice unto Daniel: and the king spake and said to Daniel, O Daniel, servant of the living God, is thy God, whom thou servest continually, able to deliver thee from the lions?"
+    ],
+    [
+      20,
+      28,
+      "My God hath sent his angel, and hath shut the lions’ mouths, that they have not hurt me: forasmuch as before him innocency was found in me; and also before thee, O king, have I done no hurt."
+    ],
+    [
+      28,
+      32,
+      "Father, shut every threatening mouth tonight and grant us your steadfast peace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      4,
+      [
+        "THAT CLOSING DOOR",
+        "IN YOUR FACE TONIGHT",
+        "IS NOT WHERE"
+      ],
+      "TONIGHT",
+      "DANIEL 6 : 19"
+    ],
+    [
+      4,
+      8,
+      [
+        "LORD WHEN THE PIT",
+        "FEELS DEEP AND THE NIGHT",
+        "SURROUNDS US"
+      ],
+      "DEEP",
+      "DANIEL 6 : 20"
+    ],
+    [
+      8,
+      13,
+      [
+        "THEN THE KING AROSE",
+        "VERY EARLY IN THE MORNING",
+        "AND WENT IN HASTE"
+      ],
+      "AROSE",
+      "DANIEL 6 : 19"
+    ],
+    [
+      13,
+      20,
+      [
+        "AND WHEN HE CAME",
+        "TO THE DEN HE CRIED",
+        "WITH A LAMENTABLE VOICE"
+      ],
+      "CRIED",
+      "DANIEL 6 : 20"
+    ],
+    [
+      20,
+      28,
+      [
+        "MY GOD HATH SENT",
+        "HIS ANGEL AND HATH SHUT",
+        "THE LIONS MOUTHS"
+      ],
+      "ANGEL",
+      "DANIEL 6 : 22"
+    ],
+    [
+      28,
+      32,
+      [
+        "FATHER SHUT EVERY",
+        "THREATENING MOUTH TONIGHT",
+        "AND GRANT US PEACE"
+      ],
+      "PEACE",
+      "MIDNIGHT WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That closing door in your face tonight is not where your story ends.",
+      "kind": "phrase",
+      "words": [
+        "CLOSING",
+        "DOOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when the pit feels deep and the night surrounds us, let our trust remain unshaken.",
+      "kind": "phrase",
+      "words": [
+        "PIT",
+        "FEELS",
+        "DEEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Then the king arose very early in the morning, and went in haste unto the den of lions.",
+      "kind": "phrase",
+      "words": [
+        "AROSE",
+        "EARLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And when he came to the den, he cried with a lamentable voice unto Daniel: and the king spake and said to Daniel, O Daniel, servant of the living God, is thy God, whom thou servest continually, able to deliver thee from the lions?",
+      "kind": "phrase",
+      "words": [
+        "LIVING",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "My God hath sent his angel, and hath shut the lions’ mouths, that they have not hurt me: forasmuch as before him innocency was found in me; and also before thee, O king, have I done no hurt.",
+      "kind": "phrase",
+      "words": [
+        "SHUT",
+        "LIONS",
+        "MOUTHS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, shut every threatening mouth tonight and grant us your steadfast peace.",
+      "kind": "phrase",
+      "words": [
+        "STEADFAST",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Daniel 6:19-22"
+}

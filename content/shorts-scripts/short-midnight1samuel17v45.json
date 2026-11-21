@@ -1,0 +1,276 @@
+{
+  "key": "short-midnight1samuel17v45",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "THE BATTLE IS",
+    "THE LORD'S"
+  ],
+  "poster": [
+    "MIDNIGHT WATCH",
+    "1 SAMUEL 17:47",
+    "THE BATTLE IS",
+    "THE LORD'S"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette deep starry heavens dark sky",
+    "ancient dark mountain night sky stars quiet vigil",
+    "dramatic night sky over dark valley moonlight glowing",
+    "lamp-lit sanctuary window dark night solitary light",
+    "calm mountain ridge under midnight starry canopy",
+    "soft glow lamp sanctuary altar night prayer vigil"
+  ],
+  "scenes": [
+    {
+      "a": "If an impossible obstacle is keeping you awake in fear tonight, stay right here.",
+      "img": "short-midnight1samuel17v45-scene-01.jpg",
+      "kicker": "MIDNIGHT WATCH",
+      "sub": "OVERCOME FEAR TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Scripture declares, And all this assembly shall know that the LORD saveth not with sword and spear:",
+      "img": "short-midnight1samuel17v45-scene-02.jpg",
+      "kicker": "1 SAMUEL 17:47",
+      "sub": "GOD SAVES NOT WITH SWORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "for the battle is the LORD’s, and he will give you into our hands.",
+      "img": "short-midnight1samuel17v45-scene-03.jpg",
+      "kicker": "1 SAMUEL 17:47",
+      "sub": "THE BATTLE IS THE LORDS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, at this midnight hour, we surrender every overwhelming battle facing us into Your hands.",
+      "img": "short-midnight1samuel17v45-scene-04.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "SURRENDER YOUR BATTLES",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "We refuse to walk in our own limited strength. Give us courage to stand firm against giant fears, knowing You fight for us.",
+      "img": "short-midnight1samuel17v45-scene-05.jpg",
+      "kicker": "FAITH AT MIDNIGHT",
+      "sub": "STAND FIRM IN HIS MIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Deliver us from dread and fill us with Your divine peace. Subscribe to join The Midnight Watch in nightly prayer.",
+      "img": "short-midnight1samuel17v45-scene-06.jpg",
+      "kicker": "JOIN THE WATCH",
+      "sub": "PEACE IN HIS PRESENCE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If an impossible obstacle is keeping you awake in fear tonight, stay right here."
+    ],
+    [
+      8,
+      18,
+      "Scripture declares, And all this assembly shall know that the LORD saveth not with sword and spear:"
+    ],
+    [
+      18,
+      28,
+      "for the battle is the LORD’s, and he will give you into our hands."
+    ],
+    [
+      28,
+      38,
+      "Lord, at this midnight hour, we surrender every overwhelming battle facing us into Your hands."
+    ],
+    [
+      38,
+      48,
+      "We refuse to walk in our own limited strength. Give us courage to stand firm against giant fears, knowing You fight for us."
+    ],
+    [
+      48,
+      58,
+      "Deliver us from dread and fill us with Your divine peace. Subscribe to join The Midnight Watch in nightly prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF AN IMPOSSIBLE",
+        "OBSTACLE KEEPS YOU",
+        "AWAKE IN FEAR TONIGHT"
+      ],
+      [
+        "IMPOSSIBLE",
+        "FEAR"
+      ],
+      "MIDNIGHT WATCH"
+    ],
+    [
+      8,
+      18,
+      [
+        "SCRIPTURE DECLARES",
+        "THE LORD SAVETH NOT",
+        "WITH SWORD AND SPEAR"
+      ],
+      [
+        "LORD",
+        "SAVETH"
+      ],
+      "1 SAMUEL 17:47"
+    ],
+    [
+      18,
+      28,
+      [
+        "FOR THE BATTLE IS",
+        "THE LORD'S AND HE WILL",
+        "GIVE YOU INTO OUR HANDS"
+      ],
+      [
+        "BATTLE",
+        "LORD'S"
+      ],
+      "1 SAMUEL 17:47"
+    ],
+    [
+      28,
+      38,
+      [
+        "LORD AT MIDNIGHT",
+        "WE SURRENDER EVERY",
+        "OVERWHELMING BATTLE"
+      ],
+      [
+        "SURRENDER",
+        "BATTLE"
+      ],
+      "MIDNIGHT PRAYER"
+    ],
+    [
+      38,
+      48,
+      [
+        "STAND FIRM AGAINST",
+        "GIANT FEARS KNOWING",
+        "YOU FIGHT FOR US"
+      ],
+      [
+        "STAND",
+        "FIGHT"
+      ],
+      "FAITH AT MIDNIGHT"
+    ],
+    [
+      48,
+      58,
+      [
+        "FILL US WITH YOUR",
+        "DIVINE PEACE AND",
+        "STAND WITH US TONIGHT"
+      ],
+      [
+        "DIVINE",
+        "PEACE"
+      ],
+      "JOIN THE WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If an impossible obstacle is keeping you awake in fear tonight, stay right here.",
+      "kind": "phrase",
+      "words": [
+        "IMPOSSIBLE",
+        "OBSTACLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture declares, And all this assembly shall know that the LORD saveth not with sword and spear:",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "SAVETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "for the battle is the LORD’s, and he will give you into our hands.",
+      "kind": "phrase",
+      "words": [
+        "BATTLE",
+        "LORD’S"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, at this midnight hour, we surrender every overwhelming battle facing us into Your hands.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "BATTLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We refuse to walk in our own limited strength. Give us courage to stand firm against giant fears, knowing You fight for us.",
+      "kind": "phrase",
+      "words": [
+        "COURAGE",
+        "FIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Deliver us from dread and fill us with Your divine peace. Subscribe to join The Midnight Watch in nightly prayer.",
+      "kind": "phrase",
+      "words": [
+        "DELIVER",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 Samuel 17:45-47"
+}
