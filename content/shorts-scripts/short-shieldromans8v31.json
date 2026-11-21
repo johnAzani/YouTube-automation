@@ -1,0 +1,267 @@
+{
+  "key": "short-shieldromans8v31",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "GOD IS FOR YOU",
+    "UNSHAKABLE DEFENSE"
+  ],
+  "poster": [
+    "THE COVENANT SHIELD",
+    "DIVINE REFUGE",
+    "ROMANS 8:31",
+    "A SACRED PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "majestic mountain range at dawn",
+    "ancient stone watchtower landscape",
+    "golden sunlight piercing heavy storm clouds",
+    "calm flowing river reflecting sky",
+    "serene valley with morning mist",
+    "peaceful golden field at sunset"
+  ],
+  "scenes": [
+    {
+      "a": "If the weight of this specific confrontation feels like it is overwhelming you, stay here.",
+      "img": "short-shieldromans8v31-scene-01.jpg",
+      "kicker": "ROMANS 8:31",
+      "sub": "FIND YOUR REFUGE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "What shall we then say to these things? If God be for us, who can be against us?",
+      "img": "short-shieldromans8v31-scene-02.jpg",
+      "kicker": "ROMANS 8:31",
+      "sub": "THE ALMIGHTY SHIELD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Lord, anchor my soul in this truth while the shadows of doubt gather around me.",
+      "img": "short-shieldromans8v31-scene-03.jpg",
+      "kicker": "ROMANS 8:31",
+      "sub": "ANCHORED IN TRUTH",
+      "cam": "pan_left",
+      "focus": [
+        0.2,
+        0.5
+      ]
+    },
+    {
+      "a": "When I feel small, remind me that the Creator of heaven stands at my side.",
+      "img": "short-shieldromans8v31-scene-04.jpg",
+      "kicker": "ROMANS 8:31",
+      "sub": "THE CREATOR IS NEAR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Let no weapon formed against my spirit prosper in this season of trial and fire.",
+      "img": "short-shieldromans8v31-scene-05.jpg",
+      "kicker": "ROMANS 8:31",
+      "sub": "DIVINE PROTECTION",
+      "cam": "push_in",
+      "focus": [
+        0.8,
+        0.5
+      ]
+    },
+    {
+      "a": "Cover my mind and my path as I move forward under your holy shadow today.",
+      "img": "short-shieldromans8v31-scene-06.jpg",
+      "kicker": "ROMANS 8:31",
+      "sub": "WALK UNDER HIS WINGS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the weight of this specific confrontation feels like it is overwhelming you, stay here."
+    ],
+    [
+      8,
+      18,
+      "What shall we then say to these things? If God be for us, who can be against us?"
+    ],
+    [
+      18,
+      27,
+      "Lord, anchor my soul in this truth while the shadows of doubt gather around me."
+    ],
+    [
+      27,
+      35,
+      "When I feel small, remind me that the Creator of heaven stands at my side."
+    ],
+    [
+      35,
+      43,
+      "Let no weapon formed against my spirit prosper in this season of trial and fire."
+    ],
+    [
+      43,
+      50,
+      "Cover my mind and my path as I move forward under your holy shadow today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF THE WEIGHT",
+        "OF THIS CONFRONTATION",
+        "FEELS OVERWHELMING"
+      ],
+      [
+        "OVERWHELMING"
+      ],
+      "ROMANS 8:31"
+    ],
+    [
+      8,
+      18,
+      [
+        "WHAT SHALL WE SAY",
+        "IF GOD BE FOR US",
+        "WHO CAN BE AGAINST"
+      ],
+      [
+        "GOD BE FOR US"
+      ],
+      "ROMANS 8:31"
+    ],
+    [
+      18,
+      27,
+      [
+        "LORD ANCHOR MY SOUL",
+        "IN THIS TRUTH",
+        "AMIDST THE SHADOWS"
+      ],
+      [
+        "ANCHOR MY SOUL"
+      ],
+      "ROMANS 8:31"
+    ],
+    [
+      27,
+      35,
+      [
+        "REMIND ME THAT",
+        "THE CREATOR STANDS",
+        "AT MY SIDE"
+      ],
+      [
+        "CREATOR STANDS"
+      ],
+      "ROMANS 8:31"
+    ],
+    [
+      35,
+      43,
+      [
+        "LET NO WEAPON",
+        "PROSPER IN THIS",
+        "SEASON OF TRIAL"
+      ],
+      [
+        "NO WEAPON"
+      ],
+      "ROMANS 8:31"
+    ],
+    [
+      43,
+      50,
+      [
+        "COVER MY MIND",
+        "AS I MOVE",
+        "UNDER YOUR SHADOW"
+      ],
+      [
+        "UNDER YOUR SHADOW"
+      ],
+      "ROMANS 8:31"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the weight of this specific confrontation feels like it is overwhelming you, stay here.",
+      "kind": "phrase",
+      "words": [
+        "OVERWHELMING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "What shall we then say to these things? If God be for us, who can be against us?",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "FOR",
+        "US"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor my soul in this truth while the shadows of doubt gather around me.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When I feel small, remind me that the Creator of heaven stands at my side.",
+      "kind": "phrase",
+      "words": [
+        "CREATOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let no weapon formed against my spirit prosper in this season of trial and fire.",
+      "kind": "phrase",
+      "words": [
+        "NO",
+        "WEAPON"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Cover my mind and my path as I move forward under your holy shadow today.",
+      "kind": "phrase",
+      "words": [
+        "SHADOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Romans 8:31"
+}
