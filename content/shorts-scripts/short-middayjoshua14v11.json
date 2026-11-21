@@ -1,0 +1,226 @@
+{
+  "key": "short-middayjoshua14v11",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "STRENGTH FOR",
+    "THE CLIMB"
+  ],
+  "poster": [
+    "GIVE ME",
+    "THIS MOUNTAIN",
+    "THE MIDDAY",
+    "WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright midday sun hitting a clean wooden desk",
+    "dust motes dancing in a shaft of midday light",
+    "blurred view of a mountain range at high noon",
+    "close up of a vintage hourglass on a stone ledge",
+    "open field under a vast cloudless blue sky",
+    "gentle ripples on a sunlit creek"
+  ],
+  "scenes": [
+    {
+      "a": "That recurring uncertainty about your capacity to handle the current challenge weighs on you today.",
+      "img": "short-middayjoshua14v11-scene-01.jpg",
+      "kicker": "JOSHUA 14:11",
+      "sub": "STRENGTH REMAINS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "As yet I am as strong this day as I was in the day that Moses sent me.",
+      "img": "short-middayjoshua14v11-scene-02.jpg",
+      "kicker": "JOSHUA 14:11",
+      "sub": "AS MY STRENGTH WAS THEN",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "As my strength was then, even so is my strength now, for war, both to go out, and to come in.",
+      "img": "short-middayjoshua14v11-scene-03.jpg",
+      "kicker": "JOSHUA 14:11",
+      "sub": "EVEN SO IS MY STRENGTH NOW",
+      "cam": "pull_out",
+      "focus": [
+        0.3,
+        0.7
+      ]
+    },
+    {
+      "a": "Now therefore give me this mountain, whereof the LORD spake in that day; for thou heardest in that day.",
+      "img": "short-middayjoshua14v11-scene-04.jpg",
+      "kicker": "JOSHUA 14:12",
+      "sub": "GIVE ME THIS MOUNTAIN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "If so be the LORD will be with me, then I shall be able to drive them out, as the LORD said.",
+      "img": "short-middayjoshua14v11-scene-05.jpg",
+      "kicker": "JOSHUA 14:12",
+      "sub": "THE LORD IS WITH ME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, grant us that same confidence to face what lies ahead, knowing you are our strength.",
+      "img": "short-middayjoshua14v11-scene-06.jpg",
+      "kicker": "JOSHUA 14:12",
+      "sub": "TRUSTING IN YOUR POWER",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "That recurring uncertainty about your capacity to handle the current challenge weighs on you today."
+    ],
+    [
+      16,
+      28,
+      "As yet I am as strong this day as I was in the day that Moses sent me."
+    ],
+    [
+      29,
+      45,
+      "As my strength was then, even so is my strength now, for war, both to go out, and to come in."
+    ],
+    [
+      46,
+      62,
+      "Now therefore give me this mountain, whereof the LORD spake in that day; for thou heardest in that day."
+    ],
+    [
+      63,
+      80,
+      "If so be the LORD will be with me, then I shall be able to drive them out, as the LORD said."
+    ],
+    [
+      81,
+      105,
+      "Lord, grant us that same confidence to face what lies ahead, knowing you are our strength and our sure foundation in this struggle."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "RECURRING UNCERTAINTY",
+        "WEIGHS ON YOU",
+        "CAPACITY TO HANDLE"
+      ],
+      [
+        "UNCERTAINTY",
+        "HANDLE"
+      ],
+      "JOSHUA 14 : 11"
+    ],
+    [
+      16,
+      28,
+      [
+        "AS YET I AM",
+        "AS STRONG TODAY",
+        "AS I WAS THEN"
+      ],
+      [
+        "STRONG",
+        "AS I WAS"
+      ],
+      "JOSHUA 14 : 11"
+    ],
+    [
+      29,
+      45,
+      [
+        "AS MY STRENGTH WAS",
+        "EVEN SO IS",
+        "MY STRENGTH NOW"
+      ],
+      [
+        "STRENGTH",
+        "NOW"
+      ],
+      "JOSHUA 14 : 11"
+    ],
+    [
+      46,
+      62,
+      [
+        "GIVE ME THIS",
+        "MOUNTAIN WHERE THE",
+        "LORD SPAKE"
+      ],
+      [
+        "GIVE ME",
+        "MOUNTAIN"
+      ],
+      "JOSHUA 14 : 12"
+    ],
+    [
+      63,
+      80,
+      [
+        "THE LORD WILL",
+        "BE WITH ME",
+        "I SHALL DRIVE OUT"
+      ],
+      [
+        "THE LORD",
+        "WITH ME"
+      ],
+      "JOSHUA 14 : 12"
+    ],
+    [
+      81,
+      105,
+      [
+        "GRANT US CONFIDENCE",
+        "YOU ARE OUR",
+        "SURE FOUNDATION"
+      ],
+      [
+        "CONFIDENCE",
+        "FOUNDATION"
+      ],
+      "JOSHUA 14 : 12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That recurring uncertainty about your capacity to handle the current challenge weighs on you today.",
+      "kind": "phrase",
+      "words": [
+        "UNCERTAINTY",
+        "HANDLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Joshua 14:11-12"
+}
