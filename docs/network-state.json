@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T14:47:26Z",
+  "generated_at": "2026-11-21T14:56:42Z",
   "monitor_generated_at": "2026-11-21T11:27:49.289585+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 597,
+    "published_total": 598,
     "published_longform": 179,
-    "published_shorts": 418,
-    "public_total": 595,
+    "published_shorts": 419,
+    "public_total": 596,
     "queued_longform": 60,
-    "queued_shorts": 99,
+    "queued_shorts": 98,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -373,23 +373,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 54,
+        "published_total": 55,
         "published_longform": 15,
-        "published_shorts": 39,
+        "published_shorts": 40,
         "thumbnail_pending": 3,
-        "public_total": 54,
+        "public_total": 55,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-HEALINGJEREMIAH8V22",
-        "title": "Pray This Jeremiah 8:22 Healing Prayer for Peace & Strength | Where Is The Healing #Shorts",
+        "id": "SHORT-HEALINGACTS3V6",
+        "title": "Pray This Acts 3:6-8 Healing Prayer for Peace & Strength | Healing In His Name #Shorts",
         "format": "short",
-        "youtube_video_id": "C7JqIHawDlA",
-        "watch_url": "https://www.youtube.com/shorts/C7JqIHawDlA",
+        "youtube_video_id": "l6U3vwDjdx0",
+        "watch_url": "https://www.youtube.com/shorts/l6U3vwDjdx0",
         "published_on": "2026-11-21",
-        "published_at": "2026-11-21T11:29:02Z"
+        "published_at": "2026-11-21T14:55:46Z"
       },
       "next_queued_longform": {
         "id": "0415",
@@ -398,8 +398,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingacts3v6",
-        "scripture": "Acts 3:6-8",
+        "short": "short-healingluke13v11",
+        "scripture": "Luke 13:11-13",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGACTS3V6",
+      "slug": "short-healingacts3v6-restoration-prayer",
+      "file": "short-healingacts3v6-restoration-prayer.md",
+      "title": "Pray This Acts 3:6-8 Healing Prayer for Peace & Strength | Healing In His Name #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T14:55:46Z",
+      "youtube_video_id": "l6U3vwDjdx0",
+      "watch_url": "https://www.youtube.com/shorts/l6U3vwDjdx0",
+      "youtu_be_url": "https://youtu.be/l6U3vwDjdx0",
+      "shorts_url": "https://www.youtube.com/shorts/l6U3vwDjdx0",
+      "studio_url": "https://studio.youtube.com/video/l6U3vwDjdx0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/l6U3vwDjdx0/hqdefault.jpg",
+      "thumb_text": "IN JESUS NAME \u00b7 RISE AND WALK",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 661
+    },
     {
       "id": "SHORT-DEUTERONOMY33V12",
       "slug": "short-deuteronomy33v12-pre-sleep-prayer",
@@ -15901,17 +15925,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-healingacts3v6",
-        "file": "0000-short-healingacts3v6.yml",
-        "companion_longform_id": "",
-        "scripture": "Acts 3:6-8",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingluke13v11",
