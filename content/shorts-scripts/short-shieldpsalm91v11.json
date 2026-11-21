@@ -1,0 +1,258 @@
+{
+  "key": "short-shieldpsalm91v11",
+  "channel": "prayer8",
+  "psalm": 91,
+  "title": [
+    "DIVINE PROTECTION",
+    "STRONG TOWER REFUGE"
+  ],
+  "poster": [
+    "WALK UNDER",
+    "HIS DAILY",
+    "SHADOW",
+    "AND KEEP"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "sunlit mountain pass dawn golden rays",
+    "ancient stone watchtower misty valley",
+    "peaceful river winding through green hills",
+    "dramatic clouds with golden light breaking through",
+    "serene pine forest in soft morning light",
+    "calm alpine lake reflecting high peaks"
+  ],
+  "scenes": [
+    {
+      "a": "If that lonely road ahead makes your footsteps falter, stay and take refuge here.",
+      "img": "short-shieldpsalm91v11-scene-01.jpg",
+      "kicker": "PSALM 91:11",
+      "sub": "HIS ANGELS CHARGE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we place every step and every unseen concern under your divine protection today.",
+      "img": "short-shieldpsalm91v11-scene-02.jpg",
+      "kicker": "DIVINE SHIELD",
+      "sub": "WALK IN SAFETY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "When the path grows steep and hidden dangers surround us, your word remains our strong tower.",
+      "img": "short-shieldpsalm91v11-scene-03.jpg",
+      "kicker": "STRONG TOWER",
+      "sub": "UNSHAKABLE REFUGE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Your holy promise declares that For he shall give his angels charge over thee, to keep thee in all thy ways.",
+      "img": "short-shieldpsalm91v11-scene-04.jpg",
+      "kicker": "HOLY PROMISE",
+      "sub": "ANGELS CHARGE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, surround our coming and our going with your heavenly guards and quiet our anxious hearts.",
+      "img": "short-shieldpsalm91v11-scene-05.jpg",
+      "kicker": "HEAVENLY GUARDS",
+      "sub": "QUIET HEARTS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Grant us steadfast peace as we walk in your safe-keeping now and forevermore. Amen.",
+      "img": "short-shieldpsalm91v11-scene-06.jpg",
+      "kicker": "STEADFAST PEACE",
+      "sub": "SAFE-KEEPING AMEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      4,
+      "If that lonely road ahead makes your footsteps falter, stay and take refuge here."
+    ],
+    [
+      5,
+      9,
+      "Father, we place every step and every unseen concern under your divine protection today."
+    ],
+    [
+      10,
+      14,
+      "When the path grows steep and hidden dangers surround us, your word remains our strong tower."
+    ],
+    [
+      15,
+      19,
+      "Your holy promise declares that For he shall give his angels charge over thee, to keep thee in all thy ways."
+    ],
+    [
+      20,
+      24,
+      "Lord, surround our coming and our going with your heavenly guards and quiet our anxious hearts."
+    ],
+    [
+      25,
+      30,
+      "Grant us steadfast peace as we walk in your safe-keeping now and forevermore. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      4,
+      [
+        "LONELY ROAD AHEAD",
+        "MAKES FOOTSTEPS FALTER",
+        "STAY AND TAKE REFUGE"
+      ],
+      "REFUGE",
+      "PSALM 91:11"
+    ],
+    [
+      5,
+      9,
+      [
+        "FATHER WE PLACE",
+        "EVERY UNSEEN CONCERN",
+        "UNDER DIVINE PROTECTION"
+      ],
+      "PROTECTION",
+      "PSALM 91:11"
+    ],
+    [
+      10,
+      14,
+      [
+        "PATH GROWS STEEP",
+        "HIDDEN DANGERS SURROUND",
+        "OUR STRONG TOWER"
+      ],
+      "TOWER",
+      "PSALM 91:11"
+    ],
+    [
+      15,
+      19,
+      [
+        "ANGELS CHARGE OVER",
+        "THEE TO KEEP",
+        "THEE IN ALL"
+      ],
+      "CHARGE",
+      "PSALM 91:11"
+    ],
+    [
+      20,
+      24,
+      [
+        "SURROUND OUR COMING",
+        "WITH HEAVENLY GUARDS",
+        "QUIET ANXIOUS HEARTS"
+      ],
+      "GUARDS",
+      "PSALM 91:11"
+    ],
+    [
+      25,
+      30,
+      [
+        "STEADFAST PEACE WALK",
+        "IN YOUR SAFE KEEPING",
+        "NOW AND FOREVERMORE"
+      ],
+      "PEACE",
+      "PSALM 91:11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that lonely road ahead makes your footsteps falter, stay and take refuge here.",
+      "kind": "phrase",
+      "words": [
+        "LONELY ROAD",
+        "REFUGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we place every step and every unseen concern under your divine protection today.",
+      "kind": "phrase",
+      "words": [
+        "DIVINE PROTECTION",
+        "CONCERN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When the path grows steep and hidden dangers surround us, your word remains our strong tower.",
+      "kind": "phrase",
+      "words": [
+        "PATH GROWS",
+        "STRONG TOWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your holy promise declares that For he shall give his angels charge over thee, to keep thee in all thy ways.",
+      "kind": "phrase",
+      "words": [
+        "ANGELS CHARGE",
+        "ALL THY WAYS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, surround our coming and our going with your heavenly guards and quiet our anxious hearts.",
+      "kind": "phrase",
+      "words": [
+        "HEAVENLY GUARDS",
+        "ANXIOUS HEARTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us steadfast peace as we walk in your safe-keeping now and forevermore. Amen.",
+      "kind": "phrase",
+      "words": [
+        "STEADFAST PEACE",
+        "FOREVERMORE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 91:11"
+}

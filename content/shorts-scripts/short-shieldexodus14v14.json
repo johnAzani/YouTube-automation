@@ -1,0 +1,295 @@
+{
+  "key": "short-shieldexodus14v14",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "EXODUS 14:14",
+    "THE LORD SHALL FIGHT"
+  ],
+  "poster": [
+    "DIVINE",
+    "PROTECTION",
+    "AND",
+    "REFUGE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower sunrise rays",
+    "calm misty mountain valley dawn",
+    "golden sun rays piercing dark clouds",
+    "peaceful winding river through mountains",
+    "solid rock fortress steep mountain cliff",
+    "serene high altitude snow peaks glowing",
+    "tranquil alpine lake reflection morning"
+  ],
+  "scenes": [
+    {
+      "a": "If that looming conflict makes your chest tighten right now, stay and seek shelter here.",
+      "img": "short-shieldexodus14v14-scene-01.jpg",
+      "kicker": "EXODUS 14:14",
+      "sub": "FIND YOUR REFUGE HERE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father, when the noise of accusation and the pressure of impossible circumstances surround us on every side,",
+      "img": "short-shieldexodus14v14-scene-02.jpg",
+      "kicker": "THE STRONG TOWER",
+      "sub": "WHEN PRESSURE SURROUNDS YOU",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "we confess our human weakness and our tendency to fight battles we were never meant to carry alone.",
+      "img": "short-shieldexodus14v14-scene-03.jpg",
+      "kicker": "LAY DOWN THE BURDEN",
+      "sub": "RELEASE WHAT YOU CARRY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant us the profound grace to step back from our striving and trust Your mighty arm to defend us.",
+      "img": "short-shieldexodus14v14-scene-04.jpg",
+      "kicker": "GRACE TO REST",
+      "sub": "TRUST HIS MIGHTY ARM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.35
+      ]
+    },
+    {
+      "a": "Your holy word declares with absolute certainty:",
+      "img": "short-shieldexodus14v14-scene-05.jpg",
+      "kicker": "HIS HOLY WORD",
+      "sub": "ABSOLUTE CERTAINTY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The LORD shall fight for you, and ye shall hold your peace.",
+      "img": "short-shieldexodus14v14-scene-06.jpg",
+      "kicker": "EXODUS 14:14",
+      "sub": "HOLD YOUR PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We rest securely in that promise today, resting beneath the shadow of Your unchanging wings. Amen.",
+      "img": "short-shieldexodus14v14-scene-07.jpg",
+      "kicker": "SECURE IN HIM",
+      "sub": "UNDER HIS SHADOW",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "If that looming conflict makes your chest tighten right now, stay and seek shelter here."
+    ],
+    [
+      12,
+      28,
+      "Father, when the noise of accusation and the pressure of impossible circumstances surround us on every side,"
+    ],
+    [
+      28,
+      44,
+      "we confess our human weakness and our tendency to fight battles we were never meant to carry alone."
+    ],
+    [
+      44,
+      60,
+      "Grant us the profound grace to step back from our striving and trust Your mighty arm to defend us."
+    ],
+    [
+      60,
+      72,
+      "Your holy word declares with absolute certainty:"
+    ],
+    [
+      72,
+      87,
+      "The LORD shall fight for you, and ye shall hold your peace."
+    ],
+    [
+      87,
+      102,
+      "We rest securely in that promise today, resting beneath the shadow of Your unchanging wings. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "IF THAT LOOMING CONFLICT",
+        "MAKES YOUR CHEST TIGHTEN",
+        "STAY AND SEEK SHELTER"
+      ],
+      "SHELTER",
+      "EXODUS 14:14"
+    ],
+    [
+      12,
+      28,
+      [
+        "WHEN THE NOISE SURROUNDS",
+        "THE PRESSURE OF CIRCUMSTANCES",
+        "ON EVERY SIDE"
+      ],
+      "PRESSURE",
+      "PRAYER"
+    ],
+    [
+      28,
+      44,
+      [
+        "WE CONFESS OUR WEAKNESS",
+        "BATTLES WE NEVER MEANT",
+        "TO CARRY ALONE"
+      ],
+      "WEAKNESS",
+      "REFUGE"
+    ],
+    [
+      44,
+      60,
+      [
+        "GRANT US PROFOUND GRACE",
+        "TO STEP BACK FROM STRIVING",
+        "TRUST HIS MIGHTY ARM"
+      ],
+      "STRIVING",
+      "GRACE"
+    ],
+    [
+      60,
+      72,
+      [
+        "YOUR HOLY WORD DECLARES",
+        "WITH ABSOLUTE CERTAINTY"
+      ],
+      "CERTAINTY",
+      "PROMISE"
+    ],
+    [
+      72,
+      87,
+      [
+        "THE LORD SHALL FIGHT",
+        "FOR YOU",
+        "YE SHALL HOLD YOUR PEACE"
+      ],
+      "FIGHT",
+      "EXODUS 14:14"
+    ],
+    [
+      87,
+      102,
+      [
+        "WE REST SECURELY TODAY",
+        "BENEATH UNCHANGING WINGS",
+        "AMEN"
+      ],
+      "SECURELY",
+      "AMEN"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that looming conflict makes your chest tighten right now, stay and seek shelter here.",
+      "kind": "phrase",
+      "words": [
+        "LOOMING",
+        "CONFLICT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, when the noise of accusation and the pressure of impossible circumstances surround us on every side,",
+      "kind": "phrase",
+      "words": [
+        "PRESSURE",
+        "CIRCUMSTANCES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "we confess our human weakness and our tendency to fight battles we were never meant to carry alone.",
+      "kind": "phrase",
+      "words": [
+        "HUMAN",
+        "WEAKNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us the profound grace to step back from our striving and trust Your mighty arm to defend us.",
+      "kind": "phrase",
+      "words": [
+        "MIGHTY",
+        "ARM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your holy word declares with absolute certainty:",
+      "kind": "phrase",
+      "words": [
+        "ABSOLUTE",
+        "CERTAINTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD shall fight for you, and ye shall hold your peace.",
+      "kind": "phrase",
+      "words": [
+        "SHALL",
+        "FIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We rest securely in that promise today, resting beneath the shadow of Your unchanging wings. Amen.",
+      "kind": "phrase",
+      "words": [
+        "UNCHANGING",
+        "WINGS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Exodus 14:14"
+}

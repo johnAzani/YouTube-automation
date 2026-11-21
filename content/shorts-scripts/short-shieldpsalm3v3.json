@@ -1,0 +1,314 @@
+{
+  "key": "short-shieldpsalm3v3",
+  "channel": "prayer8",
+  "psalm": 3,
+  "title": [
+    "THE LIFTER OF",
+    "MINE HEAD"
+  ],
+  "poster": [
+    "WHEN DESPAIR BENDS",
+    "YOUR HEAD DOWN",
+    "GOD STANDS AS",
+    "YOUR SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "sunlit mountain pass golden light cloud overlay",
+    "ancient stone watchtower misty valley sunset",
+    "dramatic golden rays through dark clouds canyon",
+    "calm majestic mountain lake quiet water reflection",
+    "sunbeams through ancient pine forest misty path",
+    "glorious sunrise over quiet mountain peaks summit",
+    "peaceful mountain valley golden twilight soft sky"
+  ],
+  "scenes": [
+    {
+      "a": "When harsh words make your head bow down in sorrow today, hear this divine promise.",
+      "img": "short-shieldpsalm3v3-scene-01.jpg",
+      "kicker": "PSALM 3:3",
+      "sub": "DIVINE PROTECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "But thou, O LORD, art a shield for me; my glory, and the lifter up of mine head.",
+      "img": "short-shieldpsalm3v3-scene-02.jpg",
+      "kicker": "PSALM 3:3",
+      "sub": "THE LIFTER OF MY HEAD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, when opposition surrounds us, be our impenetrable armor against every fear.",
+      "img": "short-shieldpsalm3v3-scene-03.jpg",
+      "kicker": "PSALM 3:3",
+      "sub": "IMPENETRABLE ARMOR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lift our eyes above the noise of those who whisper that help is far away.",
+      "img": "short-shieldpsalm3v3-scene-04.jpg",
+      "kicker": "PSALM 3:3",
+      "sub": "FAITH ABOVE NOISE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Restore our dignity, quiet our spirit, and cover us under Your everlasting banner of peace.",
+      "img": "short-shieldpsalm3v3-scene-05.jpg",
+      "kicker": "PSALM 3:3",
+      "sub": "EVERLASTING COVERING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Keep our steps steadfast, for You alone lift our heads in triumph.",
+      "img": "short-shieldpsalm3v3-scene-06.jpg",
+      "kicker": "PSALM 3:3",
+      "sub": "TRIUMPH IN GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to walk daily with us under God's almighty covenant shield.",
+      "img": "short-shieldpsalm3v3-scene-07.jpg",
+      "kicker": "PSALM 3:3",
+      "sub": "THE COVENANT SHIELD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "When harsh words make your head bow down in sorrow today, hear this divine promise."
+    ],
+    [
+      7,
+      15,
+      "But thou, O LORD, art a shield for me; my glory, and the lifter up of mine head."
+    ],
+    [
+      15,
+      22,
+      "Heavenly Father, when opposition surrounds us, be our impenetrable armor against every fear."
+    ],
+    [
+      22,
+      29,
+      "Lift our eyes above the noise of those who whisper that help is far away."
+    ],
+    [
+      29,
+      36,
+      "Restore our dignity, quiet our spirit, and cover us under Your everlasting banner of peace."
+    ],
+    [
+      36,
+      43,
+      "Keep our steps steadfast, for You alone lift our heads in triumph."
+    ],
+    [
+      43,
+      50,
+      "Subscribe to walk daily with us under God's almighty covenant shield."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "WHEN HARSH WORDS MAKE YOUR HEAD",
+        "BOW DOWN IN SORROW TODAY",
+        "HEAR THIS DIVINE PROMISE"
+      ],
+      [
+        "BOW DOWN",
+        "DIVINE PROMISE"
+      ],
+      "PSALM 3 : 3"
+    ],
+    [
+      7,
+      15,
+      [
+        "BUT THOU O LORD",
+        "ART A SHIELD FOR ME",
+        "MY GLORY AND THE LIFTER UP",
+        "OF MINE HEAD"
+      ],
+      [
+        "SHIELD FOR ME",
+        "LIFTER UP"
+      ],
+      "PSALM 3 : 3"
+    ],
+    [
+      15,
+      22,
+      [
+        "HEAVENLY FATHER WHEN OPPOSITION",
+        "SURROUNDS US BE OUR IMPENETRABLE",
+        "ARMOR AGAINST EVERY FEAR"
+      ],
+      [
+        "IMPENETRABLE ARMOR"
+      ],
+      "PSALM 3 : 3"
+    ],
+    [
+      22,
+      29,
+      [
+        "LIFT OUR EYES ABOVE THE NOISE",
+        "OF THOSE WHO WHISPER THAT",
+        "HELP IS FAR AWAY"
+      ],
+      [
+        "LIFT OUR EYES"
+      ],
+      "PSALM 3 : 3"
+    ],
+    [
+      29,
+      36,
+      [
+        "RESTORE OUR DIGNITY QUIET OUR SPIRIT",
+        "AND COVER US UNDER YOUR",
+        "EVERLASTING BANNER OF PEACE"
+      ],
+      [
+        "EVERLASTING BANNER"
+      ],
+      "PSALM 3 : 3"
+    ],
+    [
+      36,
+      43,
+      [
+        "KEEP OUR STEPS STEADFAST",
+        "FOR YOU ALONE LIFT OUR",
+        "HEADS IN TRIUMPH"
+      ],
+      [
+        "STEADFAST",
+        "TRIUMPH"
+      ],
+      "PSALM 3 : 3"
+    ],
+    [
+      43,
+      50,
+      [
+        "SUBSCRIBE TO WALK DAILY WITH US",
+        "UNDER GODS ALMIGHTY",
+        "COVENANT SHIELD"
+      ],
+      [
+        "COVENANT SHIELD"
+      ],
+      "PSALM 3 : 3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When harsh words make your head bow down in sorrow today, hear this divine promise.",
+      "kind": "phrase",
+      "words": [
+        "BOW",
+        "DOWN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But thou, O LORD, art a shield for me; my glory, and the lifter up of mine head.",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "LIFTER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, when opposition surrounds us, be our impenetrable armor against every fear.",
+      "kind": "phrase",
+      "words": [
+        "IMPENETRABLE",
+        "ARMOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lift our eyes above the noise of those who whisper that help is far away.",
+      "kind": "phrase",
+      "words": [
+        "LIFT",
+        "EYES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Restore our dignity, quiet our spirit, and cover us under Your everlasting banner of peace.",
+      "kind": "phrase",
+      "words": [
+        "EVERLASTING",
+        "BANNER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Keep our steps steadfast, for You alone lift our heads in triumph.",
+      "kind": "phrase",
+      "words": [
+        "HEADS",
+        "TRIUMPH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to walk daily with us under God's almighty covenant shield.",
+      "kind": "phrase",
+      "words": [
+        "COVENANT",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 3:3"
+}
