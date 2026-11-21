@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T19:55:17Z",
+  "generated_at": "2026-11-21T20:01:47Z",
   "monitor_generated_at": "2026-11-21T19:30:32.776979+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 614,
+    "published_total": 615,
     "published_longform": 184,
-    "published_shorts": 430,
-    "public_total": 612,
+    "published_shorts": 431,
+    "public_total": 613,
     "queued_longform": 55,
-    "queued_shorts": 85,
+    "queued_shorts": 84,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 48,
+        "published_total": 49,
         "published_longform": 14,
-        "published_shorts": 34,
-        "thumbnail_pending": 48,
-        "public_total": 48,
+        "published_shorts": 35,
+        "thumbnail_pending": 49,
+        "public_total": 49,
         "queued_longform": 6,
         "queued_other": 3,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM91V11",
-        "title": "Pray This Psalm 91:11 Prayer for Divine Protection | His Angels Charge #Shorts",
+        "id": "SHORT-SHIELDROMANS8V31",
+        "title": "Pray This Romans 8:31 Prayer for Divine Protection | A Sacred Prayer #Shorts",
         "format": "short",
-        "youtube_video_id": "mziTpWKcrKc",
-        "watch_url": "https://www.youtube.com/shorts/mziTpWKcrKc",
+        "youtube_video_id": "8JKBmMOtdvg",
+        "watch_url": "https://www.youtube.com/shorts/8JKBmMOtdvg",
         "published_on": "2026-11-21",
-        "published_at": "2026-11-21T15:12:21Z"
+        "published_at": "2026-11-21T20:01:00Z"
       },
       "next_queued_longform": {
         "id": "0617",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldromans8v31",
-        "scripture": "Romans 8:31",
+        "short": "short-shieldpsalm61v3",
+        "scripture": "Psalm 61:3",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDROMANS8V31",
+      "slug": "short-shieldromans8v31-protection-prayer",
+      "file": "short-shieldromans8v31-protection-prayer.md",
+      "title": "Pray This Romans 8:31 Prayer for Divine Protection | A Sacred Prayer #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T20:01:00Z",
+      "youtube_video_id": "8JKBmMOtdvg",
+      "watch_url": "https://www.youtube.com/shorts/8JKBmMOtdvg",
+      "youtu_be_url": "https://youtu.be/8JKBmMOtdvg",
+      "shorts_url": "https://www.youtube.com/shorts/8JKBmMOtdvg",
+      "studio_url": "https://studio.youtube.com/video/8JKBmMOtdvg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/8JKBmMOtdvg/hqdefault.jpg",
+      "thumb_text": "THE COVENANT SHIELD \u00b7 DIVINE REFUGE",
+      "thumbnail_pending": true,
+      "duration_label": "44s",
+      "words": 645
+    },
     {
       "id": "SHORT-MIDNIGHT1SAMUEL17V45",
       "slug": "short-midnight1samuel17v45-midnight-prayer",
@@ -16354,17 +16378,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldromans8v31",
-        "file": "0000-short-shieldromans8v31.yml",
-        "companion_longform_id": "",
-        "scripture": "Romans 8:31",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-zephaniah3v17",
