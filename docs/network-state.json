@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T15:47:35Z",
+  "generated_at": "2026-11-21T15:56:39Z",
   "monitor_generated_at": "2026-11-21T15:04:03.237531+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 601,
+    "published_total": 602,
     "published_longform": 180,
-    "published_shorts": 421,
-    "public_total": 599,
+    "published_shorts": 422,
+    "public_total": 600,
     "queued_longform": 59,
-    "queued_shorts": 95,
+    "queued_shorts": 93,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -645,23 +645,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 44,
+        "published_total": 45,
         "published_longform": 12,
-        "published_shorts": 32,
+        "published_shorts": 33,
         "thumbnail_pending": 5,
-        "public_total": 44,
+        "public_total": 45,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0811",
-        "title": "Learning Which Way to Walk: Psalm 143:8 | The Guided Path",
-        "format": "longform",
-        "youtube_video_id": "voyzxQIfguU",
-        "watch_url": "https://youtu.be/voyzxQIfguU",
+        "id": "SHORT-GUIDEDJAMES3V17",
+        "title": "Pray This James 3:17 Prayer for God's Guidance | Seek God's Wisdom Today #Shorts",
+        "format": "short",
+        "youtube_video_id": "y16x6JhxW4Y",
+        "watch_url": "https://www.youtube.com/shorts/y16x6JhxW4Y",
         "published_on": "2026-11-21",
-        "published_at": "2026-11-21T12:37:11Z"
+        "published_at": "2026-11-21T15:55:44Z"
       },
       "next_queued_longform": {
         "id": "0812",
@@ -670,8 +670,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedjames3v17",
-        "scripture": "James 3:17",
+        "short": "short-guidedproverbs4v11",
+        "scripture": "Proverbs 4:11-12",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDJAMES3V17",
+      "slug": "short-guidedjames3v17-guidance-prayer",
+      "file": "short-guidedjames3v17-guidance-prayer.md",
+      "title": "Pray This James 3:17 Prayer for God's Guidance | Seek God's Wisdom Today #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T15:55:44Z",
+      "youtube_video_id": "y16x6JhxW4Y",
+      "watch_url": "https://www.youtube.com/shorts/y16x6JhxW4Y",
+      "youtu_be_url": "https://youtu.be/y16x6JhxW4Y",
+      "shorts_url": "https://www.youtube.com/shorts/y16x6JhxW4Y",
+      "studio_url": "https://studio.youtube.com/video/y16x6JhxW4Y/edit",
+      "thumb_url": "https://i.ytimg.com/vi/y16x6JhxW4Y/hqdefault.jpg",
+      "thumb_text": "HEAVENLY WISDOM \u00b7 PURE AND PEACEABLE",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 622
+    },
     {
       "id": "0220",
       "slug": "the-standard-lifted-against-the-flood-isaiah-59-19-the-midnight-watch",
@@ -15964,17 +15988,6 @@
         "target_window_utc": "09:44"
       },
       {
-        "short": "short-guidedjames3v17",
-        "file": "0000-short-guidedjames3v17.yml",
-        "companion_longform_id": "",
-        "scripture": "James 3:17",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
-      },
-      {
         "short": "short-guidedproverbs4v11",
         "file": "0000-short-guidedproverbs4v11.yml",
         "companion_longform_id": "",
@@ -16925,17 +16938,6 @@
         "file": "0817-short-guidedisaiah42v16.yml",
         "companion_longform_id": "0817",
         "scripture": "Isaiah 42:16",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-guidedromans12v2",
-        "file": "0818-short-guidedromans12v2.yml",
-        "companion_longform_id": "0818",
-        "scripture": "Romans 12:2",
         "channel": "prayer10",
         "channel_name": "The Guided Path",
         "status": "approved",
