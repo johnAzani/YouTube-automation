@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T00:27:12Z",
+  "generated_at": "2026-11-21T00:27:30Z",
   "monitor_generated_at": "2026-11-20T22:00:20.527326+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 576,
+    "published_total": 577,
     "published_longform": 175,
-    "published_shorts": 401,
-    "public_total": 574,
+    "published_shorts": 402,
+    "public_total": 575,
     "queued_longform": 56,
-    "queued_shorts": 70,
+    "queued_shorts": 69,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": false
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 84,
+        "published_total": 85,
         "published_longform": 29,
-        "published_shorts": 55,
+        "published_shorts": 56,
         "thumbnail_pending": 1,
-        "public_total": 83,
+        "public_total": 84,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM65V8",
-        "title": "Say This Psalm 65:8 Prayer at Sunrise | Bring Your Trembling Heart #Shorts",
+        "id": "SHORT-MORNINGPSALM86V11",
+        "title": "Say This Psalm 86:11 Prayer at Sunrise | Bring Your Indecision To God #Shorts",
         "format": "short",
-        "youtube_video_id": "AZH8yBR28u4",
-        "watch_url": "https://www.youtube.com/shorts/AZH8yBR28u4",
-        "published_on": "2026-11-20",
-        "published_at": "2026-11-20T20:42:42Z"
+        "youtube_video_id": "TD6rGyZtkY0",
+        "watch_url": "https://www.youtube.com/shorts/TD6rGyZtkY0",
+        "published_on": "2026-11-21",
+        "published_at": "2026-11-21T00:26:44Z"
       },
       "next_queued_longform": {
         "id": "0073",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm86v11",
-        "scripture": "Psalm 86:11",
+        "short": "short-morningpsalm119v147",
+        "scripture": "Psalm 119:147",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM86V11",
+      "slug": "short-morningpsalm86v11-sunrise-prayer",
+      "file": "short-morningpsalm86v11-sunrise-prayer.md",
+      "title": "Say This Psalm 86:11 Prayer at Sunrise | Bring Your Indecision To God #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T00:26:44Z",
+      "youtube_video_id": "TD6rGyZtkY0",
+      "watch_url": "https://www.youtube.com/shorts/TD6rGyZtkY0",
+      "youtu_be_url": "https://youtu.be/TD6rGyZtkY0",
+      "shorts_url": "https://www.youtube.com/shorts/TD6rGyZtkY0",
+      "studio_url": "https://studio.youtube.com/video/TD6rGyZtkY0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/TD6rGyZtkY0/hqdefault.jpg",
+      "thumb_text": "TEACH ME THY WAY \u00b7 UNITE MY HEART",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 604
+    },
     {
       "id": "SHORT-ROMANS8V28",
       "slug": "short-romans8v28-pre-sleep-prayer",
@@ -15258,17 +15282,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-morningpsalm86v11",
-        "file": "0000-short-morningpsalm86v11.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 86:11",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
       {
         "short": "short-romans8v38",
         "file": "0000-short-romans8v38.yml",
