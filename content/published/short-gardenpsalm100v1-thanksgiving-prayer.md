@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE PRAISE GARDEN", "A PRAYER OF THANKS", "PSALM 100:1-2", "FIND YOUR REST HERE"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-21T15:28:45Z"
+thumbnail_retry_after: "2026-11-28T16:51:21Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 That sharp anxiety pulling at your focus right now is met by a higher truth. Make a joyful noise unto the Lord, all ye lands. Serve the Lord with gladness: come before his presence with singing. Father, I bring this heavy heart to Your altar. You are the refuge that holds me when the world feels far too loud to bear. I choose to offer You a sacrifice of praise instead of my own weary worries. May Your gladness settle deep within my spirit, turning my perspective toward Your endless love. Thank You for the gates of thanksgiving that lead me straight into Your holy presence today. I commit my day to You, trusting in Your goodness that never fails, now and forever.

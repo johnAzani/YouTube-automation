@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["PEACE BE", "TO THIS", "HOUSEHOLD", "TODAY"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-28T16:51:10Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When the tension in your living room feels like it might break, choose stillness instead. And into whatsoever house ye enter, first say, Peace be to this house. And if the son of peace be there, your peace shall rest upon it: if not, it shall turn to you again. Lord, anchor our family in this sacred promise that your tranquility flows through every single room. Let no bitterness find a root here while we trust that your gentle presence remains enough. Grant us the grace to overflow with this gift to every person who crosses our threshold.

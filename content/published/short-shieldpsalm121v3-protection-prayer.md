@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["DIVINE PROTECTION", "PSALM 121:3-4", "GOD'S SLEEPLESS CARE", "THE COVENANT SHIELD"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-21T15:28:43Z"
+thumbnail_retry_after: "2026-11-28T16:51:16Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If your feet feel unsteady on this uncertain road today, pause and rest in God's promise. He will not suffer thy foot to be moved: he that keepeth thee will not slumber. Behold, he that keepeth Israel shall neither slumber nor sleep. Lord God, establish my steps so I will never stumble in times of severe trial. Watch over my heart and mind when deep night comes and quiet worries linger. Thank You for shielding my life with Your constant, sleepless care and guiding my daily path. Subscribe to The Covenant Shield to walk under God's daily covering and divine protection.

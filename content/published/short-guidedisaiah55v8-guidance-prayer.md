@@ -23,14 +23,12 @@ short_visual_fingerprints: ["sha256:0f338b446efe06037d1afce3eac4ff778578e7816bb2
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; auth_channel_title=The Guided Path; long_uploads_status=eligible; video_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; video_channel_title=The Guided Path; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_pending: false
 thumbnail_poster: ["WHEN PLANS FAIL", "GOD SEES HIGHER", "TRUST HIS GUIDANCE", "ISAIAH 55:8-9"]
 thumbnail_kicker: "HE SHALL DIRECT THY PATHS"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-21T16:30:17Z"
-thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 0
+thumbnail_revision: "shorts-poster-v1"
 ---
 
 When your own carefully laid plan fails and you cannot understand why, take a breath. Isaiah fifty-five, verses eight and nine says, For my thoughts are not your thoughts, neither are your ways my ways, saith the LORD. For as the heavens are higher than the earth, so are my ways higher than your ways, and my thoughts than your thoughts. Father, when our understanding falls short, remind us that Your vision is complete. Release us from the need to control what only You direct. Give us wisdom to trust Your timing and peace to follow where You lead. Subscribe to keep walking with God.
