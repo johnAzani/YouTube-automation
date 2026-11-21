@@ -1,0 +1,303 @@
+{
+  "key": "short-healingjeremiah8v22",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "IS THERE NO BALM",
+    "IN GILEAD"
+  ],
+  "poster": [
+    "THE HEALING BALM",
+    "JEREMIAH EIGHT TWENTY TWO",
+    "A QUIET PRAYER",
+    "FOR RESTORATION"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters river stream",
+    "warm golden sanctuary light filtering through trees",
+    "gentle white dove resting in peaceful olive branches",
+    "soft morning mist over calm turquoise waters",
+    "golden sunlight breaking through morning clouds",
+    "tranquil turquoise sea waves gently lapping shore",
+    "serene sanctuary interior with warm golden glow"
+  ],
+  "scenes": [
+    {
+      "a": "If this lingering ache leaves you wondering where healing is found, stay right here.",
+      "img": "short-healingjeremiah8v22-scene-01.jpg",
+      "kicker": "JEREMIAH 8:22",
+      "sub": "WHERE IS THE HEALING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, we bring every persistent weariness and unspoken hurt into your presence today.",
+      "img": "short-healingjeremiah8v22-scene-02.jpg",
+      "kicker": "JEREMIAH 8:22",
+      "sub": "BRING YOUR WEARINESS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We acknowledge the deep questions we carry when restoration feels so distant.",
+      "img": "short-healingjeremiah8v22-scene-03.jpg",
+      "kicker": "JEREMIAH 8:22",
+      "sub": "WHEN RESTORATION WAITS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Your word asks us directly, saying, Is there no balm in Gilead; is there no physician there?",
+      "img": "short-healingjeremiah8v22-scene-04.jpg",
+      "kicker": "JEREMIAH 8:22",
+      "sub": "IS THERE NO BALM",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Why then is not the health of the daughter of my people recovered?",
+      "img": "short-healingjeremiah8v22-scene-05.jpg",
+      "kicker": "JEREMIAH 8:22",
+      "sub": "THE HEALTH RECOVERED",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Father, touch our lives with your restoring grace and bind up every broken place.",
+      "img": "short-healingjeremiah8v22-scene-06.jpg",
+      "kicker": "JEREMIAH 8:22",
+      "sub": "RESTORING GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Grant us quiet trust in your enduring mercy, in Jesus name, amen.",
+      "img": "short-healingjeremiah8v22-scene-07.jpg",
+      "kicker": "JEREMIAH 8:22",
+      "sub": "QUIET TRUST IN MERCY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "If this lingering ache leaves you wondering where healing is found, stay right here."
+    ],
+    [
+      12,
+      25,
+      "Lord, we bring every persistent weariness and unspoken hurt into your presence today."
+    ],
+    [
+      25,
+      38,
+      "We acknowledge the deep questions we carry when restoration feels so distant."
+    ],
+    [
+      38,
+      52,
+      "Your word asks us directly, saying, Is there no balm in Gilead; is there no physician there?"
+    ],
+    [
+      52,
+      64,
+      "Why then is not the health of the daughter of my people recovered?"
+    ],
+    [
+      64,
+      77,
+      "Father, touch our lives with your restoring grace and bind up every broken place."
+    ],
+    [
+      77,
+      90,
+      "Grant us quiet trust in your enduring mercy, in Jesus name, amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "IF THIS LINGERING ACHE",
+        "LEAVES YOU WONDERING",
+        "WHERE HEALING IS FOUND",
+        "STAY RIGHT HERE"
+      ],
+      "HEALING",
+      "JEREMIAH 8:22"
+    ],
+    [
+      12,
+      25,
+      [
+        "LORD WE BRING",
+        "EVERY WEARINESS",
+        "AND UNSPOKEN HURT",
+        "INTO YOUR PRESENCE"
+      ],
+      "PRESENCE",
+      "JEREMIAH 8:22"
+    ],
+    [
+      25,
+      38,
+      [
+        "WE ACKNOWLEDGE",
+        "THE DEEP QUESTIONS",
+        "WHEN RESTORATION",
+        "FEELS SO DISTANT"
+      ],
+      "RESTORATION",
+      "JEREMIAH 8:22"
+    ],
+    [
+      38,
+      52,
+      [
+        "IS THERE NO BALM",
+        "IN GILEAD",
+        "IS THERE NO",
+        "PHYSICIAN THERE"
+      ],
+      "BALM",
+      "JEREMIAH 8:22"
+    ],
+    [
+      52,
+      64,
+      [
+        "WHY THEN IS NOT",
+        "THE HEALTH OF",
+        "THE DAUGHTER OF",
+        "MY PEOPLE RECOVERED"
+      ],
+      "RECOVERED",
+      "JEREMIAH 8:22"
+    ],
+    [
+      64,
+      77,
+      [
+        "FATHER TOUCH OUR LIVES",
+        "WITH YOUR GRACE",
+        "AND BIND UP",
+        "EVERY BROKEN PLACE"
+      ],
+      "GRACE",
+      "JEREMIAH 8:22"
+    ],
+    [
+      77,
+      90,
+      [
+        "GRANT US QUIET TRUST",
+        "IN YOUR MERCY",
+        "IN JESUS NAME",
+        "AMEN"
+      ],
+      "MERCY",
+      "JEREMIAH 8:22"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If this lingering ache leaves you wondering where healing is found, stay right here.",
+      "kind": "phrase",
+      "words": [
+        "LINGERING",
+        "ACHE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we bring every persistent weariness and unspoken hurt into your presence today.",
+      "kind": "phrase",
+      "words": [
+        "WEARINESS",
+        "HURT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We acknowledge the deep questions we carry when restoration feels so distant.",
+      "kind": "phrase",
+      "words": [
+        "DEEP",
+        "QUESTIONS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your word asks us directly, saying, Is there no balm in Gilead; is there no physician there?",
+      "kind": "phrase",
+      "words": [
+        "BALM",
+        "GILEAD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Why then is not the health of the daughter of my people recovered?",
+      "kind": "phrase",
+      "words": [
+        "HEALTH",
+        "RECOVERED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, touch our lives with your restoring grace and bind up every broken place.",
+      "kind": "phrase",
+      "words": [
+        "RESTORING",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us quiet trust in your enduring mercy, in Jesus name, amen.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Jeremiah 8:22"
+}

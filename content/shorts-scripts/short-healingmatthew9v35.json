@@ -1,0 +1,326 @@
+{
+  "key": "short-healingmatthew9v35",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "JESUS HEALS EVERY SICKNESS",
+    "A PRAYER FOR RESTORATION"
+  ],
+  "poster": [
+    "JESUS HEALS EVERY DISEASE",
+    "MATTHEW 9:35",
+    "RECEIVE HIS HEALING TOUCH",
+    "THE HEALING BALM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters gently flowing in warm sunlight",
+    "warm golden sanctuary light glowing softly through arched stone stained glass windows",
+    "pure white dove soaring above crystal clear turquoise stream",
+    "soft warm light reflecting on tranquil clear turquoise pool",
+    "golden divine light rays illuminating peaceful calm waters",
+    "tranquil mountain stream with glowing turquoise water in morning light",
+    "gentle white dove resting in warm golden light near quiet stream"
+  ],
+  "scenes": [
+    {
+      "a": "When physical sickness makes you feel completely forgotten in this quiet room, hear this truth.",
+      "img": "short-healingmatthew9v35-scene-01.jpg",
+      "kicker": "MATTHEW 9:35",
+      "sub": "HEALING IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And Jesus went about all the cities and villages, teaching in their synagogues,",
+      "img": "short-healingmatthew9v35-scene-02.jpg",
+      "kicker": "MATTHEW 9:35",
+      "sub": "JESUS HEALS ALL SICKNESS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "and preaching the gospel of the kingdom, and healing every sickness and every disease among the people.",
+      "img": "short-healingmatthew9v35-scene-03.jpg",
+      "kicker": "MATTHEW 9:35",
+      "sub": "EVERY DISEASE HEALED",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord Jesus, you walked through every town to reach the suffering. No pain is hidden from your sight,",
+      "img": "short-healingmatthew9v35-scene-04.jpg",
+      "kicker": "MATTHEW 9:35",
+      "sub": "NO PAIN IS HIDDEN",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "and no body is beyond your restorative power. Lay your gentle hand upon this hurting servant.",
+      "img": "short-healingmatthew9v35-scene-05.jpg",
+      "kicker": "MATTHEW 9:35",
+      "sub": "TOUCHED BY HIS HAND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Renew lost strength, calm all anxious fear, and let your living waters flow through every cell.",
+      "img": "short-healingmatthew9v35-scene-06.jpg",
+      "kicker": "MATTHEW 9:35",
+      "sub": "LIVING WATERS RESTORE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Subscribe to rest in God's healing peace with The Healing Balm.",
+      "img": "short-healingmatthew9v35-scene-07.jpg",
+      "kicker": "MATTHEW 9:35",
+      "sub": "THE HEALING BALM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "When physical sickness makes you feel completely forgotten in this quiet room, hear this truth."
+    ],
+    [
+      6,
+      14,
+      "And Jesus went about all the cities and villages, teaching in their synagogues,"
+    ],
+    [
+      14,
+      22,
+      "and preaching the gospel of the kingdom, and healing every sickness and every disease among the people."
+    ],
+    [
+      22,
+      29,
+      "Lord Jesus, you walked through every town to reach the suffering. No pain is hidden from your sight,"
+    ],
+    [
+      29,
+      37,
+      "and no body is beyond your restorative power. Lay your gentle hand upon this hurting servant."
+    ],
+    [
+      37,
+      45,
+      "Renew lost strength, calm all anxious fear, and let your living waters flow through every cell."
+    ],
+    [
+      45,
+      52,
+      "Subscribe to rest in God's healing peace with The Healing Balm."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "WHEN PHYSICAL SICKNESS MAKES YOU",
+        "FEEL FORGOTTEN IN THIS ROOM",
+        "HEAR THIS TRUTH"
+      ],
+      [
+        "FORGOTTEN",
+        "TRUTH"
+      ],
+      "MATTHEW 9:35"
+    ],
+    [
+      6,
+      14,
+      [
+        "AND JESUS WENT ABOUT",
+        "ALL CITIES AND VILLAGES",
+        "TEACHING IN THEIR SYNAGOGUES"
+      ],
+      [
+        "JESUS",
+        "TEACHING"
+      ],
+      "MATTHEW 9:35"
+    ],
+    [
+      14,
+      22,
+      [
+        "PREACHING THE GOSPEL OF KINGDOM",
+        "AND HEALING EVERY SICKNESS",
+        "AND EVERY DISEASE AMONG PEOPLE"
+      ],
+      [
+        "HEALING",
+        "EVERY SICKNESS"
+      ],
+      "MATTHEW 9:35"
+    ],
+    [
+      22,
+      29,
+      [
+        "LORD JESUS YOU WALKED EVERY TOWN",
+        "TO REACH THE SUFFERING",
+        "NO PAIN IS HIDDEN FROM YOU"
+      ],
+      [
+        "SUFFERING",
+        "HIDDEN"
+      ],
+      "MATTHEW 9:35"
+    ],
+    [
+      29,
+      37,
+      [
+        "NO BODY IS BEYOND YOUR POWER",
+        "LAY YOUR GENTLE HAND UPON",
+        "THIS HURTING SERVANT TODAY"
+      ],
+      [
+        "RESTORATIVE POWER",
+        "GENTLE HAND"
+      ],
+      "MATTHEW 9:35"
+    ],
+    [
+      37,
+      45,
+      [
+        "RENEW LOST STRENGTH AND CALM",
+        "ALL ANXIOUS FEAR WITH WATERS",
+        "FLOWING THROUGH EVERY CELL"
+      ],
+      [
+        "RENEW STRENGTH",
+        "LIVING WATERS"
+      ],
+      "MATTHEW 9:35"
+    ],
+    [
+      45,
+      52,
+      [
+        "SUBSCRIBE TO REST IN GODS PEACE",
+        "WITH THE HEALING BALM CHANNEL"
+      ],
+      [
+        "HEALING PEACE",
+        "HEALING BALM"
+      ],
+      "MATTHEW 9:35"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When physical sickness makes you feel completely forgotten in this quiet room, hear this truth.",
+      "kind": "phrase",
+      "words": [
+        "PHYSICAL",
+        "SICKNESS",
+        "FORGOTTEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And Jesus went about all the cities and villages, teaching in their synagogues,",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "CITIES",
+        "TEACHING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and preaching the gospel of the kingdom, and healing every sickness and every disease among the people.",
+      "kind": "phrase",
+      "words": [
+        "PREACHING",
+        "HEALING",
+        "EVERY",
+        "DISEASE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord Jesus, you walked through every town to reach the suffering. No pain is hidden from your sight,",
+      "kind": "phrase",
+      "words": [
+        "WALKED",
+        "SUFFERING",
+        "HIDDEN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "and no body is beyond your restorative power. Lay your gentle hand upon this hurting servant.",
+      "kind": "phrase",
+      "words": [
+        "RESTORATIVE",
+        "POWER",
+        "GENTLE",
+        "HAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Renew lost strength, calm all anxious fear, and let your living waters flow through every cell.",
+      "kind": "phrase",
+      "words": [
+        "RENEW",
+        "STRENGTH",
+        "LIVING",
+        "WATERS"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to rest in God's healing peace with The Healing Balm.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "HEALING",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 9:35"
+}

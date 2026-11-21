@@ -1,0 +1,304 @@
+{
+  "key": "short-healingpsalm118v17",
+  "channel": "prayer6",
+  "psalm": 118,
+  "title": [
+    "I SHALL NOT DIE",
+    "BUT LIVE"
+  ],
+  "poster": [
+    "PSALM 118:17",
+    "I SHALL NOT DIE",
+    "HEALING PRAYER",
+    "THE HEALING BALM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters glowing warm golden sanctuary light",
+    "warm golden light beam over gentle turquoise crystal waters",
+    "white dove hovering softly in warm radiant golden light",
+    "tranquil turquoise stream flowing under warm golden sanctuary light",
+    "soft glowing white dove flying over serene turquoise water",
+    "warm golden light illuminating calm turquoise sanctuary waters"
+  ],
+  "scenes": [
+    {
+      "a": "If a terrifying report about your health has left you fearing the worst tonight, listen.",
+      "img": "short-healingpsalm118v17-scene-01.jpg",
+      "kicker": "PSALM 118:17",
+      "sub": "FAITH FOR HEALING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "God promises in his holy word, I shall not die, but live, and declare the works of the LORD.",
+      "img": "short-healingpsalm118v17-scene-02.jpg",
+      "kicker": "PSALM 118:17",
+      "sub": "DECLARATION OF LIFE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord Jesus, reach into this weary body right now and breathe your living power into every cell.",
+      "img": "short-healingpsalm118v17-scene-03.jpg",
+      "kicker": "PSALM 118:17",
+      "sub": "DIVINE RESTORATION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Command all illness to depart and drive away every shadow of fear and despair.",
+      "img": "short-healingpsalm118v17-scene-04.jpg",
+      "kicker": "PSALM 118:17",
+      "sub": "CAST OUT FEAR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Where physical strength has failed, pour out your tender breath of resurrection life.",
+      "img": "short-healingpsalm118v17-scene-05.jpg",
+      "kicker": "PSALM 118:17",
+      "sub": "RESURRECTION LIFE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Subscribe to The Healing Balm to rest daily in God's healing peace.",
+      "img": "short-healingpsalm118v17-scene-06.jpg",
+      "kicker": "THE HEALING BALM",
+      "sub": "REST IN GODS PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If a terrifying report about your health has left you fearing the worst tonight, listen."
+    ],
+    [
+      6,
+      13,
+      "God promises in his holy word, I shall not die, but live, and declare the works of the LORD."
+    ],
+    [
+      13,
+      20,
+      "Lord Jesus, reach into this weary body right now and breathe your living power into every cell."
+    ],
+    [
+      20,
+      26,
+      "Command all illness to depart and drive away every shadow of fear and despair."
+    ],
+    [
+      26,
+      32,
+      "Where physical strength has failed, pour out your tender breath of resurrection life."
+    ],
+    [
+      32,
+      38,
+      "Restore this heart, renew this body, and let your healing testimony be made known."
+    ],
+    [
+      38,
+      44,
+      "Subscribe to The Healing Balm to rest daily in God's healing peace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF A TERRIFYING REPORT",
+        "ABOUT YOUR HEALTH HAS LEFT YOU",
+        "FEARING THE WORST TONIGHT"
+      ],
+      [
+        "TERRIFYING REPORT",
+        "FEARING THE WORST"
+      ],
+      "PSALM 118:17"
+    ],
+    [
+      6,
+      13,
+      [
+        "GOD PROMISES IN HIS HOLY WORD",
+        "I SHALL NOT DIE BUT LIVE",
+        "AND DECLARE THE WORKS OF THE LORD"
+      ],
+      [
+        "NOT DIE",
+        "BUT LIVE"
+      ],
+      "PSALM 118:17"
+    ],
+    [
+      13,
+      20,
+      [
+        "LORD JESUS REACH INTO THIS WEARY BODY",
+        "AND BREATHE YOUR LIVING POWER",
+        "INTO EVERY CELL"
+      ],
+      [
+        "LIVING POWER",
+        "EVERY CELL"
+      ],
+      "PSALM 118:17"
+    ],
+    [
+      20,
+      26,
+      [
+        "COMMAND ALL ILLNESS TO DEPART",
+        "AND DRIVE AWAY EVERY SHADOW",
+        "OF FEAR AND DESPAIR"
+      ],
+      [
+        "COMMAND ALL ILLNESS",
+        "DRIVE AWAY FEAR"
+      ],
+      "PSALM 118:17"
+    ],
+    [
+      26,
+      32,
+      [
+        "WHERE PHYSICAL STRENGTH HAS FAILED",
+        "POUR OUT YOUR TENDER BREATH",
+        "OF RESURRECTION LIFE"
+      ],
+      [
+        "TENDER BREATH",
+        "RESURRECTION LIFE"
+      ],
+      "PSALM 118:17"
+    ],
+    [
+      32,
+      38,
+      [
+        "RESTORE THIS HEART RENEW THIS BODY",
+        "AND LET YOUR HEALING TESTIMONY",
+        "BE MADE KNOWN"
+      ],
+      [
+        "RENEW THIS BODY",
+        "HEALING TESTIMONY"
+      ],
+      "PSALM 118:17"
+    ],
+    [
+      38,
+      44,
+      [
+        "SUBSCRIBE TO THE HEALING BALM",
+        "TO REST DAILY IN GODS HEALING PEACE"
+      ],
+      [
+        "SUBSCRIBE",
+        "GODS HEALING PEACE"
+      ],
+      "PSALM 118:17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If a terrifying report about your health has left you fearing the worst tonight, listen.",
+      "kind": "phrase",
+      "words": [
+        "TERRIFYING",
+        "REPORT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I shall not die, but live, and declare the works of the LORD.",
+      "kind": "phrase",
+      "words": [
+        "LIVE",
+        "DECLARE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord Jesus, reach into this weary body right now and breathe your living power into every cell.",
+      "kind": "phrase",
+      "words": [
+        "LIVING",
+        "POWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Command all illness to depart and drive away every shadow of fear and despair.",
+      "kind": "phrase",
+      "words": [
+        "COMMAND",
+        "ILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Where physical strength has failed, pour out your tender breath of resurrection life.",
+      "kind": "phrase",
+      "words": [
+        "RESURRECTION",
+        "LIFE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Restore this heart, renew this body, and let your healing testimony be made known.",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "TESTIMONY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Healing Balm to rest daily in God's healing peace.",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 118:17"
+}

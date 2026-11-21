@@ -1,0 +1,238 @@
+{
+  "key": "short-healingluke13v11",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALING THE BENT",
+    "SPIRIT"
+  ],
+  "poster": [
+    "RELEASE FROM",
+    "EVERY INFIRMITY",
+    "JESUS IS HERE",
+    "TO MAKE YOU STRAIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters",
+    "warm golden sanctuary light",
+    "white dove flying in soft light",
+    "gentle ripples on clear water",
+    "sunlight breaking through clouds",
+    "calm ocean waves at sunset"
+  ],
+  "scenes": [
+    {
+      "a": "If you are struggling to look up from the weight of your burden, stay here.",
+      "img": "short-healingluke13v11-scene-01.jpg",
+      "kicker": "LUKE 13:11-13",
+      "sub": "FINDING REST FOR YOUR SPIRIT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And, behold, there was a woman which had a spirit of infirmity eighteen years,",
+      "img": "short-healingluke13v11-scene-02.jpg",
+      "kicker": "THE SCRIPTURE",
+      "sub": "GOD SEES YOUR LONG STRUGGLE",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "and was bowed together, and could in no wise lift up herself.",
+      "img": "short-healingluke13v11-scene-03.jpg",
+      "kicker": "THE SCRIPTURE",
+      "sub": "HE UNDERSTANDS YOUR WEARINESS",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "And when Jesus saw her, he called her to him, and said unto her, Woman, thou art loosed from thine infirmity.",
+      "img": "short-healingluke13v11-scene-04.jpg",
+      "kicker": "THE SCRIPTURE",
+      "sub": "HIS WORD BRINGS FREEDOM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "And he laid his hands on her: and immediately she was made straight, and glorified God.",
+      "img": "short-healingluke13v11-scene-05.jpg",
+      "kicker": "THE SCRIPTURE",
+      "sub": "TOUCHED BY HIS MERCY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, touch this weary heart, straighten what is bent, and bring your lasting peace today.",
+      "img": "short-healingluke13v11-scene-06.jpg",
+      "kicker": "RESTORATION",
+      "sub": "MAY HIS PEACE REMAIN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are struggling to look up from the weight of your burden, stay here."
+    ],
+    [
+      8,
+      16,
+      "And, behold, there was a woman which had a spirit of infirmity eighteen years,"
+    ],
+    [
+      16,
+      24,
+      "and was bowed together, and could in no wise lift up herself."
+    ],
+    [
+      24,
+      34,
+      "And when Jesus saw her, he called her to him, and said unto her, Woman, thou art loosed from thine infirmity."
+    ],
+    [
+      34,
+      42,
+      "And he laid his hands on her: and immediately she was made straight, and glorified God."
+    ],
+    [
+      42,
+      50,
+      "Lord, touch this weary heart, straighten what is bent, and bring your lasting peace today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "STRUGGLING TO LOOK UP",
+        "WEIGHT OF YOUR BURDEN",
+        "STAY HERE"
+      ],
+      [
+        "STAY HERE"
+      ],
+      "LUKE 13:11-13"
+    ],
+    [
+      8,
+      16,
+      [
+        "SPIRIT OF INFIRMITY",
+        "FOR EIGHTEEN YEARS"
+      ],
+      [
+        "EIGHTEEN YEARS"
+      ],
+      "LUKE 13:11-13"
+    ],
+    [
+      16,
+      24,
+      [
+        "BOWED TOGETHER",
+        "COULD NOT LIFT UP"
+      ],
+      [
+        "NOT LIFT UP"
+      ],
+      "LUKE 13:11-13"
+    ],
+    [
+      24,
+      34,
+      [
+        "JESUS CALLED HER",
+        "THOU ART LOOSED",
+        "FROM THINE INFIRMITY"
+      ],
+      [
+        "LOOSED"
+      ],
+      "LUKE 13:11-13"
+    ],
+    [
+      34,
+      42,
+      [
+        "MADE STRAIGHT",
+        "AND GLORIFIED GOD"
+      ],
+      [
+        "MADE STRAIGHT"
+      ],
+      "LUKE 13:11-13"
+    ],
+    [
+      42,
+      50,
+      [
+        "TOUCH THIS HEART",
+        "STRAIGHTEN WHAT IS BENT",
+        "BRING YOUR PEACE"
+      ],
+      [
+        "YOUR PEACE"
+      ],
+      "LUKE 13:11-13"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are struggling to look up from the weight of your burden, stay here.",
+      "kind": "phrase",
+      "words": [
+        "STAY",
+        "HERE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "And when Jesus saw her, he called her to him, and said unto her, Woman, thou art loosed from thine infirmity.",
+      "kind": "phrase",
+      "words": [
+        "THOU",
+        "ART",
+        "LOOSED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And he laid his hands on her: and immediately she was made straight, and glorified God.",
+      "kind": "phrase",
+      "words": [
+        "MADE",
+        "STRAIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Luke 13:11-13"
+}
