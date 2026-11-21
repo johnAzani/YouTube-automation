@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T11:24:06Z",
+  "generated_at": "2026-11-21T11:24:26Z",
   "monitor_generated_at": "2026-11-21T03:57:09.854457+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 587,
+    "published_total": 588,
     "published_longform": 177,
-    "published_shorts": 410,
-    "public_total": 585,
+    "published_shorts": 411,
+    "public_total": 586,
     "queued_longform": 60,
-    "queued_shorts": 95,
+    "queued_shorts": 93,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -237,23 +237,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 62,
+        "published_total": 63,
         "published_longform": 20,
-        "published_shorts": 42,
-        "thumbnail_pending": 61,
-        "public_total": 62,
+        "published_shorts": 43,
+        "thumbnail_pending": 62,
+        "public_total": 63,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0219",
-        "title": "Crooked Places Made Straight: Isaiah 45:2-3 | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "OZTf1IzgoB8",
-        "watch_url": "https://youtu.be/OZTf1IzgoB8",
+        "id": "SHORT-MIDNIGHT1PETER5V8",
+        "title": "Pray This 1 Peter 5:8-9 Midnight Prayer | Stand Firm Tonight #Shorts",
+        "format": "short",
+        "youtube_video_id": "tTbnrKSO9dA",
+        "watch_url": "https://www.youtube.com/shorts/tTbnrKSO9dA",
         "published_on": "2026-11-21",
-        "published_at": "2026-11-21T01:35:17Z"
+        "published_at": "2026-11-21T11:23:36Z"
       },
       "next_queued_longform": {
         "id": "0220",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnight1peter5v8",
-        "scripture": "1 Peter 5:8-9",
+        "short": "short-midnightmatthew14v25",
+        "scripture": "Matthew 14:25-27",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHT1PETER5V8",
+      "slug": "short-midnight1peter5v8-midnight-prayer",
+      "file": "short-midnight1peter5v8-midnight-prayer.md",
+      "title": "Pray This 1 Peter 5:8-9 Midnight Prayer | Stand Firm Tonight #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T11:23:36Z",
+      "youtube_video_id": "tTbnrKSO9dA",
+      "watch_url": "https://www.youtube.com/shorts/tTbnrKSO9dA",
+      "youtu_be_url": "https://youtu.be/tTbnrKSO9dA",
+      "shorts_url": "https://www.youtube.com/shorts/tTbnrKSO9dA",
+      "studio_url": "https://studio.youtube.com/video/tTbnrKSO9dA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/tTbnrKSO9dA/hqdefault.jpg",
+      "thumb_text": "WHEN FEAR PROWLS \u00b7 AT MIDNIGHT",
+      "thumbnail_pending": true,
+      "duration_label": "50s",
+      "words": 617
+    },
     {
       "id": "SHORT-PSALM17V3",
       "slug": "short-psalm17v3-pre-sleep-prayer",
@@ -15707,17 +15731,6 @@
         "target_window_utc": "12:14"
       },
       {
-        "short": "short-midnight1peter5v8",
-        "file": "0000-short-midnight1peter5v8.yml",
-        "companion_longform_id": "",
-        "scripture": "1 Peter 5:8-9",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
-      },
-      {
         "short": "short-midnightmatthew14v25",
         "file": "0000-short-midnightmatthew14v25.yml",
         "companion_longform_id": "",
@@ -16140,17 +16153,6 @@
         "file": "0223-short-midnightacts12v5.yml",
         "companion_longform_id": "0223",
         "scripture": "Acts 12:5-11",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-midnightrevelation3v7",
-        "file": "0225-short-midnightrevelation3v7.yml",
-        "companion_longform_id": "0225",
-        "scripture": "Revelation 3:7-8",
         "channel": "prayer4",
         "channel_name": "The Midnight Watch",
         "status": "approved",
