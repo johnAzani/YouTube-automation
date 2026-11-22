@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T20:00:30Z",
+  "generated_at": "2026-11-22T20:08:10Z",
   "monitor_generated_at": "2026-11-22T19:51:50.670192+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 660,
+    "published_total": 661,
     "published_longform": 192,
-    "published_shorts": 468,
-    "public_total": 658,
+    "published_shorts": 469,
+    "public_total": 659,
     "queued_longform": 59,
-    "queued_shorts": 74,
+    "queued_shorts": 73,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": true
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 61,
+        "published_total": 62,
         "published_longform": 18,
-        "published_shorts": 43,
+        "published_shorts": 44,
         "thumbnail_pending": 5,
-        "public_total": 61,
+        "public_total": 62,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONCOLOSSIANS3V23",
-        "title": "Colossians 3:23-24 | When Your Work Feels Unnoticed #Shorts",
+        "id": "SHORT-PROVISIONJOEL2V25",
+        "title": "Pray This Joel 2:25-26 Prayer for Open Doors & Provision | Daily Provision Prayer #Shorts",
         "format": "short",
-        "youtube_video_id": "DbsOpRXr0G8",
-        "watch_url": "https://www.youtube.com/shorts/DbsOpRXr0G8",
+        "youtube_video_id": "LTHmaf5YBHE",
+        "watch_url": "https://www.youtube.com/shorts/LTHmaf5YBHE",
         "published_on": "2026-11-22",
-        "published_at": "2026-11-22T15:47:06Z"
+        "published_at": "2026-11-22T20:07:19Z"
       },
       "next_queued_longform": {
         "id": "0519",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionjoel2v25",
-        "scripture": "Joel 2:25-26",
+        "short": "short-provisionjohn6v11",
+        "scripture": "John 6:11-13",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONJOEL2V25",
+      "slug": "short-provisionjoel2v25-stewardship-prayer",
+      "file": "short-provisionjoel2v25-stewardship-prayer.md",
+      "title": "Pray This Joel 2:25-26 Prayer for Open Doors & Provision | Daily Provision Prayer #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T20:07:19Z",
+      "youtube_video_id": "LTHmaf5YBHE",
+      "watch_url": "https://www.youtube.com/shorts/LTHmaf5YBHE",
+      "youtu_be_url": "https://youtu.be/LTHmaf5YBHE",
+      "shorts_url": "https://www.youtube.com/shorts/LTHmaf5YBHE",
+      "studio_url": "https://studio.youtube.com/video/LTHmaf5YBHE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/LTHmaf5YBHE/hqdefault.jpg",
+      "thumb_text": "GOD WILL RESTORE \u00b7 THE YEARS OF LOSS",
+      "thumbnail_pending": false,
+      "duration_label": "56s",
+      "words": 639
+    },
     {
       "id": "SHORT-MIDDAYECCLESIASTES9V10",
       "slug": "short-middayecclesiastes9v10-midday-prayer",
@@ -17367,17 +17391,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisionjoel2v25",
-        "file": "0000-short-provisionjoel2v25.yml",
-        "companion_longform_id": "",
-        "scripture": "Joel 2:25-26",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionjohn6v11",
