@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T21:20:23Z",
+  "generated_at": "2026-11-22T21:38:14Z",
   "monitor_generated_at": "2026-11-22T19:51:50.670192+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 670,
-    "published_longform": 196,
-    "published_shorts": 474,
-    "public_total": 668,
-    "queued_longform": 55,
-    "queued_shorts": 68,
+    "published_total": 672,
+    "published_longform": 197,
+    "published_shorts": 475,
+    "public_total": 670,
+    "queued_longform": 54,
+    "queued_shorts": 67,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": true
@@ -101,33 +101,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 92,
-        "published_longform": 30,
-        "published_shorts": 62,
+        "published_total": 94,
+        "published_longform": 31,
+        "published_shorts": 63,
         "thumbnail_pending": 1,
-        "public_total": 91,
-        "queued_longform": 7,
+        "public_total": 93,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPROVERBS8V17",
-        "title": "Say This Proverbs 8:17 Prayer at Sunrise | The Stillness Before The Day #Shorts",
-        "format": "short",
-        "youtube_video_id": "5q6BRqSxN1Y",
-        "watch_url": "https://www.youtube.com/shorts/5q6BRqSxN1Y",
-        "published_on": "2026-11-22",
-        "published_at": "2026-11-22T15:39:40Z"
-      },
-      "next_queued_longform": {
         "id": "0074",
         "title": "Looking unto the Lord at Daybreak: Micah 7:7 | The Morning Altar",
-        "words": 2160,
+        "format": "longform",
+        "youtube_video_id": "auyRlnjVYZM",
+        "watch_url": "https://youtu.be/auyRlnjVYZM",
+        "published_on": "2026-11-22",
+        "published_at": "2026-11-22T21:37:24Z"
+      },
+      "next_queued_longform": {
+        "id": "0075",
+        "title": "Morning Prayer for a Day Dedicated to Christ: Colossians 3:17",
+        "words": 1078,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm3v5",
-        "scripture": "Psalm 3:5",
+        "short": "short-morningpsalm119v147",
+        "scripture": "Psalm 119:147",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0074",
+      "slug": "looking-unto-the-lord-at-daybreak-micah-7-7",
+      "file": "0074-looking-unto-the-lord-at-daybreak-micah-7-7.md",
+      "title": "Looking unto the Lord at Daybreak: Micah 7:7 | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T21:37:24Z",
+      "youtube_video_id": "auyRlnjVYZM",
+      "watch_url": "https://youtu.be/auyRlnjVYZM",
+      "youtu_be_url": "https://youtu.be/auyRlnjVYZM",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/auyRlnjVYZM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/auyRlnjVYZM/hqdefault.jpg",
+      "thumb_text": "MY GOD WILL HEAR",
+      "thumbnail_pending": false,
+      "duration_label": "~15 min",
+      "words": 2160
+    },
+    {
       "id": "0712",
       "slug": "peace-that-rules-when-hearts-are-troubled-colossians-3-15-17",
       "file": "0712-peace-that-rules-when-hearts-are-troubled-colossians-3-15-17.md",
@@ -916,6 +940,30 @@
       "thumbnail_pending": false,
       "duration_label": "52s",
       "words": 658
+    },
+    {
+      "id": "SHORT-MORNINGPSALM3V5",
+      "slug": "short-morningpsalm3v5-sunrise-prayer",
+      "file": "short-morningpsalm3v5-sunrise-prayer.md",
+      "title": "Say This Psalm 3:5 Prayer at Sunrise | Find Strength In The Stillness #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T20:01:26Z",
+      "youtube_video_id": "QjX4678A3Y4",
+      "watch_url": "https://www.youtube.com/shorts/QjX4678A3Y4",
+      "youtu_be_url": "https://youtu.be/QjX4678A3Y4",
+      "shorts_url": "https://www.youtube.com/shorts/QjX4678A3Y4",
+      "studio_url": "https://studio.youtube.com/video/QjX4678A3Y4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/QjX4678A3Y4/hqdefault.jpg",
+      "thumb_text": "FIND PEACE \u00b7 IN THE LIGHT",
+      "thumbnail_pending": false,
+      "duration_label": "47s",
+      "words": 613
     },
     {
       "id": "SHORT-PSALM85V8",
@@ -16837,19 +16885,6 @@
         "words": 1025
       },
       {
-        "id": "0074",
-        "slug": "looking-unto-the-lord-at-daybreak-micah-7-7",
-        "file": "0074-looking-unto-the-lord-at-daybreak-micah-7-7.md",
-        "title": "Looking unto the Lord at Daybreak: Micah 7:7 | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2160
-      },
-      {
         "id": "0075",
         "slug": "morning-prayer-for-a-day-dedicated-to-christ-colossians-317",
         "file": "0075-morning-prayer-for-a-day-dedicated-to-christ-colossians-317.md",
@@ -17522,17 +17557,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-morningpsalm3v5",
-        "file": "0000-short-morningpsalm3v5.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 3:5",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-provisionjohn6v11",

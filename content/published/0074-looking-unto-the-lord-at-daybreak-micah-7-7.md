@@ -2,7 +2,7 @@
 id: '0074'
 title: 'Looking unto the Lord at Daybreak: Micah 7:7 | The Morning Altar'
 slug: looking-unto-the-lord-at-daybreak-micah-7-7
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -73,6 +73,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-22"
+published_at: "2026-11-22T21:37:24Z"
+youtube_video_id: "auyRlnjVYZM"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The First Light and the Watchful Eye
