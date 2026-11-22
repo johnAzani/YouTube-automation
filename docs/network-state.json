@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T20:41:15Z",
+  "generated_at": "2026-11-22T20:50:21Z",
   "monitor_generated_at": "2026-11-22T19:51:50.670192+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 666,
-    "published_longform": 194,
-    "published_shorts": 472,
-    "public_total": 664,
-    "queued_longform": 57,
-    "queued_shorts": 70,
+    "published_total": 668,
+    "published_longform": 195,
+    "published_shorts": 473,
+    "public_total": 666,
+    "queued_longform": 56,
+    "queued_shorts": 69,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": true
@@ -33,33 +33,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 86,
-        "published_longform": 23,
-        "published_shorts": 63,
+        "published_total": 88,
+        "published_longform": 24,
+        "published_shorts": 64,
         "thumbnail_pending": 6,
-        "public_total": 85,
-        "queued_longform": 6,
+        "public_total": 87,
+        "queued_longform": 5,
         "queued_other": 5,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-NAHUM1V7",
-        "title": "Say This Nahum 1:7 Prayer Before You Sleep | Lay Down Your Burden Tonight #Shorts",
-        "format": "short",
-        "youtube_video_id": "RBSNUDXHi-U",
-        "watch_url": "https://www.youtube.com/shorts/RBSNUDXHi-U",
-        "published_on": "2026-11-22",
-        "published_at": "2026-11-22T15:38:47Z"
-      },
-      "next_queued_longform": {
         "id": "0031",
         "title": "Night Prayer When Dread Keeps You Awake: 2 Timothy 1:7",
-        "words": 880,
+        "format": "longform",
+        "youtube_video_id": "IhL8prNsgaU",
+        "watch_url": "https://youtu.be/IhL8prNsgaU",
+        "published_on": "2026-11-22",
+        "published_at": "2026-11-22T20:49:31Z"
+      },
+      "next_queued_longform": {
+        "id": "0032",
+        "title": "Bedtime Prayer to Let Go of Worry: 1 Peter 5:7 | The Secret Place",
+        "words": 875,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm85v8",
-        "scripture": "Psalm 85:8",
+        "short": "short-romans8v38",
+        "scripture": "Romans 8:38-39",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0031",
+      "slug": "2-timothy-1-7-power-love-and-a-sound-mind",
+      "file": "0031-2-timothy-1-7-power-love-and-a-sound-mind.md",
+      "title": "Night Prayer When Dread Keeps You Awake: 2 Timothy 1:7",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T20:49:31Z",
+      "youtube_video_id": "IhL8prNsgaU",
+      "watch_url": "https://youtu.be/IhL8prNsgaU",
+      "youtu_be_url": "https://youtu.be/IhL8prNsgaU",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/IhL8prNsgaU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/IhL8prNsgaU/hqdefault.jpg",
+      "thumb_text": "NO SPIRIT OF FEAR",
+      "thumbnail_pending": false,
+      "duration_label": "186m 39s",
+      "words": 880
+    },
+    {
       "id": "0416",
       "slug": "healing-when-the-body-is-weak-psalm-107-19-20-the-healing-balm",
       "file": "0416-healing-when-the-body-is-weak-psalm-107-19-20-the-healing-balm.md",
@@ -844,6 +868,30 @@
       "thumbnail_pending": false,
       "duration_label": "52s",
       "words": 658
+    },
+    {
+      "id": "SHORT-PSALM85V8",
+      "slug": "short-psalm85v8-pre-sleep-prayer",
+      "file": "short-psalm85v8-pre-sleep-prayer.md",
+      "title": "Say This Psalm 85:8 Prayer Before You Sleep | Rest In His Still Voice #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T20:01:23Z",
+      "youtube_video_id": "4XNw0nfZg9U",
+      "watch_url": "https://www.youtube.com/shorts/4XNw0nfZg9U",
+      "youtu_be_url": "https://youtu.be/4XNw0nfZg9U",
+      "shorts_url": "https://www.youtube.com/shorts/4XNw0nfZg9U",
+      "studio_url": "https://studio.youtube.com/video/4XNw0nfZg9U/edit",
+      "thumb_url": "https://i.ytimg.com/vi/4XNw0nfZg9U/hqdefault.jpg",
+      "thumb_text": "HE WILL \u00b7 SPEAK PEACE",
+      "thumbnail_pending": false,
+      "duration_label": "49s",
+      "words": 614
     },
     {
       "id": "SHORT-MIDDAYECCLESIASTES9V10",
@@ -16689,19 +16737,6 @@
   "queues": {
     "longform": [
       {
-        "id": "0031",
-        "slug": "2-timothy-1-7-power-love-and-a-sound-mind",
-        "file": "0031-2-timothy-1-7-power-love-and-a-sound-mind.md",
-        "title": "Night Prayer When Dread Keeps You Awake: 2 Timothy 1:7",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 880
-      },
-      {
         "id": "0032",
         "slug": "1-peter-5-6-7-casting-all-your-care-upon-him",
         "file": "0032-1-peter-5-6-7-casting-all-your-care-upon-him.md",
@@ -17485,17 +17520,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-psalm85v8",
-        "file": "0000-short-psalm85v8.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 85:8",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-romans8v38",

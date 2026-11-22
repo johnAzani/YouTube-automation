@@ -2,7 +2,7 @@
 id: '0031'
 title: "Night Prayer When Dread Keeps You Awake: 2 Timothy 1:7"
 slug: 2-timothy-1-7-power-love-and-a-sound-mind
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -85,6 +85,16 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this 2 Timothy 1:7 KJV night prayer before sleep to rebuke nighttime fear and rest in God's power, love, and sound mind.
 category_id: '22'
+published_on: "2026-11-22"
+published_at: "2026-11-22T20:49:31Z"
+youtube_video_id: "IhL8prNsgaU"
+metadata_revision: "selar-seo-v1"
+prayer_seconds: 398.5
+duration_seconds: 11198.9
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — For God Hath Not Given Us the Spirit of Fear (Verse 7a)
