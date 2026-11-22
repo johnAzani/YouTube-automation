@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T11:59:23Z",
+  "generated_at": "2026-11-22T12:56:34Z",
   "monitor_generated_at": "2026-11-22T11:42:28.969000+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 642,
-    "published_longform": 188,
-    "published_shorts": 454,
-    "public_total": 640,
-    "queued_longform": 59,
-    "queued_shorts": 78,
+    "published_total": 644,
+    "published_longform": 189,
+    "published_shorts": 455,
+    "public_total": 642,
+    "queued_longform": 58,
+    "queued_shorts": 77,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -441,33 +441,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 58,
-        "published_longform": 17,
-        "published_shorts": 41,
+        "published_total": 60,
+        "published_longform": 18,
+        "published_shorts": 42,
         "thumbnail_pending": 4,
-        "public_total": 58,
-        "queued_longform": 6,
+        "public_total": 60,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPROVERBS11V24",
-        "title": "Pray This Proverbs 11:24-25 Prayer for Open Doors & Provision | Daily Stewardship #Shorts",
-        "format": "short",
-        "youtube_video_id": "PPR77wmq7vk",
-        "watch_url": "https://www.youtube.com/shorts/PPR77wmq7vk",
-        "published_on": "2026-11-22",
-        "published_at": "2026-11-22T00:00:41Z"
-      },
-      "next_queued_longform": {
         "id": "0518",
         "title": "Honest Labor Crowned With Favour: Proverbs 22:29 | The Provision Table",
-        "words": 1210,
+        "format": "longform",
+        "youtube_video_id": "GHfg2dTZ1d4",
+        "watch_url": "https://youtu.be/GHfg2dTZ1d4",
+        "published_on": "2026-11-22",
+        "published_at": "2026-11-22T12:55:44Z"
+      },
+      "next_queued_longform": {
+        "id": "0519",
+        "title": "Crowning Your Labor With Goodness: Psalm 65:11 | The Provision Table",
+        "words": 1149,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisiondeuteronomy2v7",
-        "scripture": "Deuteronomy 2:7",
+        "short": "short-provisionjoel2v25",
+        "scripture": "Joel 2:25-26",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,54 @@
     }
   ],
   "videos": [
+    {
+      "id": "0518",
+      "slug": "when-diligent-hands-find-favour-proverbs-22-29",
+      "file": "0518-when-diligent-hands-find-favour-proverbs-22-29.md",
+      "title": "Honest Labor Crowned With Favour: Proverbs 22:29 | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T12:55:44Z",
+      "youtube_video_id": "GHfg2dTZ1d4",
+      "watch_url": "https://youtu.be/GHfg2dTZ1d4",
+      "youtu_be_url": "https://youtu.be/GHfg2dTZ1d4",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/GHfg2dTZ1d4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/GHfg2dTZ1d4/hqdefault.jpg",
+      "thumb_text": "DILIGENT HANDS",
+      "thumbnail_pending": false,
+      "duration_label": "~8 min",
+      "words": 1210
+    },
+    {
+      "id": "SHORT-PROVISIONDEUTERONOMY2V7",
+      "slug": "short-provisiondeuteronomy2v7-stewardship-prayer",
+      "file": "short-provisiondeuteronomy2v7-stewardship-prayer.md",
+      "title": "Pray This Deuteronomy 2:7 Prayer for Open Doors & Provision | Hear His Promise Today #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T11:58:46Z",
+      "youtube_video_id": "-mbl1-YBgPQ",
+      "watch_url": "https://www.youtube.com/shorts/-mbl1-YBgPQ",
+      "youtu_be_url": "https://youtu.be/-mbl1-YBgPQ",
+      "shorts_url": "https://www.youtube.com/shorts/-mbl1-YBgPQ",
+      "studio_url": "https://studio.youtube.com/video/-mbl1-YBgPQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/-mbl1-YBgPQ/hqdefault.jpg",
+      "thumb_text": "GOD SEES YOUR \u00b7 QUIET LABOR IN",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 641
+    },
     {
       "id": "SHORT-SHIELDJUDE1V24",
       "slug": "short-shieldjude1v24-protection-prayer",
@@ -16568,19 +16616,6 @@
         "words": 1098
       },
       {
-        "id": "0518",
-        "slug": "when-diligent-hands-find-favour-proverbs-22-29",
-        "file": "0518-when-diligent-hands-find-favour-proverbs-22-29.md",
-        "title": "Honest Labor Crowned With Favour: Proverbs 22:29 | The Provision Table",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1210
-      },
-      {
         "id": "0519",
         "slug": "when-you-need-god-to-crown-your-year-psalm-6511",
         "file": "0519-when-you-need-god-to-crown-your-year-psalm-6511.md",
@@ -16979,17 +17014,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-provisiondeuteronomy2v7",
-        "file": "0000-short-provisiondeuteronomy2v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Deuteronomy 2:7",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionjoel2v25",
