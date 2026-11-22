@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T11:51:15Z",
+  "generated_at": "2026-11-22T11:57:24Z",
   "monitor_generated_at": "2026-11-22T11:42:28.969000+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 639,
+    "published_total": 640,
     "published_longform": 188,
-    "published_shorts": 451,
-    "public_total": 637,
+    "published_shorts": 452,
+    "public_total": 638,
     "queued_longform": 59,
-    "queued_shorts": 83,
+    "queued_shorts": 81,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 49,
+        "published_total": 50,
         "published_longform": 12,
-        "published_shorts": 37,
-        "thumbnail_pending": 49,
-        "public_total": 49,
+        "published_shorts": 38,
+        "thumbnail_pending": 50,
+        "public_total": 50,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM86V12",
-        "title": "Pray This Psalm 86:12 Prayer of Thanksgiving | Whole Heart #Shorts",
+        "id": "SHORT-GARDEN1CHRONICLES16V8",
+        "title": "Pray This 1 Chronicles 16:8-10 Prayer of Thanksgiving | When Quiet Rooms Feel Heavy #Shorts",
         "format": "short",
-        "youtube_video_id": "ZDRq0pILd6w",
-        "watch_url": "https://www.youtube.com/shorts/ZDRq0pILd6w",
+        "youtube_video_id": "iKANw8t7HsA",
+        "watch_url": "https://www.youtube.com/shorts/iKANw8t7HsA",
         "published_on": "2026-11-22",
-        "published_at": "2026-11-22T00:04:19Z"
+        "published_at": "2026-11-22T11:56:36Z"
       },
       "next_queued_longform": {
         "id": "0712",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-garden1chronicles16v8",
-        "scripture": "1 Chronicles 16:8-10",
+        "short": "short-gardenpsalm89v1",
+        "scripture": "Psalm 89:1",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDEN1CHRONICLES16V8",
+      "slug": "short-garden1chronicles16v8-thanksgiving-prayer",
+      "file": "short-garden1chronicles16v8-thanksgiving-prayer.md",
+      "title": "Pray This 1 Chronicles 16:8-10 Prayer of Thanksgiving | When Quiet Rooms Feel Heavy #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T11:56:36Z",
+      "youtube_video_id": "iKANw8t7HsA",
+      "watch_url": "https://www.youtube.com/shorts/iKANw8t7HsA",
+      "youtu_be_url": "https://youtu.be/iKANw8t7HsA",
+      "shorts_url": "https://www.youtube.com/shorts/iKANw8t7HsA",
+      "studio_url": "https://studio.youtube.com/video/iKANw8t7HsA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/iKANw8t7HsA/hqdefault.jpg",
+      "thumb_text": "WHEN THOUGHTS CROWD \u00b7 YOUR QUIET ROOM",
+      "thumbnail_pending": true,
+      "duration_label": "47s",
+      "words": 638
+    },
     {
       "id": "SHORT-EXODUS13V21",
       "slug": "short-exodus13v21-pre-sleep-prayer",
@@ -16821,17 +16845,6 @@
         "target_window_utc": "17:14"
       },
       {
-        "short": "short-garden1chronicles16v8",
-        "file": "0000-short-garden1chronicles16v8.yml",
-        "companion_longform_id": "",
-        "scripture": "1 Chronicles 16:8-10",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
         "short": "short-gardenpsalm89v1",
         "file": "0000-short-gardenpsalm89v1.yml",
         "companion_longform_id": "",
@@ -17639,17 +17652,6 @@
         "file": "0715-short-gardenpsalm9v1.yml",
         "companion_longform_id": "0715",
         "scripture": "Psalm 9:1-2",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-gardenisaiah12v2",
-        "file": "0718-short-gardenisaiah12v2.yml",
-        "companion_longform_id": "0718",
-        "scripture": "Isaiah 12:2-5",
         "channel": "prayer9",
         "channel_name": "The Praise Garden",
         "status": "approved",
