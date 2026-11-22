@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T15:39:25Z",
+  "generated_at": "2026-11-22T15:39:44Z",
   "monitor_generated_at": "2026-11-22T11:42:28.969000+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 647,
+    "published_total": 648,
     "published_longform": 190,
-    "published_shorts": 457,
-    "public_total": 645,
+    "published_shorts": 458,
+    "public_total": 646,
     "queued_longform": 61,
-    "queued_shorts": 88,
+    "queued_shorts": 87,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 85,
+        "published_total": 86,
         "published_longform": 23,
-        "published_shorts": 62,
+        "published_shorts": 63,
         "thumbnail_pending": 6,
-        "public_total": 84,
+        "public_total": 85,
         "queued_longform": 6,
         "queued_other": 5,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-EXODUS13V21",
-        "title": "Say This Exodus 13:21 Prayer Before You Sleep | Your Dark Room Tonight #Shorts",
+        "id": "SHORT-NAHUM1V7",
+        "title": "Say This Nahum 1:7 Prayer Before You Sleep | Lay Down Your Burden Tonight #Shorts",
         "format": "short",
-        "youtube_video_id": "0c_aRqtIIQM",
-        "watch_url": "https://www.youtube.com/shorts/0c_aRqtIIQM",
+        "youtube_video_id": "RBSNUDXHi-U",
+        "watch_url": "https://www.youtube.com/shorts/RBSNUDXHi-U",
         "published_on": "2026-11-22",
-        "published_at": "2026-11-22T11:50:18Z"
+        "published_at": "2026-11-22T15:38:47Z"
       },
       "next_queued_longform": {
         "id": "0031",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-nahum1v7",
-        "scripture": "Nahum 1:7",
+        "short": "short-psalm85v8",
+        "scripture": "Psalm 85:8",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-NAHUM1V7",
+      "slug": "short-nahum1v7-pre-sleep-prayer",
+      "file": "short-nahum1v7-pre-sleep-prayer.md",
+      "title": "Say This Nahum 1:7 Prayer Before You Sleep | Lay Down Your Burden Tonight #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T15:38:47Z",
+      "youtube_video_id": "RBSNUDXHi-U",
+      "watch_url": "https://www.youtube.com/shorts/RBSNUDXHi-U",
+      "youtu_be_url": "https://youtu.be/RBSNUDXHi-U",
+      "shorts_url": "https://www.youtube.com/shorts/RBSNUDXHi-U",
+      "studio_url": "https://studio.youtube.com/video/RBSNUDXHi-U/edit",
+      "thumb_url": "https://i.ytimg.com/vi/RBSNUDXHi-U/hqdefault.jpg",
+      "thumb_text": "BEDTIME PRAYER \u00b7 NAHUM 1:7",
+      "thumbnail_pending": false,
+      "duration_label": "49s",
+      "words": 610
+    },
     {
       "id": "SHORT-MIDNIGHTMATTHEW26V40",
       "slug": "short-midnightmatthew26v40-midnight-prayer",
@@ -17169,17 +17193,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-nahum1v7",
-        "file": "0000-short-nahum1v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Nahum 1:7",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-provisioncolossians3v23",
