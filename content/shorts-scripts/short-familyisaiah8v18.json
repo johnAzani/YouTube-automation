@@ -1,0 +1,390 @@
+{
+  "key": "short-familyisaiah8v18",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "SIGNS AND WONDERS",
+    "OVER YOUR CHILDREN"
+  ],
+  "poster": [
+    "YOUR CHILDREN",
+    "ARE SET APART",
+    "ISAIAH 8:18",
+    "THE FAMILY ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "dimly lit hallway outside bedroom open bible on wooden table warm glow",
+    "cozy living room window night peaceful countryside lantern light",
+    "vintage bible open on rustic table warm lamp light olive branch",
+    "sunlight filtering through quiet forest trees golden hour peaceful",
+    "warm glowing window of family home twilight soft lighting",
+    "open bible on wooden porch table overlooking peaceful mountain valley",
+    "calm lake reflection dusk serene trees peaceful home light",
+    "warm illuminated pathway wooden fence quiet countryside evening",
+    "peaceful warm cottage window night stars soft golden light"
+  ],
+  "scenes": [
+    {
+      "a": "Your children are quiet in their beds.",
+      "img": "short-familyisaiah8v18-scene-01.jpg",
+      "kicker": "QUIET BEDROOMS",
+      "sub": "YOUR CHILDREN ARE IN THEIR BEDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You wonder what world waits outside their door tomorrow.",
+      "img": "short-familyisaiah8v18-scene-02.jpg",
+      "kicker": "UNCERTAIN TOMORROWS",
+      "sub": "WONDERING WHAT WAITS OUTSIDE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Hear the word of the Lord from Isaiah:",
+      "img": "short-familyisaiah8v18-scene-03.jpg",
+      "kicker": "THE PROMISE",
+      "sub": "HEAR THE WORD OF THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Behold, I and the children whom the LORD hath given me are for signs and for wonders in Israel from the LORD of hosts, which dwelleth in mount Zion.",
+      "img": "short-familyisaiah8v18-scene-04.jpg",
+      "kicker": "SIGNS AND WONDERS",
+      "sub": "ISAIAH 8:18",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, cover our household tonight with Your peace.",
+      "img": "short-familyisaiah8v18-scene-05.jpg",
+      "kicker": "HOUSEHOLD PEACE",
+      "sub": "COVER OUR HOME WITH YOUR PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Set our children apart as living signs of Your grace and holy truth.",
+      "img": "short-familyisaiah8v18-scene-06.jpg",
+      "kicker": "LIVING SIGNS",
+      "sub": "SET APART FOR GRACE AND TRUTH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Where the world brings uncertainty, anchor their young hearts firmly in Your love.",
+      "img": "short-familyisaiah8v18-scene-07.jpg",
+      "kicker": "ANCHORED HEARTS",
+      "sub": "ANCHOR THEM FIRMLY IN YOUR LOVE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Shield their lives from harm and guide every step they take.",
+      "img": "short-familyisaiah8v18-scene-08.jpg",
+      "kicker": "GUIDE THEIR STEPS",
+      "sub": "SHIELD THEIR LIVES FROM HARM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Rest now, for your children are quiet in their beds.",
+      "img": "short-familyisaiah8v18-scene-09.jpg",
+      "kicker": "REST IN FAITH",
+      "sub": "YOUR HOUSEHOLD IS IN HIS HANDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your children are quiet in their beds."
+    ],
+    [
+      3,
+      8,
+      "You wonder what world waits outside their door tomorrow."
+    ],
+    [
+      8,
+      12,
+      "Hear the word of the Lord from Isaiah:"
+    ],
+    [
+      12,
+      24,
+      "Behold, I and the children whom the LORD hath given me are for signs and for wonders in Israel from the LORD of hosts, which dwelleth in mount Zion."
+    ],
+    [
+      24,
+      30,
+      "Heavenly Father, cover our household tonight with Your peace."
+    ],
+    [
+      30,
+      37,
+      "Set our children apart as living signs of Your grace and holy truth."
+    ],
+    [
+      37,
+      44,
+      "Where the world brings uncertainty, anchor their young hearts firmly in Your love."
+    ],
+    [
+      44,
+      50,
+      "Shield their lives from harm and guide every step they take."
+    ],
+    [
+      50,
+      56,
+      "Amen. Rest now, for your children are quiet in their beds."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR CHILDREN ARE",
+        "QUIET IN THEIR BEDS"
+      ],
+      [
+        "QUIET",
+        "BEDS"
+      ],
+      "ISAIAH 8 : 18"
+    ],
+    [
+      3,
+      8,
+      [
+        "WHAT WORLD WAITS",
+        "OUTSIDE THEIR DOOR"
+      ],
+      [
+        "WORLD",
+        "WAITS"
+      ],
+      "ISAIAH 8 : 18"
+    ],
+    [
+      8,
+      12,
+      [
+        "HEAR THE WORD",
+        "OF THE LORD"
+      ],
+      [
+        "WORD",
+        "LORD"
+      ],
+      "ISAIAH 8 : 18"
+    ],
+    [
+      12,
+      24,
+      [
+        "FOR SIGNS AND",
+        "FOR WONDERS"
+      ],
+      [
+        "SIGNS",
+        "WONDERS"
+      ],
+      "ISAIAH 8 : 18"
+    ],
+    [
+      24,
+      30,
+      [
+        "COVER OUR HOUSEHOLD",
+        "WITH YOUR PEACE"
+      ],
+      [
+        "COVER",
+        "PEACE"
+      ],
+      "ISAIAH 8 : 18"
+    ],
+    [
+      30,
+      37,
+      [
+        "SET OUR CHILDREN APART",
+        "AS LIVING SIGNS"
+      ],
+      [
+        "CHILDREN",
+        "SIGNS"
+      ],
+      "ISAIAH 8 : 18"
+    ],
+    [
+      37,
+      44,
+      [
+        "ANCHOR THEIR HEARTS",
+        "IN YOUR LOVE"
+      ],
+      [
+        "ANCHOR",
+        "LOVE"
+      ],
+      "ISAIAH 8 : 18"
+    ],
+    [
+      44,
+      50,
+      [
+        "SHIELD THEIR LIVES",
+        "AND GUIDE THEIR STEPS"
+      ],
+      [
+        "SHIELD",
+        "GUIDE"
+      ],
+      "ISAIAH 8 : 18"
+    ],
+    [
+      50,
+      56,
+      [
+        "REST NOW FOR",
+        "YOUR CHILDREN ARE QUIET"
+      ],
+      [
+        "REST",
+        "QUIET"
+      ],
+      "ISAIAH 8 : 18"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your children are quiet in their beds.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "BEDS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "You wonder what world waits outside their door tomorrow.",
+      "kind": "phrase",
+      "words": [
+        "WORLD",
+        "WAITS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the word of the Lord from Isaiah:",
+      "kind": "phrase",
+      "words": [
+        "WORD",
+        "LORD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Behold, I and the children whom the LORD hath given me are for signs and for wonders in Israel from the LORD of hosts, which dwelleth in mount Zion.",
+      "kind": "phrase",
+      "words": [
+        "SIGNS",
+        "WONDERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, cover our household tonight with Your peace.",
+      "kind": "phrase",
+      "words": [
+        "COVER",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Set our children apart as living signs of Your grace and holy truth.",
+      "kind": "phrase",
+      "words": [
+        "LIVING",
+        "SIGNS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Where the world brings uncertainty, anchor their young hearts firmly in Your love.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Shield their lives from harm and guide every step they take.",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "GUIDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Rest now, for your children are quiet in their beds.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "QUIET"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 8:18"
+}

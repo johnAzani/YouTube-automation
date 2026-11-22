@@ -1,0 +1,330 @@
+{
+  "key": "short-familymalachi4v6",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "SILENCE AT THE TABLE",
+    "PRAYER FOR HEALING HEARTS"
+  ],
+  "poster": [
+    "WHEN SILENCE FEELS HEAVY",
+    "MALACHI 4:6",
+    "RESTORE OUR HOME",
+    "THE FAMILY ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit wooden kitchen table empty morning light peaceful household",
+    "sunlight softly glowing through rustic living room window olive branch",
+    "open Bible on dark wooden table soft candlelight warm home ambiance",
+    "peaceful golden sunrise over countryside home quiet family farmland",
+    "cozy rustic fireplace flickering warmth peaceful home interior evening",
+    "warm vintage porch light evening quiet peaceful country cottage",
+    "calm twilight over peaceful rural house warm glowing windows"
+  ],
+  "scenes": [
+    {
+      "a": "Silence feels heavy at your kitchen table today.",
+      "img": "short-familymalachi4v6-scene-01.jpg",
+      "kicker": "HEAVY SILENCE",
+      "sub": "AT YOUR KITCHEN TABLE TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Remember that God sees every distance in your home.",
+      "img": "short-familymalachi4v6-scene-02.jpg",
+      "kicker": "HE SEES YOU",
+      "sub": "GOD SEES EVERY DISTANCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The prophet Malachi writes,",
+      "img": "short-familymalachi4v6-scene-03.jpg",
+      "kicker": "MALACHI 4:6",
+      "sub": "THE UNCHANGING WORD",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "And he shall turn the heart of the fathers to the children, and the heart of the children to their fathers, lest I come and smite the earth with a curse.",
+      "img": "short-familymalachi4v6-scene-04.jpg",
+      "kicker": "HEARTS TURNED",
+      "sub": "FATHERS AND CHILDREN RESTORED",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, where hard words or long quiet distance have grown between generations, soften our hearts today.",
+      "img": "short-familymalachi4v6-scene-05.jpg",
+      "kicker": "SOFTEN OUR HEARTS",
+      "sub": "BRIDGE THE GENERATIONS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Turn us back to one another in patience and gentle truth.",
+      "img": "short-familymalachi4v6-scene-06.jpg",
+      "kicker": "TURN US BACK",
+      "sub": "PATIENCE AND GENTLE TRUTH",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Heal what feels broken past mending, and fill every room of this household with Your steady grace. Amen. Silence feels heavy at your kitchen table today.",
+      "img": "short-familymalachi4v6-scene-07.jpg",
+      "kicker": "STEADY GRACE",
+      "sub": "COVER YOUR HOME IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Silence feels heavy at your kitchen table today."
+    ],
+    [
+      3,
+      7,
+      "Remember that God sees every distance in your home."
+    ],
+    [
+      7,
+      11,
+      "The prophet Malachi writes,"
+    ],
+    [
+      11,
+      21,
+      "And he shall turn the heart of the fathers to the children, and the heart of the children to their fathers, lest I come and smite the earth with a curse."
+    ],
+    [
+      21,
+      27,
+      "Lord, where hard words or long quiet distance have grown between generations, soften our hearts today."
+    ],
+    [
+      27,
+      33,
+      "Turn us back to one another in patience and gentle truth."
+    ],
+    [
+      33,
+      39,
+      "Heal what feels broken past mending, and fill every room of this household with Your steady grace."
+    ],
+    [
+      39,
+      44,
+      "Amen. Silence feels heavy at your kitchen table today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "SILENCE FEELS HEAVY AT",
+        "YOUR KITCHEN TABLE TODAY"
+      ],
+      [
+        "SILENCE",
+        "KITCHEN"
+      ],
+      "MALACHI 4:6"
+    ],
+    [
+      3,
+      7,
+      [
+        "REMEMBER THAT GOD SEES",
+        "EVERY DISTANCE IN YOUR HOME"
+      ],
+      [
+        "GOD",
+        "DISTANCE"
+      ],
+      "MALACHI 4:6"
+    ],
+    [
+      7,
+      11,
+      [
+        "THE PROPHET",
+        "MALACHI WRITES"
+      ],
+      [
+        "MALACHI"
+      ],
+      "MALACHI 4:6"
+    ],
+    [
+      11,
+      21,
+      [
+        "HE SHALL TURN THE HEART",
+        "OF THE FATHERS TO CHILDREN",
+        "AND CHILDREN TO FATHERS"
+      ],
+      [
+        "HEART",
+        "FATHERS",
+        "CHILDREN"
+      ],
+      "MALACHI 4:6"
+    ],
+    [
+      21,
+      27,
+      [
+        "LORD SOFTEN OUR HEARTS",
+        "WHERE DISTANCE HAS GROWN",
+        "BETWEEN GENERATIONS"
+      ],
+      [
+        "SOFTEN",
+        "HEARTS"
+      ],
+      "MALACHI 4:6"
+    ],
+    [
+      27,
+      33,
+      [
+        "TURN US BACK TO ONE ANOTHER",
+        "IN PATIENCE AND GENTLE TRUTH"
+      ],
+      [
+        "PATIENCE",
+        "TRUTH"
+      ],
+      "MALACHI 4:6"
+    ],
+    [
+      33,
+      39,
+      [
+        "HEAL WHAT FEELS BROKEN",
+        "FILL THIS HOUSEHOLD",
+        "WITH YOUR STEADY GRACE"
+      ],
+      [
+        "HEAL",
+        "GRACE"
+      ],
+      "MALACHI 4:6"
+    ],
+    [
+      39,
+      44,
+      [
+        "AMEN SILENCE FEELS HEAVY",
+        "AT YOUR KITCHEN TABLE TODAY"
+      ],
+      [
+        "SILENCE",
+        "TABLE"
+      ],
+      "MALACHI 4:6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Silence feels heavy at your kitchen table today.",
+      "kind": "phrase",
+      "words": [
+        "SILENCE",
+        "KITCHEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Remember that God sees every distance in your home.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "DISTANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The prophet Malachi writes,",
+      "kind": "phrase",
+      "words": [
+        "MALACHI"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And he shall turn the heart of the fathers to the children, and the heart of the children to their fathers, lest I come and smite the earth with a curse.",
+      "kind": "phrase",
+      "words": [
+        "FATHERS",
+        "CHILDREN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, where hard words or long quiet distance have grown between generations, soften our hearts today.",
+      "kind": "phrase",
+      "words": [
+        "SOFTEN",
+        "HEARTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Turn us back to one another in patience and gentle truth.",
+      "kind": "phrase",
+      "words": [
+        "PATIENCE",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heal what feels broken past mending, and fill every room of this household with Your steady grace. Amen. Silence feels heavy at your kitchen table today.",
+      "kind": "phrase",
+      "words": [
+        "HEAL",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Malachi 4:6"
+}
