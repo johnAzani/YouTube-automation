@@ -1,0 +1,368 @@
+{
+  "key": "short-midnightcolossians4v2",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "WHEN THOUGHTS KEEP YOU",
+    "AWAKE AT MIDNIGHT"
+  ],
+  "poster": [
+    "CONTINUE IN PRAYER",
+    "WATCH WITH THANKSGIVING",
+    "MIDNIGHT PRAYER",
+    "COLOSSIANS 4:2"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "calm midnight watchtower starry sky",
+    "dim candle lit sanctuary dark night",
+    "ancient open bible illuminated warm light",
+    "deep night sky milky way mountains silhouette",
+    "silent lamp lit room midnight window reflection",
+    "peaceful night lake reflecting stars landscape",
+    "quiet midnight sanctuary interior candle glow"
+  ],
+  "scenes": [
+    {
+      "a": "That restless thought still keeps you awake.",
+      "img": "short-midnightcolossians4v2-scene-01.jpg",
+      "kicker": "STILL AWAKE",
+      "sub": "THE THOUGHT THAT WON'T REST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You have prayed through the evening, yet your heart remains fully alert.",
+      "img": "short-midnightcolossians4v2-scene-02.jpg",
+      "kicker": "WATCHFUL HEART",
+      "sub": "STILL ALERT IN THE SILENT HOUR",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Scripture reminds us in Colossians 4:2: Continue in prayer, and watch in the same with thanksgiving;",
+      "img": "short-midnightcolossians4v2-scene-03.jpg",
+      "kicker": "COLOSSIANS 4:2",
+      "sub": "CONTINUE IN PRAYER AND WATCH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, in this quiet midnight hour, we bring our watchful hearts to You.",
+      "img": "short-midnightcolossians4v2-scene-04.jpg",
+      "kicker": "MIDNIGHT WATCH",
+      "sub": "BRINGING OUR HEARTS TO GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "We choose to stay alert, not in lingering fear, but with grateful hearts.",
+      "img": "short-midnightcolossians4v2-scene-05.jpg",
+      "kicker": "WITH THANKSGIVING",
+      "sub": "CHOOSING PEACE OVER FEAR",
+      "cam": "push_in",
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    {
+      "a": "Keep our eyes fixed on Your holy presence when sleep feels far away tonight.",
+      "img": "short-midnightcolossians4v2-scene-06.jpg",
+      "kicker": "HIS PRESENCE",
+      "sub": "WHEN SLEEP FEELS FAR AWAY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Grant us grace to remain steadfast in this silent vigil. Fill this dark room with Your steady, enduring peace. Amen. That restless thought still keeps you awake.",
+      "img": "short-midnightcolossians4v2-scene-07.jpg",
+      "kicker": "STEADY PEACE",
+      "sub": "AN ENDURING REST TONIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That restless thought still keeps you awake."
+    ],
+    [
+      3,
+      8,
+      "You have prayed through the evening, yet your heart remains fully alert."
+    ],
+    [
+      8,
+      14,
+      "Scripture reminds us in Colossians 4:2: Continue in prayer, and watch in the same with thanksgiving;"
+    ],
+    [
+      14,
+      20,
+      "Lord, in this quiet midnight hour, we bring our watchful hearts to You."
+    ],
+    [
+      20,
+      26,
+      "We choose to stay alert, not in lingering fear, but with grateful hearts."
+    ],
+    [
+      26,
+      31,
+      "Keep our eyes fixed on Your holy presence when sleep feels far away tonight."
+    ],
+    [
+      31,
+      35,
+      "Grant us grace to remain steadfast in this silent vigil."
+    ],
+    [
+      35,
+      38,
+      "Fill this dark room with Your steady, enduring peace."
+    ],
+    [
+      38,
+      42,
+      "Amen. That restless thought still keeps you awake."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT RESTLESS THOUGHT",
+        "STILL KEEPS YOU AWAKE"
+      ],
+      [
+        "RESTLESS",
+        "AWAKE"
+      ],
+      "COLOSSIANS 4 : 2"
+    ],
+    [
+      3,
+      8,
+      [
+        "YOU HAVE PRAYED THROUGH",
+        "THE EVENING YET YOUR HEART",
+        "REMAINS FULLY ALERT"
+      ],
+      [
+        "ALERT",
+        "HEART"
+      ],
+      "COLOSSIANS 4 : 2"
+    ],
+    [
+      8,
+      14,
+      [
+        "CONTINUE IN PRAYER",
+        "AND WATCH IN THE SAME",
+        "WITH THANKSGIVING"
+      ],
+      [
+        "PRAYER",
+        "WATCH",
+        "THANKSGIVING"
+      ],
+      "COLOSSIANS 4 : 2"
+    ],
+    [
+      14,
+      20,
+      [
+        "LORD IN THIS QUIET",
+        "MIDNIGHT HOUR WE BRING OUR",
+        "WATCHFUL HEARTS TO YOU"
+      ],
+      [
+        "MIDNIGHT",
+        "HEARTS"
+      ],
+      "COLOSSIANS 4 : 2"
+    ],
+    [
+      20,
+      26,
+      [
+        "WE CHOOSE TO STAY ALERT",
+        "NOT IN LINGERING FEAR",
+        "BUT WITH GRATEFUL HEARTS"
+      ],
+      [
+        "GRATEFUL",
+        "ALERT"
+      ],
+      "COLOSSIANS 4 : 2"
+    ],
+    [
+      26,
+      31,
+      [
+        "KEEP OUR EYES FIXED",
+        "ON YOUR HOLY PRESENCE",
+        "WHEN SLEEP FEELS FAR AWAY"
+      ],
+      [
+        "PRESENCE",
+        "FIXED"
+      ],
+      "COLOSSIANS 4 : 2"
+    ],
+    [
+      31,
+      35,
+      [
+        "GRANT US GRACE TO REMAIN",
+        "STEADFAST IN THIS SILENT VIGIL"
+      ],
+      [
+        "STEADFAST",
+        "VIGIL"
+      ],
+      "COLOSSIANS 4 : 2"
+    ],
+    [
+      35,
+      38,
+      [
+        "FILL THIS DARK ROOM WITH",
+        "YOUR STEADY ENDURING PEACE"
+      ],
+      [
+        "PEACE",
+        "STEADY"
+      ],
+      "COLOSSIANS 4 : 2"
+    ],
+    [
+      38,
+      42,
+      [
+        "AMEN THAT RESTLESS THOUGHT",
+        "STILL KEEPS YOU AWAKE"
+      ],
+      [
+        "AMEN",
+        "AWAKE"
+      ],
+      "COLOSSIANS 4 : 2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That restless thought still keeps you awake.",
+      "kind": "phrase",
+      "words": [
+        "RESTLESS",
+        "AWAKE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You have prayed through the evening, yet your heart remains fully alert.",
+      "kind": "phrase",
+      "words": [
+        "HEART",
+        "ALERT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Continue in prayer, and watch in the same with thanksgiving;",
+      "kind": "phrase",
+      "words": [
+        "PRAYER",
+        "WATCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, in this quiet midnight hour, we bring our watchful hearts to You.",
+      "kind": "phrase",
+      "words": [
+        "MIDNIGHT",
+        "HEARTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We choose to stay alert, not in lingering fear, but with grateful hearts.",
+      "kind": "phrase",
+      "words": [
+        "GRATEFUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Keep our eyes fixed on Your holy presence when sleep feels far away tonight.",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us grace to remain steadfast in this silent vigil.",
+      "kind": "phrase",
+      "words": [
+        "STEADFAST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Fill this dark room with Your steady, enduring peace.",
+      "kind": "phrase",
+      "words": [
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. That restless thought still keeps you awake.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "AWAKE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Colossians 4:2"
+}
