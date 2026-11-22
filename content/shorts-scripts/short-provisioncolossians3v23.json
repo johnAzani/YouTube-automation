@@ -1,0 +1,354 @@
+{
+  "key": "short-provisioncolossians3v23",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "WORK DONE UNTO GOD",
+    "DAILY PROVISION PRAYER"
+  ],
+  "poster": [
+    "COLOSSIANS 3:23-24",
+    "WHEN YOUR WORK FEELS UNSEEN",
+    "DAILY PROVISION PRAYER",
+    "THE PROVISION TABLE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit wooden table quiet morning sunlight",
+    "peaceful golden mountain valley sunrise",
+    "calm mountain pass bathed in golden sunlight",
+    "sunlit stone sanctuary table warm light",
+    "quiet peaceful river running through golden forest",
+    "sunlit mountain meadow soft morning fog",
+    "open sunlit valley road golden morning glow",
+    "calm sunrise over quiet golden mountain lake"
+  ],
+  "scenes": [
+    {
+      "a": "Your quiet labor feels completely forgotten today.",
+      "img": "short-provisioncolossians3v23-scene-01.jpg",
+      "kicker": "UNSEEN LABOR",
+      "sub": "WHEN YOUR WORK FEELS UNNOTICED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear the word of God for your hands:",
+      "img": "short-provisioncolossians3v23-scene-02.jpg",
+      "kicker": "THE WORD OF GOD",
+      "sub": "A PROMISE FOR YOUR DAILY EFFORT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And whatsoever ye do, do it heartily, as to the Lord, and not unto men;",
+      "img": "short-provisioncolossians3v23-scene-03.jpg",
+      "kicker": "COLOSSIANS 3:23",
+      "sub": "DO IT HEARTILY UNTO THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Knowing that of the Lord ye shall receive the reward of the inheritance: for ye serve the Lord Christ.",
+      "img": "short-provisioncolossians3v23-scene-04.jpg",
+      "kicker": "COLOSSIANS 3:24",
+      "sub": "YE SERVE THE LORD CHRIST",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, when our daily effort feels unseen or unappreciated by men, turn our eyes unto you.",
+      "img": "short-provisioncolossians3v23-scene-05.jpg",
+      "kicker": "PRAYER FOR WORK",
+      "sub": "LIFTING OUR EYES UNTO GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant us fresh strength to perform every small duty with joy and quiet faithfulness.",
+      "img": "short-provisioncolossians3v23-scene-06.jpg",
+      "kicker": "FRESH STRENGTH",
+      "sub": "FAITHFUL IN EVERY SMALL DUTY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Open wide your doors of daily provision as we yield our decisions and work into your care.",
+      "img": "short-provisioncolossians3v23-scene-07.jpg",
+      "kicker": "OPEN DOORS",
+      "sub": "GOD'S DAILY PROVISION FOR YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen, for your quiet labor is never forgotten.",
+      "img": "short-provisioncolossians3v23-scene-08.jpg",
+      "kicker": "NEVER FORGOTTEN",
+      "sub": "YOUR WORK IS SEEN BY GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your quiet labor feels completely forgotten today."
+    ],
+    [
+      3,
+      6,
+      "Hear the word of God for your hands:"
+    ],
+    [
+      6,
+      12,
+      "And whatsoever ye do, do it heartily, as to the Lord, and not unto men;"
+    ],
+    [
+      12,
+      19,
+      "Knowing that of the Lord ye shall receive the reward of the inheritance: for ye serve the Lord Christ."
+    ],
+    [
+      19,
+      25,
+      "Heavenly Father, when our daily effort feels unseen or unappreciated by men, turn our eyes unto you."
+    ],
+    [
+      25,
+      30,
+      "Grant us fresh strength to perform every small duty with joy and quiet faithfulness."
+    ],
+    [
+      30,
+      36,
+      "Open wide your doors of daily provision as we yield our decisions and work into your care."
+    ],
+    [
+      36,
+      40,
+      "Amen, for your quiet labor is never forgotten."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR QUIET LABOR",
+        "FEELS FORGOTTEN TODAY"
+      ],
+      [
+        "QUIET",
+        "LABOR"
+      ],
+      "COLOSSIANS 3 : 23 - 24"
+    ],
+    [
+      3,
+      6,
+      [
+        "HEAR THE WORD OF GOD",
+        "FOR YOUR HANDS TODAY"
+      ],
+      [
+        "WORD",
+        "GOD"
+      ],
+      "COLOSSIANS 3 : 23 - 24"
+    ],
+    [
+      6,
+      12,
+      [
+        "WHATSOEVER YE DO",
+        "DO IT HEARTILY AS TO LORD",
+        "AND NOT UNTO MEN"
+      ],
+      [
+        "HEARTILY",
+        "LORD"
+      ],
+      "COLOSSIANS 3 : 23"
+    ],
+    [
+      12,
+      19,
+      [
+        "KNOWING THAT OF THE LORD",
+        "YE SHALL RECEIVE REWARD",
+        "FOR YE SERVE LORD CHRIST"
+      ],
+      [
+        "REWARD",
+        "INHERITANCE"
+      ],
+      "COLOSSIANS 3 : 24"
+    ],
+    [
+      19,
+      25,
+      [
+        "WHEN DAILY EFFORT FEELS UNSEEN",
+        "TURN OUR EYES UNTO YOU"
+      ],
+      [
+        "UNSEEN",
+        "EYES"
+      ],
+      "COLOSSIANS 3 : 23 - 24"
+    ],
+    [
+      25,
+      30,
+      [
+        "GRANT US FRESH STRENGTH",
+        "PERFORM EVERY DUTY WITH JOY",
+        "AND QUIET FAITHFULNESS"
+      ],
+      [
+        "FRESH",
+        "STRENGTH"
+      ],
+      "COLOSSIANS 3 : 23 - 24"
+    ],
+    [
+      30,
+      36,
+      [
+        "OPEN WIDE YOUR DOORS",
+        "OF DAILY PROVISION AS WE YIELD",
+        "OUR WORK INTO YOUR CARE"
+      ],
+      [
+        "OPEN",
+        "DOORS"
+      ],
+      "COLOSSIANS 3 : 23 - 24"
+    ],
+    [
+      36,
+      40,
+      [
+        "AMEN FOR YOUR QUIET LABOR",
+        "IS NEVER FORGOTTEN"
+      ],
+      [
+        "QUIET",
+        "LABOR"
+      ],
+      "COLOSSIANS 3 : 23 - 24"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your quiet labor feels completely forgotten today.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "LABOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the word of God for your hands:",
+      "kind": "phrase",
+      "words": [
+        "WORD",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And whatsoever ye do, do it heartily, as to the Lord, and not unto men;",
+      "kind": "phrase",
+      "words": [
+        "HEARTILY",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Knowing that of the Lord ye shall receive the reward of the inheritance: for ye serve the Lord Christ.",
+      "kind": "phrase",
+      "words": [
+        "REWARD",
+        "INHERITANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, when our daily effort feels unseen or unappreciated by men, turn our eyes unto you.",
+      "kind": "phrase",
+      "words": [
+        "UNSEEN",
+        "EYES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us fresh strength to perform every small duty with joy and quiet faithfulness.",
+      "kind": "phrase",
+      "words": [
+        "FRESH",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Open wide your doors of daily provision as we yield our decisions and work into your care.",
+      "kind": "phrase",
+      "words": [
+        "OPEN",
+        "DOORS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen, for your quiet labor is never forgotten.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "LABOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Colossians 3:23-24"
+}
