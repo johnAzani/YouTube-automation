@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T11:57:50Z",
+  "generated_at": "2026-11-22T11:59:23Z",
   "monitor_generated_at": "2026-11-22T11:42:28.969000+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 641,
+    "published_total": 642,
     "published_longform": 188,
-    "published_shorts": 453,
-    "public_total": 639,
+    "published_shorts": 454,
+    "public_total": 640,
     "queued_longform": 59,
-    "queued_shorts": 80,
+    "queued_shorts": 78,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 51,
+        "published_total": 52,
         "published_longform": 15,
-        "published_shorts": 36,
+        "published_shorts": 37,
         "thumbnail_pending": 50,
-        "public_total": 51,
+        "public_total": 52,
         "queued_longform": 6,
         "queued_other": 3,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0617",
-        "title": "When You Pass Through Deep Waters: Isaiah 43:2 | The Covenant Shield",
-        "format": "longform",
-        "youtube_video_id": "h0zC5kTzkdQ",
-        "watch_url": "https://youtu.be/h0zC5kTzkdQ",
+        "id": "SHORT-SHIELDJUDE1V24",
+        "title": "Pray This Jude 1:24-25 Prayer for Divine Protection | When The Road Feels Steep Today #Shorts",
+        "format": "short",
+        "youtube_video_id": "HgEI8O2xxNo",
+        "watch_url": "https://www.youtube.com/shorts/HgEI8O2xxNo",
         "published_on": "2026-11-22",
-        "published_at": "2026-11-22T00:46:14Z"
+        "published_at": "2026-11-22T11:58:36Z"
       },
       "next_queued_longform": {
         "id": "0618",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldjude1v24",
-        "scripture": "Jude 1:24-25",
+        "short": "short-shieldnumbers6v24",
+        "scripture": "Numbers 6:24-26",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDJUDE1V24",
+      "slug": "short-shieldjude1v24-protection-prayer",
+      "file": "short-shieldjude1v24-protection-prayer.md",
+      "title": "Pray This Jude 1:24-25 Prayer for Divine Protection | When The Road Feels Steep Today #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T11:58:36Z",
+      "youtube_video_id": "HgEI8O2xxNo",
+      "watch_url": "https://www.youtube.com/shorts/HgEI8O2xxNo",
+      "youtu_be_url": "https://youtu.be/HgEI8O2xxNo",
+      "shorts_url": "https://www.youtube.com/shorts/HgEI8O2xxNo",
+      "studio_url": "https://studio.youtube.com/video/HgEI8O2xxNo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/HgEI8O2xxNo/hqdefault.jpg",
+      "thumb_text": "UNSTEADY STEPS \u00b7 GOD IS ABLE",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 630
+    },
     {
       "id": "SHORT-HEALING2CORINTHIANS12V9",
       "slug": "short-healing2corinthians12v9-restoration-prayer",
@@ -17012,17 +17036,6 @@
         "target_window_utc": "14:14"
       },
       {
-        "short": "short-shieldjude1v24",
-        "file": "0000-short-shieldjude1v24.yml",
-        "companion_longform_id": "",
-        "scripture": "Jude 1:24-25",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
-      },
-      {
         "short": "short-shieldnumbers6v24",
         "file": "0000-short-shieldnumbers6v24.yml",
         "companion_longform_id": "",
@@ -17588,17 +17601,6 @@
         "file": "0625-short-shieldexodus14v14.yml",
         "companion_longform_id": "0625",
         "scripture": "Exodus 14:14",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-shieldromans8v31",
-        "file": "0627-short-shieldromans8v31.yml",
-        "companion_longform_id": "0627",
-        "scripture": "Romans 8:31",
         "channel": "prayer8",
         "channel_name": "The Covenant Shield",
         "status": "approved",
