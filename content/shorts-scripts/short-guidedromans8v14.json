@@ -1,0 +1,330 @@
+{
+  "key": "short-guidedromans8v14",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "WHEN FACING A HARD CHOICE",
+    "LET HIS SPIRIT LEAD YOU"
+  ],
+  "poster": [
+    "LED BY THE SPIRIT",
+    "WISDOM FOR DECISIONS",
+    "ROMANS 8:14",
+    "THE GUIDED PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley at twilight calm fog",
+    "quiet mountain lake early morning reflection",
+    "sunlight streaming through forest trees mist",
+    "calm river flowing through quiet mountain valley",
+    "peaceful alpine meadow at sunrise soft light",
+    "misty mountain peak in dawn light peaceful",
+    "still waters river calm morning sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "You stand silent before a hard choice today.",
+      "img": "short-guidedromans8v14-scene-01.jpg",
+      "kicker": "HARD DECISIONS",
+      "sub": "STANDING AT A CROSSROADS TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Your own understanding feels limited, and the noise around you brings no clarity.",
+      "img": "short-guidedromans8v14-scene-02.jpg",
+      "kicker": "SEEKING CLARITY",
+      "sub": "WHEN HUMAN WISDOM FEELS LIMITED",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear the word of the Lord. For as many as are led by the Spirit of God, they are the sons of God.",
+      "img": "short-guidedromans8v14-scene-03.jpg",
+      "kicker": "ROMANS 8:14",
+      "sub": "LED BY THE SPIRIT OF GOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, we quiet our anxious minds and yield our steps to You.",
+      "img": "short-guidedromans8v14-scene-04.jpg",
+      "kicker": "YIELDING STEPS",
+      "sub": "BRINGING YOUR DECISION TO GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "When we are uncertain which path to choose, let Your Holy Spirit guide our thoughts.",
+      "img": "short-guidedromans8v14-scene-05.jpg",
+      "kicker": "DIVINE GUIDANCE",
+      "sub": "ASKING HIS SPIRIT TO DIRECT YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant us humble wisdom to surrender our own plans and follow Your gentle direction.",
+      "img": "short-guidedromans8v14-scene-06.jpg",
+      "kicker": "HUMBLE SURRENDER",
+      "sub": "FOLLOWING HIS GENTLE DIRECTION",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Remind us that as Your children, we are never left to guess our way alone. Amen. You stand silent before a hard choice.",
+      "img": "short-guidedromans8v14-scene-07.jpg",
+      "kicker": "HIS CHILDREN",
+      "sub": "NEVER WALKING ALONE IN DARKNESS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You stand silent before a hard choice today."
+    ],
+    [
+      3,
+      8,
+      "Your own understanding feels limited, and the noise around you brings no clarity."
+    ],
+    [
+      8,
+      15,
+      "Hear the word of the Lord. For as many as are led by the Spirit of God, they are the sons of God."
+    ],
+    [
+      15,
+      21,
+      "Lord, we quiet our anxious minds and yield our steps to You."
+    ],
+    [
+      21,
+      28,
+      "When we are uncertain which path to choose, let Your Holy Spirit guide our thoughts."
+    ],
+    [
+      28,
+      35,
+      "Grant us humble wisdom to surrender our own plans and follow Your gentle direction."
+    ],
+    [
+      35,
+      42,
+      "Remind us that as Your children, we are never left to guess our way alone. Amen. You stand silent before a hard choice."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU STAND SILENT BEFORE",
+        "A HARD CHOICE TODAY"
+      ],
+      [
+        "SILENT",
+        "HARD",
+        "CHOICE"
+      ],
+      "ROMANS 8 : 14"
+    ],
+    [
+      3,
+      8,
+      [
+        "YOUR OWN UNDERSTANDING FEELS LIMITED",
+        "AND THE NOISE AROUND YOU",
+        "BRINGS NO CLARITY"
+      ],
+      [
+        "LIMITED",
+        "NOISE",
+        "CLARITY"
+      ],
+      "ROMANS 8 : 14"
+    ],
+    [
+      8,
+      15,
+      [
+        "HEAR THE WORD OF THE LORD",
+        "FOR AS MANY AS ARE LED",
+        "BY THE SPIRIT OF GOD",
+        "THEY ARE THE SONS OF GOD"
+      ],
+      [
+        "LED",
+        "SPIRIT",
+        "SONS",
+        "GOD"
+      ],
+      "ROMANS 8 : 14"
+    ],
+    [
+      15,
+      21,
+      [
+        "LORD WE QUIET OUR ANXIOUS MINDS",
+        "AND YIELD OUR STEPS TO YOU"
+      ],
+      [
+        "QUIET",
+        "YIELD",
+        "STEPS"
+      ],
+      "ROMANS 8 : 14"
+    ],
+    [
+      21,
+      28,
+      [
+        "WHEN WE ARE UNCERTAIN WHICH PATH",
+        "TO CHOOSE LET YOUR HOLY SPIRIT",
+        "GUIDE OUR THOUGHTS"
+      ],
+      [
+        "UNCERTAIN",
+        "HOLY",
+        "SPIRIT",
+        "GUIDE"
+      ],
+      "ROMANS 8 : 14"
+    ],
+    [
+      28,
+      35,
+      [
+        "GRANT US HUMBLE WISDOM TO SURRENDER",
+        "OUR OWN PLANS AND FOLLOW YOUR",
+        "GENTLE DIRECTION"
+      ],
+      [
+        "HUMBLE",
+        "WISDOM",
+        "SURRENDER",
+        "DIRECTION"
+      ],
+      "ROMANS 8 : 14"
+    ],
+    [
+      35,
+      42,
+      [
+        "REMIND US THAT AS YOUR CHILDREN",
+        "WE ARE NEVER LEFT TO GUESS",
+        "OUR WAY ALONE AMEN",
+        "YOU STAND SILENT BEFORE A HARD CHOICE"
+      ],
+      [
+        "CHILDREN",
+        "NEVER",
+        "SILENT",
+        "CHOICE"
+      ],
+      "ROMANS 8 : 14"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You stand silent before a hard choice today.",
+      "kind": "phrase",
+      "words": [
+        "SILENT",
+        "CHOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your own understanding feels limited, and the noise around you brings no clarity.",
+      "kind": "phrase",
+      "words": [
+        "LIMITED",
+        "CLARITY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the word of the Lord. For as many as are led by the Spirit of God, they are the sons of God.",
+      "kind": "phrase",
+      "words": [
+        "LED",
+        "SPIRIT",
+        "SONS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we quiet our anxious minds and yield our steps to You.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "YIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When we are uncertain which path to choose, let Your Holy Spirit guide our thoughts.",
+      "kind": "phrase",
+      "words": [
+        "UNCERTAIN",
+        "GUIDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us humble wisdom to surrender our own plans and follow Your gentle direction.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "SURRENDER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Remind us that as Your children, we are never left to guess our way alone. Amen. You stand silent before a hard choice.",
+      "kind": "phrase",
+      "words": [
+        "CHILDREN",
+        "NEVER",
+        "SILENT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Romans 8:14"
+}
