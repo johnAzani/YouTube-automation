@@ -1,0 +1,318 @@
+{
+  "key": "short-familypsalm113v9",
+  "channel": "prayer5",
+  "psalm": 113,
+  "title": [
+    "JOY IN THE HOUSEHOLD",
+    "GOD RESTORES THE BARREN"
+  ],
+  "poster": [
+    "GOD'S PROMISE TO HOMES",
+    "A PRAYER FOR FRUITFULNESS",
+    "FINDING PEACE IN WAITING",
+    "HE MAKES THE HOUSE A HOME"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit table with open bible",
+    "olive branches on wooden table",
+    "soft morning sunlight in kitchen",
+    "peaceful countryside home garden",
+    "empty rocking chair near window",
+    "warm hearth with soft shadows",
+    "quiet home interior in golden hour"
+  ],
+  "scenes": [
+    {
+      "a": "The empty chair at your table",
+      "img": "short-familypsalm113v9-scene-01.jpg",
+      "kicker": "THE EMPTY CHAIR",
+      "sub": "WAITING FOR GOD'S PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He maketh the barren woman to keep house",
+      "img": "short-familypsalm113v9-scene-02.jpg",
+      "kicker": "HIS HOLY WORD",
+      "sub": "THE PROMISE OF FRUITFULNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "and to be a joyful mother of children",
+      "img": "short-familypsalm113v9-scene-03.jpg",
+      "kicker": "JOYFUL MOTHER",
+      "sub": "FINDING HOPE IN WAITING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Praise ye the LORD",
+      "img": "short-familypsalm113v9-scene-04.jpg",
+      "kicker": "PRAISE HIM",
+      "sub": "TRUSTING HIS TIMING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord please turn our barrenness",
+      "img": "short-familypsalm113v9-scene-05.jpg",
+      "kicker": "OUR PETITION",
+      "sub": "BRINGING OUR DESIRES TO GOD",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "into a season of fruitfulness",
+      "img": "short-familypsalm113v9-scene-06.jpg",
+      "kicker": "NEW FRUIT",
+      "sub": "RESTING IN FAITH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "The empty chair remains silent",
+      "img": "short-familypsalm113v9-scene-07.jpg",
+      "kicker": "STILL HERE",
+      "sub": "WAITING FOR GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The empty chair at your table."
+    ],
+    [
+      3,
+      14,
+      "He maketh the barren woman to keep house, and to be a joyful mother of children. Praise ye the LORD."
+    ],
+    [
+      14,
+      25,
+      "Lord please turn our barrenness into a season of fruitfulness and fill our home with your grace."
+    ],
+    [
+      25,
+      36,
+      "We trust your hand to grow what is sown in faith, even when the silence feels heavy."
+    ],
+    [
+      36,
+      45,
+      "Let our hearts be anchored in your promise as we wait for the life you provide."
+    ],
+    [
+      45,
+      55,
+      "We bring our household to you today, trusting that every good thing comes from your loving heart."
+    ],
+    [
+      55,
+      60,
+      "Amen. The empty chair remains silent."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE EMPTY CHAIR",
+        "AT YOUR TABLE"
+      ],
+      [
+        "EMPTY"
+      ],
+      "PSALM 113:9"
+    ],
+    [
+      3,
+      14,
+      [
+        "HE MAKETH THE BARREN",
+        "WOMAN TO KEEP HOUSE",
+        "AND TO BE A JOYFUL",
+        "MOTHER OF CHILDREN",
+        "PRAISE YE THE LORD"
+      ],
+      [
+        "JOYFUL"
+      ],
+      "PSALM 113:9"
+    ],
+    [
+      14,
+      25,
+      [
+        "LORD PLEASE TURN",
+        "OUR BARRENESS",
+        "INTO A SEASON",
+        "OF FRUITFULNESS"
+      ],
+      [
+        "FRUITFULNESS"
+      ],
+      "PSALM 113:9"
+    ],
+    [
+      25,
+      36,
+      [
+        "WE TRUST YOUR HAND",
+        "TO GROW WHAT IS SOWN",
+        "IN FAITH",
+        "EVEN WHEN THE SILENCE",
+        "FEELS HEAVY"
+      ],
+      [
+        "FAITH"
+      ],
+      "PSALM 113:9"
+    ],
+    [
+      36,
+      45,
+      [
+        "LET OUR HEARTS BE",
+        "ANCHORED IN YOUR PROMISE",
+        "AS WE WAIT",
+        "FOR THE LIFE",
+        "YOU PROVIDE"
+      ],
+      [
+        "ANCHORED"
+      ],
+      "PSALM 113:9"
+    ],
+    [
+      45,
+      55,
+      [
+        "WE BRING OUR HOUSEHOLD",
+        "TO YOU TODAY",
+        "TRUSTING THAT EVERY",
+        "GOOD THING COMES",
+        "FROM YOUR HEART"
+      ],
+      [
+        "HOUSEHOLD"
+      ],
+      "PSALM 113:9"
+    ],
+    [
+      55,
+      60,
+      [
+        "AMEN.",
+        "THE EMPTY CHAIR",
+        "REMAINS SILENT"
+      ],
+      [
+        "SILENT"
+      ],
+      "PSALM 113:9"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The empty chair at your table",
+      "kind": "phrase",
+      "words": [
+        "EMPTY",
+        "TABLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He maketh the barren woman to keep house",
+      "kind": "phrase",
+      "words": [
+        "BARREN",
+        "HOUSE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "and to be a joyful mother of children",
+      "kind": "phrase",
+      "words": [
+        "JOYFUL",
+        "MOTHER"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Praise ye the LORD",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "LORD"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Lord please turn our barrenness",
+      "kind": "phrase",
+      "words": [
+        "TURN",
+        "BARRENESS"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "into a season of fruitfulness",
+      "kind": "phrase",
+      "words": [
+        "SEASON",
+        "FRUITFULNESS"
+      ],
+      "hi": 5,
+      "slot": "C"
+    },
+    {
+      "a": "The empty chair remains silent",
+      "kind": "phrase",
+      "words": [
+        "EMPTY",
+        "SILENT"
+      ],
+      "hi": 6,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 113:9"
+}

@@ -1,0 +1,280 @@
+{
+  "key": "short-familypsalm147v13",
+  "channel": "prayer5",
+  "psalm": 147,
+  "title": [
+    "GOD GUARDS YOUR HOME",
+    "PSALM 147:13-14 PRAYER"
+  ],
+  "poster": [
+    "PEACE WITHIN YOUR WALLS",
+    "A PRAYER FOR YOUR HOME",
+    "STRENGTH AND PROTECTION",
+    "THE FAMILY ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "cozy rustic wooden doorway warm interior light night",
+    "warm dim lit hallway cozy home evening soft glowing lamp",
+    "open bible on wooden table warm candlelight olive branch",
+    "golden wheat field twilight serene countryside peaceful home",
+    "peaceful living room warm fireplace light evening quiet home",
+    "peaceful house glowing windows night calm night sky stars"
+  ],
+  "scenes": [
+    {
+      "a": "You locked the front door for your family.",
+      "img": "short-familypsalm147v13-scene-01.jpg",
+      "kicker": "LOCKED DOORS",
+      "sub": "SAFE INSIDE YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Yet your heart still wonders if they are safe inside.",
+      "img": "short-familypsalm147v13-scene-02.jpg",
+      "kicker": "QUIET WORRY",
+      "sub": "TRUSTING GOD WITH YOUR FAMILY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "God's Word promises in Psalm 147: For he hath strengthened the bars of thy gates; he hath blessed thy children within thee.",
+      "img": "short-familypsalm147v13-scene-03.jpg",
+      "kicker": "PSALM 147:13",
+      "sub": "HE BLESSES THY CHILDREN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He maketh peace in thy borders, and filleth thee with the finest of the wheat.",
+      "img": "short-familypsalm147v13-scene-04.jpg",
+      "kicker": "PSALM 147:14",
+      "sub": "PEACE WITHIN THY BORDERS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, guard our home and strengthen our doors against anxiety. Bless our children sleeping inside, fill our rooms with your lasting peace, and satisfy every daily need of this household.",
+      "img": "short-familypsalm147v13-scene-05.jpg",
+      "kicker": "HOUSEHOLD PRAYER",
+      "sub": "GOD GUARDS OUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We place our trust entirely in your faithful protection. Amen. Rest easy, knowing you locked the front door for your family.",
+      "img": "short-familypsalm147v13-scene-06.jpg",
+      "kicker": "FAITHFUL CARE",
+      "sub": "REST IN GODS PROTECTION",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You locked the front door for your family."
+    ],
+    [
+      3,
+      7,
+      "Yet your heart still wonders if they are safe inside."
+    ],
+    [
+      7,
+      15,
+      "God's Word promises in Psalm 147: For he hath strengthened the bars of thy gates; he hath blessed thy children within thee."
+    ],
+    [
+      15,
+      22,
+      "He maketh peace in thy borders, and filleth thee with the finest of the wheat."
+    ],
+    [
+      22,
+      30,
+      "Lord, guard our home and strengthen our doors against anxiety. Bless our children sleeping inside, fill our rooms with your lasting peace, and satisfy every daily need of this household."
+    ],
+    [
+      30,
+      38,
+      "We place our trust entirely in your faithful protection. Amen. Rest easy, knowing you locked the front door for your family."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU LOCKED THE FRONT DOOR",
+        "FOR YOUR FAMILY"
+      ],
+      [
+        "LOCKED",
+        "FAMILY"
+      ],
+      "THE FAMILY ALTAR"
+    ],
+    [
+      3,
+      7,
+      [
+        "YET YOUR HEART WONDERS",
+        "IF THEY ARE SAFE INSIDE"
+      ],
+      [
+        "HEART",
+        "SAFE"
+      ],
+      "THE FAMILY ALTAR"
+    ],
+    [
+      7,
+      15,
+      [
+        "HE HATH STRENGTHENED",
+        "THE BARS OF THY GATES",
+        "HE HATH BLESSED THY CHILDREN"
+      ],
+      [
+        "STRENGTHENED",
+        "BLESSED"
+      ],
+      "PSALM 147 : 13"
+    ],
+    [
+      15,
+      22,
+      [
+        "HE MAKETH PEACE",
+        "IN THY BORDERS",
+        "FINEST OF THE WHEAT"
+      ],
+      [
+        "PEACE",
+        "FINEST"
+      ],
+      "PSALM 147 : 14"
+    ],
+    [
+      22,
+      30,
+      [
+        "LORD GUARD OUR HOME",
+        "FILL OUR ROOMS WITH PEACE",
+        "SATISFY EVERY DAILY NEED"
+      ],
+      [
+        "GUARD",
+        "PEACE"
+      ],
+      "HOUSEHOLD PRAYER"
+    ],
+    [
+      30,
+      38,
+      [
+        "TRUST IN HIS PROTECTION",
+        "REST EASY TONIGHT",
+        "YOU LOCKED THE FRONT DOOR"
+      ],
+      [
+        "TRUST",
+        "PROTECTION"
+      ],
+      "THE FAMILY ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You locked the front door for your family.",
+      "kind": "phrase",
+      "words": [
+        "LOCKED",
+        "DOOR",
+        "FAMILY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Yet your heart still wonders if they are safe inside.",
+      "kind": "phrase",
+      "words": [
+        "HEART",
+        "SAFE",
+        "INSIDE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "For he hath strengthened the bars of thy gates; he hath blessed thy children within thee.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTHENED",
+        "GATES",
+        "BLESSED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He maketh peace in thy borders, and filleth thee with the finest of the wheat.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "BORDERS",
+        "FINEST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, guard our home and strengthen our doors against anxiety.",
+      "kind": "phrase",
+      "words": [
+        "GUARD",
+        "HOME",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We place our trust entirely in your faithful protection.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "FAITHFUL",
+        "PROTECTION"
+      ],
+      "hi": 2,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 147:13-14"
+}
