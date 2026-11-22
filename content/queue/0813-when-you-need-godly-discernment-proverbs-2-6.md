@@ -1,6 +1,6 @@
 ---
 id: 0813
-title: 'When You Need Godly Discernment: Proverbs 2:6 | The Guided Path'
+title: "Asking for Wisdom Before a Choice: Proverbs 2:6 | The Guided Path"
 slug: when-you-need-godly-discernment-proverbs-2-6
 status: approved
 channel: prayer10
@@ -74,6 +74,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When You Need Godly Discernment: Proverbs 2:6 | The Guided Path"
+queue_title_fixed_at: "2026-11-22"
 ---
 
 ## Scene 1 — Bringing the Decision to the Lord

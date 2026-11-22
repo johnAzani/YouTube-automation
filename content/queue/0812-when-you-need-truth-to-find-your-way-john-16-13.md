@@ -1,6 +1,6 @@
 ---
 id: 0812
-title: 'When You Need Truth to Find Your Way: John 16:13 | The Guided Path'
+title: "Discernment When Your Path Is Unclear: John 16:13 | The Guided Path"
 slug: when-you-need-truth-to-find-your-way-john-16-13
 status: approved
 channel: prayer10
@@ -74,6 +74,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When You Need Truth to Find Your Way: John 16:13 | The Guided Path"
+queue_title_fixed_at: "2026-11-22"
 ---
 
 ## Scene 1 — Bringing the Decision to the Lord
