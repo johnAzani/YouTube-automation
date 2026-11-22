@@ -1,0 +1,380 @@
+{
+  "key": "short-morningephesians5v14",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "AWAKE AND WALK IN LIGHT",
+    "A MORNING PRAYER ON EPHESIANS 5"
+  ],
+  "poster": [
+    "AWAKE THOU",
+    "THAT SLEEPEST",
+    "EPHESIANS 5:14-16",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "bedroom window morning sunlight light ray",
+    "golden sunrise shining across wooden floor morning",
+    "open bible on desk sunrise morning glow",
+    "dawn breaking over mist mountain valley sunrise",
+    "calm forest trail golden morning sun rays",
+    "fog lifting over serene lake sunrise calm",
+    "morning dew on green grass sun flare",
+    "sun breaking through clouds over horizon morning",
+    "bright morning sunlight over open field sky",
+    "peaceful morning horizon soft golden dawn"
+  ],
+  "scenes": [
+    {
+      "a": "You hit snooze hoping today might wait.",
+      "img": "short-morningephesians5v14-scene-01.jpg",
+      "kicker": "HEAVY SLUMBER",
+      "sub": "YOU HIT SNOOZE HOPING TODAY WAITS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Yet the morning sunlight already touches your floor.",
+      "img": "short-morningephesians5v14-scene-02.jpg",
+      "kicker": "SUNLIGHT TOUCHES",
+      "sub": "MORNING LIGHT REACHES YOUR FLOOR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Hear the word of the Lord:",
+      "img": "short-morningephesians5v14-scene-03.jpg",
+      "kicker": "EPHESIANS 5:14-16",
+      "sub": "HEAR THE WORD OF THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Wherefore he saith, Awake thou that sleepest, and arise from the dead, and Christ shall give thee light.",
+      "img": "short-morningephesians5v14-scene-04.jpg",
+      "kicker": "EPHESIANS 5:14",
+      "sub": "AWAKE THOU THAT SLEEPEST",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "See then that ye walk circumspectly, not as fools, but as wise, redeeming the time, because the days are evil.",
+      "img": "short-morningephesians5v14-scene-05.jpg",
+      "kicker": "EPHESIANS 5:15-16",
+      "sub": "WALK WISELY REDEEMING THE TIME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, shake the heavy slumber from our weary souls.",
+      "img": "short-morningephesians5v14-scene-06.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "SHAKE THE HEAVY SLUMBER FROM US",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Teach us to walk carefully today, choosing Your wisdom over quiet distraction.",
+      "img": "short-morningephesians5v14-scene-07.jpg",
+      "kicker": "WALK CAREFULLY",
+      "sub": "CHOOSE WISDOM OVER DISTRACTION",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Help us redeem every hour You give us with steady purpose.",
+      "img": "short-morningephesians5v14-scene-08.jpg",
+      "kicker": "REDEEM THE TIME",
+      "sub": "EVERY HOUR WITH STEADY PURPOSE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Guide our steps into Your everlasting light.",
+      "img": "short-morningephesians5v14-scene-09.jpg",
+      "kicker": "EVERLASTING LIGHT",
+      "sub": "GUIDE OUR STEPS IN YOUR LIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Amen. You hit snooze hoping today might wait.",
+      "img": "short-morningephesians5v14-scene-10.jpg",
+      "kicker": "AWAKE TODAY",
+      "sub": "BEGIN THIS MORNING IN LIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You hit snooze hoping today might wait."
+    ],
+    [
+      3,
+      7,
+      "Yet the morning sunlight already touches your floor."
+    ],
+    [
+      7,
+      10,
+      "Hear the word of the Lord:"
+    ],
+    [
+      10,
+      16,
+      "Wherefore he saith, Awake thou that sleepest, and arise from the dead, and Christ shall give thee light."
+    ],
+    [
+      16,
+      24,
+      "See then that ye walk circumspectly, not as fools, but as wise, redeeming the time, because the days are evil."
+    ],
+    [
+      24,
+      28,
+      "Lord, shake the heavy slumber from our weary souls."
+    ],
+    [
+      28,
+      33,
+      "Teach us to walk carefully today, choosing Your wisdom over quiet distraction."
+    ],
+    [
+      33,
+      38,
+      "Help us redeem every hour You give us with steady purpose."
+    ],
+    [
+      38,
+      42,
+      "Guide our steps into Your everlasting light."
+    ],
+    [
+      42,
+      47,
+      "Amen. You hit snooze hoping today might wait."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU HIT SNOOZE",
+        "HOPING TODAY MIGHT WAIT"
+      ],
+      [
+        "SNOOZE",
+        "WAIT"
+      ],
+      "EPHESIANS 5 : 14-16"
+    ],
+    [
+      3,
+      7,
+      [
+        "YET THE SUNLIGHT",
+        "TOUCHES YOUR FLOOR"
+      ],
+      [
+        "SUNLIGHT",
+        "FLOOR"
+      ],
+      "EPHESIANS 5 : 14-16"
+    ],
+    [
+      7,
+      10,
+      [
+        "HEAR THE WORD",
+        "OF THE LORD"
+      ],
+      [
+        "WORD",
+        "LORD"
+      ],
+      "EPHESIANS 5 : 14-16"
+    ],
+    [
+      10,
+      16,
+      [
+        "AWAKE THOU THAT SLEEPEST",
+        "CHRIST SHALL GIVE THEE LIGHT"
+      ],
+      [
+        "AWAKE",
+        "LIGHT"
+      ],
+      "EPHESIANS 5 : 14-16"
+    ],
+    [
+      16,
+      24,
+      [
+        "WALK CIRCUMSPECTLY",
+        "REDEEMING THE TIME"
+      ],
+      [
+        "WISE",
+        "REDEEMING"
+      ],
+      "EPHESIANS 5 : 14-16"
+    ],
+    [
+      24,
+      28,
+      [
+        "SHAKE THE SLUMBER",
+        "FROM OUR WEARY SOULS"
+      ],
+      [
+        "SHAKE",
+        "SOULS"
+      ],
+      "EPHESIANS 5 : 14-16"
+    ],
+    [
+      28,
+      33,
+      [
+        "TEACH US TO WALK",
+        "CHOOSING YOUR WISDOM"
+      ],
+      [
+        "WALK",
+        "WISDOM"
+      ],
+      "EPHESIANS 5 : 14-16"
+    ],
+    [
+      33,
+      38,
+      [
+        "HELP US REDEEM",
+        "EVERY GIVEN HOUR"
+      ],
+      [
+        "REDEEM",
+        "PURPOSE"
+      ],
+      "EPHESIANS 5 : 14-16"
+    ],
+    [
+      38,
+      42,
+      [
+        "GUIDE OUR STEPS",
+        "INTO EVERLASTING LIGHT"
+      ],
+      [
+        "GUIDE",
+        "LIGHT"
+      ],
+      "EPHESIANS 5 : 14-16"
+    ],
+    [
+      42,
+      47,
+      [
+        "AMEN",
+        "TODAY CALLS YOU"
+      ],
+      [
+        "AMEN",
+        "TODAY"
+      ],
+      "EPHESIANS 5 : 14-16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You hit snooze hoping today might wait.",
+      "kind": "phrase",
+      "words": [
+        "SNOOZE",
+        "WAIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Wherefore he saith, Awake thou that sleepest, and arise from the dead, and Christ shall give thee light.",
+      "kind": "phrase",
+      "words": [
+        "AWAKE",
+        "LIGHT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "See then that ye walk circumspectly, not as fools, but as wise, redeeming the time, because the days are evil.",
+      "kind": "phrase",
+      "words": [
+        "REDEEMING",
+        "TIME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, shake the heavy slumber from our weary souls.",
+      "kind": "phrase",
+      "words": [
+        "SHAKE",
+        "SLUMBER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. You hit snooze hoping today might wait.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "SNOOZE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ephesians 5:14-16"
+}

@@ -1,0 +1,347 @@
+{
+  "key": "short-morningproverbs8v17",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "SEEK HIM EARLY",
+    "PROVERBS 8:17"
+  ],
+  "poster": [
+    "YOUR QUIET KITCHEN",
+    "HOLDS LINGERING DARK",
+    "SEEK HIM FIRST TODAY",
+    "PROVERBS 8:17"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "dark quiet kitchen dawn window golden morning light",
+    "misty lake soft sunrise early dawn fog",
+    "calm mountain peak first rays of sun morning sky",
+    "sunrise over pine forest warm morning glow",
+    "soft sunlight filtering through window morning room",
+    "golden morning light breaking through trees mist",
+    "tranquil valley early sunrise horizon soft clouds",
+    "peaceful morning light over quiet valley dawn"
+  ],
+  "scenes": [
+    {
+      "a": "Your quiet kitchen holds the lingering dark.",
+      "img": "short-morningproverbs8v17-scene-01.jpg",
+      "kicker": "LINGERING DARK",
+      "sub": "THE STILLNESS BEFORE THE DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Before the world makes its noise, you carry a heavy choice into this hour.",
+      "img": "short-morningproverbs8v17-scene-02.jpg",
+      "kicker": "HEAVY CHOICE",
+      "sub": "BEFORE THE WORLD MAKES NOISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "I love them that love me; and those that seek me early shall find me.",
+      "img": "short-morningproverbs8v17-scene-03.jpg",
+      "kicker": "PROVERBS 8:17",
+      "sub": "THOSE THAT SEEK ME SHALL FIND ME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, as sunrise breaks, we come seeking You before any obligation claims our morning thoughts.",
+      "img": "short-morningproverbs8v17-scene-04.jpg",
+      "kicker": "SEEKING HIM FIRST",
+      "sub": "BEFORE OBLIGATIONS BEGIN",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Fill this silent room with Your steady peace and calm our anxious mind.",
+      "img": "short-morningproverbs8v17-scene-05.jpg",
+      "kicker": "STEADY PEACE",
+      "sub": "CALM YOUR ANXIOUS MIND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach us to look for You first, knowing Your enduring love is already waiting here.",
+      "img": "short-morningproverbs8v17-scene-06.jpg",
+      "kicker": "ENDURING LOVE",
+      "sub": "HE IS ALREADY WAITING HERE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Guide our steps today as we trust Your promises in every quiet decision.",
+      "img": "short-morningproverbs8v17-scene-07.jpg",
+      "kicker": "GUIDE OUR STEPS",
+      "sub": "TRUST HIS PROMISES TODAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Your quiet kitchen holds the lingering dark.",
+      "img": "short-morningproverbs8v17-scene-08.jpg",
+      "kicker": "LINGERING DARK",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your quiet kitchen holds the lingering dark."
+    ],
+    [
+      3,
+      7,
+      "Before the world makes its noise, you carry a heavy choice into this hour."
+    ],
+    [
+      7,
+      14,
+      "I love them that love me; and those that seek me early shall find me."
+    ],
+    [
+      14,
+      20,
+      "Lord, as sunrise breaks, we come seeking You before any obligation claims our morning thoughts."
+    ],
+    [
+      20,
+      26,
+      "Fill this silent room with Your steady peace and calm our anxious mind."
+    ],
+    [
+      26,
+      32,
+      "Teach us to look for You first, knowing Your enduring love is already waiting here."
+    ],
+    [
+      32,
+      38,
+      "Guide our steps today as we trust Your promises in every quiet decision."
+    ],
+    [
+      38,
+      43,
+      "Amen. Your quiet kitchen holds the lingering dark."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR QUIET KITCHEN",
+        "HOLDS THE LINGERING DARK"
+      ],
+      [
+        "LINGERING",
+        "DARK"
+      ],
+      "PROVERBS 8:17"
+    ],
+    [
+      3,
+      7,
+      [
+        "BEFORE THE WORLD MAKES NOISE",
+        "YOU CARRY A HEAVY CHOICE",
+        "INTO THIS HOUR"
+      ],
+      [
+        "HEAVY",
+        "CHOICE"
+      ],
+      "PROVERBS 8:17"
+    ],
+    [
+      7,
+      14,
+      [
+        "I LOVE THEM THAT LOVE ME",
+        "AND THOSE THAT SEEK ME",
+        "EARLY SHALL FIND ME"
+      ],
+      [
+        "SEEK",
+        "FIND"
+      ],
+      "PROVERBS 8:17"
+    ],
+    [
+      14,
+      20,
+      [
+        "LORD AS SUNRISE BREAKS",
+        "WE COME SEEKING YOU",
+        "BEFORE OBLIGATION CLAIMS US"
+      ],
+      [
+        "SEEKING",
+        "YOU"
+      ],
+      "PROVERBS 8:17"
+    ],
+    [
+      20,
+      26,
+      [
+        "FILL THIS SILENT ROOM",
+        "WITH YOUR STEADY PEACE",
+        "AND CALM OUR MIND"
+      ],
+      [
+        "STEADY",
+        "PEACE"
+      ],
+      "PROVERBS 8:17"
+    ],
+    [
+      26,
+      32,
+      [
+        "TEACH US TO LOOK FIRST",
+        "KNOWING YOUR ENDURING LOVE",
+        "IS ALREADY WAITING HERE"
+      ],
+      [
+        "ENDURING",
+        "LOVE"
+      ],
+      "PROVERBS 8:17"
+    ],
+    [
+      32,
+      38,
+      [
+        "GUIDE OUR STEPS TODAY",
+        "AS WE TRUST YOUR PROMISES",
+        "IN EVERY DECISION"
+      ],
+      [
+        "TRUST",
+        "PROMISES"
+      ],
+      "PROVERBS 8:17"
+    ],
+    [
+      38,
+      43,
+      [
+        "AMEN",
+        "YOUR QUIET KITCHEN",
+        "HOLDS THE LINGERING DARK"
+      ],
+      [
+        "LINGERING",
+        "DARK"
+      ],
+      "PROVERBS 8:17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "lingering dark",
+      "kind": "phrase",
+      "words": [
+        "LINGERING",
+        "DARK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "heavy choice",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "CHOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "seek me early shall find me",
+      "kind": "phrase",
+      "words": [
+        "SEEK",
+        "FIND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "seeking You",
+      "kind": "phrase",
+      "words": [
+        "SEEKING",
+        "YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "steady peace",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "enduring love",
+      "kind": "phrase",
+      "words": [
+        "ENDURING",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "trust Your promises",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "PROMISES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 8:17"
+}
