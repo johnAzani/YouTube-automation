@@ -1,0 +1,352 @@
+{
+  "key": "short-garden1chronicles16v8",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "GIVE THANKS UNTO GOD",
+    "REJOICE IN HIS NAME"
+  ],
+  "poster": [
+    "WHEN THOUGHTS CROWD",
+    "YOUR QUIET ROOM",
+    "1 CHRONICLES 16:8-10",
+    "THE PRAISE GARDEN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade soft mist golden light",
+    "calm mountain lake gentle sunrise reflection",
+    "peaceful river winding through misty meadow golden hour",
+    "soft morning light filtering through green trees countryside",
+    "serene pine forest path bathed in warm sunlight",
+    "tranquil valley bathed in soft morning glow",
+    "quiet sunlit meadow filled with soft wildflowers"
+  ],
+  "scenes": [
+    {
+      "a": "When tired thoughts crowd your quiet room,",
+      "img": "short-garden1chronicles16v8-scene-01.jpg",
+      "kicker": "TIRED THOUGHTS",
+      "sub": "WHEN QUIET ROOMS FEEL HEAVY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Give thanks unto the LORD, call upon his name, make known his deeds among the people.",
+      "img": "short-garden1chronicles16v8-scene-02.jpg",
+      "kicker": "CALL UPON HIS NAME",
+      "sub": "MAKE KNOWN HIS FAITHFUL DEEDS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Sing unto him, sing psalms unto him, talk ye of all his wondrous works.",
+      "img": "short-garden1chronicles16v8-scene-03.jpg",
+      "kicker": "SING UNTO HIM",
+      "sub": "TALK OF ALL HIS WONDROUS WORKS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Glory ye in his holy name: let the heart of them rejoice that seek the LORD.",
+      "img": "short-garden1chronicles16v8-scene-04.jpg",
+      "kicker": "REJOICE IN HIM",
+      "sub": "LET THE HEART SEEKING GOD REJOICE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Father, we give thanks for your constant goodness right where we are.",
+      "img": "short-garden1chronicles16v8-scene-05.jpg",
+      "kicker": "GIVE HONEST THANKS",
+      "sub": "STANDING IN HIS CONSTANT GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Remind us of your wondrous works, quiet our restless hearts,",
+      "img": "short-garden1chronicles16v8-scene-06.jpg",
+      "kicker": "QUIET RESTLESS HEARTS",
+      "sub": "RECOUNTING HIS KINDNESS TODAY",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. When tired thoughts crowd your quiet room.",
+      "img": "short-garden1chronicles16v8-scene-07.jpg",
+      "kicker": "SEEK HIS HOLY FACE",
+      "sub": "ENTER HIS GATES WITH PRAISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "When tired thoughts crowd your quiet room,"
+    ],
+    [
+      3,
+      6,
+      "turn to the Lord. Scripture tells us:"
+    ],
+    [
+      6,
+      12,
+      "Give thanks unto the LORD, call upon his name, make known his deeds among the people."
+    ],
+    [
+      12,
+      18,
+      "Sing unto him, sing psalms unto him, talk ye of all his wondrous works."
+    ],
+    [
+      18,
+      24,
+      "Glory ye in his holy name: let the heart of them rejoice that seek the LORD."
+    ],
+    [
+      24,
+      30,
+      "Father, we give thanks for your constant goodness right where we are."
+    ],
+    [
+      30,
+      36,
+      "Remind us of your wondrous works, quiet our restless hearts,"
+    ],
+    [
+      36,
+      41,
+      "and fill us with gladness as we seek your holy face."
+    ],
+    [
+      41,
+      45,
+      "Amen. When tired thoughts crowd your quiet room."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WHEN TIRED THOUGHTS",
+        "CROWD YOUR QUIET ROOM"
+      ],
+      [
+        "TIRED",
+        "QUIET"
+      ],
+      "1 CHRONICLES 16:8-10"
+    ],
+    [
+      3,
+      6,
+      [
+        "TURN TO THE LORD",
+        "SCRIPTURE TELLS US"
+      ],
+      [
+        "LORD",
+        "SCRIPTURE"
+      ],
+      "1 CHRONICLES 16:8-10"
+    ],
+    [
+      6,
+      12,
+      [
+        "GIVE THANKS UNTO THE LORD",
+        "CALL UPON HIS NAME",
+        "MAKE KNOWN HIS DEEDS"
+      ],
+      [
+        "THANKS",
+        "LORD",
+        "DEEDS"
+      ],
+      "1 CHRONICLES 16:8-10"
+    ],
+    [
+      12,
+      18,
+      [
+        "SING UNTO HIM",
+        "SING PSALMS UNTO HIM",
+        "TALK OF HIS WORKS"
+      ],
+      [
+        "SING",
+        "PSALMS",
+        "WONDROUS"
+      ],
+      "1 CHRONICLES 16:8-10"
+    ],
+    [
+      18,
+      24,
+      [
+        "GLORY IN HIS HOLY NAME",
+        "LET SEEKING HEARTS REJOICE",
+        "IN THE LORD"
+      ],
+      [
+        "GLORY",
+        "REJOICE",
+        "SEEK"
+      ],
+      "1 CHRONICLES 16:8-10"
+    ],
+    [
+      24,
+      30,
+      [
+        "FATHER WE GIVE THANKS",
+        "FOR YOUR CONSTANT GOODNESS",
+        "RIGHT WHERE WE ARE"
+      ],
+      [
+        "THANKS",
+        "GOODNESS"
+      ],
+      "1 CHRONICLES 16:8-10"
+    ],
+    [
+      30,
+      36,
+      [
+        "REMIND US OF YOUR WORKS",
+        "QUIET OUR RESTLESS HEARTS"
+      ],
+      [
+        "WONDROUS",
+        "QUIET"
+      ],
+      "1 CHRONICLES 16:8-10"
+    ],
+    [
+      36,
+      41,
+      [
+        "FILL US WITH GLADNESS",
+        "AS WE SEEK YOUR FACE"
+      ],
+      [
+        "GLADNESS",
+        "SEEK"
+      ],
+      "1 CHRONICLES 16:8-10"
+    ],
+    [
+      41,
+      45,
+      [
+        "AMEN WHEN TIRED THOUGHTS",
+        "CROWD YOUR QUIET ROOM"
+      ],
+      [
+        "AMEN",
+        "QUIET"
+      ],
+      "1 CHRONICLES 16:8-10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When tired thoughts crowd your quiet room,",
+      "kind": "phrase",
+      "words": [
+        "TIRED",
+        "THOUGHTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give thanks unto the LORD, call upon his name, make known his deeds among the people.",
+      "kind": "phrase",
+      "words": [
+        "GIVE",
+        "THANKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Sing unto him, sing psalms unto him, talk ye of all his wondrous works.",
+      "kind": "phrase",
+      "words": [
+        "SING",
+        "PSALMS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Glory ye in his holy name: let the heart of them rejoice that seek the LORD.",
+      "kind": "phrase",
+      "words": [
+        "GLORY",
+        "REJOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we give thanks for your constant goodness right where we are.",
+      "kind": "phrase",
+      "words": [
+        "CONSTANT",
+        "GOODNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Remind us of your wondrous works, quiet our restless hearts,",
+      "kind": "phrase",
+      "words": [
+        "WONDROUS",
+        "WORKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. When tired thoughts crowd your quiet room.",
+      "kind": "phrase",
+      "words": [
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 Chronicles 16:8-10"
+}

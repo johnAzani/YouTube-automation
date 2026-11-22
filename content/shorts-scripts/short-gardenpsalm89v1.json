@@ -1,0 +1,331 @@
+{
+  "key": "short-gardenpsalm89v1",
+  "channel": "prayer9",
+  "psalm": 89,
+  "title": [
+    "WHEN PRAISE IS QUIET",
+    "SING OF HIS MERCIES"
+  ],
+  "poster": [
+    "THE PRAISE GARDEN",
+    "PSALM 89:1",
+    "GOD IS FAITHFUL",
+    "EVERLASTING MERCY"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade soft fog",
+    "misty countryside soft golden morning light",
+    "calm lake sunrise reflection golden light",
+    "peaceful river flowing through sunlit meadow",
+    "misty mountain valley warm sunlight",
+    "sunbeams through evergreen trees meadow",
+    "golden light over calm countryside landscape"
+  ],
+  "scenes": [
+    {
+      "a": "Your voice feels too quiet to praise today.",
+      "img": "short-gardenpsalm89v1-scene-01.jpg",
+      "kicker": "QUIET ROOM",
+      "sub": "WHEN YOUR VOICE FEELS TOO STILL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Yet God hears the gratitude lingering beneath the heavy silence in this very room.",
+      "img": "short-gardenpsalm89v1-scene-02.jpg",
+      "kicker": "HEAVY SILENCE",
+      "sub": "GOD HEARS YOUR HONEST GRATITUDE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "I will sing of the mercies of the LORD for ever: with my mouth will I make known thy faithfulness to all generations.",
+      "img": "short-gardenpsalm89v1-scene-03.jpg",
+      "kicker": "EVERLASTING MERCY",
+      "sub": "I WILL SING OF HIS MERCIES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, thank You for Your endless mercy that holds us when our own strength gives out.",
+      "img": "short-gardenpsalm89v1-scene-04.jpg",
+      "kicker": "ENDLESS MERCY",
+      "sub": "HE HOLDS US WHEN STRENGTH FAILS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Even in moments of doubt, Your enduring faithfulness remains the steady anchor of our lives.",
+      "img": "short-gardenpsalm89v1-scene-05.jpg",
+      "kicker": "STEADY ANCHOR",
+      "sub": "HIS FAITHFULNESS ENDURES ALWAYS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Fill our mouths with honest praise today, declaring Your grace to the next generation.",
+      "img": "short-gardenpsalm89v1-scene-06.jpg",
+      "kicker": "HONEST PRAISE",
+      "sub": "DECLARING HIS GRACE TO ALL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Even when your voice feels too quiet to praise today.",
+      "img": "short-gardenpsalm89v1-scene-07.jpg",
+      "kicker": "STILL LISTENING",
+      "sub": "HIS MERCY REMAINS FOREVER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your voice feels too quiet to praise today."
+    ],
+    [
+      3,
+      9,
+      "Yet God hears the gratitude lingering beneath the heavy silence in this very room."
+    ],
+    [
+      9,
+      19,
+      "I will sing of the mercies of the LORD for ever: with my mouth will I make known thy faithfulness to all generations."
+    ],
+    [
+      19,
+      25,
+      "Father, thank You for Your endless mercy that holds us when our own strength gives out."
+    ],
+    [
+      25,
+      31,
+      "Even in moments of doubt, Your enduring faithfulness remains the steady anchor of our lives."
+    ],
+    [
+      31,
+      36,
+      "Fill our mouths with honest praise today, declaring Your grace to the next generation."
+    ],
+    [
+      36,
+      41,
+      "Amen. Even when your voice feels too quiet to praise today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR VOICE FEELS TOO QUIET",
+        "TO PRAISE TODAY."
+      ],
+      [
+        "QUIET",
+        "PRAISE"
+      ],
+      "PSALM 89 : 1"
+    ],
+    [
+      3,
+      9,
+      [
+        "YET GOD HEARS THE GRATITUDE",
+        "LINGERING BENEATH THE HEAVY",
+        "SILENCE IN THIS VERY ROOM."
+      ],
+      [
+        "GOD",
+        "GRATITUDE",
+        "SILENCE"
+      ],
+      "PSALM 89 : 1"
+    ],
+    [
+      9,
+      19,
+      [
+        "I WILL SING OF THE MERCIES",
+        "OF THE LORD FOR EVER",
+        "WITH MY MOUTH WILL I MAKE KNOWN",
+        "THY FAITHFULNESS TO ALL GENERATIONS."
+      ],
+      [
+        "SING",
+        "MERCIES",
+        "LORD",
+        "FAITHFULNESS"
+      ],
+      "PSALM 89 : 1"
+    ],
+    [
+      19,
+      25,
+      [
+        "FATHER THANK YOU FOR YOUR",
+        "ENDLESS MERCY THAT HOLDS US",
+        "WHEN OUR OWN STRENGTH GIVES OUT."
+      ],
+      [
+        "FATHER",
+        "ENDLESS",
+        "MERCY",
+        "STRENGTH"
+      ],
+      "PSALM 89 : 1"
+    ],
+    [
+      25,
+      31,
+      [
+        "EVEN IN MOMENTS OF DOUBT",
+        "YOUR ENDURING FAITHFULNESS REMAINS",
+        "THE STEADY ANCHOR OF OUR LIVES."
+      ],
+      [
+        "FAITHFULNESS",
+        "STEADY",
+        "ANCHOR"
+      ],
+      "PSALM 89 : 1"
+    ],
+    [
+      31,
+      36,
+      [
+        "FILL OUR MOUTHS WITH HONEST",
+        "PRAISE TODAY DECLARING YOUR GRACE",
+        "TO THE NEXT GENERATION."
+      ],
+      [
+        "HONEST",
+        "PRAISE",
+        "GRACE",
+        "GENERATION"
+      ],
+      "PSALM 89 : 1"
+    ],
+    [
+      36,
+      41,
+      [
+        "AMEN EVEN WHEN YOUR VOICE",
+        "FEELS TOO QUIET TO PRAISE TODAY."
+      ],
+      [
+        "AMEN",
+        "QUIET",
+        "PRAISE"
+      ],
+      "PSALM 89 : 1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your voice feels too quiet to praise today.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Yet God hears the gratitude lingering beneath the heavy silence in this very room.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "GRATITUDE",
+        "SILENCE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "I will sing of the mercies of the LORD for ever: with my mouth will I make known thy faithfulness to all generations.",
+      "kind": "phrase",
+      "words": [
+        "SING",
+        "MERCIES",
+        "FAITHFULNESS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Father, thank You for Your endless mercy that holds us when our own strength gives out.",
+      "kind": "phrase",
+      "words": [
+        "FATHER",
+        "ENDLESS",
+        "MERCY"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Even in moments of doubt, Your enduring faithfulness remains the steady anchor of our lives.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFULNESS",
+        "STEADY",
+        "ANCHOR"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Fill our mouths with honest praise today, declaring Your grace to the next generation.",
+      "kind": "phrase",
+      "words": [
+        "HONEST",
+        "PRAISE",
+        "GRACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Even when your voice feels too quiet to praise today.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "QUIET",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 89:1"
+}
