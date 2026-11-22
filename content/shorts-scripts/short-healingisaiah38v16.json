@@ -1,0 +1,220 @@
+{
+  "key": "short-healingisaiah38v16",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALING RESTORATION",
+    "ISAIAH PRAYER"
+  ],
+  "poster": [
+    "BITTERNESS TO PEACE",
+    "GOD CASTS AWAY SIN",
+    "HIS LOVE RESTORES",
+    "HEALING SPIRIT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "calm mountain lake night",
+    "golden light inside chapel",
+    "white dove flying in soft clouds",
+    "still river at twilight",
+    "glowing candlelight on wood table",
+    "gentle ripples in turquoise water"
+  ],
+  "scenes": [
+    {
+      "a": "That sharp ache returns",
+      "img": "short-healingisaiah38v16-scene-01.jpg",
+      "kicker": "THE SHARP ACHE",
+      "sub": "IT RETURNS IN THE QUIET",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "O LORD, by these things men live, and in all these things is the life of my spirit: so wilt thou recover me, and make me to live.",
+      "img": "short-healingisaiah38v16-scene-02.jpg",
+      "kicker": "HIS WORD IS LIFE",
+      "sub": "RECOVERY FOR YOUR SPIRIT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Behold, for peace I had great bitterness: but thou hast in love to my soul delivered it from the pit of corruption: for thou hast cast all my sins behind thy back.",
+      "img": "short-healingisaiah38v16-scene-03.jpg",
+      "kicker": "DELIVERANCE",
+      "sub": "SIN CAST BEHIND HIS BACK",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Father, you see the bitterness",
+      "img": "short-healingisaiah38v16-scene-04.jpg",
+      "kicker": "PRAYER",
+      "sub": "TAKE EVERY BITTER THOUGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Restore the life of my spirit",
+      "img": "short-healingisaiah38v16-scene-05.jpg",
+      "kicker": "RESTORE",
+      "sub": "RENEW THE WEARY SOUL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Even as the sharp ache returns",
+      "img": "short-healingisaiah38v16-scene-06.jpg",
+      "kicker": "HIS PEACE",
+      "sub": "STILL HERE IN HIS HANDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That sharp ache returns in silence."
+    ],
+    [
+      3,
+      12,
+      "O LORD, by these things men live, and in all these things is the life of my spirit: so wilt thou recover me, and make me to live."
+    ],
+    [
+      12,
+      22,
+      "Behold, for peace I had great bitterness: but thou hast in love to my soul delivered it from the pit of corruption: for thou hast cast all my sins behind thy back."
+    ],
+    [
+      22,
+      28,
+      "Father, you see the bitterness heavy in my heart."
+    ],
+    [
+      28,
+      33,
+      "Restore the life of my spirit today."
+    ],
+    [
+      33,
+      40,
+      "Even as the sharp ache returns, remind me that you are still here."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT SHARP",
+        "ACHE RETURNS",
+        "IN SILENCE"
+      ],
+      [
+        "ACHE"
+      ],
+      "ISAIAH 38 : 16"
+    ],
+    [
+      3,
+      12,
+      [
+        "O LORD",
+        "LIFE OF MY SPIRIT",
+        "MAKE ME TO LIVE"
+      ],
+      [
+        "LIFE"
+      ],
+      "ISAIAH 38 : 16"
+    ],
+    [
+      12,
+      22,
+      [
+        "IN LOVE",
+        "DELIVERED FROM PIT",
+        "CAST BEHIND BACK"
+      ],
+      [
+        "LOVE"
+      ],
+      "ISAIAH 38 : 17"
+    ],
+    [
+      22,
+      28,
+      [
+        "FATHER",
+        "YOU SEE BITTERNESS",
+        "IN MY HEART"
+      ],
+      [
+        "BITTERNESS"
+      ],
+      "PRAYER"
+    ],
+    [
+      28,
+      33,
+      [
+        "RESTORE",
+        "LIFE OF",
+        "MY SPIRIT"
+      ],
+      [
+        "RESTORE"
+      ],
+      "PRAYER"
+    ],
+    [
+      33,
+      40,
+      [
+        "ACHE RETURNS",
+        "STILL HERE",
+        "IN HIS HANDS"
+      ],
+      [
+        "HERE"
+      ],
+      "RESTORATION"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That sharp ache returns",
+      "kind": "phrase",
+      "words": [
+        "SHARP",
+        "ACHE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 38:16-17"
+}

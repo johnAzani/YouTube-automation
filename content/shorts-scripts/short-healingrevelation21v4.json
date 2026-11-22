@@ -1,0 +1,308 @@
+{
+  "key": "short-healingrevelation21v4",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "WIPING EVERY TEAR",
+    "REVELATION 21:4 PRAYER"
+  ],
+  "poster": [
+    "WHEN PAIN FEELS",
+    "HEAVY TONIGHT",
+    "GOD WIPES AWAY",
+    "EVERY TEAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise mountain lake sunset golden light",
+    "calm sanctuary rays of warm golden light peaceful atmosphere",
+    "gentle water ripples turquoise light serene reflection",
+    "white dove flying soaring soft glowing warm atmosphere",
+    "peaceful golden horizon calm still waters turquoise blue",
+    "warm sanctuary glow peaceful still water reflection sunset"
+  ],
+  "scenes": [
+    {
+      "a": "The silent ache you carried today still hurts.",
+      "img": "short-healingrevelation21v4-scene-01.jpg",
+      "kicker": "SILENT ACHE",
+      "sub": "THE WEIGHT CARRIED TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And God shall wipe away all tears from their eyes",
+      "img": "short-healingrevelation21v4-scene-02.jpg",
+      "kicker": "REVELATION 21:4",
+      "sub": "NO MORE SORROW OR PAIN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, reach into this quiet space and hold the tears that fell in secret.",
+      "img": "short-healingrevelation21v4-scene-03.jpg",
+      "kicker": "UNSAID SORROW",
+      "sub": "GOD SEES EVERY TEAR",
+      "cam": "tilt_up",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Where grief lingers and pain feels unrelenting, surround us with your tender peace.",
+      "img": "short-healingrevelation21v4-scene-04.jpg",
+      "kicker": "TENDER PEACE",
+      "sub": "SURROUNDED BY MERCY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Restrain our weary hearts in your presence and heal what feels broken beyond repair.",
+      "img": "short-healingrevelation21v4-scene-05.jpg",
+      "kicker": "RESTING IN HIM",
+      "sub": "HEALING FOR WEARY HEARTS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We trust that sorrow will not have the final word. Amen. The silent ache carried today.",
+      "img": "short-healingrevelation21v4-scene-06.jpg",
+      "kicker": "HOPE RESTORED",
+      "sub": "GOD HAS THE FINAL WORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The silent ache you carried today still hurts."
+    ],
+    [
+      3,
+      6,
+      "Hear this holy promise:"
+    ],
+    [
+      6,
+      26,
+      "And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away."
+    ],
+    [
+      26,
+      38,
+      "Lord, reach into this quiet space and hold the tears that fell in secret."
+    ],
+    [
+      38,
+      48,
+      "Where grief lingers and pain feels unrelenting, surround us with your tender peace."
+    ],
+    [
+      48,
+      56,
+      "Restrain our weary hearts in your presence and heal what feels broken beyond repair."
+    ],
+    [
+      56,
+      62,
+      "We trust that sorrow will not have the final word."
+    ],
+    [
+      62,
+      66,
+      "Amen. The silent ache carried today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE SILENT ACHE",
+        "YOU CARRIED TODAY",
+        "STILL HURTS"
+      ],
+      [
+        "SILENT",
+        "ACHE"
+      ],
+      "REVELATION 21:4"
+    ],
+    [
+      3,
+      6,
+      [
+        "HEAR THIS",
+        "HOLY PROMISE"
+      ],
+      [
+        "HOLY",
+        "PROMISE"
+      ],
+      "REVELATION 21:4"
+    ],
+    [
+      6,
+      26,
+      [
+        "GOD SHALL WIPE AWAY",
+        "ALL TEARS FROM THEIR EYES",
+        "NO MORE DEATH NOR SORROW",
+        "NO MORE PAIN"
+      ],
+      [
+        "WIPE",
+        "AWAY",
+        "NO",
+        "MORE",
+        "PAIN"
+      ],
+      "REVELATION 21:4"
+    ],
+    [
+      26,
+      38,
+      [
+        "LORD REACH INTO",
+        "THIS QUIET SPACE",
+        "HOLD TEARS FELL IN SECRET"
+      ],
+      [
+        "QUIET",
+        "SPACE",
+        "TEARS"
+      ],
+      "REVELATION 21:4"
+    ],
+    [
+      38,
+      48,
+      [
+        "WHERE GRIEF LINGERS",
+        "PAIN FEELS UNRELENTING",
+        "SURROUND US WITH PEACE"
+      ],
+      [
+        "TENDER",
+        "PEACE"
+      ],
+      "REVELATION 21:4"
+    ],
+    [
+      48,
+      56,
+      [
+        "RESTRAIN OUR WEARY HEARTS",
+        "HEAL WHAT FEELS BROKEN",
+        "BEYOND REPAIR"
+      ],
+      [
+        "HEAL",
+        "BROKEN"
+      ],
+      "REVELATION 21:4"
+    ],
+    [
+      56,
+      62,
+      [
+        "WE TRUST SORROW WILL NOT",
+        "HAVE THE FINAL WORD"
+      ],
+      [
+        "FINAL",
+        "WORD"
+      ],
+      "REVELATION 21:4"
+    ],
+    [
+      62,
+      66,
+      [
+        "AMEN",
+        "THE SILENT ACHE",
+        "CARRIED TODAY"
+      ],
+      [
+        "AMEN",
+        "SILENT"
+      ],
+      "REVELATION 21:4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The silent ache you carried today still hurts.",
+      "kind": "phrase",
+      "words": [
+        "SILENT",
+        "ACHE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "And God shall wipe away all tears from their eyes;",
+      "kind": "phrase",
+      "words": [
+        "WIPE",
+        "AWAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "neither shall there be any more pain:",
+      "kind": "phrase",
+      "words": [
+        "NO",
+        "MORE",
+        "PAIN"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "surround us with your tender peace.",
+      "kind": "phrase",
+      "words": [
+        "TENDER",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "We trust that sorrow will not have the final word.",
+      "kind": "phrase",
+      "words": [
+        "FINAL",
+        "WORD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Revelation 21:4"
+}
