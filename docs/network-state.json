@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T15:48:44Z",
+  "generated_at": "2026-11-22T15:54:44Z",
   "monitor_generated_at": "2026-11-22T11:42:28.969000+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 652,
+    "published_total": 653,
     "published_longform": 190,
-    "published_shorts": 462,
-    "public_total": 650,
+    "published_shorts": 463,
+    "public_total": 651,
     "queued_longform": 61,
-    "queued_shorts": 81,
+    "queued_shorts": 80,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 50,
+        "published_total": 51,
         "published_longform": 12,
-        "published_shorts": 38,
-        "thumbnail_pending": 50,
-        "public_total": 50,
+        "published_shorts": 39,
+        "thumbnail_pending": 51,
+        "public_total": 51,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-GARDEN1CHRONICLES16V8",
-        "title": "Pray This 1 Chronicles 16:8-10 Prayer of Thanksgiving | When Quiet Rooms Feel Heavy #Shorts",
+        "id": "SHORT-GARDENPSALM89V1",
+        "title": "Pray This Psalm 89:1 Prayer of Thanksgiving | Everlasting Mercy #Shorts",
         "format": "short",
-        "youtube_video_id": "iKANw8t7HsA",
-        "watch_url": "https://www.youtube.com/shorts/iKANw8t7HsA",
+        "youtube_video_id": "V8hcy6GqvJ0",
+        "watch_url": "https://www.youtube.com/shorts/V8hcy6GqvJ0",
         "published_on": "2026-11-22",
-        "published_at": "2026-11-22T11:56:36Z"
+        "published_at": "2026-11-22T15:53:57Z"
       },
       "next_queued_longform": {
         "id": "0712",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm89v1",
-        "scripture": "Psalm 89:1",
+        "short": "short-gardenpsalm98v4",
+        "scripture": "Psalm 98:4",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM89V1",
+      "slug": "short-gardenpsalm89v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm89v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 89:1 Prayer of Thanksgiving | Everlasting Mercy #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T15:53:57Z",
+      "youtube_video_id": "V8hcy6GqvJ0",
+      "watch_url": "https://www.youtube.com/shorts/V8hcy6GqvJ0",
+      "youtu_be_url": "https://youtu.be/V8hcy6GqvJ0",
+      "shorts_url": "https://www.youtube.com/shorts/V8hcy6GqvJ0",
+      "studio_url": "https://studio.youtube.com/video/V8hcy6GqvJ0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/V8hcy6GqvJ0/hqdefault.jpg",
+      "thumb_text": "THE PRAISE GARDEN \u00b7 PSALM 89:1",
+      "thumbnail_pending": true,
+      "duration_label": "49s",
+      "words": 636
+    },
     {
       "id": "SHORT-SHIELDDEUTERONOMY31V6",
       "slug": "short-shielddeuteronomy31v6-protection-prayer",
@@ -17179,17 +17203,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-gardenpsalm89v1",
-        "file": "0000-short-gardenpsalm89v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 89:1",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm98v4",
