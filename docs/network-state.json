@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T15:39:44Z",
+  "generated_at": "2026-11-22T15:40:27Z",
   "monitor_generated_at": "2026-11-22T11:42:28.969000+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 648,
+    "published_total": 649,
     "published_longform": 190,
-    "published_shorts": 458,
-    "public_total": 646,
+    "published_shorts": 459,
+    "public_total": 647,
     "queued_longform": 61,
-    "queued_shorts": 87,
+    "queued_shorts": 85,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 91,
+        "published_total": 92,
         "published_longform": 30,
-        "published_shorts": 61,
+        "published_shorts": 62,
         "thumbnail_pending": 1,
-        "public_total": 90,
+        "public_total": 91,
         "queued_longform": 7,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MORNINGEPHESIANS5V14",
-        "title": "Say This Ephesians 5:14-16 Prayer at Sunrise | You Hit Snooze Hoping Today Waits #Shorts",
+        "id": "SHORT-MORNINGPROVERBS8V17",
+        "title": "Say This Proverbs 8:17 Prayer at Sunrise | The Stillness Before The Day #Shorts",
         "format": "short",
-        "youtube_video_id": "RPgfu_50ECI",
-        "watch_url": "https://www.youtube.com/shorts/RPgfu_50ECI",
+        "youtube_video_id": "5q6BRqSxN1Y",
+        "watch_url": "https://www.youtube.com/shorts/5q6BRqSxN1Y",
         "published_on": "2026-11-22",
-        "published_at": "2026-11-22T11:50:02Z"
+        "published_at": "2026-11-22T15:39:40Z"
       },
       "next_queued_longform": {
         "id": "0074",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningproverbs8v17",
-        "scripture": "Proverbs 8:17",
+        "short": "short-morningpsalm3v5",
+        "scripture": "Psalm 3:5",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPROVERBS8V17",
+      "slug": "short-morningproverbs8v17-sunrise-prayer",
+      "file": "short-morningproverbs8v17-sunrise-prayer.md",
+      "title": "Say This Proverbs 8:17 Prayer at Sunrise | The Stillness Before The Day #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T15:39:40Z",
+      "youtube_video_id": "5q6BRqSxN1Y",
+      "watch_url": "https://www.youtube.com/shorts/5q6BRqSxN1Y",
+      "youtu_be_url": "https://youtu.be/5q6BRqSxN1Y",
+      "shorts_url": "https://www.youtube.com/shorts/5q6BRqSxN1Y",
+      "studio_url": "https://studio.youtube.com/video/5q6BRqSxN1Y/edit",
+      "thumb_url": "https://i.ytimg.com/vi/5q6BRqSxN1Y/hqdefault.jpg",
+      "thumb_text": "YOUR QUIET KITCHEN \u00b7 HOLDS LINGERING DARK",
+      "thumbnail_pending": false,
+      "duration_label": "55s",
+      "words": 614
+    },
     {
       "id": "SHORT-NAHUM1V7",
       "slug": "short-nahum1v7-pre-sleep-prayer",
@@ -17173,17 +17197,6 @@
         "target_window_utc": "12:14"
       },
       {
-        "short": "short-morningproverbs8v17",
-        "file": "0000-short-morningproverbs8v17.yml",
-        "companion_longform_id": "",
-        "scripture": "Proverbs 8:17",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
-      {
         "short": "short-morningpsalm3v5",
         "file": "0000-short-morningpsalm3v5.yml",
         "companion_longform_id": "",
@@ -17386,17 +17399,6 @@
         "file": "0075-short-morningcolossians3v17.yml",
         "companion_longform_id": "0075",
         "scripture": "Colossians 3:17",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-morningexodus33v14",
-        "file": "0082-short-morningexodus33v14.yml",
-        "companion_longform_id": "0082",
-        "scripture": "Exodus 33:14",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
