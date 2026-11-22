@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["STAND IN PRAYER", "AT MIDNIGHT", "RUTH 3:8-11", "THE MIDNIGHT WATCH"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-22T03:33:14Z"
+thumbnail_retry_after: "2026-11-29T11:42:07Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If you sit alone in this dark room wondering what tomorrow brings, listen. Scripture records: And it came to pass at midnight, that the man was afraid, and turned himself: and, behold, a woman lay at his feet. And now, my daughter, fear not; I will do to thee all that thou requirest: for all the city of my people doth know that thou art a virtuous woman. Lord, in this midnight hour, when anxiety presses upon your heart, we rest in Your holy protection. You see our quiet faith and silent prayers. Cover us with grace, remove all fear, and pave our way ahead. Subscribe to join The Midnight Watch.

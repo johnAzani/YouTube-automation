@@ -23,14 +23,12 @@ short_visual_fingerprints: ["sha256:00f0d99e3261f92b07873873c8d16f0b6a1942e5fbfa
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; auth_channel_title=The Guided Path; long_uploads_status=allowed; video_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; video_channel_title=The Guided Path; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_pending: false
 thumbnail_poster: ["WHEN YOU NEED", "CLEAR DIRECTION", "LOOK TO THE WAY", "JOHN 14:6"]
 thumbnail_kicker: "HE SHALL DIRECT THY PATHS"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-22T06:48:56Z"
-thumbnail_retry_reason: "rate_limit"
-thumbnail_attempts: 1
+thumbnail_attempts: 0
+thumbnail_revision: "shorts-poster-v1"
 ---
 
 When competing voices leave your mind confused tonight, stop and look to the only true direction. Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me. Heavenly Father, when the world offers endless opinions and uncertain paths, bring divine clarity to our hearts. Guide our steps out of confusion and into Your enduring light. Teach us to trust Your truth above our own understanding, and give us courage to walk where You lead. May Your holy presence guard our decisions and anchor our souls today. Subscribe to walk daily in God's wisdom.
