@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T15:47:00Z",
+  "generated_at": "2026-11-22T15:47:53Z",
   "monitor_generated_at": "2026-11-22T11:42:28.969000+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 650,
+    "published_total": 651,
     "published_longform": 190,
-    "published_shorts": 460,
-    "public_total": 648,
+    "published_shorts": 461,
+    "public_total": 649,
     "queued_longform": 61,
-    "queued_shorts": 84,
+    "queued_shorts": 82,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 60,
+        "published_total": 61,
         "published_longform": 18,
-        "published_shorts": 42,
-        "thumbnail_pending": 4,
-        "public_total": 60,
+        "published_shorts": 43,
+        "thumbnail_pending": 5,
+        "public_total": 61,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0518",
-        "title": "Honest Labor Crowned With Favour: Proverbs 22:29 | The Provision Table",
-        "format": "longform",
-        "youtube_video_id": "GHfg2dTZ1d4",
-        "watch_url": "https://youtu.be/GHfg2dTZ1d4",
+        "id": "SHORT-PROVISIONCOLOSSIANS3V23",
+        "title": "Colossians 3:23-24 | When Your Work Feels Unnoticed #Shorts",
+        "format": "short",
+        "youtube_video_id": "DbsOpRXr0G8",
+        "watch_url": "https://www.youtube.com/shorts/DbsOpRXr0G8",
         "published_on": "2026-11-22",
-        "published_at": "2026-11-22T12:55:44Z"
+        "published_at": "2026-11-22T15:47:06Z"
       },
       "next_queued_longform": {
         "id": "0519",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisioncolossians3v23",
-        "scripture": "Colossians 3:23-24",
+        "short": "short-provisionjoel2v25",
+        "scripture": "Joel 2:25-26",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONCOLOSSIANS3V23",
+      "slug": "short-provisioncolossians3v23-stewardship-prayer",
+      "file": "short-provisioncolossians3v23-stewardship-prayer.md",
+      "title": "Colossians 3:23-24 | When Your Work Feels Unnoticed #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T15:47:06Z",
+      "youtube_video_id": "DbsOpRXr0G8",
+      "watch_url": "https://www.youtube.com/shorts/DbsOpRXr0G8",
+      "youtu_be_url": "https://youtu.be/DbsOpRXr0G8",
+      "shorts_url": "https://www.youtube.com/shorts/DbsOpRXr0G8",
+      "studio_url": "https://studio.youtube.com/video/DbsOpRXr0G8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/DbsOpRXr0G8/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 655
+    },
     {
       "id": "SHORT-HEALINGISAIAH38V16",
       "slug": "short-healingisaiah38v16-restoration-prayer",
@@ -17221,17 +17245,6 @@
         "target_window_utc": "06:14"
       },
       {
-        "short": "short-provisioncolossians3v23",
-        "file": "0000-short-provisioncolossians3v23.yml",
-        "companion_longform_id": "",
-        "scripture": "Colossians 3:23-24",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
-      },
-      {
         "short": "short-provisionjoel2v25",
         "file": "0000-short-provisionjoel2v25.yml",
         "companion_longform_id": "",
@@ -17786,17 +17799,6 @@
         "file": "0521-short-provisionisaiah48v17.yml",
         "companion_longform_id": "0521",
         "scripture": "Isaiah 48:17",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-provisionluke5v4",
-        "file": "0526-short-provisionluke5v4.yml",
-        "companion_longform_id": "0526",
-        "scripture": "Luke 5:4-6",
         "channel": "prayer7",
         "channel_name": "The Provision Table",
         "status": "approved",
