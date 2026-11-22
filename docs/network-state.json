@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T16:31:08Z",
+  "generated_at": "2026-11-22T16:35:43Z",
   "monitor_generated_at": "2026-11-22T11:42:28.969000+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 656,
-    "published_longform": 191,
-    "published_shorts": 465,
-    "public_total": 654,
-    "queued_longform": 60,
-    "queued_shorts": 77,
+    "published_total": 658,
+    "published_longform": 192,
+    "published_shorts": 466,
+    "public_total": 656,
+    "queued_longform": 59,
+    "queued_shorts": 76,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -305,33 +305,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 57,
-        "published_longform": 18,
-        "published_shorts": 39,
-        "thumbnail_pending": 57,
-        "public_total": 57,
-        "queued_longform": 6,
+        "published_total": 59,
+        "published_longform": 19,
+        "published_shorts": 40,
+        "thumbnail_pending": 59,
+        "public_total": 59,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-FAMILYPSALM113V9",
-        "title": "Pray This Psalm 113:9 Family Prayer Over Your Home | He Makes The House A Home #Shorts",
-        "format": "short",
-        "youtube_video_id": "cboYjQgkAIs",
-        "watch_url": "https://www.youtube.com/shorts/cboYjQgkAIs",
-        "published_on": "2026-11-22",
-        "published_at": "2026-11-22T11:49:58Z"
-      },
-      "next_queued_longform": {
         "id": "0318",
         "title": "Blessing Over Sons and Daughters: Psalm 144:12-15 | The Family Altar",
-        "words": 1208,
+        "format": "longform",
+        "youtube_video_id": "Sui7Ujs4mck",
+        "watch_url": "https://youtu.be/Sui7Ujs4mck",
+        "published_on": "2026-11-22",
+        "published_at": "2026-11-22T16:34:53Z"
+      },
+      "next_queued_longform": {
+        "id": "0319",
+        "title": "Bowing Our Knees for Our Homes: Ephesians 3:14-19 | The Family Altar",
+        "words": 1248,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyisaiah8v18",
-        "scripture": "Isaiah 8:18",
+        "short": "short-familymalachi4v6",
+        "scripture": "Malachi 4:6",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0318",
+      "slug": "blessing-over-sons-and-daughters-psalm-144",
+      "file": "0318-blessing-over-sons-and-daughters-psalm-144.md",
+      "title": "Blessing Over Sons and Daughters: Psalm 144:12-15 | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T16:34:53Z",
+      "youtube_video_id": "Sui7Ujs4mck",
+      "watch_url": "https://youtu.be/Sui7Ujs4mck",
+      "youtu_be_url": "https://youtu.be/Sui7Ujs4mck",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/Sui7Ujs4mck/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Sui7Ujs4mck/hqdefault.jpg",
+      "thumb_text": "BLESSING OVER SONS",
+      "thumbnail_pending": true,
+      "duration_label": "~8 min",
+      "words": 1208
+    },
+    {
       "id": "0100",
       "slug": "strength-when-your-heart-fails-psalm-73-26-the-midday-watch",
       "file": "0100-strength-when-your-heart-fails-psalm-73-26-the-midday-watch.md",
@@ -844,6 +868,30 @@
       "thumbnail_pending": false,
       "duration_label": "45s",
       "words": 644
+    },
+    {
+      "id": "SHORT-FAMILYISAIAH8V18",
+      "slug": "short-familyisaiah8v18-household-prayer",
+      "file": "short-familyisaiah8v18-household-prayer.md",
+      "title": "Pray This Isaiah 8:18 Family Prayer Over Your Home | Your Children Are In Their Beds #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T15:39:59Z",
+      "youtube_video_id": "keP4QpY9C9c",
+      "watch_url": "https://www.youtube.com/shorts/keP4QpY9C9c",
+      "youtu_be_url": "https://youtu.be/keP4QpY9C9c",
+      "shorts_url": "https://www.youtube.com/shorts/keP4QpY9C9c",
+      "studio_url": "https://studio.youtube.com/video/keP4QpY9C9c/edit",
+      "thumb_url": "https://i.ytimg.com/vi/keP4QpY9C9c/hqdefault.jpg",
+      "thumb_text": "YOUR CHILDREN \u00b7 ARE SET APART",
+      "thumbnail_pending": true,
+      "duration_label": "55s",
+      "words": 672
     },
     {
       "id": "SHORT-MORNINGPROVERBS8V17",
@@ -16761,19 +16809,6 @@
         "words": 1121
       },
       {
-        "id": "0318",
-        "slug": "blessing-over-sons-and-daughters-psalm-144",
-        "file": "0318-blessing-over-sons-and-daughters-psalm-144.md",
-        "title": "Blessing Over Sons and Daughters: Psalm 144:12-15 | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1208
-      },
-      {
         "id": "0319",
         "slug": "bowing-our-knees-for-our-homes-ephesians-3-14-19",
         "file": "0319-bowing-our-knees-for-our-homes-ephesians-3-14-19.md",
@@ -17230,17 +17265,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-familyisaiah8v18",
-        "file": "0000-short-familyisaiah8v18.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 8:18",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
       {
         "short": "short-familymalachi4v6",
         "file": "0000-short-familymalachi4v6.yml",
