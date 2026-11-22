@@ -23,14 +23,12 @@ short_visual_fingerprints: ["sha256:37a84f25066b8d93fc1174bfd3fcd93d8f3b2dcc57d2
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; auth_channel_title=The Guided Path; long_uploads_status=eligible; video_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; video_channel_title=The Guided Path; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_pending: false
 thumbnail_poster: ["MICAH 6:8", "A PRAYER FOR", "YOUR NEXT STEP", "THE GUIDED PATH"]
 thumbnail_kicker: "HE SHALL DIRECT THY PATHS"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-22T02:46:24Z"
-thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 0
+thumbnail_revision: "shorts-poster-v1"
 ---
 
 Stop your mind from racing over that choice you cannot seem to resolve this morning. He has shown thee, O man, what is good; and what doth the Lord require of thee, but to do justly, and to love mercy, and to walk humbly with thy God? Lord, quiet the chaos in my heart as I seek to honor You in my current situation. Teach me to choose justice, to extend Your mercy, and to walk in complete humility today. Guide my thoughts, steady my spirit, and keep me close to Your truth until I see clearly.

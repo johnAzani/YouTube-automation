@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["NUMBERS 6:24-26", "A BLESSING FOR YOUR HOME", "PEACE OVER YOUR HOUSEHOLD", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-22T02:33:00Z"
+thumbnail_retry_after: "2026-11-29T03:05:24Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 Before you switch off the lights and close your eyes tonight, bring your family to God. The LORD bless thee, and keep thee: The LORD make his face shine upon thee, and be gracious unto thee: The LORD lift up his countenance upon thee, and give thee peace. Heavenly Father, pour out this timeless priestly blessing over every corner of our home tonight. Guard our children while they sleep, quiet our lingering anxieties with Your gentle grace, and let Your divine light fill our hearts and minds with unwavering, perfect peace. Subscribe to cover your home in daily prayer as we seek the Lord together.
