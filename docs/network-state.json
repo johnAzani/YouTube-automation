@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T19:59:21Z",
+  "generated_at": "2026-11-22T20:00:30Z",
   "monitor_generated_at": "2026-11-22T19:51:50.670192+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 659,
+    "published_total": 660,
     "published_longform": 192,
-    "published_shorts": 467,
-    "public_total": 657,
+    "published_shorts": 468,
+    "public_total": 658,
     "queued_longform": 59,
-    "queued_shorts": 75,
+    "queued_shorts": 74,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 77,
+        "published_total": 78,
         "published_longform": 24,
-        "published_shorts": 53,
+        "published_shorts": 54,
         "thumbnail_pending": 1,
-        "public_total": 77,
+        "public_total": 78,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0100",
-        "title": "When You Need Strength to Keep Going: Psalm 73:26 | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "qf-9geskGdI",
-        "watch_url": "https://youtu.be/qf-9geskGdI",
+        "id": "SHORT-MIDDAYECCLESIASTES9V10",
+        "title": "Say This Ecclesiastes 9:10 Prayer at Noon | Strength For The Midday Task #Shorts",
+        "format": "short",
+        "youtube_video_id": "91TWdth5wSo",
+        "watch_url": "https://www.youtube.com/shorts/91TWdth5wSo",
         "published_on": "2026-11-22",
-        "published_at": "2026-11-22T16:30:17Z"
+        "published_at": "2026-11-22T19:59:39Z"
       },
       "next_queued_longform": {
         "id": "0101",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayecclesiastes9v10",
-        "scripture": "Ecclesiastes 9:10",
+        "short": "short-middayisaiah26v12",
+        "scripture": "Isaiah 26:12",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYECCLESIASTES9V10",
+      "slug": "short-middayecclesiastes9v10-midday-prayer",
+      "file": "short-middayecclesiastes9v10-midday-prayer.md",
+      "title": "Say This Ecclesiastes 9:10 Prayer at Noon | Strength For The Midday Task #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T19:59:39Z",
+      "youtube_video_id": "91TWdth5wSo",
+      "watch_url": "https://www.youtube.com/shorts/91TWdth5wSo",
+      "youtu_be_url": "https://youtu.be/91TWdth5wSo",
+      "shorts_url": "https://www.youtube.com/shorts/91TWdth5wSo",
+      "studio_url": "https://studio.youtube.com/video/91TWdth5wSo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/91TWdth5wSo/hqdefault.jpg",
+      "thumb_text": "WHEN THE WORK \u00b7 FEELS HEAVY",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 617
+    },
     {
       "id": "SHORT-FAMILYMALACHI4V6",
       "slug": "short-familymalachi4v6-household-prayer",
@@ -17321,17 +17345,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-middayecclesiastes9v10",
-        "file": "0000-short-middayecclesiastes9v10.yml",
-        "companion_longform_id": "",
-        "scripture": "Ecclesiastes 9:10",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middayisaiah26v12",
