@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T00:01:41Z",
+  "generated_at": "2026-11-22T00:02:36Z",
   "monitor_generated_at": "2026-11-21T22:10:41.393240+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 627,
+    "published_total": 628,
     "published_longform": 186,
-    "published_shorts": 441,
-    "public_total": 625,
+    "published_shorts": 442,
+    "public_total": 626,
     "queued_longform": 53,
-    "queued_shorts": 74,
+    "queued_shorts": 73,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": true
@@ -373,23 +373,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 57,
+        "published_total": 58,
         "published_longform": 16,
-        "published_shorts": 41,
-        "thumbnail_pending": 3,
-        "public_total": 57,
+        "published_shorts": 42,
+        "thumbnail_pending": 4,
+        "public_total": 58,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "0415",
-        "title": "Restoration for a Weary Body: Proverbs 4:20-22 | The Healing Balm",
-        "format": "longform",
-        "youtube_video_id": "orWc3us3OJg",
-        "watch_url": "https://youtu.be/orWc3us3OJg",
-        "published_on": "2026-11-21",
-        "published_at": "2026-11-21T20:47:49Z"
+        "id": "SHORT-HEALINGMATTHEW9V35",
+        "title": "Pray This Matthew 9:35 Healing Prayer for Peace & Strength | Healing In His Presence #Shorts",
+        "format": "short",
+        "youtube_video_id": "Laa4CECyw3o",
+        "watch_url": "https://www.youtube.com/shorts/Laa4CECyw3o",
+        "published_on": "2026-11-22",
+        "published_at": "2026-11-22T00:01:47Z"
       },
       "next_queued_longform": {
         "id": "0416",
@@ -398,8 +398,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingmatthew9v35",
-        "scripture": "Matthew 9:35",
+        "short": "short-healing2corinthians12v9",
+        "scripture": "2 Corinthians 12:9",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGMATTHEW9V35",
+      "slug": "short-healingmatthew9v35-restoration-prayer",
+      "file": "short-healingmatthew9v35-restoration-prayer.md",
+      "title": "Pray This Matthew 9:35 Healing Prayer for Peace & Strength | Healing In His Presence #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T00:01:47Z",
+      "youtube_video_id": "Laa4CECyw3o",
+      "watch_url": "https://www.youtube.com/shorts/Laa4CECyw3o",
+      "youtu_be_url": "https://youtu.be/Laa4CECyw3o",
+      "shorts_url": "https://www.youtube.com/shorts/Laa4CECyw3o",
+      "studio_url": "https://studio.youtube.com/video/Laa4CECyw3o/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Laa4CECyw3o/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "55s",
+      "words": 677
+    },
     {
       "id": "SHORT-PROVISIONPROVERBS11V24",
       "slug": "short-provisionproverbs11v24-stewardship-prayer",
@@ -16464,17 +16488,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-healingmatthew9v35",
-        "file": "0000-short-healingmatthew9v35.yml",
-        "companion_longform_id": "",
-        "scripture": "Matthew 9:35",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-midnightdaniel6v19",
