@@ -1,6 +1,6 @@
 ---
 id: 0518
-title: 'When Diligent Hands Find Favour: Proverbs 22:29 | The Provision Table'
+title: "Honest Labor Crowned With Favour: Proverbs 22:29 | The Provision Table"
 slug: when-diligent-hands-find-favour-proverbs-22-29
 status: approved
 channel: prayer7
@@ -77,6 +77,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When Diligent Hands Find Favour: Proverbs 22:29 | The Provision Table"
+queue_title_fixed_at: "2026-11-22"
 ---
 
 ## Scene 1 — The Prepared Table of Daily Labour

@@ -1,6 +1,6 @@
 ---
 id: '0521'
-title: 'When You Need Guidance in Your Work: Isaiah 48:17'
+title: "Guidance for Your Daily Labor: Isaiah 48:17 | The Provision Table"
 slug: when-you-need-guidance-in-your-work-isaiah-48-17
 status: approved
 channel: prayer7
@@ -73,6 +73,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When You Need Guidance in Your Work: Isaiah 48:17"
+queue_title_fixed_at: "2026-11-22"
 ---
 
 ## Scene 1 — The Teacher at the Desk
