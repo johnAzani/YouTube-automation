@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T15:54:44Z",
+  "generated_at": "2026-11-22T15:56:57Z",
   "monitor_generated_at": "2026-11-22T11:42:28.969000+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 653,
+    "published_total": 654,
     "published_longform": 190,
-    "published_shorts": 463,
-    "public_total": 651,
+    "published_shorts": 464,
+    "public_total": 652,
     "queued_longform": 61,
-    "queued_shorts": 80,
+    "queued_shorts": 78,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -645,23 +645,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 49,
+        "published_total": 50,
         "published_longform": 13,
-        "published_shorts": 36,
+        "published_shorts": 37,
         "thumbnail_pending": 2,
-        "public_total": 49,
+        "public_total": 50,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "0812",
-        "title": "Discernment When Your Path Is Unclear: John 16:13 | The Guided Path",
-        "format": "longform",
-        "youtube_video_id": "3L9DcmXdz98",
-        "watch_url": "https://youtu.be/3L9DcmXdz98",
+        "id": "SHORT-GUIDED1KINGS3V9",
+        "title": "Pray This 1 Kings 3:9 Prayer for God's Guidance | That Choice On Your Desk #Shorts",
+        "format": "short",
+        "youtube_video_id": "nEtr9Hc_1fA",
+        "watch_url": "https://www.youtube.com/shorts/nEtr9Hc_1fA",
         "published_on": "2026-11-22",
-        "published_at": "2026-11-22T12:57:34Z"
+        "published_at": "2026-11-22T15:56:08Z"
       },
       "next_queued_longform": {
         "id": "0813",
@@ -670,8 +670,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guided1kings3v9",
-        "scripture": "1 Kings 3:9",
+        "short": "short-guidedromans8v14",
+        "scripture": "Romans 8:14",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDED1KINGS3V9",
+      "slug": "short-guided1kings3v9-guidance-prayer",
+      "file": "short-guided1kings3v9-guidance-prayer.md",
+      "title": "Pray This 1 Kings 3:9 Prayer for God's Guidance | That Choice On Your Desk #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T15:56:08Z",
+      "youtube_video_id": "nEtr9Hc_1fA",
+      "watch_url": "https://www.youtube.com/shorts/nEtr9Hc_1fA",
+      "youtu_be_url": "https://youtu.be/nEtr9Hc_1fA",
+      "shorts_url": "https://www.youtube.com/shorts/nEtr9Hc_1fA",
+      "studio_url": "https://studio.youtube.com/video/nEtr9Hc_1fA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/nEtr9Hc_1fA/hqdefault.jpg",
+      "thumb_text": "ASK FOR AN \u00b7 UNDERSTANDING",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 636
+    },
     {
       "id": "SHORT-GARDENPSALM89V1",
       "slug": "short-gardenpsalm89v1-thanksgiving-prayer",
@@ -17216,17 +17240,6 @@
         "target_window_utc": "09:44"
       },
       {
-        "short": "short-guided1kings3v9",
-        "file": "0000-short-guided1kings3v9.yml",
-        "companion_longform_id": "",
-        "scripture": "1 Kings 3:9",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
-      },
-      {
         "short": "short-guidedromans8v14",
         "file": "0000-short-guidedromans8v14.yml",
         "companion_longform_id": "",
@@ -18034,17 +18047,6 @@
         "file": "0817-short-guidedisaiah42v16.yml",
         "companion_longform_id": "0817",
         "scripture": "Isaiah 42:16",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-guidedcolossians1v9",
-        "file": "0819-short-guidedcolossians1v9.yml",
-        "companion_longform_id": "0819",
-        "scripture": "Colossians 1:9-10",
         "channel": "prayer10",
         "channel_name": "The Guided Path",
         "status": "approved",
