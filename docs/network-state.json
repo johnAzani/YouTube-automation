@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T00:02:36Z",
+  "generated_at": "2026-11-22T00:05:19Z",
   "monitor_generated_at": "2026-11-21T22:10:41.393240+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 628,
+    "published_total": 629,
     "published_longform": 186,
-    "published_shorts": 442,
-    "public_total": 626,
+    "published_shorts": 443,
+    "public_total": 627,
     "queued_longform": 53,
-    "queued_shorts": 73,
+    "queued_shorts": 72,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 48,
+        "published_total": 49,
         "published_longform": 12,
-        "published_shorts": 36,
-        "thumbnail_pending": 48,
-        "public_total": 48,
+        "published_shorts": 37,
+        "thumbnail_pending": 49,
+        "public_total": 49,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM69V30",
-        "title": "Pray This Psalm 69:30 Prayer of Thanksgiving | Bring Your Quiet Heart #Shorts",
+        "id": "SHORT-GARDENPSALM86V12",
+        "title": "Pray This Psalm 86:12 Prayer of Thanksgiving | Whole Heart #Shorts",
         "format": "short",
-        "youtube_video_id": "DbelIaYuzQw",
-        "watch_url": "https://www.youtube.com/shorts/DbelIaYuzQw",
-        "published_on": "2026-11-21",
-        "published_at": "2026-11-21T20:02:52Z"
+        "youtube_video_id": "ZDRq0pILd6w",
+        "watch_url": "https://www.youtube.com/shorts/ZDRq0pILd6w",
+        "published_on": "2026-11-22",
+        "published_at": "2026-11-22T00:04:19Z"
       },
       "next_queued_longform": {
         "id": "0712",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm86v12",
-        "scripture": "Psalm 86:12",
+        "short": "short-gardenpsalm98v4",
+        "scripture": "Psalm 98:4",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM86V12",
+      "slug": "short-gardenpsalm86v12-thanksgiving-prayer",
+      "file": "short-gardenpsalm86v12-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 86:12 Prayer of Thanksgiving | Whole Heart #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T00:04:19Z",
+      "youtube_video_id": "ZDRq0pILd6w",
+      "watch_url": "https://www.youtube.com/shorts/ZDRq0pILd6w",
+      "youtu_be_url": "https://youtu.be/ZDRq0pILd6w",
+      "shorts_url": "https://www.youtube.com/shorts/ZDRq0pILd6w",
+      "studio_url": "https://studio.youtube.com/video/ZDRq0pILd6w/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ZDRq0pILd6w/hqdefault.jpg",
+      "thumb_text": "GIVE THANKS \u00b7 TO THE LORD",
+      "thumbnail_pending": true,
+      "duration_label": "44s",
+      "words": 630
+    },
     {
       "id": "SHORT-HEALINGMATTHEW9V35",
       "slug": "short-healingmatthew9v35-restoration-prayer",
@@ -16467,17 +16491,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-gardenpsalm86v12",
-        "file": "0000-short-gardenpsalm86v12.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 86:12",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
       {
         "short": "short-gardenpsalm98v4",
         "file": "0000-short-gardenpsalm98v4.yml",
