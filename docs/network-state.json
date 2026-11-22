@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T00:40:06Z",
+  "generated_at": "2026-11-22T00:46:55Z",
   "monitor_generated_at": "2026-11-21T22:10:41.393240+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 632,
-    "published_longform": 187,
-    "published_shorts": 445,
-    "public_total": 630,
-    "queued_longform": 52,
-    "queued_shorts": 70,
+    "published_total": 634,
+    "published_longform": 188,
+    "published_shorts": 446,
+    "public_total": 632,
+    "queued_longform": 51,
+    "queued_shorts": 69,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": true
@@ -509,33 +509,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 49,
-        "published_longform": 14,
-        "published_shorts": 35,
-        "thumbnail_pending": 49,
-        "public_total": 49,
-        "queued_longform": 6,
+        "published_total": 51,
+        "published_longform": 15,
+        "published_shorts": 36,
+        "thumbnail_pending": 51,
+        "public_total": 51,
+        "queued_longform": 5,
         "queued_other": 3,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-SHIELDROMANS8V31",
-        "title": "Pray This Romans 8:31 Prayer for Divine Protection | A Sacred Prayer #Shorts",
-        "format": "short",
-        "youtube_video_id": "8JKBmMOtdvg",
-        "watch_url": "https://www.youtube.com/shorts/8JKBmMOtdvg",
-        "published_on": "2026-11-21",
-        "published_at": "2026-11-21T20:01:00Z"
-      },
-      "next_queued_longform": {
         "id": "0617",
         "title": "When You Pass Through Deep Waters: Isaiah 43:2 | The Covenant Shield",
-        "words": 1270,
+        "format": "longform",
+        "youtube_video_id": "h0zC5kTzkdQ",
+        "watch_url": "https://youtu.be/h0zC5kTzkdQ",
+        "published_on": "2026-11-22",
+        "published_at": "2026-11-22T00:46:14Z"
+      },
+      "next_queued_longform": {
+        "id": "0618",
+        "title": "Finding Sanctuary in the Storm: Psalm 32:7 | The Covenant Shield",
+        "words": 1364,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm61v3",
-        "scripture": "Psalm 61:3",
+        "short": "short-shieldisaiah43v2",
+        "scripture": "Isaiah 43:2",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0617",
+      "slug": "when-you-pass-through-deep-waters-isaiah-43-2",
+      "file": "0617-when-you-pass-through-deep-waters-isaiah-43-2.md",
+      "title": "When You Pass Through Deep Waters: Isaiah 43:2 | The Covenant Shield",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T00:46:14Z",
+      "youtube_video_id": "h0zC5kTzkdQ",
+      "watch_url": "https://youtu.be/h0zC5kTzkdQ",
+      "youtu_be_url": "https://youtu.be/h0zC5kTzkdQ",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/h0zC5kTzkdQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/h0zC5kTzkdQ/hqdefault.jpg",
+      "thumb_text": "GOD IS WITH ME",
+      "thumbnail_pending": true,
+      "duration_label": "~9 min",
+      "words": 1270
+    },
+    {
       "id": "0221",
       "slug": "the-promise-of-the-midnight-answer-jeremiah-33-3",
       "file": "0221-the-promise-of-the-midnight-answer-jeremiah-33-3.md",
@@ -772,6 +796,30 @@
       "thumbnail_pending": true,
       "duration_label": "44s",
       "words": 630
+    },
+    {
+      "id": "SHORT-SHIELDPSALM61V3",
+      "slug": "short-shieldpsalm61v3-protection-prayer",
+      "file": "short-shieldpsalm61v3-protection-prayer.md",
+      "title": "Pray This Psalm 61:3 Prayer for Divine Protection | A Strong Tower #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T00:03:54Z",
+      "youtube_video_id": "sfMBFc093Oc",
+      "watch_url": "https://www.youtube.com/shorts/sfMBFc093Oc",
+      "youtu_be_url": "https://youtu.be/sfMBFc093Oc",
+      "shorts_url": "https://www.youtube.com/shorts/sfMBFc093Oc",
+      "studio_url": "https://studio.youtube.com/video/sfMBFc093Oc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/sfMBFc093Oc/hqdefault.jpg",
+      "thumb_text": "GOD IS YOUR \u00b7 STRONG TOWER",
+      "thumbnail_pending": true,
+      "duration_label": "59s",
+      "words": 659
     },
     {
       "id": "SHORT-HEALINGMATTHEW9V35",
@@ -16328,19 +16376,6 @@
         "words": 1451
       },
       {
-        "id": "0617",
-        "slug": "when-you-pass-through-deep-waters-isaiah-43-2",
-        "file": "0617-when-you-pass-through-deep-waters-isaiah-43-2.md",
-        "title": "When You Pass Through Deep Waters: Isaiah 43:2 | The Covenant Shield",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1270
-      },
-      {
         "id": "0618",
         "slug": "finding-sanctuary-in-the-storm-psalm-32-7",
         "file": "0618-finding-sanctuary-in-the-storm-psalm-32-7.md",
@@ -17099,17 +17134,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldpsalm61v3",
-        "file": "0616-short-shieldpsalm61v3.yml",
-        "companion_longform_id": "0616",
-        "scripture": "Psalm 61:3",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldisaiah43v2",

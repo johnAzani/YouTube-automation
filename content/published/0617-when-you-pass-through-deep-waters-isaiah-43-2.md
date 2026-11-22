@@ -2,7 +2,7 @@
 id: '0617'
 title: 'When You Pass Through Deep Waters: Isaiah 43:2 | The Covenant Shield'
 slug: when-you-pass-through-deep-waters-isaiah-43-2
-status: approved
+status: published
 channel: prayer8
 privacy: public
 format: longform
@@ -77,6 +77,15 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-22"
+published_at: "2026-11-22T00:46:14Z"
+youtube_video_id: "h0zC5kTzkdQ"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Running Into the Strong Tower of the LORD
