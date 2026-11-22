@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T20:40:44Z",
+  "generated_at": "2026-11-22T20:41:15Z",
   "monitor_generated_at": "2026-11-22T19:51:50.670192+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 664,
-    "published_longform": 193,
-    "published_shorts": 471,
-    "public_total": 662,
-    "queued_longform": 58,
-    "queued_shorts": 71,
+    "published_total": 666,
+    "published_longform": 194,
+    "published_shorts": 472,
+    "public_total": 664,
+    "queued_longform": 57,
+    "queued_shorts": 70,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": true
@@ -373,33 +373,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 60,
-        "published_longform": 16,
-        "published_shorts": 44,
+        "published_total": 62,
+        "published_longform": 17,
+        "published_shorts": 45,
         "thumbnail_pending": 4,
-        "public_total": 60,
-        "queued_longform": 6,
+        "public_total": 62,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-HEALINGISAIAH38V16",
-        "title": "Pray This Isaiah 38:16-17 Healing Prayer for Peace & Strength | Healing Spirit #Shorts",
-        "format": "short",
-        "youtube_video_id": "gqgHrEV9Y_Q",
-        "watch_url": "https://www.youtube.com/shorts/gqgHrEV9Y_Q",
-        "published_on": "2026-11-22",
-        "published_at": "2026-11-22T15:46:08Z"
-      },
-      "next_queued_longform": {
         "id": "0416",
         "title": "Healing When the Body Is Weak: Psalm 107:19-20 | The Healing Balm",
-        "words": 1017,
+        "format": "longform",
+        "youtube_video_id": "0SmEbw4lYWs",
+        "watch_url": "https://youtu.be/0SmEbw4lYWs",
+        "published_on": "2026-11-22",
+        "published_at": "2026-11-22T20:40:35Z"
+      },
+      "next_queued_longform": {
+        "id": "0418",
+        "title": "The Prayer of Faith for Healing: James 5:14-16 | The Healing Balm",
+        "words": 1163,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingpsalm34v17",
-        "scripture": "Psalm 34:17-19",
+        "short": "short-healingproverbs4v20",
+        "scripture": "Proverbs 4:20-22",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0416",
+      "slug": "healing-when-the-body-is-weak-psalm-107-19-20-the-healing-balm",
+      "file": "0416-healing-when-the-body-is-weak-psalm-107-19-20-the-healing-balm.md",
+      "title": "Healing When the Body Is Weak: Psalm 107:19-20 | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T20:40:35Z",
+      "youtube_video_id": "0SmEbw4lYWs",
+      "watch_url": "https://youtu.be/0SmEbw4lYWs",
+      "youtu_be_url": "https://youtu.be/0SmEbw4lYWs",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/0SmEbw4lYWs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/0SmEbw4lYWs/hqdefault.jpg",
+      "thumb_text": "HE SENT HIS WORD",
+      "thumbnail_pending": false,
+      "duration_label": "~7 min",
+      "words": 1017
+    },
+    {
       "id": "SHORT-GUIDEDROMANS8V14",
       "slug": "short-guidedromans8v14-guidance-prayer",
       "file": "short-guidedromans8v14-guidance-prayer.md",
@@ -796,6 +820,30 @@
       "thumbnail_pending": false,
       "duration_label": "56s",
       "words": 639
+    },
+    {
+      "id": "SHORT-HEALINGPSALM34V17",
+      "slug": "short-healingpsalm34v17-restoration-prayer",
+      "file": "short-healingpsalm34v17-restoration-prayer.md",
+      "title": "Pray This Psalm 34:17-19 Healing Prayer for Peace & Strength | Hear His Voice #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T20:06:16Z",
+      "youtube_video_id": "eDJ5TBu0E4w",
+      "watch_url": "https://www.youtube.com/shorts/eDJ5TBu0E4w",
+      "youtu_be_url": "https://youtu.be/eDJ5TBu0E4w",
+      "shorts_url": "https://www.youtube.com/shorts/eDJ5TBu0E4w",
+      "studio_url": "https://studio.youtube.com/video/eDJ5TBu0E4w/edit",
+      "thumb_url": "https://i.ytimg.com/vi/eDJ5TBu0E4w/hqdefault.jpg",
+      "thumb_text": "REST \u00b7 IN",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 658
     },
     {
       "id": "SHORT-MIDDAYECCLESIASTES9V10",
@@ -17005,19 +17053,6 @@
         "words": 1184
       },
       {
-        "id": "0416",
-        "slug": "healing-when-the-body-is-weak-psalm-107-19-20-the-healing-balm",
-        "file": "0416-healing-when-the-body-is-weak-psalm-107-19-20-the-healing-balm.md",
-        "title": "Healing When the Body Is Weak: Psalm 107:19-20 | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1017
-      },
-      {
         "id": "0418",
         "slug": "prayer-of-faith-for-healing-james-5-14-16",
         "file": "0418-prayer-of-faith-for-healing-james-5-14-16.md",
@@ -17824,17 +17859,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healingpsalm34v17",
-        "file": "0414-short-healingpsalm34v17.yml",
-        "companion_longform_id": "0414",
-        "scripture": "Psalm 34:17-19",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingproverbs4v20",

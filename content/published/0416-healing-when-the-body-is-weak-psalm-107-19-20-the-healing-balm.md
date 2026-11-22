@@ -2,7 +2,7 @@
 id: '0416'
 title: 'Healing When the Body Is Weak: Psalm 107:19-20 | The Healing Balm'
 slug: healing-when-the-body-is-weak-psalm-107-19-20-the-healing-balm
-status: approved
+status: published
 channel: prayer6
 privacy: public
 format: longform
@@ -72,6 +72,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-22"
+published_at: "2026-11-22T20:40:35Z"
+youtube_video_id: "0SmEbw4lYWs"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith
