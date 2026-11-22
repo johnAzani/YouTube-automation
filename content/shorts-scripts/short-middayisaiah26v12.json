@@ -1,0 +1,316 @@
+{
+  "key": "short-middayisaiah26v12",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "PEACE FOR YOUR MIDDAY WORK",
+    "PRAYER ON ISAIAH 26:12"
+  ],
+  "poster": [
+    "ORDAIN PEACE",
+    "IN YOUR WORK",
+    "ISAIAH 26:12",
+    "THE MIDDAY WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "sunlit wooden desk with notebook open under midday window light",
+    "bright midday sunlight streaming through window onto quiet room",
+    "high sun over calm lake surrounded by quiet mountains",
+    "sunbeams shining through green leaves on peaceful desk surface",
+    "sunlit mountain path under bright clear sky at noon",
+    "warm sunlight on open journal beside cup of coffee",
+    "tranquil sunny horizon over calm water at midday"
+  ],
+  "scenes": [
+    {
+      "a": "Your unfinished work is crowding your mind today.",
+      "img": "short-middayisaiah26v12-scene-01.jpg",
+      "kicker": "UNFINISHED WORK",
+      "sub": "CROWDING YOUR MIND TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "You have strived through the morning hours, carrying every single task as though it rested entirely on your own strength.",
+      "img": "short-middayisaiah26v12-scene-02.jpg",
+      "kicker": "MORNING STRIVING",
+      "sub": "CARRYING EVERY SINGLE TASK",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear the quiet promise of Isaiah 26 verse 12: LORD, thou wilt ordain peace for us: for thou also hast wrought all our works in us.",
+      "img": "short-middayisaiah26v12-scene-03.jpg",
+      "kicker": "ISAIAH 26:12",
+      "sub": "THOU WILT ORDAIN PEACE FOR US",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, we lay down our self-reliance in this middle hour of the day.",
+      "img": "short-middayisaiah26v12-scene-04.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "LAYING DOWN SELF RELIANCE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Ordain peace over the labor of our hands, knowing that every true accomplishment is wrought by You.",
+      "img": "short-middayisaiah26v12-scene-05.jpg",
+      "kicker": "ORDAIN PEACE",
+      "sub": "EVERY WORK WROUGHT BY GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Quiet our restless thoughts and grant us steady focus for what lies ahead.",
+      "img": "short-middayisaiah26v12-scene-06.jpg",
+      "kicker": "STEADY FOCUS",
+      "sub": "QUIET OUR RESTLESS THOUGHTS",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. Receive His peace when your unfinished work is crowding your mind today.",
+      "img": "short-middayisaiah26v12-scene-07.jpg",
+      "kicker": "RECEIVE HIS PEACE",
+      "sub": "WHEN WORK CROWDS YOUR MIND",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your unfinished work is crowding your mind today."
+    ],
+    [
+      3,
+      8,
+      "You have strived through the morning hours, carrying every single task as though it rested entirely on your own strength."
+    ],
+    [
+      8,
+      16,
+      "Hear the quiet promise of Isaiah 26 verse 12: LORD, thou wilt ordain peace for us: for thou also hast wrought all our works in us."
+    ],
+    [
+      16,
+      22,
+      "Lord, we lay down our self-reliance in this middle hour of the day."
+    ],
+    [
+      22,
+      28,
+      "Ordain peace over the labor of our hands, knowing that every true accomplishment is wrought by You."
+    ],
+    [
+      28,
+      33,
+      "Quiet our restless thoughts and grant us steady focus for what lies ahead."
+    ],
+    [
+      33,
+      38,
+      "Amen. Receive His peace when your unfinished work is crowding your mind today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR UNFINISHED WORK",
+        "IS CROWDING YOUR MIND TODAY"
+      ],
+      [
+        "UNFINISHED",
+        "WORK"
+      ],
+      "ISAIAH 26 : 12"
+    ],
+    [
+      3,
+      8,
+      [
+        "YOU HAVE STRIVED THROUGH MORNING",
+        "CARRYING EVERY SINGLE TASK",
+        "ON YOUR OWN STRENGTH"
+      ],
+      [
+        "STRIVED",
+        "STRENGTH"
+      ],
+      "ISAIAH 26 : 12"
+    ],
+    [
+      8,
+      16,
+      [
+        "LORD THOU WILT ORDAIN",
+        "PEACE FOR US",
+        "FOR THOU ALSO HAST WROUGHT",
+        "ALL OUR WORKS IN US"
+      ],
+      [
+        "ORDAIN",
+        "PEACE",
+        "WROUGHT"
+      ],
+      "ISAIAH 26 : 12"
+    ],
+    [
+      16,
+      22,
+      [
+        "WE LAY DOWN SELF-RELIANCE",
+        "IN THIS MIDDLE HOUR",
+        "OF THE DAY"
+      ],
+      [
+        "LAY",
+        "DOWN"
+      ],
+      "ISAIAH 26 : 12"
+    ],
+    [
+      22,
+      28,
+      [
+        "ORDAIN PEACE OVER LABOR",
+        "KNOWING EVERY ACCOMPLISHMENT",
+        "IS WROUGHT BY YOU"
+      ],
+      [
+        "ORDAIN",
+        "PEACE"
+      ],
+      "ISAIAH 26 : 12"
+    ],
+    [
+      28,
+      33,
+      [
+        "QUIET OUR RESTLESS THOUGHTS",
+        "GRANT US STEADY FOCUS",
+        "FOR WHAT LIES AHEAD"
+      ],
+      [
+        "QUIET",
+        "STEADY"
+      ],
+      "ISAIAH 26 : 12"
+    ],
+    [
+      33,
+      38,
+      [
+        "RECEIVE HIS PEACE WHEN YOUR",
+        "UNFINISHED WORK IS CROWDING",
+        "YOUR MIND TODAY"
+      ],
+      [
+        "PEACE",
+        "MIND"
+      ],
+      "ISAIAH 26 : 12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your unfinished work is crowding your mind today.",
+      "kind": "phrase",
+      "words": [
+        "UNFINISHED",
+        "WORK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You have strived through the morning hours, carrying every single task as though it rested entirely on your own strength.",
+      "kind": "phrase",
+      "words": [
+        "OWN",
+        "STRENGTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the quiet promise of Isaiah 26 verse 12: LORD, thou wilt ordain peace for us: for thou also hast wrought all our works in us.",
+      "kind": "phrase",
+      "words": [
+        "ORDAIN",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we lay down our self-reliance in this middle hour of the day.",
+      "kind": "phrase",
+      "words": [
+        "SELF-RELIANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Ordain peace over the labor of our hands, knowing that every true accomplishment is wrought by You.",
+      "kind": "phrase",
+      "words": [
+        "ACCOMPLISHMENT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Quiet our restless thoughts and grant us steady focus for what lies ahead.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "FOCUS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Receive His peace when your unfinished work is crowding your mind today.",
+      "kind": "phrase",
+      "words": [
+        "HIS",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 26:12"
+}

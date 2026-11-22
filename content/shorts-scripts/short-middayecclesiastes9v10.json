@@ -1,0 +1,352 @@
+{
+  "key": "short-middayecclesiastes9v10",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "STRENGTH FOR",
+    "YOUR MIDDAY TASK"
+  ],
+  "poster": [
+    "WHEN THE WORK",
+    "FEELS HEAVY",
+    "PAUSE AND PRAY",
+    "ECCLESIASTES 9:10"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday light sunny quiet desk wooden notebook",
+    "sunlight streaming through window oak table empty room",
+    "high noon sun open field tall grass calm daylight",
+    "sunbeams on wooden workbench craft tools peaceful daylight",
+    "calm sunlit mountain path noon brightness",
+    "quiet window afternoon sunlight shadows on wall",
+    "sunlight illuminating empty rustic wooden desk midday",
+    "warm midday sunlight glistening on clear calm water"
+  ],
+  "scenes": [
+    {
+      "a": "Your half-finished task feels heavy this afternoon.",
+      "img": "short-middayecclesiastes9v10-scene-01.jpg",
+      "kicker": "UNFINISHED WORK",
+      "sub": "STRENGTH FOR THE MIDDAY TASK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You have poured yourself out, yet the work remains before you.",
+      "img": "short-middayecclesiastes9v10-scene-02.jpg",
+      "kicker": "WEARY HANDS",
+      "sub": "WHEN THE PACE FEELS HEAVY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Hear the wisdom of Ecclesiastes 9:10.",
+      "img": "short-middayecclesiastes9v10-scene-03.jpg",
+      "kicker": "GOD'S WORD",
+      "sub": "ECCLESIASTES 9:10",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Whatsoever thy hand findeth to do, do it with thy might;",
+      "img": "short-middayecclesiastes9v10-scene-04.jpg",
+      "kicker": "DO IT WITH MIGHT",
+      "sub": "GIVE YOUR ALL TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "for there is no work, nor device, nor knowledge, nor wisdom, in the grave, whither thou goest.",
+      "img": "short-middayecclesiastes9v10-scene-05.jpg",
+      "kicker": "PRESENT MOMENT",
+      "sub": "THIS HOUR MATTERS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, strengthen our hands for the duty right in front of us.",
+      "img": "short-middayecclesiastes9v10-scene-06.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "STRENGTH FOR YOUR DUTY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "When exhaustion whispers that our labor is pointless, give us quiet diligence to serve You well today.",
+      "img": "short-middayecclesiastes9v10-scene-07.jpg",
+      "kicker": "QUIET DILIGENCE",
+      "sub": "SERVE WITH PURPOSE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Renew our energy for this very hour. Amen. Your half-finished task feels heavy this afternoon.",
+      "img": "short-middayecclesiastes9v10-scene-08.jpg",
+      "kicker": "RENEWED STRENGTH",
+      "sub": "PAUSE AND PRAY AGAIN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your half-finished task feels heavy this afternoon."
+    ],
+    [
+      3,
+      7,
+      "You have poured yourself out, yet the work remains before you."
+    ],
+    [
+      7,
+      10,
+      "Hear the wisdom of Ecclesiastes 9:10."
+    ],
+    [
+      10,
+      17,
+      "Whatsoever thy hand findeth to do, do it with thy might;"
+    ],
+    [
+      17,
+      26,
+      "for there is no work, nor device, nor knowledge, nor wisdom, in the grave, whither thou goest."
+    ],
+    [
+      26,
+      33,
+      "Lord, strengthen our hands for the duty right in front of us."
+    ],
+    [
+      33,
+      42,
+      "When exhaustion whispers that our labor is pointless, give us quiet diligence to serve You well today."
+    ],
+    [
+      42,
+      48,
+      "Renew our energy for this very hour. Amen. Your half-finished task feels heavy this afternoon."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR HALF-FINISHED TASK",
+        "FEELS HEAVY THIS AFTERNOON"
+      ],
+      [
+        "TASK",
+        "HEAVY"
+      ],
+      "ECCLESIASTES 9 : 10"
+    ],
+    [
+      3,
+      7,
+      [
+        "YOU HAVE POURED YOURSELF OUT",
+        "YET WORK REMAINS BEFORE YOU"
+      ],
+      [
+        "POURED",
+        "REMAINS"
+      ],
+      "ECCLESIASTES 9 : 10"
+    ],
+    [
+      7,
+      10,
+      [
+        "HEAR THE WISDOM OF",
+        "ECCLESIASTES 9:10"
+      ],
+      [
+        "WISDOM"
+      ],
+      "ECCLESIASTES 9 : 10"
+    ],
+    [
+      10,
+      17,
+      [
+        "WHATSOEVER THY HAND",
+        "FINDETH TO DO",
+        "DO IT WITH THY MIGHT"
+      ],
+      [
+        "HAND",
+        "MIGHT"
+      ],
+      "ECCLESIASTES 9 : 10"
+    ],
+    [
+      17,
+      26,
+      [
+        "FOR THERE IS NO WORK",
+        "NOR DEVICE NOR KNOWLEDGE",
+        "NOR WISDOM IN THE GRAVE"
+      ],
+      [
+        "WORK",
+        "WISDOM"
+      ],
+      "ECCLESIASTES 9 : 10"
+    ],
+    [
+      26,
+      33,
+      [
+        "LORD STRENGTHEN OUR HANDS",
+        "FOR THE DUTY RIGHT IN FRONT"
+      ],
+      [
+        "STRENGTHEN",
+        "DUTY"
+      ],
+      "ECCLESIASTES 9 : 10"
+    ],
+    [
+      33,
+      42,
+      [
+        "WHEN EXHAUSTION WHISPERS",
+        "GIVE US QUIET DILIGENCE",
+        "TO SERVE YOU WELL TODAY"
+      ],
+      [
+        "DILIGENCE",
+        "SERVE"
+      ],
+      "ECCLESIASTES 9 : 10"
+    ],
+    [
+      42,
+      48,
+      [
+        "RENEW OUR ENERGY NOW",
+        "YOUR HALF-FINISHED TASK",
+        "FEELS HEAVY THIS AFTERNOON"
+      ],
+      [
+        "RENEW",
+        "TASK"
+      ],
+      "ECCLESIASTES 9 : 10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your half-finished task feels heavy this afternoon.",
+      "kind": "phrase",
+      "words": [
+        "TASK",
+        "HEAVY"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "You have poured yourself out, yet the work remains before you.",
+      "kind": "phrase",
+      "words": [
+        "POURED",
+        "REMAINS"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the wisdom of Ecclesiastes 9:10.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Whatsoever thy hand findeth to do, do it with thy might;",
+      "kind": "phrase",
+      "words": [
+        "HAND",
+        "MIGHT"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "for there is no work, nor device, nor knowledge, nor wisdom, in the grave, whither thou goest.",
+      "kind": "phrase",
+      "words": [
+        "WORK",
+        "GRAVE"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, strengthen our hands for the duty right in front of us.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTHEN",
+        "DUTY"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "When exhaustion whispers that our labor is pointless, give us quiet diligence to serve You well today.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "DILIGENCE"
+      ],
+      "hi": 6,
+      "slot": "C"
+    },
+    {
+      "a": "Renew our energy for this very hour. Amen. Your half-finished task feels heavy this afternoon.",
+      "kind": "phrase",
+      "words": [
+        "RENEW",
+        "ENERGY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ecclesiastes 9:10"
+}
