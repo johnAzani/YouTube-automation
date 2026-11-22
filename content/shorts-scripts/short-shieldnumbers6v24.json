@@ -1,0 +1,362 @@
+{
+  "key": "short-shieldnumbers6v24",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "GOD'S DAILY BLESSING",
+    "NUMBERS 6:24-26 PRAYER"
+  ],
+  "poster": [
+    "WALK UNDER HIS",
+    "STRONG COVERING",
+    "NUMBERS 6:24-26",
+    "THE COVENANT SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "calm sunlit mountain peak peaceful dawn clouds",
+    "ancient stone fortress watchtower morning light",
+    "golden light rays shining through mountain valley",
+    "serene mirror lake reflection peaceful mountains",
+    "dramatic light rays bursting through clouds landscape",
+    "peaceful river flowing through majestic pine forest"
+  ],
+  "scenes": [
+    {
+      "a": "The quiet weight on your heart is real.",
+      "img": "short-shieldnumbers6v24-scene-01.jpg",
+      "kicker": "QUIET WEIGHT",
+      "sub": "THE BURDEN YOU CARRY TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Numbers chapter six says: The LORD bless thee",
+      "img": "short-shieldnumbers6v24-scene-02.jpg",
+      "kicker": "GOD'S BLESSING",
+      "sub": "NUMBERS 6:24-26",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The LORD make his face shine upon thee",
+      "img": "short-shieldnumbers6v24-scene-03.jpg",
+      "kicker": "HIS GRACIOUS FACE",
+      "sub": "WALK UNDER HIS COVERING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "The LORD lift up his countenance upon thee",
+      "img": "short-shieldnumbers6v24-scene-04.jpg",
+      "kicker": "DIVINE PEACE",
+      "sub": "REFUGE FOR THE WEARY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, cover this weary soul today.",
+      "img": "short-shieldnumbers6v24-scene-05.jpg",
+      "kicker": "STRONG TOWER",
+      "sub": "HE CALMS THE RISING STORM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Shield their path with Your presence",
+      "img": "short-shieldnumbers6v24-scene-06.jpg",
+      "kicker": "EVERLASTING REST",
+      "sub": "SHIELDED IN HIS PRESENCE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The quiet weight on your heart is real."
+    ],
+    [
+      3,
+      9,
+      "When tomorrow feels uncertain and strength runs low, hear the blessing of the Lord over your life."
+    ],
+    [
+      9,
+      13,
+      "Numbers chapter six says: The LORD bless thee, and keep thee:"
+    ],
+    [
+      13,
+      19,
+      "The LORD make his face shine upon thee, and be gracious unto thee:"
+    ],
+    [
+      19,
+      25,
+      "The LORD lift up his countenance upon thee, and give thee peace."
+    ],
+    [
+      25,
+      30,
+      "Heavenly Father, cover this weary soul today."
+    ],
+    [
+      30,
+      36,
+      "Keep them safe beneath Your strong refuge, and let Your grace calm every rising storm."
+    ],
+    [
+      36,
+      42,
+      "Shield their path with Your presence and give them rest."
+    ],
+    [
+      42,
+      45,
+      "Amen. The quiet weight on your heart."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE QUIET WEIGHT",
+        "ON YOUR HEART",
+        "IS REAL."
+      ],
+      [
+        "WEIGHT",
+        "HEART"
+      ],
+      "THE COVENANT SHIELD"
+    ],
+    [
+      3,
+      9,
+      [
+        "WHEN TOMORROW FEELS UNCERTAIN",
+        "AND STRENGTH RUNS LOW",
+        "HEAR THE BLESSING OF THE LORD"
+      ],
+      [
+        "UNCERTAIN",
+        "STRENGTH",
+        "BLESSING"
+      ],
+      "NUMBERS 6:24-26"
+    ],
+    [
+      9,
+      13,
+      [
+        "THE LORD BLESS THEE",
+        "AND KEEP THEE"
+      ],
+      [
+        "BLESS",
+        "KEEP"
+      ],
+      "NUMBERS 6:24"
+    ],
+    [
+      13,
+      19,
+      [
+        "THE LORD MAKE HIS FACE SHINE",
+        "UPON THEE AND BE GRACIOUS"
+      ],
+      [
+        "SHINE",
+        "GRACIOUS"
+      ],
+      "NUMBERS 6:25"
+    ],
+    [
+      19,
+      25,
+      [
+        "THE LORD LIFT UP HIS COUNTENANCE",
+        "UPON THEE AND GIVE THEE PEACE"
+      ],
+      [
+        "COUNTENANCE",
+        "PEACE"
+      ],
+      "NUMBERS 6:26"
+    ],
+    [
+      25,
+      30,
+      [
+        "HEAVENLY FATHER",
+        "COVER THIS WEARY SOUL TODAY"
+      ],
+      [
+        "COVER",
+        "WEARY"
+      ],
+      "NUMBERS 6:24-26"
+    ],
+    [
+      30,
+      36,
+      [
+        "KEEP THEM SAFE BENEATH",
+        "YOUR STRONG REFUGE",
+        "CALM EVERY RISING STORM"
+      ],
+      [
+        "REFUGE",
+        "GRACE",
+        "STORM"
+      ],
+      "NUMBERS 6:24-26"
+    ],
+    [
+      36,
+      42,
+      [
+        "SHIELD THEIR PATH",
+        "WITH YOUR PRESENCE",
+        "AND GIVE THEM REST"
+      ],
+      [
+        "SHIELD",
+        "PRESENCE",
+        "REST"
+      ],
+      "NUMBERS 6:24-26"
+    ],
+    [
+      42,
+      45,
+      [
+        "AMEN",
+        "THE QUIET WEIGHT",
+        "ON YOUR HEART"
+      ],
+      [
+        "AMEN",
+        "WEIGHT"
+      ],
+      "THE COVENANT SHIELD"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The quiet weight on your heart is real.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "WEIGHT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "When tomorrow feels uncertain and strength runs low, hear the blessing of the Lord over your life.",
+      "kind": "phrase",
+      "words": [
+        "UNCERTAIN",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Numbers chapter six says: The LORD bless thee, and keep thee:",
+      "kind": "phrase",
+      "words": [
+        "BLESS",
+        "KEEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD make his face shine upon thee, and be gracious unto thee:",
+      "kind": "phrase",
+      "words": [
+        "FACE",
+        "SHINE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD lift up his countenance upon thee, and give thee peace.",
+      "kind": "phrase",
+      "words": [
+        "COUNTENANCE",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, cover this weary soul today.",
+      "kind": "phrase",
+      "words": [
+        "COVER",
+        "WEARY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Keep them safe beneath Your strong refuge, and let Your grace calm every rising storm.",
+      "kind": "phrase",
+      "words": [
+        "REFUGE",
+        "GRACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Shield their path with Your presence and give them rest.",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. The quiet weight on your heart.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "WEIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Numbers 6:24-26"
+}

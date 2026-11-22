@@ -1,0 +1,372 @@
+{
+  "key": "short-shieldjude1v24",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "KEPT FROM FALLING",
+    "A PRAYER OF REFUGE"
+  ],
+  "poster": [
+    "UNSTEADY STEPS",
+    "GOD IS ABLE",
+    "STAY STANDING",
+    "JUDE 1:24-25"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "steep mountain path stone cliff sunlit morning",
+    "ancient stone watchtower misty mountain ridge",
+    "golden light rays shining through cloud canyon",
+    "peaceful wide mountain river illuminated sky",
+    "majestic mountain pass golden sunrise fog",
+    "strong stone fortress towering cliffs sunlight",
+    "calm alpine lake reflection glowing horizon"
+  ],
+  "scenes": [
+    {
+      "a": "Your feet feel unsteady on this steep road.",
+      "img": "short-shieldjude1v24-scene-01.jpg",
+      "kicker": "UNSTEADY STEPS",
+      "sub": "WHEN THE ROAD FEELS STEEP TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear the promise in Jude one:",
+      "img": "short-shieldjude1v24-scene-02.jpg",
+      "kicker": "GOD IS ABLE",
+      "sub": "FOUNDATION FOR UNCERTAIN FEET",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Now unto him that is able to keep you from falling,",
+      "img": "short-shieldjude1v24-scene-03.jpg",
+      "kicker": "STRONG HOLD",
+      "sub": "KEPT FROM SLIPPING IN THE VALLEY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "and to present you faultless before the presence of his glory with exceeding joy,",
+      "img": "short-shieldjude1v24-scene-04.jpg",
+      "kicker": "PRESENTED FAULTLESS",
+      "sub": "IN THE LIGHT OF HIS PRESENCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "To the only wise God our Savior, be glory and majesty, dominion and power, both now and ever. Amen.",
+      "img": "short-shieldjude1v24-scene-05.jpg",
+      "kicker": "EVERLASTING POWER",
+      "sub": "DOMINION AND MAJESTY FOREVER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father, hold our steps upright whenever the heavy ground beneath us begins to tremble.",
+      "img": "short-shieldjude1v24-scene-06.jpg",
+      "kicker": "STEADY OUR STEPS",
+      "sub": "HOLD US UPRIGHT THROUGH THE STORM",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Guard our soul from slipping into fear, and carry every unseen concern in Your hands. You remain our safe refuge both today and forever. Amen. Your feet feel unsteady on this steep road.",
+      "img": "short-shieldjude1v24-scene-07.jpg",
+      "kicker": "COVENANT SHIELD",
+      "sub": "OUR SAFE REFUGE TODAY AND EVER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your feet feel unsteady on this steep road."
+    ],
+    [
+      3,
+      6,
+      "Hear the promise in Jude one:"
+    ],
+    [
+      6,
+      12,
+      "Now unto him that is able to keep you from falling,"
+    ],
+    [
+      12,
+      19,
+      "and to present you faultless before the presence of his glory with exceeding joy,"
+    ],
+    [
+      19,
+      26,
+      "To the only wise God our Savior, be glory and majesty, dominion and power, both now and ever. Amen."
+    ],
+    [
+      26,
+      31,
+      "Father, hold our steps upright whenever the heavy ground beneath us begins to tremble."
+    ],
+    [
+      31,
+      37,
+      "Guard our soul from slipping into fear, and carry every unseen concern in Your hands."
+    ],
+    [
+      37,
+      41,
+      "You remain our safe refuge both today and forever."
+    ],
+    [
+      41,
+      45,
+      "Amen. Your feet feel unsteady on this steep road."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR FEET FEEL UNSTEADY",
+        "ON THIS STEEP ROAD"
+      ],
+      [
+        "UNSTEADY",
+        "STEEP"
+      ],
+      "JUDE 1 : 24 - 25"
+    ],
+    [
+      3,
+      6,
+      [
+        "HEAR THE PROMISE",
+        "IN JUDE ONE"
+      ],
+      [
+        "PROMISE"
+      ],
+      "JUDE 1 : 24 - 25"
+    ],
+    [
+      6,
+      12,
+      [
+        "NOW UNTO HIM THAT IS ABLE",
+        "TO KEEP YOU FROM FALLING"
+      ],
+      [
+        "ABLE",
+        "KEEP",
+        "FALLING"
+      ],
+      "JUDE 1 : 24 - 25"
+    ],
+    [
+      12,
+      19,
+      [
+        "AND TO PRESENT YOU FAULTLESS",
+        "BEFORE THE PRESENCE OF HIS GLORY",
+        "WITH EXCEEDING JOY"
+      ],
+      [
+        "FAULTLESS",
+        "PRESENCE",
+        "JOY"
+      ],
+      "JUDE 1 : 24 - 25"
+    ],
+    [
+      19,
+      26,
+      [
+        "TO THE ONLY WISE GOD OUR SAVIOR",
+        "BE GLORY AND MAJESTY",
+        "DOMINION AND POWER BOTH NOW AND EVER"
+      ],
+      [
+        "GLORY",
+        "DOMINION",
+        "POWER"
+      ],
+      "JUDE 1 : 24 - 25"
+    ],
+    [
+      26,
+      31,
+      [
+        "FATHER HOLD OUR STEPS UPRIGHT",
+        "WHENEVER THE HEAVY GROUND",
+        "BEGINS TO TREMBLE"
+      ],
+      [
+        "UPRIGHT",
+        "GROUND"
+      ],
+      "JUDE 1 : 24 - 25"
+    ],
+    [
+      31,
+      37,
+      [
+        "GUARD OUR SOUL FROM SLIPPING",
+        "INTO FEAR AND CARRY EVERY",
+        "UNSEEN CONCERN IN YOUR HANDS"
+      ],
+      [
+        "GUARD",
+        "FEAR",
+        "HANDS"
+      ],
+      "JUDE 1 : 24 - 25"
+    ],
+    [
+      37,
+      41,
+      [
+        "YOU REMAIN OUR SAFE REFUGE",
+        "BOTH TODAY AND FOREVER"
+      ],
+      [
+        "SAFE",
+        "REFUGE"
+      ],
+      "JUDE 1 : 24 - 25"
+    ],
+    [
+      41,
+      45,
+      [
+        "AMEN YOUR FEET FEEL UNSTEADY",
+        "ON THIS STEEP ROAD"
+      ],
+      [
+        "UNSTEADY",
+        "ROAD"
+      ],
+      "JUDE 1 : 24 - 25"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your feet feel unsteady on this steep road.",
+      "kind": "phrase",
+      "words": [
+        "UNSTEADY",
+        "STEEP"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "Hear the promise in Jude one:",
+      "kind": "phrase",
+      "words": [
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "Now unto him that is able to keep you from falling,",
+      "kind": "phrase",
+      "words": [
+        "ABLE",
+        "KEEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and to present you faultless before the presence of his glory with exceeding joy,",
+      "kind": "phrase",
+      "words": [
+        "FAULTLESS",
+        "JOY"
+      ],
+      "hi": 1,
+      "slot": "D"
+    },
+    {
+      "a": "To the only wise God our Savior, be glory and majesty, dominion and power, both now and ever. Amen.",
+      "kind": "phrase",
+      "words": [
+        "GLORY",
+        "POWER"
+      ],
+      "hi": 0,
+      "slot": "E"
+    },
+    {
+      "a": "Father, hold our steps upright whenever the heavy ground beneath us begins to tremble.",
+      "kind": "phrase",
+      "words": [
+        "UPRIGHT",
+        "TREMBLE"
+      ],
+      "hi": 0,
+      "slot": "F"
+    },
+    {
+      "a": "Guard our soul from slipping into fear, and carry every unseen concern in Your hands.",
+      "kind": "phrase",
+      "words": [
+        "GUARD",
+        "CONCERN"
+      ],
+      "hi": 0,
+      "slot": "G"
+    },
+    {
+      "a": "You remain our safe refuge both today and forever.",
+      "kind": "phrase",
+      "words": [
+        "SAFE",
+        "REFUGE"
+      ],
+      "hi": 0,
+      "slot": "H"
+    },
+    {
+      "a": "Amen. Your feet feel unsteady on this steep road.",
+      "kind": "phrase",
+      "words": [
+        "UNSTEADY",
+        "ROAD"
+      ],
+      "hi": 1,
+      "slot": "I"
+    }
+  ],
+  "scripture": "Jude 1:24-25"
+}
