@@ -1,6 +1,6 @@
 ---
 id: 0409
-title: "Prayer When You Are Tired and Heavy Laden: Matthew 11:28-30"
+title: "When You Need Rest For Your Soul: Matthew 11:28-30 | The Healing Balm"
 slug: matthew-11-28-30-rest-for-your-soul-prayer
 status: published
 channel: prayer6
@@ -79,10 +79,13 @@ originality:
 published_on: "2026-11-15"
 published_at: "2026-11-15T20:43:07Z"
 youtube_video_id: "JpCM2hZ9jpM"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Prayer When You Are Tired and Heavy Laden: Matthew 11:28-30"
+retitled_at: "2026-11-22"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith
