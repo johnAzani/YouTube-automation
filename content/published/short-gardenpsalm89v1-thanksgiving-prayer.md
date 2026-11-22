@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE PRAISE GARDEN", "PSALM 89:1", "GOD IS FAITHFUL", "EVERLASTING MERCY"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-29T17:48:30Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Your voice feels too quiet to praise today. Yet God hears the gratitude lingering beneath the heavy silence in this very room. I will sing of the mercies of the LORD for ever: with my mouth will I make known thy faithfulness to all generations. Father, thank You for Your endless mercy that holds us when our own strength gives out. Even in moments of doubt, Your enduring faithfulness remains the steady anchor of our lives. Fill our mouths with honest praise today, declaring Your grace to the next generation. Amen. Even when your voice feels too quiet to praise today.

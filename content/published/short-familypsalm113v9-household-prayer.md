@@ -27,7 +27,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (58, 775, 1021, 824); shorten the authored lockup or reduce its size"
 ---
 
 The empty chair at your table. He maketh the barren woman to keep house, and to be a joyful mother of children. Praise ye the LORD. Lord please turn our barrenness into a season of fruitfulness and fill our home with your grace. We trust your hand to grow what is sown in faith, even when the silence feels heavy. Let our hearts be anchored in your promise as we wait for the life you provide. We bring our household to you today, trusting that every good thing comes from your loving heart. Amen. The empty chair remains silent.

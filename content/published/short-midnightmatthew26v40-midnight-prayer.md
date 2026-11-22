@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["STAY VIGILANT", "BEYOND THE WEARINESS", "HEAR THE CALL", "KEEP THE WATCH"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-29T17:48:23Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 That restlessness keeping you awake is the Lord calling you to his side. And he cometh unto the disciples, and findeth them asleep, and saith unto Peter, What, could ye not watch with me one hour? Watch and pray, that ye enter not into temptation: the spirit indeed is willing, but the flesh is weak. Lord, strengthen my resolve in this quiet hour. Keep my heart alert and fixed upon your holy truth. Deliver me from wandering thoughts. Make me a faithful watcher who guards the door of my soul. Let your grace sustain me when the world grows cold and my spirit finds its rest in you.

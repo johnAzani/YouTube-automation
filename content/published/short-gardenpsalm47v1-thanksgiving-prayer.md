@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["A PRAYER", "OF TRIUMPH", "THE PRAISE", "GARDEN"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-22T13:57:33Z"
+thumbnail_retry_after: "2026-11-29T17:48:29Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If that decision weighing on your mind feels too heavy to carry alone, lean in here. Lord, the weight of tomorrow often obscures the victory You have already secured for my life. I find peace in Your word: O clap your hands, all ye people; shout unto God with the voice of triumph. In this quiet moment, I choose to turn my anxiety into a rhythm of holy celebration. Let my spirit rise above these passing troubles to honor the One who sustains my soul. Thank You for being the anchor that holds me steady through every single changing season today.
