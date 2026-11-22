@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T11:43:49Z",
+  "generated_at": "2026-11-22T11:49:59Z",
   "monitor_generated_at": "2026-11-22T11:42:28.969000+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 634,
+    "published_total": 635,
     "published_longform": 188,
-    "published_shorts": 446,
-    "public_total": 632,
+    "published_shorts": 447,
+    "public_total": 633,
     "queued_longform": 59,
-    "queued_shorts": 93,
+    "queued_shorts": 91,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 74,
+        "published_total": 75,
         "published_longform": 23,
-        "published_shorts": 51,
-        "thumbnail_pending": 0,
-        "public_total": 74,
+        "published_shorts": 52,
+        "thumbnail_pending": 1,
+        "public_total": 75,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYPSALM94V18",
-        "title": "Say This Psalm 94:18 Prayer at Noon | Holds You Up #Shorts",
+        "id": "SHORT-MIDDAY1PETER4V11",
+        "title": "Say This 1 Peter 4:11 Prayer at Noon | Strength For The Midday Hour #Shorts",
         "format": "short",
-        "youtube_video_id": "UmHZqw6eWHc",
-        "watch_url": "https://www.youtube.com/shorts/UmHZqw6eWHc",
-        "published_on": "2026-11-21",
-        "published_at": "2026-11-21T23:55:46Z"
+        "youtube_video_id": "TwbYfuFKZ64",
+        "watch_url": "https://www.youtube.com/shorts/TwbYfuFKZ64",
+        "published_on": "2026-11-22",
+        "published_at": "2026-11-22T11:49:13Z"
       },
       "next_queued_longform": {
         "id": "0100",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midday1peter4v11",
-        "scripture": "1 Peter 4:11",
+        "short": "short-midday1thessalonians5v16",
+        "scripture": "1 Thessalonians 5:16-18",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAY1PETER4V11",
+      "slug": "short-midday1peter4v11-midday-prayer",
+      "file": "short-midday1peter4v11-midday-prayer.md",
+      "title": "Say This 1 Peter 4:11 Prayer at Noon | Strength For The Midday Hour #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T11:49:13Z",
+      "youtube_video_id": "TwbYfuFKZ64",
+      "watch_url": "https://www.youtube.com/shorts/TwbYfuFKZ64",
+      "youtu_be_url": "https://youtu.be/TwbYfuFKZ64",
+      "shorts_url": "https://www.youtube.com/shorts/TwbYfuFKZ64",
+      "studio_url": "https://studio.youtube.com/video/TwbYfuFKZ64/edit",
+      "thumb_url": "https://i.ytimg.com/vi/TwbYfuFKZ64/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "49s",
+      "words": 646
+    },
     {
       "id": "0617",
       "slug": "when-you-pass-through-deep-waters-isaiah-43-2",
@@ -16767,17 +16791,6 @@
         "target_window_utc": "18:44"
       },
       {
-        "short": "short-midday1peter4v11",
-        "file": "0000-short-midday1peter4v11.yml",
-        "companion_longform_id": "",
-        "scripture": "1 Peter 4:11",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
-      {
         "short": "short-midday1thessalonians5v16",
         "file": "0000-short-midday1thessalonians5v16.yml",
         "companion_longform_id": "",
@@ -17134,17 +17147,6 @@
         "file": "0102-short-middayproverbs15v1.yml",
         "companion_longform_id": "0102",
         "scripture": "Proverbs 15:1",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-middayphilippians4v13",
-        "file": "0107-short-middayphilippians4v13.yml",
-        "companion_longform_id": "0107",
-        "scripture": "Philippians 4:13",
         "channel": "prayer3",
         "channel_name": "The Midday Watch",
         "status": "approved",
