@@ -1,0 +1,361 @@
+{
+  "key": "short-provisionjohn6v11",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "WHEN WHAT YOU HAVE",
+    "FEELS TOO LITTLE"
+  ],
+  "poster": [
+    "GATHER THE FRAGMENTS",
+    "GOD MULTIPLIES YOUR EFFORT",
+    "DAILY PROVISION PRAYER",
+    "JOHN 6:11-13"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit sanctuary stone table peaceful early morning",
+    "calm mountain river flowing through golden valley",
+    "golden sunlight streaming over serene mountain pass",
+    "ancient stone table outdoors bathed in warm sunlight",
+    "quiet sunlit meadow path surrounded by pine trees",
+    "peaceful golden sun rays over calm clear lake water",
+    "soft morning light on quiet alpine valley landscape",
+    "sunlit stone altar in quiet valley setting",
+    "peaceful golden river at dawn glowing in morning light"
+  ],
+  "scenes": [
+    {
+      "a": "You hold a meager portion in your hands.",
+      "img": "short-provisionjohn6v11-scene-01.jpg",
+      "kicker": "MEAGER PORTION",
+      "sub": "HOLDING WHAT REMAINS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You wonder if what remains is enough for the work before you.",
+      "img": "short-provisionjohn6v11-scene-02.jpg",
+      "kicker": "UNCERTAIN ENOUGH",
+      "sub": "WEIGHING THE TASK AHEAD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear the holy scripture recorded in John.",
+      "img": "short-provisionjohn6v11-scene-03.jpg",
+      "kicker": "JOHN 6:12",
+      "sub": "THE MASTER COMMANDS",
+      "cam": "tilt_up",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "When they were filled, he said unto his disciples, Gather up the fragments that remain, that nothing be lost.",
+      "img": "short-provisionjohn6v11-scene-04.jpg",
+      "kicker": "GATHER FRAGMENTS",
+      "sub": "THAT NOTHING BE LOST",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we quietly bring the little we have left into Your hands today.",
+      "img": "short-provisionjohn6v11-scene-05.jpg",
+      "kicker": "INTO HIS CARE",
+      "sub": "PLACING THE LITTLE WE HAVE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Give us eyes to treasure every fragment of Your daily grace.",
+      "img": "short-provisionjohn6v11-scene-06.jpg",
+      "kicker": "DAILY GRACE",
+      "sub": "TREASURING EVERY FRAGMENT",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Bless our small obedience and multiply our meager effort.",
+      "img": "short-provisionjohn6v11-scene-07.jpg",
+      "kicker": "MULTIPLIED EFFORT",
+      "sub": "BLESS OUR SMALL OBEDIENCES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Guard our faithful stewardship so that nothing You provide is lost or wasted.",
+      "img": "short-provisionjohn6v11-scene-08.jpg",
+      "kicker": "FAITHFUL STEWARDSHIP",
+      "sub": "NOTHING WASTED OR LOST",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen, even while you hold a meager portion.",
+      "img": "short-provisionjohn6v11-scene-09.jpg",
+      "kicker": "STILL HELD",
+      "sub": "IN THE HANDS OF GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You hold a meager portion in your hands."
+    ],
+    [
+      3,
+      8,
+      "You wonder if what remains is enough for the work before you."
+    ],
+    [
+      8,
+      12,
+      "Hear the holy scripture recorded in John."
+    ],
+    [
+      12,
+      19,
+      "When they were filled, he said unto his disciples, Gather up the fragments that remain, that nothing be lost."
+    ],
+    [
+      19,
+      25,
+      "Lord, we quietly bring the little we have left into Your hands today."
+    ],
+    [
+      25,
+      31,
+      "Give us eyes to treasure every fragment of Your daily grace."
+    ],
+    [
+      31,
+      37,
+      "Bless our small obedience and multiply our meager effort."
+    ],
+    [
+      37,
+      44,
+      "Guard our faithful stewardship so that nothing You provide is lost or wasted."
+    ],
+    [
+      44,
+      48,
+      "Amen, even while you hold a meager portion."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU HOLD A",
+        "MEAGER PORTION"
+      ],
+      [
+        "MEAGER"
+      ],
+      "JOHN 6 : 12"
+    ],
+    [
+      3,
+      8,
+      [
+        "UNCERTAIN IF WHAT",
+        "REMAINS IS ENOUGH"
+      ],
+      [
+        "ENOUGH"
+      ],
+      "JOHN 6 : 12"
+    ],
+    [
+      8,
+      12,
+      [
+        "HEAR THE HOLY",
+        "SCRIPTURE IN JOHN"
+      ],
+      [
+        "HOLY"
+      ],
+      "JOHN 6 : 12"
+    ],
+    [
+      12,
+      19,
+      [
+        "GATHER UP THE",
+        "FRAGMENTS THAT REMAIN"
+      ],
+      [
+        "FRAGMENTS"
+      ],
+      "JOHN 6 : 12"
+    ],
+    [
+      19,
+      25,
+      [
+        "WE BRING THE LITTLE",
+        "INTO YOUR HANDS"
+      ],
+      [
+        "HANDS"
+      ],
+      "JOHN 6 : 12"
+    ],
+    [
+      25,
+      31,
+      [
+        "TREASURE EVERY",
+        "FRAGMENT OF GRACE"
+      ],
+      [
+        "GRACE"
+      ],
+      "JOHN 6 : 12"
+    ],
+    [
+      31,
+      37,
+      [
+        "MULTIPLY OUR",
+        "MEAGER EFFORT"
+      ],
+      [
+        "MULTIPLY"
+      ],
+      "JOHN 6 : 12"
+    ],
+    [
+      37,
+      44,
+      [
+        "GUARD OUR STEWARDSHIP",
+        "NOTHING LOST OR WASTED"
+      ],
+      [
+        "STEWARDSHIP"
+      ],
+      "JOHN 6 : 12"
+    ],
+    [
+      44,
+      48,
+      [
+        "EVEN WHILE YOU HOLD",
+        "A MEAGER PORTION"
+      ],
+      [
+        "MEAGER"
+      ],
+      "JOHN 6 : 12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You hold a meager portion in your hands.",
+      "kind": "phrase",
+      "words": [
+        "MEAGER",
+        "PORTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You wonder if what remains is enough for the work before you.",
+      "kind": "phrase",
+      "words": [
+        "WORK",
+        "BEFORE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When they were filled, he said unto his disciples, Gather up the fragments that remain, that nothing be lost.",
+      "kind": "phrase",
+      "words": [
+        "GATHER",
+        "FRAGMENTS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we quietly bring the little we have left into Your hands today.",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "HANDS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Give us eyes to treasure every fragment of Your daily grace.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "GRACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Bless our small obedience and multiply our meager effort.",
+      "kind": "phrase",
+      "words": [
+        "MULTIPLY",
+        "EFFORT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guard our faithful stewardship so that nothing You provide is lost or wasted.",
+      "kind": "phrase",
+      "words": [
+        "NOTHING",
+        "WASTED"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "John 6:11-13"
+}

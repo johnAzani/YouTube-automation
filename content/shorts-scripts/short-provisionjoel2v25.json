@@ -1,0 +1,324 @@
+{
+  "key": "short-provisionjoel2v25",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "GOD WILL RESTORE",
+    "YOUR WASTED YEARS"
+  ],
+  "poster": [
+    "GOD WILL RESTORE",
+    "THE YEARS OF LOSS",
+    "JOEL 2:25-26",
+    "DAILY PROVISION PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit mountain valley at sunrise golden light",
+    "peaceful river flowing through sunlit green valley",
+    "ancient stone sanctuary table bathed in warm sunlight",
+    "golden wheat field under calm bright sunlight",
+    "sunlight breaking through morning mist over quiet stream",
+    "sunlit peaceful mountain path at dawn",
+    "calm mountain river under glowing morning sun"
+  ],
+  "scenes": [
+    {
+      "a": "You still carry the weight of wasted years.",
+      "img": "short-provisionjoel2v25-scene-01.jpg",
+      "kicker": "HEAVY SEASONS",
+      "sub": "THE YEARS OF FRUITLESS STRUGGLE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear the promise of the Lord in Joel chapter two.",
+      "img": "short-provisionjoel2v25-scene-02.jpg",
+      "kicker": "GOD REMEMBERS",
+      "sub": "HEAR HIS PROMISE TODAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And I will restore to you the years that the locust hath eaten, the cankerworm, and the caterpiller, and the palmerworm, my great army which I sent among you.",
+      "img": "short-provisionjoel2v25-scene-03.jpg",
+      "kicker": "FULL RESTORATION",
+      "sub": "I WILL RESTORE TO YOU THE YEARS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "And ye shall eat in plenty, and be satisfied, and praise the name of the LORD your God, that hath dealt wondrously with you: and my people shall never be ashamed.",
+      "img": "short-provisionjoel2v25-scene-04.jpg",
+      "kicker": "ABUNDANT SATISFACTION",
+      "sub": "YE SHALL EAT IN PLENTY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, restore what seemed lost to fruitless struggle.",
+      "img": "short-provisionjoel2v25-scene-05.jpg",
+      "kicker": "DAILY PETITION",
+      "sub": "RESTORE WHAT SEEMED LOST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Fill our hands with Your daily provision. Deal wondrously with our labor, that we praise Your name.",
+      "img": "short-provisionjoel2v25-scene-06.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "DEAL WONDROUSLY WITH OUR LABOR",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. You carry wasted years no more.",
+      "img": "short-provisionjoel2v25-scene-07.jpg",
+      "kicker": "FREEDOM IN GOD",
+      "sub": "WASTED YEARS NO MORE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You still carry the weight of wasted years."
+    ],
+    [
+      3,
+      6,
+      "Hear the promise of the Lord in Joel chapter two."
+    ],
+    [
+      6,
+      14,
+      "And I will restore to you the years that the locust hath eaten, the cankerworm, and the caterpiller, and the palmerworm, my great army which I sent among you."
+    ],
+    [
+      14,
+      22,
+      "And ye shall eat in plenty, and be satisfied, and praise the name of the LORD your God, that hath dealt wondrously with you: and my people shall never be ashamed."
+    ],
+    [
+      22,
+      26,
+      "Lord, restore what seemed lost to fruitless struggle."
+    ],
+    [
+      26,
+      30,
+      "Fill our hands with Your daily provision. Deal wondrously with our labor, that we praise Your name."
+    ],
+    [
+      30,
+      34,
+      "Amen. You carry wasted years no more."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU STILL CARRY",
+        "THE WEIGHT OF",
+        "WASTED YEARS"
+      ],
+      [
+        "WEIGHT",
+        "WASTED"
+      ],
+      "JOEL 2:25-26"
+    ],
+    [
+      3,
+      6,
+      [
+        "HEAR THE PROMISE",
+        "OF THE LORD IN",
+        "JOEL CHAPTER TWO"
+      ],
+      [
+        "PROMISE",
+        "LORD"
+      ],
+      "JOEL 2:25-26"
+    ],
+    [
+      6,
+      14,
+      [
+        "AND I WILL RESTORE",
+        "THE YEARS THAT THE",
+        "LOCUST HATH EATEN"
+      ],
+      [
+        "RESTORE",
+        "YEARS"
+      ],
+      "JOEL 2:25-26"
+    ],
+    [
+      14,
+      22,
+      [
+        "AND YE SHALL EAT",
+        "IN PLENTY AND",
+        "BE SATISFIED"
+      ],
+      [
+        "PLENTY",
+        "SATISFIED"
+      ],
+      "JOEL 2:25-26"
+    ],
+    [
+      22,
+      26,
+      [
+        "LORD RESTORE WHAT",
+        "SEEMED LOST TO",
+        "FRUITLESS STRUGGLE"
+      ],
+      [
+        "RESTORE",
+        "LOST"
+      ],
+      "JOEL 2:25-26"
+    ],
+    [
+      26,
+      30,
+      [
+        "FILL OUR HANDS WITH",
+        "YOUR DAILY PROVISION",
+        "AND BLESS OUR LABOR"
+      ],
+      [
+        "PROVISION",
+        "LABOR"
+      ],
+      "JOEL 2:25-26"
+    ],
+    [
+      30,
+      34,
+      [
+        "AMEN YOU CARRY",
+        "WASTED YEARS",
+        "NO MORE"
+      ],
+      [
+        "WASTED",
+        "NO MORE"
+      ],
+      "JOEL 2:25-26"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You still carry the weight of wasted years.",
+      "kind": "phrase",
+      "words": [
+        "WEIGHT",
+        "WASTED",
+        "YEARS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the promise of the Lord in Joel chapter two.",
+      "kind": "phrase",
+      "words": [
+        "HEAR",
+        "PROMISE",
+        "LORD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "And I will restore to you the years that the locust hath eaten, the cankerworm, and the caterpiller, and the palmerworm, my great army which I sent among you.",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "YEARS",
+        "LOCUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And ye shall eat in plenty, and be satisfied, and praise the name of the LORD your God, that hath dealt wondrously with you: and my people shall never be ashamed.",
+      "kind": "phrase",
+      "words": [
+        "PLENTY",
+        "SATISFIED",
+        "WONDROUSLY"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, restore what seemed lost to fruitless struggle.",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "LOST",
+        "STRUGGLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Fill our hands with Your daily provision. Deal wondrously with our labor, that we praise Your name.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "PROVISION",
+        "WONDROUSLY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. You carry wasted years no more.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "WASTED",
+        "YEARS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Joel 2:25-26"
+}

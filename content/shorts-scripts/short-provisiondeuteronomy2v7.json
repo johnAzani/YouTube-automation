@@ -1,0 +1,393 @@
+{
+  "key": "short-provisiondeuteronomy2v7",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "HE KNOWS YOUR",
+    "WALKING TODAY"
+  ],
+  "poster": [
+    "GOD SEES YOUR",
+    "QUIET LABOR IN",
+    "EVERY WILDERNESS",
+    "DEUTERONOMY 2:7"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "calm sunlit mountain valley morning",
+    "golden light over open desert path",
+    "sunlight shining through mountain pass",
+    "peaceful winding path in golden desert",
+    "golden rays over desert valley at dawn",
+    "sunlit mountain trail at sunrise",
+    "peaceful river through valley morning",
+    "sunlit sanctuary stone table morning",
+    "calm sunlit mountain valley twilight"
+  ],
+  "scenes": [
+    {
+      "a": "When you fear your quiet labor goes unnoticed,",
+      "img": "short-provisiondeuteronomy2v7-scene-01.jpg",
+      "kicker": "QUIET LABOR",
+      "sub": "WHEN YOUR WORK FEELS UNSEEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "hear His promise in Deuteronomy chapter two, verse seven:",
+      "img": "short-provisiondeuteronomy2v7-scene-02.jpg",
+      "kicker": "GOD SEES YOU",
+      "sub": "HEAR HIS PROMISE TODAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For the LORD thy God hath blessed thee in all the works of thy hand:",
+      "img": "short-provisiondeuteronomy2v7-scene-03.jpg",
+      "kicker": "WORKS OF THY HAND",
+      "sub": "BLESSED IN ALL YOUR LABOR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "he knoweth thy walking through this great wilderness:",
+      "img": "short-provisiondeuteronomy2v7-scene-04.jpg",
+      "kicker": "GREAT WILDERNESS",
+      "sub": "HE KNOWS YOUR DAILY WALK",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "these forty years the LORD thy God hath been with thee; thou hast lacked nothing.",
+      "img": "short-provisiondeuteronomy2v7-scene-05.jpg",
+      "kicker": "LACKED NOTHING",
+      "sub": "GOD HAS BEEN WITH YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, when the path feels long and dry, remind us that You track every step we take.",
+      "img": "short-provisiondeuteronomy2v7-scene-06.jpg",
+      "kicker": "TRACK EVERY STEP",
+      "sub": "HE MARKS YOUR EVERY STEP",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Bless the work of our hands today, supply our daily bread,",
+      "img": "short-provisiondeuteronomy2v7-scene-07.jpg",
+      "kicker": "DAILY BREAD",
+      "sub": "STRENGTH FOR TODAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "and give us eyes to see how faithfully You have sustained us.",
+      "img": "short-provisiondeuteronomy2v7-scene-08.jpg",
+      "kicker": "FAITHFULLY SUSTAINED",
+      "sub": "EVER PRESENT PROVISION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "In Jesus' name, Amen. When you fear your quiet labor goes unnoticed.",
+      "img": "short-provisiondeuteronomy2v7-scene-09.jpg",
+      "kicker": "STILL UNNOTICED",
+      "sub": "HE SEES YOUR LABOR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "When you fear your quiet labor goes unnoticed,"
+    ],
+    [
+      3,
+      7,
+      "hear His promise in Deuteronomy chapter two, verse seven:"
+    ],
+    [
+      7,
+      14,
+      "For the LORD thy God hath blessed thee in all the works of thy hand:"
+    ],
+    [
+      14,
+      21,
+      "he knoweth thy walking through this great wilderness:"
+    ],
+    [
+      21,
+      29,
+      "these forty years the LORD thy God hath been with thee; thou hast lacked nothing."
+    ],
+    [
+      29,
+      35,
+      "Lord, when the path feels long and dry, remind us that You track every step we take."
+    ],
+    [
+      35,
+      42,
+      "Bless the work of our hands today, supply our daily bread,"
+    ],
+    [
+      42,
+      47,
+      "and give us eyes to see how faithfully You have sustained us."
+    ],
+    [
+      47,
+      51,
+      "In Jesus' name, Amen. When you fear your quiet labor goes unnoticed."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WHEN YOU FEAR",
+        "YOUR QUIET LABOR",
+        "GOES UNNOTICED"
+      ],
+      [
+        "QUIET",
+        "LABOR"
+      ],
+      "DEUTERONOMY 2:7"
+    ],
+    [
+      3,
+      7,
+      [
+        "HEAR HIS PROMISE IN",
+        "DEUTERONOMY TWO",
+        "VERSE SEVEN"
+      ],
+      [
+        "PROMISE"
+      ],
+      "DEUTERONOMY 2:7"
+    ],
+    [
+      7,
+      14,
+      [
+        "FOR THE LORD THY GOD",
+        "HATH BLESSED THEE IN ALL",
+        "THE WORKS OF THY HAND"
+      ],
+      [
+        "BLESSED",
+        "WORKS"
+      ],
+      "DEUTERONOMY 2:7"
+    ],
+    [
+      14,
+      21,
+      [
+        "HE KNOWETH THY WALKING",
+        "THROUGH THIS GREAT",
+        "WILDERNESS"
+      ],
+      [
+        "KNOWETH",
+        "WILDERNESS"
+      ],
+      "DEUTERONOMY 2:7"
+    ],
+    [
+      21,
+      29,
+      [
+        "THESE FORTY YEARS",
+        "THE LORD THY GOD HATH BEEN",
+        "WITH THEE THOU HAST LACKED NOTHING"
+      ],
+      [
+        "LACKED",
+        "NOTHING"
+      ],
+      "DEUTERONOMY 2:7"
+    ],
+    [
+      29,
+      35,
+      [
+        "LORD WHEN THE PATH FEELS LONG",
+        "REMIND US THAT YOU TRACK",
+        "EVERY STEP WE TAKE"
+      ],
+      [
+        "TRACK",
+        "STEP"
+      ],
+      "DEUTERONOMY 2:7"
+    ],
+    [
+      35,
+      42,
+      [
+        "BLESS THE WORK OF OUR HANDS",
+        "TODAY SUPPLY OUR",
+        "DAILY BREAD"
+      ],
+      [
+        "DAILY",
+        "BREAD"
+      ],
+      "DEUTERONOMY 2:7"
+    ],
+    [
+      42,
+      47,
+      [
+        "AND GIVE US EYES TO SEE",
+        "HOW FAITHFULLY YOU HAVE",
+        "SUSTAINED US"
+      ],
+      [
+        "FAITHFULLY",
+        "SUSTAINED"
+      ],
+      "DEUTERONOMY 2:7"
+    ],
+    [
+      47,
+      51,
+      [
+        "IN JESUS NAME AMEN",
+        "WHEN YOU FEAR YOUR QUIET",
+        "LABOR GOES UNNOTICED"
+      ],
+      [
+        "AMEN",
+        "QUIET"
+      ],
+      "DEUTERONOMY 2:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When you fear your quiet labor goes unnoticed,",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "LABOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "hear His promise in Deuteronomy chapter two, verse seven:",
+      "kind": "phrase",
+      "words": [
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For the LORD thy God hath blessed thee in all the works of thy hand:",
+      "kind": "quote",
+      "words": [
+        "BLESSED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "he knoweth thy walking through this great wilderness:",
+      "kind": "quote",
+      "words": [
+        "KNOWETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "these forty years the LORD thy God hath been with thee; thou hast lacked nothing.",
+      "kind": "quote",
+      "words": [
+        "LACKED",
+        "NOTHING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when the path feels long and dry, remind us that You track every step we take.",
+      "kind": "phrase",
+      "words": [
+        "TRACK",
+        "STEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Bless the work of our hands today, supply our daily bread,",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "BREAD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and give us eyes to see how faithfully You have sustained us.",
+      "kind": "phrase",
+      "words": [
+        "SUSTAINED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus' name, Amen. When you fear your quiet labor goes unnoticed.",
+      "kind": "phrase",
+      "words": [
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Deuteronomy 2:7"
+}
