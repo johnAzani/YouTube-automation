@@ -1,0 +1,318 @@
+{
+  "key": "short-midday1peter4v11",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "WHEN YOUR STRENGTH IS DRY",
+    "1 PETER 4:11 MIDDAY PRAYER"
+  ],
+  "poster": [
+    "WHEN YOUR STRENGTH IS DRY",
+    "A MIDDAY PRAYER FOR SERVING",
+    "1 PETER 4:11",
+    "THE MIDDAY WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "quiet wooden desk in warm midday sunlight",
+    "sunlight filtering through glass window midday",
+    "high noon sun over open calm field",
+    "sun rays illuminate quiet room midday",
+    "peaceful valley under midday sky",
+    "calm water reflecting bright noon light"
+  ],
+  "scenes": [
+    {
+      "a": "Your strength to serve is running dry.",
+      "img": "short-midday1peter4v11-scene-01.jpg",
+      "kicker": "RUNNING ON EMPTY",
+      "sub": "STRENGTH FOR THE MIDDAY HOUR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear First Peter four, verse eleven.",
+      "img": "short-midday1peter4v11-scene-02.jpg",
+      "kicker": "THE ORACLES OF GOD",
+      "sub": "1 PETER 4:11",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "if any man minister, let him do it as of the ability which God giveth:",
+      "img": "short-midday1peter4v11-scene-03.jpg",
+      "kicker": "GOD GIVETH ABILITY",
+      "sub": "MINISTER IN HIS STRENGTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "that God in all things may be glorified through Jesus Christ,",
+      "img": "short-midday1peter4v11-scene-04.jpg",
+      "kicker": "GLORIFIED IN ALL",
+      "sub": "TO HIM BE PRAISE FOR EVER",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, at this midday hour, we stop striving in our own weak power.",
+      "img": "short-midday1peter4v11-scene-05.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "PAUSE AND RENEW YOUR SPIRIT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen, when our strength to serve is running dry.",
+      "img": "short-midday1peter4v11-scene-06.jpg",
+      "kicker": "PAUSE AND PRAY",
+      "sub": "THE MIDDAY WATCH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your strength to serve is running dry."
+    ],
+    [
+      3,
+      8,
+      "You sit at this desk, giving everything to others while feeling depleted inside."
+    ],
+    [
+      8,
+      11,
+      "Hear First Peter four, verse eleven."
+    ],
+    [
+      11,
+      18,
+      "If any man speak, let him speak as the oracles of God;"
+    ],
+    [
+      18,
+      27,
+      "if any man minister, let him do it as of the ability which God giveth:"
+    ],
+    [
+      27,
+      39,
+      "that God in all things may be glorified through Jesus Christ, to whom be praise and dominion for ever and ever. Amen."
+    ],
+    [
+      39,
+      45,
+      "Lord, at this midday hour, we stop striving in our own weak power."
+    ],
+    [
+      45,
+      51,
+      "Supply the strength we lack, so all we do glorifies Christ."
+    ],
+    [
+      51,
+      56,
+      "Amen, when our strength to serve is running dry."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR STRENGTH TO SERVE",
+        "IS RUNNING DRY"
+      ],
+      [
+        "RUNNING"
+      ],
+      "1 PETER 4 : 11"
+    ],
+    [
+      3,
+      8,
+      [
+        "YOU SIT AT THIS DESK",
+        "GIVING EVERYTHING TO OTHERS",
+        "WHILE FEELING DEPLETED INSIDE"
+      ],
+      [
+        "DEPLETED"
+      ],
+      "1 PETER 4 : 11"
+    ],
+    [
+      8,
+      11,
+      [
+        "HEAR FIRST PETER",
+        "FOUR VERSE ELEVEN"
+      ],
+      [
+        "PETER"
+      ],
+      "1 PETER 4 : 11"
+    ],
+    [
+      11,
+      18,
+      [
+        "IF ANY MAN SPEAK",
+        "LET HIM SPEAK AS THE",
+        "ORACLES OF GOD"
+      ],
+      [
+        "ORACLES"
+      ],
+      "1 PETER 4 : 11"
+    ],
+    [
+      18,
+      27,
+      [
+        "IF ANY MAN MINISTER",
+        "LET HIM DO IT AS OF THE ABILITY",
+        "WHICH GOD GIVETH"
+      ],
+      [
+        "ABILITY"
+      ],
+      "1 PETER 4 : 11"
+    ],
+    [
+      27,
+      39,
+      [
+        "THAT GOD IN ALL THINGS",
+        "MAY BE GLORIFIED THROUGH JESUS CHRIST",
+        "TO WHOM BE PRAISE AND DOMINION",
+        "FOR EVER AND EVER AMEN"
+      ],
+      [
+        "GLORIFIED"
+      ],
+      "1 PETER 4 : 11"
+    ],
+    [
+      39,
+      45,
+      [
+        "LORD AT THIS MIDDAY HOUR",
+        "WE STOP STRIVING IN OUR OWN WEAK POWER"
+      ],
+      [
+        "POWER"
+      ],
+      "1 PETER 4 : 11"
+    ],
+    [
+      45,
+      51,
+      [
+        "SUPPLY THE STRENGTH WE LACK",
+        "SO ALL WE DO GLORIFIES CHRIST"
+      ],
+      [
+        "STRENGTH"
+      ],
+      "1 PETER 4 : 11"
+    ],
+    [
+      51,
+      56,
+      [
+        "AMEN WHEN OUR STRENGTH",
+        "TO SERVE IS RUNNING DRY"
+      ],
+      [
+        "SERVE"
+      ],
+      "1 PETER 4 : 11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your strength to serve is running dry.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "RUNNING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You sit at this desk, giving everything to others while feeling depleted inside.",
+      "kind": "phrase",
+      "words": [
+        "DEPLETED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "if any man minister, let him do it as of the ability which God giveth:",
+      "kind": "phrase",
+      "words": [
+        "ABILITY",
+        "GOD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "that God in all things may be glorified through Jesus Christ, to whom be praise and dominion for ever and ever. Amen.",
+      "kind": "phrase",
+      "words": [
+        "GLORIFIED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, at this midday hour, we stop striving in our own weak power.",
+      "kind": "phrase",
+      "words": [
+        "WEAK",
+        "POWER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Supply the strength we lack, so all we do glorifies Christ.",
+      "kind": "phrase",
+      "words": [
+        "SUPPLY",
+        "STRENGTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 Peter 4:11"
+}
