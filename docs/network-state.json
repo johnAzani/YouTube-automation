@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T11:57:24Z",
+  "generated_at": "2026-11-22T11:57:50Z",
   "monitor_generated_at": "2026-11-22T11:42:28.969000+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 640,
+    "published_total": 641,
     "published_longform": 188,
-    "published_shorts": 452,
-    "public_total": 638,
+    "published_shorts": 453,
+    "public_total": 639,
     "queued_longform": 59,
-    "queued_shorts": 81,
+    "queued_shorts": 80,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -373,23 +373,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 58,
+        "published_total": 59,
         "published_longform": 16,
-        "published_shorts": 42,
+        "published_shorts": 43,
         "thumbnail_pending": 4,
-        "public_total": 58,
+        "public_total": 59,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-HEALINGMATTHEW9V35",
-        "title": "Pray This Matthew 9:35 Healing Prayer for Peace & Strength | Healing In His Presence #Shorts",
+        "id": "SHORT-HEALING2CORINTHIANS12V9",
+        "title": "Pray This 2 Corinthians 12:9 Healing Prayer for Peace & Strength | His Grace Is Enough #Shorts",
         "format": "short",
-        "youtube_video_id": "Laa4CECyw3o",
-        "watch_url": "https://www.youtube.com/shorts/Laa4CECyw3o",
+        "youtube_video_id": "3703yvP2RK0",
+        "watch_url": "https://www.youtube.com/shorts/3703yvP2RK0",
         "published_on": "2026-11-22",
-        "published_at": "2026-11-22T00:01:47Z"
+        "published_at": "2026-11-22T11:57:08Z"
       },
       "next_queued_longform": {
         "id": "0416",
@@ -398,8 +398,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healing2corinthians12v9",
-        "scripture": "2 Corinthians 12:9",
+        "short": "short-healingpsalm34v17",
+        "scripture": "Psalm 34:17-19",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALING2CORINTHIANS12V9",
+      "slug": "short-healing2corinthians12v9-restoration-prayer",
+      "file": "short-healing2corinthians12v9-restoration-prayer.md",
+      "title": "Pray This 2 Corinthians 12:9 Healing Prayer for Peace & Strength | His Grace Is Enough #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T11:57:08Z",
+      "youtube_video_id": "3703yvP2RK0",
+      "watch_url": "https://www.youtube.com/shorts/3703yvP2RK0",
+      "youtu_be_url": "https://youtu.be/3703yvP2RK0",
+      "shorts_url": "https://www.youtube.com/shorts/3703yvP2RK0",
+      "studio_url": "https://studio.youtube.com/video/3703yvP2RK0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/3703yvP2RK0/hqdefault.jpg",
+      "thumb_text": "2 CORINTHIANS 12:9 \u00b7 STRENGTH IN WEAKNESS",
+      "thumbnail_pending": false,
+      "duration_label": "53s",
+      "words": 659
+    },
     {
       "id": "SHORT-GARDEN1CHRONICLES16V8",
       "slug": "short-garden1chronicles16v8-thanksgiving-prayer",
@@ -17360,17 +17384,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healing2corinthians12v9",
-        "file": "0413-short-healing2corinthians12v9.yml",
-        "companion_longform_id": "0413",
-        "scripture": "2 Corinthians 12:9",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingpsalm34v17",
