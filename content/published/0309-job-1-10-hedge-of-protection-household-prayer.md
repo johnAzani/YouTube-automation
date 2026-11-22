@@ -1,6 +1,6 @@
 ---
 id: 0309
-title: "Prayer for Protection Over Your Home: Job 1:10 | The Family Altar"
+title: "When Fear Knocks at Your Door: Job 1:10 | The Family Altar"
 slug: job-1-10-hedge-of-protection-household-prayer
 status: published
 channel: prayer5
@@ -77,13 +77,16 @@ originality:
 published_on: "2026-11-15"
 published_at: "2026-11-15T15:38:38Z"
 youtube_video_id: "n60RRvMFSQQ"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_retry_after: "2026-11-22T16:18:10Z"
 thumbnail_retry_reason: "permission"
+title_before: "Prayer for Protection Over Your Home: Job 1:10 | The Family Altar"
+retitled_at: "2026-11-22"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar
