@@ -2,7 +2,7 @@
 id: '0100'
 title: "When You Need Strength to Keep Going: Psalm 73:26 | The Midday Watch"
 slug: strength-when-your-heart-fails-psalm-73-26-the-midday-watch
-status: approved
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -74,6 +74,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-22"
+published_at: "2026-11-22T16:30:17Z"
+youtube_video_id: "qf-9geskGdI"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Noonday Pause and the Heavy Hour

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T15:56:57Z",
+  "generated_at": "2026-11-22T16:31:08Z",
   "monitor_generated_at": "2026-11-22T11:42:28.969000+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 654,
-    "published_longform": 190,
-    "published_shorts": 464,
-    "public_total": 652,
-    "queued_longform": 61,
-    "queued_shorts": 78,
+    "published_total": 656,
+    "published_longform": 191,
+    "published_shorts": 465,
+    "public_total": 654,
+    "queued_longform": 60,
+    "queued_shorts": 77,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -169,33 +169,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 75,
-        "published_longform": 23,
-        "published_shorts": 52,
+        "published_total": 77,
+        "published_longform": 24,
+        "published_shorts": 53,
         "thumbnail_pending": 1,
-        "public_total": 75,
-        "queued_longform": 6,
+        "public_total": 77,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MIDDAY1PETER4V11",
-        "title": "Say This 1 Peter 4:11 Prayer at Noon | Strength For The Midday Hour #Shorts",
-        "format": "short",
-        "youtube_video_id": "TwbYfuFKZ64",
-        "watch_url": "https://www.youtube.com/shorts/TwbYfuFKZ64",
-        "published_on": "2026-11-22",
-        "published_at": "2026-11-22T11:49:13Z"
-      },
-      "next_queued_longform": {
         "id": "0100",
         "title": "When You Need Strength to Keep Going: Psalm 73:26 | The Midday Watch",
-        "words": 1464,
+        "format": "longform",
+        "youtube_video_id": "qf-9geskGdI",
+        "watch_url": "https://youtu.be/qf-9geskGdI",
+        "published_on": "2026-11-22",
+        "published_at": "2026-11-22T16:30:17Z"
+      },
+      "next_queued_longform": {
+        "id": "0101",
+        "title": "When the Afternoon Weariness Sets In: Psalm 84:5-7 | The Midday Watch",
+        "words": 1431,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midday1thessalonians5v16",
-        "scripture": "1 Thessalonians 5:16-18",
+        "short": "short-middayecclesiastes9v10",
+        "scripture": "Ecclesiastes 9:10",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0100",
+      "slug": "strength-when-your-heart-fails-psalm-73-26-the-midday-watch",
+      "file": "0100-strength-when-your-heart-fails-psalm-73-26-the-midday-watch.md",
+      "title": "When You Need Strength to Keep Going: Psalm 73:26 | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T16:30:17Z",
+      "youtube_video_id": "qf-9geskGdI",
+      "watch_url": "https://youtu.be/qf-9geskGdI",
+      "youtu_be_url": "https://youtu.be/qf-9geskGdI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/qf-9geskGdI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/qf-9geskGdI/hqdefault.jpg",
+      "thumb_text": "GOD IS MY STRENGTH",
+      "thumbnail_pending": false,
+      "duration_label": "~10 min",
+      "words": 1464
+    },
+    {
       "id": "SHORT-GUIDED1KINGS3V9",
       "slug": "short-guided1kings3v9-guidance-prayer",
       "file": "short-guided1kings3v9-guidance-prayer.md",
@@ -892,6 +916,30 @@
       "thumbnail_pending": true,
       "duration_label": "53s",
       "words": 625
+    },
+    {
+      "id": "SHORT-MIDDAY1THESSALONIANS5V16",
+      "slug": "short-midday1thessalonians5v16-midday-prayer",
+      "file": "short-midday1thessalonians5v16-midday-prayer.md",
+      "title": "Say This 1 Thessalonians 5:16-18 Prayer at Noon | Pause And Pray At Noon #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T15:38:31Z",
+      "youtube_video_id": "-z_nb73sUxE",
+      "watch_url": "https://www.youtube.com/shorts/-z_nb73sUxE",
+      "youtu_be_url": "https://youtu.be/-z_nb73sUxE",
+      "shorts_url": "https://www.youtube.com/shorts/-z_nb73sUxE",
+      "studio_url": "https://studio.youtube.com/video/-z_nb73sUxE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/-z_nb73sUxE/hqdefault.jpg",
+      "thumb_text": "UNFINISHED TASKS \u00b7 CROWDING YOUR MIDDAY",
+      "thumbnail_pending": false,
+      "duration_label": "47s",
+      "words": 614
     },
     {
       "id": "0812",
@@ -16557,19 +16605,6 @@
         "words": 979
       },
       {
-        "id": "0100",
-        "slug": "strength-when-your-heart-fails-psalm-73-26-the-midday-watch",
-        "file": "0100-strength-when-your-heart-fails-psalm-73-26-the-midday-watch.md",
-        "title": "When You Need Strength to Keep Going: Psalm 73:26 | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1464
-      },
-      {
         "id": "0101",
         "slug": "when-the-afternoon-weariness-sets-in-psalm-84-5-7",
         "file": "0101-when-the-afternoon-weariness-sets-in-psalm-84-5-7.md",
@@ -17249,17 +17284,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-midday1thessalonians5v16",
-        "file": "0000-short-midday1thessalonians5v16.yml",
-        "companion_longform_id": "",
-        "scripture": "1 Thessalonians 5:16-18",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middayecclesiastes9v10",
