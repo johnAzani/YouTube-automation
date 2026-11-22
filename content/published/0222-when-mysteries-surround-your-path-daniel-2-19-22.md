@@ -2,7 +2,7 @@
 id: '0222'
 title: 'When Mysteries Surround Your Path: Daniel 2:19-22 | The Midnight Watch'
 slug: when-mysteries-surround-your-path-daniel-2-19-22
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -73,6 +73,15 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-22"
+published_at: "2026-11-22T20:31:47Z"
+youtube_video_id: "sXTvbqZcMy4"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — The Midnight Hour of Unknowns

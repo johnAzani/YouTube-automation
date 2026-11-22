@@ -10,3 +10,8 @@ replace: false
 target_window_utc: '23:14'
 notes: "Companion Short for When You Need a Defender: Psalm 144:1-2 | The Midnight\
   \ Watch \u2014 spec authored by the brain (110 narration words)"
+alignment_failures: 1
+last_alignment_error: 'cannot prepare Charon narration for short-midnightpsalm144v1
+  (Short speech alignment unavailable or incomplete; refusing to render [ValueError:
+  Narration does not match the script: only 62% of the 110 script words were recognised
+  (floor 85%); the audio is not this script]); refusing to render'

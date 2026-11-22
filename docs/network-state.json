@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T20:15:14Z",
+  "generated_at": "2026-11-22T20:32:34Z",
   "monitor_generated_at": "2026-11-22T19:51:50.670192+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 662,
-    "published_longform": 192,
+    "published_total": 663,
+    "published_longform": 193,
     "published_shorts": 470,
-    "public_total": 660,
-    "queued_longform": 59,
+    "public_total": 661,
+    "queued_longform": 58,
     "queued_shorts": 72,
     "automations_ok": 10,
     "automations_total": 13,
@@ -237,28 +237,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 69,
-        "published_longform": 22,
+        "published_total": 70,
+        "published_longform": 23,
         "published_shorts": 47,
-        "thumbnail_pending": 68,
-        "public_total": 69,
-        "queued_longform": 6,
+        "thumbnail_pending": 69,
+        "public_total": 70,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTMATTHEW26V40",
-        "title": "Pray This Matthew 26:40-41 Midnight Prayer | Keep The Watch #Shorts",
-        "format": "short",
-        "youtube_video_id": "5KpHGkMqbrA",
-        "watch_url": "https://www.youtube.com/shorts/5KpHGkMqbrA",
-        "published_on": "2026-11-22",
-        "published_at": "2026-11-22T15:38:32Z"
-      },
-      "next_queued_longform": {
         "id": "0222",
         "title": "When Mysteries Surround Your Path: Daniel 2:19-22 | The Midnight Watch",
-        "words": 1083,
+        "format": "longform",
+        "youtube_video_id": "sXTvbqZcMy4",
+        "watch_url": "https://youtu.be/sXTvbqZcMy4",
+        "published_on": "2026-11-22",
+        "published_at": "2026-11-22T20:31:47Z"
+      },
+      "next_queued_longform": {
+        "id": "0223",
+        "title": "Prayer for the Iron Gates to Open: Acts 12:5-11 | The Midnight Watch",
+        "words": 1509,
         "status": "approved"
       },
       "next_queued_short": {
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0222",
+      "slug": "when-mysteries-surround-your-path-daniel-2-19-22",
+      "file": "0222-when-mysteries-surround-your-path-daniel-2-19-22.md",
+      "title": "When Mysteries Surround Your Path: Daniel 2:19-22 | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T20:31:47Z",
+      "youtube_video_id": "sXTvbqZcMy4",
+      "watch_url": "https://youtu.be/sXTvbqZcMy4",
+      "youtu_be_url": "https://youtu.be/sXTvbqZcMy4",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/sXTvbqZcMy4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/sXTvbqZcMy4/hqdefault.jpg",
+      "thumb_text": "REVEAL DEEP THINGS",
+      "thumbnail_pending": true,
+      "duration_label": "~7 min",
+      "words": 1083
+    },
     {
       "id": "SHORT-SHIELDNUMBERS6V24",
       "slug": "short-shieldnumbers6v24-protection-prayer",
@@ -16825,19 +16849,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1383
-      },
-      {
-        "id": "0222",
-        "slug": "when-mysteries-surround-your-path-daniel-2-19-22",
-        "file": "0222-when-mysteries-surround-your-path-daniel-2-19-22.md",
-        "title": "When Mysteries Surround Your Path: Daniel 2:19-22 | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1083
       },
       {
         "id": "0223",
