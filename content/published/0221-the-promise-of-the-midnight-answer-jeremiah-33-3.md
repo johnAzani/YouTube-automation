@@ -2,7 +2,7 @@
 id: '0221'
 title: 'The Promise of the Midnight Answer: Jeremiah 33:3 | The Midnight Watch'
 slug: the-promise-of-the-midnight-answer-jeremiah-33-3
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -72,6 +72,15 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-22"
+published_at: "2026-11-22T00:39:20Z"
+youtube_video_id: "9S6Yz8oxV6U"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Rising at the Midnight Hour

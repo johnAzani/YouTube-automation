@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T00:08:56Z",
+  "generated_at": "2026-11-22T00:40:06Z",
   "monitor_generated_at": "2026-11-21T22:10:41.393240+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 630,
-    "published_longform": 186,
-    "published_shorts": 444,
-    "public_total": 628,
-    "queued_longform": 53,
-    "queued_shorts": 71,
+    "published_total": 632,
+    "published_longform": 187,
+    "published_shorts": 445,
+    "public_total": 630,
+    "queued_longform": 52,
+    "queued_shorts": 70,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": true
@@ -237,33 +237,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 65,
-        "published_longform": 21,
-        "published_shorts": 44,
-        "thumbnail_pending": 64,
-        "public_total": 65,
-        "queued_longform": 5,
+        "published_total": 67,
+        "published_longform": 22,
+        "published_shorts": 45,
+        "thumbnail_pending": 66,
+        "public_total": 67,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHT1SAMUEL17V45",
-        "title": "Pray This 1 Samuel 17:45-47 Midnight Prayer | The Lord's #Shorts",
-        "format": "short",
-        "youtube_video_id": "cL-HI3GZ-uA",
-        "watch_url": "https://www.youtube.com/shorts/cL-HI3GZ-uA",
-        "published_on": "2026-11-21",
-        "published_at": "2026-11-21T19:54:31Z"
-      },
-      "next_queued_longform": {
         "id": "0221",
         "title": "The Promise of the Midnight Answer: Jeremiah 33:3 | The Midnight Watch",
-        "words": 1323,
+        "format": "longform",
+        "youtube_video_id": "9S6Yz8oxV6U",
+        "watch_url": "https://youtu.be/9S6Yz8oxV6U",
+        "published_on": "2026-11-22",
+        "published_at": "2026-11-22T00:39:20Z"
+      },
+      "next_queued_longform": {
+        "id": "0222",
+        "title": "When Mysteries Surround Your Path: Daniel 2:19-22 | The Midnight Watch",
+        "words": 1083,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightdaniel6v19",
-        "scripture": "Daniel 6:19-22",
+        "short": "short-midnightmatthew14v25",
+        "scripture": "Matthew 14:25-27",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0221",
+      "slug": "the-promise-of-the-midnight-answer-jeremiah-33-3",
+      "file": "0221-the-promise-of-the-midnight-answer-jeremiah-33-3.md",
+      "title": "The Promise of the Midnight Answer: Jeremiah 33:3 | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T00:39:20Z",
+      "youtube_video_id": "9S6Yz8oxV6U",
+      "watch_url": "https://youtu.be/9S6Yz8oxV6U",
+      "youtu_be_url": "https://youtu.be/9S6Yz8oxV6U",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/9S6Yz8oxV6U/edit",
+      "thumb_url": "https://i.ytimg.com/vi/9S6Yz8oxV6U/hqdefault.jpg",
+      "thumb_text": "CALL UNTO ME",
+      "thumbnail_pending": true,
+      "duration_label": "~9 min",
+      "words": 1323
+    },
+    {
       "id": "SHORT-GUIDEDISAIAH58V11",
       "slug": "short-guidedisaiah58v11-guidance-prayer",
       "file": "short-guidedisaiah58v11-guidance-prayer.md",
@@ -844,6 +868,30 @@
       "thumbnail_pending": false,
       "duration_label": "45s",
       "words": 615
+    },
+    {
+      "id": "SHORT-MIDNIGHTDANIEL6V19",
+      "slug": "short-midnightdaniel6v19-midnight-prayer",
+      "file": "short-midnightdaniel6v19-midnight-prayer.md",
+      "title": "Pray This Daniel 6:19-22 Midnight Prayer | Stand In Faith #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-21",
+      "published_at": "2026-11-21T23:54:58Z",
+      "youtube_video_id": "a0cvEpdu4RM",
+      "watch_url": "https://www.youtube.com/shorts/a0cvEpdu4RM",
+      "youtu_be_url": "https://youtu.be/a0cvEpdu4RM",
+      "shorts_url": "https://www.youtube.com/shorts/a0cvEpdu4RM",
+      "studio_url": "https://studio.youtube.com/video/a0cvEpdu4RM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/a0cvEpdu4RM/hqdefault.jpg",
+      "thumb_text": "THE LIONS DEN \u00b7 GOD SENDS HIS ANGEL",
+      "thumbnail_pending": true,
+      "duration_label": "59s",
+      "words": 657
     },
     {
       "id": "SHORT-FAMILYPSALM103V17",
@@ -16020,19 +16068,6 @@
         "words": 2104
       },
       {
-        "id": "0221",
-        "slug": "the-promise-of-the-midnight-answer-jeremiah-33-3",
-        "file": "0221-the-promise-of-the-midnight-answer-jeremiah-33-3.md",
-        "title": "The Promise of the Midnight Answer: Jeremiah 33:3 | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1323
-      },
-      {
         "id": "0222",
         "slug": "when-mysteries-surround-your-path-daniel-2-19-22",
         "file": "0222-when-mysteries-surround-your-path-daniel-2-19-22.md",
@@ -16525,17 +16560,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-midnightdaniel6v19",
-        "file": "0000-short-midnightdaniel6v19.yml",
-        "companion_longform_id": "",
-        "scripture": "Daniel 6:19-22",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightmatthew14v25",
