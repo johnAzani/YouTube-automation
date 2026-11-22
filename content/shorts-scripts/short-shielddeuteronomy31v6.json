@@ -1,0 +1,391 @@
+{
+  "key": "short-shielddeuteronomy31v6",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "STRONG TOWER",
+    "DIVINE REFUGE"
+  ],
+  "poster": [
+    "UNSEEN BATTLES",
+    "DIVINE PROTECTION",
+    "THE STRONG TOWER",
+    "WALK UNDER HIS WINGS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower at dawn with morning light",
+    "vast mountain range under golden sun rays through clouds",
+    "peaceful river flowing through deep green valley mountains",
+    "solid stone fortress wall under bright blue morning sky",
+    "sunlit mountain pass with high stone cliffs and mist",
+    "calm mountain lake reflecting golden morning sunlight",
+    "distant high stone citadel surrounded by quiet hills",
+    "rays of sunlight breaking through heavy clouds on peaks",
+    "tranquil valley below ancient stone ramparts at sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "That heavy shadow across your path",
+      "img": "short-shielddeuteronomy31v6-scene-01.jpg",
+      "kicker": "THE SHADOW",
+      "sub": "WHEN FEAR WHISPERS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "does not get the final word today.",
+      "img": "short-shielddeuteronomy31v6-scene-02.jpg",
+      "kicker": "NO FEAR",
+      "sub": "STAND FIRM NOW",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Listen to the mandate given to your soul in Deuteronomy thirty-one, verse six:",
+      "img": "short-shielddeuteronomy31v6-scene-03.jpg",
+      "kicker": "THE PROMISE",
+      "sub": "HEAR HIS WORD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Be strong and of a good courage, fear not, nor be afraid of them:",
+      "img": "short-shielddeuteronomy31v6-scene-04.jpg",
+      "kicker": "COURAGE",
+      "sub": "BE STRONG",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "for the LORD thy God, he it is that doth go with thee;",
+      "img": "short-shielddeuteronomy31v6-scene-05.jpg",
+      "kicker": "THE LORD",
+      "sub": "HE GOES WITH YOU",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "he will not fail thee, nor forsake thee.",
+      "img": "short-shielddeuteronomy31v6-scene-06.jpg",
+      "kicker": "HIS WORD",
+      "sub": "NEVER FORSAKEN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father, when uncertainty presses in around us, anchor our hearts in your unchanging presence.",
+      "img": "short-shielddeuteronomy31v6-scene-07.jpg",
+      "kicker": "PRAYER",
+      "sub": "ANCHOR OUR HEARTS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Remove the spirit of terror and grant us the quiet confidence of your mighty shield.",
+      "img": "short-shielddeuteronomy31v6-scene-08.jpg",
+      "kicker": "REFUGE",
+      "sub": "YOUR MIGHTY SHIELD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In Jesus' name, amen. That heavy shadow across your path.",
+      "img": "short-shielddeuteronomy31v6-scene-09.jpg",
+      "kicker": "AMEN",
+      "sub": "WALK IN PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That heavy shadow across your path"
+    ],
+    [
+      3,
+      7,
+      "does not get the final word today."
+    ],
+    [
+      7,
+      12,
+      "Listen to the mandate given to your soul in Deuteronomy thirty-one, verse six:"
+    ],
+    [
+      12,
+      18,
+      "Be strong and of a good courage, fear not, nor be afraid of them:"
+    ],
+    [
+      18,
+      23,
+      "for the LORD thy God, he it is that doth go with thee;"
+    ],
+    [
+      23,
+      27,
+      "he will not fail thee, nor forsake thee."
+    ],
+    [
+      27,
+      33,
+      "Father, when uncertainty presses in around us, anchor our hearts in your unchanging presence."
+    ],
+    [
+      33,
+      38,
+      "Remove the spirit of terror and grant us the quiet confidence of your mighty shield."
+    ],
+    [
+      38,
+      44,
+      "In Jesus' name, amen. That heavy shadow across your path."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT HEAVY SHADOW",
+        "ACROSS YOUR PATH"
+      ],
+      [
+        "HEAVY",
+        "SHADOW"
+      ],
+      "DEUTERONOMY 31 : 6"
+    ],
+    [
+      3,
+      7,
+      [
+        "DOES NOT GET",
+        "THE FINAL WORD TODAY"
+      ],
+      [
+        "FINAL",
+        "WORD"
+      ],
+      "DEUTERONOMY 31 : 6"
+    ],
+    [
+      7,
+      12,
+      [
+        "LISTEN TO THE MANDATE",
+        "GIVEN TO YOUR SOUL"
+      ],
+      [
+        "MANDATE",
+        "SOUL"
+      ],
+      "DEUTERONOMY 31 : 6"
+    ],
+    [
+      12,
+      18,
+      [
+        "BE STRONG AND",
+        "OF A GOOD COURAGE",
+        "FEAR NOT"
+      ],
+      [
+        "STRONG",
+        "COURAGE"
+      ],
+      "DEUTERONOMY 31 : 6"
+    ],
+    [
+      18,
+      23,
+      [
+        "FOR THE LORD THY GOD",
+        "HE GOES WITH THEE"
+      ],
+      [
+        "LORD",
+        "THEE"
+      ],
+      "DEUTERONOMY 31 : 6"
+    ],
+    [
+      23,
+      27,
+      [
+        "HE WILL NOT FAIL",
+        "NOR FORSAKE THEE"
+      ],
+      [
+        "FAIL",
+        "FORSAKE"
+      ],
+      "DEUTERONOMY 31 : 6"
+    ],
+    [
+      27,
+      33,
+      [
+        "ANCHOR OUR HEARTS",
+        "IN YOUR PRESENCE"
+      ],
+      [
+        "ANCHOR",
+        "HEARTS"
+      ],
+      "DEUTERONOMY 31 : 6"
+    ],
+    [
+      33,
+      38,
+      [
+        "REMOVE THE TERROR",
+        "GRANT US CONFIDENCE"
+      ],
+      [
+        "TERROR",
+        "CONFIDENCE"
+      ],
+      "DEUTERONOMY 31 : 6"
+    ],
+    [
+      38,
+      44,
+      [
+        "IN JESUS NAME",
+        "AMEN"
+      ],
+      [
+        "JESUS",
+        "AMEN"
+      ],
+      "DEUTERONOMY 31 : 6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That heavy shadow across your path",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "SHADOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "does not get the final word today.",
+      "kind": "phrase",
+      "words": [
+        "FINAL",
+        "WORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Listen to the mandate given to your soul in Deuteronomy thirty-one, verse six:",
+      "kind": "phrase",
+      "words": [
+        "MANDATE",
+        "SOUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be strong and of a good courage, fear not, nor be afraid of them:",
+      "kind": "phrase",
+      "words": [
+        "STRONG",
+        "COURAGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "for the LORD thy God, he it is that doth go with thee;",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "THEE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "he will not fail thee, nor forsake thee.",
+      "kind": "phrase",
+      "words": [
+        "FAIL",
+        "FORSAKE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, when uncertainty presses in around us, anchor our hearts in your unchanging presence.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "HEARTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Remove the spirit of terror and grant us the quiet confidence of your mighty shield.",
+      "kind": "phrase",
+      "words": [
+        "TERROR",
+        "CONFIDENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus' name, amen. That heavy shadow across your path.",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Deuteronomy 31:6"
+}
