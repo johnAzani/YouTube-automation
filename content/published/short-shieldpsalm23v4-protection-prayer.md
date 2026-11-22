@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["A REFUGE IN", "THE SHADOW", "OF THE ALMIGHTY", "THE COVENANT SHIELD"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-21T22:37:27Z"
+thumbnail_retry_after: "2026-11-29T00:49:12Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If the weight of this dark valley feels heavier than you can bear, stay right here. Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Lord, surround this soul with your hedge of protection as they navigate this difficult season. Grant them a spirit of courage that stands firm even when the path ahead seems obscured. Let your peace, which surpasses all understanding, guard their heart and mind this very hour.

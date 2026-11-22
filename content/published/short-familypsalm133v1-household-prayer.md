@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["WHEN TENSION FILLS", "YOUR HOME TODAY", "PRAY FOR GOD'S", "PEACE AND UNITY"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-21T22:37:20Z"
+thumbnail_retry_after: "2026-11-29T00:49:04Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If sharp words strained your home today, pause here and let God heal your family. Psalm 133 verse 1 says, Behold, how good and how pleasant it is for brethren to dwell together in unity! Heavenly Father, we bring our home before You right now. Where small arguments or silence have divided us, bring Your quiet peace. Soften our hearts toward one another, teach us to forgive quickly, and let Your love rest upon every room. Bind our household in true harmony so our home reflects Your grace. Subscribe to join us at The Family Altar as we pray for our families daily.

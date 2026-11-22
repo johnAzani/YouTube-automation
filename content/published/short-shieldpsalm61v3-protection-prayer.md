@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["GOD IS YOUR", "STRONG TOWER", "DEFENSE TODAY", "PSALM 61:3"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-29T00:49:13Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If a sudden fear about your future is pressing upon your mind right now, stay still. Hear the eternal Word of God: For thou hast been a shelter for me, and a strong tower from the enemy. Lord God, become this person's impenetrable fortress today. Where hidden threats linger and anxious thoughts quicken, cover them beneath your divine shield. Father, stand firmly between them and every lurking snare, surrounding their daily path with holy strength and unshakable grace. Lift their eyes above the storm to your ancient throne. You are their refuge, their high tower, and their constant defense against all harm. Subscribe to walk under God's daily covering.

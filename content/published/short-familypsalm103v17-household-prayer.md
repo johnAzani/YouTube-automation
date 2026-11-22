@@ -27,7 +27,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (-116, 775, 1196, 824); shorten the authored lockup or reduce its size"
 ---
 
 As you sit quietly by your child's bedside tonight worrying about their future, receive God's peace. But the mercy of the LORD is from everlasting to everlasting upon them that fear him, and his righteousness unto children’s children; To such as keep his covenant, and to those that remember his commandments to do them. Heavenly Father, cover our household with your unfailing mercy through all the years to come. Preserve our children and their children in your eternal truth, and anchor their lives in your holy covenant forever. Subscribe to join The Family Altar and cover your home in daily prayer.

@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["MIDNIGHT PRAYER", "BEYOND DEFEAT", "THE MIDNIGHT WATCH", "BENEATH THE STARS"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-21T22:37:18Z"
+thumbnail_retry_after: "2026-11-29T00:49:02Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 That recurring doubt echoing in your mind right now is not the final word tonight. Lay your weary heart before the Creator who sustains every breath during this quiet watch. Hear the promise written for you: Nay, in all these things we are more than conquerors through him that loved us. Lord, lift the shadows of fear that cling to this heart when the world goes silent. Grant a steady spirit to face the coming light with the assurance of your constant grace. May your presence fill this room until morning breaks and hope rests deep within my soul.

@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["REST IN GOD'S", "LOVINGKINDNESS", "PSALM 36:7", "NIGHTLY PRAYER"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If you are replaying that difficult conversation from earlier, lay your heavy heart down now. How excellent is thy lovingkindness, O God! therefore the children of men put their trust under the shadow of thy wings. Father, beneath the quiet cover of tonight, we rest in Your faithful love. Every anxiety that tried to follow us into bed fades away when we remember how deeply we are protected. Your wings stretch over this room, shielding us from every fear and giving peace to our tired minds. We let go of tomorrow's decisions and rest securely in Your grace tonight. Amen. Subscribe to The Secret Place for nightly prayers.
