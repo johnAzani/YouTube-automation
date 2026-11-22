@@ -1,6 +1,6 @@
 ---
 id: '0705'
-title: 'When Your Heart Needs to Remember His Mercy: Psalm 107:1'
+title: "When Your Spirit Feels Worn Down: Psalm 107:1 | The Praise Garden"
 slug: when-your-heart-needs-to-remember-his-mercy-psalm-107-1
 status: published
 channel: prayer9
@@ -80,13 +80,16 @@ originality:
 published_on: "2026-11-15"
 published_at: "2026-11-15T08:20:28Z"
 youtube_video_id: "f0KU35IAceI"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_retry_after: "2026-11-22T13:57:32Z"
 thumbnail_retry_reason: "permission"
+title_before: "When Your Heart Needs to Remember His Mercy: Psalm 107:1"
+retitled_at: "2026-11-22"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Entering His Gates With Thanksgiving
