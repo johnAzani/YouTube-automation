@@ -1,0 +1,358 @@
+{
+  "key": "short-guidedgenesis24v27",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "HE GUIDES THE STEP",
+    "TRUSTING HIS FAITHFUL HAND"
+  ],
+  "poster": [
+    "THE PATH IS UNCERTAIN",
+    "THE LORD IS FAITHFUL",
+    "HIS TRUTH REMAINS",
+    "PRAYER FOR GUIDANCE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain pass at dawn",
+    "winding path through quiet valley",
+    "still river reflecting early light",
+    "soft golden light on forest trail",
+    "calm horizon at dusk",
+    "deep valley with morning fog",
+    "peaceful lake at twilight",
+    "distant peaks in quiet blue"
+  ],
+  "scenes": [
+    {
+      "a": "That decision weighing heavy",
+      "img": "short-guidedgenesis24v27-scene-01.jpg",
+      "kicker": "HEAVY DECISION",
+      "sub": "THE WAY AHEAD IS UNCERTAIN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "is exactly where the Lord",
+      "img": "short-guidedgenesis24v27-scene-02.jpg",
+      "kicker": "DIVINE GUIDANCE",
+      "sub": "SEEKING THE LORD'S DIRECTION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "And he said, Blessed be the LORD God",
+      "img": "short-guidedgenesis24v27-scene-03.jpg",
+      "kicker": "GENESIS 24:27",
+      "sub": "HIS MERCY AND HIS TRUTH",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "of my master Abraham",
+      "img": "short-guidedgenesis24v27-scene-04.jpg",
+      "kicker": "HIS FAITHFULNESS",
+      "sub": "HE LEADS EVERY STEP",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "who hath not left destitute",
+      "img": "short-guidedgenesis24v27-scene-05.jpg",
+      "kicker": "NEVER FORSAKEN",
+      "sub": "PROVIDING FOR THE JOURNEY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "my master of his mercy and his truth",
+      "img": "short-guidedgenesis24v27-scene-06.jpg",
+      "kicker": "STEADFAST LOVE",
+      "sub": "HIS TRUTH IS YOUR ANCHOR",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "I being in the way",
+      "img": "short-guidedgenesis24v27-scene-07.jpg",
+      "kicker": "WALKING BY FAITH",
+      "sub": "STAYING IN HIS PRESENCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "the LORD led me to the house of my master’s brethren",
+      "img": "short-guidedgenesis24v27-scene-08.jpg",
+      "kicker": "HE LEADS YOU",
+      "sub": "YOUR PATH IS IN HIS HAND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That decision weighing heavy is here."
+    ],
+    [
+      3,
+      8,
+      "It is exactly where the Lord desires to lead."
+    ],
+    [
+      8,
+      18,
+      "And he said, Blessed be the LORD God of my master Abraham, who hath not left destitute my master of his mercy and his truth:"
+    ],
+    [
+      18,
+      25,
+      "I being in the way, the LORD led me to the house of my master’s brethren."
+    ],
+    [
+      25,
+      35,
+      "Lord, when my path is unclear and I cannot see the next step, please guide my feet."
+    ],
+    [
+      35,
+      42,
+      "Keep me within Your truth and lead me toward Your perfect will for my life."
+    ],
+    [
+      42,
+      50,
+      "You are my Provider and my Shepherd through this heavy decision that remains before me, Amen."
+    ],
+    [
+      50,
+      52,
+      "That decision weighing heavy is here."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT DECISION",
+        "WEIGHING HEAVY",
+        "IS HERE"
+      ],
+      [
+        "DECISION",
+        "HERE"
+      ],
+      "GENESIS 24 : 27"
+    ],
+    [
+      3,
+      8,
+      [
+        "EXACTLY WHERE",
+        "THE LORD",
+        "DESIRES TO LEAD"
+      ],
+      [
+        "LORD",
+        "LEAD"
+      ],
+      "GENESIS 24 : 27"
+    ],
+    [
+      8,
+      18,
+      [
+        "BLESSED BE",
+        "THE LORD GOD",
+        "HIS MERCY",
+        "AND HIS TRUTH"
+      ],
+      [
+        "BLESSED",
+        "MERCY",
+        "TRUTH"
+      ],
+      "GENESIS 24 : 27"
+    ],
+    [
+      18,
+      25,
+      [
+        "I BEING",
+        "IN THE WAY",
+        "THE LORD",
+        "LED ME"
+      ],
+      [
+        "WAY",
+        "LED"
+      ],
+      "GENESIS 24 : 27"
+    ],
+    [
+      25,
+      35,
+      [
+        "LORD GUIDE",
+        "MY FEET",
+        "THROUGH THE UNKNOWN"
+      ],
+      [
+        "GUIDE",
+        "FEET"
+      ],
+      "GENESIS 24 : 27"
+    ],
+    [
+      35,
+      42,
+      [
+        "KEEP ME",
+        "WITHIN YOUR TRUTH",
+        "YOUR PERFECT WILL"
+      ],
+      [
+        "TRUTH",
+        "WILL"
+      ],
+      "GENESIS 24 : 27"
+    ],
+    [
+      42,
+      50,
+      [
+        "YOU ARE",
+        "MY SHEPHERD",
+        "AMEN"
+      ],
+      [
+        "SHEPHERD",
+        "AMEN"
+      ],
+      "GENESIS 24 : 27"
+    ],
+    [
+      50,
+      52,
+      [
+        "THAT DECISION",
+        "WEIGHING HEAVY",
+        "IS HERE"
+      ],
+      [
+        "DECISION",
+        "HERE"
+      ],
+      "GENESIS 24 : 27"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That decision weighing heavy",
+      "kind": "phrase",
+      "words": [
+        "DECISION",
+        "HEAVY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "is exactly where the Lord",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "LEAD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "And he said, Blessed be the LORD God",
+      "kind": "phrase",
+      "words": [
+        "BLESSED",
+        "GOD"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "of my master Abraham",
+      "kind": "phrase",
+      "words": [
+        "ABRAHAM"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "who hath not left destitute",
+      "kind": "phrase",
+      "words": [
+        "DESTITUTE"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "my master of his mercy and his truth",
+      "kind": "phrase",
+      "words": [
+        "MERCY",
+        "TRUTH"
+      ],
+      "hi": 5,
+      "slot": "C"
+    },
+    {
+      "a": "I being in the way",
+      "kind": "phrase",
+      "words": [
+        "WAY"
+      ],
+      "hi": 6,
+      "slot": "C"
+    },
+    {
+      "a": "the LORD led me to the house of my master’s brethren",
+      "kind": "phrase",
+      "words": [
+        "LED",
+        "HOUSE"
+      ],
+      "hi": 7,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Genesis 24:27"
+}
