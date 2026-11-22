@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T11:49:59Z",
+  "generated_at": "2026-11-22T11:50:48Z",
   "monitor_generated_at": "2026-11-22T11:42:28.969000+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 635,
+    "published_total": 636,
     "published_longform": 188,
-    "published_shorts": 447,
-    "public_total": 633,
+    "published_shorts": 448,
+    "public_total": 634,
     "queued_longform": 59,
-    "queued_shorts": 91,
+    "queued_shorts": 89,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 90,
+        "published_total": 91,
         "published_longform": 30,
-        "published_shorts": 60,
+        "published_shorts": 61,
         "thumbnail_pending": 1,
-        "public_total": 89,
+        "public_total": 90,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM17V15",
-        "title": "Say This Psalm 17:15 Prayer at Sunrise | Find Your Satisfaction In Him #Shorts",
+        "id": "SHORT-MORNINGEPHESIANS5V14",
+        "title": "Say This Ephesians 5:14-16 Prayer at Sunrise | You Hit Snooze Hoping Today Waits #Shorts",
         "format": "short",
-        "youtube_video_id": "AfIholMcsWs",
-        "watch_url": "https://www.youtube.com/shorts/AfIholMcsWs",
-        "published_on": "2026-11-21",
-        "published_at": "2026-11-21T23:52:47Z"
+        "youtube_video_id": "RPgfu_50ECI",
+        "watch_url": "https://www.youtube.com/shorts/RPgfu_50ECI",
+        "published_on": "2026-11-22",
+        "published_at": "2026-11-22T11:50:02Z"
       },
       "next_queued_longform": {
         "id": "0074",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningephesians5v14",
-        "scripture": "Ephesians 5:14-16",
+        "short": "short-morningproverbs8v17",
+        "scripture": "Proverbs 8:17",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGEPHESIANS5V14",
+      "slug": "short-morningephesians5v14-sunrise-prayer",
+      "file": "short-morningephesians5v14-sunrise-prayer.md",
+      "title": "Say This Ephesians 5:14-16 Prayer at Sunrise | You Hit Snooze Hoping Today Waits #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T11:50:02Z",
+      "youtube_video_id": "RPgfu_50ECI",
+      "watch_url": "https://www.youtube.com/shorts/RPgfu_50ECI",
+      "youtu_be_url": "https://youtu.be/RPgfu_50ECI",
+      "shorts_url": "https://www.youtube.com/shorts/RPgfu_50ECI",
+      "studio_url": "https://studio.youtube.com/video/RPgfu_50ECI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/RPgfu_50ECI/hqdefault.jpg",
+      "thumb_text": "AWAKE THOU \u00b7 THAT SLEEPEST",
+      "thumbnail_pending": false,
+      "duration_label": "54s",
+      "words": 615
+    },
     {
       "id": "SHORT-MIDDAY1PETER4V11",
       "slug": "short-midday1peter4v11-midday-prayer",
@@ -16824,17 +16848,6 @@
         "target_window_utc": "23:14"
       },
       {
-        "short": "short-morningephesians5v14",
-        "file": "0000-short-morningephesians5v14.yml",
-        "companion_longform_id": "",
-        "scripture": "Ephesians 5:14-16",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
-      {
         "short": "short-morningproverbs8v17",
         "file": "0000-short-morningproverbs8v17.yml",
         "companion_longform_id": "",
@@ -17059,17 +17072,6 @@
         "file": "0075-short-morningcolossians3v17.yml",
         "companion_longform_id": "0075",
         "scripture": "Colossians 3:17",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-morningdeuteronomy33v25",
-        "file": "0081-short-morningdeuteronomy33v25.yml",
-        "companion_longform_id": "0081",
-        "scripture": "Deuteronomy 33:25",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
