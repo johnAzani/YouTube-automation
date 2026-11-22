@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["MIDNIGHT", "STRENGTH", "DIVINE", "PROMISE"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-22T13:57:18Z"
+thumbnail_retry_after: "2026-11-29T16:37:07Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 The fear circling your thoughts tonight is no match for the authority given to you. Behold, I give unto you power to tread on serpents and scorpions, and over all the power of the enemy: and nothing shall by any means hurt you. Lord, in this stillness, let your servant feel the weight of this divine protection tonight. Remove every lingering doubt that keeps sleep from these eyes as we trust your promise. Grant a heart of iron and a soul at rest under the shadow of your wings. We stand firm in this confidence, knowing your hand holds us safely through the darkness.

@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["BEDTIME PRAYER", "NAHUM 1:7", "FIND PEACE TONIGHT", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 The heavy concern you carried here can rest. Tonight, hear the promise of Nahum chapter one, verse seven: The LORD is good, a strong hold in the day of trouble; and he knoweth them that trust in him. Lord, when trouble presses into this quiet room tonight, remind us that You are our strong fortress. You know each hidden worry we cannot solve before we sleep. Hold us in Your enduring goodness and shield us with Your stillness. We place every burden into Your safe hands and rest peacefully under Your care. Amen. The heavy concern you carried here can rest.

@@ -82,7 +82,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-22T16:18:10Z"
+thumbnail_retry_after: "2026-11-29T16:37:12Z"
 thumbnail_retry_reason: "permission"
 title_before: "Prayer for Protection Over Your Home: Job 1:10 | The Family Altar"
 retitled_at: "2026-11-22"

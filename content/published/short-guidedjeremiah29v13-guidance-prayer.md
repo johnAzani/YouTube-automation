@@ -23,14 +23,12 @@ short_visual_fingerprints: ["sha256:516b527569fdf8cc277919aec5f418ad6ba95dbb904d
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; auth_channel_title=The Guided Path; long_uploads_status=eligible; video_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; video_channel_title=The Guided Path; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_pending: false
 thumbnail_poster: ["WHERE IS", "YOUR HEART", "TRULY FOCUSED", "THIS MOMENT"]
 thumbnail_kicker: "HE SHALL DIRECT THY PATHS"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-22T13:57:10Z"
-thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 0
+thumbnail_revision: "shorts-poster-v1"
 ---
 
 That persistent restlessness in your spirit is pointing you toward a much deeper, hidden truth. You are invited to release your burdens and anchor your thoughts in the Holy Word. The promise is clear: And ye shall seek me, and find me, when ye shall search for me with all your heart. Heavenly Father, I bring this situation before You because I know You hold the answers. Grant me the wisdom to discern the right path and the patience to wait for clarity. I surrender my anxiety, knowing that seeking You is the foundation of every faithful step.

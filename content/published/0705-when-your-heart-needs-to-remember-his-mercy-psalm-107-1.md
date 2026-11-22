@@ -85,7 +85,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-22T13:57:32Z"
+thumbnail_retry_after: "2026-11-29T16:37:40Z"
 thumbnail_retry_reason: "permission"
 title_before: "When Your Heart Needs to Remember His Mercy: Psalm 107:1"
 retitled_at: "2026-11-22"

@@ -27,7 +27,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (42, 703, 1037, 752); shorten the authored lockup or reduce its size"
 ---
 
 Your strength to serve is running dry. You sit at this desk, giving everything to others while feeling depleted inside. Hear First Peter four, verse eleven. If any man speak, let him speak as the oracles of God; if any man minister, let him do it as of the ability which God giveth: that God in all things may be glorified through Jesus Christ, to whom be praise and dominion for ever and ever. Amen. Lord, at this midday hour, we stop striving in our own weak power. Supply the strength we lack, so all we do glorifies Christ. Amen, when our strength to serve is running dry.

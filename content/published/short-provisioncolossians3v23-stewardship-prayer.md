@@ -27,7 +27,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (-14, 780, 1094, 829); shorten the authored lockup or reduce its size"
 ---
 
 Your quiet labor feels completely forgotten today. Hear the word of God for your hands: And whatsoever ye do, do it heartily, as to the Lord, and not unto men; Knowing that of the Lord ye shall receive the reward of the inheritance: for ye serve the Lord Christ. Heavenly Father, when our daily effort feels unseen or unappreciated by men, turn our eyes unto you. Grant us fresh strength to perform every small duty with joy and quiet faithfulness. Open wide your doors of daily provision as we yield our decisions and work into your care. Amen, for your quiet labor is never forgotten.

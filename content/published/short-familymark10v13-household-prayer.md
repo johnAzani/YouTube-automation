@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["BRING YOUR", "LITTLE ONES", "TO THE SAVIOR", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-22T13:57:22Z"
+thumbnail_retry_after: "2026-11-29T16:37:17Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If you are holding a little one tonight and wondering how to guide them, listen. Lord, we bring our children to You right now, placing them entirely into Your loving care. And they brought young children to him, that he should touch them: and his disciples rebuked those that brought them. But when Jesus saw it, he was much displeased, and said unto them, Suffer the little children to come unto me, and forbid them not: for of such is the kingdom of God. Father, help us to receive Your kingdom with that same simple, trusting faith. And he took them up in his arms, put his hands upon them, and blessed them.

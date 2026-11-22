@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE MIDNIGHT", "WATCH", "JOEL 2:25", "RESTORATION"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-22T13:57:18Z"
+thumbnail_retry_after: "2026-11-29T16:37:06Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If you are staring at the ceiling tonight regretting the time lost to silent failures, hear the promise of God spoken over your life in this quiet, holy, dark hour. And I will restore to you the years that the locust hath eaten, the cankerworm, and the caterpiller, and the palmerworm, my great army which I sent among you. Lord, take these wasted seasons and turn them into fruitfulness, healing every deep, hidden hurt. We trust Your hand to rebuild what felt permanently destroyed by the enemy of peace. May Your grace fill the gaps of my history starting now, in this quiet midnight.

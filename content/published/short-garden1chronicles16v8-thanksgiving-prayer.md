@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["WHEN THOUGHTS CROWD", "YOUR QUIET ROOM", "1 CHRONICLES 16:8-10", "THE PRAISE GARDEN"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-29T16:37:41Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When tired thoughts crowd your quiet room, turn to the Lord. Scripture tells us: Give thanks unto the LORD, call upon his name, make known his deeds among the people. Sing unto him, sing psalms unto him, talk ye of all his wondrous works. Glory ye in his holy name: let the heart of them rejoice that seek the LORD. Father, we give thanks for your constant goodness right where we are. Remind us of your wondrous works, quiet our restless hearts, and fill us with gladness as we seek your holy face. Amen. When tired thoughts crowd your quiet room.

@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["STAND IN PRAYER", "THE MIDNIGHT HOUR", "FAITH THAT MOVES MOUNTAINS", "HEAR HIS WORD"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-22T16:18:07Z"
+thumbnail_retry_after: "2026-11-29T16:37:08Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If that heavy mountain still blocks your path tonight, hear this. For verily I say unto you, That whosoever shall say unto this mountain, Be thou removed, and be thou cast into the sea; and shall not doubt in his heart, but shall believe that those things which he saith shall come to pass; he shall have whatsoever he saith. Therefore I say unto you, What things soever ye desire, when ye pray, believe that ye receive them, and ye shall have them. Lord, remove every doubt from our hearts in this silent hour. May our faith rise to meet your holy word. Amen.

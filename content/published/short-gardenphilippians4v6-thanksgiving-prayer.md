@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE PRAISE GARDEN", "A PRAYER OF THANKS", "CALM YOUR SPIRIT", "FIND GODS PEACE"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-22T16:18:17Z"
+thumbnail_retry_after: "2026-11-29T16:37:42Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 Pause for a moment and notice the grace of God today. Be careful for nothing; but in every thing by prayer and supplication. With thanksgiving let your requests be made known unto God. And the peace of God, which passeth all understanding. Shall keep your hearts and minds through Christ Jesus. Lord, thank You for the beauty of this quiet morning. I surrender my burdens and choose to trust Your plan. Help me to live in the light of Your perfect peace. May my life be a continuous offering of sincere praise. Thank You for guarding my heart with Your great love. Rest in this truth as you walk through your day. Subscribe to The Praise Garden for more daily prayer.

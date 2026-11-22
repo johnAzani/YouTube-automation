@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["NIGHT PRAYER", "EXODUS 13:21", "GOD GOES BEFORE YOU", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Your dark room holds too many questions tonight. You lie awake wondering how to navigate the road ahead. Exodus 13 verse 21 says, And the LORD went before them by day in a pillar of a cloud, to lead them the way; and by night in a pillar of fire, to give them light; to go by day and night: Lord, you who guided your people through the wilderness, go before me into this quiet night. Let your steady light calm my restless thoughts and cover this room in quiet safety. I release my heavy tomorrow into your faithful hands. Amen, whenever your dark room holds too many questions.
