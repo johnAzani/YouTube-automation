@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["A PRAYER OF PRAISE", "THE PRAISE GARDEN", "PSALM 98:4", "FOR YOUR HEART"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-29T21:40:05Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If that heavy decision weighing on your mind feels impossible to resolve, stay right here. Lord, we quiet our racing thoughts and turn our attention to Your sovereign goodness today. As we look to You, we remember Your word that says: Make a joyful noise unto the LORD, all the earth: make a loud noise, and rejoice, and sing praise. We choose to lift a shout of gladness, even when the path ahead seems obscured. May our weary spirits find renewed strength as we offer this sacrifice of thanksgiving now.

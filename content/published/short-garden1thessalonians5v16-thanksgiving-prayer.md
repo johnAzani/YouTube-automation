@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["REJOICE EVERMORE", "PRAY WITHOUT CEASING", "GIVE THANKS ALWAYS", "THE PRAISE GARDEN"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-22T20:07:47Z"
+thumbnail_retry_after: "2026-11-29T21:40:04Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 Pause for a quiet moment today, and notice the gentle grace of God surrounding your life. Open your heart with honest gratitude for His faithful love. The word of God declares in First Thessalonians five sixteen through eighteen: Rejoice evermore. Pray without ceasing. In every thing give thanks: for this is the will of God in Christ Jesus concerning you. Heavenly Father, we offer You our praise with sincere thanksgiving. Thank You for Your endless mercies, Your steady comfort, and Your peace. Help us to rejoice in all seasons, knowing You walk with us every single day. We rest in Your grace and magnify Your holy name forever. Subscribe to The Praise Garden to walk with us in daily thanksgiving.

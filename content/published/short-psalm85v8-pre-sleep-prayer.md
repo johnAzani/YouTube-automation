@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["HE WILL", "SPEAK PEACE", "TO HIS PEOPLE", "PSALM 85:8"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If tonight's difficult decision is keeping your mind awake in the quiet, rest now. I will hear what God the LORD will speak: for he will speak peace unto his people, and to his saints: but let them not turn again to folly. Lord, quiet the noise of competing voices as sleep comes to this room. Speak Your stillness into every restless corner of this weary heart tonight. Help me to listen closely to Your gentle word, to receive the deep rest You offer, and to walk steadily in Your peace without turning back. Subscribe to The Secret Place for nightly prayers.
