@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T11:51:10Z",
+  "generated_at": "2026-11-22T11:51:15Z",
   "monitor_generated_at": "2026-11-22T11:42:28.969000+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 638,
+    "published_total": 639,
     "published_longform": 188,
-    "published_shorts": 450,
-    "public_total": 636,
+    "published_shorts": 451,
+    "public_total": 637,
     "queued_longform": 59,
-    "queued_shorts": 85,
+    "queued_shorts": 83,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 84,
+        "published_total": 85,
         "published_longform": 23,
-        "published_shorts": 61,
+        "published_shorts": 62,
         "thumbnail_pending": 6,
-        "public_total": 83,
+        "public_total": 84,
         "queued_longform": 6,
         "queued_other": 5,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-PSALM36V7",
-        "title": "Say This Psalm 36:7 Prayer Before You Sleep | Nightly Prayer #Shorts",
+        "id": "SHORT-EXODUS13V21",
+        "title": "Say This Exodus 13:21 Prayer Before You Sleep | Your Dark Room Tonight #Shorts",
         "format": "short",
-        "youtube_video_id": "Arbs11c9ipQ",
-        "watch_url": "https://www.youtube.com/shorts/Arbs11c9ipQ",
-        "published_on": "2026-11-21",
-        "published_at": "2026-11-21T23:56:00Z"
+        "youtube_video_id": "0c_aRqtIIQM",
+        "watch_url": "https://www.youtube.com/shorts/0c_aRqtIIQM",
+        "published_on": "2026-11-22",
+        "published_at": "2026-11-22T11:50:18Z"
       },
       "next_queued_longform": {
         "id": "0031",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-exodus13v21",
-        "scripture": "Exodus 13:21",
+        "short": "short-nahum1v7",
+        "scripture": "Nahum 1:7",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-EXODUS13V21",
+      "slug": "short-exodus13v21-pre-sleep-prayer",
+      "file": "short-exodus13v21-pre-sleep-prayer.md",
+      "title": "Say This Exodus 13:21 Prayer Before You Sleep | Your Dark Room Tonight #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T11:50:18Z",
+      "youtube_video_id": "0c_aRqtIIQM",
+      "watch_url": "https://www.youtube.com/shorts/0c_aRqtIIQM",
+      "youtu_be_url": "https://youtu.be/0c_aRqtIIQM",
+      "shorts_url": "https://www.youtube.com/shorts/0c_aRqtIIQM",
+      "studio_url": "https://studio.youtube.com/video/0c_aRqtIIQM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/0c_aRqtIIQM/hqdefault.jpg",
+      "thumb_text": "NIGHT PRAYER \u00b7 EXODUS 13:21",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 617
+    },
     {
       "id": "SHORT-MORNINGEPHESIANS5V14",
       "slug": "short-morningephesians5v14-sunrise-prayer",
@@ -16786,17 +16810,6 @@
     ],
     "shorts": [
       {
-        "short": "short-exodus13v21",
-        "file": "0000-short-exodus13v21.yml",
-        "companion_longform_id": "",
-        "scripture": "Exodus 13:21",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
-      {
         "short": "short-familypsalm147v13",
         "file": "0000-short-familypsalm147v13.yml",
         "companion_longform_id": "",
@@ -17180,17 +17193,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-psalm42v8",
-        "file": "0113-short-psalm42v8.yml",
-        "companion_longform_id": "0113",
-        "scripture": "Psalm 42:8",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-midnightpsalm144v1",
