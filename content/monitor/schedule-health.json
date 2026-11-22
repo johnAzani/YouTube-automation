@@ -44,15 +44,29 @@
       "workflow": "keepalive.yml"
     }
   ],
-  "generated_at": "2026-11-22T21:13:02.863561+00:00",
-  "last_run_at": "2026-11-22T21:12:07+00:00",
+  "generated_at": "2026-11-22T21:39:53.647239+00:00",
+  "last_run_at": "2026-11-22T21:39:01+00:00",
   "on_time": [
+    {
+      "late_minutes": 85,
+      "name": "automation-health",
+      "ran_at": "2026-11-22T21:39:01+00:00",
+      "slot": "2026-11-22T20:14:00+00:00",
+      "workflow": "automation-health.yml"
+    },
     {
       "late_minutes": 111,
       "name": "Autonomous Comment Replies",
       "ran_at": "2026-11-22T21:05:02+00:00",
       "slot": "2026-11-22T19:14:00+00:00",
       "workflow": "comments.yml"
+    },
+    {
+      "late_minutes": 119,
+      "name": "Autonomous Community Tab Automation",
+      "ran_at": "2026-11-22T21:13:05+00:00",
+      "slot": "2026-11-22T19:14:00+00:00",
+      "workflow": "community.yml"
     },
     {
       "late_minutes": 1,
@@ -62,10 +76,10 @@
       "workflow": "metrics.yml"
     },
     {
-      "late_minutes": 87,
+      "late_minutes": 16,
       "name": "Automation monitor",
-      "ran_at": "2026-11-22T19:50:50+00:00",
-      "slot": "2026-11-22T18:23:00+00:00",
+      "ran_at": "2026-11-22T21:39:01+00:00",
+      "slot": "2026-11-22T21:23:00+00:00",
       "workflow": "monitor.yml"
     },
     {
