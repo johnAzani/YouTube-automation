@@ -1,0 +1,349 @@
+{
+  "key": "short-exodus13v21",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "WHEN THE ROAD AHEAD",
+    "FEELS UNCERTAIN"
+  ],
+  "poster": [
+    "NIGHT PRAYER",
+    "EXODUS 13:21",
+    "GOD GOES BEFORE YOU",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm dark bedroom window night moonlight soft warm light",
+    "peaceful night lake quiet forest trees mist calm water",
+    "soft glowing candle cozy dim lighting night prayer",
+    "cloudy sky dusk soft lighting peaceful mountains distant",
+    "warm ember flame soft campfire glow dark night serenity",
+    "calm starlit night sky dark mountains quiet wilderness",
+    "cozy warm lantern dark room night calm reflection",
+    "calm still water dark night horizon soft stars quiet"
+  ],
+  "scenes": [
+    {
+      "a": "Your dark room holds too many questions tonight.",
+      "img": "short-exodus13v21-scene-01.jpg",
+      "kicker": "TOO MANY QUESTIONS",
+      "sub": "YOUR DARK ROOM TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You lie awake wondering how to navigate the road ahead.",
+      "img": "short-exodus13v21-scene-02.jpg",
+      "kicker": "WONDERING ALONE",
+      "sub": "NAVIGATING THE ROAD AHEAD",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Exodus 13 verse 21 says,",
+      "img": "short-exodus13v21-scene-03.jpg",
+      "kicker": "GOD GOES BEFORE",
+      "sub": "EXODUS THIRTEEN TWENTY ONE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "And the LORD went before them by day in a pillar of a cloud, to lead them the way;",
+      "img": "short-exodus13v21-scene-04.jpg",
+      "kicker": "A PILLAR OF CLOUD",
+      "sub": "THE LORD WENT BEFORE THEM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "and by night in a pillar of fire, to give them light; to go by day and night:",
+      "img": "short-exodus13v21-scene-05.jpg",
+      "kicker": "A PILLAR OF FIRE",
+      "sub": "TO GIVE THEM LIGHT BY NIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, you who guided your people through the wilderness, go before me into this quiet night.",
+      "img": "short-exodus13v21-scene-06.jpg",
+      "kicker": "GO BEFORE ME",
+      "sub": "GUIDE MY QUIET NIGHT",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Let your steady light calm my restless thoughts and cover this room in quiet safety.",
+      "img": "short-exodus13v21-scene-07.jpg",
+      "kicker": "STEADY LIGHT",
+      "sub": "QUIET SAFETY FOR YOUR REST",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I release my heavy tomorrow into your faithful hands. Amen, whenever your dark room holds too many questions.",
+      "img": "short-exodus13v21-scene-08.jpg",
+      "kicker": "FAITHFUL HANDS",
+      "sub": "REST IN GODS GUIDANCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your dark room holds too many questions tonight."
+    ],
+    [
+      3,
+      7,
+      "You lie awake wondering how to navigate the road ahead."
+    ],
+    [
+      7,
+      11,
+      "Exodus 13 verse 21 says,"
+    ],
+    [
+      11,
+      16,
+      "And the LORD went before them by day in a pillar of a cloud, to lead them the way;"
+    ],
+    [
+      16,
+      21,
+      "and by night in a pillar of fire, to give them light; to go by day and night:"
+    ],
+    [
+      21,
+      26,
+      "Lord, you who guided your people through the wilderness, go before me into this quiet night."
+    ],
+    [
+      26,
+      31,
+      "Let your steady light calm my restless thoughts and cover this room in quiet safety."
+    ],
+    [
+      31,
+      36,
+      "I release my heavy tomorrow into your faithful hands. Amen, whenever your dark room holds too many questions."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR DARK ROOM",
+        "HOLDS TOO MANY",
+        "QUESTIONS TONIGHT"
+      ],
+      [
+        "QUESTIONS"
+      ],
+      "EXODUS 13 : 21"
+    ],
+    [
+      3,
+      7,
+      [
+        "YOU LIE AWAKE",
+        "WONDERING HOW TO",
+        "NAVIGATE THE ROAD"
+      ],
+      [
+        "NAVIGATE"
+      ],
+      "EXODUS 13 : 21"
+    ],
+    [
+      7,
+      11,
+      [
+        "EXODUS 13",
+        "VERSE 21 SAYS"
+      ],
+      [
+        "EXODUS"
+      ],
+      "EXODUS 13 : 21"
+    ],
+    [
+      11,
+      16,
+      [
+        "AND THE LORD",
+        "WENT BEFORE THEM",
+        "IN A PILLAR OF CLOUD"
+      ],
+      [
+        "BEFORE"
+      ],
+      "EXODUS 13 : 21"
+    ],
+    [
+      16,
+      21,
+      [
+        "AND BY NIGHT IN A",
+        "PILLAR OF FIRE TO",
+        "GIVE THEM LIGHT"
+      ],
+      [
+        "FIRE"
+      ],
+      "EXODUS 13 : 21"
+    ],
+    [
+      21,
+      26,
+      [
+        "LORD WHO GUIDED",
+        "YOUR PEOPLE GO BEFORE",
+        "THIS QUIET NIGHT"
+      ],
+      [
+        "GUIDED"
+      ],
+      "EXODUS 13 : 21"
+    ],
+    [
+      26,
+      31,
+      [
+        "LET YOUR STEADY LIGHT",
+        "CALM MY RESTLESS THOUGHTS",
+        "IN QUIET SAFETY"
+      ],
+      [
+        "STEADY"
+      ],
+      "EXODUS 13 : 21"
+    ],
+    [
+      31,
+      36,
+      [
+        "I RELEASE MY TOMORROW",
+        "INTO YOUR FAITHFUL HANDS",
+        "AMEN"
+      ],
+      [
+        "FAITHFUL"
+      ],
+      "EXODUS 13 : 21"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your dark room holds too many questions tonight.",
+      "kind": "phrase",
+      "words": [
+        "QUESTIONS",
+        "TONIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You lie awake wondering how to navigate the road ahead.",
+      "kind": "phrase",
+      "words": [
+        "NAVIGATE",
+        "ROAD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Exodus 13 verse 21 says,",
+      "kind": "quote",
+      "words": [
+        "EXODUS",
+        "21"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And the LORD went before them by day in a pillar of a cloud, to lead them the way;",
+      "kind": "quote",
+      "words": [
+        "LORD",
+        "PILLAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and by night in a pillar of fire, to give them light; to go by day and night:",
+      "kind": "quote",
+      "words": [
+        "FIRE",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, you who guided your people through the wilderness, go before me into this quiet night.",
+      "kind": "phrase",
+      "words": [
+        "GUIDED",
+        "NIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your steady light calm my restless thoughts and cover this room in quiet safety.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "SAFETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I release my heavy tomorrow into your faithful hands. Amen, whenever your dark room holds too many questions.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Exodus 13:21"
+}

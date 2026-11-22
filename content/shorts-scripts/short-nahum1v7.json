@@ -1,0 +1,345 @@
+{
+  "key": "short-nahum1v7",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "A STRONG HOLD",
+    "IN TROUBLE"
+  ],
+  "poster": [
+    "BEDTIME PRAYER",
+    "NAHUM 1:7",
+    "FIND PEACE TONIGHT",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm night lake quiet reflection moon",
+    "peaceful forest night soft moonlight misty",
+    "dark mountain peak starry night sky calm",
+    "dim candle glow dark warm room still",
+    "gentle ocean waves dark night moonlight",
+    "serene pine forest night starry canopy",
+    "soft candle flame dark bedroom quiet",
+    "calm lake night glowing stars twilight"
+  ],
+  "scenes": [
+    {
+      "a": "The heavy concern you carried here can rest.",
+      "img": "short-nahum1v7-scene-01.jpg",
+      "kicker": "HEAVY CONCERN",
+      "sub": "LAY DOWN YOUR BURDEN TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Tonight, hear the promise of Nahum chapter one, verse seven:",
+      "img": "short-nahum1v7-scene-02.jpg",
+      "kicker": "SCRIPTURE PROMISE",
+      "sub": "GOD STAYS NEAR IN THE DARK",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The LORD is good, a strong hold in the day of trouble; and he knoweth them that trust in him.",
+      "img": "short-nahum1v7-scene-03.jpg",
+      "kicker": "NAHUM 1:7",
+      "sub": "A STRONG HOLD IN DAY OF TROUBLE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, when trouble presses into this quiet room tonight, remind us that You are our strong fortress.",
+      "img": "short-nahum1v7-scene-04.jpg",
+      "kicker": "OUR FORTRESS",
+      "sub": "YOU PROTECT OUR QUIET ROOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "You know each hidden worry we cannot solve before we sleep.",
+      "img": "short-nahum1v7-scene-05.jpg",
+      "kicker": "HIDDEN WORRIES",
+      "sub": "YOU SEE WHAT WE CANNOT SOLVE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Hold us in Your enduring goodness and shield us with Your stillness.",
+      "img": "short-nahum1v7-scene-06.jpg",
+      "kicker": "DIVINE STILLNESS",
+      "sub": "COVERED IN ENDURING GOODNESS",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "We place every burden into Your safe hands and rest peacefully under Your care.",
+      "img": "short-nahum1v7-scene-07.jpg",
+      "kicker": "SAFE HANDS",
+      "sub": "RESTING PEACEFULLY TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. The heavy concern you carried here can rest.",
+      "img": "short-nahum1v7-scene-08.jpg",
+      "kicker": "REST TONIGHT",
+      "sub": "THE HEAVY CONCERN CAN REST",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The heavy concern you carried here can rest."
+    ],
+    [
+      3,
+      7,
+      "Tonight, hear the promise of Nahum chapter one, verse seven:"
+    ],
+    [
+      7,
+      14,
+      "The LORD is good, a strong hold in the day of trouble; and he knoweth them that trust in him."
+    ],
+    [
+      14,
+      20,
+      "Lord, when trouble presses into this quiet room tonight, remind us that You are our strong fortress."
+    ],
+    [
+      20,
+      25,
+      "You know each hidden worry we cannot solve before we sleep."
+    ],
+    [
+      25,
+      31,
+      "Hold us in Your enduring goodness and shield us with Your stillness."
+    ],
+    [
+      31,
+      38,
+      "We place every burden into Your safe hands and rest peacefully under Your care."
+    ],
+    [
+      38,
+      43,
+      "Amen. The heavy concern you carried here can rest."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE HEAVY CONCERN",
+        "YOU CARRIED HERE",
+        "CAN REST"
+      ],
+      [
+        "REST"
+      ],
+      "NAHUM 1:7"
+    ],
+    [
+      3,
+      7,
+      [
+        "TONIGHT HEAR THE PROMISE",
+        "OF NAHUM ONE SEVEN"
+      ],
+      [
+        "PROMISE"
+      ],
+      "NAHUM 1:7"
+    ],
+    [
+      7,
+      14,
+      [
+        "THE LORD IS GOOD",
+        "A STRONG HOLD IN TROUBLE",
+        "HE KNOWETH THEM THAT TRUST"
+      ],
+      [
+        "STRONG HOLD"
+      ],
+      "NAHUM 1:7"
+    ],
+    [
+      14,
+      20,
+      [
+        "WHEN TROUBLE PRESSES",
+        "YOU ARE OUR FORTRESS"
+      ],
+      [
+        "FORTRESS"
+      ],
+      "NAHUM 1:7"
+    ],
+    [
+      20,
+      25,
+      [
+        "YOU KNOW EACH HIDDEN WORRY",
+        "BEFORE WE SLEEP"
+      ],
+      [
+        "HIDDEN WORRY"
+      ],
+      "NAHUM 1:7"
+    ],
+    [
+      25,
+      31,
+      [
+        "HOLD US IN YOUR GOODNESS",
+        "SHIELD US WITH STILLNESS"
+      ],
+      [
+        "STILLNESS"
+      ],
+      "NAHUM 1:7"
+    ],
+    [
+      31,
+      38,
+      [
+        "WE PLACE EVERY BURDEN",
+        "INTO YOUR SAFE HANDS"
+      ],
+      [
+        "SAFE HANDS"
+      ],
+      "NAHUM 1:7"
+    ],
+    [
+      38,
+      43,
+      [
+        "AMEN",
+        "THE HEAVY CONCERN",
+        "CAN REST"
+      ],
+      [
+        "REST"
+      ],
+      "NAHUM 1:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The heavy concern you carried here can rest.",
+      "kind": "phrase",
+      "words": [
+        "CONCERN",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Tonight, hear the promise of Nahum chapter one, verse seven:",
+      "kind": "phrase",
+      "words": [
+        "PROMISE",
+        "NAHUM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD is good, a strong hold in the day of trouble; and he knoweth them that trust in him.",
+      "kind": "phrase",
+      "words": [
+        "STRONG",
+        "HOLD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when trouble presses into this quiet room tonight, remind us that You are our strong fortress.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "FORTRESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You know each hidden worry we cannot solve before we sleep.",
+      "kind": "phrase",
+      "words": [
+        "HIDDEN",
+        "WORRY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hold us in Your enduring goodness and shield us with Your stillness.",
+      "kind": "phrase",
+      "words": [
+        "GOODNESS",
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We place every burden into Your safe hands and rest peacefully under Your care.",
+      "kind": "phrase",
+      "words": [
+        "SAFE",
+        "CARE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. The heavy concern you carried here can rest.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Nahum 1:7"
+}
