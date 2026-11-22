@@ -9,15 +9,57 @@
       "workflow": "growth-autopilot.yml"
     },
     {
+      "late_minutes": 399,
+      "name": "Gemini Brain Autonomous Queue Replenishment",
+      "ran_at": "2026-11-22T09:53:43+00:00",
+      "slot": "2026-11-22T03:14:00+00:00",
+      "workflow": "gemini_brain.yml"
+    },
+    {
+      "late_minutes": 376,
+      "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
+      "ran_at": "2026-11-22T09:53:44+00:00",
+      "slot": "2026-11-22T03:37:00+00:00",
+      "workflow": "channel-analytics.yml"
+    },
+    {
+      "late_minutes": 301,
+      "name": "Tests on main (daily)",
+      "ran_at": "2026-11-22T09:53:46+00:00",
+      "slot": "2026-11-22T04:52:00+00:00",
+      "workflow": "tests-on-main.yml"
+    },
+    {
+      "late_minutes": 246,
+      "name": "YouTube reporting jobs (thumbnail impressions)",
+      "ran_at": "2026-11-22T09:53:48+00:00",
+      "slot": "2026-11-22T05:47:00+00:00",
+      "workflow": "reporting-jobs.yml"
+    },
+    {
       "late_minutes": 208,
       "name": "Keepalive",
       "ran_at": "2026-11-16T06:51:47+00:00",
       "slot": "2026-11-16T03:23:00+00:00",
       "workflow": "keepalive.yml"
+    },
+    {
+      "late_minutes": 159,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-22T09:53:53+00:00",
+      "slot": "2026-11-22T07:14:00+00:00",
+      "workflow": "comments.yml"
+    },
+    {
+      "late_minutes": 138,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-22T11:41:08+00:00",
+      "slot": "2026-11-22T09:23:00+00:00",
+      "workflow": "monitor.yml"
     }
   ],
-  "generated_at": "2026-11-22T09:53:38.591996+00:00",
-  "last_run_at": "2026-11-22T09:52:42+00:00",
+  "generated_at": "2026-11-22T11:44:42.425251+00:00",
+  "last_run_at": "2026-11-22T11:43:55+00:00",
   "on_time": [
     {
       "late_minutes": 64,
