@@ -64,7 +64,7 @@ Videos by watch time, 365 days (up to 50):
 | [Say This John 14:27 Prayer Before You Sleep / The Secret Place #Shorts](https://youtu.be/dmwIvRt6Ve8) | 1.5 | 177 | 1:04 (109%) |
 | [Say This Psalm 42:8 Prayer Before You Sleep / He Is With You #Shorts](https://youtu.be/D4SsfbWpMK4) | 1.3 | 118 | 1:47 (238%) |
 | [Say This John 14:1-3 Prayer Before You Sleep / Your Tired Soul #Shorts](https://youtu.be/SAA1fLyeNgo) | 0.97 | 238 | 0:32 (73%) |
-| [Psalm 91:11-12 Night Prayer / Angels Guard Your Home & Sleep](https://youtu.be/dgvGl0EZyYE) | 0.92 | 24 | 2:30 (39.5%) |
+| [Psalm 91:11-12 Night Prayer / Angels Guard Your Home & Sleep](https://youtu.be/dgvGl0EZyYE) | 0.92 | 25 | 2:30 (39.5%) |
 | [Say This Psalm 56:3 Prayer Before You Sleep / The Secret Place #Shorts](https://youtu.be/uSsaVvsLsfU) | 0.9 | 194 | 0:32 (63.5%) |
 | [Say This Psalm 91 Prayer Before You Sleep / Divine Protection #Shorts](https://youtu.be/SG69BbNlfRw) | 0.83 | 266 | 0:26 (65.4%) |
 | [Say This Isaiah 30:15 Prayer Before You Sleep / Isaiah 30:15 #Shorts](https://youtu.be/57j_VQcPFlI) | 0.77 | 82 | 1:21 (150%) |
@@ -76,7 +76,7 @@ Videos by watch time, 365 days (up to 50):
 | [Say This Psalm 31:5 Prayer Before You Sleep / Redeemed In Peace #Shor…](https://youtu.be/nHTVsgHaLpE) | 0.57 | 97 | 0:44 (70.8%) |
 | [Say This Psalm 34 Prayer Before You Sleep / Angels Stand Watch #Shorts](https://youtu.be/fTYu1V5GHUE) | 0.53 | 129 | 0:49 (91.9%) |
 | [Say This Psalm 37:7 Prayer Before You Sleep / The Secret Place #Shorts](https://youtu.be/5ekShDmycic) | 0.53 | 54 | 1:27 (129%) |
-| [Say This Psalm 103:1-5 Prayer Before You Sleep / Night Prayer #Shorts](https://youtu.be/y1Vt4YVBLdQ) | 0.47 | 77 | 0:58 (100%) |
+| [Say This Psalm 103:1-5 Prayer Before You Sleep / Night Prayer #Shorts](https://youtu.be/y1Vt4YVBLdQ) | 0.47 | 78 | 0:58 (100%) |
 | [Say This Psalm 139:11-12 Prayer Before You Sleep / The Secret Place #…](https://youtu.be/avnYVdvDmkc) | 0.47 | 51 | 1:02 (99.6%) |
 | [Say This Isaiah 41:10 Prayer Before You Sleep / The Secret Place #Sho…](https://youtu.be/nZO6mwej0Is) | 0.42 | 69 | 0:42 (67.9%) |
 | [Psalm 37:7 Bedtime Prayer / Rest in the Lord & Fret Not](https://youtu.be/sAyMduXhoeQ) | 0.4 | 8 | 3:27 (50.5%) |
