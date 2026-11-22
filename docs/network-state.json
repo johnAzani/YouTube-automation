@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T20:08:10Z",
+  "generated_at": "2026-11-22T20:15:14Z",
   "monitor_generated_at": "2026-11-22T19:51:50.670192+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 661,
+    "published_total": 662,
     "published_longform": 192,
-    "published_shorts": 469,
-    "public_total": 659,
+    "published_shorts": 470,
+    "public_total": 660,
     "queued_longform": 59,
-    "queued_shorts": 73,
+    "queued_shorts": 72,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 53,
+        "published_total": 54,
         "published_longform": 15,
-        "published_shorts": 38,
+        "published_shorts": 39,
         "thumbnail_pending": 47,
-        "public_total": 53,
+        "public_total": 54,
         "queued_longform": 6,
         "queued_other": 3,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-SHIELDDEUTERONOMY31V6",
-        "title": "Pray This Deuteronomy 31:6 Prayer for Divine Protection | Walk Under His Wings #Shorts",
+        "id": "SHORT-SHIELDNUMBERS6V24",
+        "title": "Pray This Numbers 6:24-26 Prayer for Divine Protection | The Burden You Carry Today #Shorts",
         "format": "short",
-        "youtube_video_id": "s2F8zPGCc24",
-        "watch_url": "https://www.youtube.com/shorts/s2F8zPGCc24",
+        "youtube_video_id": "2-WDcWtZ7B4",
+        "watch_url": "https://www.youtube.com/shorts/2-WDcWtZ7B4",
         "published_on": "2026-11-22",
-        "published_at": "2026-11-22T15:47:45Z"
+        "published_at": "2026-11-22T20:14:31Z"
       },
       "next_queued_longform": {
         "id": "0618",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldnumbers6v24",
-        "scripture": "Numbers 6:24-26",
+        "short": "short-shieldisaiah43v2",
+        "scripture": "Isaiah 43:2",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDNUMBERS6V24",
+      "slug": "short-shieldnumbers6v24-protection-prayer",
+      "file": "short-shieldnumbers6v24-protection-prayer.md",
+      "title": "Pray This Numbers 6:24-26 Prayer for Divine Protection | The Burden You Carry Today #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T20:14:31Z",
+      "youtube_video_id": "2-WDcWtZ7B4",
+      "watch_url": "https://www.youtube.com/shorts/2-WDcWtZ7B4",
+      "youtu_be_url": "https://youtu.be/2-WDcWtZ7B4",
+      "shorts_url": "https://www.youtube.com/shorts/2-WDcWtZ7B4",
+      "studio_url": "https://studio.youtube.com/video/2-WDcWtZ7B4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/2-WDcWtZ7B4/hqdefault.jpg",
+      "thumb_text": "WALK UNDER HIS \u00b7 STRONG COVERING",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 626
+    },
     {
       "id": "SHORT-PROVISIONJOEL2V25",
       "slug": "short-provisionjoel2v25-stewardship-prayer",
@@ -17424,17 +17448,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldnumbers6v24",
-        "file": "0000-short-shieldnumbers6v24.yml",
-        "companion_longform_id": "",
-        "scripture": "Numbers 6:24-26",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-zephaniah3v17",
