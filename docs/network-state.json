@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T15:47:53Z",
+  "generated_at": "2026-11-22T15:48:44Z",
   "monitor_generated_at": "2026-11-22T11:42:28.969000+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 651,
+    "published_total": 652,
     "published_longform": 190,
-    "published_shorts": 461,
-    "public_total": 649,
+    "published_shorts": 462,
+    "public_total": 650,
     "queued_longform": 61,
-    "queued_shorts": 82,
+    "queued_shorts": 81,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": false
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 52,
+        "published_total": 53,
         "published_longform": 15,
-        "published_shorts": 37,
+        "published_shorts": 38,
         "thumbnail_pending": 50,
-        "public_total": 52,
+        "public_total": 53,
         "queued_longform": 6,
         "queued_other": 3,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-SHIELDJUDE1V24",
-        "title": "Pray This Jude 1:24-25 Prayer for Divine Protection | When The Road Feels Steep Today #Shorts",
+        "id": "SHORT-SHIELDDEUTERONOMY31V6",
+        "title": "Pray This Deuteronomy 31:6 Prayer for Divine Protection | Walk Under His Wings #Shorts",
         "format": "short",
-        "youtube_video_id": "HgEI8O2xxNo",
-        "watch_url": "https://www.youtube.com/shorts/HgEI8O2xxNo",
+        "youtube_video_id": "s2F8zPGCc24",
+        "watch_url": "https://www.youtube.com/shorts/s2F8zPGCc24",
         "published_on": "2026-11-22",
-        "published_at": "2026-11-22T11:58:36Z"
+        "published_at": "2026-11-22T15:47:45Z"
       },
       "next_queued_longform": {
         "id": "0618",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shielddeuteronomy31v6",
-        "scripture": "Deuteronomy 31:6",
+        "short": "short-shieldnumbers6v24",
+        "scripture": "Numbers 6:24-26",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDDEUTERONOMY31V6",
+      "slug": "short-shielddeuteronomy31v6-protection-prayer",
+      "file": "short-shielddeuteronomy31v6-protection-prayer.md",
+      "title": "Pray This Deuteronomy 31:6 Prayer for Divine Protection | Walk Under His Wings #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-22",
+      "published_at": "2026-11-22T15:47:45Z",
+      "youtube_video_id": "s2F8zPGCc24",
+      "watch_url": "https://www.youtube.com/shorts/s2F8zPGCc24",
+      "youtu_be_url": "https://youtu.be/s2F8zPGCc24",
+      "shorts_url": "https://www.youtube.com/shorts/s2F8zPGCc24",
+      "studio_url": "https://studio.youtube.com/video/s2F8zPGCc24/edit",
+      "thumb_url": "https://i.ytimg.com/vi/s2F8zPGCc24/hqdefault.jpg",
+      "thumb_text": "UNSEEN BATTLES \u00b7 DIVINE PROTECTION",
+      "thumbnail_pending": false,
+      "duration_label": "46s",
+      "words": 625
+    },
     {
       "id": "SHORT-PROVISIONCOLOSSIANS3V23",
       "slug": "short-provisioncolossians3v23-stewardship-prayer",
@@ -17287,17 +17311,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shielddeuteronomy31v6",
-        "file": "0000-short-shielddeuteronomy31v6.yml",
-        "companion_longform_id": "",
-        "scripture": "Deuteronomy 31:6",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldnumbers6v24",
