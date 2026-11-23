@@ -1,6 +1,6 @@
 ---
 id: '0067'
-title: "Morning Prayer for Guidance and Direction: Psalm 25:4-5"
+title: "When You Need to Know the Way: Psalm 25:4-5 | The Morning Altar"
 slug: psalm-25-4-5-morning-prayer
 status: published
 channel: prayer2
@@ -79,12 +79,15 @@ originality:
 published_on: "2026-11-15"
 published_at: "2026-11-15T07:39:53Z"
 youtube_video_id: "0N-rq5bbv6g"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Morning Prayer for Guidance and Direction: Psalm 25:4-5"
+retitled_at: "2026-11-23"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer
