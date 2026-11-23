@@ -37,8 +37,8 @@
       "workflow": "reporting-jobs.yml"
     }
   ],
-  "generated_at": "2026-11-23T14:57:04.551132+00:00",
-  "last_run_at": "2026-11-23T14:56:08+00:00",
+  "generated_at": "2026-11-23T15:51:56.204309+00:00",
+  "last_run_at": "2026-11-23T15:51:16+00:00",
   "on_time": [
     {
       "late_minutes": 85,
@@ -46,13 +46,6 @@
       "ran_at": "2026-11-22T21:39:01+00:00",
       "slot": "2026-11-22T20:14:00+00:00",
       "workflow": "automation-health.yml"
-    },
-    {
-      "late_minutes": 90,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-23T08:44:24+00:00",
-      "slot": "2026-11-23T07:14:00+00:00",
-      "workflow": "comments.yml"
     },
     {
       "late_minutes": 119,
@@ -76,17 +69,17 @@
       "workflow": "metrics.yml"
     },
     {
-      "late_minutes": 51,
+      "late_minutes": 27,
       "name": "Automation monitor",
-      "ran_at": "2026-11-23T13:14:37+00:00",
-      "slot": "2026-11-23T12:23:00+00:00",
+      "ran_at": "2026-11-23T15:50:40+00:00",
+      "slot": "2026-11-23T15:23:00+00:00",
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 27,
+      "late_minutes": 3,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-23T13:14:15+00:00",
-      "slot": "2026-11-23T12:47:00+00:00",
+      "ran_at": "2026-11-23T15:50:40+00:00",
+      "slot": "2026-11-23T15:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
