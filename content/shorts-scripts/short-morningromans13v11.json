@@ -1,0 +1,311 @@
+{
+  "key": "short-morningromans13v11",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "HIGH TIME TO AWAKE",
+    "PUT ON THE ARMOR OF LIGHT"
+  ],
+  "poster": [
+    "AWAKE",
+    "OUT OF SLEEP",
+    "ARMOR OF LIGHT",
+    "ROMANS 13:11-12"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "calm mountain dawn bedroom light misty horizon",
+    "sunrise over quiet misty valley golden morning light",
+    "soft dawn sunbeams through forest trees morning mist",
+    "golden sunrise glowing sky mountain meadow morning",
+    "gentle dawn sunlight streaming through quiet woods",
+    "bright sunrise over peaceful calm lake water morning",
+    "soft golden sunrise breaking over tranquil valley hills"
+  ],
+  "scenes": [
+    {
+      "a": "Alarm clocks ring before your heart feels ready.",
+      "img": "short-morningromans13v11-scene-01.jpg",
+      "kicker": "HEAVY MORNING",
+      "sub": "BEFORE YOUR HEART FEELS READY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Scripture reminds us in Romans thirteen, eleven and twelve:",
+      "img": "short-morningromans13v11-scene-02.jpg",
+      "kicker": "HIGH TIME",
+      "sub": "AWAKE OUT OF SLEEP",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And that, knowing the time, that now it is high time to awake out of sleep: for now is our salvation nearer than when we believed.",
+      "img": "short-morningromans13v11-scene-03.jpg",
+      "kicker": "SALVATION NEARER",
+      "sub": "ROMANS 13:11",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "The night is far spent, the day is at hand: let us therefore cast off the works of darkness, and let us put on the armor of light.",
+      "img": "short-morningromans13v11-scene-04.jpg",
+      "kicker": "ARMOR OF LIGHT",
+      "sub": "ROMANS 13:12",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father, replace our exhaustion with Your living strength today.",
+      "img": "short-morningromans13v11-scene-05.jpg",
+      "kicker": "LIVING STRENGTH",
+      "sub": "REPLACE OUR EXHAUSTION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Help us lay down yesterday's shadows and walk in Your armor of light.",
+      "img": "short-morningromans13v11-scene-06.jpg",
+      "kicker": "CAST OFF SHADOWS",
+      "sub": "WALK IN LIGHT",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Alarm clocks ring before your heart feels ready.",
+      "img": "short-morningromans13v11-scene-07.jpg",
+      "kicker": "HEAVY MORNING",
+      "sub": "BEFORE YOUR HEART FEELS READY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Alarm clocks ring before your heart feels ready."
+    ],
+    [
+      3,
+      7,
+      "Scripture reminds us in Romans thirteen, eleven and twelve:"
+    ],
+    [
+      7,
+      15,
+      "And that, knowing the time, that now it is high time to awake out of sleep: for now is our salvation nearer than when we believed."
+    ],
+    [
+      15,
+      22,
+      "The night is far spent, the day is at hand: let us therefore cast off the works of darkness, and let us put on the armor of light."
+    ],
+    [
+      22,
+      26,
+      "Father, replace our exhaustion with Your living strength today."
+    ],
+    [
+      26,
+      30,
+      "Help us lay down yesterday's shadows and walk in Your armor of light."
+    ],
+    [
+      30,
+      34,
+      "Amen. Alarm clocks ring before your heart feels ready."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "ALARM CLOCKS RING",
+        "BEFORE YOUR HEART",
+        "FEELS READY"
+      ],
+      [
+        "FEELS",
+        "READY"
+      ],
+      "ROMANS 13:11-12"
+    ],
+    [
+      3,
+      7,
+      [
+        "SCRIPTURE REMINDS US",
+        "IN ROMANS THIRTEEN",
+        "ELEVEN AND TWELVE"
+      ],
+      [
+        "ROMANS"
+      ],
+      "ROMANS 13:11-12"
+    ],
+    [
+      7,
+      15,
+      [
+        "HIGH TIME TO AWAKE",
+        "OUT OF SLEEP",
+        "SALVATION IS NEARER"
+      ],
+      [
+        "AWAKE",
+        "NEARER"
+      ],
+      "ROMANS 13:11"
+    ],
+    [
+      15,
+      22,
+      [
+        "DAY IS AT HAND",
+        "CAST OFF DARKNESS",
+        "PUT ON ARMOR OF LIGHT"
+      ],
+      [
+        "ARMOR",
+        "LIGHT"
+      ],
+      "ROMANS 13:12"
+    ],
+    [
+      22,
+      26,
+      [
+        "REPLACE OUR EXHAUSTION",
+        "WITH YOUR LIVING",
+        "STRENGTH TODAY"
+      ],
+      [
+        "LIVING",
+        "STRENGTH"
+      ],
+      "ROMANS 13:11-12"
+    ],
+    [
+      26,
+      30,
+      [
+        "LAY DOWN SHADOWS",
+        "AND WALK IN YOUR",
+        "ARMOR OF LIGHT"
+      ],
+      [
+        "WALK",
+        "LIGHT"
+      ],
+      "ROMANS 13:11-12"
+    ],
+    [
+      30,
+      34,
+      [
+        "AMEN ALARM CLOCKS RING",
+        "BEFORE YOUR HEART",
+        "FEELS READY"
+      ],
+      [
+        "READY"
+      ],
+      "ROMANS 13:11-12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Alarm clocks ring before your heart feels ready.",
+      "kind": "phrase",
+      "words": [
+        "BEFORE",
+        "READY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture reminds us in Romans thirteen, eleven and twelve:",
+      "kind": "phrase",
+      "words": [
+        "ROMANS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And that, knowing the time, that now it is high time to awake out of sleep: for now is our salvation nearer than when we believed.",
+      "kind": "phrase",
+      "words": [
+        "AWAKE",
+        "SALVATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The night is far spent, the day is at hand: let us therefore cast off the works of darkness, and let us put on the armor of light.",
+      "kind": "phrase",
+      "words": [
+        "ARMOR",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, replace our exhaustion with Your living strength today.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help us lay down yesterday's shadows and walk in Your armor of light.",
+      "kind": "phrase",
+      "words": [
+        "ARMOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Alarm clocks ring before your heart feels ready.",
+      "kind": "phrase",
+      "words": [
+        "READY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Romans 13:11-12"
+}

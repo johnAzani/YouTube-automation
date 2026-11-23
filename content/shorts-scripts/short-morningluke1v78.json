@@ -1,0 +1,312 @@
+{
+  "key": "short-morningluke1v78",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "DAYSPRING IN THE DARK",
+    "MORNING PRAYER FOR PEACE"
+  ],
+  "poster": [
+    "LIGHT IN THE SHADOWS",
+    "LUKE 1:78-79 PRAYER",
+    "THE MORNING ALTAR",
+    "SUNRISE PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "foggy room morning light window silhouette calm",
+    "sunrise golden horizon misty mountain calm",
+    "early dawn sky gentle light trees morning",
+    "soft morning light over quiet meadow sunrise",
+    "sunrise rays breaking through forest mist",
+    "calm lake morning sunrise light serene"
+  ],
+  "scenes": [
+    {
+      "a": "Darkness still lingers in your quiet room.",
+      "img": "short-morningluke1v78-scene-01.jpg",
+      "kicker": "DARK ROOM",
+      "sub": "SHADOWS STILL LINGER BEFORE DAWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Through the tender mercy of our God;",
+      "img": "short-morningluke1v78-scene-02.jpg",
+      "kicker": "DAYSPRING DAWN",
+      "sub": "GOD VISITS US IN MERCY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "to give light to them that sit in darkness",
+      "img": "short-morningluke1v78-scene-03.jpg",
+      "kicker": "LIGHT BREAKS",
+      "sub": "GUIDING OUR FEET INTO PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, visit us in the dim places",
+      "img": "short-morningluke1v78-scene-04.jpg",
+      "kicker": "PRAYER AT DAWN",
+      "sub": "MEET US IN THE STILLNESS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let Your tender mercy fall upon every step",
+      "img": "short-morningluke1v78-scene-05.jpg",
+      "kicker": "TENDER MERCY",
+      "sub": "CLEAR AWAY THE SHADOWS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. Darkness still lingers in your quiet room.",
+      "img": "short-morningluke1v78-scene-06.jpg",
+      "kicker": "WAY OF PEACE",
+      "sub": "REST IN HIS SUNRISE GRACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Darkness still lingers in your quiet room."
+    ],
+    [
+      3,
+      8,
+      "Before the rush begins, receive the promise of Luke 1:78-79:"
+    ],
+    [
+      8,
+      15,
+      "Through the tender mercy of our God; whereby the dayspring from on high hath visited us,"
+    ],
+    [
+      15,
+      24,
+      "to give light to them that sit in darkness and in the shadow of death, to guide our feet into the way of peace."
+    ],
+    [
+      24,
+      32,
+      "Lord, visit us in the dim places of this morning."
+    ],
+    [
+      32,
+      40,
+      "Let Your tender mercy fall upon every step we take today."
+    ],
+    [
+      40,
+      48,
+      "Clear away the heavy shadows of fear, and show us how to walk in Your quiet peace."
+    ],
+    [
+      48,
+      54,
+      "Amen. Darkness still lingers in your quiet room."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "DARKNESS STILL LINGERS",
+        "IN YOUR QUIET ROOM"
+      ],
+      [
+        "DARKNESS",
+        "LINGERS"
+      ],
+      "LUKE 1:78-79"
+    ],
+    [
+      3,
+      8,
+      [
+        "BEFORE THE RUSH BEGINS",
+        "RECEIVE THIS PROMISE"
+      ],
+      [
+        "PROMISE"
+      ],
+      "LUKE 1:78-79"
+    ],
+    [
+      8,
+      15,
+      [
+        "THROUGH THE TENDER MERCY",
+        "OF OUR GOD"
+      ],
+      [
+        "TENDER",
+        "MERCY"
+      ],
+      "LUKE 1:78-79"
+    ],
+    [
+      15,
+      24,
+      [
+        "TO GIVE LIGHT TO THEM",
+        "IN SHADOW OF DEATH"
+      ],
+      [
+        "LIGHT",
+        "PEACE"
+      ],
+      "LUKE 1:78-79"
+    ],
+    [
+      24,
+      32,
+      [
+        "LORD VISIT US IN THE",
+        "DIM PLACES OF MORNING"
+      ],
+      [
+        "VISIT",
+        "MORNING"
+      ],
+      "LUKE 1:78-79"
+    ],
+    [
+      32,
+      40,
+      [
+        "LET YOUR TENDER MERCY",
+        "FALL UPON EVERY STEP"
+      ],
+      [
+        "MERCY",
+        "STEP"
+      ],
+      "LUKE 1:78-79"
+    ],
+    [
+      40,
+      48,
+      [
+        "CLEAR AWAY THE SHADOWS",
+        "WALK IN QUIET PEACE"
+      ],
+      [
+        "QUIET",
+        "PEACE"
+      ],
+      "LUKE 1:78-79"
+    ],
+    [
+      48,
+      54,
+      [
+        "AMEN DARKNESS STILL",
+        "LINGERS IN YOUR ROOM"
+      ],
+      [
+        "AMEN",
+        "DARKNESS"
+      ],
+      "LUKE 1:78-79"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Darkness still lingers in your quiet room.",
+      "kind": "phrase",
+      "words": [
+        "DARKNESS",
+        "LINGERS",
+        "QUIET",
+        "ROOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Through the tender mercy of our God;",
+      "kind": "phrase",
+      "words": [
+        "TENDER",
+        "MERCY",
+        "DAYSPRING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "to give light to them that sit in darkness",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "DARKNESS",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, visit us in the dim places",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "VISIT",
+        "DIM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Let Your tender mercy fall upon every step",
+      "kind": "phrase",
+      "words": [
+        "TENDER",
+        "MERCY",
+        "STEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Darkness still lingers in your quiet room.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "DARKNESS",
+        "QUIET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Luke 1:78-79"
+}
