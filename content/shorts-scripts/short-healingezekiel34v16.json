@@ -1,0 +1,350 @@
+{
+  "key": "short-healingezekiel34v16",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALING FOR THE BROKEN",
+    "EZEKIEL 34:16 PRAYER"
+  ],
+  "poster": [
+    "I WILL SEEK THE LOST",
+    "AND BIND UP THE BROKEN",
+    "HEALING PRAYER",
+    "EZEKIEL 34:16"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters soft light",
+    "warm golden sanctuary light rays",
+    "peaceful glowing turquoise water sanctuary",
+    "soft warm golden glow altar light",
+    "white dove flying in tranquil golden sanctuary light",
+    "calm turquoise stream gentle sunlight",
+    "glowing golden peace light serene water"
+  ],
+  "scenes": [
+    {
+      "a": "The broken place inside you still hurts.",
+      "img": "short-healingezekiel34v16-scene-01.jpg",
+      "kicker": "BROKEN PLACES",
+      "sub": "THE SILENT PAIN YOU CARRY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "listen to God's promise in Ezekiel 34:16:",
+      "img": "short-healingezekiel34v16-scene-02.jpg",
+      "kicker": "EZEKIEL 34:16",
+      "sub": "GOD PROMISES TO RESTORE YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I will seek that which was lost,",
+      "img": "short-healingezekiel34v16-scene-03.jpg",
+      "kicker": "HE SEEKS THE LOST",
+      "sub": "BRINGING BACK THE DRIVEN AWAY",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "and will bind up that which was broken,",
+      "img": "short-healingezekiel34v16-scene-04.jpg",
+      "kicker": "BINDING THE BROKEN",
+      "sub": "STRENGTHENING THE SICK",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, reach into this quiet room tonight",
+      "img": "short-healingezekiel34v16-scene-05.jpg",
+      "kicker": "A HEALING PRAYER",
+      "sub": "GENTLY BIND EVERY HIDDEN WOUND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Seek what feels lost, restore what was driven away,",
+      "img": "short-healingezekiel34v16-scene-06.jpg",
+      "kicker": "RESTORE MY SOUL",
+      "sub": "STRENGTHEN THIS WEARY BODY",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Wrap your holy presence around this heart",
+      "img": "short-healingezekiel34v16-scene-07.jpg",
+      "kicker": "GENTLE PEACE",
+      "sub": "PEACE REPLACES EVERY FEAR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The broken place inside you still hurts."
+    ],
+    [
+      3,
+      9,
+      "When you feel driven away by heavy exhaustion, listen to God's promise in Ezekiel 34:16:"
+    ],
+    [
+      9,
+      19,
+      "I will seek that which was lost, and bring again that which was driven away,"
+    ],
+    [
+      19,
+      29,
+      "and will bind up that which was broken, and will strengthen that which was sick."
+    ],
+    [
+      29,
+      37,
+      "Lord, reach into this quiet room tonight and gently bind up every hidden wound."
+    ],
+    [
+      37,
+      45,
+      "Seek what feels lost, restore what was driven away, and strengthen this weary body."
+    ],
+    [
+      45,
+      52,
+      "Wrap your holy presence around this heart until peace replaces every lingering fear."
+    ],
+    [
+      52,
+      58,
+      "Amen. The broken place inside you still hurts."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE BROKEN PLACE",
+        "INSIDE YOU STILL HURTS"
+      ],
+      [
+        "BROKEN",
+        "HURTS"
+      ],
+      "EZEKIEL 34:16"
+    ],
+    [
+      3,
+      9,
+      [
+        "WHEN YOU FEEL DRIVEN AWAY",
+        "BY HEAVY EXHAUSTION",
+        "LISTEN TO GOD'S PROMISE"
+      ],
+      [
+        "DRIVEN",
+        "PROMISE"
+      ],
+      "EZEKIEL 34:16"
+    ],
+    [
+      9,
+      19,
+      [
+        "I WILL SEEK THAT WHICH WAS LOST",
+        "AND BRING AGAIN THAT WHICH WAS",
+        "DRIVEN AWAY"
+      ],
+      [
+        "SEEK",
+        "LOST",
+        "DRIVEN"
+      ],
+      "EZEKIEL 34:16"
+    ],
+    [
+      19,
+      29,
+      [
+        "AND WILL BIND UP THAT",
+        "WHICH WAS BROKEN",
+        "AND WILL STRENGTHEN THAT",
+        "WHICH WAS SICK"
+      ],
+      [
+        "BIND",
+        "BROKEN",
+        "STRENGTHEN"
+      ],
+      "EZEKIEL 34:16"
+    ],
+    [
+      29,
+      37,
+      [
+        "LORD REACH INTO THIS",
+        "QUIET ROOM TONIGHT",
+        "AND GENTLY BIND UP",
+        "EVERY HIDDEN WOUND"
+      ],
+      [
+        "REACH",
+        "BIND",
+        "WOUND"
+      ],
+      "EZEKIEL 34:16"
+    ],
+    [
+      37,
+      45,
+      [
+        "SEEK WHAT FEELS LOST",
+        "RESTORE WHAT WAS DRIVEN AWAY",
+        "AND STRENGTHEN THIS WEARY BODY"
+      ],
+      [
+        "RESTORE",
+        "STRENGTHEN"
+      ],
+      "EZEKIEL 34:16"
+    ],
+    [
+      45,
+      52,
+      [
+        "WRAP YOUR HOLY PRESENCE",
+        "AROUND THIS HEART UNTIL PEACE",
+        "REPLACES EVERY LINGERING FEAR"
+      ],
+      [
+        "PRESENCE",
+        "PEACE"
+      ],
+      "EZEKIEL 34:16"
+    ],
+    [
+      52,
+      58,
+      [
+        "AMEN",
+        "THE BROKEN PLACE",
+        "INSIDE YOU STILL HURTS"
+      ],
+      [
+        "AMEN",
+        "HURTS"
+      ],
+      "EZEKIEL 34:16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The broken place inside you still hurts.",
+      "kind": "phrase",
+      "words": [
+        "BROKEN",
+        "HURTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When you feel driven away by heavy exhaustion, listen to God's promise in Ezekiel 34:16:",
+      "kind": "phrase",
+      "words": [
+        "DRIVEN",
+        "EXHAUSTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will seek that which was lost, and bring again that which was driven away,",
+      "kind": "phrase",
+      "words": [
+        "SEEK",
+        "LOST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and will bind up that which was broken, and will strengthen that which was sick.",
+      "kind": "phrase",
+      "words": [
+        "BIND",
+        "STRENGTHEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, reach into this quiet room tonight and gently bind up every hidden wound.",
+      "kind": "phrase",
+      "words": [
+        "REACH",
+        "BIND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Seek what feels lost, restore what was driven away, and strengthen this weary body.",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "STRENGTHEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Wrap your holy presence around this heart until peace replaces every lingering fear.",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. The broken place inside you still hurts.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "HURTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ezekiel 34:16"
+}

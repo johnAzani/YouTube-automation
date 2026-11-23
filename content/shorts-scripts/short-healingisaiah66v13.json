@@ -1,0 +1,294 @@
+{
+  "key": "short-healingisaiah66v13",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "GOD'S TENDER COMFORT",
+    "ISAIAH 66:13 RESTORATION PRAYER"
+  ],
+  "poster": [
+    "WHEN YOU CARRY",
+    "EVERYONE ELSE",
+    "GOD COMFORTS YOU",
+    "ISAIAH 66:13"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living water golden sunlight rays reflection",
+    "warm golden sanctuary glowing light gentle soft focus mist",
+    "white dove soft glowing light peaceful tranquil blue sky",
+    "calm serene turquoise ocean water slow motion sunlight",
+    "golden ray light shining through quiet peaceful forest stream",
+    "calm turquoise water gently rippling under golden sunset sky"
+  ],
+  "scenes": [
+    {
+      "a": "Your heart is weary from carrying everyone else.",
+      "img": "short-healingisaiah66v13-scene-01.jpg",
+      "kicker": "CARRIER OF BURDENS",
+      "sub": "WHEN YOU CARRY EVERYONE ELSE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You hold every broken piece in quiet silence while nobody asks how you are doing today. The Lord sees your hidden exhaustion.",
+      "img": "short-healingisaiah66v13-scene-02.jpg",
+      "kicker": "HIDDEN EXHAUSTION",
+      "sub": "THE LORD SEES YOUR QUIET PAIN",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear his promise in Isaiah chapter sixty-six, verse thirteen: As one whom his mother comforteth, so will I comfort you; and ye shall be comforted in Jerusalem.",
+      "img": "short-healingisaiah66v13-scene-03.jpg",
+      "kicker": "GOD'S COMFORT",
+      "sub": "ISAIAH 66:13",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, wrap this tired soul in your soothing presence right now.",
+      "img": "short-healingisaiah66v13-scene-04.jpg",
+      "kicker": "SOOTHING PRESENCE",
+      "sub": "REST IN HIS TENDER MERCY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Where grief has left a deep ache, bring the tender warmth only your spirit gives.",
+      "img": "short-healingisaiah66v13-scene-05.jpg",
+      "kicker": "HEALING WARMTH",
+      "sub": "HE COMFORTETH THE WEARY SOUL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Soften their pain and quiet every restless thought in your mercy. Amen. Your heart is weary.",
+      "img": "short-healingisaiah66v13-scene-06.jpg",
+      "kicker": "PEACE RESTORED",
+      "sub": "REST FOR YOUR HEAVY HEART",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your heart is weary from carrying everyone else."
+    ],
+    [
+      3,
+      9,
+      "You hold every broken piece in quiet silence while nobody asks how you are doing today."
+    ],
+    [
+      9,
+      14,
+      "The Lord sees your hidden exhaustion. Hear his promise in Isaiah chapter sixty-six, verse thirteen:"
+    ],
+    [
+      14,
+      23,
+      "As one whom his mother comforteth, so will I comfort you; and ye shall be comforted in Jerusalem."
+    ],
+    [
+      23,
+      29,
+      "Father, wrap this tired soul in your soothing presence right now."
+    ],
+    [
+      29,
+      34,
+      "Where grief has left a deep ache, bring the tender warmth only your spirit gives."
+    ],
+    [
+      34,
+      39,
+      "Soften their pain and quiet every restless thought in your mercy. Amen. Your heart is weary."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR HEART IS WEARY",
+        "FROM CARRYING EVERYONE ELSE"
+      ],
+      [
+        "WEARY",
+        "EVERYONE"
+      ],
+      "ISAIAH 66 : 13"
+    ],
+    [
+      3,
+      9,
+      [
+        "YOU HOLD EVERY BROKEN PIECE",
+        "IN QUIET SILENCE",
+        "WHILE NOBODY ASKS HOW YOU ARE DOING"
+      ],
+      [
+        "BROKEN",
+        "SILENCE",
+        "DOING"
+      ],
+      "ISAIAH 66 : 13"
+    ],
+    [
+      9,
+      14,
+      [
+        "THE LORD SEES YOUR HIDDEN EXHAUSTION",
+        "HEAR HIS PROMISE IN ISAIAH 66:13"
+      ],
+      [
+        "EXHAUSTION",
+        "PROMISE"
+      ],
+      "ISAIAH 66 : 13"
+    ],
+    [
+      14,
+      23,
+      [
+        "AS ONE WHOM HIS MOTHER COMFORTETH",
+        "SO WILL I COMFORT YOU",
+        "AND YE SHALL BE COMFORTED"
+      ],
+      [
+        "MOTHER",
+        "COMFORT",
+        "JERUSALEM"
+      ],
+      "ISAIAH 66 : 13"
+    ],
+    [
+      23,
+      29,
+      [
+        "FATHER WRAP THIS TIRED SOUL",
+        "IN YOUR SOOTHING PRESENCE"
+      ],
+      [
+        "TIRED",
+        "SOOTHING"
+      ],
+      "ISAIAH 66 : 13"
+    ],
+    [
+      29,
+      34,
+      [
+        "WHERE GRIEF LEFT A DEEP ACHE",
+        "BRING TENDER WARMTH"
+      ],
+      [
+        "GRIEF",
+        "WARMTH"
+      ],
+      "ISAIAH 66 : 13"
+    ],
+    [
+      34,
+      39,
+      [
+        "SOFTEN THEIR PAIN AND QUIET",
+        "EVERY RESTLESS THOUGHT",
+        "IN YOUR MERCY AMEN"
+      ],
+      [
+        "PAIN",
+        "RESTLESS",
+        "WEARY"
+      ],
+      "ISAIAH 66 : 13"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your heart is weary from carrying everyone else.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "CARRYING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord sees your hidden exhaustion.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "EXHAUSTION"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "As one whom his mother comforteth, so will I comfort you; and ye shall be comforted in Jerusalem.",
+      "kind": "phrase",
+      "words": [
+        "MOTHER",
+        "COMFORTETH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Father, wrap this tired soul in your soothing presence right now.",
+      "kind": "phrase",
+      "words": [
+        "TIRED",
+        "SOOTHING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Where grief has left a deep ache, bring the tender warmth only your spirit gives.",
+      "kind": "phrase",
+      "words": [
+        "GRIEF",
+        "WARMTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Soften their pain and quiet every restless thought in your mercy. Amen. Your heart is weary.",
+      "kind": "phrase",
+      "words": [
+        "PAIN",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 66:13"
+}
