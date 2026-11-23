@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-23T03:54:02.941723+00:00",
+  "generated_at": "2026-11-23T10:48:31.021511+00:00",
   "as_of": "2026-11-23",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 12,
+  "total_longform_videos": 11,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 56,
+    "receipt_video_ids": 57,
     "matched_video_ids": 50,
-    "longform_below_view_threshold": 12,
+    "longform_below_view_threshold": 11,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 3,
     "minimum_views": 25,
@@ -18,7 +18,7 @@
   "themes": [
     {
       "theme": "protection",
-      "videos": 8,
+      "videos": 7,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -59,11 +59,11 @@
   ],
   "shorts": {
     "measured_shorts": 33,
-    "total_shorts": 38,
+    "total_shorts": 39,
     "sufficient_data": true,
     "avg_views": 206.1,
     "median_views": 184,
-    "total_views": 6800,
+    "total_views": 6801,
     "minimum_age_days": 2,
     "by_book": {
       "2 kings": {
@@ -113,7 +113,7 @@
       },
       "psalm": {
         "shorts": 18,
-        "avg_views": 182.5,
+        "avg_views": 182.6,
         "ratio": 0.897
       },
       "romans": {
@@ -151,7 +151,7 @@
       "morning_mercy_renewal": {
         "shorts": 1,
         "avg_views": 105.0,
-        "ratio": 0.837
+        "ratio": 0.836
       },
       "peace_rest": {
         "shorts": 2,
@@ -160,7 +160,7 @@
       },
       "protection": {
         "shorts": 19,
-        "avg_views": 191.9,
+        "avg_views": 192.0,
         "ratio": 0.938
       },
       "stillness_refuge": {
