@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["MICAH 7:7-8", "WHEN YOU SIT IN DARKNESS", "THE LORD IS YOUR LIGHT", "MIDNIGHT WATCH PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-30T16:08:34Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 The dark feels heavy around your chair tonight. You wonder if God hears your quiet prayer. Hear the word of the Lord: Therefore I will look unto the LORD; I will wait for the God of my salvation: my God will hear me. Rejoice not against me, O mine enemy: when I fall, I shall arise; when I sit in darkness, the LORD shall be a light unto me. Father, we turn our eyes to You in midnight silence. When our steps stumble, reach down and hold us fast. Be the light that breaks through every shadow tonight. Amen. The dark feels heavy around your chair tonight.
