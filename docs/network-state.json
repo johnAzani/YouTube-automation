@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T10:20:45Z",
+  "generated_at": "2026-11-23T10:22:21Z",
   "monitor_generated_at": "2026-11-23T08:48:38.501249+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 689,
+    "published_total": 690,
     "published_longform": 199,
-    "published_shorts": 490,
-    "public_total": 687,
+    "published_shorts": 491,
+    "public_total": 688,
     "queued_longform": 61,
-    "queued_shorts": 82,
+    "queued_shorts": 80,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": true
@@ -368,23 +368,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 63,
+        "published_total": 64,
         "published_longform": 17,
-        "published_shorts": 46,
+        "published_shorts": 47,
         "thumbnail_pending": 4,
-        "public_total": 63,
+        "public_total": 64,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-HEALINGPROVERBS4V20",
-        "title": "Pray This Proverbs 4:20-22 Healing Prayer for Peace & Strength | Your Body #Shorts",
+        "id": "SHORT-HEALINGJOB5V18",
+        "title": "Pray This Job 5:18 Healing Prayer for Peace & Strength | God Binds Your Wounds #Shorts",
         "format": "short",
-        "youtube_video_id": "fp9luxJEz1I",
-        "watch_url": "https://www.youtube.com/shorts/fp9luxJEz1I",
+        "youtube_video_id": "N6eoH6dNDyI",
+        "watch_url": "https://www.youtube.com/shorts/N6eoH6dNDyI",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T00:30:18Z"
+        "published_at": "2026-11-23T10:21:32Z"
       },
       "next_queued_longform": {
         "id": "0418",
@@ -393,8 +393,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingjob5v18",
-        "scripture": "Job 5:18",
+        "short": "short-healingnahum1v7",
+        "scripture": "Nahum 1:7",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGJOB5V18",
+      "slug": "short-healingjob5v18-restoration-prayer",
+      "file": "short-healingjob5v18-restoration-prayer.md",
+      "title": "Pray This Job 5:18 Healing Prayer for Peace & Strength | God Binds Your Wounds #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T10:21:32Z",
+      "youtube_video_id": "N6eoH6dNDyI",
+      "watch_url": "https://www.youtube.com/shorts/N6eoH6dNDyI",
+      "youtu_be_url": "https://youtu.be/N6eoH6dNDyI",
+      "shorts_url": "https://www.youtube.com/shorts/N6eoH6dNDyI",
+      "studio_url": "https://studio.youtube.com/video/N6eoH6dNDyI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/N6eoH6dNDyI/hqdefault.jpg",
+      "thumb_text": "HE HEALS THE BROKEN \u00b7 JOB 5:18 PRAYER",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 649
+    },
     {
       "id": "SHORT-MORNINGLUKE1V78",
       "slug": "short-morningluke1v78-sunrise-prayer",
@@ -18108,17 +18132,6 @@
         "target_window_utc": "18:44"
       },
       {
-        "short": "short-healingjob5v18",
-        "file": "0000-short-healingjob5v18.yml",
-        "companion_longform_id": "",
-        "scripture": "Job 5:18",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
-      },
-      {
         "short": "short-healingnahum1v7",
         "file": "0000-short-healingnahum1v7.yml",
         "companion_longform_id": "",
@@ -18651,17 +18664,6 @@
         "file": "0429-short-healingrevelation21v4.yml",
         "companion_longform_id": "0429",
         "scripture": "Revelation 21:4",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-healingjeremiah33v6",
-        "file": "0430-short-healingjeremiah33v6.yml",
-        "companion_longform_id": "0430",
-        "scripture": "Jeremiah 33:6",
         "channel": "prayer6",
         "channel_name": "The Healing Balm",
         "status": "approved",
