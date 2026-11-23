@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T22:08:04Z",
+  "generated_at": "2026-11-23T22:09:47Z",
   "monitor_generated_at": "2026-11-23T18:09:31.613904+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 709,
+    "published_total": 710,
     "published_longform": 203,
-    "published_shorts": 506,
-    "public_total": 707,
+    "published_shorts": 507,
+    "public_total": 708,
     "queued_longform": 59,
-    "queued_shorts": 72,
+    "queued_shorts": 71,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -164,23 +164,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 82,
+        "published_total": 83,
         "published_longform": 25,
-        "published_shorts": 57,
+        "published_shorts": 58,
         "thumbnail_pending": 1,
-        "public_total": 82,
+        "public_total": 83,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "0101",
-        "title": "When the Afternoon Weariness Sets In: Psalm 84:5-7 | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "wz_jzDV0s5c",
-        "watch_url": "https://youtu.be/wz_jzDV0s5c",
+        "id": "SHORT-MIDDAYNEHEMIAH6V3",
+        "title": "Say This Nehemiah 6:3 Prayer at Noon | Demands On Your Time #Shorts",
+        "format": "short",
+        "youtube_video_id": "QCLtBcxBZAs",
+        "watch_url": "https://www.youtube.com/shorts/QCLtBcxBZAs",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T16:59:37Z"
+        "published_at": "2026-11-23T22:08:46Z"
       },
       "next_queued_longform": {
         "id": "0102",
@@ -189,8 +189,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaynehemiah6v3",
-        "scripture": "Nehemiah 6:3",
+        "short": "short-middaynehemiah2v4",
+        "scripture": "Nehemiah 2:4",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYNEHEMIAH6V3",
+      "slug": "short-middaynehemiah6v3-midday-prayer",
+      "file": "short-middaynehemiah6v3-midday-prayer.md",
+      "title": "Say This Nehemiah 6:3 Prayer at Noon | Demands On Your Time #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T22:08:46Z",
+      "youtube_video_id": "QCLtBcxBZAs",
+      "watch_url": "https://www.youtube.com/shorts/QCLtBcxBZAs",
+      "youtu_be_url": "https://youtu.be/QCLtBcxBZAs",
+      "shorts_url": "https://www.youtube.com/shorts/QCLtBcxBZAs",
+      "studio_url": "https://studio.youtube.com/video/QCLtBcxBZAs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/QCLtBcxBZAs/hqdefault.jpg",
+      "thumb_text": "NEHEMIAH 6:3 \u00b7 MIDDAY PRAYER",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 633
+    },
     {
       "id": "SHORT-MORNINGPROVERBS4V18",
       "slug": "short-morningproverbs4v18-sunrise-prayer",
@@ -18582,17 +18606,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-middaynehemiah6v3",
-        "file": "0000-short-middaynehemiah6v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Nehemiah 6:3",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-provisionpsalm112v1",
