@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-22T09:48:49.918586+00:00",
-  "as_of": "2026-11-22",
+  "generated_at": "2026-11-23T03:53:07.296007+00:00",
+  "as_of": "2026-11-23",
   "sufficient_data": false,
   "measured_longform_videos": 2,
-  "total_longform_videos": 12,
+  "total_longform_videos": 11,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 58,
+    "receipt_video_ids": 63,
     "matched_video_ids": 50,
-    "longform_below_view_threshold": 10,
+    "longform_below_view_threshold": 9,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 2,
     "minimum_views": 25,
@@ -23,13 +23,13 @@
       "theme": "morning_mercy_renewal",
       "videos": 1,
       "measured_videos": 1,
-      "avg_score": 0.9268,
+      "avg_score": 0.9181,
       "avg_engagement": 0.0667,
       "top_scripture": "Psalm 5"
     },
     {
       "theme": "daily_guidance_wisdom",
-      "videos": 2,
+      "videos": 1,
       "measured_videos": 1,
       "avg_score": 0.8659,
       "avg_engagement": 0.0488,
@@ -37,7 +37,7 @@
     },
     {
       "theme": "general_prayer",
-      "videos": 6,
+      "videos": 7,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -50,160 +50,152 @@
       "avg_score": 0.0,
       "avg_engagement": 0.0,
       "top_scripture": ""
-    },
-    {
-      "theme": "anxiety_peace",
-      "videos": 1,
-      "measured_videos": 0,
-      "avg_score": 0.0,
-      "avg_engagement": 0.0,
-      "top_scripture": ""
     }
   ],
   "shorts": {
-    "measured_shorts": 33,
-    "total_shorts": 38,
+    "measured_shorts": 34,
+    "total_shorts": 39,
     "sufficient_data": true,
-    "avg_views": 81.9,
-    "median_views": 71,
-    "total_views": 2703,
+    "avg_views": 66.3,
+    "median_views": 67,
+    "total_views": 2255,
     "minimum_age_days": 2,
     "by_book": {
       "1 corinthians": {
         "shorts": 1,
         "avg_views": 100.0,
-        "ratio": 1.074
+        "ratio": 1.169
       },
       "1 kings": {
         "shorts": 1,
         "avg_views": 1.0,
-        "ratio": 0.671
+        "ratio": 0.672
       },
       "2 corinthians": {
-        "shorts": 1,
+        "shorts": 2,
         "avg_views": 3.0,
-        "ratio": 0.679
+        "ratio": 0.523
       },
       "2 kings": {
         "shorts": 1,
         "avg_views": 60.0,
-        "ratio": 0.911
+        "ratio": 0.968
       },
       "deuteronomy": {
-        "shorts": 2,
-        "avg_views": 117.0,
-        "ratio": 1.214
+        "shorts": 3,
+        "avg_views": 80.7,
+        "ratio": 1.13
       },
       "ephesians": {
         "shorts": 1,
-        "avg_views": 13.0,
-        "ratio": 0.72
+        "avg_views": 14.0,
+        "ratio": 0.737
+      },
+      "exodus": {
+        "shorts": 1,
+        "avg_views": 5.0,
+        "ratio": 0.692
       },
       "genesis": {
         "shorts": 2,
         "avg_views": 69.0,
-        "ratio": 0.921
+        "ratio": 1.02
       },
       "haggai": {
         "shorts": 1,
         "avg_views": 54.0,
-        "ratio": 0.886
+        "ratio": 0.938
       },
       "isaiah": {
         "shorts": 1,
         "avg_views": 145.0,
-        "ratio": 1.257
+        "ratio": 1.395
       },
       "james": {
         "shorts": 1,
         "avg_views": 110.0,
-        "ratio": 1.114
+        "ratio": 1.22
       },
       "luke": {
         "shorts": 2,
         "avg_views": 95.0,
-        "ratio": 1.08
+        "ratio": 1.216
       },
       "malachi": {
         "shorts": 1,
         "avg_views": 69.0,
-        "ratio": 0.947
+        "ratio": 1.013
       },
       "matthew": {
         "shorts": 4,
         "avg_views": 134.5,
-        "ratio": 1.428
+        "ratio": 1.685
       },
       "proverbs": {
-        "shorts": 3,
-        "avg_views": 72.7,
-        "ratio": 0.932
+        "shorts": 2,
+        "avg_views": 41.0,
+        "ratio": 0.809
       },
       "psalm": {
         "shorts": 9,
-        "avg_views": 73.8,
-        "ratio": 0.919
-      },
-      "revelation": {
-        "shorts": 1,
-        "avg_views": 100.0,
-        "ratio": 1.074
+        "avg_views": 48.2,
+        "ratio": 0.777
       },
       "ruth": {
         "shorts": 1,
-        "avg_views": 66.0,
-        "ratio": 0.935
+        "avg_views": 67.0,
+        "ratio": 1.003
       }
     },
     "by_theme": {
       "anxiety_peace": {
-        "shorts": 2,
-        "avg_views": 102.5,
-        "ratio": 1.126
+        "shorts": 1,
+        "avg_views": 69.0,
+        "ratio": 1.013
       },
       "daily_guidance_wisdom": {
-        "shorts": 6,
-        "avg_views": 111.0,
-        "ratio": 1.266
+        "shorts": 7,
+        "avg_views": 95.6,
+        "ratio": 1.343
       },
       "general_prayer": {
         "shorts": 16,
-        "avg_views": 68.4,
-        "ratio": 0.853
+        "avg_views": 62.8,
+        "ratio": 0.953
       },
       "midday_strength_endurance": {
         "shorts": 3,
-        "avg_views": 115.7,
-        "ratio": 1.247
+        "avg_views": 38.3,
+        "ratio": 0.747
       },
       "morning_mercy_renewal": {
-        "shorts": 1,
-        "avg_views": 53.0,
-        "ratio": 0.882
+        "shorts": 2,
+        "avg_views": 29.0,
+        "ratio": 0.719
       },
       "peace_rest": {
         "shorts": 1,
         "avg_views": 113.0,
-        "ratio": 1.127
+        "ratio": 1.235
       },
       "protection": {
         "shorts": 2,
         "avg_views": 44.0,
-        "ratio": 0.769
+        "ratio": 0.832
       },
       "stillness_refuge": {
         "shorts": 1,
-        "avg_views": 66.0,
-        "ratio": 0.935
+        "avg_views": 67.0,
+        "ratio": 1.003
       },
       "trust_surrender": {
         "shorts": 1,
         "avg_views": 71.0,
-        "ratio": 0.956
+        "ratio": 1.024
       }
     },
     "guidance": [
-      "Shorts: Matthew runs 1.4x this channel's average Short (82 views over 33 Shorts); its passages are written first."
+      "Shorts: Matthew runs 1.7x this channel's average Short (66 views over 34 Shorts); its passages are written first."
     ]
   },
   "guidance": [
@@ -218,13 +210,13 @@
       "opened": "2026-11-17",
       "status": "testing",
       "decided": "",
-      "counted_through": "2026-11-18",
+      "counted_through": "2026-11-19",
       "with_videos": 0,
       "with_views": 0,
-      "without_videos": 2,
-      "without_views": 10,
+      "without_videos": 3,
+      "without_views": 21,
       "ratio": null,
-      "note": "0 long prayer(s) titled with it drew 0 views and 2 without it drew 10, each counted at 4 days old; a verdict needs 5 on each side and 100 views in all"
+      "note": "0 long prayer(s) titled with it drew 0 views and 3 without it drew 21, each counted at 4 days old; a verdict needs 5 on each side and 100 views in all"
     },
     {
       "phrase": "carry this scripture",
@@ -232,13 +224,13 @@
       "opened": "2026-11-17",
       "status": "testing",
       "decided": "",
-      "counted_through": "2026-11-18",
+      "counted_through": "2026-11-19",
       "with_videos": 0,
       "with_views": 0,
-      "without_videos": 2,
-      "without_views": 10,
+      "without_videos": 3,
+      "without_views": 21,
       "ratio": null,
-      "note": "0 long prayer(s) titled with it drew 0 views and 2 without it drew 10, each counted at 4 days old; a verdict needs 5 on each side and 100 views in all"
+      "note": "0 long prayer(s) titled with it drew 0 views and 3 without it drew 21, each counted at 4 days old; a verdict needs 5 on each side and 100 views in all"
     },
     {
       "phrase": "breakthrough comes",
@@ -246,13 +238,13 @@
       "opened": "2026-11-17",
       "status": "testing",
       "decided": "",
-      "counted_through": "2026-11-18",
+      "counted_through": "2026-11-19",
       "with_videos": 0,
       "with_views": 0,
-      "without_videos": 2,
-      "without_views": 10,
+      "without_videos": 3,
+      "without_views": 21,
       "ratio": null,
-      "note": "0 long prayer(s) titled with it drew 0 views and 2 without it drew 10, each counted at 4 days old; a verdict needs 5 on each side and 100 views in all"
+      "note": "0 long prayer(s) titled with it drew 0 views and 3 without it drew 21, each counted at 4 days old; a verdict needs 5 on each side and 100 views in all"
     }
   ],
   "niche": {
