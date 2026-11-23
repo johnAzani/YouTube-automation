@@ -74,7 +74,7 @@ What viewers typed into YouTube search to find this channel, last 90 days:
 | psalms 91 | 2 | 0 |
 | psalmul 91 | 2 | 0 |
 | 91 psalm | 1 | 0 |
-| 91 psalm prayer | 1 | 0 |
+| foot worship | 1 | 0 |
 
 13 other search(es) in YouTube's top 25 were not about prayer or scripture and are not listed.
 
