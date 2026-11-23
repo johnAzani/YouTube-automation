@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T11:14:26Z",
+  "generated_at": "2026-11-23T11:36:41Z",
   "monitor_generated_at": "2026-11-23T08:48:38.501249+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 694,
-    "published_longform": 200,
-    "published_shorts": 494,
-    "public_total": 692,
-    "queued_longform": 60,
-    "queued_shorts": 76,
+    "published_total": 696,
+    "published_longform": 201,
+    "published_shorts": 495,
+    "public_total": 694,
+    "queued_longform": 59,
+    "queued_shorts": 75,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": true
@@ -640,33 +640,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 52,
-        "published_longform": 13,
-        "published_shorts": 39,
+        "published_total": 54,
+        "published_longform": 14,
+        "published_shorts": 40,
         "thumbnail_pending": 0,
-        "public_total": 52,
-        "queued_longform": 6,
+        "public_total": 54,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPSALM143V8",
-        "title": "Pray This Psalm 143:8 Prayer for God's Guidance | Finding God In The Silence #Shorts",
-        "format": "short",
-        "youtube_video_id": "BWCnPUK9Mp4",
-        "watch_url": "https://www.youtube.com/shorts/BWCnPUK9Mp4",
-        "published_on": "2026-11-23",
-        "published_at": "2026-11-23T00:36:22Z"
-      },
-      "next_queued_longform": {
         "id": "0813",
         "title": "Asking for Wisdom Before a Choice: Proverbs 2:6 | The Guided Path",
-        "words": 1510,
+        "format": "longform",
+        "youtube_video_id": "q73G3TeXHxc",
+        "watch_url": "https://youtu.be/q73G3TeXHxc",
+        "published_on": "2026-11-23",
+        "published_at": "2026-11-23T11:35:42Z"
+      },
+      "next_queued_longform": {
+        "id": "0814",
+        "title": "Led by His Counsel: Psalm 73:23-24 | The Guided Path",
+        "words": 1384,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedjeremiah29v11",
-        "scripture": "Jeremiah 29:11",
+        "short": "short-guidedluke1v79",
+        "scripture": "Luke 1:79",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -697,6 +697,30 @@
   ],
   "videos": [
     {
+      "id": "0813",
+      "slug": "when-you-need-godly-discernment-proverbs-2-6",
+      "file": "0813-when-you-need-godly-discernment-proverbs-2-6.md",
+      "title": "Asking for Wisdom Before a Choice: Proverbs 2:6 | The Guided Path",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T11:35:42Z",
+      "youtube_video_id": "q73G3TeXHxc",
+      "watch_url": "https://youtu.be/q73G3TeXHxc",
+      "youtu_be_url": "https://youtu.be/q73G3TeXHxc",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/q73G3TeXHxc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/q73G3TeXHxc/hqdefault.jpg",
+      "thumb_text": "GOD GIVES WISDOM",
+      "thumbnail_pending": false,
+      "duration_label": "~10 min",
+      "words": 1510
+    },
+    {
       "id": "0519",
       "slug": "when-you-need-god-to-crown-your-year-psalm-6511",
       "file": "0519-when-you-need-god-to-crown-your-year-psalm-6511.md",
@@ -719,6 +743,30 @@
       "thumbnail_pending": false,
       "duration_label": "~8 min",
       "words": 1149
+    },
+    {
+      "id": "SHORT-GUIDEDJEREMIAH29V11",
+      "slug": "short-guidedjeremiah29v11-guidance-prayer",
+      "file": "short-guidedjeremiah29v11-guidance-prayer.md",
+      "title": "Pray This Jeremiah 29:11 Prayer for God's Guidance | Still Awake Over A Broken Plan #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T10:28:17Z",
+      "youtube_video_id": "6ZwpPdihRXE",
+      "watch_url": "https://www.youtube.com/shorts/6ZwpPdihRXE",
+      "youtu_be_url": "https://youtu.be/6ZwpPdihRXE",
+      "shorts_url": "https://www.youtube.com/shorts/6ZwpPdihRXE",
+      "studio_url": "https://studio.youtube.com/video/6ZwpPdihRXE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/6ZwpPdihRXE/hqdefault.jpg",
+      "thumb_text": "JEREMIAH 29:11 \u00b7 THOUGHTS OF PEACE",
+      "thumbnail_pending": false,
+      "duration_label": "49s",
+      "words": 645
     },
     {
       "id": "SHORT-SHIELD1JOHN4V4",
@@ -18045,19 +18093,6 @@
         "words": 1679
       },
       {
-        "id": "0813",
-        "slug": "when-you-need-godly-discernment-proverbs-2-6",
-        "file": "0813-when-you-need-godly-discernment-proverbs-2-6.md",
-        "title": "Asking for Wisdom Before a Choice: Proverbs 2:6 | The Guided Path",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1510
-      },
-      {
         "id": "0814",
         "slug": "led-by-his-counsel-psalm-73-23-24",
         "file": "0814-led-by-his-counsel-psalm-73-23-24.md",
@@ -18180,17 +18215,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedjeremiah29v11",
-        "file": "0000-short-guidedjeremiah29v11.yml",
-        "companion_longform_id": "",
-        "scripture": "Jeremiah 29:11",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedluke1v79",
