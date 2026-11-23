@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T10:22:21Z",
+  "generated_at": "2026-11-23T10:24:20Z",
   "monitor_generated_at": "2026-11-23T08:48:38.501249+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 690,
+    "published_total": 691,
     "published_longform": 199,
-    "published_shorts": 491,
-    "public_total": 688,
+    "published_shorts": 492,
+    "public_total": 689,
     "queued_longform": 61,
-    "queued_shorts": 80,
+    "queued_shorts": 78,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": true
@@ -572,23 +572,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 54,
+        "published_total": 55,
         "published_longform": 13,
-        "published_shorts": 41,
-        "thumbnail_pending": 54,
-        "public_total": 54,
+        "published_shorts": 42,
+        "thumbnail_pending": 55,
+        "public_total": 55,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-GARDENLAMENTATIONS3V22",
-        "title": "Pray This Lamentations 3:22-23 Prayer of Thanksgiving | His Mercies Are New Today #Shorts",
+        "id": "SHORT-GARDENEXODUS15V2",
+        "title": "Pray This Exodus 15:2 Prayer of Thanksgiving | An Anchor In The Quiet #Shorts",
         "format": "short",
-        "youtube_video_id": "IodwQefMU70",
-        "watch_url": "https://www.youtube.com/shorts/IodwQefMU70",
+        "youtube_video_id": "wZU1-NbSe1k",
+        "watch_url": "https://www.youtube.com/shorts/wZU1-NbSe1k",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T00:30:26Z"
+        "published_at": "2026-11-23T10:23:18Z"
       },
       "next_queued_longform": {
         "id": "0714",
@@ -597,8 +597,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenexodus15v2",
-        "scripture": "Exodus 15:2",
+        "short": "short-gardenpsalm126v2",
+        "scripture": "Psalm 126:2-3",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENEXODUS15V2",
+      "slug": "short-gardenexodus15v2-thanksgiving-prayer",
+      "file": "short-gardenexodus15v2-thanksgiving-prayer.md",
+      "title": "Pray This Exodus 15:2 Prayer of Thanksgiving | An Anchor In The Quiet #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T10:23:18Z",
+      "youtube_video_id": "wZU1-NbSe1k",
+      "watch_url": "https://www.youtube.com/shorts/wZU1-NbSe1k",
+      "youtu_be_url": "https://youtu.be/wZU1-NbSe1k",
+      "shorts_url": "https://www.youtube.com/shorts/wZU1-NbSe1k",
+      "studio_url": "https://studio.youtube.com/video/wZU1-NbSe1k/edit",
+      "thumb_url": "https://i.ytimg.com/vi/wZU1-NbSe1k/hqdefault.jpg",
+      "thumb_text": "THE LORD \u00b7 IS MY",
+      "thumbnail_pending": true,
+      "duration_label": "43s",
+      "words": 632
+    },
     {
       "id": "SHORT-HEALINGJOB5V18",
       "slug": "short-healingjob5v18-restoration-prayer",
@@ -18066,17 +18090,6 @@
         "target_window_utc": "17:14"
       },
       {
-        "short": "short-gardenexodus15v2",
-        "file": "0000-short-gardenexodus15v2.yml",
-        "companion_longform_id": "",
-        "scripture": "Exodus 15:2",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
         "short": "short-gardenpsalm126v2",
         "file": "0000-short-gardenpsalm126v2.yml",
         "companion_longform_id": "",
@@ -18862,17 +18875,6 @@
         "file": "0715-short-gardenpsalm9v1.yml",
         "companion_longform_id": "0715",
         "scripture": "Psalm 9:1-2",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-gardenpsalm63v3",
-        "file": "0719-short-gardenpsalm63v3.yml",
-        "companion_longform_id": "0719",
-        "scripture": "Psalm 63:3-4",
         "channel": "prayer9",
         "channel_name": "The Praise Garden",
         "status": "approved",
