@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T13:16:58Z",
+  "generated_at": "2026-11-23T15:05:09Z",
   "monitor_generated_at": "2026-11-23T13:15:42.517869+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 696,
+    "published_total": 697,
     "published_longform": 201,
-    "published_shorts": 495,
-    "public_total": 694,
-    "queued_longform": 59,
-    "queued_shorts": 76,
+    "published_shorts": 496,
+    "public_total": 695,
+    "queued_longform": 61,
+    "queued_shorts": 83,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 90,
+        "published_total": 91,
         "published_longform": 24,
-        "published_shorts": 66,
+        "published_shorts": 67,
         "thumbnail_pending": 6,
-        "public_total": 89,
+        "public_total": 90,
         "queued_longform": 6,
         "queued_other": 5,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-JUDE1V24",
-        "title": "Say This Jude 1:24-25 Prayer Before You Sleep | Your Mind Is Racing Tonight #Shorts",
+        "id": "SHORT-ZEPHANIAH3V17",
+        "title": "Say This Zephaniah 3:17 Prayer Before You Sleep | Lay Down Your Worry Tonight #Shorts",
         "format": "short",
-        "youtube_video_id": "ANAJJugqvBE",
-        "watch_url": "https://www.youtube.com/shorts/ANAJJugqvBE",
+        "youtube_video_id": "-m9ICoIeOQQ",
+        "watch_url": "https://www.youtube.com/shorts/-m9ICoIeOQQ",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T10:13:35Z"
+        "published_at": "2026-11-23T15:04:02Z"
       },
       "next_queued_longform": {
         "id": "0032",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-zephaniah3v17",
-        "scripture": "Zephaniah 3:17",
+        "short": "short-psalm3v3",
+        "scripture": "Psalm 3:3-5",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -307,7 +307,7 @@
         "public_total": 62,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 9
       },
       "latest_video": {
         "id": "SHORT-FAMILY1SAMUEL1V27",
@@ -375,7 +375,7 @@
         "public_total": 64,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-HEALINGJOB5V18",
@@ -393,8 +393,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingnahum1v7",
-        "scripture": "Nahum 1:7",
+        "short": "short-healingezekiel34v16",
+        "scripture": "Ezekiel 34:16",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -441,9 +441,9 @@
         "published_shorts": 46,
         "thumbnail_pending": 6,
         "public_total": 65,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "0519",
@@ -511,7 +511,7 @@
         "public_total": 57,
         "queued_longform": 6,
         "queued_other": 3,
-        "queued_shorts": 9
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-SHIELD1JOHN4V4",
@@ -579,7 +579,7 @@
         "public_total": 55,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-GARDENEXODUS15V2",
@@ -645,9 +645,9 @@
         "published_shorts": 40,
         "thumbnail_pending": 0,
         "public_total": 54,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 7
       },
       "latest_video": {
         "id": "0813",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-ZEPHANIAH3V17",
+      "slug": "short-zephaniah3v17-pre-sleep-prayer",
+      "file": "short-zephaniah3v17-pre-sleep-prayer.md",
+      "title": "Say This Zephaniah 3:17 Prayer Before You Sleep | Lay Down Your Worry Tonight #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T15:04:02Z",
+      "youtube_video_id": "-m9ICoIeOQQ",
+      "watch_url": "https://www.youtube.com/shorts/-m9ICoIeOQQ",
+      "youtu_be_url": "https://youtu.be/-m9ICoIeOQQ",
+      "shorts_url": "https://www.youtube.com/shorts/-m9ICoIeOQQ",
+      "studio_url": "https://studio.youtube.com/video/-m9ICoIeOQQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/-m9ICoIeOQQ/hqdefault.jpg",
+      "thumb_text": "BEDTIME PRAYER \u00b7 ZEPHANIAH 3:17",
+      "thumbnail_pending": false,
+      "duration_label": "49s",
+      "words": 626
+    },
     {
       "id": "0813",
       "slug": "when-you-need-godly-discernment-proverbs-2-6",
@@ -17937,6 +17961,19 @@
         "words": 1267
       },
       {
+        "id": "0527",
+        "slug": "daily-bread-for-every-need-proverbs-30-8-9",
+        "file": "0527-daily-bread-for-every-need-proverbs-30-8-9.md",
+        "title": "Daily Bread for Every Need: Proverbs 30:8-9 | The Provision Table",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1656
+      },
+      {
         "id": "0619",
         "slug": "pure-word-shield-proverbs-30-5",
         "file": "0619-pure-word-shield-proverbs-30-5.md",
@@ -18158,6 +18195,19 @@
         "words": 1613
       },
       {
+        "id": "0821",
+        "slug": "clear-footing-for-the-way-ahead-proverbs-4-11-12",
+        "file": "0821-clear-footing-for-the-way-ahead-proverbs-4-11-12.md",
+        "title": "Clear Footing for the Way Ahead: Proverbs 4:11-12 | The Guided Path",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1399
+      },
+      {
         "id": "0900",
         "slug": "faithful-work-today-ecclesiastes-116-the-morning-altar",
         "file": "0900-faithful-work-today-ecclesiastes-116-the-morning-altar.md",
@@ -18177,6 +18227,17 @@
         "file": "0000-short-familyisaiah49v25.yml",
         "companion_longform_id": "",
         "scripture": "Isaiah 49:25",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "17:14"
+      },
+      {
+        "short": "short-familyruth2v12",
+        "file": "0000-short-familyruth2v12.yml",
+        "companion_longform_id": "",
+        "scripture": "Ruth 2:12",
         "channel": "prayer5",
         "channel_name": "The Family Altar",
         "status": "approved",
@@ -18206,6 +18267,28 @@
         "target_window_utc": "09:44"
       },
       {
+        "short": "short-gardenpsalm42v11",
+        "file": "0000-short-gardenpsalm42v11.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 42:11",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
+        "short": "short-gardenpsalm8v1",
+        "file": "0000-short-gardenpsalm8v1.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 8:1",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
         "short": "short-gardenrevelation5v12",
         "file": "0000-short-gardenrevelation5v12.yml",
         "companion_longform_id": "",
@@ -18226,6 +18309,28 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
+      },
+      {
+        "short": "short-healingezekiel34v16",
+        "file": "0000-short-healingezekiel34v16.yml",
+        "companion_longform_id": "",
+        "scripture": "Ezekiel 34:16",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-healingisaiah66v13",
+        "file": "0000-short-healingisaiah66v13.yml",
+        "companion_longform_id": "",
+        "scripture": "Isaiah 66:13",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingnahum1v7",
@@ -18327,6 +18432,17 @@
         "target_window_utc": "10:44"
       },
       {
+        "short": "short-provisionpsalm127v1",
+        "file": "0000-short-provisionpsalm127v1.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 127:1-2",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
         "short": "short-provisionpsalm145v15",
         "file": "0000-short-provisionpsalm145v15.yml",
         "companion_longform_id": "",
@@ -18360,15 +18476,15 @@
         "target_window_utc": "08:44"
       },
       {
-        "short": "short-zephaniah3v17",
-        "file": "0000-short-zephaniah3v17.yml",
+        "short": "short-shieldpsalm56v3",
+        "file": "0000-short-shieldpsalm56v3.yml",
         "companion_longform_id": "",
-        "scripture": "Zephaniah 3:17",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
+        "scripture": "Psalm 56:3-4",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
         "status": "approved",
         "publishable": true,
-        "target_window_utc": "14:14"
+        "target_window_utc": "08:44"
       },
       {
         "short": "short-psalm3v3",
@@ -19002,6 +19118,17 @@
         "file": "0817-short-guidedisaiah42v16.yml",
         "companion_longform_id": "0817",
         "scripture": "Isaiah 42:16",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "18:44"
+      },
+      {
+        "short": "short-guidedproverbs4v11",
+        "file": "0821-short-guidedproverbs4v11.yml",
+        "companion_longform_id": "0821",
+        "scripture": "Proverbs 4:11-12",
         "channel": "prayer10",
         "channel_name": "The Guided Path",
         "status": "approved",
