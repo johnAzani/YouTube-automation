@@ -1,0 +1,390 @@
+{
+  "key": "short-middaynehemiah6v3",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "I AM DOING A",
+    "GREAT WORK"
+  ],
+  "poster": [
+    "NEHEMIAH 6:3",
+    "MIDDAY PRAYER",
+    "REFUSE TO COME DOWN",
+    "THE MIDDAY WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "sunlit wooden desk with notebook open natural window light",
+    "calm mountain lake midday sun quiet reflection",
+    "stone wall ancient architecture warm sunlight",
+    "high midday sun illuminating open field calm landscape",
+    "quiet bright room window frame sunlight shadows",
+    "peaceful forest path midday light soft sunbeams",
+    "clean minimal workplace desk warm afternoon light",
+    "ancient stone pathway bathed in clear noon sun",
+    "sunlit serene landscape calm noon sky"
+  ],
+  "scenes": [
+    {
+      "a": "Demands are pulling you away from your work.",
+      "img": "short-middaynehemiah6v3-scene-01.jpg",
+      "kicker": "PULLED AWAY",
+      "sub": "DEMANDS ON YOUR TIME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Every interruption asks you to step away from what matters.",
+      "img": "short-middaynehemiah6v3-scene-02.jpg",
+      "kicker": "STAY THE COURSE",
+      "sub": "FOCUS ON WHAT MATTERS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Nehemiah answered his detractors with these words:",
+      "img": "short-middaynehemiah6v3-scene-03.jpg",
+      "kicker": "NEHEMIAH 6:3",
+      "sub": "A TIMELESS TRUTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And I sent messengers unto them, saying, I am doing a great work, so that I cannot come down: why should the work cease, whilst I leave it, and come down to you?",
+      "img": "short-middaynehemiah6v3-scene-04.jpg",
+      "kicker": "NEHEMIAH 6:3",
+      "sub": "I AM DOING A GREAT WORK",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, give us wisdom to recognize what is essential right now.",
+      "img": "short-middaynehemiah6v3-scene-05.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "WISDOM TO DISCERN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Protect our minds from trivial noise that seeks to derail our purpose.",
+      "img": "short-middaynehemiah6v3-scene-06.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "PROTECT OUR PURPOSE",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach us to say no to distractions so your calling stands firm.",
+      "img": "short-middaynehemiah6v3-scene-07.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "STAND FIRM TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Strengthen our hands to build, refusing to abandon the wall.",
+      "img": "short-middaynehemiah6v3-scene-08.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "REFUSE TO ABANDON",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Amen. Demands pull you away from your work.",
+      "img": "short-middaynehemiah6v3-scene-09.jpg",
+      "kicker": "STAY FOCUSED",
+      "sub": "PAUSE AND PRAY AT NOON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Demands are pulling you away from your work."
+    ],
+    [
+      3,
+      7,
+      "Every interruption asks you to step away from what matters."
+    ],
+    [
+      7,
+      11,
+      "Nehemiah answered his detractors with these words:"
+    ],
+    [
+      11,
+      23,
+      "And I sent messengers unto them, saying, I am doing a great work, so that I cannot come down: why should the work cease, whilst I leave it, and come down to you?"
+    ],
+    [
+      23,
+      29,
+      "Lord, give us wisdom to recognize what is essential right now."
+    ],
+    [
+      29,
+      36,
+      "Protect our minds from trivial noise that seeks to derail our purpose."
+    ],
+    [
+      36,
+      43,
+      "Teach us to say no to distractions so your calling stands firm."
+    ],
+    [
+      43,
+      49,
+      "Strengthen our hands to build, refusing to abandon the wall."
+    ],
+    [
+      49,
+      54,
+      "Amen. Demands pull you away from your work."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "DEMANDS ARE PULLING",
+        "YOU AWAY FROM",
+        "YOUR WORK"
+      ],
+      [
+        "DEMANDS",
+        "WORK"
+      ],
+      "NEHEMIAH 6 : 3"
+    ],
+    [
+      3,
+      7,
+      [
+        "EVERY INTERRUPTION",
+        "ASKS YOU TO STEP",
+        "AWAY FROM WHAT MATTERS"
+      ],
+      [
+        "INTERRUPTION",
+        "MATTERS"
+      ],
+      "NEHEMIAH 6 : 3"
+    ],
+    [
+      7,
+      11,
+      [
+        "NEHEMIAH ANSWERED",
+        "HIS DETRACTORS WITH",
+        "THESE WORDS"
+      ],
+      [
+        "NEHEMIAH",
+        "WORDS"
+      ],
+      "NEHEMIAH 6 : 3"
+    ],
+    [
+      11,
+      23,
+      [
+        "I AM DOING A",
+        "GREAT WORK SO THAT",
+        "I CANNOT COME DOWN"
+      ],
+      [
+        "GREAT",
+        "WORK"
+      ],
+      "NEHEMIAH 6 : 3"
+    ],
+    [
+      23,
+      29,
+      [
+        "LORD GIVE US WISDOM",
+        "TO RECOGNIZE WHAT IS",
+        "ESSENTIAL RIGHT NOW"
+      ],
+      [
+        "WISDOM",
+        "ESSENTIAL"
+      ],
+      "NEHEMIAH 6 : 3"
+    ],
+    [
+      29,
+      36,
+      [
+        "PROTECT OUR MINDS",
+        "FROM TRIVIAL NOISE",
+        "THAT SEEKS TO DERAIL",
+        "OUR PURPOSE"
+      ],
+      [
+        "PROTECT",
+        "PURPOSE"
+      ],
+      "NEHEMIAH 6 : 3"
+    ],
+    [
+      36,
+      43,
+      [
+        "TEACH US TO SAY NO",
+        "TO DISTRACTIONS SO",
+        "YOUR CALLING STANDS FIRM"
+      ],
+      [
+        "DISTRACTIONS",
+        "FIRM"
+      ],
+      "NEHEMIAH 6 : 3"
+    ],
+    [
+      43,
+      49,
+      [
+        "STRENGTHEN OUR HANDS",
+        "TO BUILD REFUSING",
+        "TO ABANDON THE WALL"
+      ],
+      [
+        "BUILD",
+        "WALL"
+      ],
+      "NEHEMIAH 6 : 3"
+    ],
+    [
+      49,
+      54,
+      [
+        "AMEN DEMANDS PULL",
+        "YOU AWAY FROM",
+        "YOUR WORK"
+      ],
+      [
+        "DEMANDS",
+        "WORK"
+      ],
+      "NEHEMIAH 6 : 3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Demands are pulling you away from your work.",
+      "kind": "phrase",
+      "words": [
+        "DEMANDS",
+        "WORK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Every interruption asks you to step away from what matters.",
+      "kind": "phrase",
+      "words": [
+        "INTERRUPTION",
+        "MATTERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And I sent messengers unto them, saying, I am doing a great work, so that I cannot come down: why should the work cease, whilst I leave it, and come down to you?",
+      "kind": "phrase",
+      "words": [
+        "GREAT",
+        "WORK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, give us wisdom to recognize what is essential right now.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "ESSENTIAL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Protect our minds from trivial noise that seeks to derail our purpose.",
+      "kind": "phrase",
+      "words": [
+        "PROTECT",
+        "PURPOSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach us to say no to distractions so your calling stands firm.",
+      "kind": "phrase",
+      "words": [
+        "CALLING",
+        "FIRM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Strengthen our hands to build, refusing to abandon the wall.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTHEN",
+        "WALL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Demands pull you away from your work.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "WORK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Nehemiah 6:3"
+}

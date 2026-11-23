@@ -1,0 +1,281 @@
+{
+  "key": "short-middayjohn15v5",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "WHEN STRIVING EXHAUSTS YOU",
+    "JOHN 15:5 MIDDAY PRAYER"
+  ],
+  "poster": [
+    "ABIDE IN THE VINE",
+    "MIDDAY PRAYER FOR PEACE",
+    "JOHN 15:5",
+    "THE MIDDAY WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "sunlight streaming through quiet wooden desk midday",
+    "dry grapevine leaves illuminated by noon sun",
+    "peaceful orchard trees in midday sunlight",
+    "lush grapevine branches under clear blue midday sky",
+    "calm mountain lake sun shining at noon",
+    "open wooden table with midday light through window"
+  ],
+  "scenes": [
+    {
+      "a": "Your strength feels thin from striving alone today.",
+      "img": "short-middayjohn15v5-scene-01.jpg",
+      "kicker": "STRIVING ALONE",
+      "sub": "WHEN MIDDAY EFFORT FAILS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You try to force results from your own exhausted effort, forgetting where real life grows.",
+      "img": "short-middayjohn15v5-scene-02.jpg",
+      "kicker": "EXHAUSTED EFFORT",
+      "sub": "RESTING FROM SELF-RELIANCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear the Savior in John fifteen verse five:",
+      "img": "short-middayjohn15v5-scene-03.jpg",
+      "kicker": "THE TRUE VINE",
+      "sub": "JOHN 15:5",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing.",
+      "img": "short-middayjohn15v5-scene-04.jpg",
+      "kicker": "ABIDE IN HIM",
+      "sub": "WITHOUT ME YE CAN DO NOTHING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Lord, we yield our restless work back to your hands. Teach us to abide in you right here, trusting you for what we cannot produce.",
+      "img": "short-middayjohn15v5-scene-05.jpg",
+      "kicker": "YIELD YOUR WORK",
+      "sub": "PLACING EFFORT IN HIS HANDS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Quiet our hurried minds in your grace. Amen. Return to peace when your strength feels thin from striving alone.",
+      "img": "short-middayjohn15v5-scene-06.jpg",
+      "kicker": "RETURN TO PEACE",
+      "sub": "THE MIDDAY WATCH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your strength feels thin from striving alone today."
+    ],
+    [
+      3,
+      8,
+      "You try to force results from your own exhausted effort, forgetting where real life grows."
+    ],
+    [
+      8,
+      14,
+      "Hear the Savior in John fifteen verse five:"
+    ],
+    [
+      14,
+      25,
+      "I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing."
+    ],
+    [
+      25,
+      33,
+      "Lord, we yield our restless work back to your hands. Teach us to abide in you right here, trusting you for what we cannot produce."
+    ],
+    [
+      33,
+      40,
+      "Quiet our hurried minds in your grace. Amen. Return to peace when your strength feels thin from striving alone."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR STRENGTH FEELS THIN",
+        "FROM STRIVING ALONE TODAY"
+      ],
+      [
+        "STRENGTH",
+        "STRIVING"
+      ],
+      "JOHN 15 : 5"
+    ],
+    [
+      3,
+      8,
+      [
+        "YOU TRY TO FORCE RESULTS",
+        "FROM YOUR OWN EXHAUSTED EFFORT",
+        "FORGETTING WHERE REAL LIFE GROWS"
+      ],
+      [
+        "FORCE",
+        "EXHAUSTED",
+        "LIFE"
+      ],
+      "JOHN 15 : 5"
+    ],
+    [
+      8,
+      14,
+      [
+        "HEAR THE SAVIOR IN",
+        "JOHN FIFTEEN VERSE FIVE"
+      ],
+      [
+        "SAVIOR",
+        "JOHN 15:5"
+      ],
+      "JOHN 15 : 5"
+    ],
+    [
+      14,
+      25,
+      [
+        "I AM THE VINE",
+        "YE ARE THE BRANCHES",
+        "HE THAT ABIDETH IN ME",
+        "AND I IN HIM",
+        "BRINGETH FORTH MUCH FRUIT"
+      ],
+      [
+        "VINE",
+        "BRANCHES",
+        "ABIDETH",
+        "FRUIT"
+      ],
+      "JOHN 15 : 5"
+    ],
+    [
+      25,
+      33,
+      [
+        "LORD WE YIELD OUR RESTLESS WORK",
+        "TEACH US TO ABIDE IN YOU",
+        "TRUSTING YOU FOR WHAT WE CANNOT PRODUCE"
+      ],
+      [
+        "YIELD",
+        "ABIDE",
+        "TRUSTING"
+      ],
+      "JOHN 15 : 5"
+    ],
+    [
+      33,
+      40,
+      [
+        "QUIET OUR HURRIED MINDS",
+        "IN YOUR GRACE AMEN",
+        "RETURN TO PEACE WHEN YOUR STRENGTH FEELS THIN"
+      ],
+      [
+        "QUIET",
+        "GRACE",
+        "PEACE"
+      ],
+      "JOHN 15 : 5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your strength feels thin from striving alone today.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "STRIVING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You try to force results from your own exhausted effort, forgetting where real life grows.",
+      "kind": "phrase",
+      "words": [
+        "EXHAUSTED",
+        "EFFORT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the Savior in John fifteen verse five:",
+      "kind": "phrase",
+      "words": [
+        "SAVIOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing.",
+      "kind": "phrase",
+      "words": [
+        "VINE",
+        "BRANCHES",
+        "ABIDETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we yield our restless work back to your hands. Teach us to abide in you right here, trusting you for what we cannot produce.",
+      "kind": "phrase",
+      "words": [
+        "ABIDE",
+        "TRUSTING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Quiet our hurried minds in your grace. Amen. Return to peace when your strength feels thin from striving alone.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "John 15:5"
+}
