@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T16:18:52Z",
+  "generated_at": "2026-11-23T17:00:58Z",
   "monitor_generated_at": "2026-11-23T16:17:32.647533+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 706,
-    "published_longform": 202,
-    "published_shorts": 504,
-    "public_total": 704,
-    "queued_longform": 60,
-    "queued_shorts": 74,
+    "published_total": 708,
+    "published_longform": 203,
+    "published_shorts": 505,
+    "public_total": 706,
+    "queued_longform": 59,
+    "queued_shorts": 73,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -164,33 +164,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 80,
-        "published_longform": 24,
-        "published_shorts": 56,
+        "published_total": 82,
+        "published_longform": 25,
+        "published_shorts": 57,
         "thumbnail_pending": 1,
-        "public_total": 80,
-        "queued_longform": 6,
+        "public_total": 82,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYJOHN15V5",
-        "title": "Say This John 15:5 Prayer at Noon | When Midday Effort Fails #Shorts",
-        "format": "short",
-        "youtube_video_id": "SE6ec9bdvkw",
-        "watch_url": "https://www.youtube.com/shorts/SE6ec9bdvkw",
-        "published_on": "2026-11-23",
-        "published_at": "2026-11-23T10:15:26Z"
-      },
-      "next_queued_longform": {
         "id": "0101",
         "title": "When the Afternoon Weariness Sets In: Psalm 84:5-7 | The Midday Watch",
-        "words": 1431,
+        "format": "longform",
+        "youtube_video_id": "wz_jzDV0s5c",
+        "watch_url": "https://youtu.be/wz_jzDV0s5c",
+        "published_on": "2026-11-23",
+        "published_at": "2026-11-23T16:59:37Z"
+      },
+      "next_queued_longform": {
+        "id": "0102",
+        "title": "When Words Are Heated: Proverbs 15:1 | The Midday Watch",
+        "words": 1110,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayhabakkuk3v19",
-        "scripture": "Habakkuk 3:19",
+        "short": "short-middaynehemiah6v3",
+        "scripture": "Nehemiah 6:3",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -697,6 +697,30 @@
   ],
   "videos": [
     {
+      "id": "0101",
+      "slug": "when-the-afternoon-weariness-sets-in-psalm-84-5-7",
+      "file": "0101-when-the-afternoon-weariness-sets-in-psalm-84-5-7.md",
+      "title": "When the Afternoon Weariness Sets In: Psalm 84:5-7 | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T16:59:37Z",
+      "youtube_video_id": "wz_jzDV0s5c",
+      "watch_url": "https://youtu.be/wz_jzDV0s5c",
+      "youtu_be_url": "https://youtu.be/wz_jzDV0s5c",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/wz_jzDV0s5c/edit",
+      "thumb_url": "https://i.ytimg.com/vi/wz_jzDV0s5c/hqdefault.jpg",
+      "thumb_text": "STRENGTH TO STRENGTH",
+      "thumbnail_pending": false,
+      "duration_label": "~10 min",
+      "words": 1431
+    },
+    {
       "id": "SHORT-SHIELDPSALM124V6",
       "slug": "short-shieldpsalm124v6-protection-prayer",
       "file": "short-shieldpsalm124v6-protection-prayer.md",
@@ -839,6 +863,30 @@
       "thumbnail_pending": false,
       "duration_label": "52s",
       "words": 637
+    },
+    {
+      "id": "SHORT-MIDDAYHABAKKUK3V19",
+      "slug": "short-middayhabakkuk3v19-midday-prayer",
+      "file": "short-middayhabakkuk3v19-midday-prayer.md",
+      "title": "Say This Habakkuk 3:19 Prayer at Noon | Your Knees Feel Weak Today #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T16:01:15Z",
+      "youtube_video_id": "Pn6BS-fNxL4",
+      "watch_url": "https://www.youtube.com/shorts/Pn6BS-fNxL4",
+      "youtu_be_url": "https://youtu.be/Pn6BS-fNxL4",
+      "shorts_url": "https://www.youtube.com/shorts/Pn6BS-fNxL4",
+      "studio_url": "https://studio.youtube.com/video/Pn6BS-fNxL4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Pn6BS-fNxL4/hqdefault.jpg",
+      "thumb_text": "STRENGTH FOR \u00b7 THE CLIMB",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 632
     },
     {
       "id": "SHORT-MIDNIGHTMICAH7V7",
@@ -17774,19 +17822,6 @@
         "words": 979
       },
       {
-        "id": "0101",
-        "slug": "when-the-afternoon-weariness-sets-in-psalm-84-5-7",
-        "file": "0101-when-the-afternoon-weariness-sets-in-psalm-84-5-7.md",
-        "title": "When the Afternoon Weariness Sets In: Psalm 84:5-7 | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1431
-      },
-      {
         "id": "0102",
         "slug": "when-words-are-heated-proverbs-15-1",
         "file": "0102-when-words-are-heated-proverbs-15-1.md",
@@ -18523,17 +18558,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-middayhabakkuk3v19",
-        "file": "0000-short-middayhabakkuk3v19.yml",
-        "companion_longform_id": "",
-        "scripture": "Habakkuk 3:19",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaynehemiah6v3",
