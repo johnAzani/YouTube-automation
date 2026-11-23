@@ -1,0 +1,402 @@
+{
+  "key": "short-provisionpsalm145v15",
+  "channel": "prayer7",
+  "psalm": 145,
+  "title": [
+    "WHEN THE PANTRY IS EMPTY",
+    "TRUST GOD'S DAILY TABLE"
+  ],
+  "poster": [
+    "PSALM 145:15-16",
+    "GOD OPENETH HIS HAND",
+    "MEAT IN DUE SEASON",
+    "THE PROVISION TABLE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit rustic wooden stone table in mountain valley sunset",
+    "golden wheat field standing in calm sunlit evening light",
+    "peaceful mountain valley river in warm morning sunlight",
+    "sunlit rustic wooden table with wheat stalks in quiet room",
+    "calm clear mountain lake reflecting golden morning sun",
+    "sunbeam illuminating quiet sanctuary stone table",
+    "golden sunlit valley path with quiet stream running",
+    "peaceful sunlit mountain ridge at dawn glow",
+    "rustic wooden table illuminated by gentle window light"
+  ],
+  "scenes": [
+    {
+      "a": "When the pantry shelf is bare tonight,",
+      "img": "short-provisionpsalm145v15-scene-01.jpg",
+      "kicker": "BARE PANTRY",
+      "sub": "WHEN TOMORROW FEELS UNSURE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "how will tomorrow's table be supplied?",
+      "img": "short-provisionpsalm145v15-scene-02.jpg",
+      "kicker": "DAILY NEED",
+      "sub": "WAITING UPON GOD'S PROVISION",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear the word of the Lord in Psalm 145:",
+      "img": "short-provisionpsalm145v15-scene-03.jpg",
+      "kicker": "PSALM 145:15-16",
+      "sub": "GOD'S FAITHFUL PROMISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The eyes of all wait upon thee; and thou givest them their meat in due season.",
+      "img": "short-provisionpsalm145v15-scene-04.jpg",
+      "kicker": "IN DUE SEASON",
+      "sub": "THE EYES OF ALL WAIT UPON THEE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Thou openest thine hand, and satisfiest the desire of every living thing.",
+      "img": "short-provisionpsalm145v15-scene-05.jpg",
+      "kicker": "OPEN HAND",
+      "sub": "SATISFYING EVERY LIVING THING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father, we bring our quiet worries and daily needs to your open hand.",
+      "img": "short-provisionpsalm145v15-scene-06.jpg",
+      "kicker": "QUIET PETITION",
+      "sub": "LAYING OUR WORRIES BEFORE HIM",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    {
+      "a": "You know the exact hour and measure of our daily bread.",
+      "img": "short-provisionpsalm145v15-scene-07.jpg",
+      "kicker": "DAILY BREAD",
+      "sub": "HE KNOWS YOUR EXACT NEED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant us patient faith while we wait for your season, and give us wisdom to steward today.",
+      "img": "short-provisionpsalm145v15-scene-08.jpg",
+      "kicker": "PATIENT STEWARDSHIP",
+      "sub": "TRUSTING GOD IN EVERY SEASON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Satisfy every humble heart. Amen. When the pantry shelf is bare tonight,",
+      "img": "short-provisionpsalm145v15-scene-09.jpg",
+      "kicker": "SATISFIED HEART",
+      "sub": "TRUSTING GOD'S DAILY TABLE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "When the pantry shelf is bare tonight,"
+    ],
+    [
+      3,
+      7,
+      "how will tomorrow's table be supplied?"
+    ],
+    [
+      7,
+      12,
+      "Hear the word of the Lord in Psalm 145:"
+    ],
+    [
+      12,
+      20,
+      "The eyes of all wait upon thee; and thou givest them their meat in due season."
+    ],
+    [
+      20,
+      27,
+      "Thou openest thine hand, and satisfiest the desire of every living thing."
+    ],
+    [
+      27,
+      33,
+      "Father, we bring our quiet worries and daily needs to your open hand."
+    ],
+    [
+      33,
+      39,
+      "You know the exact hour and measure of our daily bread."
+    ],
+    [
+      39,
+      46,
+      "Grant us patient faith while we wait for your season, and give us wisdom to steward today."
+    ],
+    [
+      46,
+      52,
+      "Satisfy every humble heart. Amen. When the pantry shelf is bare tonight,"
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WHEN THE PANTRY",
+        "SHELF IS BARE",
+        "TONIGHT,"
+      ],
+      [
+        "BARE"
+      ],
+      "PSALM 145:15-16"
+    ],
+    [
+      3,
+      7,
+      [
+        "HOW WILL TOMORROW'S",
+        "TABLE BE SUPPLIED?"
+      ],
+      [
+        "SUPPLIED"
+      ],
+      "PSALM 145:15-16"
+    ],
+    [
+      7,
+      12,
+      [
+        "HEAR THE WORD",
+        "OF THE LORD IN",
+        "PSALM 145:"
+      ],
+      [
+        "PSALM"
+      ],
+      "PSALM 145:15-16"
+    ],
+    [
+      12,
+      20,
+      [
+        "THE EYES OF ALL",
+        "WAIT UPON THEE;",
+        "AND THOU GIVEST THEM",
+        "THEIR MEAT IN DUE SEASON."
+      ],
+      [
+        "MEAT",
+        "DUE",
+        "SEASON"
+      ],
+      "PSALM 145:15"
+    ],
+    [
+      20,
+      27,
+      [
+        "THOU OPENEST THINE HAND,",
+        "AND SATISFIEST THE DESIRE",
+        "OF EVERY LIVING THING."
+      ],
+      [
+        "OPENEST",
+        "HAND",
+        "SATISFIEST"
+      ],
+      "PSALM 145:16"
+    ],
+    [
+      27,
+      33,
+      [
+        "FATHER, WE BRING OUR",
+        "QUIET WORRIES AND DAILY NEEDS",
+        "TO YOUR OPEN HAND."
+      ],
+      [
+        "OPEN",
+        "HAND"
+      ],
+      "PSALM 145:15-16"
+    ],
+    [
+      33,
+      39,
+      [
+        "YOU KNOW THE EXACT",
+        "HOUR AND MEASURE OF",
+        "OUR DAILY BREAD."
+      ],
+      [
+        "DAILY",
+        "BREAD"
+      ],
+      "PSALM 145:15-16"
+    ],
+    [
+      39,
+      46,
+      [
+        "GRANT US PATIENT FAITH",
+        "WHILE WE WAIT FOR YOUR SEASON,",
+        "AND GIVE US WISDOM",
+        "TO STEWARD TODAY."
+      ],
+      [
+        "PATIENT",
+        "FAITH",
+        "SEASON"
+      ],
+      "PSALM 145:15-16"
+    ],
+    [
+      46,
+      52,
+      [
+        "SATISFY EVERY HUMBLE HEART.",
+        "AMEN.",
+        "WHEN THE PANTRY SHELF",
+        "IS BARE TONIGHT,"
+      ],
+      [
+        "SATISFY",
+        "HUMBLE",
+        "HEART"
+      ],
+      "PSALM 145:15-16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When the pantry shelf is bare tonight,",
+      "kind": "phrase",
+      "words": [
+        "BARE",
+        "TONIGHT"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "how will tomorrow's table be supplied?",
+      "kind": "phrase",
+      "words": [
+        "SUPPLIED"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "Hear the word of the Lord in Psalm 145:",
+      "kind": "phrase",
+      "words": [
+        "WORD",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The eyes of all wait upon thee; and thou givest them their meat in due season.",
+      "kind": "phrase",
+      "words": [
+        "MEAT",
+        "DUE",
+        "SEASON"
+      ],
+      "hi": 0,
+      "slot": "D"
+    },
+    {
+      "a": "Thou openest thine hand, and satisfiest the desire of every living thing.",
+      "kind": "phrase",
+      "words": [
+        "OPENEST",
+        "SATISFIEST"
+      ],
+      "hi": 0,
+      "slot": "E"
+    },
+    {
+      "a": "Father, we bring our quiet worries and daily needs to your open hand.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "WORRIES"
+      ],
+      "hi": 0,
+      "slot": "F"
+    },
+    {
+      "a": "You know the exact hour and measure of our daily bread.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "BREAD"
+      ],
+      "hi": 0,
+      "slot": "G"
+    },
+    {
+      "a": "Grant us patient faith while we wait for your season, and give us wisdom to steward today.",
+      "kind": "phrase",
+      "words": [
+        "PATIENT",
+        "FAITH"
+      ],
+      "hi": 0,
+      "slot": "H"
+    },
+    {
+      "a": "Satisfy every humble heart. Amen. When the pantry shelf is bare tonight,",
+      "kind": "phrase",
+      "words": [
+        "SATISFY",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "I"
+    }
+  ],
+  "scripture": "Psalm 145:15-16"
+}

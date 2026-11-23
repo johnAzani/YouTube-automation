@@ -1,0 +1,251 @@
+{
+  "key": "short-provisionproverbs30v8",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "A PRAYER FOR",
+    "SUFFICIENT PROVISION"
+  ],
+  "poster": [
+    "GIVE ME NEITHER",
+    "POVERTY NOR RICHES",
+    "ONLY THE FOOD",
+    "CONVENIENT FOR ME"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "misty morning mountain stream",
+    "golden light on stone table",
+    "sunlit forest path in autumn",
+    "quiet river at dawn",
+    "soft sunlight on stone wall",
+    "gentle ripples on clear lake",
+    "calm morning valley landscape"
+  ],
+  "scenes": [
+    {
+      "a": "That hunger for more is unsettling.",
+      "img": "short-provisionproverbs30v8-scene-01.jpg",
+      "kicker": "THAT HUNGER",
+      "sub": "UNSETTLING DESIRES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "It shifts your focus from the Giver.",
+      "img": "short-provisionproverbs30v8-scene-02.jpg",
+      "kicker": "SHIFTED FOCUS",
+      "sub": "THE GIVER IS NEAR",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Listen to the wisdom of Agur.",
+      "img": "short-provisionproverbs30v8-scene-03.jpg",
+      "kicker": "GODLY WISDOM",
+      "sub": "PROVERBS THIRTY EIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Remove far from me vanity and lies: give me neither poverty nor riches; feed me with food convenient for me: Lest I be full, and deny thee, and say, Who is the LORD? or lest I be poor, and steal, and take the name of my God in vain.",
+      "img": "short-provisionproverbs30v8-scene-04.jpg",
+      "kicker": "THE SCRIPTURE",
+      "sub": "DIVINE PROVISION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, anchor my heart in this middle ground.",
+      "img": "short-provisionproverbs30v8-scene-05.jpg",
+      "kicker": "HUMBLE TRUST",
+      "sub": "ANCHOR MY HEART",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Keep me from the pride of plenty or the bitterness of want.",
+      "img": "short-provisionproverbs30v8-scene-06.jpg",
+      "kicker": "FAITHFUL STEWARD",
+      "sub": "GRANT ME CONTENTMENT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Supply today what I need to walk in Your ways, that hunger for more is unsettling.",
+      "img": "short-provisionproverbs30v8-scene-07.jpg",
+      "kicker": "AMEN",
+      "sub": "RESTING IN PROVISION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That hunger for more is unsettling."
+    ],
+    [
+      3,
+      6,
+      "It shifts your focus from the Giver."
+    ],
+    [
+      6,
+      9,
+      "Listen to the wisdom of Agur."
+    ],
+    [
+      9,
+      25,
+      "Remove far from me vanity and lies: give me neither poverty nor riches; feed me with food convenient for me: Lest I be full, and deny thee, and say, Who is the LORD? or lest I be poor, and steal, and take the name of my God in vain."
+    ],
+    [
+      25,
+      29,
+      "Lord, anchor my heart in this middle ground."
+    ],
+    [
+      29,
+      33,
+      "Keep me from the pride of plenty or the bitterness of want."
+    ],
+    [
+      33,
+      38,
+      "Supply today what I need to walk in Your ways, that hunger for more is unsettling."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT HUNGER",
+        "FOR MORE",
+        "IS UNSETTLING"
+      ],
+      [
+        "HUNGER"
+      ],
+      "PROVERBS 30:8"
+    ],
+    [
+      3,
+      6,
+      [
+        "IT SHIFTS",
+        "YOUR FOCUS",
+        "FROM THE GIVER"
+      ],
+      [
+        "FOCUS"
+      ],
+      "PROVERBS 30:8"
+    ],
+    [
+      6,
+      9,
+      [
+        "LISTEN TO THE",
+        "WISDOM OF AGUR"
+      ],
+      [
+        "WISDOM"
+      ],
+      "PROVERBS 30:8"
+    ],
+    [
+      9,
+      25,
+      [
+        "REMOVE VANITY",
+        "NEITHER POVERTY",
+        "NOR RICHES",
+        "FEED ME",
+        "CONVENIENT FOOD"
+      ],
+      [
+        "CONVENIENT"
+      ],
+      "PROVERBS 30:8"
+    ],
+    [
+      25,
+      29,
+      [
+        "ANCHOR MY HEART",
+        "IN THIS",
+        "MIDDLE GROUND"
+      ],
+      [
+        "ANCHOR"
+      ],
+      "PROVERBS 30:8"
+    ],
+    [
+      29,
+      33,
+      [
+        "KEEP ME FROM",
+        "PRIDE OR",
+        "BITTERNESS"
+      ],
+      [
+        "CONTENTMENT"
+      ],
+      "PROVERBS 30:8"
+    ],
+    [
+      33,
+      38,
+      [
+        "SUPPLY TODAY",
+        "WHAT I NEED",
+        "THAT HUNGER IS UNSETTLING"
+      ],
+      [
+        "SUPPLY"
+      ],
+      "PROVERBS 30:8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That hunger for more is unsettling.",
+      "kind": "phrase",
+      "words": [
+        "UNSETTLING",
+        "HUNGER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 30:8-9"
+}

@@ -1,0 +1,276 @@
+{
+  "key": "short-provisionpsalm112v1",
+  "channel": "prayer7",
+  "psalm": 112,
+  "title": [
+    "LIGHT IN THE DARKNESS",
+    "A PRAYER FOR STEWARDSHIP"
+  ],
+  "poster": [
+    "WHEN LEDGERS",
+    "DO NOT BALANCE",
+    "WISDOM FOR YOUR",
+    "DAILY AFFAIRS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit valley mist morning",
+    "sunlit mountain pass peaceful river",
+    "sunlit sanctuary stone table mountain light",
+    "peaceful morning river sunbeams trees",
+    "sunlit stone path autumn valley glow",
+    "golden hour quiet mountain meadow stream"
+  ],
+  "scenes": [
+    {
+      "a": "When ledgers do not balance tonight, stay still.",
+      "img": "short-provisionpsalm112v1-scene-01.jpg",
+      "kicker": "UNBALANCED LEDGERS",
+      "sub": "WHEN DAILY ACCOUNTS DO NOT ADD UP",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The scripture promises in Psalm 112: Unto the upright there ariseth light in the darkness: he is gracious, and full of compassion, and righteous.",
+      "img": "short-provisionpsalm112v1-scene-02.jpg",
+      "kicker": "LIGHT IN DARKNESS",
+      "sub": "GOD PROMISES DIRECTION",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "A good man showeth favor, and lendeth: he will guide his affairs with discretion.",
+      "img": "short-provisionpsalm112v1-scene-03.jpg",
+      "kicker": "GUIDING AFFAIRS",
+      "sub": "WISDOM IN DAILY STEWARDSHIP",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, as we guide our work and manage our daily bread, grant us quiet wisdom to conduct our decisions with honor.",
+      "img": "short-provisionpsalm112v1-scene-04.jpg",
+      "kicker": "STEWARDSHIP PRAYER",
+      "sub": "DECISIONS CONDUCTED WITH HONOR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Where resources feel thin and decisions heavy, let Your light arise in our darkness.",
+      "img": "short-provisionpsalm112v1-scene-05.jpg",
+      "kicker": "WHEN RESOURCES THIN",
+      "sub": "YOUR LIGHT IN OUR DARKNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Provide for our home, sustain our family, and give us grace to be generous even in tight seasons. Amen. When ledgers do not balance tonight, stay still.",
+      "img": "short-provisionpsalm112v1-scene-06.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "GRACE IN TIGHT SEASONS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "When ledgers do not balance tonight, stay still."
+    ],
+    [
+      3,
+      14,
+      "The scripture promises in Psalm 112: Unto the upright there ariseth light in the darkness: he is gracious, and full of compassion, and righteous."
+    ],
+    [
+      14,
+      24,
+      "A good man showeth favor, and lendeth: he will guide his affairs with discretion."
+    ],
+    [
+      24,
+      36,
+      "Father, as we guide our work and manage our daily bread, grant us quiet wisdom to conduct our decisions with honor."
+    ],
+    [
+      36,
+      48,
+      "Where resources feel thin and decisions heavy, let Your light arise in our darkness."
+    ],
+    [
+      48,
+      60,
+      "Provide for our home, sustain our family, and give us grace to be generous even in tight seasons. Amen. When ledgers do not balance tonight, stay still."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WHEN LEDGERS",
+        "DO NOT BALANCE",
+        "STAY STILL"
+      ],
+      [
+        "BALANCE",
+        "STAY"
+      ],
+      "PSALM 112:4-5"
+    ],
+    [
+      3,
+      14,
+      [
+        "UNTO THE UPRIGHT",
+        "THERE ARISETH LIGHT",
+        "IN THE DARKNESS"
+      ],
+      [
+        "LIGHT",
+        "DARKNESS"
+      ],
+      "PSALM 112:4"
+    ],
+    [
+      14,
+      24,
+      [
+        "HE WILL GUIDE",
+        "HIS AFFAIRS WITH",
+        "DISCRETION"
+      ],
+      [
+        "GUIDE",
+        "DISCRETION"
+      ],
+      "PSALM 112:5"
+    ],
+    [
+      24,
+      36,
+      [
+        "GRANT US QUIET WISDOM",
+        "TO CONDUCT OUR DECISIONS",
+        "WITH HONOR"
+      ],
+      [
+        "WISDOM",
+        "HONOR"
+      ],
+      "PSALM 112:5"
+    ],
+    [
+      36,
+      48,
+      [
+        "LET YOUR LIGHT ARISE",
+        "IN OUR DARKNESS"
+      ],
+      [
+        "LIGHT",
+        "ARISE"
+      ],
+      "PSALM 112:4"
+    ],
+    [
+      48,
+      60,
+      [
+        "SUSTAIN OUR FAMILY",
+        "GRACE IN TIGHT SEASONS",
+        "STAY STILL"
+      ],
+      [
+        "SUSTAIN",
+        "STAY",
+        "STILL"
+      ],
+      "THE PROVISION TABLE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When ledgers do not balance tonight, stay still.",
+      "kind": "phrase",
+      "words": [
+        "LEDGERS",
+        "BALANCE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Unto the upright there ariseth light in the darkness: he is gracious, and full of compassion, and righteous.",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "DARKNESS"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "A good man showeth favor, and lendeth: he will guide his affairs with discretion.",
+      "kind": "phrase",
+      "words": [
+        "GUIDE",
+        "DISCRETION"
+      ],
+      "hi": 1,
+      "slot": "B"
+    },
+    {
+      "a": "Father, as we guide our work and manage our daily bread, grant us quiet wisdom to conduct our decisions with honor.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "WISDOM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Where resources feel thin and decisions heavy, let Your light arise in our darkness.",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "ARISE"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "Provide for our home, sustain our family, and give us grace to be generous even in tight seasons.",
+      "kind": "phrase",
+      "words": [
+        "SUSTAIN",
+        "GENEROUS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 112:1-5"
+}

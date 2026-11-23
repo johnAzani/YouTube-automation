@@ -1,0 +1,344 @@
+{
+  "key": "short-provisiongenesis39v2",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "WHEN YOUR WORK",
+    "IS UNSEEN"
+  ],
+  "poster": [
+    "GOD SEES YOUR",
+    "FAITHFUL LABOR",
+    "GENESIS 39:2-3",
+    "DAILY PROVISION"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit stone sanctuary courtyard early morning light",
+    "peaceful golden sunlit valley mountain path sunrise",
+    "calm ancient stone courtyard morning sun rays",
+    "sunlit wheat field golden hour gentle breeze",
+    "peaceful river flowing through sunlit valley morning",
+    "ancient stone table sunlit sanctuary morning shadows",
+    "sunlit mountain pass golden horizon morning light"
+  ],
+  "scenes": [
+    {
+      "a": "You are carrying work that no one notices.",
+      "img": "short-provisiongenesis39v2-scene-01.jpg",
+      "kicker": "UNSEEN LABOR",
+      "sub": "WORK THAT NO ONE NOTICES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Even in an unseen place, God establishes faithful hands.",
+      "img": "short-provisiongenesis39v2-scene-02.jpg",
+      "kicker": "FAITHFUL HANDS",
+      "sub": "GOD ESTABLISHES YOUR STEPS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And the LORD was with Joseph, and he was a prosperous man;",
+      "img": "short-provisiongenesis39v2-scene-03.jpg",
+      "kicker": "GENESIS 39:2",
+      "sub": "THE LORD WAS WITH JOSEPH",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "and that the LORD made all that he did to prosper in his hand.",
+      "img": "short-provisiongenesis39v2-scene-04.jpg",
+      "kicker": "GENESIS 39:3",
+      "sub": "PROSPER IN HIS HAND",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Heavenly Father, establish the work of our hands today.",
+      "img": "short-provisiongenesis39v2-scene-05.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "ESTABLISH OUR HANDS TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Let Your presence attend every quiet duty and unseen task.",
+      "img": "short-provisiongenesis39v2-scene-06.jpg",
+      "kicker": "QUIET DUTY",
+      "sub": "YOUR PRESENCE IN EVERY TASK",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. You are carrying work that no one notices.",
+      "img": "short-provisiongenesis39v2-scene-07.jpg",
+      "kicker": "WALK IN FAVOR",
+      "sub": "GOD SEES YOUR UNSEEN WORK",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You are carrying work that no one notices."
+    ],
+    [
+      3,
+      7,
+      "Even in an unseen place, God establishes faithful hands."
+    ],
+    [
+      7,
+      13,
+      "And the LORD was with Joseph, and he was a prosperous man;"
+    ],
+    [
+      13,
+      19,
+      "and he was in the house of his master the Egyptian."
+    ],
+    [
+      19,
+      25,
+      "And his master saw that the LORD was with him,"
+    ],
+    [
+      25,
+      31,
+      "and that the LORD made all that he did to prosper in his hand."
+    ],
+    [
+      31,
+      37,
+      "Heavenly Father, establish the work of our hands today."
+    ],
+    [
+      37,
+      43,
+      "Let Your presence attend every quiet duty and unseen task."
+    ],
+    [
+      43,
+      49,
+      "May others see Your favor where You have placed us."
+    ],
+    [
+      49,
+      56,
+      "Amen. You are carrying work that no one notices."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WORK NO ONE",
+        "NOTICES TODAY"
+      ],
+      [
+        "NOTICES"
+      ],
+      "GENESIS 39 : 2-3"
+    ],
+    [
+      3,
+      7,
+      [
+        "GOD ESTABLISHES",
+        "FAITHFUL HANDS"
+      ],
+      [
+        "FAITHFUL"
+      ],
+      "GENESIS 39 : 2-3"
+    ],
+    [
+      7,
+      13,
+      [
+        "THE LORD WAS",
+        "WITH JOSEPH"
+      ],
+      [
+        "LORD"
+      ],
+      "GENESIS 39 : 2"
+    ],
+    [
+      13,
+      19,
+      [
+        "IN THE HOUSE OF",
+        "HIS MASTER"
+      ],
+      [
+        "MASTER"
+      ],
+      "GENESIS 39 : 2"
+    ],
+    [
+      19,
+      25,
+      [
+        "HIS MASTER SAW",
+        "THE LORD WITH HIM"
+      ],
+      [
+        "SAW"
+      ],
+      "GENESIS 39 : 3"
+    ],
+    [
+      25,
+      31,
+      [
+        "ALL THAT HE DID",
+        "TO PROSPER"
+      ],
+      [
+        "PROSPER"
+      ],
+      "GENESIS 39 : 3"
+    ],
+    [
+      31,
+      37,
+      [
+        "ESTABLISH THE WORK",
+        "OF OUR HANDS"
+      ],
+      [
+        "ESTABLISH"
+      ],
+      "GENESIS 39 : 2-3"
+    ],
+    [
+      37,
+      43,
+      [
+        "ATTEND EVERY",
+        "QUIET DUTY"
+      ],
+      [
+        "DUTY"
+      ],
+      "GENESIS 39 : 2-3"
+    ],
+    [
+      43,
+      49,
+      [
+        "SEE YOUR FAVOR",
+        "WHERE PLACED"
+      ],
+      [
+        "FAVOR"
+      ],
+      "GENESIS 39 : 2-3"
+    ],
+    [
+      49,
+      56,
+      [
+        "WORK NO ONE",
+        "NOTICES TODAY"
+      ],
+      [
+        "NOTICES"
+      ],
+      "GENESIS 39 : 2-3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You are carrying work that no one notices.",
+      "kind": "phrase",
+      "words": [
+        "WORK",
+        "NOTICES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Even in an unseen place, God establishes faithful hands.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "ESTABLISHES"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "And the LORD was with Joseph, and he was a prosperous man;",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "JOSEPH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And his master saw that the LORD was with him,",
+      "kind": "phrase",
+      "words": [
+        "MASTER",
+        "SAW"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, establish the work of our hands today.",
+      "kind": "phrase",
+      "words": [
+        "ESTABLISH",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May others see Your favor where You have placed us.",
+      "kind": "phrase",
+      "words": [
+        "SEE",
+        "FAVOR"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Genesis 39:2-3"
+}
