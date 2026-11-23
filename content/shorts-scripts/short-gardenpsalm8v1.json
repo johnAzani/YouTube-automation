@@ -1,0 +1,318 @@
+{
+  "key": "short-gardenpsalm8v1",
+  "channel": "prayer9",
+  "psalm": 8,
+  "title": [
+    "THE SKY IS VAST",
+    "BUT GOD KNOWS YOU"
+  ],
+  "poster": [
+    "PSALM 8:1",
+    "EXCELLENT IS THY NAME",
+    "A PRAYER OF THANKS",
+    "THE PRAISE GARDEN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "golden twilight sky over calm misty valley",
+    "starry night sky over calm mountain lake",
+    "misty countryside in soft golden morning light",
+    "sunlit forest glade with peaceful light beams",
+    "peaceful river flowing through lush countryside at twilight",
+    "calm landscape under vast evening sky",
+    "golden light over peaceful pine forest"
+  ],
+  "scenes": [
+    {
+      "a": "When the evening sky dwarfs your heavy thoughts,",
+      "img": "short-gardenpsalm8v1-scene-01.jpg",
+      "kicker": "EVENING SKY",
+      "sub": "DWARFS YOUR HEAVY THOUGHTS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "remember that the Maker of every star still knows your name.",
+      "img": "short-gardenpsalm8v1-scene-02.jpg",
+      "kicker": "MAKER OF STARS",
+      "sub": "HE KNOWS YOUR NAME",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "As written in Psalm eight verse one, \"O LORD, our Lord, how excellent is thy name in all the earth! who hast set thy glory above the heavens.\"",
+      "img": "short-gardenpsalm8v1-scene-03.jpg",
+      "kicker": "PSALM 8:1",
+      "sub": "EXCELLENT IS THY NAME",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Heavenly Father, we pause to thank You for the boundless majesty of Your creation.",
+      "img": "short-gardenpsalm8v1-scene-04.jpg",
+      "kicker": "BOUNDLESS MAJESTY",
+      "sub": "WE PAUSE TO THANK YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You set glory above the stars, yet You listen gently to every quiet prayer we breathe.",
+      "img": "short-gardenpsalm8v1-scene-05.jpg",
+      "kicker": "HE HEARS YOU",
+      "sub": "GLORY ABOVE THE HEAVENS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Anchor our hearts in Your quiet peace, knowing Your light covers every step of our path.",
+      "img": "short-gardenpsalm8v1-scene-06.jpg",
+      "kicker": "QUIET PEACE",
+      "sub": "YOUR LIGHT COVERS OUR PATH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Peace remains when the evening sky dwarfs your heavy thoughts.",
+      "img": "short-gardenpsalm8v1-scene-07.jpg",
+      "kicker": "REST IN GOD",
+      "sub": "ENTER HIS GATES WITH THANKS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "When the evening sky dwarfs your heavy thoughts,"
+    ],
+    [
+      3,
+      8,
+      "remember that the Maker of every star still knows your name."
+    ],
+    [
+      8,
+      18,
+      "As written in Psalm eight verse one, \"O LORD, our Lord, how excellent is thy name in all the earth! who hast set thy glory above the heavens.\""
+    ],
+    [
+      18,
+      25,
+      "Heavenly Father, we pause to thank You for the boundless majesty of Your creation."
+    ],
+    [
+      25,
+      32,
+      "You set glory above the stars, yet You listen gently to every quiet prayer we breathe."
+    ],
+    [
+      32,
+      39,
+      "Anchor our hearts in Your quiet peace, knowing Your light covers every step of our path."
+    ],
+    [
+      39,
+      45,
+      "Amen. Peace remains when the evening sky dwarfs your heavy thoughts."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WHEN THE EVENING SKY",
+        "DWARFS YOUR HEAVY THOUGHTS"
+      ],
+      [
+        "EVENING",
+        "DWARFS"
+      ],
+      "PSALM 8 : 1"
+    ],
+    [
+      3,
+      8,
+      [
+        "REMEMBER THAT THE MAKER",
+        "OF EVERY STAR",
+        "STILL KNOWS YOUR NAME"
+      ],
+      [
+        "MAKER",
+        "KNOWS"
+      ],
+      "PSALM 8 : 1"
+    ],
+    [
+      8,
+      18,
+      [
+        "O LORD OUR LORD",
+        "HOW EXCELLENT IS THY NAME",
+        "IN ALL THE EARTH",
+        "WHO HAST SET THY GLORY",
+        "ABOVE THE HEAVENS"
+      ],
+      [
+        "EXCELLENT",
+        "GLORY"
+      ],
+      "PSALM 8 : 1"
+    ],
+    [
+      18,
+      25,
+      [
+        "HEAVENLY FATHER",
+        "WE THANK YOU FOR THE",
+        "BOUNDLESS MAJESTY OF CREATION"
+      ],
+      [
+        "BOUNDLESS",
+        "MAJESTY"
+      ],
+      "PSALM 8 : 1"
+    ],
+    [
+      25,
+      32,
+      [
+        "YOU SET GLORY ABOVE",
+        "YET LISTEN GENTLY TO",
+        "EVERY QUIET PRAYER"
+      ],
+      [
+        "GLORY",
+        "LISTEN"
+      ],
+      "PSALM 8 : 1"
+    ],
+    [
+      32,
+      39,
+      [
+        "ANCHOR OUR HEARTS IN PEACE",
+        "KNOWING YOUR LIGHT COVERS",
+        "EVERY STEP OF OUR PATH"
+      ],
+      [
+        "ANCHOR",
+        "PEACE"
+      ],
+      "PSALM 8 : 1"
+    ],
+    [
+      39,
+      45,
+      [
+        "AMEN PEACE REMAINS",
+        "WHEN THE EVENING SKY DWARFS",
+        "YOUR HEAVY THOUGHTS"
+      ],
+      [
+        "AMEN",
+        "PEACE"
+      ],
+      "PSALM 8 : 1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When the evening sky dwarfs your heavy thoughts,",
+      "kind": "phrase",
+      "words": [
+        "EVENING",
+        "DWARFS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "remember that the Maker of every star still knows your name.",
+      "kind": "phrase",
+      "words": [
+        "MAKER",
+        "STAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As written in Psalm eight verse one, \"O LORD, our Lord, how excellent is thy name in all the earth! who hast set thy glory above the heavens.\"",
+      "kind": "phrase",
+      "words": [
+        "EXCELLENT",
+        "GLORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we pause to thank You for the boundless majesty of Your creation.",
+      "kind": "phrase",
+      "words": [
+        "BOUNDLESS",
+        "MAJESTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You set glory above the stars, yet You listen gently to every quiet prayer we breathe.",
+      "kind": "phrase",
+      "words": [
+        "LISTEN",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Anchor our hearts in Your quiet peace, knowing Your light covers every step of our path.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Peace remains when the evening sky dwarfs your heavy thoughts.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "REMAINS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 8:1"
+}

@@ -1,0 +1,299 @@
+{
+  "key": "short-gardenpsalm42v11",
+  "channel": "prayer9",
+  "psalm": 42,
+  "title": [
+    "WHEN YOUR SOUL",
+    "FEELS HEAVY"
+  ],
+  "poster": [
+    "WHY ART THOU",
+    "CAST DOWN",
+    "HOPE THOU IN GOD",
+    "PSALM 42:11"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "misty forest glade morning soft sunbeams",
+    "calm mountain lake glowing dawn light",
+    "golden sunlight through tall forest trees",
+    "peaceful river flowing through green meadow",
+    "soft golden sun setting over countryside",
+    "gentle stream shining in afternoon sun",
+    "misty valley golden morning light"
+  ],
+  "scenes": [
+    {
+      "a": "Your soul feels heavy in the silence.",
+      "img": "short-gardenpsalm42v11-scene-01.jpg",
+      "kicker": "HEAVY SOUL",
+      "sub": "IN THE STILLNESS OF THIS HOUR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear the quiet truth of Psalm 42:11:",
+      "img": "short-gardenpsalm42v11-scene-02.jpg",
+      "kicker": "GOD'S WORD",
+      "sub": "PSALM 42 VERSE 11",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Why art thou cast down, O my soul? and why art thou disquieted within me? hope thou in God: for I shall yet praise him, who is the health of my countenance, and my God.",
+      "img": "short-gardenpsalm42v11-scene-03.jpg",
+      "kicker": "HOPE THOU IN GOD",
+      "sub": "THE HEALTH OF MY COUNTENANCE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, when disquiet stirs inside us today, we thank You that our hope is never anchored in our feelings.",
+      "img": "short-gardenpsalm42v11-scene-04.jpg",
+      "kicker": "ANCHORED HOPE",
+      "sub": "BEYOND OUR TROUBLED FEELINGS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You are the restoration of our countenance, turning our downward gaze back to Your faithful presence.",
+      "img": "short-gardenpsalm42v11-scene-05.jpg",
+      "kicker": "FAITHFUL PRESENCE",
+      "sub": "TURNING OUR GAZE TO YOU",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We praise You now, trusting You with every quiet sorrow.",
+      "img": "short-gardenpsalm42v11-scene-06.jpg",
+      "kicker": "HONEST PRAISE",
+      "sub": "TRUSTING HIM WITH EVERY SORROW",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Rest easy when your soul feels heavy.",
+      "img": "short-gardenpsalm42v11-scene-07.jpg",
+      "kicker": "FIND REST",
+      "sub": "WHEN YOUR SOUL FEELS HEAVY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your soul feels heavy in the silence."
+    ],
+    [
+      3,
+      8,
+      "Hear the quiet truth of Psalm 42:11:"
+    ],
+    [
+      8,
+      22,
+      "Why art thou cast down, O my soul? and why art thou disquieted within me? hope thou in God: for I shall yet praise him, who is the health of my countenance, and my God."
+    ],
+    [
+      22,
+      32,
+      "Lord, when disquiet stirs inside us today, we thank You that our hope is never anchored in our feelings."
+    ],
+    [
+      32,
+      42,
+      "You are the restoration of our countenance, turning our downward gaze back to Your faithful presence."
+    ],
+    [
+      42,
+      50,
+      "We praise You now, trusting You with every quiet sorrow."
+    ],
+    [
+      50,
+      56,
+      "Amen. Rest easy when your soul feels heavy."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR SOUL FEELS HEAVY",
+        "IN THE SILENCE"
+      ],
+      [
+        "HEAVY",
+        "SILENCE"
+      ],
+      "HEAVY SOUL"
+    ],
+    [
+      3,
+      8,
+      [
+        "HEAR THE QUIET TRUTH",
+        "OF PSALM 42:11"
+      ],
+      [
+        "TRUTH"
+      ],
+      "PSALM 42 : 11"
+    ],
+    [
+      8,
+      22,
+      [
+        "WHY ART THOU CAST DOWN",
+        "O MY SOUL",
+        "HOPE THOU IN GOD"
+      ],
+      [
+        "HOPE",
+        "GOD"
+      ],
+      "PSALM 42 : 11"
+    ],
+    [
+      22,
+      32,
+      [
+        "OUR HOPE IS NEVER",
+        "ANCHORED IN FEELINGS"
+      ],
+      [
+        "HOPE",
+        "ANCHORED"
+      ],
+      "THANKSGIVING"
+    ],
+    [
+      32,
+      42,
+      [
+        "YOU ARE THE RESTORATION",
+        "OF OUR COUNTENANCE"
+      ],
+      [
+        "RESTORATION"
+      ],
+      "PRAYER"
+    ],
+    [
+      42,
+      50,
+      [
+        "WE PRAISE YOU NOW",
+        "TRUSTING YOUR GRACE"
+      ],
+      [
+        "PRAISE",
+        "TRUSTING"
+      ],
+      "WORSHIP"
+    ],
+    [
+      50,
+      56,
+      [
+        "AMEN",
+        "REST EASY"
+      ],
+      [
+        "AMEN",
+        "REST"
+      ],
+      "THE PRAISE GARDEN"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your soul feels heavy in the silence.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "SILENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Why art thou cast down, O my soul? and why art thou disquieted within me? hope thou in God: for I shall yet praise him, who is the health of my countenance, and my God.",
+      "kind": "phrase",
+      "words": [
+        "HOPE",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when disquiet stirs inside us today, we thank You that our hope is never anchored in our feelings.",
+      "kind": "phrase",
+      "words": [
+        "HOPE",
+        "ANCHORED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are the restoration of our countenance, turning our downward gaze back to Your faithful presence.",
+      "kind": "phrase",
+      "words": [
+        "RESTORATION",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We praise You now, trusting You with every quiet sorrow.",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "TRUSTING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Rest easy when your soul feels heavy.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 42:11"
+}
