@@ -1,0 +1,317 @@
+{
+  "key": "short-shieldpsalm56v3",
+  "channel": "prayer8",
+  "psalm": 56,
+  "title": [
+    "WHEN FEAR STRIKES",
+    "GOD IS YOUR SHIELD"
+  ],
+  "poster": [
+    "WHAT TIME I AM AFRAID",
+    "I WILL TRUST IN THEE",
+    "PSALM 56:3-4",
+    "THE COVENANT SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone fortress tower sunlit mountain pass",
+    "sunbeams pouring through dramatic storm clouds over mountain peaks",
+    "calm mountain lake glowing golden sunset reflection",
+    "majestic pine forest mist sun rays glowing light",
+    "peaceful mountain river calm water sunrise light",
+    "dramatic mountain cliff standing strong golden hour light",
+    "serene alpine valley golden twilight peaceful sky"
+  ],
+  "scenes": [
+    {
+      "a": "That sharp sudden fear caught you off guard.",
+      "img": "short-shieldpsalm56v3-scene-01.jpg",
+      "kicker": "SUDDEN FEAR",
+      "sub": "THAT THREAT CAUGHT YOU OFF GUARD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "When unexpected threats disturb your spirit, turn immediately to the Lord's strong tower.",
+      "img": "short-shieldpsalm56v3-scene-02.jpg",
+      "kicker": "STRONG TOWER",
+      "sub": "TURN IMMEDIATELY TO THE LORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "What time I am afraid, I will trust in thee. In God I will praise his word, in God I have put my trust; I will not fear what flesh can do unto me.",
+      "img": "short-shieldpsalm56v3-scene-03.jpg",
+      "kicker": "PSALM 56:3-4",
+      "sub": "WHAT TIME I AM AFRAID I TRUST THEE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, whenever trembling grips this heart, we anchor our reliance squarely in Your unfailing righteousness.",
+      "img": "short-shieldpsalm56v3-scene-04.jpg",
+      "kicker": "ANCHORED TRUST",
+      "sub": "YOUR UNFAILING RIGHTEOUSNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Shield us from human malice, quiet every racing thought, and cover us under Your wings.",
+      "img": "short-shieldpsalm56v3-scene-05.jpg",
+      "kicker": "DIVINE COVERING",
+      "sub": "QUIET EVERY RACING THOUGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Give us steady boldness today, knowing mortal man cannot dismantle what You protect.",
+      "img": "short-shieldpsalm56v3-scene-06.jpg",
+      "kicker": "STEADY BOLDNESS",
+      "sub": "GOD PROTECTS WHAT HE HOLDS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Amen. That sharp sudden fear caught you off guard.",
+      "img": "short-shieldpsalm56v3-scene-07.jpg",
+      "kicker": "SAFE REFUGE",
+      "sub": "WALK UNDER HIS DAILY COVERING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That sharp sudden fear caught you off guard."
+    ],
+    [
+      3,
+      7,
+      "When unexpected threats disturb your spirit, turn immediately to the Lord's strong tower."
+    ],
+    [
+      7,
+      16,
+      "What time I am afraid, I will trust in thee. In God I will praise his word, in God I have put my trust; I will not fear what flesh can do unto me."
+    ],
+    [
+      16,
+      21,
+      "Father, whenever trembling grips this heart, we anchor our reliance squarely in Your unfailing righteousness."
+    ],
+    [
+      21,
+      26,
+      "Shield us from human malice, quiet every racing thought, and cover us under Your wings."
+    ],
+    [
+      26,
+      30,
+      "Give us steady boldness today, knowing mortal man cannot dismantle what You protect."
+    ],
+    [
+      30,
+      33,
+      "Amen. That sharp sudden fear caught you off guard."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT SHARP SUDDEN FEAR",
+        "CAUGHT YOU OFF GUARD"
+      ],
+      [
+        "SUDDEN",
+        "FEAR"
+      ],
+      "PSALM 56:3-4"
+    ],
+    [
+      3,
+      7,
+      [
+        "WHEN UNEXPECTED THREATS",
+        "DISTURB YOUR SPIRIT",
+        "TURN TO THE LORD"
+      ],
+      [
+        "STRONG",
+        "TOWER"
+      ],
+      "PSALM 56:3-4"
+    ],
+    [
+      7,
+      16,
+      [
+        "WHAT TIME I AM AFRAID",
+        "I WILL TRUST IN THEE",
+        "I WILL NOT FEAR",
+        "WHAT FLESH CAN DO"
+      ],
+      [
+        "TRUST",
+        "NOT FEAR"
+      ],
+      "PSALM 56:3-4"
+    ],
+    [
+      16,
+      21,
+      [
+        "WHENEVER TREMBLING GRIPS",
+        "THIS HEART WE ANCHOR",
+        "OUR RELIANCE IN YOU"
+      ],
+      [
+        "ANCHOR",
+        "RELIANCE"
+      ],
+      "PSALM 56:3-4"
+    ],
+    [
+      21,
+      26,
+      [
+        "SHIELD US FROM MALICE",
+        "QUIET RACING THOUGHTS",
+        "COVER US UNDER WINGS"
+      ],
+      [
+        "SHIELD",
+        "COVER"
+      ],
+      "PSALM 56:3-4"
+    ],
+    [
+      26,
+      30,
+      [
+        "GIVE US STEADY BOLDNESS",
+        "MAN CANNOT DISMANTLE",
+        "WHAT YOU PROTECT"
+      ],
+      [
+        "STEADY",
+        "PROTECT"
+      ],
+      "PSALM 56:3-4"
+    ],
+    [
+      30,
+      33,
+      [
+        "AMEN THAT SHARP",
+        "SUDDEN FEAR CAUGHT YOU"
+      ],
+      [
+        "SAFE",
+        "REFUGE"
+      ],
+      "PSALM 56:3-4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That sharp sudden fear caught you off guard.",
+      "kind": "phrase",
+      "words": [
+        "SUDDEN",
+        "FEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When unexpected threats disturb your spirit, turn immediately to the Lord's strong tower.",
+      "kind": "phrase",
+      "words": [
+        "STRONG",
+        "TOWER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "What time I am afraid, I will trust in thee. In God I will praise his word, in God I have put my trust; I will not fear what flesh can do unto me.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "IN",
+        "THEE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, whenever trembling grips this heart, we anchor our reliance squarely in Your unfailing righteousness.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "RELIANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Shield us from human malice, quiet every racing thought, and cover us under Your wings.",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "COVER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give us steady boldness today, knowing mortal man cannot dismantle what You protect.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "BOLDNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. That sharp sudden fear caught you off guard.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "GUARD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 56:3-4"
+}
