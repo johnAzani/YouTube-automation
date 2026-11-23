@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T22:17:29Z",
+  "generated_at": "2026-11-23T22:18:17Z",
   "monitor_generated_at": "2026-11-23T18:09:31.613904+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 713,
+    "published_total": 714,
     "published_longform": 203,
-    "published_shorts": 510,
-    "public_total": 711,
+    "published_shorts": 511,
+    "public_total": 712,
     "queued_longform": 59,
-    "queued_shorts": 68,
+    "queued_shorts": 67,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -572,23 +572,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 56,
+        "published_total": 57,
         "published_longform": 13,
-        "published_shorts": 43,
-        "thumbnail_pending": 56,
-        "public_total": 56,
+        "published_shorts": 44,
+        "thumbnail_pending": 57,
+        "public_total": 57,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM126V2",
-        "title": "Pray This Psalm 126:2-3 Prayer of Thanksgiving | Hears Your Quiet Tears #Shorts",
+        "id": "SHORT-GARDENPSALM40V1",
+        "title": "Pray This Psalm 40:1-3 Prayer of Thanksgiving | When The Ground Feels Unsure #Shorts",
         "format": "short",
-        "youtube_video_id": "Xbg28s_6iDY",
-        "watch_url": "https://www.youtube.com/shorts/Xbg28s_6iDY",
+        "youtube_video_id": "yiHIWPnXDgo",
+        "watch_url": "https://www.youtube.com/shorts/yiHIWPnXDgo",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T16:12:14Z"
+        "published_at": "2026-11-23T22:17:18Z"
       },
       "next_queued_longform": {
         "id": "0714",
@@ -597,8 +597,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm40v1",
-        "scripture": "Psalm 40:1-3",
+        "short": "short-gardenpsalm42v11",
+        "scripture": "Psalm 42:11",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM40V1",
+      "slug": "short-gardenpsalm40v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm40v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 40:1-3 Prayer of Thanksgiving | When The Ground Feels Unsure #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T22:17:18Z",
+      "youtube_video_id": "yiHIWPnXDgo",
+      "watch_url": "https://www.youtube.com/shorts/yiHIWPnXDgo",
+      "youtu_be_url": "https://youtu.be/yiHIWPnXDgo",
+      "shorts_url": "https://www.youtube.com/shorts/yiHIWPnXDgo",
+      "studio_url": "https://studio.youtube.com/video/yiHIWPnXDgo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/yiHIWPnXDgo/hqdefault.jpg",
+      "thumb_text": "WAITING IN PATIENCE \u00b7 HE HEARD MY CRY",
+      "thumbnail_pending": true,
+      "duration_label": "42s",
+      "words": 636
+    },
     {
       "id": "SHORT-PROVISIONPSALM112V1",
       "slug": "short-provisionpsalm112v1-stewardship-prayer",
@@ -18580,17 +18604,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-gardenpsalm40v1",
-        "file": "0000-short-gardenpsalm40v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 40:1-3",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
       {
         "short": "short-gardenpsalm42v11",
         "file": "0000-short-gardenpsalm42v11.yml",
