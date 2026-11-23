@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T16:12:53Z",
+  "generated_at": "2026-11-23T16:13:28Z",
   "monitor_generated_at": "2026-11-23T16:08:51.009685+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 704,
+    "published_total": 705,
     "published_longform": 202,
-    "published_shorts": 502,
-    "public_total": 702,
+    "published_shorts": 503,
+    "public_total": 703,
     "queued_longform": 60,
-    "queued_shorts": 76,
+    "queued_shorts": 75,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -572,23 +572,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 55,
+        "published_total": 56,
         "published_longform": 13,
-        "published_shorts": 42,
-        "thumbnail_pending": 55,
-        "public_total": 55,
+        "published_shorts": 43,
+        "thumbnail_pending": 56,
+        "public_total": 56,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-GARDENEXODUS15V2",
-        "title": "Pray This Exodus 15:2 Prayer of Thanksgiving | An Anchor In The Quiet #Shorts",
+        "id": "SHORT-GARDENPSALM126V2",
+        "title": "Pray This Psalm 126:2-3 Prayer of Thanksgiving | Hears Your Quiet Tears #Shorts",
         "format": "short",
-        "youtube_video_id": "wZU1-NbSe1k",
-        "watch_url": "https://www.youtube.com/shorts/wZU1-NbSe1k",
+        "youtube_video_id": "Xbg28s_6iDY",
+        "watch_url": "https://www.youtube.com/shorts/Xbg28s_6iDY",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T10:23:18Z"
+        "published_at": "2026-11-23T16:12:14Z"
       },
       "next_queued_longform": {
         "id": "0714",
@@ -597,8 +597,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm126v2",
-        "scripture": "Psalm 126:2-3",
+        "short": "short-gardenpsalm40v1",
+        "scripture": "Psalm 40:1-3",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM126V2",
+      "slug": "short-gardenpsalm126v2-thanksgiving-prayer",
+      "file": "short-gardenpsalm126v2-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 126:2-3 Prayer of Thanksgiving | Hears Your Quiet Tears #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T16:12:14Z",
+      "youtube_video_id": "Xbg28s_6iDY",
+      "watch_url": "https://www.youtube.com/shorts/Xbg28s_6iDY",
+      "youtu_be_url": "https://youtu.be/Xbg28s_6iDY",
+      "shorts_url": "https://www.youtube.com/shorts/Xbg28s_6iDY",
+      "studio_url": "https://studio.youtube.com/video/Xbg28s_6iDY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Xbg28s_6iDY/hqdefault.jpg",
+      "thumb_text": "WHEN GOD TURNS \u00b7 YOUR HEAVY SEASON",
+      "thumbnail_pending": true,
+      "duration_label": "48s",
+      "words": 643
+    },
     {
       "id": "SHORT-GUIDEDLUKE1V79",
       "slug": "short-guidedluke1v79-guidance-prayer",
@@ -18387,17 +18411,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-gardenpsalm126v2",
-        "file": "0000-short-gardenpsalm126v2.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 126:2-3",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm40v1",
