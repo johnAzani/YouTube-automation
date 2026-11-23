@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T16:01:33Z",
+  "generated_at": "2026-11-23T16:02:28Z",
   "monitor_generated_at": "2026-11-23T15:54:01.250620+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 700,
+    "published_total": 701,
     "published_longform": 202,
-    "published_shorts": 498,
-    "public_total": 698,
+    "published_shorts": 499,
+    "public_total": 699,
     "queued_longform": 60,
-    "queued_shorts": 81,
+    "queued_shorts": 80,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": true
@@ -436,23 +436,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 65,
+        "published_total": 66,
         "published_longform": 19,
-        "published_shorts": 46,
+        "published_shorts": 47,
         "thumbnail_pending": 6,
-        "public_total": 65,
+        "public_total": 66,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0519",
-        "title": "Crowning Your Labor With Goodness: Psalm 65:11 | The Provision Table",
-        "format": "longform",
-        "youtube_video_id": "DiQyci8GqIY",
-        "watch_url": "https://youtu.be/DiQyci8GqIY",
+        "id": "SHORT-PROVISIONPROVERBS30V8",
+        "title": "Pray This Proverbs 30:8-9 Prayer for Open Doors & Provision | Convenient For Me #Shorts",
+        "format": "short",
+        "youtube_video_id": "K5y2ai_bRYA",
+        "watch_url": "https://www.youtube.com/shorts/K5y2ai_bRYA",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T11:13:25Z"
+        "published_at": "2026-11-23T16:01:18Z"
       },
       "next_queued_longform": {
         "id": "0520",
@@ -461,8 +461,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionproverbs30v8",
-        "scripture": "Proverbs 30:8-9",
+        "short": "short-provisionpsalm112v1",
+        "scripture": "Psalm 112:1-5",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONPROVERBS30V8",
+      "slug": "short-provisionproverbs30v8-stewardship-prayer",
+      "file": "short-provisionproverbs30v8-stewardship-prayer.md",
+      "title": "Pray This Proverbs 30:8-9 Prayer for Open Doors & Provision | Convenient For Me #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T16:01:18Z",
+      "youtube_video_id": "K5y2ai_bRYA",
+      "watch_url": "https://www.youtube.com/shorts/K5y2ai_bRYA",
+      "youtu_be_url": "https://youtu.be/K5y2ai_bRYA",
+      "shorts_url": "https://www.youtube.com/shorts/K5y2ai_bRYA",
+      "studio_url": "https://studio.youtube.com/video/K5y2ai_bRYA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/K5y2ai_bRYA/hqdefault.jpg",
+      "thumb_text": "GIVE ME NEITHER \u00b7 POVERTY NOR RICHES",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 637
+    },
     {
       "id": "SHORT-MIDNIGHTMICAH7V7",
       "slug": "short-midnightmicah7v7-midnight-prayer",
@@ -18445,17 +18469,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisionproverbs30v8",
-        "file": "0000-short-provisionproverbs30v8.yml",
-        "companion_longform_id": "",
-        "scripture": "Proverbs 30:8-9",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionpsalm112v1",
