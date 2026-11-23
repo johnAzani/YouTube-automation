@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T15:05:09Z",
+  "generated_at": "2026-11-23T15:51:45Z",
   "monitor_generated_at": "2026-11-23T13:15:42.517869+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 697,
-    "published_longform": 201,
-    "published_shorts": 496,
-    "public_total": 695,
-    "queued_longform": 61,
-    "queued_shorts": 83,
+    "published_total": 699,
+    "published_longform": 202,
+    "published_shorts": 497,
+    "public_total": 697,
+    "queued_longform": 60,
+    "queued_shorts": 82,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": true
@@ -300,33 +300,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 62,
-        "published_longform": 19,
-        "published_shorts": 43,
-        "thumbnail_pending": 62,
-        "public_total": 62,
-        "queued_longform": 6,
+        "published_total": 64,
+        "published_longform": 20,
+        "published_shorts": 44,
+        "thumbnail_pending": 64,
+        "public_total": 64,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-FAMILY1SAMUEL1V27",
-        "title": "Pray This 1 Samuel 1:27-28 Family Prayer Over Your Home | Your Quiet Cry Is Remembered #Shorts",
-        "format": "short",
-        "youtube_video_id": "TgyR84_JR2w",
-        "watch_url": "https://www.youtube.com/shorts/TgyR84_JR2w",
-        "published_on": "2026-11-23",
-        "published_at": "2026-11-23T10:13:01Z"
-      },
-      "next_queued_longform": {
         "id": "0319",
         "title": "Bowing Our Knees for Our Homes: Ephesians 3:14-19 | The Family Altar",
-        "words": 1248,
+        "format": "longform",
+        "youtube_video_id": "rO1Eq1gQQ-s",
+        "watch_url": "https://youtu.be/rO1Eq1gQQ-s",
+        "published_on": "2026-11-23",
+        "published_at": "2026-11-23T15:50:47Z"
+      },
+      "next_queued_longform": {
+        "id": "0320",
+        "title": "Strength and Honour in Your Home: Proverbs 31:25-28 | The Family Altar",
+        "words": 1608,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyisaiah49v25",
-        "scripture": "Isaiah 49:25",
+        "short": "short-familyruth2v12",
+        "scripture": "Ruth 2:12",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -696,6 +696,54 @@
     }
   ],
   "videos": [
+    {
+      "id": "0319",
+      "slug": "bowing-our-knees-for-our-homes-ephesians-3-14-19",
+      "file": "0319-bowing-our-knees-for-our-homes-ephesians-3-14-19.md",
+      "title": "Bowing Our Knees for Our Homes: Ephesians 3:14-19 | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T15:50:47Z",
+      "youtube_video_id": "rO1Eq1gQQ-s",
+      "watch_url": "https://youtu.be/rO1Eq1gQQ-s",
+      "youtu_be_url": "https://youtu.be/rO1Eq1gQQ-s",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/rO1Eq1gQQ-s/edit",
+      "thumb_url": "https://i.ytimg.com/vi/rO1Eq1gQQ-s/hqdefault.jpg",
+      "thumb_text": "ROOTED IN LOVE",
+      "thumbnail_pending": true,
+      "duration_label": "~9 min",
+      "words": 1248
+    },
+    {
+      "id": "SHORT-FAMILYISAIAH49V25",
+      "slug": "short-familyisaiah49v25-household-prayer",
+      "file": "short-familyisaiah49v25-household-prayer.md",
+      "title": "Pray This Isaiah 49:25 Family Prayer Over Your Home | Still Here #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T15:08:09Z",
+      "youtube_video_id": "kM9-spzxoW0",
+      "watch_url": "https://www.youtube.com/shorts/kM9-spzxoW0",
+      "youtu_be_url": "https://youtu.be/kM9-spzxoW0",
+      "shorts_url": "https://www.youtube.com/shorts/kM9-spzxoW0",
+      "studio_url": "https://studio.youtube.com/video/kM9-spzxoW0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/kM9-spzxoW0/hqdefault.jpg",
+      "thumb_text": "GOD CONTIENDS \u00b7 FOR YOUR HOME",
+      "thumbnail_pending": true,
+      "duration_label": "49s",
+      "words": 677
+    },
     {
       "id": "SHORT-ZEPHANIAH3V17",
       "slug": "short-zephaniah3v17-pre-sleep-prayer",
@@ -17740,19 +17788,6 @@
         "words": 1083
       },
       {
-        "id": "0319",
-        "slug": "bowing-our-knees-for-our-homes-ephesians-3-14-19",
-        "file": "0319-bowing-our-knees-for-our-homes-ephesians-3-14-19.md",
-        "title": "Bowing Our Knees for Our Homes: Ephesians 3:14-19 | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1248
-      },
-      {
         "id": "0320",
         "slug": "strength-and-honour-in-your-home-proverbs-31-25-28",
         "file": "0320-strength-and-honour-in-your-home-proverbs-31-25-28.md",
@@ -18222,17 +18257,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-familyisaiah49v25",
-        "file": "0000-short-familyisaiah49v25.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 49:25",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
       {
         "short": "short-familyruth2v12",
         "file": "0000-short-familyruth2v12.yml",
