@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T10:16:26Z",
+  "generated_at": "2026-11-23T10:20:45Z",
   "monitor_generated_at": "2026-11-23T08:48:38.501249+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 688,
+    "published_total": 689,
     "published_longform": 199,
-    "published_shorts": 489,
-    "public_total": 686,
+    "published_shorts": 490,
+    "public_total": 687,
     "queued_longform": 61,
-    "queued_shorts": 84,
+    "queued_shorts": 82,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 95,
+        "published_total": 96,
         "published_longform": 31,
-        "published_shorts": 64,
+        "published_shorts": 65,
         "thumbnail_pending": 1,
-        "public_total": 94,
+        "public_total": 95,
         "queued_longform": 7,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM119V147",
-        "title": "Say This Psalm 119:147 Prayer at Sunrise | When Worry Keeps You Awake #Shorts",
+        "id": "SHORT-MORNINGLUKE1V78",
+        "title": "Say This Luke 1:78-79 Prayer at Sunrise | Shadows Still Linger Before Dawn #Shorts",
         "format": "short",
-        "youtube_video_id": "nWH4cVsUevY",
-        "watch_url": "https://www.youtube.com/shorts/nWH4cVsUevY",
+        "youtube_video_id": "5A7R-sjgNYI",
+        "watch_url": "https://www.youtube.com/shorts/5A7R-sjgNYI",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T00:22:12Z"
+        "published_at": "2026-11-23T10:19:46Z"
       },
       "next_queued_longform": {
         "id": "0075",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningluke1v78",
-        "scripture": "Luke 1:78-79",
+        "short": "short-morningromans13v11",
+        "scripture": "Romans 13:11-12",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGLUKE1V78",
+      "slug": "short-morningluke1v78-sunrise-prayer",
+      "file": "short-morningluke1v78-sunrise-prayer.md",
+      "title": "Say This Luke 1:78-79 Prayer at Sunrise | Shadows Still Linger Before Dawn #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T10:19:46Z",
+      "youtube_video_id": "5A7R-sjgNYI",
+      "watch_url": "https://www.youtube.com/shorts/5A7R-sjgNYI",
+      "youtu_be_url": "https://youtu.be/5A7R-sjgNYI",
+      "shorts_url": "https://www.youtube.com/shorts/5A7R-sjgNYI",
+      "studio_url": "https://studio.youtube.com/video/5A7R-sjgNYI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/5A7R-sjgNYI/hqdefault.jpg",
+      "thumb_text": "LIGHT IN THE SHADOWS \u00b7 LUKE 1:78-79 PRAYER",
+      "thumbnail_pending": false,
+      "duration_label": "1m 40s",
+      "words": 624
+    },
     {
       "id": "SHORT-MIDDAYJOHN15V5",
       "slug": "short-middayjohn15v5-midday-prayer",
@@ -18150,17 +18174,6 @@
         "target_window_utc": "23:14"
       },
       {
-        "short": "short-morningluke1v78",
-        "file": "0000-short-morningluke1v78.yml",
-        "companion_longform_id": "",
-        "scripture": "Luke 1:78-79",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
-      {
         "short": "short-morningromans13v11",
         "file": "0000-short-morningromans13v11.yml",
         "companion_longform_id": "",
@@ -18918,17 +18931,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-morningecclesiastes11v6",
-        "file": "0900-short-morningecclesiastes11v6.yml",
-        "companion_longform_id": "0900",
-        "scripture": "Ecclesiastes 11:6",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       }
     ]
   },
