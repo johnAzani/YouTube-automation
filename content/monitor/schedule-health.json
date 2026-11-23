@@ -2,6 +2,13 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
+      "late_minutes": 664,
+      "name": "Growth score (where the watch hours come from)",
+      "ran_at": "2026-11-23T15:41:19+00:00",
+      "slot": "2026-11-23T04:37:00+00:00",
+      "workflow": "growth-score.yml"
+    },
+    {
       "late_minutes": 326,
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "ran_at": "2026-11-23T08:40:14+00:00",
@@ -37,8 +44,8 @@
       "workflow": "reporting-jobs.yml"
     }
   ],
-  "generated_at": "2026-11-23T15:54:07.405425+00:00",
-  "last_run_at": "2026-11-23T15:53:13+00:00",
+  "generated_at": "2026-11-23T16:08:21.709515+00:00",
+  "last_run_at": "2026-11-23T16:07:34+00:00",
   "on_time": [
     {
       "late_minutes": 85,
