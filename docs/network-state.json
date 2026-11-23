@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T16:13:28Z",
+  "generated_at": "2026-11-23T16:14:35Z",
   "monitor_generated_at": "2026-11-23T16:08:51.009685+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 705,
+    "published_total": 706,
     "published_longform": 202,
-    "published_shorts": 503,
-    "public_total": 703,
+    "published_shorts": 504,
+    "public_total": 704,
     "queued_longform": 60,
-    "queued_shorts": 75,
+    "queued_shorts": 74,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -504,23 +504,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 57,
+        "published_total": 58,
         "published_longform": 16,
-        "published_shorts": 41,
-        "thumbnail_pending": 42,
-        "public_total": 57,
+        "published_shorts": 42,
+        "thumbnail_pending": 43,
+        "public_total": 58,
         "queued_longform": 6,
         "queued_other": 3,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-SHIELD1JOHN4V4",
-        "title": "Pray This 1 John 4:4 Prayer for Divine Protection | The Pressure Standing Against You #Shorts",
+        "id": "SHORT-SHIELDPSALM124V6",
+        "title": "Pray This Psalm 124:6-8 Prayer for Divine Protection | The Trap Against You Is Broken #Shorts",
         "format": "short",
-        "youtube_video_id": "ZVqESHS8tz8",
-        "watch_url": "https://www.youtube.com/shorts/ZVqESHS8tz8",
+        "youtube_video_id": "ycXtOA6pmhI",
+        "watch_url": "https://www.youtube.com/shorts/ycXtOA6pmhI",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T10:23:35Z"
+        "published_at": "2026-11-23T16:13:21Z"
       },
       "next_queued_longform": {
         "id": "0619",
@@ -529,8 +529,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm124v6",
-        "scripture": "Psalm 124:6-8",
+        "short": "short-shieldpsalm144v1",
+        "scripture": "Psalm 144:1-2",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM124V6",
+      "slug": "short-shieldpsalm124v6-protection-prayer",
+      "file": "short-shieldpsalm124v6-protection-prayer.md",
+      "title": "Pray This Psalm 124:6-8 Prayer for Divine Protection | The Trap Against You Is Broken #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T16:13:21Z",
+      "youtube_video_id": "ycXtOA6pmhI",
+      "watch_url": "https://www.youtube.com/shorts/ycXtOA6pmhI",
+      "youtu_be_url": "https://youtu.be/ycXtOA6pmhI",
+      "shorts_url": "https://www.youtube.com/shorts/ycXtOA6pmhI",
+      "studio_url": "https://studio.youtube.com/video/ycXtOA6pmhI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ycXtOA6pmhI/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "52s",
+      "words": 669
+    },
     {
       "id": "SHORT-GARDENPSALM126V2",
       "slug": "short-gardenpsalm126v2-thanksgiving-prayer",
@@ -18554,17 +18578,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldpsalm124v6",
-        "file": "0000-short-shieldpsalm124v6.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 124:6-8",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm144v1",
