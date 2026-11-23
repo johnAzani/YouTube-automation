@@ -1,0 +1,93 @@
+name: Growth score (where the watch hours come from)
+
+# Once a day, a few minutes after channel-analytics.yml has committed fresh
+# Analytics files, this reads them and writes two answers the rest of the
+# automation acts on:
+#
+#   * content/research/growth_score.json — where each channel's watch hours
+#     arrive from (suggested, search, playlists, end screens, or the Shorts feed
+#     that does not count), the pace against the Partner Program threshold, each
+#     channel's target, and the length a release should be built to;
+#   * the verdicts the release path reads: pipeline/night_tail.py takes its
+#     length from the report and stops adding a night tail when the report says
+#     the tail is flat.
+#
+# The length is measured, not guessed: a video's real duration is stamped into
+# its receipt at upload (pipeline/run.py), and the report prices each length by
+# the watch time a view of it actually returned. Until a length has two measured
+# videos, the report says so and the existing length stands.
+#
+# $0.00 lock: no API call of any kind. This job reads files the analytics job
+# already committed and writes one file back. It holds no credential.
+on:
+  schedule:
+    # 04:37 UTC — an hour after channel-analytics.yml starts (03:37), and after
+    # its publish job has had time to commit. Late delivery is harmless: this is
+    # a reading, and the next day reads again.
+    - cron: "37 4 * * *"
+  workflow_dispatch:
+  # A change to the reading runs it, so a fix can be seen working the same day.
+  push:
+    branches: ["main", "arena/**"]
+    paths:
+      - ".github/workflows/growth-score.yml"
+      - "pipeline/growth_score.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: growth-score
+  cancel-in-progress: false
+
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # No dependency install: the reading is pure standard library, so it cannot
+      # fail because a package did not resolve.
+      - name: Read where the channels' hours come from
+        run: python -u -m pipeline.growth_score
+
+      - name: Show the reading in the run summary
+        if: always()
+        run: |
+          {
+            echo "### Growth score"
+            echo '```'
+            python -u -m pipeline.growth_score --summary-only || echo "report not readable yet"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit the reading
+        # Only on main: a session branch reads and reports, and commits nothing —
+        # the same rule the analytics job follows.
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: |
+          git config user.name "growth-score"
+          git config user.email "actions@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch --quiet origin main
+            git reset --quiet --hard origin/main
+            python -u -m pipeline.growth_score >/dev/null
+            git add content/research/growth_score.json
+            if git diff --cached --quiet; then
+              echo "growth score unchanged"
+              exit 0
+            fi
+            git commit --quiet -m "chore(growth): where the watch hours came from [skip ci]"
+            if git push --quiet origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 3))
+          done
+          echo "::warning title=Growth score::could not push the reading; the next run writes it again"

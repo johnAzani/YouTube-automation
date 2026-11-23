@@ -322,6 +322,8 @@ WORKFLOW_CODE_PATHS: dict[str, tuple[str, ...]] = {
     "produce.yml": ("pipeline/run.py", "pipeline/prayer_pipeline.py", "pipeline/prayer_alignment.py", "pipeline/short_release.py"),
     "comments.yml": ("pipeline/comment_responder.py", "scripts/reply_comments.py"),
     "growth-autopilot.yml": ("scripts/growth_autopilot.py",),
+    "channel-analytics.yml": ("scripts/analytics_reader.py", "scripts/reach_reader.py"),
+    "growth-score.yml": ("pipeline/growth_score.py",),
     "automation-health.yml": ("scripts/pipeline_watchdog.py", "scripts/automation_monitor.py"),
     "monitor.yml": ("scripts/automation_monitor.py", "scripts/pipeline_watchdog.py"),
 }
@@ -366,6 +368,9 @@ EFFECTS = {
     "monitor.yml": "this report",
     "tests-on-main.yml": "proves main still passes its own unit tests (queue and "
                          "publish commits skip them)",
+    "channel-analytics.yml": "writes content/analytics/ — where each channel stands",
+    "growth-score.yml": "writes content/research/growth_score.json: where the counted "
+                        "watch hours come from and the length a release should be built to",
 }
 
 

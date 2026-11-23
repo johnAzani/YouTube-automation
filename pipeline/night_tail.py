@@ -73,7 +73,16 @@ REST_NOTE = "The prayer has ended. Quiet music plays on while you sleep."
 
 
 def configured_minutes(channel_id: str | None, environ: dict | None = None) -> int:
-    """Whole-video minutes for this channel; 0 means no tail."""
+    """Whole-video minutes for this channel; 0 means no tail.
+
+    The length is no longer a constant in this file. ``pipeline/growth_score.py``
+    reads the channel's own Analytics and writes the length at which a view of a
+    release has actually been seen to return the most watch time, together with
+    its verdict on whether the night tail is still earning its keep. This module
+    reads that report; the constant below is only the fallback for a channel the
+    report has never measured. An explicit ``NIGHT_TAIL_MINUTES`` still wins, and
+    ``0`` still turns the tail off.
+    """
     from .channels import normalize_channel_id
 
     env = os.environ if environ is None else environ
@@ -87,6 +96,24 @@ def configured_minutes(channel_id: str | None, environ: dict | None = None) -> i
         if wanted <= 0 or not base:
             return 0  # the switch turns it off; it never turns it on for a daytime channel
         return max(MIN_TOTAL_MINUTES, min(MAX_TOTAL_MINUTES, wanted))
+    if not base:
+        return 0  # a daytime channel is not a sleep video, whatever the report says
+    try:
+        from . import growth_score
+
+        report = growth_score.load_report()
+    except Exception as exc:  # noqa: BLE001 - the constant is a sound fallback
+        print(f"[night-tail] growth report unreadable, keeping {base} minutes: {exc!r}")
+        return base
+    if report and not growth_score.keep_night_tail(report, default=True):
+        print("[night-tail] the growth report reads the tail as flat; publishing the prayer alone")
+        return 0
+    if report:
+        minutes = growth_score.budget_minutes_from_report(report, default=base)
+        if minutes != base:
+            print(f"[night-tail] {channel_id}: the growth report sets {minutes} minutes "
+                  f"(was {base}) — {report.get('budget', {}).get('basis', '')}")
+        return minutes
     return base
 
 
