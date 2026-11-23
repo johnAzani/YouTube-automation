@@ -62,3 +62,18 @@ jobs:
         if: ${{ failure() }}
         run: |
           echo "::error title=main is failing its own tests::The next pull request will show a failed check for this reason and not for its own change. The failing tests are named in the annotation 'Unit test failure' on this run."
+
+      # The annotation names the failed tests, but the full output (tracebacks,
+      # the second run) is only in pytest.log, and the runner throws it away
+      # with the job. Keep it, only when the run failed, for 14 days, so a red
+      # run can be read without the log API.
+      - name: Keep the test log of a failed run
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: tests-on-main-log-${{ github.run_id }}
+          path: |
+            pytest.log
+            pytest-alone.log
+          if-no-files-found: warn
+          retention-days: 14

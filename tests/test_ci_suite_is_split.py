@@ -152,7 +152,10 @@ class MainIsTestedEveryDay(unittest.TestCase):
 
     def test_it_prepares_the_runner_as_a_pull_request_does(self):
         def uses(job: dict) -> list[str]:
-            return [s["uses"] for s in job["steps"] if "uses" in s]
+            # A step that runs only on failure (the log upload) is not part of
+            # preparing the runner; it is judged by its own test below.
+            return [s["uses"] for s in job["steps"]
+                    if "uses" in s and "failure()" not in str(s.get("if", ""))]
 
         self.assertEqual(uses(self._job()),
                          uses(_workflow("dry-run.yml")["jobs"]["checks"]))
@@ -165,6 +168,22 @@ class MainIsTestedEveryDay(unittest.TestCase):
         for step in job["steps"]:
             self.assertIsNone(step.get("continue-on-error"), step.get("name"))
         self.assertNotIn("|| true", _unit_test_step(job))
+
+    def test_a_failed_run_keeps_its_log(self):
+        # pytest.log is the only full record of a red run; the runner discards
+        # it with the job. The upload runs only on failure, and only for the
+        # log files the script writes.
+        steps = [s for s in self._job()["steps"] if "upload-artifact" in s.get("uses", "")]
+        self.assertEqual(len(steps), 1, "the job must keep its log in exactly one upload")
+        step = steps[0]
+        self.assertEqual(step.get("if"), "${{ failure() }}")
+        paths = step["with"]["path"].split()
+        self.assertEqual(paths, ["pytest.log", "pytest-alone.log"])
+        self.assertEqual(step["with"]["if-no-files-found"], "warn")
+
+    def test_the_log_is_not_kept_forever(self):
+        step = [s for s in self._job()["steps"] if "upload-artifact" in s.get("uses", "")][0]
+        self.assertLessEqual(int(step["with"]["retention-days"]), 30)
 
     def test_it_holds_no_secret_and_cannot_write(self):
         text = (WORKFLOWS / self.NAME).read_text(encoding="utf-8")
