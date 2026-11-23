@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["PEACE WITHIN YOUR WALLS", "A PRAYER FOR YOUR HOME", "STRENGTH AND PROTECTION", "THE FAMILY ALTAR"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-30T01:50:39Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 You locked the front door for your family. Yet your heart still wonders if they are safe inside. God's Word promises in Psalm 147: For he hath strengthened the bars of thy gates; he hath blessed thy children within thee. He maketh peace in thy borders, and filleth thee with the finest of the wheat. Lord, guard our home and strengthen our doors against anxiety. Bless our children sleeping inside, fill our rooms with your lasting peace, and satisfy every daily need of this household. We place our trust entirely in your faithful protection. Amen. Rest easy, knowing you locked the front door for your family.
