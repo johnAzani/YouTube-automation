@@ -1,0 +1,294 @@
+{
+  "key": "short-familyruth2v12",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "WHEN YOUR LABOR",
+    "FEELS UNSEEN AT HOME"
+  ],
+  "poster": [
+    "RUTH 2:12",
+    "GOD SEES YOUR",
+    "QUIET FAITHFULNESS",
+    "AT HOME"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp-lit open Bible on wooden family table quiet room",
+    "cozy living room evening warm soft glow vintage armchair",
+    "peaceful golden wheat field sunset quiet countryside home",
+    "soft sunbeams glowing through rustic window frame warm wooden table",
+    "peaceful countryside cottage porch dusk warm lantern light",
+    "warm sunlight on wooden Bible table olive branch shadow",
+    "serene sunset landscape peaceful country meadow warm light"
+  ],
+  "scenes": [
+    {
+      "a": "Your quiet labor for your family feels unseen.",
+      "img": "short-familyruth2v12-scene-01.jpg",
+      "kicker": "UNSEEN LABOR",
+      "sub": "YOUR QUIET DEVOTION MATTERS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You serve through long hours without complaint, tending daily to details no one notices.",
+      "img": "short-familyruth2v12-scene-02.jpg",
+      "kicker": "FAITHFUL SERVICE",
+      "sub": "TENDING DAILY TO YOUR HOME",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear God's Word in Ruth chapter two, verse twelve:",
+      "img": "short-familyruth2v12-scene-03.jpg",
+      "kicker": "RUTH 2:12",
+      "sub": "GOD REMEMBERS YOUR WORK",
+      "cam": "push_in",
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    {
+      "a": "The LORD recompense thy work, and a full reward be given thee of the LORD God of Israel, under whose wings thou art come to trust.",
+      "img": "short-familyruth2v12-scene-04.jpg",
+      "kicker": "UNDER HIS WINGS",
+      "sub": "A FULL REWARD FROM GOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Heavenly Father, grant strength to this weary heart. Remind them that every unseen act of devotion is remembered in Your presence.",
+      "img": "short-familyruth2v12-scene-05.jpg",
+      "kicker": "HEAR OUR PRAYER",
+      "sub": "EVERY HIDDEN ACT IS SEEN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Shelter their home under Your faithful wings today, and fill their spirit with deep peace.",
+      "img": "short-familyruth2v12-scene-06.jpg",
+      "kicker": "FAITHFUL SHELTER",
+      "sub": "PEACE UPON YOUR HOUSEHOLD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Your quiet labor for your family is seen.",
+      "img": "short-familyruth2v12-scene-07.jpg",
+      "kicker": "YOU ARE SEEN",
+      "sub": "YOUR LABOR IS REMEMBERED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your quiet labor for your family feels unseen."
+    ],
+    [
+      3,
+      8,
+      "You serve through long hours without complaint, tending daily to details no one notices."
+    ],
+    [
+      8,
+      13,
+      "Hear God's Word in Ruth chapter two, verse twelve:"
+    ],
+    [
+      13,
+      23,
+      "The LORD recompense thy work, and a full reward be given thee of the LORD God of Israel, under whose wings thou art come to trust."
+    ],
+    [
+      23,
+      33,
+      "Heavenly Father, grant strength to this weary heart. Remind them that every unseen act of devotion is remembered in Your presence."
+    ],
+    [
+      33,
+      40,
+      "Shelter their home under Your faithful wings today, and fill their spirit with deep peace."
+    ],
+    [
+      40,
+      45,
+      "Amen. Your quiet labor for your family is seen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR QUIET LABOR",
+        "FOR YOUR FAMILY",
+        "FEELS UNSEEN"
+      ],
+      [
+        "UNSEEN"
+      ],
+      "RUTH 2 : 12"
+    ],
+    [
+      3,
+      8,
+      [
+        "YOU SERVE THROUGH",
+        "LONG HOURS WITHOUT",
+        "COMPLAINT TODAY"
+      ],
+      [
+        "WITHOUT"
+      ],
+      "RUTH 2 : 12"
+    ],
+    [
+      8,
+      13,
+      [
+        "HEAR GODS WORD IN",
+        "RUTH CHAPTER TWO",
+        "VERSE TWELVE"
+      ],
+      [
+        "TWELVE"
+      ],
+      "RUTH 2 : 12"
+    ],
+    [
+      13,
+      23,
+      [
+        "THE LORD RECOMPENSE",
+        "THY WORK AND A",
+        "FULL REWARD BE GIVEN"
+      ],
+      [
+        "RECOMPENSE",
+        "REWARD"
+      ],
+      "RUTH 2 : 12"
+    ],
+    [
+      23,
+      33,
+      [
+        "HEAVENLY FATHER GRANT",
+        "STRENGTH TO THIS",
+        "WEARY HEART TODAY"
+      ],
+      [
+        "STRENGTH"
+      ],
+      "RUTH 2 : 12"
+    ],
+    [
+      33,
+      40,
+      [
+        "SHELTER THEIR HOME",
+        "UNDER YOUR WINGS",
+        "WITH DEEP PEACE"
+      ],
+      [
+        "SHELTER"
+      ],
+      "RUTH 2 : 12"
+    ],
+    [
+      40,
+      45,
+      [
+        "AMEN YOUR QUIET",
+        "LABOR FOR FAMILY",
+        "IS SEEN TODAY"
+      ],
+      [
+        "SEEN"
+      ],
+      "RUTH 2 : 12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your quiet labor for your family feels unseen.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "LABOR",
+        "UNSEEN"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD recompense thy work,",
+      "kind": "phrase",
+      "words": [
+        "RECOMPENSE",
+        "WORK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "under whose wings thou art come to trust.",
+      "kind": "phrase",
+      "words": [
+        "WINGS",
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, grant strength to this weary heart.",
+      "kind": "phrase",
+      "words": [
+        "GRANT",
+        "STRENGTH",
+        "WEARY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Your quiet labor for your family is seen.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "LABOR",
+        "SEEN"
+      ],
+      "hi": 2,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ruth 2:12"
+}
