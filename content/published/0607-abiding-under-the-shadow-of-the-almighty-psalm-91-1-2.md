@@ -78,16 +78,14 @@ originality:
 published_on: "2026-11-16"
 published_at: "2026-11-16T00:39:22Z"
 youtube_video_id: "9yQ_qPWCthI"
-metadata_revision: "retitle-pending"
+metadata_revision: "selar-seo-v1"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=allowed; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-23T07:16:27Z"
-thumbnail_retry_reason: "rate_limit"
+thumbnail_pending: false
 title_before: "Abiding Under the Shadow of the Almighty: Psalm 91:1-2"
 retitled_at: "2026-11-23"
 retitle_reason: "unwatched after 7 days or more"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Dwelling Place of the Most High

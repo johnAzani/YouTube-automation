@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE MIDNIGHT WATCH", "DEUTERONOMY 28:7", "PRAYER FOR VICTORY", "STAND IN FAITH"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-23T08:06:45Z"
+thumbnail_retry_after: "2026-11-30T08:40:14Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If you lie awake tonight sensing unseen opposition closing in around your life, hear this word. Father, we come before Your throne in this quiet hour acknowledging that battles surround us on every side. We stand our ground and declare Your holy truth over every adversary rising against our peace. Your living word declares, The LORD shall cause thine enemies that rise up against thee to be smitten before thy face: they shall come out against thee one way, and flee before thee seven ways. Lord, let Your mighty shield scatter every darkness and grant us unshakeable peace until morning light breaks.

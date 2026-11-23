@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-23T03:44:43Z",
-  "monitor_generated_at": "2026-11-23T03:43:35.140446+00:00",
+  "generated_at": "2026-11-23T08:42:08Z",
+  "monitor_generated_at": "2026-11-23T08:40:54.064130+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -14,7 +14,7 @@
     "public_total": 682,
     "queued_longform": 52,
     "queued_shorts": 57,
-    "automations_ok": 10,
+    "automations_ok": 11,
     "automations_total": 13,
     "network_healthy": true
   },
@@ -65,18 +65,18 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-22",
+        "as_of": "2026-11-23",
         "measured_longform_videos": 4,
-        "total_longform_videos": 12,
+        "total_longform_videos": 9,
         "top_themes": [
           {
             "theme": "anxiety_peace",
-            "videos": 6,
+            "videos": 7,
             "top_scripture": "John 14"
           },
           {
             "theme": "midday_strength_endurance",
-            "videos": 3,
+            "videos": 1,
             "top_scripture": ""
           },
           {
@@ -133,9 +133,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-22",
+        "as_of": "2026-11-23",
         "measured_longform_videos": 0,
-        "total_longform_videos": 12,
+        "total_longform_videos": 10,
         "top_themes": [
           {
             "theme": "daily_guidance_wisdom",
@@ -145,11 +145,6 @@
           {
             "theme": "midday_strength_endurance",
             "videos": 1,
-            "top_scripture": ""
-          },
-          {
-            "theme": "morning_mercy_renewal",
-            "videos": 2,
             "top_scripture": ""
           }
         ]
@@ -201,13 +196,13 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-22",
+        "as_of": "2026-11-23",
         "measured_longform_videos": 0,
-        "total_longform_videos": 12,
+        "total_longform_videos": 9,
         "top_themes": [
           {
             "theme": "midday_strength_endurance",
-            "videos": 9,
+            "videos": 7,
             "top_scripture": ""
           },
           {
@@ -269,18 +264,18 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-22",
+        "as_of": "2026-11-23",
         "measured_longform_videos": 1,
         "total_longform_videos": 12,
         "top_themes": [
           {
             "theme": "protection",
-            "videos": 3,
+            "videos": 1,
             "top_scripture": "Psalm 35"
           },
           {
             "theme": "general_prayer",
-            "videos": 7,
+            "videos": 9,
             "top_scripture": ""
           },
           {
@@ -337,9 +332,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-22",
+        "as_of": "2026-11-23",
         "measured_longform_videos": 0,
-        "total_longform_videos": 15,
+        "total_longform_videos": 13,
         "top_themes": [
           {
             "theme": "daily_guidance_wisdom",
@@ -347,13 +342,13 @@
             "top_scripture": ""
           },
           {
-            "theme": "general_prayer",
-            "videos": 7,
+            "theme": "light_courage",
+            "videos": 2,
             "top_scripture": ""
           },
           {
-            "theme": "anxiety_peace",
-            "videos": 2,
+            "theme": "general_prayer",
+            "videos": 6,
             "top_scripture": ""
           }
         ]
@@ -405,23 +400,23 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-22",
+        "as_of": "2026-11-23",
         "measured_longform_videos": 0,
-        "total_longform_videos": 12,
+        "total_longform_videos": 9,
         "top_themes": [
           {
-            "theme": "peace_rest",
-            "videos": 4,
+            "theme": "general_prayer",
+            "videos": 2,
             "top_scripture": ""
           },
           {
-            "theme": "general_prayer",
-            "videos": 1,
+            "theme": "peace_rest",
+            "videos": 2,
             "top_scripture": ""
           },
           {
             "theme": "midday_strength_endurance",
-            "videos": 2,
+            "videos": 1,
             "top_scripture": ""
           }
         ]
@@ -473,9 +468,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-22",
+        "as_of": "2026-11-23",
         "measured_longform_videos": 2,
-        "total_longform_videos": 12,
+        "total_longform_videos": 11,
         "top_themes": [
           {
             "theme": "morning_mercy_renewal",
@@ -484,12 +479,12 @@
           },
           {
             "theme": "daily_guidance_wisdom",
-            "videos": 2,
+            "videos": 1,
             "top_scripture": "Matthew 6"
           },
           {
             "theme": "general_prayer",
-            "videos": 6,
+            "videos": 7,
             "top_scripture": ""
           }
         ]
@@ -512,7 +507,7 @@
         "published_total": 56,
         "published_longform": 16,
         "published_shorts": 40,
-        "thumbnail_pending": 46,
+        "thumbnail_pending": 43,
         "public_total": 56,
         "queued_longform": 5,
         "queued_other": 3,
@@ -541,9 +536,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-22",
+        "as_of": "2026-11-23",
         "measured_longform_videos": 0,
-        "total_longform_videos": 15,
+        "total_longform_videos": 12,
         "top_themes": [
           {
             "theme": "protection",
@@ -551,13 +546,13 @@
             "top_scripture": ""
           },
           {
-            "theme": "peace_rest",
+            "theme": "daily_guidance_wisdom",
             "videos": 1,
             "top_scripture": ""
           },
           {
-            "theme": "daily_guidance_wisdom",
-            "videos": 2,
+            "theme": "stillness_refuge",
+            "videos": 1,
             "top_scripture": ""
           }
         ]
@@ -609,22 +604,22 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-22",
+        "as_of": "2026-11-23",
         "measured_longform_videos": 0,
-        "total_longform_videos": 12,
+        "total_longform_videos": 10,
         "top_themes": [
           {
             "theme": "general_prayer",
-            "videos": 6,
+            "videos": 3,
+            "top_scripture": ""
+          },
+          {
+            "theme": "daily_guidance_wisdom",
+            "videos": 2,
             "top_scripture": ""
           },
           {
             "theme": "peace_rest",
-            "videos": 1,
-            "top_scripture": ""
-          },
-          {
-            "theme": "anxiety_peace",
             "videos": 1,
             "top_scripture": ""
           }
@@ -677,13 +672,13 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-22",
+        "as_of": "2026-11-23",
         "measured_longform_videos": 0,
         "total_longform_videos": 12,
         "top_themes": [
           {
             "theme": "daily_guidance_wisdom",
-            "videos": 4,
+            "videos": 5,
             "top_scripture": ""
           },
           {
@@ -8817,7 +8812,7 @@
       "id": "0310",
       "slug": "proverbs-3-33-he-blesseth-the-habitation-of-the-just",
       "file": "0310-proverbs-3-33-he-blesseth-the-habitation-of-the-just.md",
-      "title": "Prayer to Bless Your Home and Family: Proverbs 3:33 | The Family Altar",
+      "title": "When Your Home Needs God's Peace: Proverbs 3:33 | The Family Altar",
       "channel": "prayer5",
       "channel_name": "The Family Altar",
       "channel_handle": "@TheFamilyAltarDaily",
@@ -9393,7 +9388,7 @@
       "id": "0706",
       "slug": "gratitude-when-life-is-heavy-psalm-34-1-3",
       "file": "0706-gratitude-when-life-is-heavy-psalm-34-1-3.md",
-      "title": "Gratitude When Life Is Heavy: Psalm 34:1-3 | The Praise Garden",
+      "title": "When You Cannot See the Way Out: Psalm 34:1-3 | The Praise Garden",
       "channel": "prayer9",
       "channel_name": "The Praise Garden",
       "channel_handle": "@ThePraiseGardenDaily",
@@ -9529,7 +9524,7 @@
       "studio_url": "https://studio.youtube.com/video/ibM7J2KLTpw/edit",
       "thumb_url": "https://i.ytimg.com/vi/ibM7J2KLTpw/hqdefault.jpg",
       "thumb_text": "THE COVENANT SHIELD \u00b7 DIVINE PROTECTION",
-      "thumbnail_pending": true,
+      "thumbnail_pending": false,
       "duration_label": "48s",
       "words": 624
     },
@@ -9657,7 +9652,7 @@
       "id": "0607",
       "slug": "abiding-under-the-shadow-of-the-almighty-psalm-91-1-2",
       "file": "0607-abiding-under-the-shadow-of-the-almighty-psalm-91-1-2.md",
-      "title": "Abiding Under the Shadow of the Almighty: Psalm 91:1-2",
+      "title": "When You Need a Quiet Place: Psalm 91:1-2 | The Covenant Shield",
       "channel": "prayer8",
       "channel_name": "The Covenant Shield",
       "channel_handle": "@TheCovenantShieldDaily",
@@ -9673,7 +9668,7 @@
       "studio_url": "https://studio.youtube.com/video/9yQ_qPWCthI/edit",
       "thumb_url": "https://i.ytimg.com/vi/9yQ_qPWCthI/hqdefault.jpg",
       "thumb_text": "GOD MY REFUGE",
-      "thumbnail_pending": true,
+      "thumbnail_pending": false,
       "duration_label": "~10 min",
       "words": 1431
     },
@@ -9769,7 +9764,7 @@
       "studio_url": "https://studio.youtube.com/video/LBd6JDnP7Fs/edit",
       "thumb_url": "https://i.ytimg.com/vi/LBd6JDnP7Fs/hqdefault.jpg",
       "thumb_text": "PLACE EVERY STEP \u00b7 UNDER THE SHADOW",
-      "thumbnail_pending": true,
+      "thumbnail_pending": false,
       "duration_label": "53s",
       "words": 617
     },
@@ -10785,7 +10780,7 @@
       "id": "0067",
       "slug": "psalm-25-4-5-morning-prayer",
       "file": "0067-psalm-25-4-5-morning-prayer.md",
-      "title": "Morning Prayer for Guidance and Direction: Psalm 25:4-5",
+      "title": "When You Need to Know the Way: Psalm 25:4-5 | The Morning Altar",
       "channel": "prayer2",
       "channel_name": "The Morning Altar",
       "channel_handle": "@TheMorningAltarDaily",
@@ -17241,7 +17236,7 @@
         "id": "0082",
         "slug": "when-you-need-gods-presence-before-you-move-exodus-33-14",
         "file": "0082-when-you-need-gods-presence-before-you-move-exodus-33-14.md",
-        "title": "When You Need God's Presence Before You Move: Exodus 33:14",
+        "title": "Starting the Day with God: Exodus 33:14 | The Morning Altar",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
@@ -17319,7 +17314,7 @@
         "id": "0113",
         "slug": "when-the-dark-hours-wont-let-you-rest-psalm-42-8",
         "file": "0113-when-the-dark-hours-wont-let-you-rest-psalm-42-8.md",
-        "title": "When the Dark Hours Won't Let You Rest: Psalm 42:8 | The Secret Place",
+        "title": "When Sleep Will Not Come: Psalm 42:8 | The Secret Place",
         "channel": "secret-place",
         "channel_name": "The Secret Place",
         "status": "approved",
@@ -17436,7 +17431,7 @@
         "id": "0324",
         "slug": "inviting-gods-peace-into-your-home-luke-10-5-6",
         "file": "0324-inviting-gods-peace-into-your-home-luke-10-5-6.md",
-        "title": "Inviting God's Peace Into Your Home: Luke 10:5-6 | The Family Altar",
+        "title": "When Tension Fills the Living Room: Luke 10:5-6 | The Family Altar",
         "channel": "prayer5",
         "channel_name": "The Family Altar",
         "status": "approved",
@@ -18434,9 +18429,9 @@
       "verdict": "SELF-REPORT",
       "severity": "info",
       "detail": "its red runs are the verdicts below, not failures of it",
-      "last_conclusion": "",
-      "last_run": "2026-11-23T03:42:41+00:00",
-      "last_success": "2026-11-21T21:59:12+00:00",
+      "last_conclusion": "success",
+      "last_run": "2026-11-23T08:39:48+00:00",
+      "last_success": "2026-11-23T08:39:48+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 4,
@@ -18447,9 +18442,9 @@
       "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 15.8h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-22T11:53:37+00:00",
+      "detail": "last success 20.8h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-23T08:40:18+00:00",
       "last_success": "2026-11-22T11:53:37+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -18461,7 +18456,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 3.4h ago",
+      "detail": "last success 8.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-23T00:18:50+00:00",
       "last_success": "2026-11-23T00:18:50+00:00",
@@ -18475,7 +18470,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 3.4h ago",
+      "detail": "last success 8.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-23T00:19:01+00:00",
       "last_success": "2026-11-23T00:19:01+00:00",
@@ -18489,9 +18484,9 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 16.4h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-22T11:21:21+00:00",
+      "detail": "last success 21.3h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-23T08:40:14+00:00",
       "last_success": "2026-11-22T11:21:21+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -18503,10 +18498,10 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 18.0h ago",
+      "detail": "last success 4.9h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-22T09:42:11+00:00",
-      "last_success": "2026-11-22T09:42:11+00:00",
+      "last_run": "2026-11-23T03:45:55+00:00",
+      "last_success": "2026-11-23T03:45:55+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -18517,10 +18512,10 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 160.0h ago",
+      "detail": "last success 0.0h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-16T11:44:57+00:00",
-      "last_success": "2026-11-16T11:44:57+00:00",
+      "last_run": "2026-11-23T08:40:16+00:00",
+      "last_success": "2026-11-23T08:40:16+00:00",
       "runs_14d": 4,
       "missed_slots": 0,
       "failures_5": 0,
@@ -18531,10 +18526,10 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.5h ago",
-      "last_conclusion": "",
+      "detail": "last success 5.0h ago",
+      "last_conclusion": "success",
       "last_run": "2026-11-23T03:42:41+00:00",
-      "last_success": "2026-11-23T01:15:22+00:00",
+      "last_success": "2026-11-23T03:42:41+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -18547,11 +18542,11 @@
       "severity": "info",
       "detail": "its red runs are the verdicts below, not failures of it",
       "last_conclusion": "",
-      "last_run": "2026-11-23T03:42:41+00:00",
+      "last_run": "2026-11-23T08:39:48+00:00",
       "last_success": "",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 4,
+      "failures_5": 3,
       "effect": "this report"
     },
     {
@@ -18559,9 +18554,9 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.0h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-23T03:42:15+00:00",
+      "detail": "last success 5.0h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-23T08:40:23+00:00",
       "last_success": "2026-11-23T03:42:15+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -18573,11 +18568,11 @@
       "name": "YouTube reporting jobs (thumbnail impressions)",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 14.1h ago",
+      "detail": "last success 0.0h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-22T13:36:50+00:00",
-      "last_success": "2026-11-22T13:36:50+00:00",
-      "runs_14d": 18,
+      "last_run": "2026-11-23T08:40:19+00:00",
+      "last_success": "2026-11-23T08:40:19+00:00",
+      "runs_14d": 19,
       "missed_slots": 0,
       "failures_5": 0,
       "effect": ""
@@ -18588,9 +18583,9 @@
       "verdict": "OK",
       "severity": "ok",
       "detail": "last success 0.0h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-23T03:42:41+00:00",
-      "last_success": "2026-11-23T03:42:41+00:00",
+      "last_conclusion": "",
+      "last_run": "2026-11-23T08:39:48+00:00",
+      "last_success": "2026-11-23T08:39:26+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -18599,15 +18594,15 @@
     {
       "workflow": "tests-on-main.yml",
       "name": "Tests on main (daily)",
-      "verdict": "FLAKY",
-      "severity": "warning",
-      "detail": "3 of its last 5 runs failed",
-      "last_conclusion": "success",
-      "last_run": "2026-11-22T12:53:26+00:00",
+      "verdict": "OK",
+      "severity": "ok",
+      "detail": "last success 19.8h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-23T08:39:48+00:00",
       "last_success": "2026-11-22T12:53:26+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 3,
+      "failures_5": 0,
       "effect": "proves main still passes its own unit tests (queue and publish commits skip them)"
     }
   ]
