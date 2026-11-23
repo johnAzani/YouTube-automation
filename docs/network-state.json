@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T22:10:27Z",
+  "generated_at": "2026-11-23T22:17:29Z",
   "monitor_generated_at": "2026-11-23T18:09:31.613904+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 712,
+    "published_total": 713,
     "published_longform": 203,
-    "published_shorts": 509,
-    "public_total": 710,
+    "published_shorts": 510,
+    "public_total": 711,
     "queued_longform": 59,
-    "queued_shorts": 69,
+    "queued_shorts": 68,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -436,23 +436,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 66,
+        "published_total": 67,
         "published_longform": 19,
-        "published_shorts": 47,
+        "published_shorts": 48,
         "thumbnail_pending": 6,
-        "public_total": 66,
+        "public_total": 67,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPROVERBS30V8",
-        "title": "Pray This Proverbs 30:8-9 Prayer for Open Doors & Provision | Convenient For Me #Shorts",
+        "id": "SHORT-PROVISIONPSALM112V1",
+        "title": "Pray This Psalm 112:1-5 Prayer for Open Doors & Provision | Daily Affairs #Shorts",
         "format": "short",
-        "youtube_video_id": "K5y2ai_bRYA",
-        "watch_url": "https://www.youtube.com/shorts/K5y2ai_bRYA",
+        "youtube_video_id": "a7_WR-pzuIo",
+        "watch_url": "https://www.youtube.com/shorts/a7_WR-pzuIo",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T16:01:18Z"
+        "published_at": "2026-11-23T22:16:25Z"
       },
       "next_queued_longform": {
         "id": "0520",
@@ -461,8 +461,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionpsalm112v1",
-        "scripture": "Psalm 112:1-5",
+        "short": "short-provisionpsalm127v1",
+        "scripture": "Psalm 127:1-2",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONPSALM112V1",
+      "slug": "short-provisionpsalm112v1-stewardship-prayer",
+      "file": "short-provisionpsalm112v1-stewardship-prayer.md",
+      "title": "Pray This Psalm 112:1-5 Prayer for Open Doors & Provision | Daily Affairs #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T22:16:25Z",
+      "youtube_video_id": "a7_WR-pzuIo",
+      "watch_url": "https://www.youtube.com/shorts/a7_WR-pzuIo",
+      "youtu_be_url": "https://youtu.be/a7_WR-pzuIo",
+      "shorts_url": "https://www.youtube.com/shorts/a7_WR-pzuIo",
+      "studio_url": "https://studio.youtube.com/video/a7_WR-pzuIo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/a7_WR-pzuIo/hqdefault.jpg",
+      "thumb_text": "WHEN LEDGERS \u00b7 DO NOT BALANCE",
+      "thumbnail_pending": false,
+      "duration_label": "60s",
+      "words": 638
+    },
     {
       "id": "SHORT-FAMILYRUTH2V12",
       "slug": "short-familyruth2v12-household-prayer",
@@ -18643,17 +18667,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-provisionpsalm112v1",
-        "file": "0000-short-provisionpsalm112v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 112:1-5",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionpsalm127v1",
