@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T15:55:28Z",
+  "generated_at": "2026-11-23T16:01:33Z",
   "monitor_generated_at": "2026-11-23T15:54:01.250620+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 699,
+    "published_total": 700,
     "published_longform": 202,
-    "published_shorts": 497,
-    "public_total": 697,
+    "published_shorts": 498,
+    "public_total": 698,
     "queued_longform": 60,
-    "queued_shorts": 82,
+    "queued_shorts": 81,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": true
@@ -232,23 +232,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 73,
+        "published_total": 74,
         "published_longform": 24,
-        "published_shorts": 49,
-        "thumbnail_pending": 72,
-        "public_total": 73,
+        "published_shorts": 50,
+        "thumbnail_pending": 73,
+        "public_total": 74,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTJOB35V10",
-        "title": "Pray This Job 35:10 Midnight Prayer | Heavy In Your Hands Tonight #Shorts",
+        "id": "SHORT-MIDNIGHTMICAH7V7",
+        "title": "Pray This Micah 7:7-8 Midnight Prayer | When Silence Fills The Room #Shorts",
         "format": "short",
-        "youtube_video_id": "IZz4rbxFn9o",
-        "watch_url": "https://www.youtube.com/shorts/IZz4rbxFn9o",
+        "youtube_video_id": "2Qu4rSMayV4",
+        "watch_url": "https://www.youtube.com/shorts/2Qu4rSMayV4",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T10:14:02Z"
+        "published_at": "2026-11-23T16:00:30Z"
       },
       "next_queued_longform": {
         "id": "0224",
@@ -257,8 +257,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightmicah7v7",
-        "scripture": "Micah 7:7-8",
+        "short": "short-midnightisaiah45v2",
+        "scripture": "Isaiah 45:2-3",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTMICAH7V7",
+      "slug": "short-midnightmicah7v7-midnight-prayer",
+      "file": "short-midnightmicah7v7-midnight-prayer.md",
+      "title": "Pray This Micah 7:7-8 Midnight Prayer | When Silence Fills The Room #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T16:00:30Z",
+      "youtube_video_id": "2Qu4rSMayV4",
+      "watch_url": "https://www.youtube.com/shorts/2Qu4rSMayV4",
+      "youtu_be_url": "https://youtu.be/2Qu4rSMayV4",
+      "shorts_url": "https://www.youtube.com/shorts/2Qu4rSMayV4",
+      "studio_url": "https://studio.youtube.com/video/2Qu4rSMayV4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/2Qu4rSMayV4/hqdefault.jpg",
+      "thumb_text": "MICAH 7:7-8 \u00b7 WHEN YOU SIT IN DARKNESS",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 629
+    },
     {
       "id": "0319",
       "slug": "bowing-our-knees-for-our-homes-ephesians-3-14-19",
@@ -18410,17 +18434,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightmicah7v7",
-        "file": "0000-short-midnightmicah7v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Micah 7:7-8",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-morningromans13v11",
