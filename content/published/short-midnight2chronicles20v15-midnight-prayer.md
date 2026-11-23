@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["STAND STILL", "GOD FIGHTS FOR YOU", "2 CHRONICLES 20:15", "MIDNIGHT WATCH"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-23T00:41:21Z"
+thumbnail_retry_after: "2026-11-30T01:16:20Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 As midnight settles over the quiet world, rise in spirit and bring your weary heart before the Lord in this silent hour. In the stillness of the midnight watch, receive God's eternal truth from Second Chronicles twenty fifteen: "Do not be afraid or discouraged because of this vast army. For the battle is not yours, but God's." Tonight, release every heavy burden, every silent tear, and every hidden battle holding your soul. Stop fighting in your own limited human power. Stand firm in faith, quiet your spirit, and allow Almighty God to fight your battles. His glorious victory is already set before you tonight. Rest peacefully under His holy wings. Subscribe to join our midnight prayer watch every single night.

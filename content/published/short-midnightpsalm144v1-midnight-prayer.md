@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["PRAYER AT MIDNIGHT", "STRENGTH FOR THE WEARY", "FINDING PEACE", "THE MIDNIGHT WATCH"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-30T01:16:21Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 The restless thoughts circling your mind right now find their quiet end in this prayer. Blessed be the LORD my strength, which teacheth my hands to war, and my fingers to fight: My goodness, and my fortress; my high tower, and my deliverer; my shield, and he in whom I trust; who subdueth my people under me. Heavenly Father, in the stillness of this hour, we acknowledge that our battles are won through Your grace. Grant us the quiet confidence to rest while You handle the storms that currently loom over our lives. We yield our burdens to You, trusting in Your deliverance as we wait for the coming dawn.

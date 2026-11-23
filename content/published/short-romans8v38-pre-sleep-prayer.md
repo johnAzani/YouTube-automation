@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["HIS UNENDING", "LOVE FOR YOU", "A PRAYER FOR REST TONIGHT", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If that recurring doubt about your worth keeps you awake, simply listen to this promise. For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord. Lord, anchor my soul in this truth while the world is quiet and I am still. May every fear fade away as I rest in the depth of your unending, perfect grace. In this holy space, I trust that your presence is the final word over my heart.

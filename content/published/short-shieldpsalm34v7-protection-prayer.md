@@ -28,8 +28,8 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["PLACE EVERY STEP", "UNDER THE SHADOW", "OF THE ALMIGHTY", "REFUGE IN GOD"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-23T00:41:26Z"
-thumbnail_retry_reason: "permission"
+thumbnail_retry_after: "2026-11-23T07:16:27Z"
+thumbnail_retry_reason: "rate_limit"
 thumbnail_attempts: 1
 ---
 
