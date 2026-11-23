@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["WHEN NIGHT IS HEAVY", "GOD GIVES A SONG", "JOB 35:10", "THE MIDNIGHT WATCH"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-30T13:15:16Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 The quiet weight in your hands remains tonight. In the dark, we search everywhere for peace except in our Creator. Job 35:10 reminds us, "But none saith, Where is God my maker, who giveth songs in the night;" Lord, forgive us for turning to silent walls instead of turning to You. We call upon You now, our Maker, who gives melodies in the deepest darkness. Fill this silent room with Your quiet presence and replace heavy sorrow with trust. Teach our heart to sing even while the night is long. Amen. The quiet weight in your hands remains tonight.

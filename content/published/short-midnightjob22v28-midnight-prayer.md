@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE MIDNIGHT WATCH", "DECREE A THING", "LIGHT UPON YOUR WAYS", "MIDNIGHT PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-23T11:49:37Z"
+thumbnail_retry_after: "2026-11-30T13:15:15Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 That recurring doubt haunting your thoughts right now is not the final word for you. Your spirit knows there is power in spoken truth beneath the silence of these stars. Thou shalt also decree a thing, and it shall be established unto thee: and the light shall shine upon thy ways. Father, we stand in this quiet watch claiming the authority You have placed in us. May every heavy burden be lifted as we align our hearts with Your eternal promise. Guide our steps through the morning and let Your peace rest upon this soul tonight.

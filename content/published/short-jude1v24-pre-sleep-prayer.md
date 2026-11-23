@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["HE IS ABLE", "TO KEEP YOU", "FROM FALLING", "JUDE 1:24-25"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Your mind is racing in the dark tonight. You worry you will stumble tomorrow under the weight you carry. Quiet your heart and hear these words. Now unto him that is able to keep you from falling, and to present you faultless before the presence of his glory with exceeding joy, To the only wise God our Savior, be glory and majesty, dominion and power, both now and ever. Amen. Lord, hold us steady when our legs feel weak. Keep our hearts from falling into fear tonight, and rest us safe in your strong hands. Amen. Your mind is racing in the dark.

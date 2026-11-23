@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE PROMISE", "IS UNTO YOU", "AND YOUR CHILDREN", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-23T11:49:38Z"
+thumbnail_retry_after: "2026-11-30T13:15:18Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 When your heart aches for a child who feels distant from God, listen to this truth. For the promise is unto you, and to your children, and to all that are afar off, even as many as the LORD our God shall call. Heavenly Father, we lay our children and grandchildren at your feet today. Your covenant of grace reaches across generations, beyond every distance, and into every wandering heart. Protect our home with your truth, draw our loved ones back to your presence, and anchor our family in your abiding love. We trust your faithful promises over our household forever. Subscribe to gather with us daily at The Family Altar.
