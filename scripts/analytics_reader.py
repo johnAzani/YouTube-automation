@@ -494,6 +494,66 @@ def lesson_lines(lessons):
     return lines + ['']
 
 
+def growth_lines():
+    """A short reading from `content/research/growth_score.json`, or [] when absent.
+
+    `pipeline/growth_score.py` writes where the counted hours arrive from and the
+    length a release is built to. That file is the engine's own record; this puts
+    the four figures a person acts on at the top of the page they already read,
+    rather than a second dashboard nobody opens.
+    """
+    path = ROOT / 'content' / 'research' / 'growth_score.json'
+    try:
+        report = json.loads(path.read_text(encoding='utf-8')) or {}
+    except (OSError, ValueError):
+        return []
+    network = report.get('network') or {}
+    budget = report.get('budget') or {}
+    if not network:
+        return []
+    lines = ['## Where the counted watch hours come from', '',
+             'Written by `pipeline/growth_score.py`; the detail is in '
+             '`content/research/growth_score.json`. Hours watched in the Shorts feed do not '
+             'count toward the Partner Program, so the doors below are the ones that do.', '']
+    hours = network.get('hours_by_source') or {}
+    if hours:
+        lines += ['| Door | Hours, shared window |', '| :--- | ---: |']
+        for key, value in hours.items():
+            label = 'Shorts feed — does not count' if key == 'shorts_feed' else key.replace('_', ' ')
+            lines.append('| %s | %s |' % (label, amount(value)))
+        lines.append('')
+    counted = network.get('counted_hours')
+    share = network.get('counted_share')
+    if counted is not None:
+        lines.append('**Counted: %s hours (%s of all watch hours read).**' % (
+            amount(counted), amount(share * 100) + '%' if isinstance(share, (int, float)) else '?'))
+        lines.append('')
+    need = network.get('need') or {}
+    if need.get('hours_a_day_needed') is not None:
+        lines.append('The threshold asks %s hours a day for the %s days left before it doubles; '
+                     'the channels run at %s a day.' % (
+                         amount(need.get('hours_a_day_needed')), count(need.get('days_until_the_threshold_doubles')),
+                         amount(need.get('hours_a_day_now'))))
+        lines.append('')
+    if budget.get('minutes'):
+        lines.append('**Release length: %s minutes.** %s' % (
+            count(budget['minutes']), str(budget.get('basis') or '')))
+        lines.append('')
+    tail = (report.get('hints') or {}).get('night_tail') or {}
+    if tail.get('verdict'):
+        lines.append('Night tail: `%s` — %s.' % (
+            tail.get('verdict'),
+            'kept' if tail.get('keep') else 'stopped, the days do not step up'))
+        lines.append('')
+    held = network.get('held_percent_median')
+    if held is not None:
+        lines.append('Long-form retention, median of videos with a reading: **%s%% watched**. '
+                     'A Short is excluded from this figure: a looping Short reports past 100%%.'
+                     % amount(held))
+        lines.append('')
+    return lines
+
+
 def summary(reports, published_dir=None, reach=None, lessons=None):
     """The whole of `content/analytics/README.md`, from the reports that exist."""
     reach = reach or {}
@@ -503,6 +563,7 @@ def summary(reports, published_dir=None, reach=None, lessons=None):
         'YouTube\'s figures run about two days behind. Revenue is never written here.', '']
     if not reports:
         return '\n'.join(lines + ['No channel has been granted Analytics access yet.', ''])
+    lines += growth_lines()
     known = titles(published_dir)
     first = next(iter(reports.values()))
     need = first['partner_program']['needs']

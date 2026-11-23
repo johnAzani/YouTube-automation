@@ -3,6 +3,33 @@
 Written by `scripts/analytics_reader.py`. Do not edit: the next run rewrites it.
 YouTube's figures run about two days behind. Revenue is never written here.
 
+## Where the counted watch hours come from
+
+Written by `pipeline/growth_score.py`; the detail is in `content/research/growth_score.json`. Hours watched in the Shorts feed do not count toward the Partner Program, so the doors below are the ones that do.
+
+| Door | Hours, shared window |
+| :--- | ---: |
+| suggested | 22.1 |
+| Shorts feed — does not count | 24.7 |
+| yt search | 0.95 |
+| home subs | 1.1 |
+| other pages | 0.23 |
+| notifications | 0.1 |
+| ext url | 1.2 |
+| direct unknown | 2 |
+| channel page | 0.58 |
+| sound pages | 0 |
+
+**Counted: 23 hours (43.5% of all watch hours read).**
+
+The threshold asks 57.4 hours a day for the 69 days left before it doubles; the channels run at 2 a day.
+
+**Release length: 180 minutes.** a view of a video over 3 hours returned 0.1261 hours, the most of any length measured (6 videos); the threshold asks 57.38 hours a day
+
+Night tail: `hold` — kept.
+
+Long-form retention, median of videos with a reading: **8.9% watched**. A Short is excluded from this figure: a looping Short reports past 100%.
+
 ## Toward the Partner Program
 
 | Channel | Subscribers (need 1,000) | Watch hours, 365 days (need 4,000) | Shorts views, 90 days (need 10,000,000) | Long-form hours a day, last 28 days (need 11) | Read |

@@ -5,6 +5,16 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-21 — Nearly half the watch time does not count
+
+- **Nobody had read where the hours arrive from.** `content/analytics/` has held the traffic-source breakdown since November; nothing read it to decide anything. Everything built to grow watch time — playlists, end screens, the three-hour night tail, the thumbnail pack — rested on a belief nobody had checked.
+- **What the file says (The Secret Place, 28 days).** Shorts feed 24.68 hours (46.7% — it does not count toward the 4,000). Suggested videos 22.05 hours. Everything else, search included, about 3 hours. Counted watch time is **23 hours for the month**, not 53. Long-form retention (Shorts excluded, because a loop reports past 100%) is a **median 8.9%**.
+- **New `pipeline/growth_score.py` and `.github/workflows/growth-score.yml`** (daily, 04:37 UTC, commits `content/research/growth_score.json`): hours by door, the counted share, the pace against the threshold and its 1 February 2027 doubling, each channel's target, and a verdict on each format change read from the hours rather than assumed. `night_tail` is `hold` when days step above the channel's recent usual, `flat` when none does; `flat` turns the tail off.
+- **The length is now measured, not chosen.** `pipeline/night_tail.py` reads its minutes from the report. The report prices each length by hours earned a view: over-3-hour videos return **0.1261 hours a view** across 6 videos, and that is the only band with enough videos to count.
+- **A receipt now says what the video is.** 192 of 201 long-form receipts carried only `target_minutes` (what was *planned*). `pipeline/run.py` stamps the real `duration_seconds` at upload. Planned lengths are never priced.
+- **Unproven:** that a different length earns more a view — the shorter bands have no measured lengths yet; that the night-tail bump days are the tail. **Owner-only:** the Analytics grant on the other nine channels (one consent screen each), and whether the January date is still the goal. **Next step:** after a week, `growth_score.json` `length_payoff.bands` should hold more than one measured band.
+- Tests: `tests/test_growth_score.py` (new, 29). Reading: `docs/GROWTH_SCORE_2026-11-21.md`.
+
 ## 2026-11-17 — Like, comment, share and subscribe — in the comment
 
 - **The four YouTube actions still matter.** Help counts likes (and surveys) after average % viewed. They were not being asked for in one place: the Short's last frame said SUBSCRIBE (a closer), the first comment said write AMEN, the description said subscribe.

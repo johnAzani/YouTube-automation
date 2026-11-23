@@ -406,6 +406,11 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
                 recovered_video = inspect_existing_longform(up.video_id, doc.title)
             _mark_job_uploaded(path, doc, up.video_id,
                                getattr(up, 'thumbnail_status', 'not_requested') if is_new_upload else 'not_requested',
+                               # The real length of the file that was uploaded, so a
+                               # receipt says what the video is and not what the
+                               # script was planned at (pipeline/growth_score.py).
+                               duration_seconds=(night['total_seconds'] if night else duration)
+                               if is_new_upload else None,
                                narration_engine=engine if is_new_upload else None,
                                narration_voice='Charon' if is_new_upload else None,
                                recovered_video=recovered_video,

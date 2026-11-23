@@ -110,6 +110,7 @@ def _mark_job_uploaded(
     caption_cues: int | None = None,
     caption_sha256: str | None = None,
     extra_fields: dict | None = None,
+    duration_seconds: float | None = None,
 ) -> Path:
     """Move and stamp a queue job only after YouTube confirms an uploaded video ID.
 
@@ -137,6 +138,17 @@ def _mark_job_uploaded(
     unconditionally, so a refused thumbnail looked finished forever — that is
     why the two Morning Altar videos had none and nothing said so.
     """
+    # The real length of the take this run uploaded, not the length the script was
+    # written to (`target_minutes`). 192 of the 201 long-form receipts written
+    # before 21 November 2026 carry only the target, so a six-minute prayer could
+    # not be told from a three-hour one by anything in the repository
+    # (pipeline/growth_score.py prices a release's length on this figure).
+    measured_length = None
+    try:
+        if duration_seconds is not None and float(duration_seconds) > 0:
+            measured_length = round(float(duration_seconds), 2)
+    except (TypeError, ValueError):
+        measured_length = None
     thumb_ok = str(thumbnail_status).strip().lower() == "ok"
     thumb_note = "" if thumb_ok else str(thumbnail_status or "not_requested").strip()[:220]
     if not video_id:
@@ -229,6 +241,8 @@ def _mark_job_uploaded(
             stamped.append(("caption_sha256", caption_sha256))
     if narration_engine and narration_voice:
         stamped.extend((("narration_engine", narration_engine), ("narration_voice", narration_voice)))
+    if measured_length is not None:
+        stamped.append(("duration_seconds", measured_length))
     if thumb_ok:
         stamped.append(("thumbnail_revision", THUMBNAIL_REVISION))
     else:
@@ -274,6 +288,8 @@ def _mark_job_uploaded(
     if narration_engine and narration_voice:
         doc.meta["narration_engine"] = narration_engine
         doc.meta["narration_voice"] = narration_voice
+    if measured_length is not None:
+        doc.meta["duration_seconds"] = measured_length
     if thumb_ok:
         doc.meta["thumbnail_revision"] = THUMBNAIL_REVISION
     else:

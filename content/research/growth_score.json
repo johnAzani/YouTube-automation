@@ -1,0 +1,308 @@
+{
+  "schema": 1,
+  "generated_at": "2026-11-23T15:40:20.295204+00:00",
+  "as_of": "2026-11-23",
+  "window": {
+    "first_day": "2026-10-26",
+    "last_day": "2026-11-20",
+    "days": 26
+  },
+  "channels_read": [
+    "secret-place"
+  ],
+  "channels_not_read": [],
+  "network": {
+    "hours_by_source": {
+      "suggested": 22.05,
+      "shorts_feed": 24.68,
+      "yt_search": 0.95,
+      "home_subs": 1.05,
+      "other_pages": 0.23,
+      "notifications": 0.1,
+      "ext_url": 1.2,
+      "direct_unknown": 1.98,
+      "channel_page": 0.58,
+      "sound_pages": 0.0
+    },
+    "share_by_source": {
+      "suggested": 0.4175,
+      "shorts_feed": 0.4672,
+      "yt_search": 0.018,
+      "home_subs": 0.0199,
+      "other_pages": 0.0044,
+      "notifications": 0.0019,
+      "ext_url": 0.0227,
+      "direct_unknown": 0.0375,
+      "channel_page": 0.011,
+      "sound_pages": 0.0
+    },
+    "counted_hours": 23.0,
+    "counted_share": 0.4354,
+    "pace": {
+      "days": 26,
+      "hours_a_day": 2.03,
+      "hours_a_day_last_7": 5.07,
+      "by_day": [
+        {
+          "day": "2026-10-26",
+          "hours": 0.15
+        },
+        {
+          "day": "2026-10-27",
+          "hours": 0.42
+        },
+        {
+          "day": "2026-10-28",
+          "hours": 0.72
+        },
+        {
+          "day": "2026-10-29",
+          "hours": 0.52
+        },
+        {
+          "day": "2026-10-30",
+          "hours": 0.0
+        },
+        {
+          "day": "2026-10-31",
+          "hours": 0.0
+        },
+        {
+          "day": "2026-11-01",
+          "hours": 0.05
+        },
+        {
+          "day": "2026-11-02",
+          "hours": 0.15
+        },
+        {
+          "day": "2026-11-03",
+          "hours": 4.52
+        },
+        {
+          "day": "2026-11-04",
+          "hours": 0.33
+        },
+        {
+          "day": "2026-11-05",
+          "hours": 0.25
+        },
+        {
+          "day": "2026-11-06",
+          "hours": 0.4
+        },
+        {
+          "day": "2026-11-07",
+          "hours": 0.45
+        },
+        {
+          "day": "2026-11-08",
+          "hours": 1.57
+        },
+        {
+          "day": "2026-11-09",
+          "hours": 1.0
+        },
+        {
+          "day": "2026-11-10",
+          "hours": 1.27
+        },
+        {
+          "day": "2026-11-11",
+          "hours": 1.8
+        },
+        {
+          "day": "2026-11-12",
+          "hours": 2.35
+        },
+        {
+          "day": "2026-11-13",
+          "hours": 1.32
+        },
+        {
+          "day": "2026-11-14",
+          "hours": 1.82
+        },
+        {
+          "day": "2026-11-15",
+          "hours": 7.13
+        },
+        {
+          "day": "2026-11-16",
+          "hours": 6.4
+        },
+        {
+          "day": "2026-11-17",
+          "hours": 2.53
+        },
+        {
+          "day": "2026-11-18",
+          "hours": 3.68
+        },
+        {
+          "day": "2026-11-19",
+          "hours": 4.18
+        },
+        {
+          "day": "2026-11-20",
+          "hours": 9.75
+        }
+      ]
+    },
+    "need": {
+      "threshold_hours": 4000,
+      "counted_hours_365d": 41.03,
+      "remaining_hours": 3958.97,
+      "days_until_the_threshold_doubles": 69,
+      "hours_a_day_needed": 57.38,
+      "hours_a_day_now": 2.03,
+      "times_the_pace_must_rise": 28.3,
+      "note": "counted hours are long-form and live only; Shorts-feed hours do not count. Only channels with the Analytics grant are in this figure."
+    },
+    "held_percent_median": 8.9
+  },
+  "targets": [
+    {
+      "channel": "secret-place",
+      "hours": 52.76,
+      "views": 5387,
+      "days": 26,
+      "hours_a_day": 2.03,
+      "views_a_day": 207.2,
+      "long_form_view_share": 0.0527,
+      "long_form_views_a_day": 10.92,
+      "held_percent": 8.9,
+      "videos_read": 8,
+      "share_of_network_hours": 1.0,
+      "target_minutes": 180,
+      "longer_is_watched": false
+    }
+  ],
+  "budget": {
+    "minutes": 180,
+    "basis": "a view of a video over 3 hours returned 0.1261 hours, the most of any length measured (6 videos); the threshold asks 57.38 hours a day",
+    "considered": [
+      {
+        "band": "over 3 hours",
+        "videos": 6,
+        "views": 192,
+        "hours": 24.22,
+        "minutes": 187,
+        "hours_a_view": 0.1261,
+        "measured": true
+      }
+    ]
+  },
+  "length_payoff": {
+    "bands": [
+      {
+        "band": "over 3 hours",
+        "videos": 6,
+        "views": 192,
+        "hours": 24.22,
+        "minutes": 187,
+        "hours_a_view": 0.1261,
+        "measured": true
+      }
+    ],
+    "best_band": "over 3 hours",
+    "best_hours_a_view": 0.1261,
+    "longest_measured_band": "over 3 hours",
+    "videos_without_a_length": 29,
+    "note": "hours a view, by the video's own length. Only videos whose real length is known are compared, and a band needs two videos to count. A video whose receipt carries only the planned length is counted above, not guessed at."
+  },
+  "hints": {
+    "night_tail": {
+      "verdict": "hold",
+      "keep": true,
+      "channels_read": 1,
+      "note": "a bump is a day whose hours rose above the channel's recent usual; three or more such days in 15% of the days read is a hold",
+      "channels": [
+        {
+          "channel": "secret-place",
+          "hours_read": 52.76,
+          "days_read": 26,
+          "bump_share": 0.3462,
+          "verdict": "hold",
+          "bumps": [
+            {
+              "day": "2026-11-03",
+              "hours": 4.52,
+              "usual": 0.15,
+              "rise": 4.37
+            },
+            {
+              "day": "2026-11-08",
+              "hours": 1.57,
+              "usual": 0.29,
+              "rise": 1.28
+            },
+            {
+              "day": "2026-11-11",
+              "hours": 1.8,
+              "usual": 0.43,
+              "rise": 1.38
+            },
+            {
+              "day": "2026-11-12",
+              "hours": 2.35,
+              "usual": 0.72,
+              "rise": 1.62
+            },
+            {
+              "day": "2026-11-15",
+              "hours": 7.13,
+              "usual": 1.29,
+              "rise": 5.83
+            },
+            {
+              "day": "2026-11-16",
+              "hours": 6.4,
+              "usual": 1.45,
+              "rise": 4.96
+            },
+            {
+              "day": "2026-11-18",
+              "hours": 3.68,
+              "usual": 1.81,
+              "rise": 1.87
+            },
+            {
+              "day": "2026-11-19",
+              "hours": 4.18,
+              "usual": 2.08,
+              "rise": 2.09
+            },
+            {
+              "day": "2026-11-20",
+              "hours": 9.75,
+              "usual": 2.44,
+              "rise": 7.31
+            }
+          ]
+        }
+      ]
+    },
+    "end_screen": {
+      "hours": 0.0,
+      "verdict": "unmeasured_or_unused",
+      "note": "end screens are only reported by Analytics when a viewer reaches one; zero hours means nobody did, or the channel has not been read",
+      "channels": [
+        {
+          "channel": "secret-place",
+          "end_screen_hours": 0.0,
+          "suggested_hours": 22.05,
+          "views": 0,
+          "end_screen_share_of_tail": 0.0
+        }
+      ]
+    },
+    "related_video": {
+      "verdict": "not_measured",
+      "note": "a Related video needs advanced access and an edit in Studio; scripts/growth_ab.py reads the hours before and after one is added"
+    }
+  },
+  "watchers_needed_a_day": 7.6,
+  "cost_lock": "$0.00 \u2014 reads committed Analytics files; no API call, no new secret.",
+  "privacy": "Hours, views, minutes and shares only. No revenue, no viewer, no other channel's title."
+}
