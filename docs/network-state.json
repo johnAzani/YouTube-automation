@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T00:22:38Z",
+  "generated_at": "2026-11-23T00:22:59Z",
   "monitor_generated_at": "2026-11-22T21:40:11.712280+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 673,
+    "published_total": 674,
     "published_longform": 197,
-    "published_shorts": 476,
-    "public_total": 671,
+    "published_shorts": 477,
+    "public_total": 672,
     "queued_longform": 54,
-    "queued_shorts": 66,
+    "queued_shorts": 65,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 94,
+        "published_total": 95,
         "published_longform": 31,
-        "published_shorts": 63,
+        "published_shorts": 64,
         "thumbnail_pending": 1,
-        "public_total": 93,
+        "public_total": 94,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0074",
-        "title": "Looking unto the Lord at Daybreak: Micah 7:7 | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "auyRlnjVYZM",
-        "watch_url": "https://youtu.be/auyRlnjVYZM",
-        "published_on": "2026-11-22",
-        "published_at": "2026-11-22T21:37:24Z"
+        "id": "SHORT-MORNINGPSALM119V147",
+        "title": "Say This Psalm 119:147 Prayer at Sunrise | When Worry Keeps You Awake #Shorts",
+        "format": "short",
+        "youtube_video_id": "nWH4cVsUevY",
+        "watch_url": "https://www.youtube.com/shorts/nWH4cVsUevY",
+        "published_on": "2026-11-23",
+        "published_at": "2026-11-23T00:22:12Z"
       },
       "next_queued_longform": {
         "id": "0075",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm119v147",
-        "scripture": "Psalm 119:147",
+        "short": "short-morningproverbs4v18",
+        "scripture": "Proverbs 4:18",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM119V147",
+      "slug": "short-morningpsalm119v147-sunrise-prayer",
+      "file": "short-morningpsalm119v147-sunrise-prayer.md",
+      "title": "Say This Psalm 119:147 Prayer at Sunrise | When Worry Keeps You Awake #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T00:22:12Z",
+      "youtube_video_id": "nWH4cVsUevY",
+      "watch_url": "https://www.youtube.com/shorts/nWH4cVsUevY",
+      "youtu_be_url": "https://youtu.be/nWH4cVsUevY",
+      "shorts_url": "https://www.youtube.com/shorts/nWH4cVsUevY",
+      "studio_url": "https://studio.youtube.com/video/nWH4cVsUevY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/nWH4cVsUevY/hqdefault.jpg",
+      "thumb_text": "BEFORE THE SUN RISES \u00b7 LAY YOUR WORRIES DOWN",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 624
+    },
     {
       "id": "SHORT-ROMANS8V38",
       "slug": "short-romans8v38-pre-sleep-prayer",
@@ -17647,17 +17671,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-morningpsalm119v147",
-        "file": "0070-short-morningpsalm119v147.yml",
-        "companion_longform_id": "0070",
-        "scripture": "Psalm 119:147",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningproverbs4v18",
