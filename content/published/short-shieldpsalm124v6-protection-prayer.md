@@ -27,7 +27,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (68, 790, 1011, 839); shorten the authored lockup or reduce its size"
 ---
 
 The trap set against your peace is broken. You were not handed over to the thing that sought to consume you today. Hear the word of God in Psalm 124: Blessed be the LORD, who hath not given us as a prey to their teeth. Our soul is escaped as a bird out of the snare of the fowlers: the snare is broken, and we are escaped. Our help is in the name of the LORD, who made heaven and earth. Lord, break every subtle net of fear and hidden trap plotted against this life. You are our refuge; pull our feet from the dark cables of anxiety. Amen. The trap set against your peace is broken.
