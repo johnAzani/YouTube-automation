@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T10:14:31Z",
+  "generated_at": "2026-11-23T10:14:56Z",
   "monitor_generated_at": "2026-11-23T08:48:38.501249+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 686,
+    "published_total": 687,
     "published_longform": 199,
-    "published_shorts": 487,
-    "public_total": 684,
+    "published_shorts": 488,
+    "public_total": 685,
     "queued_longform": 61,
-    "queued_shorts": 88,
+    "queued_shorts": 86,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": true
@@ -232,23 +232,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 72,
+        "published_total": 73,
         "published_longform": 24,
-        "published_shorts": 48,
-        "thumbnail_pending": 71,
-        "public_total": 72,
+        "published_shorts": 49,
+        "thumbnail_pending": 72,
+        "public_total": 73,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0223",
-        "title": "Prayer for the Iron Gates to Open: Acts 12:5-11 | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "80iuJjQ7qLk",
-        "watch_url": "https://youtu.be/80iuJjQ7qLk",
+        "id": "SHORT-MIDNIGHTJOB35V10",
+        "title": "Pray This Job 35:10 Midnight Prayer | Heavy In Your Hands Tonight #Shorts",
+        "format": "short",
+        "youtube_video_id": "IZz4rbxFn9o",
+        "watch_url": "https://www.youtube.com/shorts/IZz4rbxFn9o",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T01:10:51Z"
+        "published_at": "2026-11-23T10:14:02Z"
       },
       "next_queued_longform": {
         "id": "0224",
@@ -257,8 +257,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightjob35v10",
-        "scripture": "Job 35:10",
+        "short": "short-midnightmicah7v7",
+        "scripture": "Micah 7:7-8",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTJOB35V10",
+      "slug": "short-midnightjob35v10-midnight-prayer",
+      "file": "short-midnightjob35v10-midnight-prayer.md",
+      "title": "Pray This Job 35:10 Midnight Prayer | Heavy In Your Hands Tonight #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T10:14:02Z",
+      "youtube_video_id": "IZz4rbxFn9o",
+      "watch_url": "https://www.youtube.com/shorts/IZz4rbxFn9o",
+      "youtu_be_url": "https://youtu.be/IZz4rbxFn9o",
+      "shorts_url": "https://www.youtube.com/shorts/IZz4rbxFn9o",
+      "studio_url": "https://studio.youtube.com/video/IZz4rbxFn9o/edit",
+      "thumb_url": "https://i.ytimg.com/vi/IZz4rbxFn9o/hqdefault.jpg",
+      "thumb_text": "WHEN NIGHT IS HEAVY \u00b7 GOD GIVES A SONG",
+      "thumbnail_pending": true,
+      "duration_label": "49s",
+      "words": 619
+    },
     {
       "id": "SHORT-JUDE1V24",
       "slug": "short-jude1v24-pre-sleep-prayer",
@@ -18102,17 +18126,6 @@
         "target_window_utc": "12:14"
       },
       {
-        "short": "short-midnightjob35v10",
-        "file": "0000-short-midnightjob35v10.yml",
-        "companion_longform_id": "",
-        "scripture": "Job 35:10",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
-      },
-      {
         "short": "short-midnightmicah7v7",
         "file": "0000-short-midnightmicah7v7.yml",
         "companion_longform_id": "",
@@ -18491,17 +18504,6 @@
         "file": "0229-short-midnighthebrews13v20.yml",
         "companion_longform_id": "0229",
         "scripture": "Hebrews 13:20-21",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-midnightexodus14v13",
-        "file": "0230-short-midnightexodus14v13.yml",
-        "companion_longform_id": "0230",
-        "scripture": "Exodus 14:13-14",
         "channel": "prayer4",
         "channel_name": "The Midnight Watch",
         "status": "approved",
