@@ -2,7 +2,7 @@
 id: 0519
 title: "Crowning Your Labor With Goodness: Psalm 65:11 | The Provision Table"
 slug: when-you-need-god-to-crown-your-year-psalm-6511
-status: approved
+status: published
 channel: prayer7
 privacy: public
 format: longform
@@ -75,6 +75,14 @@ originality:
   source_notes: true
 title_before: "When You Need God to Crown Your Year: Psalm 65:11"
 queue_title_fixed_at: "2026-11-22"
+published_on: "2026-11-23"
+published_at: "2026-11-23T11:13:25Z"
+youtube_video_id: "DiQyci8GqIY"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Table Prepared in the Wilderness

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T10:24:35Z",
+  "generated_at": "2026-11-23T11:14:26Z",
   "monitor_generated_at": "2026-11-23T08:48:38.501249+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 692,
-    "published_longform": 199,
-    "published_shorts": 493,
-    "public_total": 690,
-    "queued_longform": 61,
-    "queued_shorts": 77,
+    "published_total": 694,
+    "published_longform": 200,
+    "published_shorts": 494,
+    "public_total": 692,
+    "queued_longform": 60,
+    "queued_shorts": 76,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": true
@@ -135,11 +135,11 @@
         "available": true,
         "as_of": "2026-11-23",
         "measured_longform_videos": 0,
-        "total_longform_videos": 10,
+        "total_longform_videos": 9,
         "top_themes": [
           {
             "theme": "daily_guidance_wisdom",
-            "videos": 9,
+            "videos": 8,
             "top_scripture": ""
           },
           {
@@ -334,7 +334,7 @@
         "available": true,
         "as_of": "2026-11-23",
         "measured_longform_videos": 0,
-        "total_longform_videos": 13,
+        "total_longform_videos": 12,
         "top_themes": [
           {
             "theme": "daily_guidance_wisdom",
@@ -436,33 +436,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 63,
-        "published_longform": 18,
-        "published_shorts": 45,
+        "published_total": 65,
+        "published_longform": 19,
+        "published_shorts": 46,
         "thumbnail_pending": 6,
-        "public_total": 63,
-        "queued_longform": 6,
+        "public_total": 65,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONJOHN6V11",
-        "title": "Pray This John 6:11-13 Prayer for Open Doors & Provision | Holding What Remains #Shorts",
-        "format": "short",
-        "youtube_video_id": "m_5R2LFANwc",
-        "watch_url": "https://www.youtube.com/shorts/m_5R2LFANwc",
-        "published_on": "2026-11-23",
-        "published_at": "2026-11-23T00:29:17Z"
-      },
-      "next_queued_longform": {
         "id": "0519",
         "title": "Crowning Your Labor With Goodness: Psalm 65:11 | The Provision Table",
-        "words": 1149,
+        "format": "longform",
+        "youtube_video_id": "DiQyci8GqIY",
+        "watch_url": "https://youtu.be/DiQyci8GqIY",
+        "published_on": "2026-11-23",
+        "published_at": "2026-11-23T11:13:25Z"
+      },
+      "next_queued_longform": {
+        "id": "0520",
+        "title": "True Wealth Without Anxious Toil: Proverbs 10:22 | The Provision Table",
+        "words": 1499,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisiongenesis39v2",
-        "scripture": "Genesis 39:2-3",
+        "short": "short-provisionproverbs30v8",
+        "scripture": "Proverbs 30:8-9",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -470,7 +470,7 @@
         "available": true,
         "as_of": "2026-11-23",
         "measured_longform_videos": 2,
-        "total_longform_videos": 11,
+        "total_longform_videos": 10,
         "top_themes": [
           {
             "theme": "morning_mercy_renewal",
@@ -484,7 +484,7 @@
           },
           {
             "theme": "general_prayer",
-            "videos": 7,
+            "videos": 6,
             "top_scripture": ""
           }
         ]
@@ -538,11 +538,11 @@
         "available": true,
         "as_of": "2026-11-23",
         "measured_longform_videos": 0,
-        "total_longform_videos": 12,
+        "total_longform_videos": 11,
         "top_themes": [
           {
             "theme": "protection",
-            "videos": 8,
+            "videos": 7,
             "top_scripture": ""
           },
           {
@@ -606,7 +606,7 @@
         "available": true,
         "as_of": "2026-11-23",
         "measured_longform_videos": 0,
-        "total_longform_videos": 10,
+        "total_longform_videos": 9,
         "top_themes": [
           {
             "theme": "general_prayer",
@@ -674,16 +674,16 @@
         "available": true,
         "as_of": "2026-11-23",
         "measured_longform_videos": 0,
-        "total_longform_videos": 12,
+        "total_longform_videos": 11,
         "top_themes": [
-          {
-            "theme": "daily_guidance_wisdom",
-            "videos": 5,
-            "top_scripture": ""
-          },
           {
             "theme": "trust_surrender",
             "videos": 2,
+            "top_scripture": ""
+          },
+          {
+            "theme": "daily_guidance_wisdom",
+            "videos": 4,
             "top_scripture": ""
           },
           {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0519",
+      "slug": "when-you-need-god-to-crown-your-year-psalm-6511",
+      "file": "0519-when-you-need-god-to-crown-your-year-psalm-6511.md",
+      "title": "Crowning Your Labor With Goodness: Psalm 65:11 | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T11:13:25Z",
+      "youtube_video_id": "DiQyci8GqIY",
+      "watch_url": "https://youtu.be/DiQyci8GqIY",
+      "youtu_be_url": "https://youtu.be/DiQyci8GqIY",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/DiQyci8GqIY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/DiQyci8GqIY/hqdefault.jpg",
+      "thumb_text": "CROWNED WITH GOODNESS",
+      "thumbnail_pending": false,
+      "duration_label": "~8 min",
+      "words": 1149
+    },
     {
       "id": "SHORT-SHIELD1JOHN4V4",
       "slug": "short-shield1john4v4-protection-prayer",
@@ -743,6 +767,30 @@
       "thumbnail_pending": true,
       "duration_label": "43s",
       "words": 632
+    },
+    {
+      "id": "SHORT-PROVISIONGENESIS39V2",
+      "slug": "short-provisiongenesis39v2-stewardship-prayer",
+      "file": "short-provisiongenesis39v2-stewardship-prayer.md",
+      "title": "Pray This Genesis 39:2-3 Prayer for Open Doors & Provision | Daily Provision #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T10:21:34Z",
+      "youtube_video_id": "Rd0vy7v4rUk",
+      "watch_url": "https://www.youtube.com/shorts/Rd0vy7v4rUk",
+      "youtu_be_url": "https://youtu.be/Rd0vy7v4rUk",
+      "shorts_url": "https://www.youtube.com/shorts/Rd0vy7v4rUk",
+      "studio_url": "https://studio.youtube.com/video/Rd0vy7v4rUk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Rd0vy7v4rUk/hqdefault.jpg",
+      "thumb_text": "GOD SEES YOUR \u00b7 FAITHFUL LABOR",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 634
     },
     {
       "id": "SHORT-HEALINGJOB5V18",
@@ -8980,7 +9028,7 @@
       "id": "0092",
       "slug": "1-corinthians-15-58-midday-prayer",
       "file": "0092-1-corinthians-15-58-midday-prayer.md",
-      "title": "Your Labor Is Not in Vain: 1 Corinthians 15:58 | The Midday Watch",
+      "title": "When Your Efforts Go Unseen: 1 Corinthians 15:58 | The Midday Watch",
       "channel": "prayer3",
       "channel_name": "The Midday Watch",
       "channel_handle": "@TheMiddayWatch",
@@ -17532,7 +17580,7 @@
         "id": "0114",
         "slug": "when-you-cant-find-your-joy-psalm-77-6",
         "file": "0114-when-you-cant-find-your-joy-psalm-77-6.md",
-        "title": "When You Can't Find Your Joy: Psalm 77:6 | The Secret Place",
+        "title": "When Your Soul Refuses Comfort: Psalm 77:6 | The Secret Place",
         "channel": "secret-place",
         "channel_name": "The Secret Place",
         "status": "approved",
@@ -17774,19 +17822,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1273
-      },
-      {
-        "id": "0519",
-        "slug": "when-you-need-god-to-crown-your-year-psalm-6511",
-        "file": "0519-when-you-need-god-to-crown-your-year-psalm-6511.md",
-        "title": "Crowning Your Labor With Goodness: Psalm 65:11 | The Provision Table",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1149
       },
       {
         "id": "0520",
@@ -18233,17 +18268,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisiongenesis39v2",
-        "file": "0000-short-provisiongenesis39v2.yml",
-        "companion_longform_id": "",
-        "scripture": "Genesis 39:2-3",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionproverbs30v8",
