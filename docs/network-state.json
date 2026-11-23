@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T23:11:42Z",
+  "generated_at": "2026-11-23T23:25:26Z",
   "monitor_generated_at": "2026-11-23T18:09:31.613904+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 719,
-    "published_longform": 205,
+    "published_total": 720,
+    "published_longform": 206,
     "published_shorts": 514,
-    "public_total": 717,
-    "queued_longform": 57,
+    "public_total": 718,
+    "queued_longform": 56,
     "queued_shorts": 64,
     "automations_ok": 14,
     "automations_total": 14,
@@ -504,28 +504,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 58,
-        "published_longform": 16,
+        "published_total": 59,
+        "published_longform": 17,
         "published_shorts": 42,
         "thumbnail_pending": 42,
-        "public_total": 58,
-        "queued_longform": 6,
+        "public_total": 59,
+        "queued_longform": 5,
         "queued_other": 3,
         "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM124V6",
-        "title": "Pray This Psalm 124:6-8 Prayer for Divine Protection | The Trap Against You Is Broken #Shorts",
-        "format": "short",
-        "youtube_video_id": "ycXtOA6pmhI",
-        "watch_url": "https://www.youtube.com/shorts/ycXtOA6pmhI",
-        "published_on": "2026-11-23",
-        "published_at": "2026-11-23T16:13:21Z"
-      },
-      "next_queued_longform": {
         "id": "0619",
         "title": "Pure Word Shield: Proverbs 30:5 | The Covenant Shield",
-        "words": 1559,
+        "format": "longform",
+        "youtube_video_id": "sc7PHHmp5wQ",
+        "watch_url": "https://youtu.be/sc7PHHmp5wQ",
+        "published_on": "2026-11-23",
+        "published_at": "2026-11-23T23:24:28Z"
+      },
+      "next_queued_longform": {
+        "id": "0622",
+        "title": "The Lord Is Your Stronghold in Trouble: Nahum 1:7",
+        "words": 1309,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0619",
+      "slug": "pure-word-shield-proverbs-30-5",
+      "file": "0619-pure-word-shield-proverbs-30-5.md",
+      "title": "Pure Word Shield: Proverbs 30:5 | The Covenant Shield",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T23:24:28Z",
+      "youtube_video_id": "sc7PHHmp5wQ",
+      "watch_url": "https://youtu.be/sc7PHHmp5wQ",
+      "youtu_be_url": "https://youtu.be/sc7PHHmp5wQ",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/sc7PHHmp5wQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/sc7PHHmp5wQ/hqdefault.jpg",
+      "thumb_text": "PURE WORD SHIELD",
+      "thumbnail_pending": false,
+      "duration_label": "10m 39s",
+      "words": 1559
+    },
     {
       "id": "0418",
       "slug": "prayer-of-faith-for-healing-james-5-14-16",
@@ -18448,19 +18472,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1656
-      },
-      {
-        "id": "0619",
-        "slug": "pure-word-shield-proverbs-30-5",
-        "file": "0619-pure-word-shield-proverbs-30-5.md",
-        "title": "Pure Word Shield: Proverbs 30:5 | The Covenant Shield",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1559
       },
       {
         "id": "0622",

@@ -11,3 +11,8 @@ replace: false
 target_window_utc: 08:44
 notes: "Standalone Short on Psalm 144:1-2 (roadmap list) \u2014 spec authored by the\
   \ brain (103 narration words)"
+alignment_failures: 1
+last_alignment_error: 'cannot prepare Charon narration for short-shieldpsalm144v1
+  (Short speech alignment unavailable or incomplete; refusing to render [ValueError:
+  Narration does not match the script: only 58% of the 103 script words were recognised
+  (floor 85%); the audio is not this script]); refusing to render'
