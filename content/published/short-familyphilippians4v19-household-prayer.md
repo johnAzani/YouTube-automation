@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["HOUSEHOLD PRAYER", "PHILIPPIANS 4:19", "DIVINE PROVISION", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-23T21:05:55Z"
+thumbnail_retry_after: "2026-11-30T23:26:34Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 Gather your home and loved ones in faith today as we stand together in prayer over your household. Let us bring every burden, every financial concern, and every quiet worry before the throne of grace. Scripture promises us in Philippians four nineteen: "And my God shall supply all your need according to His riches in glory by Christ Jesus." Heavenly Father, we place this family into Your faithful hands. You know every silent need within these walls. Pour out Your peace, provide daily bread, cover this home with Your divine abundance, and strengthen every heart gathered here. May Your presence fill every room with hope and resting grace. Subscribe to cover your home in prayer daily with us today. Amen.

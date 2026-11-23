@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["FINDING REST", "IN THE", "SHADOW OF GOD", "PSALM 3:3-5"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 You are staring at the shadows, feeling the weight of the day pressing upon you. But thou, O LORD, art a shield for me; my glory, and the lifter up of mine head. I cried unto the LORD with my voice, and he heard me out of his holy hill. I laid me down and slept; I awaked; for the LORD sustained me. Father, let this truth wrap around my anxious heart like a warm, thick blanket tonight. May your strength become my pillow as I surrender every unresolved worry into your keeping. I trust you to guard my dreams and renew my spirit for the coming morning light. Lord, thank you for your presence, your peace, and the promise of your steady hand. Guide me into deep, restorative rest knowing that I am never alone in the darkness. Amen. May you find complete comfort in these words. Please subscribe to The Secret Place.

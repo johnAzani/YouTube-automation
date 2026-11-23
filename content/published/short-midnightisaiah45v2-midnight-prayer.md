@@ -27,7 +27,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (33, 780, 1045, 829); shorten the authored lockup or reduce its size"
 ---
 
 If you are staring at an impossible decision tonight, the Lord speaks into your room. I will go before thee, and make the crooked places straight: I will break in pieces the gates of brass, and cut in sunder the bars of iron: And I will give thee the treasures of darkness, and hidden riches of secret places, that thou mayest know that I, the LORD, which call thee by thy name, am the God of Israel. Lord, shatter every locked gate standing against this quiet soul tonight. Clear their path, uncover secret strength in this late hour, and remind them that You know their name. Amen. Subscribe to stand with us.

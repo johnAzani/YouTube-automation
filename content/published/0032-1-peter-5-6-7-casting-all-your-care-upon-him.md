@@ -95,6 +95,7 @@ top_comment: "ok"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+live_handle: "@SecretPlaceSanctuary"
 ---
 ## Scene 1 — Humble Yourselves Therefore Under the Mighty Hand of God (Verse 6a)
 
