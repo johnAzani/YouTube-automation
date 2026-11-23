@@ -1,6 +1,6 @@
 ---
 id: 0092
-title: "Your Labor Is Not in Vain: 1 Corinthians 15:58 | The Midday Watch"
+title: "When Your Efforts Go Unseen: 1 Corinthians 15:58 | The Midday Watch"
 slug: 1-corinthians-15-58-midday-prayer
 status: published
 channel: prayer3
@@ -73,15 +73,17 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
-title_before: "When Your Hard Work Feels Wasted: 1 Corinthians 15:58"
+title_before: "Your Labor Is Not in Vain: 1 Corinthians 15:58 | The Midday Watch"
 queue_title_fixed_at: "2026-11-16"
 published_on: "2026-11-16"
 published_at: "2026-11-16T17:57:23Z"
 youtube_video_id: "GU4-8UTXaHk"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+retitled_at: "2026-11-23"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Noonday Pause and The Anchor
