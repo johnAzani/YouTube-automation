@@ -1,6 +1,6 @@
 ---
 id: '0706'
-title: 'Gratitude When Life Is Heavy: Psalm 34:1-3 | The Praise Garden'
+title: "When You Cannot See the Way Out: Psalm 34:1-3 | The Praise Garden"
 slug: gratitude-when-life-is-heavy-psalm-34-1-3
 status: published
 channel: prayer9
@@ -78,13 +78,16 @@ originality:
 published_on: "2026-11-16"
 published_at: "2026-11-16T08:35:07Z"
 youtube_video_id: "MjVwe-IxfV4"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_retry_after: "2026-11-23T11:15:04Z"
 thumbnail_retry_reason: "permission"
+title_before: "Gratitude When Life Is Heavy: Psalm 34:1-3 | The Praise Garden"
+retitled_at: "2026-11-23"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Entering His Gates With Thanksgiving
