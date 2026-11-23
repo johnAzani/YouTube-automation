@@ -1,0 +1,309 @@
+{
+  "key": "short-guidedjeremiah29v11",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "WHEN PLANS FAIL",
+    "GOD HAS A FUTURE"
+  ],
+  "poster": [
+    "JEREMIAH 29:11",
+    "THOUGHTS OF PEACE",
+    "FOR YOUR NEXT STEP",
+    "THE GUIDED PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain valley at twilight",
+    "quiet alpine river flowing softly",
+    "dawning sky over mountain lake",
+    "peaceful forest path early morning fog",
+    "calm mountain lake reflection dawn",
+    "serene alpine meadow sunrise",
+    "misty mountain ridge calm light"
+  ],
+  "scenes": [
+    {
+      "a": "That ruined plan still keeps you awake tonight.",
+      "img": "short-guidedjeremiah29v11-scene-01.jpg",
+      "kicker": "RUINED PLAN",
+      "sub": "STILL AWAKE OVER A BROKEN PLAN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You wonder if God derailed your path or abandoned your steps.",
+      "img": "short-guidedjeremiah29v11-scene-02.jpg",
+      "kicker": "DERAILED PATH",
+      "sub": "WHEN YOUR STEPS FEEL UNCERTAIN",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear His promise in Jeremiah 29:11.",
+      "img": "short-guidedjeremiah29v11-scene-03.jpg",
+      "kicker": "GOD'S PROMISE",
+      "sub": "JEREMIAH 29:11",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end.",
+      "img": "short-guidedjeremiah29v11-scene-04.jpg",
+      "kicker": "THOUGHTS OF PEACE",
+      "sub": "AN EXPECTED END",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, when our own designs fall to pieces, give us wisdom to trust Your divine purpose.",
+      "img": "short-guidedjeremiah29v11-scene-05.jpg",
+      "kicker": "DIVINE PURPOSE",
+      "sub": "WISDOM WHEN DESIGNS FALL APART",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Quiet our anxiety over this next decision and grant us eyes to see Your leading.",
+      "img": "short-guidedjeremiah29v11-scene-06.jpg",
+      "kicker": "CLEAR GUIDANCE",
+      "sub": "EYES TO SEE HIS LEADING",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Rest tonight, even when that ruined plan still keeps you awake.",
+      "img": "short-guidedjeremiah29v11-scene-07.jpg",
+      "kicker": "EXPECTED END",
+      "sub": "HIS WISDOM FOR EVERY STEP",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That ruined plan still keeps you awake tonight."
+    ],
+    [
+      3,
+      7,
+      "You wonder if God derailed your path or abandoned your steps."
+    ],
+    [
+      7,
+      11,
+      "Hear His promise in Jeremiah 29:11."
+    ],
+    [
+      11,
+      20,
+      "For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end."
+    ],
+    [
+      20,
+      26,
+      "Lord, when our own designs fall to pieces, give us wisdom to trust Your divine purpose."
+    ],
+    [
+      26,
+      32,
+      "Quiet our anxiety over this next decision and grant us eyes to see Your leading."
+    ],
+    [
+      32,
+      38,
+      "Teach us to rest in Your peace, knowing Your promise holds even when our plans fail."
+    ],
+    [
+      38,
+      43,
+      "Amen. Rest tonight, even when that ruined plan still keeps you awake."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT RUINED PLAN",
+        "STILL KEEPS YOU AWAKE TONIGHT"
+      ],
+      [
+        "RUINED",
+        "AWAKE"
+      ],
+      "JEREMIAH 29 : 11"
+    ],
+    [
+      3,
+      7,
+      [
+        "YOU WONDER IF GOD DERAILED",
+        "YOUR PATH OR STEPS"
+      ],
+      [
+        "PATH"
+      ],
+      "JEREMIAH 29 : 11"
+    ],
+    [
+      7,
+      11,
+      [
+        "HEAR HIS PROMISE IN",
+        "JEREMIAH 29 VERSE 11"
+      ],
+      [
+        "PROMISE"
+      ],
+      "JEREMIAH 29 : 11"
+    ],
+    [
+      11,
+      20,
+      [
+        "THOUGHTS OF PEACE",
+        "AND NOT OF EVIL",
+        "TO GIVE YOU AN EXPECTED END"
+      ],
+      [
+        "PEACE",
+        "EXPECTED"
+      ],
+      "JEREMIAH 29 : 11"
+    ],
+    [
+      20,
+      26,
+      [
+        "GIVE US WISDOM TO TRUST",
+        "YOUR DIVINE PURPOSE"
+      ],
+      [
+        "WISDOM",
+        "PURPOSE"
+      ],
+      "JEREMIAH 29 : 11"
+    ],
+    [
+      26,
+      32,
+      [
+        "QUIET OUR ANXIETY",
+        "GRANT EYES TO SEE"
+      ],
+      [
+        "ANXIETY",
+        "SEE"
+      ],
+      "JEREMIAH 29 : 11"
+    ],
+    [
+      32,
+      38,
+      [
+        "YOUR PROMISE HOLDS EVEN",
+        "WHEN OUR PLANS FAIL"
+      ],
+      [
+        "PROMISE",
+        "HOLDS"
+      ],
+      "JEREMIAH 29 : 11"
+    ],
+    [
+      38,
+      43,
+      [
+        "REST TONIGHT IN HIS WISDOM",
+        "AND HIS PEACE"
+      ],
+      [
+        "REST",
+        "PEACE"
+      ],
+      "JEREMIAH 29 : 11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That ruined plan still keeps you awake tonight.",
+      "kind": "phrase",
+      "words": [
+        "RUINED",
+        "AWAKE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You wonder if God derailed your path or abandoned your steps.",
+      "kind": "phrase",
+      "words": [
+        "PATH",
+        "STEPS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end.",
+      "kind": "phrase",
+      "words": [
+        "THOUGHTS",
+        "PEACE",
+        "EXPECTED",
+        "END"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when our own designs fall to pieces, give us wisdom to trust Your divine purpose.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "PURPOSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Rest tonight, even when that ruined plan still keeps you awake.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "AWAKE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Jeremiah 29:11"
+}

@@ -1,0 +1,383 @@
+{
+  "key": "short-guidedluke1v79",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "WHEN THE PATH",
+    "IS HIDDEN IN SHADOW"
+  ],
+  "poster": [
+    "A PRAYER FOR",
+    "WISDOM IN DARKNESS",
+    "AND GOD'S PEACE",
+    "LUKE 1:79"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain valley at twilight dawn",
+    "quiet alpine river flowing through dark forest",
+    "first beam of sunlight breaking over misty mountain pass",
+    "calm mountain lake reflection early morning light",
+    "foggy pine forest path with soft golden light",
+    "peaceful stream in quiet mountain valley sunrise",
+    "sunlight illuminating gentle mountain path in morning mist",
+    "serene mountain ridge twilight mist calm water"
+  ],
+  "scenes": [
+    {
+      "a": "You sit in shadow",
+      "img": "short-guidedluke1v79-scene-01.jpg",
+      "kicker": "DARK PATH",
+      "sub": "UNSURE WHERE TO TREAD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "God promises in Luke",
+      "img": "short-guidedluke1v79-scene-02.jpg",
+      "kicker": "THE PROMISE",
+      "sub": "LIGHT IN THE SHADOWS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "To give light to them",
+      "img": "short-guidedluke1v79-scene-03.jpg",
+      "kicker": "LUKE 1:79",
+      "sub": "A WAY OF PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, when darkness hides",
+      "img": "short-guidedluke1v79-scene-04.jpg",
+      "kicker": "HEAVY CHOICES",
+      "sub": "SEEKING HIS TRUTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "We cannot see",
+      "img": "short-guidedluke1v79-scene-05.jpg",
+      "kicker": "TRUSTING GOD",
+      "sub": "HE KNOWS THE TRAIL",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Clear away our deep confusion",
+      "img": "short-guidedluke1v79-scene-06.jpg",
+      "kicker": "STILL FEAR",
+      "sub": "CLEAR THE CONFUSION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Direct our steps today",
+      "img": "short-guidedluke1v79-scene-07.jpg",
+      "kicker": "GUIDED STEPS",
+      "sub": "INTO HIS PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. You sit in shadow",
+      "img": "short-guidedluke1v79-scene-08.jpg",
+      "kicker": "WALK IN LIGHT",
+      "sub": "HIS PEACE GUIDES YOU",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You sit in shadow, unsure where to tread."
+    ],
+    [
+      3,
+      7,
+      "God promises in Luke 1:79,"
+    ],
+    [
+      7,
+      15,
+      "To give light to them that sit in darkness and in the shadow of death, to guide our feet into the way of peace."
+    ],
+    [
+      15,
+      22,
+      "Lord, when darkness hides the right path and every choice feels heavy, shine your truth into this quiet hour."
+    ],
+    [
+      22,
+      28,
+      "We cannot see what lies ahead, but you know every hidden trail and turn."
+    ],
+    [
+      28,
+      34,
+      "Clear away our deep confusion and quiet every restless fear inside."
+    ],
+    [
+      34,
+      42,
+      "Direct our steps today and guide our feet into your path of true peace."
+    ],
+    [
+      42,
+      47,
+      "Amen. You sit in shadow, unsure where to tread."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU SIT IN SHADOW",
+        "UNSURE WHERE TO TREAD"
+      ],
+      [
+        "SHADOW",
+        "TREAD"
+      ],
+      "LUKE 1 : 79"
+    ],
+    [
+      3,
+      7,
+      [
+        "GOD PROMISES IN",
+        "LUKE 1:79"
+      ],
+      [
+        "PROMISES",
+        "LUKE"
+      ],
+      "LUKE 1 : 79"
+    ],
+    [
+      7,
+      15,
+      [
+        "TO GIVE LIGHT TO THEM",
+        "THAT SIT IN DARKNESS",
+        "AND IN SHADOW OF DEATH",
+        "TO GUIDE OUR FEET",
+        "INTO THE WAY OF PEACE"
+      ],
+      [
+        "LIGHT",
+        "DARKNESS",
+        "GUIDE",
+        "PEACE"
+      ],
+      "LUKE 1 : 79"
+    ],
+    [
+      15,
+      22,
+      [
+        "WHEN DARKNESS HIDES THE PATH",
+        "AND EVERY CHOICE FEELS HEAVY",
+        "SHINE YOUR TRUTH INTO THIS HOUR"
+      ],
+      [
+        "DARKNESS",
+        "TRUTH",
+        "HOUR"
+      ],
+      "LUKE 1 : 79"
+    ],
+    [
+      22,
+      28,
+      [
+        "WE CANNOT SEE WHAT LIES AHEAD",
+        "BUT YOU KNOW EVERY TRAIL AND TURN"
+      ],
+      [
+        "AHEAD",
+        "KNOW",
+        "TRAIL"
+      ],
+      "LUKE 1 : 79"
+    ],
+    [
+      28,
+      34,
+      [
+        "CLEAR AWAY OUR CONFUSION",
+        "AND QUIET EVERY RESTLESS FEAR"
+      ],
+      [
+        "CLEAR",
+        "CONFUSION",
+        "QUIET",
+        "FEAR"
+      ],
+      "LUKE 1 : 79"
+    ],
+    [
+      34,
+      42,
+      [
+        "DIRECT OUR STEPS TODAY",
+        "AND GUIDE OUR FEET INTO PEACE"
+      ],
+      [
+        "DIRECT",
+        "GUIDE",
+        "PEACE"
+      ],
+      "LUKE 1 : 79"
+    ],
+    [
+      42,
+      47,
+      [
+        "AMEN",
+        "YOU SIT IN SHADOW",
+        "UNSURE WHERE TO TREAD"
+      ],
+      [
+        "AMEN",
+        "SHADOW",
+        "TREAD"
+      ],
+      "LUKE 1 : 79"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You sit in shadow",
+      "kind": "phrase",
+      "words": [
+        "YOU",
+        "SIT",
+        "IN",
+        "SHADOW"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "God promises in Luke",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "PROMISES",
+        "IN",
+        "LUKE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "To give light to them",
+      "kind": "phrase",
+      "words": [
+        "TO",
+        "GIVE",
+        "LIGHT",
+        "TO",
+        "THEM"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when darkness hides",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "WHEN",
+        "DARKNESS",
+        "HIDES"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "We cannot see",
+      "kind": "phrase",
+      "words": [
+        "WE",
+        "CANNOT",
+        "SEE",
+        "WHAT",
+        "LIES"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Clear away our deep confusion",
+      "kind": "phrase",
+      "words": [
+        "CLEAR",
+        "AWAY",
+        "OUR",
+        "DEEP",
+        "CONFUSION"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "Direct our steps today",
+      "kind": "phrase",
+      "words": [
+        "DIRECT",
+        "OUR",
+        "STEPS",
+        "TODAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. You sit in shadow",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "YOU",
+        "SIT",
+        "IN",
+        "SHADOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Luke 1:79"
+}
