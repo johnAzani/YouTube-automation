@@ -91,7 +91,7 @@ Videos by watch time, 365 days (up to 50):
 | [Say This Philippians 4:8 Prayer Before You Sleep / The Secret Place #…](https://youtu.be/8ssIICb_3Ts) | 0.27 | 58 | 0:39 (68.2%) |
 | [Say This Psalm 121 Prayer Before You Sleep / He Who Keeps You #Shorts](https://youtu.be/xkpfupurX-0) | 0.25 | 147 | 0:20 (42.4%) |
 
-Thumbnails, 2026-10-15 to 2026-11-20 (33 days of YouTube's daily reach files): shown 11,899 times, clicked 157 times, a click rate of 1.3%.
+Thumbnails, 2026-10-15 to 2026-11-20 (34 days of YouTube's daily reach files): shown 11,901 times, clicked 157 times, a click rate of 1.3%.
 A thumbnail is counted where YouTube shows one (search, home, suggested, the channel page). The Shorts feed shows none, so Shorts watched there are not in these figures.
 
 Videos by times shown (up to 25):
