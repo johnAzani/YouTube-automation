@@ -1,0 +1,259 @@
+{
+  "key": "short-familyisaiah49v25",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "DEFENDING YOUR",
+    "HOUSEHOLD PEACE"
+  ],
+  "poster": [
+    "GOD CONTIENDS",
+    "FOR YOUR HOME",
+    "ISAIAH 49:25",
+    "STILL HERE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit table with open bible",
+    "soft morning light on kitchen wooden table",
+    "peaceful countryside home window view",
+    "olive branches on a rustic table",
+    "blurred home interior at dusk",
+    "glowing candles on a wooden hearth",
+    "the sun rising over a quiet valley"
+  ],
+  "scenes": [
+    {
+      "a": "The anxiety inside your house is still here.",
+      "img": "short-familyisaiah49v25-scene-01.jpg",
+      "kicker": "THE UNREST",
+      "sub": "THE ANXIETY INSIDE YOUR HOUSE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You feel the weight of concerns that simply will not lie down tonight.",
+      "img": "short-familyisaiah49v25-scene-02.jpg",
+      "kicker": "HEAVY CONCERNS",
+      "sub": "THE WEIGHT THAT PERSISTS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "But thus saith the LORD, Even the captives of the mighty shall be taken away, and the prey of the terrible shall be delivered: for I will contend with him that contendeth with thee, and I will save thy children.",
+      "img": "short-familyisaiah49v25-scene-03.jpg",
+      "kicker": "GOD'S PROMISE",
+      "sub": "THE LORD CONTENDS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, stand between these walls and the storms that threaten our quiet rest today.",
+      "img": "short-familyisaiah49v25-scene-04.jpg",
+      "kicker": "DIVINE DEFENSE",
+      "sub": "PRAYING FOR PROTECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let Your strength be the shelter where our children find their safety and hope.",
+      "img": "short-familyisaiah49v25-scene-05.jpg",
+      "kicker": "CHILDREN'S SAFETY",
+      "sub": "RESTING IN HIS MIGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We trust You to battle for our household when our own strength has faded.",
+      "img": "short-familyisaiah49v25-scene-06.jpg",
+      "kicker": "HIS STRENGTH",
+      "sub": "TRUSTING IN HIS BATTLE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen, the anxiety inside your house is still here.",
+      "img": "short-familyisaiah49v25-scene-07.jpg",
+      "kicker": "STILL HERE",
+      "sub": "HE IS WORKING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The anxiety inside your house is still here."
+    ],
+    [
+      3,
+      10,
+      "You feel the weight of concerns that simply will not lie down tonight."
+    ],
+    [
+      10,
+      25,
+      "But thus saith the LORD, Even the captives of the mighty shall be taken away, and the prey of the terrible shall be delivered: for I will contend with him that contendeth with thee, and I will save thy children."
+    ],
+    [
+      25,
+      35,
+      "Lord, stand between these walls and the storms that threaten our quiet rest today."
+    ],
+    [
+      35,
+      45,
+      "Let Your strength be the shelter where our children find their safety and hope."
+    ],
+    [
+      45,
+      55,
+      "We trust You to battle for our household when our own strength has faded."
+    ],
+    [
+      55,
+      60,
+      "Amen, the anxiety inside your house is still here."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE ANXIETY",
+        "INSIDE YOUR HOUSE",
+        "IS STILL HERE"
+      ],
+      [
+        "STILL HERE"
+      ],
+      "ISAIAH 49:25"
+    ],
+    [
+      3,
+      10,
+      [
+        "WEIGHT OF",
+        "CONCERNS THAT",
+        "WILL NOT",
+        "LIE DOWN"
+      ],
+      [
+        "WEIGHT",
+        "LIE DOWN"
+      ],
+      "ISAIAH 49:25"
+    ],
+    [
+      10,
+      25,
+      [
+        "THE LORD",
+        "SHALL DELIVER",
+        "AND SAVE",
+        "THY CHILDREN"
+      ],
+      [
+        "SAVE",
+        "CHILDREN"
+      ],
+      "ISAIAH 49:25"
+    ],
+    [
+      25,
+      35,
+      [
+        "STAND BETWEEN",
+        "THESE WALLS",
+        "OUR QUIET",
+        "REST"
+      ],
+      [
+        "STAND",
+        "REST"
+      ],
+      "ISAIAH 49:25"
+    ],
+    [
+      35,
+      45,
+      [
+        "YOUR STRENGTH",
+        "BE THE",
+        "SHELTER FOR",
+        "OUR CHILDREN"
+      ],
+      [
+        "STRENGTH",
+        "SHELTER"
+      ],
+      "ISAIAH 49:25"
+    ],
+    [
+      45,
+      55,
+      [
+        "BATTLE FOR",
+        "OUR HOUSEHOLD",
+        "STRENGTH HAS",
+        "FADED"
+      ],
+      [
+        "BATTLE",
+        "HOUSEHOLD"
+      ],
+      "ISAIAH 49:25"
+    ],
+    [
+      55,
+      60,
+      [
+        "AMEN",
+        "STILL HERE"
+      ],
+      [
+        "STILL HERE"
+      ],
+      "ISAIAH 49:25"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The anxiety inside your house is still here.",
+      "kind": "phrase",
+      "words": [
+        "STILL",
+        "HERE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 49:25"
+}

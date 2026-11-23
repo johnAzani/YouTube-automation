@@ -1,0 +1,403 @@
+{
+  "key": "short-family1samuel1v27",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "A PARENT'S PRAYER",
+    "FOR OUR CHILDREN"
+  ],
+  "poster": [
+    "FOR THIS CHILD",
+    "I PRAYED",
+    "1 SAMUEL 1:27-28",
+    "THE FAMILY ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit living room wooden table with open bible",
+    "soft morning light through sheer curtain in cozy living room",
+    "vintage open bible on rustic wooden table with olive branch",
+    "peaceful country home garden path sunrise lighting",
+    "cozy family living room window with warm glowing light",
+    "warm glowing candlelight on wooden table with open scripture",
+    "peaceful green valley view from cozy rustic home porch",
+    "soft sunset glowing over peaceful countryside farm home",
+    "warm lamp lit bible on wooden table in peaceful home"
+  ],
+  "scenes": [
+    {
+      "a": "Your quiet prayer for your child is remembered.",
+      "img": "short-family1samuel1v27-scene-01.jpg",
+      "kicker": "A PARENT'S PRAYER",
+      "sub": "YOUR QUIET CRY IS REMEMBERED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Scripture records in First Samuel chapter one:",
+      "img": "short-family1samuel1v27-scene-02.jpg",
+      "kicker": "GOD HEARS YOU",
+      "sub": "THE WORD OF GOD FOR YOUR HOME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For this child I prayed; and the LORD hath given me my petition which I asked of him:",
+      "img": "short-family1samuel1v27-scene-03.jpg",
+      "kicker": "FOR THIS CHILD",
+      "sub": "PETITION GRANTED IN HIS TIME",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Therefore also I have lent him to the LORD; as long as he liveth he shall be lent to the LORD.",
+      "img": "short-family1samuel1v27-scene-04.jpg",
+      "kicker": "LENT TO THE LORD",
+      "sub": "TRUSTING GOD WITH THEIR FUTURE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "And he worshipped the LORD there.",
+      "img": "short-family1samuel1v27-scene-05.jpg",
+      "kicker": "HE WORSHIPPED",
+      "sub": "FAITHFULNESS IN EVERY GENERATION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, we surrender our children into your faithful hands.",
+      "img": "short-family1samuel1v27-scene-06.jpg",
+      "kicker": "WE SURRENDER",
+      "sub": "PLACING THEM IN FAITHFUL HANDS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Protect their steps, guard their hearts, and guide their path through every season.",
+      "img": "short-family1samuel1v27-scene-07.jpg",
+      "kicker": "GUARD THEIR PATH",
+      "sub": "PROTECTION FOR YOUR HOUSEHOLD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Give us wisdom as parents to trust your promise when worry fills our home.",
+      "img": "short-family1samuel1v27-scene-08.jpg",
+      "kicker": "WISDOM TO TRUST",
+      "sub": "PEACE WHEN WORRY FILLS HOME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Amen. Your quiet prayer for your child is remembered.",
+      "img": "short-family1samuel1v27-scene-09.jpg",
+      "kicker": "PRAYER ANSWERED",
+      "sub": "COVER YOUR HOME IN FAITHFUL PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your quiet prayer for your child is remembered."
+    ],
+    [
+      3,
+      7,
+      "Scripture records in First Samuel chapter one:"
+    ],
+    [
+      7,
+      13,
+      "For this child I prayed; and the LORD hath given me my petition which I asked of him:"
+    ],
+    [
+      13,
+      20,
+      "Therefore also I have lent him to the LORD; as long as he liveth he shall be lent to the LORD."
+    ],
+    [
+      20,
+      24,
+      "And he worshipped the LORD there."
+    ],
+    [
+      24,
+      29,
+      "Lord, we surrender our children into your faithful hands."
+    ],
+    [
+      29,
+      35,
+      "Protect their steps, guard their hearts, and guide their path through every season."
+    ],
+    [
+      35,
+      41,
+      "Give us wisdom as parents to trust your promise when worry fills our home."
+    ],
+    [
+      41,
+      46,
+      "Amen. Your quiet prayer for your child is remembered."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR QUIET PRAYER",
+        "FOR YOUR CHILD",
+        "IS REMEMBERED"
+      ],
+      [
+        "REMEMBERED"
+      ],
+      "1 SAMUEL 1:27-28"
+    ],
+    [
+      3,
+      7,
+      [
+        "SCRIPTURE RECORDS IN",
+        "FIRST SAMUEL CHAPTER ONE"
+      ],
+      [
+        "SCRIPTURE"
+      ],
+      "1 SAMUEL 1:27-28"
+    ],
+    [
+      7,
+      13,
+      [
+        "FOR THIS CHILD I PRAYED",
+        "AND THE LORD HATH GIVEN ME",
+        "MY PETITION WHICH I ASKED"
+      ],
+      [
+        "PRAYED",
+        "PETITION"
+      ],
+      "1 SAMUEL 1:27"
+    ],
+    [
+      13,
+      20,
+      [
+        "THEREFORE ALSO I HAVE LENT HIM",
+        "TO THE LORD AS LONG AS HE LIVETH",
+        "HE SHALL BE LENT TO THE LORD"
+      ],
+      [
+        "LENT",
+        "LORD"
+      ],
+      "1 SAMUEL 1:28"
+    ],
+    [
+      20,
+      24,
+      [
+        "AND HE WORSHIPPED",
+        "THE LORD THERE"
+      ],
+      [
+        "WORSHIPPED"
+      ],
+      "1 SAMUEL 1:28"
+    ],
+    [
+      24,
+      29,
+      [
+        "LORD WE SURRENDER",
+        "OUR CHILDREN INTO YOUR",
+        "FAITHFUL HANDS"
+      ],
+      [
+        "SURRENDER",
+        "HANDS"
+      ],
+      "1 SAMUEL 1:27-28"
+    ],
+    [
+      29,
+      35,
+      [
+        "PROTECT THEIR STEPS",
+        "GUARD THEIR HEARTS",
+        "AND GUIDE THEIR PATH"
+      ],
+      [
+        "PROTECT",
+        "GUARD",
+        "GUIDE"
+      ],
+      "1 SAMUEL 1:27-28"
+    ],
+    [
+      35,
+      41,
+      [
+        "GIVE US WISDOM AS PARENTS",
+        "TO TRUST YOUR PROMISE",
+        "WHEN WORRY FILLS OUR HOME"
+      ],
+      [
+        "WISDOM",
+        "PROMISE"
+      ],
+      "1 SAMUEL 1:27-28"
+    ],
+    [
+      41,
+      46,
+      [
+        "AMEN YOUR QUIET PRAYER",
+        "FOR YOUR CHILD",
+        "IS REMEMBERED"
+      ],
+      [
+        "AMEN",
+        "REMEMBERED"
+      ],
+      "1 SAMUEL 1:27-28"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your quiet prayer for your child is remembered.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PRAYER",
+        "REMEMBERED"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture records in First Samuel chapter one:",
+      "kind": "phrase",
+      "words": [
+        "SCRIPTURE",
+        "RECORDS",
+        "SAMUEL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For this child I prayed; and the LORD hath given me my petition which I asked of him:",
+      "kind": "phrase",
+      "words": [
+        "PRAYED",
+        "PETITION",
+        "ASKED"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Therefore also I have lent him to the LORD; as long as he liveth he shall be lent to the LORD.",
+      "kind": "phrase",
+      "words": [
+        "LENT",
+        "LORD",
+        "LIVETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And he worshipped the LORD there.",
+      "kind": "phrase",
+      "words": [
+        "WORSHIPPED",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we surrender our children into your faithful hands.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "CHILDREN",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Protect their steps, guard their hearts, and guide their path through every season.",
+      "kind": "phrase",
+      "words": [
+        "PROTECT",
+        "GUARD",
+        "GUIDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give us wisdom as parents to trust your promise when worry fills our home.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "TRUST",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Your quiet prayer for your child is remembered.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "PRAYER",
+        "REMEMBERED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 Samuel 1:27-28"
+}
