@@ -1,0 +1,381 @@
+{
+  "key": "short-shieldpsalm140v7",
+  "channel": "prayer8",
+  "psalm": 140,
+  "title": [
+    "COVER MY HEAD",
+    "IN DAY OF BATTLE"
+  ],
+  "poster": [
+    "GOD IS YOUR STRENGTH",
+    "HE COVERS YOUR HEAD",
+    "IN THE DAY OF BATTLE",
+    "PSALM 140:7"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "stormy valley dramatic light mountains",
+    "ancient stone fortress watchtower mist",
+    "dramatic sunlight breaking through dark storm clouds",
+    "golden shield light beams dramatic canyon",
+    "calm mountain lake after storm dramatic atmosphere",
+    "ancient stone stronghold sunset ridge",
+    "peaceful sunlit valley river mountains calm"
+  ],
+  "scenes": [
+    {
+      "a": "When noise and conflict surround you this hour.",
+      "img": "short-shieldpsalm140v7-scene-01.jpg",
+      "kicker": "NOISE AND CONFLICT",
+      "sub": "WHEN PRESSURE PRESSES HARD TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Scripture promises in Psalm 140, verse 7:",
+      "img": "short-shieldpsalm140v7-scene-02.jpg",
+      "kicker": "PSALM 140:7",
+      "sub": "GOD IS THE STRENGTH OF SALVATION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "O GOD the Lord, the strength of my salvation, thou hast covered my head in the day of battle.",
+      "img": "short-shieldpsalm140v7-scene-03.jpg",
+      "kicker": "DAY OF BATTLE",
+      "sub": "HE COVERS YOUR HEAD IN CONFLICT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, You see the sudden pressure and hostility crowding this mind today.",
+      "img": "short-shieldpsalm140v7-scene-04.jpg",
+      "kicker": "UNSEEN PRESSURE",
+      "sub": "GOD SEES THE BATTLE IN YOUR MIND",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Cover every exposed place with Your almighty strength and quiet peace.",
+      "img": "short-shieldpsalm140v7-scene-05.jpg",
+      "kicker": "DIVINE COVERING",
+      "sub": "ALMIGHTY STRENGTH OVER YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Protect every step, turn back every arrow, and remain our strong refuge.",
+      "img": "short-shieldpsalm140v7-scene-06.jpg",
+      "kicker": "STRONG REFUGE",
+      "sub": "TURNING BACK EVERY ARROW",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.45
+      ]
+    },
+    {
+      "a": "God covers you when noise and conflict surround you.",
+      "img": "short-shieldpsalm140v7-scene-07.jpg",
+      "kicker": "YOU ARE SHIELDED",
+      "sub": "WALK UNDER GODS DAILY COVERING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "When noise and conflict surround you this hour."
+    ],
+    [
+      3,
+      6,
+      "Scripture promises in Psalm 140, verse 7:"
+    ],
+    [
+      6,
+      10,
+      "O GOD the Lord, the strength of my salvation,"
+    ],
+    [
+      10,
+      14,
+      "thou hast covered my head in the day of battle."
+    ],
+    [
+      14,
+      19,
+      "Lord, You see the sudden pressure and hostility crowding this mind today."
+    ],
+    [
+      19,
+      23,
+      "Be the shield over every thought when the fight grows fierce."
+    ],
+    [
+      23,
+      27,
+      "Cover every exposed place with Your almighty strength and quiet peace."
+    ],
+    [
+      27,
+      32,
+      "Protect every step, turn back every arrow, and remain our strong refuge."
+    ],
+    [
+      32,
+      36,
+      "Deliver us from every unseen snare that seeks to disturb our heart."
+    ],
+    [
+      36,
+      38,
+      "In Jesus' name, Amen."
+    ],
+    [
+      38,
+      42,
+      "God covers you when noise and conflict surround you."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WHEN NOISE AND CONFLICT",
+        "SURROUND YOU THIS HOUR"
+      ],
+      [
+        "NOISE",
+        "CONFLICT"
+      ],
+      "PSALM 140 : 7"
+    ],
+    [
+      3,
+      6,
+      [
+        "SCRIPTURE PROMISES IN",
+        "PSALM 140 VERSE 7"
+      ],
+      [
+        "SCRIPTURE",
+        "PROMISES"
+      ],
+      "PSALM 140 : 7"
+    ],
+    [
+      6,
+      10,
+      [
+        "O GOD THE LORD THE",
+        "STRENGTH OF MY SALVATION"
+      ],
+      [
+        "LORD",
+        "STRENGTH",
+        "SALVATION"
+      ],
+      "PSALM 140 : 7"
+    ],
+    [
+      10,
+      14,
+      [
+        "THOU HAST COVERED MY HEAD",
+        "IN THE DAY OF BATTLE"
+      ],
+      [
+        "COVERED",
+        "HEAD",
+        "BATTLE"
+      ],
+      "PSALM 140 : 7"
+    ],
+    [
+      14,
+      19,
+      [
+        "LORD YOU SEE THE SUDDEN PRESSURE",
+        "AND HOSTILITY CROWDING THIS MIND"
+      ],
+      [
+        "PRESSURE",
+        "HOSTILITY",
+        "MIND"
+      ],
+      "PSALM 140 : 7"
+    ],
+    [
+      19,
+      23,
+      [
+        "BE THE SHIELD OVER EVERY THOUGHT",
+        "WHEN THE FIGHT GROWS FIERCE"
+      ],
+      [
+        "SHIELD",
+        "THOUGHT",
+        "FIERCE"
+      ],
+      "PSALM 140 : 7"
+    ],
+    [
+      23,
+      27,
+      [
+        "COVER EVERY EXPOSED PLACE WITH",
+        "YOUR ALMIGHTY STRENGTH AND PEACE"
+      ],
+      [
+        "COVER",
+        "EXPOSED",
+        "STRENGTH",
+        "PEACE"
+      ],
+      "PSALM 140 : 7"
+    ],
+    [
+      27,
+      32,
+      [
+        "PROTECT EVERY STEP TURN BACK",
+        "EVERY ARROW AND REMAIN OUR REFUGE"
+      ],
+      [
+        "PROTECT",
+        "ARROW",
+        "REFUGE"
+      ],
+      "PSALM 140 : 7"
+    ],
+    [
+      32,
+      36,
+      [
+        "DELIVER US FROM EVERY UNSEEN SNARE",
+        "THAT SEEKS TO DISTURB OUR HEART"
+      ],
+      [
+        "DELIVER",
+        "UNSEEN",
+        "SNARE"
+      ],
+      "PSALM 140 : 7"
+    ],
+    [
+      36,
+      38,
+      [
+        "IN JESUS NAME",
+        "AMEN"
+      ],
+      [
+        "JESUS",
+        "AMEN"
+      ],
+      "PSALM 140 : 7"
+    ],
+    [
+      38,
+      42,
+      [
+        "GOD COVERS YOU WHEN NOISE",
+        "AND CONFLICT SURROUND YOU"
+      ],
+      [
+        "GOD",
+        "COVERS",
+        "CONFLICT"
+      ],
+      "PSALM 140 : 7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When noise and conflict surround you this hour.",
+      "kind": "phrase",
+      "words": [
+        "NOISE",
+        "CONFLICT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "O GOD the Lord, the strength of my salvation,",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "SALVATION"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "thou hast covered my head in the day of battle.",
+      "kind": "phrase",
+      "words": [
+        "COVERED",
+        "BATTLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be the shield over every thought when the fight grows fierce.",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "FIERCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Cover every exposed place with Your almighty strength and quiet peace.",
+      "kind": "phrase",
+      "words": [
+        "ALMIGHTY",
+        "STRENGTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "God covers you when noise and conflict surround you.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "COVERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 140:7"
+}

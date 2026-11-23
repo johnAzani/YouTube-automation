@@ -1,0 +1,347 @@
+{
+  "key": "short-shieldpsalm124v6",
+  "channel": "prayer8",
+  "psalm": 124,
+  "title": [
+    "THE SNARE IS BROKEN",
+    "GOD IS YOUR ESCAPE"
+  ],
+  "poster": [
+    "WALK IN SAFETY",
+    "THE HIDDEN TRAP IS BROKEN",
+    "PSALM 124:6-8 PRAYER",
+    "THE COVENANT SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "golden sunrise sunbeams over peaceful mountain pass fog",
+    "misty mountain forest morning light ancient trees",
+    "dramatic golden sun rays breaking through storm clouds over canyon",
+    "majestic eagle flying free over mountain ridge sunset",
+    "ancient stone tower peak sunrise sunburst rays",
+    "quiet forest trail morning sun mist rays",
+    "calm mountain lake reflecting golden sky dawn",
+    "sunlit mountain valley peaceful rivers golden glow"
+  ],
+  "scenes": [
+    {
+      "a": "The trap set against your peace is broken.",
+      "img": "short-shieldpsalm124v6-scene-01.jpg",
+      "kicker": "BROKEN TRAP",
+      "sub": "THE TRAP AGAINST YOU IS BROKEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You were not handed over to the thing that sought to consume you today.",
+      "img": "short-shieldpsalm124v6-scene-02.jpg",
+      "kicker": "UNTOUCHED",
+      "sub": "YOU WERE NOT HANDED OVER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear the word of God in Psalm 124: Blessed be the LORD, who hath not given us as a prey to their teeth.",
+      "img": "short-shieldpsalm124v6-scene-03.jpg",
+      "kicker": "NOT A PREY",
+      "sub": "BLESSED BE THE LORD",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Our soul is escaped as a bird out of the snare of the fowlers: the snare is broken, and we are escaped.",
+      "img": "short-shieldpsalm124v6-scene-04.jpg",
+      "kicker": "SOUL ESCAPED",
+      "sub": "THE SNARE IS BROKEN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Our help is in the name of the LORD, who made heaven and earth.",
+      "img": "short-shieldpsalm124v6-scene-05.jpg",
+      "kicker": "MAKER OF HEAVEN",
+      "sub": "OUR HELP IS IN HIS NAME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, break every subtle net of fear and hidden trap plotted against this life.",
+      "img": "short-shieldpsalm124v6-scene-06.jpg",
+      "kicker": "HIDDEN TRAPS",
+      "sub": "BREAK EVERY NET OF FEAR",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "You are our refuge; pull our feet from the dark cables of anxiety.",
+      "img": "short-shieldpsalm124v6-scene-07.jpg",
+      "kicker": "OUR REFUGE",
+      "sub": "PULL OUR FEET TO SAFETY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. The trap set against your peace is broken.",
+      "img": "short-shieldpsalm124v6-scene-08.jpg",
+      "kicker": "SAFE AND FREE",
+      "sub": "WALK IN HIS DAILY COVERING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The trap set against your peace is broken."
+    ],
+    [
+      3,
+      8,
+      "You were not handed over to the thing that sought to consume you today."
+    ],
+    [
+      8,
+      17,
+      "Hear the word of God in Psalm 124: Blessed be the LORD, who hath not given us as a prey to their teeth."
+    ],
+    [
+      17,
+      25,
+      "Our soul is escaped as a bird out of the snare of the fowlers: the snare is broken, and we are escaped."
+    ],
+    [
+      25,
+      32,
+      "Our help is in the name of the LORD, who made heaven and earth."
+    ],
+    [
+      32,
+      39,
+      "Lord, break every subtle net of fear and hidden trap plotted against this life."
+    ],
+    [
+      39,
+      46,
+      "You are our refuge; pull our feet from the dark cables of anxiety."
+    ],
+    [
+      46,
+      52,
+      "Amen. The trap set against your peace is broken."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE TRAP SET AGAINST",
+        "YOUR PEACE IS BROKEN"
+      ],
+      [
+        "BROKEN"
+      ],
+      "PSALM 124 : 6-8"
+    ],
+    [
+      3,
+      8,
+      [
+        "YOU WERE NOT HANDED OVER",
+        "TO WHAT SOUGHT TO CONSUME YOU"
+      ],
+      [
+        "HANDED"
+      ],
+      "PSALM 124 : 6-8"
+    ],
+    [
+      8,
+      17,
+      [
+        "HEAR THE WORD OF GOD",
+        "BLESSED BE THE LORD",
+        "NOT GIVEN US AS A PREY"
+      ],
+      [
+        "BLESSED"
+      ],
+      "PSALM 124 : 6"
+    ],
+    [
+      17,
+      25,
+      [
+        "OUR SOUL IS ESCAPED",
+        "AS A BIRD OUT OF THE SNARE",
+        "THE SNARE IS BROKEN"
+      ],
+      [
+        "ESCAPED"
+      ],
+      "PSALM 124 : 7"
+    ],
+    [
+      25,
+      32,
+      [
+        "OUR HELP IS IN THE NAME",
+        "OF THE LORD WHO MADE",
+        "HEAVEN AND EARTH"
+      ],
+      [
+        "HELP"
+      ],
+      "PSALM 124 : 8"
+    ],
+    [
+      32,
+      39,
+      [
+        "LORD BREAK EVERY SUBTLE",
+        "NET OF FEAR AND TRAP",
+        "PLOTTED AGAINST THIS LIFE"
+      ],
+      [
+        "BREAK"
+      ],
+      "PSALM 124 : 6-8"
+    ],
+    [
+      39,
+      46,
+      [
+        "YOU ARE OUR REFUGE",
+        "PULL OUR FEET FROM THE",
+        "DARK CABLES OF ANXIETY"
+      ],
+      [
+        "REFUGE"
+      ],
+      "PSALM 124 : 6-8"
+    ],
+    [
+      46,
+      52,
+      [
+        "AMEN THE TRAP SET",
+        "AGAINST YOUR PEACE IS BROKEN"
+      ],
+      [
+        "BROKEN"
+      ],
+      "PSALM 124 : 6-8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The trap set against your peace is broken.",
+      "kind": "phrase",
+      "words": [
+        "TRAP",
+        "BROKEN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "You were not handed over to the thing that sought to consume you today.",
+      "kind": "phrase",
+      "words": [
+        "NOT",
+        "HANDED"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the word of God in Psalm 124: Blessed be the LORD, who hath not given us as a prey to their teeth.",
+      "kind": "phrase",
+      "words": [
+        "BLESSED",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Our soul is escaped as a bird out of the snare of the fowlers: the snare is broken, and we are escaped.",
+      "kind": "phrase",
+      "words": [
+        "SNARE",
+        "BROKEN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Our help is in the name of the LORD, who made heaven and earth.",
+      "kind": "phrase",
+      "words": [
+        "OUR",
+        "HELP"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, break every subtle net of fear and hidden trap plotted against this life.",
+      "kind": "phrase",
+      "words": [
+        "BREAK",
+        "NET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are our refuge; pull our feet from the dark cables of anxiety.",
+      "kind": "phrase",
+      "words": [
+        "OUR",
+        "REFUGE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. The trap set against your peace is broken.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "BROKEN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 124:6-8"
+}

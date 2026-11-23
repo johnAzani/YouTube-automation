@@ -1,0 +1,365 @@
+{
+  "key": "short-shieldpsalm144v1",
+  "channel": "prayer8",
+  "psalm": 144,
+  "title": [
+    "GOD IS YOUR REFUGE",
+    "IN THE COMING BATTLE"
+  ],
+  "poster": [
+    "PSALM 144:1-2",
+    "THE LORD MY STRENGTH",
+    "HIGH TOWER & DELIVERER",
+    "THE COVENANT SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone fortress watchtower sunset mountains",
+    "sunlit mountain pass golden rays cloud landscape",
+    "dramatic mountain peak high tower view light sky",
+    "golden sunlight beaming over quiet mountain ridge",
+    "calm mountain lake reflection sunset trees",
+    "peaceful valley river sun rays through trees",
+    "majestic mountain refuge dramatic light sunset sky"
+  ],
+  "scenes": [
+    {
+      "a": "That upcoming conflict weighs heavy on your mind.",
+      "img": "short-shieldpsalm144v1-scene-01.jpg",
+      "kicker": "UPCOMING CONFLICT",
+      "sub": "FACING THE BATTLES OF TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Blessed be the LORD my strength, which teacheth my hands to war, and my fingers to fight:",
+      "img": "short-shieldpsalm144v1-scene-02.jpg",
+      "kicker": "GOD OUR STRENGTH",
+      "sub": "HE TEACHETH OUR HANDS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "My goodness, and my fortress; my high tower, and my deliverer;",
+      "img": "short-shieldpsalm144v1-scene-03.jpg",
+      "kicker": "HIGH TOWER",
+      "sub": "MY FORTRESS AND DELIVERER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "my shield, and he in whom I trust; who subdueth my people under me.",
+      "img": "short-shieldpsalm144v1-scene-04.jpg",
+      "kicker": "OUR SHIELD",
+      "sub": "HE IN WHOM WE TRUST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, train our hands and quiet our anxious hearts for every trial ahead.",
+      "img": "short-shieldpsalm144v1-scene-05.jpg",
+      "kicker": "QUIET HEART",
+      "sub": "PREPARING FOR TRIAL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Be our high tower when opposition surrounds us, and our shield when strength fades.",
+      "img": "short-shieldpsalm144v1-scene-06.jpg",
+      "kicker": "UNSHAKABLE COVERING",
+      "sub": "WHEN OPPOSITION SURROUNDS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Subdue every fear and steady our steps in Your unfailing protection.",
+      "img": "short-shieldpsalm144v1-scene-07.jpg",
+      "kicker": "DIVINE REFUGE",
+      "sub": "STEADY STEPS IN GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That upcoming conflict weighs heavy on your mind."
+    ],
+    [
+      3,
+      5,
+      "Hear God's Word from Psalm 144:"
+    ],
+    [
+      5,
+      11,
+      "Blessed be the LORD my strength, which teacheth my hands to war, and my fingers to fight:"
+    ],
+    [
+      11,
+      16,
+      "My goodness, and my fortress; my high tower, and my deliverer;"
+    ],
+    [
+      16,
+      20,
+      "my shield, and he in whom I trust; who subdueth my people under me."
+    ],
+    [
+      20,
+      25,
+      "Lord, train our hands and quiet our anxious hearts for every trial ahead."
+    ],
+    [
+      25,
+      30,
+      "Be our high tower when opposition surrounds us, and our shield when strength fades."
+    ],
+    [
+      30,
+      34,
+      "Subdue every fear and steady our steps in Your unfailing protection."
+    ],
+    [
+      34,
+      38,
+      "Amen. We place that upcoming conflict in Your hands."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT UPCOMING CONFLICT",
+        "WEIGHS HEAVY ON YOUR MIND"
+      ],
+      [
+        "UPCOMING",
+        "CONFLICT"
+      ],
+      "PSALM 144 : 1-2"
+    ],
+    [
+      3,
+      5,
+      [
+        "HEAR GOD'S WORD",
+        "FROM PSALM 144"
+      ],
+      [
+        "WORD"
+      ],
+      "PSALM 144 : 1-2"
+    ],
+    [
+      5,
+      11,
+      [
+        "BLESSED BE THE LORD MY STRENGTH",
+        "WHICH TEACHETH MY HANDS TO WAR",
+        "AND MY FINGERS TO FIGHT"
+      ],
+      [
+        "STRENGTH",
+        "WAR",
+        "FIGHT"
+      ],
+      "PSALM 144 : 1"
+    ],
+    [
+      11,
+      16,
+      [
+        "MY GOODNESS AND MY FORTRESS",
+        "MY HIGH TOWER",
+        "AND MY DELIVERER"
+      ],
+      [
+        "FORTRESS",
+        "HIGH",
+        "TOWER",
+        "DELIVERER"
+      ],
+      "PSALM 144 : 2"
+    ],
+    [
+      16,
+      20,
+      [
+        "MY SHIELD AND HE",
+        "IN WHOM I TRUST",
+        "WHO SUBDUETH MY PEOPLE UNDER ME"
+      ],
+      [
+        "SHIELD",
+        "TRUST"
+      ],
+      "PSALM 144 : 2"
+    ],
+    [
+      20,
+      25,
+      [
+        "LORD TRAIN OUR HANDS",
+        "AND QUIET OUR ANXIOUS HEARTS",
+        "FOR EVERY TRIAL AHEAD"
+      ],
+      [
+        "QUIET",
+        "HEARTS"
+      ],
+      "PSALM 144 : 1-2"
+    ],
+    [
+      25,
+      30,
+      [
+        "BE OUR HIGH TOWER",
+        "WHEN OPPOSITION SURROUNDS US",
+        "AND OUR SHIELD WHEN STRENGTH FADES"
+      ],
+      [
+        "OPPOSITION",
+        "SHIELD"
+      ],
+      "PSALM 144 : 1-2"
+    ],
+    [
+      30,
+      34,
+      [
+        "SUBDUE EVERY FEAR",
+        "AND STEADY OUR STEPS",
+        "IN YOUR UNFAILING PROTECTION"
+      ],
+      [
+        "SUBDUE",
+        "STEADY"
+      ],
+      "PSALM 144 : 1-2"
+    ],
+    [
+      34,
+      38,
+      [
+        "AMEN WE PLACE THAT",
+        "UPCOMING CONFLICT IN YOUR HANDS"
+      ],
+      [
+        "UPCOMING",
+        "CONFLICT"
+      ],
+      "PSALM 144 : 1-2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That upcoming conflict weighs heavy on your mind.",
+      "kind": "phrase",
+      "words": [
+        "UPCOMING",
+        "CONFLICT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed be the LORD my strength, which teacheth my hands to war, and my fingers to fight:",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "WAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "My goodness, and my fortress; my high tower, and my deliverer;",
+      "kind": "phrase",
+      "words": [
+        "FORTRESS",
+        "HIGH",
+        "TOWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "my shield, and he in whom I trust; who subdueth my people under me.",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, train our hands and quiet our anxious hearts for every trial ahead.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "HEARTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be our high tower when opposition surrounds us, and our shield when strength fades.",
+      "kind": "phrase",
+      "words": [
+        "OPPOSITION",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subdue every fear and steady our steps in Your unfailing protection.",
+      "kind": "phrase",
+      "words": [
+        "SUBDUE",
+        "PROTECTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. We place that upcoming conflict in Your hands.",
+      "kind": "phrase",
+      "words": [
+        "UPCOMING",
+        "CONFLICT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 144:1-2"
+}

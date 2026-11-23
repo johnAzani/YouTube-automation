@@ -1,0 +1,317 @@
+{
+  "key": "short-shield1john4v4",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "GREATER IS HE",
+    "THAT IS IN YOU"
+  ],
+  "poster": [
+    "GREATER IS HE",
+    "THAT IS IN YOU",
+    "1 JOHN 4:4",
+    "THE COVENANT SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone fortress watchtower mist morning light rays",
+    "sunbeam breaking through dark storm clouds over mountain peak",
+    "calm deep lake surrounded by tall pine trees dawn fog",
+    "golden light beaming through dense forest canopy quiet morning",
+    "dramatic sun rays over calm ocean coastal cliffs sunrise",
+    "rugged mountain ridge path sunrise light peaceful journey",
+    "strong stone wall sunlight streaming through fog morning shield"
+  ],
+  "scenes": [
+    {
+      "a": "That subtle threat standing against you must yield.",
+      "img": "short-shield1john4v4-scene-01.jpg",
+      "kicker": "SILENT THREAT",
+      "sub": "THE PRESSURE STANDING AGAINST YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Ye are of God, little children, and have overcome them: because greater is he that is in you, than he that is in the world.",
+      "img": "short-shield1john4v4-scene-02.jpg",
+      "kicker": "1 JOHN 4:4",
+      "sub": "YE ARE OF GOD LITTLE CHILDREN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, when quiet intimidation tries to make us feel small, anchor our hearts in Your abiding presence.",
+      "img": "short-shield1john4v4-scene-03.jpg",
+      "kicker": "ABIDING PRESENCE",
+      "sub": "ANCHOR OUR HEARTS IN GOD",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "You have claimed us as Your own and placed Your Spirit within us.",
+      "img": "short-shield1john4v4-scene-04.jpg",
+      "kicker": "SPIRIT WITHIN",
+      "sub": "CLAIMED AND COVERED BY GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "No scheme of opposition, no sudden fear, and no unseen danger can overpower the God who dwells in us.",
+      "img": "short-shield1john4v4-scene-05.jpg",
+      "kicker": "UNSHAKABLE SHIELD",
+      "sub": "NO OPPOSITION CAN OVERPOWER GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Guard our steps, shield our minds from every lie of weakness, and give us courage to stand firm.",
+      "img": "short-shield1john4v4-scene-06.jpg",
+      "kicker": "STAND FIRM",
+      "sub": "COURAGE UNDER HIS COVERING",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. That subtle threat standing against you must yield.",
+      "img": "short-shield1john4v4-scene-07.jpg",
+      "kicker": "HE MUST YIELD",
+      "sub": "THE COVENANT SHIELD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That subtle threat standing against you must yield."
+    ],
+    [
+      3,
+      11,
+      "Ye are of God, little children, and have overcome them: because greater is he that is in you, than he that is in the world."
+    ],
+    [
+      11,
+      18,
+      "Lord, when quiet intimidation tries to make us feel small, anchor our hearts in Your abiding presence."
+    ],
+    [
+      18,
+      25,
+      "You have claimed us as Your own and placed Your Spirit within us."
+    ],
+    [
+      25,
+      33,
+      "No scheme of opposition, no sudden fear, and no unseen danger can overpower the God who dwells in us."
+    ],
+    [
+      33,
+      40,
+      "Guard our steps, shield our minds from every lie of weakness, and give us courage to stand firm."
+    ],
+    [
+      40,
+      45,
+      "Amen. That subtle threat standing against you must yield."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT SUBTLE THREAT",
+        "STANDING AGAINST YOU",
+        "MUST YIELD"
+      ],
+      [
+        "SUBTLE",
+        "YIELD"
+      ],
+      "1 JOHN 4 : 4"
+    ],
+    [
+      3,
+      11,
+      [
+        "YE ARE OF GOD",
+        "AND HAVE OVERCOME THEM",
+        "GREATER IS HE IN YOU"
+      ],
+      [
+        "GREATER",
+        "OVERCOME"
+      ],
+      "1 JOHN 4 : 4"
+    ],
+    [
+      11,
+      18,
+      [
+        "WHEN QUIET INTIMIDATION",
+        "TRIES TO MAKE US FEEL SMALL",
+        "ANCHOR OUR HEARTS IN YOU"
+      ],
+      [
+        "ANCHOR",
+        "HEARTS"
+      ],
+      "1 JOHN 4 : 4"
+    ],
+    [
+      18,
+      25,
+      [
+        "YOU HAVE CLAIMED US",
+        "AS YOUR OWN AND PLACED",
+        "YOUR SPIRIT WITHIN US"
+      ],
+      [
+        "CLAIMED",
+        "SPIRIT"
+      ],
+      "1 JOHN 4 : 4"
+    ],
+    [
+      25,
+      33,
+      [
+        "NO SCHEME OF OPPOSITION",
+        "AND NO UNSEEN DANGER",
+        "CAN OVERPOWER GOD"
+      ],
+      [
+        "OVERPOWER",
+        "GOD"
+      ],
+      "1 JOHN 4 : 4"
+    ],
+    [
+      33,
+      40,
+      [
+        "GUARD OUR STEPS",
+        "SHIELD OUR MINDS",
+        "GIVE US COURAGE TO STAND"
+      ],
+      [
+        "SHIELD",
+        "COURAGE"
+      ],
+      "1 JOHN 4 : 4"
+    ],
+    [
+      40,
+      45,
+      [
+        "AMEN THAT SUBTLE THREAT",
+        "STANDING AGAINST YOU",
+        "MUST YIELD"
+      ],
+      [
+        "AMEN",
+        "YIELD"
+      ],
+      "1 JOHN 4 : 4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That subtle threat standing against you must yield.",
+      "kind": "phrase",
+      "words": [
+        "SUBTLE",
+        "YIELD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Ye are of God, little children, and have overcome them: because greater is he that is in you, than he that is in the world.",
+      "kind": "phrase",
+      "words": [
+        "GREATER",
+        "OVERCOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when quiet intimidation tries to make us feel small, anchor our hearts in Your abiding presence.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You have claimed us as Your own and placed Your Spirit within us.",
+      "kind": "phrase",
+      "words": [
+        "CLAIMED",
+        "SPIRIT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "No scheme of opposition, no sudden fear, and no unseen danger can overpower the God who dwells in us.",
+      "kind": "phrase",
+      "words": [
+        "DWELLS",
+        "OVERPOWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guard our steps, shield our minds from every lie of weakness, and give us courage to stand firm.",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "COURAGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. That subtle threat standing against you must yield.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "YIELD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 John 4:4"
+}
