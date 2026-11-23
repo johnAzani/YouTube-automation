@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-23T03:46:53.786248+00:00",
+  "generated_at": "2026-11-23T10:42:31.878124+00:00",
   "as_of": "2026-11-23",
   "sufficient_data": true,
   "measured_longform_videos": 4,
   "total_longform_videos": 9,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 89,
+    "receipt_video_ids": 90,
     "matched_video_ids": 50,
     "longform_below_view_threshold": 4,
     "longform_missing_view_count": 0,
@@ -44,123 +44,116 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 37,
+    "measured_shorts": 36,
     "total_shorts": 41,
     "sufficient_data": true,
-    "avg_views": 59.4,
+    "avg_views": 54.6,
     "median_views": 45,
-    "total_views": 2196,
+    "total_views": 1967,
     "minimum_age_days": 2,
     "by_book": {
       "1 john": {
         "shorts": 1,
         "avg_views": 10.0,
-        "ratio": 0.723
+        "ratio": 0.728
       },
       "deuteronomy": {
         "shorts": 2,
-        "avg_views": 16.5,
-        "ratio": 0.639
+        "avg_views": 17.5,
+        "ratio": 0.66
       },
       "hebrews": {
         "shorts": 1,
         "avg_views": 9.0,
-        "ratio": 0.717
+        "ratio": 0.722
       },
       "isaiah": {
         "shorts": 3,
         "avg_views": 71.0,
-        "ratio": 1.118,
+        "ratio": 1.18,
         "avg_apv": 150.2,
-        "loop_ratio": 1.093
+        "loop_ratio": 1.055
       },
       "jeremiah": {
         "shorts": 1,
         "avg_views": 10.0,
-        "ratio": 0.723
-      },
-      "john": {
-        "shorts": 1,
-        "avg_views": 239.0,
-        "ratio": 2.009,
-        "avg_apv": 73.0,
-        "loop_ratio": 0.874
+        "ratio": 0.728
       },
       "matthew": {
         "shorts": 2,
         "avg_views": 91.0,
-        "ratio": 1.267,
+        "ratio": 1.333,
         "avg_apv": 49.7,
-        "loop_ratio": 0.808
+        "loop_ratio": 0.795
       },
       "philippians": {
         "shorts": 1,
         "avg_views": 58.0,
-        "ratio": 0.992,
+        "ratio": 1.021,
         "avg_apv": 68.2,
-        "loop_ratio": 0.86
+        "loop_ratio": 0.843
       },
       "psalm": {
         "shorts": 24,
-        "avg_views": 59.2,
-        "ratio": 0.997,
-        "avg_apv": 136.0,
-        "loop_ratio": 1.122
+        "avg_views": 59.5,
+        "ratio": 1.082,
+        "avg_apv": 148.8,
+        "loop_ratio": 1.115
       },
       "romans": {
         "shorts": 1,
         "avg_views": 22.0,
-        "ratio": 0.79
+        "ratio": 0.801
       }
     },
     "by_theme": {
       "anxiety_peace": {
-        "shorts": 3,
-        "avg_views": 138.0,
-        "ratio": 1.795,
-        "avg_apv": 70.6,
-        "loop_ratio": 0.8
+        "shorts": 2,
+        "avg_views": 87.5,
+        "ratio": 1.301,
+        "avg_apv": 68.2,
+        "loop_ratio": 0.843
       },
       "daily_guidance_wisdom": {
         "shorts": 8,
-        "avg_views": 36.6,
-        "ratio": 0.694,
+        "avg_views": 36.9,
+        "ratio": 0.74,
         "avg_apv": 150.2,
-        "loop_ratio": 1.093
+        "loop_ratio": 1.055
       },
       "midday_strength_endurance": {
         "shorts": 4,
         "avg_views": 47.5,
-        "ratio": 0.867,
+        "ratio": 0.913,
         "avg_apv": 363.4,
-        "loop_ratio": 1.697
+        "loop_ratio": 1.606
       },
       "morning_mercy_renewal": {
         "shorts": 2,
         "avg_views": 89.0,
-        "ratio": 1.25,
+        "ratio": 1.314,
         "avg_apv": 58.1,
-        "loop_ratio": 0.831
+        "loop_ratio": 0.817
       },
       "peace_rest": {
         "shorts": 19,
-        "avg_views": 58.0,
-        "ratio": 0.979,
-        "avg_apv": 96.7,
-        "loop_ratio": 0.867
+        "avg_views": 58.3,
+        "ratio": 1.061,
+        "avg_apv": 104.2,
+        "loop_ratio": 0.863
       },
       "protection": {
         "shorts": 1,
-        "avg_views": 19.0,
-        "ratio": 0.773
+        "avg_views": 21.0,
+        "ratio": 0.795
       }
     },
-    "measured_with_apv": 11,
-    "avg_apv": 117.5,
+    "measured_with_apv": 9,
+    "avg_apv": 129.0,
     "looped_shorts": 4,
     "guidance": [
-      "Shorts: Matthew runs 1.3x this channel's average Short (59 views over 37 Shorts); its passages are written first.",
-      "Shorts: 4 of 11 with Analytics retention were watched past the end (average % viewed 100 or more, channel average 118%); looping books share the ranking with view counts."
+      "Shorts: Matthew runs 1.3x this channel's average Short (55 views over 36 Shorts); its passages are written first.",
+      "Shorts: 4 of 9 with Analytics retention were watched past the end (average % viewed 100 or more, channel average 129%); looping books share the ranking with view counts."
     ]
   },
   "guidance": [
