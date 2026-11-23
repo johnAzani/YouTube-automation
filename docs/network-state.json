@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T01:11:39Z",
+  "generated_at": "2026-11-23T01:14:55Z",
   "monitor_generated_at": "2026-11-22T21:40:11.712280+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 682,
-    "published_longform": 198,
-    "published_shorts": 484,
-    "public_total": 680,
-    "queued_longform": 53,
-    "queued_shorts": 58,
+    "published_total": 684,
+    "published_longform": 199,
+    "published_shorts": 485,
+    "public_total": 682,
+    "queued_longform": 52,
+    "queued_shorts": 57,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": true
@@ -509,33 +509,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 54,
-        "published_longform": 15,
-        "published_shorts": 39,
+        "published_total": 56,
+        "published_longform": 16,
+        "published_shorts": 40,
         "thumbnail_pending": 46,
-        "public_total": 54,
-        "queued_longform": 6,
+        "public_total": 56,
+        "queued_longform": 5,
         "queued_other": 3,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-SHIELDNUMBERS6V24",
-        "title": "Pray This Numbers 6:24-26 Prayer for Divine Protection | The Burden You Carry Today #Shorts",
-        "format": "short",
-        "youtube_video_id": "2-WDcWtZ7B4",
-        "watch_url": "https://www.youtube.com/shorts/2-WDcWtZ7B4",
-        "published_on": "2026-11-22",
-        "published_at": "2026-11-22T20:14:31Z"
-      },
-      "next_queued_longform": {
         "id": "0618",
         "title": "Finding Sanctuary in the Storm: Psalm 32:7 | The Covenant Shield",
-        "words": 1364,
+        "format": "longform",
+        "youtube_video_id": "BoLlg3W2WrI",
+        "watch_url": "https://youtu.be/BoLlg3W2WrI",
+        "published_on": "2026-11-23",
+        "published_at": "2026-11-23T01:14:08Z"
+      },
+      "next_queued_longform": {
+        "id": "0619",
+        "title": "Pure Word Shield: Proverbs 30:5 | The Covenant Shield",
+        "words": 1559,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldisaiah43v2",
-        "scripture": "Isaiah 43:2",
+        "short": "short-shieldpsalm32v7",
+        "scripture": "Psalm 32:7",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0618",
+      "slug": "finding-sanctuary-in-the-storm-psalm-32-7",
+      "file": "0618-finding-sanctuary-in-the-storm-psalm-32-7.md",
+      "title": "Finding Sanctuary in the Storm: Psalm 32:7 | The Covenant Shield",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T01:14:08Z",
+      "youtube_video_id": "BoLlg3W2WrI",
+      "watch_url": "https://youtu.be/BoLlg3W2WrI",
+      "youtu_be_url": "https://youtu.be/BoLlg3W2WrI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/BoLlg3W2WrI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/BoLlg3W2WrI/hqdefault.jpg",
+      "thumb_text": "MY HIDING PLACE",
+      "thumbnail_pending": false,
+      "duration_label": "~9 min",
+      "words": 1364
+    },
+    {
       "id": "0223",
       "slug": "prayer-for-the-iron-gates-to-open-acts-12-5-11-the-midnight-watch",
       "file": "0223-prayer-for-the-iron-gates-to-open-acts-12-5-11-the-midnight-watch.md",
@@ -748,6 +772,30 @@
       "thumbnail_pending": false,
       "duration_label": "42s",
       "words": 627
+    },
+    {
+      "id": "SHORT-SHIELDISAIAH43V2",
+      "slug": "short-shieldisaiah43v2-protection-prayer",
+      "file": "short-shieldisaiah43v2-protection-prayer.md",
+      "title": "Pray This Isaiah 43:2 Prayer for Divine Protection | Find Your Refuge Now #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T00:30:39Z",
+      "youtube_video_id": "8MuPyQk5Ing",
+      "watch_url": "https://www.youtube.com/shorts/8MuPyQk5Ing",
+      "youtu_be_url": "https://youtu.be/8MuPyQk5Ing",
+      "shorts_url": "https://www.youtube.com/shorts/8MuPyQk5Ing",
+      "studio_url": "https://studio.youtube.com/video/8MuPyQk5Ing/edit",
+      "thumb_url": "https://i.ytimg.com/vi/8MuPyQk5Ing/hqdefault.jpg",
+      "thumb_text": "A REFUGE IN THE STORM \u00b7 STRENGTH FOR THE WEARY",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 625
     },
     {
       "id": "SHORT-GARDENLAMENTATIONS3V22",
@@ -17541,19 +17589,6 @@
         "words": 1267
       },
       {
-        "id": "0618",
-        "slug": "finding-sanctuary-in-the-storm-psalm-32-7",
-        "file": "0618-finding-sanctuary-in-the-storm-psalm-32-7.md",
-        "title": "Finding Sanctuary in the Storm: Psalm 32:7 | The Covenant Shield",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1364
-      },
-      {
         "id": "0619",
         "slug": "pure-word-shield-proverbs-30-5",
         "file": "0619-pure-word-shield-proverbs-30-5.md",
@@ -18213,17 +18248,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldisaiah43v2",
-        "file": "0617-short-shieldisaiah43v2.yml",
-        "companion_longform_id": "0617",
-        "scripture": "Isaiah 43:2",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm32v7",
