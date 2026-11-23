@@ -1,6 +1,6 @@
 ---
 id: '0113'
-title: 'When the Dark Hours Won''t Let You Rest: Psalm 42:8 | The Secret Place'
+title: "When Sleep Will Not Come: Psalm 42:8 | The Secret Place"
 slug: when-the-dark-hours-wont-let-you-rest-psalm-42-8
 status: approved
 channel: secret-place
@@ -71,6 +71,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When the Dark Hours Won't Let You Rest: Psalm 42:8 | The Secret Place"
+queue_title_fixed_at: "2026-11-23"
 ---
 
 ## Scene 1 — The Quiet Room and the Midnight Hour
