@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T22:09:47Z",
+  "generated_at": "2026-11-23T22:10:12Z",
   "monitor_generated_at": "2026-11-23T18:09:31.613904+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 710,
+    "published_total": 711,
     "published_longform": 203,
-    "published_shorts": 507,
-    "public_total": 708,
+    "published_shorts": 508,
+    "public_total": 709,
     "queued_longform": 59,
-    "queued_shorts": 71,
+    "queued_shorts": 70,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -232,23 +232,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 74,
+        "published_total": 75,
         "published_longform": 24,
-        "published_shorts": 50,
-        "thumbnail_pending": 73,
-        "public_total": 74,
+        "published_shorts": 51,
+        "thumbnail_pending": 74,
+        "public_total": 75,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTMICAH7V7",
-        "title": "Pray This Micah 7:7-8 Midnight Prayer | When Silence Fills The Room #Shorts",
+        "id": "SHORT-MIDNIGHTISAIAH45V2",
+        "title": "Pray This Isaiah 45:2-3 Midnight Prayer | Midnight Breakthrough Prayer #Shorts",
         "format": "short",
-        "youtube_video_id": "2Qu4rSMayV4",
-        "watch_url": "https://www.youtube.com/shorts/2Qu4rSMayV4",
+        "youtube_video_id": "-CXz7ODsmek",
+        "watch_url": "https://www.youtube.com/shorts/-CXz7ODsmek",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T16:00:30Z"
+        "published_at": "2026-11-23T22:09:13Z"
       },
       "next_queued_longform": {
         "id": "0224",
@@ -257,8 +257,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightisaiah45v2",
-        "scripture": "Isaiah 45:2-3",
+        "short": "short-midnightisaiah59v19",
+        "scripture": "Isaiah 59:19",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTISAIAH45V2",
+      "slug": "short-midnightisaiah45v2-midnight-prayer",
+      "file": "short-midnightisaiah45v2-midnight-prayer.md",
+      "title": "Pray This Isaiah 45:2-3 Midnight Prayer | Midnight Breakthrough Prayer #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T22:09:13Z",
+      "youtube_video_id": "-CXz7ODsmek",
+      "watch_url": "https://www.youtube.com/shorts/-CXz7ODsmek",
+      "youtu_be_url": "https://youtu.be/-CXz7ODsmek",
+      "shorts_url": "https://www.youtube.com/shorts/-CXz7ODsmek",
+      "studio_url": "https://studio.youtube.com/video/-CXz7ODsmek/edit",
+      "thumb_url": "https://i.ytimg.com/vi/-CXz7ODsmek/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "58s",
+      "words": 625
+    },
     {
       "id": "SHORT-MIDDAYNEHEMIAH6V3",
       "slug": "short-middaynehemiah6v3-midday-prayer",
@@ -18826,17 +18850,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightisaiah45v2",
-        "file": "0219-short-midnightisaiah45v2.yml",
-        "companion_longform_id": "0219",
-        "scripture": "Isaiah 45:2-3",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightisaiah59v19",
