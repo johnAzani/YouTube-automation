@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE MIDNIGHT WATCH", "MATTHEW 18:18", "HEAVENLY AUTHORITY", "MIDNIGHT PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-23T15:15:14Z"
+thumbnail_retry_after: "2026-11-30T15:51:19Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If the weight of that recurring worry keeps you pacing in the dark, listen here. Your prayers hold a weight that shifts the spiritual atmosphere of your entire home today. Verily I say unto you, Whatsoever ye shall bind on earth shall be bound in heaven: and whatsoever ye shall loose on earth shall be loosed in heaven. Lord, I lift up the one listening, asking that you grant them clarity and strength. Let them step into the authority given, closing doors to fear and opening heavens. May your spirit rest now in the peace of knowing you are heard tonight. Amen.

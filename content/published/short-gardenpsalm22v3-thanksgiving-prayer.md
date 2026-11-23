@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["A PRAYER", "OF THANKS", "AND PRAISE", "THE PRAISE GARDEN"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-23T11:58:23Z"
+thumbnail_retry_after: "2026-11-30T15:51:25Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If you are sitting in the quiet shadows of discouragement right now, stay here. Lord God, when our souls feel low and our strength fails us, we turn our eyes to You. Your word reminds us of Your unchanging majesty and grace. As it is written: But thou art holy, O thou that inhabitest the praises of Israel. Father, we offer our humble thanksgiving and lift our voices in adoration to Your name today. Let Your holy presence fill every troubled corner of our minds with Your everlasting peace. In Jesus' name, amen.

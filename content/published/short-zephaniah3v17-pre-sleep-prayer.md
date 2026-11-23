@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["BEDTIME PRAYER", "ZEPHANIAH 3:17", "GOD IS WITH YOU", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If worry about tomorrow's decision is keeping your eyes open tonight, rest now. Zephaniah three verse seventeen tells us, The LORD thy God in the midst of thee is mighty; he will save, he will rejoice over thee with joy; he will rest in his love, he will joy over thee with singing. You do not need to carry the weight of this quiet hour alone. The Almighty is present in your room right now, holding you in perfect peace and quietness. Let His love calm your anxious heart as you lay your head down. He delights in you and watches over your sleep tonight. Subscribe to join us in prayer every night.
