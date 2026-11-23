@@ -1,0 +1,336 @@
+{
+  "key": "short-middayhabakkuk3v19",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "WHEN THE CLIMB",
+    "FEELS TOO STEEP"
+  ],
+  "poster": [
+    "STRENGTH FOR",
+    "THE CLIMB",
+    "HABAKKUK 3:19",
+    "THE MIDDAY WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "steep mountain trail high noon sunlight",
+    "sunlit rocky mountain path midday sky",
+    "open Bible resting on rustic wooden desk warm window sunlight",
+    "high mountain peak under clear blue midday sky",
+    "rocky foothill path bathed in bright sunlight",
+    "mountain ridge overview looking above valley noon sun",
+    "tranquil high mountain summit bathed in golden light",
+    "calm mountain landscape high noon sun"
+  ],
+  "scenes": [
+    {
+      "a": "Your knees feel weak on this steep hill.",
+      "img": "short-middayhabakkuk3v19-scene-01.jpg",
+      "kicker": "STEEP HILL",
+      "sub": "YOUR KNEES FEEL WEAK TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The noon sun is hot, and the climb ahead looks far too steep for tired legs.",
+      "img": "short-middayhabakkuk3v19-scene-02.jpg",
+      "kicker": "MIDDAY HEAT",
+      "sub": "WHEN THE CLIMB FEELS TOO FAR",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear the promise in Habakkuk three, verse nineteen:",
+      "img": "short-middayhabakkuk3v19-scene-03.jpg",
+      "kicker": "HABAKKUK 3:19",
+      "sub": "HE WILL MAKE ME WALK",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The LORD God is my strength, and he will make my feet like hinds' feet, and he will make me to walk upon mine high places.",
+      "img": "short-middayhabakkuk3v19-scene-04.jpg",
+      "kicker": "HINDS FEET",
+      "sub": "UPON MINE HIGH PLACES",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, when the path of this day turns rough, grant us steady feet.",
+      "img": "short-middayhabakkuk3v19-scene-05.jpg",
+      "kicker": "STEADY FEET",
+      "sub": "WHEN THE PATH TURNS ROUGH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Hold us up where the ground gives way, and lift our eyes above the dark valley.",
+      "img": "short-middayhabakkuk3v19-scene-06.jpg",
+      "kicker": "ABOVE THE VALLEY",
+      "sub": "HOLD US UP LORD",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Give us your quiet endurance until we reach the high places of your peace.",
+      "img": "short-middayhabakkuk3v19-scene-07.jpg",
+      "kicker": "QUIET ENDURANCE",
+      "sub": "HIGH PLACES OF PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. When your knees feel weak on this steep hill.",
+      "img": "short-middayhabakkuk3v19-scene-08.jpg",
+      "kicker": "MIDDAY WATCH",
+      "sub": "PAUSE AND PRAY AT NOON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your knees feel weak on this steep hill."
+    ],
+    [
+      3,
+      9,
+      "The noon sun is hot, and the climb ahead looks far too steep for tired legs."
+    ],
+    [
+      9,
+      13,
+      "Hear the promise in Habakkuk three, verse nineteen:"
+    ],
+    [
+      13,
+      23,
+      "The LORD God is my strength, and he will make my feet like hinds' feet, and he will make me to walk upon mine high places."
+    ],
+    [
+      23,
+      29,
+      "Lord, when the path of this day turns rough, grant us steady feet."
+    ],
+    [
+      29,
+      36,
+      "Hold us up where the ground gives way, and lift our eyes above the dark valley."
+    ],
+    [
+      36,
+      43,
+      "Give us your quiet endurance until we reach the high places of your peace."
+    ],
+    [
+      43,
+      49,
+      "Amen. When your knees feel weak on this steep hill."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR KNEES FEEL WEAK",
+        "ON THIS STEEP HILL"
+      ],
+      [
+        "WEAK",
+        "STEEP"
+      ],
+      "HABAKKUK 3 : 19"
+    ],
+    [
+      3,
+      9,
+      [
+        "THE NOON SUN IS HOT",
+        "AND THE CLIMB AHEAD LOOKS",
+        "FAR TOO STEEP FOR TIRED LEGS"
+      ],
+      [
+        "STEEP",
+        "TIRED"
+      ],
+      "HABAKKUK 3 : 19"
+    ],
+    [
+      9,
+      13,
+      [
+        "HEAR THE PROMISE IN",
+        "HABAKKUK THREE",
+        "VERSE NINETEEN"
+      ],
+      [
+        "PROMISE"
+      ],
+      "HABAKKUK 3 : 19"
+    ],
+    [
+      13,
+      23,
+      [
+        "THE LORD GOD IS MY STRENGTH",
+        "AND HE WILL MAKE MY FEET",
+        "LIKE HINDS FEET AND MAKE ME WALK",
+        "UPON MINE HIGH PLACES"
+      ],
+      [
+        "STRENGTH",
+        "HIGH PLACES"
+      ],
+      "HABAKKUK 3 : 19"
+    ],
+    [
+      23,
+      29,
+      [
+        "LORD WHEN THE PATH",
+        "OF THIS DAY TURNS ROUGH",
+        "GRANT US STEADY FEET"
+      ],
+      [
+        "STEADY FEET"
+      ],
+      "HABAKKUK 3 : 19"
+    ],
+    [
+      29,
+      36,
+      [
+        "HOLD US UP WHERE THE GROUND",
+        "GIVES WAY AND LIFT OUR EYES",
+        "ABOVE THE DARK VALLEY"
+      ],
+      [
+        "HOLD US UP",
+        "DARK VALLEY"
+      ],
+      "HABAKKUK 3 : 19"
+    ],
+    [
+      36,
+      43,
+      [
+        "GIVE US YOUR QUIET ENDURANCE",
+        "UNTIL WE REACH THE HIGH PLACES",
+        "OF YOUR PEACE"
+      ],
+      [
+        "QUIET ENDURANCE",
+        "PEACE"
+      ],
+      "HABAKKUK 3 : 19"
+    ],
+    [
+      43,
+      49,
+      [
+        "AMEN WHEN YOUR KNEES",
+        "FEEL WEAK ON THIS STEEP HILL"
+      ],
+      [
+        "AMEN",
+        "STEEP HILL"
+      ],
+      "HABAKKUK 3 : 19"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your knees feel weak on this steep hill.",
+      "kind": "phrase",
+      "words": [
+        "WEAK",
+        "STEEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The noon sun is hot, and the climb ahead looks far too steep for tired legs.",
+      "kind": "phrase",
+      "words": [
+        "CLIMB",
+        "TIRED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD God is my strength, and he will make my feet like hinds' feet, and he will make me to walk upon mine high places.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "HIGH",
+        "PLACES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when the path of this day turns rough, grant us steady feet.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "FEET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hold us up where the ground gives way, and lift our eyes above the dark valley.",
+      "kind": "phrase",
+      "words": [
+        "HOLD",
+        "LIFT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give us your quiet endurance until we reach the high places of your peace.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Habakkuk 3:19"
+}
