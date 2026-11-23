@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T00:37:12Z",
+  "generated_at": "2026-11-23T01:11:39Z",
   "monitor_generated_at": "2026-11-22T21:40:11.712280+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 680,
-    "published_longform": 197,
-    "published_shorts": 483,
-    "public_total": 678,
-    "queued_longform": 54,
-    "queued_shorts": 59,
+    "published_total": 682,
+    "published_longform": 198,
+    "published_shorts": 484,
+    "public_total": 680,
+    "queued_longform": 53,
+    "queued_shorts": 58,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": true
@@ -237,33 +237,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 70,
-        "published_longform": 23,
-        "published_shorts": 47,
-        "thumbnail_pending": 69,
-        "public_total": 70,
-        "queued_longform": 5,
+        "published_total": 72,
+        "published_longform": 24,
+        "published_shorts": 48,
+        "thumbnail_pending": 71,
+        "public_total": 72,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0222",
-        "title": "When Mysteries Surround Your Path: Daniel 2:19-22 | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "sXTvbqZcMy4",
-        "watch_url": "https://youtu.be/sXTvbqZcMy4",
-        "published_on": "2026-11-22",
-        "published_at": "2026-11-22T20:31:47Z"
-      },
-      "next_queued_longform": {
         "id": "0223",
         "title": "Prayer for the Iron Gates to Open: Acts 12:5-11 | The Midnight Watch",
-        "words": 1509,
+        "format": "longform",
+        "youtube_video_id": "80iuJjQ7qLk",
+        "watch_url": "https://youtu.be/80iuJjQ7qLk",
+        "published_on": "2026-11-23",
+        "published_at": "2026-11-23T01:10:51Z"
+      },
+      "next_queued_longform": {
+        "id": "0224",
+        "title": "When You Are Weary of Waiting: Luke 18:1-8 | The Midnight Watch",
+        "words": 1546,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightpsalm144v1",
-        "scripture": "Psalm 144:1-2",
+        "short": "short-midnightisaiah45v2",
+        "scripture": "Isaiah 45:2-3",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0223",
+      "slug": "prayer-for-the-iron-gates-to-open-acts-12-5-11-the-midnight-watch",
+      "file": "0223-prayer-for-the-iron-gates-to-open-acts-12-5-11-the-midnight-watch.md",
+      "title": "Prayer for the Iron Gates to Open: Acts 12:5-11 | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T01:10:51Z",
+      "youtube_video_id": "80iuJjQ7qLk",
+      "watch_url": "https://youtu.be/80iuJjQ7qLk",
+      "youtu_be_url": "https://youtu.be/80iuJjQ7qLk",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/80iuJjQ7qLk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/80iuJjQ7qLk/hqdefault.jpg",
+      "thumb_text": "IRON GATE OPENS",
+      "thumbnail_pending": true,
+      "duration_label": "~10 min",
+      "words": 1509
+    },
+    {
       "id": "SHORT-GUIDEDPSALM143V8",
       "slug": "short-guidedpsalm143v8-guidance-prayer",
       "file": "short-guidedpsalm143v8-guidance-prayer.md",
@@ -820,6 +844,30 @@
       "thumbnail_pending": false,
       "duration_label": "51s",
       "words": 631
+    },
+    {
+      "id": "SHORT-MIDNIGHTPSALM144V1",
+      "slug": "short-midnightpsalm144v1-midnight-prayer",
+      "file": "short-midnightpsalm144v1-midnight-prayer.md",
+      "title": "Pray This Psalm 144:1-2 Midnight Prayer | Finding Strength In Silence #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T00:22:28Z",
+      "youtube_video_id": "WErsksgT2RU",
+      "watch_url": "https://www.youtube.com/shorts/WErsksgT2RU",
+      "youtu_be_url": "https://youtu.be/WErsksgT2RU",
+      "shorts_url": "https://www.youtube.com/shorts/WErsksgT2RU",
+      "studio_url": "https://studio.youtube.com/video/WErsksgT2RU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/WErsksgT2RU/hqdefault.jpg",
+      "thumb_text": "PRAYER AT MIDNIGHT \u00b7 STRENGTH FOR THE WEARY",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 627
     },
     {
       "id": "SHORT-FAMILYPSALM147V13",
@@ -17233,19 +17281,6 @@
         "words": 1383
       },
       {
-        "id": "0223",
-        "slug": "prayer-for-the-iron-gates-to-open-acts-12-5-11-the-midnight-watch",
-        "file": "0223-prayer-for-the-iron-gates-to-open-acts-12-5-11-the-midnight-watch.md",
-        "title": "Prayer for the Iron Gates to Open: Acts 12:5-11 | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1509
-      },
-      {
         "id": "0224",
         "slug": "when-you-are-weary-of-waiting-luke-18-1-8",
         "file": "0224-when-you-are-weary-of-waiting-luke-18-1-8.md",
@@ -17914,17 +17949,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightpsalm144v1",
-        "file": "0218-short-midnightpsalm144v1.yml",
-        "companion_longform_id": "0218",
-        "scripture": "Psalm 144:1-2",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightisaiah45v2",

@@ -2,7 +2,7 @@
 id: '0223'
 title: 'Prayer for the Iron Gates to Open: Acts 12:5-11 | The Midnight Watch'
 slug: prayer-for-the-iron-gates-to-open-acts-12-5-11-the-midnight-watch
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -74,6 +74,15 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-23"
+published_at: "2026-11-23T01:10:51Z"
+youtube_video_id: "80iuJjQ7qLk"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Rising at the Midnight Hour
