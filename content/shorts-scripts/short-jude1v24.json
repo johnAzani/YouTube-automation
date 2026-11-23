@@ -1,0 +1,325 @@
+{
+  "key": "short-jude1v24",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "HE IS ABLE TO KEEP YOU",
+    "A BEDTIME PRAYER FOR REST"
+  ],
+  "poster": [
+    "HE IS ABLE",
+    "TO KEEP YOU",
+    "FROM FALLING",
+    "JUDE 1:24-25"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "misty calm lake night silent water",
+    "dark pine forest under starry night sky",
+    "soft glowing lantern on dark wooden deck",
+    "calm ocean waves at dusk blue hour",
+    "night sky full of bright stars over mountains",
+    "gentle river flowing through quiet night forest",
+    "calm moonlit mountain lake still water"
+  ],
+  "scenes": [
+    {
+      "a": "Your mind is racing in the dark tonight.",
+      "img": "short-jude1v24-scene-01.jpg",
+      "kicker": "THE DARK HOUR",
+      "sub": "YOUR MIND IS RACING TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You worry you will stumble tomorrow under the weight you carry.",
+      "img": "short-jude1v24-scene-02.jpg",
+      "kicker": "HEAVY STEPS",
+      "sub": "WORRY OF STUMBLING TOMORROW",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Quiet your heart and hear these words.",
+      "img": "short-jude1v24-scene-03.jpg",
+      "kicker": "QUIET HEART",
+      "sub": "HEAR HIS PROMISE TONIGHT",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Now unto him that is able to keep you from falling, and to present you faultless before the presence of his glory with exceeding joy,",
+      "img": "short-jude1v24-scene-04.jpg",
+      "kicker": "ABLE TO KEEP YOU",
+      "sub": "JUDE 1:24",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "To the only wise God our Savior, be glory and majesty, dominion and power, both now and ever. Amen.",
+      "img": "short-jude1v24-scene-05.jpg",
+      "kicker": "GLORY AND MAJESTY",
+      "sub": "JUDE 1:25",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, hold us steady when our legs feel weak. Keep our hearts from falling into fear tonight, and rest us safe in your strong hands.",
+      "img": "short-jude1v24-scene-06.jpg",
+      "kicker": "HOLD US STEADY",
+      "sub": "REST SAFE IN HIS HANDS",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Your mind is racing in the dark.",
+      "img": "short-jude1v24-scene-07.jpg",
+      "kicker": "STILL HELD",
+      "sub": "PEACE IN THE DARK",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your mind is racing in the dark tonight."
+    ],
+    [
+      3,
+      8,
+      "You worry you will stumble tomorrow under the weight you carry."
+    ],
+    [
+      8,
+      12,
+      "Quiet your heart and hear these words."
+    ],
+    [
+      12,
+      22,
+      "Now unto him that is able to keep you from falling, and to present you faultless before the presence of his glory with exceeding joy,"
+    ],
+    [
+      22,
+      30,
+      "To the only wise God our Savior, be glory and majesty, dominion and power, both now and ever. Amen."
+    ],
+    [
+      30,
+      38,
+      "Lord, hold us steady when our legs feel weak. Keep our hearts from falling into fear tonight, and rest us safe in your strong hands."
+    ],
+    [
+      38,
+      43,
+      "Amen. Your mind is racing in the dark."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR MIND IS RACING",
+        "IN THE DARK TONIGHT"
+      ],
+      [
+        "RACING",
+        "DARK"
+      ],
+      "JUDE 1 : 24-25"
+    ],
+    [
+      3,
+      8,
+      [
+        "YOU WORRY YOU WILL",
+        "STUMBLE TOMORROW",
+        "UNDER THE WEIGHT YOU CARRY"
+      ],
+      [
+        "STUMBLE",
+        "WEIGHT"
+      ],
+      "JUDE 1 : 24-25"
+    ],
+    [
+      8,
+      12,
+      [
+        "QUIET YOUR HEART",
+        "AND HEAR THESE WORDS"
+      ],
+      [
+        "QUIET",
+        "HEAR"
+      ],
+      "JUDE 1 : 24-25"
+    ],
+    [
+      12,
+      22,
+      [
+        "NOW UNTO HIM THAT IS ABLE",
+        "TO KEEP YOU FROM FALLING",
+        "AND TO PRESENT YOU FAULTLESS",
+        "BEFORE HIS GLORY WITH EXCEEDING JOY"
+      ],
+      [
+        "KEEP",
+        "FAULTLESS",
+        "EXCEEDING",
+        "JOY"
+      ],
+      "JUDE 1 : 24"
+    ],
+    [
+      22,
+      30,
+      [
+        "TO THE ONLY WISE GOD",
+        "OUR SAVIOR BE GLORY",
+        "AND MAJESTY DOMINION",
+        "AND POWER BOTH NOW AND EVER"
+      ],
+      [
+        "SAVIOR",
+        "GLORY",
+        "MAJESTY",
+        "POWER"
+      ],
+      "JUDE 1 : 25"
+    ],
+    [
+      30,
+      38,
+      [
+        "LORD HOLD US STEADY",
+        "WHEN OUR LEGS FEEL WEAK",
+        "KEEP OUR HEARTS FROM FEAR",
+        "AND REST US SAFE IN YOUR HANDS"
+      ],
+      [
+        "STEADY",
+        "FEAR",
+        "SAFE",
+        "HANDS"
+      ],
+      "JUDE 1 : 24-25"
+    ],
+    [
+      38,
+      43,
+      [
+        "AMEN",
+        "YOUR MIND IS RACING",
+        "IN THE DARK"
+      ],
+      [
+        "AMEN",
+        "RACING",
+        "DARK"
+      ],
+      "JUDE 1 : 24-25"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your mind is racing in the dark tonight.",
+      "kind": "phrase",
+      "words": [
+        "RACING",
+        "DARK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You worry you will stumble tomorrow under the weight you carry.",
+      "kind": "phrase",
+      "words": [
+        "STUMBLE",
+        "WEIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Quiet your heart and hear these words.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "HEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Now unto him that is able to keep you from falling, and to present you faultless before the presence of his glory with exceeding joy,",
+      "kind": "phrase",
+      "words": [
+        "KEEP",
+        "FAULTLESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "To the only wise God our Savior, be glory and majesty, dominion and power, both now and ever. Amen.",
+      "kind": "phrase",
+      "words": [
+        "GLORY",
+        "MAJESTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, hold us steady when our legs feel weak. Keep our hearts from falling into fear tonight, and rest us safe in your strong hands.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "SAFE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Your mind is racing in the dark.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "DARK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Jude 1:24-25"
+}
