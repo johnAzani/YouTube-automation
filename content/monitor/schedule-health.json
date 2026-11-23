@@ -30,6 +30,13 @@
       "workflow": "tests-on-main.yml"
     },
     {
+      "late_minutes": 181,
+      "name": "Produce video",
+      "ran_at": "2026-11-23T13:15:38+00:00",
+      "slot": "2026-11-23T10:14:00+00:00",
+      "workflow": "produce.yml"
+    },
+    {
       "late_minutes": 173,
       "name": "YouTube reporting jobs (thumbnail impressions)",
       "ran_at": "2026-11-23T08:40:19+00:00",
@@ -37,8 +44,8 @@
       "workflow": "reporting-jobs.yml"
     }
   ],
-  "generated_at": "2026-11-23T13:15:34.167002+00:00",
-  "last_run_at": "2026-11-23T13:14:37+00:00",
+  "generated_at": "2026-11-23T13:17:59.492772+00:00",
+  "last_run_at": "2026-11-23T13:17:07+00:00",
   "on_time": [
     {
       "late_minutes": 85,
