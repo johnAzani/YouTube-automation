@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T08:50:02Z",
+  "generated_at": "2026-11-23T10:13:52Z",
   "monitor_generated_at": "2026-11-23T08:48:38.501249+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 684,
+    "published_total": 685,
     "published_longform": 199,
-    "published_shorts": 485,
-    "public_total": 682,
-    "queued_longform": 53,
-    "queued_shorts": 59,
+    "published_shorts": 486,
+    "public_total": 683,
+    "queued_longform": 61,
+    "queued_shorts": 90,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": true
@@ -106,9 +106,9 @@
         "published_shorts": 64,
         "thumbnail_pending": 1,
         "public_total": 94,
-        "queued_longform": 6,
+        "queued_longform": 7,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 8
       },
       "latest_video": {
         "id": "SHORT-MORNINGPSALM119V147",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningproverbs4v18",
-        "scripture": "Proverbs 4:18",
+        "short": "short-morningluke1v78",
+        "scripture": "Luke 1:78-79",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -169,9 +169,9 @@
         "published_shorts": 55,
         "thumbnail_pending": 1,
         "public_total": 79,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-MIDDAYISAIAH26V12",
@@ -189,8 +189,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaynehemiah2v4",
-        "scripture": "Nehemiah 2:4",
+        "short": "short-middayjohn15v5",
+        "scripture": "John 15:5",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -237,9 +237,9 @@
         "published_shorts": 48,
         "thumbnail_pending": 71,
         "public_total": 72,
-        "queued_longform": 4,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "0223",
@@ -257,8 +257,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightisaiah45v2",
-        "scripture": "Isaiah 45:2-3",
+        "short": "short-midnightjob35v10",
+        "scripture": "Job 35:10",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -300,23 +300,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 61,
+        "published_total": 62,
         "published_longform": 19,
-        "published_shorts": 42,
-        "thumbnail_pending": 61,
-        "public_total": 61,
-        "queued_longform": 5,
+        "published_shorts": 43,
+        "thumbnail_pending": 62,
+        "public_total": 62,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-FAMILYPSALM147V13",
-        "title": "Pray This Psalm 147:13-14 Family Prayer Over Your Home | Safe Inside Your Home #Shorts",
+        "id": "SHORT-FAMILY1SAMUEL1V27",
+        "title": "Pray This 1 Samuel 1:27-28 Family Prayer Over Your Home | Your Quiet Cry Is Remembered #Shorts",
         "format": "short",
-        "youtube_video_id": "Nc9W4snFWWk",
-        "watch_url": "https://www.youtube.com/shorts/Nc9W4snFWWk",
+        "youtube_video_id": "TgyR84_JR2w",
+        "watch_url": "https://www.youtube.com/shorts/TgyR84_JR2w",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T00:22:15Z"
+        "published_at": "2026-11-23T10:13:01Z"
       },
       "next_queued_longform": {
         "id": "0319",
@@ -325,8 +325,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familypsalm115v12",
-        "scripture": "Psalm 115:12-15",
+        "short": "short-familyisaiah49v25",
+        "scripture": "Isaiah 49:25",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -373,9 +373,9 @@
         "published_shorts": 46,
         "thumbnail_pending": 4,
         "public_total": 63,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-HEALINGPROVERBS4V20",
@@ -393,8 +393,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingpsalm107v19",
-        "scripture": "Psalm 107:19-20",
+        "short": "short-healingjob5v18",
+        "scripture": "Job 5:18",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -443,7 +443,7 @@
         "public_total": 63,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-PROVISIONJOHN6V11",
@@ -461,8 +461,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionisaiah45v2",
-        "scripture": "Isaiah 45:2-3",
+        "short": "short-provisiongenesis39v2",
+        "scripture": "Genesis 39:2-3",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -509,9 +509,9 @@
         "published_shorts": 40,
         "thumbnail_pending": 43,
         "public_total": 56,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 3,
-        "queued_shorts": 6
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "0618",
@@ -529,8 +529,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm32v7",
-        "scripture": "Psalm 32:7",
+        "short": "short-shield1john4v4",
+        "scripture": "1 John 4:4",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -577,9 +577,9 @@
         "published_shorts": 41,
         "thumbnail_pending": 54,
         "public_total": 54,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-GARDENLAMENTATIONS3V22",
@@ -597,8 +597,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm95v1",
-        "scripture": "Psalm 95:1-2",
+        "short": "short-gardenexodus15v2",
+        "scripture": "Exodus 15:2",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -647,7 +647,7 @@
         "public_total": 52,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 7
       },
       "latest_video": {
         "id": "SHORT-GUIDEDPSALM143V8",
@@ -665,8 +665,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedjohn16v13",
-        "scripture": "John 16:13",
+        "short": "short-guidedjeremiah29v11",
+        "scripture": "Jeremiah 29:11",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILY1SAMUEL1V27",
+      "slug": "short-family1samuel1v27-household-prayer",
+      "file": "short-family1samuel1v27-household-prayer.md",
+      "title": "Pray This 1 Samuel 1:27-28 Family Prayer Over Your Home | Your Quiet Cry Is Remembered #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T10:13:01Z",
+      "youtube_video_id": "TgyR84_JR2w",
+      "watch_url": "https://www.youtube.com/shorts/TgyR84_JR2w",
+      "youtu_be_url": "https://youtu.be/TgyR84_JR2w",
+      "shorts_url": "https://www.youtube.com/shorts/TgyR84_JR2w",
+      "studio_url": "https://studio.youtube.com/video/TgyR84_JR2w/edit",
+      "thumb_url": "https://i.ytimg.com/vi/TgyR84_JR2w/hqdefault.jpg",
+      "thumb_text": "FOR THIS CHILD \u00b7 I PRAYED",
+      "thumbnail_pending": true,
+      "duration_label": "45s",
+      "words": 671
+    },
     {
       "id": "0618",
       "slug": "finding-sanctuary-in-the-storm-psalm-32-7",
@@ -17311,6 +17335,19 @@
         "words": 1208
       },
       {
+        "id": "0109",
+        "slug": "grace-when-the-afternoon-gets-heavy-hebrews-4-16",
+        "file": "0109-grace-when-the-afternoon-gets-heavy-hebrews-4-16.md",
+        "title": "Grace When the Afternoon Gets Heavy: Hebrews 4:16 | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1382
+      },
+      {
         "id": "0113",
         "slug": "when-the-dark-hours-wont-let-you-rest-psalm-42-8",
         "file": "0113-when-the-dark-hours-wont-let-you-rest-psalm-42-8.md",
@@ -17389,6 +17426,32 @@
         "words": 1121
       },
       {
+        "id": "0229",
+        "slug": "the-god-of-peace-who-seals-the-broken-hebrews-13-20-21",
+        "file": "0229-the-god-of-peace-who-seals-the-broken-hebrews-13-20-21.md",
+        "title": "The God of Peace Who Seals the Broken: Hebrews 13:20-21",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1401
+      },
+      {
+        "id": "0230",
+        "slug": "the-lord-shall-fight-for-you-exodus-14-13-14",
+        "file": "0230-the-lord-shall-fight-for-you-exodus-14-13-14.md",
+        "title": "The Lord Shall Fight for You: Exodus 14:13-14 | The Midnight Watch",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1083
+      },
+      {
         "id": "0319",
         "slug": "bowing-our-knees-for-our-homes-ephesians-3-14-19",
         "file": "0319-bowing-our-knees-for-our-homes-ephesians-3-14-19.md",
@@ -17454,6 +17517,19 @@
         "words": 1184
       },
       {
+        "id": "0325",
+        "slug": "strength-in-marriage-and-home-ecclesiastes-4-9-12",
+        "file": "0325-strength-in-marriage-and-home-ecclesiastes-4-9-12.md",
+        "title": "Strength in Marriage and Home: Ecclesiastes 4:9-12 | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1309
+      },
+      {
         "id": "0418",
         "slug": "prayer-of-faith-for-healing-james-5-14-16",
         "file": "0418-prayer-of-faith-for-healing-james-5-14-16.md",
@@ -17517,6 +17593,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1154
+      },
+      {
+        "id": "0430",
+        "slug": "i-will-bring-it-health-and-cure-jeremiah-33-6-the-healing- balm",
+        "file": "0430-i-will-bring-it-health-and-cure-jeremiah-33-6-the-healing- balm.md",
+        "title": "I Will Bring It Health and Cure: Jeremiah 33:6 | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1273
       },
       {
         "id": "0519",
@@ -17662,6 +17751,19 @@
         "words": 1140
       },
       {
+        "id": "0630",
+        "slug": "covered-in-the-day-of-battle-psalm-140-7-the-covenant-shield",
+        "file": "0630-covered-in-the-day-of-battle-psalm-140-7-the-covenant-shield.md",
+        "title": "Covered in the Day of Battle: Psalm 140:7 | The Covenant Shield",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1183
+      },
+      {
         "id": "0714",
         "slug": "the-sacrifice-of-praise-when-grief-is-heavy-hebrews-13-15",
         "file": "0714-the-sacrifice-of-praise-when-grief-is-heavy-hebrews-13-15.md",
@@ -17725,6 +17827,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1501
+      },
+      {
+        "id": "0719",
+        "slug": "thanksgiving-worship-when-your-soul-is-thirsty-psalm-63-3-4",
+        "file": "0719-thanksgiving-worship-when-your-soul-is-thirsty-psalm-63-3-4.md",
+        "title": "Thanksgiving Worship When Your Soul Is Thirsty: Psalm 63:3-4",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1679
       },
       {
         "id": "0813",
@@ -17803,9 +17918,143 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1613
+      },
+      {
+        "id": "0900",
+        "slug": "faithful-work-today-ecclesiastes-116-the-morning-altar",
+        "file": "0900-faithful-work-today-ecclesiastes-116-the-morning-altar.md",
+        "title": "Faithful Work Today: Ecclesiastes 11:6 | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 896
       }
     ],
     "shorts": [
+      {
+        "short": "short-familyisaiah49v25",
+        "file": "0000-short-familyisaiah49v25.yml",
+        "companion_longform_id": "",
+        "scripture": "Isaiah 49:25",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "17:14"
+      },
+      {
+        "short": "short-gardenexodus15v2",
+        "file": "0000-short-gardenexodus15v2.yml",
+        "companion_longform_id": "",
+        "scripture": "Exodus 15:2",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
+        "short": "short-gardenpsalm126v2",
+        "file": "0000-short-gardenpsalm126v2.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 126:2-3",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
+        "short": "short-gardenpsalm40v1",
+        "file": "0000-short-gardenpsalm40v1.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 40:1-3",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
+        "short": "short-gardenrevelation5v12",
+        "file": "0000-short-gardenrevelation5v12.yml",
+        "companion_longform_id": "",
+        "scripture": "Revelation 5:12-13",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
+        "short": "short-guidedjeremiah29v11",
+        "file": "0000-short-guidedjeremiah29v11.yml",
+        "companion_longform_id": "",
+        "scripture": "Jeremiah 29:11",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "18:44"
+      },
+      {
+        "short": "short-guidedluke1v79",
+        "file": "0000-short-guidedluke1v79.yml",
+        "companion_longform_id": "",
+        "scripture": "Luke 1:79",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "18:44"
+      },
+      {
+        "short": "short-healingjob5v18",
+        "file": "0000-short-healingjob5v18.yml",
+        "companion_longform_id": "",
+        "scripture": "Job 5:18",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-healingnahum1v7",
+        "file": "0000-short-healingnahum1v7.yml",
+        "companion_longform_id": "",
+        "scripture": "Nahum 1:7",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-healingproverbs3v7",
+        "file": "0000-short-healingproverbs3v7.yml",
+        "companion_longform_id": "",
+        "scripture": "Proverbs 3:7-8",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-healingpsalm73v26",
+        "file": "0000-short-healingpsalm73v26.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 73:26",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
       {
         "short": "short-jude1v24",
         "file": "0000-short-jude1v24.yml",
@@ -17816,6 +18065,149 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
+      },
+      {
+        "short": "short-middayjohn15v5",
+        "file": "0000-short-middayjohn15v5.yml",
+        "companion_longform_id": "",
+        "scripture": "John 15:5",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-middaynehemiah6v3",
+        "file": "0000-short-middaynehemiah6v3.yml",
+        "companion_longform_id": "",
+        "scripture": "Nehemiah 6:3",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-midnightjob35v10",
+        "file": "0000-short-midnightjob35v10.yml",
+        "companion_longform_id": "",
+        "scripture": "Job 35:10",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-midnightmicah7v7",
+        "file": "0000-short-midnightmicah7v7.yml",
+        "companion_longform_id": "",
+        "scripture": "Micah 7:7-8",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-morningluke1v78",
+        "file": "0000-short-morningluke1v78.yml",
+        "companion_longform_id": "",
+        "scripture": "Luke 1:78-79",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-morningromans13v11",
+        "file": "0000-short-morningromans13v11.yml",
+        "companion_longform_id": "",
+        "scripture": "Romans 13:11-12",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-provisiongenesis39v2",
+        "file": "0000-short-provisiongenesis39v2.yml",
+        "companion_longform_id": "",
+        "scripture": "Genesis 39:2-3",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-provisionproverbs30v8",
+        "file": "0000-short-provisionproverbs30v8.yml",
+        "companion_longform_id": "",
+        "scripture": "Proverbs 30:8-9",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-provisionpsalm112v1",
+        "file": "0000-short-provisionpsalm112v1.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 112:1-5",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-provisionpsalm145v15",
+        "file": "0000-short-provisionpsalm145v15.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 145:15-16",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-shield1john4v4",
+        "file": "0000-short-shield1john4v4.yml",
+        "companion_longform_id": "",
+        "scripture": "1 John 4:4",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "08:44"
+      },
+      {
+        "short": "short-shieldpsalm124v6",
+        "file": "0000-short-shieldpsalm124v6.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 124:6-8",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "08:44"
+      },
+      {
+        "short": "short-shieldpsalm144v1",
+        "file": "0000-short-shieldpsalm144v1.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 144:1-2",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "08:44"
       },
       {
         "short": "short-zephaniah3v17",
@@ -18005,6 +18397,17 @@
         "target_window_utc": "12:14"
       },
       {
+        "short": "short-middayhebrews4v16",
+        "file": "0109-short-middayhebrews4v16.yml",
+        "companion_longform_id": "0109",
+        "scripture": "Hebrews 4:16",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
         "short": "short-psalm77v6",
         "file": "0114-short-psalm77v6.yml",
         "companion_longform_id": "0114",
@@ -18075,6 +18478,28 @@
         "file": "0228-short-midnightcolossians4v2.yml",
         "companion_longform_id": "0228",
         "scripture": "Colossians 4:2",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-midnighthebrews13v20",
+        "file": "0229-short-midnighthebrews13v20.yml",
+        "companion_longform_id": "0229",
+        "scripture": "Hebrews 13:20-21",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-midnightexodus14v13",
+        "file": "0230-short-midnightexodus14v13.yml",
+        "companion_longform_id": "0230",
+        "scripture": "Exodus 14:13-14",
         "channel": "prayer4",
         "channel_name": "The Midnight Watch",
         "status": "approved",
@@ -18214,6 +18639,17 @@
         "target_window_utc": "15:44"
       },
       {
+        "short": "short-healingjeremiah33v6",
+        "file": "0430-short-healingjeremiah33v6.yml",
+        "companion_longform_id": "0430",
+        "scripture": "Jeremiah 33:6",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
         "short": "short-provisionisaiah45v2",
         "file": "0515-short-provisionisaiah45v2.yml",
         "companion_longform_id": "0515",
@@ -18346,6 +18782,17 @@
         "target_window_utc": "08:44"
       },
       {
+        "short": "short-shieldpsalm140v7",
+        "file": "0630-short-shieldpsalm140v7.yml",
+        "companion_longform_id": "0630",
+        "scripture": "Psalm 140:7",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "08:44"
+      },
+      {
         "short": "short-gardenpsalm95v1",
         "file": "0710-short-gardenpsalm95v1.yml",
         "companion_longform_id": "0710",
@@ -18394,6 +18841,17 @@
         "file": "0715-short-gardenpsalm9v1.yml",
         "companion_longform_id": "0715",
         "scripture": "Psalm 9:1-2",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
+        "short": "short-gardenpsalm63v3",
+        "file": "0719-short-gardenpsalm63v3.yml",
+        "companion_longform_id": "0719",
+        "scripture": "Psalm 63:3-4",
         "channel": "prayer9",
         "channel_name": "The Praise Garden",
         "status": "approved",
@@ -18454,6 +18912,17 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
+      },
+      {
+        "short": "short-morningecclesiastes11v6",
+        "file": "0900-short-morningecclesiastes11v6.yml",
+        "companion_longform_id": "0900",
+        "scripture": "Ecclesiastes 11:6",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
       }
     ]
   },
