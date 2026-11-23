@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T18:10:52Z",
+  "generated_at": "2026-11-23T22:08:04Z",
   "monitor_generated_at": "2026-11-23T18:09:31.613904+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 708,
+    "published_total": 709,
     "published_longform": 203,
-    "published_shorts": 505,
-    "public_total": 706,
+    "published_shorts": 506,
+    "public_total": 707,
     "queued_longform": 59,
-    "queued_shorts": 73,
+    "queued_shorts": 72,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 97,
+        "published_total": 98,
         "published_longform": 31,
-        "published_shorts": 66,
+        "published_shorts": 67,
         "thumbnail_pending": 1,
-        "public_total": 96,
+        "public_total": 97,
         "queued_longform": 7,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-MORNINGROMANS13V11",
-        "title": "Say This Romans 13:11-12 Prayer at Sunrise | Before Your Heart Feels Ready #Shorts",
+        "id": "SHORT-MORNINGPROVERBS4V18",
+        "title": "Say This Proverbs 4:18 Prayer at Sunrise | Light For Your Path #Shorts",
         "format": "short",
-        "youtube_video_id": "JvcGVIabq6A",
-        "watch_url": "https://www.youtube.com/shorts/JvcGVIabq6A",
+        "youtube_video_id": "cfWHMY8_jiE",
+        "watch_url": "https://www.youtube.com/shorts/cfWHMY8_jiE",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T16:02:18Z"
+        "published_at": "2026-11-23T22:07:04Z"
       },
       "next_queued_longform": {
         "id": "0075",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningproverbs4v18",
-        "scripture": "Proverbs 4:18",
+        "short": "short-morningproverbs16v9",
+        "scripture": "Proverbs 16:9",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPROVERBS4V18",
+      "slug": "short-morningproverbs4v18-sunrise-prayer",
+      "file": "short-morningproverbs4v18-sunrise-prayer.md",
+      "title": "Say This Proverbs 4:18 Prayer at Sunrise | Light For Your Path #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T22:07:04Z",
+      "youtube_video_id": "cfWHMY8_jiE",
+      "watch_url": "https://www.youtube.com/shorts/cfWHMY8_jiE",
+      "youtu_be_url": "https://youtu.be/cfWHMY8_jiE",
+      "shorts_url": "https://www.youtube.com/shorts/cfWHMY8_jiE",
+      "studio_url": "https://studio.youtube.com/video/cfWHMY8_jiE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/cfWHMY8_jiE/hqdefault.jpg",
+      "thumb_text": "WALK IN LIGHT \u00b7 PROVERBS 4:18",
+      "thumbnail_pending": false,
+      "duration_label": "44s",
+      "words": 624
+    },
     {
       "id": "0101",
       "slug": "when-the-afternoon-weariness-sets-in-psalm-84-5-7",
@@ -18668,17 +18692,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-morningproverbs4v18",
-        "file": "0071-short-morningproverbs4v18.yml",
-        "companion_longform_id": "0071",
-        "scripture": "Proverbs 4:18",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningproverbs16v9",
