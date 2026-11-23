@@ -1,0 +1,339 @@
+{
+  "key": "short-healingnahum1v7",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "A STRONG HOLD IN TROUBLE",
+    "HEALING PEACE FOR WEARY HEARTS"
+  ],
+  "poster": [
+    "WHEN TROUBLE PRESSES",
+    "GOD IS YOUR STRONGHOLD",
+    "PRAYER FOR RESTORATION",
+    "NAHUM 1:7"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters sunset calm reflection",
+    "warm golden sanctuary light soft glow sanctuary quiet",
+    "white dove peace soaring calm turquoise sky sunlight",
+    "calm mountain lake gentle turquoise water soft sunlight",
+    "golden sunlight streaming through morning mist tranquil river",
+    "peaceful living waters glowing warm golden light sanctuary",
+    "gentle water ripples turquoise light peaceful nature",
+    "serene golden sunset calm water glowing sky tranquil"
+  ],
+  "scenes": [
+    {
+      "a": "When trouble presses heavy on your heart today.",
+      "img": "short-healingnahum1v7-scene-01.jpg",
+      "kicker": "HEAVY HEART TODAY",
+      "sub": "WHEN TROUBLE PRESSES HARD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You carry worries no one else can see in this quiet hour.",
+      "img": "short-healingnahum1v7-scene-02.jpg",
+      "kicker": "HIDDEN WORRIES",
+      "sub": "GOD SEES YOUR QUIET BURDEN",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear God speak in Nahum chapter one, verse seven:",
+      "img": "short-healingnahum1v7-scene-03.jpg",
+      "kicker": "NAHUM 1:7",
+      "sub": "HIS PROMISE IN TROUBLE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The LORD is good, a strong hold in the day of trouble; and he knoweth them that trust in him.",
+      "img": "short-healingnahum1v7-scene-04.jpg",
+      "kicker": "A STRONG HOLD",
+      "sub": "HE KNOWETH THEM THAT TRUST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord God, you see this weary heart right now.",
+      "img": "short-healingnahum1v7-scene-05.jpg",
+      "kicker": "LORD HEAR US",
+      "sub": "LOOK UPON THIS WEARY HEART",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Be a refuge against every wave of pain, holding us steady when strength fades.",
+      "img": "short-healingnahum1v7-scene-06.jpg",
+      "kicker": "BE OUR REFUGE",
+      "sub": "STRENGTH WHEN YOU ARE WEAK",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Remind us that we are known, loved, and kept safe in your presence.",
+      "img": "short-healingnahum1v7-scene-07.jpg",
+      "kicker": "KNOWN AND LOVED",
+      "sub": "KEPT SAFE IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Bring your healing peace, Amen, when trouble presses heavy on your heart today.",
+      "img": "short-healingnahum1v7-scene-08.jpg",
+      "kicker": "RESTING IN PEACE",
+      "sub": "HEALING PEACE FOR YOUR HEART",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "When trouble presses heavy on your heart today."
+    ],
+    [
+      3,
+      8,
+      "You carry worries no one else can see in this quiet hour."
+    ],
+    [
+      8,
+      14,
+      "Hear God speak in Nahum chapter one, verse seven:"
+    ],
+    [
+      14,
+      23,
+      "The LORD is good, a strong hold in the day of trouble; and he knoweth them that trust in him."
+    ],
+    [
+      23,
+      29,
+      "Lord God, you see this weary heart right now."
+    ],
+    [
+      29,
+      36,
+      "Be a refuge against every wave of pain, holding us steady when strength fades."
+    ],
+    [
+      36,
+      43,
+      "Remind us that we are known, loved, and kept safe in your presence."
+    ],
+    [
+      43,
+      50,
+      "Bring your healing peace, Amen, when trouble presses heavy on your heart today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WHEN TROUBLE PRESSES",
+        "HEAVY ON YOUR HEART",
+        "TODAY"
+      ],
+      [
+        "HEAVY",
+        "HEART"
+      ],
+      "NAHUM 1 : 7"
+    ],
+    [
+      3,
+      8,
+      [
+        "YOU CARRY WORRIES",
+        "NO ONE ELSE CAN SEE",
+        "IN THIS QUIET HOUR"
+      ],
+      [
+        "WORRIES",
+        "QUIET"
+      ],
+      "NAHUM 1 : 7"
+    ],
+    [
+      8,
+      14,
+      [
+        "HEAR GOD SPEAK",
+        "IN NAHUM CHAPTER ONE",
+        "VERSE SEVEN"
+      ],
+      [
+        "GOD",
+        "SPEAK"
+      ],
+      "NAHUM 1 : 7"
+    ],
+    [
+      14,
+      23,
+      [
+        "THE LORD IS GOOD",
+        "A STRONG HOLD IN THE DAY",
+        "OF TROUBLE",
+        "HE KNOWETH THEM THAT TRUST"
+      ],
+      [
+        "STRONG HOLD",
+        "GOOD"
+      ],
+      "NAHUM 1 : 7"
+    ],
+    [
+      23,
+      29,
+      [
+        "LORD GOD YOU SEE",
+        "THIS WEARY HEART",
+        "RIGHT NOW"
+      ],
+      [
+        "WEARY",
+        "HEART"
+      ],
+      "NAHUM 1 : 7"
+    ],
+    [
+      29,
+      36,
+      [
+        "BE A REFUGE AGAINST",
+        "EVERY WAVE OF PAIN",
+        "HOLDING US STEADY"
+      ],
+      [
+        "REFUGE",
+        "STEADY"
+      ],
+      "NAHUM 1 : 7"
+    ],
+    [
+      36,
+      43,
+      [
+        "REMIND US THAT WE ARE",
+        "KNOWN LOVED AND KEPT",
+        "SAFE IN YOUR PRESENCE"
+      ],
+      [
+        "KNOWN",
+        "SAFE"
+      ],
+      "NAHUM 1 : 7"
+    ],
+    [
+      43,
+      50,
+      [
+        "BRING YOUR HEALING PEACE",
+        "AMEN WHEN TROUBLE PRESSES",
+        "HEAVY ON YOUR HEART TODAY"
+      ],
+      [
+        "HEALING",
+        "PEACE"
+      ],
+      "NAHUM 1 : 7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When trouble presses heavy on your heart today.",
+      "kind": "phrase",
+      "words": [
+        "TROUBLE",
+        "HEAVY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "You carry worries no one else can see in this quiet hour.",
+      "kind": "phrase",
+      "words": [
+        "WORRIES",
+        "QUIET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD is good, a strong hold in the day of trouble; and he knoweth them that trust in him.",
+      "kind": "phrase",
+      "words": [
+        "STRONG",
+        "HOLD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord God, you see this weary heart right now.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be a refuge against every wave of pain, holding us steady when strength fades.",
+      "kind": "phrase",
+      "words": [
+        "REFUGE",
+        "STEADY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Bring your healing peace, Amen, when trouble presses heavy on your heart today.",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Nahum 1:7"
+}

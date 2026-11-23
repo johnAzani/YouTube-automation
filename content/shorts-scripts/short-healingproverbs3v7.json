@@ -1,0 +1,275 @@
+{
+  "key": "short-healingproverbs3v7",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALTH TO THY NAVEL",
+    "HEALING FOR WEARY BONES"
+  ],
+  "poster": [
+    "PROVERBS 3:7-8",
+    "GOD'S HEALING BALM",
+    "RESTORATION FOR WEARY BONES",
+    "THE HEALING BALM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters soft golden sunlight glowing warm peace",
+    "calm turquoise lake still reflection warm golden sanctuary rays quiet",
+    "warm golden sanctuary light glowing rays quiet altar peace",
+    "peaceful living waters turquoise stream soft golden morning light",
+    "white dove flying glowing soft golden sanctuary light rays quiet peace",
+    "tranquil turquoise waters calm reflection golden sunset light gentle peaceful"
+  ],
+  "scenes": [
+    {
+      "a": "Your weary body carries a deep, quiet ache.",
+      "img": "short-healingproverbs3v7-scene-01.jpg",
+      "kicker": "WEARY BODY",
+      "sub": "WHEN PAIN RESTS IN THE QUIET",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We lean on our own understanding when sickness lingers, yet God’s Word restores us.",
+      "img": "short-healingproverbs3v7-scene-02.jpg",
+      "kicker": "TURNING TO GOD",
+      "sub": "LEANING BEYOND OUR OWN STRENGTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Proverbs 3:7-8 promises: Be not wise in thine own eyes: fear the LORD, and depart from evil. It shall be health to thy navel, and marrow to thy bones.",
+      "img": "short-healingproverbs3v7-scene-03.jpg",
+      "kicker": "HOLY SCRIPTURE",
+      "sub": "HEALTH TO THY NAVEL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, we release the desperate fight to fix what feels broken inside us. Pour your living peace into deep places where strength has dried up.",
+      "img": "short-healingproverbs3v7-scene-04.jpg",
+      "kicker": "RELEASING BURDENS",
+      "sub": "LIVING PEACE FOR DRY PLACES",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Bring medicine to weary joints, comfort to strained thoughts, and deep restoration to every bone.",
+      "img": "short-healingproverbs3v7-scene-05.jpg",
+      "kicker": "RESTORATION",
+      "sub": "MARROW TO THY BONES",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Amen. Rest now, even when your weary body carries a deep, quiet ache.",
+      "img": "short-healingproverbs3v7-scene-06.jpg",
+      "kicker": "HEALING PEACE",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your weary body carries a deep, quiet ache."
+    ],
+    [
+      3,
+      9,
+      "We lean on our own understanding when sickness lingers, yet God’s Word restores us."
+    ],
+    [
+      9,
+      18,
+      "Proverbs 3:7-8 promises: Be not wise in thine own eyes: fear the LORD, and depart from evil. It shall be health to thy navel, and marrow to thy bones."
+    ],
+    [
+      18,
+      28,
+      "Lord, we release the desperate fight to fix what feels broken inside us. Pour your living peace into deep places where strength has dried up."
+    ],
+    [
+      28,
+      36,
+      "Bring medicine to weary joints, comfort to strained thoughts, and deep restoration to every bone."
+    ],
+    [
+      36,
+      43,
+      "Amen. Rest now, even when your weary body carries a deep, quiet ache."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR WEARY BODY CARRIES",
+        "A DEEP QUIET ACHE"
+      ],
+      [
+        "WEARY",
+        "ACHE"
+      ],
+      "PROVERBS 3 : 7-8"
+    ],
+    [
+      3,
+      9,
+      [
+        "WE LEAN ON OUR OWN",
+        "UNDERSTANDING WHEN SICKNESS LINGERS",
+        "YET GODS WORD RESTORES US"
+      ],
+      [
+        "RESTORES"
+      ],
+      "PROVERBS 3 : 7-8"
+    ],
+    [
+      9,
+      18,
+      [
+        "BE NOT WISE IN THINE OWN EYES",
+        "FEAR THE LORD AND DEPART FROM EVIL",
+        "IT SHALL BE HEALTH TO THY NAVEL",
+        "AND MARROW TO THY BONES"
+      ],
+      [
+        "HEALTH",
+        "MARROW"
+      ],
+      "PROVERBS 3 : 7-8"
+    ],
+    [
+      18,
+      28,
+      [
+        "WE RELEASE THE DESPERATE FIGHT",
+        "TO FIX WHAT FEELS BROKEN INSIDE US",
+        "POUR YOUR LIVING PEACE INTO",
+        "DEEP PLACES WHERE STRENGTH DRIED UP"
+      ],
+      [
+        "LIVING PEACE"
+      ],
+      "PROVERBS 3 : 7-8"
+    ],
+    [
+      28,
+      36,
+      [
+        "BRING MEDICINE TO WEARY JOINTS",
+        "COMFORT TO STRAINED THOUGHTS AND",
+        "DEEP RESTORATION TO EVERY BONE"
+      ],
+      [
+        "MEDICINE",
+        "RESTORATION"
+      ],
+      "PROVERBS 3 : 7-8"
+    ],
+    [
+      36,
+      43,
+      [
+        "AMEN REST NOW EVEN WHEN YOUR",
+        "WEARY BODY CARRIES",
+        "A DEEP QUIET ACHE"
+      ],
+      [
+        "REST",
+        "ACHE"
+      ],
+      "PROVERBS 3 : 7-8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your weary body carries a deep, quiet ache.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "ACHE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We lean on our own understanding when sickness lingers, yet God’s Word restores us.",
+      "kind": "phrase",
+      "words": [
+        "UNDERSTANDING",
+        "RESTORES"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Proverbs 3:7-8 promises: Be not wise in thine own eyes: fear the LORD, and depart from evil. It shall be health to thy navel, and marrow to thy bones.",
+      "kind": "phrase",
+      "words": [
+        "HEALTH",
+        "MARROW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we release the desperate fight to fix what feels broken inside us. Pour your living peace into deep places where strength has dried up.",
+      "kind": "phrase",
+      "words": [
+        "LIVING",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Bring medicine to weary joints, comfort to strained thoughts, and deep restoration to every bone.",
+      "kind": "phrase",
+      "words": [
+        "MEDICINE",
+        "RESTORATION"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Rest now, even when your weary body carries a deep, quiet ache.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "ACHE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 3:7-8"
+}

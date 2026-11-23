@@ -1,0 +1,358 @@
+{
+  "key": "short-healingjob5v18",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HIS HANDS MAKE WHOLE",
+    "A PRAYER FOR BODILY HEALING"
+  ],
+  "poster": [
+    "HE HEALS THE BROKEN",
+    "JOB 5:18 PRAYER",
+    "THE HEALING BALM",
+    "GOD BINDS YOUR WOUNDS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters soft light",
+    "warm golden sanctuary candle glow calm night",
+    "white dove hovering soft golden glowing light",
+    "peaceful calm mountain lake clear water night",
+    "gentle warm golden light rays through soft fog",
+    "calm serene water surface turquoise warm glow",
+    "glowing warm sanctuary altar light peaceful",
+    "tranquil living water glowing warm golden light"
+  ],
+  "scenes": [
+    {
+      "a": "When your body aches in the quiet dark,",
+      "img": "short-healingjob5v18-scene-01.jpg",
+      "kicker": "QUIET DARK",
+      "sub": "WHEN YOUR BODY ACHES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "you might wonder if God has forgotten where it hurts.",
+      "img": "short-healingjob5v18-scene-02.jpg",
+      "kicker": "HE KNOWS",
+      "sub": "GOD HAS NOT FORGOTTEN YOU",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Job 5:18 says, For he maketh sore, and bindeth up: he woundeth, and his hands make whole.",
+      "img": "short-healingjob5v18-scene-03.jpg",
+      "kicker": "JOB 5:18",
+      "sub": "HIS HANDS MAKE WHOLE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, reach down into every tender wound today.",
+      "img": "short-healingjob5v18-scene-04.jpg",
+      "kicker": "TENDER WOUNDS",
+      "sub": "LORD REACH DOWN TODAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Wrap your gentle hands around the broken places that no human doctor can touch.",
+      "img": "short-healingjob5v18-scene-05.jpg",
+      "kicker": "HEALING HANDS",
+      "sub": "TOUCH THE BROKEN PLACES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Bind up what has been torn apart, and bring true whole restoration to this weary soul.",
+      "img": "short-healingjob5v18-scene-06.jpg",
+      "kicker": "RESTORATION",
+      "sub": "BIND UP WHAT WAS TORN",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "We trust your healing touch, believing that your hands are making us whole right now.",
+      "img": "short-healingjob5v18-scene-07.jpg",
+      "kicker": "MADE WHOLE",
+      "sub": "WE TRUST YOUR HEALING TOUCH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Rest in his care when your body aches in the quiet dark.",
+      "img": "short-healingjob5v18-scene-08.jpg",
+      "kicker": "REST IN HIM",
+      "sub": "IN HIS HEALING CARE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "When your body aches in the quiet dark,"
+    ],
+    [
+      3,
+      9,
+      "you might wonder if God has forgotten where it hurts."
+    ],
+    [
+      9,
+      18,
+      "Job 5:18 says, For he maketh sore, and bindeth up: he woundeth, and his hands make whole."
+    ],
+    [
+      18,
+      26,
+      "Lord, reach down into every tender wound today."
+    ],
+    [
+      26,
+      35,
+      "Wrap your gentle hands around the broken places that no human doctor can touch."
+    ],
+    [
+      35,
+      44,
+      "Bind up what has been torn apart, and bring true whole restoration to this weary soul."
+    ],
+    [
+      44,
+      52,
+      "We trust your healing touch, believing that your hands are making us whole right now."
+    ],
+    [
+      52,
+      58,
+      "Amen. Rest in his care when your body aches in the quiet dark."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WHEN YOUR BODY ACHES",
+        "IN THE QUIET DARK"
+      ],
+      [
+        "ACHES",
+        "DARK"
+      ],
+      "HEALING & RESTORATION"
+    ],
+    [
+      3,
+      9,
+      [
+        "YOU MIGHT WONDER",
+        "IF GOD HAS FORGOTTEN",
+        "WHERE IT HURTS"
+      ],
+      [
+        "FORGOTTEN",
+        "HURTS"
+      ],
+      "JOB 5 : 18"
+    ],
+    [
+      9,
+      18,
+      [
+        "FOR HE MAKETH SORE",
+        "AND BINDETH UP",
+        "HE WOUNDETH",
+        "AND HIS HANDS MAKE WHOLE"
+      ],
+      [
+        "BINDETH",
+        "WHOLE"
+      ],
+      "JOB 5 : 18"
+    ],
+    [
+      18,
+      26,
+      [
+        "LORD REACH DOWN",
+        "INTO EVERY TENDER",
+        "WOUND TODAY"
+      ],
+      [
+        "REACH",
+        "TENDER"
+      ],
+      "JOB 5 : 18"
+    ],
+    [
+      26,
+      35,
+      [
+        "WRAP YOUR GENTLE HANDS",
+        "AROUND BROKEN PLACES",
+        "NO DOCTOR CAN TOUCH"
+      ],
+      [
+        "GENTLE",
+        "TOUCH"
+      ],
+      "JOB 5 : 18"
+    ],
+    [
+      35,
+      44,
+      [
+        "BIND UP WHAT WAS TORN",
+        "BRING RESTORATION",
+        "TO THIS WEARY SOUL"
+      ],
+      [
+        "BIND",
+        "RESTORATION"
+      ],
+      "JOB 5 : 18"
+    ],
+    [
+      44,
+      52,
+      [
+        "WE TRUST YOUR TOUCH",
+        "YOUR HANDS ARE MAKING",
+        "US WHOLE RIGHT NOW"
+      ],
+      [
+        "TRUST",
+        "WHOLE"
+      ],
+      "JOB 5 : 18"
+    ],
+    [
+      52,
+      58,
+      [
+        "AMEN REST IN HIS CARE",
+        "WHEN YOUR BODY ACHES",
+        "IN THE QUIET DARK"
+      ],
+      [
+        "REST",
+        "CARE"
+      ],
+      "JOB 5 : 18"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When your body aches in the quiet dark,",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "DARK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "you might wonder if God has forgotten where it hurts.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "FORGOTTEN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Job 5:18 says, For he maketh sore, and bindeth up: he woundeth, and his hands make whole.",
+      "kind": "phrase",
+      "words": [
+        "BINDETH",
+        "WHOLE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, reach down into every tender wound today.",
+      "kind": "phrase",
+      "words": [
+        "TENDER",
+        "WOUND"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Wrap your gentle hands around the broken places that no human doctor can touch.",
+      "kind": "phrase",
+      "words": [
+        "BROKEN",
+        "PLACES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Bind up what has been torn apart, and bring true whole restoration to this weary soul.",
+      "kind": "phrase",
+      "words": [
+        "WHOLE",
+        "RESTORATION"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "We trust your healing touch, believing that your hands are making us whole right now.",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "TOUCH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Rest in his care when your body aches in the quiet dark.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "CARE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Job 5:18"
+}

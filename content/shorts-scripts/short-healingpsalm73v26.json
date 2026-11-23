@@ -1,0 +1,342 @@
+{
+  "key": "short-healingpsalm73v26",
+  "channel": "prayer6",
+  "psalm": 73,
+  "title": [
+    "GOD IS THE STRENGTH",
+    "OF MY HEART"
+  ],
+  "poster": [
+    "WHEN YOUR STRENGTH FAILS",
+    "GOD IS YOUR PORTION",
+    "HEALING PRAYER",
+    "PSALM 73:26"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "calm turquoise water smooth lake sunset serene",
+    "warm golden sanctuary light soft glow quiet room",
+    "peaceful golden sunlight glowing through tranquil forest mist",
+    "glowing golden candlelight soft sacred sanctuary peace",
+    "tranquil turquoise sea gentle morning waves calm",
+    "white dove soaring softly in warm golden sky peaceful",
+    "serene turquoise river glowing with warm sunlight",
+    "calm evening lake smooth water warm glowing horizon"
+  ],
+  "scenes": [
+    {
+      "a": "Your energy is completely gone tonight.",
+      "img": "short-healingpsalm73v26-scene-01.jpg",
+      "kicker": "EMPTY STRENGTH",
+      "sub": "WHEN EVERYTHING IS GONE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You have given everything away until nothing remains inside your weary body.",
+      "img": "short-healingpsalm73v26-scene-02.jpg",
+      "kicker": "WEARY BODY",
+      "sub": "NOTHING REMAINS INSIDE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Scripture reminds us, My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever.",
+      "img": "short-healingpsalm73v26-scene-03.jpg",
+      "kicker": "GOD IS STRENGTH",
+      "sub": "PSALM 73:26",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, when our physical strength gives out and all courage fades, meet us in our deepest weakness.",
+      "img": "short-healingpsalm73v26-scene-04.jpg",
+      "kicker": "MEET US HERE",
+      "sub": "IN OUR DEEPEST WEAKNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Be the unshakable foundation beneath our weary soul when every human effort fails today.",
+      "img": "short-healingpsalm73v26-scene-05.jpg",
+      "kicker": "UNSHAKABLE ROCK",
+      "sub": "WHEN HUMAN EFFORT FAILS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Restore our heart with your quiet presence and sustain us through this fragile, heavy hour.",
+      "img": "short-healingpsalm73v26-scene-06.jpg",
+      "kicker": "QUIET PRESENCE",
+      "sub": "SUSTAIN US IN THIS HOUR",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Fill our inner emptiness with your divine peace, holding us secure forever in your love.",
+      "img": "short-healingpsalm73v26-scene-07.jpg",
+      "kicker": "HEALING PEACE",
+      "sub": "SECURE FOREVER IN LOVE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. When your energy is completely gone tonight.",
+      "img": "short-healingpsalm73v26-scene-08.jpg",
+      "kicker": "EVERLASTING PORTION",
+      "sub": "GOD IS YOUR STRENGTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your energy is completely gone tonight."
+    ],
+    [
+      3,
+      8,
+      "You have given everything away until nothing remains inside your weary body."
+    ],
+    [
+      8,
+      16,
+      "Scripture reminds us, My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever."
+    ],
+    [
+      16,
+      23,
+      "Lord, when our physical strength gives out and all courage fades, meet us in our deepest weakness."
+    ],
+    [
+      23,
+      29,
+      "Be the unshakable foundation beneath our weary soul when every human effort fails today."
+    ],
+    [
+      29,
+      35,
+      "Restore our heart with your quiet presence and sustain us through this fragile, heavy hour."
+    ],
+    [
+      35,
+      41,
+      "Fill our inner emptiness with your divine peace, holding us secure forever in your love."
+    ],
+    [
+      41,
+      45,
+      "Amen. When your energy is completely gone tonight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR ENERGY IS",
+        "COMPLETELY GONE TONIGHT"
+      ],
+      [
+        "GONE"
+      ],
+      "PSALM 73 : 26"
+    ],
+    [
+      3,
+      8,
+      [
+        "YOU HAVE GIVEN EVERYTHING",
+        "NOTHING REMAINS INSIDE"
+      ],
+      [
+        "NOTHING"
+      ],
+      "PSALM 73 : 26"
+    ],
+    [
+      8,
+      16,
+      [
+        "MY FLESH AND HEART FAILETH",
+        "GOD IS MY STRENGTH FOREVER"
+      ],
+      [
+        "STRENGTH"
+      ],
+      "PSALM 73 : 26"
+    ],
+    [
+      16,
+      23,
+      [
+        "WHEN PHYSICAL STRENGTH GIVES OUT",
+        "MEET US IN OUR WEAKNESS"
+      ],
+      [
+        "WEAKNESS"
+      ],
+      "PSALM 73 : 26"
+    ],
+    [
+      23,
+      29,
+      [
+        "BE THE UNSHAKABLE FOUNDATION",
+        "WHEN HUMAN EFFORT FAILS"
+      ],
+      [
+        "FOUNDATION"
+      ],
+      "PSALM 73 : 26"
+    ],
+    [
+      29,
+      35,
+      [
+        "RESTORE OUR HEART WITH PEACE",
+        "SUSTAIN US IN THIS HOUR"
+      ],
+      [
+        "RESTORE"
+      ],
+      "PSALM 73 : 26"
+    ],
+    [
+      35,
+      41,
+      [
+        "FILL OUR INNER EMPTINESS",
+        "HOLDING US SECURE FOREVER"
+      ],
+      [
+        "SECURE"
+      ],
+      "PSALM 73 : 26"
+    ],
+    [
+      41,
+      45,
+      [
+        "AMEN WHEN YOUR ENERGY",
+        "IS COMPLETELY GONE TONIGHT"
+      ],
+      [
+        "ENERGY"
+      ],
+      "PSALM 73 : 26"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your energy is completely gone tonight.",
+      "kind": "phrase",
+      "words": [
+        "ENERGY",
+        "GONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You have given everything away until nothing remains inside your weary body.",
+      "kind": "phrase",
+      "words": [
+        "NOTHING",
+        "REMAINS"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "Scripture reminds us, My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever.",
+      "kind": "quote",
+      "words": [
+        "STRENGTH",
+        "PORTION"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "Lord, when our physical strength gives out and all courage fades, meet us in our deepest weakness.",
+      "kind": "phrase",
+      "words": [
+        "MEET",
+        "WEAKNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be the unshakable foundation beneath our weary soul when every human effort fails today.",
+      "kind": "phrase",
+      "words": [
+        "UNSHAKABLE",
+        "FOUNDATION"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "Restore our heart with your quiet presence and sustain us through this fragile, heavy hour.",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "SUSTAIN"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "Fill our inner emptiness with your divine peace, holding us secure forever in your love.",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. When your energy is completely gone tonight.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "ENERGY"
+      ],
+      "hi": 0,
+      "slot": "B"
+    }
+  ],
+  "scripture": "Psalm 73:26"
+}
