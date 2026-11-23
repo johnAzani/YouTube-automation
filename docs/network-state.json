@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T00:30:10Z",
+  "generated_at": "2026-11-23T00:31:05Z",
   "monitor_generated_at": "2026-11-22T21:40:11.712280+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 677,
+    "published_total": 678,
     "published_longform": 197,
-    "published_shorts": 480,
-    "public_total": 675,
+    "published_shorts": 481,
+    "public_total": 676,
     "queued_longform": 54,
-    "queued_shorts": 62,
+    "queued_shorts": 61,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": true
@@ -373,23 +373,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 62,
+        "published_total": 63,
         "published_longform": 17,
-        "published_shorts": 45,
+        "published_shorts": 46,
         "thumbnail_pending": 4,
-        "public_total": 62,
+        "public_total": 63,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0416",
-        "title": "Healing When the Body Is Weak: Psalm 107:19-20 | The Healing Balm",
-        "format": "longform",
-        "youtube_video_id": "0SmEbw4lYWs",
-        "watch_url": "https://youtu.be/0SmEbw4lYWs",
-        "published_on": "2026-11-22",
-        "published_at": "2026-11-22T20:40:35Z"
+        "id": "SHORT-HEALINGPROVERBS4V20",
+        "title": "Pray This Proverbs 4:20-22 Healing Prayer for Peace & Strength | Your Body #Shorts",
+        "format": "short",
+        "youtube_video_id": "fp9luxJEz1I",
+        "watch_url": "https://www.youtube.com/shorts/fp9luxJEz1I",
+        "published_on": "2026-11-23",
+        "published_at": "2026-11-23T00:30:18Z"
       },
       "next_queued_longform": {
         "id": "0418",
@@ -398,8 +398,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingproverbs4v20",
-        "scripture": "Proverbs 4:20-22",
+        "short": "short-healingpsalm107v19",
+        "scripture": "Psalm 107:19-20",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGPROVERBS4V20",
+      "slug": "short-healingproverbs4v20-restoration-prayer",
+      "file": "short-healingproverbs4v20-restoration-prayer.md",
+      "title": "Pray This Proverbs 4:20-22 Healing Prayer for Peace & Strength | Your Body #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T00:30:18Z",
+      "youtube_video_id": "fp9luxJEz1I",
+      "watch_url": "https://www.youtube.com/shorts/fp9luxJEz1I",
+      "youtu_be_url": "https://youtu.be/fp9luxJEz1I",
+      "shorts_url": "https://www.youtube.com/shorts/fp9luxJEz1I",
+      "studio_url": "https://studio.youtube.com/video/fp9luxJEz1I/edit",
+      "thumb_url": "https://i.ytimg.com/vi/fp9luxJEz1I/hqdefault.jpg",
+      "thumb_text": "GOD'S WORD \u00b7 IS LIFE AND",
+      "thumbnail_pending": false,
+      "duration_label": "54s",
+      "words": 651
+    },
     {
       "id": "SHORT-PROVISIONJOHN6V11",
       "slug": "short-provisionjohn6v11-stewardship-prayer",
@@ -17996,17 +18020,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healingproverbs4v20",
-        "file": "0415-short-healingproverbs4v20.yml",
-        "companion_longform_id": "0415",
-        "scripture": "Proverbs 4:20-22",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingpsalm107v19",
