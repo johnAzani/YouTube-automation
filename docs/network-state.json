@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T16:02:28Z",
+  "generated_at": "2026-11-23T16:03:28Z",
   "monitor_generated_at": "2026-11-23T15:54:01.250620+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 701,
+    "published_total": 702,
     "published_longform": 202,
-    "published_shorts": 499,
-    "public_total": 699,
+    "published_shorts": 500,
+    "public_total": 700,
     "queued_longform": 60,
-    "queued_shorts": 80,
+    "queued_shorts": 79,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 96,
+        "published_total": 97,
         "published_longform": 31,
-        "published_shorts": 65,
+        "published_shorts": 66,
         "thumbnail_pending": 1,
-        "public_total": 95,
+        "public_total": 96,
         "queued_longform": 7,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-MORNINGLUKE1V78",
-        "title": "Say This Luke 1:78-79 Prayer at Sunrise | Shadows Still Linger Before Dawn #Shorts",
+        "id": "SHORT-MORNINGROMANS13V11",
+        "title": "Say This Romans 13:11-12 Prayer at Sunrise | Before Your Heart Feels Ready #Shorts",
         "format": "short",
-        "youtube_video_id": "5A7R-sjgNYI",
-        "watch_url": "https://www.youtube.com/shorts/5A7R-sjgNYI",
+        "youtube_video_id": "JvcGVIabq6A",
+        "watch_url": "https://www.youtube.com/shorts/JvcGVIabq6A",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T10:19:46Z"
+        "published_at": "2026-11-23T16:02:18Z"
       },
       "next_queued_longform": {
         "id": "0075",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningromans13v11",
-        "scripture": "Romans 13:11-12",
+        "short": "short-morningproverbs4v18",
+        "scripture": "Proverbs 4:18",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGROMANS13V11",
+      "slug": "short-morningromans13v11-sunrise-prayer",
+      "file": "short-morningromans13v11-sunrise-prayer.md",
+      "title": "Say This Romans 13:11-12 Prayer at Sunrise | Before Your Heart Feels Ready #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T16:02:18Z",
+      "youtube_video_id": "JvcGVIabq6A",
+      "watch_url": "https://www.youtube.com/shorts/JvcGVIabq6A",
+      "youtu_be_url": "https://youtu.be/JvcGVIabq6A",
+      "shorts_url": "https://www.youtube.com/shorts/JvcGVIabq6A",
+      "studio_url": "https://studio.youtube.com/video/JvcGVIabq6A/edit",
+      "thumb_url": "https://i.ytimg.com/vi/JvcGVIabq6A/hqdefault.jpg",
+      "thumb_text": "AWAKE \u00b7 OUT OF SLEEP",
+      "thumbnail_pending": false,
+      "duration_label": "46s",
+      "words": 625
+    },
     {
       "id": "SHORT-PROVISIONPROVERBS30V8",
       "slug": "short-provisionproverbs30v8-stewardship-prayer",
@@ -18458,17 +18482,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-morningromans13v11",
-        "file": "0000-short-morningromans13v11.yml",
-        "companion_longform_id": "",
-        "scripture": "Romans 13:11-12",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-provisionpsalm112v1",
