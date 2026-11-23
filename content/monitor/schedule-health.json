@@ -37,6 +37,13 @@
       "workflow": "tests-on-main.yml"
     },
     {
+      "late_minutes": 175,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-23T18:09:12+00:00",
+      "slot": "2026-11-23T15:14:00+00:00",
+      "workflow": "comments.yml"
+    },
+    {
       "late_minutes": 173,
       "name": "YouTube reporting jobs (thumbnail impressions)",
       "ran_at": "2026-11-23T08:40:19+00:00",
@@ -44,8 +51,8 @@
       "workflow": "reporting-jobs.yml"
     }
   ],
-  "generated_at": "2026-11-23T16:08:21.709515+00:00",
-  "last_run_at": "2026-11-23T16:07:34+00:00",
+  "generated_at": "2026-11-23T18:11:44.783312+00:00",
+  "last_run_at": "2026-11-23T18:11:01+00:00",
   "on_time": [
     {
       "late_minutes": 85,
