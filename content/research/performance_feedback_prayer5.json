@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-23T03:51:10.760505+00:00",
+  "generated_at": "2026-11-23T10:46:02.992718+00:00",
   "as_of": "2026-11-23",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 13,
+  "total_longform_videos": 12,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 61,
+    "receipt_video_ids": 62,
     "matched_video_ids": 50,
-    "longform_below_view_threshold": 13,
+    "longform_below_view_threshold": 12,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 2,
     "minimum_views": 25,
@@ -47,34 +47,26 @@
       "avg_score": 0.0,
       "avg_engagement": 0.0,
       "top_scripture": ""
-    },
-    {
-      "theme": "blessing_benediction",
-      "videos": 1,
-      "measured_videos": 0,
-      "avg_score": 0.0,
-      "avg_engagement": 0.0,
-      "top_scripture": ""
     }
   ],
   "shorts": {
     "measured_shorts": 33,
-    "total_shorts": 37,
+    "total_shorts": 38,
     "sufficient_data": true,
-    "avg_views": 64.2,
+    "avg_views": 64.3,
     "median_views": 47,
-    "total_views": 2120,
+    "total_views": 2123,
     "minimum_age_days": 2,
     "by_book": {
       "1 corinthians": {
         "shorts": 1,
         "avg_views": 150.0,
-        "ratio": 1.445
+        "ratio": 1.444
       },
       "3 john": {
         "shorts": 1,
         "avg_views": 64.0,
-        "ratio": 0.999
+        "ratio": 0.998
       },
       "acts": {
         "shorts": 2,
@@ -89,7 +81,7 @@
       "deuteronomy": {
         "shorts": 2,
         "avg_views": 73.0,
-        "ratio": 1.068
+        "ratio": 1.067
       },
       "ecclesiastes": {
         "shorts": 1,
@@ -104,51 +96,51 @@
       "genesis": {
         "shorts": 1,
         "avg_views": 31.0,
-        "ratio": 0.828
+        "ratio": 0.827
       },
       "isaiah": {
         "shorts": 2,
         "avg_views": 65.5,
-        "ratio": 1.01
+        "ratio": 1.009
       },
       "job": {
         "shorts": 1,
         "avg_views": 154.0,
-        "ratio": 1.466
+        "ratio": 1.465
       },
       "luke": {
         "shorts": 2,
-        "avg_views": 8.5,
-        "ratio": 0.566
+        "avg_views": 9.0,
+        "ratio": 0.57
       },
       "mark": {
         "shorts": 2,
         "avg_views": 51.5,
-        "ratio": 0.901
+        "ratio": 0.9
       },
       "matthew": {
         "shorts": 1,
         "avg_views": 135.0,
-        "ratio": 1.367
+        "ratio": 1.366
       },
       "numbers": {
         "shorts": 1,
-        "avg_views": 54.0,
-        "ratio": 0.947
+        "avg_views": 55.0,
+        "ratio": 0.952
       },
       "philippians": {
         "shorts": 1,
         "avg_views": 53.0,
-        "ratio": 0.942
+        "ratio": 0.941
       },
       "proverbs": {
         "shorts": 6,
         "avg_views": 46.7,
-        "ratio": 0.795
+        "ratio": 0.794
       },
       "psalm": {
         "shorts": 7,
-        "avg_views": 84.3,
+        "avg_views": 84.4,
         "ratio": 1.243
       }
     },
@@ -156,37 +148,37 @@
       "anxiety_peace": {
         "shorts": 2,
         "avg_views": 74.5,
-        "ratio": 1.08
+        "ratio": 1.079
       },
       "blessing_benediction": {
         "shorts": 1,
-        "avg_views": 54.0,
-        "ratio": 0.947
+        "avg_views": 55.0,
+        "ratio": 0.952
       },
       "daily_guidance_wisdom": {
         "shorts": 3,
         "avg_views": 87.0,
-        "ratio": 1.213
+        "ratio": 1.211
       },
       "general_prayer": {
         "shorts": 19,
-        "avg_views": 60.9,
+        "avg_views": 61.1,
         "ratio": 0.954
       },
       "morning_mercy_renewal": {
         "shorts": 2,
         "avg_views": 51.5,
-        "ratio": 0.901
+        "ratio": 0.9
       },
       "peace_rest": {
         "shorts": 2,
         "avg_views": 61.5,
-        "ratio": 0.979
+        "ratio": 0.978
       },
       "protection": {
         "shorts": 2,
         "avg_views": 132.5,
-        "ratio": 1.531
+        "ratio": 1.53
       },
       "stillness_refuge": {
         "shorts": 2,
