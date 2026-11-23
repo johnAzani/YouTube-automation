@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["WHEN THEY ARE", "FAR FROM HOME", "GOD BRINGS THEM", "BACK IN MERCY"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-23T17:59:46Z"
+thumbnail_retry_after: "2026-11-30T18:09:08Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If you wait by the window tonight praying for a child to return home, listen. Luke 15 verse 20 declares: And he arose, and came to his father. But when he was yet a great way off, his father saw him, and had compassion, and ran, and fell on his neck, and kissed him. Heavenly Father, touch the hearts of those who have wandered from our households today. Where distance and pride have built walls, let Your mercy break them down completely. Restore our broken bonds, welcome our lost back into Your loving embrace, and fill our home with joy. Subscribe to The Family Altar to cover your home in prayer daily.
