@@ -1,6 +1,6 @@
 ---
 id: '0324'
-title: 'Inviting God''s Peace Into Your Home: Luke 10:5-6 | The Family Altar'
+title: "When Tension Fills the Living Room: Luke 10:5-6 | The Family Altar"
 slug: inviting-gods-peace-into-your-home-luke-10-5-6
 status: approved
 channel: prayer5
@@ -66,6 +66,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "Inviting God's Peace Into Your Home: Luke 10:5-6 | The Family Altar"
+queue_title_fixed_at: "2026-11-23"
 ---
 
 ## Scene 1 — The Threshold of Grace
