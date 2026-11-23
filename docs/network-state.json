@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T00:31:05Z",
+  "generated_at": "2026-11-23T00:31:15Z",
   "monitor_generated_at": "2026-11-22T21:40:11.712280+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 678,
+    "published_total": 679,
     "published_longform": 197,
-    "published_shorts": 481,
-    "public_total": 676,
+    "published_shorts": 482,
+    "public_total": 677,
     "queued_longform": 54,
-    "queued_shorts": 61,
+    "queued_shorts": 60,
     "automations_ok": 10,
     "automations_total": 13,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 53,
+        "published_total": 54,
         "published_longform": 13,
-        "published_shorts": 40,
-        "thumbnail_pending": 53,
-        "public_total": 53,
+        "published_shorts": 41,
+        "thumbnail_pending": 54,
+        "public_total": 54,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0712",
-        "title": "Peace That Rules When Hearts Are Troubled: Colossians 3:15-17",
-        "format": "longform",
-        "youtube_video_id": "Z9hjI8Jebmw",
-        "watch_url": "https://youtu.be/Z9hjI8Jebmw",
-        "published_on": "2026-11-22",
-        "published_at": "2026-11-22T21:19:41Z"
+        "id": "SHORT-GARDENLAMENTATIONS3V22",
+        "title": "Pray This Lamentations 3:22-23 Prayer of Thanksgiving | His Mercies Are New Today #Shorts",
+        "format": "short",
+        "youtube_video_id": "IodwQefMU70",
+        "watch_url": "https://www.youtube.com/shorts/IodwQefMU70",
+        "published_on": "2026-11-23",
+        "published_at": "2026-11-23T00:30:26Z"
       },
       "next_queued_longform": {
         "id": "0714",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenlamentations3v22",
-        "scripture": "Lamentations 3:22-23",
+        "short": "short-gardenpsalm95v1",
+        "scripture": "Psalm 95:1-2",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENLAMENTATIONS3V22",
+      "slug": "short-gardenlamentations3v22-thanksgiving-prayer",
+      "file": "short-gardenlamentations3v22-thanksgiving-prayer.md",
+      "title": "Pray This Lamentations 3:22-23 Prayer of Thanksgiving | His Mercies Are New Today #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T00:30:26Z",
+      "youtube_video_id": "IodwQefMU70",
+      "watch_url": "https://www.youtube.com/shorts/IodwQefMU70",
+      "youtu_be_url": "https://youtu.be/IodwQefMU70",
+      "shorts_url": "https://www.youtube.com/shorts/IodwQefMU70",
+      "studio_url": "https://studio.youtube.com/video/IodwQefMU70/edit",
+      "thumb_url": "https://i.ytimg.com/vi/IodwQefMU70/hqdefault.jpg",
+      "thumb_text": "HIS MERCIES \u00b7 ARE NEW EVERY MORNING",
+      "thumbnail_pending": true,
+      "duration_label": "45s",
+      "words": 638
+    },
     {
       "id": "SHORT-HEALINGPROVERBS4V20",
       "slug": "short-healingproverbs4v20-restoration-prayer",
@@ -18218,17 +18242,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-gardenlamentations3v22",
-        "file": "0709-short-gardenlamentations3v22.yml",
-        "companion_longform_id": "0709",
-        "scripture": "Lamentations 3:22-23",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm95v1",
