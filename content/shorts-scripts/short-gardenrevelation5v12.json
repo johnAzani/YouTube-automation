@@ -1,0 +1,276 @@
+{
+  "key": "short-gardenrevelation5v12",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "WORTHY IS THE LAMB",
+    "A PRAYER OF PRAISE"
+  ],
+  "poster": [
+    "THE THING YOU CARRIED",
+    "IS STILL HERE",
+    "REVELATION FIVE",
+    "THE PRAISE GARDEN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "golden morning sunlight filtering through misty forest trees",
+    "peaceful river flowing softly under a quiet morning sky",
+    "gentle sun rays breaking over a quiet dew covered meadow",
+    "serene mountain valley bathed in calm golden hour light",
+    "soft light resting on a tranquil woodland stream at dawn",
+    "calm woodland landscape glowing in gentle morning light"
+  ],
+  "scenes": [
+    {
+      "a": "The thing you carried",
+      "img": "short-gardenrevelation5v12-scene-01.jpg",
+      "kicker": "STILL HERE",
+      "sub": "THE THING YOU CARRIED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Worthy is the Lamb",
+      "img": "short-gardenrevelation5v12-scene-02.jpg",
+      "kicker": "HIS GLORY",
+      "sub": "WORTHY IS THE LAMB",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "receive power",
+      "img": "short-gardenrevelation5v12-scene-03.jpg",
+      "kicker": "POWER",
+      "sub": "AND RICHES AND WISDOM",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Blessing and honor",
+      "img": "short-gardenrevelation5v12-scene-04.jpg",
+      "kicker": "EVERY CREATURE",
+      "sub": "BLESSING AND HONOR",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord we bring our praise",
+      "img": "short-gardenrevelation5v12-scene-05.jpg",
+      "kicker": "OUR OFFERING",
+      "sub": "WE BRING OUR PRAISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "The thing you carried is still here",
+      "img": "short-gardenrevelation5v12-scene-06.jpg",
+      "kicker": "REST IN HIM",
+      "sub": "THE THING YOU CARRIED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The thing you carried is still here."
+    ],
+    [
+      3,
+      10,
+      "Lord we lift our eyes above the weight of this day."
+    ],
+    [
+      10,
+      18,
+      "Saying with a loud voice, Worthy is the Lamb that was slain to receive power, and riches, and wisdom, and strength, and honor, and glory, and blessing."
+    ],
+    [
+      18,
+      27,
+      "And every creature which is in heaven, and on the earth, and under the earth, heard I saying, Blessing, and honor, and glory, and power, be unto him that sitteth upon the throne, and unto the Lamb for ever and ever."
+    ],
+    [
+      27,
+      33,
+      "Lord we bring our praise to Your throne today."
+    ],
+    [
+      33,
+      38,
+      "The thing you carried is still here."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE THING YOU",
+        "CARRIED IS STILL",
+        "HERE TODAY"
+      ],
+      [
+        "STILL",
+        "HERE"
+      ],
+      "REVELATION 5 : 12"
+    ],
+    [
+      3,
+      10,
+      [
+        "LORD WE LIFT",
+        "OUR EYES ABOVE",
+        "THE HEAVY WEIGHT"
+      ],
+      [
+        "LIFT",
+        "EYES"
+      ],
+      "REVELATION 5 : 12"
+    ],
+    [
+      10,
+      18,
+      [
+        "WORTHY IS THE",
+        "LAMB THAT WAS",
+        "SLAIN TO RECEIVE"
+      ],
+      [
+        "WORTHY",
+        "LAMB"
+      ],
+      "REVELATION 5 : 12"
+    ],
+    [
+      18,
+      27,
+      [
+        "EVERY CREATURE IN",
+        "HEAVEN AND EARTH",
+        "BLESSING AND HONOR"
+      ],
+      [
+        "BLESSING",
+        "HONOR"
+      ],
+      "REVELATION 5 : 13"
+    ],
+    [
+      27,
+      33,
+      [
+        "WE BRING OUR",
+        "PRAISE TO YOUR",
+        "THRONE TODAY"
+      ],
+      [
+        "PRAISE",
+        "THRONE"
+      ],
+      "REVELATION 5 : 13"
+    ],
+    [
+      33,
+      38,
+      [
+        "THE THING YOU",
+        "CARRIED IS",
+        "STILL HERE"
+      ],
+      [
+        "CARRIED",
+        "HERE"
+      ],
+      "REVELATION 5 : 13"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The thing you carried",
+      "kind": "phrase",
+      "words": [
+        "THING",
+        "CARRIED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Worthy is the Lamb",
+      "kind": "phrase",
+      "words": [
+        "WORTHY",
+        "LAMB"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "receive power",
+      "kind": "phrase",
+      "words": [
+        "RECEIVE",
+        "POWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessing and honor",
+      "kind": "phrase",
+      "words": [
+        "BLESSING",
+        "HONOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord we bring our praise",
+      "kind": "phrase",
+      "words": [
+        "BRING",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The thing you carried is still here",
+      "kind": "phrase",
+      "words": [
+        "STILL",
+        "HERE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Revelation 5:12-13"
+}

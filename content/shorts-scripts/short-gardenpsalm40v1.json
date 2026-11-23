@@ -1,0 +1,286 @@
+{
+  "key": "short-gardenpsalm40v1",
+  "channel": "prayer9",
+  "psalm": 40,
+  "title": [
+    "HE BROUGHT ME UP",
+    "OUT OF THE PIT"
+  ],
+  "poster": [
+    "WAITING IN PATIENCE",
+    "HE HEARD MY CRY",
+    "FEET UPON A ROCK",
+    "PSALM 40:1-3"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "misty forest glade sunrise soft light",
+    "calm river morning fog sunbeams",
+    "sunlit mountain path ancient rocks",
+    "golden light over peaceful pine forest",
+    "quiet meadow stream warm evening light",
+    "tranquil lake sunset soft golden sky"
+  ],
+  "scenes": [
+    {
+      "a": "You have waited long in the dark.",
+      "img": "short-gardenpsalm40v1-scene-01.jpg",
+      "kicker": "WAITING IN DARK",
+      "sub": "WHEN THE GROUND FEELS UNSURE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The Psalmist wrote, I waited patiently for the LORD; and he inclined unto me, and heard my cry.",
+      "img": "short-gardenpsalm40v1-scene-02.jpg",
+      "kicker": "HE HEARD MY CRY",
+      "sub": "INCLINED UNTO MY PRAYER",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings.",
+      "img": "short-gardenpsalm40v1-scene-03.jpg",
+      "kicker": "FEET UPON A ROCK",
+      "sub": "LIFTED OUT OF THE MIRY CLAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Father, thank You for hearing every quiet cry when the ground beneath us felt unsure.",
+      "img": "short-gardenpsalm40v1-scene-04.jpg",
+      "kicker": "THANK YOU FATHER",
+      "sub": "YOU HEAR EVERY QUIET CRY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "You lift our feet onto firm stone and place a new song of thanksgiving in our heart.",
+      "img": "short-gardenpsalm40v1-scene-05.jpg",
+      "kicker": "A NEW SONG",
+      "sub": "ESTABLISHED IN HIS GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We trust Your faithful hand today. Amen. You have waited long in the dark.",
+      "img": "short-gardenpsalm40v1-scene-06.jpg",
+      "kicker": "FAITHFUL HAND",
+      "sub": "RESTING IN HIS PEACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You have waited long in the dark."
+    ],
+    [
+      3,
+      9,
+      "The Psalmist wrote, I waited patiently for the LORD; and he inclined unto me, and heard my cry."
+    ],
+    [
+      9,
+      17,
+      "He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings."
+    ],
+    [
+      17,
+      22,
+      "Father, thank You for hearing every quiet cry when the ground beneath us felt unsure."
+    ],
+    [
+      22,
+      27,
+      "You lift our feet onto firm stone and place a new song of thanksgiving in our heart."
+    ],
+    [
+      27,
+      32,
+      "We trust Your faithful hand today. Amen. You have waited long in the dark."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU HAVE WAITED",
+        "LONG IN THE DARK"
+      ],
+      [
+        "WAITED",
+        "DARK"
+      ],
+      "PSALM 40 : 1-2"
+    ],
+    [
+      3,
+      9,
+      [
+        "THE PSALMIST WROTE",
+        "I WAITED PATIENTLY",
+        "FOR THE LORD AND HE",
+        "HEARD MY CRY"
+      ],
+      [
+        "PATIENTLY",
+        "LORD",
+        "HEARD"
+      ],
+      "PSALM 40 : 1"
+    ],
+    [
+      9,
+      17,
+      [
+        "HE BROUGHT ME UP",
+        "OUT OF AN HORRIBLE PIT",
+        "OUT OF THE MIRY CLAY",
+        "AND SET MY FEET",
+        "UPON A ROCK"
+      ],
+      [
+        "HORRIBLE",
+        "MIRY",
+        "ROCK"
+      ],
+      "PSALM 40 : 2"
+    ],
+    [
+      17,
+      22,
+      [
+        "FATHER THANK YOU",
+        "FOR HEARING EVERY CRY",
+        "WHEN THE GROUND",
+        "FELT UNSURE"
+      ],
+      [
+        "THANK",
+        "HEARING",
+        "UNSURE"
+      ],
+      "PSALM 40 : 1-2"
+    ],
+    [
+      22,
+      27,
+      [
+        "YOU LIFT OUR FEET",
+        "ONTO FIRM STONE",
+        "AND PLACE A NEW SONG",
+        "IN OUR HEART"
+      ],
+      [
+        "FIRM",
+        "STONE",
+        "SONG"
+      ],
+      "PSALM 40 : 1-2"
+    ],
+    [
+      27,
+      32,
+      [
+        "WE TRUST YOUR FAITHFUL",
+        "HAND TODAY AMEN",
+        "YOU HAVE WAITED",
+        "LONG IN THE DARK"
+      ],
+      [
+        "TRUST",
+        "FAITHFUL",
+        "DARK"
+      ],
+      "PSALM 40 : 1-2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You have waited long in the dark.",
+      "kind": "phrase",
+      "words": [
+        "WAITED",
+        "DARK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Psalmist wrote, I waited patiently for the LORD; and he inclined unto me, and heard my cry.",
+      "kind": "phrase",
+      "words": [
+        "PATIENTLY",
+        "HEARD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings.",
+      "kind": "phrase",
+      "words": [
+        "MIRY",
+        "ROCK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, thank You for hearing every quiet cry when the ground beneath us felt unsure.",
+      "kind": "phrase",
+      "words": [
+        "THANK",
+        "HEARING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You lift our feet onto firm stone and place a new song of thanksgiving in our heart.",
+      "kind": "phrase",
+      "words": [
+        "FIRM",
+        "SONG"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We trust Your faithful hand today. Amen. You have waited long in the dark.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "FAITHFUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 40:1-3"
+}

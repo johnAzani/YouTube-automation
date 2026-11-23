@@ -1,0 +1,225 @@
+{
+  "key": "short-gardenexodus15v2",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "STRENGTH IN",
+    "THE WILDERNESS"
+  ],
+  "poster": [
+    "THE LORD",
+    "IS MY",
+    "STRENGTH AND",
+    "SONG"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "misty mountain morning sun",
+    "golden light through forest trees",
+    "calm river at dawn",
+    "soft sunlight on meadow grass",
+    "rippling water in morning light",
+    "dew on forest leaves"
+  ],
+  "scenes": [
+    {
+      "a": "That sharp worry keeps you awake.",
+      "img": "short-gardenexodus15v2-scene-01.jpg",
+      "kicker": "THE LINGERING WORRY",
+      "sub": "AN ANCHOR IN THE QUIET",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The LORD is my strength and song, and he is become my salvation: he is my God, and I will prepare him an habitation; my father’s God, and I will exalt him.",
+      "img": "short-gardenexodus15v2-scene-02.jpg",
+      "kicker": "HIS PROMISE",
+      "sub": "THE WORD OF EXODUS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, when the path is uncertain and my own power fails, remind me that you are my strength.",
+      "img": "short-gardenexodus15v2-scene-03.jpg",
+      "kicker": "A HUMBLE PETITION",
+      "sub": "RESTING IN HIS MIGHT",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You are the song I lift up when the world grows too loud for my weary heart.",
+      "img": "short-gardenexodus15v2-scene-04.jpg",
+      "kicker": "HEAR MY PRAISE",
+      "sub": "SINGING IN THE TRIAL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Help me to prepare a habitation for your grace today, in the center of this worry.",
+      "img": "short-gardenexodus15v2-scene-05.jpg",
+      "kicker": "PREPARING HIS PLACE",
+      "sub": "GRACE WITHIN THE HEART",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. That sharp worry keeps you awake.",
+      "img": "short-gardenexodus15v2-scene-06.jpg",
+      "kicker": "STILL STANDING",
+      "sub": "RETURNING TO HIS PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That sharp worry keeps you awake."
+    ],
+    [
+      3,
+      17,
+      "The LORD is my strength and song, and he is become my salvation: he is my God, and I will prepare him an habitation; my father’s God, and I will exalt him."
+    ],
+    [
+      17,
+      32,
+      "Lord, when the path is uncertain and my own power fails, remind me that you are my strength."
+    ],
+    [
+      32,
+      47,
+      "You are the song I lift up when the world grows too loud for my weary heart."
+    ],
+    [
+      47,
+      62,
+      "Help me to prepare a habitation for your grace today, in the center of this worry."
+    ],
+    [
+      62,
+      70,
+      "Amen. That sharp worry keeps you awake."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT SHARP WORRY",
+        "KEEPS YOU",
+        "AWAKE"
+      ],
+      [
+        "SHARP WORRY"
+      ],
+      "EXODUS 15 : 2"
+    ],
+    [
+      3,
+      17,
+      [
+        "THE LORD IS MY",
+        "STRENGTH AND SONG",
+        "AND HE IS BECOME",
+        "MY SALVATION"
+      ],
+      [
+        "STRENGTH",
+        "SONG"
+      ],
+      "EXODUS 15 : 2"
+    ],
+    [
+      17,
+      32,
+      [
+        "LORD WHEN THE PATH",
+        "IS UNCERTAIN",
+        "AND POWER FAILS",
+        "REMAIN MY STRENGTH"
+      ],
+      [
+        "STRENGTH"
+      ],
+      "EXODUS 15 : 2"
+    ],
+    [
+      32,
+      47,
+      [
+        "YOU ARE THE SONG",
+        "I LIFT UP",
+        "WHEN THE WORLD",
+        "GROWS TOO LOUD"
+      ],
+      [
+        "SONG"
+      ],
+      "EXODUS 15 : 2"
+    ],
+    [
+      47,
+      62,
+      [
+        "PREPARE A HABITATION",
+        "FOR YOUR GRACE",
+        "IN THE CENTER",
+        "OF THIS WORRY"
+      ],
+      [
+        "HABITATION"
+      ],
+      "EXODUS 15 : 2"
+    ],
+    [
+      62,
+      70,
+      [
+        "AMEN",
+        "THAT SHARP WORRY",
+        "KEEPS YOU AWAKE"
+      ],
+      [
+        "AWAKE"
+      ],
+      "EXODUS 15 : 2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That sharp worry keeps you awake.",
+      "kind": "phrase",
+      "words": [
+        "SHARP",
+        "WORRY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Exodus 15:2"
+}

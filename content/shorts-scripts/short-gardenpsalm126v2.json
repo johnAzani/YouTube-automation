@@ -1,0 +1,379 @@
+{
+  "key": "short-gardenpsalm126v2",
+  "channel": "prayer9",
+  "psalm": 126,
+  "title": [
+    "GREAT THINGS",
+    "HATH HE DONE"
+  ],
+  "poster": [
+    "WHEN GOD TURNS",
+    "YOUR HEAVY SEASON",
+    "INTO SONGS OF PRAISE",
+    "PSALM 126:2-3"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "misty countryside sunlit glade morning light",
+    "sunlit forest path golden light autumn trees",
+    "peaceful meadow misty hills dawn sunlight",
+    "calm river reflecting golden sunlight morning",
+    "soft sunlight filtering through green forest trees",
+    "golden morning light over peaceful valley",
+    "tranquil forest lake quiet water dawn",
+    "sunlit glade gentle breeze morning mist countryside"
+  ],
+  "scenes": [
+    {
+      "a": "You carried tears through a very long season.",
+      "img": "short-gardenpsalm126v2-scene-01.jpg",
+      "kicker": "LONG SEASON",
+      "sub": "HEARS YOUR QUIET TEARS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "But God turns quiet endurance into joy.",
+      "img": "short-gardenpsalm126v2-scene-02.jpg",
+      "kicker": "FAITHFUL JOY",
+      "sub": "GOD STRENGTHENS YOUR HEART",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Then was our mouth filled with laughter, and our tongue with singing:",
+      "img": "short-gardenpsalm126v2-scene-03.jpg",
+      "kicker": "PSALM 126:2",
+      "sub": "FILLED WITH LAUGHTER AND PRAISE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "then said they among the heathen, The LORD hath done great things for them.",
+      "img": "short-gardenpsalm126v2-scene-04.jpg",
+      "kicker": "GREAT THINGS",
+      "sub": "GOD HAS DONE GREAT THINGS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "The LORD hath done great things for us; whereof we are glad.",
+      "img": "short-gardenpsalm126v2-scene-05.jpg",
+      "kicker": "PSALM 126:3",
+      "sub": "WE ARE GLAD IN HIS LOVE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, we thank You for every hidden deliverance and every answered prayer.",
+      "img": "short-gardenpsalm126v2-scene-06.jpg",
+      "kicker": "HIDDEN DELIVERANCE",
+      "sub": "THANKING GOD FOR EVERY ANSWER",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Restore our hearts with Your steady joy today, and turn our sorrow into songs of praise.",
+      "img": "short-gardenpsalm126v2-scene-07.jpg",
+      "kicker": "STEADY JOY",
+      "sub": "TURNING SORROW INTO PRAISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We remember Your goodness and rest in Your faithful love. Amen. You carried tears through a very long season.",
+      "img": "short-gardenpsalm126v2-scene-08.jpg",
+      "kicker": "EVERLASTING LOVE",
+      "sub": "REST IN HIS FAITHFULNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You carried tears through a very long season."
+    ],
+    [
+      3,
+      8,
+      "But God turns quiet endurance into joy."
+    ],
+    [
+      8,
+      17,
+      "As the scripture says: Then was our mouth filled with laughter, and our tongue with singing:"
+    ],
+    [
+      17,
+      26,
+      "then said they among the heathen, The LORD hath done great things for them."
+    ],
+    [
+      26,
+      33,
+      "The LORD hath done great things for us; whereof we are glad."
+    ],
+    [
+      33,
+      41,
+      "Lord, we thank You for every hidden deliverance and every answered prayer."
+    ],
+    [
+      41,
+      49,
+      "Restore our hearts with Your steady joy today, and turn our sorrow into songs of praise."
+    ],
+    [
+      49,
+      58,
+      "We remember Your goodness and rest in Your faithful love. Amen. You carried tears through a very long season."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU CARRIED TEARS",
+        "THROUGH A VERY",
+        "LONG SEASON."
+      ],
+      [
+        "TEARS",
+        "LONG",
+        "SEASON"
+      ],
+      "PSALM 126:2-3"
+    ],
+    [
+      3,
+      8,
+      [
+        "BUT GOD TURNS",
+        "QUIET ENDURANCE",
+        "INTO JOY."
+      ],
+      [
+        "TURNS",
+        "ENDURANCE",
+        "JOY"
+      ],
+      "PSALM 126:2-3"
+    ],
+    [
+      8,
+      17,
+      [
+        "THEN WAS OUR MOUTH",
+        "FILLED WITH LAUGHTER,",
+        "AND OUR TONGUE",
+        "WITH SINGING:"
+      ],
+      [
+        "LAUGHTER",
+        "TONGUE",
+        "SINGING"
+      ],
+      "PSALM 126:2"
+    ],
+    [
+      17,
+      26,
+      [
+        "THEN SAID THEY AMONG",
+        "THE HEATHEN, THE LORD",
+        "HATH DONE GREAT THINGS",
+        "FOR THEM."
+      ],
+      [
+        "LORD",
+        "GREAT",
+        "THINGS"
+      ],
+      "PSALM 126:2"
+    ],
+    [
+      26,
+      33,
+      [
+        "THE LORD HATH DONE",
+        "GREAT THINGS FOR US;",
+        "WHEREAF WE ARE GLAD."
+      ],
+      [
+        "LORD",
+        "GREAT",
+        "GLAD"
+      ],
+      "PSALM 126:3"
+    ],
+    [
+      33,
+      41,
+      [
+        "LORD, WE THANK YOU",
+        "FOR EVERY HIDDEN",
+        "DELIVERANCE AND EVERY",
+        "ANSWERED PRAYER."
+      ],
+      [
+        "THANK",
+        "DELIVERANCE",
+        "PRAYER"
+      ],
+      "PSALM 126:2-3"
+    ],
+    [
+      41,
+      49,
+      [
+        "RESTORE OUR HEARTS",
+        "WITH YOUR STEADY JOY,",
+        "AND TURN OUR SORROW",
+        "INTO SONGS OF PRAISE."
+      ],
+      [
+        "RESTORE",
+        "JOY",
+        "PRAISE"
+      ],
+      "PSALM 126:2-3"
+    ],
+    [
+      49,
+      58,
+      [
+        "WE REMEMBER YOUR GOODNESS",
+        "AND REST IN YOUR",
+        "FAITHFUL LOVE. AMEN.",
+        "YOU CARRIED TEARS."
+      ],
+      [
+        "GOODNESS",
+        "REST",
+        "FAITHFUL"
+      ],
+      "PSALM 126:2-3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You carried tears through a very long season.",
+      "kind": "phrase",
+      "words": [
+        "CARRIED",
+        "TEARS",
+        "SEASON"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "But God turns quiet endurance into joy.",
+      "kind": "phrase",
+      "words": [
+        "TURNS",
+        "ENDURANCE",
+        "JOY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Then was our mouth filled with laughter, and our tongue with singing:",
+      "kind": "phrase",
+      "words": [
+        "FILLED",
+        "LAUGHTER",
+        "SINGING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "then said they among the heathen, The LORD hath done great things for them.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "GREAT",
+        "THINGS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD hath done great things for us; whereof we are glad.",
+      "kind": "phrase",
+      "words": [
+        "GREAT",
+        "THINGS",
+        "GLAD"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we thank You for every hidden deliverance and every answered prayer.",
+      "kind": "phrase",
+      "words": [
+        "THANK",
+        "HIDDEN",
+        "DELIVERANCE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Restore our hearts with Your steady joy today, and turn our sorrow into songs of praise.",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "STEADY",
+        "JOY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "We remember Your goodness and rest in Your faithful love. Amen. You carried tears through a very long season.",
+      "kind": "phrase",
+      "words": [
+        "REMEMBER",
+        "GOODNESS",
+        "FAITHFUL"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 126:2-3"
+}
