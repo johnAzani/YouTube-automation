@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T10:13:52Z",
+  "generated_at": "2026-11-23T10:14:31Z",
   "monitor_generated_at": "2026-11-23T08:48:38.501249+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 685,
+    "published_total": 686,
     "published_longform": 199,
-    "published_shorts": 486,
-    "public_total": 683,
+    "published_shorts": 487,
+    "public_total": 684,
     "queued_longform": 61,
-    "queued_shorts": 90,
+    "queued_shorts": 88,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 89,
+        "published_total": 90,
         "published_longform": 24,
-        "published_shorts": 65,
+        "published_shorts": 66,
         "thumbnail_pending": 6,
-        "public_total": 88,
+        "public_total": 89,
         "queued_longform": 6,
         "queued_other": 5,
-        "queued_shorts": 7
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-ROMANS8V38",
-        "title": "Say This Romans 8:38-39 Prayer Before You Sleep | Rest Tonight #Shorts",
+        "id": "SHORT-JUDE1V24",
+        "title": "Say This Jude 1:24-25 Prayer Before You Sleep | Your Mind Is Racing Tonight #Shorts",
         "format": "short",
-        "youtube_video_id": "a2laWMhANNM",
-        "watch_url": "https://www.youtube.com/shorts/a2laWMhANNM",
+        "youtube_video_id": "ANAJJugqvBE",
+        "watch_url": "https://www.youtube.com/shorts/ANAJJugqvBE",
         "published_on": "2026-11-23",
-        "published_at": "2026-11-23T00:21:43Z"
+        "published_at": "2026-11-23T10:13:35Z"
       },
       "next_queued_longform": {
         "id": "0032",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-jude1v24",
-        "scripture": "Jude 1:24-25",
+        "short": "short-zephaniah3v17",
+        "scripture": "Zephaniah 3:17",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-JUDE1V24",
+      "slug": "short-jude1v24-pre-sleep-prayer",
+      "file": "short-jude1v24-pre-sleep-prayer.md",
+      "title": "Say This Jude 1:24-25 Prayer Before You Sleep | Your Mind Is Racing Tonight #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T10:13:35Z",
+      "youtube_video_id": "ANAJJugqvBE",
+      "watch_url": "https://www.youtube.com/shorts/ANAJJugqvBE",
+      "youtu_be_url": "https://youtu.be/ANAJJugqvBE",
+      "shorts_url": "https://www.youtube.com/shorts/ANAJJugqvBE",
+      "studio_url": "https://studio.youtube.com/video/ANAJJugqvBE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ANAJJugqvBE/hqdefault.jpg",
+      "thumb_text": "HE IS ABLE \u00b7 TO KEEP YOU",
+      "thumbnail_pending": false,
+      "duration_label": "53s",
+      "words": 613
+    },
     {
       "id": "SHORT-FAMILY1SAMUEL1V27",
       "slug": "short-family1samuel1v27-household-prayer",
@@ -18056,17 +18080,6 @@
         "target_window_utc": "15:44"
       },
       {
-        "short": "short-jude1v24",
-        "file": "0000-short-jude1v24.yml",
-        "companion_longform_id": "",
-        "scripture": "Jude 1:24-25",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
-      {
         "short": "short-middayjohn15v5",
         "file": "0000-short-middayjohn15v5.yml",
         "companion_longform_id": "",
@@ -18406,17 +18419,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-psalm77v6",
-        "file": "0114-short-psalm77v6.yml",
-        "companion_longform_id": "0114",
-        "scripture": "Psalm 77:6",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-midnightisaiah45v2",
