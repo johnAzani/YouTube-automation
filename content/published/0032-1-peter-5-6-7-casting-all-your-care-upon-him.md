@@ -2,7 +2,7 @@
 id: '0032'
 title: "Bedtime Prayer to Let Go of Worry: 1 Peter 5:7 | The Secret Place"
 slug: 1-peter-5-6-7-casting-all-your-care-upon-him
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -85,6 +85,16 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this 1 Peter 5:6-7 KJV bedtime prayer before sleep to cast every anxious care upon the Lord because He cares deeply for you.
 category_id: '22'
+published_on: "2026-11-23"
+published_at: "2026-11-23T22:49:11Z"
+youtube_video_id: "mzA1qTbk1Kc"
+metadata_revision: "selar-seo-v1"
+prayer_seconds: 402.8
+duration_seconds: 11203.16
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 ## Scene 1 — Humble Yourselves Therefore Under the Mighty Hand of God (Verse 6a)
 

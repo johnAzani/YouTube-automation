@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T22:26:25Z",
+  "generated_at": "2026-11-23T22:50:10Z",
   "monitor_generated_at": "2026-11-23T18:09:31.613904+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 715,
-    "published_longform": 203,
-    "published_shorts": 512,
-    "public_total": 713,
-    "queued_longform": 59,
-    "queued_shorts": 66,
+    "published_total": 717,
+    "published_longform": 204,
+    "published_shorts": 513,
+    "public_total": 715,
+    "queued_longform": 58,
+    "queued_shorts": 65,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -33,33 +33,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 91,
-        "published_longform": 24,
-        "published_shorts": 67,
+        "published_total": 93,
+        "published_longform": 25,
+        "published_shorts": 68,
         "thumbnail_pending": 6,
-        "public_total": 90,
-        "queued_longform": 6,
+        "public_total": 92,
+        "queued_longform": 5,
         "queued_other": 5,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-ZEPHANIAH3V17",
-        "title": "Say This Zephaniah 3:17 Prayer Before You Sleep | Lay Down Your Worry Tonight #Shorts",
-        "format": "short",
-        "youtube_video_id": "-m9ICoIeOQQ",
-        "watch_url": "https://www.youtube.com/shorts/-m9ICoIeOQQ",
-        "published_on": "2026-11-23",
-        "published_at": "2026-11-23T15:04:02Z"
-      },
-      "next_queued_longform": {
         "id": "0032",
         "title": "Bedtime Prayer to Let Go of Worry: 1 Peter 5:7 | The Secret Place",
-        "words": 875,
+        "format": "longform",
+        "youtube_video_id": "mzA1qTbk1Kc",
+        "watch_url": "https://youtu.be/mzA1qTbk1Kc",
+        "published_on": "2026-11-23",
+        "published_at": "2026-11-23T22:49:11Z"
+      },
+      "next_queued_longform": {
+        "id": "0033",
+        "title": "A Blessing to Fall Asleep Under: Numbers 6:24-26 | The Secret Place",
+        "words": 855,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm3v3",
-        "scripture": "Psalm 3:3-5",
+        "short": "short-numbers6v24",
+        "scripture": "Numbers 6:24-26",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -697,6 +697,30 @@
   ],
   "videos": [
     {
+      "id": "0032",
+      "slug": "1-peter-5-6-7-casting-all-your-care-upon-him",
+      "file": "0032-1-peter-5-6-7-casting-all-your-care-upon-him.md",
+      "title": "Bedtime Prayer to Let Go of Worry: 1 Peter 5:7 | The Secret Place",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T22:49:11Z",
+      "youtube_video_id": "mzA1qTbk1Kc",
+      "watch_url": "https://youtu.be/mzA1qTbk1Kc",
+      "youtu_be_url": "https://youtu.be/mzA1qTbk1Kc",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/mzA1qTbk1Kc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/mzA1qTbk1Kc/hqdefault.jpg",
+      "thumb_text": "HE CARES FOR YOU",
+      "thumbnail_pending": false,
+      "duration_label": "186m 43s",
+      "words": 875
+    },
+    {
       "id": "SHORT-GUIDEDJOHN16V13",
       "slug": "short-guidedjohn16v13-guidance-prayer",
       "file": "short-guidedjohn16v13-guidance-prayer.md",
@@ -790,6 +814,30 @@
       "thumb_text": "RUTH 2:12 \u00b7 GOD SEES YOUR",
       "thumbnail_pending": true,
       "duration_label": "54s",
+      "words": 669
+    },
+    {
+      "id": "SHORT-PSALM3V3",
+      "slug": "short-psalm3v3-pre-sleep-prayer",
+      "file": "short-psalm3v3-pre-sleep-prayer.md",
+      "title": "Say This Psalm 3:3-5 Prayer Before You Sleep | Finding Rest In The Night #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T22:09:23Z",
+      "youtube_video_id": "COwgYPQeLpo",
+      "watch_url": "https://www.youtube.com/shorts/COwgYPQeLpo",
+      "youtu_be_url": "https://youtu.be/COwgYPQeLpo",
+      "shorts_url": "https://www.youtube.com/shorts/COwgYPQeLpo",
+      "studio_url": "https://studio.youtube.com/video/COwgYPQeLpo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/COwgYPQeLpo/hqdefault.jpg",
+      "thumb_text": "FINDING REST \u00b7 IN THE",
+      "thumbnail_pending": false,
+      "duration_label": "68s",
       "words": 669
     },
     {
@@ -17860,19 +17908,6 @@
   "queues": {
     "longform": [
       {
-        "id": "0032",
-        "slug": "1-peter-5-6-7-casting-all-your-care-upon-him",
-        "file": "0032-1-peter-5-6-7-casting-all-your-care-upon-him.md",
-        "title": "Bedtime Prayer to Let Go of Worry: 1 Peter 5:7 | The Secret Place",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 875
-      },
-      {
         "id": "0033",
         "slug": "numbers-6-24-26-the-priestly-benediction-of-peace",
         "file": "0033-numbers-6-24-26-the-priestly-benediction-of-peace.md",
@@ -18748,17 +18783,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-psalm3v3",
-        "file": "0018-short-psalm3v3.yml",
-        "companion_longform_id": "0018",
-        "scripture": "Psalm 3:3-5",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-numbers6v24",
