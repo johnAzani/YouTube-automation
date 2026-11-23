@@ -1,0 +1,359 @@
+{
+  "key": "short-midnightjob35v10",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "SONGS IN THE NIGHT",
+    "MIDNIGHT PRAYER"
+  ],
+  "poster": [
+    "WHEN NIGHT IS HEAVY",
+    "GOD GIVES A SONG",
+    "JOB 35:10",
+    "THE MIDNIGHT WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "quiet lamp illuminated room dark night silhouette",
+    "calm mountain lake midnight starry sky moonlight",
+    "dark sanctuary vigil oil lamp glowing soft light",
+    "misty forest night deep blue starry sky",
+    "lamp lit window nighttime quiet street silhouette",
+    "calm starry night sky horizon quiet midnight landscape",
+    "dimly lit quiet room warm lantern night light",
+    "calm lake reflection stars night midnight sky"
+  ],
+  "scenes": [
+    {
+      "a": "The quiet weight in your hands remains tonight.",
+      "img": "short-midnightjob35v10-scene-01.jpg",
+      "kicker": "QUIET WEIGHT",
+      "sub": "HEAVY IN YOUR HANDS TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In the dark, we search everywhere for peace except in our Creator.",
+      "img": "short-midnightjob35v10-scene-02.jpg",
+      "kicker": "IN THE DARK",
+      "sub": "SEARCHING FOR REST",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Job 35:10 reminds us, \"But none saith, Where is God my maker, who giveth songs in the night;\"",
+      "img": "short-midnightjob35v10-scene-03.jpg",
+      "kicker": "JOB 35:10",
+      "sub": "SONGS IN THE NIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, forgive us for turning to silent walls instead of turning to You.",
+      "img": "short-midnightjob35v10-scene-04.jpg",
+      "kicker": "SILENT WALLS",
+      "sub": "TURN TO YOUR MAKER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "We call upon You now, our Maker, who gives melodies in the deepest darkness.",
+      "img": "short-midnightjob35v10-scene-05.jpg",
+      "kicker": "OUR MAKER",
+      "sub": "MELODIES IN DARKNESS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Fill this silent room with Your quiet presence and replace heavy sorrow with trust.",
+      "img": "short-midnightjob35v10-scene-06.jpg",
+      "kicker": "QUIET PRESENCE",
+      "sub": "REPLACE HEAVY SORROW",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach our heart to sing even while the night is long.",
+      "img": "short-midnightjob35v10-scene-07.jpg",
+      "kicker": "SING AT MIDNIGHT",
+      "sub": "HEAR THE SONG HE GIVES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. The quiet weight in your hands remains tonight.",
+      "img": "short-midnightjob35v10-scene-08.jpg",
+      "kicker": "STILL STANDING",
+      "sub": "THE LORD GIVES SONGS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The quiet weight in your hands remains tonight."
+    ],
+    [
+      3,
+      8,
+      "In the dark, we search everywhere for peace except in our Creator."
+    ],
+    [
+      8,
+      15,
+      "Job 35:10 reminds us, \"But none saith, Where is God my maker, who giveth songs in the night;\""
+    ],
+    [
+      15,
+      22,
+      "Lord, forgive us for turning to silent walls instead of turning to You."
+    ],
+    [
+      22,
+      29,
+      "We call upon You now, our Maker, who gives melodies in the deepest darkness."
+    ],
+    [
+      29,
+      36,
+      "Fill this silent room with Your quiet presence and replace heavy sorrow with trust."
+    ],
+    [
+      36,
+      42,
+      "Teach our heart to sing even while the night is long."
+    ],
+    [
+      42,
+      46,
+      "Amen. The quiet weight in your hands remains tonight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "QUIET WEIGHT",
+        "IN YOUR HANDS",
+        "REMAINS TONIGHT"
+      ],
+      [
+        "WEIGHT",
+        "REMAINS"
+      ],
+      "JOB 35 : 10"
+    ],
+    [
+      3,
+      8,
+      [
+        "SEARCHING IN DARK",
+        "FOR PEACE",
+        "EXCEPT CREATOR"
+      ],
+      [
+        "CREATOR"
+      ],
+      "JOB 35 : 10"
+    ],
+    [
+      8,
+      15,
+      [
+        "WHERE IS GOD",
+        "MY MAKER",
+        "SONGS IN NIGHT"
+      ],
+      [
+        "GOD",
+        "SONGS"
+      ],
+      "JOB 35 : 10"
+    ],
+    [
+      15,
+      22,
+      [
+        "TURNING TO SILENCE",
+        "INSTEAD OF GOD"
+      ],
+      [
+        "TURNING"
+      ],
+      "JOB 35 : 10"
+    ],
+    [
+      22,
+      29,
+      [
+        "MAKER WHO GIVES",
+        "MELODIES IN DARK"
+      ],
+      [
+        "MELODIES"
+      ],
+      "JOB 35 : 10"
+    ],
+    [
+      29,
+      36,
+      [
+        "FILL THIS ROOM",
+        "REPLACE HEAVY SORROW"
+      ],
+      [
+        "PRESENCE",
+        "TRUST"
+      ],
+      "JOB 35 : 10"
+    ],
+    [
+      36,
+      42,
+      [
+        "TEACH OUR HEART",
+        "TO SING IN NIGHT"
+      ],
+      [
+        "SING"
+      ],
+      "JOB 35 : 10"
+    ],
+    [
+      42,
+      46,
+      [
+        "AMEN",
+        "WEIGHT REMAINS",
+        "TONIGHT"
+      ],
+      [
+        "AMEN"
+      ],
+      "JOB 35 : 10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The quiet weight in your hands remains tonight.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "WEIGHT",
+        "HANDS",
+        "TONIGHT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "In the dark, we search everywhere for peace except in our Creator.",
+      "kind": "phrase",
+      "words": [
+        "SEARCH",
+        "PEACE",
+        "CREATOR"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Job 35:10 reminds us, \"But none saith, Where is God my maker, who giveth songs in the night;\"",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "MAKER",
+        "SONGS",
+        "NIGHT"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, forgive us for turning to silent walls instead of turning to You.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "FORGIVE",
+        "TURNING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We call upon You now, our Maker, who gives melodies in the deepest darkness.",
+      "kind": "phrase",
+      "words": [
+        "MAKER",
+        "MELODIES",
+        "DARKNESS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Fill this silent room with Your quiet presence and replace heavy sorrow with trust.",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE",
+        "SORROW",
+        "TRUST"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Teach our heart to sing even while the night is long.",
+      "kind": "phrase",
+      "words": [
+        "TEACH",
+        "HEART",
+        "SING"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. The quiet weight in your hands remains tonight.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "WEIGHT",
+        "TONIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Job 35:10"
+}

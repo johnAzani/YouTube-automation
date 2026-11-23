@@ -1,0 +1,275 @@
+{
+  "key": "short-midnighthebrews13v20",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "HEBREWS 13:20-21",
+    "MIDNIGHT PRAYER"
+  ],
+  "poster": [
+    "THE GOD OF PEACE",
+    "MADE PERFECT IN WORK",
+    "HIS WILL BE DONE",
+    "GLORY FOREVERMORE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "dark mountain pass at night",
+    "soft light through wooden door",
+    "starlit window view at night",
+    "glowing candle on stone table",
+    "mist over dark winter field",
+    "faint horizon glow at midnight",
+    "ancient cathedral stone walls"
+  ],
+  "scenes": [
+    {
+      "a": "That relentless question stays awake with you.",
+      "img": "short-midnighthebrews13v20-scene-01.jpg",
+      "kicker": "RELENTLESS QUESTION",
+      "sub": "STAYING AWAKE AGAIN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You are staring into the dark, wondering where the grace is hidden.",
+      "img": "short-midnighthebrews13v20-scene-02.jpg",
+      "kicker": "SEARCHING FOR GRACE",
+      "sub": "WONDERING IN THE DARK",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Now the God of peace, that brought again from the dead our Lord Jesus, that great shepherd of the sheep, through the blood of the everlasting covenant, Make you perfect in every good work to do his will, working in you that which is wellpleasing in his sight, through Jesus Christ; to whom be glory for ever and ever. Amen.",
+      "img": "short-midnighthebrews13v20-scene-03.jpg",
+      "kicker": "THE EVERLASTING VOW",
+      "sub": "THE SHEPHERD IS NEAR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, let this peace reach the restlessness in this room tonight.",
+      "img": "short-midnighthebrews13v20-scene-04.jpg",
+      "kicker": "PEACE BE STILL",
+      "sub": "ANCHORING THE SOUL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant the strength to walk in the good works prepared.",
+      "img": "short-midnighthebrews13v20-scene-05.jpg",
+      "kicker": "STRENGTH TO WALK",
+      "sub": "HIS WILL BE DONE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We trust your hand to finish what you started here.",
+      "img": "short-midnighthebrews13v20-scene-06.jpg",
+      "kicker": "TRUSTING THE HAND",
+      "sub": "FINISHING THE WORK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "That relentless question is finally finding its rest.",
+      "img": "short-midnighthebrews13v20-scene-07.jpg",
+      "kicker": "QUESTION AT REST",
+      "sub": "PEACE IN THE MIDNIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That relentless question stays awake with you."
+    ],
+    [
+      3,
+      6,
+      "You are staring into the dark."
+    ],
+    [
+      6,
+      12,
+      "Wondering where the grace is hidden."
+    ],
+    [
+      12,
+      28,
+      "Now the God of peace, that brought again from the dead our Lord Jesus, that great shepherd of the sheep, through the blood of the everlasting covenant, Make you perfect in every good work to do his will, working in you that which is wellpleasing in his sight, through Jesus Christ; to whom be glory for ever and ever. Amen."
+    ],
+    [
+      28,
+      34,
+      "Father, let this peace reach the restlessness in this room tonight."
+    ],
+    [
+      34,
+      40,
+      "Grant the strength to walk in the good works prepared."
+    ],
+    [
+      40,
+      48,
+      "We trust your hand to finish what you started here."
+    ],
+    [
+      48,
+      55,
+      "That relentless question is finally finding its rest."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT RELENTLESS",
+        "QUESTION STAYS",
+        "AWAKE WITH YOU"
+      ],
+      [
+        "RELENTLESS",
+        "QUESTION"
+      ],
+      "HEBREWS 13:20"
+    ],
+    [
+      3,
+      6,
+      [
+        "YOU ARE STARING",
+        "INTO THE DARK"
+      ],
+      [
+        "STARING",
+        "DARK"
+      ],
+      "HEBREWS 13:20"
+    ],
+    [
+      6,
+      12,
+      [
+        "WONDERING WHERE",
+        "THE GRACE",
+        "IS HIDDEN"
+      ],
+      [
+        "GRACE",
+        "HIDDEN"
+      ],
+      "HEBREWS 13:20"
+    ],
+    [
+      12,
+      28,
+      [
+        "GOD OF PEACE",
+        "GREAT SHEPHERD",
+        "EVERLASTING COVENANT",
+        "PERFECT IN WORK",
+        "GLORY FOREVER"
+      ],
+      [
+        "PEACE",
+        "SHEPHERD",
+        "COVENANT"
+      ],
+      "HEBREWS 13:20"
+    ],
+    [
+      28,
+      34,
+      [
+        "LET THIS PEACE",
+        "REACH THE",
+        "RESTLESSNESS"
+      ],
+      [
+        "PEACE",
+        "RESTLESSNESS"
+      ],
+      "HEBREWS 13:21"
+    ],
+    [
+      34,
+      40,
+      [
+        "STRENGTH TO WALK",
+        "IN GOOD WORKS"
+      ],
+      [
+        "STRENGTH",
+        "WORKS"
+      ],
+      "HEBREWS 13:21"
+    ],
+    [
+      40,
+      48,
+      [
+        "TRUST YOUR HAND",
+        "TO FINISH IT"
+      ],
+      [
+        "TRUST",
+        "FINISH"
+      ],
+      "HEBREWS 13:21"
+    ],
+    [
+      48,
+      55,
+      [
+        "QUESTION IS",
+        "FINDING ITS REST"
+      ],
+      [
+        "QUESTION",
+        "REST"
+      ],
+      "HEBREWS 13:21"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That relentless question stays awake with you.",
+      "kind": "phrase",
+      "words": [
+        "RELENTLESS",
+        "QUESTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Hebrews 13:20-21"
+}
