@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T22:50:10Z",
+  "generated_at": "2026-11-23T23:11:42Z",
   "monitor_generated_at": "2026-11-23T18:09:31.613904+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 717,
-    "published_longform": 204,
-    "published_shorts": 513,
-    "public_total": 715,
-    "queued_longform": 58,
-    "queued_shorts": 65,
+    "published_total": 719,
+    "published_longform": 205,
+    "published_shorts": 514,
+    "public_total": 717,
+    "queued_longform": 57,
+    "queued_shorts": 64,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -368,33 +368,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 65,
-        "published_longform": 17,
-        "published_shorts": 48,
+        "published_total": 67,
+        "published_longform": 18,
+        "published_shorts": 49,
         "thumbnail_pending": 4,
-        "public_total": 65,
-        "queued_longform": 6,
+        "public_total": 67,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-HEALINGEZEKIEL34V16",
-        "title": "Pray This Ezekiel 34:16 Healing Prayer for Peace & Strength | Strengthening The Sick #Shorts",
-        "format": "short",
-        "youtube_video_id": "FFOuhiOGCD8",
-        "watch_url": "https://www.youtube.com/shorts/FFOuhiOGCD8",
-        "published_on": "2026-11-23",
-        "published_at": "2026-11-23T16:05:08Z"
-      },
-      "next_queued_longform": {
         "id": "0418",
         "title": "The Prayer of Faith for Healing: James 5:14-16 | The Healing Balm",
-        "words": 1163,
+        "format": "longform",
+        "youtube_video_id": "fqZLUtZspy0",
+        "watch_url": "https://youtu.be/fqZLUtZspy0",
+        "published_on": "2026-11-23",
+        "published_at": "2026-11-23T23:10:42Z"
+      },
+      "next_queued_longform": {
+        "id": "0422",
+        "title": "Mercy For A Weary Body And Soul: Psalm 6:2-4 | The Healing Balm",
+        "words": 1369,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingisaiah66v13",
-        "scripture": "Isaiah 66:13",
+        "short": "short-healingnahum1v7",
+        "scripture": "Nahum 1:7",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -697,6 +697,30 @@
   ],
   "videos": [
     {
+      "id": "0418",
+      "slug": "prayer-of-faith-for-healing-james-5-14-16",
+      "file": "0418-prayer-of-faith-for-healing-james-5-14-16.md",
+      "title": "The Prayer of Faith for Healing: James 5:14-16 | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T23:10:42Z",
+      "youtube_video_id": "fqZLUtZspy0",
+      "watch_url": "https://youtu.be/fqZLUtZspy0",
+      "youtu_be_url": "https://youtu.be/fqZLUtZspy0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/fqZLUtZspy0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/fqZLUtZspy0/hqdefault.jpg",
+      "thumb_text": "PRAYER OF FAITH",
+      "thumbnail_pending": false,
+      "duration_label": "8m 06s",
+      "words": 1163
+    },
+    {
       "id": "0032",
       "slug": "1-peter-5-6-7-casting-all-your-care-upon-him",
       "file": "0032-1-peter-5-6-7-casting-all-your-care-upon-him.md",
@@ -791,6 +815,30 @@
       "thumbnail_pending": false,
       "duration_label": "60s",
       "words": 638
+    },
+    {
+      "id": "SHORT-HEALINGISAIAH66V13",
+      "slug": "short-healingisaiah66v13-restoration-prayer",
+      "file": "short-healingisaiah66v13-restoration-prayer.md",
+      "title": "Pray This Isaiah 66:13 Healing Prayer for Peace & Strength | Rest In His Tender Mercy #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-23",
+      "published_at": "2026-11-23T22:15:23Z",
+      "youtube_video_id": "O-iuwZbpgE0",
+      "watch_url": "https://www.youtube.com/shorts/O-iuwZbpgE0",
+      "youtu_be_url": "https://youtu.be/O-iuwZbpgE0",
+      "shorts_url": "https://www.youtube.com/shorts/O-iuwZbpgE0",
+      "studio_url": "https://studio.youtube.com/video/O-iuwZbpgE0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/O-iuwZbpgE0/hqdefault.jpg",
+      "thumb_text": "WHEN YOU CARRY \u00b7 EVERYONE ELSE",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 649
     },
     {
       "id": "SHORT-FAMILYRUTH2V12",
@@ -18259,19 +18307,6 @@
         "words": 1309
       },
       {
-        "id": "0418",
-        "slug": "prayer-of-faith-for-healing-james-5-14-16",
-        "file": "0418-prayer-of-faith-for-healing-james-5-14-16.md",
-        "title": "The Prayer of Faith for Healing: James 5:14-16 | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1163
-      },
-      {
         "id": "0422",
         "slug": "mercy-for-a-weary-body-and-soul-psalm-6-2-4",
         "file": "0422-mercy-for-a-weary-body-and-soul-psalm-6-2-4.md",
@@ -18695,17 +18730,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-healingisaiah66v13",
-        "file": "0000-short-healingisaiah66v13.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 66:13",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingnahum1v7",
