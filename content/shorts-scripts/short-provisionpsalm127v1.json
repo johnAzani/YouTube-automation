@@ -1,0 +1,321 @@
+{
+  "key": "short-provisionpsalm127v1",
+  "channel": "prayer7",
+  "psalm": 127,
+  "title": [
+    "UNLOAD THE STRAIN",
+    "OF SELF-RELIANCE"
+  ],
+  "poster": [
+    "WHEN LABOR FEELS VAIN",
+    "PSALM 127:1-2",
+    "A STEWARDSHIP PRAYER",
+    "THE PROVISION TABLE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "calm mountain lake glowing sunrise",
+    "sunlit valley mist morning light",
+    "stone table sanctuary sunlight forest",
+    "peaceful meadow river evening sun",
+    "golden wheat field quiet horizon",
+    "mountain peak sunbeams clouds",
+    "tranquil pine forest morning sun"
+  ],
+  "scenes": [
+    {
+      "a": "You calculated late into the night again.",
+      "img": "short-provisionpsalm127v1-scene-01.jpg",
+      "kicker": "LATE NIGHT STRAIN",
+      "sub": "WHEN YOUR LABOR FEELS IN VAIN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You carry the building of this house on your shoulders, fearing tomorrow's shortage.",
+      "img": "short-provisionpsalm127v1-scene-02.jpg",
+      "kicker": "HEAVY BURDEN",
+      "sub": "SURRENDER THE STEWARDSHIP",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear Psalm 127, verses 1 and 2: Except the LORD build the house, they labor in vain that build it: except the LORD keep the city, the watchman waketh but in vain.",
+      "img": "short-provisionpsalm127v1-scene-03.jpg",
+      "kicker": "PSALM 127:1",
+      "sub": "EXCEPT THE LORD BUILD THE HOUSE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "It is vain for you to rise up early, to sit up late, to eat the bread of sorrows: for so he giveth his beloved sleep.",
+      "img": "short-provisionpsalm127v1-scene-04.jpg",
+      "kicker": "PSALM 127:2",
+      "sub": "HE GIVETH HIS BELOVED SLEEP",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, we hand You the tools, the ledgers, and the sleepless strain of our self-reliance.",
+      "img": "short-provisionpsalm127v1-scene-05.jpg",
+      "kicker": "DAILY SURRENDER",
+      "sub": "HANDING GOD THE LEDGERS",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Build what we cannot build, and guard our labor while we rest.",
+      "img": "short-provisionpsalm127v1-scene-06.jpg",
+      "kicker": "REST IN PROVISION",
+      "sub": "GOD GUARDS YOUR LABOR",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. You calculated late into the night.",
+      "img": "short-provisionpsalm127v1-scene-07.jpg",
+      "kicker": "REST SECURED",
+      "sub": "WALK IN DAILY PROVISION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You calculated late into the night again."
+    ],
+    [
+      3,
+      10,
+      "You carry the building of this house on your shoulders, fearing tomorrow's shortage."
+    ],
+    [
+      10,
+      22,
+      "Hear Psalm 127, verses 1 and 2: Except the LORD build the house, they labor in vain that build it: except the LORD keep the city, the watchman waketh but in vain."
+    ],
+    [
+      22,
+      34,
+      "It is vain for you to rise up early, to sit up late, to eat the bread of sorrows: for so he giveth his beloved sleep."
+    ],
+    [
+      34,
+      43,
+      "Father, we hand You the tools, the ledgers, and the sleepless strain of our self-reliance."
+    ],
+    [
+      43,
+      50,
+      "Build what we cannot build, and guard our labor while we rest."
+    ],
+    [
+      50,
+      56,
+      "Amen. You calculated late into the night."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU CALCULATED LATE",
+        "INTO THE NIGHT AGAIN"
+      ],
+      [
+        "CALCULATED",
+        "NIGHT"
+      ],
+      "PSALM 127 : 1-2"
+    ],
+    [
+      3,
+      10,
+      [
+        "YOU CARRY THE BUILDING",
+        "ON YOUR SHOULDERS",
+        "FEARING SHORTAGE"
+      ],
+      [
+        "BUILDING",
+        "SHORTAGE"
+      ],
+      "PSALM 127 : 1-2"
+    ],
+    [
+      10,
+      22,
+      [
+        "EXCEPT THE LORD BUILD",
+        "THE HOUSE THEY LABOR",
+        "IN VAIN THAT BUILD IT"
+      ],
+      [
+        "LORD",
+        "BUILD",
+        "LABOR"
+      ],
+      "PSALM 127 : 1"
+    ],
+    [
+      22,
+      34,
+      [
+        "IT IS VAIN TO RISE",
+        "UP EARLY SIT UP LATE",
+        "HE GIVETH BELOVED SLEEP"
+      ],
+      [
+        "VAIN",
+        "BELOVED",
+        "SLEEP"
+      ],
+      "PSALM 127 : 2"
+    ],
+    [
+      34,
+      43,
+      [
+        "FATHER WE HAND YOU",
+        "THE LEDGERS AND THE",
+        "SLEEPLESS STRAIN"
+      ],
+      [
+        "HAND",
+        "LEDGERS",
+        "STRAIN"
+      ],
+      "PSALM 127 : 1-2"
+    ],
+    [
+      43,
+      50,
+      [
+        "BUILD WHAT WE CANNOT",
+        "GUARD OUR LABOR",
+        "WHILE WE REST"
+      ],
+      [
+        "BUILD",
+        "GUARD",
+        "REST"
+      ],
+      "PSALM 127 : 1-2"
+    ],
+    [
+      50,
+      56,
+      [
+        "AMEN YOU CALCULATED",
+        "LATE INTO THE NIGHT"
+      ],
+      [
+        "AMEN",
+        "CALCULATED"
+      ],
+      "PSALM 127 : 1-2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You calculated late into the night again.",
+      "kind": "phrase",
+      "words": [
+        "CALCULATED",
+        "NIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You carry the building of this house on your shoulders, fearing tomorrow's shortage.",
+      "kind": "phrase",
+      "words": [
+        "BUILDING",
+        "SHORTAGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear Psalm 127, verses 1 and 2: Except the LORD build the house, they labor in vain that build it: except the LORD keep the city, the watchman waketh but in vain.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "BUILD",
+        "VAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "It is vain for you to rise up early, to sit up late, to eat the bread of sorrows: for so he giveth his beloved sleep.",
+      "kind": "phrase",
+      "words": [
+        "BREAD",
+        "BELOVED",
+        "SLEEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we hand You the tools, the ledgers, and the sleepless strain of our self-reliance.",
+      "kind": "phrase",
+      "words": [
+        "LEDGERS",
+        "STRAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Build what we cannot build, and guard our labor while we rest.",
+      "kind": "phrase",
+      "words": [
+        "GUARD",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. You calculated late into the night.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "NIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 127:1-2"
+}
