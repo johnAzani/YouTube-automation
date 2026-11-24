@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["RUTH 2:12", "GOD SEES YOUR", "QUIET FAITHFULNESS", "AT HOME"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-01T04:17:42Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Your quiet labor for your family feels unseen. You serve through long hours without complaint, tending daily to details no one notices. Hear God's Word in Ruth chapter two, verse twelve: The LORD recompense thy work, and a full reward be given thee of the LORD God of Israel, under whose wings thou art come to trust. Heavenly Father, grant strength to this weary heart. Remind them that every unseen act of devotion is remembered in Your presence. Shelter their home under Your faithful wings today, and fill their spirit with deep peace. Amen. Your quiet labor for your family is seen.
