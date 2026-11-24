@@ -38,6 +38,17 @@ EVERGREEN: dict[str, tuple[str, ...]] = {
         "Psalm 94:19", "Isaiah 41:13", "Psalm 62:1-2", "Isaiah 30:15",
         "Psalm 139:7-10", "Philippians 4:8", "Matthew 28:20", "Psalm 119:165",
         "Psalm 145:18", "Psalm 4:4",
+        # Added 21 November 2026. The pool above was exhausted — the nightly pass
+        # reported "0 passage(s) left for standalone Shorts on The Secret Place",
+        # which is why the queue held one ready Short where it wants two. Familiar
+        # passages for the hour before sleep, and none already in this channel's
+        # specs.
+        # Only passages no channel's roadmap already prays are useful here: a roadmap
+        # passage is reached anyway through ``_roadmap_ahead``, and one already
+        # published (Psalm 27:1, Zephaniah 3:17, Proverbs 3:5-6) is filtered out by
+        # ``used_references``. The list looked longer than it worked.
+        "Psalm 62:8", "Psalm 31:7", "Isaiah 26:20", "Job 11:18",
+        "Isaiah 50:10", "Lamentations 3:22-23",
     ),
     # The Morning Altar: the first minutes of the day.
     "prayer2": (
@@ -59,6 +70,12 @@ EVERGREEN: dict[str, tuple[str, ...]] = {
         "Joel 2:25", "Luke 10:19", "Deuteronomy 28:7", "Matthew 18:18",
         "Job 22:28", "Psalm 138:7", "Psalm 126:1-3", "2 Timothy 4:18",
         "Colossians 2:14-15", "Psalm 124:7",
+        # Added 21 November 2026 (same exhaustion), in this channel's voice:
+        # passages for the long middle of the night, none already in its specs.
+        # Psalm 63:6, 42:8 and 77:6 are on this channel's roadmap too (0245-0247),
+        # so they are reached through the roadmap pass and not listed twice.
+        "Psalm 121:3-4", "Psalm 30:5", "Isaiah 26:3-4", "Psalm 46:10",
+        "Psalm 59:16", "Micah 7:8",
     ),
     # The Family Altar: the home, the marriage, the children.
     "prayer5": (

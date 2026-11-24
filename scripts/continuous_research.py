@@ -441,6 +441,71 @@ SCRIPTURE_ROADMAP = [
         "status": "planned",
         "video_id": None,
     },
+    # Added 21 November 2026. The Secret Place's standalone Short pool ran dry —
+    # "0 passage(s) left" in the nightly pass left the queue one ready Short short
+    # of the two it keeps. These are the passages that pool now draws on, on the
+    # roadmap so that draining the evergreen list refills it rather than empties it.
+    {
+        "id": "0141",
+        "scripture": "Psalm 62:8",
+        "theme": "Pour Out Your Heart Before Him",
+        "hook": "POUR IT OUT",
+        "verses": "Verse 8 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Telling God the whole of it at night, and finding Him a refuge",
+        "search_volume_tier": "Tier 1 (Refuge in the Night)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0142",
+        "scripture": "Psalm 31:7",
+        "theme": "Thou Hast Known My Soul in Adversities",
+        "hook": "YOU KNOW MY SOUL",
+        "verses": "Verse 7 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Being known by God in the trouble no one else sees",
+        "search_volume_tier": "Tier 2 (Known in Trouble)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0143",
+        "scripture": "Isaiah 26:20",
+        "theme": "Come, My People, Enter Thou into Thy Chambers",
+        "hook": "SHUT THE DOOR",
+        "verses": "Verse 20 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Entering the quiet place and shutting the door until the storm passes",
+        "search_volume_tier": "Tier 1 (Hidden Until the Storm Passes)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0144",
+        "scripture": "Job 11:18",
+        "theme": "Thou Shalt Take Thy Rest in Safety",
+        "hook": "REST IN SAFETY",
+        "verses": "Verse 18 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Lying down without fear because your tent is secure",
+        "search_volume_tier": "Tier 2 (Safe Rest)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0145",
+        "scripture": "Isaiah 50:10",
+        "theme": "Let Him Trust in the Name of the Lord",
+        "hook": "TRUST IN THE DARK",
+        "verses": "Verse 10 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Walking without light and still leaning on the name of the Lord",
+        "search_volume_tier": "Tier 2 (Light for the Dark)",
+        "status": "planned",
+        "video_id": None,
+    },
+
 ]
 
 
@@ -4157,6 +4222,28 @@ MIDNIGHT_WATCH_ROADMAP += [
     _planned("0244", "Nehemiah 4:9", "We Made Our Prayer and Set a Watch", "PRAY AND SET A WATCH",
              "Verse 9 (Exposition)", "Praying and standing guard, day and night, over what God is building",
              "Tier 2 (Watchful Prayer)"),
+    # Added 21 November 2026. The Midnight Watch had 14 unqueued scriptures left
+    # where the repository's own floor is 15, so the nightly pass had nothing to
+    # top the runway up with. Same voice, same tier scheme, the long middle of the
+    # night: the hours nobody chooses to be awake.
+    _planned("0245", "Psalm 63:6", "When I Remember Thee upon My Bed", "ON MY BED I REMEMBER",
+             "Verse 6 (Exposition)", "Remembering God in the night watches when sleep will not come",
+             "Tier 1 (Midnight Watch Anchor)"),
+    _planned("0246", "Psalm 42:8", "In the Night His Song Shall Be with Me", "HIS SONG IN THE NIGHT",
+             "Verse 8 (Exposition)", "Asking for the song of the Lord to be with you in a dark hour",
+             "Tier 1 (Song in the Night)"),
+    _planned("0247", "Psalm 77:6", "My Song in the Night", "MY SONG IN THE NIGHT",
+             "Verse 6 (Exposition)", "Making your complaint known and then remembering the works of the Lord",
+             "Tier 2 (Remembering His Works)"),
+    _planned("0248", "Psalm 121:3-4", "He That Keepeth Thee Shall Not Slumber", "HE NEVER SLUMBERS",
+             "Verses 3-4 (Exposition)", "Resting because the One keeping you does not sleep",
+             "Tier 1 (The Keeper Who Stays Awake)"),
+    _planned("0249", "Psalm 30:5", "Joy Cometh in the Morning", "JOY IN THE MORNING",
+             "Verse 5 (Exposition)", "Holding on through weeping in the night for the morning that is promised",
+             "Tier 1 (Morning Comes)"),
+    _planned("0250", "Isaiah 26:3-4", "Thou Wilt Keep Him in Perfect Peace", "PERFECT PEACE",
+             "Verses 3-4 (Exposition)", "A mind stayed on God in the night, and peace that outlasts the dark",
+             "Tier 1 (Perfect Peace)"),
 ]
 
 FAMILY_ALTAR_ROADMAP += [

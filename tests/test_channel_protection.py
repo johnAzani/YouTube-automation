@@ -472,3 +472,22 @@ def test_the_grade_section_is_not_drawn_from_nothing(dirs):
     assert "#### The grades the stills wear" not in report
     # The channel's own grade is known without reading a single spec.
     assert _row(rows, "prayer4").poster_grade == "midnight"
+
+
+def test_quoted_scripture_is_not_counted_as_shared_prayer():
+    """Two channels may quote Jude 1:24 word for word; that is scripture, not a template.
+
+    Regression from 21 November 2026. Narrators write the curly apostrophe
+    ("name\u2019s") and the modern -or spelling ("Savior"); the KJV corpus holds the
+    straight apostrophe and "Saviour". Both comparisons failed, so the verse was
+    counted as one channel reusing another's prayer sentence — the sharpest alarm
+    this script can raise — on what was simply the Bible.
+    """
+    verse = ("Now unto him that is able to keep you from falling, and to present you "
+             "faultless before the presence of his glory with exceeding joy, to the only "
+             "wise God our Savior, be glory and majesty, dominion and power, both now and ever.")
+
+    assert cp._is_scripture(" ".join(cp._words(verse))), "Jude 1:24 must be recognised"
+    # The apostrophe and the spelling are the two things that used to break it.
+    assert cp._words("God\u2019s own") == cp._words("God's own")
+    assert cp._words("our Savior") == cp._words("our Saviour")
