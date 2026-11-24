@@ -15,13 +15,47 @@ from pipeline import night_tail as nt
 # --------------------------------------------------------------------------- #
 # Which channels, and how long
 # --------------------------------------------------------------------------- #
-def test_only_the_bedtime_channel_gets_a_night_tail():
+@pytest.fixture
+def no_growth_report(monkeypatch, tmp_path):
+    """The constant is the fallback when the reading has never been written."""
+    from pipeline import growth_score
+
+    monkeypatch.setattr(growth_score, "REPORT_PATH", tmp_path / "absent.json")
+    return tmp_path
+
+
+def test_only_the_bedtime_channel_gets_a_night_tail(no_growth_report):
     assert nt.configured_minutes("secret-place", {}) == 180
     for daytime in ("prayer2", "prayer3", "prayer5", "prayer9", "prayer10"):
         assert nt.configured_minutes(daytime, {}) == 0
 
 
-def test_the_switch_turns_it_off_and_sets_the_length_but_never_adds_a_channel():
+def test_the_measured_watch_time_removes_the_tail(monkeypatch, tmp_path):
+    """The repository's own Analytics: nobody stays for three hours.
+
+    The reading across five measured videos is a median of about 10.6 minutes, so
+    appending 170 minutes of quiet music to every prayer is 94% of a file nobody
+    sees. The tail goes off on the evidence, not on a hunch.
+    """
+    from pipeline import growth_score
+
+    monkeypatch.setattr(growth_score, "REPORT_PATH", tmp_path / "growth_score.json")
+    growth_score.write_report(growth_score.build_report(
+        *growth_score.load_channels()[:1]), tmp_path / "growth_score.json")
+    assert nt.configured_minutes("secret-place", {}) == 0
+
+
+def test_the_switch_still_wins_over_the_reading(monkeypatch, tmp_path):
+    from pipeline import growth_score
+
+    monkeypatch.setattr(growth_score, "REPORT_PATH", tmp_path / "growth_score.json")
+    growth_score.write_report(growth_score.build_report(*growth_score.load_channels()[:1]),
+                              tmp_path / "growth_score.json")
+    assert nt.configured_minutes("secret-place", {"NIGHT_TAIL_MINUTES": "45"}) == 45
+    assert nt.configured_minutes("secret-place", {"NIGHT_TAIL_MINUTES": "0"}) == 0
+
+
+def test_the_switch_turns_it_off_and_sets_the_length_but_never_adds_a_channel(no_growth_report):
     assert nt.configured_minutes("secret-place", {"NIGHT_TAIL_MINUTES": "0"}) == 0
     assert nt.configured_minutes("secret-place", {"NIGHT_TAIL_MINUTES": "60"}) == 60
     assert nt.configured_minutes("secret-place", {"NIGHT_TAIL_MINUTES": "5"}) == nt.MIN_TOTAL_MINUTES
@@ -233,7 +267,7 @@ def test_pipeline_skips_daytime_channels_without_asking_youtube(monkeypatch):
     assert pp._add_night_tail(_Doc("prayer2"), Path("x.mp4"), [], 400.0) is None
 
 
-def test_pipeline_skips_when_youtube_does_not_allow_long_uploads(monkeypatch, capsys):
+def test_pipeline_skips_when_youtube_does_not_allow_long_uploads(monkeypatch, capsys, no_growth_report):
     from pipeline import prayer_pipeline as pp
     from pipeline import upload
 
@@ -245,7 +279,10 @@ def test_pipeline_skips_when_youtube_does_not_allow_long_uploads(monkeypatch, ca
     assert "Night tail skipped" in capsys.readouterr().out
 
 
-def test_pipeline_builds_the_tail_for_the_bedtime_channel(monkeypatch, capsys):
+def test_pipeline_builds_the_tail_for_the_bedtime_channel(monkeypatch, capsys, no_growth_report):
+    # No growth report on disk: the three-hour constant is the fallback, which is
+    # the case this test is about. What the reading does to the length is covered
+    # by tests/test_viewer_length.py and the two tests above it.
     from pipeline import prayer_pipeline as pp
     from pipeline import upload
 

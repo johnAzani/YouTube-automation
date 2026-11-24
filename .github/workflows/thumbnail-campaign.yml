@@ -1,0 +1,91 @@
+name: Thumbnail campaign (which concept earns the click)
+
+# Once a day, measures the click rate of each thumbnail concept the CTR pack
+# renders, using the videos the rotation actually put it on.
+#
+# What this is not: a per-video A/B test. YouTube's Test & Compare is Studio-only
+# and the Data API can neither open one nor read which variant won. What it is: the
+# three concepts (imperative, curiosity, textless poster) are assigned to different
+# videos by a deterministic rotation (pipeline/thumbnail_campaign.py), each receipt
+# records which one went live, and the reach files say which one earned the clicks.
+#
+# $0.00 lock: no API call, no credential; it reads committed files and writes one.
+on:
+  schedule:
+    # 05:07 UTC — after channel-analytics.yml (03:37) has refreshed the reach files.
+    - cron: "7 5 * * *"
+  workflow_dispatch:
+  push:
+    branches: ["main", "arena/**"]
+    paths:
+      - ".github/workflows/thumbnail-campaign.yml"
+      - "pipeline/thumbnail_campaign.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: thumbnail-campaign
+  cancel-in-progress: false
+
+jobs:
+  campaign:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install the pack's own dependency
+        # Only PyYAML is needed to read a receipt's frontmatter; the pack itself is
+        # not rendered here.
+        run: pip install --quiet pyyaml
+
+      - name: Measure the concepts
+        run: python -u -m pipeline.thumbnail_campaign
+
+      - name: Show the reading in the run summary
+        if: always()
+        run: |
+          {
+            echo "### Thumbnail campaign"
+            echo '```'
+            python - <<'PY'
+          import json
+          from pipeline.thumbnail_campaign import headline
+          try:
+              report = json.load(open("content/research/thumbnail_campaign.json"))
+          except Exception as exc:
+              print("campaign not readable yet:", exc)
+          else:
+              print("\n".join(headline(report)))
+          PY
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit the reading
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: |
+          git config user.name "thumbnail-campaign"
+          git config user.email "actions@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch --quiet origin main
+            git reset --quiet --hard origin/main
+            python -u -m pipeline.thumbnail_campaign >/dev/null
+            git add content/research/thumbnail_campaign.json
+            if git diff --cached --quiet; then
+              echo "campaign unchanged"
+              exit 0
+            fi
+            git commit --quiet -m "chore(growth): which thumbnail concept earned the click [skip ci]"
+            if git push --quiet origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 3))
+          done
+          echo "::warning title=Thumbnail campaign::could not push the reading; the next run writes it again"

@@ -5,6 +5,15 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-21 — 94% of every published minute is never watched
+
+- **The three-hour night tail was measured and lost.** Across five long-forms with a real length and a reading, the median view is **10.6 minutes**. The channel publishes 187-minute videos, so 94% of every minute is never seen, and the 50-minute outlier that made the bet look reasonable had **one view**. Average percentage viewed is a signal YouTube ranks on: 5% on a three-hour upload is worse for distribution than 60% on a six-minute one.
+- **New `pipeline/viewer_length.py`.** A release is never built longer than viewers measurably stay: the ceiling is the median watched time, rounded down, floored at five minutes. `pipeline/night_tail.py` reads it, and with today's reading (10 minutes) below the tail's minimum (20) **the tail switches itself off** — the prayer publishes alone. `NIGHT_TAIL_MINUTES` still overrides; fewer than three measured videos leaves the length untouched.
+- **The thumbnail choice is finally tested. New `pipeline/thumbnail_campaign.py` + `thumbnail-campaign.yml`.** The pack has always rendered three concepts and uploaded the first one every time. A deterministic rotation now puts a different concept live on each release, the receipt records `thumbnail_concept`, and the daily job computes the click rate per concept from the reach files. A per-video Test & Compare cannot be opened or read by the Data API, and the report says so.
+- **New `pipeline/realistic_ceiling.py`, in the daily growth job.** Prices each lever from measured values: today 0.81 hours a day; click rate at 4% and watch time at 3 minutes take it to 2.47; the threshold asks 58.8. Closing the rest needs **8,350 impressions a day where YouTube serves 350**. It names what it will not claim: any view count, or virality.
+- **Unproven:** that any thumbnail concept beats another — the campaign reads 0 videos until uploads carry the field; that a shorter prayer holds viewers longer. **Owner-only:** the Analytics grant on nine channels. **Next step:** the next `content/analytics/README.md` should show a release budget of 10 minutes and a tail that is off.
+- Tests: `tests/test_viewer_length.py` (11), `tests/test_thumbnail_campaign.py` (13), `tests/test_realistic_ceiling.py` (12). Reading: `docs/EVERY_LEVER_MEASURED_2026-11-21.md`.
+
 ## 2026-11-21 — Nearly half the watch time does not count
 
 - **Nobody had read where the hours arrive from.** `content/analytics/` has held the traffic-source breakdown since November; nothing read it to decide anything. Everything built to grow watch time — playlists, end screens, the three-hour night tail, the thumbnail pack — rested on a belief nobody had checked.

@@ -191,6 +191,8 @@ def read_channel(path: Path) -> dict | None:
             "hours": _hours(row.get("watch_hours")),
             "views": _int(row.get("views")),
             "average_view_percent": _hours(row.get("average_view_percent")),
+            # Seconds watched a view: where the length ceiling is measured from.
+            "average_view_seconds": _hours(row.get("average_view_seconds")),
         })
 
     by_kind = (payload.get("last_28_days") or {}).get("views_by_kind") or {}
@@ -541,6 +543,29 @@ def budget_from_payoff(payoff: dict, need_a_day: float | None) -> dict:
     }
 
 
+def watch_ceiling(channels: dict[str, dict], current_seconds: int | None = None) -> dict:
+    """How long a release should be, from where viewers actually leave.
+
+    ``pipeline/viewer_length.py`` holds the argument and the arithmetic; this only
+    feeds it the two things it needs: every video that has both a real length and a
+    reading, and the length the channel publishes today.
+    """
+    from . import viewer_length
+
+    lengths = video_lengths()
+    rows: list[dict] = []
+    for report in channels.values():
+        rows.extend(viewer_length.measured_views(report["videos"], lengths))
+    reading = viewer_length.read(rows)
+    current = current_seconds
+    if current is None:
+        current = DEFAULT_BUDGET_MINUTES * 60
+    verdict = viewer_length.ceiling_seconds(reading, current_seconds=current)
+    verdict["wasted_share"] = viewer_length.wasted_share(reading, current)
+    verdict["tail_is_the_problem"] = viewer_length.tail_is_the_problem(reading, current)
+    return verdict
+
+
 def channel_readings(channels: dict[str, dict], days: list[str]) -> list[dict]:
     """What each channel's own figures say, over the shared window.
 
@@ -682,10 +707,18 @@ def build_report(channels: dict[str, dict] | None = None, *, today: date | None 
     need = need_reading(channels, today, hours_a_day)
 
     payoff = length_payoff(channels)
+    ceiling = watch_ceiling(channels)
     if budget_minutes is not None:
         budget = {"minutes": int(budget_minutes), "basis": "given", "considered": payoff["bands"]}
     else:
-        budget = budget_from_payoff(payoff, need.get("hours_a_day_needed"))
+        # Where viewers leave is the last word on length: a band's hours a view
+        # cannot argue for a video longer than the median viewer stays for.
+        budget = {
+            "minutes": max(MIN_BUDGET_MINUTES, int(round(ceiling["minutes"]))),
+            "basis": ceiling["basis"],
+            "considered": payoff["bands"],
+            "ceiling": ceiling,
+        }
     minutes = int(budget.get("minutes") or DEFAULT_BUDGET_MINUTES)
     targets = allocate(rows, minutes)
 
@@ -723,6 +756,7 @@ def build_report(channels: dict[str, dict] | None = None, *, today: date | None 
         "targets": targets,
         "budget": budget,
         "length_payoff": payoff,
+        "watch_ceiling": ceiling,
         "hints": {
             "night_tail": tail,
             "end_screen": ends,

@@ -323,7 +323,9 @@ WORKFLOW_CODE_PATHS: dict[str, tuple[str, ...]] = {
     "comments.yml": ("pipeline/comment_responder.py", "scripts/reply_comments.py"),
     "growth-autopilot.yml": ("scripts/growth_autopilot.py",),
     "channel-analytics.yml": ("scripts/analytics_reader.py", "scripts/reach_reader.py"),
-    "growth-score.yml": ("pipeline/growth_score.py",),
+    "growth-score.yml": ("pipeline/growth_score.py", "pipeline/viewer_length.py",
+                         "pipeline/realistic_ceiling.py"),
+    "thumbnail-campaign.yml": ("pipeline/thumbnail_campaign.py",),
     "automation-health.yml": ("scripts/pipeline_watchdog.py", "scripts/automation_monitor.py"),
     "monitor.yml": ("scripts/automation_monitor.py", "scripts/pipeline_watchdog.py"),
 }
@@ -371,6 +373,8 @@ EFFECTS = {
     "channel-analytics.yml": "writes content/analytics/ — where each channel stands",
     "growth-score.yml": "writes content/research/growth_score.json: where the counted "
                         "watch hours come from and the length a release should be built to",
+    "thumbnail-campaign.yml": "writes content/research/thumbnail_campaign.json: which "
+                              "thumbnail concept earns the click",
 }
 
 

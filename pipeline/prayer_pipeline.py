@@ -370,9 +370,25 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
                                               channel_id=doc.channel)
         for report in thumb_reports:
             mobile_preview(report.path, report.path.with_name(report.path.stem + "_mobile.png"))
+        # The pack has always rendered three different concepts and uploaded the
+        # first one every time, so the other two were never on screen and the
+        # choice between them was never tested. This release takes its turn in a
+        # rotation instead (pipeline/thumbnail_campaign.py); the receipt records
+        # which concept went live so the click rate that follows can be read per
+        # concept.
+        from .thumbnail_campaign import concept_for, rotation_report
+
+        concept = concept_for(doc.id or doc.slug)
+        # The pack's reports name their concept in ``variant``; a stand-in passed by a
+        # test or a caller may not carry one, and is taken as the first concept.
+        chosen = next((r for r in thumb_reports
+                       if str(getattr(r, "variant", "")) == concept), thumb_reports[0])
+        live_concept = str(getattr(chosen, "variant", "") or concept)
+        print(f"[thumbnail] {doc.id or doc.slug}: concept "
+              f"'{live_concept}' goes live {rotation_report(doc.id or doc.slug)['sequence']}")
         (out / "thumbnails" / "report.json").write_text(
             json.dumps([r.as_dict() for r in thumb_reports], indent=2), encoding="utf-8")
-        thumbs = [r.path for r in thumb_reports]
+        thumbs = [chosen.path] + [r.path for r in thumb_reports if r is not chosen]
         pack = write_metadata_pack(doc, durations, out)
         if night:
             from .night_tail import describe as describe_night
@@ -406,6 +422,10 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
                 recovered_video = inspect_existing_longform(up.video_id, doc.title)
             _mark_job_uploaded(path, doc, up.video_id,
                                getattr(up, 'thumbnail_status', 'not_requested') if is_new_upload else 'not_requested',
+                               # Which of the pack's three concepts went live, so the
+                               # click rate that follows can be read per concept
+                               # (pipeline/thumbnail_campaign.py).
+                               thumbnail_concept=live_concept if is_new_upload else None,
                                # The real length of the file that was uploaded, so a
                                # receipt says what the video is and not what the
                                # script was planned at (pipeline/growth_score.py).

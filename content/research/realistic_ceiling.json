@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "as_of": "2026-11-24",
+  "threshold_hours": 4000,
+  "days_until_the_threshold_doubles": 68,
+  "hours_a_day_needed": 58.82,
+  "measured": {
+    "impressions_a_day": 350.0,
+    "click_rate_percent": 1.32,
+    "watch_seconds_a_view": 634.0,
+    "views_a_day": 207.2,
+    "reach_sufficient": true,
+    "watch_sufficient": true
+  },
+  "levers": [
+    {
+      "lever": "as it stands",
+      "hours_a_day": 0.814,
+      "note": "the measured impressions, click rate and watch time"
+    },
+    {
+      "lever": "click rate to 4%",
+      "hours_a_day": 2.466,
+      "note": "the bottom of the 4-8% band prayer and sleep channels report"
+    },
+    {
+      "lever": "watch time to 3 minutes and a 4% click rate",
+      "hours_a_day": 2.466,
+      "note": "both format levers at their documented levels, impressions unchanged"
+    }
+  ],
+  "verdict": {
+    "reachable_on_impressions_alone": false,
+    "times_the_pace_must_rise": 72.3,
+    "impressions_a_day_needed": 8350,
+    "impressions_multiple_needed": 23.9,
+    "sentence": "The threshold asks 58.82 hours a day; the channels produce 0.814. With both format levers at their documented levels it would be 2.466. To reach the threshold at a 4% click rate and the measured watch time, YouTube would have to serve 8,350 impressions a day where it serves 350. Impressions are chosen by YouTube's recommendation system from how viewers respond, so that is the honest distance: it is reach, not metadata."
+  },
+  "not_claimed": [
+    "any particular view count on any particular video",
+    "virality: no lever here raises impressions, and impressions are what a video must have before it can be watched",
+    "the date: with the impressions measured today, the threshold is reached by many levers, and the model says which one must move"
+  ],
+  "cost_lock": "$0.00 \u2014 reads committed analytics files; no API call.",
+  "sources": [
+    "content/analytics/*.reach.json",
+    "content/analytics/*.json",
+    "content/published/*.md"
+  ]
+}

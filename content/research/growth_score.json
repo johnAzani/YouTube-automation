@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-23T16:07:57.510982+00:00",
-  "as_of": "2026-11-23",
+  "generated_at": "2026-11-24T15:39:58.278216+00:00",
+  "as_of": "2026-11-24",
   "window": {
     "first_day": "2026-10-26",
     "last_day": "2026-11-20",
@@ -153,10 +153,10 @@
       "threshold_hours": 4000,
       "counted_hours_365d": 41.03,
       "remaining_hours": 3958.97,
-      "days_until_the_threshold_doubles": 69,
-      "hours_a_day_needed": 57.38,
+      "days_until_the_threshold_doubles": 68,
+      "hours_a_day_needed": 58.22,
       "hours_a_day_now": 2.03,
-      "times_the_pace_must_rise": 28.3,
+      "times_the_pace_must_rise": 28.7,
       "note": "counted hours are long-form and live only; Shorts-feed hours do not count. Only channels with the Analytics grant are in this figure."
     },
     "held_percent_median": 8.9
@@ -174,13 +174,13 @@
       "held_percent": 8.9,
       "videos_read": 8,
       "share_of_network_hours": 1.0,
-      "target_minutes": 180,
+      "target_minutes": 10,
       "longer_is_watched": false
     }
   ],
   "budget": {
-    "minutes": 180,
-    "basis": "a view of a video over 3 hours returned 0.1261 hours, the most of any length measured (6 videos); the threshold asks 57.38 hours a day",
+    "minutes": 10,
+    "basis": "the median view of a measured video is 10.6 minutes (across 5 videos); a release is not built longer than that",
     "considered": [
       {
         "band": "over 3 hours",
@@ -191,7 +191,22 @@
         "hours_a_view": 0.1261,
         "measured": true
       }
-    ]
+    ],
+    "ceiling": {
+      "seconds": 600,
+      "minutes": 10.0,
+      "changed": true,
+      "basis": "the median view of a measured video is 10.6 minutes (across 5 videos); a release is not built longer than that",
+      "reading": {
+        "videos": 5,
+        "median_seconds": 634.0,
+        "average_seconds": 685.2,
+        "shortest_seconds": 271.0,
+        "longest_seconds": 1337.0
+      },
+      "wasted_share": 0.9413,
+      "tail_is_the_problem": true
+    }
   },
   "length_payoff": {
     "bands": [
@@ -210,6 +225,21 @@
     "longest_measured_band": "over 3 hours",
     "videos_without_a_length": 29,
     "note": "hours a view, by the video's own length. Only videos whose real length is known are compared, and a band needs two videos to count. A video whose receipt carries only the planned length is counted above, not guessed at."
+  },
+  "watch_ceiling": {
+    "seconds": 600,
+    "minutes": 10.0,
+    "changed": true,
+    "basis": "the median view of a measured video is 10.6 minutes (across 5 videos); a release is not built longer than that",
+    "reading": {
+      "videos": 5,
+      "median_seconds": 634.0,
+      "average_seconds": 685.2,
+      "shortest_seconds": 271.0,
+      "longest_seconds": 1337.0
+    },
+    "wasted_share": 0.9413,
+    "tail_is_the_problem": true
   },
   "hints": {
     "night_tail": {
@@ -302,7 +332,7 @@
       "note": "a Related video needs advanced access and an edit in Studio; scripts/growth_ab.py reads the hours before and after one is added"
     }
   },
-  "watchers_needed_a_day": 7.6,
+  "watchers_needed_a_day": 136.9,
   "cost_lock": "$0.00 \u2014 reads committed Analytics files; no API call, no new secret.",
   "privacy": "Hours, views, minutes and shares only. No revenue, no viewer, no other channel's title."
 }

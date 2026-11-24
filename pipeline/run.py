@@ -111,6 +111,7 @@ def _mark_job_uploaded(
     caption_sha256: str | None = None,
     extra_fields: dict | None = None,
     duration_seconds: float | None = None,
+    thumbnail_concept: str | None = None,
 ) -> Path:
     """Move and stamp a queue job only after YouTube confirms an uploaded video ID.
 
@@ -245,6 +246,10 @@ def _mark_job_uploaded(
         stamped.append(("duration_seconds", measured_length))
     if thumb_ok:
         stamped.append(("thumbnail_revision", THUMBNAIL_REVISION))
+        # Which of the pack's three concepts this release put live. Without it the
+        # campaign has nothing to compare (pipeline/thumbnail_campaign.py).
+        if thumbnail_concept:
+            stamped.append(("thumbnail_concept", thumbnail_concept))
     else:
         # Honest state: the repair pass in the monitor is what fixes this, so
         # leave a marker it can see rather than a revision it can trust.
@@ -292,6 +297,8 @@ def _mark_job_uploaded(
         doc.meta["duration_seconds"] = measured_length
     if thumb_ok:
         doc.meta["thumbnail_revision"] = THUMBNAIL_REVISION
+        if thumbnail_concept:
+            doc.meta["thumbnail_concept"] = thumbnail_concept
     else:
         doc.meta["thumbnail_pending"] = True
         doc.meta["thumbnail_error"] = thumb_note
