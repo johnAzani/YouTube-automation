@@ -235,10 +235,33 @@ def opener(title: str) -> str:
     return " ".join(words[:2])
 
 
+#: Characters that stand for an apostrophe. Narrators write the curly one — the
+#: specs are full of "name\u2019s" — while the KJV corpus is straight. Comparing
+#: one against the other made scripture look like unauthored prayer.
+_APOSTROPHES = str.maketrans({c: "'" for c in "\u2018\u2019\u02bc" + chr(0x2019)})
+
+
+#: The modern -or spelling a narrator writes where the KJV corpus has -our. Without
+#: this, "the only wise God our Savior" (Jude 1:24, spoken word for word) failed to
+#: match the corpus's "Saviour" and was counted as one channel reusing another's
+#: prayer sentence. Only words that occur both ways in real narration are listed.
+_MODERN_SPELLINGS = {
+    "savior": "saviour", "honor": "honour", "favor": "favour", "labor": "labour",
+    "armor": "armour", "behavior": "behaviour", "neighbor": "neighbour",
+    "splendor": "splendour", "savor": "savour", "harbor": "harbour",
+    "vigor": "vigour", "valor": "valour", "odor": "odour", "rumor": "rumour",
+}
+
+
+def _words(text: str) -> list[str]:
+    raw = re.findall(r"[a-z']+", str(text or "").translate(_APOSTROPHES).lower())
+    return [_MODERN_SPELLINGS.get(w, w) for w in raw]
+
+
 def _sentences(text: str) -> list[str]:
     out = []
     for piece in re.split(r"(?<=[.!?])\s+", str(text or "")):
-        words = re.findall(r"[a-z']+", piece.lower())
+        words = _words(piece)
         if len(words) >= MIN_SENTENCE_WORDS:
             out.append(" ".join(words))
     return out
@@ -256,8 +279,7 @@ def _is_scripture(sentence: str) -> bool:
     from pipeline import scripture_text
 
     if not _BIBLE_WORDS:
-        _BIBLE_WORDS.append(
-            " " + " ".join(re.findall(r"[a-z']+", scripture_text._whole_text())) + " ")
+        _BIBLE_WORDS.append(" " + " ".join(_words(scripture_text._whole_text())) + " ")
     words = sentence.split()
     for skipped in range(0, 7):
         rest = words[skipped:]

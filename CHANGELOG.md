@@ -5,6 +5,14 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-21 — the protection alarm was reading the Bible as template writing
+
+- **`scripts/channel_protection.py` counted quoted scripture as one channel reusing another's prayer.** Narrators write "name’s" and "our Savior"; the KJV corpus holds "name's" and "our Saviour". Both comparisons were literal, so every verse spoken word for word across two channels failed to match and raised the sharpest alarm the script has. Two normalisations — the apostrophe, and the -or/-our spellings that actually occur in narration (savior, honor, favor, labor, armor) — take the measure from two channel pairs down to **0**. The report now says what it means.
+- **Two pools were empty, and that is why the runway was short.** The nightly pass reported `0 passage(s) left for standalone Shorts on The Secret Place`, so its queue held one ready Short where it keeps two: `EVERGREEN["secret-place"]` had drained. Six free passages were added there, and five more to the channel's roadmap so that draining the list refills it — Psalm 62:8, 31:7, Isaiah 26:20, Job 11:18, Isaiah 50:10, Lamentations 3:22-23.
+- **The Midnight Watch roadmap was one row under the floor** — 14 unqueued scriptures where `scripts/roadmap_headroom.py` requires 15. Six rows added in the same voice (0245–0250): the night watches, the song in the night, the Keeper who does not slumber, joy in the morning, perfect peace.
+- **Still open, honestly:** `secret-place` shows 1 ready Short until the next scheduled brain pass authors the second. The pool it now draws on holds six passages, but the narration is the model's to write, and writing it by hand here would break the rule that a Short is authored rather than pasted.
+- Tests: `tests/test_channel_protection.py` gains the Jude 1:24 regression (39 pass).
+
 ## 2026-11-21 — 92% of every published minute is never watched
 
 - **The three-hour night tail was measured and lost.** Across the seven long-forms that have both a real length and a reading, the median view is **13.5 minutes**. The channel publishes 187-minute videos, so 92.5% of every minute is never seen, and the 34-minute outlier that made the bet look reasonable had **one view**. Average percentage viewed is a signal YouTube ranks on: 7% on a three-hour upload is worse for distribution than 60% on a thirteen-minute one.
