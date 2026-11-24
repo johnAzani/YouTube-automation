@@ -58,6 +58,12 @@ jobs:
       - name: Read where the channels' hours come from
         run: python -u -m pipeline.growth_score
 
+      - name: Model what the channel can actually reach
+        # pipeline/realistic_ceiling.py: today's impressions, click rate and watch
+        # time, then each lever at a documented level. It says what is not reachable
+        # as plainly as what is.
+        run: python -u -m pipeline.realistic_ceiling
+
       - name: Show the reading in the run summary
         if: always()
         run: |
@@ -79,7 +85,8 @@ jobs:
             git fetch --quiet origin main
             git reset --quiet --hard origin/main
             python -u -m pipeline.growth_score >/dev/null
-            git add content/research/growth_score.json
+            python -u -m pipeline.realistic_ceiling >/dev/null
+            git add content/research/growth_score.json content/research/realistic_ceiling.json
             if git diff --cached --quiet; then
               echo "growth score unchanged"
               exit 0

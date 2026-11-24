@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-24T15:15:22.609282+00:00",
+  "generated_at": "2026-11-24T15:48:55.989896+00:00",
   "as_of": "2026-11-24",
   "window": {
     "first_day": "2026-10-27",
@@ -174,13 +174,13 @@
       "held_percent": 10.2,
       "videos_read": 9,
       "share_of_network_hours": 1.0,
-      "target_minutes": 180,
+      "target_minutes": 13,
       "longer_is_watched": false
     }
   ],
   "budget": {
-    "minutes": 180,
-    "basis": "a view of a video over 3 hours returned 0.1816 hours, the most of any length measured (7 videos); the threshold asks 57.9 hours a day",
+    "minutes": 13,
+    "basis": "the median view of a measured video is 13.5 minutes (across 7 videos); a release is not built longer than that",
     "considered": [
       {
         "band": "over 3 hours",
@@ -191,7 +191,22 @@
         "hours_a_view": 0.1816,
         "measured": true
       }
-    ]
+    ],
+    "ceiling": {
+      "seconds": 780,
+      "minutes": 13.0,
+      "changed": true,
+      "basis": "the median view of a measured video is 13.5 minutes (across 7 videos); a release is not built longer than that",
+      "reading": {
+        "videos": 7,
+        "median_seconds": 812.0,
+        "average_seconds": 948.6,
+        "shortest_seconds": 271.0,
+        "longest_seconds": 2066.0
+      },
+      "wasted_share": 0.9248,
+      "tail_is_the_problem": true
+    }
   },
   "length_payoff": {
     "bands": [
@@ -210,6 +225,21 @@
     "longest_measured_band": "over 3 hours",
     "videos_without_a_length": 28,
     "note": "hours a view, by the video's own length. Only videos whose real length is known are compared, and a band needs two videos to count. A video whose receipt carries only the planned length is counted above, not guessed at."
+  },
+  "watch_ceiling": {
+    "seconds": 780,
+    "minutes": 13.0,
+    "changed": true,
+    "basis": "the median view of a measured video is 13.5 minutes (across 7 videos); a release is not built longer than that",
+    "reading": {
+      "videos": 7,
+      "median_seconds": 812.0,
+      "average_seconds": 948.6,
+      "shortest_seconds": 271.0,
+      "longest_seconds": 2066.0
+    },
+    "wasted_share": 0.9248,
+    "tail_is_the_problem": true
   },
   "hints": {
     "night_tail": {
@@ -296,7 +326,7 @@
       "note": "a Related video needs advanced access and an edit in Studio; scripts/growth_ab.py reads the hours before and after one is added"
     }
   },
-  "watchers_needed_a_day": 9.4,
+  "watchers_needed_a_day": 130.3,
   "cost_lock": "$0.00 \u2014 reads committed Analytics files; no API call, no new secret.",
   "privacy": "Hours, views, minutes and shares only. No revenue, no viewer, no other channel's title."
 }

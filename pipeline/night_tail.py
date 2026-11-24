@@ -72,6 +72,29 @@ REST_LINE = "Rest now. He that keepeth thee will not slumber."
 REST_NOTE = "The prayer has ended. Quiet music plays on while you sleep."
 
 
+def growth_verdict() -> dict:
+    """``(minutes, keep, basis)`` from the growth report, or an empty dict.
+
+    Kept separate so the decision can be tested without a file on disk. A missing
+    or unreadable report is not a failure: the constant stands.
+    """
+    try:
+        from . import growth_score
+
+        report = growth_score.load_report()
+    except Exception as exc:  # noqa: BLE001 - the constant is a sound fallback
+        print(f"[night-tail] growth report unreadable, keeping the constant: {exc!r}")
+        return {}
+    if not report:
+        return {}
+    ceiling = report.get("watch_ceiling") or {}
+    minutes = growth_score.budget_minutes_from_report(report, default=0)
+    return {"report": report, "minutes": minutes,
+            "keep": growth_score.keep_night_tail(report, default=True),
+            "basis": str(report.get("budget", {}).get("basis") or ""),
+            "ceiling": ceiling}
+
+
 def configured_minutes(channel_id: str | None, environ: dict | None = None) -> int:
     """Whole-video minutes for this channel; 0 means no tail.
 
@@ -98,23 +121,29 @@ def configured_minutes(channel_id: str | None, environ: dict | None = None) -> i
         return max(MIN_TOTAL_MINUTES, min(MAX_TOTAL_MINUTES, wanted))
     if not base:
         return 0  # a daytime channel is not a sleep video, whatever the report says
-    try:
-        from . import growth_score
-
-        report = growth_score.load_report()
-    except Exception as exc:  # noqa: BLE001 - the constant is a sound fallback
-        print(f"[night-tail] growth report unreadable, keeping {base} minutes: {exc!r}")
+    verdict = growth_verdict()
+    if not verdict:
         return base
-    if report and not growth_score.keep_night_tail(report, default=True):
+    if not verdict["keep"]:
         print("[night-tail] the growth report reads the tail as flat; publishing the prayer alone")
         return 0
-    if report:
-        minutes = growth_score.budget_minutes_from_report(report, default=base)
-        if minutes != base:
-            print(f"[night-tail] {channel_id}: the growth report sets {minutes} minutes "
-                  f"(was {base}) — {report.get('budget', {}).get('basis', '')}")
-        return minutes
-    return base
+    minutes = int(verdict["minutes"] or 0)
+    if minutes <= 0:
+        return base
+    # A release is never built longer than viewers measurably stay for. When the
+    # ceiling is below the tail's own minimum there is no honest tail left: the
+    # prayer publishes alone rather than three hours nobody watches
+    # (pipeline/viewer_length.py).
+    ceiling = verdict.get("ceiling") or {}
+    if ceiling.get("seconds") and ceiling["seconds"] < MIN_TOTAL_MINUTES * 60:
+        print(f"[night-tail] {channel_id}: viewers stay {ceiling.get('minutes')} minutes "
+              f"({ceiling.get('basis')}); there is no tail to add")
+        return 0
+    minutes = max(MIN_TOTAL_MINUTES, min(MAX_TOTAL_MINUTES, minutes))
+    if minutes != base:
+        print(f"[night-tail] {channel_id}: the growth report sets {minutes} minutes "
+              f"(was {base}) — {verdict['basis']}")
+    return minutes
 
 
 def long_uploads_allowed(youtube: Any) -> tuple[bool, str]:

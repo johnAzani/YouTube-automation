@@ -551,6 +551,78 @@ def growth_lines():
                      'A Short is excluded from this figure: a looping Short reports past 100%%.'
                      % amount(held))
         lines.append('')
+    lines += campaign_lines()
+    lines += ceiling_lines()
+    return lines
+
+
+def campaign_lines():
+    """Which thumbnail concept earns the click, from `thumbnail_campaign.json`."""
+    path = ROOT / 'content' / 'research' / 'thumbnail_campaign.json'
+    try:
+        report = json.loads(path.read_text(encoding='utf-8')) or {}
+    except (OSError, ValueError):
+        return []
+    concepts = report.get('concepts') or []
+    if not concepts:
+        return []
+    lines = ['### Which thumbnail concept earns the click', '',
+             'Written by `pipeline/thumbnail_campaign.py`. The pack renders three concepts; a '
+             'rotation puts a different one live on each release, so the click rate that '
+             'follows can be compared across videos. A per-video Test & Compare is Studio-only: '
+             'the Data API can neither open one nor read which variant won.', '',
+             '| Concept | Videos | Impressions | Click rate |', '| :--- | ---: | ---: | ---: |']
+    for row in concepts:
+        rate = row.get('click_rate_percent')
+        trust = '' if row.get('measurable') else ' (too few impressions)'
+        lines.append('| %s | %s | %s | %s%s |' % (
+            row.get('concept'), count(row.get('videos')), count(row.get('impressions')),
+            '—' if rate is None else '%s%%' % amount(rate), trust))
+    lines.append('')
+    if report.get('leader'):
+        lines.append('Leader: **%s** at %s%% click rate.' % (
+            report['leader'], amount(report.get('leader_click_rate_percent'))))
+        lines.append('')
+    return lines
+
+
+def ceiling_lines():
+    """The measured length ceiling and the honest best case, from the two reports."""
+    lines = []
+    growth = ROOT / 'content' / 'research' / 'growth_score.json'
+    ceiling = {}
+    try:
+        ceiling = (json.loads(growth.read_text(encoding='utf-8')) or {}).get('watch_ceiling') or {}
+    except (OSError, ValueError):
+        ceiling = {}
+    if ceiling.get('reading'):
+        reading = ceiling['reading']
+        lines += ['### How long a release should be', '',
+                  'A view is watched for a median of **%s minutes** across %s measured videos. '
+                  'A release is not built longer than that, so length outside the prayer is '
+                  'time nobody spends.' % (
+                      amount(reading.get('median_seconds', 0) / 60), count(reading.get('videos'))), '',
+                  '%s `%s` — %s of every published minute is never watched.' % (
+                      'The night tail is the problem:' if ceiling.get('tail_is_the_problem')
+                      else 'Length:', amount(ceiling.get('minutes')),
+                      '%s%%' % amount((ceiling.get('wasted_share') or 0) * 100)), '']
+    model_path = ROOT / 'content' / 'research' / 'realistic_ceiling.json'
+    try:
+        model = json.loads(model_path.read_text(encoding='utf-8')) or {}
+    except (OSError, ValueError):
+        model = {}
+    if model.get('levers'):
+        lines += ['### What is actually reachable', '',
+                  'Written by `pipeline/realistic_ceiling.py`. Every figure below is measured '
+                  'or is a documented level, never a promise.', '',
+                  '| Lever | Hours a day |', '| :--- | ---: |']
+        for lever in model['levers']:
+            lines.append('| %s | %s |' % (lever.get('lever'), amount(lever.get('hours_a_day'))))
+        lines.append('')
+        verdict = model.get('verdict') or {}
+        if verdict.get('sentence'):
+            lines.append(verdict['sentence'])
+            lines.append('')
     return lines
 
 

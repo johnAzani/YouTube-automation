@@ -9,26 +9,54 @@ Written by `pipeline/growth_score.py`; the detail is in `content/research/growth
 
 | Door | Hours, shared window |
 | :--- | ---: |
-| suggested | 22.1 |
-| Shorts feed — does not count | 24.7 |
+| suggested | 43.8 |
+| Shorts feed — does not count | 24.8 |
 | yt search | 0.95 |
 | home subs | 1.1 |
 | other pages | 0.23 |
 | notifications | 0.1 |
-| ext url | 1.2 |
-| direct unknown | 2 |
+| ext url | 1.1 |
+| direct unknown | 2.3 |
 | channel page | 0.58 |
 | sound pages | 0 |
 
-**Counted: 23 hours (43.5% of all watch hours read).**
+**Counted: 44.8 hours (59.7% of all watch hours read).**
 
-The threshold asks 58.2 hours a day for the 68 days left before it doubles; the channels run at 2 a day.
+The threshold asks 57.9 hours a day for the 68 days left before it doubles; the channels run at 2.9 a day.
 
-**Release length: 180 minutes.** a view of a video over 3 hours returned 0.1261 hours, the most of any length measured (6 videos); the threshold asks 58.22 hours a day
+**Release length: 13 minutes.** the median view of a measured video is 13.5 minutes (across 7 videos); a release is not built longer than that
 
 Night tail: `hold` — kept.
 
-Long-form retention, median of videos with a reading: **8.9% watched**. A Short is excluded from this figure: a looping Short reports past 100%.
+Long-form retention, median of videos with a reading: **10.2% watched**. A Short is excluded from this figure: a looping Short reports past 100%.
+
+### Which thumbnail concept earns the click
+
+Written by `pipeline/thumbnail_campaign.py`. The pack renders three concepts; a rotation puts a different one live on each release, so the click rate that follows can be compared across videos. A per-video Test & Compare is Studio-only: the Data API can neither open one nor read which variant won.
+
+| Concept | Videos | Impressions | Click rate |
+| :--- | ---: | ---: | ---: |
+| hook | 0 | 0 | — (too few impressions) |
+| quiet | 0 | 0 | — (too few impressions) |
+| poster | 0 | 0 | — (too few impressions) |
+
+### How long a release should be
+
+A view is watched for a median of **13.5 minutes** across 7 measured videos. A release is not built longer than that, so length outside the prayer is time nobody spends.
+
+The night tail is the problem: `13` — 92.5% of every published minute is never watched.
+
+### What is actually reachable
+
+Written by `pipeline/realistic_ceiling.py`. Every figure below is measured or is a documented level, never a promise.
+
+| Lever | Hours a day |
+| :--- | ---: |
+| as it stands | 1.3 |
+| click rate to 4% | 3.8 |
+| watch time to 3 minutes and a 4% click rate | 3.8 |
+
+The threshold asks 58.82 hours a day; the channels produce 1.294. With both format levers at their documented levels it would be 3.779. To reach the threshold at a 4% click rate and the measured watch time, YouTube would have to serve 6,519 impressions a day where it serves 418. Impressions are chosen by YouTube's recommendation system from how viewers respond, so that is the honest distance: it is reach, not metadata.
 
 ## Toward the Partner Program
 

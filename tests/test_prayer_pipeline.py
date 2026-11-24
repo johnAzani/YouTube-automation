@@ -195,8 +195,13 @@ class PrayerPipelineTests(unittest.TestCase):
             self.assertEqual(pack.call_args.kwargs['channel_id'], doc.channel)
             self.assertIsNotNone(pack.call_args.kwargs['channel_id'])
             self.assertIsNone(pack.call_args.kwargs['hero_override'])
-            self.assertTrue(result['thumbnail'].endswith('thumbnail_hook.jpg'),
-                            f"thumbnail came from {result['thumbnail']}")
+            # Which of the three concepts goes live is this release's turn in the
+            # rotation (pipeline/thumbnail_campaign.py), not always the first one:
+            # uploading `hook` every time left the other two untested forever.
+            from pipeline.thumbnail_campaign import concept_for
+            expected = f"thumbnail_{concept_for(doc.id)}.jpg"
+            self.assertTrue(result['thumbnail'].endswith(expected),
+                            f"thumbnail came from {result['thumbnail']}, expected {expected}")
             mark.assert_called_once()
             self.assertEqual(mark.call_args.args[3], 'not_requested')
 
