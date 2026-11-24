@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T07:04:54Z",
+  "generated_at": "2026-11-24T07:09:06Z",
   "monitor_generated_at": "2026-11-24T04:17:53.491848+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 734,
+    "published_total": 735,
     "published_longform": 209,
-    "published_shorts": 525,
-    "public_total": 732,
+    "published_shorts": 526,
+    "public_total": 733,
     "queued_longform": 53,
-    "queued_shorts": 53,
+    "queued_shorts": 52,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -227,23 +227,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 77,
+        "published_total": 78,
         "published_longform": 25,
-        "published_shorts": 52,
-        "thumbnail_pending": 76,
-        "public_total": 77,
+        "published_shorts": 53,
+        "thumbnail_pending": 77,
+        "public_total": 78,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0224",
-        "title": "When You Are Weary of Waiting: Luke 18:1-8 | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "vPd_JHrgYfo",
-        "watch_url": "https://youtu.be/vPd_JHrgYfo",
+        "id": "SHORT-MIDNIGHTJEREMIAH33V3",
+        "title": "Pray This Jeremiah 33:3 Midnight Prayer | God Reveals Answers At Midnight #Shorts",
+        "format": "short",
+        "youtube_video_id": "v3-wyuo4-04",
+        "watch_url": "https://www.youtube.com/shorts/v3-wyuo4-04",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T02:42:06Z"
+        "published_at": "2026-11-24T07:08:15Z"
       },
       "next_queued_longform": {
         "id": "0225",
@@ -252,8 +252,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightjeremiah33v3",
-        "scripture": "Jeremiah 33:3",
+        "short": "short-midnightdaniel2v19",
+        "scripture": "Daniel 2:19-22",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTJEREMIAH33V3",
+      "slug": "short-midnightjeremiah33v3-midnight-prayer",
+      "file": "short-midnightjeremiah33v3-midnight-prayer.md",
+      "title": "Pray This Jeremiah 33:3 Midnight Prayer | God Reveals Answers At Midnight #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T07:08:15Z",
+      "youtube_video_id": "v3-wyuo4-04",
+      "watch_url": "https://www.youtube.com/shorts/v3-wyuo4-04",
+      "youtu_be_url": "https://youtu.be/v3-wyuo4-04",
+      "shorts_url": "https://www.youtube.com/shorts/v3-wyuo4-04",
+      "studio_url": "https://studio.youtube.com/video/v3-wyuo4-04/edit",
+      "thumb_url": "https://i.ytimg.com/vi/v3-wyuo4-04/hqdefault.jpg",
+      "thumb_text": "CALL UNTO ME \u00b7 AND I WILL ANSWER",
+      "thumbnail_pending": true,
+      "duration_label": "50s",
+      "words": 631
+    },
     {
       "id": "SHORT-MIDDAYNEHEMIAH6V9",
       "slug": "short-middaynehemiah6v9-midday-prayer",
@@ -19187,17 +19211,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightjeremiah33v3",
-        "file": "0221-short-midnightjeremiah33v3.yml",
-        "companion_longform_id": "0221",
-        "scripture": "Jeremiah 33:3",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightdaniel2v19",
