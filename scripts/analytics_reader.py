@@ -174,6 +174,26 @@ def read_channel(channel, token, today, get=None):
             entry['minutes'] += number(row.get('estimatedMinutesWatched'))
         return table
 
+    def video_row(r):
+        """One per-video row, keeping engaged views when YouTube returns them.
+
+        engagedViews is the pre-31-March-2025 view count: a play that lasted. On a
+        Shorts feed `views` counts any play at all, so the ratio between them is
+        the only stay-versus-swipe signal the Analytics API exposes — Studio's own
+        "viewed vs swiped away" is not in any API.
+        """
+        views = number(r.get('views'))
+        engaged = number(r.get('engagedViews')) if r.get('engagedViews') is not None else None
+        row = {'video_id': str(r.get('video')), 'watch_hours': hours(r.get('estimatedMinutesWatched')),
+               'views': views, 'average_view_seconds': number(r.get('averageViewDuration')),
+               'average_view_percent': round(float(number(r.get('averageViewPercentage'))), 1)}
+        if engaged is not None:
+            row['engaged_views'] = int(engaged)
+            #: share of plays that lasted, as a percentage. Rounded because the
+            #: inputs are; it is a reading, not a measurement to two decimals.
+            row['engaged_share_percent'] = round(100.0 * engaged / views, 1) if views else 0.0
+        return row
+
     def by_kind(table):
         long_minutes = sum(table.get(kind, {}).get('minutes', 0) for kind in LONG_FORM)
         short_minutes = table.get('shorts', {}).get('minutes', 0)
@@ -194,9 +214,20 @@ def read_channel(channel, token, today, get=None):
     day_rows, _ = question('watch time by day, 28 days', month,
                            'metrics=views,estimatedMinutesWatched&dimensions=day&sort=day')
     # A per-video report must be sorted by views or watch time and capped (settled live, 14 Nov).
+    # Two sorts, because one hides most of the channel. Sorted by watch time a
+    # three-hour long-form outranks every Short ever published, so on 24 November
+    # the report described 35 videos while 536 Shorts had gone out: 28 of The
+    # Secret Place's own 64 Shorts were absent, and the newest measured Short was
+    # six days old. Sorted by views, with engaged views beside them, the report is
+    # about what was actually published.
     video_rows, _ = question('videos by watch time, 365 days', year,
-                             'metrics=estimatedMinutesWatched,views,averageViewDuration,averageViewPercentage'
+                             'metrics=estimatedMinutesWatched,views,engagedViews,'
+                             'averageViewDuration,averageViewPercentage'
                              '&dimensions=video&sort=-estimatedMinutesWatched&maxResults=%d' % MAX_VIDEOS)
+    by_views_rows, _ = question('videos by views, 365 days', year,
+                                'metrics=views,engagedViews,estimatedMinutesWatched,'
+                                'averageViewDuration,averageViewPercentage'
+                                '&dimensions=video&sort=-views&maxResults=%d' % MAX_VIDEOS)
 
     # The detail report must name its source, be sorted, and ask for 25 rows or fewer.
     term_rows, _ = question('what viewers typed into YouTube search, 90 days', quarter,
@@ -260,10 +291,13 @@ def read_channel(channel, token, today, get=None):
                 for r in day_rows if re.match(r'^\d{4}-\d{2}-\d{2}$', str(r.get('day'))[:10])],
         },
         'videos_365d': [
-            {'video_id': str(r.get('video')), 'watch_hours': hours(r.get('estimatedMinutesWatched')),
-             'views': number(r.get('views')), 'average_view_seconds': number(r.get('averageViewDuration')),
-             'average_view_percent': round(float(number(r.get('averageViewPercentage'))), 1)}
-            for r in video_rows if VIDEO_ID.match(str(r.get('video')))][:MAX_VIDEOS],
+            video_row(r) for r in video_rows if VIDEO_ID.match(str(r.get('video')))][:MAX_VIDEOS],
+        #: The same rows the other way round, plus engaged views. `views` counts a
+        #: play of any length since 31 March 2025; `engagedViews` keeps the older
+        #: rule, and on a Shorts feed the difference between the two is the
+        #: closest thing this API has to "did they stay or swipe".
+        'videos_by_views_365d': [
+            video_row(r) for r in by_views_rows if VIDEO_ID.match(str(r.get('video')))][:MAX_VIDEOS],
         'search_terms_90d': terms[:MAX_SEARCH_TERMS],
         'search_terms_off_topic_90d': off_topic,
         'not_included': ['thumbnail impressions and click rate: read from the daily reach files by '
@@ -698,6 +732,7 @@ def summary(reports, published_dir=None, reach=None, lessons=None):
                     cell(known.get(row['video_id'], row['video_id'])), row['video_id'], amount(row['watch_hours']),
                     count(row['views']), clock(row['average_view_seconds']), amount(row['average_view_percent'])))
             lines.append('')
+        lines += views_lines(report)
         if channel in reach:
             lines += reach_lines(reach[channel], known)
         refused = ['%s (%s)' % (label, answer) for label, answer in sorted(report.get('coverage', {}).items())
@@ -706,6 +741,45 @@ def summary(reports, published_dir=None, reach=None, lessons=None):
             lines += ['Not answered on the last read: %s.' % cell('; '.join(refused), 400), '']
     lines += lesson_lines(lessons)
     return '\n'.join(lines).rstrip('\n') + '\n'
+
+
+def views_lines(report):
+    """"What was watched, as opposed to what was merely started."
+
+    Two things are said here, and only when the data supports them:
+
+    * the per-video report sorted by views, so the Shorts are visible at all;
+    * engaged views, which is the only stay-or-swipe signal the API exposes.
+      Studio calls it "viewed vs swiped away" and does not offer it to any API,
+      so this is a proxy and the section says so.
+    """
+    rows = report.get('videos_by_views_365d') or []
+    if not rows:
+        return []
+    with_engaged = [r for r in rows if r.get('engaged_views') is not None]
+    lines = ['#### What was started, and what was actually watched', '']
+    if with_engaged:
+        plays = sum(r['views'] for r in with_engaged)
+        engaged = sum(r['engaged_views'] for r in with_engaged)
+        share = 100.0 * engaged / plays if plays else 0.0
+        lines += ['Of %s plays across the %d most-viewed videos, **%s were engaged views** — plays that '
+                  'lasted rather than started. That %s is the nearest thing the Analytics API offers to '
+                  'YouTube Studio\'s "viewed vs swiped away"; Studio does not expose that figure to any API, '
+                  'so it is a proxy, not the number itself.' % (
+                      count(plays), len(with_engaged), count(engaged), amount(share) + '%'), '']
+    lines += ['| Video | Views | Engaged | Average watched |', '| :--- | ---: | ---: | ---: |']
+    for row in rows[:15]:
+        engaged = count(row['engaged_views']) if row.get('engaged_views') is not None else '—'
+        lines.append('| [%s](https://youtu.be/%s) | %s | %s | %s (%s%%) |' % (
+            cell(row['video_id'], 24), row['video_id'], count(row['views']), engaged,
+            clock(row['average_view_seconds']), amount(row['average_view_percent'])))
+    lines.append('')
+    thin = [r for r in rows if r['views'] < 30]
+    if thin:
+        lines += ['%d of the %d most-viewed videos were played fewer than 30 times: the feed tested them '
+                  'and did not widen them. That is a hook decision made in the first second, before any '
+                  'title or description is read.' % (len(thin), len(rows)), '']
+    return lines
 
 
 def issue_lines(channel, out_dir=None):

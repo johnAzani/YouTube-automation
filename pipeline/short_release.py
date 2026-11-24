@@ -512,9 +512,26 @@ def resolve_edition(key: str, channel_id: str | None = None) -> ShortEdition | N
     raw_title = brand.short_title_template.format(label=label, hook=hook)
     previous_fitted = f"{smart_truncate_title(raw_title, SHORT_TITLE_LIMIT)} #Shorts"
     if len(raw_title) > SHORT_TITLE_LIMIT:
-        # The generic truncator can drop everything after the bar. Keep the
-        # exact reference and the script's own hook, not an orphaned template.
-        raw_title = f"{label} | {hook}"
+        # The generic truncator can drop everything after the bar. The old fallback
+        # here was `label | hook`, which fixed that and threw away the one phrase
+        # that says what the Short is for: on 24 November 2026 the channels whose
+        # titles name a need (Divine Protection, 182 views a Short) sat far above
+        # those that named only a clock (at Sunrise, 11). So keep the template's own
+        # words and give the hook whatever room is left — a shorter hook, never a
+        # missing promise.
+        before, after = brand.short_title_template.split("{label}", 1)
+        head, _, _tail = after.partition("{hook}")
+        # What the title is before the hook begins — separators included, since
+        # they are written in the template. The limit applies to the title before
+        # " #Shorts" is appended, so the hook gets whatever is left.
+        fixed = f"{before}{label}{head}"
+        room = SHORT_TITLE_LIMIT - len(fixed)
+        if room >= 12:
+            raw_title = f"{fixed}{smart_truncate_title(hook, room)}"
+        else:
+            # No room for even a short hook: drop the trailing bar and the hook, and
+            # keep the words that say what the Short is for.
+            raw_title = fixed.rstrip(" |")
     clean_title = f"{smart_truncate_title(raw_title, SHORT_TITLE_LIMIT)} #Shorts"
     # The title this Short had until 16 November 2026 (last poster line, `str.title()`).
     last_line = spec.poster[3] if len(spec.poster) >= 4 and spec.poster[3] else "Divine Peace"

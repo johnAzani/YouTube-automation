@@ -456,7 +456,13 @@ _BRANDS: dict[str, Brand] = {
             'this prayer, and subscribe to The Morning Altar to begin every sunrise with us."',
             "Asset queries MUST be sunrise/dawn/morning-light scenes, never night or moonlight.",
         ),
-        short_title_template="Say This {label} Prayer at Sunrise | {hook}",
+        # "At Sunrise" names a clock. Ranked by measured views per Short across the ten
+        # channels on 24 November 2026, the channels whose titles name a *need* came out
+        # ahead of both clock channels ("Divine Protection" 182 views, "Thanksgiving" 90 —
+        # against "at Sunrise" 11 and "at Noon" 10). Ten channels over three weeks cannot
+        # prove a cause, so this keeps every word that could be searched for and adds the
+        # need beside it: the clock stays, the promise leads where it can.
+        short_title_template="Say This {label} Prayer for Fresh Start at Sunrise | {hook}",
         subscribe_heading="🙏 BEGIN EVERY MORNING IN PRAYER",
         short_target_window_utc="06:14",
         short_channel_label="a faceless sunrise-prayer channel called The Morning Altar",
@@ -713,7 +719,8 @@ _BRANDS: dict[str, Brand] = {
             "Asset queries MUST be midday light, a quiet desk, an open window at noon or "
             "high-sun landscape scenes - never candlelight, starfields or dawn.",
         ),
-        short_title_template="Say This {label} Prayer at Noon | {hook}",
+        # See the note on prayer2 above: "at Noon" names the clock and nothing else.
+        short_title_template="Say This {label} Prayer for Strength at Noon | {hook}",
         subscribe_heading="🙏 PAUSE AND PRAY AT NOON",
         short_target_window_utc="12:14",
         short_channel_label="a faceless noonday-prayer channel called The Midday Watch",

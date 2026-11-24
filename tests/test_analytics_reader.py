@@ -86,8 +86,10 @@ def test_it_only_reads_and_never_asks_about_money():
     for verb in ("method='POST'", 'method="POST"', "PUT", "DELETE", "PATCH"):
         assert verb not in source
     _report_, _why, asked = _report()
-    # Eight questions since 16 November: the words typed into YouTube search were added.
-    assert len(asked) == 8 and all("youtubeanalytics.googleapis.com" in u or "youtube/v3/channels" in u for u in asked)
+    # Nine questions since 24 November: a second per-video report, sorted by views,
+    # because sorted by watch time a three-hour long-form outranks every Short and
+    # the report described 35 videos while 536 Shorts had been published.
+    assert len(asked) == 9 and all("youtubeanalytics.googleapis.com" in u or "youtube/v3/channels" in u for u in asked)
     for url in asked:
         assert not reader.MONEY.search(url), url
         assert "ids=channel==MINE" in url or "mine=true" in url
@@ -401,3 +403,40 @@ def test_the_summary_lists_what_each_channel_is_trying(tmp_path):
     assert text.index("| The Secret Place | prayer before sleep") < text.index("| The Morning Altar |")
     assert "being tried | 0 / 0 | 0 / 0 | 2026-11-16 |" in text and "x|y" not in text
     assert "trying in its titles" not in reader.summary({"secret-place": report}, published_dir=tmp_path)
+
+
+# ------------------------------------------------- the Shorts the old read hid
+def test_a_short_sorted_by_views_is_asked_for_as_well():
+    """Sorted by watch time alone, every Short is outranked by a three-hour long-form."""
+    _report_, _why, asked = _report()
+    sorts = [u for u in asked if "dimensions=video" in u]
+    assert len(sorts) == 2, sorts
+    assert any("sort=-views" in u for u in sorts)
+    assert any("sort=-estimatedMinutesWatched" in u for u in sorts)
+
+
+def test_engaged_views_are_asked_for_because_views_count_any_play():
+    """Since 31 March 2025 `views` counts a play of any length; engaged views do not."""
+    _report_, _why, asked = _report()
+    assert all("engagedViews" in u for u in asked if "dimensions=video" in u)
+
+
+def test_the_engaged_share_is_shown_and_called_a_proxy():
+    """"Viewed vs swiped away" is Studio-only; engaged views are the nearest the API has."""
+    lines = reader.views_lines({
+        "videos_by_views_365d": [
+            {"video_id": "KkPAtMLoGf4", "views": 400, "engaged_views": 100,
+             "average_view_seconds": 46, "average_view_percent": 75.4, "watch_hours": 1.9},
+            {"video_id": "SG69BbNlfRw", "views": 100, "engaged_views": 50,
+             "average_view_seconds": 26, "average_view_percent": 65.4, "watch_hours": 0.8},
+        ]})
+    text = "\n".join(lines)
+    assert "150 were engaged views" in text
+    # 150 of 500 plays lasted.
+    assert "That 30% " in text
+    assert "proxy" in text
+    assert "viewed vs swiped away" in text
+
+
+def test_a_report_with_no_by_views_rows_says_nothing_new():
+    assert reader.views_lines({"videos_365d": [{"video_id": "x", "views": 3}]}) == []
