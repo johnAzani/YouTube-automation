@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T23:28:02Z",
+  "generated_at": "2026-11-24T01:47:39Z",
   "monitor_generated_at": "2026-11-23T23:26:47.046817+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 720,
+    "published_total": 721,
     "published_longform": 206,
-    "published_shorts": 514,
-    "public_total": 718,
+    "published_shorts": 515,
+    "public_total": 719,
     "queued_longform": 56,
-    "queued_shorts": 64,
+    "queued_shorts": 63,
     "automations_ok": 13,
     "automations_total": 14,
     "network_healthy": false
@@ -300,23 +300,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 65,
+        "published_total": 66,
         "published_longform": 20,
-        "published_shorts": 45,
-        "thumbnail_pending": 65,
-        "public_total": 65,
+        "published_shorts": 46,
+        "thumbnail_pending": 66,
+        "public_total": 66,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-FAMILYRUTH2V12",
-        "title": "Pray This Ruth 2:12 Family Prayer Over Your Home | Your Quiet Devotion Matters #Shorts",
+        "id": "SHORT-FAMILYPSALM115V12",
+        "title": "Pray This Psalm 115:12-15 Family Prayer Over Your Home | He Is Mindful Of You #Shorts",
         "format": "short",
-        "youtube_video_id": "O5PtTHn5LHU",
-        "watch_url": "https://www.youtube.com/shorts/O5PtTHn5LHU",
-        "published_on": "2026-11-23",
-        "published_at": "2026-11-23T22:09:30Z"
+        "youtube_video_id": "DZAvzPBc-eI",
+        "watch_url": "https://www.youtube.com/shorts/DZAvzPBc-eI",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T01:46:42Z"
       },
       "next_queued_longform": {
         "id": "0320",
@@ -325,8 +325,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familypsalm115v12",
-        "scripture": "Psalm 115:12-15",
+        "short": "short-familydeuteronomy28v3",
+        "scripture": "Deuteronomy 28:3-6",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYPSALM115V12",
+      "slug": "short-familypsalm115v12-household-prayer",
+      "file": "short-familypsalm115v12-household-prayer.md",
+      "title": "Pray This Psalm 115:12-15 Family Prayer Over Your Home | He Is Mindful Of You #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T01:46:42Z",
+      "youtube_video_id": "DZAvzPBc-eI",
+      "watch_url": "https://www.youtube.com/shorts/DZAvzPBc-eI",
+      "youtu_be_url": "https://youtu.be/DZAvzPBc-eI",
+      "shorts_url": "https://www.youtube.com/shorts/DZAvzPBc-eI",
+      "studio_url": "https://studio.youtube.com/video/DZAvzPBc-eI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/DZAvzPBc-eI/hqdefault.jpg",
+      "thumb_text": "HIS MINDFULNESS \u00b7 UPON YOUR HOME",
+      "thumbnail_pending": true,
+      "duration_label": "38s",
+      "words": 659
+    },
     {
       "id": "0619",
       "slug": "pure-word-shield-proverbs-30-5",
@@ -19038,17 +19062,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-familypsalm115v12",
-        "file": "0316-short-familypsalm115v12.yml",
-        "companion_longform_id": "0316",
-        "scripture": "Psalm 115:12-15",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-familydeuteronomy28v3",
