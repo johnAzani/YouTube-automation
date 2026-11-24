@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T07:22:27Z",
+  "generated_at": "2026-11-24T08:19:11Z",
   "monitor_generated_at": "2026-11-24T04:17:53.491848+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 740,
-    "published_longform": 209,
-    "published_shorts": 531,
-    "public_total": 738,
-    "queued_longform": 53,
-    "queued_shorts": 48,
+    "published_total": 742,
+    "published_longform": 210,
+    "published_shorts": 532,
+    "public_total": 740,
+    "queued_longform": 52,
+    "queued_shorts": 47,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -96,33 +96,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 100,
-        "published_longform": 32,
-        "published_shorts": 68,
+        "published_total": 102,
+        "published_longform": 33,
+        "published_shorts": 69,
         "thumbnail_pending": 1,
-        "public_total": 99,
-        "queued_longform": 6,
+        "public_total": 101,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "0075",
-        "title": "Morning Prayer for a Day Dedicated to Christ: Colossians 3:17",
-        "format": "longform",
-        "youtube_video_id": "6KYkPU11mXc",
-        "watch_url": "https://youtu.be/6KYkPU11mXc",
-        "published_on": "2026-11-24",
-        "published_at": "2026-11-24T02:34:26Z"
-      },
-      "next_queued_longform": {
         "id": "0077",
         "title": "Offering Every Hour to Him: Romans 12:1-2 | The Morning Altar",
-        "words": 1661,
+        "format": "longform",
+        "youtube_video_id": "y1j_lpvat9Q",
+        "watch_url": "https://youtu.be/y1j_lpvat9Q",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T08:18:00Z"
+      },
+      "next_queued_longform": {
+        "id": "0079",
+        "title": "When I Awake, I Am Still with Thee: Psalm 139:17-18",
+        "words": 1605,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningisaiah30v21",
-        "scripture": "Isaiah 30:21",
+        "short": "short-morningmicah7v7",
+        "scripture": "Micah 7:7",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -692,6 +692,30 @@
   ],
   "videos": [
     {
+      "id": "0077",
+      "slug": "offering-every-hour-to-him-romans-12-1-2-the-morning-altar",
+      "file": "0077-offering-every-hour-to-him-romans-12-1-2-the-morning-altar.md",
+      "title": "Offering Every Hour to Him: Romans 12:1-2 | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T08:18:00Z",
+      "youtube_video_id": "y1j_lpvat9Q",
+      "watch_url": "https://youtu.be/y1j_lpvat9Q",
+      "youtu_be_url": "https://youtu.be/y1j_lpvat9Q",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/y1j_lpvat9Q/edit",
+      "thumb_url": "https://i.ytimg.com/vi/y1j_lpvat9Q/hqdefault.jpg",
+      "thumb_text": "A LIVING ALTAR TODAY",
+      "thumbnail_pending": false,
+      "duration_label": "10m 17s",
+      "words": 1661
+    },
+    {
       "id": "SHORT-SHIELDPSALM144V1",
       "slug": "short-shieldpsalm144v1-protection-prayer",
       "file": "short-shieldpsalm144v1-protection-prayer.md",
@@ -834,6 +858,30 @@
       "thumbnail_pending": true,
       "duration_label": "50s",
       "words": 631
+    },
+    {
+      "id": "SHORT-MORNINGISAIAH30V21",
+      "slug": "short-morningisaiah30v21-sunrise-prayer",
+      "file": "short-morningisaiah30v21-sunrise-prayer.md",
+      "title": "Say This Isaiah 30:21 Prayer at Sunrise | Stop And Listen Today #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T07:06:04Z",
+      "youtube_video_id": "3Mvamd-F27Q",
+      "watch_url": "https://www.youtube.com/shorts/3Mvamd-F27Q",
+      "youtu_be_url": "https://youtu.be/3Mvamd-F27Q",
+      "shorts_url": "https://www.youtube.com/shorts/3Mvamd-F27Q",
+      "studio_url": "https://studio.youtube.com/video/3Mvamd-F27Q/edit",
+      "thumb_url": "https://i.ytimg.com/vi/3Mvamd-F27Q/hqdefault.jpg",
+      "thumb_text": "ISAIAH 30:21 \u00b7 THIS IS THE WAY",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 630
     },
     {
       "id": "SHORT-MIDDAYNEHEMIAH6V9",
@@ -18494,19 +18542,6 @@
         "words": 1025
       },
       {
-        "id": "0077",
-        "slug": "offering-every-hour-to-him-romans-12-1-2-the-morning-altar",
-        "file": "0077-offering-every-hour-to-him-romans-12-1-2-the-morning-altar.md",
-        "title": "Offering Every Hour to Him: Romans 12:1-2 | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1661
-      },
-      {
         "id": "0079",
         "slug": "when-i-awake-i-am-still-with-thee-psalm-139",
         "file": "0079-when-i-awake-i-am-still-with-thee-psalm-139.md",
@@ -19210,17 +19245,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-morningisaiah30v21",
-        "file": "0073-short-morningisaiah30v21.yml",
-        "companion_longform_id": "0073",
-        "scripture": "Isaiah 30:21",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningmicah7v7",
