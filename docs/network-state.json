@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T01:47:39Z",
+  "generated_at": "2026-11-24T01:48:34Z",
   "monitor_generated_at": "2026-11-23T23:26:47.046817+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 721,
+    "published_total": 722,
     "published_longform": 206,
-    "published_shorts": 515,
-    "public_total": 719,
+    "published_shorts": 516,
+    "public_total": 720,
     "queued_longform": 56,
-    "queued_shorts": 63,
+    "queued_shorts": 62,
     "automations_ok": 13,
     "automations_total": 14,
     "network_healthy": false
@@ -164,23 +164,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 83,
+        "published_total": 84,
         "published_longform": 25,
-        "published_shorts": 58,
+        "published_shorts": 59,
         "thumbnail_pending": 1,
-        "public_total": 83,
+        "public_total": 84,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYNEHEMIAH6V3",
-        "title": "Say This Nehemiah 6:3 Prayer at Noon | Demands On Your Time #Shorts",
+        "id": "SHORT-MIDDAYNEHEMIAH2V4",
+        "title": "Say This Nehemiah 2:4 Prayer at Noon | That Urgent Decision #Shorts",
         "format": "short",
-        "youtube_video_id": "QCLtBcxBZAs",
-        "watch_url": "https://www.youtube.com/shorts/QCLtBcxBZAs",
-        "published_on": "2026-11-23",
-        "published_at": "2026-11-23T22:08:46Z"
+        "youtube_video_id": "Yen53L9-TOM",
+        "watch_url": "https://www.youtube.com/shorts/Yen53L9-TOM",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T01:47:26Z"
       },
       "next_queued_longform": {
         "id": "0102",
@@ -189,8 +189,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaynehemiah2v4",
-        "scripture": "Nehemiah 2:4",
+        "short": "short-middaynehemiah6v9",
+        "scripture": "Nehemiah 6:9",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYNEHEMIAH2V4",
+      "slug": "short-middaynehemiah2v4-midday-prayer",
+      "file": "short-middaynehemiah2v4-midday-prayer.md",
+      "title": "Say This Nehemiah 2:4 Prayer at Noon | That Urgent Decision #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T01:47:26Z",
+      "youtube_video_id": "Yen53L9-TOM",
+      "watch_url": "https://www.youtube.com/shorts/Yen53L9-TOM",
+      "youtu_be_url": "https://youtu.be/Yen53L9-TOM",
+      "shorts_url": "https://www.youtube.com/shorts/Yen53L9-TOM",
+      "studio_url": "https://studio.youtube.com/video/Yen53L9-TOM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Yen53L9-TOM/hqdefault.jpg",
+      "thumb_text": "PAUSE \u00b7 AND",
+      "thumbnail_pending": false,
+      "duration_label": "44s",
+      "words": 623
+    },
     {
       "id": "SHORT-FAMILYPSALM115V12",
       "slug": "short-familypsalm115v12-household-prayer",
@@ -18919,17 +18943,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-middaynehemiah2v4",
-        "file": "0094-short-middaynehemiah2v4.yml",
-        "companion_longform_id": "0094",
-        "scripture": "Nehemiah 2:4",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaynehemiah6v9",
