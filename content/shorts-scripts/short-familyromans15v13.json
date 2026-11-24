@@ -1,0 +1,386 @@
+{
+  "key": "short-familyromans15v13",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "ABOUND IN HOPE",
+    "A HOUSEHOLD PRAYER"
+  ],
+  "poster": [
+    "ROMANS 15:13",
+    "FILL YOUR HOME WITH",
+    "JOY AND PEACE",
+    "THE FAMILY ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "dimly lit wooden kitchen table with open Bible soft warm lamplight peaceful",
+    "cozy home interior warm lighting on open scripture books quiet room",
+    "peaceful countryside cottage window soft sunlight glow warm wood",
+    "rustic wooden table with olive branch glass bottle lamp lighting",
+    "warmly lit living room soft hearth glow peaceful domestic atmosphere",
+    "calm evening lake reflected glowing horizon distant cottage light",
+    "warm lantern glowing on porch table dusk peaceful family home"
+  ],
+  "scenes": [
+    {
+      "a": "Weariness sits beside you at this table.",
+      "img": "short-familyromans15v13-scene-01.jpg",
+      "kicker": "WEARY TABLE",
+      "sub": "WEARINESS SITS BESIDE YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear God's Word from Romans chapter fifteen verse thirteen.",
+      "img": "short-familyromans15v13-scene-02.jpg",
+      "kicker": "GOD OF HOPE",
+      "sub": "ROMANS 15:13",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Now the God of hope fill you with all joy and peace in believing,",
+      "img": "short-familyromans15v13-scene-03.jpg",
+      "kicker": "JOY AND PEACE",
+      "sub": "ABOUND IN HOPE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, fill this home with your joy when our strength feels small.",
+      "img": "short-familyromans15v13-scene-04.jpg",
+      "kicker": "HEAVENLY FATHER",
+      "sub": "FILL THIS HOME WITH JOY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Grant our household deep peace in believing, removing every quiet fear tonight.",
+      "img": "short-familyromans15v13-scene-05.jpg",
+      "kicker": "HOUSEHOLD PEACE",
+      "sub": "DEEP PEACE IN BELIEVING",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Let your Holy Spirit pour fresh hope into every room of this home.",
+      "img": "short-familyromans15v13-scene-06.jpg",
+      "kicker": "HOLY SPIRIT",
+      "sub": "FRESH HOPE IN EVERY ROOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. Weariness sits beside you at this table.",
+      "img": "short-familyromans15v13-scene-07.jpg",
+      "kicker": "STEADY GRACE",
+      "sub": "GUARD OUR LOVED ONES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Weariness sits beside you at this table."
+    ],
+    [
+      3,
+      7,
+      "Hear God's Word from Romans chapter fifteen verse thirteen."
+    ],
+    [
+      7,
+      12,
+      "Now the God of hope fill you with all joy and peace in believing,"
+    ],
+    [
+      12,
+      17,
+      "that ye may abound in hope, through the power of the Holy Ghost."
+    ],
+    [
+      17,
+      23,
+      "Heavenly Father, fill this home with your joy when our strength feels small."
+    ],
+    [
+      23,
+      30,
+      "Grant our household deep peace in believing, removing every quiet fear tonight."
+    ],
+    [
+      30,
+      36,
+      "Let your Holy Spirit pour fresh hope into every room of this home."
+    ],
+    [
+      36,
+      41,
+      "Guard our loved ones and anchor our hearts in your steady grace."
+    ],
+    [
+      41,
+      46,
+      "Amen. Weariness sits beside you at this table."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WEARINESS SITS",
+        "BESIDE YOU",
+        "AT THIS TABLE"
+      ],
+      [
+        "WEARINESS",
+        "TABLE"
+      ],
+      "ROMANS 15 : 13"
+    ],
+    [
+      3,
+      7,
+      [
+        "HEAR GOD'S WORD",
+        "FROM ROMANS 15:13"
+      ],
+      [
+        "GOD'S",
+        "WORD"
+      ],
+      "ROMANS 15 : 13"
+    ],
+    [
+      7,
+      12,
+      [
+        "NOW THE GOD OF HOPE",
+        "FILL YOU WITH ALL JOY",
+        "AND PEACE IN BELIEVING"
+      ],
+      [
+        "GOD",
+        "HOPE",
+        "JOY",
+        "PEACE"
+      ],
+      "ROMANS 15 : 13"
+    ],
+    [
+      12,
+      17,
+      [
+        "THAT YE MAY ABOUND",
+        "IN HOPE THROUGH THE POWER",
+        "OF THE HOLY GHOST"
+      ],
+      [
+        "ABOUND",
+        "HOPE",
+        "POWER",
+        "HOLY",
+        "GHOST"
+      ],
+      "ROMANS 15 : 13"
+    ],
+    [
+      17,
+      23,
+      [
+        "HEAVENLY FATHER",
+        "FILL THIS HOME WITH JOY",
+        "WHEN STRENGTH FEELS SMALL"
+      ],
+      [
+        "FATHER",
+        "JOY",
+        "STRENGTH"
+      ],
+      "ROMANS 15 : 13"
+    ],
+    [
+      23,
+      30,
+      [
+        "GRANT OUR HOUSEHOLD",
+        "DEEP PEACE IN BELIEVING",
+        "REMOVING EVERY FEAR"
+      ],
+      [
+        "PEACE",
+        "BELIEVING",
+        "FEAR"
+      ],
+      "ROMANS 15 : 13"
+    ],
+    [
+      30,
+      36,
+      [
+        "LET YOUR HOLY SPIRIT",
+        "POUR FRESH HOPE INTO",
+        "EVERY ROOM OF THIS HOME"
+      ],
+      [
+        "HOLY",
+        "SPIRIT",
+        "HOPE"
+      ],
+      "ROMANS 15 : 13"
+    ],
+    [
+      36,
+      41,
+      [
+        "GUARD OUR LOVED ONES",
+        "AND ANCHOR OUR HEARTS",
+        "IN YOUR STEADY GRACE"
+      ],
+      [
+        "GUARD",
+        "HEARTS",
+        "GRACE"
+      ],
+      "ROMANS 15 : 13"
+    ],
+    [
+      41,
+      46,
+      [
+        "AMEN",
+        "WEARINESS SITS BESIDE YOU",
+        "AT THIS TABLE"
+      ],
+      [
+        "AMEN",
+        "WEARINESS",
+        "TABLE"
+      ],
+      "ROMANS 15 : 13"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Weariness sits beside you at this table.",
+      "kind": "phrase",
+      "words": [
+        "WEARINESS",
+        "TABLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear God's Word from Romans chapter fifteen verse thirteen.",
+      "kind": "phrase",
+      "words": [
+        "GOD'S",
+        "WORD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Now the God of hope fill you with all joy and peace in believing,",
+      "kind": "phrase",
+      "words": [
+        "HOPE",
+        "JOY",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "that ye may abound in hope, through the power of the Holy Ghost.",
+      "kind": "phrase",
+      "words": [
+        "ABOUND",
+        "HOLY",
+        "GHOST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, fill this home with your joy when our strength feels small.",
+      "kind": "phrase",
+      "words": [
+        "JOY",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant our household deep peace in believing, removing every quiet fear tonight.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "BELIEVING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your Holy Spirit pour fresh hope into every room of this home.",
+      "kind": "phrase",
+      "words": [
+        "FRESH",
+        "HOPE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Guard our loved ones and anchor our hearts in your steady grace.",
+      "kind": "phrase",
+      "words": [
+        "GUARD",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Weariness sits beside you at this table.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "WEARINESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Romans 15:13"
+}

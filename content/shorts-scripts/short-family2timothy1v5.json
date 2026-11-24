@@ -1,0 +1,273 @@
+{
+  "key": "short-family2timothy1v5",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "FAITH PASSED DOWN",
+    "A QUIET LEGACY"
+  ],
+  "poster": [
+    "A FAITH",
+    "THAT ENDURES",
+    "THE QUIET",
+    "HOUSEHOLD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit wooden table with open bible",
+    "faded vintage photograph on table",
+    "sunlight streaming through window onto floor",
+    "dust motes dancing in light",
+    "close up of hands holding bible pages",
+    "quiet house interior at dusk",
+    "glowing window in countryside at twilight"
+  ],
+  "scenes": [
+    {
+      "a": "The burden of your past is still here.",
+      "img": "short-family2timothy1v5-scene-01.jpg",
+      "kicker": "THE BURDEN CARRIED",
+      "sub": "THE BURDEN OF YOUR PAST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "It lingers in the quiet corners of this home.",
+      "img": "short-family2timothy1v5-scene-02.jpg",
+      "kicker": "LINGERING SHADOWS",
+      "sub": "QUIET CORNERS",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.7
+      ]
+    },
+    {
+      "a": "Listen to the truth of Scripture today.",
+      "img": "short-family2timothy1v5-scene-03.jpg",
+      "kicker": "HEAR THE TRUTH",
+      "sub": "SCRIPTURE SPEAKS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "When I call to remembrance the unfeigned faith that is in thee, which dwelt first in thy grandmother Lois, and thy mother Eunice; and I am persuaded that in thee also.",
+      "img": "short-family2timothy1v5-scene-04.jpg",
+      "kicker": "THE ANCIENT PROMISE",
+      "sub": "UNFEIGNED FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, help me see the seeds sown by those who walked this path before me.",
+      "img": "short-family2timothy1v5-scene-05.jpg",
+      "kicker": "SEEDS OF FAITH",
+      "sub": "THOSE BEFORE ME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Give me grace to nurture this same heart in the ones I raise now.",
+      "img": "short-family2timothy1v5-scene-06.jpg",
+      "kicker": "NURTURE THE HEART",
+      "sub": "THE ONES I RAISE",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Let this faith be the bedrock of our house, Amen. The burden of your past is still here.",
+      "img": "short-family2timothy1v5-scene-07.jpg",
+      "kicker": "BEDROCK FAITH",
+      "sub": "STILL HERE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The burden of your past is still here."
+    ],
+    [
+      3,
+      7,
+      "It lingers in the quiet corners of this home."
+    ],
+    [
+      7,
+      10,
+      "Listen to the truth of Scripture today."
+    ],
+    [
+      10,
+      22,
+      "When I call to remembrance the unfeigned faith that is in thee, which dwelt first in thy grandmother Lois, and thy mother Eunice; and I am persuaded that in thee also."
+    ],
+    [
+      22,
+      27,
+      "Lord, help me see the seeds sown by those who walked this path before me."
+    ],
+    [
+      27,
+      32,
+      "Give me grace to nurture this same heart in the ones I raise now."
+    ],
+    [
+      32,
+      36,
+      "Let this faith be the bedrock of our house, Amen. The burden of your past is still here."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE BURDEN",
+        "OF YOUR PAST",
+        "IS STILL HERE"
+      ],
+      [
+        "BURDEN",
+        "STILL HERE"
+      ],
+      "2 TIMOTHY 1:5"
+    ],
+    [
+      3,
+      7,
+      [
+        "IT LINGERS",
+        "IN THE QUIET",
+        "CORNERS OF",
+        "THIS HOME"
+      ],
+      [
+        "LINGERS",
+        "QUIET"
+      ],
+      "2 TIMOTHY 1:5"
+    ],
+    [
+      7,
+      10,
+      [
+        "LISTEN TO THE",
+        "TRUTH OF",
+        "SCRIPTURE TODAY"
+      ],
+      [
+        "TRUTH",
+        "SCRIPTURE"
+      ],
+      "2 TIMOTHY 1:5"
+    ],
+    [
+      10,
+      22,
+      [
+        "UNFEIGNED FAITH",
+        "IN THEE",
+        "GRANDMOTHER LOIS",
+        "MOTHER EUNICE",
+        "PERSUADED IN THEE"
+      ],
+      [
+        "UNFEIGNED",
+        "FAITH"
+      ],
+      "2 TIMOTHY 1:5"
+    ],
+    [
+      22,
+      27,
+      [
+        "LORD HELP ME",
+        "SEE THE SEEDS",
+        "SOWN BY THOSE",
+        "BEFORE ME"
+      ],
+      [
+        "SEEDS",
+        "SOWN"
+      ],
+      "2 TIMOTHY 1:5"
+    ],
+    [
+      27,
+      32,
+      [
+        "GIVE ME GRACE",
+        "TO NURTURE",
+        "THIS SAME HEART",
+        "THE ONES I RAISE"
+      ],
+      [
+        "GRACE",
+        "HEART"
+      ],
+      "2 TIMOTHY 1:5"
+    ],
+    [
+      32,
+      36,
+      [
+        "BEDROCK FAITH",
+        "OF OUR HOUSE",
+        "AMEN",
+        "STILL HERE"
+      ],
+      [
+        "BEDROCK",
+        "AMEN"
+      ],
+      "2 TIMOTHY 1:5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The burden of your past is still here.",
+      "kind": "phrase",
+      "words": [
+        "BURDEN",
+        "STILL HERE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "When I call to remembrance the unfeigned faith that is in thee, which dwelt first in thy grandmother Lois, and thy mother Eunice; and I am persuaded that in thee also.",
+      "kind": "phrase",
+      "words": [
+        "UNFEIGNED FAITH",
+        "PERSUADED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Timothy 1:5"
+}
