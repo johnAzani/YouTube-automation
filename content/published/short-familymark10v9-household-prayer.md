@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["WHAT GOD HAS JOINED", "LET NO ONE DIVIDE", "A PRAYER FOR MARRIAGE", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-24T22:26:51Z"
+thumbnail_retry_after: "2026-12-01T23:58:19Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 When hard silence settles between husband and wife, let this truth cover your home. God's word declares: What therefore God hath joined together, let not man put asunder. Lord, protect the sacred covenant of marriage binding this home today. Where weariness, misunderstanding, or bitterness seeks to divide, pour out your renewing grace. Soften quiet hearts, restore gentle affection, and rebuild what human effort cannot sustain. Shield this household from every unseen wedge, and knit these lives together in unbreakable peace. May your holy presence anchor every room and keep this family standing in true unity. Subscribe to join us in covering your home in daily prayer.

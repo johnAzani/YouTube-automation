@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["RELEASE FROM THE TRAP", "BREAKING THE CHAINS", "MIDNIGHT SPIRITUAL VIGIL", "THE WATCH IS OPEN"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-24T22:26:50Z"
+thumbnail_retry_after: "2026-12-01T23:58:17Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 The invisible trap you feel gripping your heart tonight is losing its hold right now. Listen to the word of the Lord, for it speaks into the core of your struggle. Our soul is escaped as a bird out of the snare of the fowlers: the snare is broken, and we are escaped. Father, thank You for this divine intervention that snaps every chain binding your weary child tonight. Restore the freedom that belongs to those who trust in Your unfailing light and perfect grace. May this peace settle deep in your soul as you rest in the safety of Him.

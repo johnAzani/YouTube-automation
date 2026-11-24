@@ -26,14 +26,12 @@ short_visual_fingerprints: ["sha256:180a9b2d28f62035ab38d9a58cc65fce07d7fa09f8ea
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_pending: false
 thumbnail_poster: ["THE", "LORD", "HEAR", "THEE"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-24T22:26:54Z"
-thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 0
+thumbnail_revision: "shorts-poster-v1"
 ---
 
 If that recurring anxiety regarding your bank account is keeping you awake, stay right here. The LORD hear thee in the day of trouble; the name of the God of Jacob defend thee; Send thee help from the sanctuary, and strengthen thee out of Zion; We lean into these promises now, trusting Your sovereign hand to establish peace in this room. Remove the heavy burden of tomorrow and let Your grace settle upon every weary thought. May Your presence be the anchor for this soul through every shift in the coming season.

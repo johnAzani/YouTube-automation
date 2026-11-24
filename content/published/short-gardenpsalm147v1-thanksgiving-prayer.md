@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["IT IS GOOD TO SING", "PRAISES UNTO OUR GOD", "PRAISE IS COMELY", "PSALM 147:1"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-24T22:26:56Z"
+thumbnail_retry_after: "2026-12-01T23:58:32Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 Right now, in this quiet kitchen after a long day, lift your heart in praise. Praise ye the LORD: for it is good to sing praises unto our God; for it is pleasant; and praise is comely. Father, we thank You for Your endless grace that restores our weary souls. Even when our spirit feels tired, declaring Your goodness brings light into the dark places. Singing to You is pleasant, beautiful, and right. We offer You our simple gratitude for every unseen mercy You have provided. May praise constantly overflow from this heart today. Subscribe to join our garden of praise.
