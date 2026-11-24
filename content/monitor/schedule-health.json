@@ -2,6 +2,13 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
+      "late_minutes": 633,
+      "name": "Thumbnail campaign (which concept earns the click)",
+      "ran_at": "2026-11-24T15:40:48+00:00",
+      "slot": "2026-11-24T05:07:00+00:00",
+      "workflow": "thumbnail-campaign.yml"
+    },
+    {
       "late_minutes": 324,
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "ran_at": "2026-11-24T08:38:20+00:00",
@@ -58,8 +65,8 @@
       "workflow": "growth-autopilot.yml"
     }
   ],
-  "generated_at": "2026-11-24T15:49:22.681538+00:00",
-  "last_run_at": "2026-11-24T15:48:35+00:00",
+  "generated_at": "2026-11-24T15:59:45.375992+00:00",
+  "last_run_at": "2026-11-24T15:59:39+00:00",
   "on_time": [
     {
       "late_minutes": 119,
