@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-24T04:23:16.898984+00:00",
+  "generated_at": "2026-11-24T12:29:52.055751+00:00",
   "as_of": "2026-11-24",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 9,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 68,
+    "receipt_video_ids": 69,
     "matched_video_ids": 50,
     "longform_below_view_threshold": 9,
     "longform_missing_view_count": 0,
@@ -74,23 +74,23 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 36,
+    "measured_shorts": 35,
     "total_shorts": 41,
     "sufficient_data": true,
-    "avg_views": 33.8,
-    "median_views": 37,
-    "total_views": 1216,
+    "avg_views": 33.1,
+    "median_views": 34,
+    "total_views": 1157,
     "minimum_age_days": 2,
     "by_book": {
       "1 peter": {
         "shorts": 1,
         "avg_views": 4.0,
-        "ratio": 0.706
+        "ratio": 0.707
       },
       "2 corinthians": {
         "shorts": 2,
         "avg_views": 40.0,
-        "ratio": 1.092
+        "ratio": 1.105
       },
       "2 timothy": {
         "shorts": 1,
@@ -100,114 +100,109 @@
       "3 john": {
         "shorts": 1,
         "avg_views": 8.0,
-        "ratio": 0.746
+        "ratio": 0.747
       },
       "acts": {
         "shorts": 2,
         "avg_views": 5.5,
-        "ratio": 0.581
+        "ratio": 0.583
       },
       "deuteronomy": {
         "shorts": 1,
         "avg_views": 55.0,
-        "ratio": 1.209
+        "ratio": 1.221
       },
       "exodus": {
         "shorts": 1,
         "avg_views": 42.0,
-        "ratio": 1.081
+        "ratio": 1.09
       },
       "hosea": {
         "shorts": 1,
         "avg_views": 42.0,
-        "ratio": 1.081
+        "ratio": 1.09
       },
       "isaiah": {
         "shorts": 7,
-        "avg_views": 27.0,
-        "ratio": 0.844
+        "avg_views": 27.1,
+        "ratio": 0.861
       },
       "james": {
         "shorts": 1,
         "avg_views": 58.0,
-        "ratio": 1.239
+        "ratio": 1.252
       },
       "jeremiah": {
         "shorts": 2,
         "avg_views": 3.0,
-        "ratio": 0.544
+        "ratio": 0.545
       },
       "lamentations": {
         "shorts": 1,
         "avg_views": 2.0,
-        "ratio": 0.686
+        "ratio": 0.687
       },
       "luke": {
         "shorts": 2,
         "avg_views": 19.0,
-        "ratio": 0.781
-      },
-      "malachi": {
-        "shorts": 1,
-        "avg_views": 60.0,
-        "ratio": 1.259
+        "ratio": 0.787
       },
       "mark": {
         "shorts": 1,
         "avg_views": 86.0,
-        "ratio": 1.515
+        "ratio": 1.534
       },
       "matthew": {
         "shorts": 3,
         "avg_views": 40.7,
-        "ratio": 1.122
+        "ratio": 1.138
       },
       "proverbs": {
         "shorts": 1,
         "avg_views": 135.0,
-        "ratio": 1.999
+        "ratio": 2.028
       },
       "psalm": {
         "shorts": 6,
         "avg_views": 35.3,
-        "ratio": 1.035
+        "ratio": 1.052
       },
       "romans": {
         "shorts": 1,
         "avg_views": 66.0,
-        "ratio": 1.318
+        "ratio": 1.332
       }
     },
     "by_theme": {
       "anxiety_peace": {
         "shorts": 5,
         "avg_views": 20.8,
-        "ratio": 0.726
+        "ratio": 0.735
       },
       "daily_guidance_wisdom": {
         "shorts": 1,
         "avg_views": 42.0,
-        "ratio": 1.081
+        "ratio": 1.09
       },
       "midday_strength_endurance": {
         "shorts": 3,
         "avg_views": 25.0,
-        "ratio": 0.844
+        "ratio": 0.854
       },
       "morning_mercy_renewal": {
         "shorts": 3,
         "avg_views": 27.0,
-        "ratio": 0.88
+        "ratio": 0.89
       },
       "peace_rest": {
-        "shorts": 22,
-        "avg_views": 37.5,
-        "ratio": 1.101
+        "shorts": 21,
+        "avg_views": 36.5,
+        "ratio": 1.094
       },
       "protection": {
         "shorts": 2,
         "avg_views": 44.5,
-        "ratio": 1.159
+        "ratio": 1.173
       }
     },
     "guidance": []
