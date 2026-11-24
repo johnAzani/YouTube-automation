@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T20:47:13Z",
+  "generated_at": "2026-11-24T20:47:23Z",
   "monitor_generated_at": "2026-11-24T17:48:42.638979+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 767,
+    "published_total": 768,
     "published_longform": 215,
-    "published_shorts": 552,
-    "public_total": 765,
+    "published_shorts": 553,
+    "public_total": 766,
     "queued_longform": 62,
-    "queued_shorts": 54,
+    "queued_shorts": 53,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": true
@@ -290,23 +290,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 69,
+        "published_total": 70,
         "published_longform": 21,
-        "published_shorts": 48,
-        "thumbnail_pending": 69,
-        "public_total": 69,
+        "published_shorts": 49,
+        "thumbnail_pending": 70,
+        "public_total": 70,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0320",
-        "title": "Strength and Honour in Your Home: Proverbs 31:25-28 | The Family Altar",
-        "format": "longform",
-        "youtube_video_id": "qcapmVv0M0M",
-        "watch_url": "https://youtu.be/qcapmVv0M0M",
+        "id": "SHORT-FAMILYGENESIS48V15",
+        "title": "Pray This Genesis 48:15-16 Family Prayer Over Your Home | Faithful Through Generations #Shorts",
+        "format": "short",
+        "youtube_video_id": "E_hhnpNtNV4",
+        "watch_url": "https://www.youtube.com/shorts/E_hhnpNtNV4",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T16:51:01Z"
+        "published_at": "2026-11-24T20:46:13Z"
       },
       "next_queued_longform": {
         "id": "0322",
@@ -315,8 +315,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familygenesis48v15",
-        "scripture": "Genesis 48:15-16",
+        "short": "short-familyjude1v24",
+        "scripture": "Jude 1:24-25",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -686,6 +686,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYGENESIS48V15",
+      "slug": "short-familygenesis48v15-household-prayer",
+      "file": "short-familygenesis48v15-household-prayer.md",
+      "title": "Pray This Genesis 48:15-16 Family Prayer Over Your Home | Faithful Through Generations #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T20:46:13Z",
+      "youtube_video_id": "E_hhnpNtNV4",
+      "watch_url": "https://www.youtube.com/shorts/E_hhnpNtNV4",
+      "youtu_be_url": "https://youtu.be/E_hhnpNtNV4",
+      "shorts_url": "https://www.youtube.com/shorts/E_hhnpNtNV4",
+      "studio_url": "https://studio.youtube.com/video/E_hhnpNtNV4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/E_hhnpNtNV4/hqdefault.jpg",
+      "thumb_text": "BLESS THE LADS \u00b7 GOD OF OUR FATHERS",
+      "thumbnail_pending": true,
+      "duration_label": "48s",
+      "words": 680
+    },
     {
       "id": "SHORT-MORNINGPSALM5V3",
       "slug": "short-morningpsalm5v3-sunrise-prayer",
@@ -19905,17 +19929,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-familygenesis48v15",
-        "file": "0000-short-familygenesis48v15.yml",
-        "companion_longform_id": "",
-        "scripture": "Genesis 48:15-16",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
       {
         "short": "short-familyjude1v24",
         "file": "0000-short-familyjude1v24.yml",
