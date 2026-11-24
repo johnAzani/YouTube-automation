@@ -1,0 +1,354 @@
+{
+  "key": "short-guidedexodus13v21",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "DARKNESS AHEAD?",
+    "GOD GOES BEFORE YOU"
+  ],
+  "poster": [
+    "PILLAR OF CLOUD",
+    "PILLAR OF FIRE",
+    "LEAD MY STEPS",
+    "EXODUS 13:21"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley night mountain path",
+    "quiet mountain valley early light fog",
+    "dramatic cloud over mountain pass morning light",
+    "glowing horizon night wilderness peaceful",
+    "calm mountain lake early morning reflection",
+    "sunbeams through trees mountain path day",
+    "peaceful river winding through valley twilight"
+  ],
+  "scenes": [
+    {
+      "a": "You cannot see through the dark ahead tonight.",
+      "img": "short-guidedexodus13v21-scene-01.jpg",
+      "kicker": "DARK AHEAD",
+      "sub": "WHEN THE PATH IS HIDDEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "When the way forward is hidden in deep shadow,",
+      "img": "short-guidedexodus13v21-scene-02.jpg",
+      "kicker": "DEEP SHADOW",
+      "sub": "HOLD FAST TO HIS PROMISE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And the LORD went before them by day",
+      "img": "short-guidedexodus13v21-scene-03.jpg",
+      "kicker": "PILLAR OF CLOUD",
+      "sub": "EXODUS 13:21",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "and by night in a pillar of fire,",
+      "img": "short-guidedexodus13v21-scene-04.jpg",
+      "kicker": "PILLAR OF FIRE",
+      "sub": "EXODUS 13:21",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, go before us when our own vision fails.",
+      "img": "short-guidedexodus13v21-scene-05.jpg",
+      "kicker": "GO BEFORE US",
+      "sub": "WHEN OUR OWN VISION FAILS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Be our guiding cloud through the glare of noon",
+      "img": "short-guidedexodus13v21-scene-06.jpg",
+      "kicker": "LIGHT AND FIRE",
+      "sub": "GUIDE EVERY STEP",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Direct our uncertain steps according to Thy perfect wisdom.",
+      "img": "short-guidedexodus13v21-scene-07.jpg",
+      "kicker": "PERFECT WISDOM",
+      "sub": "LEAD US DAY AND NIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You cannot see through the dark ahead tonight."
+    ],
+    [
+      3,
+      8,
+      "When the way forward is hidden in deep shadow, hold fast to His ancient promise."
+    ],
+    [
+      8,
+      10,
+      "For the Scripture testifieth,"
+    ],
+    [
+      10,
+      16,
+      "And the LORD went before them by day in a pillar of a cloud, to lead them the way;"
+    ],
+    [
+      16,
+      22,
+      "and by night in a pillar of fire, to give them light; to go by day and night."
+    ],
+    [
+      22,
+      26,
+      "Lord, go before us when our own vision fails."
+    ],
+    [
+      26,
+      31,
+      "Be our guiding cloud through the glare of noon and our fire in the quiet watches."
+    ],
+    [
+      31,
+      35,
+      "Direct our uncertain steps according to Thy perfect wisdom."
+    ],
+    [
+      35,
+      38,
+      "Amen. You cannot see through the dark ahead tonight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU CANNOT SEE",
+        "THROUGH THE DARK",
+        "AHEAD TONIGHT"
+      ],
+      [
+        "DARK",
+        "TONIGHT"
+      ],
+      "EXODUS 13 : 21"
+    ],
+    [
+      3,
+      8,
+      [
+        "WHEN THE WAY FORWARD IS",
+        "HIDDEN IN DEEP SHADOW",
+        "HOLD FAST TO HIS PROMISE"
+      ],
+      [
+        "HIDDEN",
+        "PROMISE"
+      ],
+      "EXODUS 13 : 21"
+    ],
+    [
+      8,
+      10,
+      [
+        "FOR THE SCRIPTURE",
+        "TESTIFIETH"
+      ],
+      [
+        "SCRIPTURE"
+      ],
+      "EXODUS 13 : 21"
+    ],
+    [
+      10,
+      16,
+      [
+        "AND THE LORD WENT BEFORE THEM",
+        "BY DAY IN A PILLAR OF A CLOUD",
+        "TO LEAD THEM THE WAY"
+      ],
+      [
+        "LORD",
+        "CLOUD",
+        "LEAD"
+      ],
+      "EXODUS 13 : 21"
+    ],
+    [
+      16,
+      22,
+      [
+        "AND BY NIGHT IN A PILLAR OF FIRE",
+        "TO GIVE THEM LIGHT",
+        "TO GO BY DAY AND NIGHT"
+      ],
+      [
+        "FIRE",
+        "LIGHT",
+        "NIGHT"
+      ],
+      "EXODUS 13 : 21"
+    ],
+    [
+      22,
+      26,
+      [
+        "LORD GO BEFORE US",
+        "WHEN OUR OWN VISION FAILS"
+      ],
+      [
+        "BEFORE",
+        "FAILS"
+      ],
+      "EXODUS 13 : 21"
+    ],
+    [
+      26,
+      31,
+      [
+        "BE OUR GUIDING CLOUD BY NOON",
+        "AND OUR FIRE IN THE",
+        "QUIET WATCHES"
+      ],
+      [
+        "GUIDING",
+        "FIRE"
+      ],
+      "EXODUS 13 : 21"
+    ],
+    [
+      31,
+      35,
+      [
+        "DIRECT OUR UNCERTAIN STEPS",
+        "ACCORDING TO THY",
+        "PERFECT WISDOM"
+      ],
+      [
+        "STEPS",
+        "WISDOM"
+      ],
+      "EXODUS 13 : 21"
+    ],
+    [
+      35,
+      38,
+      [
+        "AMEN YOU CANNOT SEE",
+        "THROUGH THE DARK",
+        "AHEAD TONIGHT"
+      ],
+      [
+        "AMEN",
+        "DARK"
+      ],
+      "EXODUS 13 : 21"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You cannot see through the dark ahead tonight.",
+      "kind": "phrase",
+      "words": [
+        "DARK",
+        "TONIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "hold fast to His ancient promise.",
+      "kind": "phrase",
+      "words": [
+        "ANCIENT",
+        "PROMISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "And the LORD went before them by day in a pillar of a cloud, to lead them the way;",
+      "kind": "phrase",
+      "words": [
+        "PILLAR",
+        "CLOUD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and by night in a pillar of fire, to give them light; to go by day and night.",
+      "kind": "phrase",
+      "words": [
+        "PILLAR",
+        "FIRE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, go before us when our own vision fails.",
+      "kind": "phrase",
+      "words": [
+        "VISION",
+        "FAILS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Be our guiding cloud through the glare of noon and our fire in the quiet watches.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "WATCHES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Direct our uncertain steps according to Thy perfect wisdom.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT",
+        "WISDOM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Exodus 13:21"
+}
