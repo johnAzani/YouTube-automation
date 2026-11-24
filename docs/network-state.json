@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T07:09:06Z",
+  "generated_at": "2026-11-24T07:10:35Z",
   "monitor_generated_at": "2026-11-24T04:17:53.491848+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 735,
+    "published_total": 736,
     "published_longform": 209,
-    "published_shorts": 526,
-    "public_total": 733,
+    "published_shorts": 527,
+    "public_total": 734,
     "queued_longform": 53,
-    "queued_shorts": 52,
+    "queued_shorts": 51,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -363,23 +363,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 68,
+        "published_total": 69,
         "published_longform": 18,
-        "published_shorts": 50,
+        "published_shorts": 51,
         "thumbnail_pending": 4,
-        "public_total": 68,
+        "public_total": 69,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-HEALINGNAHUM1V7",
-        "title": "Pray This Nahum 1:7 Healing Prayer for Peace & Strength | When Trouble Presses Hard #Shorts",
+        "id": "SHORT-HEALINGPROVERBS3V7",
+        "title": "Pray This Proverbs 3:7-8 Healing Prayer for Peace & Strength | Health To Thy Navel #Shorts",
         "format": "short",
-        "youtube_video_id": "PyNs3ISLLgE",
-        "watch_url": "https://www.youtube.com/shorts/PyNs3ISLLgE",
+        "youtube_video_id": "CjKPqoAg6G4",
+        "watch_url": "https://www.youtube.com/shorts/CjKPqoAg6G4",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T01:54:37Z"
+        "published_at": "2026-11-24T07:09:37Z"
       },
       "next_queued_longform": {
         "id": "0422",
@@ -388,8 +388,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingproverbs3v7",
-        "scripture": "Proverbs 3:7-8",
+        "short": "short-healingpsalm73v26",
+        "scripture": "Psalm 73:26",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGPROVERBS3V7",
+      "slug": "short-healingproverbs3v7-restoration-prayer",
+      "file": "short-healingproverbs3v7-restoration-prayer.md",
+      "title": "Pray This Proverbs 3:7-8 Healing Prayer for Peace & Strength | Health To Thy Navel #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T07:09:37Z",
+      "youtube_video_id": "CjKPqoAg6G4",
+      "watch_url": "https://www.youtube.com/shorts/CjKPqoAg6G4",
+      "youtu_be_url": "https://youtu.be/CjKPqoAg6G4",
+      "shorts_url": "https://www.youtube.com/shorts/CjKPqoAg6G4",
+      "studio_url": "https://studio.youtube.com/video/CjKPqoAg6G4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/CjKPqoAg6G4/hqdefault.jpg",
+      "thumb_text": "PROVERBS 3:7-8 \u00b7 GOD'S HEALING BALM",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 652
+    },
     {
       "id": "SHORT-MIDNIGHTJEREMIAH33V3",
       "slug": "short-midnightjeremiah33v3-midnight-prayer",
@@ -19046,17 +19070,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-healingproverbs3v7",
-        "file": "0000-short-healingproverbs3v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Proverbs 3:7-8",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingpsalm73v26",
