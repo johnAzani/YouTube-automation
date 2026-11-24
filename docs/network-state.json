@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T02:01:22Z",
+  "generated_at": "2026-11-24T02:03:24Z",
   "monitor_generated_at": "2026-11-23T23:26:47.046817+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 725,
+    "published_total": 726,
     "published_longform": 206,
-    "published_shorts": 519,
-    "public_total": 723,
+    "published_shorts": 520,
+    "public_total": 724,
     "queued_longform": 56,
-    "queued_shorts": 59,
+    "queued_shorts": 58,
     "automations_ok": 13,
     "automations_total": 14,
     "network_healthy": false
@@ -436,23 +436,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 67,
+        "published_total": 68,
         "published_longform": 19,
-        "published_shorts": 48,
+        "published_shorts": 49,
         "thumbnail_pending": 6,
-        "public_total": 67,
+        "public_total": 68,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPSALM112V1",
-        "title": "Pray This Psalm 112:1-5 Prayer for Open Doors & Provision | Daily Affairs #Shorts",
+        "id": "SHORT-PROVISIONPSALM127V1",
+        "title": "Pray This Psalm 127:1-2 Prayer for Open Doors & Provision | Surrender The Stewardship #Shorts",
         "format": "short",
-        "youtube_video_id": "a7_WR-pzuIo",
-        "watch_url": "https://www.youtube.com/shorts/a7_WR-pzuIo",
-        "published_on": "2026-11-23",
-        "published_at": "2026-11-23T22:16:25Z"
+        "youtube_video_id": "rJqhkGasNpE",
+        "watch_url": "https://www.youtube.com/shorts/rJqhkGasNpE",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T02:02:32Z"
       },
       "next_queued_longform": {
         "id": "0520",
@@ -461,8 +461,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionpsalm127v1",
-        "scripture": "Psalm 127:1-2",
+        "short": "short-provisionpsalm145v15",
+        "scripture": "Psalm 145:15-16",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONPSALM127V1",
+      "slug": "short-provisionpsalm127v1-stewardship-prayer",
+      "file": "short-provisionpsalm127v1-stewardship-prayer.md",
+      "title": "Pray This Psalm 127:1-2 Prayer for Open Doors & Provision | Surrender The Stewardship #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T02:02:32Z",
+      "youtube_video_id": "rJqhkGasNpE",
+      "watch_url": "https://www.youtube.com/shorts/rJqhkGasNpE",
+      "youtu_be_url": "https://youtu.be/rJqhkGasNpE",
+      "shorts_url": "https://www.youtube.com/shorts/rJqhkGasNpE",
+      "studio_url": "https://studio.youtube.com/video/rJqhkGasNpE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/rJqhkGasNpE/hqdefault.jpg",
+      "thumb_text": "WHEN LABOR FEELS VAIN \u00b7 PSALM 127:1-2",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 642
+    },
     {
       "id": "SHORT-GUIDEDPROVERBS2V6",
       "slug": "short-guidedproverbs2v6-guidance-prayer",
@@ -18883,17 +18907,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-provisionpsalm127v1",
-        "file": "0000-short-provisionpsalm127v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 127:1-2",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionpsalm145v15",
