@@ -73,8 +73,10 @@ EVERGREEN: dict[str, tuple[str, ...]] = {
         # Added 21 November 2026 (same exhaustion), in this channel's voice:
         # passages for the long middle of the night, none already in its specs.
         # Psalm 63:6, 42:8 and 77:6 are on this channel's roadmap too (0245-0247),
-        # so they are reached through the roadmap pass and not listed twice.
-        "Psalm 121:3-4", "Psalm 30:5", "Isaiah 26:3-4", "Psalm 46:10",
+        # so they are reached through the roadmap pass and not listed twice. Psalm
+        # 88:1-2 here, not 121:3-4: a passage may not appear on two channels'
+        # evergreen lists, and prayer8 owns Psalm 121.
+        "Psalm 88:1-2", "Psalm 30:5", "Isaiah 26:3-4", "Psalm 46:10",
         "Psalm 59:16", "Micah 7:8",
     ),
     # The Family Altar: the home, the marriage, the children.

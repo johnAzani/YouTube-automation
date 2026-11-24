@@ -4226,8 +4226,8 @@ MIDNIGHT_WATCH_ROADMAP += [
     # where the repository's own floor is 15, so the nightly pass had nothing to
     # top the runway up with. Same voice, same tier scheme, the long middle of the
     # night: the hours nobody chooses to be awake.
-    _planned("0245", "Psalm 63:6", "When I Remember Thee upon My Bed", "ON MY BED I REMEMBER",
-             "Verse 6 (Exposition)", "Remembering God in the night watches when sleep will not come",
+    _planned("0245", "Psalm 88:1-2", "Unto Thee Have I Cried", "I CRIED IN THE NIGHT",
+             "Verse 6 (Exposition)", "Crying to God in the dark and knowing the prayer is heard",
              "Tier 1 (Midnight Watch Anchor)"),
     _planned("0246", "Psalm 42:8", "In the Night His Song Shall Be with Me", "HIS SONG IN THE NIGHT",
              "Verse 8 (Exposition)", "Asking for the song of the Lord to be with you in a dark hour",
