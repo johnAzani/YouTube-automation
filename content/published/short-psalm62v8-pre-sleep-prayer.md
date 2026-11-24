@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["UNSPOKEN WORDS", "HEAVY NIGHTS", "POUR OUT YOUR HEART", "PSALM 62:8"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 You carried unspoken words into this quiet room. The thoughts you could not share with anyone else still linger in your heart tonight. God hears what you hold back. Trust in him at all times; ye people, pour out your heart before him: God is a refuge for us. Lord, we bring the raw, unpolished truth of our day before You. Every silent burden, every hidden fear, and every unspoken prayer, we pour into Your safe hands. Be our quiet sanctuary while we rest. Let Your peace guard our minds as sleep comes. Amen. You carried unspoken words into this room.
