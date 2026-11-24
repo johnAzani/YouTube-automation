@@ -1,0 +1,328 @@
+{
+  "key": "short-job11v18",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "REST IN SAFETY",
+    "JOB 11:18 BEDTIME PRAYER"
+  ],
+  "poster": [
+    "WHEN NIGHT FEELS UNCERTAIN",
+    "FIND REST IN SAFETY",
+    "A BEDTIME PRAYER FOR PEACE",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm dark lake starry night mist",
+    "still mountain peak night sky stars",
+    "gentle candle light flickering dark room quiet",
+    "calm ocean water moonlight night horizon",
+    "quiet pine forest twilight foggy night",
+    "soft lantern glow calm cabin night",
+    "misty lake reflection night stars calm"
+  ],
+  "scenes": [
+    {
+      "a": "Your mind is still searching for safety tonight.",
+      "img": "short-job11v18-scene-01.jpg",
+      "kicker": "SEARCHING FOR SAFETY",
+      "sub": "UNCLENCH YOUR THOUGHTS TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Scripture promises, 'And thou shalt be secure, because there is hope; yea, thou shalt dig about thee, and thou shalt take thy rest in safety.'",
+      "img": "short-job11v18-scene-02.jpg",
+      "kicker": "JOB 11:18",
+      "sub": "THOU SHALT TAKE THY REST IN SAFETY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, when tomorrow feels uncertain and we try to guard our own heart, anchor us deeply in your quiet peace.",
+      "img": "short-job11v18-scene-03.jpg",
+      "kicker": "ANCHOR IN PEACE",
+      "sub": "WHEN TOMORROW FEELS UNCERTAIN",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Clear away the lingering fears that keep this pillow restless in the dark.",
+      "img": "short-job11v18-scene-04.jpg",
+      "kicker": "QUIET THE NIGHT",
+      "sub": "RELEASE THE FEARS OF THE DARK",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Replace every heavy thought with the quiet assurance that we are fully held in your steady care.",
+      "img": "short-job11v18-scene-05.jpg",
+      "kicker": "HELD IN CARE",
+      "sub": "STEADY SURRENDER BEFORE SLEEP",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Let sleep come gently now, rooted in the security only you provide.",
+      "img": "short-job11v18-scene-06.jpg",
+      "kicker": "REST IN SECURITY",
+      "sub": "ROOTED IN HIS UNCHANGING PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. Your mind can rest in safety tonight.",
+      "img": "short-job11v18-scene-07.jpg",
+      "kicker": "REST IN SAFETY",
+      "sub": "THE SECRET PLACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your mind is still searching for safety tonight."
+    ],
+    [
+      3,
+      10,
+      "Scripture promises, 'And thou shalt be secure, because there is hope; yea, thou shalt dig about thee, and thou shalt take thy rest in safety.'"
+    ],
+    [
+      10,
+      15,
+      "Lord, when tomorrow feels uncertain and we try to guard our own heart, anchor us deeply in your quiet peace."
+    ],
+    [
+      15,
+      20,
+      "Clear away the lingering fears that keep this pillow restless in the dark."
+    ],
+    [
+      20,
+      25,
+      "Replace every heavy thought with the quiet assurance that we are fully held in your steady care."
+    ],
+    [
+      25,
+      30,
+      "Let sleep come gently now, rooted in the security only you provide."
+    ],
+    [
+      30,
+      34,
+      "Amen. Your mind can rest in safety tonight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR MIND IS STILL",
+        "SEARCHING FOR SAFETY",
+        "TONIGHT."
+      ],
+      [
+        "SEARCHING",
+        "SAFETY"
+      ],
+      "JOB 11 : 18"
+    ],
+    [
+      3,
+      10,
+      [
+        "AND THOU SHALT BE SECURE",
+        "BECAUSE THERE IS HOPE",
+        "THOU SHALT TAKE THY REST",
+        "IN SAFETY."
+      ],
+      [
+        "SECURE",
+        "HOPE",
+        "REST",
+        "SAFETY"
+      ],
+      "JOB 11 : 18"
+    ],
+    [
+      10,
+      15,
+      [
+        "WHEN TOMORROW FEELS UNCERTAIN",
+        "ANCHOR US DEEPLY",
+        "IN YOUR QUIET PEACE."
+      ],
+      [
+        "UNCERTAIN",
+        "ANCHOR",
+        "PEACE"
+      ],
+      "JOB 11 : 18"
+    ],
+    [
+      15,
+      20,
+      [
+        "CLEAR AWAY LINGERING FEARS",
+        "THAT KEEP THIS PILLOW",
+        "RESTLESS IN THE DARK."
+      ],
+      [
+        "CLEAR",
+        "FEARS",
+        "RESTLESS"
+      ],
+      "JOB 11 : 18"
+    ],
+    [
+      20,
+      25,
+      [
+        "REPLACE EVERY HEAVY THOUGHT",
+        "WITH QUIET ASSURANCE",
+        "HELD IN STEADY CARE."
+      ],
+      [
+        "HEAVY",
+        "ASSURANCE",
+        "HELD"
+      ],
+      "JOB 11 : 18"
+    ],
+    [
+      25,
+      30,
+      [
+        "LET SLEEP COME GENTLY",
+        "ROOTED IN SECURITY",
+        "ONLY YOU PROVIDE."
+      ],
+      [
+        "SLEEP",
+        "GENTLY",
+        "SECURITY"
+      ],
+      "JOB 11 : 18"
+    ],
+    [
+      30,
+      34,
+      [
+        "AMEN.",
+        "YOUR MIND CAN REST",
+        "IN SAFETY TONIGHT."
+      ],
+      [
+        "AMEN",
+        "REST",
+        "SAFETY"
+      ],
+      "JOB 11 : 18"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your mind is still searching for safety tonight.",
+      "kind": "phrase",
+      "words": [
+        "SEARCHING",
+        "SAFETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture promises, 'And thou shalt be secure, because there is hope; yea, thou shalt dig about thee, and thou shalt take thy rest in safety.'",
+      "kind": "phrase",
+      "words": [
+        "SECURE",
+        "HOPE",
+        "REST",
+        "SAFETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when tomorrow feels uncertain and we try to guard our own heart, anchor us deeply in your quiet peace.",
+      "kind": "phrase",
+      "words": [
+        "UNCERTAIN",
+        "ANCHOR",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Clear away the lingering fears that keep this pillow restless in the dark.",
+      "kind": "phrase",
+      "words": [
+        "FEARS",
+        "RESTLESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Replace every heavy thought with the quiet assurance that we are fully held in your steady care.",
+      "kind": "phrase",
+      "words": [
+        "ASSURANCE",
+        "HELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let sleep come gently now, rooted in the security only you provide.",
+      "kind": "phrase",
+      "words": [
+        "SLEEP",
+        "SECURITY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Your mind can rest in safety tonight.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "SAFETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Job 11:18"
+}
