@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["HIS MINDFULNESS", "UPON YOUR HOME", "A PROMISE KEPT", "FOR YOUR LINEAGE"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-01T03:15:51Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If you are worried that your efforts to raise your family are going unnoticed, hear this. The LORD hath been mindful of us: he will bless us; he will bless the house of Israel; he will bless the house of Aaron. He will bless them that fear the LORD, both small and great. The LORD shall increase you more and more, you and your children. Ye are blessed of the LORD which made heaven and earth. Lord, anchor our home in this truth and keep our hearts set on your eternal goodness.
