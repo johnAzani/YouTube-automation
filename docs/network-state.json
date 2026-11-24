@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T07:03:54Z",
+  "generated_at": "2026-11-24T07:04:54Z",
   "monitor_generated_at": "2026-11-24T04:17:53.491848+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 733,
+    "published_total": 734,
     "published_longform": 209,
-    "published_shorts": 524,
-    "public_total": 731,
+    "published_shorts": 525,
+    "public_total": 732,
     "queued_longform": 53,
-    "queued_shorts": 54,
+    "queued_shorts": 53,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -159,23 +159,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 84,
+        "published_total": 85,
         "published_longform": 25,
-        "published_shorts": 59,
+        "published_shorts": 60,
         "thumbnail_pending": 1,
-        "public_total": 84,
+        "public_total": 85,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYNEHEMIAH2V4",
-        "title": "Say This Nehemiah 2:4 Prayer at Noon | That Urgent Decision #Shorts",
+        "id": "SHORT-MIDDAYNEHEMIAH6V9",
+        "title": "Say This Nehemiah 6:9 Prayer at Noon | Pause & Pray At Noon #Shorts",
         "format": "short",
-        "youtube_video_id": "Yen53L9-TOM",
-        "watch_url": "https://www.youtube.com/shorts/Yen53L9-TOM",
+        "youtube_video_id": "17X-uNpu5iY",
+        "watch_url": "https://www.youtube.com/shorts/17X-uNpu5iY",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T01:47:26Z"
+        "published_at": "2026-11-24T07:03:53Z"
       },
       "next_queued_longform": {
         "id": "0102",
@@ -184,8 +184,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaynehemiah6v9",
-        "scripture": "Nehemiah 6:9",
+        "short": "short-middaypsalm46v10",
+        "scripture": "Psalm 46:10",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYNEHEMIAH6V9",
+      "slug": "short-middaynehemiah6v9-midday-prayer",
+      "file": "short-middaynehemiah6v9-midday-prayer.md",
+      "title": "Say This Nehemiah 6:9 Prayer at Noon | Pause & Pray At Noon #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T07:03:53Z",
+      "youtube_video_id": "17X-uNpu5iY",
+      "watch_url": "https://www.youtube.com/shorts/17X-uNpu5iY",
+      "youtu_be_url": "https://youtu.be/17X-uNpu5iY",
+      "shorts_url": "https://www.youtube.com/shorts/17X-uNpu5iY",
+      "studio_url": "https://studio.youtube.com/video/17X-uNpu5iY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/17X-uNpu5iY/hqdefault.jpg",
+      "thumb_text": "THE MIDDAY WATCH \u00b7 NEHEMIAH 6:9",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 625
+    },
     {
       "id": "SHORT-FAMILYDEUTERONOMY28V3",
       "slug": "short-familydeuteronomy28v3-household-prayer",
@@ -19108,17 +19132,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-middaynehemiah6v9",
-        "file": "0095-short-middaynehemiah6v9.yml",
-        "companion_longform_id": "0095",
-        "scripture": "Nehemiah 6:9",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm46v10",
