@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T20:46:32Z",
+  "generated_at": "2026-11-24T20:46:51Z",
   "monitor_generated_at": "2026-11-24T17:48:42.638979+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 765,
+    "published_total": 766,
     "published_longform": 215,
-    "published_shorts": 550,
-    "public_total": 763,
+    "published_shorts": 551,
+    "public_total": 764,
     "queued_longform": 60,
-    "queued_shorts": 56,
+    "queued_shorts": 55,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": true
@@ -227,23 +227,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 80,
+        "published_total": 81,
         "published_longform": 25,
-        "published_shorts": 55,
-        "thumbnail_pending": 79,
-        "public_total": 80,
+        "published_shorts": 56,
+        "thumbnail_pending": 80,
+        "public_total": 81,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTJUDGES7V19",
-        "title": "Pray This Judges 7:19-21 Midnight Prayer | Strength To Stand #Shorts",
+        "id": "SHORT-MIDNIGHTNEHEMIAH4V9",
+        "title": "Pray This Nehemiah 4:9 Midnight Prayer | Unseen Pressures In The Dark #Shorts",
         "format": "short",
-        "youtube_video_id": "0KUWFG-oogI",
-        "watch_url": "https://www.youtube.com/shorts/0KUWFG-oogI",
+        "youtube_video_id": "u2zmnTvWytw",
+        "watch_url": "https://www.youtube.com/shorts/u2zmnTvWytw",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T17:02:50Z"
+        "published_at": "2026-11-24T20:45:48Z"
       },
       "next_queued_longform": {
         "id": "0225",
@@ -252,8 +252,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightnehemiah4v9",
-        "scripture": "Nehemiah 4:9",
+        "short": "short-midnightdaniel2v19",
+        "scripture": "Daniel 2:19-22",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTNEHEMIAH4V9",
+      "slug": "short-midnightnehemiah4v9-midnight-prayer",
+      "file": "short-midnightnehemiah4v9-midnight-prayer.md",
+      "title": "Pray This Nehemiah 4:9 Midnight Prayer | Unseen Pressures In The Dark #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T20:45:48Z",
+      "youtube_video_id": "u2zmnTvWytw",
+      "watch_url": "https://www.youtube.com/shorts/u2zmnTvWytw",
+      "youtu_be_url": "https://youtu.be/u2zmnTvWytw",
+      "shorts_url": "https://www.youtube.com/shorts/u2zmnTvWytw",
+      "studio_url": "https://studio.youtube.com/video/u2zmnTvWytw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/u2zmnTvWytw/hqdefault.jpg",
+      "thumb_text": "NEHEMIAH 4:9 \u00b7 STAND IN PRAYER",
+      "thumbnail_pending": true,
+      "duration_label": "55s",
+      "words": 639
+    },
     {
       "id": "SHORT-MIDDAYISAIAH35V3",
       "slug": "short-middayisaiah35v3-midday-prayer",
@@ -19923,17 +19947,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightnehemiah4v9",
-        "file": "0000-short-midnightnehemiah4v9.yml",
-        "companion_longform_id": "",
-        "scripture": "Nehemiah 4:9",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-provisionpsalm67v5",
