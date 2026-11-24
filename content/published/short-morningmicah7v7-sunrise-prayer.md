@@ -27,7 +27,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (12, 683, 1067, 732); shorten the authored lockup or reduce its size"
 ---
 
 Before you make that heavy decision alone today, lift your eyes to the Lord. Therefore I will look unto the LORD; I will wait for the God of my salvation: my God will hear me. Father, when earthly answers fail and human help falls short, I fix my eyes on You. I will not rush ahead in fear or act out of panic this morning. Teach me to wait patiently for Your guidance, knowing You hear my quietest prayer. Fill my heart with steady confidence as I step into this day. Subscribe to The Morning Altar to begin every sunrise in prayer.

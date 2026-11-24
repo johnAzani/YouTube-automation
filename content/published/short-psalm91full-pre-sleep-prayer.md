@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["REST UNDER THE", "SHADOW OF THE", "ALMIGHTY", "TONIGHT"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If the heavy weight of your failures follows you into this bed tonight, listen closely. He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty. I will say of the LORD, He is my refuge and my fortress: my God; in him will I trust. Lord, let this promise sink into the marrow of my bones until all fear fades away. Cover me in your perfect peace while the world sleeps and keep my heart secure tonight. Thank you for being my constant dwelling place, my refuge, and my only true hope. Amen.

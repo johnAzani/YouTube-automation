@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE MIDNIGHT WATCH", "COLOSSIANS 2:14-15", "A SILENT PRAYER", "STAND IN FAITH"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-24T12:34:59Z"
+thumbnail_retry_after: "2026-12-01T13:58:39Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If that old record of failure still weights your heart at this midnight hour. Lord, we come before you in this quiet hour acknowledging the burdens we carry. Blotting out the handwriting of ordinances that was against us, which was contrary to us, and took it out of the way, nailing it to his cross; Father, let this truth anchor our souls as the night deepens around us. And having spoiled principalities and powers, he made a show of them openly, triumphing over them in it. We rest securely in your finished work tonight, trusting your mighty name.
