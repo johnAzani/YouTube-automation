@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T14:01:01Z",
+  "generated_at": "2026-11-24T14:34:06Z",
   "monitor_generated_at": "2026-11-24T13:59:05.742007+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 752,
-    "published_longform": 211,
-    "published_shorts": 541,
-    "public_total": 750,
-    "queued_longform": 61,
-    "queued_shorts": 64,
+    "published_total": 754,
+    "published_longform": 212,
+    "published_shorts": 542,
+    "public_total": 752,
+    "queued_longform": 60,
+    "queued_shorts": 63,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -431,33 +431,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 69,
-        "published_longform": 19,
-        "published_shorts": 50,
+        "published_total": 71,
+        "published_longform": 20,
+        "published_shorts": 51,
         "thumbnail_pending": 6,
-        "public_total": 69,
-        "queued_longform": 6,
+        "public_total": 71,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPSALM145V15",
-        "title": "Pray This Psalm 145:15-16 Prayer for Open Doors & Provision | God's Faithful Promise #Shorts",
-        "format": "short",
-        "youtube_video_id": "vHIwIbXj7s0",
-        "watch_url": "https://www.youtube.com/shorts/vHIwIbXj7s0",
-        "published_on": "2026-11-24",
-        "published_at": "2026-11-24T07:13:03Z"
-      },
-      "next_queued_longform": {
         "id": "0520",
         "title": "True Wealth Without Anxious Toil: Proverbs 10:22 | The Provision Table",
-        "words": 1499,
+        "format": "longform",
+        "youtube_video_id": "zQd8TcjOFgc",
+        "watch_url": "https://youtu.be/zQd8TcjOFgc",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T14:33:09Z"
+      },
+      "next_queued_longform": {
+        "id": "0521",
+        "title": "Guidance for Your Daily Labor: Isaiah 48:17 | The Provision Table",
+        "words": 1762,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionpsalm111v5",
-        "scripture": "Psalm 111:5",
+        "short": "short-provisionpsalm67v5",
+        "scripture": "Psalm 67:5-7",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -692,6 +692,30 @@
   ],
   "videos": [
     {
+      "id": "0520",
+      "slug": "true-wealth-without-anxious-toil-proverbs-10-22",
+      "file": "0520-true-wealth-without-anxious-toil-proverbs-10-22.md",
+      "title": "True Wealth Without Anxious Toil: Proverbs 10:22 | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T14:33:09Z",
+      "youtube_video_id": "zQd8TcjOFgc",
+      "watch_url": "https://youtu.be/zQd8TcjOFgc",
+      "youtu_be_url": "https://youtu.be/zQd8TcjOFgc",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/zQd8TcjOFgc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/zQd8TcjOFgc/hqdefault.jpg",
+      "thumb_text": "BLESSING WITHOUT SORROW",
+      "thumbnail_pending": false,
+      "duration_label": "10m 15s",
+      "words": 1499
+    },
+    {
       "id": "SHORT-GARDENPSALM116V12",
       "slug": "short-gardenpsalm116v12-thanksgiving-prayer",
       "file": "short-gardenpsalm116v12-thanksgiving-prayer.md",
@@ -762,6 +786,30 @@
       "thumbnail_pending": false,
       "duration_label": "52s",
       "words": 652
+    },
+    {
+      "id": "SHORT-PROVISIONPSALM111V5",
+      "slug": "short-provisionpsalm111v5-stewardship-prayer",
+      "file": "short-provisionpsalm111v5-stewardship-prayer.md",
+      "title": "Pray This Psalm 111:5 Prayer for Open Doors & Provision | Trusting God For Daily Bread #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T13:41:28Z",
+      "youtube_video_id": "AD83fS7vkk0",
+      "watch_url": "https://www.youtube.com/shorts/AD83fS7vkk0",
+      "youtu_be_url": "https://youtu.be/AD83fS7vkk0",
+      "shorts_url": "https://www.youtube.com/shorts/AD83fS7vkk0",
+      "studio_url": "https://studio.youtube.com/video/AD83fS7vkk0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/AD83fS7vkk0/hqdefault.jpg",
+      "thumb_text": "GOD REMEMBERS \u00b7 HIS COVENANT",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 633
     },
     {
       "id": "SHORT-PSALM91FULL",
@@ -19185,19 +19233,6 @@
         "words": 930
       },
       {
-        "id": "0520",
-        "slug": "true-wealth-without-anxious-toil-proverbs-10-22",
-        "file": "0520-true-wealth-without-anxious-toil-proverbs-10-22.md",
-        "title": "True Wealth Without Anxious Toil: Proverbs 10:22 | The Provision Table",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1499
-      },
-      {
         "id": "0521",
         "slug": "when-you-need-guidance-in-your-work-isaiah-48-17",
         "file": "0521-when-you-need-guidance-in-your-work-isaiah-48-17.md",
@@ -19690,17 +19725,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-provisionpsalm111v5",
-        "file": "0000-short-provisionpsalm111v5.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 111:5",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionpsalm67v5",
