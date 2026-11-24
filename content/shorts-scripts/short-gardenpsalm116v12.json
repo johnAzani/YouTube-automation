@@ -1,0 +1,316 @@
+{
+  "key": "short-gardenpsalm116v12",
+  "channel": "prayer9",
+  "psalm": 116,
+  "title": [
+    "WHAT SHALL I RENDER?",
+    "A PRAYER OF THANKS"
+  ],
+  "poster": [
+    "WHAT SHALL I",
+    "RENDER UNTO THE LORD?",
+    "PSALM 116:12-13",
+    "THE PRAISE GARDEN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "golden sunlight through morning forest trees",
+    "calm meadow river soft morning light",
+    "misty green valley landscape dawn",
+    "peaceful mountain lake morning reflection",
+    "sunlit countryside trail quiet landscape",
+    "golden sunset over calm river water",
+    "soft morning sunlight over green hills"
+  ],
+  "scenes": [
+    {
+      "a": "Your hands are full of unmerited mercy today.",
+      "img": "short-gardenpsalm116v12-scene-01.jpg",
+      "kicker": "UNMERITED MERCY",
+      "sub": "YOUR HANDS ARE FULL TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "When you look back over what God has done, the heart quietly asks:",
+      "img": "short-gardenpsalm116v12-scene-02.jpg",
+      "kicker": "LOOKING BACK",
+      "sub": "WHAT GOD HAS DONE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "What shall I render unto the LORD for all his benefits toward me?",
+      "img": "short-gardenpsalm116v12-scene-03.jpg",
+      "kicker": "PSALM 116:12",
+      "sub": "WHAT SHALL I RENDER UNTO THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I will take the cup of salvation, and call upon the name of the LORD.",
+      "img": "short-gardenpsalm116v12-scene-04.jpg",
+      "kicker": "PSALM 116:13",
+      "sub": "I WILL TAKE THE CUP OF SALVATION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Father, we cannot repay Your kindness. We do not bring gifts to buy Your favor;",
+      "img": "short-gardenpsalm116v12-scene-05.jpg",
+      "kicker": "UNMERITED FAVOR",
+      "sub": "WE CANNOT REPAY YOUR KINDNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "we simply lift up the cup You filled and call upon Your holy name with thankful praise.",
+      "img": "short-gardenpsalm116v12-scene-06.jpg",
+      "kicker": "THANKFUL PRAISE",
+      "sub": "LIFTING UP THE CUP HE FILLED",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach us to receive Your daily grace with open hands, trusting Your goodness in every season. Amen. Your hands are full of mercy.",
+      "img": "short-gardenpsalm116v12-scene-07.jpg",
+      "kicker": "DAILY GRACE",
+      "sub": "TRUSTING HIS GOODNESS ALWAYS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your hands are full of unmerited mercy today."
+    ],
+    [
+      3,
+      8,
+      "When you look back over what God has done, the heart quietly asks:"
+    ],
+    [
+      8,
+      15,
+      "What shall I render unto the LORD for all his benefits toward me?"
+    ],
+    [
+      15,
+      22,
+      "I will take the cup of salvation, and call upon the name of the LORD."
+    ],
+    [
+      22,
+      28,
+      "Father, we cannot repay Your kindness. We do not bring gifts to buy Your favor;"
+    ],
+    [
+      28,
+      35,
+      "we simply lift up the cup You filled and call upon Your holy name with thankful praise."
+    ],
+    [
+      35,
+      42,
+      "Teach us to receive Your daily grace with open hands, trusting Your goodness in every season. Amen. Your hands are full of mercy."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR HANDS ARE FULL",
+        "OF UNMERITED MERCY TODAY"
+      ],
+      [
+        "FULL",
+        "MERCY"
+      ],
+      "PSALM 116 : 12-13"
+    ],
+    [
+      3,
+      8,
+      [
+        "WHEN YOU LOOK BACK",
+        "OVER WHAT GOD HAS DONE",
+        "THE HEART QUIETLY ASKS"
+      ],
+      [
+        "LOOK",
+        "DONE"
+      ],
+      "PSALM 116 : 12"
+    ],
+    [
+      8,
+      15,
+      [
+        "WHAT SHALL I RENDER",
+        "UNTO THE LORD FOR ALL",
+        "HIS BENEFITS TOWARD ME"
+      ],
+      [
+        "RENDER",
+        "BENEFITS"
+      ],
+      "PSALM 116 : 12"
+    ],
+    [
+      15,
+      22,
+      [
+        "I WILL TAKE THE CUP",
+        "OF SALVATION AND CALL",
+        "UPON THE NAME OF THE LORD"
+      ],
+      [
+        "CUP",
+        "SALVATION"
+      ],
+      "PSALM 116 : 13"
+    ],
+    [
+      22,
+      28,
+      [
+        "FATHER WE CANNOT",
+        "REPAY YOUR KINDNESS",
+        "OR BUY YOUR FAVOR"
+      ],
+      [
+        "KINDNESS",
+        "FAVOR"
+      ],
+      "PSALM 116 : 12-13"
+    ],
+    [
+      28,
+      35,
+      [
+        "WE LIFT UP THE CUP",
+        "YOU FILLED AND CALL",
+        "UPON YOUR HOLY NAME"
+      ],
+      [
+        "FILLED",
+        "NAME"
+      ],
+      "PSALM 116 : 13"
+    ],
+    [
+      35,
+      42,
+      [
+        "TEACH US TO RECEIVE",
+        "YOUR DAILY GRACE",
+        "YOUR HANDS ARE FULL"
+      ],
+      [
+        "GRACE",
+        "FULL"
+      ],
+      "PSALM 116 : 12-13"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your hands are full of unmerited mercy today.",
+      "kind": "phrase",
+      "words": [
+        "UNMERITED",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When you look back over what God has done, the heart quietly asks:",
+      "kind": "phrase",
+      "words": [
+        "LOOK",
+        "BACK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "What shall I render unto the LORD for all his benefits toward me?",
+      "kind": "phrase",
+      "words": [
+        "RENDER",
+        "BENEFITS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will take the cup of salvation, and call upon the name of the LORD.",
+      "kind": "phrase",
+      "words": [
+        "CUP",
+        "SALVATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we cannot repay Your kindness. We do not bring gifts to buy Your favor;",
+      "kind": "phrase",
+      "words": [
+        "REPAY",
+        "KINDNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "we simply lift up the cup You filled and call upon Your holy name with thankful praise.",
+      "kind": "phrase",
+      "words": [
+        "CUP",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach us to receive Your daily grace with open hands, trusting Your goodness in every season. Amen. Your hands are full of mercy.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 116:12-13"
+}
