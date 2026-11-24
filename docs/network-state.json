@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T02:24:28Z",
+  "generated_at": "2026-11-24T02:35:23Z",
   "monitor_generated_at": "2026-11-24T02:23:23.793843+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 726,
-    "published_longform": 206,
-    "published_shorts": 520,
-    "public_total": 724,
-    "queued_longform": 56,
-    "queued_shorts": 58,
+    "published_total": 728,
+    "published_longform": 207,
+    "published_shorts": 521,
+    "public_total": 726,
+    "queued_longform": 55,
+    "queued_shorts": 57,
     "automations_ok": 13,
     "automations_total": 14,
     "network_healthy": true
@@ -101,33 +101,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 98,
-        "published_longform": 31,
-        "published_shorts": 67,
+        "published_total": 100,
+        "published_longform": 32,
+        "published_shorts": 68,
         "thumbnail_pending": 1,
-        "public_total": 97,
-        "queued_longform": 7,
+        "public_total": 99,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPROVERBS4V18",
-        "title": "Say This Proverbs 4:18 Prayer at Sunrise | Light For Your Path #Shorts",
-        "format": "short",
-        "youtube_video_id": "cfWHMY8_jiE",
-        "watch_url": "https://www.youtube.com/shorts/cfWHMY8_jiE",
-        "published_on": "2026-11-23",
-        "published_at": "2026-11-23T22:07:04Z"
-      },
-      "next_queued_longform": {
         "id": "0075",
         "title": "Morning Prayer for a Day Dedicated to Christ: Colossians 3:17",
-        "words": 1078,
+        "format": "longform",
+        "youtube_video_id": "6KYkPU11mXc",
+        "watch_url": "https://youtu.be/6KYkPU11mXc",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T02:34:26Z"
+      },
+      "next_queued_longform": {
+        "id": "0077",
+        "title": "Offering Every Hour to Him: Romans 12:1-2 | The Morning Altar",
+        "words": 1661,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningproverbs16v9",
-        "scripture": "Proverbs 16:9",
+        "short": "short-morningisaiah30v21",
+        "scripture": "Isaiah 30:21",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -697,6 +697,30 @@
   ],
   "videos": [
     {
+      "id": "0075",
+      "slug": "morning-prayer-for-a-day-dedicated-to-christ-colossians-317",
+      "file": "0075-morning-prayer-for-a-day-dedicated-to-christ-colossians-317.md",
+      "title": "Morning Prayer for a Day Dedicated to Christ: Colossians 3:17",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T02:34:26Z",
+      "youtube_video_id": "6KYkPU11mXc",
+      "watch_url": "https://youtu.be/6KYkPU11mXc",
+      "youtu_be_url": "https://youtu.be/6KYkPU11mXc",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/6KYkPU11mXc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/6KYkPU11mXc/hqdefault.jpg",
+      "thumb_text": "ALL IN JESUS NAME",
+      "thumbnail_pending": false,
+      "duration_label": "6m 45s",
+      "words": 1078
+    },
+    {
       "id": "SHORT-PROVISIONPSALM127V1",
       "slug": "short-provisionpsalm127v1-stewardship-prayer",
       "file": "short-provisionpsalm127v1-stewardship-prayer.md",
@@ -791,6 +815,30 @@
       "thumbnail_pending": false,
       "duration_label": "51s",
       "words": 624
+    },
+    {
+      "id": "SHORT-MORNINGPROVERBS16V9",
+      "slug": "short-morningproverbs16v9-sunrise-prayer",
+      "file": "short-morningproverbs16v9-sunrise-prayer.md",
+      "title": "Say This Proverbs 16:9 Prayer at Sunrise | Surrender Your Schedule #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T01:48:05Z",
+      "youtube_video_id": "MhWeJ5wNb4c",
+      "watch_url": "https://www.youtube.com/shorts/MhWeJ5wNb4c",
+      "youtu_be_url": "https://youtu.be/MhWeJ5wNb4c",
+      "shorts_url": "https://www.youtube.com/shorts/MhWeJ5wNb4c",
+      "studio_url": "https://studio.youtube.com/video/MhWeJ5wNb4c/edit",
+      "thumb_url": "https://i.ytimg.com/vi/MhWeJ5wNb4c/hqdefault.jpg",
+      "thumb_text": "PROVERBS 16:9 \u00b7 TRUST GOD'S STEPS",
+      "thumbnail_pending": false,
+      "duration_label": "49s",
+      "words": 631
     },
     {
       "id": "SHORT-MIDDAYNEHEMIAH2V4",
@@ -18163,19 +18211,6 @@
         "words": 1025
       },
       {
-        "id": "0075",
-        "slug": "morning-prayer-for-a-day-dedicated-to-christ-colossians-317",
-        "file": "0075-morning-prayer-for-a-day-dedicated-to-christ-colossians-317.md",
-        "title": "Morning Prayer for a Day Dedicated to Christ: Colossians 3:17",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1078
-      },
-      {
         "id": "0077",
         "slug": "offering-every-hour-to-him-romans-12-1-2-the-morning-altar",
         "file": "0077-offering-every-hour-to-him-romans-12-1-2-the-morning-altar.md",
@@ -18962,17 +18997,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-morningproverbs16v9",
-        "file": "0072-short-morningproverbs16v9.yml",
-        "companion_longform_id": "0072",
-        "scripture": "Proverbs 16:9",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningisaiah30v21",

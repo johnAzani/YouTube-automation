@@ -2,7 +2,7 @@
 id: '0075'
 title: 'Morning Prayer for a Day Dedicated to Christ: Colossians 3:17'
 slug: morning-prayer-for-a-day-dedicated-to-christ-colossians-317
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -75,6 +75,15 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-24"
+published_at: "2026-11-24T02:34:26Z"
+youtube_video_id: "6KYkPU11mXc"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 404.96
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Sunrise Hook and Directing the Prayer
