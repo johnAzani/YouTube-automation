@@ -1,0 +1,436 @@
+{
+  "key": "short-shieldpsalm94v22",
+  "channel": "prayer8",
+  "psalm": 94,
+  "title": [
+    "WHEN ACCUSATIONS RISE",
+    "GOD IS YOUR DEFENCE"
+  ],
+  "poster": [
+    "PSALM 94:22",
+    "GOD IS YOUR DEFENCE",
+    "FIND REFUGE IN HIM",
+    "THE COVENANT SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower misty mountains sunrise",
+    "sunrays through dark clouds calm mountain valley",
+    "majestic mountain cliff rock sunset golden light",
+    "dramatic sunbeams breaking mountain sky silent river",
+    "peaceful mountain peak under golden sun sky",
+    "rugged mountain fortress ancient stone golden hour",
+    "calm mountain lake reflection dawn fog",
+    "sunlight streaming through mountain forest morning",
+    "dramatic sky mountain silhouette golden sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "Unfair accusations are pressing hard against your mind.",
+      "img": "short-shieldpsalm94v22-scene-01.jpg",
+      "kicker": "HEAVY ACCUSATIONS",
+      "sub": "UNFAIR WORDS PRESSING HARD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "When harsh words threaten to undermine your standing, hear the ancient promise:",
+      "img": "short-shieldpsalm94v22-scene-02.jpg",
+      "kicker": "UNSHAKEABLE TOWER",
+      "sub": "STANDING UPON HOLY GROUND",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "But the LORD is my defence; and my God is the rock of my refuge.",
+      "img": "short-shieldpsalm94v22-scene-03.jpg",
+      "kicker": "PSALM 94:22",
+      "sub": "GOD IS MY DEFENCE AND ROCK",
+      "cam": "push_in",
+      "focus": [
+        0.45,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord God, arise as our fortress when unjust troubles surround us.",
+      "img": "short-shieldpsalm94v22-scene-04.jpg",
+      "kicker": "DIVINE FORTRESS",
+      "sub": "PROTECTION IN UNJUST TROUBLE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Shield this weary heart from every sharp tongue and false claim.",
+      "img": "short-shieldpsalm94v22-scene-05.jpg",
+      "kicker": "SHIELD OF FAITH",
+      "sub": "SHELTER FROM SHARP TONGUES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We plant our feet upon your unshakeable truth, trusting your strong arm to vindicate us.",
+      "img": "short-shieldpsalm94v22-scene-06.jpg",
+      "kicker": "GOD VINDICATES",
+      "sub": "STRENGTH UPON UNSHAKEABLE TRUTH",
+      "cam": "pan_left",
+      "focus": [
+        0.55,
+        0.45
+      ]
+    },
+    {
+      "a": "Let your steady peace quiet every rising fear, for no weapon formed against us can stand.",
+      "img": "short-shieldpsalm94v22-scene-07.jpg",
+      "kicker": "STEADY PEACE",
+      "sub": "QUIETING EVERY RISING FEAR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In your high tower we find safety, sheltered under your sovereign wings.",
+      "img": "short-shieldpsalm94v22-scene-08.jpg",
+      "kicker": "HIGH TOWER REFUGE",
+      "sub": "UNDER HIS SOVEREIGN WINGS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. Unfair accusations press hard against your mind.",
+      "img": "short-shieldpsalm94v22-scene-09.jpg",
+      "kicker": "EVERLASTING SHIELD",
+      "sub": "WALK IN DIVINE COVERING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Unfair accusations are pressing hard against your mind."
+    ],
+    [
+      3,
+      7,
+      "When harsh words threaten to undermine your standing, hear the ancient promise:"
+    ],
+    [
+      7,
+      12,
+      "But the LORD is my defence; and my God is the rock of my refuge."
+    ],
+    [
+      12,
+      18,
+      "Lord God, arise as our fortress when unjust troubles surround us."
+    ],
+    [
+      18,
+      24,
+      "Shield this weary heart from every sharp tongue and false claim."
+    ],
+    [
+      24,
+      30,
+      "We plant our feet upon your unshakeable truth, trusting your strong arm to vindicate us."
+    ],
+    [
+      30,
+      36,
+      "Let your steady peace quiet every rising fear, for no weapon formed against us can stand."
+    ],
+    [
+      36,
+      42,
+      "In your high tower we find safety, sheltered under your sovereign wings."
+    ],
+    [
+      42,
+      47,
+      "Amen. Unfair accusations press hard against your mind."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "UNFAIR ACCUSATIONS ARE",
+        "PRESSING HARD",
+        "AGAINST YOUR MIND."
+      ],
+      [
+        "UNFAIR",
+        "PRESSING"
+      ],
+      "PSALM 94:22"
+    ],
+    [
+      3,
+      7,
+      [
+        "WHEN HARSH WORDS THREATEN",
+        "TO UNDERMINE YOUR STANDING,",
+        "HEAR THE ANCIENT PROMISE:"
+      ],
+      [
+        "HARSH",
+        "PROMISE"
+      ],
+      "PSALM 94:22"
+    ],
+    [
+      7,
+      12,
+      [
+        "BUT THE LORD IS MY DEFENCE;",
+        "AND MY GOD IS THE ROCK",
+        "OF MY REFUGE."
+      ],
+      [
+        "LORD",
+        "DEFENCE",
+        "ROCK",
+        "REFUGE"
+      ],
+      "PSALM 94:22"
+    ],
+    [
+      12,
+      18,
+      [
+        "LORD GOD, ARISE AS OUR FORTRESS",
+        "WHEN UNJUST TROUBLES",
+        "SURROUND US."
+      ],
+      [
+        "FORTRESS",
+        "UNJUST"
+      ],
+      "PSALM 94:22"
+    ],
+    [
+      18,
+      24,
+      [
+        "SHIELD THIS WEARY HEART",
+        "FROM EVERY SHARP TONGUE",
+        "AND FALSE CLAIM."
+      ],
+      [
+        "SHIELD",
+        "WEARY",
+        "FALSE"
+      ],
+      "PSALM 94:22"
+    ],
+    [
+      24,
+      30,
+      [
+        "WE PLANT OUR FEET UPON",
+        "YOUR UNSHAKEABLE TRUTH,",
+        "TRUSTING YOUR STRONG ARM",
+        "TO VINDICATE US."
+      ],
+      [
+        "UNSHAKEABLE",
+        "VINDICATE"
+      ],
+      "PSALM 94:22"
+    ],
+    [
+      30,
+      36,
+      [
+        "LET YOUR STEADY PEACE",
+        "QUIET EVERY RISING FEAR,",
+        "FOR NO WEAPON FORMED",
+        "AGAINST US CAN STAND."
+      ],
+      [
+        "STEADY",
+        "PEACE",
+        "STAND"
+      ],
+      "PSALM 94:22"
+    ],
+    [
+      36,
+      42,
+      [
+        "IN YOUR HIGH TOWER",
+        "WE FIND SAFETY, SHELTERED",
+        "UNDER YOUR SOVEREIGN WINGS."
+      ],
+      [
+        "HIGH",
+        "TOWER",
+        "SAFETY"
+      ],
+      "PSALM 94:22"
+    ],
+    [
+      42,
+      47,
+      [
+        "AMEN.",
+        "UNFAIR ACCUSATIONS PRESS HARD",
+        "AGAINST YOUR MIND."
+      ],
+      [
+        "AMEN",
+        "ACCUSATIONS"
+      ],
+      "PSALM 94:22"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Unfair accusations",
+      "kind": "phrase",
+      "words": [
+        "UNFAIR",
+        "ACCUSATIONS"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "pressing hard against your mind.",
+      "kind": "phrase",
+      "words": [
+        "PRESSING",
+        "MIND"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "hear the ancient promise:",
+      "kind": "phrase",
+      "words": [
+        "ANCIENT",
+        "PROMISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "But the LORD is my defence;",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "DEFENCE"
+      ],
+      "hi": 1,
+      "slot": "A"
+    },
+    {
+      "a": "and my God is the rock of my refuge.",
+      "kind": "phrase",
+      "words": [
+        "ROCK",
+        "REFUGE"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "Lord God, arise as our fortress",
+      "kind": "phrase",
+      "words": [
+        "ARISE",
+        "FORTRESS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "from every sharp tongue",
+      "kind": "phrase",
+      "words": [
+        "SHARP",
+        "TONGUE"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "your unshakeable truth,",
+      "kind": "phrase",
+      "words": [
+        "UNSHAKEABLE",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "trusting your strong arm to vindicate us.",
+      "kind": "phrase",
+      "words": [
+        "STRONG",
+        "VINDICATE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "quiet every rising fear,",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "FEAR"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "In your high tower we find safety,",
+      "kind": "phrase",
+      "words": [
+        "HIGH",
+        "SAFETY"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "under your sovereign wings.",
+      "kind": "phrase",
+      "words": [
+        "SOVEREIGN",
+        "WINGS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 94:22"
+}
