@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T17:05:23Z",
+  "generated_at": "2026-11-24T17:05:35Z",
   "monitor_generated_at": "2026-11-24T16:51:52.277938+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 761,
+    "published_total": 762,
     "published_longform": 215,
-    "published_shorts": 546,
-    "public_total": 759,
+    "published_shorts": 547,
+    "public_total": 760,
     "queued_longform": 60,
-    "queued_shorts": 59,
+    "queued_shorts": 58,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": true
@@ -499,23 +499,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 61,
+        "published_total": 62,
         "published_longform": 17,
-        "published_shorts": 44,
+        "published_shorts": 45,
         "thumbnail_pending": 37,
-        "public_total": 61,
+        "public_total": 62,
         "queued_longform": 6,
         "queued_other": 4,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-SHIELDISAIAH59V19",
-        "title": "Pray This Isaiah 59:19 Prayer for Divine Protection | When Trouble Surges Today #Shorts",
+        "id": "SHORT-SHIELDPSALM56V3",
+        "title": "Pray This Psalm 56:3-4 Prayer for Divine Protection | That Threat Caught You Off Guard #Shorts",
         "format": "short",
-        "youtube_video_id": "f4rzXErHHI4",
-        "watch_url": "https://www.youtube.com/shorts/f4rzXErHHI4",
+        "youtube_video_id": "FiEzYJg6x2I",
+        "watch_url": "https://www.youtube.com/shorts/FiEzYJg6x2I",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T13:42:31Z"
+        "published_at": "2026-11-24T17:04:18Z"
       },
       "next_queued_longform": {
         "id": "0622",
@@ -524,8 +524,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm56v3",
-        "scripture": "Psalm 56:3-4",
+        "short": "short-shieldpsalm32v7",
+        "scripture": "Psalm 32:7",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM56V3",
+      "slug": "short-shieldpsalm56v3-protection-prayer",
+      "file": "short-shieldpsalm56v3-protection-prayer.md",
+      "title": "Pray This Psalm 56:3-4 Prayer for Divine Protection | That Threat Caught You Off Guard #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T17:04:18Z",
+      "youtube_video_id": "FiEzYJg6x2I",
+      "watch_url": "https://www.youtube.com/shorts/FiEzYJg6x2I",
+      "youtu_be_url": "https://youtu.be/FiEzYJg6x2I",
+      "shorts_url": "https://www.youtube.com/shorts/FiEzYJg6x2I",
+      "studio_url": "https://studio.youtube.com/video/FiEzYJg6x2I/edit",
+      "thumb_url": "https://i.ytimg.com/vi/FiEzYJg6x2I/hqdefault.jpg",
+      "thumb_text": "WHAT TIME I AM AFRAID \u00b7 I WILL TRUST IN THEE",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 640
+    },
     {
       "id": "SHORT-MORNINGCOLOSSIANS3V17",
       "slug": "short-morningcolossians3v17-sunrise-prayer",
@@ -19893,17 +19917,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldpsalm56v3",
-        "file": "0000-short-shieldpsalm56v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 56:3-4",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-psalm23full",
