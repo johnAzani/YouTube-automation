@@ -1,6 +1,6 @@
 ---
 id: '0411'
-title: 'When You Need The Great Physician: Psalm 30:2 | The Healing Balm'
+title: "When Your Body and Mind Grow Weary: Psalm 30:2 | The Healing Balm"
 slug: when-you-need-the-great-physician-psalm-30-2
 status: published
 channel: prayer6
@@ -80,11 +80,14 @@ originality:
 published_on: "2026-11-17"
 published_at: "2026-11-17T21:20:23Z"
 youtube_video_id: "J3Gf81Awr14"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 top_comment: "ok"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "When You Need The Great Physician: Psalm 30:2 | The Healing Balm"
+retitled_at: "2026-11-24"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith
