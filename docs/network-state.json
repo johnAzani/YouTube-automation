@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T07:11:28Z",
+  "generated_at": "2026-11-24T07:14:00Z",
   "monitor_generated_at": "2026-11-24T04:17:53.491848+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 737,
+    "published_total": 738,
     "published_longform": 209,
-    "published_shorts": 528,
-    "public_total": 735,
+    "published_shorts": 529,
+    "public_total": 736,
     "queued_longform": 53,
-    "queued_shorts": 51,
+    "queued_shorts": 50,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -431,23 +431,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 68,
+        "published_total": 69,
         "published_longform": 19,
-        "published_shorts": 49,
+        "published_shorts": 50,
         "thumbnail_pending": 6,
-        "public_total": 68,
+        "public_total": 69,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPSALM127V1",
-        "title": "Pray This Psalm 127:1-2 Prayer for Open Doors & Provision | Surrender The Stewardship #Shorts",
+        "id": "SHORT-PROVISIONPSALM145V15",
+        "title": "Pray This Psalm 145:15-16 Prayer for Open Doors & Provision | God's Faithful Promise #Shorts",
         "format": "short",
-        "youtube_video_id": "rJqhkGasNpE",
-        "watch_url": "https://www.youtube.com/shorts/rJqhkGasNpE",
+        "youtube_video_id": "vHIwIbXj7s0",
+        "watch_url": "https://www.youtube.com/shorts/vHIwIbXj7s0",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T02:02:32Z"
+        "published_at": "2026-11-24T07:13:03Z"
       },
       "next_queued_longform": {
         "id": "0520",
@@ -456,8 +456,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionpsalm145v15",
-        "scripture": "Psalm 145:15-16",
+        "short": "short-provisionisaiah45v2",
+        "scripture": "Isaiah 45:2-3",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONPSALM145V15",
+      "slug": "short-provisionpsalm145v15-stewardship-prayer",
+      "file": "short-provisionpsalm145v15-stewardship-prayer.md",
+      "title": "Pray This Psalm 145:15-16 Prayer for Open Doors & Provision | God's Faithful Promise #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T07:13:03Z",
+      "youtube_video_id": "vHIwIbXj7s0",
+      "watch_url": "https://www.youtube.com/shorts/vHIwIbXj7s0",
+      "youtu_be_url": "https://youtu.be/vHIwIbXj7s0",
+      "shorts_url": "https://www.youtube.com/shorts/vHIwIbXj7s0",
+      "studio_url": "https://studio.youtube.com/video/vHIwIbXj7s0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/vHIwIbXj7s0/hqdefault.jpg",
+      "thumb_text": "PSALM 145:15-16 \u00b7 GOD OPENETH HIS HAND",
+      "thumbnail_pending": false,
+      "duration_label": "53s",
+      "words": 633
+    },
     {
       "id": "SHORT-2THESSALONIANS3V16",
       "slug": "short-2thessalonians3v16-pre-sleep-prayer",
@@ -19105,17 +19129,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-provisionpsalm145v15",
-        "file": "0000-short-provisionpsalm145v15.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 145:15-16",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-shieldpsalm144v1",
