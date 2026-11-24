@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T08:19:11Z",
+  "generated_at": "2026-11-24T08:37:01Z",
   "monitor_generated_at": "2026-11-24T04:17:53.491848+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 742,
-    "published_longform": 210,
-    "published_shorts": 532,
-    "public_total": 740,
-    "queued_longform": 52,
-    "queued_shorts": 47,
+    "published_total": 744,
+    "published_longform": 211,
+    "published_shorts": 533,
+    "public_total": 742,
+    "queued_longform": 51,
+    "queued_shorts": 46,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -567,33 +567,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 59,
-        "published_longform": 14,
-        "published_shorts": 45,
-        "thumbnail_pending": 59,
-        "public_total": 59,
-        "queued_longform": 5,
+        "published_total": 61,
+        "published_longform": 15,
+        "published_shorts": 46,
+        "thumbnail_pending": 61,
+        "public_total": 61,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0714",
-        "title": "The Sacrifice of Praise When Grief Is Heavy: Hebrews 13:15",
-        "format": "longform",
-        "youtube_video_id": "WRvhZO9KUYo",
-        "watch_url": "https://youtu.be/WRvhZO9KUYo",
-        "published_on": "2026-11-24",
-        "published_at": "2026-11-24T03:13:30Z"
-      },
-      "next_queued_longform": {
         "id": "0715",
         "title": "Thanksgiving Worship When Your Heart Is Heavy: Psalm 9:1-2",
-        "words": 1725,
+        "format": "longform",
+        "youtube_video_id": "3TmfStXAsYg",
+        "watch_url": "https://youtu.be/3TmfStXAsYg",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T08:36:01Z"
+      },
+      "next_queued_longform": {
+        "id": "0716",
+        "title": "Thanksgiving Worship When You Have Received His Mercy: Luke 17:15-16",
+        "words": 1710,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm8v1",
-        "scripture": "Psalm 8:1",
+        "short": "short-gardenrevelation5v12",
+        "scripture": "Revelation 5:12-13",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -692,6 +692,30 @@
   ],
   "videos": [
     {
+      "id": "0715",
+      "slug": "thanksgiving-worship-when-your-heart-is-heavy-psalm-9-1-2",
+      "file": "0715-thanksgiving-worship-when-your-heart-is-heavy-psalm-9-1-2.md",
+      "title": "Thanksgiving Worship When Your Heart Is Heavy: Psalm 9:1-2",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T08:36:01Z",
+      "youtube_video_id": "3TmfStXAsYg",
+      "watch_url": "https://youtu.be/3TmfStXAsYg",
+      "youtu_be_url": "https://youtu.be/3TmfStXAsYg",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/3TmfStXAsYg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/3TmfStXAsYg/hqdefault.jpg",
+      "thumb_text": "WHOLE HEART",
+      "thumbnail_pending": true,
+      "duration_label": "11m 19s",
+      "words": 1725
+    },
+    {
       "id": "0077",
       "slug": "offering-every-hour-to-him-romans-12-1-2-the-morning-altar",
       "file": "0077-offering-every-hour-to-him-romans-12-1-2-the-morning-altar.md",
@@ -762,6 +786,30 @@
       "thumbnail_pending": false,
       "duration_label": "51s",
       "words": 642
+    },
+    {
+      "id": "SHORT-GARDENPSALM8V1",
+      "slug": "short-gardenpsalm8v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm8v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 8:1 Prayer of Thanksgiving | Dwarfs Your Heavy Thoughts #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T07:17:53Z",
+      "youtube_video_id": "i5BIAr1erQw",
+      "watch_url": "https://www.youtube.com/shorts/i5BIAr1erQw",
+      "youtu_be_url": "https://youtu.be/i5BIAr1erQw",
+      "shorts_url": "https://www.youtube.com/shorts/i5BIAr1erQw",
+      "studio_url": "https://studio.youtube.com/video/i5BIAr1erQw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/i5BIAr1erQw/hqdefault.jpg",
+      "thumb_text": "PSALM 8:1 \u00b7 EXCELLENT IS THY NAME",
+      "thumbnail_pending": true,
+      "duration_label": "46s",
+      "words": 645
     },
     {
       "id": "SHORT-PROVISIONPSALM145V15",
@@ -19023,19 +19071,6 @@
         "words": 1183
       },
       {
-        "id": "0715",
-        "slug": "thanksgiving-worship-when-your-heart-is-heavy-psalm-9-1-2",
-        "file": "0715-thanksgiving-worship-when-your-heart-is-heavy-psalm-9-1-2.md",
-        "title": "Thanksgiving Worship When Your Heart Is Heavy: Psalm 9:1-2",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1725
-      },
-      {
         "id": "0716",
         "slug": "thanksgiving-worship-luke-17-15-16",
         "file": "0716-thanksgiving-worship-luke-17-15-16.md",
@@ -19180,17 +19215,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-gardenpsalm8v1",
-        "file": "0000-short-gardenpsalm8v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 8:1",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
       {
         "short": "short-gardenrevelation5v12",
         "file": "0000-short-gardenrevelation5v12.yml",

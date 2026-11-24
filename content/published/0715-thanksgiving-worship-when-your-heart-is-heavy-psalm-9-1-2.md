@@ -2,7 +2,7 @@
 id: '0715'
 title: 'Thanksgiving Worship When Your Heart Is Heavy: Psalm 9:1-2'
 slug: thanksgiving-worship-when-your-heart-is-heavy-psalm-9-1-2
-status: approved
+status: published
 channel: prayer9
 privacy: public
 format: longform
@@ -73,6 +73,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-24"
+published_at: "2026-11-24T08:36:01Z"
+youtube_video_id: "3TmfStXAsYg"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 679.24
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Entering His Gates With Thanksgiving
