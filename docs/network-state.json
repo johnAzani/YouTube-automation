@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T07:20:50Z",
+  "generated_at": "2026-11-24T07:22:27Z",
   "monitor_generated_at": "2026-11-24T04:17:53.491848+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 739,
+    "published_total": 740,
     "published_longform": 209,
-    "published_shorts": 530,
-    "public_total": 737,
+    "published_shorts": 531,
+    "public_total": 738,
     "queued_longform": 53,
-    "queued_shorts": 49,
+    "queued_shorts": 48,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -499,23 +499,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 59,
+        "published_total": 60,
         "published_longform": 17,
-        "published_shorts": 42,
+        "published_shorts": 43,
         "thumbnail_pending": 40,
-        "public_total": 59,
+        "public_total": 60,
         "queued_longform": 5,
         "queued_other": 3,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0619",
-        "title": "Pure Word Shield: Proverbs 30:5 | The Covenant Shield",
-        "format": "longform",
-        "youtube_video_id": "sc7PHHmp5wQ",
-        "watch_url": "https://youtu.be/sc7PHHmp5wQ",
-        "published_on": "2026-11-23",
-        "published_at": "2026-11-23T23:24:28Z"
+        "id": "SHORT-SHIELDPSALM144V1",
+        "title": "Pray This Psalm 144:1-2 Prayer for Divine Protection | Facing The Battles Of Today #Shorts",
+        "format": "short",
+        "youtube_video_id": "4gICwKlky38",
+        "watch_url": "https://www.youtube.com/shorts/4gICwKlky38",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T07:21:38Z"
       },
       "next_queued_longform": {
         "id": "0622",
@@ -524,8 +524,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm144v1",
-        "scripture": "Psalm 144:1-2",
+        "short": "short-shieldpsalm56v3",
+        "scripture": "Psalm 56:3-4",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM144V1",
+      "slug": "short-shieldpsalm144v1-protection-prayer",
+      "file": "short-shieldpsalm144v1-protection-prayer.md",
+      "title": "Pray This Psalm 144:1-2 Prayer for Divine Protection | Facing The Battles Of Today #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T07:21:38Z",
+      "youtube_video_id": "4gICwKlky38",
+      "watch_url": "https://www.youtube.com/shorts/4gICwKlky38",
+      "youtu_be_url": "https://youtu.be/4gICwKlky38",
+      "shorts_url": "https://www.youtube.com/shorts/4gICwKlky38",
+      "studio_url": "https://studio.youtube.com/video/4gICwKlky38/edit",
+      "thumb_url": "https://i.ytimg.com/vi/4gICwKlky38/hqdefault.jpg",
+      "thumb_text": "PSALM 144:1-2 \u00b7 THE LORD MY STRENGTH",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 627
+    },
     {
       "id": "SHORT-GUIDEDPSALM73V23",
       "slug": "short-guidedpsalm73v23-guidance-prayer",
@@ -19153,17 +19177,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-shieldpsalm144v1",
-        "file": "0000-short-shieldpsalm144v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 144:1-2",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm56v3",
