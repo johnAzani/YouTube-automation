@@ -16,13 +16,6 @@
       "workflow": "comments.yml"
     },
     {
-      "late_minutes": 326,
-      "name": "Gemini Brain Autonomous Queue Replenishment",
-      "ran_at": "2026-11-23T08:40:14+00:00",
-      "slot": "2026-11-23T03:14:00+00:00",
-      "workflow": "gemini_brain.yml"
-    },
-    {
       "late_minutes": 317,
       "name": "Keepalive",
       "ran_at": "2026-11-23T08:40:16+00:00",
@@ -65,8 +58,8 @@
       "workflow": "produce.yml"
     }
   ],
-  "generated_at": "2026-11-24T02:25:26.186390+00:00",
-  "last_run_at": "2026-11-24T02:24:34+00:00",
+  "generated_at": "2026-11-24T03:15:55.132509+00:00",
+  "last_run_at": "2026-11-24T03:15:03+00:00",
   "on_time": [
     {
       "late_minutes": 119,
