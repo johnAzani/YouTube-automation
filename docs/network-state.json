@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T21:03:02Z",
+  "generated_at": "2026-11-24T21:33:19Z",
   "monitor_generated_at": "2026-11-24T17:48:42.638979+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 772,
-    "published_longform": 215,
-    "published_shorts": 557,
-    "public_total": 770,
-    "queued_longform": 62,
-    "queued_shorts": 49,
+    "published_total": 774,
+    "published_longform": 216,
+    "published_shorts": 558,
+    "public_total": 772,
+    "queued_longform": 61,
+    "queued_shorts": 50,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": true
@@ -33,33 +33,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 97,
-        "published_longform": 25,
-        "published_shorts": 72,
+        "published_total": 99,
+        "published_longform": 26,
+        "published_shorts": 73,
         "thumbnail_pending": 6,
-        "public_total": 96,
-        "queued_longform": 8,
+        "public_total": 98,
+        "queued_longform": 7,
         "queued_other": 5,
-        "queued_shorts": 1
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "SHORT-PSALM62V8",
-        "title": "Say This Psalm 62:8 Prayer Before You Sleep | Carried Into The Quiet #Shorts",
-        "format": "short",
-        "youtube_video_id": "hQGKoSaLtSo",
-        "watch_url": "https://www.youtube.com/shorts/hQGKoSaLtSo",
-        "published_on": "2026-11-24",
-        "published_at": "2026-11-24T17:21:07Z"
-      },
-      "next_queued_longform": {
         "id": "0033",
         "title": "A Blessing to Fall Asleep Under: Numbers 6:24-26 | The Secret Place",
-        "words": 855,
+        "format": "longform",
+        "youtube_video_id": "uFnHfI-w0p8",
+        "watch_url": "https://youtu.be/uFnHfI-w0p8",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T21:32:04Z"
+      },
+      "next_queued_longform": {
+        "id": "0034",
+        "title": "Psalm 91 Night Prayer for Protection While You Sleep (Full KJV)",
+        "words": 975,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm23full",
-        "scripture": "Psalm 23",
+        "short": "short-psalm31v7",
+        "scripture": "Psalm 31:7",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -687,6 +687,30 @@
   ],
   "videos": [
     {
+      "id": "0033",
+      "slug": "numbers-6-24-26-the-priestly-benediction-of-peace",
+      "file": "0033-numbers-6-24-26-the-priestly-benediction-of-peace.md",
+      "title": "A Blessing to Fall Asleep Under: Numbers 6:24-26 | The Secret Place",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T21:32:04Z",
+      "youtube_video_id": "uFnHfI-w0p8",
+      "watch_url": "https://youtu.be/uFnHfI-w0p8",
+      "youtu_be_url": "https://youtu.be/uFnHfI-w0p8",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/uFnHfI-w0p8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/uFnHfI-w0p8/hqdefault.jpg",
+      "thumb_text": "BLESSED AND KEPT",
+      "thumbnail_pending": false,
+      "duration_label": "6m 41s",
+      "words": 855
+    },
+    {
       "id": "SHORT-GUIDEDPSALM17V5",
       "slug": "short-guidedpsalm17v5-guidance-prayer",
       "file": "short-guidedpsalm17v5-guidance-prayer.md",
@@ -781,6 +805,30 @@
       "thumbnail_pending": false,
       "duration_label": "55s",
       "words": 638
+    },
+    {
+      "id": "SHORT-ISAIAH26V20",
+      "slug": "short-isaiah26v20-pre-sleep-prayer",
+      "file": "short-isaiah26v20-pre-sleep-prayer.md",
+      "title": "Say This Isaiah 26:20 Prayer Before You Sleep | The Noisy World Is Outside #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T20:52:01Z",
+      "youtube_video_id": "tvJSEQTbg0g",
+      "watch_url": "https://www.youtube.com/shorts/tvJSEQTbg0g",
+      "youtu_be_url": "https://youtu.be/tvJSEQTbg0g",
+      "shorts_url": "https://www.youtube.com/shorts/tvJSEQTbg0g",
+      "studio_url": "https://studio.youtube.com/video/tvJSEQTbg0g/edit",
+      "thumb_url": "https://i.ytimg.com/vi/tvJSEQTbg0g/hqdefault.jpg",
+      "thumb_text": "ENTER YOUR CHAMBER \u00b7 SHUT THE DOOR",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 633
     },
     {
       "id": "SHORT-FAMILYGENESIS48V15",
@@ -19218,19 +19266,6 @@
   "queues": {
     "longform": [
       {
-        "id": "0033",
-        "slug": "numbers-6-24-26-the-priestly-benediction-of-peace",
-        "file": "0033-numbers-6-24-26-the-priestly-benediction-of-peace.md",
-        "title": "A Blessing to Fall Asleep Under: Numbers 6:24-26 | The Secret Place",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 855
-      },
-      {
         "id": "0034",
         "slug": "psalm-91-complete-night-prayer-of-divine-protection",
         "file": "0034-psalm-91-complete-night-prayer-of-divine-protection.md",
@@ -20101,6 +20136,17 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-psalm31v7",
+        "file": "0000-short-psalm31v7.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 31:7",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm23full",

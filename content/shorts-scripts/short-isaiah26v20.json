@@ -1,0 +1,341 @@
+{
+  "key": "short-isaiah26v20",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "THE DOOR IS",
+    "CLOSED TONIGHT"
+  ],
+  "poster": [
+    "ENTER YOUR CHAMBER",
+    "SHUT THE DOOR",
+    "ISAIAH 26:20",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "cozy candlelit room dark window night",
+    "calm forest cabin night dim light",
+    "soft glowing candle dark room quiet",
+    "peaceful night sky stars misty valley",
+    "dim lantern glow cozy bedroom night",
+    "calm lake night moonlight still water",
+    "warm glowing candle dark night background"
+  ],
+  "scenes": [
+    {
+      "a": "The door is closed against the noisy world.",
+      "img": "short-isaiah26v20-scene-01.jpg",
+      "kicker": "DOORS CLOSED",
+      "sub": "THE NOISY WORLD IS OUTSIDE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "stop carrying the worries",
+      "img": "short-isaiah26v20-scene-02.jpg",
+      "kicker": "LEAVE THE WEIGHT",
+      "sub": "CARRIED INTO THIS ROOM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "enter thou into thy chambers",
+      "img": "short-isaiah26v20-scene-03.jpg",
+      "kicker": "ISAIAH 26:20",
+      "sub": "ENTER INTO THY CHAMBERS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "hide thyself as it were for a little moment",
+      "img": "short-isaiah26v20-scene-04.jpg",
+      "kicker": "FOR A MOMENT",
+      "sub": "UNTIL THE STORM PASSES",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "shut our doors against the noise",
+      "img": "short-isaiah26v20-scene-05.jpg",
+      "kicker": "BEDTIME PRAYER",
+      "sub": "WE TURN TO YOU LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "quiet every sudden fear",
+      "img": "short-isaiah26v20-scene-06.jpg",
+      "kicker": "GUARD THIS ROOM",
+      "sub": "PEACE OVER THIS BED",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "for the door is closed against the noisy world.",
+      "img": "short-isaiah26v20-scene-07.jpg",
+      "kicker": "REST NOW",
+      "sub": "SAFE IN HIS SHELTER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The door is closed against the noisy world."
+    ],
+    [
+      3,
+      7,
+      "Tonight, you can stop carrying the worries you could not finish today."
+    ],
+    [
+      7,
+      13,
+      "Isaiah wrote, Come, my people, enter thou into thy chambers, and shut thy doors about thee:"
+    ],
+    [
+      13,
+      18,
+      "hide thyself as it were for a little moment, until the indignation be overpast."
+    ],
+    [
+      18,
+      24,
+      "Lord, we shut our doors against the noise of this day and turn to you."
+    ],
+    [
+      24,
+      31,
+      "Guard this dark room, quiet every sudden fear, and let your peace cover this bed all night long."
+    ],
+    [
+      31,
+      36,
+      "Hold us close until the heavy storm passes by."
+    ],
+    [
+      36,
+      42,
+      "Amen. Rest now, for the door is closed against the noisy world."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE DOOR IS CLOSED",
+        "AGAINST THE NOISY WORLD"
+      ],
+      [
+        "CLOSED",
+        "WORLD"
+      ],
+      "ISAIAH 26 : 20"
+    ],
+    [
+      3,
+      7,
+      [
+        "STOP CARRYING WORRIES",
+        "YOU COULD NOT FINISH"
+      ],
+      [
+        "CARRYING",
+        "FINISH"
+      ],
+      "ISAIAH 26 : 20"
+    ],
+    [
+      7,
+      13,
+      [
+        "ENTER THOU INTO",
+        "THY CHAMBERS",
+        "AND SHUT THY DOORS"
+      ],
+      [
+        "CHAMBERS",
+        "DOORS"
+      ],
+      "ISAIAH 26 : 20"
+    ],
+    [
+      13,
+      18,
+      [
+        "HIDE THYSELF FOR A",
+        "LITTLE MOMENT UNTIL IT",
+        "IS OVERPAST"
+      ],
+      [
+        "MOMENT",
+        "OVERPAST"
+      ],
+      "ISAIAH 26 : 20"
+    ],
+    [
+      18,
+      24,
+      [
+        "WE SHUT OUR DOORS",
+        "AND TURN TO YOU"
+      ],
+      [
+        "SHUT",
+        "TURN"
+      ],
+      "ISAIAH 26 : 20"
+    ],
+    [
+      24,
+      31,
+      [
+        "GUARD THIS DARK ROOM",
+        "LET YOUR PEACE COVER",
+        "THIS BED ALL NIGHT"
+      ],
+      [
+        "GUARD",
+        "PEACE"
+      ],
+      "ISAIAH 26 : 20"
+    ],
+    [
+      31,
+      36,
+      [
+        "HOLD US CLOSE UNTIL",
+        "THE HEAVY STORM PASSES"
+      ],
+      [
+        "CLOSE",
+        "STORM"
+      ],
+      "ISAIAH 26 : 20"
+    ],
+    [
+      36,
+      42,
+      [
+        "REST NOW THE DOOR",
+        "IS CLOSED AGAIN"
+      ],
+      [
+        "REST",
+        "CLOSED"
+      ],
+      "ISAIAH 26 : 20"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The door is closed against the noisy world.",
+      "kind": "phrase",
+      "words": [
+        "CLOSED",
+        "NOISY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "stop carrying the worries",
+      "kind": "phrase",
+      "words": [
+        "STOP",
+        "WORRIES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "enter thou into thy chambers",
+      "kind": "phrase",
+      "words": [
+        "ENTER",
+        "CHAMBERS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "hide thyself as it were for a little moment",
+      "kind": "phrase",
+      "words": [
+        "HIDE",
+        "MOMENT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "shut our doors against the noise",
+      "kind": "phrase",
+      "words": [
+        "SHUT",
+        "NOISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "quiet every sudden fear",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "FEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hold us close until the heavy storm passes by.",
+      "kind": "phrase",
+      "words": [
+        "HOLD",
+        "STORM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "for the door is closed against the noisy world.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "CLOSED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 26:20"
+}

@@ -2,7 +2,7 @@
 id: '0033'
 title: "A Blessing to Fall Asleep Under: Numbers 6:24-26 | The Secret Place"
 slug: numbers-6-24-26-the-priestly-benediction-of-peace
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -85,6 +85,16 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this Numbers 6:24-26 KJV priestly blessing before sleep that the Lord may bless you, keep you, and give you deep peace tonight.
 category_id: '22'
+published_on: "2026-11-24"
+published_at: "2026-11-24T21:32:04Z"
+youtube_video_id: "uFnHfI-w0p8"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 401.32
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "poster"
 ---
 ## Scene 1 — The LORD Bless Thee, and Keep Thee (Verse 24a)
 

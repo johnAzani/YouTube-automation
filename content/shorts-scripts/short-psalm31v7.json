@@ -1,0 +1,353 @@
+{
+  "key": "short-psalm31v7",
+  "channel": "secret-place",
+  "psalm": 31,
+  "title": [
+    "WHEN UNSEEN TRIALS",
+    "WEIGH HEAVY TONIGHT"
+  ],
+  "poster": [
+    "GOD SEES",
+    "YOUR QUIET",
+    "STRUGGLE",
+    "TONIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm starry night sky forest mist",
+    "dim candle light quiet room nighttime",
+    "misty lake night moonlight reflective water",
+    "soft lantern glow night calm nature",
+    "quiet mountain silhouette night stars",
+    "gentle rain window candle light night",
+    "peaceful calm night sky moon clouds"
+  ],
+  "scenes": [
+    {
+      "a": "Your quiet struggle is not hidden tonight.",
+      "img": "short-psalm31v7-scene-01.jpg",
+      "kicker": "UNSEEN STRUGGLE",
+      "sub": "GOD SEES YOUR HEART TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "God knows every detail.",
+      "img": "short-psalm31v7-scene-02.jpg",
+      "kicker": "HE KNOWS",
+      "sub": "EVERY DETAIL OF YOUR GRIEF",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "I will be glad and rejoice in thy mercy:",
+      "img": "short-psalm31v7-scene-03.jpg",
+      "kicker": "PSALM 31:7",
+      "sub": "REJOICE IN THY MERCY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, thank you for witnessing the unseen trials",
+      "img": "short-psalm31v7-scene-04.jpg",
+      "kicker": "WITNESSED BY GOD",
+      "sub": "NOT A SINGLE TEAR IS LOST",
+      "cam": "tilt_up",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "You have not overlooked a single tear",
+      "img": "short-psalm31v7-scene-05.jpg",
+      "kicker": "ALWAYS SEEN",
+      "sub": "HEARS YOUR QUIET PRAYER",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Surround this room with your unfailing mercy",
+      "img": "short-psalm31v7-scene-06.jpg",
+      "kicker": "UNFAILING MERCY",
+      "sub": "RESTORE PEACE TO YOUR MIND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Your quiet struggle is not hidden.",
+      "img": "short-psalm31v7-scene-07.jpg",
+      "kicker": "PEACEFUL REST",
+      "sub": "HELD IN HIS PRESENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your quiet struggle is not hidden tonight."
+    ],
+    [
+      3,
+      8,
+      "When nobody else sees the grief you carry behind closed doors, God knows every detail."
+    ],
+    [
+      8,
+      12,
+      "Hear the quiet comfort of Psalm 31 verse 7."
+    ],
+    [
+      12,
+      22,
+      "I will be glad and rejoice in thy mercy: for thou hast considered my trouble; thou hast known my soul in adversities;"
+    ],
+    [
+      22,
+      27,
+      "Father, thank you for witnessing the unseen trials of this day."
+    ],
+    [
+      27,
+      31,
+      "You have not overlooked a single tear or quiet prayer."
+    ],
+    [
+      31,
+      37,
+      "Surround this room with your unfailing mercy tonight, and quiet every restless thought."
+    ],
+    [
+      37,
+      41,
+      "Grant peaceful sleep in the security of your presence."
+    ],
+    [
+      41,
+      45,
+      "Amen. Your quiet struggle is not hidden."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR QUIET STRUGGLE IS",
+        "NOT HIDDEN TONIGHT"
+      ],
+      [
+        "NOT",
+        "HIDDEN"
+      ],
+      "PSALM 31 : 7"
+    ],
+    [
+      3,
+      8,
+      [
+        "WHEN NOBODY ELSE SEES",
+        "THE GRIEF YOU CARRY",
+        "BEHIND CLOSED DOORS",
+        "GOD KNOWS EVERY DETAIL"
+      ],
+      [
+        "GOD",
+        "KNOWS"
+      ],
+      "PSALM 31 : 7"
+    ],
+    [
+      8,
+      12,
+      [
+        "HEAR THE QUIET COMFORT",
+        "OF PSALM 31 VERSE 7"
+      ],
+      [
+        "QUIET",
+        "COMFORT"
+      ],
+      "PSALM 31 : 7"
+    ],
+    [
+      12,
+      22,
+      [
+        "I WILL BE GLAD AND REJOICE",
+        "IN THY MERCY FOR THOU HAST",
+        "CONSIDERED MY TROUBLE THOU HAST",
+        "KNOWN MY SOUL IN ADVERSITIES"
+      ],
+      [
+        "REJOICE",
+        "THY",
+        "MERCY"
+      ],
+      "PSALM 31 : 7"
+    ],
+    [
+      22,
+      27,
+      [
+        "FATHER THANK YOU FOR",
+        "WITNESSING THE UNSEEN TRIALS",
+        "OF THIS DAY"
+      ],
+      [
+        "UNSEEN",
+        "TRIALS"
+      ],
+      "PSALM 31 : 7"
+    ],
+    [
+      27,
+      31,
+      [
+        "YOU HAVE NOT OVERLOOKED",
+        "A SINGLE TEAR OR QUIET PRAYER"
+      ],
+      [
+        "SINGLE",
+        "TEAR"
+      ],
+      "PSALM 31 : 7"
+    ],
+    [
+      31,
+      37,
+      [
+        "SURROUND THIS ROOM WITH YOUR",
+        "UNFAILING MERCY TONIGHT AND",
+        "QUIET EVERY RESTLESS THOUGHT"
+      ],
+      [
+        "UNFAILING",
+        "MERCY"
+      ],
+      "PSALM 31 : 7"
+    ],
+    [
+      37,
+      41,
+      [
+        "GRANT PEACEFUL SLEEP IN THE",
+        "SECURITY OF YOUR PRESENCE"
+      ],
+      [
+        "PEACEFUL",
+        "SLEEP"
+      ],
+      "PSALM 31 : 7"
+    ],
+    [
+      41,
+      45,
+      [
+        "AMEN YOUR QUIET STRUGGLE",
+        "IS NOT HIDDEN"
+      ],
+      [
+        "QUIET",
+        "STRUGGLE"
+      ],
+      "PSALM 31 : 7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your quiet struggle is not hidden tonight.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "STRUGGLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "God knows every detail.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "KNOWS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will be glad and rejoice in thy mercy:",
+      "kind": "phrase",
+      "words": [
+        "REJOICE",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, thank you for witnessing the unseen trials",
+      "kind": "phrase",
+      "words": [
+        "WITNESSING",
+        "UNSEEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You have not overlooked a single tear",
+      "kind": "phrase",
+      "words": [
+        "SINGLE",
+        "TEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Surround this room with your unfailing mercy",
+      "kind": "phrase",
+      "words": [
+        "UNFAILING",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Your quiet struggle is not hidden.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "STRUGGLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 31:7"
+}
