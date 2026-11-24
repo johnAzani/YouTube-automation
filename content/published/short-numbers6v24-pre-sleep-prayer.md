@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["THE LORD BLESS THEE", "AND KEEP THEE", "HIS FACE SHINE UPON YOU", "RECEIVE HIS PEACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If you feel exposed to tomorrow's dangers as darkness falls, let this ancient blessing cover you. The LORD bless thee, and keep thee: The LORD make his face shine upon thee, and be gracious unto thee: The LORD lift up his countenance upon thee, and give thee peace. Father, over this tired heart, let your keeping hand rest tonight. Where worry shadowed their thoughts, turn your radiant face toward them. Soften every sharp fear with your gentle grace. Look upon them with love, quiet their mind, and breathe your true peace into this room. Subscribe to The Secret Place for nightly prayers.

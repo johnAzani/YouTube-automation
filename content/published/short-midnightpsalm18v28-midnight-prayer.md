@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["MIDNIGHT WATCH", "PSALM 18:28", "DIVINE GUIDANCE", "PRAYER FOR STRENGTH"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-24T00:39:20Z"
+thumbnail_retry_after: "2026-12-01T02:22:58Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 The heavy shadow hanging over your spirit tonight has not gone unnoticed by the Creator. For thou wilt light my candle: the LORD my God will enlighten my darkness. For by thee I have run through a troop; and by my God have I leaped over a wall. Lord, grant this weary soul the strength to push past the walls built by fear. Help them see that no barrier is too high when your spirit leads the way. May your peace steady their feet, turning this dark hour into a season of triumph.

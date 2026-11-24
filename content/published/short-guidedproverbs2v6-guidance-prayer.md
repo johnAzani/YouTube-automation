@@ -27,7 +27,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (29, 708, 1050, 757); shorten the authored lockup or reduce its size"
 ---
 
 As you stare at that difficult conversation ahead today, do not rely on your own mind. For the LORD giveth wisdom: out of his mouth cometh knowledge and understanding. When you feel uncertain of what to say or which direction to take, turn to the Almighty. He does not hold back guidance from those who seek Him. Ask Him to speak truth into your confusion, to clarify your thoughts, and to lead your steps according to His perfect will. Put down the burden of trying to figure everything out by yourself. Trust that His voice brings real discernment to every crossroads you face. Subscribe to join us daily on The Guided Path.

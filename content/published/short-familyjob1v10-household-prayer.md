@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["A HEDGE AROUND", "YOUR ENTIRE HOME", "PRAYER FOR PROTECTION", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-24T00:39:22Z"
+thumbnail_retry_after: "2026-12-01T02:22:59Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If the heavy weight of protecting your family feels entirely on your shoulders right now, we bring these concerns to the Lord. Hear the words of Scripture: Hast not thou made an hedge about him, and about his house, and about all that he hath on every side? thou hast blessed the work of his hands, and his substance is increased in the land. Heavenly Father, we claim this truth over our household, trusting your grace to watch us, knowing you remain our ultimate refuge and keeper as we rest in your peace today.

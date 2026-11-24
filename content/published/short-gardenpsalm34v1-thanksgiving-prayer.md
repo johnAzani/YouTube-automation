@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["GIVE THANKS", "TO THE LORD", "ALWAYS IN YOUR HEART", "THE PRAISE GARDEN"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-24T00:39:30Z"
+thumbnail_retry_after: "2026-12-01T02:23:16Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 That weight sitting heavy on your chest right now is exactly where His peace belongs. I will bless the Lord at all times: his praise shall continually be in my mouth. My soul shall make her boast in the Lord: the humble shall hear thereof, and be glad. O magnify the Lord with me, and let us exalt his name together. Lord, help me turn my gaze from these worries toward the goodness of Your constant grace. May my spirit find rest in Your presence and my lips sing of Your faithfulness forever.
