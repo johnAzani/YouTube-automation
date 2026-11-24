@@ -49,10 +49,17 @@
       "ran_at": "2026-11-24T01:40:18+00:00",
       "slot": "2026-11-23T23:14:00+00:00",
       "workflow": "produce.yml"
+    },
+    {
+      "late_minutes": 123,
+      "name": "Growth autopilot",
+      "ran_at": "2026-11-24T04:17:41+00:00",
+      "slot": "2026-11-24T02:14:00+00:00",
+      "workflow": "growth-autopilot.yml"
     }
   ],
-  "generated_at": "2026-11-24T04:17:36.797262+00:00",
-  "last_run_at": "2026-11-24T04:17:27+00:00",
+  "generated_at": "2026-11-24T04:19:57.615180+00:00",
+  "last_run_at": "2026-11-24T04:19:09+00:00",
   "on_time": [
     {
       "late_minutes": 119,
