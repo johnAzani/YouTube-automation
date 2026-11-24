@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T15:42:03Z",
+  "generated_at": "2026-11-24T15:43:14Z",
   "monitor_generated_at": "2026-11-24T13:59:05.742007+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 213,
     "published_shorts": 543,
     "public_total": 754,
-    "queued_longform": 60,
+    "queued_longform": 62,
     "queued_shorts": 62,
     "automations_ok": 14,
     "automations_total": 14,
@@ -38,7 +38,7 @@
         "published_shorts": 71,
         "thumbnail_pending": 6,
         "public_total": 95,
-        "queued_longform": 6,
+        "queued_longform": 8,
         "queued_other": 5,
         "queued_shorts": 1
       },
@@ -19032,6 +19032,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1082
+      },
+      {
+        "id": "0115",
+        "slug": "rest-for-the-mind-at-midnight-psalm-119-55",
+        "file": "0115-rest-for-the-mind-at-midnight-psalm-119-55.md",
+        "title": "Rest for the Mind at Midnight: Psalm 119:55 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1450
+      },
+      {
+        "id": "0117",
+        "slug": "before-you-sleep-tonight-psalm-119-148",
+        "file": "0117-before-you-sleep-tonight-psalm-119-148.md",
+        "title": "Before You Sleep Tonight: Psalm 119:148 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 997
       },
       {
         "id": "0139",
