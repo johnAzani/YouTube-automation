@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-23T16:07:57.510982+00:00",
-  "as_of": "2026-11-23",
+  "generated_at": "2026-11-24T08:38:51.563246+00:00",
+  "as_of": "2026-11-24",
   "window": {
     "first_day": "2026-10-26",
     "last_day": "2026-11-20",
@@ -153,10 +153,10 @@
       "threshold_hours": 4000,
       "counted_hours_365d": 41.03,
       "remaining_hours": 3958.97,
-      "days_until_the_threshold_doubles": 69,
-      "hours_a_day_needed": 57.38,
+      "days_until_the_threshold_doubles": 68,
+      "hours_a_day_needed": 58.22,
       "hours_a_day_now": 2.03,
-      "times_the_pace_must_rise": 28.3,
+      "times_the_pace_must_rise": 28.7,
       "note": "counted hours are long-form and live only; Shorts-feed hours do not count. Only channels with the Analytics grant are in this figure."
     },
     "held_percent_median": 8.9
@@ -180,7 +180,7 @@
   ],
   "budget": {
     "minutes": 180,
-    "basis": "a view of a video over 3 hours returned 0.1261 hours, the most of any length measured (6 videos); the threshold asks 57.38 hours a day",
+    "basis": "a view of a video over 3 hours returned 0.1261 hours, the most of any length measured (6 videos); the threshold asks 58.22 hours a day",
     "considered": [
       {
         "band": "over 3 hours",
