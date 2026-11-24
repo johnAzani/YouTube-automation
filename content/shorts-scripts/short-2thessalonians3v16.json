@@ -1,0 +1,344 @@
+{
+  "key": "short-2thessalonians3v16",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "PEACE IN THE DARK",
+    "2 THESSALONIANS 3:16"
+  ],
+  "poster": [
+    "WHEN YOUR THOUGHTS",
+    "WILL NOT SETTLE",
+    "FIND GOD'S PEACE",
+    "BEDTIME PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm dark bedroom window night moonlight",
+    "quiet night landscape misty lake calm",
+    "gentle candle flickering warm dark room",
+    "starry night sky soft mountain horizon calm",
+    "peaceful forest stream twilight calm night",
+    "cozy candle flame warm soft glow dark",
+    "calm ocean shore night moonlight gentle waves"
+  ],
+  "scenes": [
+    {
+      "a": "Your thoughts will not settle tonight.",
+      "img": "short-2thessalonians3v16-scene-01.jpg",
+      "kicker": "RESTLESS MINDS",
+      "sub": "WHEN THOUGHTS WILL NOT SETTLE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "quiet room only amplifies your worry.",
+      "img": "short-2thessalonians3v16-scene-02.jpg",
+      "kicker": "LATE HOUR",
+      "sub": "LAYING DOWN THE DAY'S NOISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear what God promises",
+      "img": "short-2thessalonians3v16-scene-03.jpg",
+      "kicker": "GOD'S WORD",
+      "sub": "2 THESSALONIANS 3:16",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Now the Lord of peace himself",
+      "img": "short-2thessalonians3v16-scene-04.jpg",
+      "kicker": "LORD OF PEACE",
+      "sub": "PEACE ALWAYS BY ALL MEANS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "step into this quiet space",
+      "img": "short-2thessalonians3v16-scene-05.jpg",
+      "kicker": "EVENING PRAYER",
+      "sub": "CALM THE STORM INSIDE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Cover every fear with your presence",
+      "img": "short-2thessalonians3v16-scene-06.jpg",
+      "kicker": "DEEP REST",
+      "sub": "SAFETY IN THE SILENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Be with us in the silence.",
+      "img": "short-2thessalonians3v16-scene-07.jpg",
+      "kicker": "REST IN HIM",
+      "sub": "THE SECRET PLACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your thoughts will not settle tonight."
+    ],
+    [
+      3,
+      9,
+      "You have tried to quiet the noise of this day, but the quiet room only amplifies your worry."
+    ],
+    [
+      9,
+      15,
+      "Hear what God promises your tired heart in Second Thessalonians chapter three, verse sixteen."
+    ],
+    [
+      15,
+      23,
+      "Now the Lord of peace himself give you peace always by all means. The Lord be with you all."
+    ],
+    [
+      23,
+      28,
+      "Lord, step into this quiet space right now."
+    ],
+    [
+      28,
+      33,
+      "Give peace when answers are missing, and calm the storm inside this room."
+    ],
+    [
+      33,
+      38,
+      "Cover every fear with your presence, and let deep rest take over tonight."
+    ],
+    [
+      38,
+      44,
+      "Be with us in the silence. Amen. Your thoughts will not settle tonight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR THOUGHTS WILL NOT",
+        "SETTLE TONIGHT"
+      ],
+      [
+        "SETTLE"
+      ],
+      "2 THESSALONIANS 3 : 16"
+    ],
+    [
+      3,
+      9,
+      [
+        "QUIET THE NOISE OF THIS DAY",
+        "BUT THE QUIET ROOM",
+        "ONLY AMPLIFIES YOUR WORRY"
+      ],
+      [
+        "AMPLIFIES"
+      ],
+      "2 THESSALONIANS 3 : 16"
+    ],
+    [
+      9,
+      15,
+      [
+        "HEAR WHAT GOD PROMISES",
+        "YOUR TIRED HEART IN",
+        "SECOND THESSALONIANS 3:16"
+      ],
+      [
+        "PROMISES"
+      ],
+      "2 THESSALONIANS 3 : 16"
+    ],
+    [
+      15,
+      23,
+      [
+        "NOW THE LORD OF PEACE HIMSELF",
+        "GIVE YOU PEACE ALWAYS",
+        "BY ALL MEANS",
+        "THE LORD BE WITH YOU ALL"
+      ],
+      [
+        "PEACE"
+      ],
+      "2 THESSALONIANS 3 : 16"
+    ],
+    [
+      23,
+      28,
+      [
+        "LORD STEP INTO THIS",
+        "QUIET SPACE RIGHT NOW"
+      ],
+      [
+        "QUIET"
+      ],
+      "2 THESSALONIANS 3 : 16"
+    ],
+    [
+      28,
+      33,
+      [
+        "GIVE PEACE WHEN ANSWERS ARE MISSING",
+        "AND CALM THE STORM INSIDE"
+      ],
+      [
+        "CALM"
+      ],
+      "2 THESSALONIANS 3 : 16"
+    ],
+    [
+      33,
+      38,
+      [
+        "COVER EVERY FEAR WITH YOUR PRESENCE",
+        "AND LET DEEP REST TAKE OVER"
+      ],
+      [
+        "DEEP REST"
+      ],
+      "2 THESSALONIANS 3 : 16"
+    ],
+    [
+      38,
+      44,
+      [
+        "BE WITH US IN THE SILENCE",
+        "AMEN YOUR THOUGHTS WILL NOT",
+        "SETTLE TONIGHT"
+      ],
+      [
+        "SILENCE"
+      ],
+      "2 THESSALONIANS 3 : 16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your thoughts will not settle tonight.",
+      "kind": "phrase",
+      "words": [
+        "THOUGHTS",
+        "SETTLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "quiet room only amplifies your worry.",
+      "kind": "phrase",
+      "words": [
+        "AMPLIFIES",
+        "WORRY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear what God promises",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "PROMISES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Now the Lord of peace himself give you peace always by all means.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord be with you all.",
+      "kind": "phrase",
+      "words": [
+        "WITH",
+        "YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, step into this quiet space right now.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "SPACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "calm the storm inside this room.",
+      "kind": "phrase",
+      "words": [
+        "CALM",
+        "STORM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Cover every fear with your presence",
+      "kind": "phrase",
+      "words": [
+        "COVER",
+        "FEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be with us in the silence.",
+      "kind": "phrase",
+      "words": [
+        "SILENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Thessalonians 3:16"
+}

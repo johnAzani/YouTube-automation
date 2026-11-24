@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T07:10:35Z",
+  "generated_at": "2026-11-24T07:11:28Z",
   "monitor_generated_at": "2026-11-24T04:17:53.491848+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,10 +8,10 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 736,
+    "published_total": 737,
     "published_longform": 209,
-    "published_shorts": 527,
-    "public_total": 734,
+    "published_shorts": 528,
+    "public_total": 735,
     "queued_longform": 53,
     "queued_shorts": 51,
     "automations_ok": 14,
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 94,
+        "published_total": 95,
         "published_longform": 25,
-        "published_shorts": 69,
+        "published_shorts": 70,
         "thumbnail_pending": 6,
-        "public_total": 93,
+        "public_total": 94,
         "queued_longform": 5,
         "queued_other": 5,
         "queued_shorts": 2
       },
       "latest_video": {
-        "id": "SHORT-NUMBERS6V24",
-        "title": "Say This Numbers 6:24-26 Prayer Before You Sleep | Receive His Peace #Shorts",
+        "id": "SHORT-2THESSALONIANS3V16",
+        "title": "Say This 2 Thessalonians 3:16 Prayer Before You Sleep | Bedtime Prayer #Shorts",
         "format": "short",
-        "youtube_video_id": "lduRekVZEfM",
-        "watch_url": "https://www.youtube.com/shorts/lduRekVZEfM",
+        "youtube_video_id": "Oi7t_QjCX5Y",
+        "watch_url": "https://www.youtube.com/shorts/Oi7t_QjCX5Y",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T01:48:25Z"
+        "published_at": "2026-11-24T07:10:29Z"
       },
       "next_queued_longform": {
         "id": "0033",
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-2THESSALONIANS3V16",
+      "slug": "short-2thessalonians3v16-pre-sleep-prayer",
+      "file": "short-2thessalonians3v16-pre-sleep-prayer.md",
+      "title": "Say This 2 Thessalonians 3:16 Prayer Before You Sleep | Bedtime Prayer #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T07:10:29Z",
+      "youtube_video_id": "Oi7t_QjCX5Y",
+      "watch_url": "https://www.youtube.com/shorts/Oi7t_QjCX5Y",
+      "youtu_be_url": "https://youtu.be/Oi7t_QjCX5Y",
+      "shorts_url": "https://www.youtube.com/shorts/Oi7t_QjCX5Y",
+      "studio_url": "https://studio.youtube.com/video/Oi7t_QjCX5Y/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Oi7t_QjCX5Y/hqdefault.jpg",
+      "thumb_text": "WHEN YOUR THOUGHTS \u00b7 WILL NOT SETTLE",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 627
+    },
     {
       "id": "SHORT-HEALINGPROVERBS3V7",
       "slug": "short-healingproverbs3v7-restoration-prayer",
