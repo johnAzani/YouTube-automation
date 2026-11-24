@@ -1,0 +1,364 @@
+{
+  "key": "short-middayisaiah35v3",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "WHEN YOUR HANDS ARE WEAK",
+    "A Midday Prayer for Strength"
+  ],
+  "poster": [
+    "STRENGTH FOR WEAK HANDS",
+    "Isaiah 35:3-4 Prayer",
+    "Pause and Pray at Noon",
+    "The Midday Watch"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sun shining through office window onto wooden desk",
+    "soft golden light filtering through dust motes in room",
+    "open Bible on wooden table bathed in bright noon light",
+    "calm open valley under high afternoon sun and blue sky",
+    "quiet desk with sunlight casting long shadows at noon",
+    "peaceful meadow bathed in bright midday sunlight",
+    "sunlight illuminating a calm empty room at midday"
+  ],
+  "scenes": [
+    {
+      "a": "Your trembling hands need steady strength right now.",
+      "img": "short-middayisaiah35v3-scene-01.jpg",
+      "kicker": "TREMBLING HANDS",
+      "sub": "STEADY STRENGTH FOR THIS HOUR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In the middle of this demanding workday",
+      "img": "short-middayisaiah35v3-scene-02.jpg",
+      "kicker": "MIDDAY WEARINESS",
+      "sub": "WHEN FATIGUE TAKES OVER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Strengthen ye the weak hands",
+      "img": "short-middayisaiah35v3-scene-03.jpg",
+      "kicker": "ISAIAH 35:3",
+      "sub": "GOD STRENGTHENS THE WEAK",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Be strong, fear not",
+      "img": "short-middayisaiah35v3-scene-04.jpg",
+      "kicker": "ISAIAH 35:4",
+      "sub": "YOUR GOD WILL COME AND SAVE YOU",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, reach into this exact hour",
+      "img": "short-middayisaiah35v3-scene-05.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "STEADY OUR SHAKEN HEARTS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "renew our worn courage",
+      "img": "short-middayisaiah35v3-scene-06.jpg",
+      "kicker": "RENEWED COURAGE",
+      "sub": "SUSTAIN US IN OUR WEAKNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Your trembling hands need steady strength",
+      "img": "short-middayisaiah35v3-scene-07.jpg",
+      "kicker": "PAUSE AND PRAY",
+      "sub": "THE MIDDAY WATCH AT NOON",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your trembling hands need steady strength right now."
+    ],
+    [
+      3,
+      9,
+      "In the middle of this demanding workday, fatigue can make your spirit feel faint and uncertain."
+    ],
+    [
+      9,
+      12,
+      "Hear what God speaks through Isaiah:"
+    ],
+    [
+      12,
+      17,
+      "Strengthen ye the weak hands, and confirm the feeble knees."
+    ],
+    [
+      17,
+      22,
+      "Say to them that are of a fearful heart, Be strong, fear not:"
+    ],
+    [
+      22,
+      30,
+      "behold, your God will come with vengeance, even God with a recompence; he will come and save you."
+    ],
+    [
+      30,
+      35,
+      "Lord, reach into this exact hour and steady our shaken hearts."
+    ],
+    [
+      35,
+      41,
+      "Quiet every anxious thought, renew our worn courage, and sustain us where we are weak."
+    ],
+    [
+      41,
+      46,
+      "Amen. Your trembling hands need steady strength right now."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR TREMBLING HANDS",
+        "NEED STEADY STRENGTH",
+        "RIGHT NOW"
+      ],
+      [
+        "TREMBLING",
+        "STRENGTH"
+      ],
+      "ISAIAH 35:3-4"
+    ],
+    [
+      3,
+      9,
+      [
+        "IN THIS DEMANDING WORKDAY",
+        "FATIGUE CAN MAKE YOUR SPIRIT",
+        "FEEL FAINT AND UNCERTAIN"
+      ],
+      [
+        "WORKDAY",
+        "FATIGUE"
+      ],
+      "ISAIAH 35:3-4"
+    ],
+    [
+      9,
+      12,
+      [
+        "HEAR WHAT GOD SPEAKS",
+        "THROUGH ISAIAH"
+      ],
+      [
+        "GOD",
+        "ISAIAH"
+      ],
+      "ISAIAH 35:3-4"
+    ],
+    [
+      12,
+      17,
+      [
+        "STRENGTHEN YE THE WEAK HANDS",
+        "AND CONFIRM THE FEEBLE KNEES"
+      ],
+      [
+        "STRENGTHEN",
+        "CONFIRM"
+      ],
+      "ISAIAH 35:3"
+    ],
+    [
+      17,
+      22,
+      [
+        "SAY TO THEM THAT ARE OF",
+        "A FEARFUL HEART BE STRONG",
+        "FEAR NOT"
+      ],
+      [
+        "BE STRONG",
+        "FEAR NOT"
+      ],
+      "ISAIAH 35:4"
+    ],
+    [
+      22,
+      30,
+      [
+        "BEHOLD YOUR GOD WILL COME",
+        "WITH VENGEANCE EVEN GOD",
+        "WITH A RECOMPENCE HE WILL",
+        "COME AND SAVE YOU"
+      ],
+      [
+        "VENGEANCE",
+        "SAVE YOU"
+      ],
+      "ISAIAH 35:4"
+    ],
+    [
+      30,
+      35,
+      [
+        "LORD REACH INTO THIS EXACT HOUR",
+        "AND STEADY OUR SHAKEN HEARTS"
+      ],
+      [
+        "STEADY",
+        "SHAKEN"
+      ],
+      "ISAIAH 35:3-4"
+    ],
+    [
+      35,
+      41,
+      [
+        "QUIET EVERY ANXIOUS THOUGHT",
+        "RENEW OUR WORN COURAGE",
+        "AND SUSTAIN US"
+      ],
+      [
+        "QUIET",
+        "RENEW",
+        "SUSTAIN"
+      ],
+      "ISAIAH 35:3-4"
+    ],
+    [
+      41,
+      46,
+      [
+        "AMEN YOUR TREMBLING HANDS",
+        "NEED STEADY STRENGTH",
+        "RIGHT NOW"
+      ],
+      [
+        "AMEN",
+        "STRENGTH"
+      ],
+      "ISAIAH 35:3-4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your trembling hands need steady strength right now.",
+      "kind": "phrase",
+      "words": [
+        "TREMBLING",
+        "HANDS",
+        "STEADY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "In the middle of this demanding workday, fatigue can make your spirit feel faint and uncertain.",
+      "kind": "phrase",
+      "words": [
+        "FATIGUE",
+        "SPIRIT",
+        "FAINT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Strengthen ye the weak hands, and confirm the feeble knees.",
+      "kind": "phrase",
+      "words": [
+        "WEAK",
+        "HANDS",
+        "FEEBLE",
+        "KNEES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Say to them that are of a fearful heart, Be strong, fear not:",
+      "kind": "phrase",
+      "words": [
+        "FEARFUL",
+        "HEART",
+        "STRONG"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "behold, your God will come with vengeance, even God with a recompence; he will come and save you.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "COME",
+        "SAVE",
+        "YOU"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, reach into this exact hour and steady our shaken hearts.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "STEADY",
+        "SHAKEN",
+        "HEARTS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Quiet every anxious thought, renew our worn courage, and sustain us where we are weak.",
+      "kind": "phrase",
+      "words": [
+        "RENEW",
+        "COURAGE",
+        "SUSTAIN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 35:3-4"
+}

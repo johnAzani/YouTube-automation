@@ -1,0 +1,350 @@
+{
+  "key": "short-middaypsalm90v12",
+  "channel": "prayer3",
+  "psalm": 90,
+  "title": [
+    "NUMBER OUR DAYS",
+    "PRAYER FOR MIDDAY WISDOM"
+  ],
+  "poster": [
+    "MIDDAY PRESSURE",
+    "NUMBER YOUR DAYS",
+    "FIND GOD'S WISDOM",
+    "NOON PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sun shining through quiet office window desk",
+    "sunlight filtering through window onto wooden table shadow",
+    "open Bible on wooden desk illuminated by bright midday light",
+    "quiet sunlit window looking over calm green garden",
+    "high noon sun casting long soft shadows on empty path",
+    "bright sunlight warm rays illuminating peaceful quiet room",
+    "calm sunlit mountain trail high noon clear sky",
+    "sunbeams filtering through green trees midday silence"
+  ],
+  "scenes": [
+    {
+      "a": "Midday hours slip past while tasks remain undone.",
+      "img": "short-middaypsalm90v12-scene-01.jpg",
+      "kicker": "MIDDAY PRESSURE",
+      "sub": "WHEN HOURS SLIP PAST UNDONE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "You feel the relentless pressure of a ticking clock right now.",
+      "img": "short-middaypsalm90v12-scene-02.jpg",
+      "kicker": "TICKING CLOCK",
+      "sub": "RELENTLESS DAILY PACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "God's word guides us: So teach us to number our days, that we may apply our hearts unto wisdom.",
+      "img": "short-middaypsalm90v12-scene-03.jpg",
+      "kicker": "PSALM 90:12",
+      "sub": "NUMBER OUR DAYS IN WISDOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Lord, in the quiet middle of this afternoon, steady our anxious hearts.",
+      "img": "short-middaypsalm90v12-scene-04.jpg",
+      "kicker": "STEADY HEART",
+      "sub": "QUIET MIDDLE HOUR",
+      "cam": "tilt_up",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "We often spend our precious hours chasing endless demands and forgetting eternity.",
+      "img": "short-middaypsalm90v12-scene-05.jpg",
+      "kicker": "ENDLESS DEMANDS",
+      "sub": "LOOKING BEYOND BUSYNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach us to measure our time by Your grace rather than our worries.",
+      "img": "short-middaypsalm90v12-scene-06.jpg",
+      "kicker": "MEASURED GRACE",
+      "sub": "TIME IN HIS HANDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant us wisdom to release unnecessary stress and walk in Your peaceful truth.",
+      "img": "short-middaypsalm90v12-scene-07.jpg",
+      "kicker": "PEACEFUL TRUTH",
+      "sub": "RELEASING UNNECESSARY STRESS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. Midday hours slip past while tasks remain undone.",
+      "img": "short-middaypsalm90v12-scene-08.jpg",
+      "kicker": "MIDDAY WATCH",
+      "sub": "PAUSE AND PRAY AT NOON",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Midday hours slip past while tasks remain undone."
+    ],
+    [
+      3,
+      7,
+      "You feel the relentless pressure of a ticking clock right now."
+    ],
+    [
+      7,
+      13,
+      "God's word guides us: So teach us to number our days, that we may apply our hearts unto wisdom."
+    ],
+    [
+      13,
+      17,
+      "Lord, in the quiet middle of this afternoon, steady our anxious hearts."
+    ],
+    [
+      17,
+      21,
+      "We often spend our precious hours chasing endless demands and forgetting eternity."
+    ],
+    [
+      21,
+      26,
+      "Teach us to measure our time by Your grace rather than our worries."
+    ],
+    [
+      26,
+      31,
+      "Grant us wisdom to release unnecessary stress and walk in Your peaceful truth."
+    ],
+    [
+      31,
+      35,
+      "Amen. Midday hours slip past while tasks remain undone."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "MIDDAY HOURS SLIP PAST",
+        "WHILE TASKS REMAIN UNDONE"
+      ],
+      [
+        "TASKS",
+        "REMAIN"
+      ],
+      "PSALM 90 : 12"
+    ],
+    [
+      3,
+      7,
+      [
+        "YOU FEEL THE PRESSURE",
+        "OF A TICKING CLOCK"
+      ],
+      [
+        "PRESSURE",
+        "CLOCK"
+      ],
+      "PSALM 90 : 12"
+    ],
+    [
+      7,
+      13,
+      [
+        "SO TEACH US TO NUMBER",
+        "OUR DAYS UNTO WISDOM"
+      ],
+      [
+        "NUMBER",
+        "WISDOM"
+      ],
+      "PSALM 90 : 12"
+    ],
+    [
+      13,
+      17,
+      [
+        "STEADY OUR ANXIOUS HEARTS",
+        "IN THIS QUIET HOUR"
+      ],
+      [
+        "STEADY",
+        "HEARTS"
+      ],
+      "PSALM 90 : 12"
+    ],
+    [
+      17,
+      21,
+      [
+        "CHASING ENDLESS DEMANDS",
+        "FORGETTING ETERNITY"
+      ],
+      [
+        "ENDLESS",
+        "ETERNITY"
+      ],
+      "PSALM 90 : 12"
+    ],
+    [
+      21,
+      26,
+      [
+        "MEASURE OUR TIME",
+        "BY YOUR GRACE"
+      ],
+      [
+        "GRACE",
+        "TIME"
+      ],
+      "PSALM 90 : 12"
+    ],
+    [
+      26,
+      31,
+      [
+        "RELEASE UNNECESSARY STRESS",
+        "WALK IN PEACEFUL TRUTH"
+      ],
+      [
+        "RELEASE",
+        "PEACEFUL"
+      ],
+      "PSALM 90 : 12"
+    ],
+    [
+      31,
+      35,
+      [
+        "AMEN MIDDAY HOURS",
+        "SLIP PAST WHILE TASKS REMAIN"
+      ],
+      [
+        "MIDDAY",
+        "HOURS"
+      ],
+      "PSALM 90 : 12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Midday hours slip past",
+      "kind": "phrase",
+      "words": [
+        "MIDDAY",
+        "HOURS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "relentless pressure",
+      "kind": "phrase",
+      "words": [
+        "RELENTLESS",
+        "PRESSURE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "number our days",
+      "kind": "phrase",
+      "words": [
+        "NUMBER",
+        "DAYS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "steady our anxious hearts",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "HEARTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "chasing endless demands",
+      "kind": "phrase",
+      "words": [
+        "ENDLESS",
+        "DEMANDS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "measure our time",
+      "kind": "phrase",
+      "words": [
+        "MEASURE",
+        "TIME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "release unnecessary stress",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "STRESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "tasks remain undone",
+      "kind": "phrase",
+      "words": [
+        "TASKS",
+        "UNDONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 90:12"
+}
