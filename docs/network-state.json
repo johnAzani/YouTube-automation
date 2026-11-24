@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T13:43:06Z",
+  "generated_at": "2026-11-24T13:43:39Z",
   "monitor_generated_at": "2026-11-24T08:39:01.248981+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 750,
+    "published_total": 751,
     "published_longform": 211,
-    "published_shorts": 539,
-    "public_total": 748,
+    "published_shorts": 540,
+    "public_total": 749,
     "queued_longform": 61,
-    "queued_shorts": 68,
+    "queued_shorts": 66,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -499,23 +499,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 60,
+        "published_total": 61,
         "published_longform": 17,
-        "published_shorts": 43,
+        "published_shorts": 44,
         "thumbnail_pending": 39,
-        "public_total": 60,
+        "public_total": 61,
         "queued_longform": 6,
         "queued_other": 4,
-        "queued_shorts": 11
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM144V1",
-        "title": "Pray This Psalm 144:1-2 Prayer for Divine Protection | Facing The Battles Of Today #Shorts",
+        "id": "SHORT-SHIELDISAIAH59V19",
+        "title": "Pray This Isaiah 59:19 Prayer for Divine Protection | When Trouble Surges Today #Shorts",
         "format": "short",
-        "youtube_video_id": "4gICwKlky38",
-        "watch_url": "https://www.youtube.com/shorts/4gICwKlky38",
+        "youtube_video_id": "f4rzXErHHI4",
+        "watch_url": "https://www.youtube.com/shorts/f4rzXErHHI4",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T07:21:38Z"
+        "published_at": "2026-11-24T13:42:31Z"
       },
       "next_queued_longform": {
         "id": "0622",
@@ -524,8 +524,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldisaiah59v19",
-        "scripture": "Isaiah 59:19",
+        "short": "short-shieldpsalm56v3",
+        "scripture": "Psalm 56:3-4",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDISAIAH59V19",
+      "slug": "short-shieldisaiah59v19-protection-prayer",
+      "file": "short-shieldisaiah59v19-protection-prayer.md",
+      "title": "Pray This Isaiah 59:19 Prayer for Divine Protection | When Trouble Surges Today #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T13:42:31Z",
+      "youtube_video_id": "f4rzXErHHI4",
+      "watch_url": "https://www.youtube.com/shorts/f4rzXErHHI4",
+      "youtu_be_url": "https://youtu.be/f4rzXErHHI4",
+      "shorts_url": "https://www.youtube.com/shorts/f4rzXErHHI4",
+      "studio_url": "https://studio.youtube.com/video/f4rzXErHHI4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/f4rzXErHHI4/hqdefault.jpg",
+      "thumb_text": "THE SPIRIT OF THE LORD \u00b7 RAISES A BANNER",
+      "thumbnail_pending": false,
+      "duration_label": "47s",
+      "words": 629
+    },
     {
       "id": "SHORT-HEALINGPSALM116V8",
       "slug": "short-healingpsalm116v8-restoration-prayer",
@@ -19699,17 +19723,6 @@
         "target_window_utc": "10:44"
       },
       {
-        "short": "short-shieldisaiah59v19",
-        "file": "0000-short-shieldisaiah59v19.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 59:19",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
-      },
-      {
         "short": "short-shieldpsalm56v3",
         "file": "0000-short-shieldpsalm56v3.yml",
         "companion_longform_id": "",
@@ -20110,17 +20123,6 @@
         "file": "0633-short-shieldpsalm94v22.yml",
         "companion_longform_id": "0633",
         "scripture": "Psalm 94:22",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-shieldpsalm124v6",
-        "file": "0635-short-shieldpsalm124v6.yml",
-        "companion_longform_id": "0635",
-        "scripture": "Psalm 124:6-8",
         "channel": "prayer8",
         "channel_name": "The Covenant Shield",
         "status": "approved",
