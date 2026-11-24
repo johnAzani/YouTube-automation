@@ -252,7 +252,9 @@ def test_every_written_short_keeps_its_hook_in_the_title_that_is_uploaded():
         if edition is None:
             continue
         checked += 1
-        assert " | " in edition.title, edition.title
+        # A title may have no bar: when the hook cannot fit, the promise wins and
+        # the hook goes. What must never be missing is the promise.
+        assert "Prayer" in edition.title, edition.title
         assert edition.title.endswith(" #Shorts") and len(edition.title) <= 100, edition.title
         assert "'S " not in edition.title, edition.title
     if not checked:
@@ -273,9 +275,12 @@ def _saved(monkeypatch, tmp_path, **spec):
 def test_a_short_whose_title_changed_remembers_the_title_it_had(monkeypatch, tmp_path):
     edition = _saved(monkeypatch, tmp_path, poster_last="THE MORNING ALTAR",
                      subs=("AWAKEN THE DAWN",))
-    assert edition.title == "Say This Psalm 55:22 Prayer at Sunrise | Awaken The Dawn #Shorts"
+    assert edition.title == "Say This Psalm 55:22 Prayer for Fresh Start at Sunrise | Awaken The Dawn #Shorts"
+    # `before` is rebuilt from the channel's current template, so the rename of
+    # 24 November 2026 appears in it too: this records the title the Short's own
+    # last poster line would have produced, not a title YouTube ever saw.
     assert edition.earlier_titles == (
-        "Say This Psalm 55:22 Prayer at Sunrise | The Morning Altar #Shorts",)
+        "Say This Psalm 55:22 Prayer for Fresh Start at Sunrise | The Morning Altar #Shorts",)
     assert sr._build_script_doc(edition).meta["earlier_titles"] == list(edition.earlier_titles)
 
 
@@ -286,14 +291,41 @@ def test_a_short_whose_title_did_not_change_has_no_earlier_title(monkeypatch, tm
 
 
 def test_overflow_keeps_hook_and_remembers_the_previously_truncated_title(monkeypatch, tmp_path):
+    """At a limit that fits this template, the hook survives whole.
+
+    Changed 24 November 2026. The fallback used to be `label | hook`, which kept
+    the hook and threw away the phrase that says what the Short is for — the
+    phrase the measured differences between channels track. It now keeps the
+    template's own words and gives the hook the room that is left.
+    """
     from pipeline.metadata import smart_truncate_title
 
-    monkeypatch.setattr(sr, "SHORT_TITLE_LIMIT", 45)
+    # 70 overflows the renamed template by five characters and still leaves the hook
+    # thirteen: the smallest kind of limit where both halves can survive.
+    monkeypatch.setattr(sr, "SHORT_TITLE_LIMIT", 70)
     edition = _saved(monkeypatch, tmp_path, poster_last="A QUIET MIND")
     previous = smart_truncate_title(
-        "Say This Psalm 55:22 Prayer at Sunrise | A Quiet Mind", 45) + " #Shorts"
-    assert edition.title == "Psalm 55:22 | A Quiet Mind #Shorts"
-    assert previous in edition.earlier_titles
+        "Say This Psalm 55:22 Prayer at Sunrise | A Quiet Mind", 70) + " #Shorts"
+    # Changed 24 November 2026. The overflow fallback used to be `label | hook`,
+    # which kept the hook and threw away the phrase that says what the Short is
+    # for — the phrase the measured differences between channels track. It now
+    # keeps the template's own words and gives the hook the room that is left.
+    assert edition.title == ("Say This Psalm 55:22 Prayer for Fresh Start at Sunrise | "
+                             "A Quiet Mind #Shorts")
+    assert len(edition.title) - len(" #Shorts") <= 70
+    # `before` is rebuilt from the channel's current template, so a rename shows in
+    # it too and it can equal the live title; what must be recorded is whatever the
+    # previous rule would have produced, whenever that differs.
+    assert all(t.endswith("#Shorts") for t in edition.earlier_titles)
+    assert edition.earlier_titles != (edition.title,)
+
+
+def test_an_overflow_that_cannot_fit_the_hook_keeps_the_promise(monkeypatch, tmp_path):
+    """A short limit must cost the hook, never the phrase that says what it is for."""
+    monkeypatch.setattr(sr, "SHORT_TITLE_LIMIT", 45)
+    edition = _saved(monkeypatch, tmp_path, poster_last="A QUIET MIND")
+    assert edition.title == "Say This Psalm 55:22 Prayer for Fresh Start #Shorts"
+    assert "Sunrise" not in edition.title, "the part that was cut is the trailing flourish"
 
 
 def test_the_upload_looks_for_the_earlier_title_too(monkeypatch):

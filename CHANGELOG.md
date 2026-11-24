@@ -5,6 +5,16 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-24 — the Shorts report was describing the wrong videos, and naming clocks instead of needs
+
+- **The per-video Analytics report could not see the Shorts.** It was sorted by watch time and capped at 50 rows, so a three-hour long-form outranked every Short ever published: the report described **35 videos while 536 Shorts had gone out**, 28 of The Secret Place's own 64 Shorts were missing from it, and the newest measured Short was six days old. Every conclusion drawn about Shorts from that file came from an unrepresentative sample. `scripts/analytics_reader.py` now asks a second time sorted by **views**, and requests **engaged views** — the pre-2025 count of plays that lasted, and the closest the API gets to Studio's "viewed vs swiped away", which no API exposes.
+- **Measured, not assumed:** 536 Shorts in 21 days (25.5 a day); 69 views per Short on average; the median video was shown **24 times** and **76 of 113** never passed 50 impressions. The feed auditions each Short on a few dozen people and stops. That is the "few views", and it is decided in the first second or two.
+- **The channels that name a need beat the channels that name a clock.** Ranked by measured views per Short: Divine Protection **182**, Thanksgiving 90, God's Guidance 84 — against "at Sunrise" **11** and "at Noon" **10**. `prayer2` and `prayer3` now name the need ("Prayer for Fresh Start at Sunrise", "Prayer for Strength at Noon") and keep every word that was searchable before.
+- **A title over the character limit used to lose its promise.** `short_release.py` fell back to `label | hook`, keeping the hook and dropping the phrase that says what the Short is for. It now keeps the template's words and shortens the hook; only when no hook will fit does the trailing flourish go.
+- **Retention does predict reach, but slowly:** ρ = 0.46 across 35 videos; bottom third by percentage watched gets 37 views, top third 118. Worth fixing, not sufficient.
+- **Unproven:** that renaming a channel multiplies its views — ten channels over three weeks cannot settle that, and the document says so. **Owner-only:** the Analytics grant on the other nine channels.
+- Reading: `docs/SHORTS_WHY_FEW_VIEWS_2026-11-24.md`.
+
 ## 2026-11-21 — the protection alarm was reading the Bible as template writing
 
 - **`scripts/channel_protection.py` counted quoted scripture as one channel reusing another's prayer.** Narrators write "name’s" and "our Savior"; the KJV corpus holds "name's" and "our Saviour". Both comparisons were literal, so every verse spoken word for word across two channels failed to match and raised the sharpest alarm the script has. Two normalisations — the apostrophe, and the -or/-our spellings that actually occur in narration (savior, honor, favor, labor, armor) — take the measure from two channel pairs down to **0**. The report now says what it means.
