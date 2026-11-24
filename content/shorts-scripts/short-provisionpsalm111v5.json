@@ -1,0 +1,376 @@
+{
+  "key": "short-provisionpsalm111v5",
+  "channel": "prayer7",
+  "psalm": 111,
+  "title": [
+    "WHEN THE CUPBOARD",
+    "LOOKS EMPTY"
+  ],
+  "poster": [
+    "GOD REMEMBERS",
+    "HIS COVENANT",
+    "DAILY PROVISION",
+    "PSALM 111:5"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "rustic wooden table in morning sunlight warm shadows quiet home",
+    "golden sunlit valley mountain path tranquil stream morning light",
+    "ancient sunlit sanctuary stone table warm beam of light peaceful",
+    "golden wheat field glowing in warm afternoon sunlight wide landscape",
+    "peaceful mountain valley golden sun rays quiet morning mist",
+    "sunlit rustic wooden table open bible warm radiant window light",
+    "tranquil golden sunrise over calm lake reflection morning glow"
+  ],
+  "scenes": [
+    {
+      "a": "You are staring at an empty cupboard tonight.",
+      "img": "short-provisionpsalm111v5-scene-01.jpg",
+      "kicker": "EMPTY CUPBOARD",
+      "sub": "WHEN PROVISION FEELS UNCERTAIN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The grocery bill mounts, and your heart wonders how tomorrow's bread will come.",
+      "img": "short-provisionpsalm111v5-scene-02.jpg",
+      "kicker": "MOUNTING COSTS",
+      "sub": "TRUSTING GOD FOR DAILY BREAD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear the promise of Psalm 111, verse five:",
+      "img": "short-provisionpsalm111v5-scene-03.jpg",
+      "kicker": "GOD'S WORD",
+      "sub": "HE IS MINDFUL OF HIS COVENANT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "He hath given meat unto them that fear him: he will ever be mindful of his covenant.",
+      "img": "short-provisionpsalm111v5-scene-04.jpg",
+      "kicker": "PSALM 111:5",
+      "sub": "HE PROVIDES FOR HIS OWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we bring our small store and heavy worries to Your table.",
+      "img": "short-provisionpsalm111v5-scene-05.jpg",
+      "kicker": "BRING YOUR WORRY",
+      "sub": "LAYING EVERY NEED AT HIS FEET",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Strengthen our hands to honor You, and remind us that Your faithfulness never fails.",
+      "img": "short-provisionpsalm111v5-scene-06.jpg",
+      "kicker": "UNFAILING GRACE",
+      "sub": "STRENGTH FOR THE DAYS AHEAD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Keep trusting when the cupboard looks empty.",
+      "img": "short-provisionpsalm111v5-scene-07.jpg",
+      "kicker": "WALK IN FAITH",
+      "sub": "HIS PROMISE STANDS FOREVER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You are staring at an empty cupboard tonight."
+    ],
+    [
+      3,
+      7,
+      "The grocery bill mounts, and your heart wonders how tomorrow's bread will come."
+    ],
+    [
+      7,
+      11,
+      "Hear the promise of Psalm 111, verse five:"
+    ],
+    [
+      11,
+      19,
+      "He hath given meat unto them that fear him: he will ever be mindful of his covenant."
+    ],
+    [
+      19,
+      24,
+      "Lord, we bring our small store and heavy worries to Your table."
+    ],
+    [
+      24,
+      30,
+      "You know every missing portion in this home."
+    ],
+    [
+      30,
+      36,
+      "Strengthen our hands to honor You, and remind us that Your faithfulness never fails."
+    ],
+    [
+      36,
+      41,
+      "Supply our daily meat according to Your holy promise."
+    ],
+    [
+      41,
+      46,
+      "Amen. Keep trusting when the cupboard looks empty."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU ARE STARING AT",
+        "AN EMPTY CUPBOARD",
+        "TONIGHT"
+      ],
+      [
+        "EMPTY",
+        "CUPBOARD"
+      ],
+      "PSALM 111 : 5"
+    ],
+    [
+      3,
+      7,
+      [
+        "THE GROCERY BILL MOUNTS",
+        "WONDERING HOW TOMORROW'S",
+        "BREAD WILL COME"
+      ],
+      [
+        "BREAD"
+      ],
+      "PSALM 111 : 5"
+    ],
+    [
+      7,
+      11,
+      [
+        "HEAR THE PROMISE OF",
+        "PSALM 111 VERSE FIVE"
+      ],
+      [
+        "PROMISE"
+      ],
+      "PSALM 111 : 5"
+    ],
+    [
+      11,
+      19,
+      [
+        "HE HATH GIVEN MEAT",
+        "UNTO THEM THAT FEAR HIM",
+        "HE WILL EVER BE MINDFUL",
+        "OF HIS COVENANT"
+      ],
+      [
+        "GIVEN",
+        "MEAT",
+        "MINDFUL"
+      ],
+      "PSALM 111 : 5"
+    ],
+    [
+      19,
+      24,
+      [
+        "WE BRING OUR SMALL STORE",
+        "AND HEAVY WORRIES",
+        "TO YOUR TABLE"
+      ],
+      [
+        "YOUR",
+        "TABLE"
+      ],
+      "PSALM 111 : 5"
+    ],
+    [
+      24,
+      30,
+      [
+        "YOU KNOW EVERY",
+        "MISSING PORTION",
+        "IN THIS HOME"
+      ],
+      [
+        "MISSING",
+        "PORTION"
+      ],
+      "PSALM 111 : 5"
+    ],
+    [
+      30,
+      36,
+      [
+        "STRENGTHEN OUR HANDS",
+        "YOUR FAITHFULNESS",
+        "NEVER FAILS"
+      ],
+      [
+        "FAITHFULNESS"
+      ],
+      "PSALM 111 : 5"
+    ],
+    [
+      36,
+      41,
+      [
+        "SUPPLY OUR DAILY MEAT",
+        "ACCORDING TO YOUR",
+        "HOLY PROMISE"
+      ],
+      [
+        "DAILY",
+        "MEAT"
+      ],
+      "PSALM 111 : 5"
+    ],
+    [
+      41,
+      46,
+      [
+        "AMEN KEEP TRUSTING",
+        "WHEN THE CUPBOARD",
+        "LOOKS EMPTY"
+      ],
+      [
+        "KEEP",
+        "TRUSTING"
+      ],
+      "PSALM 111 : 5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You are staring at an empty cupboard tonight.",
+      "kind": "phrase",
+      "words": [
+        "EMPTY",
+        "CUPBOARD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The grocery bill mounts, and your heart wonders how tomorrow's bread will come.",
+      "kind": "phrase",
+      "words": [
+        "TOMORROW'S",
+        "BREAD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the promise of Psalm 111, verse five:",
+      "kind": "phrase",
+      "words": [
+        "PROMISE",
+        "PSALM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He hath given meat unto them that fear him: he will ever be mindful of his covenant.",
+      "kind": "phrase",
+      "words": [
+        "GIVEN",
+        "MEAT",
+        "COVENANT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we bring our small store and heavy worries to Your table.",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "TABLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You know every missing portion in this home.",
+      "kind": "phrase",
+      "words": [
+        "MISSING",
+        "PORTION"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Strengthen our hands to honor You, and remind us that Your faithfulness never fails.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFULNESS",
+        "NEVER",
+        "FAILS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Supply our daily meat according to Your holy promise.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "MEAT",
+        "PROMISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Keep trusting when the cupboard looks empty.",
+      "kind": "phrase",
+      "words": [
+        "KEEP",
+        "TRUSTING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 111:5"
+}

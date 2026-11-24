@@ -1,0 +1,335 @@
+{
+  "key": "short-provisionpsalm85v12",
+  "channel": "prayer7",
+  "psalm": 85,
+  "title": [
+    "WHEN WORK FEELS",
+    "UNFRUITFUL"
+  ],
+  "poster": [
+    "THE LORD SHALL",
+    "GIVE THAT WHICH",
+    "IS GOOD AND",
+    "OUR LAND YIELDS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit valley with quiet river",
+    "sunlit mountain pass at sunrise",
+    "quiet rustic sanctuary stone table sunlit",
+    "sunlit wheat field in quiet valley",
+    "calm mountain river in golden morning light",
+    "peaceful sunlit valley meadow",
+    "serene mountain stream sunlit morning"
+  ],
+  "scenes": [
+    {
+      "a": "You wonder if your work will bear fruit.",
+      "img": "short-provisionpsalm85v12-scene-01.jpg",
+      "kicker": "EMPTY FIELDS",
+      "sub": "WHEN LABOR FEELS UNCERTAIN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You have planted your labor, tended your fields, and waited through dry seasons with a quiet heart.",
+      "img": "short-provisionpsalm85v12-scene-02.jpg",
+      "kicker": "WAITING IN PATIENCE",
+      "sub": "TENDING THE DRY SEASONS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear the word of Psalm 85 verse 12.",
+      "img": "short-provisionpsalm85v12-scene-03.jpg",
+      "kicker": "GOD'S PROMISE",
+      "sub": "PSALM 85:12",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Yea, the LORD shall give that which is good; and our land shall yield her increase.",
+      "img": "short-provisionpsalm85v12-scene-04.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "OUR LAND SHALL YIELD INCREASE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, we bring our daily work to Your table today. Where we see empty ground, You see an approaching harvest.",
+      "img": "short-provisionpsalm85v12-scene-05.jpg",
+      "kicker": "FAITHFUL HARVEST",
+      "sub": "COMMITTING OUR WORK TO GOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Teach us to trust Your steady supply, bless the effort of our hands, and give what is good in Your perfect timing.",
+      "img": "short-provisionpsalm85v12-scene-06.jpg",
+      "kicker": "STEADY SUPPLY",
+      "sub": "BLESS THE WORK OF OUR HANDS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "We rest in Your faithful care. Amen. You wonder if your work will bear fruit.",
+      "img": "short-provisionpsalm85v12-scene-07.jpg",
+      "kicker": "RESTING IN HIM",
+      "sub": "HIS GOODNESS ENDURES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You wonder if your work will bear fruit."
+    ],
+    [
+      3,
+      8,
+      "You have planted your labor, tended your fields, and waited through dry seasons with a quiet heart."
+    ],
+    [
+      8,
+      12,
+      "Hear the word of Psalm 85 verse 12."
+    ],
+    [
+      12,
+      19,
+      "Yea, the LORD shall give that which is good; and our land shall yield her increase."
+    ],
+    [
+      19,
+      26,
+      "Father, we bring our daily work to Your table today. Where we see empty ground, You see an approaching harvest."
+    ],
+    [
+      26,
+      34,
+      "Teach us to trust Your steady supply, bless the effort of our hands, and give what is good in Your perfect timing."
+    ],
+    [
+      34,
+      40,
+      "We rest in Your faithful care. Amen. You wonder if your work will bear fruit."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU WONDER IF YOUR",
+        "WORK WILL BEAR FRUIT"
+      ],
+      [
+        "WORK",
+        "FRUIT"
+      ],
+      "PSALM 85 : 12"
+    ],
+    [
+      3,
+      8,
+      [
+        "YOU HAVE PLANTED YOUR LABOR",
+        "TENDED YOUR FIELDS AND WAITED",
+        "THROUGH DRY SEASONS"
+      ],
+      [
+        "PLANTED",
+        "LABOR",
+        "SEASONS"
+      ],
+      "PSALM 85 : 12"
+    ],
+    [
+      8,
+      12,
+      [
+        "HEAR THE WORD OF",
+        "PSALM 85 VERSE 12"
+      ],
+      [
+        "PSALM",
+        "12"
+      ],
+      "PSALM 85 : 12"
+    ],
+    [
+      12,
+      19,
+      [
+        "YEA THE LORD SHALL GIVE",
+        "THAT WHICH IS GOOD",
+        "AND OUR LAND SHALL YIELD",
+        "HER INCREASE"
+      ],
+      [
+        "LORD",
+        "GOOD",
+        "YIELD",
+        "INCREASE"
+      ],
+      "PSALM 85 : 12"
+    ],
+    [
+      19,
+      26,
+      [
+        "FATHER WE BRING OUR DAILY WORK",
+        "TO YOUR TABLE TODAY",
+        "WHERE WE SEE EMPTY GROUND",
+        "YOU SEE AN APPROACHING HARVEST"
+      ],
+      [
+        "WORK",
+        "TABLE",
+        "HARVEST"
+      ],
+      "PSALM 85 : 12"
+    ],
+    [
+      26,
+      34,
+      [
+        "TEACH US TO TRUST YOUR STEADY SUPPLY",
+        "BLESS THE EFFORT OF OUR HANDS",
+        "AND GIVE WHAT IS GOOD IN YOUR PERFECT TIMING"
+      ],
+      [
+        "TRUST",
+        "SUPPLY",
+        "HANDS",
+        "GOOD"
+      ],
+      "PSALM 85 : 12"
+    ],
+    [
+      34,
+      40,
+      [
+        "WE REST IN YOUR FAITHFUL CARE",
+        "AMEN YOU WONDER IF YOUR",
+        "WORK WILL BEAR FRUIT"
+      ],
+      [
+        "REST",
+        "FAITHFUL",
+        "WORK",
+        "FRUIT"
+      ],
+      "PSALM 85 : 12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You wonder if your work will bear fruit.",
+      "kind": "phrase",
+      "words": [
+        "WORK",
+        "BEAR",
+        "FRUIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You have planted your labor, tended your fields, and waited through dry seasons with a quiet heart.",
+      "kind": "phrase",
+      "words": [
+        "PLANTED",
+        "LABOR",
+        "SEASONS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the word of Psalm 85 verse 12.",
+      "kind": "phrase",
+      "words": [
+        "PSALM",
+        "85",
+        "VERSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Yea, the LORD shall give that which is good; and our land shall yield her increase.",
+      "kind": "quote",
+      "words": [
+        "LORD",
+        "GOOD",
+        "YIELD",
+        "INCREASE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we bring our daily work to Your table today. Where we see empty ground, You see an approaching harvest.",
+      "kind": "phrase",
+      "words": [
+        "WORK",
+        "TABLE",
+        "HARVEST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach us to trust Your steady supply, bless the effort of our hands, and give what is good in Your perfect timing.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "SUPPLY",
+        "HANDS",
+        "GOOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We rest in Your faithful care. Amen. You wonder if your work will bear fruit.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "FAITHFUL",
+        "CARE",
+        "FRUIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 85:12"
+}
