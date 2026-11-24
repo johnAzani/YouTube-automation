@@ -2,7 +2,7 @@
 id: '0224'
 title: 'When You Are Weary of Waiting: Luke 18:1-8 | The Midnight Watch'
 slug: when-you-are-weary-of-waiting-luke-18-1-8
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -72,6 +72,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-24"
+published_at: "2026-11-24T02:42:06Z"
+youtube_video_id: "vPd_JHrgYfo"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 612.0
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Rising at the Twelfth Hour

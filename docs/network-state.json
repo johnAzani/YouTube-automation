@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T02:35:23Z",
+  "generated_at": "2026-11-24T02:43:11Z",
   "monitor_generated_at": "2026-11-24T02:23:23.793843+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 728,
-    "published_longform": 207,
-    "published_shorts": 521,
-    "public_total": 726,
-    "queued_longform": 55,
-    "queued_shorts": 57,
+    "published_total": 730,
+    "published_longform": 208,
+    "published_shorts": 522,
+    "public_total": 728,
+    "queued_longform": 54,
+    "queued_shorts": 56,
     "automations_ok": 13,
     "automations_total": 14,
     "network_healthy": true
@@ -232,33 +232,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 75,
-        "published_longform": 24,
-        "published_shorts": 51,
-        "thumbnail_pending": 74,
-        "public_total": 75,
-        "queued_longform": 6,
+        "published_total": 77,
+        "published_longform": 25,
+        "published_shorts": 52,
+        "thumbnail_pending": 76,
+        "public_total": 77,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTISAIAH45V2",
-        "title": "Pray This Isaiah 45:2-3 Midnight Prayer | Midnight Breakthrough Prayer #Shorts",
-        "format": "short",
-        "youtube_video_id": "-CXz7ODsmek",
-        "watch_url": "https://www.youtube.com/shorts/-CXz7ODsmek",
-        "published_on": "2026-11-23",
-        "published_at": "2026-11-23T22:09:13Z"
-      },
-      "next_queued_longform": {
         "id": "0224",
         "title": "When You Are Weary of Waiting: Luke 18:1-8 | The Midnight Watch",
-        "words": 1546,
+        "format": "longform",
+        "youtube_video_id": "vPd_JHrgYfo",
+        "watch_url": "https://youtu.be/vPd_JHrgYfo",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T02:42:06Z"
+      },
+      "next_queued_longform": {
+        "id": "0225",
+        "title": "An Open Door No Man Can Shut: Revelation 3:7-8 | The Midnight Watch",
+        "words": 1480,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightisaiah59v19",
-        "scripture": "Isaiah 59:19",
+        "short": "short-midnightjeremiah33v3",
+        "scripture": "Jeremiah 33:3",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -697,6 +697,30 @@
   ],
   "videos": [
     {
+      "id": "0224",
+      "slug": "when-you-are-weary-of-waiting-luke-18-1-8",
+      "file": "0224-when-you-are-weary-of-waiting-luke-18-1-8.md",
+      "title": "When You Are Weary of Waiting: Luke 18:1-8 | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T02:42:06Z",
+      "youtube_video_id": "vPd_JHrgYfo",
+      "watch_url": "https://youtu.be/vPd_JHrgYfo",
+      "youtu_be_url": "https://youtu.be/vPd_JHrgYfo",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/vPd_JHrgYfo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/vPd_JHrgYfo/hqdefault.jpg",
+      "thumb_text": "DO NOT FAINT",
+      "thumbnail_pending": true,
+      "duration_label": "10m 12s",
+      "words": 1546
+    },
+    {
       "id": "0075",
       "slug": "morning-prayer-for-a-day-dedicated-to-christ-colossians-317",
       "file": "0075-morning-prayer-for-a-day-dedicated-to-christ-colossians-317.md",
@@ -839,6 +863,30 @@
       "thumbnail_pending": false,
       "duration_label": "49s",
       "words": 631
+    },
+    {
+      "id": "SHORT-MIDNIGHTISAIAH59V19",
+      "slug": "short-midnightisaiah59v19-midnight-prayer",
+      "file": "short-midnightisaiah59v19-midnight-prayer.md",
+      "title": "Pray This Isaiah 59:19 Midnight Prayer | The Standard Is Raised #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T01:47:41Z",
+      "youtube_video_id": "XcVN9P2-ctU",
+      "watch_url": "https://www.youtube.com/shorts/XcVN9P2-ctU",
+      "youtu_be_url": "https://youtu.be/XcVN9P2-ctU",
+      "shorts_url": "https://www.youtube.com/shorts/XcVN9P2-ctU",
+      "studio_url": "https://studio.youtube.com/video/XcVN9P2-ctU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/XcVN9P2-ctU/hqdefault.jpg",
+      "thumb_text": "THE SPIRIT \u00b7 LIFTS THE",
+      "thumbnail_pending": true,
+      "duration_label": "55s",
+      "words": 643
     },
     {
       "id": "SHORT-MIDDAYNEHEMIAH2V4",
@@ -18367,19 +18415,6 @@
         "words": 1082
       },
       {
-        "id": "0224",
-        "slug": "when-you-are-weary-of-waiting-luke-18-1-8",
-        "file": "0224-when-you-are-weary-of-waiting-luke-18-1-8.md",
-        "title": "When You Are Weary of Waiting: Luke 18:1-8 | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1546
-      },
-      {
         "id": "0225",
         "slug": "an-open-door-no-man-can-shut-revelation-3-7-8-the-midnight-watch",
         "file": "0225-an-open-door-no-man-can-shut-revelation-3-7-8-the-midnight-watch.md",
@@ -19096,17 +19131,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightisaiah59v19",
-        "file": "0220-short-midnightisaiah59v19.yml",
-        "companion_longform_id": "0220",
-        "scripture": "Isaiah 59:19",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightjeremiah33v3",
