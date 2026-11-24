@@ -1416,20 +1416,18 @@
     "result": "dispatched secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8, prayer9, prayer10"
   },
   "produce.yml@2026-11-24T14:14:00+00:00": {
-    "at": "2026-11-24T15:35:54.614756+00:00",
+    "at": "2026-11-24T16:55:43.757936+00:00",
     "attempted_channels": [
       "secret-place",
       "prayer2",
-      "prayer3",
       "prayer4",
-      "prayer5",
       "prayer6",
       "prayer8",
       "prayer9"
     ],
-    "attempts": 1,
-    "code_id": "99a02d51175fbe7b",
-    "result": "dispatched secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer8, prayer9"
+    "attempts": 2,
+    "code_id": "79f7226eb8caaaf5",
+    "result": "dispatched secret-place, prayer2, prayer4, prayer6, prayer8, prayer9"
   },
   "reporting-jobs.yml@2026-11-15T05:47:00+00:00": {
     "at": "2026-11-15T09:26:59.051436+00:00",
