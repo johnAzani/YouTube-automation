@@ -1,6 +1,6 @@
 ---
 id: '0707'
-title: 'Breath Left in Your Lungs: Psalm 150:6 | The Praise Garden'
+title: "When You Have Breath to Praise: Psalm 150:6 | The Praise Garden"
 slug: breath-left-in-your-lungs-psalm-150-6-the-praise-garden
 status: published
 channel: prayer9
@@ -76,13 +76,16 @@ originality:
 published_on: "2026-11-17"
 published_at: "2026-11-17T07:37:49Z"
 youtube_video_id: "fRiT9_Zn20Y"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_retry_after: "2026-11-24T07:43:26Z"
 thumbnail_retry_reason: "permission"
+title_before: "Breath Left in Your Lungs: Psalm 150:6 | The Praise Garden"
+retitled_at: "2026-11-24"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Entering His Gates With Thanksgiving
