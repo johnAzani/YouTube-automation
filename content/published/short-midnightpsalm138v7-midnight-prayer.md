@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THOUGH I WALK", "IN MIDST OF TROUBLE", "THOU WILT REVIVE ME", "PSALM 138:7"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-23T21:05:54Z"
+thumbnail_retry_after: "2026-11-30T23:26:32Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If trouble surrounds you in this dark hour, God sees your distress right now. Scripture declares: Though I walk in the midst of trouble, thou wilt revive me: thou shalt stretch forth thine hand against the wrath of mine enemies, and thy right hand shall save me. Lord, when trial presses close on every side, breathe your quiet strength into our weary heart. Reach out your victorious right hand and deliver us from every lingering threat that haunts the shadows. Revive our spirit in this midnight watch and grant us deep, abiding peace tonight. Amen. Subscribe to stand with The Midnight Watch in prayer.

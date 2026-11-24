@@ -1,0 +1,275 @@
+{
+  "key": "short-midnightacts27v23",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "STANDING IN THE STORM",
+    "ACTS 27 MIDNIGHT PRAYER"
+  ],
+  "poster": [
+    "FEAR NOT IN THE STORM",
+    "MIDNIGHT BREAKTHROUGH",
+    "ACTS 27:23-25",
+    "THE MIDNIGHT WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "stormy ocean night dark waves silhouette",
+    "lantern light dark room midnight prayer",
+    "midnight sky dark clouds star light watchtower",
+    "calm night sea moonlit horizon peaceful",
+    "lamp lit altar sanctuary midnight prayer",
+    "dark stormy sea night distant light"
+  ],
+  "scenes": [
+    {
+      "a": "The violent storm around you will not quiet.",
+      "img": "short-midnightacts27v23-scene-01.jpg",
+      "kicker": "MIDNIGHT STORM",
+      "sub": "WHEN THE WIND WILL NOT QUIET",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Yet in this dark hour, heaven sends word to your weary heart.",
+      "img": "short-midnightacts27v23-scene-02.jpg",
+      "kicker": "DIVINE PRESENCE",
+      "sub": "GOD REMEMBERS YOUR DARKEST HOUR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For there stood by me this night the angel of God, whose I am, and whom I serve, Saying, Fear not, Paul; thou must be brought before Caesar: and, lo, God hath given thee all them that sail with thee.",
+      "img": "short-midnightacts27v23-scene-03.jpg",
+      "kicker": "FEAR NOT",
+      "sub": "GOD STANDS WITH YOU TONIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Wherefore, sirs, be of good cheer: for I believe God, that it shall be even as it was told me.",
+      "img": "short-midnightacts27v23-scene-04.jpg",
+      "kicker": "BE OF GOOD CHEER",
+      "sub": "IT SHALL BE AS HE PROMISED",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, stand by us in this midnight watch and anchor our souls in Your promises.",
+      "img": "short-midnightacts27v23-scene-05.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "ANCHOR OUR SOULS IN PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen, though the violent storm around you will not quiet.",
+      "img": "short-midnightacts27v23-scene-06.jpg",
+      "kicker": "STILL THE STORM",
+      "sub": "STAND STEADFAST IN FAITH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The violent storm around you will not quiet."
+    ],
+    [
+      3,
+      8,
+      "Yet in this dark hour, heaven sends word to your weary heart."
+    ],
+    [
+      8,
+      22,
+      "For there stood by me this night the angel of God, whose I am, and whom I serve, Saying, Fear not, Paul; thou must be brought before Caesar: and, lo, God hath given thee all them that sail with thee."
+    ],
+    [
+      22,
+      30,
+      "Wherefore, sirs, be of good cheer: for I believe God, that it shall be even as it was told me."
+    ],
+    [
+      30,
+      38,
+      "Lord, stand by us in this midnight watch and anchor our souls in Your promises."
+    ],
+    [
+      38,
+      44,
+      "Amen, though the violent storm around you will not quiet."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE VIOLENT STORM",
+        "AROUND YOU",
+        "WILL NOT QUIET"
+      ],
+      [
+        "STORM",
+        "QUIET"
+      ],
+      "ACTS 27:23-25"
+    ],
+    [
+      3,
+      8,
+      [
+        "HEAVEN SENDS WORD",
+        "TO YOUR WEARY HEART"
+      ],
+      [
+        "HEAVEN",
+        "WORD"
+      ],
+      "ACTS 27:23-25"
+    ],
+    [
+      8,
+      22,
+      [
+        "THERE STOOD BY ME",
+        "THE ANGEL OF GOD",
+        "FEAR NOT"
+      ],
+      [
+        "ANGEL",
+        "FEAR"
+      ],
+      "ACTS 27:23-25"
+    ],
+    [
+      22,
+      30,
+      [
+        "BE OF GOOD CHEER",
+        "FOR I BELIEVE GOD"
+      ],
+      [
+        "GOOD",
+        "CHEER",
+        "BELIEVE"
+      ],
+      "ACTS 27:23-25"
+    ],
+    [
+      30,
+      38,
+      [
+        "STAND BY US",
+        "IN THIS MIDNIGHT WATCH"
+      ],
+      [
+        "STAND",
+        "ANCHOR"
+      ],
+      "ACTS 27:23-25"
+    ],
+    [
+      38,
+      44,
+      [
+        "AMEN, THOUGH THE STORM",
+        "WILL NOT QUIET"
+      ],
+      [
+        "AMEN",
+        "STORM"
+      ],
+      "ACTS 27:23-25"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The violent storm around you will not quiet.",
+      "kind": "phrase",
+      "words": [
+        "VIOLENT",
+        "STORM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Yet in this dark hour, heaven sends word to your weary heart.",
+      "kind": "phrase",
+      "words": [
+        "HEAVEN",
+        "WORD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "For there stood by me this night the angel of God, whose I am, and whom I serve, Saying, Fear not, Paul; thou must be brought before Caesar: and, lo, God hath given thee all them that sail with thee.",
+      "kind": "phrase",
+      "words": [
+        "ANGEL",
+        "GOD",
+        "FEAR",
+        "NOT"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Wherefore, sirs, be of good cheer: for I believe God, that it shall be even as it was told me.",
+      "kind": "phrase",
+      "words": [
+        "BELIEVE",
+        "GOD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, stand by us in this midnight watch and anchor our souls in Your promises.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "PROMISES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen, though the violent storm around you will not quiet.",
+      "kind": "phrase",
+      "words": [
+        "STORM",
+        "QUIET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Acts 27:23-25"
+}

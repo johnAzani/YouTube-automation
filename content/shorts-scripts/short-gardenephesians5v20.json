@@ -1,0 +1,316 @@
+{
+  "key": "short-gardenephesians5v20",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "WHEN HARD NEWS REACHES",
+    "YOUR HANDS TODAY"
+  ],
+  "poster": [
+    "GIVING THANKS ALWAYS",
+    "FOR ALL THINGS",
+    "UNTO GOD THE FATHER",
+    "EPHESIANS 5:20"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "misty sunlit forest glade morning light",
+    "calm mountain lake reflection golden hour",
+    "peaceful countryside river soft daylight",
+    "sunbeams glowing through pine tree forest",
+    "quiet green valley golden morning light",
+    "serene lake shore calm waters dawn",
+    "soft morning sunlight over misty meadow"
+  ],
+  "scenes": [
+    {
+      "a": "When unexpected hard news reaches your hands today,",
+      "img": "short-gardenephesians5v20-scene-01.jpg",
+      "kicker": "UNEXPECTED NEWS",
+      "sub": "WHEN HARD NEWS REACHES YOUR HANDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "remember that praise still belongs to God.",
+      "img": "short-gardenephesians5v20-scene-02.jpg",
+      "kicker": "PRAISE BELONGS TO GOD",
+      "sub": "REMEMBER HIS FAITHFULNESS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Giving thanks always for all things unto God and the Father in the name of our Lord Jesus Christ;",
+      "img": "short-gardenephesians5v20-scene-03.jpg",
+      "kicker": "EPHESIANS 5:20",
+      "sub": "GIVING THANKS ALWAYS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, when hard news breaks our day, give us an honest heart to give You thanks anyway.",
+      "img": "short-gardenephesians5v20-scene-04.jpg",
+      "kicker": "AN HONEST HEART",
+      "sub": "THANKSGIVING IN THE DARK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We offer gratitude not for the pain, but for Your unchanging grace holding us steady inside it.",
+      "img": "short-gardenephesians5v20-scene-05.jpg",
+      "kicker": "UNCHANGING GRACE",
+      "sub": "HOLDING US STEADY TODAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Teach us to trust Your goodness in every circumstance and honor You in all things.",
+      "img": "short-gardenephesians5v20-scene-06.jpg",
+      "kicker": "HONOR IN ALL THINGS",
+      "sub": "TRUSTING HIS GOODNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "In Christ's holy name we pray, Amen. When unexpected hard news reaches your hands today.",
+      "img": "short-gardenephesians5v20-scene-07.jpg",
+      "kicker": "STILL HELD",
+      "sub": "WHEN HARD NEWS REACHES YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "When unexpected hard news reaches your hands today,"
+    ],
+    [
+      3,
+      7,
+      "remember that praise still belongs to God."
+    ],
+    [
+      7,
+      14,
+      "Giving thanks always for all things unto God and the Father in the name of our Lord Jesus Christ;"
+    ],
+    [
+      14,
+      21,
+      "Heavenly Father, when hard news breaks our day, give us an honest heart to give You thanks anyway."
+    ],
+    [
+      21,
+      28,
+      "We offer gratitude not for the pain, but for Your unchanging grace holding us steady inside it."
+    ],
+    [
+      28,
+      35,
+      "Teach us to trust Your goodness in every circumstance and honor You in all things."
+    ],
+    [
+      35,
+      42,
+      "In Christ's holy name we pray, Amen. When unexpected hard news reaches your hands today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WHEN UNEXPECTED",
+        "HARD NEWS REACHES",
+        "YOUR HANDS TODAY"
+      ],
+      [
+        "HARD",
+        "NEWS"
+      ],
+      "EPHESIANS 5 : 20"
+    ],
+    [
+      3,
+      7,
+      [
+        "REMEMBER THAT PRAISE",
+        "STILL BELONGS TO GOD"
+      ],
+      [
+        "PRAISE",
+        "BELONGS"
+      ],
+      "EPHESIANS 5 : 20"
+    ],
+    [
+      7,
+      14,
+      [
+        "GIVING THANKS ALWAYS",
+        "FOR ALL THINGS UNTO GOD",
+        "AND THE FATHER IN THE NAME",
+        "OF OUR LORD JESUS CHRIST"
+      ],
+      [
+        "GIVING",
+        "THANKS",
+        "ALWAYS"
+      ],
+      "EPHESIANS 5 : 20"
+    ],
+    [
+      14,
+      21,
+      [
+        "HEAVENLY FATHER WHEN",
+        "HARD NEWS BREAKS OUR DAY",
+        "GIVE US AN HONEST HEART"
+      ],
+      [
+        "HONEST",
+        "HEART"
+      ],
+      "EPHESIANS 5 : 20"
+    ],
+    [
+      21,
+      28,
+      [
+        "WE OFFER GRATITUDE",
+        "NOT FOR THE PAIN BUT FOR",
+        "YOUR UNCHANGING GRACE"
+      ],
+      [
+        "UNCHANGING",
+        "GRACE"
+      ],
+      "EPHESIANS 5 : 20"
+    ],
+    [
+      28,
+      35,
+      [
+        "TEACH US TO TRUST",
+        "YOUR GOODNESS IN EVERY",
+        "CIRCUMSTANCE AND HONOR YOU"
+      ],
+      [
+        "TRUST",
+        "GOODNESS"
+      ],
+      "EPHESIANS 5 : 20"
+    ],
+    [
+      35,
+      42,
+      [
+        "IN CHRISTS HOLY NAME",
+        "WE PRAY AMEN WHEN HARD NEWS",
+        "REACHES YOUR HANDS TODAY"
+      ],
+      [
+        "AMEN"
+      ],
+      "EPHESIANS 5 : 20"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When unexpected hard news reaches your hands today,",
+      "kind": "phrase",
+      "words": [
+        "UNEXPECTED",
+        "HARD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "remember that praise still belongs to God.",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "BELONGS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Giving thanks always for all things unto God and the Father in the name of our Lord Jesus Christ;",
+      "kind": "phrase",
+      "words": [
+        "THANKS",
+        "ALWAYS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, when hard news breaks our day, give us an honest heart to give You thanks anyway.",
+      "kind": "phrase",
+      "words": [
+        "HONEST",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We offer gratitude not for the pain, but for Your unchanging grace holding us steady inside it.",
+      "kind": "phrase",
+      "words": [
+        "UNCHANGING",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach us to trust Your goodness in every circumstance and honor You in all things.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "GOODNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Christ's holy name we pray, Amen. When unexpected hard news reaches your hands today.",
+      "kind": "phrase",
+      "words": [
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ephesians 5:20"
+}

@@ -1,0 +1,411 @@
+{
+  "key": "short-provisionpsalm67v5",
+  "channel": "prayer7",
+  "psalm": 67,
+  "title": [
+    "WHEN LABORS",
+    "BEAR FRUIT"
+  ],
+  "poster": [
+    "PSALM 67:5-7",
+    "GOD SHALL BLESS US",
+    "THE PROVISION TABLE",
+    "DAILY PROVISION PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlight wheat field dawn",
+    "peaceful river flowing golden hour",
+    "sunlit mountain pass quiet morning",
+    "ancient stone sanctuary morning sun",
+    "golden sunlit valley early mist",
+    "sunlit field under open sky",
+    "calm mountain lake morning reflection"
+  ],
+  "scenes": [
+    {
+      "a": "When hard work yields no visible return,",
+      "img": "short-provisionpsalm67v5-scene-01.jpg",
+      "kicker": "UNFRUITFUL LABOR",
+      "sub": "WHEN HARD WORK YIELDS NO RETURN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "hear God's word in Psalm 67:",
+      "img": "short-provisionpsalm67v5-scene-02.jpg",
+      "kicker": "HEAR HIS PROMISE",
+      "sub": "PSALM 67:5-7",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let the people praise thee, O God; let all the people praise thee.",
+      "img": "short-provisionpsalm67v5-scene-03.jpg",
+      "kicker": "PRAISE BEFORE HARVEST",
+      "sub": "LET ALL THE PEOPLE PRAISE THEE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Then shall the earth yield her increase; and God, even our own God, shall bless us.",
+      "img": "short-provisionpsalm67v5-scene-04.jpg",
+      "kicker": "THE PROMISED YIELD",
+      "sub": "THE EARTH SHALL YIELD INCREASE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, we lift our empty hands to You today. Forgive us for measuring Your faithfulness only by our immediate harvest.",
+      "img": "short-provisionpsalm67v5-scene-05.jpg",
+      "kicker": "EMPTY HANDS",
+      "sub": "TRUSTING GOD BEFORE THE HARVEST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We praise You before the yield appears. Open the doors no man can shut, and cause our quiet labors to bear fruit in Your time.",
+      "img": "short-provisionpsalm67v5-scene-06.jpg",
+      "kicker": "OPEN DOORS",
+      "sub": "FRUITFULNESS IN HIS TIME",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.45
+      ]
+    },
+    {
+      "a": "Bless our work, our decisions, and our daily bread. Amen. When hard work yields no visible return.",
+      "img": "short-provisionpsalm67v5-scene-07.jpg",
+      "kicker": "DAILY BLESSING",
+      "sub": "STEWARDSHIP AND PROVISION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "When hard work yields no visible return,"
+    ],
+    [
+      3,
+      6,
+      "hear God's word in Psalm 67:"
+    ],
+    [
+      6,
+      10,
+      "Let the people praise thee, O God; let all the people praise thee."
+    ],
+    [
+      10,
+      15,
+      "Then shall the earth yield her increase; and God, even our own God, shall bless us."
+    ],
+    [
+      15,
+      18,
+      "Lord, we lift our empty hands to You today."
+    ],
+    [
+      18,
+      22,
+      "Forgive us for measuring Your faithfulness only by our immediate harvest."
+    ],
+    [
+      22,
+      25,
+      "We praise You before the yield appears."
+    ],
+    [
+      25,
+      29,
+      "Open the doors no man can shut, and cause our quiet labors to bear fruit in Your time."
+    ],
+    [
+      29,
+      32,
+      "Bless our work, our decisions, and our daily bread."
+    ],
+    [
+      32,
+      35,
+      "Amen. When hard work yields no visible return."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WHEN HARD WORK",
+        "YIELDS NO",
+        "VISIBLE RETURN"
+      ],
+      [
+        "HARD",
+        "WORK",
+        "RETURN"
+      ],
+      "PSALM 67 : 5"
+    ],
+    [
+      3,
+      6,
+      [
+        "HEAR GOD'S WORD",
+        "IN PSALM 67"
+      ],
+      [
+        "WORD",
+        "PSALM"
+      ],
+      "PSALM 67 : 5"
+    ],
+    [
+      6,
+      10,
+      [
+        "LET THE PEOPLE",
+        "PRAISE THEE O GOD",
+        "LET ALL PRAISE THEE"
+      ],
+      [
+        "PRAISE",
+        "GOD"
+      ],
+      "PSALM 67 : 5"
+    ],
+    [
+      10,
+      15,
+      [
+        "THEN SHALL THE EARTH",
+        "YIELD HER INCREASE",
+        "GOD SHALL BLESS US"
+      ],
+      [
+        "EARTH",
+        "INCREASE",
+        "BLESS"
+      ],
+      "PSALM 67 : 6"
+    ],
+    [
+      15,
+      18,
+      [
+        "LORD WE LIFT",
+        "OUR EMPTY HANDS",
+        "TO YOU TODAY"
+      ],
+      [
+        "EMPTY",
+        "HANDS"
+      ],
+      "PSALM 67 : 6"
+    ],
+    [
+      18,
+      22,
+      [
+        "FORGIVE US FOR",
+        "MEASURING FAITHFULNESS",
+        "BY IMMEDIATE HARVEST"
+      ],
+      [
+        "FAITHFULNESS",
+        "HARVEST"
+      ],
+      "PSALM 67 : 6"
+    ],
+    [
+      22,
+      25,
+      [
+        "WE PRAISE YOU",
+        "BEFORE THE YIELD",
+        "APPEARS TODAY"
+      ],
+      [
+        "PRAISE",
+        "YIELD"
+      ],
+      "PSALM 67 : 6"
+    ],
+    [
+      25,
+      29,
+      [
+        "OPEN THE DOORS",
+        "NO MAN CAN SHUT",
+        "BEAR FRUIT IN TIME"
+      ],
+      [
+        "OPEN",
+        "DOORS",
+        "FRUIT"
+      ],
+      "PSALM 67 : 7"
+    ],
+    [
+      29,
+      32,
+      [
+        "BLESS OUR WORK",
+        "OUR DECISIONS",
+        "AND DAILY BREAD"
+      ],
+      [
+        "BLESS",
+        "WORK",
+        "BREAD"
+      ],
+      "PSALM 67 : 7"
+    ],
+    [
+      32,
+      35,
+      [
+        "AMEN",
+        "WHEN HARD WORK",
+        "YIELDS NO RETURN"
+      ],
+      [
+        "AMEN",
+        "RETURN"
+      ],
+      "PSALM 67 : 7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When hard work yields no visible return,",
+      "kind": "phrase",
+      "words": [
+        "HARD",
+        "WORK",
+        "RETURN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "hear God's word in Psalm 67:",
+      "kind": "phrase",
+      "words": [
+        "WORD",
+        "PSALM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let the people praise thee, O God; let all the people praise thee.",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Then shall the earth yield her increase; and God, even our own God, shall bless us.",
+      "kind": "phrase",
+      "words": [
+        "EARTH",
+        "YIELD",
+        "BLESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we lift our empty hands to You today.",
+      "kind": "phrase",
+      "words": [
+        "EMPTY",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Forgive us for measuring Your faithfulness only by our immediate harvest.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFULNESS",
+        "HARVEST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We praise You before the yield appears.",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "YIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Open the doors no man can shut, and cause our quiet labors to bear fruit in Your time.",
+      "kind": "phrase",
+      "words": [
+        "OPEN",
+        "DOORS",
+        "FRUIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Bless our work, our decisions, and our daily bread.",
+      "kind": "phrase",
+      "words": [
+        "BLESS",
+        "WORK",
+        "BREAD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. When hard work yields no visible return.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "RETURN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 67:5-7"
+}

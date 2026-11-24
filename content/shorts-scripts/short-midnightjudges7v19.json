@@ -1,0 +1,287 @@
+{
+  "key": "short-midnightjudges7v19",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "THE LAMP IN YOUR HAND",
+    "THE SOUND IN THE DARK"
+  ],
+  "poster": [
+    "MIDNIGHT VIGIL",
+    "THE BROKEN PITCHER",
+    "LIGHT IN DARKNESS",
+    "STRENGTH TO STAND"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "silhouette of watchtower at night",
+    "dark starry sky over lonely hill",
+    "clay pitcher glowing with internal light",
+    "ancient trumpet silhouette against moon",
+    "dusty camp edge in midnight fog",
+    "glowing lamp in shadows",
+    "dark mountain pass at night",
+    "empty field under night sky"
+  ],
+  "scenes": [
+    {
+      "a": "That heavy watch keeps you awake.",
+      "img": "short-midnightjudges7v19-scene-01.jpg",
+      "kicker": "THE HEAVY WATCH",
+      "sub": "KEEPING YOU AWAKE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "So Gideon, and the hundred men that were with him, came unto the outside of the camp in the beginning of the middle watch; and they had but newly set the watch: and they blew the trumpets, and brake the pitchers that were in their hands.",
+      "img": "short-midnightjudges7v19-scene-02.jpg",
+      "kicker": "THE MIDDLE WATCH",
+      "sub": "THE PITCHERS BRAKE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "The three companies blew the trumpets, and brake the pitchers, and held the lamps in their left hands, and the trumpets in their right hands to blow withal: and they cried, The sword of the LORD, and of Gideon.",
+      "img": "short-midnightjudges7v19-scene-03.jpg",
+      "kicker": "THE LAMP HELD HIGH",
+      "sub": "THE SWORD OF THE LORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "And they stood every man in his place round about the camp; and all the host ran, and cried, and fled.",
+      "img": "short-midnightjudges7v19-scene-04.jpg",
+      "kicker": "STANDING YOUR PLACE",
+      "sub": "THE HOST HAS FLED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Lord, break the clay of my own hesitation tonight.",
+      "img": "short-midnightjudges7v19-scene-05.jpg",
+      "kicker": "BREAK THE CLAY",
+      "sub": "LET THE LIGHT SHINE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant me the courage to stand in the place assigned to me.",
+      "img": "short-midnightjudges7v19-scene-06.jpg",
+      "kicker": "COURAGE TO STAND",
+      "sub": "STEADFAST IN THE DARK",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Let the light within me overcome the fear that lingers.",
+      "img": "short-midnightjudges7v19-scene-07.jpg",
+      "kicker": "LIGHT OVERCOMING FEAR",
+      "sub": "THE DARKNESS RETREATS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Amen, the heavy watch keeps you awake.",
+      "img": "short-midnightjudges7v19-scene-08.jpg",
+      "kicker": "AMEN",
+      "sub": "THE WATCH ENDURES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That heavy watch keeps you awake."
+    ],
+    [
+      3,
+      15,
+      "So Gideon, and the hundred men that were with him, came unto the outside of the camp in the beginning of the middle watch; and they had but newly set the watch: and they blew the trumpets, and brake the pitchers that were in their hands."
+    ],
+    [
+      15,
+      30,
+      "The three companies blew the trumpets, and brake the pitchers, and held the lamps in their left hands, and the trumpets in their right hands to blow withal: and they cried, The sword of the LORD, and of Gideon."
+    ],
+    [
+      30,
+      42,
+      "And they stood every man in his place round about the camp; and all the host ran, and cried, and fled."
+    ],
+    [
+      42,
+      50,
+      "Lord, break the clay of my own hesitation tonight."
+    ],
+    [
+      50,
+      60,
+      "Grant me the courage to stand in the place assigned to me."
+    ],
+    [
+      60,
+      70,
+      "Let the light within me overcome the fear that lingers."
+    ],
+    [
+      70,
+      78,
+      "Amen, the heavy watch keeps you awake."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT HEAVY WATCH",
+        "KEEPS YOU AWAKE"
+      ],
+      [
+        "HEAVY WATCH",
+        "AWAKE"
+      ],
+      "JUDGES 7:19"
+    ],
+    [
+      3,
+      15,
+      [
+        "GIDEON AND THE MEN",
+        "BLEW THE TRUMPETS",
+        "BRAKE THE PITCHERS"
+      ],
+      [
+        "GIDEON",
+        "TRUMPETS",
+        "BRAKE"
+      ],
+      "JUDGES 7:19"
+    ],
+    [
+      15,
+      30,
+      [
+        "HELD THE LAMPS",
+        "THE SWORD OF THE LORD",
+        "AND OF GIDEON"
+      ],
+      [
+        "LAMPS",
+        "SWORD",
+        "GIDEON"
+      ],
+      "JUDGES 7:20"
+    ],
+    [
+      30,
+      42,
+      [
+        "STOOD IN HIS PLACE",
+        "ROUND ABOUT THE CAMP",
+        "THE HOST FLED"
+      ],
+      [
+        "STOOD",
+        "PLACE",
+        "FLED"
+      ],
+      "JUDGES 7:21"
+    ],
+    [
+      42,
+      50,
+      [
+        "BREAK THE CLAY",
+        "OF MY HESITATION"
+      ],
+      [
+        "BREAK",
+        "HESITATION"
+      ],
+      "PRAYER"
+    ],
+    [
+      50,
+      60,
+      [
+        "COURAGE TO STAND",
+        "IN MY PLACE"
+      ],
+      [
+        "COURAGE",
+        "STAND"
+      ],
+      "PRAYER"
+    ],
+    [
+      60,
+      70,
+      [
+        "LET THE LIGHT",
+        "OVERCOME THE FEAR"
+      ],
+      [
+        "LIGHT",
+        "OVERCOME"
+      ],
+      "PRAYER"
+    ],
+    [
+      70,
+      78,
+      [
+        "AMEN",
+        "THE HEAVY WATCH",
+        "STILL AWAKE"
+      ],
+      [
+        "AMEN",
+        "HEAVY WATCH"
+      ],
+      "PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That heavy watch keeps you awake.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "WATCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Judges 7:19-21"
+}

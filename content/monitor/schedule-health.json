@@ -2,17 +2,10 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 664,
-      "name": "Growth score (where the watch hours come from)",
-      "ran_at": "2026-11-23T15:41:19+00:00",
-      "slot": "2026-11-23T04:37:00+00:00",
-      "workflow": "growth-score.yml"
-    },
-    {
-      "late_minutes": 326,
+      "late_minutes": 324,
       "name": "Gemini Brain Autonomous Queue Replenishment",
-      "ran_at": "2026-11-23T08:40:14+00:00",
-      "slot": "2026-11-23T03:14:00+00:00",
+      "ran_at": "2026-11-24T08:38:20+00:00",
+      "slot": "2026-11-24T03:14:00+00:00",
       "workflow": "gemini_brain.yml"
     },
     {
@@ -23,50 +16,57 @@
       "workflow": "keepalive.yml"
     },
     {
-      "late_minutes": 303,
+      "late_minutes": 301,
       "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
-      "ran_at": "2026-11-23T08:40:18+00:00",
-      "slot": "2026-11-23T03:37:00+00:00",
+      "ran_at": "2026-11-24T08:38:22+00:00",
+      "slot": "2026-11-24T03:37:00+00:00",
       "workflow": "channel-analytics.yml"
     },
     {
-      "late_minutes": 227,
+      "late_minutes": 241,
+      "name": "Growth score (where the watch hours come from)",
+      "ran_at": "2026-11-24T08:38:24+00:00",
+      "slot": "2026-11-24T04:37:00+00:00",
+      "workflow": "growth-score.yml"
+    },
+    {
+      "late_minutes": 226,
       "name": "Tests on main (daily)",
-      "ran_at": "2026-11-23T08:39:48+00:00",
-      "slot": "2026-11-23T04:52:00+00:00",
+      "ran_at": "2026-11-24T08:38:26+00:00",
+      "slot": "2026-11-24T04:52:00+00:00",
       "workflow": "tests-on-main.yml"
     },
     {
-      "late_minutes": 173,
-      "name": "YouTube reporting jobs (thumbnail impressions)",
-      "ran_at": "2026-11-23T08:40:19+00:00",
-      "slot": "2026-11-23T05:47:00+00:00",
-      "workflow": "reporting-jobs.yml"
-    }
-  ],
-  "generated_at": "2026-11-23T16:08:21.709515+00:00",
-  "last_run_at": "2026-11-23T16:07:34+00:00",
-  "on_time": [
-    {
-      "late_minutes": 85,
+      "late_minutes": 191,
       "name": "automation-health",
-      "ran_at": "2026-11-22T21:39:01+00:00",
-      "slot": "2026-11-22T20:14:00+00:00",
+      "ran_at": "2026-11-23T23:25:52+00:00",
+      "slot": "2026-11-23T20:14:00+00:00",
       "workflow": "automation-health.yml"
     },
+    {
+      "late_minutes": 171,
+      "name": "YouTube reporting jobs (thumbnail impressions)",
+      "ran_at": "2026-11-24T08:38:28+00:00",
+      "slot": "2026-11-24T05:47:00+00:00",
+      "workflow": "reporting-jobs.yml"
+    },
+    {
+      "late_minutes": 123,
+      "name": "Growth autopilot",
+      "ran_at": "2026-11-24T04:17:41+00:00",
+      "slot": "2026-11-24T02:14:00+00:00",
+      "workflow": "growth-autopilot.yml"
+    }
+  ],
+  "generated_at": "2026-11-24T15:35:54.614756+00:00",
+  "last_run_at": "2026-11-24T15:35:06+00:00",
+  "on_time": [
     {
       "late_minutes": 119,
       "name": "Autonomous Community Tab Automation",
       "ran_at": "2026-11-22T21:13:05+00:00",
       "slot": "2026-11-22T19:14:00+00:00",
       "workflow": "community.yml"
-    },
-    {
-      "late_minutes": 91,
-      "name": "Growth autopilot",
-      "ran_at": "2026-11-23T03:45:55+00:00",
-      "slot": "2026-11-23T02:14:00+00:00",
-      "workflow": "growth-autopilot.yml"
     },
     {
       "late_minutes": 1,
@@ -76,24 +76,10 @@
       "workflow": "metrics.yml"
     },
     {
-      "late_minutes": 27,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-23T15:50:40+00:00",
-      "slot": "2026-11-23T15:23:00+00:00",
-      "workflow": "monitor.yml"
-    },
-    {
-      "late_minutes": 99,
-      "name": "Produce video",
-      "ran_at": "2026-11-23T15:53:13+00:00",
-      "slot": "2026-11-23T14:14:00+00:00",
-      "workflow": "produce.yml"
-    },
-    {
-      "late_minutes": 3,
+      "late_minutes": 74,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-23T15:50:40+00:00",
-      "slot": "2026-11-23T15:47:00+00:00",
+      "ran_at": "2026-11-24T14:01:13+00:00",
+      "slot": "2026-11-24T12:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],

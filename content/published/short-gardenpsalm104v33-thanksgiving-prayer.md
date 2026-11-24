@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE PRAISE GARDEN", "PSALM 104:33", "A PRAYER OF THANKSGIVING", "KJV"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-24T12:35:07Z"
+thumbnail_retry_after: "2026-12-01T13:58:56Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If that quiet whisper of gratitude has been struggling to find its voice today, stay right here. Lord God, You have given us breath and life to declare Your goodness. We come before You with honest hearts, choosing to lift our voices in praise no matter the season. As Your holy word declares in Psalm one hundred and four, verse thirty-three: I will sing unto the LORD as long as I live: I will sing praise to my God while I have my being. Father, let this song of worship remain upon our lips today.

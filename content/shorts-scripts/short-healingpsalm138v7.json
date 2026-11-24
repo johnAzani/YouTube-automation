@@ -1,0 +1,277 @@
+{
+  "key": "short-healingpsalm138v7",
+  "channel": "prayer6",
+  "psalm": 138,
+  "title": [
+    "WHEN TROUBLE SURROUNDS YOU",
+    "GOD WILL REVIVE YOUR SOUL"
+  ],
+  "poster": [
+    "WHEN TROUBLE",
+    "SURROUNDS YOU",
+    "GOD WILL REVIVE",
+    "YOUR SOUL"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise mountain lake illuminated by soft golden atmospheric mist",
+    "warm golden light reflecting on calm turquoise river gentle water ripples",
+    "white dove soaring over serene calm turquoise lake in warm sanctuary light",
+    "peaceful glowing sanctuary water with warm golden sunlight rays raying through light mist",
+    "calm turquoise ocean shore soft waves warm golden morning sun reflection",
+    "tranquil turquoise waters bathed in warm glowing golden evening light"
+  ],
+  "scenes": [
+    {
+      "a": "Your heart is weary from constant trouble.",
+      "img": "short-healingpsalm138v7-scene-01.jpg",
+      "kicker": "CONSTANT TROUBLE",
+      "sub": "WHEN TROUBLE SURROUNDS YOU TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You feel completely surrounded, yet God’s Word speaks right into your darkest hour of fear:",
+      "img": "short-healingpsalm138v7-scene-02.jpg",
+      "kicker": "GOD'S WORD SPEAKS",
+      "sub": "LIGHT IN YOUR DARKEST HOUR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Though I walk in the midst of trouble, thou wilt revive me: thou shalt stretch forth thine hand against the wrath of mine enemies, and thy right hand shall save me.",
+      "img": "short-healingpsalm138v7-scene-03.jpg",
+      "kicker": "PSALM 138:7",
+      "sub": "THOU WILT REVIVE ME",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, reach into this exhausting storm and revive this heavy soul. Stretch out your strong, saving hand.",
+      "img": "short-healingpsalm138v7-scene-04.jpg",
+      "kicker": "SAVING HAND",
+      "sub": "REVIVE THIS HEAVY SOUL",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Shield them from every enemy of peace and restore their strength. Cover their heart with quiet hope.",
+      "img": "short-healingpsalm138v7-scene-05.jpg",
+      "kicker": "RESTORE STRENGTH",
+      "sub": "COVER THEIR HEART WITH HOPE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Lord, revive this weary heart when trouble surrounds them on every side.",
+      "img": "short-healingpsalm138v7-scene-06.jpg",
+      "kicker": "HEALING PEACE",
+      "sub": "GOD REVIVES THE WEARY HEART",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your heart is weary from constant trouble."
+    ],
+    [
+      3,
+      10,
+      "You feel completely surrounded, yet God’s Word speaks right into your darkest hour of fear:"
+    ],
+    [
+      10,
+      22,
+      "Though I walk in the midst of trouble, thou wilt revive me: thou shalt stretch forth thine hand against the wrath of mine enemies, and thy right hand shall save me."
+    ],
+    [
+      22,
+      31,
+      "Lord, reach into this exhausting storm and revive this heavy soul. Stretch out your strong, saving hand."
+    ],
+    [
+      31,
+      40,
+      "Shield them from every enemy of peace and restore their strength. Cover their heart with quiet hope."
+    ],
+    [
+      40,
+      48,
+      "Amen. Lord, revive this weary heart when trouble surrounds them on every side."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR HEART IS WEARY",
+        "FROM CONSTANT TROUBLE"
+      ],
+      [
+        "WEARY",
+        "TROUBLE"
+      ],
+      "PSALM 138 : 7"
+    ],
+    [
+      3,
+      10,
+      [
+        "YOU FEEL SURROUNDED",
+        "GOD'S WORD SPEAKS INTO",
+        "YOUR DARKEST HOUR"
+      ],
+      [
+        "SURROUNDED",
+        "DARKEST"
+      ],
+      "PSALM 138 : 7"
+    ],
+    [
+      10,
+      22,
+      [
+        "THOUGH I WALK IN TROUBLE",
+        "THOU WILT REVIVE ME",
+        "THY RIGHT HAND SHALL SAVE ME"
+      ],
+      [
+        "REVIVE",
+        "SAVE"
+      ],
+      "PSALM 138 : 7"
+    ],
+    [
+      22,
+      31,
+      [
+        "REACH INTO THIS STORM",
+        "REVIVE THIS HEAVY SOUL",
+        "STRETCH OUT YOUR SAVING HAND"
+      ],
+      [
+        "STORM",
+        "REVIVE",
+        "SAVING"
+      ],
+      "PSALM 138 : 7"
+    ],
+    [
+      31,
+      40,
+      [
+        "SHIELD THEM FROM ENEMIES",
+        "RESTORE THEIR STRENGTH",
+        "COVER THEM WITH HOPE"
+      ],
+      [
+        "SHIELD",
+        "RESTORE",
+        "HOPE"
+      ],
+      "PSALM 138 : 7"
+    ],
+    [
+      40,
+      48,
+      [
+        "AMEN LORD REVIVE THIS HEART",
+        "WHEN TROUBLE SURROUNDS THEM",
+        "ON EVERY SIDE"
+      ],
+      [
+        "REVIVE",
+        "TROUBLE"
+      ],
+      "PSALM 138 : 7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your heart is weary from constant trouble.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "TROUBLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You feel completely surrounded, yet God’s Word speaks right into your darkest hour of fear:",
+      "kind": "phrase",
+      "words": [
+        "WORD",
+        "DARKEST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Though I walk in the midst of trouble, thou wilt revive me: thou shalt stretch forth thine hand against the wrath of mine enemies, and thy right hand shall save me.",
+      "kind": "phrase",
+      "words": [
+        "REVIVE",
+        "SAVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, reach into this exhausting storm and revive this heavy soul. Stretch out your strong, saving hand.",
+      "kind": "phrase",
+      "words": [
+        "REVIVE",
+        "SAVING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Shield them from every enemy of peace and restore their strength. Cover their heart with quiet hope.",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "HOPE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Lord, revive this weary heart when trouble surrounds them on every side.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "REVIVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 138:7"
+}

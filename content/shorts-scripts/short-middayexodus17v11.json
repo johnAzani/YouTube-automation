@@ -1,0 +1,285 @@
+{
+  "key": "short-middayexodus17v11",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "WHEN HANDS GROW HEAVY",
+    "A MIDDAY PRAYER FOR STRENGTH"
+  ],
+  "poster": [
+    "YOUR ARMS ARE TIRED",
+    "WHEN STRENGTH FAILS AT NOON",
+    "A MIDDAY PRAYER",
+    "EXODUS 17:11-12"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "sunlight through window desk warm dust particles",
+    "sunlit wooden tabletop solitude midday hour",
+    "high desert sun stone quiet horizon midday",
+    "warm golden light beams glowing open ground",
+    "sunbeams shining on quiet wooden bench midday",
+    "bright midday sky over calm desert landscape"
+  ],
+  "scenes": [
+    {
+      "a": "Your arms are tired from holding everything up.",
+      "img": "short-middayexodus17v11-scene-01.jpg",
+      "kicker": "WEARY HANDS",
+      "sub": "THE WEIGHT YOU CARRY AT NOON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In the middle of the day, heavy responsibility presses down.",
+      "img": "short-middayexodus17v11-scene-02.jpg",
+      "kicker": "MIDDAY BURDEN",
+      "sub": "STRENGTH FAILING AT HIGH NOON",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Scripture records: But Moses' hands were heavy; and they took a stone, and put it under him, and he sat thereon;",
+      "img": "short-middayexodus17v11-scene-03.jpg",
+      "kicker": "EXODUS 17:12",
+      "sub": "THE STONE OF REST",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "and Aaron and Hur stayed up his hands, the one on the one side, and the other on the other side; and his hands were steady until the going down of the sun.",
+      "img": "short-middayexodus17v11-scene-04.jpg",
+      "kicker": "HELD STEADY",
+      "sub": "SUPPORT UNTIL SUNSET",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, when our strength gives out, raise up support around us. Establish our hearts in Your peace through this afternoon.",
+      "img": "short-middayexodus17v11-scene-05.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "STRENGTH FOR THE HOUR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. Your arms are tired from holding everything up.",
+      "img": "short-middayexodus17v11-scene-06.jpg",
+      "kicker": "PAUSE AND PRAY",
+      "sub": "RENEW YOUR STRENGTH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your arms are tired from holding everything up."
+    ],
+    [
+      3,
+      7,
+      "In the middle of the day, heavy responsibility presses down."
+    ],
+    [
+      7,
+      15,
+      "Scripture records: But Moses' hands were heavy; and they took a stone, and put it under him, and he sat thereon;"
+    ],
+    [
+      15,
+      23,
+      "and Aaron and Hur stayed up his hands, the one on the one side, and the other on the other side; and his hands were steady until the going down of the sun."
+    ],
+    [
+      23,
+      29,
+      "Lord, when our strength gives out, raise up support around us. Establish our hearts in Your peace through this afternoon."
+    ],
+    [
+      29,
+      35,
+      "Amen. Your arms are tired from holding everything up."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR ARMS ARE TIRED",
+        "FROM HOLDING EVERYTHING UP"
+      ],
+      [
+        "TIRED",
+        "EVERYTHING"
+      ],
+      "EXODUS 17 : 11 - 12"
+    ],
+    [
+      3,
+      7,
+      [
+        "IN THE MIDDLE OF THE DAY",
+        "HEAVY RESPONSIBILITY PRESSES DOWN"
+      ],
+      [
+        "RESPONSIBILITY",
+        "PRESSES"
+      ],
+      "EXODUS 17 : 11 - 12"
+    ],
+    [
+      7,
+      15,
+      [
+        "BUT MOSES HANDS WERE HEAVY",
+        "AND THEY TOOK A STONE",
+        "AND PUT IT UNDER HIM"
+      ],
+      [
+        "MOSES",
+        "HANDS",
+        "HEAVY"
+      ],
+      "EXODUS 17 : 12"
+    ],
+    [
+      15,
+      23,
+      [
+        "AND AARON AND HUR",
+        "STAYED UP HIS HANDS",
+        "STEADY UNTIL SUNSET"
+      ],
+      [
+        "STAYED",
+        "STEADY"
+      ],
+      "EXODUS 17 : 12"
+    ],
+    [
+      23,
+      29,
+      [
+        "LORD WHEN OUR STRENGTH GIVES OUT",
+        "RAISE UP SUPPORT AROUND US",
+        "ESTABLISH OUR HEARTS"
+      ],
+      [
+        "STRENGTH",
+        "SUPPORT",
+        "PEACE"
+      ],
+      "EXODUS 17 : 11 - 12"
+    ],
+    [
+      29,
+      35,
+      [
+        "AMEN",
+        "YOUR ARMS ARE TIRED",
+        "FROM HOLDING EVERYTHING UP"
+      ],
+      [
+        "AMEN",
+        "TIRED"
+      ],
+      "EXODUS 17 : 11 - 12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your arms are tired from holding everything up.",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "ARMS",
+        "ARE",
+        "TIRED"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "In the middle of the day, heavy responsibility presses down.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "RESPONSIBILITY",
+        "PRESSES"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture records: But Moses' hands were heavy; and they took a stone, and put it under him, and he sat thereon;",
+      "kind": "phrase",
+      "words": [
+        "MOSES",
+        "HANDS",
+        "WERE",
+        "HEAVY"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "and Aaron and Hur stayed up his hands, the one on the one side, and the other on the other side; and his hands were steady until the going down of the sun.",
+      "kind": "phrase",
+      "words": [
+        "HANDS",
+        "WERE",
+        "STEADY"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when our strength gives out, raise up support around us. Establish our hearts in Your peace through this afternoon.",
+      "kind": "phrase",
+      "words": [
+        "RAISE",
+        "UP",
+        "SUPPORT"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Your arms are tired from holding everything up.",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "ARMS",
+        "ARE",
+        "TIRED"
+      ],
+      "hi": 3,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Exodus 17:11-12"
+}

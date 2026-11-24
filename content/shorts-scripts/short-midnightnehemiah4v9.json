@@ -1,0 +1,361 @@
+{
+  "key": "short-midnightnehemiah4v9",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "PRAYER AND VIGILANCE",
+    "AT MIDNIGHT"
+  ],
+  "poster": [
+    "NEHEMIAH 4:9",
+    "STAND IN PRAYER",
+    "SET A WATCH",
+    "THE MIDNIGHT WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower silhouette under midnight starry sky",
+    "calm dark mountain lake illuminated by distant starlight night",
+    "warm lamp glowing inside ancient stone sanctuary nocturnal vigil",
+    "deep midnight sky over quiet horizon with soft starlight glow",
+    "solitary candlelight burning brightly in dark stone room night",
+    "ancient fortress wall silhouette against midnight starry heavens",
+    "quiet sanctuary candle burning soft warm light night vigilance"
+  ],
+  "scenes": [
+    {
+      "a": "Unseen pressures feel heavy in your room tonight.",
+      "img": "short-midnightnehemiah4v9-scene-01.jpg",
+      "kicker": "HEAVY NIGHT",
+      "sub": "UNSEEN PRESSURES IN THE DARK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "turn to God and post a vigilant guard.",
+      "img": "short-midnightnehemiah4v9-scene-02.jpg",
+      "kicker": "POST THE GUARD",
+      "sub": "STANDING FIRM IN THE SILENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Nevertheless we made our prayer unto our God",
+      "img": "short-midnightnehemiah4v9-scene-03.jpg",
+      "kicker": "NEHEMIAH 4:9",
+      "sub": "SET A WATCH DAY AND NIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "we bring our deepest burdens directly to Your throne.",
+      "img": "short-midnightnehemiah4v9-scene-04.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "PETITIONS BEFORE GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "standing unwavering against every fear.",
+      "img": "short-midnightnehemiah4v9-scene-05.jpg",
+      "kicker": "UNWAVERING FAITH",
+      "sub": "STRENGTH FOR THE VIGIL",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Protect this home and fill every quiet space",
+      "img": "short-midnightnehemiah4v9-scene-06.jpg",
+      "kicker": "DIVINE PROTECTION",
+      "sub": "PEACE OVER THIS HOUSE",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen, even as unseen pressures feel heavy tonight.",
+      "img": "short-midnightnehemiah4v9-scene-07.jpg",
+      "kicker": "WATCHFUL SPIRIT",
+      "sub": "ANCHORED IN HIS TRUTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Unseen pressures feel heavy in your room tonight."
+    ],
+    [
+      3,
+      8,
+      "When subtle opposition threatens your spirit, turn to God and post a vigilant guard."
+    ],
+    [
+      8,
+      11,
+      "Hear Nehemiah four verse nine:"
+    ],
+    [
+      11,
+      20,
+      "Nevertheless we made our prayer unto our God, and set a watch against them day and night, because of them."
+    ],
+    [
+      20,
+      26,
+      "Lord, as midnight darkness settles, we bring our deepest burdens directly to Your throne."
+    ],
+    [
+      26,
+      31,
+      "Give us strength to pray continuously while standing unwavering against every fear."
+    ],
+    [
+      31,
+      36,
+      "Protect this home and fill every quiet space with Your abiding peace."
+    ],
+    [
+      36,
+      41,
+      "Keep our spirit watchful, steadfast, and firmly anchored in Your eternal truth."
+    ],
+    [
+      41,
+      46,
+      "Amen, even as unseen pressures feel heavy tonight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "UNSEEN PRESSURES",
+        "FEEL HEAVY TONIGHT"
+      ],
+      [
+        "HEAVY",
+        "TONIGHT"
+      ],
+      "NEHEMIAH 4 : 9"
+    ],
+    [
+      3,
+      8,
+      [
+        "TURN TO GOD",
+        "AND POST A GUARD"
+      ],
+      [
+        "GOD",
+        "GUARD"
+      ],
+      "NEHEMIAH 4 : 9"
+    ],
+    [
+      8,
+      11,
+      [
+        "HEAR NEHEMIAH",
+        "FOUR VERSE NINE"
+      ],
+      [
+        "NEHEMIAH"
+      ],
+      "NEHEMIAH 4 : 9"
+    ],
+    [
+      11,
+      20,
+      [
+        "WE MADE OUR PRAYER",
+        "UNTO OUR GOD",
+        "AND SET A WATCH"
+      ],
+      [
+        "PRAYER",
+        "WATCH"
+      ],
+      "NEHEMIAH 4 : 9"
+    ],
+    [
+      20,
+      26,
+      [
+        "WE BRING OUR BURDENS",
+        "TO YOUR THRONE"
+      ],
+      [
+        "BURDENS",
+        "THRONE"
+      ],
+      "NEHEMIAH 4 : 9"
+    ],
+    [
+      26,
+      31,
+      [
+        "STANDING UNWAVERING",
+        "AGAINST EVERY FEAR"
+      ],
+      [
+        "UNWAVERING",
+        "FEAR"
+      ],
+      "NEHEMIAH 4 : 9"
+    ],
+    [
+      31,
+      36,
+      [
+        "PROTECT THIS HOME",
+        "WITH ABIDING PEACE"
+      ],
+      [
+        "PROTECT",
+        "PEACE"
+      ],
+      "NEHEMIAH 4 : 9"
+    ],
+    [
+      36,
+      41,
+      [
+        "KEEP OUR SPIRIT",
+        "WATCHFUL AND STEADFAST"
+      ],
+      [
+        "WATCHFUL",
+        "STEADFAST"
+      ],
+      "NEHEMIAH 4 : 9"
+    ],
+    [
+      41,
+      46,
+      [
+        "UNSEEN PRESSURES",
+        "FEEL HEAVY TONIGHT"
+      ],
+      [
+        "HEAVY"
+      ],
+      "NEHEMIAH 4 : 9"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Unseen pressures feel heavy in your room tonight.",
+      "kind": "phrase",
+      "words": [
+        "PRESSURES",
+        "HEAVY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "turn to God and post a vigilant guard.",
+      "kind": "phrase",
+      "words": [
+        "POST",
+        "GUARD"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Hear Nehemiah four verse nine:",
+      "kind": "phrase",
+      "words": [
+        "NEHEMIAH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Nevertheless we made our prayer unto our God",
+      "kind": "phrase",
+      "words": [
+        "PRAYER",
+        "GOD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "we bring our deepest burdens directly to Your throne.",
+      "kind": "phrase",
+      "words": [
+        "BURDENS",
+        "THRONE"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "standing unwavering against every fear.",
+      "kind": "phrase",
+      "words": [
+        "UNWAVERING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Protect this home and fill every quiet space",
+      "kind": "phrase",
+      "words": [
+        "PROTECT",
+        "HOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "firmly anchored in Your eternal truth.",
+      "kind": "phrase",
+      "words": [
+        "ANCHORED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen, even as unseen pressures feel heavy tonight.",
+      "kind": "phrase",
+      "words": [
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Nehemiah 4:9"
+}

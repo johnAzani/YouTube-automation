@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["HIS UNENDING", "GLORY AND", "POWER", "THOU ART WORTHY"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-23T21:05:59Z"
+thumbnail_retry_after: "2026-11-30T23:26:41Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If the weight of this decision keeps you awake tonight, simply rest your heart here. You are invited to lift your eyes toward the majesty of the creator today. Thou art worthy, O Lord, to receive glory and honor and power: for thou hast created all things, and for thy pleasure they are and were created. Father, we acknowledge that every breath we take is a gift from Your gracious hand. Everything we see, and everything we hold dear, exists solely because of Your beautiful design. May our hearts align with Your will, finding deep peace in Your perfect and sovereign care.

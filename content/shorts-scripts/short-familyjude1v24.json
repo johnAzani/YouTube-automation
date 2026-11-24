@@ -1,0 +1,353 @@
+{
+  "key": "short-familyjude1v24",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "WHEN YOU FEAR",
+    "STUMBLING TODAY"
+  ],
+  "poster": [
+    "HE IS ABLE",
+    "TO KEEP YOU",
+    "FROM FALLING",
+    "JUDE 1:24-25"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit living room wooden table Bible",
+    "peaceful cottage window early morning light",
+    "open Bible on rustic table soft sunlight",
+    "calm countryside home golden hour glow",
+    "olive branches on wooden table beside Bible",
+    "cozy family home interior evening light",
+    "tranquil garden path bathed in sunlight",
+    "warm lit candle on wooden table near scripture"
+  ],
+  "scenes": [
+    {
+      "a": "Your quiet fear of stumbling today is real.",
+      "img": "short-familyjude1v24-scene-01.jpg",
+      "kicker": "QUIET FEAR",
+      "sub": "WHEN YOU FEAR YOU MIGHT SLIP",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "When you carry the weight of your household and worry you will slip, remember what is written in Jude.",
+      "img": "short-familyjude1v24-scene-02.jpg",
+      "kicker": "JUDE 1:24-25",
+      "sub": "GOD HOLDS YOUR HOUSEHOLD STEADY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Now unto him that is able to keep you from falling, and to present you faultless before the presence of his glory with exceeding joy,",
+      "img": "short-familyjude1v24-scene-03.jpg",
+      "kicker": "ABLE TO KEEP YOU",
+      "sub": "KEPT FROM FALLING BY HIS GRACE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "To the only wise God our Savior, be glory and majesty, dominion and power, both now and ever. Amen.",
+      "img": "short-familyjude1v24-scene-04.jpg",
+      "kicker": "DOMINION AND POWER",
+      "sub": "GLORY TO OUR SAVIOR FOREVER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, guard our home when our strength falters.",
+      "img": "short-familyjude1v24-scene-05.jpg",
+      "kicker": "GUARD OUR HOME",
+      "sub": "STRENGTH WHEN WE FALTER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Hold our children and keep our steps steady in your truth.",
+      "img": "short-familyjude1v24-scene-06.jpg",
+      "kicker": "STEADY STEPS",
+      "sub": "KEEP OUR CHILDREN IN TRUTH",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "We rest our family in your keeping power.",
+      "img": "short-familyjude1v24-scene-07.jpg",
+      "kicker": "KEEPING POWER",
+      "sub": "RESTING OUR FAMILY IN HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen, for your quiet fear of stumbling.",
+      "img": "short-familyjude1v24-scene-08.jpg",
+      "kicker": "HE STRENGTHENS YOU",
+      "sub": "STAY STEADFAST IN HIS CARE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your quiet fear of stumbling today is real."
+    ],
+    [
+      3,
+      7,
+      "When you carry the weight of your household and worry you will slip, remember what is written in Jude."
+    ],
+    [
+      7,
+      13,
+      "Now unto him that is able to keep you from falling, and to present you faultless before the presence of his glory with exceeding joy,"
+    ],
+    [
+      13,
+      18,
+      "To the only wise God our Savior, be glory and majesty, dominion and power, both now and ever. Amen."
+    ],
+    [
+      18,
+      22,
+      "Lord, guard our home when our strength falters."
+    ],
+    [
+      22,
+      26,
+      "Hold our children and keep our steps steady in your truth."
+    ],
+    [
+      26,
+      29,
+      "We rest our family in your keeping power."
+    ],
+    [
+      29,
+      32,
+      "Amen, for your quiet fear of stumbling."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR QUIET FEAR OF",
+        "STUMBLING TODAY IS REAL"
+      ],
+      [
+        "STUMBLING",
+        "REAL"
+      ],
+      "JUDE 1:24-25"
+    ],
+    [
+      3,
+      7,
+      [
+        "WHEN YOU CARRY THE WEIGHT",
+        "OF YOUR HOUSEHOLD AND WORRY",
+        "YOU WILL SLIP"
+      ],
+      [
+        "WEIGHT",
+        "SLIP"
+      ],
+      "JUDE 1:24-25"
+    ],
+    [
+      7,
+      13,
+      [
+        "NOW UNTO HIM THAT IS ABLE",
+        "TO KEEP YOU FROM FALLING",
+        "BEFORE HIS GLORY"
+      ],
+      [
+        "ABLE",
+        "GLORY"
+      ],
+      "JUDE 1:24"
+    ],
+    [
+      13,
+      18,
+      [
+        "TO THE ONLY WISE GOD",
+        "OUR SAVIOR BE GLORY",
+        "AND DOMINION FOREVER"
+      ],
+      [
+        "WISE",
+        "DOMINION"
+      ],
+      "JUDE 1:25"
+    ],
+    [
+      18,
+      22,
+      [
+        "LORD GUARD OUR HOME",
+        "WHEN OUR STRENGTH FALTERS"
+      ],
+      [
+        "GUARD",
+        "HOME"
+      ],
+      "JUDE 1:24-25"
+    ],
+    [
+      22,
+      26,
+      [
+        "HOLD OUR CHILDREN AND KEEP",
+        "OUR STEPS STEADY IN TRUTH"
+      ],
+      [
+        "STEADY",
+        "TRUTH"
+      ],
+      "JUDE 1:24-25"
+    ],
+    [
+      26,
+      29,
+      [
+        "WE REST OUR FAMILY IN",
+        "YOUR KEEPING POWER"
+      ],
+      [
+        "REST",
+        "POWER"
+      ],
+      "JUDE 1:24-25"
+    ],
+    [
+      29,
+      32,
+      [
+        "AMEN FOR YOUR QUIET",
+        "FEAR OF STUMBLING"
+      ],
+      [
+        "FEAR",
+        "STUMBLING"
+      ],
+      "JUDE 1:24-25"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your quiet fear of stumbling today is real.",
+      "kind": "phrase",
+      "words": [
+        "STUMBLING",
+        "REAL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When you carry the weight of your household and worry you will slip, remember what is written in Jude.",
+      "kind": "phrase",
+      "words": [
+        "WEIGHT",
+        "SLIP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Now unto him that is able to keep you from falling, and to present you faultless before the presence of his glory with exceeding joy,",
+      "kind": "phrase",
+      "words": [
+        "KEEP",
+        "FALLING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "To the only wise God our Savior, be glory and majesty, dominion and power, both now and ever. Amen.",
+      "kind": "phrase",
+      "words": [
+        "GLORY",
+        "MAJESTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, guard our home when our strength falters.",
+      "kind": "phrase",
+      "words": [
+        "GUARD",
+        "HOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hold our children and keep our steps steady in your truth.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We rest our family in your keeping power.",
+      "kind": "phrase",
+      "words": [
+        "KEEPING",
+        "POWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen, for your quiet fear of stumbling.",
+      "kind": "phrase",
+      "words": [
+        "FEAR",
+        "STUMBLING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Jude 1:24-25"
+}

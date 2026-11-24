@@ -9,26 +9,26 @@ Written by `pipeline/growth_score.py`; the detail is in `content/research/growth
 
 | Door | Hours, shared window |
 | :--- | ---: |
-| suggested | 22.1 |
-| Shorts feed — does not count | 24.7 |
+| suggested | 43.8 |
+| Shorts feed — does not count | 24.8 |
 | yt search | 0.95 |
 | home subs | 1.1 |
 | other pages | 0.23 |
 | notifications | 0.1 |
-| ext url | 1.2 |
-| direct unknown | 2 |
+| ext url | 1.1 |
+| direct unknown | 2.3 |
 | channel page | 0.58 |
 | sound pages | 0 |
 
-**Counted: 23 hours (43.5% of all watch hours read).**
+**Counted: 44.8 hours (59.7% of all watch hours read).**
 
-The threshold asks 58.2 hours a day for the 68 days left before it doubles; the channels run at 2 a day.
+The threshold asks 57.9 hours a day for the 68 days left before it doubles; the channels run at 2.9 a day.
 
-**Release length: 10 minutes.** the median view of a measured video is 10.6 minutes (across 5 videos); a release is not built longer than that
+**Release length: 13 minutes.** the median view of a measured video is 13.5 minutes (across 7 videos); a release is not built longer than that
 
 Night tail: `hold` — kept.
 
-Long-form retention, median of videos with a reading: **8.9% watched**. A Short is excluded from this figure: a looping Short reports past 100%.
+Long-form retention, median of videos with a reading: **10.2% watched**. A Short is excluded from this figure: a looping Short reports past 100%.
 
 ### Which thumbnail concept earns the click
 
@@ -42,9 +42,9 @@ Written by `pipeline/thumbnail_campaign.py`. The pack renders three concepts; a 
 
 ### How long a release should be
 
-A view is watched for a median of **10.6 minutes** across 5 measured videos. A release is not built longer than that, so length outside the prayer is time nobody spends.
+A view is watched for a median of **13.5 minutes** across 7 measured videos. A release is not built longer than that, so length outside the prayer is time nobody spends.
 
-The night tail is the problem: `10` — 94.1% of every published minute is never watched.
+The night tail is the problem: `13` — 92.5% of every published minute is never watched.
 
 ### What is actually reachable
 
@@ -52,17 +52,17 @@ Written by `pipeline/realistic_ceiling.py`. Every figure below is measured or is
 
 | Lever | Hours a day |
 | :--- | ---: |
-| as it stands | 0.81 |
-| click rate to 4% | 2.5 |
-| watch time to 3 minutes and a 4% click rate | 2.5 |
+| as it stands | 1.3 |
+| click rate to 4% | 3.8 |
+| watch time to 3 minutes and a 4% click rate | 3.8 |
 
-The threshold asks 58.82 hours a day; the channels produce 0.814. With both format levers at their documented levels it would be 2.466. To reach the threshold at a 4% click rate and the measured watch time, YouTube would have to serve 8,350 impressions a day where it serves 350. Impressions are chosen by YouTube's recommendation system from how viewers respond, so that is the honest distance: it is reach, not metadata.
+The threshold asks 58.82 hours a day; the channels produce 1.294. With both format levers at their documented levels it would be 3.779. To reach the threshold at a 4% click rate and the measured watch time, YouTube would have to serve 6,519 impressions a day where it serves 418. Impressions are chosen by YouTube's recommendation system from how viewers respond, so that is the honest distance: it is reach, not metadata.
 
 ## Toward the Partner Program
 
 | Channel | Subscribers (need 1,000) | Watch hours, 365 days (need 4,000) | Shorts views, 90 days (need 10,000,000) | Long-form hours a day, last 28 days (need 11) | Read |
 | :--- | ---: | ---: | ---: | ---: | :--- |
-| The Secret Place | 1,260 | 41 | 5,131 | 0.95 | 2026-11-23 |
+| The Secret Place | 1,260 | 63 | 5,236 | 1.7 | 2026-11-24 |
 
 Ads need the subscribers and either the watch hours or the Shorts views. Watch hours counted here are long-form and live only: time watched in the Shorts feed does not count. A year of the daily figure in the last column is what the 365-day total becomes. YouTube Studio's Earn page holds the official count.
 
@@ -70,21 +70,21 @@ Not granted Analytics access yet: The Morning Altar, The Midday Watch, The Midni
 
 ## The Secret Place
 
-Last 28 days (2026-10-26 to 2026-11-23): 5,389 views, 52.9 watch hours (26.5 long-form and live, 26.4 Shorts). Over 365 days: 41 hours long-form and live, 76.2 hours Shorts.
+Last 28 days (2026-10-27 to 2026-11-24): 5,480 views, 75.1 watch hours (48.6 long-form and live, 26.5 Shorts). Over 365 days: 63 hours long-form and live, 76.4 hours Shorts.
 
 Where viewers came from, last 28 days:
 
 | Source | Views | Watch hours |
 | :--- | ---: | ---: |
-| Shorts feed | 4,736 | 24.7 |
-| YouTube search | 259 | 0.95 |
-| Suggested videos | 145 | 22.1 |
-| Home and subscriptions | 92 | 1.1 |
-| Other YouTube pages | 54 | 0.23 |
+| Shorts feed | 4,773 | 24.8 |
+| YouTube search | 257 | 0.95 |
+| Suggested videos | 196 | 43.8 |
+| Home and subscriptions | 100 | 1.1 |
+| Other YouTube pages | 55 | 0.23 |
 | Channel page | 43 | 0.58 |
-| Other sites and apps | 40 | 1.2 |
-| Notifications | 11 | 0.1 |
-| Direct or unknown | 6 | 2 |
+| Other sites and apps | 35 | 1.1 |
+| Direct or unknown | 10 | 2.3 |
+| Notifications | 10 | 0.1 |
 | Shorts sound pages | 1 | 0 |
 
 What viewers typed into YouTube search to find this channel, last 90 days:
@@ -102,7 +102,7 @@ What viewers typed into YouTube search to find this channel, last 90 days:
 | psalms 91 | 2 | 0 |
 | psalmul 91 | 2 | 0 |
 | 91 psalm | 1 | 0 |
-| foot worship | 1 | 0 |
+| 91 psalm prayer | 1 | 0 |
 
 13 other search(es) in YouTube's top 25 were not about prayer or scripture and are not listed.
 
@@ -110,9 +110,11 @@ Videos by watch time, 365 days (up to 50):
 
 | Video | Watch hours | Views | Average watched |
 | :--- | ---: | ---: | ---: |
-| [Bedtime Prayer for a Troubled Heart: John 14:27 / The Secret Place](https://youtu.be/uGkV42GvplM) | 7.8 | 45 | 10:57 (5.8%) |
-| [Bedtime Prayer When You Are Worn Out: Matthew 11:28-30](https://youtu.be/EmLY_qhrc7c) | 6.3 | 21 | 22:17 (12%) |
+| [When Exhaustion Weighs on Your Soul: Isaiah 40:28-31](https://youtu.be/XLXi986WZ_k) | 16.1 | 43 | 19:47 (10.8%) |
+| [Bedtime Prayer for a Troubled Heart: John 14:27 / The Secret Place](https://youtu.be/uGkV42GvplM) | 10.6 | 49 | 13:32 (7.2%) |
+| [Bedtime Prayer When You Are Worn Out: Matthew 11:28-30](https://youtu.be/EmLY_qhrc7c) | 6.3 | 31 | 19:03 (10.2%) |
 | [Night Prayer to Quiet a Racing Mind: Isaiah 26:3-4 / The Secret Place](https://youtu.be/t00bsmMtC-s) | 4.8 | 70 | 8:47 (4.7%) |
+| [Bedtime Prayer for Anxiety and Overthinking: Philippians 4:6-7](https://youtu.be/YsHGDAO8uRE) | 4 | 7 | 34:26 (18.4%) |
 | [When the Night Feels Too Dark: Psalm 139:11-12 / The Secret Place](https://youtu.be/VPAFfGNkCGs) | 2.8 | 18 | 10:34 (5.7%) |
 | [Say This Psalm 23 Prayer Before You Sleep / Divine Peace #Shorts](https://youtu.be/kLgHN57fb1w) | 2.1 | 260 | 1:17 (146%) |
 | [Say This Psalm 27 Prayer Before You Sleep / Fear No Evil #Shorts](https://youtu.be/KkPAtMLoGf4) | 2 | 394 | 0:46 (75.4%) |
@@ -125,7 +127,6 @@ Videos by watch time, 365 days (up to 50):
 | [Psalm 91:11-12 Night Prayer / Angels Guard Your Home & Sleep](https://youtu.be/dgvGl0EZyYE) | 0.92 | 25 | 2:30 (39.5%) |
 | [Say This Psalm 56:3 Prayer Before You Sleep / The Secret Place #Shorts](https://youtu.be/uSsaVvsLsfU) | 0.9 | 194 | 0:32 (63.5%) |
 | [Say This Psalm 91 Prayer Before You Sleep / Divine Protection #Shorts](https://youtu.be/SG69BbNlfRw) | 0.83 | 266 | 0:26 (65.4%) |
-| [Bedtime Prayer for Anxiety and Overthinking: Philippians 4:6-7](https://youtu.be/YsHGDAO8uRE) | 0.83 | 1 | 50:04 (26.8%) |
 | [Say This Isaiah 30:15 Prayer Before You Sleep / Isaiah 30:15 #Shorts](https://youtu.be/57j_VQcPFlI) | 0.77 | 82 | 1:21 (150%) |
 | [Say This Psalm 18:2 Prayer Before You Sleep / Safe Stronghold #Shorts](https://youtu.be/jhOlEJvNg-0) | 0.73 | 126 | 0:54 (98.8%) |
 | [Say This Philippians 4:6-7 Prayer Before You Sleep / Tonight #Shorts](https://youtu.be/QHm6Z2sfpnc) | 0.67 | 115 | 0:45 (66%) |
@@ -144,40 +145,39 @@ Videos by watch time, 365 days (up to 50):
 | [Say This 2 Timothy 1:7 Prayer Before You Sleep / Mind #Shorts](https://youtu.be/XyFODtqpNkU) | 0.37 | 78 | 0:34 (69%) |
 | [Say This Matthew 11:28-30 Prayer Before You Sleep / The Secret Place…](https://youtu.be/GBNCiP8UTS8) | 0.33 | 69 | 0:47 (81.3%) |
 | [Say This Philippians 4:8 Prayer Before You Sleep / The Secret Place #…](https://youtu.be/8ssIICb_3Ts) | 0.27 | 58 | 0:39 (68.2%) |
-| [Say This Psalm 121 Prayer Before You Sleep / He Who Keeps You #Shorts](https://youtu.be/xkpfupurX-0) | 0.25 | 147 | 0:20 (42.4%) |
 
-Thumbnails, 2026-10-15 to 2026-11-20 (34 days of YouTube's daily reach files): shown 11,901 times, clicked 157 times, a click rate of 1.3%.
+Thumbnails, 2026-10-15 to 2026-11-22 (36 days of YouTube's daily reach files): shown 15,081 times, clicked 207 times, a click rate of 1.4%.
 A thumbnail is counted where YouTube shows one (search, home, suggested, the channel page). The Shorts feed shows none, so Shorts watched there are not in these figures.
 
 Videos by times shown (up to 25):
 
 | Video | Thumbnail shown | Clicks | Click rate |
 | :--- | ---: | ---: | ---: |
-| [Night Prayer to Quiet a Racing Mind: Isaiah 26:3-4 / The Secret Place](https://youtu.be/t00bsmMtC-s) | 1,856 | 20 | 1.1% |
-| [Bedtime Prayer When You Are Worn Out: Matthew 11:28-30](https://youtu.be/EmLY_qhrc7c) | 1,661 | 12 | 0.72% |
-| [Bedtime Prayer for a Troubled Heart: John 14:27 / The Secret Place](https://youtu.be/uGkV42GvplM) | 1,441 | 36 | 2.5% |
+| [Night Prayer to Quiet a Racing Mind: Isaiah 26:3-4 / The Secret Place](https://youtu.be/t00bsmMtC-s) | 1,858 | 19 | 1% |
+| [Bedtime Prayer When You Are Worn Out: Matthew 11:28-30](https://youtu.be/EmLY_qhrc7c) | 1,792 | 14 | 0.78% |
+| [When Exhaustion Weighs on Your Soul: Isaiah 40:28-31](https://youtu.be/XLXi986WZ_k) | 1,439 | 37 | 2.6% |
+| [Bedtime Prayer for a Troubled Heart: John 14:27 / The Secret Place](https://youtu.be/uGkV42GvplM) | 1,418 | 36 | 2.5% |
 | [When the Night Feels Too Dark: Psalm 139:11-12 / The Secret Place](https://youtu.be/VPAFfGNkCGs) | 1,352 | 10 | 0.74% |
-| [Night Prayer When You Feel Afraid: Isaiah 41:10 / The Secret Place](https://youtu.be/nBujp4zoTCk) | 1,094 | 18 | 1.6% |
+| [Bedtime Prayer for Anxiety and Overthinking: Philippians 4:6-7](https://youtu.be/YsHGDAO8uRE) | 1,128 | 5 | 0.44% |
+| [Night Prayer When You Feel Afraid: Isaiah 41:10 / The Secret Place](https://youtu.be/nBujp4zoTCk) | 1,103 | 18 | 1.6% |
 | [Psalm 91:11-12 Night Prayer / Angels Guard Your Home & Sleep](https://youtu.be/dgvGl0EZyYE) | 581 | 18 | 3.1% |
-| [Bedtime Prayer for Anxiety and Overthinking: Philippians 4:6-7](https://youtu.be/YsHGDAO8uRE) | 394 | 1 | 0.25% |
+| [Night Prayer When Dread Keeps You Awake: 2 Timothy 1:7](https://youtu.be/IhL8prNsgaU) | 524 | 5 | 0.95% |
 | [Psalm 37:7 Bedtime Prayer / Rest in the Lord & Fret Not](https://youtu.be/sAyMduXhoeQ) | 202 | 5 | 2.5% |
 | [pbpPdG7_DQk](https://youtu.be/pbpPdG7_DQk) | 167 | 3 | 1.8% |
 | [Zw0pjLM5hEI](https://youtu.be/Zw0pjLM5hEI) | 131 | 3 | 2.3% |
 | [Psalm 91:5-6 Night Prayer / Deliverance From Terror by Night](https://youtu.be/rb6X37vQt7o) | 130 | 0 | 0% |
-| [Surrendering Every Heavy Burden: Psalm 31:5 / The Secret Place](https://youtu.be/r3nA7BgZpP4) | 121 | 1 | 0.83% |
-| [Say This Psalm 37:7 Prayer Before You Sleep / The Secret Place #Shorts](https://youtu.be/5ekShDmycic) | 120 | 0 | 0% |
-| [Say This Psalm 121 Prayer Before You Sleep / He Who Keeps You #Shorts](https://youtu.be/xkpfupurX-0) | 120 | 0 | 0% |
+| [Say This Psalm 121 Prayer Before You Sleep / He Who Keeps You #Shorts](https://youtu.be/xkpfupurX-0) | 125 | 0 | 0% |
+| [Surrendering Every Heavy Burden: Psalm 31:5 / The Secret Place](https://youtu.be/r3nA7BgZpP4) | 123 | 1 | 0.81% |
+| [Say This Psalm 37:7 Prayer Before You Sleep / The Secret Place #Shorts](https://youtu.be/5ekShDmycic) | 122 | 0 | 0% |
 | [Say This Psalm 91 Prayer Before You Sleep / Divine Protection #Shorts](https://youtu.be/SG69BbNlfRw) | 107 | 1 | 0.93% |
-| [Say This Psalm 27 Prayer Before You Sleep / Fear No Evil #Shorts](https://youtu.be/KkPAtMLoGf4) | 100 | 0 | 0% |
+| [Say This Psalm 27 Prayer Before You Sleep / Fear No Evil #Shorts](https://youtu.be/KkPAtMLoGf4) | 103 | 0 | 0% |
+| [Say This Matthew 6:34 Prayer Before You Sleep / The Secret Place #Sho…](https://youtu.be/EiF_FNNAhCU) | 102 | 1 | 0.98% |
 | [Say This Psalm 34 Prayer Before You Sleep / Angels Stand Watch #Shorts](https://youtu.be/fTYu1V5GHUE) | 91 | 0 | 0% |
-| [Say This Matthew 6:34 Prayer Before You Sleep / The Secret Place #Sho…](https://youtu.be/EiF_FNNAhCU) | 87 | 1 | 1.1% |
-| [Bedtime Prayer for Sleep Without Fear: Proverbs 3:24-26](https://youtu.be/3xrS2BqNeWA) | 85 | 1 | 1.2% |
+| [Say This Psalm 18:2 Prayer Before You Sleep / Safe Stronghold #Shorts](https://youtu.be/jhOlEJvNg-0) | 87 | 0 | 0% |
+| [Bedtime Prayer for Sleep Without Fear: Proverbs 3:24-26](https://youtu.be/3xrS2BqNeWA) | 86 | 1 | 1.2% |
 | [Night Prayer When You Lie Awake: Psalm 63:6-7 / The Secret Place](https://youtu.be/P2JDAtPkryI) | 85 | 2 | 2.4% |
-| [Say This Psalm 18:2 Prayer Before You Sleep / Safe Stronghold #Shorts](https://youtu.be/jhOlEJvNg-0) | 85 | 0 | 0% |
 | [Say This Psalm 91:11-12 Prayer Before You Sleep / Angelic Night Guard…](https://youtu.be/dqKjQaJbU0c) | 77 | 0 | 0% |
-| [When You Need a Safe Place to Rest: Psalm 18:2 / The Secret Place](https://youtu.be/oiLCbx4-wMA) | 74 | 0 | 0% |
-| [Uhd7uMYo9Mo](https://youtu.be/Uhd7uMYo9Mo) | 73 | 0 | 0% |
-| [Say This Psalm 91:5-6 Prayer Before You Sleep / Fear No Night Shadow…](https://youtu.be/SVhby9Yv0Wg) | 66 | 0 | 0% |
+| [When You Need a Safe Place to Rest: Psalm 18:2 / The Secret Place](https://youtu.be/oiLCbx4-wMA) | 76 | 0 | 0% |
 
 ## What each channel is trying in its titles
 
@@ -185,11 +185,14 @@ A phrase comes from the words viewers typed into YouTube search, or from wording
 
 | Channel | Phrase | Where it came from | Now | Long prayers with / without | Views with / without | Since |
 | :--- | :--- | :--- | :--- | ---: | ---: | :--- |
-| The Morning Altar | day with god | titles of the most-watched videos of this kind | being tried | 0 / 3 | 0 / 6 | 2026-11-17 |
-| The Morning Altar | morning worship | titles of the most-watched videos of this kind | being tried | 0 / 3 | 0 / 6 | 2026-11-17 |
-| The Midday Watch | morning prayer | titles of the most-watched videos of this kind | being tried | 0 / 3 | 0 / 27 | 2026-11-17 |
-| The Midday Watch | start your day | titles of the most-watched videos of this kind | being tried | 0 / 3 | 0 / 27 | 2026-11-17 |
-| The Provision Table | financial breakthrough | titles of the most-watched videos of this kind | being tried | 0 / 3 | 0 / 21 | 2026-11-17 |
-| The Provision Table | carry this scripture | titles of the most-watched videos of this kind | being tried | 0 / 3 | 0 / 21 | 2026-11-17 |
-| The Provision Table | breakthrough comes | titles of the most-watched videos of this kind | being tried | 0 / 3 | 0 / 21 | 2026-11-17 |
-| The Praise Garden | thanksgiving worship | titles of the most-watched videos of this kind | being tried | 0 / 3 | 0 / 15 | 2026-11-17 |
+| The Morning Altar | day with god | titles of the most-watched videos of this kind | being tried | 1 / 3 | 21 / 6 | 2026-11-17 |
+| The Morning Altar | morning worship | titles of the most-watched videos of this kind | being tried | 0 / 4 | 0 / 27 | 2026-11-17 |
+| The Midday Watch | morning prayer | titles of the most-watched videos of this kind | being tried | 0 / 4 | 0 / 30 | 2026-11-17 |
+| The Midday Watch | start your day | titles of the most-watched videos of this kind | being tried | 0 / 4 | 0 / 30 | 2026-11-17 |
+| The Midday Watch | blessed morning | titles of the most-watched videos of this kind | being tried | 0 / 0 | 0 / 0 | 2026-11-24 |
+| The Provision Table | financial breakthrough | titles of the most-watched videos of this kind | being tried | 0 / 4 | 0 / 21 | 2026-11-17 |
+| The Provision Table | carry this scripture | titles of the most-watched videos of this kind | being tried | 0 / 4 | 0 / 21 | 2026-11-17 |
+| The Provision Table | breakthrough comes | titles of the most-watched videos of this kind | being tried | 0 / 4 | 0 / 21 | 2026-11-17 |
+| The Covenant Shield | holy spirit | titles of the most-watched videos of this kind | being tried | 0 / 0 | 0 / 0 | 2026-11-24 |
+| The Praise Garden | thanksgiving worship | titles of the most-watched videos of this kind | being tried | 0 / 4 | 0 / 20 | 2026-11-17 |
+| The Guided Path | prayer for peace | titles of the most-watched videos of this kind | being tried | 0 / 0 | 0 / 0 | 2026-11-24 |

@@ -1,0 +1,310 @@
+{
+  "key": "short-provisionpsalm68v19",
+  "channel": "prayer7",
+  "psalm": 68,
+  "title": [
+    "DAILY BENEFITS",
+    "OPEN PROVISION"
+  ],
+  "poster": [
+    "WHEN DEMANDS EXCEED",
+    "YOUR SMALL SUPPLY",
+    "GOD LOADS YOU DAILY",
+    "PSALM 68:19"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit valley morning mist calm river",
+    "sunlit sanctuary stone table mountain view",
+    "peaceful mountain pass golden hour morning glow",
+    "golden morning sunlight over calm river valley",
+    "sunlit stone path through quiet peaceful forest",
+    "sunlit golden valley wheat field at dawn"
+  ],
+  "scenes": [
+    {
+      "a": "You carry a heavy ledger of unanswered needs.",
+      "img": "short-provisionpsalm68v19-scene-01.jpg",
+      "kicker": "HEAVY LEDGER",
+      "sub": "UNANSWERED DAILY NEEDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Blessed be the Lord, who daily loadeth us with benefits, even the God of our salvation.",
+      "img": "short-provisionpsalm68v19-scene-02.jpg",
+      "kicker": "PSALM 68:19",
+      "sub": "GOD DAILY LOADETH US",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, when tomorrow's demands press hard against our small supply,",
+      "img": "short-provisionpsalm68v19-scene-03.jpg",
+      "kicker": "SMALL SUPPLY",
+      "sub": "PRESSING DEMANDS OF TOMORROW",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "You load us daily with mercy, wisdom, and bread for every honest duty.",
+      "img": "short-provisionpsalm68v19-scene-04.jpg",
+      "kicker": "DAILY PORTION",
+      "sub": "MERCY WISDOM AND DAILY BREAD",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Forgive our fearful counting when we look at empty cupboards instead of Your faithful hand.",
+      "img": "short-provisionpsalm68v19-scene-05.jpg",
+      "kicker": "FAITHFUL HAND",
+      "sub": "LOOKING BEYOND EMPTY CUPBOARDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Open doors of daily provision, grant peace to our hands, and sustain us.",
+      "img": "short-provisionpsalm68v19-scene-06.jpg",
+      "kicker": "OPEN DOORS",
+      "sub": "SUSTAINED BY HIS PROVISION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You carry a heavy ledger of unanswered needs."
+    ],
+    [
+      3,
+      8,
+      "Hear the word of God in Psalm 68 verse 19:"
+    ],
+    [
+      8,
+      16,
+      "Blessed be the Lord, who daily loadeth us with benefits, even the God of our salvation."
+    ],
+    [
+      16,
+      22,
+      "Heavenly Father, when tomorrow's demands press hard against our small supply,"
+    ],
+    [
+      22,
+      28,
+      "remind us that You do not measure grace grudgingly."
+    ],
+    [
+      28,
+      35,
+      "You load us daily with mercy, wisdom, and bread for every honest duty."
+    ],
+    [
+      35,
+      42,
+      "Forgive our fearful counting when we look at empty cupboards instead of Your faithful hand."
+    ],
+    [
+      42,
+      48,
+      "Open doors of daily provision, grant peace to our hands, and sustain us."
+    ],
+    [
+      48,
+      52,
+      "In Jesus' name, Amen. You carry a heavy ledger of unanswered needs."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU CARRY A",
+        "HEAVY LEDGER OF",
+        "UNANSWERED NEEDS"
+      ],
+      [
+        "HEAVY",
+        "NEEDS"
+      ],
+      "PSALM 68 : 19"
+    ],
+    [
+      3,
+      8,
+      [
+        "HEAR THE WORD",
+        "OF GOD IN PSALM",
+        "68 VERSE 19"
+      ],
+      [
+        "PSALM",
+        "19"
+      ],
+      "PSALM 68 : 19"
+    ],
+    [
+      8,
+      16,
+      [
+        "BLESSED BE THE LORD",
+        "WHO DAILY LOADETH US",
+        "WITH BENEFITS"
+      ],
+      [
+        "DAILY",
+        "BENEFITS"
+      ],
+      "PSALM 68 : 19"
+    ],
+    [
+      16,
+      22,
+      [
+        "WHEN TOMORROWS DEMANDS",
+        "PRESS HARD AGAINST",
+        "OUR SMALL SUPPLY"
+      ],
+      [
+        "SMALL",
+        "SUPPLY"
+      ],
+      "PSALM 68 : 19"
+    ],
+    [
+      22,
+      28,
+      [
+        "YOU DO NOT MEASURE",
+        "GRACE GRUDGINGLY"
+      ],
+      [
+        "MEASURE",
+        "GRACE"
+      ],
+      "PSALM 68 : 19"
+    ],
+    [
+      28,
+      35,
+      [
+        "LOAD US DAILY WITH",
+        "MERCY WISDOM AND BREAD"
+      ],
+      [
+        "MERCY",
+        "BREAD"
+      ],
+      "PSALM 68 : 19"
+    ],
+    [
+      35,
+      42,
+      [
+        "INSTEAD OF YOUR",
+        "FAITHFUL HAND"
+      ],
+      [
+        "FAITHFUL",
+        "HAND"
+      ],
+      "PSALM 68 : 19"
+    ],
+    [
+      42,
+      48,
+      [
+        "OPEN DOORS OF",
+        "DAILY PROVISION",
+        "AND SUSTAIN US"
+      ],
+      [
+        "DAILY",
+        "PROVISION"
+      ],
+      "PSALM 68 : 19"
+    ],
+    [
+      48,
+      52,
+      [
+        "IN JESUS NAME AMEN",
+        "YOU CARRY A",
+        "HEAVY LEDGER"
+      ],
+      [
+        "AMEN",
+        "HEAVY"
+      ],
+      "PSALM 68 : 19"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You carry a heavy ledger of unanswered needs.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "LEDGER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed be the Lord, who daily loadeth us with benefits, even the God of our salvation.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "LOADETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You load us daily with mercy, wisdom, and bread for every honest duty.",
+      "kind": "phrase",
+      "words": [
+        "MERCY",
+        "BREAD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Open doors of daily provision, grant peace to our hands, and sustain us.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 68:19"
+}

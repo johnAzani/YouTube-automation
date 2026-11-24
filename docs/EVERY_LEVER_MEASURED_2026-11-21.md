@@ -17,28 +17,28 @@ three levers, measured, and the distance left.
 
 ## 2. The measurement everything else follows from
 
-Six published long-forms have both a real length and a retention reading. Their
-median view is **10.6 minutes**. Mean average view duration is 11.4 minutes.
+Seven published long-forms have both a real length and a retention reading. Their
+median view is **13.5 minutes** (average 15.8).
 
 The channel publishes each bedtime prayer as a **186–188 minute** video, because
 the night tail appends about three hours of quiet music after the prayer. So:
 
 | | |
 | :--- | ---: |
-| Median time a viewer actually stays | **10.6 min** |
+| Median time a viewer actually stays | **13.5 min** |
 | Median length published | **187 min** |
-| Share of every published minute never watched | **94.1%** |
+| Share of every published minute never watched | **92.5%** |
 
-The one video with a 50-minute average view had **one view**. That outlier is what
-made the three-hour bet look reasonable in the first place.
+The one video with a 34-minute average view had **one view**. An outlier like that is
+what made the three-hour bet look reasonable in the first place.
 
 Two consequences, and they are the whole story:
 
 1. **The three hours buy nothing.** Nobody is staying for the music. The hours the
    tail was supposed to produce are not being produced.
 2. **They actively cost something.** Average percentage viewed is a signal YouTube
-   ranks on, and 5% on a three-hour upload is a worse signal than 60% on a
-   six-minute one. The tail makes the channel's own numbers worse.
+   ranks on, and 7% on a three-hour upload is a worse signal than 60% on a
+   thirteen-minute one. The tail makes the channel's own numbers worse.
 
 ## 3. Lever one — length (`pipeline/viewer_length.py`)
 
@@ -47,9 +47,10 @@ measurably stay.** The ceiling is the median watched time, rounded down, held ab
 a floor of five minutes because that is what the prayers are authored to.
 
 * `pipeline/night_tail.py` reads the ceiling from the growth report. With today's
-  reading the ceiling (10 minutes) is below the tail's own minimum (20 minutes), so
+  reading the ceiling (13 minutes) is below the tail's own minimum (20 minutes), so
   **the tail switches itself off**: the prayer publishes alone rather than three
-  hours nobody watches.
+  hours nobody watches. Verified: `configured_minutes()` returns 0 for both
+  `secret-place` and `prayer3`.
 * `NIGHT_TAIL_MINUTES` still overrides everything, and `0` still means off.
 * With fewer than three measured videos, or one that has fewer than five views, the
   length stands untouched. The module never argues for a length from theory.
@@ -86,16 +87,16 @@ Every coefficient here is measured or is a documented level:
 
 | Lever | Hours a day |
 | :--- | ---: |
-| As it stands (350 impressions/day, 1.32% CTR, 10.6 min watched) | **0.81** |
-| Click rate to 4% (bottom of the 4–8% band in this niche) | **2.47** |
-| Watch time to 3 minutes *and* 4% click rate | **2.47** |
+| As it stands (419 impressions/day, 1.37% CTR, 13.5 min watched) | **1.29** |
+| Click rate to 4% (bottom of the 4–8% band in this niche) | **3.78** |
+| Watch time to 3 minutes *and* 4% click rate | **3.78** |
 
 The threshold asks **58.8 hours a day** for the 68 days before it doubles.
 
-So: both format levers at their documented best take the channel from 0.81 to 2.47
-hours a day — a **3× improvement**, and still **24× short**. What closes the gap
+So: both format levers at their documented best take the channel from 1.29 to 3.78
+hours a day — a **2.9× improvement**, and still **15.6× short**. What closes the gap
 is impressions: at a 4% click rate and the measured watch time, the channel needs
-**8,350 impressions a day where YouTube currently serves 350**.
+**6,519 impressions a day where YouTube currently serves 419**.
 
 Impressions are chosen by YouTube's recommendation system from how viewers respond
 to what it has already shown. No metadata, no thumbnail, and no commit raises
@@ -104,8 +105,8 @@ them directly. That is the honest distance, and the model says so in those words
 ## 6. What this means for the three targets
 
 * **CTR above 3%** — now measurable per concept, and the rotation means the answer
-  will come from your own traffic instead of a study of other people's videos. The
-  model prices the whole lever at 0.81 → 2.47 hours a day.
+  will come from your own traffic instead of a study of other people's videos. At
+  today's 1.37% it costs the channel 1.29 → 3.78 hours a day.
 * **Retention above 25%** — the ceiling is already enforced; the number to watch is
   `watch_ceiling.reading.median_seconds`. It cannot improve by making videos longer.
 * **Grow the other nine channels** — still the largest untouched lever, because
@@ -117,7 +118,7 @@ them directly. That is the honest distance, and the model says so in those words
 
 - Any particular view count on any particular video.
 - Virality. Nothing here increases impressions.
-- That the ceiling of 10 minutes is permanent. It is what five measured videos say
+- That the ceiling of 13 minutes is permanent. It is what seven measured videos say
   today; as more receipts carry a real length, it moves.
 - That the tail was a mistake. It was a reasonable bet that was measured and lost;
   the honest move is to stop paying for it.

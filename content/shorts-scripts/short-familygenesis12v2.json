@@ -1,0 +1,355 @@
+{
+  "key": "short-familygenesis12v2",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "WHEN UNCERTAINTY COMES",
+    "GOD'S PROMISE TO YOUR HOME"
+  ],
+  "poster": [
+    "GOD'S PROMISE",
+    "FOR YOUR",
+    "FAMILY",
+    "GENESIS 12:2-3"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm cozy living room lamp warm light open bible on wooden table peaceful",
+    "rustic wooden table open bible olive branches soft glowing light",
+    "peaceful countryside home sunrise golden light morning mist serene landscape",
+    "sunbeam shining through window on antique wooden dining table open scriptures",
+    "cozy home porch morning light green olive leaves soft focus background",
+    "warm lantern light on wooden table vintage open bible family home interior",
+    "peaceful rolling hills countryside sunrise soft morning golden hour glow",
+    "warm candlelight reflecting on wooden altar table with open bible serene"
+  ],
+  "scenes": [
+    {
+      "a": "When an unknown future weighs on your mind.",
+      "img": "short-familygenesis12v2-scene-01.jpg",
+      "kicker": "UNKNOWN FUTURE",
+      "sub": "WHEN LEAVING ON A NEW PATH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear the promise of God in Genesis twelve:",
+      "img": "short-familygenesis12v2-scene-02.jpg",
+      "kicker": "GOD'S PROMISE",
+      "sub": "GENESIS TWELVE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing:",
+      "img": "short-familygenesis12v2-scene-03.jpg",
+      "kicker": "A GREAT NATION",
+      "sub": "A BLESSING TO THE WORLD",
+      "cam": "pull_out",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed.",
+      "img": "short-familygenesis12v2-scene-04.jpg",
+      "kicker": "DIVINE PROTECTION",
+      "sub": "ALL FAMILIES BLESSED",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, cover our household as we step forward in faith.",
+      "img": "short-familygenesis12v2-scene-05.jpg",
+      "kicker": "STEPPING FORWARD",
+      "sub": "COVERING OUR HOUSEHOLD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let Your favor rest upon our children and protect our home.",
+      "img": "short-familygenesis12v2-scene-06.jpg",
+      "kicker": "FAVOR ON CHILDREN",
+      "sub": "GUARDING OUR HOME",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Make our family a quiet light to everyone around us.",
+      "img": "short-familygenesis12v2-scene-07.jpg",
+      "kicker": "A QUIET LIGHT",
+      "sub": "BLESSING OUR NEIGHBORS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen, when an unknown future weighs on your mind.",
+      "img": "short-familygenesis12v2-scene-08.jpg",
+      "kicker": "REST IN PEACE",
+      "sub": "GOD GUIDES YOUR STEPS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "When an unknown future weighs on your mind."
+    ],
+    [
+      3,
+      6,
+      "Hear the promise of God in Genesis twelve:"
+    ],
+    [
+      6,
+      12,
+      "And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing:"
+    ],
+    [
+      12,
+      19,
+      "And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed."
+    ],
+    [
+      19,
+      23,
+      "Lord, cover our household as we step forward in faith."
+    ],
+    [
+      23,
+      28,
+      "Let Your favor rest upon our children and protect our home."
+    ],
+    [
+      28,
+      33,
+      "Make our family a quiet light to everyone around us."
+    ],
+    [
+      33,
+      37,
+      "Amen, when an unknown future weighs on your mind."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WHEN AN UNKNOWN FUTURE",
+        "WEIGHS ON YOUR MIND"
+      ],
+      [
+        "UNKNOWN",
+        "FUTURE"
+      ],
+      "GENESIS 12 : 2 - 3"
+    ],
+    [
+      3,
+      6,
+      [
+        "HEAR THE PROMISE OF GOD",
+        "IN GENESIS TWELVE"
+      ],
+      [
+        "PROMISE",
+        "GOD"
+      ],
+      "GENESIS 12 : 2 - 3"
+    ],
+    [
+      6,
+      12,
+      [
+        "AND I WILL MAKE OF THEE",
+        "A GREAT NATION AND BLESS THEE",
+        "AND MAKE THY NAME GREAT",
+        "THOU SHALT BE A BLESSING"
+      ],
+      [
+        "GREAT",
+        "NATION",
+        "BLESSING"
+      ],
+      "GENESIS 12 : 2"
+    ],
+    [
+      12,
+      19,
+      [
+        "AND I WILL BLESS THEM",
+        "THAT BLESS THEE AND CURSE HIM",
+        "AND IN THEE SHALL ALL FAMILIES",
+        "OF THE EARTH BE BLESSED"
+      ],
+      [
+        "ALL",
+        "FAMILIES",
+        "BLESSED"
+      ],
+      "GENESIS 12 : 3"
+    ],
+    [
+      19,
+      23,
+      [
+        "LORD COVER OUR HOUSEHOLD",
+        "AS WE STEP FORWARD IN FAITH"
+      ],
+      [
+        "COVER",
+        "FAITH"
+      ],
+      "GENESIS 12 : 2 - 3"
+    ],
+    [
+      23,
+      28,
+      [
+        "LET YOUR FAVOR REST",
+        "UPON OUR CHILDREN AND",
+        "PROTECT OUR HOME"
+      ],
+      [
+        "FAVOR",
+        "PROTECT"
+      ],
+      "GENESIS 12 : 2 - 3"
+    ],
+    [
+      28,
+      33,
+      [
+        "MAKE OUR FAMILY A QUIET LIGHT",
+        "TO EVERYONE AROUND US"
+      ],
+      [
+        "QUIET",
+        "LIGHT"
+      ],
+      "GENESIS 12 : 2 - 3"
+    ],
+    [
+      33,
+      37,
+      [
+        "AMEN WHEN AN UNKNOWN FUTURE",
+        "WEIGHS ON YOUR MIND"
+      ],
+      [
+        "AMEN",
+        "FUTURE"
+      ],
+      "GENESIS 12 : 2 - 3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When an unknown future weighs on your mind.",
+      "kind": "phrase",
+      "words": [
+        "UNKNOWN",
+        "FUTURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the promise of God in Genesis twelve:",
+      "kind": "phrase",
+      "words": [
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing:",
+      "kind": "phrase",
+      "words": [
+        "GREAT",
+        "NATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed.",
+      "kind": "phrase",
+      "words": [
+        "FAMILIES",
+        "BLESSED"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, cover our household as we step forward in faith.",
+      "kind": "phrase",
+      "words": [
+        "COVER",
+        "HOUSEHOLD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let Your favor rest upon our children and protect our home.",
+      "kind": "phrase",
+      "words": [
+        "FAVOR",
+        "CHILDREN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Make our family a quiet light to everyone around us.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "LIGHT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Amen, when an unknown future weighs on your mind.",
+      "kind": "phrase",
+      "words": [
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Genesis 12:2-3"
+}

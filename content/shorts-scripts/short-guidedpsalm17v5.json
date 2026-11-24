@@ -1,0 +1,316 @@
+{
+  "key": "short-guidedpsalm17v5",
+  "channel": "prayer10",
+  "psalm": 17,
+  "title": [
+    "STEADY YOUR STEPS",
+    "PRAYER FOR UNCERTAIN PATHS"
+  ],
+  "poster": [
+    "WHEN YOUR FOOTING",
+    "FEELS UNSTEADY",
+    "A PRAYER FOR",
+    "GOD'S GUIDANCE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "rocky mountain path misty morning",
+    "misty alpine valley fog sunrise",
+    "narrow stone trail winding mountain pass",
+    "steep mountain ridge early light",
+    "calm valley river dawn light",
+    "quiet mountain pass sunrise mist",
+    "peaceful alpine lake calm dawn"
+  ],
+  "scenes": [
+    {
+      "a": "Your feet feel unsteady on this uncertain path.",
+      "img": "short-guidedpsalm17v5-scene-01.jpg",
+      "kicker": "UNSTEADY FEET",
+      "sub": "ON THIS UNCERTAIN PATH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "When the ground beneath your next step feels unstable, turn to the Lord in Psalm 17, verse 5:",
+      "img": "short-guidedpsalm17v5-scene-02.jpg",
+      "kicker": "UNSTABLE GROUND",
+      "sub": "SEEKING GOD'S WISDOM TODAY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hold up my goings in thy paths, that my footsteps slip not.",
+      "img": "short-guidedpsalm17v5-scene-03.jpg",
+      "kicker": "PSALM 17:5",
+      "sub": "HOLD UP MY GOINGS IN THY PATHS",
+      "cam": "tilt_up",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Heavenly Father, we admit our own understanding cannot keep us upright when the terrain grows steep.",
+      "img": "short-guidedpsalm17v5-scene-04.jpg",
+      "kicker": "STEEP TERRAIN",
+      "sub": "LEAN NOT ON YOUR OWN MIND",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Establish our steps in Your wisdom today, and guard our hearts against every secret fear.",
+      "img": "short-guidedpsalm17v5-scene-05.jpg",
+      "kicker": "ESTABLISH US",
+      "sub": "GUARDING OUR HEARTS IN FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    {
+      "a": "Sustain us through every heavy choice today, so that we do not falter or slide backward into doubt.",
+      "img": "short-guidedpsalm17v5-scene-06.jpg",
+      "kicker": "SUSTAIN OUR STEPS",
+      "sub": "STRENGTH FOR EVERY DECISION",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Amen. Lord, hold our steps steady when your feet feel unsteady on this uncertain path.",
+      "img": "short-guidedpsalm17v5-scene-07.jpg",
+      "kicker": "HOLD US STEADY",
+      "sub": "SEEK THE LORD FOR EVERY STEP",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your feet feel unsteady on this uncertain path."
+    ],
+    [
+      3,
+      8,
+      "When the ground beneath your next step feels unstable, turn to the Lord in Psalm 17, verse 5:"
+    ],
+    [
+      8,
+      14,
+      "Hold up my goings in thy paths, that my footsteps slip not."
+    ],
+    [
+      14,
+      21,
+      "Heavenly Father, we admit our own understanding cannot keep us upright when the terrain grows steep."
+    ],
+    [
+      21,
+      28,
+      "Establish our steps in Your wisdom today, and guard our hearts against every secret fear."
+    ],
+    [
+      28,
+      35,
+      "Sustain us through every heavy choice today, so that we do not falter or slide backward into doubt."
+    ],
+    [
+      35,
+      42,
+      "Amen. Lord, hold our steps steady when your feet feel unsteady on this uncertain path."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR FEET FEEL UNSTEADY",
+        "ON THIS UNCERTAIN PATH"
+      ],
+      [
+        "UNSTEADY",
+        "PATH"
+      ],
+      "PSALM 17 : 5"
+    ],
+    [
+      3,
+      8,
+      [
+        "WHEN THE GROUND BENEATH",
+        "YOUR NEXT STEP FEELS UNSTABLE",
+        "TURN TO THE LORD"
+      ],
+      [
+        "UNSTABLE",
+        "LORD"
+      ],
+      "PSALM 17 : 5"
+    ],
+    [
+      8,
+      14,
+      [
+        "HOLD UP MY GOINGS",
+        "IN THY PATHS",
+        "THAT MY FOOTSTEPS SLIP NOT"
+      ],
+      [
+        "HOLD",
+        "FOOTSTEPS"
+      ],
+      "PSALM 17 : 5"
+    ],
+    [
+      14,
+      21,
+      [
+        "WE ADMIT OUR OWN UNDERSTANDING",
+        "CANNOT KEEP US UPRIGHT",
+        "WHEN TERRAIN GROWS STEEP"
+      ],
+      [
+        "UPRIGHT",
+        "STEEP"
+      ],
+      "PSALM 17 : 5"
+    ],
+    [
+      21,
+      28,
+      [
+        "ESTABLISH OUR STEPS IN WISDOM",
+        "GUARD OUR HEARTS AGAINST",
+        "EVERY SECRET FEAR"
+      ],
+      [
+        "WISDOM",
+        "GUARD"
+      ],
+      "PSALM 17 : 5"
+    ],
+    [
+      28,
+      35,
+      [
+        "SUSTAIN US THROUGH EVERY CHOICE",
+        "SO WE DO NOT FALTER",
+        "OR SLIDE BACKWARD"
+      ],
+      [
+        "SUSTAIN",
+        "FALTER"
+      ],
+      "PSALM 17 : 5"
+    ],
+    [
+      35,
+      42,
+      [
+        "AMEN LORD HOLD OUR STEPS STEADY",
+        "WHEN YOUR FEET FEEL UNSTEADY",
+        "ON THIS UNCERTAIN PATH"
+      ],
+      [
+        "STEADY",
+        "PATH"
+      ],
+      "PSALM 17 : 5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your feet feel unsteady on this uncertain path.",
+      "kind": "phrase",
+      "words": [
+        "FEET",
+        "UNSTEADY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "When the ground beneath your next step feels unstable, turn to the Lord in Psalm 17, verse 5:",
+      "kind": "phrase",
+      "words": [
+        "UNSTABLE",
+        "LORD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Hold up my goings in thy paths, that my footsteps slip not.",
+      "kind": "phrase",
+      "words": [
+        "HOLD",
+        "FOOTSTEPS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we admit our own understanding cannot keep us upright when the terrain grows steep.",
+      "kind": "phrase",
+      "words": [
+        "UPRIGHT",
+        "TERRAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Establish our steps in Your wisdom today, and guard our hearts against every secret fear.",
+      "kind": "phrase",
+      "words": [
+        "STEPS",
+        "WISDOM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Sustain us through every heavy choice today, so that we do not falter or slide backward into doubt.",
+      "kind": "phrase",
+      "words": [
+        "SUSTAIN",
+        "FALTER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Lord, hold our steps steady when your feet feel unsteady on this uncertain path.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 17:5"
+}

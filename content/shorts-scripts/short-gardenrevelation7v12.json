@@ -1,0 +1,324 @@
+{
+  "key": "short-gardenrevelation7v12",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "UNNOTICED LABOR",
+    "ETERNAL PRAISE"
+  ],
+  "poster": [
+    "WHEN YOUR EFFORT",
+    "FEELS UNSEEN",
+    "HEAVEN REJOICES",
+    "REVELATION 7:12"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade soft morning light",
+    "misty countryside field golden hour",
+    "peaceful mountain lake calm water sunrise",
+    "golden sunlight through green woodland leaves",
+    "quiet river flowing through meadow soft light",
+    "serene valley landscape soft warm glow",
+    "calm forest trail bathed in morning light"
+  ],
+  "scenes": [
+    {
+      "a": "Your quiet labor went completely unnoticed today.",
+      "img": "short-gardenrevelation7v12-scene-01.jpg",
+      "kicker": "UNNOTICED LABOR",
+      "sub": "WHEN YOUR EFFORT FEELS UNSEEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "When your hard work feels small or forgotten, lift up your eyes.",
+      "img": "short-gardenrevelation7v12-scene-02.jpg",
+      "kicker": "LIFT UP YOUR EYES",
+      "sub": "HEAVEN REMEMBERS YOUR FAITH",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "For the angels gather around the throne, saying, Amen: Blessing, and glory, and wisdom, and thanksgiving, and honor, and power, and might, be unto our God for ever and ever. Amen.",
+      "img": "short-gardenrevelation7v12-scene-03.jpg",
+      "kicker": "REVELATION 7:12",
+      "sub": "ETERNAL PRAISE BEFORE THE THRONE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we join our humble voices to this eternal song.",
+      "img": "short-gardenrevelation7v12-scene-04.jpg",
+      "kicker": "JOIN THE SONG",
+      "sub": "OUR HUMBLE VOICES RAISED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Receive our quiet gratitude when no one else sees our effort.",
+      "img": "short-gardenrevelation7v12-scene-05.jpg",
+      "kicker": "QUIET GRATITUDE",
+      "sub": "GOD SEES EVERY FAITHFUL STEP",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Teach us to rest in your everlasting strength and honor.",
+      "img": "short-gardenrevelation7v12-scene-06.jpg",
+      "kicker": "EVERLASTING MIGHT",
+      "sub": "REST IN HIS UNCHANGING GLORY",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "May our daily praise glorify your holy name through every shadow. Amen, even when quiet labor goes unnoticed today.",
+      "img": "short-gardenrevelation7v12-scene-07.jpg",
+      "kicker": "GLORIFY HIS NAME",
+      "sub": "PRAISE IN EVERY SHADOW",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your quiet labor went completely unnoticed today."
+    ],
+    [
+      3,
+      8,
+      "When your hard work feels small or forgotten, lift up your eyes."
+    ],
+    [
+      8,
+      18,
+      "For the angels gather around the throne, saying, Amen: Blessing, and glory, and wisdom, and thanksgiving, and honor, and power, and might, be unto our God for ever and ever. Amen."
+    ],
+    [
+      18,
+      23,
+      "Lord, we join our humble voices to this eternal song."
+    ],
+    [
+      23,
+      28,
+      "Receive our quiet gratitude when no one else sees our effort."
+    ],
+    [
+      28,
+      33,
+      "Teach us to rest in your everlasting strength and honor."
+    ],
+    [
+      33,
+      42,
+      "May our daily praise glorify your holy name through every shadow. Amen, even when quiet labor goes unnoticed today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR QUIET LABOR",
+        "WENT COMPLETELY",
+        "UNNOTICED TODAY."
+      ],
+      [
+        "UNNOTICED"
+      ],
+      "REVELATION 7 : 12"
+    ],
+    [
+      3,
+      8,
+      [
+        "WHEN YOUR HARD WORK",
+        "FEELS SMALL OR FORGOTTEN,",
+        "LIFT UP YOUR EYES."
+      ],
+      [
+        "EYES"
+      ],
+      "REVELATION 7 : 12"
+    ],
+    [
+      8,
+      18,
+      [
+        "BLESSING AND GLORY",
+        "AND THANKSGIVING",
+        "UNTO OUR GOD",
+        "FOR EVER AND EVER."
+      ],
+      [
+        "GLORY",
+        "THANKSGIVING"
+      ],
+      "REV 7 : 12"
+    ],
+    [
+      18,
+      23,
+      [
+        "LORD WE JOIN",
+        "OUR HUMBLE VOICES",
+        "TO THIS ETERNAL SONG."
+      ],
+      [
+        "SONG"
+      ],
+      "REVELATION 7 : 12"
+    ],
+    [
+      23,
+      28,
+      [
+        "RECEIVE OUR QUIET",
+        "GRATITUDE WHEN NO ONE",
+        "ELSE SEES OUR EFFORT."
+      ],
+      [
+        "GRATITUDE"
+      ],
+      "REVELATION 7 : 12"
+    ],
+    [
+      28,
+      33,
+      [
+        "TEACH US TO REST",
+        "IN YOUR EVERLASTING",
+        "STRENGTH AND HONOR."
+      ],
+      [
+        "REST"
+      ],
+      "REVELATION 7 : 12"
+    ],
+    [
+      33,
+      42,
+      [
+        "MAY OUR DAILY PRAISE",
+        "GLORIFY YOUR HOLY NAME",
+        "THROUGH EVERY SHADOW. AMEN."
+      ],
+      [
+        "GLORIFY"
+      ],
+      "REVELATION 7 : 12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your quiet labor went completely unnoticed today.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "LABOR",
+        "UNNOTICED"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "When your hard work feels small or forgotten, lift up your eyes.",
+      "kind": "phrase",
+      "words": [
+        "LIFT",
+        "UP",
+        "YOUR",
+        "EYES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For the angels gather around the throne, saying, Amen: Blessing, and glory, and wisdom, and thanksgiving, and honor, and power, and might, be unto our God for ever and ever. Amen.",
+      "kind": "phrase",
+      "words": [
+        "BLESSING",
+        "GLORY",
+        "THANKSGIVING",
+        "HONOR"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we join our humble voices to this eternal song.",
+      "kind": "phrase",
+      "words": [
+        "HUMBLE",
+        "VOICES",
+        "ETERNAL",
+        "SONG"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Receive our quiet gratitude when no one else sees our effort.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "GRATITUDE",
+        "GOD",
+        "SEES"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Teach us to rest in your everlasting strength and honor.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "EVERLASTING",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May our daily praise glorify your holy name through every shadow. Amen, even when quiet labor goes unnoticed today.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "PRAISE",
+        "GLORIFY",
+        "AMEN"
+      ],
+      "hi": 2,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Revelation 7:12"
+}

@@ -1,0 +1,432 @@
+{
+  "key": "short-guidedjeremiah33v3",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "WHEN YOU CANNOT UNTANGLE A CHOICE",
+    "JEREMIAH 33:3 PRAYER FOR WISDOM"
+  ],
+  "poster": [
+    "CALL UNTO ME",
+    "GOD ANSWERS WITH WISDOM",
+    "PRAYER FOR GUIDANCE",
+    "JEREMIAH 33:3"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain valley at early morning light",
+    "calm alpine river flowing through quiet mountain pass",
+    "peaceful mountain lake in soft morning mist",
+    "foggy forest trail in alpine mountain range",
+    "serene mountain valley with distant sunbeams",
+    "quiet river winding through misty alpine forest",
+    "calm mountain pass under early dawn sky",
+    "sunlight breaking over peaceful alpine ridge",
+    "tranquil mountain stream surrounded by mist",
+    "peaceful mountain lake reflecting distant peaks"
+  ],
+  "scenes": [
+    {
+      "a": "You stand before a choice you cannot untangle.",
+      "img": "short-guidedjeremiah33v3-scene-01.jpg",
+      "kicker": "CONFUSED CHOICE",
+      "sub": "WHEN LOGIC REACHES ITS LIMIT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Your own understanding has reached its limit today.",
+      "img": "short-guidedjeremiah33v3-scene-02.jpg",
+      "kicker": "HUMAN LIMITS",
+      "sub": "REACHING THE END OF YOUR MIND",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear the word of the Lord in Jeremiah thirty-three, verse three:",
+      "img": "short-guidedjeremiah33v3-scene-03.jpg",
+      "kicker": "GOD'S PROMISE",
+      "sub": "HEAR THE WORD OF THE LORD",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Call unto me, and I will answer thee, and show thee great and mighty things, which thou knowest not.",
+      "img": "short-guidedjeremiah33v3-scene-04.jpg",
+      "kicker": "JEREMIAH 33:3",
+      "sub": "GREAT AND MIGHTY THINGS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, we lay this hidden decision before You now.",
+      "img": "short-guidedjeremiah33v3-scene-05.jpg",
+      "kicker": "LAY IT DOWN",
+      "sub": "BRINGING THE DECISION TO GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "We have trusted our own logic long enough and found only silence.",
+      "img": "short-guidedjeremiah33v3-scene-06.jpg",
+      "kicker": "HUMBLE TRUTH",
+      "sub": "TURNING AWAY FROM SELF-RELIANCE",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Answer us with the wisdom that comes from Your spirit.",
+      "img": "short-guidedjeremiah33v3-scene-07.jpg",
+      "kicker": "ASK FOR WISDOM",
+      "sub": "SEEKING HEAVENLY DISCERNMENT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Reveal what is hidden and make clear the path ahead.",
+      "img": "short-guidedjeremiah33v3-scene-08.jpg",
+      "kicker": "CLEAR PATH",
+      "sub": "LIGHT FOR YOUR NEXT STEP",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lead our steps out of hesitation and into Your truth.",
+      "img": "short-guidedjeremiah33v3-scene-09.jpg",
+      "kicker": "DIVINE STEPS",
+      "sub": "WALKING IN FAITHFUL TRUTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. We bring this choice we cannot untangle back to You.",
+      "img": "short-guidedjeremiah33v3-scene-10.jpg",
+      "kicker": "UNTANGLE CHOICE",
+      "sub": "PEACE IN HIS WISDOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You stand before a choice you cannot untangle."
+    ],
+    [
+      3,
+      8,
+      "Your own understanding has reached its limit today."
+    ],
+    [
+      8,
+      14,
+      "Hear the word of the Lord in Jeremiah thirty-three, verse three:"
+    ],
+    [
+      14,
+      24,
+      "Call unto me, and I will answer thee, and show thee great and mighty things, which thou knowest not."
+    ],
+    [
+      24,
+      31,
+      "Lord, we lay this hidden decision before You now."
+    ],
+    [
+      31,
+      39,
+      "We have trusted our own logic long enough and found only silence."
+    ],
+    [
+      39,
+      47,
+      "Answer us with the wisdom that comes from Your spirit."
+    ],
+    [
+      47,
+      55,
+      "Reveal what is hidden and make clear the path ahead."
+    ],
+    [
+      55,
+      63,
+      "Lead our steps out of hesitation and into Your truth."
+    ],
+    [
+      63,
+      71,
+      "Amen. We bring this choice we cannot untangle back to You."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU STAND BEFORE A",
+        "CHOICE YOU CANNOT",
+        "UNTANGLE."
+      ],
+      [
+        "CHOICE",
+        "UNTANGLE"
+      ],
+      "JEREMIAH 33 : 3"
+    ],
+    [
+      3,
+      8,
+      [
+        "YOUR OWN UNDERSTANDING",
+        "HAS REACHED ITS LIMIT TODAY."
+      ],
+      [
+        "REACHED",
+        "LIMIT"
+      ],
+      "JEREMIAH 33 : 3"
+    ],
+    [
+      8,
+      14,
+      [
+        "HEAR THE WORD OF THE LORD",
+        "IN JEREMIAH 33:3:"
+      ],
+      [
+        "WORD",
+        "LORD"
+      ],
+      "JEREMIAH 33 : 3"
+    ],
+    [
+      14,
+      24,
+      [
+        "CALL UNTO ME AND I WILL ANSWER THEE",
+        "AND SHOW THEE GREAT AND MIGHTY THINGS",
+        "WHICH THOU KNOWEST NOT."
+      ],
+      [
+        "ANSWER",
+        "MIGHTY"
+      ],
+      "JEREMIAH 33 : 3"
+    ],
+    [
+      24,
+      31,
+      [
+        "LORD WE LAY THIS HIDDEN",
+        "DECISION BEFORE YOU NOW."
+      ],
+      [
+        "LAY",
+        "DECISION"
+      ],
+      "JEREMIAH 33 : 3"
+    ],
+    [
+      31,
+      39,
+      [
+        "WE HAVE TRUSTED OUR OWN LOGIC",
+        "LONG ENOUGH AND FOUND ONLY SILENCE."
+      ],
+      [
+        "TRUSTED",
+        "SILENCE"
+      ],
+      "JEREMIAH 33 : 3"
+    ],
+    [
+      39,
+      47,
+      [
+        "ANSWER US WITH THE WISDOM",
+        "THAT COMES FROM YOUR SPIRIT."
+      ],
+      [
+        "WISDOM",
+        "SPIRIT"
+      ],
+      "JEREMIAH 33 : 3"
+    ],
+    [
+      47,
+      55,
+      [
+        "REVEAL WHAT IS HIDDEN AND MAKE",
+        "CLEAR THE PATH AHEAD."
+      ],
+      [
+        "REVEAL",
+        "PATH"
+      ],
+      "JEREMIAH 33 : 3"
+    ],
+    [
+      55,
+      63,
+      [
+        "LEAD OUR STEPS OUT OF HESITATION",
+        "AND INTO YOUR TRUTH."
+      ],
+      [
+        "LEAD",
+        "TRUTH"
+      ],
+      "JEREMIAH 33 : 3"
+    ],
+    [
+      63,
+      71,
+      [
+        "AMEN WE BRING THIS CHOICE",
+        "WE CANNOT UNTANGLE BACK TO YOU."
+      ],
+      [
+        "BRING",
+        "CHOICE"
+      ],
+      "JEREMIAH 33 : 3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You stand before a choice you cannot untangle.",
+      "kind": "phrase",
+      "words": [
+        "CHOICE",
+        "UNTANGLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your own understanding has reached its limit today.",
+      "kind": "phrase",
+      "words": [
+        "REACHED",
+        "LIMIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the word of the Lord in Jeremiah thirty-three, verse three:",
+      "kind": "phrase",
+      "words": [
+        "WORD",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Call unto me, and I will answer thee, and show thee great and mighty things, which thou knowest not.",
+      "kind": "phrase",
+      "words": [
+        "ANSWER",
+        "MIGHTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we lay this hidden decision before You now.",
+      "kind": "phrase",
+      "words": [
+        "LAY",
+        "DECISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We have trusted our own logic long enough and found only silence.",
+      "kind": "phrase",
+      "words": [
+        "TRUSTED",
+        "SILENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Answer us with the wisdom that comes from Your spirit.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Reveal what is hidden and make clear the path ahead.",
+      "kind": "phrase",
+      "words": [
+        "REVEAL",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lead our steps out of hesitation and into Your truth.",
+      "kind": "phrase",
+      "words": [
+        "LEAD",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. We bring this choice we cannot untangle back to You.",
+      "kind": "phrase",
+      "words": [
+        "BRING",
+        "CHOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Jeremiah 33:3"
+}

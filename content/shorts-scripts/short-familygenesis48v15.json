@@ -1,0 +1,345 @@
+{
+  "key": "short-familygenesis48v15",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "A PRAYER FOR",
+    "YOUR CHILDREN"
+  ],
+  "poster": [
+    "BLESS THE LADS",
+    "GOD OF OUR FATHERS",
+    "A HOUSEHOLD PRAYER",
+    "GENESIS 48:15-16"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm candle light on rustic wooden dining table with bible",
+    "cozy evening living room glowing lamp peaceful atmosphere",
+    "soft lamp light on open family bible olive branch",
+    "peaceful countryside home dusk glowing window warm light",
+    "rustic wooden desk bible candle light quiet evening",
+    "calm window view twilight warm cozy home interior",
+    "vintage family altar open scripture peaceful warm light",
+    "quiet dimly lit hallway cozy warm home at night"
+  ],
+  "scenes": [
+    {
+      "a": "You carry quiet worries for your children tonight.",
+      "img": "short-familygenesis48v15-scene-01.jpg",
+      "kicker": "QUIET WORRIES",
+      "sub": "FOR YOUR CHILDREN TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And he blessed Joseph, and said, God, before whom my fathers Abraham and Isaac did walk,",
+      "img": "short-familygenesis48v15-scene-02.jpg",
+      "kicker": "GOD OF OUR FATHERS",
+      "sub": "FAITHFUL THROUGH GENERATIONS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "the God which fed me all my life long unto this day,",
+      "img": "short-familygenesis48v15-scene-03.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "HE SUSTAINS YOUR HOUSEHOLD",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "The Angel which redeemed me from all evil, bless the lads;",
+      "img": "short-familygenesis48v15-scene-04.jpg",
+      "kicker": "BLESS THE LADS",
+      "sub": "REDEEMED FROM ALL EVIL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "and let my name be named on them, and the name of my fathers Abraham and Isaac;",
+      "img": "short-familygenesis48v15-scene-05.jpg",
+      "kicker": "HERITAGE OF FAITH",
+      "sub": "COVERED IN HIS PROMISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "and let them grow into a multitude in the midst of the earth.",
+      "img": "short-familygenesis48v15-scene-06.jpg",
+      "kicker": "GROW IN GRACE",
+      "sub": "ESTABLISHED IN THE EARTH",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Heavenly Father, redeem our home from evil and nourish our children all their days.",
+      "img": "short-familygenesis48v15-scene-07.jpg",
+      "kicker": "PROTECT OUR HOME",
+      "sub": "NOURISH THEIR DAYS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Keep their hearts secure in Your grace. Amen. You carry quiet worries for your children tonight.",
+      "img": "short-familygenesis48v15-scene-08.jpg",
+      "kicker": "SECURE IN GRACE",
+      "sub": "REST IN HIS PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You carry quiet worries for your children tonight."
+    ],
+    [
+      3,
+      9,
+      "And he blessed Joseph, and said, God, before whom my fathers Abraham and Isaac did walk,"
+    ],
+    [
+      9,
+      15,
+      "the God which fed me all my life long unto this day,"
+    ],
+    [
+      15,
+      21,
+      "The Angel which redeemed me from all evil, bless the lads;"
+    ],
+    [
+      21,
+      28,
+      "and let my name be named on them, and the name of my fathers Abraham and Isaac;"
+    ],
+    [
+      28,
+      34,
+      "and let them grow into a multitude in the midst of the earth."
+    ],
+    [
+      34,
+      40,
+      "Heavenly Father, redeem our home from evil and nourish our children all their days."
+    ],
+    [
+      40,
+      46,
+      "Keep their hearts secure in Your grace. Amen. You carry quiet worries for your children tonight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "QUIET WORRIES",
+        "FOR YOUR CHILDREN"
+      ],
+      [
+        "WORRIES"
+      ],
+      "GENESIS 48:15-16"
+    ],
+    [
+      3,
+      9,
+      [
+        "GOD BEFORE WHOM",
+        "MY FATHERS WALKED"
+      ],
+      [
+        "FATHERS"
+      ],
+      "GENESIS 48:15"
+    ],
+    [
+      9,
+      15,
+      [
+        "GOD WHICH FED ME",
+        "ALL MY LIFE LONG"
+      ],
+      [
+        "LIFE"
+      ],
+      "GENESIS 48:15"
+    ],
+    [
+      15,
+      21,
+      [
+        "THE ANGEL WHICH REDEEMED ME",
+        "BLESS THE LADS"
+      ],
+      [
+        "BLESS"
+      ],
+      "GENESIS 48:16"
+    ],
+    [
+      21,
+      28,
+      [
+        "LET MY NAME BE NAMED",
+        "ON THEM"
+      ],
+      [
+        "NAME"
+      ],
+      "GENESIS 48:16"
+    ],
+    [
+      28,
+      34,
+      [
+        "LET THEM GROW INTO",
+        "A MULTITUDE"
+      ],
+      [
+        "MULTITUDE"
+      ],
+      "GENESIS 48:16"
+    ],
+    [
+      34,
+      40,
+      [
+        "REDEEM OUR HOME",
+        "AND NOURISH OUR CHILDREN"
+      ],
+      [
+        "NOURISH"
+      ],
+      "GENESIS 48:15-16"
+    ],
+    [
+      40,
+      46,
+      [
+        "KEEP THEIR HEARTS SECURE",
+        "IN YOUR GRACE"
+      ],
+      [
+        "SECURE"
+      ],
+      "GENESIS 48:15-16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You carry quiet worries for your children tonight.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "WORRIES",
+        "CHILDREN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "And he blessed Joseph, and said, God, before whom my fathers Abraham and Isaac did walk,",
+      "kind": "phrase",
+      "words": [
+        "FATHERS",
+        "WALK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "the God which fed me all my life long unto this day,",
+      "kind": "phrase",
+      "words": [
+        "FED",
+        "LIFE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Angel which redeemed me from all evil, bless the lads;",
+      "kind": "phrase",
+      "words": [
+        "REDEEMED",
+        "BLESS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "and let my name be named on them, and the name of my fathers Abraham and Isaac;",
+      "kind": "phrase",
+      "words": [
+        "NAME",
+        "NAMED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and let them grow into a multitude in the midst of the earth.",
+      "kind": "phrase",
+      "words": [
+        "GROW",
+        "MULTITUDE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, redeem our home from evil and nourish our children all their days.",
+      "kind": "phrase",
+      "words": [
+        "REDEEM",
+        "HOME",
+        "NOURISH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Keep their hearts secure in Your grace. Amen. You carry quiet worries for your children tonight.",
+      "kind": "phrase",
+      "words": [
+        "SECURE",
+        "GRACE",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Genesis 48:15-16"
+}

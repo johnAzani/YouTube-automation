@@ -1,10 +1,10 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-24T15:39:58.278216+00:00",
+  "generated_at": "2026-11-24T15:48:55.989896+00:00",
   "as_of": "2026-11-24",
   "window": {
-    "first_day": "2026-10-26",
-    "last_day": "2026-11-20",
+    "first_day": "2026-10-27",
+    "last_day": "2026-11-21",
     "days": 26
   },
   "channels_read": [
@@ -13,40 +13,36 @@
   "channels_not_read": [],
   "network": {
     "hours_by_source": {
-      "suggested": 22.05,
-      "shorts_feed": 24.68,
+      "suggested": 43.82,
+      "shorts_feed": 24.78,
       "yt_search": 0.95,
-      "home_subs": 1.05,
+      "home_subs": 1.12,
       "other_pages": 0.23,
       "notifications": 0.1,
-      "ext_url": 1.2,
-      "direct_unknown": 1.98,
+      "ext_url": 1.15,
+      "direct_unknown": 2.33,
       "channel_page": 0.58,
       "sound_pages": 0.0
     },
     "share_by_source": {
-      "suggested": 0.4175,
-      "shorts_feed": 0.4672,
-      "yt_search": 0.018,
-      "home_subs": 0.0199,
-      "other_pages": 0.0044,
-      "notifications": 0.0019,
-      "ext_url": 0.0227,
-      "direct_unknown": 0.0375,
-      "channel_page": 0.011,
+      "suggested": 0.5838,
+      "shorts_feed": 0.3301,
+      "yt_search": 0.0127,
+      "home_subs": 0.0149,
+      "other_pages": 0.0031,
+      "notifications": 0.0013,
+      "ext_url": 0.0153,
+      "direct_unknown": 0.031,
+      "channel_page": 0.0077,
       "sound_pages": 0.0
     },
-    "counted_hours": 23.0,
-    "counted_share": 0.4354,
+    "counted_hours": 44.77,
+    "counted_share": 0.5965,
     "pace": {
       "days": 26,
-      "hours_a_day": 2.03,
-      "hours_a_day_last_7": 5.07,
+      "hours_a_day": 2.88,
+      "hours_a_day_last_7": 8.0,
       "by_day": [
-        {
-          "day": "2026-10-26",
-          "hours": 0.15
-        },
         {
           "day": "2026-10-27",
           "hours": 0.42
@@ -146,65 +142,69 @@
         {
           "day": "2026-11-20",
           "hours": 9.75
+        },
+        {
+          "day": "2026-11-21",
+          "hours": 22.32
         }
       ]
     },
     "need": {
       "threshold_hours": 4000,
-      "counted_hours_365d": 41.03,
-      "remaining_hours": 3958.97,
+      "counted_hours_365d": 63.0,
+      "remaining_hours": 3937.0,
       "days_until_the_threshold_doubles": 68,
-      "hours_a_day_needed": 58.22,
-      "hours_a_day_now": 2.03,
-      "times_the_pace_must_rise": 28.7,
+      "hours_a_day_needed": 57.9,
+      "hours_a_day_now": 2.88,
+      "times_the_pace_must_rise": 20.1,
       "note": "counted hours are long-form and live only; Shorts-feed hours do not count. Only channels with the Analytics grant are in this figure."
     },
-    "held_percent_median": 8.9
+    "held_percent_median": 10.2
   },
   "targets": [
     {
       "channel": "secret-place",
-      "hours": 52.76,
-      "views": 5387,
+      "hours": 74.93,
+      "views": 5480,
       "days": 26,
-      "hours_a_day": 2.03,
-      "views_a_day": 207.2,
-      "long_form_view_share": 0.0527,
-      "long_form_views_a_day": 10.92,
-      "held_percent": 8.9,
-      "videos_read": 8,
+      "hours_a_day": 2.88,
+      "views_a_day": 210.8,
+      "long_form_view_share": 0.0633,
+      "long_form_views_a_day": 13.34,
+      "held_percent": 10.2,
+      "videos_read": 9,
       "share_of_network_hours": 1.0,
-      "target_minutes": 10,
+      "target_minutes": 13,
       "longer_is_watched": false
     }
   ],
   "budget": {
-    "minutes": 10,
-    "basis": "the median view of a measured video is 10.6 minutes (across 5 videos); a release is not built longer than that",
+    "minutes": 13,
+    "basis": "the median view of a measured video is 13.5 minutes (across 7 videos); a release is not built longer than that",
     "considered": [
       {
         "band": "over 3 hours",
-        "videos": 6,
-        "views": 192,
-        "hours": 24.22,
+        "videos": 7,
+        "views": 255,
+        "hours": 46.32,
         "minutes": 187,
-        "hours_a_view": 0.1261,
+        "hours_a_view": 0.1816,
         "measured": true
       }
     ],
     "ceiling": {
-      "seconds": 600,
-      "minutes": 10.0,
+      "seconds": 780,
+      "minutes": 13.0,
       "changed": true,
-      "basis": "the median view of a measured video is 10.6 minutes (across 5 videos); a release is not built longer than that",
+      "basis": "the median view of a measured video is 13.5 minutes (across 7 videos); a release is not built longer than that",
       "reading": {
-        "videos": 5,
-        "median_seconds": 634.0,
-        "average_seconds": 685.2,
+        "videos": 7,
+        "median_seconds": 812.0,
+        "average_seconds": 948.6,
         "shortest_seconds": 271.0,
-        "longest_seconds": 1337.0
+        "longest_seconds": 2066.0
       },
-      "wasted_share": 0.9413,
+      "wasted_share": 0.9248,
       "tail_is_the_problem": true
     }
   },
@@ -212,33 +212,33 @@
     "bands": [
       {
         "band": "over 3 hours",
-        "videos": 6,
-        "views": 192,
-        "hours": 24.22,
+        "videos": 7,
+        "views": 255,
+        "hours": 46.32,
         "minutes": 187,
-        "hours_a_view": 0.1261,
+        "hours_a_view": 0.1816,
         "measured": true
       }
     ],
     "best_band": "over 3 hours",
-    "best_hours_a_view": 0.1261,
+    "best_hours_a_view": 0.1816,
     "longest_measured_band": "over 3 hours",
-    "videos_without_a_length": 29,
+    "videos_without_a_length": 28,
     "note": "hours a view, by the video's own length. Only videos whose real length is known are compared, and a band needs two videos to count. A video whose receipt carries only the planned length is counted above, not guessed at."
   },
   "watch_ceiling": {
-    "seconds": 600,
-    "minutes": 10.0,
+    "seconds": 780,
+    "minutes": 13.0,
     "changed": true,
-    "basis": "the median view of a measured video is 10.6 minutes (across 5 videos); a release is not built longer than that",
+    "basis": "the median view of a measured video is 13.5 minutes (across 7 videos); a release is not built longer than that",
     "reading": {
-      "videos": 5,
-      "median_seconds": 634.0,
-      "average_seconds": 685.2,
+      "videos": 7,
+      "median_seconds": 812.0,
+      "average_seconds": 948.6,
       "shortest_seconds": 271.0,
-      "longest_seconds": 1337.0
+      "longest_seconds": 2066.0
     },
-    "wasted_share": 0.9413,
+    "wasted_share": 0.9248,
     "tail_is_the_problem": true
   },
   "hints": {
@@ -250,9 +250,9 @@
       "channels": [
         {
           "channel": "secret-place",
-          "hours_read": 52.76,
+          "hours_read": 74.93,
           "days_read": 26,
-          "bump_share": 0.3462,
+          "bump_share": 0.3077,
           "verdict": "hold",
           "bumps": [
             {
@@ -260,18 +260,6 @@
               "hours": 4.52,
               "usual": 0.15,
               "rise": 4.37
-            },
-            {
-              "day": "2026-11-08",
-              "hours": 1.57,
-              "usual": 0.29,
-              "rise": 1.28
-            },
-            {
-              "day": "2026-11-11",
-              "hours": 1.8,
-              "usual": 0.43,
-              "rise": 1.38
             },
             {
               "day": "2026-11-12",
@@ -308,6 +296,12 @@
               "hours": 9.75,
               "usual": 2.44,
               "rise": 7.31
+            },
+            {
+              "day": "2026-11-21",
+              "hours": 22.32,
+              "usual": 3.1,
+              "rise": 19.21
             }
           ]
         }
@@ -321,7 +315,7 @@
         {
           "channel": "secret-place",
           "end_screen_hours": 0.0,
-          "suggested_hours": 22.05,
+          "suggested_hours": 43.82,
           "views": 0,
           "end_screen_share_of_tail": 0.0
         }
@@ -332,7 +326,7 @@
       "note": "a Related video needs advanced access and an edit in Studio; scripts/growth_ab.py reads the hours before and after one is added"
     }
   },
-  "watchers_needed_a_day": 136.9,
+  "watchers_needed_a_day": 130.3,
   "cost_lock": "$0.00 \u2014 reads committed Analytics files; no API call, no new secret.",
   "privacy": "Hours, views, minutes and shares only. No revenue, no viewer, no other channel's title."
 }

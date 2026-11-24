@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["A PRAYER FOR", "YOUR HOUSEHOLD", "ROOTED IN GENESIS 18:19", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-24T12:35:00Z"
+thumbnail_retry_after: "2026-12-01T13:58:42Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If the heavy weight of raising your children in truth feels overwhelming today, please listen. We turn our hearts to the instruction given to Abraham regarding his own family legacy. For I know him, that he will command his children and his household after him, and they shall keep the way of the LORD, to do justice and judgment; that the LORD may bring upon Abraham that which he hath spoken of him. Lord, grant us that same steady resolve to keep our homes centered upon Your path. Help us to speak truth with justice and to lead our loved ones toward You. May our families walk in Your light all our days, anchored in Your holy promise.

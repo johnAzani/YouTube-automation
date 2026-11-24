@@ -1,0 +1,327 @@
+{
+  "key": "short-morningpsalm5v3",
+  "channel": "prayer2",
+  "psalm": 5,
+  "title": [
+    "BEFORE THE NOISE",
+    "BEGINS TODAY"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "BEFORE THE NOISE",
+    "PSALM 5:3",
+    "SUNRISE PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "foggy mountain sunrise soft morning golden hour horizon",
+    "quiet dim room window dawn light breaking sky",
+    "sunrise over calm misty lake distant hills warm light",
+    "golden dawn sky clouds soft morning light sun rising",
+    "peaceful forest morning sunlight rays mist trees",
+    "open window view sunrise horizon golden morning sky"
+  ],
+  "scenes": [
+    {
+      "a": "Your mind is already racing before sunrise.",
+      "img": "short-morningpsalm5v3-scene-01.jpg",
+      "kicker": "RACING MIND",
+      "sub": "BEFORE THE DAY BEGINS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "You carry yesterday's unfinished tasks into this quiet room",
+      "img": "short-morningpsalm5v3-scene-02.jpg",
+      "kicker": "UNFINISHED TASKS",
+      "sub": "CARRIED INTO THE STILLNESS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "My voice shalt thou hear in the morning, O LORD",
+      "img": "short-morningpsalm5v3-scene-03.jpg",
+      "kicker": "PSALM 5:3",
+      "sub": "MY VOICE SHALT THOU HEAR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, before the house wakes and the day demands everything",
+      "img": "short-morningpsalm5v3-scene-04.jpg",
+      "kicker": "FIRST THOUGHTS",
+      "sub": "DIRECTED TO HEAVEN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Take this hurried spirit and anchor my heart",
+      "img": "short-morningpsalm5v3-scene-05.jpg",
+      "kicker": "QUIET STRENGTH",
+      "sub": "ANCHOR MY HEART TODAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. Before the noise begins, look up.",
+      "img": "short-morningpsalm5v3-scene-06.jpg",
+      "kicker": "LOOK UP",
+      "sub": "BEGIN THE DAY IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your mind is already racing before sunrise."
+    ],
+    [
+      3,
+      9,
+      "You carry yesterday's unfinished tasks into this quiet room, wondering how you will handle what comes next."
+    ],
+    [
+      9,
+      13,
+      "Scripture reminds us in Psalm five:"
+    ],
+    [
+      13,
+      23,
+      "My voice shalt thou hear in the morning, O LORD; in the morning will I direct my prayer unto thee, and will look up."
+    ],
+    [
+      23,
+      30,
+      "Lord, before the house wakes and the day demands everything, I direct my thoughts straight to you."
+    ],
+    [
+      30,
+      36,
+      "Take this hurried spirit and anchor my heart in your quiet strength."
+    ],
+    [
+      36,
+      42,
+      "I release the need to control today's outcome, choosing instead to lift my eyes to you."
+    ],
+    [
+      42,
+      46,
+      "Amen. Before the noise begins, look up."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR MIND IS ALREADY",
+        "RACING BEFORE SUNRISE."
+      ],
+      [
+        "RACING"
+      ],
+      "MORNING PRAYER"
+    ],
+    [
+      3,
+      9,
+      [
+        "YOU CARRY YESTERDAY'S",
+        "UNFINISHED TASKS INTO THIS",
+        "QUIET ROOM, WONDERING HOW",
+        "YOU WILL HANDLE NEXT."
+      ],
+      [
+        "UNFINISHED"
+      ],
+      "BEFORE THE NOISE"
+    ],
+    [
+      9,
+      13,
+      [
+        "SCRIPTURE REMINDS US",
+        "IN PSALM FIVE:"
+      ],
+      [
+        "PSALM"
+      ],
+      "PSALM 5 : 3"
+    ],
+    [
+      13,
+      23,
+      [
+        "MY VOICE SHALT THOU HEAR",
+        "IN THE MORNING, O LORD;",
+        "IN THE MORNING WILL I",
+        "DIRECT MY PRAYER AND LOOK UP."
+      ],
+      [
+        "MORNING"
+      ],
+      "PSALM 5 : 3"
+    ],
+    [
+      23,
+      30,
+      [
+        "LORD, BEFORE THE HOUSE",
+        "WAKES AND DAY DEMANDS",
+        "EVERYTHING, I DIRECT MY",
+        "THOUGHTS STRAIGHT TO YOU."
+      ],
+      [
+        "DIRECT"
+      ],
+      "A SUNRISE PRAYER"
+    ],
+    [
+      30,
+      36,
+      [
+        "TAKE THIS HURRIED SPIRIT",
+        "AND ANCHOR MY HEART",
+        "IN YOUR QUIET STRENGTH."
+      ],
+      [
+        "ANCHOR"
+      ],
+      "A SUNRISE PRAYER"
+    ],
+    [
+      36,
+      42,
+      [
+        "I RELEASE THE NEED TO",
+        "CONTROL TODAY'S OUTCOME,",
+        "CHOOSING INSTEAD TO LIFT",
+        "MY EYES TO YOU."
+      ],
+      [
+        "RELEASE"
+      ],
+      "A SUNRISE PRAYER"
+    ],
+    [
+      42,
+      46,
+      [
+        "AMEN. BEFORE THE NOISE",
+        "BEGINS, LOOK UP."
+      ],
+      [
+        "LOOK UP"
+      ],
+      "THE MORNING ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your mind is already racing before sunrise.",
+      "kind": "phrase",
+      "words": [
+        "RACING",
+        "SUNRISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You carry yesterday's unfinished tasks into this quiet room, wondering how you will handle what comes next.",
+      "kind": "phrase",
+      "words": [
+        "UNFINISHED",
+        "TASKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture reminds us in Psalm five:",
+      "kind": "phrase",
+      "words": [
+        "SCRIPTURE",
+        "PSALM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "My voice shalt thou hear in the morning, O LORD; in the morning will I direct my prayer unto thee, and will look up.",
+      "kind": "phrase",
+      "words": [
+        "MORNING",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, before the house wakes and the day demands everything, I direct my thoughts straight to you.",
+      "kind": "phrase",
+      "words": [
+        "THOUGHTS",
+        "STRAIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Take this hurried spirit and anchor my heart in your quiet strength.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I release the need to control today's outcome, choosing instead to lift my eyes to you.",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "EYES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Before the noise begins, look up.",
+      "kind": "phrase",
+      "words": [
+        "NOISE",
+        "LOOK"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 5:3"
+}
