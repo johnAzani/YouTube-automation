@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T16:11:18Z",
+  "generated_at": "2026-11-24T16:18:17Z",
   "monitor_generated_at": "2026-11-24T16:09:47.445174+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 756,
-    "published_longform": 213,
+    "published_total": 757,
+    "published_longform": 214,
     "published_shorts": 543,
-    "public_total": 754,
-    "queued_longform": 62,
+    "public_total": 755,
+    "queued_longform": 61,
     "queued_shorts": 62,
     "automations_ok": 14,
     "automations_total": 15,
@@ -159,28 +159,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 86,
-        "published_longform": 25,
+        "published_total": 87,
+        "published_longform": 26,
         "published_shorts": 61,
         "thumbnail_pending": 2,
-        "public_total": 86,
-        "queued_longform": 6,
+        "public_total": 87,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYEXODUS17V11",
-        "title": "Say This Exodus 17:11-12 Prayer at Noon | The Weight You Carry At Noon #Shorts",
-        "format": "short",
-        "youtube_video_id": "0sa2HDoOywo",
-        "watch_url": "https://www.youtube.com/shorts/0sa2HDoOywo",
-        "published_on": "2026-11-24",
-        "published_at": "2026-11-24T13:33:27Z"
-      },
-      "next_queued_longform": {
         "id": "0102",
         "title": "When Words Are Heated: Proverbs 15:1 | The Midday Watch",
-        "words": 1110,
+        "format": "longform",
+        "youtube_video_id": "G9ewMZbXquE",
+        "watch_url": "https://youtu.be/G9ewMZbXquE",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T16:16:45Z"
+      },
+      "next_queued_longform": {
+        "id": "0104",
+        "title": "Planted by the Waters in the Heat: Jeremiah 17:7-8 | The Midday Watch",
+        "words": 1453,
         "status": "approved"
       },
       "next_queued_short": {
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0102",
+      "slug": "when-words-are-heated-proverbs-15-1",
+      "file": "0102-when-words-are-heated-proverbs-15-1.md",
+      "title": "When Words Are Heated: Proverbs 15:1 | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T16:16:45Z",
+      "youtube_video_id": "G9ewMZbXquE",
+      "watch_url": "https://youtu.be/G9ewMZbXquE",
+      "youtu_be_url": "https://youtu.be/G9ewMZbXquE",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/G9ewMZbXquE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/G9ewMZbXquE/hqdefault.jpg",
+      "thumb_text": "WORDS ARE HEATED",
+      "thumbnail_pending": false,
+      "duration_label": "7m 00s",
+      "words": 1110
+    },
     {
       "id": "0814",
       "slug": "led-by-his-counsel-psalm-73-23-24",
@@ -18928,19 +18952,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 979
-      },
-      {
-        "id": "0102",
-        "slug": "when-words-are-heated-proverbs-15-1",
-        "file": "0102-when-words-are-heated-proverbs-15-1.md",
-        "title": "When Words Are Heated: Proverbs 15:1 | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1110
       },
       {
         "id": "0104",
