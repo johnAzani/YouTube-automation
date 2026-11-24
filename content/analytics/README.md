@@ -146,6 +146,28 @@ Videos by watch time, 365 days (up to 50):
 | [Say This Matthew 11:28-30 Prayer Before You Sleep / The Secret Place…](https://youtu.be/GBNCiP8UTS8) | 0.33 | 69 | 0:47 (81.3%) |
 | [Say This Philippians 4:8 Prayer Before You Sleep / The Secret Place #…](https://youtu.be/8ssIICb_3Ts) | 0.27 | 58 | 0:39 (68.2%) |
 
+#### What was started, and what was actually watched
+
+Of 4,331 plays across the 34 most-viewed videos, **1,710 were engaged views** — plays that lasted rather than started. That 39.5% is the nearest thing the Analytics API offers to YouTube Studio's "viewed vs swiped away"; Studio does not expose that figure to any API, so it is a proxy, not the number itself.
+
+| Video | Views | Engaged | Average watched |
+| :--- | ---: | ---: | ---: |
+| [KkPAtMLoGf4](https://youtu.be/KkPAtMLoGf4) | 394 | 146 | 0:46 (75.4%) |
+| [SG69BbNlfRw](https://youtu.be/SG69BbNlfRw) | 266 | 107 | 0:26 (65.4%) |
+| [kLgHN57fb1w](https://youtu.be/kLgHN57fb1w) | 260 | 96 | 1:17 (146%) |
+| [SAA1fLyeNgo](https://youtu.be/SAA1fLyeNgo) | 238 | 101 | 0:32 (73%) |
+| [uSsaVvsLsfU](https://youtu.be/uSsaVvsLsfU) | 194 | 96 | 0:32 (63.5%) |
+| [dmwIvRt6Ve8](https://youtu.be/dmwIvRt6Ve8) | 177 | 84 | 1:04 (109%) |
+| [6Y9d1w6Cvzg](https://youtu.be/6Y9d1w6Cvzg) | 175 | 48 | 0:24 (58.1%) |
+| [dqKjQaJbU0c](https://youtu.be/dqKjQaJbU0c) | 151 | 55 | 0:23 (46.2%) |
+| [xkpfupurX-0](https://youtu.be/xkpfupurX-0) | 147 | 41 | 0:20 (42.4%) |
+| [d0Et8L_6y1o](https://youtu.be/d0Et8L_6y1o) | 139 | 56 | 1:52 (191%) |
+| [fTYu1V5GHUE](https://youtu.be/fTYu1V5GHUE) | 129 | 38 | 0:49 (91.9%) |
+| [jhOlEJvNg-0](https://youtu.be/jhOlEJvNg-0) | 126 | 47 | 0:54 (98.8%) |
+| [fsnBaSiXhHY](https://youtu.be/fsnBaSiXhHY) | 123 | 59 | 0:37 (69.5%) |
+| [GQT7eKz9MAE](https://youtu.be/GQT7eKz9MAE) | 120 | 56 | 0:35 (81.3%) |
+| [D4SsfbWpMK4](https://youtu.be/D4SsfbWpMK4) | 118 | 42 | 1:47 (238%) |
+
 Thumbnails, 2026-10-15 to 2026-11-22 (36 days of YouTube's daily reach files): shown 15,081 times, clicked 207 times, a click rate of 1.4%.
 A thumbnail is counted where YouTube shows one (search, home, suggested, the channel page). The Shorts feed shows none, so Shorts watched there are not in these figures.
 
