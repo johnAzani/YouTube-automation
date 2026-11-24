@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["PSALM 8:1", "EXCELLENT IS THY NAME", "A PRAYER OF THANKS", "THE PRAISE GARDEN"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-01T08:38:47Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When the evening sky dwarfs your heavy thoughts, remember that the Maker of every star still knows your name. As written in Psalm eight verse one, "O LORD, our Lord, how excellent is thy name in all the earth! who hast set thy glory above the heavens." Heavenly Father, we pause to thank You for the boundless majesty of Your creation. You set glory above the stars, yet You listen gently to every quiet prayer we breathe. Anchor our hearts in Your quiet peace, knowing Your light covers every step of our path. Amen. Peace remains when the evening sky dwarfs your heavy thoughts.

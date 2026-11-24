@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["CALL UNTO ME", "AND I WILL ANSWER", "GREAT & MIGHTY THINGS", "JEREMIAH 33:3"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-01T08:38:26Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When a tough decision leaves you awake at midnight, God is ready to reveal answers. Call unto me, and I will answer thee, and show thee great and mighty things, which thou knowest not. Lord, we reach out to You in this quiet hour when confusion clouds our mind. You hold the hidden paths and the wisdom we cannot see on our own. Speak clarity into our confusion and unveil Your divine direction for tomorrow. Let Your peace settle over every pressing doubt tonight. Deliver us from fear and guide our next steps by Your unseen hand. Subscribe to stand with us in midnight prayer.

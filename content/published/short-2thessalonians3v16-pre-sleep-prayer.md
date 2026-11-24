@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["WHEN YOUR THOUGHTS", "WILL NOT SETTLE", "FIND GOD'S PEACE", "BEDTIME PRAYER"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Your thoughts will not settle tonight. You have tried to quiet the noise of this day, but the quiet room only amplifies your worry. Hear what God promises your tired heart in Second Thessalonians chapter three, verse sixteen. Now the Lord of peace himself give you peace always by all means. The Lord be with you all. Lord, step into this quiet space right now. Give peace when answers are missing, and calm the storm inside this room. Cover every fear with your presence, and let deep rest take over tonight. Be with us in the silence. Amen. Your thoughts will not settle tonight.

@@ -28,9 +28,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE PRAISE GARDEN", "LUKE 1:46-49", "MY SOUL DOTH MAGNIFY", "GOD MY SAVIOR"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-24T07:43:27Z"
+thumbnail_retry_after: "2026-12-01T08:38:46Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If you feel small and overlooked in your quiet work today, hear God's word. And Mary said, My soul doth magnify the Lord, And my spirit hath rejoiced in God my Savior. For he hath regarded the low estate of his handmaiden: for, behold, from henceforth all generations shall call me blessed. For he that is mighty hath done to me great things; and holy is his name. Heavenly Father, we praise You for looking upon our humble state with gentle mercy. You perform great wonders in our lives, and Your name is holy forever. We magnify Your grace with honest hearts of worship and thanksgiving. Subscribe to join The Praise Garden.
