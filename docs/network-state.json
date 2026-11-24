@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T14:42:45Z",
+  "generated_at": "2026-11-24T15:42:03Z",
   "monitor_generated_at": "2026-11-24T13:59:05.742007+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 213,
     "published_shorts": 543,
     "public_total": 754,
-    "queued_longform": 59,
+    "queued_longform": 60,
     "queued_shorts": 62,
     "automations_ok": 14,
     "automations_total": 14,
@@ -101,7 +101,7 @@
         "published_shorts": 70,
         "thumbnail_pending": 2,
         "public_total": 102,
-        "queued_longform": 7,
+        "queued_longform": 8,
         "queued_other": 0,
         "queued_shorts": 2
       },
@@ -19604,6 +19604,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1680
+      },
+      {
+        "id": "0904",
+        "slug": "order-for-your-day-before-it-begins-job-38-12",
+        "file": "0904-order-for-your-day-before-it-begins-job-38-12.md",
+        "title": "Order for Your Day Before it Begins: Job 38:12 | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1174
       }
     ],
     "shorts": [
