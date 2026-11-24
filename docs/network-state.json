@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T13:43:39Z",
+  "generated_at": "2026-11-24T13:45:04Z",
   "monitor_generated_at": "2026-11-24T08:39:01.248981+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 751,
+    "published_total": 752,
     "published_longform": 211,
-    "published_shorts": 540,
-    "public_total": 749,
+    "published_shorts": 541,
+    "public_total": 750,
     "queued_longform": 61,
-    "queued_shorts": 66,
+    "queued_shorts": 64,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -567,23 +567,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 61,
+        "published_total": 62,
         "published_longform": 15,
-        "published_shorts": 46,
-        "thumbnail_pending": 61,
-        "public_total": 61,
+        "published_shorts": 47,
+        "thumbnail_pending": 62,
+        "public_total": 62,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0715",
-        "title": "Thanksgiving Worship When Your Heart Is Heavy: Psalm 9:1-2",
-        "format": "longform",
-        "youtube_video_id": "3TmfStXAsYg",
-        "watch_url": "https://youtu.be/3TmfStXAsYg",
+        "id": "SHORT-GARDENPSALM116V12",
+        "title": "Pray This Psalm 116:12-13 Prayer of Thanksgiving | Your Hands Are Full Today #Shorts",
+        "format": "short",
+        "youtube_video_id": "V-lt65Ubl5M",
+        "watch_url": "https://www.youtube.com/shorts/V-lt65Ubl5M",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T08:36:01Z"
+        "published_at": "2026-11-24T13:43:55Z"
       },
       "next_queued_longform": {
         "id": "0716",
@@ -592,8 +592,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm116v12",
-        "scripture": "Psalm 116:12-13",
+        "short": "short-gardenrevelation5v12",
+        "scripture": "Revelation 5:12-13",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM116V12",
+      "slug": "short-gardenpsalm116v12-thanksgiving-prayer",
+      "file": "short-gardenpsalm116v12-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 116:12-13 Prayer of Thanksgiving | Your Hands Are Full Today #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T13:43:55Z",
+      "youtube_video_id": "V-lt65Ubl5M",
+      "watch_url": "https://www.youtube.com/shorts/V-lt65Ubl5M",
+      "youtu_be_url": "https://youtu.be/V-lt65Ubl5M",
+      "shorts_url": "https://www.youtube.com/shorts/V-lt65Ubl5M",
+      "studio_url": "https://studio.youtube.com/video/V-lt65Ubl5M/edit",
+      "thumb_url": "https://i.ytimg.com/vi/V-lt65Ubl5M/hqdefault.jpg",
+      "thumb_text": "WHAT SHALL I \u00b7 RENDER UNTO THE LORD?",
+      "thumbnail_pending": true,
+      "duration_label": "52s",
+      "words": 642
+    },
     {
       "id": "SHORT-SHIELDISAIAH59V19",
       "slug": "short-shieldisaiah59v19-protection-prayer",
@@ -19547,17 +19571,6 @@
         "target_window_utc": "17:14"
       },
       {
-        "short": "short-gardenpsalm116v12",
-        "file": "0000-short-gardenpsalm116v12.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 116:12-13",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
         "short": "short-gardenrevelation5v12",
         "file": "0000-short-gardenrevelation5v12.yml",
         "companion_longform_id": "",
@@ -20189,17 +20202,6 @@
         "file": "0720-short-gardenephesians5v20.yml",
         "companion_longform_id": "0720",
         "scripture": "Ephesians 5:20",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-gardenpsalm145v1",
-        "file": "0721-short-gardenpsalm145v1.yml",
-        "companion_longform_id": "0721",
-        "scripture": "Psalm 145:1-3",
         "channel": "prayer9",
         "channel_name": "The Praise Garden",
         "status": "approved",
