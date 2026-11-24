@@ -2,7 +2,7 @@
 id: '0320'
 title: 'Strength and Honour in Your Home: Proverbs 31:25-28 | The Family Altar'
 slug: strength-and-honour-in-your-home-proverbs-31-25-28
-status: approved
+status: published
 channel: prayer5
 privacy: public
 format: longform
@@ -74,6 +74,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-24"
+published_at: "2026-11-24T16:51:01Z"
+youtube_video_id: "qcapmVv0M0M"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 642.64
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar

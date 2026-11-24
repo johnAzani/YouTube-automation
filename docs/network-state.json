@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T16:45:44Z",
+  "generated_at": "2026-11-24T16:52:54Z",
   "monitor_generated_at": "2026-11-24T16:44:02.355735+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 757,
-    "published_longform": 214,
+    "published_total": 758,
+    "published_longform": 215,
     "published_shorts": 543,
-    "public_total": 755,
-    "queued_longform": 61,
+    "public_total": 756,
+    "queued_longform": 60,
     "queued_shorts": 62,
     "automations_ok": 13,
     "automations_total": 15,
@@ -295,28 +295,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 68,
-        "published_longform": 20,
+        "published_total": 69,
+        "published_longform": 21,
         "published_shorts": 48,
-        "thumbnail_pending": 68,
-        "public_total": 68,
-        "queued_longform": 6,
+        "thumbnail_pending": 69,
+        "public_total": 69,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-FAMILY2TIMOTHY1V5",
-        "title": "Pray This 2 Timothy 1:5 Family Prayer Over Your Home | The Burden Of Your Past #Shorts",
-        "format": "short",
-        "youtube_video_id": "Gd92uIeifLk",
-        "watch_url": "https://www.youtube.com/shorts/Gd92uIeifLk",
-        "published_on": "2026-11-24",
-        "published_at": "2026-11-24T13:33:06Z"
-      },
-      "next_queued_longform": {
         "id": "0320",
         "title": "Strength and Honour in Your Home: Proverbs 31:25-28 | The Family Altar",
-        "words": 1608,
+        "format": "longform",
+        "youtube_video_id": "qcapmVv0M0M",
+        "watch_url": "https://youtu.be/qcapmVv0M0M",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T16:51:01Z"
+      },
+      "next_queued_longform": {
+        "id": "0322",
+        "title": "An Eternal Blessing Over Your Home: 2 Samuel 7:29 | The Family Altar",
+        "words": 1084,
         "status": "approved"
       },
       "next_queued_short": {
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0320",
+      "slug": "strength-and-honour-in-your-home-proverbs-31-25-28",
+      "file": "0320-strength-and-honour-in-your-home-proverbs-31-25-28.md",
+      "title": "Strength and Honour in Your Home: Proverbs 31:25-28 | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T16:51:01Z",
+      "youtube_video_id": "qcapmVv0M0M",
+      "watch_url": "https://youtu.be/qcapmVv0M0M",
+      "youtu_be_url": "https://youtu.be/qcapmVv0M0M",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/qcapmVv0M0M/edit",
+      "thumb_url": "https://i.ytimg.com/vi/qcapmVv0M0M/hqdefault.jpg",
+      "thumb_text": "STRENGTH AND HONOUR",
+      "thumbnail_pending": true,
+      "duration_label": "10m 43s",
+      "words": 1608
+    },
     {
       "id": "0102",
       "slug": "when-words-are-heated-proverbs-15-1",
@@ -19160,19 +19184,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1064
-      },
-      {
-        "id": "0320",
-        "slug": "strength-and-honour-in-your-home-proverbs-31-25-28",
-        "file": "0320-strength-and-honour-in-your-home-proverbs-31-25-28.md",
-        "title": "Strength and Honour in Your Home: Proverbs 31:25-28 | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1608
       },
       {
         "id": "0322",
