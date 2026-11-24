@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T17:03:40Z",
+  "generated_at": "2026-11-24T17:04:02Z",
   "monitor_generated_at": "2026-11-24T16:51:52.277938+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 759,
+    "published_total": 760,
     "published_longform": 215,
-    "published_shorts": 544,
-    "public_total": 757,
+    "published_shorts": 545,
+    "public_total": 758,
     "queued_longform": 60,
-    "queued_shorts": 61,
+    "queued_shorts": 60,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": true
@@ -227,23 +227,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 79,
+        "published_total": 80,
         "published_longform": 25,
-        "published_shorts": 54,
-        "thumbnail_pending": 78,
-        "public_total": 79,
+        "published_shorts": 55,
+        "thumbnail_pending": 79,
+        "public_total": 80,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTACTS27V23",
-        "title": "Pray This Acts 27:23-25 Midnight Prayer | When The Wind Will Not Quiet #Shorts",
+        "id": "SHORT-MIDNIGHTJUDGES7V19",
+        "title": "Pray This Judges 7:19-21 Midnight Prayer | Strength To Stand #Shorts",
         "format": "short",
-        "youtube_video_id": "HCnpNtvImMU",
-        "watch_url": "https://www.youtube.com/shorts/HCnpNtvImMU",
+        "youtube_video_id": "0KUWFG-oogI",
+        "watch_url": "https://www.youtube.com/shorts/0KUWFG-oogI",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T13:32:54Z"
+        "published_at": "2026-11-24T17:02:50Z"
       },
       "next_queued_longform": {
         "id": "0225",
@@ -252,8 +252,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightjudges7v19",
-        "scripture": "Judges 7:19-21",
+        "short": "short-midnightnehemiah4v9",
+        "scripture": "Nehemiah 4:9",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTJUDGES7V19",
+      "slug": "short-midnightjudges7v19-midnight-prayer",
+      "file": "short-midnightjudges7v19-midnight-prayer.md",
+      "title": "Pray This Judges 7:19-21 Midnight Prayer | Strength To Stand #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T17:02:50Z",
+      "youtube_video_id": "0KUWFG-oogI",
+      "watch_url": "https://www.youtube.com/shorts/0KUWFG-oogI",
+      "youtu_be_url": "https://youtu.be/0KUWFG-oogI",
+      "shorts_url": "https://www.youtube.com/shorts/0KUWFG-oogI",
+      "studio_url": "https://studio.youtube.com/video/0KUWFG-oogI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/0KUWFG-oogI/hqdefault.jpg",
+      "thumb_text": "MIDNIGHT VIGIL \u00b7 THE BROKEN PITCHER",
+      "thumbnail_pending": true,
+      "duration_label": "60s",
+      "words": 682
+    },
     {
       "id": "SHORT-HEALINGPSALM138V7",
       "slug": "short-healingpsalm138v7-restoration-prayer",
@@ -19801,17 +19825,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightjudges7v19",
-        "file": "0000-short-midnightjudges7v19.yml",
-        "companion_longform_id": "",
-        "scripture": "Judges 7:19-21",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightnehemiah4v9",
