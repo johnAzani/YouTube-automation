@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T17:04:02Z",
+  "generated_at": "2026-11-24T17:05:23Z",
   "monitor_generated_at": "2026-11-24T16:51:52.277938+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 760,
+    "published_total": 761,
     "published_longform": 215,
-    "published_shorts": 545,
-    "public_total": 758,
+    "published_shorts": 546,
+    "public_total": 759,
     "queued_longform": 60,
-    "queued_shorts": 60,
+    "queued_shorts": 59,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": true
@@ -96,23 +96,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 103,
+        "published_total": 104,
         "published_longform": 33,
-        "published_shorts": 70,
+        "published_shorts": 71,
         "thumbnail_pending": 2,
-        "public_total": 102,
+        "public_total": 103,
         "queued_longform": 8,
         "queued_other": 0,
-        "queued_shorts": 2
+        "queued_shorts": 1
       },
       "latest_video": {
-        "id": "SHORT-MORNINGMICAH7V7",
-        "title": "Say This Micah 7:7 Prayer at Sunrise | Before You Decide Today #Shorts",
+        "id": "SHORT-MORNINGCOLOSSIANS3V17",
+        "title": "Say This Colossians 3:17 Prayer at Sunrise | Day Ahead #Shorts",
         "format": "short",
-        "youtube_video_id": "HCXQM-pEOSE",
-        "watch_url": "https://www.youtube.com/shorts/HCXQM-pEOSE",
+        "youtube_video_id": "M74DPsw7_mY",
+        "watch_url": "https://www.youtube.com/shorts/M74DPsw7_mY",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T13:34:09Z"
+        "published_at": "2026-11-24T17:04:08Z"
       },
       "next_queued_longform": {
         "id": "0079",
@@ -121,8 +121,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningcolossians3v17",
-        "scripture": "Colossians 3:17",
+        "short": "short-morningpsalm5v3",
+        "scripture": "Psalm 5:3",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGCOLOSSIANS3V17",
+      "slug": "short-morningcolossians3v17-sunrise-prayer",
+      "file": "short-morningcolossians3v17-sunrise-prayer.md",
+      "title": "Say This Colossians 3:17 Prayer at Sunrise | Day Ahead #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T17:04:08Z",
+      "youtube_video_id": "M74DPsw7_mY",
+      "watch_url": "https://www.youtube.com/shorts/M74DPsw7_mY",
+      "youtu_be_url": "https://youtu.be/M74DPsw7_mY",
+      "shorts_url": "https://www.youtube.com/shorts/M74DPsw7_mY",
+      "studio_url": "https://studio.youtube.com/video/M74DPsw7_mY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/M74DPsw7_mY/hqdefault.jpg",
+      "thumb_text": "GRACE IN EVERY \u00b7 ACTION",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 622
+    },
     {
       "id": "SHORT-MIDNIGHTJUDGES7V19",
       "slug": "short-midnightjudges7v19-midnight-prayer",
@@ -19891,17 +19915,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-morningcolossians3v17",
-        "file": "0075-short-morningcolossians3v17.yml",
-        "companion_longform_id": "0075",
-        "scripture": "Colossians 3:17",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-middaypsalm46v10",
