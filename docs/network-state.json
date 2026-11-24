@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T20:56:17Z",
+  "generated_at": "2026-11-24T20:56:26Z",
   "monitor_generated_at": "2026-11-24T17:48:42.638979+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 770,
+    "published_total": 771,
     "published_longform": 215,
-    "published_shorts": 555,
-    "public_total": 768,
+    "published_shorts": 556,
+    "public_total": 769,
     "queued_longform": 62,
-    "queued_shorts": 51,
+    "queued_shorts": 50,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": true
@@ -562,23 +562,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 63,
+        "published_total": 64,
         "published_longform": 15,
-        "published_shorts": 48,
-        "thumbnail_pending": 63,
-        "public_total": 63,
+        "published_shorts": 49,
+        "thumbnail_pending": 64,
+        "public_total": 64,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-GARDENREVELATION5V12",
-        "title": "Pray This Revelation 5:12-13 Prayer of Thanksgiving | The Thing You Carried #Shorts",
+        "id": "SHORT-GARDENREVELATION7V12",
+        "title": "Pray This Revelation 7:12 Prayer of Thanksgiving | When Your Effort Feels Unseen #Shorts",
         "format": "short",
-        "youtube_video_id": "dFSCwkkCGyA",
-        "watch_url": "https://www.youtube.com/shorts/dFSCwkkCGyA",
+        "youtube_video_id": "iZE02T_X2Jk",
+        "watch_url": "https://www.youtube.com/shorts/iZE02T_X2Jk",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T17:11:34Z"
+        "published_at": "2026-11-24T20:55:15Z"
       },
       "next_queued_longform": {
         "id": "0716",
@@ -587,8 +587,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenrevelation7v12",
-        "scripture": "Revelation 7:12",
+        "short": "short-gardenpsalm95v1",
+        "scripture": "Psalm 95:1-2",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -709,6 +709,30 @@
       "thumbnail_pending": false,
       "duration_label": "56s",
       "words": 640
+    },
+    {
+      "id": "SHORT-GARDENREVELATION7V12",
+      "slug": "short-gardenrevelation7v12-thanksgiving-prayer",
+      "file": "short-gardenrevelation7v12-thanksgiving-prayer.md",
+      "title": "Pray This Revelation 7:12 Prayer of Thanksgiving | When Your Effort Feels Unseen #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T20:55:15Z",
+      "youtube_video_id": "iZE02T_X2Jk",
+      "watch_url": "https://www.youtube.com/shorts/iZE02T_X2Jk",
+      "youtu_be_url": "https://youtu.be/iZE02T_X2Jk",
+      "shorts_url": "https://www.youtube.com/shorts/iZE02T_X2Jk",
+      "studio_url": "https://studio.youtube.com/video/iZE02T_X2Jk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/iZE02T_X2Jk/hqdefault.jpg",
+      "thumb_text": "WHEN YOUR EFFORT \u00b7 FEELS UNSEEN",
+      "thumbnail_pending": true,
+      "duration_label": "53s",
+      "words": 641
     },
     {
       "id": "SHORT-PROVISIONPSALM67V5",
@@ -19998,17 +20022,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-gardenrevelation7v12",
-        "file": "0000-short-gardenrevelation7v12.yml",
-        "companion_longform_id": "",
-        "scripture": "Revelation 7:12",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-guidedpsalm17v5",
