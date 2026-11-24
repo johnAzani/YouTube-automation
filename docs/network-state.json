@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T01:55:29Z",
+  "generated_at": "2026-11-24T02:01:22Z",
   "monitor_generated_at": "2026-11-23T23:26:47.046817+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 724,
+    "published_total": 725,
     "published_longform": 206,
-    "published_shorts": 518,
-    "public_total": 722,
+    "published_shorts": 519,
+    "public_total": 723,
     "queued_longform": 56,
-    "queued_shorts": 60,
+    "queued_shorts": 59,
     "automations_ok": 13,
     "automations_total": 14,
     "network_healthy": false
@@ -640,23 +640,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 56,
+        "published_total": 57,
         "published_longform": 14,
-        "published_shorts": 42,
-        "thumbnail_pending": 0,
-        "public_total": 56,
+        "published_shorts": 43,
+        "thumbnail_pending": 1,
+        "public_total": 57,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDJOHN16V13",
-        "title": "Pray This John 16:13 Prayer for God's Guidance | Your Path #Shorts",
+        "id": "SHORT-GUIDEDPROVERBS2V6",
+        "title": "Pray This Proverbs 2:6 Prayer for God's Guidance | God Gives True Wisdom #Shorts",
         "format": "short",
-        "youtube_video_id": "8CWXMgWi70M",
-        "watch_url": "https://www.youtube.com/shorts/8CWXMgWi70M",
-        "published_on": "2026-11-23",
-        "published_at": "2026-11-23T22:25:32Z"
+        "youtube_video_id": "jAHAxJ7m4uM",
+        "watch_url": "https://www.youtube.com/shorts/jAHAxJ7m4uM",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T02:00:26Z"
       },
       "next_queued_longform": {
         "id": "0814",
@@ -665,8 +665,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedproverbs2v6",
-        "scripture": "Proverbs 2:6",
+        "short": "short-guidedpsalm73v23",
+        "scripture": "Psalm 73:23-24",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDPROVERBS2V6",
+      "slug": "short-guidedproverbs2v6-guidance-prayer",
+      "file": "short-guidedproverbs2v6-guidance-prayer.md",
+      "title": "Pray This Proverbs 2:6 Prayer for God's Guidance | God Gives True Wisdom #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T02:00:26Z",
+      "youtube_video_id": "jAHAxJ7m4uM",
+      "watch_url": "https://www.youtube.com/shorts/jAHAxJ7m4uM",
+      "youtu_be_url": "https://youtu.be/jAHAxJ7m4uM",
+      "shorts_url": "https://www.youtube.com/shorts/jAHAxJ7m4uM",
+      "studio_url": "https://studio.youtube.com/video/jAHAxJ7m4uM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/jAHAxJ7m4uM/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 666
+    },
     {
       "id": "SHORT-HEALINGNAHUM1V7",
       "slug": "short-healingnahum1v7-restoration-prayer",
@@ -19420,17 +19444,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedproverbs2v6",
-        "file": "0813-short-guidedproverbs2v6.yml",
-        "companion_longform_id": "0813",
-        "scripture": "Proverbs 2:6",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedpsalm73v23",
