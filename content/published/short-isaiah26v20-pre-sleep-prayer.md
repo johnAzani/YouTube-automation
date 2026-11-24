@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["ENTER YOUR CHAMBER", "SHUT THE DOOR", "ISAIAH 26:20", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 The door is closed against the noisy world. Tonight, you can stop carrying the worries you could not finish today. Isaiah wrote, Come, my people, enter thou into thy chambers, and shut thy doors about thee: hide thyself as it were for a little moment, until the indignation be overpast. Lord, we shut our doors against the noise of this day and turn to you. Guard this dark room, quiet every sudden fear, and let your peace cover this bed all night long. Hold us close until the heavy storm passes by. Amen. Rest now, for the door is closed against the noisy world.

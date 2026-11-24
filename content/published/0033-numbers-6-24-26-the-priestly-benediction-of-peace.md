@@ -95,6 +95,7 @@ narration_voice: "Charon"
 duration_seconds: 401.32
 thumbnail_revision: "ctr-v3-cinema"
 thumbnail_concept: "poster"
+live_handle: "@SecretPlaceSanctuary"
 ---
 ## Scene 1 — The LORD Bless Thee, and Keep Thee (Verse 24a)
 

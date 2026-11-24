@@ -27,7 +27,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (55, 696, 1023, 745); shorten the authored lockup or reduce its size"
 ---
 
 Your trembling hands need steady strength right now. In the middle of this demanding workday, fatigue can make your spirit feel faint and uncertain. Hear what God speaks through Isaiah: Strengthen ye the weak hands, and confirm the feeble knees. Say to them that are of a fearful heart, Be strong, fear not: behold, your God will come with vengeance, even God with a recompence; he will come and save you. Lord, reach into this exact hour and steady our shaken hearts. Quiet every anxious thought, renew our worn courage, and sustain us where we are weak. Amen. Your trembling hands need steady strength right now.

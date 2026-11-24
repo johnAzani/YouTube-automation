@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["NEHEMIAH 4:9", "STAND IN PRAYER", "SET A WATCH", "THE MIDNIGHT WATCH"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-01T21:45:24Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Unseen pressures feel heavy in your room tonight. When subtle opposition threatens your spirit, turn to God and post a vigilant guard. Hear Nehemiah four verse nine: Nevertheless we made our prayer unto our God, and set a watch against them day and night, because of them. Lord, as midnight darkness settles, we bring our deepest burdens directly to Your throne. Give us strength to pray continuously while standing unwavering against every fear. Protect this home and fill every quiet space with Your abiding peace. Keep our spirit watchful, steadfast, and firmly anchored in Your eternal truth. Amen, even as unseen pressures feel heavy tonight.

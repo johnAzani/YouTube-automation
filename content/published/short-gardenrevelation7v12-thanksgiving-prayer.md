@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["WHEN YOUR EFFORT", "FEELS UNSEEN", "HEAVEN REJOICES", "REVELATION 7:12"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-01T21:45:36Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Your quiet labor went completely unnoticed today. When your hard work feels small or forgotten, lift up your eyes. For the angels gather around the throne, saying, Amen: Blessing, and glory, and wisdom, and thanksgiving, and honor, and power, and might, be unto our God for ever and ever. Amen. Lord, we join our humble voices to this eternal song. Receive our quiet gratitude when no one else sees our effort. Teach us to rest in your everlasting strength and honor. May our daily praise glorify your holy name through every shadow. Amen, even when quiet labor goes unnoticed today.
