@@ -1,6 +1,6 @@
 ---
 id: '0512'
-title: 'Finding Favour in Your Daily Labor: Ruth 2:12 | The Provision Table'
+title: "When Your Daily Work Feels Unseen: Ruth 2:12 | The Provision Table"
 slug: finding-favour-in-your-daily-labor-ruth-2-12
 status: published
 channel: prayer7
@@ -79,10 +79,13 @@ originality:
 published_on: "2026-11-17"
 published_at: "2026-11-17T12:06:06Z"
 youtube_video_id: "QmxTOVodFR4"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Finding Favour in Your Daily Labor: Ruth 2:12 | The Provision Table"
+retitled_at: "2026-11-24"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Approaching Jehovah-Jireh at the Prepared Table
