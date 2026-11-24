@@ -51,13 +51,6 @@
       "workflow": "reporting-jobs.yml"
     },
     {
-      "late_minutes": 140,
-      "name": "Produce video",
-      "ran_at": "2026-11-24T12:34:47+00:00",
-      "slot": "2026-11-24T10:14:00+00:00",
-      "workflow": "produce.yml"
-    },
-    {
       "late_minutes": 123,
       "name": "Growth autopilot",
       "ran_at": "2026-11-24T04:17:41+00:00",
@@ -65,8 +58,8 @@
       "workflow": "growth-autopilot.yml"
     }
   ],
-  "generated_at": "2026-11-24T14:02:08.510173+00:00",
-  "last_run_at": "2026-11-24T14:01:13+00:00",
+  "generated_at": "2026-11-24T14:17:20.951011+00:00",
+  "last_run_at": "2026-11-24T14:16:19+00:00",
   "on_time": [
     {
       "late_minutes": 91,
@@ -104,6 +97,6 @@
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 1,
   "warn_minutes": 120
 }
