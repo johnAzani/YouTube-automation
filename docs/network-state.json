@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T13:35:27Z",
+  "generated_at": "2026-11-24T13:43:06Z",
   "monitor_generated_at": "2026-11-24T08:39:01.248981+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 749,
+    "published_total": 750,
     "published_longform": 211,
-    "published_shorts": 538,
-    "public_total": 747,
+    "published_shorts": 539,
+    "public_total": 748,
     "queued_longform": 61,
-    "queued_shorts": 70,
+    "queued_shorts": 68,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -363,23 +363,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 69,
+        "published_total": 70,
         "published_longform": 18,
-        "published_shorts": 51,
+        "published_shorts": 52,
         "thumbnail_pending": 4,
-        "public_total": 69,
+        "public_total": 70,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-HEALINGPROVERBS3V7",
-        "title": "Pray This Proverbs 3:7-8 Healing Prayer for Peace & Strength | Health To Thy Navel #Shorts",
+        "id": "SHORT-HEALINGPSALM116V8",
+        "title": "Pray This Psalm 116:8-9 Healing Prayer for Peace & Strength | Refusing To Shift #Shorts",
         "format": "short",
-        "youtube_video_id": "CjKPqoAg6G4",
-        "watch_url": "https://www.youtube.com/shorts/CjKPqoAg6G4",
+        "youtube_video_id": "gEOY4if3Ik8",
+        "watch_url": "https://www.youtube.com/shorts/gEOY4if3Ik8",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T07:09:37Z"
+        "published_at": "2026-11-24T13:42:03Z"
       },
       "next_queued_longform": {
         "id": "0422",
@@ -388,8 +388,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingpsalm116v8",
-        "scripture": "Psalm 116:8-9",
+        "short": "short-healingpsalm138v7",
+        "scripture": "Psalm 138:7",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGPSALM116V8",
+      "slug": "short-healingpsalm116v8-restoration-prayer",
+      "file": "short-healingpsalm116v8-restoration-prayer.md",
+      "title": "Pray This Psalm 116:8-9 Healing Prayer for Peace & Strength | Refusing To Shift #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T13:42:03Z",
+      "youtube_video_id": "gEOY4if3Ik8",
+      "watch_url": "https://www.youtube.com/shorts/gEOY4if3Ik8",
+      "youtu_be_url": "https://youtu.be/gEOY4if3Ik8",
+      "shorts_url": "https://www.youtube.com/shorts/gEOY4if3Ik8",
+      "studio_url": "https://studio.youtube.com/video/gEOY4if3Ik8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/gEOY4if3Ik8/hqdefault.jpg",
+      "thumb_text": "DELIVERED FROM \u00b7 THE DEPTHS OF",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 652
+    },
     {
       "id": "SHORT-PSALM91FULL",
       "slug": "short-psalm91full-pre-sleep-prayer",
@@ -19554,17 +19578,6 @@
         "target_window_utc": "18:44"
       },
       {
-        "short": "short-healingpsalm116v8",
-        "file": "0000-short-healingpsalm116v8.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 116:8-9",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
-      },
-      {
         "short": "short-healingpsalm138v7",
         "file": "0000-short-healingpsalm138v7.yml",
         "companion_longform_id": "",
@@ -19943,17 +19956,6 @@
         "file": "0429-short-healingrevelation21v4.yml",
         "companion_longform_id": "0429",
         "scripture": "Revelation 21:4",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-healingjob5v18",
-        "file": "0431-short-healingjob5v18.yml",
-        "companion_longform_id": "0431",
-        "scripture": "Job 5:18",
         "channel": "prayer6",
         "channel_name": "The Healing Balm",
         "status": "approved",
