@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THINE O LORD", "IS THE GREATNESS", "AND THE POWER", "AND THE GLORY"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-24T16:16:12Z"
+thumbnail_retry_after: "2026-12-01T16:24:51Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 When your heart feels overwhelmed by the heavy choices sitting on your desk today, look up. Thine, O LORD, is the greatness, and the power, and the glory, and the victory, and the majesty: for all that is in the heaven and in the earth is thine; thine is the kingdom, O LORD, and thou art exalted as head above all. Now therefore, our God, we thank thee, and praise thy glorious name. Father, we release every heavy burden into Your sovereign hands, honoring Your majesty above our fears. Thank You for Your endless strength, enduring peace, and faithful presence today. Subscribe to pray with us daily.

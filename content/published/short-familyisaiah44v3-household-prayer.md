@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["A PRAYER FOR", "YOUR HOME", "AND YOUR CHILDREN", "THE FAMILY ALTAR"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-24T16:16:06Z"
+thumbnail_retry_after: "2026-12-01T16:24:40Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If you are weary of the spiritual dryness in your household right now, hear this. For I will pour water upon him that is thirsty, and floods upon the dry ground: I will pour my spirit upon thy seed, and my blessing upon thine offspring: Lord, we lift up every dry place within our family dynamic, trusting in your living water. May your presence refresh the hearts of our children and sustain them through every season. Let your spirit be the atmosphere of our home, guiding every decision and conversation today. We rest in your faithfulness, believing that your blessing reaches deep into our family future.
