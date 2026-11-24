@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T13:33:53Z",
+  "generated_at": "2026-11-24T13:34:15Z",
   "monitor_generated_at": "2026-11-24T08:39:01.248981+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 745,
+    "published_total": 746,
     "published_longform": 211,
-    "published_shorts": 534,
-    "public_total": 743,
+    "published_shorts": 535,
+    "public_total": 744,
     "queued_longform": 61,
-    "queued_shorts": 77,
+    "queued_shorts": 76,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -295,23 +295,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 67,
+        "published_total": 68,
         "published_longform": 20,
-        "published_shorts": 47,
-        "thumbnail_pending": 67,
-        "public_total": 67,
+        "published_shorts": 48,
+        "thumbnail_pending": 68,
+        "public_total": 68,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-FAMILYDEUTERONOMY28V3",
-        "title": "Pray This Deuteronomy 28:3-6 Family Prayer Over Your Home | Blessed In The City #Shorts",
+        "id": "SHORT-FAMILY2TIMOTHY1V5",
+        "title": "Pray This 2 Timothy 1:5 Family Prayer Over Your Home | The Burden Of Your Past #Shorts",
         "format": "short",
-        "youtube_video_id": "RcfqzY-uU5g",
-        "watch_url": "https://www.youtube.com/shorts/RcfqzY-uU5g",
+        "youtube_video_id": "Gd92uIeifLk",
+        "watch_url": "https://www.youtube.com/shorts/Gd92uIeifLk",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T07:02:51Z"
+        "published_at": "2026-11-24T13:33:06Z"
       },
       "next_queued_longform": {
         "id": "0320",
@@ -320,8 +320,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-family2timothy1v5",
-        "scripture": "2 Timothy 1:5",
+        "short": "short-familygenesis48v15",
+        "scripture": "Genesis 48:15-16",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILY2TIMOTHY1V5",
+      "slug": "short-family2timothy1v5-household-prayer",
+      "file": "short-family2timothy1v5-household-prayer.md",
+      "title": "Pray This 2 Timothy 1:5 Family Prayer Over Your Home | The Burden Of Your Past #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T13:33:06Z",
+      "youtube_video_id": "Gd92uIeifLk",
+      "watch_url": "https://www.youtube.com/shorts/Gd92uIeifLk",
+      "youtu_be_url": "https://youtu.be/Gd92uIeifLk",
+      "shorts_url": "https://www.youtube.com/shorts/Gd92uIeifLk",
+      "studio_url": "https://studio.youtube.com/video/Gd92uIeifLk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Gd92uIeifLk/hqdefault.jpg",
+      "thumb_text": "A FAITH \u00b7 THAT ENDURES",
+      "thumbnail_pending": true,
+      "duration_label": "45s",
+      "words": 676
+    },
     {
       "id": "SHORT-MIDNIGHTACTS27V23",
       "slug": "short-midnightacts27v23-midnight-prayer",
@@ -19369,17 +19393,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-family2timothy1v5",
-        "file": "0000-short-family2timothy1v5.yml",
-        "companion_longform_id": "",
-        "scripture": "2 Timothy 1:5",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
       {
         "short": "short-familygenesis48v15",
         "file": "0000-short-familygenesis48v15.yml",
