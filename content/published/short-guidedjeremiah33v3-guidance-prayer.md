@@ -27,7 +27,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (46, 798, 1032, 847); shorten the authored lockup or reduce its size"
 ---
 
 You stand before a choice you cannot untangle. Your own understanding has reached its limit today. Hear the word of the Lord in Jeremiah thirty-three, verse three: Call unto me, and I will answer thee, and show thee great and mighty things, which thou knowest not. Lord, we lay this hidden decision before You now. We have trusted our own logic long enough and found only silence. Answer us with the wisdom that comes from Your spirit. Reveal what is hidden and make clear the path ahead. Lead our steps out of hesitation and into Your truth. Amen. We bring this choice we cannot untangle back to You.
