@@ -2,7 +2,7 @@
 id: 0814
 title: 'Led by His Counsel: Psalm 73:23-24 | The Guided Path'
 slug: led-by-his-counsel-psalm-73-23-24
-status: approved
+status: published
 channel: prayer10
 privacy: public
 format: longform
@@ -74,6 +74,15 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-24"
+published_at: "2026-11-24T14:41:41Z"
+youtube_video_id: "wmO7bHfNJ0U"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 520.2
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Bringing the Decision to the Lord

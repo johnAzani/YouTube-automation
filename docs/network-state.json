@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T14:34:06Z",
+  "generated_at": "2026-11-24T14:42:45Z",
   "monitor_generated_at": "2026-11-24T13:59:05.742007+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 754,
-    "published_longform": 212,
-    "published_shorts": 542,
-    "public_total": 752,
-    "queued_longform": 60,
-    "queued_shorts": 63,
+    "published_total": 756,
+    "published_longform": 213,
+    "published_shorts": 543,
+    "public_total": 754,
+    "queued_longform": 59,
+    "queued_shorts": 62,
     "automations_ok": 14,
     "automations_total": 14,
     "network_healthy": true
@@ -635,33 +635,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 58,
-        "published_longform": 14,
-        "published_shorts": 44,
-        "thumbnail_pending": 1,
-        "public_total": 58,
-        "queued_longform": 6,
+        "published_total": 60,
+        "published_longform": 15,
+        "published_shorts": 45,
+        "thumbnail_pending": 2,
+        "public_total": 60,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPSALM73V23",
-        "title": "Pray This Psalm 73:23-24 Prayer for God's Guidance | God Holds Your Hand #Shorts",
-        "format": "short",
-        "youtube_video_id": "BaiGDPAZI-s",
-        "watch_url": "https://www.youtube.com/shorts/BaiGDPAZI-s",
-        "published_on": "2026-11-24",
-        "published_at": "2026-11-24T07:19:39Z"
-      },
-      "next_queued_longform": {
         "id": "0814",
         "title": "Led by His Counsel: Psalm 73:23-24 | The Guided Path",
-        "words": 1384,
+        "format": "longform",
+        "youtube_video_id": "wmO7bHfNJ0U",
+        "watch_url": "https://youtu.be/wmO7bHfNJ0U",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T14:41:41Z"
+      },
+      "next_queued_longform": {
+        "id": "0815",
+        "title": "Walking the Old Paths and Finding Rest: Jeremiah 6:16",
+        "words": 1254,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedjeremiah33v3",
-        "scripture": "Jeremiah 33:3",
+        "short": "short-guidedpsalm17v5",
+        "scripture": "Psalm 17:5",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0814",
+      "slug": "led-by-his-counsel-psalm-73-23-24",
+      "file": "0814-led-by-his-counsel-psalm-73-23-24.md",
+      "title": "Led by His Counsel: Psalm 73:23-24 | The Guided Path",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T14:41:41Z",
+      "youtube_video_id": "wmO7bHfNJ0U",
+      "watch_url": "https://youtu.be/wmO7bHfNJ0U",
+      "youtu_be_url": "https://youtu.be/wmO7bHfNJ0U",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/wmO7bHfNJ0U/edit",
+      "thumb_url": "https://i.ytimg.com/vi/wmO7bHfNJ0U/hqdefault.jpg",
+      "thumb_text": "GUIDE ME LORD",
+      "thumbnail_pending": false,
+      "duration_label": "8m 40s",
+      "words": 1384
+    },
     {
       "id": "0520",
       "slug": "true-wealth-without-anxious-toil-proverbs-10-22",
@@ -738,6 +762,30 @@
       "thumbnail_pending": true,
       "duration_label": "52s",
       "words": 642
+    },
+    {
+      "id": "SHORT-GUIDEDJEREMIAH33V3",
+      "slug": "short-guidedjeremiah33v3-guidance-prayer",
+      "file": "short-guidedjeremiah33v3-guidance-prayer.md",
+      "title": "Pray This Jeremiah 33:3 Prayer for God's Guidance | When Logic Reaches Its Limit #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T13:43:12Z",
+      "youtube_video_id": "duMCwCilbiE",
+      "watch_url": "https://www.youtube.com/shorts/duMCwCilbiE",
+      "youtu_be_url": "https://youtu.be/duMCwCilbiE",
+      "shorts_url": "https://www.youtube.com/shorts/duMCwCilbiE",
+      "studio_url": "https://studio.youtube.com/video/duMCwCilbiE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/duMCwCilbiE/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "54s",
+      "words": 665
     },
     {
       "id": "SHORT-SHIELDISAIAH59V19",
@@ -19454,19 +19502,6 @@
         "words": 1526
       },
       {
-        "id": "0814",
-        "slug": "led-by-his-counsel-psalm-73-23-24",
-        "file": "0814-led-by-his-counsel-psalm-73-23-24.md",
-        "title": "Led by His Counsel: Psalm 73:23-24 | The Guided Path",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1384
-      },
-      {
         "id": "0815",
         "slug": "walking-the-old-paths-and-finding-rest-jeremiah-6-16",
         "file": "0815-walking-the-old-paths-and-finding-rest-jeremiah-6-16.md",
@@ -19626,17 +19661,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedjeremiah33v3",
-        "file": "0000-short-guidedjeremiah33v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Jeremiah 33:3",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedpsalm17v5",
