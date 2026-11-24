@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T17:12:52Z",
+  "generated_at": "2026-11-24T17:22:16Z",
   "monitor_generated_at": "2026-11-24T16:51:52.277938+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,10 +8,10 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 763,
+    "published_total": 764,
     "published_longform": 215,
-    "published_shorts": 548,
-    "public_total": 761,
+    "published_shorts": 549,
+    "public_total": 762,
     "queued_longform": 60,
     "queued_shorts": 57,
     "automations_ok": 13,
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 96,
+        "published_total": 97,
         "published_longform": 25,
-        "published_shorts": 71,
+        "published_shorts": 72,
         "thumbnail_pending": 6,
-        "public_total": 95,
+        "public_total": 96,
         "queued_longform": 8,
         "queued_other": 5,
         "queued_shorts": 1
       },
       "latest_video": {
-        "id": "SHORT-PSALM91FULL",
-        "title": "Say This Psalm 91 Prayer Before You Sleep | Find Peace Now #Shorts",
+        "id": "SHORT-PSALM62V8",
+        "title": "Say This Psalm 62:8 Prayer Before You Sleep | Carried Into The Quiet #Shorts",
         "format": "short",
-        "youtube_video_id": "jQOsb_7el2A",
-        "watch_url": "https://www.youtube.com/shorts/jQOsb_7el2A",
+        "youtube_video_id": "hQGKoSaLtSo",
+        "watch_url": "https://www.youtube.com/shorts/hQGKoSaLtSo",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T13:34:14Z"
+        "published_at": "2026-11-24T17:21:07Z"
       },
       "next_queued_longform": {
         "id": "0033",
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM62V8",
+      "slug": "short-psalm62v8-pre-sleep-prayer",
+      "file": "short-psalm62v8-pre-sleep-prayer.md",
+      "title": "Say This Psalm 62:8 Prayer Before You Sleep | Carried Into The Quiet #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T17:21:07Z",
+      "youtube_video_id": "hQGKoSaLtSo",
+      "watch_url": "https://www.youtube.com/shorts/hQGKoSaLtSo",
+      "youtu_be_url": "https://youtu.be/hQGKoSaLtSo",
+      "shorts_url": "https://www.youtube.com/shorts/hQGKoSaLtSo",
+      "studio_url": "https://studio.youtube.com/video/hQGKoSaLtSo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/hQGKoSaLtSo/hqdefault.jpg",
+      "thumb_text": "UNSPOKEN WORDS \u00b7 HEAVY NIGHTS",
+      "thumbnail_pending": false,
+      "duration_label": "54s",
+      "words": 623
+    },
     {
       "id": "SHORT-GARDENREVELATION5V12",
       "slug": "short-gardenrevelation5v12-thanksgiving-prayer",

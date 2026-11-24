@@ -1,0 +1,370 @@
+{
+  "key": "short-psalm62v8",
+  "channel": "secret-place",
+  "psalm": 62,
+  "title": [
+    "POUR OUT YOUR HEART",
+    "GOD IS YOUR REFUGE"
+  ],
+  "poster": [
+    "UNSPOKEN WORDS",
+    "HEAVY NIGHTS",
+    "POUR OUT YOUR HEART",
+    "PSALM 62:8"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm night lake foggy trees dark twilight",
+    "single candle burning dimly dark room flickering",
+    "peaceful night sky stars over calm mountains",
+    "quiet forest mist evening dim light calm",
+    "still river night reflection moonlight soft",
+    "cozy bedroom window night moonlight dark soft",
+    "gentle ocean waves dark night starry sky calm"
+  ],
+  "scenes": [
+    {
+      "a": "You carried unspoken words into this quiet room.",
+      "img": "short-psalm62v8-scene-01.jpg",
+      "kicker": "UNSPOKEN WORDS",
+      "sub": "CARRIED INTO THE QUIET",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The thoughts you could not share with anyone else still linger in your heart tonight.",
+      "img": "short-psalm62v8-scene-02.jpg",
+      "kicker": "STILL LINGERING",
+      "sub": "GOD HEARS WHAT YOU HOLD BACK",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Trust in him at all times; ye people, pour out your heart before him: God is a refuge for us.",
+      "img": "short-psalm62v8-scene-03.jpg",
+      "kicker": "PSALM 62:8",
+      "sub": "GOD IS A REFUGE FOR US",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we bring the raw, unpolished truth of our day before You.",
+      "img": "short-psalm62v8-scene-04.jpg",
+      "kicker": "RAW TRUTH",
+      "sub": "UNPOLISHED BEFORE HIM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Every silent burden, every hidden fear, and every unspoken prayer, we pour into Your safe hands.",
+      "img": "short-psalm62v8-scene-05.jpg",
+      "kicker": "SAFE HANDS",
+      "sub": "EVERY HIDDEN FEAR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Be our quiet sanctuary while we rest.",
+      "img": "short-psalm62v8-scene-06.jpg",
+      "kicker": "QUIET SANCTUARY",
+      "sub": "PEACE AS SLEEP COMES",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. You carried unspoken words into this room.",
+      "img": "short-psalm62v8-scene-07.jpg",
+      "kicker": "REST IN PEACE",
+      "sub": "YOU ARE HEARD TONIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You carried unspoken words into this quiet room."
+    ],
+    [
+      3,
+      8,
+      "The thoughts you could not share with anyone else still linger in your heart tonight."
+    ],
+    [
+      8,
+      11,
+      "God hears what you hold back."
+    ],
+    [
+      11,
+      19,
+      "Trust in him at all times; ye people, pour out your heart before him: God is a refuge for us."
+    ],
+    [
+      19,
+      24,
+      "Lord, we bring the raw, unpolished truth of our day before You."
+    ],
+    [
+      24,
+      30,
+      "Every silent burden, every hidden fear, and every unspoken prayer, we pour into Your safe hands."
+    ],
+    [
+      30,
+      34,
+      "Be our quiet sanctuary while we rest."
+    ],
+    [
+      34,
+      38,
+      "Let Your peace guard our minds as sleep comes."
+    ],
+    [
+      38,
+      42,
+      "Amen. You carried unspoken words into this room."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU CARRIED",
+        "UNSPOKEN WORDS",
+        "INTO THIS ROOM"
+      ],
+      [
+        "UNSPOKEN",
+        "WORDS"
+      ],
+      "PSALM 62 : 8"
+    ],
+    [
+      3,
+      8,
+      [
+        "THE THOUGHTS YOU COULD NOT SHARE",
+        "STILL LINGER IN YOUR HEART"
+      ],
+      [
+        "STILL",
+        "LINGER"
+      ],
+      "PSALM 62 : 8"
+    ],
+    [
+      8,
+      11,
+      [
+        "GOD HEARS WHAT YOU",
+        "HOLD BACK TONIGHT"
+      ],
+      [
+        "GOD",
+        "HEARS"
+      ],
+      "PSALM 62 : 8"
+    ],
+    [
+      11,
+      19,
+      [
+        "TRUST IN HIM AT ALL TIMES",
+        "POUR OUT YOUR HEART BEFORE HIM",
+        "GOD IS A REFUGE FOR US"
+      ],
+      [
+        "POUR",
+        "OUT",
+        "REFUGE"
+      ],
+      "PSALM 62 : 8"
+    ],
+    [
+      19,
+      24,
+      [
+        "WE BRING THE RAW TRUTH",
+        "OF OUR DAY BEFORE YOU"
+      ],
+      [
+        "RAW",
+        "TRUTH"
+      ],
+      "PSALM 62 : 8"
+    ],
+    [
+      24,
+      30,
+      [
+        "EVERY SILENT BURDEN AND HIDDEN FEAR",
+        "WE POUR INTO YOUR SAFE HANDS"
+      ],
+      [
+        "SAFE",
+        "HANDS"
+      ],
+      "PSALM 62 : 8"
+    ],
+    [
+      30,
+      34,
+      [
+        "BE OUR QUIET SANCTUARY",
+        "WHILE WE REST TONIGHT"
+      ],
+      [
+        "QUIET",
+        "SANCTUARY"
+      ],
+      "PSALM 62 : 8"
+    ],
+    [
+      34,
+      38,
+      [
+        "LET YOUR PEACE GUARD OUR MINDS",
+        "AS SLEEP COMES"
+      ],
+      [
+        "PEACE",
+        "GUARD"
+      ],
+      "PSALM 62 : 8"
+    ],
+    [
+      38,
+      42,
+      [
+        "AMEN",
+        "YOU CARRIED UNSPOKEN WORDS",
+        "INTO THIS ROOM"
+      ],
+      [
+        "AMEN",
+        "UNSPOKEN"
+      ],
+      "PSALM 62 : 8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You carried unspoken words into this quiet room.",
+      "kind": "phrase",
+      "words": [
+        "UNSPOKEN",
+        "WORDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The thoughts you could not share with anyone else still linger in your heart tonight.",
+      "kind": "phrase",
+      "words": [
+        "STILL",
+        "LINGER"
+      ],
+      "hi": 0,
+      "slot": "L"
+    },
+    {
+      "a": "God hears what you hold back.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "HEARS"
+      ],
+      "hi": 0,
+      "slot": "R"
+    },
+    {
+      "a": "Trust in him at all times; ye people, pour out your heart before him: God is a refuge for us.",
+      "kind": "phrase",
+      "words": [
+        "POUR",
+        "OUT",
+        "REFUGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we bring the raw, unpolished truth of our day before You.",
+      "kind": "phrase",
+      "words": [
+        "RAW",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "L"
+    },
+    {
+      "a": "Every silent burden, every hidden fear, and every unspoken prayer, we pour into Your safe hands.",
+      "kind": "phrase",
+      "words": [
+        "SAFE",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be our quiet sanctuary while we rest.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "SANCTUARY"
+      ],
+      "hi": 0,
+      "slot": "R"
+    },
+    {
+      "a": "Let Your peace guard our minds as sleep comes.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "GUARD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. You carried unspoken words into this room.",
+      "kind": "phrase",
+      "words": [
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 62:8"
+}
