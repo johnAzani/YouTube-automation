@@ -1,0 +1,303 @@
+{
+  "key": "short-healingpsalm116v8",
+  "channel": "prayer6",
+  "psalm": 116,
+  "title": [
+    "HEALING FROM TEARS",
+    "AND FALLING FEET"
+  ],
+  "poster": [
+    "DELIVERED FROM",
+    "THE DEPTHS OF",
+    "SORROW AND",
+    "STUMBLING"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters",
+    "warm golden sanctuary light",
+    "peaceful white dove flying slow",
+    "soft evening light on calm stream",
+    "sunlight filtering through sanctuary glass",
+    "gentle ripples on a still pond",
+    "golden hour light on open field",
+    "soft abstract light for prayer"
+  ],
+  "scenes": [
+    {
+      "a": "That sharp ache still pulls at your heart.",
+      "img": "short-healingpsalm116v8-scene-01.jpg",
+      "kicker": "THAT SHARP ACHE",
+      "sub": "IT STILL PULLS AT YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "It feels heavy today, like a weight that refuses to shift or lose its hold.",
+      "img": "short-healingpsalm116v8-scene-02.jpg",
+      "kicker": "HEAVY WEIGHT",
+      "sub": "REFUSING TO SHIFT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For thou hast delivered my soul from death, mine eyes from tears, and my feet from falling.",
+      "img": "short-healingpsalm116v8-scene-03.jpg",
+      "kicker": "PSALM 116:8",
+      "sub": "DELIVERANCE FOR THE SOUL",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "I will walk before the LORD in the land of the living.",
+      "img": "short-healingpsalm116v8-scene-04.jpg",
+      "kicker": "PSALM 116:9",
+      "sub": "WALKING IN THE LIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Lord, dry these tired eyes and steady my trembling steps on this uneven path.",
+      "img": "short-healingpsalm116v8-scene-05.jpg",
+      "kicker": "STEADY MY STEPS",
+      "sub": "DRY THESE TIRED EYES",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Keep me close, tethered to your grace, so I might move forward in your peace.",
+      "img": "short-healingpsalm116v8-scene-06.jpg",
+      "kicker": "TETHERED TO GRACE",
+      "sub": "MOVING FORWARD IN PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "I trust your timing and your mercy for this day, even when the sorrow lingers.",
+      "img": "short-healingpsalm116v8-scene-07.jpg",
+      "kicker": "TRUSTING YOUR MERCY",
+      "sub": "EVEN WHEN SORROW LINGERS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. That sharp ache still pulls at your heart.",
+      "img": "short-healingpsalm116v8-scene-08.jpg",
+      "kicker": "AMEN",
+      "sub": "THE ACHE STILL PULLS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That sharp ache still pulls at your heart."
+    ],
+    [
+      3,
+      8,
+      "It feels heavy today, like a weight that refuses to shift or lose its hold."
+    ],
+    [
+      8,
+      16,
+      "For thou hast delivered my soul from death, mine eyes from tears, and my feet from falling."
+    ],
+    [
+      16,
+      21,
+      "I will walk before the LORD in the land of the living."
+    ],
+    [
+      21,
+      28,
+      "Lord, dry these tired eyes and steady my trembling steps on this uneven path."
+    ],
+    [
+      28,
+      35,
+      "Keep me close, tethered to your grace, so I might move forward in your peace."
+    ],
+    [
+      35,
+      42,
+      "I trust your timing and your mercy for this day, even when the sorrow lingers."
+    ],
+    [
+      42,
+      45,
+      "Amen. That sharp ache still pulls at your heart."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT SHARP ACHE",
+        "STILL PULLS AT",
+        "YOUR HEART"
+      ],
+      [
+        "SHARP ACHE"
+      ],
+      "PSALM 116:8"
+    ],
+    [
+      3,
+      8,
+      [
+        "IT FEELS HEAVY",
+        "LIKE A WEIGHT",
+        "THAT REFUSES TO SHIFT"
+      ],
+      [
+        "HEAVY WEIGHT"
+      ],
+      "PSALM 116:8"
+    ],
+    [
+      8,
+      16,
+      [
+        "THOU HAST DELIVERED",
+        "MINE EYES FROM TEARS",
+        "MY FEET FROM FALLING"
+      ],
+      [
+        "DELIVERED"
+      ],
+      "PSALM 116:8"
+    ],
+    [
+      16,
+      21,
+      [
+        "WALK BEFORE THE LORD",
+        "IN THE LAND",
+        "OF THE LIVING"
+      ],
+      [
+        "WALK"
+      ],
+      "PSALM 116:9"
+    ],
+    [
+      21,
+      28,
+      [
+        "DRY THESE EYES",
+        "STEADY MY STEPS",
+        "ON THIS PATH"
+      ],
+      [
+        "STEADY"
+      ],
+      "PSALM 116:9"
+    ],
+    [
+      28,
+      35,
+      [
+        "KEEP ME CLOSE",
+        "TETHERED TO GRACE",
+        "MOVE FORWARD"
+      ],
+      [
+        "GRACE"
+      ],
+      "PSALM 116:9"
+    ],
+    [
+      35,
+      42,
+      [
+        "TRUST YOUR TIMING",
+        "YOUR MERCY TODAY",
+        "SORROW LINGERS"
+      ],
+      [
+        "MERCY"
+      ],
+      "PSALM 116:9"
+    ],
+    [
+      42,
+      45,
+      [
+        "AMEN",
+        "THAT SHARP ACHE",
+        "PULLS AT HEART"
+      ],
+      [
+        "AMEN"
+      ],
+      "PSALM 116:9"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That sharp ache still pulls at your heart.",
+      "kind": "phrase",
+      "words": [
+        "SHARP",
+        "ACHE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For thou hast delivered my soul from death, mine eyes from tears, and my feet from falling.",
+      "kind": "phrase",
+      "words": [
+        "DELIVERED",
+        "MY",
+        "SOUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will walk before the LORD in the land of the living.",
+      "kind": "phrase",
+      "words": [
+        "WALK",
+        "BEFORE",
+        "THE",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 116:8-9"
+}

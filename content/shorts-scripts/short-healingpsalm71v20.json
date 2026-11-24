@@ -1,0 +1,350 @@
+{
+  "key": "short-healingpsalm71v20",
+  "channel": "prayer6",
+  "psalm": 71,
+  "title": [
+    "FROM THE DEPTHS",
+    "GOD RESTORES"
+  ],
+  "poster": [
+    "DEEP TROUBLES",
+    "QUICKENED AGAIN",
+    "GREATNESS INCREASED",
+    "COMFORTED ON EVERY SIDE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "calm mountain lake at twilight",
+    "tranquil turquoise living waters gently flowing",
+    "warm golden sanctuary light filtering through trees",
+    "gentle white dove resting in quiet olive branches",
+    "peaceful river winding through green valley at dawn",
+    "soft morning sunbeams over still water",
+    "quiet stream reflecting amber autumn light",
+    "serene twilight sky over still waters"
+  ],
+  "scenes": [
+    {
+      "a": "When the ground gives way beneath your feet",
+      "img": "short-healingpsalm71v20-scene-01.jpg",
+      "kicker": "GROUND GIVES WAY",
+      "sub": "WHEN THE EARTH SHAKES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "and the grief feels too heavy to carry alone,",
+      "img": "short-healingpsalm71v20-scene-02.jpg",
+      "kicker": "HEAVY GRIEF",
+      "sub": "CARRYING THE WEIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "hear what the Lord has spoken in his word.",
+      "img": "short-healingpsalm71v20-scene-03.jpg",
+      "kicker": "HIS WORD",
+      "sub": "HEAR THE PROMISE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Thou, which hast showed me great and sore troubles, shalt quicken me again, and shalt bring me up again from the depths of the earth.",
+      "img": "short-healingpsalm71v20-scene-04.jpg",
+      "kicker": "GREAT TROUBLES",
+      "sub": "BROUGHT UP FROM THE DEPTHS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Thou shalt increase my greatness, and comfort me on every side.",
+      "img": "short-healingpsalm71v20-scene-05.jpg",
+      "kicker": "INCREASED",
+      "sub": "COMFORTED ON EVERY SIDE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, when our strength fails and the shadows lengthen,",
+      "img": "short-healingpsalm71v20-scene-06.jpg",
+      "kicker": "STRENGTH FAILS",
+      "sub": "SHADOWS LENGTHEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "lift us up with your faithful hand and bring your quiet peace to every weary heart.",
+      "img": "short-healingpsalm71v20-scene-07.jpg",
+      "kicker": "FAITHFUL HAND",
+      "sub": "QUIET PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. When the ground gives way.",
+      "img": "short-healingpsalm71v20-scene-08.jpg",
+      "kicker": "AMEN",
+      "sub": "GROUND GIVES WAY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "When the ground gives way beneath your feet"
+    ],
+    [
+      3,
+      6,
+      "and the grief feels too heavy to carry alone,"
+    ],
+    [
+      6,
+      10,
+      "hear what the Lord has spoken in his word."
+    ],
+    [
+      10,
+      20,
+      "Thou, which hast showed me great and sore troubles, shalt quicken me again, and shalt bring me up again from the depths of the earth."
+    ],
+    [
+      20,
+      27,
+      "Thou shalt increase my greatness, and comfort me on every side."
+    ],
+    [
+      27,
+      33,
+      "Lord, when our strength fails and the shadows lengthen,"
+    ],
+    [
+      33,
+      41,
+      "lift us up with your faithful hand and bring your quiet peace to every weary heart."
+    ],
+    [
+      41,
+      45,
+      "Amen. When the ground gives way."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WHEN THE GROUND",
+        "GIVES WAY"
+      ],
+      [
+        "GROUND"
+      ],
+      "PSALM 71 : 20"
+    ],
+    [
+      3,
+      6,
+      [
+        "AND THE GRIEF",
+        "FEELS TOO HEAVY"
+      ],
+      [
+        "HEAVY"
+      ],
+      "PSALM 71 : 20"
+    ],
+    [
+      6,
+      10,
+      [
+        "HEAR WHAT THE LORD",
+        "HAS SPOKEN"
+      ],
+      [
+        "LORD"
+      ],
+      "PSALM 71 : 20"
+    ],
+    [
+      10,
+      20,
+      [
+        "THOU HAST SHOWED ME",
+        "GREAT TROUBLES",
+        "QUICKEN ME AGAIN"
+      ],
+      [
+        "QUICKEN"
+      ],
+      "PSALM 71 : 20"
+    ],
+    [
+      20,
+      27,
+      [
+        "THOU SHALT INCREASE",
+        "MY GREATNESS",
+        "COMFORT ME"
+      ],
+      [
+        "COMFORT"
+      ],
+      "PSALM 71 : 21"
+    ],
+    [
+      27,
+      33,
+      [
+        "LORD WHEN OUR",
+        "STRENGTH FAILS"
+      ],
+      [
+        "FAILS"
+      ],
+      "PRAYER"
+    ],
+    [
+      33,
+      41,
+      [
+        "LIFT US UP WITH",
+        "YOUR FAITHFUL HAND"
+      ],
+      [
+        "HAND"
+      ],
+      "PRAYER"
+    ],
+    [
+      41,
+      45,
+      [
+        "AMEN WHEN THE",
+        "GROUND GIVES WAY"
+      ],
+      [
+        "AMEN"
+      ],
+      "THE HEALING BALM"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When the ground gives way beneath your feet",
+      "kind": "phrase",
+      "words": [
+        "GROUND",
+        "GIVES",
+        "WAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and the grief feels too heavy to carry alone,",
+      "kind": "phrase",
+      "words": [
+        "GRIEF",
+        "HEAVY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "hear what the Lord has spoken in his word.",
+      "kind": "phrase",
+      "words": [
+        "HEAR",
+        "LORD",
+        "WORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thou, which hast showed me great and sore troubles, shalt quicken me again, and shalt bring me up again from the depths of the earth.",
+      "kind": "phrase",
+      "words": [
+        "GREAT",
+        "TROUBLES",
+        "QUICKEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thou shalt increase my greatness, and comfort me on every side.",
+      "kind": "phrase",
+      "words": [
+        "INCREASE",
+        "GREATNESS",
+        "COMFORT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when our strength fails and the shadows lengthen,",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "STRENGTH",
+        "FAILS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "lift us up with your faithful hand and bring your quiet peace to every weary heart.",
+      "kind": "phrase",
+      "words": [
+        "LIFT",
+        "FAITHFUL",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. When the ground gives way.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "GROUND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 71:20-21"
+}
