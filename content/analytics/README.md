@@ -22,9 +22,9 @@ Written by `pipeline/growth_score.py`; the detail is in `content/research/growth
 
 **Counted: 23 hours (43.5% of all watch hours read).**
 
-The threshold asks 57.4 hours a day for the 69 days left before it doubles; the channels run at 2 a day.
+The threshold asks 58.2 hours a day for the 68 days left before it doubles; the channels run at 2 a day.
 
-**Release length: 180 minutes.** a view of a video over 3 hours returned 0.1261 hours, the most of any length measured (6 videos); the threshold asks 57.38 hours a day
+**Release length: 180 minutes.** a view of a video over 3 hours returned 0.1261 hours, the most of any length measured (6 videos); the threshold asks 58.22 hours a day
 
 Night tail: `hold` — kept.
 
@@ -118,19 +118,19 @@ Videos by watch time, 365 days (up to 50):
 | [Say This Matthew 11:28-30 Prayer Before You Sleep / The Secret Place…](https://youtu.be/GBNCiP8UTS8) | 0.33 | 69 | 0:47 (81.3%) |
 | [Say This Philippians 4:8 Prayer Before You Sleep / The Secret Place #…](https://youtu.be/8ssIICb_3Ts) | 0.27 | 58 | 0:39 (68.2%) |
 
-Thumbnails, 2026-10-15 to 2026-11-22 (36 days of YouTube's daily reach files): shown 15,075 times, clicked 207 times, a click rate of 1.4%.
+Thumbnails, 2026-10-15 to 2026-11-22 (36 days of YouTube's daily reach files): shown 15,081 times, clicked 207 times, a click rate of 1.4%.
 A thumbnail is counted where YouTube shows one (search, home, suggested, the channel page). The Shorts feed shows none, so Shorts watched there are not in these figures.
 
 Videos by times shown (up to 25):
 
 | Video | Thumbnail shown | Clicks | Click rate |
 | :--- | ---: | ---: | ---: |
-| [Night Prayer to Quiet a Racing Mind: Isaiah 26:3-4 / The Secret Place](https://youtu.be/t00bsmMtC-s) | 1,857 | 19 | 1% |
-| [Bedtime Prayer When You Are Worn Out: Matthew 11:28-30](https://youtu.be/EmLY_qhrc7c) | 1,769 | 14 | 0.79% |
+| [Night Prayer to Quiet a Racing Mind: Isaiah 26:3-4 / The Secret Place](https://youtu.be/t00bsmMtC-s) | 1,858 | 19 | 1% |
+| [Bedtime Prayer When You Are Worn Out: Matthew 11:28-30](https://youtu.be/EmLY_qhrc7c) | 1,792 | 14 | 0.78% |
 | [When Exhaustion Weighs on Your Soul: Isaiah 40:28-31](https://youtu.be/XLXi986WZ_k) | 1,439 | 37 | 2.6% |
-| [Bedtime Prayer for a Troubled Heart: John 14:27 / The Secret Place](https://youtu.be/uGkV42GvplM) | 1,439 | 36 | 2.5% |
+| [Bedtime Prayer for a Troubled Heart: John 14:27 / The Secret Place](https://youtu.be/uGkV42GvplM) | 1,418 | 36 | 2.5% |
 | [When the Night Feels Too Dark: Psalm 139:11-12 / The Secret Place](https://youtu.be/VPAFfGNkCGs) | 1,352 | 10 | 0.74% |
-| [Bedtime Prayer for Anxiety and Overthinking: Philippians 4:6-7](https://youtu.be/YsHGDAO8uRE) | 1,124 | 5 | 0.44% |
+| [Bedtime Prayer for Anxiety and Overthinking: Philippians 4:6-7](https://youtu.be/YsHGDAO8uRE) | 1,128 | 5 | 0.44% |
 | [Night Prayer When You Feel Afraid: Isaiah 41:10 / The Secret Place](https://youtu.be/nBujp4zoTCk) | 1,103 | 18 | 1.6% |
 | [Psalm 91:11-12 Night Prayer / Angels Guard Your Home & Sleep](https://youtu.be/dgvGl0EZyYE) | 581 | 18 | 3.1% |
 | [Night Prayer When Dread Keeps You Awake: 2 Timothy 1:7](https://youtu.be/IhL8prNsgaU) | 524 | 5 | 0.95% |
@@ -139,8 +139,8 @@ Videos by times shown (up to 25):
 | [Zw0pjLM5hEI](https://youtu.be/Zw0pjLM5hEI) | 131 | 3 | 2.3% |
 | [Psalm 91:5-6 Night Prayer / Deliverance From Terror by Night](https://youtu.be/rb6X37vQt7o) | 130 | 0 | 0% |
 | [Say This Psalm 121 Prayer Before You Sleep / He Who Keeps You #Shorts](https://youtu.be/xkpfupurX-0) | 125 | 0 | 0% |
+| [Surrendering Every Heavy Burden: Psalm 31:5 / The Secret Place](https://youtu.be/r3nA7BgZpP4) | 123 | 1 | 0.81% |
 | [Say This Psalm 37:7 Prayer Before You Sleep / The Secret Place #Shorts](https://youtu.be/5ekShDmycic) | 122 | 0 | 0% |
-| [Surrendering Every Heavy Burden: Psalm 31:5 / The Secret Place](https://youtu.be/r3nA7BgZpP4) | 122 | 1 | 0.82% |
 | [Say This Psalm 91 Prayer Before You Sleep / Divine Protection #Shorts](https://youtu.be/SG69BbNlfRw) | 107 | 1 | 0.93% |
 | [Say This Psalm 27 Prayer Before You Sleep / Fear No Evil #Shorts](https://youtu.be/KkPAtMLoGf4) | 103 | 0 | 0% |
 | [Say This Matthew 6:34 Prayer Before You Sleep / The Secret Place #Sho…](https://youtu.be/EiF_FNNAhCU) | 102 | 1 | 0.98% |
