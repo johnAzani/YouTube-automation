@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-23T10:43:28.293120+00:00",
-  "as_of": "2026-11-23",
+  "generated_at": "2026-11-24T04:19:38.038948+00:00",
+  "as_of": "2026-11-24",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 9,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 96,
+    "receipt_video_ids": 100,
     "matched_video_ids": 50,
     "longform_below_view_threshold": 9,
     "longform_missing_view_count": 0,
@@ -37,65 +37,60 @@
     "measured_shorts": 36,
     "total_shorts": 41,
     "sufficient_data": true,
-    "avg_views": 17.6,
-    "median_views": 12,
-    "total_views": 632,
+    "avg_views": 11.8,
+    "median_views": 11,
+    "total_views": 425,
     "minimum_age_days": 2,
     "by_book": {
       "1 chronicles": {
         "shorts": 1,
         "avg_views": 2.0,
-        "ratio": 0.705
+        "ratio": 0.723
       },
       "2 corinthians": {
         "shorts": 1,
         "avg_views": 23.0,
-        "ratio": 1.103
+        "ratio": 1.316
       },
       "2 peter": {
         "shorts": 1,
         "avg_views": 2.0,
-        "ratio": 0.705
+        "ratio": 0.723
       },
       "deuteronomy": {
         "shorts": 2,
         "avg_views": 13.0,
-        "ratio": 0.87
+        "ratio": 1.051
       },
       "ecclesiastes": {
         "shorts": 1,
-        "avg_views": 3.0,
-        "ratio": 0.724
+        "avg_views": 4.0,
+        "ratio": 0.78
       },
       "ephesians": {
-        "shorts": 1,
-        "avg_views": 17.0,
-        "ratio": 0.989
+        "shorts": 2,
+        "avg_views": 15.5,
+        "ratio": 1.156
       },
       "exodus": {
         "shorts": 1,
         "avg_views": 12.0,
-        "ratio": 0.895
+        "ratio": 1.005
       },
       "genesis": {
         "shorts": 1,
         "avg_views": 11.0,
-        "ratio": 0.876
-      },
-      "isaiah": {
-        "shorts": 2,
-        "avg_views": 39.5,
-        "ratio": 1.625
+        "ratio": 0.977
       },
       "james": {
         "shorts": 1,
         "avg_views": 12.0,
-        "ratio": 0.895
+        "ratio": 1.005
       },
       "jeremiah": {
         "shorts": 1,
         "avg_views": 17.0,
-        "ratio": 0.989
+        "ratio": 1.147
       },
       "job": {
         "shorts": 1,
@@ -104,65 +99,73 @@
       },
       "matthew": {
         "shorts": 1,
-        "avg_views": 17.0,
-        "ratio": 0.989
+        "avg_views": 18.0,
+        "ratio": 1.175
       },
       "philippians": {
         "shorts": 1,
         "avg_views": 4.0,
-        "ratio": 0.743
+        "ratio": 0.78
+      },
+      "proverbs": {
+        "shorts": 1,
+        "avg_views": 3.0,
+        "ratio": 0.751
       },
       "psalm": {
         "shorts": 19,
-        "avg_views": 21.3,
-        "ratio": 1.194
+        "avg_views": 13.5,
+        "ratio": 1.128
       },
       "romans": {
         "shorts": 1,
-        "avg_views": 2.0,
-        "ratio": 0.705
+        "avg_views": 4.0,
+        "ratio": 0.78
       }
     },
     "by_theme": {
       "daily_guidance_wisdom": {
         "shorts": 6,
-        "avg_views": 9.0,
-        "ratio": 0.634
+        "avg_views": 9.3,
+        "ratio": 0.843
       },
       "light_courage": {
         "shorts": 2,
-        "avg_views": 9.5,
-        "ratio": 0.771
+        "avg_views": 10.0,
+        "ratio": 0.924
       },
       "midday_strength_endurance": {
-        "shorts": 4,
-        "avg_views": 53.8,
-        "ratio": 2.374
+        "shorts": 3,
+        "avg_views": 21.3,
+        "ratio": 1.484
       },
       "morning_mercy_renewal": {
         "shorts": 18,
-        "avg_views": 15.3,
-        "ratio": 0.883
+        "avg_views": 11.9,
+        "ratio": 1.006
       },
       "peace_rest": {
         "shorts": 2,
         "avg_views": 21.0,
-        "ratio": 1.098
+        "ratio": 1.389
+      },
+      "protection": {
+        "shorts": 1,
+        "avg_views": 2.0,
+        "ratio": 0.723
       },
       "stillness_refuge": {
         "shorts": 2,
         "avg_views": 4.5,
-        "ratio": 0.628
+        "ratio": 0.691
       },
       "trust_surrender": {
         "shorts": 2,
         "avg_views": 9.0,
-        "ratio": 0.756
+        "ratio": 0.881
       }
     },
-    "guidance": [
-      "Shorts: Isaiah runs 1.6x this channel's average Short (18 views over 36 Shorts); its passages are written first."
-    ]
+    "guidance": []
   },
   "guidance": [
     "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
@@ -176,13 +179,13 @@
       "opened": "2026-11-17",
       "status": "testing",
       "decided": "",
-      "counted_through": "2026-11-19",
-      "with_videos": 0,
-      "with_views": 0,
+      "counted_through": "2026-11-20",
+      "with_videos": 1,
+      "with_views": 21,
       "without_videos": 3,
       "without_views": 6,
       "ratio": null,
-      "note": "0 long prayer(s) titled with it drew 0 views and 3 without it drew 6, each counted at 4 days old; a verdict needs 5 on each side and 100 views in all"
+      "note": "1 long prayer(s) titled with it drew 21 views and 3 without it drew 6, each counted at 4 days old; a verdict needs 5 on each side and 100 views in all"
     },
     {
       "phrase": "morning worship",
@@ -190,21 +193,18 @@
       "opened": "2026-11-17",
       "status": "testing",
       "decided": "",
-      "counted_through": "2026-11-19",
+      "counted_through": "2026-11-20",
       "with_videos": 0,
       "with_views": 0,
-      "without_videos": 3,
-      "without_views": 6,
+      "without_videos": 4,
+      "without_views": 27,
       "ratio": null,
-      "note": "0 long prayer(s) titled with it drew 0 views and 3 without it drew 6, each counted at 4 days old; a verdict needs 5 on each side and 100 views in all"
+      "note": "0 long prayer(s) titled with it drew 0 views and 4 without it drew 27, each counted at 4 days old; a verdict needs 5 on each side and 100 views in all"
     }
   ],
   "niche": {
-    "read_on": "2026-11-17",
-    "phrases": [
-      "day with god",
-      "morning worship"
-    ],
-    "typical_minutes": 45
+    "read_on": "2026-11-24",
+    "phrases": [],
+    "typical_minutes": 59
   }
 }
