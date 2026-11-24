@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T17:50:10Z",
+  "generated_at": "2026-11-24T20:46:32Z",
   "monitor_generated_at": "2026-11-24T17:48:42.638979+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 764,
+    "published_total": 765,
     "published_longform": 215,
-    "published_shorts": 549,
-    "public_total": 762,
+    "published_shorts": 550,
+    "public_total": 763,
     "queued_longform": 60,
-    "queued_shorts": 57,
+    "queued_shorts": 56,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": true
@@ -159,23 +159,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 87,
+        "published_total": 88,
         "published_longform": 26,
-        "published_shorts": 61,
-        "thumbnail_pending": 2,
-        "public_total": 87,
+        "published_shorts": 62,
+        "thumbnail_pending": 3,
+        "public_total": 88,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0102",
-        "title": "When Words Are Heated: Proverbs 15:1 | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "G9ewMZbXquE",
-        "watch_url": "https://youtu.be/G9ewMZbXquE",
+        "id": "SHORT-MIDDAYISAIAH35V3",
+        "title": "Say This Isaiah 35:3-4 Prayer for Strength at Noon | Steady Strength For This Hour #Shorts",
+        "format": "short",
+        "youtube_video_id": "7b-LxQZWWgc",
+        "watch_url": "https://www.youtube.com/shorts/7b-LxQZWWgc",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T16:16:45Z"
+        "published_at": "2026-11-24T20:45:28Z"
       },
       "next_queued_longform": {
         "id": "0104",
@@ -184,8 +184,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayisaiah35v3",
-        "scripture": "Isaiah 35:3-4",
+        "short": "short-middaypsalm90v12",
+        "scripture": "Psalm 90:12",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYISAIAH35V3",
+      "slug": "short-middayisaiah35v3-midday-prayer",
+      "file": "short-middayisaiah35v3-midday-prayer.md",
+      "title": "Say This Isaiah 35:3-4 Prayer for Strength at Noon | Steady Strength For This Hour #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T20:45:28Z",
+      "youtube_video_id": "7b-LxQZWWgc",
+      "watch_url": "https://www.youtube.com/shorts/7b-LxQZWWgc",
+      "youtu_be_url": "https://youtu.be/7b-LxQZWWgc",
+      "shorts_url": "https://www.youtube.com/shorts/7b-LxQZWWgc",
+      "studio_url": "https://studio.youtube.com/video/7b-LxQZWWgc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/7b-LxQZWWgc/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "54s",
+      "words": 652
+    },
     {
       "id": "SHORT-PSALM62V8",
       "slug": "short-psalm62v8-pre-sleep-prayer",
@@ -19888,17 +19912,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-middayisaiah35v3",
-        "file": "0000-short-middayisaiah35v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 35:3-4",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm90v12",
