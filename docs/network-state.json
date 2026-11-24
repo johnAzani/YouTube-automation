@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T21:33:19Z",
+  "generated_at": "2026-11-24T21:43:58Z",
   "monitor_generated_at": "2026-11-24T17:48:42.638979+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 774,
-    "published_longform": 216,
-    "published_shorts": 558,
-    "public_total": 772,
-    "queued_longform": 61,
-    "queued_shorts": 50,
+    "published_total": 776,
+    "published_longform": 217,
+    "published_shorts": 559,
+    "public_total": 774,
+    "queued_longform": 60,
+    "queued_shorts": 49,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": true
@@ -358,33 +358,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 71,
-        "published_longform": 18,
-        "published_shorts": 53,
+        "published_total": 73,
+        "published_longform": 19,
+        "published_shorts": 54,
         "thumbnail_pending": 4,
-        "public_total": 71,
-        "queued_longform": 6,
+        "public_total": 73,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-HEALINGPSALM138V7",
-        "title": "Pray This Psalm 138:7 Healing Prayer for Peace & Strength | Your Soul #Shorts",
-        "format": "short",
-        "youtube_video_id": "Z0PlqR81Jno",
-        "watch_url": "https://www.youtube.com/shorts/Z0PlqR81Jno",
-        "published_on": "2026-11-24",
-        "published_at": "2026-11-24T17:02:33Z"
-      },
-      "next_queued_longform": {
         "id": "0422",
         "title": "Mercy For A Weary Body And Soul: Psalm 6:2-4 | The Healing Balm",
-        "words": 1369,
+        "format": "longform",
+        "youtube_video_id": "h7x833P1ylA",
+        "watch_url": "https://youtu.be/h7x833P1ylA",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T21:42:48Z"
+      },
+      "next_queued_longform": {
+        "id": "0426",
+        "title": "Tears Heard and Answered by the Lord: 2 Kings 20:5 | The Healing Balm",
+        "words": 1048,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingpsalm71v20",
-        "scripture": "Psalm 71:20-21",
+        "short": "short-healingpsalm73v26",
+        "scripture": "Psalm 73:26",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -687,6 +687,30 @@
   ],
   "videos": [
     {
+      "id": "0422",
+      "slug": "mercy-for-a-weary-body-and-soul-psalm-6-2-4",
+      "file": "0422-mercy-for-a-weary-body-and-soul-psalm-6-2-4.md",
+      "title": "Mercy For A Weary Body And Soul: Psalm 6:2-4 | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T21:42:48Z",
+      "youtube_video_id": "h7x833P1ylA",
+      "watch_url": "https://youtu.be/h7x833P1ylA",
+      "youtu_be_url": "https://youtu.be/h7x833P1ylA",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/h7x833P1ylA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/h7x833P1ylA/hqdefault.jpg",
+      "thumb_text": "HAVE MERCY LORD",
+      "thumbnail_pending": false,
+      "duration_label": "8m 45s",
+      "words": 1369
+    },
+    {
       "id": "0033",
       "slug": "numbers-6-24-26-the-priestly-benediction-of-peace",
       "file": "0033-numbers-6-24-26-the-priestly-benediction-of-peace.md",
@@ -805,6 +829,30 @@
       "thumbnail_pending": false,
       "duration_label": "55s",
       "words": 638
+    },
+    {
+      "id": "SHORT-HEALINGPSALM71V20",
+      "slug": "short-healingpsalm71v20-restoration-prayer",
+      "file": "short-healingpsalm71v20-restoration-prayer.md",
+      "title": "Pray This Psalm 71:20-21 Healing Prayer for Peace & Strength | Comforted On Every Side #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T20:53:25Z",
+      "youtube_video_id": "s-9ckQ3sC5c",
+      "watch_url": "https://www.youtube.com/shorts/s-9ckQ3sC5c",
+      "youtu_be_url": "https://youtu.be/s-9ckQ3sC5c",
+      "shorts_url": "https://www.youtube.com/shorts/s-9ckQ3sC5c",
+      "studio_url": "https://studio.youtube.com/video/s-9ckQ3sC5c/edit",
+      "thumb_url": "https://i.ytimg.com/vi/s-9ckQ3sC5c/hqdefault.jpg",
+      "thumb_text": "DEEP TROUBLES \u00b7 QUICKENED AGAIN",
+      "thumbnail_pending": false,
+      "duration_label": "43s",
+      "words": 643
     },
     {
       "id": "SHORT-ISAIAH26V20",
@@ -19617,19 +19665,6 @@
         "words": 1437
       },
       {
-        "id": "0422",
-        "slug": "mercy-for-a-weary-body-and-soul-psalm-6-2-4",
-        "file": "0422-mercy-for-a-weary-body-and-soul-psalm-6-2-4.md",
-        "title": "Mercy For A Weary Body And Soul: Psalm 6:2-4 | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1369
-      },
-      {
         "id": "0426",
         "slug": "tears-heard-and-answered-by-the-lord-2-kings-20-5",
         "file": "0426-tears-heard-and-answered-by-the-lord-2-kings-20-5.md",
@@ -20081,17 +20116,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healingpsalm71v20",
-        "file": "0000-short-healingpsalm71v20.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 71:20-21",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingpsalm73v26",

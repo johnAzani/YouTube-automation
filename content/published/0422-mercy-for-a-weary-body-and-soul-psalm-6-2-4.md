@@ -2,7 +2,7 @@
 id: '0422'
 title: 'Mercy For A Weary Body And Soul: Psalm 6:2-4 | The Healing Balm'
 slug: mercy-for-a-weary-body-and-soul-psalm-6-2-4
-status: approved
+status: published
 channel: prayer6
 privacy: public
 format: longform
@@ -75,6 +75,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-24"
+published_at: "2026-11-24T21:42:48Z"
+youtube_video_id: "h7x833P1ylA"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 524.52
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "hook"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith
