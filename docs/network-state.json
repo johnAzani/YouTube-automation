@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T01:48:34Z",
+  "generated_at": "2026-11-24T01:49:27Z",
   "monitor_generated_at": "2026-11-23T23:26:47.046817+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 722,
+    "published_total": 723,
     "published_longform": 206,
-    "published_shorts": 516,
-    "public_total": 720,
+    "published_shorts": 517,
+    "public_total": 721,
     "queued_longform": 56,
-    "queued_shorts": 62,
+    "queued_shorts": 61,
     "automations_ok": 13,
     "automations_total": 14,
     "network_healthy": false
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 93,
+        "published_total": 94,
         "published_longform": 25,
-        "published_shorts": 68,
+        "published_shorts": 69,
         "thumbnail_pending": 6,
-        "public_total": 92,
+        "public_total": 93,
         "queued_longform": 5,
         "queued_other": 5,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "0032",
-        "title": "Bedtime Prayer to Let Go of Worry: 1 Peter 5:7 | The Secret Place",
-        "format": "longform",
-        "youtube_video_id": "mzA1qTbk1Kc",
-        "watch_url": "https://youtu.be/mzA1qTbk1Kc",
-        "published_on": "2026-11-23",
-        "published_at": "2026-11-23T22:49:11Z"
+        "id": "SHORT-NUMBERS6V24",
+        "title": "Say This Numbers 6:24-26 Prayer Before You Sleep | Receive His Peace #Shorts",
+        "format": "short",
+        "youtube_video_id": "lduRekVZEfM",
+        "watch_url": "https://www.youtube.com/shorts/lduRekVZEfM",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T01:48:25Z"
       },
       "next_queued_longform": {
         "id": "0033",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-numbers6v24",
-        "scripture": "Numbers 6:24-26",
+        "short": "short-psalm91full",
+        "scripture": "Psalm 91",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-NUMBERS6V24",
+      "slug": "short-numbers6v24-pre-sleep-prayer",
+      "file": "short-numbers6v24-pre-sleep-prayer.md",
+      "title": "Say This Numbers 6:24-26 Prayer Before You Sleep | Receive His Peace #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T01:48:25Z",
+      "youtube_video_id": "lduRekVZEfM",
+      "watch_url": "https://www.youtube.com/shorts/lduRekVZEfM",
+      "youtu_be_url": "https://youtu.be/lduRekVZEfM",
+      "shorts_url": "https://www.youtube.com/shorts/lduRekVZEfM",
+      "studio_url": "https://studio.youtube.com/video/lduRekVZEfM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/lduRekVZEfM/hqdefault.jpg",
+      "thumb_text": "THE LORD BLESS THEE \u00b7 AND KEEP THEE",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 624
+    },
     {
       "id": "SHORT-MIDDAYNEHEMIAH2V4",
       "slug": "short-middaynehemiah2v4-midday-prayer",
@@ -18866,17 +18890,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-numbers6v24",
-        "file": "0033-short-numbers6v24.yml",
-        "companion_longform_id": "0033",
-        "scripture": "Numbers 6:24-26",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm91full",
