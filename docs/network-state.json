@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T17:05:35Z",
+  "generated_at": "2026-11-24T17:12:52Z",
   "monitor_generated_at": "2026-11-24T16:51:52.277938+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 762,
+    "published_total": 763,
     "published_longform": 215,
-    "published_shorts": 547,
-    "public_total": 760,
+    "published_shorts": 548,
+    "public_total": 761,
     "queued_longform": 60,
-    "queued_shorts": 58,
+    "queued_shorts": 57,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": true
@@ -567,23 +567,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 62,
+        "published_total": 63,
         "published_longform": 15,
-        "published_shorts": 47,
-        "thumbnail_pending": 62,
-        "public_total": 62,
+        "published_shorts": 48,
+        "thumbnail_pending": 63,
+        "public_total": 63,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM116V12",
-        "title": "Pray This Psalm 116:12-13 Prayer of Thanksgiving | Your Hands Are Full Today #Shorts",
+        "id": "SHORT-GARDENREVELATION5V12",
+        "title": "Pray This Revelation 5:12-13 Prayer of Thanksgiving | The Thing You Carried #Shorts",
         "format": "short",
-        "youtube_video_id": "V-lt65Ubl5M",
-        "watch_url": "https://www.youtube.com/shorts/V-lt65Ubl5M",
+        "youtube_video_id": "dFSCwkkCGyA",
+        "watch_url": "https://www.youtube.com/shorts/dFSCwkkCGyA",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T13:43:55Z"
+        "published_at": "2026-11-24T17:11:34Z"
       },
       "next_queued_longform": {
         "id": "0716",
@@ -592,8 +592,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenrevelation5v12",
-        "scripture": "Revelation 5:12-13",
+        "short": "short-gardenrevelation7v12",
+        "scripture": "Revelation 7:12",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENREVELATION5V12",
+      "slug": "short-gardenrevelation5v12-thanksgiving-prayer",
+      "file": "short-gardenrevelation5v12-thanksgiving-prayer.md",
+      "title": "Pray This Revelation 5:12-13 Prayer of Thanksgiving | The Thing You Carried #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T17:11:34Z",
+      "youtube_video_id": "dFSCwkkCGyA",
+      "watch_url": "https://www.youtube.com/shorts/dFSCwkkCGyA",
+      "youtu_be_url": "https://youtu.be/dFSCwkkCGyA",
+      "shorts_url": "https://www.youtube.com/shorts/dFSCwkkCGyA",
+      "studio_url": "https://studio.youtube.com/video/dFSCwkkCGyA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/dFSCwkkCGyA/hqdefault.jpg",
+      "thumb_text": "THE THING YOU CARRIED \u00b7 IS STILL HERE",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 640
+    },
     {
       "id": "SHORT-SHIELDPSALM56V3",
       "slug": "short-shieldpsalm56v3-protection-prayer",
@@ -19796,17 +19820,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-gardenrevelation5v12",
-        "file": "0000-short-gardenrevelation5v12.yml",
-        "companion_longform_id": "",
-        "scripture": "Revelation 5:12-13",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenrevelation7v12",
