@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T02:43:11Z",
+  "generated_at": "2026-11-24T03:14:34Z",
   "monitor_generated_at": "2026-11-24T02:23:23.793843+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 730,
-    "published_longform": 208,
-    "published_shorts": 522,
-    "public_total": 728,
-    "queued_longform": 54,
-    "queued_shorts": 56,
+    "published_total": 732,
+    "published_longform": 209,
+    "published_shorts": 523,
+    "public_total": 730,
+    "queued_longform": 53,
+    "queued_shorts": 55,
     "automations_ok": 13,
     "automations_total": 14,
     "network_healthy": true
@@ -572,33 +572,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 57,
-        "published_longform": 13,
-        "published_shorts": 44,
-        "thumbnail_pending": 57,
-        "public_total": 57,
-        "queued_longform": 6,
+        "published_total": 59,
+        "published_longform": 14,
+        "published_shorts": 45,
+        "thumbnail_pending": 59,
+        "public_total": 59,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM40V1",
-        "title": "Pray This Psalm 40:1-3 Prayer of Thanksgiving | When The Ground Feels Unsure #Shorts",
-        "format": "short",
-        "youtube_video_id": "yiHIWPnXDgo",
-        "watch_url": "https://www.youtube.com/shorts/yiHIWPnXDgo",
-        "published_on": "2026-11-23",
-        "published_at": "2026-11-23T22:17:18Z"
-      },
-      "next_queued_longform": {
         "id": "0714",
         "title": "The Sacrifice of Praise When Grief Is Heavy: Hebrews 13:15",
-        "words": 1550,
+        "format": "longform",
+        "youtube_video_id": "WRvhZO9KUYo",
+        "watch_url": "https://youtu.be/WRvhZO9KUYo",
+        "published_on": "2026-11-24",
+        "published_at": "2026-11-24T03:13:30Z"
+      },
+      "next_queued_longform": {
+        "id": "0715",
+        "title": "Thanksgiving Worship When Your Heart Is Heavy: Psalm 9:1-2",
+        "words": 1725,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm42v11",
-        "scripture": "Psalm 42:11",
+        "short": "short-gardenpsalm8v1",
+        "scripture": "Psalm 8:1",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -697,6 +697,30 @@
   ],
   "videos": [
     {
+      "id": "0714",
+      "slug": "the-sacrifice-of-praise-when-grief-is-heavy-hebrews-13-15",
+      "file": "0714-the-sacrifice-of-praise-when-grief-is-heavy-hebrews-13-15.md",
+      "title": "The Sacrifice of Praise When Grief Is Heavy: Hebrews 13:15",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T03:13:30Z",
+      "youtube_video_id": "WRvhZO9KUYo",
+      "watch_url": "https://youtu.be/WRvhZO9KUYo",
+      "youtu_be_url": "https://youtu.be/WRvhZO9KUYo",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/WRvhZO9KUYo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/WRvhZO9KUYo/hqdefault.jpg",
+      "thumb_text": "OFFER PRAISE",
+      "thumbnail_pending": true,
+      "duration_label": "11m 01s",
+      "words": 1550
+    },
+    {
       "id": "0224",
       "slug": "when-you-are-weary-of-waiting-luke-18-1-8",
       "file": "0224-when-you-are-weary-of-waiting-luke-18-1-8.md",
@@ -791,6 +815,30 @@
       "thumbnail_pending": true,
       "duration_label": "51s",
       "words": 666
+    },
+    {
+      "id": "SHORT-GARDENPSALM42V11",
+      "slug": "short-gardenpsalm42v11-thanksgiving-prayer",
+      "file": "short-gardenpsalm42v11-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 42:11 Prayer of Thanksgiving | Psalm 42 Verse 11 #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T01:58:01Z",
+      "youtube_video_id": "WBvNmZO-Ti4",
+      "watch_url": "https://www.youtube.com/shorts/WBvNmZO-Ti4",
+      "youtu_be_url": "https://youtu.be/WBvNmZO-Ti4",
+      "shorts_url": "https://www.youtube.com/shorts/WBvNmZO-Ti4",
+      "studio_url": "https://studio.youtube.com/video/WBvNmZO-Ti4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/WBvNmZO-Ti4/hqdefault.jpg",
+      "thumb_text": "WHY ART THOU \u00b7 CAST DOWN",
+      "thumbnail_pending": true,
+      "duration_label": "50s",
+      "words": 643
     },
     {
       "id": "SHORT-HEALINGNAHUM1V7",
@@ -18753,19 +18801,6 @@
         "words": 1183
       },
       {
-        "id": "0714",
-        "slug": "the-sacrifice-of-praise-when-grief-is-heavy-hebrews-13-15",
-        "file": "0714-the-sacrifice-of-praise-when-grief-is-heavy-hebrews-13-15.md",
-        "title": "The Sacrifice of Praise When Grief Is Heavy: Hebrews 13:15",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1550
-      },
-      {
         "id": "0715",
         "slug": "thanksgiving-worship-when-your-heart-is-heavy-psalm-9-1-2",
         "file": "0715-thanksgiving-worship-when-your-heart-is-heavy-psalm-9-1-2.md",
@@ -18923,17 +18958,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-gardenpsalm42v11",
-        "file": "0000-short-gardenpsalm42v11.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 42:11",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
       {
         "short": "short-gardenpsalm8v1",
         "file": "0000-short-gardenpsalm8v1.yml",
