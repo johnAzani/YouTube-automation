@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T20:46:51Z",
+  "generated_at": "2026-11-24T20:47:13Z",
   "monitor_generated_at": "2026-11-24T17:48:42.638979+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 766,
+    "published_total": 767,
     "published_longform": 215,
-    "published_shorts": 551,
-    "public_total": 764,
-    "queued_longform": 60,
-    "queued_shorts": 55,
+    "published_shorts": 552,
+    "public_total": 765,
+    "queued_longform": 62,
+    "queued_shorts": 54,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": true
@@ -96,23 +96,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 104,
+        "published_total": 105,
         "published_longform": 33,
-        "published_shorts": 71,
+        "published_shorts": 72,
         "thumbnail_pending": 2,
-        "public_total": 103,
-        "queued_longform": 8,
+        "public_total": 104,
+        "queued_longform": 10,
         "queued_other": 0,
-        "queued_shorts": 1
+        "queued_shorts": 0
       },
       "latest_video": {
-        "id": "SHORT-MORNINGCOLOSSIANS3V17",
-        "title": "Say This Colossians 3:17 Prayer at Sunrise | Day Ahead #Shorts",
+        "id": "SHORT-MORNINGPSALM5V3",
+        "title": "Say This Psalm 5:3 Prayer for Fresh Start at Sunrise | Before The Day Begins #Shorts",
         "format": "short",
-        "youtube_video_id": "M74DPsw7_mY",
-        "watch_url": "https://www.youtube.com/shorts/M74DPsw7_mY",
+        "youtube_video_id": "_BKg0DA0quE",
+        "watch_url": "https://www.youtube.com/shorts/_BKg0DA0quE",
         "published_on": "2026-11-24",
-        "published_at": "2026-11-24T17:04:08Z"
+        "published_at": "2026-11-24T20:46:12Z"
       },
       "next_queued_longform": {
         "id": "0079",
@@ -120,12 +120,7 @@
         "words": 1605,
         "status": "approved"
       },
-      "next_queued_short": {
-        "short": "short-morningpsalm5v3",
-        "scripture": "Psalm 5:3",
-        "target_window_utc": "06:14",
-        "status": "approved"
-      },
+      "next_queued_short": null,
       "feedback": {
         "available": true,
         "as_of": "2026-11-24",
@@ -691,6 +686,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM5V3",
+      "slug": "short-morningpsalm5v3-sunrise-prayer",
+      "file": "short-morningpsalm5v3-sunrise-prayer.md",
+      "title": "Say This Psalm 5:3 Prayer for Fresh Start at Sunrise | Before The Day Begins #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-24",
+      "published_at": "2026-11-24T20:46:12Z",
+      "youtube_video_id": "_BKg0DA0quE",
+      "watch_url": "https://www.youtube.com/shorts/_BKg0DA0quE",
+      "youtu_be_url": "https://youtu.be/_BKg0DA0quE",
+      "shorts_url": "https://www.youtube.com/shorts/_BKg0DA0quE",
+      "studio_url": "https://studio.youtube.com/video/_BKg0DA0quE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/_BKg0DA0quE/hqdefault.jpg",
+      "thumb_text": "THE MORNING ALTAR \u00b7 BEFORE THE NOISE",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 625
+    },
     {
       "id": "SHORT-MIDNIGHTNEHEMIAH4V9",
       "slug": "short-midnightnehemiah4v9-midnight-prayer",
@@ -19857,6 +19876,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1174
+      },
+      {
+        "id": "0905",
+        "slug": "when-you-need-direction-for-today-psalm-143-10",
+        "file": "0905-when-you-need-direction-for-today-psalm-143-10.md",
+        "title": "When You Need Direction for Today: Psalm 143:10 | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1316
+      },
+      {
+        "id": "0906",
+        "slug": "the-presence-of-god-in-your-morning",
+        "file": "0906-the-presence-of-god-in-your-morning.md",
+        "title": "The Presence of God in Your Morning: Genesis 28:16-18",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1427
       }
     ],
     "shorts": [
@@ -20453,17 +20498,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-morningpsalm5v3",
-        "file": "0903-short-morningpsalm5v3.yml",
-        "companion_longform_id": "0903",
-        "scripture": "Psalm 5:3",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       }
     ]
   },
