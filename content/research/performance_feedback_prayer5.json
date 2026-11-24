@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-24T04:22:19.597867+00:00",
+  "generated_at": "2026-11-24T12:29:00.156303+00:00",
   "as_of": "2026-11-24",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 12,
+  "total_longform_videos": 11,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 66,
+    "receipt_video_ids": 67,
     "matched_video_ids": 50,
-    "longform_below_view_threshold": 12,
+    "longform_below_view_threshold": 11,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 2,
     "minimum_views": 25,
@@ -33,16 +33,16 @@
       "top_scripture": ""
     },
     {
-      "theme": "anxiety_peace",
-      "videos": 2,
+      "theme": "general_prayer",
+      "videos": 6,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
       "top_scripture": ""
     },
     {
-      "theme": "general_prayer",
-      "videos": 6,
+      "theme": "anxiety_peace",
+      "videos": 1,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -51,7 +51,7 @@
   ],
   "shorts": {
     "measured_shorts": 33,
-    "total_shorts": 38,
+    "total_shorts": 39,
     "sufficient_data": true,
     "avg_views": 51.0,
     "median_views": 31,
