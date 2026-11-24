@@ -9,6 +9,13 @@
       "workflow": "thumbnail-campaign.yml"
     },
     {
+      "late_minutes": 329,
+      "name": "Weekly metrics snapshot",
+      "ran_at": "2026-11-21T00:10:21+00:00",
+      "slot": "2026-11-20T18:41:00+00:00",
+      "workflow": "metrics.yml"
+    },
+    {
       "late_minutes": 324,
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "ran_at": "2026-11-24T08:38:20+00:00",
@@ -44,20 +51,6 @@
       "workflow": "tests-on-main.yml"
     },
     {
-      "late_minutes": 198,
-      "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-20T21:59:12+00:00",
-      "slot": "2026-11-20T18:41:00+00:00",
-      "workflow": "metrics.yml"
-    },
-    {
-      "late_minutes": 191,
-      "name": "automation-health",
-      "ran_at": "2026-11-23T23:25:52+00:00",
-      "slot": "2026-11-23T20:14:00+00:00",
-      "workflow": "automation-health.yml"
-    },
-    {
       "late_minutes": 171,
       "name": "YouTube reporting jobs (thumbnail impressions)",
       "ran_at": "2026-11-24T08:38:28+00:00",
@@ -72,15 +65,15 @@
       "workflow": "growth-autopilot.yml"
     }
   ],
-  "generated_at": "2026-11-24T18:58:09.474343+00:00",
-  "last_run_at": "2026-11-24T18:57:22+00:00",
+  "generated_at": "2026-11-24T21:45:30.845087+00:00",
+  "last_run_at": "2026-11-24T21:44:38+00:00",
   "on_time": [
     {
       "late_minutes": 90,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-24T16:44:50+00:00",
-      "slot": "2026-11-24T15:14:00+00:00",
-      "workflow": "comments.yml"
+      "name": "automation-health",
+      "ran_at": "2026-11-24T21:44:37+00:00",
+      "slot": "2026-11-24T20:14:00+00:00",
+      "workflow": "automation-health.yml"
     },
     {
       "late_minutes": 119,
@@ -90,10 +83,17 @@
       "workflow": "community.yml"
     },
     {
-      "late_minutes": 82,
+      "late_minutes": 21,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-24T21:44:38+00:00",
+      "slot": "2026-11-24T21:23:00+00:00",
+      "workflow": "monitor.yml"
+    },
+    {
+      "late_minutes": 84,
       "name": "Produce video",
-      "ran_at": "2026-11-24T15:36:04+00:00",
-      "slot": "2026-11-24T14:14:00+00:00",
+      "ran_at": "2026-11-24T20:38:05+00:00",
+      "slot": "2026-11-24T19:14:00+00:00",
       "workflow": "produce.yml"
     },
     {
