@@ -23,13 +23,6 @@
       "workflow": "keepalive.yml"
     },
     {
-      "late_minutes": 303,
-      "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
-      "ran_at": "2026-11-23T08:40:18+00:00",
-      "slot": "2026-11-23T03:37:00+00:00",
-      "workflow": "channel-analytics.yml"
-    },
-    {
       "late_minutes": 227,
       "name": "Tests on main (daily)",
       "ran_at": "2026-11-23T08:39:48+00:00",
@@ -58,8 +51,8 @@
       "workflow": "produce.yml"
     }
   ],
-  "generated_at": "2026-11-24T03:15:55.132509+00:00",
-  "last_run_at": "2026-11-24T03:15:03+00:00",
+  "generated_at": "2026-11-24T04:17:36.797262+00:00",
+  "last_run_at": "2026-11-24T04:17:27+00:00",
   "on_time": [
     {
       "late_minutes": 119,
@@ -76,17 +69,17 @@
       "workflow": "metrics.yml"
     },
     {
-      "late_minutes": 119,
+      "late_minutes": 53,
       "name": "Automation monitor",
-      "ran_at": "2026-11-24T02:22:09+00:00",
-      "slot": "2026-11-24T00:23:00+00:00",
+      "ran_at": "2026-11-24T04:16:49+00:00",
+      "slot": "2026-11-24T03:23:00+00:00",
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 93,
+      "late_minutes": 29,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-24T02:20:47+00:00",
-      "slot": "2026-11-24T00:47:00+00:00",
+      "ran_at": "2026-11-24T04:16:49+00:00",
+      "slot": "2026-11-24T03:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
