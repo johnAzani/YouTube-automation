@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T21:47:07Z",
+  "generated_at": "2026-11-24T23:32:22Z",
   "monitor_generated_at": "2026-11-24T21:45:44.355512+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 217,
     "published_shorts": 559,
     "public_total": 774,
-    "queued_longform": 60,
+    "queued_longform": 62,
     "queued_shorts": 49,
     "automations_ok": 13,
     "automations_total": 15,
@@ -101,7 +101,7 @@
         "published_shorts": 72,
         "thumbnail_pending": 2,
         "public_total": 104,
-        "queued_longform": 10,
+        "queued_longform": 12,
         "queued_other": 0,
         "queued_shorts": 0
       },
@@ -20092,6 +20092,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1427
+      },
+      {
+        "id": "0907",
+        "slug": "rest-kept-and-morning-given-psalm-3-5",
+        "file": "0907-rest-kept-and-morning-given-psalm-3-5.md",
+        "title": "Rest Kept and Morning Given: Psalm 3:5 | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1285
+      },
+      {
+        "id": "0908",
+        "slug": "satisfied-when-i-awake-psalm-17-15-the-morning-altar",
+        "file": "0908-satisfied-when-i-awake-psalm-17-15-the-morning-altar.md",
+        "title": "Satisfied When I Awake: Psalm 17:15 | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1481
       }
     ],
     "shorts": [
