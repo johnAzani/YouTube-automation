@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T15:56:47Z",
+  "generated_at": "2026-11-25T17:20:28Z",
   "monitor_generated_at": "2026-11-25T15:33:03.208224+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 810,
+    "published_total": 811,
     "published_longform": 226,
-    "published_shorts": 584,
-    "public_total": 808,
+    "published_shorts": 585,
+    "public_total": 809,
     "queued_longform": 75,
-    "queued_shorts": 58,
+    "queued_shorts": 57,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -232,23 +232,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 84,
+        "published_total": 85,
         "published_longform": 26,
-        "published_shorts": 58,
-        "thumbnail_pending": 83,
-        "public_total": 84,
+        "published_shorts": 59,
+        "thumbnail_pending": 84,
+        "public_total": 85,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTISAIAH26V3",
-        "title": "Pray This Isaiah 26:3-4 Midnight Prayer | When Thoughts Refuse To Rest #Shorts",
+        "id": "SHORT-MIDNIGHTPSALM30V5",
+        "title": "Pray This Psalm 30:5 Midnight Prayer | The Heaviness You Carry Tonight #Shorts",
         "format": "short",
-        "youtube_video_id": "jOtykzvB1SM",
-        "watch_url": "https://www.youtube.com/shorts/jOtykzvB1SM",
+        "youtube_video_id": "bPNGjgVlAyc",
+        "watch_url": "https://www.youtube.com/shorts/bPNGjgVlAyc",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T13:45:30Z"
+        "published_at": "2026-11-25T17:19:23Z"
       },
       "next_queued_longform": {
         "id": "0226",
@@ -257,8 +257,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightpsalm30v5",
-        "scripture": "Psalm 30:5",
+        "short": "short-midnightpsalm42v8",
+        "scripture": "Psalm 42:8",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTPSALM30V5",
+      "slug": "short-midnightpsalm30v5-midnight-prayer",
+      "file": "short-midnightpsalm30v5-midnight-prayer.md",
+      "title": "Pray This Psalm 30:5 Midnight Prayer | The Heaviness You Carry Tonight #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T17:19:23Z",
+      "youtube_video_id": "bPNGjgVlAyc",
+      "watch_url": "https://www.youtube.com/shorts/bPNGjgVlAyc",
+      "youtu_be_url": "https://youtu.be/bPNGjgVlAyc",
+      "shorts_url": "https://www.youtube.com/shorts/bPNGjgVlAyc",
+      "studio_url": "https://studio.youtube.com/video/bPNGjgVlAyc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/bPNGjgVlAyc/hqdefault.jpg",
+      "thumb_text": "TEARS YOU HIDE \u00b7 ARE NOT FOREVER",
+      "thumbnail_pending": true,
+      "duration_label": "44s",
+      "words": 639
+    },
     {
       "id": "0104",
       "slug": "planted-by-the-waters-in-the-heat-jeremiah-17-7-8",
@@ -21203,17 +21227,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-midnightpsalm30v5",
-        "file": "0000-short-midnightpsalm30v5.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 30:5",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightpsalm42v8",
