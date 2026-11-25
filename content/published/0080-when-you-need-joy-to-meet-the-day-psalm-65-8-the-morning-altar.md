@@ -2,7 +2,7 @@
 id: 0080
 title: 'When You Need Joy to Meet the Day: Psalm 65:8 | The Morning Altar'
 slug: when-you-need-joy-to-meet-the-day-psalm-65-8-the-morning-altar
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -75,6 +75,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-25"
+published_at: "2026-11-25T09:55:37Z"
+youtube_video_id: "FaYzlv4eqcc"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 515.52
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — The First Light of Morning

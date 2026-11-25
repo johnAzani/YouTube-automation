@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T09:19:03Z",
+  "generated_at": "2026-11-25T09:56:41Z",
   "monitor_generated_at": "2026-11-25T08:52:23.718913+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 794,
-    "published_longform": 220,
+    "published_total": 795,
+    "published_longform": 221,
     "published_shorts": 574,
-    "public_total": 792,
+    "public_total": 793,
     "queued_longform": 70,
-    "queued_shorts": 54,
+    "queued_shorts": 52,
     "automations_ok": 9,
     "automations_total": 15,
     "network_healthy": false
@@ -101,36 +101,31 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 106,
-        "published_longform": 34,
+        "published_total": 107,
+        "published_longform": 35,
         "published_shorts": 72,
         "thumbnail_pending": 2,
-        "public_total": 105,
+        "public_total": 106,
         "queued_longform": 15,
         "queued_other": 0,
-        "queued_shorts": 2
+        "queued_shorts": 0
       },
       "latest_video": {
-        "id": "0079",
-        "title": "When I Awake, I Am Still with Thee: Psalm 139:17-18",
-        "format": "longform",
-        "youtube_video_id": "QhoCN_MPR-I",
-        "watch_url": "https://youtu.be/QhoCN_MPR-I",
-        "published_on": "2026-11-25",
-        "published_at": "2026-11-25T01:26:03Z"
-      },
-      "next_queued_longform": {
         "id": "0080",
         "title": "When You Need Joy to Meet the Day: Psalm 65:8 | The Morning Altar",
-        "words": 1417,
+        "format": "longform",
+        "youtube_video_id": "FaYzlv4eqcc",
+        "watch_url": "https://youtu.be/FaYzlv4eqcc",
+        "published_on": "2026-11-25",
+        "published_at": "2026-11-25T09:55:37Z"
+      },
+      "next_queued_longform": {
+        "id": "0081",
+        "title": "Strength for the Hours Ahead: Deuteronomy 33:25 | The Morning Altar",
+        "words": 780,
         "status": "approved"
       },
-      "next_queued_short": {
-        "short": "short-morningproverbs8v17",
-        "scripture": "Proverbs 8:17",
-        "target_window_utc": "06:14",
-        "status": "approved"
-      },
+      "next_queued_short": null,
       "feedback": {
         "available": true,
         "as_of": "2026-11-25",
@@ -696,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0080",
+      "slug": "when-you-need-joy-to-meet-the-day-psalm-65-8-the-morning-altar",
+      "file": "0080-when-you-need-joy-to-meet-the-day-psalm-65-8-the-morning-altar.md",
+      "title": "When You Need Joy to Meet the Day: Psalm 65:8 | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T09:55:37Z",
+      "youtube_video_id": "FaYzlv4eqcc",
+      "watch_url": "https://youtu.be/FaYzlv4eqcc",
+      "youtu_be_url": "https://youtu.be/FaYzlv4eqcc",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/FaYzlv4eqcc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/FaYzlv4eqcc/hqdefault.jpg",
+      "thumb_text": "MORNING REJOICING",
+      "thumbnail_pending": false,
+      "duration_label": "8m 36s",
+      "words": 1417
+    },
     {
       "id": "SHORT-GUIDEDDEUTERONOMY31V8",
       "slug": "short-guideddeuteronomy31v8-guidance-prayer",
@@ -19782,19 +19801,6 @@
         "words": 1025
       },
       {
-        "id": "0080",
-        "slug": "when-you-need-joy-to-meet-the-day-psalm-65-8-the-morning-altar",
-        "file": "0080-when-you-need-joy-to-meet-the-day-psalm-65-8-the-morning-altar.md",
-        "title": "When You Need Joy to Meet the Day: Psalm 65:8 | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1417
-      },
-      {
         "id": "0081",
         "slug": "strength-for-the-hours-ahead-deuteronomy-33-25",
         "file": "0081-strength-for-the-hours-ahead-deuteronomy-33-25.md",
@@ -20664,6 +20670,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1806
+      },
+      {
+        "id": "0913",
+        "slug": "when-you-need-strength-to-finish-philippians-1-6",
+        "file": "0913-when-you-need-strength-to-finish-philippians-1-6.md",
+        "title": "When You Need Strength to Finish: Philippians 1:6 | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1169
       }
     ],
     "shorts": [
@@ -21238,28 +21257,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-morningproverbs8v17",
-        "file": "0911-short-morningproverbs8v17.yml",
-        "companion_longform_id": "0911",
-        "scripture": "Proverbs 8:17",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-morningpsalm104v22",
-        "file": "0912-short-morningpsalm104v22.yml",
-        "companion_longform_id": "0912",
-        "scripture": "Psalm 104:22-23",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       }
     ]
   },
