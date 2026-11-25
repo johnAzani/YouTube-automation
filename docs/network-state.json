@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T20:58:26Z",
+  "generated_at": "2026-11-25T20:58:34Z",
   "monitor_generated_at": "2026-11-25T20:47:15.345030+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 824,
+    "published_total": 825,
     "published_longform": 228,
-    "published_shorts": 596,
-    "public_total": 822,
+    "published_shorts": 597,
+    "public_total": 823,
     "queued_longform": 74,
-    "queued_shorts": 47,
+    "queued_shorts": 46,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -504,23 +504,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 67,
+        "published_total": 68,
         "published_longform": 18,
-        "published_shorts": 49,
+        "published_shorts": 50,
         "thumbnail_pending": 31,
-        "public_total": 67,
+        "public_total": 68,
         "queued_longform": 6,
         "queued_other": 4,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM119V114",
-        "title": "Pray This Psalm 119:114 Prayer for Divine Protection | Resting On Your Mind Is Known #Shorts",
+        "id": "SHORT-SHIELDPROVERBS30V5",
+        "title": "Pray This Proverbs 30:5 Prayer for Divine Protection | Hear His Promise #Shorts",
         "format": "short",
-        "youtube_video_id": "-5NS1zlzb78",
-        "watch_url": "https://www.youtube.com/shorts/-5NS1zlzb78",
+        "youtube_video_id": "I7FhHkMuJSo",
+        "watch_url": "https://www.youtube.com/shorts/I7FhHkMuJSo",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T17:21:25Z"
+        "published_at": "2026-11-25T20:57:19Z"
       },
       "next_queued_longform": {
         "id": "0624",
@@ -529,8 +529,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldproverbs30v5",
-        "scripture": "Proverbs 30:5",
+        "short": "short-shieldpsalm28v7",
+        "scripture": "Psalm 28:7",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPROVERBS30V5",
+      "slug": "short-shieldproverbs30v5-protection-prayer",
+      "file": "short-shieldproverbs30v5-protection-prayer.md",
+      "title": "Pray This Proverbs 30:5 Prayer for Divine Protection | Hear His Promise #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T20:57:19Z",
+      "youtube_video_id": "I7FhHkMuJSo",
+      "watch_url": "https://www.youtube.com/shorts/I7FhHkMuJSo",
+      "youtu_be_url": "https://youtu.be/I7FhHkMuJSo",
+      "shorts_url": "https://www.youtube.com/shorts/I7FhHkMuJSo",
+      "studio_url": "https://studio.youtube.com/video/I7FhHkMuJSo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/I7FhHkMuJSo/hqdefault.jpg",
+      "thumb_text": "PROVERBS 30:5 \u00b7 EVERY WORD IS PURE",
+      "thumbnail_pending": false,
+      "duration_label": "54s",
+      "words": 639
+    },
     {
       "id": "SHORT-MORNINGPSALM116V1",
       "slug": "short-morningpsalm116v1-sunrise-prayer",
@@ -21779,17 +21803,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldproverbs30v5",
-        "file": "0619-short-shieldproverbs30v5.yml",
-        "companion_longform_id": "0619",
-        "scripture": "Proverbs 30:5",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm28v7",
