@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T11:29:33Z",
+  "generated_at": "2026-11-25T12:12:35Z",
   "monitor_generated_at": "2026-11-25T08:52:23.718913+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 797,
-    "published_longform": 222,
+    "published_total": 798,
+    "published_longform": 223,
     "published_shorts": 575,
-    "public_total": 795,
-    "queued_longform": 71,
+    "public_total": 796,
+    "queued_longform": 70,
     "queued_shorts": 51,
     "automations_ok": 9,
     "automations_total": 15,
@@ -635,28 +635,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 63,
-        "published_longform": 15,
+        "published_total": 64,
+        "published_longform": 16,
         "published_shorts": 48,
         "thumbnail_pending": 2,
-        "public_total": 63,
-        "queued_longform": 6,
+        "public_total": 64,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDDEUTERONOMY31V8",
-        "title": "Pray This Deuteronomy 31:8 Prayer for God's Guidance | Facing A Heavy Decision Today #Shorts",
-        "format": "short",
-        "youtube_video_id": "7t8sbl5PLM0",
-        "watch_url": "https://www.youtube.com/shorts/7t8sbl5PLM0",
-        "published_on": "2026-11-25",
-        "published_at": "2026-11-25T09:17:44Z"
-      },
-      "next_queued_longform": {
         "id": "0815",
         "title": "Walking the Old Paths and Finding Rest: Jeremiah 6:16",
-        "words": 1254,
+        "format": "longform",
+        "youtube_video_id": "79uIhKSJ_wE",
+        "watch_url": "https://youtu.be/79uIhKSJ_wE",
+        "published_on": "2026-11-25",
+        "published_at": "2026-11-25T12:11:37Z"
+      },
+      "next_queued_longform": {
+        "id": "0817",
+        "title": "Walking Into Unknown Territory: Isaiah 42:16 | The Guided Path",
+        "words": 1293,
         "status": "approved"
       },
       "next_queued_short": {
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0815",
+      "slug": "walking-the-old-paths-and-finding-rest-jeremiah-6-16",
+      "file": "0815-walking-the-old-paths-and-finding-rest-jeremiah-6-16.md",
+      "title": "Walking the Old Paths and Finding Rest: Jeremiah 6:16",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T12:11:37Z",
+      "youtube_video_id": "79uIhKSJ_wE",
+      "watch_url": "https://youtu.be/79uIhKSJ_wE",
+      "youtu_be_url": "https://youtu.be/79uIhKSJ_wE",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/79uIhKSJ_wE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/79uIhKSJ_wE/hqdefault.jpg",
+      "thumb_text": "THE GOOD WAY",
+      "thumbnail_pending": false,
+      "duration_label": "8m 15s",
+      "words": 1254
+    },
     {
       "id": "0716",
       "slug": "thanksgiving-worship-luke-17-15-16",
@@ -20471,19 +20495,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1526
-      },
-      {
-        "id": "0815",
-        "slug": "walking-the-old-paths-and-finding-rest-jeremiah-6-16",
-        "file": "0815-walking-the-old-paths-and-finding-rest-jeremiah-6-16.md",
-        "title": "Walking the Old Paths and Finding Rest: Jeremiah 6:16",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1254
       },
       {
         "id": "0817",
