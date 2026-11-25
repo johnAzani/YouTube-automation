@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T17:20:28Z",
+  "generated_at": "2026-11-25T17:22:07Z",
   "monitor_generated_at": "2026-11-25T15:33:03.208224+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 811,
+    "published_total": 812,
     "published_longform": 226,
-    "published_shorts": 585,
-    "public_total": 809,
+    "published_shorts": 586,
+    "public_total": 810,
     "queued_longform": 75,
-    "queued_shorts": 57,
+    "queued_shorts": 56,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -368,23 +368,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 76,
+        "published_total": 77,
         "published_longform": 19,
-        "published_shorts": 57,
+        "published_shorts": 58,
         "thumbnail_pending": 5,
-        "public_total": 76,
+        "public_total": 77,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "SHORT-HEALINGPSALM6V2",
-        "title": "Pray This Psalm 6:2-4 Healing Prayer for Peace & Strength | His Mercy #Shorts",
+        "id": "SHORT-HEALING2KINGS20V5",
+        "title": "Pray This 2 Kings 20:5 Healing Prayer for Peace & Strength | Tears You Cry #Shorts",
         "format": "short",
-        "youtube_video_id": "uCfdgAyaS9o",
-        "watch_url": "https://www.youtube.com/shorts/uCfdgAyaS9o",
+        "youtube_video_id": "zXxRhCXQWg0",
+        "watch_url": "https://www.youtube.com/shorts/zXxRhCXQWg0",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T13:48:31Z"
+        "published_at": "2026-11-25T17:20:50Z"
       },
       "next_queued_longform": {
         "id": "0426",
@@ -393,8 +393,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healing2kings20v5",
-        "scripture": "2 Kings 20:5",
+        "short": "short-healingpsalm118v17",
+        "scripture": "Psalm 118:17",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALING2KINGS20V5",
+      "slug": "short-healing2kings20v5-restoration-prayer",
+      "file": "short-healing2kings20v5-restoration-prayer.md",
+      "title": "Pray This 2 Kings 20:5 Healing Prayer for Peace & Strength | Tears You Cry #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T17:20:50Z",
+      "youtube_video_id": "zXxRhCXQWg0",
+      "watch_url": "https://www.youtube.com/shorts/zXxRhCXQWg0",
+      "youtu_be_url": "https://youtu.be/zXxRhCXQWg0",
+      "shorts_url": "https://www.youtube.com/shorts/zXxRhCXQWg0",
+      "studio_url": "https://studio.youtube.com/video/zXxRhCXQWg0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/zXxRhCXQWg0/hqdefault.jpg",
+      "thumb_text": "THE LORD HAS \u00b7 HEARD YOUR PRAYER",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 649
+    },
     {
       "id": "SHORT-MIDNIGHTPSALM30V5",
       "slug": "short-midnightpsalm30v5-midnight-prayer",
@@ -21502,17 +21526,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healing2kings20v5",
-        "file": "0426-short-healing2kings20v5.yml",
-        "companion_longform_id": "0426",
-        "scripture": "2 Kings 20:5",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingpsalm118v17",
