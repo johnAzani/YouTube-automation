@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T23:56:47Z",
+  "generated_at": "2026-11-25T23:56:54Z",
   "monitor_generated_at": "2026-11-25T23:07:25.395195+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 827,
+    "published_total": 828,
     "published_longform": 228,
-    "published_shorts": 599,
-    "public_total": 825,
-    "queued_longform": 74,
-    "queued_shorts": 44,
+    "published_shorts": 600,
+    "public_total": 826,
+    "queued_longform": 75,
+    "queued_shorts": 43,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 93,
+        "published_total": 94,
         "published_longform": 27,
-        "published_shorts": 66,
+        "published_shorts": 67,
         "thumbnail_pending": 3,
-        "public_total": 93,
-        "queued_longform": 5,
+        "public_total": 94,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 2
+        "queued_shorts": 1
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYPSALM73V26",
-        "title": "Say This Psalm 73:26 Prayer for Strength at Noon | When Strength Fails #Shorts",
+        "id": "SHORT-MIDDAYPSALM84V5",
+        "title": "Say This Psalm 84:5-7 Prayer for Strength at Noon | Find Your Strength #Shorts",
         "format": "short",
-        "youtube_video_id": "AaxrGQ9lQqs",
-        "watch_url": "https://www.youtube.com/shorts/AaxrGQ9lQqs",
+        "youtube_video_id": "bIrHZQ7NzWI",
+        "watch_url": "https://www.youtube.com/shorts/bIrHZQ7NzWI",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T20:01:14Z"
+        "published_at": "2026-11-25T23:55:52Z"
       },
       "next_queued_longform": {
         "id": "0105",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm84v5",
-        "scripture": "Psalm 84:5-7",
+        "short": "short-middayproverbs15v1",
+        "scripture": "Proverbs 15:1",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYPSALM84V5",
+      "slug": "short-middaypsalm84v5-midday-prayer",
+      "file": "short-middaypsalm84v5-midday-prayer.md",
+      "title": "Say This Psalm 84:5-7 Prayer for Strength at Noon | Find Your Strength #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T23:55:52Z",
+      "youtube_video_id": "bIrHZQ7NzWI",
+      "watch_url": "https://www.youtube.com/shorts/bIrHZQ7NzWI",
+      "youtu_be_url": "https://youtu.be/bIrHZQ7NzWI",
+      "shorts_url": "https://www.youtube.com/shorts/bIrHZQ7NzWI",
+      "studio_url": "https://studio.youtube.com/video/bIrHZQ7NzWI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/bIrHZQ7NzWI/hqdefault.jpg",
+      "thumb_text": "THE \u00b7 MIDDAY",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 629
+    },
     {
       "id": "SHORT-FAMILYROMANS15V13",
       "slug": "short-familyromans15v13-household-prayer",
@@ -20678,6 +20702,19 @@
         "words": 1170
       },
       {
+        "id": "0112",
+        "slug": "ministering-with-god-given-ability-1-peter-4-11",
+        "file": "0112-ministering-with-god-given-ability-1-peter-4-11.md",
+        "title": "Ministering With God-Given Ability: 1 Peter 4:11 | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1368
+      },
+      {
         "id": "0113",
         "slug": "when-the-dark-hours-wont-let-you-rest-psalm-42-8",
         "file": "0113-when-the-dark-hours-wont-let-you-rest-psalm-42-8.md",
@@ -21631,17 +21668,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-middaypsalm84v5",
-        "file": "0101-short-middaypsalm84v5.yml",
-        "companion_longform_id": "0101",
-        "scripture": "Psalm 84:5-7",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middayproverbs15v1",
