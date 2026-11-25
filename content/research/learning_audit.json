@@ -53,7 +53,7 @@
   },
   {
    "compositions": 1,
-   "evidence": "one composition across 639 Shorts: a variable with one level has no measured answer",
+   "evidence": "one composition across 641 Shorts: a variable with one level has no measured answer",
    "loop": "first_frame_composition",
    "owner": "pipeline/first_frame.py + pipeline/first_frame_repair.py",
    "state": "measuring",
