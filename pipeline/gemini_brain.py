@@ -2043,8 +2043,25 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
             if key in state["covered"]:
                 continue
             if key not in state["renderable"] and not self.is_api_available():
-                break
-            state["budget"] -= 1
+                # No model, but the passage is already chosen and its text is in the
+                # repository: `pipeline/passage_short.py` writes a plain, honest spec
+                # from them rather than letting the queue run dry. Its first frame
+                # shows the need, not a citation (pipeline/first_frame.py).
+                from .passage_short import write_spec
+                state["budget"] -= 1
+                try:
+                    spec_path, spec_key = write_spec(self.channel_id, reference)
+                    print(f"[gemini-brain] {spec_key} authored from the passage "
+                          f"(no model available): {spec_path.name}", flush=True)
+                except Exception as exc:  # noqa: BLE001
+                    failures += 1
+                    rows.append({"file": f"{STANDALONE_PREFIX}-{key}.yml", "key": key,
+                                 "verdict": "failed",
+                                 "reason": f"spec for {reference} could not be generated: "
+                                           f"{str(exc)[:120]}"})
+                    continue
+            else:
+                state["budget"] -= 1
             mpath, mkey = self.generate_standalone_short(reference, source=source)
             if mpath is None:
                 failures += 1

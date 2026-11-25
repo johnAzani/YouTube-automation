@@ -1,0 +1,137 @@
+{
+ "channels": [
+  {
+   "binding": "enough ready Shorts",
+   "channel": "secret-place",
+   "companion_longforms": 0,
+   "ready": 2,
+   "sources": 0,
+   "standalone_examples": [],
+   "standalone_passages": 0,
+   "verdict": "enough"
+  },
+  {
+   "binding": "enough ready Shorts",
+   "channel": "prayer2",
+   "companion_longforms": 0,
+   "ready": 5,
+   "sources": 8,
+   "standalone_examples": [
+    "Psalm 77:11",
+    "Psalm 71:15",
+    "Psalm 149:5-6",
+    "Lamentations 3:23",
+    "Luke 4:42"
+   ],
+   "standalone_passages": 8,
+   "verdict": "enough"
+  },
+  {
+   "binding": "enough ready Shorts",
+   "channel": "prayer3",
+   "companion_longforms": 0,
+   "ready": 3,
+   "sources": 0,
+   "standalone_examples": [],
+   "standalone_passages": 0,
+   "verdict": "enough"
+  },
+  {
+   "binding": "enough ready Shorts",
+   "channel": "prayer4",
+   "companion_longforms": 0,
+   "ready": 9,
+   "sources": 2,
+   "standalone_examples": [
+    "Psalm 121:3-4",
+    "Psalm 77:6"
+   ],
+   "standalone_passages": 2,
+   "verdict": "enough"
+  },
+  {
+   "binding": "enough ready Shorts",
+   "channel": "prayer5",
+   "companion_longforms": 0,
+   "ready": 8,
+   "sources": 0,
+   "standalone_examples": [],
+   "standalone_passages": 0,
+   "verdict": "enough"
+  },
+  {
+   "binding": "enough ready Shorts",
+   "channel": "prayer6",
+   "companion_longforms": 0,
+   "ready": 3,
+   "sources": 0,
+   "standalone_examples": [],
+   "standalone_passages": 0,
+   "verdict": "enough"
+  },
+  {
+   "binding": "enough ready Shorts",
+   "channel": "prayer7",
+   "companion_longforms": 0,
+   "ready": 6,
+   "sources": 0,
+   "standalone_examples": [],
+   "standalone_passages": 0,
+   "verdict": "enough"
+  },
+  {
+   "binding": "enough ready Shorts",
+   "channel": "prayer8",
+   "companion_longforms": 0,
+   "ready": 10,
+   "sources": 3,
+   "standalone_examples": [
+    "Psalm 16:8",
+    "Psalm 20:7",
+    "Psalm 115:9-11"
+   ],
+   "standalone_passages": 3,
+   "verdict": "enough"
+  },
+  {
+   "binding": "enough ready Shorts",
+   "channel": "prayer9",
+   "companion_longforms": 0,
+   "ready": 10,
+   "sources": 3,
+   "standalone_examples": [
+    "Psalm 50:23",
+    "Psalm 138:1-2",
+    "Psalm 135:3"
+   ],
+   "standalone_passages": 3,
+   "verdict": "enough"
+  },
+  {
+   "binding": "enough ready Shorts",
+   "channel": "prayer10",
+   "companion_longforms": 1,
+   "ready": 7,
+   "sources": 6,
+   "standalone_examples": [
+    "Exodus 33:14",
+    "Psalm 119:130",
+    "Hosea 14:9",
+    "Proverbs 20:24",
+    "Psalm 119:35"
+   ],
+   "standalone_passages": 5,
+   "verdict": "enough"
+  }
+ ],
+ "cost_lock": "$0.00 / month (docs/ZERO_DOLLAR_LOCK.md)",
+ "dry": [],
+ "not_claimed": [
+  "that more passages would produce more views. The supply reading says what can be authored, not what will be watched."
+ ],
+ "ready_floor": 2,
+ "schema": 1,
+ "sentence": "Every channel holds at least 2 ready Shorts.",
+ "total_sources": 22,
+ "under_floor": []
+}

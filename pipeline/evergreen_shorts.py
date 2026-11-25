@@ -56,6 +56,15 @@ EVERGREEN: dict[str, tuple[str, ...]] = {
         "Psalm 51:10", "Isaiah 43:18-19", "Psalm 37:4", "Matthew 5:14-16",
         "2 Corinthians 5:17", "Deuteronomy 31:8", "Psalm 46:5", "Psalm 90:14",
         "Psalm 113:3", "Psalm 16:8", "Psalm 138:8",
+        # Added 25 November 2026: all fifteen above were used and the nightly pass had
+        # no passage left, so this channel's Shorts queue reached zero. These seven are
+        # what remained unclaimed anywhere on the network - and they are now on this
+        # channel's roadmap too (0965-0972), so the pool refills rather than empties.
+        "Psalm 19:14", "Psalm 108:1-3", "Psalm 145:2", "Isaiah 50:4",
+        "Psalm 116:1-2", "Psalm 5:1-3", "Psalm 86:3",
+        # Added the same day, for the same reason: the first seven refill the pool but
+        # not for long at five Shorts a day.
+        "Lamentations 3:23", "Psalm 77:11", "Psalm 71:15", "Psalm 149:5-6", "Luke 4:42",
     ),
     # The Midday Watch: the middle of the working day, strength running low.
     "prayer3": (

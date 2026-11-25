@@ -91,6 +91,10 @@ class ShortSpec:
     repairs: list[str] = field(default_factory=list)
     scripture: str = ""
     channel: str = "secret-place"
+    #: Who wrote this spec: a model, or ``pipeline/passage_short.py`` writing from
+    #: the passage itself when no model is available. Recorded so a reader can tell
+    #: the two apart without guessing from the prose.
+    authored_by: str = ""
 
     @property
     def narration_text(self) -> str:
@@ -112,6 +116,8 @@ class ShortSpec:
             out["repairs"] = list(self.repairs)
         if self.scripture:
             out["scripture"] = self.scripture
+        if self.authored_by:
+            out["authored_by"] = self.authored_by
         return out
 
     def to_renderer(self) -> dict:
@@ -309,6 +315,7 @@ def validate_spec(data: dict, key: str | None = None,
         stock_queries=queries, scenes=scenes, captions=captions,
         kinetic_phrases=phrases, beats=beats, problems=problems,
         repairs=repairs, scripture=scriptural, channel=declared_channel,
+        authored_by=_norm(data.get("authored_by", "")),
     )
 
 
@@ -532,7 +539,12 @@ VERSE_KICKER_RE = re.compile(
     r"esther|job|ecclesiastes|jeremiah|lamentations|ezekiel|daniel|"
     r"hosea|joel|amos|obadiah|jonah|micah|nahum|habakkuk|zephaniah|"
     r"haggai|zechariah|malachi"
-    r")s?\s+\d"
+    # ...and the spelled-out counting a model reaches for when told not to use
+    # digits: "HOSEA SIX ONE", "NEHEMIAH TWO FOUR". Two of the 420 reference
+    # kickers counted on 25 November 2026 were written that way and passed the
+    # guard; a citation on the first frame is the same mistake however it is spelled.
+    r")s?\s+(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|"
+    r"thirteen|fourteen|fifteen|hundred|twenty|thirty|forty|fifty)\b"
 )
 CHANNEL_KICKER_RE = re.compile(
     r"(?i)^(?:the\s+)?(?:"

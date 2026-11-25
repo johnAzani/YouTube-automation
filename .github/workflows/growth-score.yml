@@ -64,6 +64,12 @@ jobs:
         # as plainly as what is.
         run: python -u -m pipeline.realistic_ceiling
 
+      - name: Count what each channel can still make a Short from
+        # pipeline/shorts_supply.py: standalone passages, companion long-forms and
+        # ready Shorts, per channel. The daily CI reports a channel that has run dry
+        # days after it happened; this reads the same thing before it bites.
+        run: python -u -m pipeline.shorts_supply
+
       - name: Show the reading in the run summary
         if: always()
         run: |
@@ -86,7 +92,10 @@ jobs:
             git reset --quiet --hard origin/main
             python -u -m pipeline.growth_score >/dev/null
             python -u -m pipeline.realistic_ceiling >/dev/null
-            git add content/research/growth_score.json content/research/realistic_ceiling.json
+            python -u -m pipeline.shorts_supply >/dev/null
+            python -u -m pipeline.first_frame >/dev/null
+            git add content/research/growth_score.json content/research/realistic_ceiling.json \
+                    content/research/shorts_supply.json content/research/first_frame.json
             if git diff --cached --quiet; then
               echo "growth score unchanged"
               exit 0

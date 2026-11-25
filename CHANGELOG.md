@@ -5,6 +5,17 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-25 — six in ten plays end in a second, and the first frame never varies
+
+- **The engaged-view report was read for the first time.** 4,336 plays across the 35 most-viewed videos, **1,739 engaged — 40.1%**. Six in ten plays end almost immediately.
+- **The swipe and retention are different problems.** Engaged share correlates with average percentage viewed at **ρ = −0.09** and with views at **−0.19**. The people who stay watch most of it; the ones who leave are not leaving because the middle dragged. Treating them as one lever measured the wrong half.
+- **New `pipeline/first_frame.py`.** Across 639 specs: **456 (71%) put a scripture reference** on the first frame, which the authoring prompt forbids — and **every first frame was the same composition**, at a median of 15 words to read before a word is spoken. The guard missed spelled-out numbers ("HOSEA SIX ONE") and the counter missed numbered books ("1 PETER 5:7"); both are fixed, which is why the count rose from 420 to 456.
+- **New `pipeline/passage_short.py`.** Writes a Short spec from a passage — the need on scene one, the citation arriving with the verse on scene two — so a channel with no model available still gets a renderable Short. Five written for `prayer2`, and they are the first Shorts in a different first-frame composition for the comparison to use.
+- **New `pipeline/shorts_supply.py`.** The red runway check was three shortages in one number: `prayer2` had **no** standalone passage and no companion long-form, so it could not author another Short at all. `prayer2` now has 11 passages and 15 unqueued roadmap rows (was 7).
+- **The systemic finding:** for every channel, every roadmap passage already has a Short. The network has consumed its scripture — six channels had an empty standalone pool. That is the real limit on five Shorts a channel a day, and it is now reported daily instead of discovered by a failing test.
+- **Unproven:** which first-frame composition keeps more people. Twelve Shorts could be matched to their spec; that cannot separate two designs, and the report says so.
+- Reading: `docs/FIRST_FRAME_AND_SUPPLY_2026-11-25.md`.
+
 ## 2026-11-24 — the Shorts report was describing the wrong videos, and naming clocks instead of needs
 
 - **The per-video Analytics report could not see the Shorts.** It was sorted by watch time and capped at 50 rows, so a three-hour long-form outranked every Short ever published: the report described **35 videos while 536 Shorts had gone out**, 28 of The Secret Place's own 64 Shorts were missing from it, and the newest measured Short was six days old. Every conclusion drawn about Shorts from that file came from an unrepresentative sample. `scripts/analytics_reader.py` now asks a second time sorted by **views**, and requests **engaged views** — the pre-2025 count of plays that lasted, and the closest the API gets to Studio's "viewed vs swiped away", which no API exposes.
