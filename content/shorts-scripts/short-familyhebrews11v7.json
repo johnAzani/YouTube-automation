@@ -1,0 +1,324 @@
+{
+  "key": "short-familyhebrews11v7",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "BUILDING IN FAITH",
+    "PROTECT YOUR HOME"
+  ],
+  "poster": [
+    "BY FAITH",
+    "NOAH PREPARED",
+    "AN ARK TO SAVE",
+    "HIS HOUSEHOLD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm rustic wooden table lamp open bible peaceful room",
+    "olive branch warm sunlight wooden window frame peaceful home",
+    "misty valley peaceful morning rustic wooden cabin exterior",
+    "cozy living room warm evening lantern light bible",
+    "warm light peaceful wooden hallway home refuge",
+    "misty mountain forest serene sunrise morning light",
+    "warm cozy home lamp light reading corner bible"
+  ],
+  "scenes": [
+    {
+      "a": "You are building safety for your family today.",
+      "img": "short-familyhebrews11v7-scene-01.jpg",
+      "kicker": "UNSEEN FUTURE",
+      "sub": "FAITHFUL PREPARATION IN THE HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hebrews 11 verse 7 says: By faith Noah, being warned of God of things not seen as yet, moved with fear, prepared an ark to the saving of his house;",
+      "img": "short-familyhebrews11v7-scene-02.jpg",
+      "kicker": "HEBREWS 11:7",
+      "sub": "MOVED WITH FAITHFUL FEAR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "by the which he condemned the world, and became heir of the righteousness which is by faith.",
+      "img": "short-familyhebrews11v7-scene-03.jpg",
+      "kicker": "HEIR OF RIGHTEOUSNESS",
+      "sub": "STANDING FIRM IN FAITH",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, when the future feels uncertain and we cannot see what lies ahead, give us quiet obedience.",
+      "img": "short-familyhebrews11v7-scene-04.jpg",
+      "kicker": "QUIET OBEDIENCE",
+      "sub": "TRUSTING GOD FOR TOMORROW",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Help us guard the souls in our care and build a sanctuary of truth for our children.",
+      "img": "short-familyhebrews11v7-scene-05.jpg",
+      "kicker": "GUARD OUR HOME",
+      "sub": "BUILDING A SANCTUARY OF TRUTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Protect our household, Lord, and anchor our hearts in Your holy promise.",
+      "img": "short-familyhebrews11v7-scene-06.jpg",
+      "kicker": "ANCHORED HEART",
+      "sub": "COVERED IN HIS PROMISE",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Keep building safety for your family today.",
+      "img": "short-familyhebrews11v7-scene-07.jpg",
+      "kicker": "STAY FAITHFUL",
+      "sub": "COVER YOUR HOME IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You are building safety for your family today."
+    ],
+    [
+      3,
+      14,
+      "Hebrews 11 verse 7 says: By faith Noah, being warned of God of things not seen as yet, moved with fear, prepared an ark to the saving of his house;"
+    ],
+    [
+      14,
+      23,
+      "by the which he condemned the world, and became heir of the righteousness which is by faith."
+    ],
+    [
+      23,
+      34,
+      "Lord, when the future feels uncertain and we cannot see what lies ahead, give us quiet obedience."
+    ],
+    [
+      34,
+      44,
+      "Help us guard the souls in our care and build a sanctuary of truth for our children."
+    ],
+    [
+      44,
+      53,
+      "Protect our household, Lord, and anchor our hearts in Your holy promise."
+    ],
+    [
+      53,
+      58,
+      "Amen. Keep building safety for your family today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU ARE BUILDING",
+        "SAFETY FOR YOUR",
+        "FAMILY TODAY."
+      ],
+      [
+        "BUILDING",
+        "SAFETY"
+      ],
+      "HEBREWS 11 : 7"
+    ],
+    [
+      3,
+      14,
+      [
+        "BY FAITH NOAH",
+        "PREPARED AN ARK",
+        "TO THE SAVING",
+        "OF HIS HOUSE"
+      ],
+      [
+        "PREPARED",
+        "SAVING"
+      ],
+      "HEBREWS 11 : 7"
+    ],
+    [
+      14,
+      23,
+      [
+        "HE BECAME HEIR",
+        "OF RIGHTEOUSNESS",
+        "WHICH IS BY FAITH"
+      ],
+      [
+        "HEIR",
+        "FAITH"
+      ],
+      "HEBREWS 11 : 7"
+    ],
+    [
+      23,
+      34,
+      [
+        "WHEN THE FUTURE",
+        "FEELS UNCERTAIN",
+        "GIVE US OBEDIENCE"
+      ],
+      [
+        "FUTURE",
+        "OBEDIENCE"
+      ],
+      "HEBREWS 11 : 7"
+    ],
+    [
+      34,
+      44,
+      [
+        "GUARD THE SOULS",
+        "IN OUR CARE",
+        "BUILD A SANCTUARY"
+      ],
+      [
+        "GUARD",
+        "SANCTUARY"
+      ],
+      "HEBREWS 11 : 7"
+    ],
+    [
+      44,
+      53,
+      [
+        "PROTECT OUR HOUSEHOLD",
+        "ANCHOR OUR HEARTS",
+        "IN YOUR PROMISE"
+      ],
+      [
+        "PROTECT",
+        "ANCHOR"
+      ],
+      "HEBREWS 11 : 7"
+    ],
+    [
+      53,
+      58,
+      [
+        "KEEP BUILDING SAFETY",
+        "FOR YOUR FAMILY",
+        "TODAY."
+      ],
+      [
+        "BUILDING",
+        "SAFETY"
+      ],
+      "HEBREWS 11 : 7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You are building safety for your family today.",
+      "kind": "phrase",
+      "words": [
+        "BUILDING",
+        "SAFETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hebrews 11 verse 7 says: By faith Noah, being warned of God of things not seen as yet, moved with fear, prepared an ark to the saving of his house;",
+      "kind": "phrase",
+      "words": [
+        "PREPARED",
+        "ARK",
+        "SAVING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "by the which he condemned the world, and became heir of the righteousness which is by faith.",
+      "kind": "phrase",
+      "words": [
+        "HEIR",
+        "RIGHTEOUSNESS",
+        "FAITH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when the future feels uncertain and we cannot see what lies ahead, give us quiet obedience.",
+      "kind": "phrase",
+      "words": [
+        "UNCERTAIN",
+        "QUIET",
+        "OBEDIENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help us guard the souls in our care and build a sanctuary of truth for our children.",
+      "kind": "phrase",
+      "words": [
+        "GUARD",
+        "SANCTUARY",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Protect our household, Lord, and anchor our hearts in Your holy promise.",
+      "kind": "phrase",
+      "words": [
+        "PROTECT",
+        "ANCHOR",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Keep building safety for your family today.",
+      "kind": "phrase",
+      "words": [
+        "KEEP",
+        "BUILDING",
+        "SAFETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Hebrews 11:7"
+}
