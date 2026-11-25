@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T13:43:00Z",
+  "generated_at": "2026-11-25T13:44:48Z",
   "monitor_generated_at": "2026-11-25T08:52:23.718913+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 798,
+    "published_total": 799,
     "published_longform": 223,
-    "published_shorts": 575,
-    "public_total": 796,
+    "published_shorts": 576,
+    "public_total": 797,
     "queued_longform": 75,
-    "queued_shorts": 62,
+    "queued_shorts": 61,
     "automations_ok": 9,
     "automations_total": 15,
     "network_healthy": false
@@ -295,23 +295,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 72,
+        "published_total": 73,
         "published_longform": 21,
-        "published_shorts": 51,
-        "thumbnail_pending": 72,
-        "public_total": 72,
+        "published_shorts": 52,
+        "thumbnail_pending": 73,
+        "public_total": 73,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-FAMILYISAIAH65V23",
-        "title": "Pray This Isaiah 65:23 Family Prayer Over Your Home | Your Work For Them Matters #Shorts",
+        "id": "SHORT-FAMILYHEBREWS11V7",
+        "title": "Pray This Hebrews 11:7 Family Prayer Over Your Home | His Household #Shorts",
         "format": "short",
-        "youtube_video_id": "AENSMjxx4E4",
-        "watch_url": "https://www.youtube.com/shorts/AENSMjxx4E4",
+        "youtube_video_id": "qciDk4SoDZU",
+        "watch_url": "https://www.youtube.com/shorts/qciDk4SoDZU",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T09:02:22Z"
+        "published_at": "2026-11-25T13:43:40Z"
       },
       "next_queued_longform": {
         "id": "0322",
@@ -320,8 +320,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyhebrews11v7",
-        "scripture": "Hebrews 11:7",
+        "short": "short-familyjoshua4v6",
+        "scripture": "Joshua 4:6-7",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYHEBREWS11V7",
+      "slug": "short-familyhebrews11v7-household-prayer",
+      "file": "short-familyhebrews11v7-household-prayer.md",
+      "title": "Pray This Hebrews 11:7 Family Prayer Over Your Home | His Household #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T13:43:40Z",
+      "youtube_video_id": "qciDk4SoDZU",
+      "watch_url": "https://www.youtube.com/shorts/qciDk4SoDZU",
+      "youtu_be_url": "https://youtu.be/qciDk4SoDZU",
+      "shorts_url": "https://www.youtube.com/shorts/qciDk4SoDZU",
+      "studio_url": "https://studio.youtube.com/video/qciDk4SoDZU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/qciDk4SoDZU/hqdefault.jpg",
+      "thumb_text": "BY FAITH \u00b7 NOAH PREPARED",
+      "thumbnail_pending": true,
+      "duration_label": "47s",
+      "words": 679
+    },
     {
       "id": "0815",
       "slug": "walking-the-old-paths-and-finding-rest-jeremiah-6-16",
@@ -20823,17 +20847,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-familyhebrews11v7",
-        "file": "0000-short-familyhebrews11v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Hebrews 11:7",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
       {
         "short": "short-familyjoshua4v6",
         "file": "0000-short-familyjoshua4v6.yml",
