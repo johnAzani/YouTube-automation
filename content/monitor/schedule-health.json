@@ -58,8 +58,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-25T15:23:48.255532+00:00",
-  "last_run_at": "2026-11-25T15:22:55+00:00",
+  "generated_at": "2026-11-25T15:32:48.562145+00:00",
+  "last_run_at": "2026-11-25T15:31:59+00:00",
   "on_time": [
     {
       "late_minutes": 90,
@@ -81,6 +81,13 @@
       "ran_at": "2026-11-22T21:13:05+00:00",
       "slot": "2026-11-22T19:14:00+00:00",
       "workflow": "community.yml"
+    },
+    {
+      "late_minutes": 8,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-25T15:31:59+00:00",
+      "slot": "2026-11-25T15:23:00+00:00",
+      "workflow": "monitor.yml"
     },
     {
       "late_minutes": 53,
