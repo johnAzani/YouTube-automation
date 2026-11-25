@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T13:49:09Z",
+  "generated_at": "2026-11-25T13:49:40Z",
   "monitor_generated_at": "2026-11-25T08:52:23.718913+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 802,
+    "published_total": 803,
     "published_longform": 223,
-    "published_shorts": 579,
-    "public_total": 800,
+    "published_shorts": 580,
+    "public_total": 801,
     "queued_longform": 75,
-    "queued_shorts": 58,
+    "queued_shorts": 57,
     "automations_ok": 9,
     "automations_total": 15,
     "network_healthy": false
@@ -363,23 +363,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 75,
+        "published_total": 76,
         "published_longform": 19,
-        "published_shorts": 56,
+        "published_shorts": 57,
         "thumbnail_pending": 5,
-        "public_total": 75,
+        "public_total": 76,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-HEALINGPSALM107V19",
-        "title": "Pray This Psalm 107:19-20 Healing Prayer for Peace & Strength | God's Grace #Shorts",
+        "id": "SHORT-HEALINGPSALM6V2",
+        "title": "Pray This Psalm 6:2-4 Healing Prayer for Peace & Strength | His Mercy #Shorts",
         "format": "short",
-        "youtube_video_id": "e7B7VEDaWkw",
-        "watch_url": "https://www.youtube.com/shorts/e7B7VEDaWkw",
+        "youtube_video_id": "uCfdgAyaS9o",
+        "watch_url": "https://www.youtube.com/shorts/uCfdgAyaS9o",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T09:09:56Z"
+        "published_at": "2026-11-25T13:48:31Z"
       },
       "next_queued_longform": {
         "id": "0426",
@@ -388,8 +388,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingpsalm6v2",
-        "scripture": "Psalm 6:2-4",
+        "short": "short-healing2kings20v5",
+        "scripture": "2 Kings 20:5",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGPSALM6V2",
+      "slug": "short-healingpsalm6v2-restoration-prayer",
+      "file": "short-healingpsalm6v2-restoration-prayer.md",
+      "title": "Pray This Psalm 6:2-4 Healing Prayer for Peace & Strength | His Mercy #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T13:48:31Z",
+      "youtube_video_id": "uCfdgAyaS9o",
+      "watch_url": "https://www.youtube.com/shorts/uCfdgAyaS9o",
+      "youtu_be_url": "https://youtu.be/uCfdgAyaS9o",
+      "shorts_url": "https://www.youtube.com/shorts/uCfdgAyaS9o",
+      "studio_url": "https://studio.youtube.com/video/uCfdgAyaS9o/edit",
+      "thumb_url": "https://i.ytimg.com/vi/uCfdgAyaS9o/hqdefault.jpg",
+      "thumb_text": "GOD HEARS \u00b7 YOUR WEAKNESS",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 636
+    },
     {
       "id": "SHORT-LAMENTATIONS3V22",
       "slug": "short-lamentations3v22-pre-sleep-prayer",
@@ -21259,17 +21283,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healingpsalm6v2",
-        "file": "0422-short-healingpsalm6v2.yml",
-        "companion_longform_id": "0422",
-        "scripture": "Psalm 6:2-4",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healing2kings20v5",
