@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T00:33:32Z",
+  "generated_at": "2026-11-25T00:34:35Z",
   "monitor_generated_at": "2026-11-25T00:25:47.876256+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 779,
+    "published_total": 780,
     "published_longform": 219,
-    "published_shorts": 560,
-    "public_total": 777,
+    "published_shorts": 561,
+    "public_total": 778,
     "queued_longform": 60,
-    "queued_shorts": 50,
+    "queued_shorts": 49,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": false
@@ -290,23 +290,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 70,
+        "published_total": 71,
         "published_longform": 21,
-        "published_shorts": 49,
-        "thumbnail_pending": 70,
-        "public_total": 70,
+        "published_shorts": 50,
+        "thumbnail_pending": 71,
+        "public_total": 71,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-FAMILYGENESIS48V15",
-        "title": "Pray This Genesis 48:15-16 Family Prayer Over Your Home | Faithful Through Generations #Shorts",
+        "id": "SHORT-FAMILYJUDE1V24",
+        "title": "Pray This Jude 1:24-25 Family Prayer Over Your Home | When You Fear You Might Slip #Shorts",
         "format": "short",
-        "youtube_video_id": "E_hhnpNtNV4",
-        "watch_url": "https://www.youtube.com/shorts/E_hhnpNtNV4",
-        "published_on": "2026-11-24",
-        "published_at": "2026-11-24T20:46:13Z"
+        "youtube_video_id": "GiBa42kGvwU",
+        "watch_url": "https://www.youtube.com/shorts/GiBa42kGvwU",
+        "published_on": "2026-11-25",
+        "published_at": "2026-11-25T00:33:23Z"
       },
       "next_queued_longform": {
         "id": "0322",
@@ -315,8 +315,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyjude1v24",
-        "scripture": "Jude 1:24-25",
+        "short": "short-familyromans15v13",
+        "scripture": "Romans 15:13",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -686,6 +686,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYJUDE1V24",
+      "slug": "short-familyjude1v24-household-prayer",
+      "file": "short-familyjude1v24-household-prayer.md",
+      "title": "Pray This Jude 1:24-25 Family Prayer Over Your Home | When You Fear You Might Slip #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T00:33:23Z",
+      "youtube_video_id": "GiBa42kGvwU",
+      "watch_url": "https://www.youtube.com/shorts/GiBa42kGvwU",
+      "youtu_be_url": "https://youtu.be/GiBa42kGvwU",
+      "shorts_url": "https://www.youtube.com/shorts/GiBa42kGvwU",
+      "studio_url": "https://studio.youtube.com/video/GiBa42kGvwU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/GiBa42kGvwU/hqdefault.jpg",
+      "thumb_text": "HE IS ABLE \u00b7 TO KEEP YOU",
+      "thumbnail_pending": true,
+      "duration_label": "46s",
+      "words": 680
+    },
     {
       "id": "SHORT-JOB11V18",
       "slug": "short-job11v18-pre-sleep-prayer",
@@ -20167,17 +20191,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-familyjude1v24",
-        "file": "0000-short-familyjude1v24.yml",
-        "companion_longform_id": "",
-        "scripture": "Jude 1:24-25",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
       {
         "short": "short-familyromans15v13",
         "file": "0000-short-familyromans15v13.yml",
