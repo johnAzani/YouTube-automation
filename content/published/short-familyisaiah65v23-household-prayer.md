@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["YOUR FAMILY IS", "BLESSED OF GOD", "NO LABOR WASTED", "ISAIAH 65:23"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-02T14:51:43Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 You wonder if your quiet labor matters today. When you spend your strength pouring into your family, the fear of failing them can weigh heavy. God speaks through Isaiah: 'They shall not labor in vain, nor bring forth for trouble; for they are the seed of the blessed of the LORD, and their offspring with them.' Father, establish the work of our hands and guard our children in your lasting peace. Let our household rest in the promise that no prayer or effort given to them is ever wasted. Amen, even when you wonder if your quiet labor matters today.

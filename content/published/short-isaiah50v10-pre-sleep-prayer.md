@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["ISAIAH 50:10", "TRUST IN THE DARK", "A NIGHT PRAYER", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Night has fallen and you see no light. Scripture speaks into this quiet hour: Who is among you that feareth the LORD, that obeyeth the voice of his servant, that walketh in darkness, and hath no light? let him trust in the name of the LORD, and stay upon his God. Lord, when the path ahead is hidden in shadows, grant rest to this searching mind. Teach this heart to lean upon Your strength when every sight fails in the dark. Cover this room with Your quiet peace until morning comes. Amen. Night has fallen and you see no light.

@@ -27,7 +27,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (68, 788, 1010, 837); shorten the authored lockup or reduce its size"
 ---
 
 Fear of hidden danger surrounds your steps today. Hear the promise of Christ in Luke 10:19: Behold, I give unto you power to tread on serpents and scorpions, and over all the power of the enemy: and nothing shall by any means hurt you. Lord, cover every path we walk and grant us spiritual authority over unseen threats that seek to bring harm. Protect our going out and coming in, crushing every subtle snare beneath Your holy feet. We rest securely under Your sovereign hand, trusting that no enemy weapon can prevail. Amen. We step forward safely, even when fear of hidden danger surrounds our steps.

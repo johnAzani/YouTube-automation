@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THANKS BE UNTO GOD", "FOR HIS UNSPEAKABLE GIFT", "2 CORINTHIANS 9:15", "THE PRAISE GARDEN"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-02T14:51:51Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Your hands feel empty after giving everything today. You spent your strength, your patience, and your warmth, wondering if any of it was enough. The Scripture speaks into that quiet exhaustion: Thanks be unto God for his unspeakable gift. Father, when we have nothing left to give, you bestow your greatest treasure upon us. We thank you for Jesus, a gift too grand for human language to contain. Teach us to receive your unearned grace with honest gratitude, knowing your love never drains away. Keep our quiet hearts steady in your overflowing peace tonight. Amen. Even when your hands feel empty.

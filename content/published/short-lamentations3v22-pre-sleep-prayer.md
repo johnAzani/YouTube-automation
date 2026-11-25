@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["WHEN YOUR MIND IS RACING", "LAMENTATIONS 3:22-23", "BEDTIME PRAYER FOR REST", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Your mind is racing in this quiet room. You carry the heavy thoughts of a long, exhausting day into your bed. Hear these comforting words from Lamentations chapter 3: It is of the LORD's mercies that we are not consumed, because his compassions fail not. They are new every morning: great is thy faithfulness. Father, as the darkness settles, we lay down our anxious fears at your feet. Forgive our doubts and silence the worries that keep our hearts awake tonight. We trust that your endless mercy is already waiting for us at dawn. Amen. Sleep safely when your mind is racing.
