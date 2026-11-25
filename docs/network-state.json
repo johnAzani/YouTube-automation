@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T20:14:07Z",
+  "generated_at": "2026-11-25T20:27:31Z",
   "monitor_generated_at": "2026-11-25T19:38:53.897385+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,10 +8,10 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 820,
-    "published_longform": 226,
+    "published_total": 821,
+    "published_longform": 227,
     "published_shorts": 594,
-    "public_total": 818,
+    "public_total": 819,
     "queued_longform": 75,
     "queued_shorts": 49,
     "automations_ok": 14,
@@ -368,28 +368,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 77,
-        "published_longform": 19,
+        "published_total": 78,
+        "published_longform": 20,
         "published_shorts": 58,
         "thumbnail_pending": 5,
-        "public_total": 77,
+        "public_total": 78,
         "queued_longform": 6,
         "queued_other": 0,
         "queued_shorts": 2
       },
       "latest_video": {
-        "id": "SHORT-HEALING2KINGS20V5",
-        "title": "Pray This 2 Kings 20:5 Healing Prayer for Peace & Strength | Tears You Cry #Shorts",
-        "format": "short",
-        "youtube_video_id": "zXxRhCXQWg0",
-        "watch_url": "https://www.youtube.com/shorts/zXxRhCXQWg0",
-        "published_on": "2026-11-25",
-        "published_at": "2026-11-25T17:20:50Z"
-      },
-      "next_queued_longform": {
         "id": "0426",
         "title": "Tears Heard and Answered by the Lord: 2 Kings 20:5 | The Healing Balm",
-        "words": 1048,
+        "format": "longform",
+        "youtube_video_id": "UaUyqeHIoDM",
+        "watch_url": "https://youtu.be/UaUyqeHIoDM",
+        "published_on": "2026-11-25",
+        "published_at": "2026-11-25T20:26:18Z"
+      },
+      "next_queued_longform": {
+        "id": "0427",
+        "title": "Strength for a Long Afternoon: Psalm 118:17 | The Healing Balm",
+        "words": 1098,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0426",
+      "slug": "tears-heard-and-answered-by-the-lord-2-kings-20-5",
+      "file": "0426-tears-heard-and-answered-by-the-lord-2-kings-20-5.md",
+      "title": "Tears Heard and Answered by the Lord: 2 Kings 20:5 | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T20:26:18Z",
+      "youtube_video_id": "UaUyqeHIoDM",
+      "watch_url": "https://youtu.be/UaUyqeHIoDM",
+      "youtu_be_url": "https://youtu.be/UaUyqeHIoDM",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/UaUyqeHIoDM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/UaUyqeHIoDM/hqdefault.jpg",
+      "thumb_text": "HE SEES THY TEARS",
+      "thumbnail_pending": false,
+      "duration_label": "6m 57s",
+      "words": 1048
+    },
     {
       "id": "SHORT-GUIDEDPHILIPPIANS1V9",
       "slug": "short-guidedphilippians1v9-guidance-prayer",
@@ -20744,19 +20768,6 @@
         "words": 1088
       },
       {
-        "id": "0426",
-        "slug": "tears-heard-and-answered-by-the-lord-2-kings-20-5",
-        "file": "0426-tears-heard-and-answered-by-the-lord-2-kings-20-5.md",
-        "title": "Tears Heard and Answered by the Lord: 2 Kings 20:5 | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1048
-      },
-      {
         "id": "0427",
         "slug": "strength-for-a-long-afternoon-psalm-118-17-the-healing-balm",
         "file": "0427-strength-for-a-long-afternoon-psalm-118-17-the-healing-balm.md",
@@ -20820,6 +20831,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1616
+      },
+      {
+        "id": "0433",
+        "slug": "when-oppression-weighs-down-body-and-mind-acts-10-38",
+        "file": "0433-when-oppression-weighs-down-body-and-mind-acts-10-38.md",
+        "title": "When Oppression Weighs Down Body and Mind: Acts 10:38",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1317
       },
       {
         "id": "0523",
