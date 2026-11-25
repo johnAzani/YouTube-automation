@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T00:41:52Z",
+  "generated_at": "2026-11-25T00:42:38Z",
   "monitor_generated_at": "2026-11-25T00:25:47.876256+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 783,
+    "published_total": 784,
     "published_longform": 219,
-    "published_shorts": 564,
-    "public_total": 781,
+    "published_shorts": 565,
+    "public_total": 782,
     "queued_longform": 60,
-    "queued_shorts": 46,
+    "queued_shorts": 45,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": false
@@ -426,23 +426,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 72,
+        "published_total": 73,
         "published_longform": 20,
-        "published_shorts": 52,
+        "published_shorts": 53,
         "thumbnail_pending": 6,
-        "public_total": 72,
+        "public_total": 73,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPSALM67V5",
-        "title": "Pray This Psalm 67:5-7 Prayer for Open Doors & Provision | Daily Provision Prayer #Shorts",
+        "id": "SHORT-PROVISIONPSALM68V19",
+        "title": "Pray This Psalm 68:19 Prayer for Open Doors & Provision | Unanswered Daily Needs #Shorts",
         "format": "short",
-        "youtube_video_id": "On4GkyDhCyw",
-        "watch_url": "https://www.youtube.com/shorts/On4GkyDhCyw",
-        "published_on": "2026-11-24",
-        "published_at": "2026-11-24T20:54:57Z"
+        "youtube_video_id": "6KpMZjeCDFc",
+        "watch_url": "https://www.youtube.com/shorts/6KpMZjeCDFc",
+        "published_on": "2026-11-25",
+        "published_at": "2026-11-25T00:41:33Z"
       },
       "next_queued_longform": {
         "id": "0521",
@@ -451,8 +451,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionpsalm68v19",
-        "scripture": "Psalm 68:19",
+        "short": "short-provisionpsalm85v12",
+        "scripture": "Psalm 85:12",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -686,6 +686,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONPSALM68V19",
+      "slug": "short-provisionpsalm68v19-stewardship-prayer",
+      "file": "short-provisionpsalm68v19-stewardship-prayer.md",
+      "title": "Pray This Psalm 68:19 Prayer for Open Doors & Provision | Unanswered Daily Needs #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T00:41:33Z",
+      "youtube_video_id": "6KpMZjeCDFc",
+      "watch_url": "https://www.youtube.com/shorts/6KpMZjeCDFc",
+      "youtu_be_url": "https://youtu.be/6KpMZjeCDFc",
+      "shorts_url": "https://www.youtube.com/shorts/6KpMZjeCDFc",
+      "studio_url": "https://studio.youtube.com/video/6KpMZjeCDFc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/6KpMZjeCDFc/hqdefault.jpg",
+      "thumb_text": "WHEN DEMANDS EXCEED \u00b7 YOUR SMALL SUPPLY",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 642
+    },
     {
       "id": "SHORT-GUIDEDEXODUS13V21",
       "slug": "short-guidedexodus13v21-guidance-prayer",
@@ -20273,17 +20297,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-provisionpsalm68v19",
-        "file": "0000-short-provisionpsalm68v19.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 68:19",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionpsalm85v12",
