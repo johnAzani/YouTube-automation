@@ -2,7 +2,7 @@
 id: '0322'
 title: 'An Eternal Blessing Over Your Home: 2 Samuel 7:29 | The Family Altar'
 slug: an-eternal-blessing-over-your-home-2-samuel-7-29
-status: approved
+status: published
 channel: prayer5
 privacy: public
 format: longform
@@ -81,6 +81,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-25"
+published_at: "2026-11-25T15:46:24Z"
+youtube_video_id: "xFQeWrkg7kU"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 440.93
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar

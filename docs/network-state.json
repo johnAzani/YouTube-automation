@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T15:34:46Z",
+  "generated_at": "2026-11-25T15:47:26Z",
   "monitor_generated_at": "2026-11-25T15:33:03.208224+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 808,
-    "published_longform": 224,
+    "published_total": 809,
+    "published_longform": 225,
     "published_shorts": 584,
-    "public_total": 806,
-    "queued_longform": 77,
+    "public_total": 807,
+    "queued_longform": 76,
     "queued_shorts": 58,
     "automations_ok": 14,
     "automations_total": 15,
@@ -300,28 +300,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 73,
-        "published_longform": 21,
+        "published_total": 74,
+        "published_longform": 22,
         "published_shorts": 52,
-        "thumbnail_pending": 73,
-        "public_total": 73,
-        "queued_longform": 6,
+        "thumbnail_pending": 74,
+        "public_total": 74,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-FAMILYHEBREWS11V7",
-        "title": "Pray This Hebrews 11:7 Family Prayer Over Your Home | His Household #Shorts",
-        "format": "short",
-        "youtube_video_id": "qciDk4SoDZU",
-        "watch_url": "https://www.youtube.com/shorts/qciDk4SoDZU",
-        "published_on": "2026-11-25",
-        "published_at": "2026-11-25T13:43:40Z"
-      },
-      "next_queued_longform": {
         "id": "0322",
         "title": "An Eternal Blessing Over Your Home: 2 Samuel 7:29 | The Family Altar",
-        "words": 1084,
+        "format": "longform",
+        "youtube_video_id": "xFQeWrkg7kU",
+        "watch_url": "https://youtu.be/xFQeWrkg7kU",
+        "published_on": "2026-11-25",
+        "published_at": "2026-11-25T15:46:24Z"
+      },
+      "next_queued_longform": {
+        "id": "0323",
+        "title": "Establish the Work of Your Hands: Psalm 90:16-17 | The Family Altar",
+        "words": 913,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0322",
+      "slug": "an-eternal-blessing-over-your-home-2-samuel-7-29",
+      "file": "0322-an-eternal-blessing-over-your-home-2-samuel-7-29.md",
+      "title": "An Eternal Blessing Over Your Home: 2 Samuel 7:29 | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T15:46:24Z",
+      "youtube_video_id": "xFQeWrkg7kU",
+      "watch_url": "https://youtu.be/xFQeWrkg7kU",
+      "youtu_be_url": "https://youtu.be/xFQeWrkg7kU",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/xFQeWrkg7kU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/xFQeWrkg7kU/hqdefault.jpg",
+      "thumb_text": "BLESS THIS HOUSE",
+      "thumbnail_pending": true,
+      "duration_label": "7m 21s",
+      "words": 1084
+    },
     {
       "id": "SHORT-GUIDEDEPHESIANS5V15",
       "slug": "short-guidedephesians5v15-guidance-prayer",
@@ -20402,19 +20426,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1060
-      },
-      {
-        "id": "0322",
-        "slug": "an-eternal-blessing-over-your-home-2-samuel-7-29",
-        "file": "0322-an-eternal-blessing-over-your-home-2-samuel-7-29.md",
-        "title": "An Eternal Blessing Over Your Home: 2 Samuel 7:29 | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1084
       },
       {
         "id": "0323",
