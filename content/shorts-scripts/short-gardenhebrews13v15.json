@@ -28,7 +28,7 @@
     {
       "a": "When your words have run out today",
       "img": "short-gardenhebrews13v15-scene-01.jpg",
-      "kicker": "HEBREWS 13:15",
+      "kicker": "SACRIFICE OF PRAISE",
       "sub": "SACRIFICE OF PRAISE",
       "cam": "push_in",
       "focus": [
@@ -270,5 +270,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Hebrews 13:15"
+  "scripture": "Hebrews 13:15",
+  "first_frame_repair": {
+    "moved": "HEBREWS 13:15",
+    "to": "SACRIFICE OF PRAISE",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

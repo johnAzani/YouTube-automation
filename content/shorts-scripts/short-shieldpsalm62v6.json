@@ -28,7 +28,7 @@
     {
       "a": "If the outcome of this specific situation keeps you awake, find your sanctuary here.",
       "img": "short-shieldpsalm62v6-scene-01.jpg",
-      "kicker": "PSALM 62:6",
+      "kicker": "IF THE OUTCOME",
       "sub": "FIND YOUR SANCTUARY HERE",
       "cam": "push_in",
       "focus": [
@@ -238,5 +238,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Psalm 62:6-7"
+  "scripture": "Psalm 62:6-7",
+  "first_frame_repair": {
+    "moved": "PSALM 62:6",
+    "to": "IF THE OUTCOME",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

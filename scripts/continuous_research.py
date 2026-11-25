@@ -4172,6 +4172,16 @@ MORNING_ALTAR_ROADMAP += [
     _planned("0985", "Luke 4:42", "He Went into a Desert Place, and the People Sought Him", "A DESERT PLACE",
              "Verse 42 (Exposition)", "Finding the quiet place before the day's demands find you",
              "Tier 2 (The Quiet Place First)"),
+    # Added 25 November 2026: the floor is 15 unqueued scriptures and this channel
+    # was at 13. Both were checked against every roadmap, every evergreen list and
+    # the seasonal tables — the first two tried (Psalm 139:18, 119:148) were already
+    # on `secret-place`'s roadmap and would have been a second channel's passage.
+    _planned("0986", "Psalm 21:13", "Be Thou Exalted, Lord, in Thine Own Strength", "EXALTED IN STRENGTH",
+             "Verse 13 (Exposition)", "Asking that the day's strength point back to God rather than to you",
+             "Tier 2 (Strength That Points Back)"),
+    _planned("0987", "Psalm 77:12", "I Will Meditate Also of All Thy Work", "I WILL MEDITATE",
+             "Verse 12 (Exposition)", "Turning the morning's thoughts from the problem to what God has already done",
+             "Tier 2 (Meditation on His Work)"),
 ]
 
 MIDDAY_WATCH_ROADMAP += [

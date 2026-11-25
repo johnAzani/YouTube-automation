@@ -376,16 +376,22 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
         # rotation instead (pipeline/thumbnail_campaign.py); the receipt records
         # which concept went live so the click rate that follows can be read per
         # concept.
-        from .thumbnail_campaign import concept_for, rotation_report
+        from .thumbnail_campaign import concept_decision, rotation_report
 
-        concept = concept_for(doc.id or doc.slug)
+        # The campaign measures a click rate per concept every day; before
+        # 25 November 2026 nothing read it and every release just took its turn in
+        # the rotation. `concept_decision` returns the measured winner once every
+        # concept has cleared the impression floor, and the rotation's answer until
+        # then, and says which of the two it did.
+        decision = concept_decision(doc.id or doc.slug)
+        concept = decision["concept"]
         # The pack's reports name their concept in ``variant``; a stand-in passed by a
         # test or a caller may not carry one, and is taken as the first concept.
         chosen = next((r for r in thumb_reports
                        if str(getattr(r, "variant", "")) == concept), thumb_reports[0])
         live_concept = str(getattr(chosen, "variant", "") or concept)
-        print(f"[thumbnail] {doc.id or doc.slug}: concept "
-              f"'{live_concept}' goes live {rotation_report(doc.id or doc.slug)['sequence']}")
+        print(f"[thumbnail] {doc.id or doc.slug}: concept '{live_concept}' goes live "
+              f"({decision['source']}) {rotation_report(doc.id or doc.slug)['sequence']}")
         (out / "thumbnails" / "report.json").write_text(
             json.dumps([r.as_dict() for r in thumb_reports], indent=2), encoding="utf-8")
         thumbs = [chosen.path] + [r.path for r in thumb_reports if r is not chosen]

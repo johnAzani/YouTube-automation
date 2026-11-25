@@ -49,6 +49,15 @@ EVERGREEN: dict[str, tuple[str, ...]] = {
         # ``used_references``. The list looked longer than it worked.
         "Psalm 62:8", "Psalm 31:7", "Isaiah 26:20", "Job 11:18",
         "Isaiah 50:10", "Lamentations 3:22-23",
+        # Added 25 November 2026: all twenty-one above were used, the pass reported
+        # 0 passages left, and the queue reached ONE ready Short where it wants two.
+        # Chosen against every passage ANY spec has a Short of — not just this
+        # channel's — because the first six tried here (Psalm 4:8, 139:11-12, 16:7,
+        # 31:5, Proverbs 3:24, 127:2) already had specs written for another channel
+        # and were filtered straight back out. The words are verified against the
+        # repository's own KJV text.
+        "Psalm 139:18", "Psalm 63:7", "Psalm 92:2",
+        "Psalm 119:164", "Psalm 119:55", "Psalm 52:9",
     ),
     # The Morning Altar: the first minutes of the day.
     "prayer2": (

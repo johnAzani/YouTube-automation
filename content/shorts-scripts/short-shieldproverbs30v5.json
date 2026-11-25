@@ -29,7 +29,7 @@
     {
       "a": "In this quiet room where worry about tomorrow is pressing in, hear this promise.",
       "img": "short-shieldproverbs30v5-scene-01.jpg",
-      "kicker": "PROVERBS 30:5",
+      "kicker": "HEAR HIS PROMISE",
       "sub": "HEAR HIS PROMISE",
       "cam": "push_in",
       "focus": [
@@ -319,5 +319,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Proverbs 30:5"
+  "scripture": "Proverbs 30:5",
+  "first_frame_repair": {
+    "moved": "PROVERBS 30:5",
+    "to": "HEAR HIS PROMISE",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

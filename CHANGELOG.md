@@ -5,6 +5,15 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-25 — two loops learned, three only measured
+
+- **New `pipeline/learning_audit.py`.** Grades every learning loop in four states. Before today **2 of 5 acted on their own measurement**: Shorts steering and the night-tail length. Three did not.
+- **The thumbnail loop was built and never wired.** The campaign has measured a click rate per concept every day since it landed, and the release path called `concept_for(doc.id)` — a rotation no measurement could reach. So the channels would have rotated forever and adopted nothing. `live_concept` now puts the measured winner live once every concept has cleared 300 impressions, records which of the two it did and why, and keeps the rotation behind the winner so it can be displaced.
+- **New `pipeline/first_frame_repair.py`.** 26 queued Shorts opened on a scripture citation; one line was in the wrong place. The repair promotes a line the spec **already contains**, promotes nothing when no line fits (80 specs left alone), and leaves the **354 published citation-first Shorts untouched as the control** — the first draft rewrote all 376 and would have deleted the comparison it existed to serve.
+- **Overlay lessons: 11 phrases, 0 verdicts.** The loop is honest; a verdict needs 5 videos each side with 100 views and the long-forms rarely reach 25. The audit reports `waiting` rather than lowering the bar.
+- **Two readings run daily with nothing installed** — the same standard-library-only rule that the last change broke and fixed.
+- Reading: `docs/SELF_IMPROVEMENT_2026-11-25.md`.
+
 ## 2026-11-25 — six in ten plays end in a second, and the first frame never varies
 
 - **The engaged-view report was read for the first time.** 4,336 plays across the 35 most-viewed videos, **1,739 engaged — 40.1%**. Six in ten plays end almost immediately.

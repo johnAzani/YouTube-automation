@@ -30,7 +30,7 @@
     {
       "a": "Close your eyes now, dear one, and take a deep, calming breath.",
       "img": "short-psalm34-scene-01.jpg",
-      "kicker": "PSALM 34",
+      "kicker": "DEEP, CALMING BREATH",
       "sub": "DEEP, CALMING BREATH",
       "cam": "push_in",
       "focus": [
@@ -438,5 +438,10 @@
       "hi": 0,
       "slot": "C"
     }
-  ]
+  ],
+  "first_frame_repair": {
+    "moved": "PSALM 34",
+    "to": "DEEP, CALMING BREATH",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

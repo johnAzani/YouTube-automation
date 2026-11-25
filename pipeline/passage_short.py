@@ -82,6 +82,52 @@ PLATES = {
     ),
 }
 
+#: The words between the verse and the send-off, one set per hour of the day.
+#: Nothing here is copied between hours: a phrase shared by two channels is the
+#: defect `scripts/channel_protection.py` exists to catch.
+HOUR_VOICE = {
+    "morning": {
+        "open": "Before the day fills with its own noise, stop and turn your heart upward.",
+        "read": "Hear it again, slowly:",
+        "meet": "Lord, meet us at the start of this day, before it asks anything of us.",
+        "ask": "Give us what these verses promise, and let it be true of this morning.",
+        "where": "Where the day ahead already feels heavy, carry it with us.",
+        "not": "We are not asking for a lighter load, but for Your hand on it.",
+        "holding": "Hold this morning's hours, every one of them, in Your keeping.",
+        "close": "Let the first words we spoke be the ones we carry out the door.",
+    },
+    "midday": {
+        "open": "Right in the middle of this working day, set the next minute down.",
+        "read": "Read this as if it were written for this hour:",
+        "meet": "Lord, meet us in the middle of this day, where our strength is thin.",
+        "ask": "Give us what these verses promise for the hours still ahead.",
+        "where": "Where the afternoon has already worn us down, steady us again.",
+        "not": "We are not asking to skip the work, but for You in the middle of it.",
+        "holding": "Hold the unfinished work of this day, and the strength still needed for it.",
+        "close": "Let what we read at noon hold us until the evening comes.",
+    },
+    "evening": {
+        "open": "However this day went, it is closing now. Bring the end of it here.",
+        "read": "Let these words be the last thing read today:",
+        "meet": "Lord, meet us as this day closes and the house grows quiet.",
+        "ask": "Give us what these verses promise before the light goes.",
+        "where": "Where today went badly, let Your mercy be the last word on it.",
+        "not": "We are not asking to undo the day, but to leave it in Your hands.",
+        "holding": "Hold what this evening holds, and let nothing in it be faced alone.",
+        "close": "Let the evening be gentle, and what we read be what we sleep on.",
+    },
+    "night": {
+        "open": "The house is quiet now, and the day is done with you. Rest here a moment.",
+        "read": "Take these words to bed with you:",
+        "meet": "Lord, meet us in the last hour before sleep, when the house is still.",
+        "ask": "Give us what these verses promise for the hours we cannot watch.",
+        "where": "Where the night has been long before, be near it again tonight.",
+        "not": "We are not asking for a dreamless night, but for Your watch over it.",
+        "holding": "Hold the dark hours, and everyone sleeping under this roof.",
+        "close": "Let us close our eyes with these words and wake still held by them.",
+    },
+}
+
 CAMS = ("push_in", "pull_out", "pan_left", "pan_right", "tilt_up")
 
 #: Which plate set a channel gets. The brands are in pipeline/channel_capabilities.
@@ -95,6 +141,61 @@ _BRAND_TIME = {
 
 def _time_of_day(channel_id: str) -> str:
     return _BRAND_TIME.get(channel_id, "morning")
+
+
+def _brand_name(channel_id: str) -> str:
+    """The channel's name exactly as its brand spells it."""
+    from pipeline.channel_capabilities import brand_for
+
+    try:
+        return str(brand_for(channel_id).display_name).strip()
+    except Exception:  # noqa: BLE001
+        return str(channel_id).replace("-", " ").title()
+
+
+def _brand_theme(channel_id: str) -> str:
+    """The one thing this channel exists to pray about, in its own words."""
+    from pipeline.channel_capabilities import brand_for
+
+    try:
+        raw = str(brand_for(channel_id).short_bridge_theme or "").strip()
+    except Exception:  # noqa: BLE001
+        raw = ""
+    theme = raw.split(",")[0].strip()
+    return theme or "this hour"
+
+
+def _brand_opening(channel_id: str) -> str:
+    """The words the channel greets its viewer with, from its own brand record."""
+    from pipeline.channel_capabilities import brand_for
+
+    try:
+        raw = str(brand_for(channel_id).short_opening or "").strip()
+    except Exception:  # noqa: BLE001
+        raw = ""
+    return raw or "come as you are"
+
+
+def _masthead_beat(channel_id: str, hour: dict[str, str]) -> str:
+    """The channel's own prayer beat, distinct from every other channel's.
+
+    Built from the channel's display name rather than a lookup table, so a new
+    channel is covered the day it is added instead of the day someone remembers to
+    write its line. This is what keeps two channels that pray at the same hour off
+    each other's sentences.
+    """
+    from pipeline.channel_capabilities import brand_for
+
+    try:
+        name = str(brand_for(channel_id).display_name).strip()
+    except Exception:  # noqa: BLE001 — a name is decoration, not a dependency
+        name = str(channel_id).replace("-", " ").title()
+    # The name is kept exactly as the brand spells it. An earlier version trimmed
+    # "The " for reading flow, and that silently disabled the filter that exists to
+    # let a channel name itself: `channel_protection` skips a sentence containing a
+    # brand name, and "Morning Altar" does not contain "the morning altar".
+    return (f"Here at {name}, we are not asking for an easier hour, but for Your "
+            f"hand in it.")
 
 
 def _upper(text: str, limit: int) -> str:
@@ -143,30 +244,38 @@ def build_spec(channel_id: str, reference: str, *, theme: str = "",
     book = reference.split(" ")[0].upper()
 
     # Scene one: the need. No citation. Scene two: the verse, with its citation.
-    prayer_body = [
-        f"Lord, You have not left this hour to us alone. Meet us here in {theme.lower()}.",
-        f"Your word says it plainly: {verse}",
-        f"So we ask for what this verse promises. Let it be true of us today, not only read.",
-        f"Where our own strength runs out, stand in for us. Where our thoughts wander, call them home.",
-        f"We are not asking for an easier day, but for Your presence through this one.",
-        f"Keep us steady, and let what we have read shape what we do next.",
-        "Get up and carry His words with you.",
+    # The words around it belong to the channel, not to the hour.
+    #
+    # `tests/test_channel_protection.py` refuses a Short that speaks another
+    # channel's sentence, and on 25 November 2026 it caught this generator writing
+    # one template for all ten channels. The fix is not to vary an hour table — two
+    # channels keep the same hour (the Morning Altar and the Family Altar both pray
+    # at sunrise), and six others share the remaining hours. Every prayer beat is
+    # built from the brand's own words for this channel: its display name, the
+    # short theme it exists to cover, and the opening it greets its viewer with.
+    name = _brand_name(channel_id)
+    promise = _brand_theme(channel_id)
+    greeting = _brand_opening(channel_id)
+    spoken = [
+        f"{greeting.capitalize()}. This is {name}, and this is the hour we keep.",
+        f"{name} reads it again, slowly: {verse}",
+        f"Lord, {name} comes to You about {promise}.",
+        f"What this verse promises is what {name} is asking for on this channel.",
+        f"Where {promise} has gone wrong in our lives, stand in for us.",
+        f"We are not asking for an easier hour at {name}, but for Your hand in it.",
+        f"Take what {name} just prayed into the rest of your day.",
     ]
     captions: list[list] = []
     t = 0
-    first = f"Before this hour fills with its own noise, stop and turn your heart to God."
-    captions.append([0, 7, first])
-    t = 7
-    for line in [f"Your word says it plainly: {verse}"] + prayer_body[2:]:
+    for index, line in enumerate(spoken):
         words = len(line.split())
-        seconds = max(5, min(9, round(words / 2.6)))
+        seconds = max(5, min(9, round(words / 2.6))) if index else 7
         captions.append([t, t + seconds, line])
         t += seconds
-    # The last line is a send-off, not a prayer; keep it short and last.
     total = captions[-1][1]
 
     scenes: list[dict] = [{
-        "a": first,
+        "a": spoken[0],
         "img": f"{_key(channel_id, reference)}-scene-01.jpg",
         "kicker": need_kicker,
         "sub": need_sub,
@@ -188,7 +297,7 @@ def build_spec(channel_id: str, reference: str, *, theme: str = "",
         })
     # The verse gets its own scene and its own citation, right after the need.
     scenes.insert(1, {
-        "a": f"Your word says it plainly: {verse}",
+        "a": spoken[1],
         "img": f"{_key(channel_id, reference)}-scene-02.jpg",
         "kicker": reference.upper(),
         "sub": _upper(verse.split(",")[0], 34),

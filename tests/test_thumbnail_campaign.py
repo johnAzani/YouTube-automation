@@ -97,7 +97,13 @@ def test_the_prayer_pipeline_uploads_the_rotated_concept_not_always_the_first():
     from pipeline import prayer_pipeline
 
     source = inspect.getsource(prayer_pipeline.produce)
-    assert "concept_for(doc.id or doc.slug)" in source
+    # The concept is now decided by `concept_decision`, which returns the measured
+    # winner once every concept has cleared the impression floor and the release's
+    # own turn in the rotation until then. When this test was written the call was
+    # `concept_for(doc.id or doc.slug)` alone — a rotation no measurement could
+    # reach, which is why the campaign's leader was never adopted.
+    assert "concept_decision(doc.id or doc.slug)" in source
+    assert 'concept = decision["concept"]' in source
     assert "thumbnail_concept=live_concept" in source
     # the old behaviour: thumbs[0] was both the file uploaded and the receipt's claim
     assert "upload(doc, final, thumbs[0]" in source

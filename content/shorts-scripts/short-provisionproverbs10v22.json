@@ -30,7 +30,7 @@
     {
       "a": "Staring at a heavy financial ledger tonight, fearful of hidden costs, hear God's promise.",
       "img": "short-provisionproverbs10v22-scene-01.jpg",
-      "kicker": "PROVERBS 10:22",
+      "kicker": "HEAR GOD'S PROMISE",
       "sub": "HEAR GOD'S PROMISE",
       "cam": "push_in",
       "focus": [
@@ -349,5 +349,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Proverbs 10:22"
+  "scripture": "Proverbs 10:22",
+  "first_frame_repair": {
+    "moved": "PROVERBS 10:22",
+    "to": "HEAR GOD'S PROMISE",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

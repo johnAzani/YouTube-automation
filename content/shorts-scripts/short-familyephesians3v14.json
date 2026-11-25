@@ -29,7 +29,7 @@
     {
       "a": "Sitting at your kitchen table",
       "img": "short-familyephesians3v14-scene-01.jpg",
-      "kicker": "EPHESIANS 3:14",
+      "kicker": "STRENGTH FOR YOUR HOME",
       "sub": "STRENGTH FOR YOUR HOME",
       "cam": "push_in",
       "focus": [
@@ -304,5 +304,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Ephesians 3:14-19"
+  "scripture": "Ephesians 3:14-19",
+  "first_frame_repair": {
+    "moved": "EPHESIANS 3:14",
+    "to": "STRENGTH FOR YOUR HOME",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

@@ -27,7 +27,7 @@
   ],
   "scenes": [
     {
-      "a": "Before this hour fills with its own noise, stop and turn your heart to God.",
+      "a": "Greet the morning. This is The Morning Altar, and this is the hour we keep.",
       "img": "short-morningpsalm19v14-scene-01.jpg",
       "kicker": "BEFORE YOU SPEAK",
       "sub": "WORDS OF MY MOUTH",
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "a": "Your word says it plainly: Let the words of my mouth, and the meditation of my heart, be acceptable in thy sight, O LORD, my strength, and my redeemer.",
+      "a": "The Morning Altar reads it again, slowly: Let the words of my mouth, and the meditation of my heart, be acceptable in thy sight, O LORD, my strength, and my redeemer.",
       "img": "short-morningpsalm19v14-scene-02.jpg",
       "kicker": "PSALM 19:14",
       "sub": "LET THE WORDS OF MY MOUTH",
@@ -49,10 +49,10 @@
       ]
     },
     {
-      "a": "Your word says it plainly: Let the words of my mouth, and the meditation of my heart, be acceptable in thy sight, O LORD, my strength, and my redeemer.",
+      "a": "The Morning Altar reads it again, slowly: Let the words of my mouth, and the meditation of my heart, be acceptable in thy sight, O LORD, my strength, and my redeemer.",
       "img": "short-morningpsalm19v14-scene-03.jpg",
       "kicker": "MEDITATION",
-      "sub": "YOUR WORD SAYS IT PLAINLY: LET",
+      "sub": "THE MORNING ALTAR READS IT AGAIN",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -60,10 +60,10 @@
       ]
     },
     {
-      "a": "So we ask for what this verse promises. Let it be true of us today, not only read.",
+      "a": "Lord, The Morning Altar comes to You about morning mercy.",
       "img": "short-morningpsalm19v14-scene-04.jpg",
-      "kicker": "PROMISES",
-      "sub": "SO WE ASK FOR WHAT THIS VERSE",
+      "kicker": "MORNING",
+      "sub": "LORD",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -71,10 +71,10 @@
       ]
     },
     {
-      "a": "Where our own strength runs out, stand in for us. Where our thoughts wander, call them home.",
+      "a": "What this verse promises is what The Morning Altar is asking for on this channel.",
       "img": "short-morningpsalm19v14-scene-05.jpg",
-      "kicker": "STRENGTH",
-      "sub": "WHERE OUR OWN STRENGTH RUNS OUT",
+      "kicker": "PROMISES",
+      "sub": "WHAT THIS VERSE PROMISES IS WHAT",
       "cam": "pan_left",
       "focus": [
         0.5,
@@ -82,10 +82,10 @@
       ]
     },
     {
-      "a": "We are not asking for an easier day, but for Your presence through this one.",
+      "a": "Where morning mercy has gone wrong in our lives, stand in for us.",
       "img": "short-morningpsalm19v14-scene-06.jpg",
-      "kicker": "PRESENCE",
-      "sub": "WE ARE NOT ASKING FOR AN EASIER",
+      "kicker": "MORNING",
+      "sub": "WHERE MORNING MERCY HAS GONE",
       "cam": "pan_right",
       "focus": [
         0.5,
@@ -93,10 +93,10 @@
       ]
     },
     {
-      "a": "Keep us steady, and let what we have read shape what we do next.",
+      "a": "We are not asking for an easier hour at The Morning Altar, but for Your hand in it.",
       "img": "short-morningpsalm19v14-scene-07.jpg",
-      "kicker": "STEADY",
-      "sub": "KEEP US STEADY",
+      "kicker": "MORNING",
+      "sub": "WE ARE NOT ASKING FOR AN EASIER",
       "cam": "tilt_up",
       "focus": [
         0.5,
@@ -108,37 +108,37 @@
     [
       0,
       7,
-      "Before this hour fills with its own noise, stop and turn your heart to God."
+      "Greet the morning. This is The Morning Altar, and this is the hour we keep."
     ],
     [
       7,
       16,
-      "Your word says it plainly: Let the words of my mouth, and the meditation of my heart, be acceptable in thy sight, O LORD, my strength, and my redeemer."
+      "The Morning Altar reads it again, slowly: Let the words of my mouth, and the meditation of my heart, be acceptable in thy sight, O LORD, my strength, and my redeemer."
     ],
     [
       16,
-      23,
-      "So we ask for what this verse promises. Let it be true of us today, not only read."
+      21,
+      "Lord, The Morning Altar comes to You about morning mercy."
     ],
     [
-      23,
-      30,
-      "Where our own strength runs out, stand in for us. Where our thoughts wander, call them home."
+      21,
+      27,
+      "What this verse promises is what The Morning Altar is asking for on this channel."
     ],
     [
-      30,
-      36,
-      "We are not asking for an easier day, but for Your presence through this one."
+      27,
+      32,
+      "Where morning mercy has gone wrong in our lives, stand in for us."
     ],
     [
-      36,
-      41,
-      "Keep us steady, and let what we have read shape what we do next."
+      32,
+      39,
+      "We are not asking for an easier hour at The Morning Altar, but for Your hand in it."
     ],
     [
-      41,
-      46,
-      "Get up and carry His words with you."
+      39,
+      44,
+      "Take what The Morning Altar just prayed into the rest of your day."
     ]
   ],
   "kinetic_phrases": [
@@ -146,15 +146,15 @@
       0,
       7,
       [
-        "BEFORE THIS HOUR FILLS",
-        "WITH ITS OWN NOISE",
-        "STOP AND TURN YOUR",
-        "HEART TO GOD"
+        "GREET THE MORNING THIS",
+        "IS THE MORNING ALTAR",
+        "AND THIS IS THE HOUR",
+        "WE KEEP"
       ],
       [
-        "BEFORE",
-        "FILLS",
-        "HEART"
+        "MORNING",
+        "ALTAR",
+        "GREET"
       ],
       "PSALM 19:14"
     ],
@@ -162,88 +162,87 @@
       7,
       16,
       [
-        "YOUR WORD SAYS IT",
-        "PLAINLY LET THE WORDS",
-        "OF MY MOUTH AND THE",
-        "MEDITATION OF MY HEART"
+        "THE MORNING ALTAR",
+        "READS IT AGAIN SLOWLY",
+        "LET THE WORDS OF MY",
+        "MOUTH AND THE"
       ],
-      [
-        "MEDITATION"
-      ],
+      [],
       "PSALM 19:14"
     ],
     [
       16,
-      23,
+      21,
       [
-        "SO WE ASK FOR WHAT",
-        "THIS VERSE PROMISES",
-        "LET IT BE TRUE OF US",
-        "TODAY NOT ONLY READ"
+        "LORD THE MORNING ALTAR",
+        "COMES TO YOU ABOUT",
+        "MORNING MERCY"
+      ],
+      [
+        "MORNING",
+        "ABOUT",
+        "MERCY"
+      ],
+      "PSALM 19:14"
+    ],
+    [
+      21,
+      27,
+      [
+        "WHAT THIS VERSE",
+        "PROMISES IS WHAT THE",
+        "MORNING ALTAR IS",
+        "ASKING FOR ON THIS"
       ],
       [
         "PROMISES",
-        "VERSE",
-        "TODAY"
+        "MORNING"
       ],
       "PSALM 19:14"
     ],
     [
-      23,
-      30,
+      27,
+      32,
       [
-        "WHERE OUR OWN STRENGTH",
-        "RUNS OUT STAND IN FOR",
-        "US WHERE OUR THOUGHTS",
-        "WANDER CALL THEM HOME"
+        "WHERE MORNING MERCY",
+        "HAS GONE WRONG IN OUR",
+        "LIVES STAND IN FOR US"
       ],
       [
-        "STRENGTH",
-        "THOUGHTS",
-        "WANDER"
+        "MORNING",
+        "LIVES",
+        "WHERE"
       ],
       "PSALM 19:14"
     ],
     [
-      30,
-      36,
+      32,
+      39,
       [
         "WE ARE NOT ASKING FOR",
-        "AN EASIER DAY BUT FOR",
-        "YOUR PRESENCE THROUGH",
-        "THIS ONE"
+        "AN EASIER HOUR AT THE",
+        "MORNING ALTAR BUT FOR",
+        "YOUR HAND IN IT"
       ],
       [
-        "PRESENCE",
-        "THROUGH",
+        "MORNING",
+        "EASIER",
         "ASKING"
       ],
       "PSALM 19:14"
     ],
     [
-      36,
-      41,
+      39,
+      44,
       [
-        "KEEP US STEADY AND LET",
-        "WHAT WE HAVE READ",
-        "SHAPE WHAT WE DO NEXT"
+        "TAKE WHAT THE MORNING",
+        "ALTAR JUST PRAYED INTO",
+        "THE REST OF YOUR DAY"
       ],
       [
-        "STEADY",
-        "SHAPE"
-      ],
-      "PSALM 19:14"
-    ],
-    [
-      41,
-      46,
-      [
-        "GET UP AND CARRY HIS",
-        "WORDS WITH YOU"
-      ],
-      [
-        "CARRY",
-        "WORDS"
+        "MORNING",
+        "PRAYED",
+        "ALTAR"
       ],
       "PSALM 19:14"
     ]

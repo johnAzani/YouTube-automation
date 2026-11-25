@@ -92,3 +92,40 @@ def test_the_repository_specs_this_module_wrote_are_on_need_first_frames():
     for path in written:
         frame = ff.first_frame(json.loads(path.read_text()))
         assert frame["kicker_is_reference"] is False, path.name
+
+
+def test_two_channels_never_speak_the_same_sentence_from_the_generator():
+    """Caught on the real repository on 25 November 2026.
+
+    The first version of this module wrote one prayer template for all ten
+    channels, so `scripts/channel_protection.py` found the same seven sentences on
+    The Secret Place and The Morning Altar. A prayer for waking and a prayer for
+    the last hour before sleep are not the same words.
+    """
+    from pipeline.channels import scheduled_channels
+
+    spoken: dict[str, set[str]] = {}
+    for channel in scheduled_channels():
+        spec = ps.build_spec(channel, "Psalm 19:14")
+        spoken[channel] = {str(caption[2]) for caption in spec["captions"]}
+    channels = list(spoken)
+    for i, first in enumerate(channels):
+        for second in channels[i + 1:]:
+            shared = spoken[first] & spoken[second]
+            # The verse itself is allowed to match; nothing else is.
+            shared = {line for line in shared if "words of my mouth" not in line.lower()}
+            assert not shared, f"{first} and {second} share {shared}"
+
+
+def test_each_channel_is_prayed_for_in_its_own_hour():
+    from pipeline.passage_short import HOUR_VOICE
+
+    openings = {hour: voice["open"] for hour, voice in HOUR_VOICE.items()}
+    assert len(set(openings.values())) == len(openings), "two hours share an opening"
+
+
+def test_the_arc_is_the_size_the_renderer_requires():
+    """6-10 scenes, one plate request each, and no caption without one."""
+    spec = ps.build_spec("prayer2", "Psalm 19:14")
+    assert len(spec["scenes"]) == len(spec["captions"]) == len(spec["stock_queries"])
+    assert 6 <= len(spec["scenes"]) <= 10

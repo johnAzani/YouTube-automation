@@ -28,7 +28,7 @@
     {
       "a": "Before you send that sharp reply",
       "img": "short-middayproverbs15v1-scene-01.jpg",
-      "kicker": "PROVERBS 15:1",
+      "kicker": "BEFORE YOU SEND",
       "sub": "BRING YOUR ANGER TO THE LORD",
       "cam": "push_in",
       "focus": [
@@ -282,5 +282,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Proverbs 15:1"
+  "scripture": "Proverbs 15:1",
+  "first_frame_repair": {
+    "moved": "PROVERBS 15:1",
+    "to": "BEFORE YOU SEND",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

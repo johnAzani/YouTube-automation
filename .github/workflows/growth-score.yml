@@ -39,6 +39,11 @@ on:
       - "pipeline/first_frame.py"
       - "pipeline/books.py"
       - "pipeline/evergreen_shorts.py"
+      - "pipeline/shorts_supply.py"
+      - "pipeline/first_frame.py"
+      - "pipeline/first_frame_repair.py"
+      - "pipeline/learning_audit.py"
+      - "pipeline/thumbnail_campaign.py"
 
 permissions:
   contents: write
@@ -71,6 +76,17 @@ jobs:
         # as plainly as what is.
         run: python -u -m pipeline.realistic_ceiling
 
+      - name: Move queued Shorts' citations off the first frame
+        # pipeline/first_frame_repair.py: an existing line is promoted, never an
+        # invented one, and a published Short is left exactly as it is — it is the
+        # control the need-first frames are compared against.
+        run: python -u -m pipeline.first_frame_repair --write
+
+      - name: Grade which loops actually learn
+        # pipeline/learning_audit.py: per loop, whether a measurement changes the
+        # next build, or only gets reported.
+        run: python -u -m pipeline.learning_audit
+
       - name: Count what each channel can still make a Short from
         # pipeline/shorts_supply.py: standalone passages, companion long-forms and
         # ready Shorts, per channel. The daily CI reports a channel that has run dry
@@ -101,8 +117,12 @@ jobs:
             python -u -m pipeline.realistic_ceiling >/dev/null
             python -u -m pipeline.shorts_supply >/dev/null
             python -u -m pipeline.first_frame >/dev/null
+            python -u -m pipeline.first_frame_repair --write >/dev/null
+            python -u -m pipeline.learning_audit >/dev/null
             git add content/research/growth_score.json content/research/realistic_ceiling.json \
-                    content/research/shorts_supply.json content/research/first_frame.json
+                    content/research/shorts_supply.json content/research/first_frame.json \
+                    content/research/first_frame_repair.json content/research/learning_audit.json \
+                    content/shorts-scripts
             if git diff --cached --quiet; then
               echo "growth score unchanged"
               exit 0

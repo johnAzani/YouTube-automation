@@ -28,7 +28,7 @@
     {
       "a": "If you are struggling to decide which path to take, listen to these ancient words.",
       "img": "short-provisionpsalm1v1-scene-01.jpg",
-      "kicker": "PSALM 1:1",
+      "kicker": "WHICH PATH TO TAKE",
       "sub": "WALK IN THE COUNSEL OF GOD",
       "cam": "push_in",
       "focus": [
@@ -260,5 +260,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Psalm 1:1-3"
+  "scripture": "Psalm 1:1-3",
+  "first_frame_repair": {
+    "moved": "PSALM 1:1",
+    "to": "WHICH PATH TO TAKE",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }
