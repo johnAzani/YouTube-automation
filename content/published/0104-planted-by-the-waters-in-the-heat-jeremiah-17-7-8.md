@@ -2,7 +2,7 @@
 id: '0104'
 title: 'Planted by the Waters in the Heat: Jeremiah 17:7-8 | The Midday Watch'
 slug: planted-by-the-waters-in-the-heat-jeremiah-17-7-8
-status: approved
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -74,6 +74,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-25"
+published_at: "2026-11-25T15:55:45Z"
+youtube_video_id: "P1rxE2Qcq-c"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 519.9
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — The Pause at High Noon

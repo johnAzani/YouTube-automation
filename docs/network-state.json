@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T15:47:26Z",
+  "generated_at": "2026-11-25T15:56:47Z",
   "monitor_generated_at": "2026-11-25T15:33:03.208224+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 809,
-    "published_longform": 225,
+    "published_total": 810,
+    "published_longform": 226,
     "published_shorts": 584,
-    "public_total": 807,
-    "queued_longform": 76,
+    "public_total": 808,
+    "queued_longform": 75,
     "queued_shorts": 58,
     "automations_ok": 14,
     "automations_total": 15,
@@ -169,28 +169,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 91,
-        "published_longform": 26,
+        "published_total": 92,
+        "published_longform": 27,
         "published_shorts": 65,
         "thumbnail_pending": 3,
-        "public_total": 91,
-        "queued_longform": 6,
+        "public_total": 92,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYPSALM62V5",
-        "title": "Say This Psalm 62:5-8 Prayer for Strength at Noon | Stillness At Noon #Shorts",
-        "format": "short",
-        "youtube_video_id": "MBgoWxsLFgc",
-        "watch_url": "https://www.youtube.com/shorts/MBgoWxsLFgc",
-        "published_on": "2026-11-25",
-        "published_at": "2026-11-25T13:45:31Z"
-      },
-      "next_queued_longform": {
         "id": "0104",
         "title": "Planted by the Waters in the Heat: Jeremiah 17:7-8 | The Midday Watch",
-        "words": 1453,
+        "format": "longform",
+        "youtube_video_id": "P1rxE2Qcq-c",
+        "watch_url": "https://youtu.be/P1rxE2Qcq-c",
+        "published_on": "2026-11-25",
+        "published_at": "2026-11-25T15:55:45Z"
+      },
+      "next_queued_longform": {
+        "id": "0105",
+        "title": "The Well That Never Runs Dry at Noon: John 4:13-14 | The Midday Watch",
+        "words": 2104,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0104",
+      "slug": "planted-by-the-waters-in-the-heat-jeremiah-17-7-8",
+      "file": "0104-planted-by-the-waters-in-the-heat-jeremiah-17-7-8.md",
+      "title": "Planted by the Waters in the Heat: Jeremiah 17:7-8 | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T15:55:45Z",
+      "youtube_video_id": "P1rxE2Qcq-c",
+      "watch_url": "https://youtu.be/P1rxE2Qcq-c",
+      "youtu_be_url": "https://youtu.be/P1rxE2Qcq-c",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/P1rxE2Qcq-c/edit",
+      "thumb_url": "https://i.ytimg.com/vi/P1rxE2Qcq-c/hqdefault.jpg",
+      "thumb_text": "GREEN IN THE HEAT",
+      "thumbnail_pending": false,
+      "duration_label": "8m 40s",
+      "words": 1453
+    },
     {
       "id": "0322",
       "slug": "an-eternal-blessing-over-your-home-2-samuel-7-29",
@@ -20192,19 +20216,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 979
-      },
-      {
-        "id": "0104",
-        "slug": "planted-by-the-waters-in-the-heat-jeremiah-17-7-8",
-        "file": "0104-planted-by-the-waters-in-the-heat-jeremiah-17-7-8.md",
-        "title": "Planted by the Waters in the Heat: Jeremiah 17:7-8 | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1453
       },
       {
         "id": "0105",
