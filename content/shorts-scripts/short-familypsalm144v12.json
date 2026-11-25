@@ -29,7 +29,7 @@
     {
       "a": "When you worry whether your home",
       "img": "short-familypsalm144v12-scene-01.jpg",
-      "kicker": "PSALM 144:12",
+      "kicker": "WHEN YOU WORRY",
       "sub": "GOD'S PROMISE FOR YOUR HOME",
       "cam": "push_in",
       "focus": [
@@ -315,5 +315,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Psalm 144:12-15"
+  "scripture": "Psalm 144:12-15",
+  "first_frame_repair": {
+    "moved": "PSALM 144:12",
+    "to": "WHEN YOU WORRY",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

@@ -28,7 +28,7 @@
     {
       "a": "If the uncertainty of this current path makes you feel lost, please stay right here.",
       "img": "short-gardencolossians3v15-scene-01.jpg",
-      "kicker": "COLOSSIANS 3:15",
+      "kicker": "FINDING YOUR WAY",
       "sub": "FINDING YOUR WAY",
       "cam": "push_in",
       "focus": [
@@ -278,5 +278,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Colossians 3:15-17"
+  "scripture": "Colossians 3:15-17",
+  "first_frame_repair": {
+    "moved": "COLOSSIANS 3:15",
+    "to": "FINDING YOUR WAY",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

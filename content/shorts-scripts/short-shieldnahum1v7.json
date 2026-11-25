@@ -29,7 +29,7 @@
     {
       "a": "If trouble has entered your quiet room today, know that you are not left defenseless.",
       "img": "short-shieldnahum1v7-scene-01.jpg",
-      "kicker": "NAHUM 1:7",
+      "kicker": "IF TROUBLE HAS ENTERED",
       "sub": "A STRONG HOLD IN TROUBLE",
       "cam": "push_in",
       "focus": [
@@ -301,5 +301,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Nahum 1:7"
+  "scripture": "Nahum 1:7",
+  "first_frame_repair": {
+    "moved": "NAHUM 1:7",
+    "to": "IF TROUBLE HAS ENTERED",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

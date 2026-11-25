@@ -28,7 +28,7 @@
     {
       "a": "If that worry about tomorrow is keeping you awake, stay here for this quiet prayer.",
       "img": "short-gardenpsalm9v1-scene-01.jpg",
-      "kicker": "PSALM 9:1",
+      "kicker": "A PRAYER OF PRAISE",
       "sub": "A PRAYER OF PRAISE",
       "cam": "push_in",
       "focus": [
@@ -272,5 +272,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Psalm 9:1-2"
+  "scripture": "Psalm 9:1-2",
+  "first_frame_repair": {
+    "moved": "PSALM 9:1",
+    "to": "A PRAYER OF PRAISE",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

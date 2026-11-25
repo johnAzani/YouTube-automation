@@ -29,7 +29,7 @@
     {
       "a": "If that lonely desk and every quiet hour of labor feels unseen, listen closely.",
       "img": "short-provisionproverbs22v29-scene-01.jpg",
-      "kicker": "PROVERBS 22:29",
+      "kicker": "IF THAT LONELY",
       "sub": "THE LABOR OF YOUR HANDS",
       "cam": "push_in",
       "focus": [
@@ -297,5 +297,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Proverbs 22:29"
+  "scripture": "Proverbs 22:29",
+  "first_frame_repair": {
+    "moved": "PROVERBS 22:29",
+    "to": "IF THAT LONELY",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

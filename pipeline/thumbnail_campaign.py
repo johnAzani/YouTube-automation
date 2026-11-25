@@ -88,6 +88,145 @@ def rotation_report(doc_key: str) -> dict:
 
 
 # --------------------------------------------------------------------------- #
+# Closing the loop: the concept that earns the click goes live
+# --------------------------------------------------------------------------- #
+#: How much traffic the losing concepts need before the winner is copied. Above
+#: the per-concept trust floor, because adopting a leader on exactly the floor
+#: would crown the concept that happened to cross it first.
+IMPRESSIONS_TO_ADOPT = MIN_IMPRESSIONS
+
+
+def load_campaign(path: Path | None = None) -> dict:
+    """The committed campaign reading, or ``{}`` when it has not been written."""
+    target = Path(path) if path else CAMPAIGN_PATH
+    try:
+        return json.loads(target.read_text(encoding="utf-8")) or {}
+    except (OSError, ValueError):
+        return {}
+
+
+def measured_leader(campaign: dict | None = None) -> tuple[str, dict] | None:
+    """``(concept, row)`` the traffic has settled on, or ``None``.
+
+    A leader is only returned when every concept has cleared the impression floor.
+    One concept measured against two unmeasured ones is not a comparison, and
+    copying the only concept that happened to receive impressions would turn the
+    rotation into a self-fulfilling choice.
+    """
+    report = load_campaign() if campaign is None else campaign
+    rows = [row for row in (report.get("concepts") or []) if isinstance(row, dict)]
+    if not rows or not report.get("leader"):
+        return None
+    # `measurable` is written by the builder; a hand-written report may only have
+    # `approved`, so either is accepted and neither is inferred from the other.
+    if not all(row.get("measurable") or row.get("approved") for row in rows):
+        return None
+    if any(int(row.get("impressions") or 0) < IMPRESSIONS_TO_ADOPT for row in rows):
+        return None
+    leader = next((row for row in rows if row.get("concept") == report["leader"]), None)
+    if not leader or not int(leader.get("impressions") or 0):
+        return None
+    # The rate is quoted, never required: a hand-written report may carry clicks
+    # and impressions and leave the division to the reader.
+    return str(report["leader"]), leader
+
+def leader_summary(row: dict) -> dict:
+    """The leader, as the audit and the run page quote it.
+
+    A hand-written report may carry `approved` and a raw `clicks` count instead of
+    a `measurable` flag and a percentage; quote whichever is present rather than
+    inventing the other.
+    """
+    return {
+        "concept": row.get("concept"),
+        "click_rate_percent": row.get("click_rate_percent"),
+        "impressions": row.get("impressions"),
+        "clicks": row.get("clicks"),
+        "approved": bool(row.get("measurable") or row.get("approved")),
+    }
+
+
+def live_concept(doc_key: str, campaign: dict | None = None) -> str:
+    """The concept this release puts live: the measured winner, else its turn.
+
+    Before 25 November 2026 this was always ``concept_for(doc_key)`` — a
+    deterministic rotation that nothing could influence. The campaign has measured
+    a click rate per concept since it landed, and no release ever read the answer,
+    so the channels would have rotated forever and adopted nothing. This is the
+    point where the measurement reaches the build.
+
+    The rotation does not stop when a winner is known: every release still records
+    which concept it carried, and the losing concepts keep collecting impressions
+    on the videos already published, so a winner can be displaced if the traffic
+    changes its mind.
+    """
+    leader = measured_leader(campaign)
+    return leader[0] if leader else concept_for(doc_key)
+
+
+def concept_decision(doc_key: str, campaign: dict | None = None) -> dict:
+    """Why this release puts live what it does, for the run page and the receipt."""
+    report = load_campaign() if campaign is None else campaign
+    leader = measured_leader(report)
+    if leader:
+        concept, row = leader
+        rate = row.get("click_rate_percent")
+        quoted = (f"at {rate}%" if rate is not None
+                  else f"on {row.get('clicks')} clicks")
+        return {
+            "concept": concept,
+            "source": "measured",
+            "why": ("every concept has cleared %d impressions and %s leads %s "
+                    "(pooled over %s impressions), so the winner goes live"
+                    % (IMPRESSIONS_TO_ADOPT, concept, quoted, row.get("impressions"))),
+        }
+    return {
+        "concept": concept_for(doc_key),
+        "source": "rotation",
+        "why": _why_not_adopted(report),
+        "sequence": sequence_for(doc_key),
+    }
+
+
+def _why_not_adopted(report: dict) -> str:
+    """The reason the rotation still decides, in the terms the reading uses."""
+    rows = [row for row in (report.get("concepts") or []) if isinstance(row, dict)]
+    if not rows:
+        return ("no release has recorded which concept went live yet, so there is "
+                "nothing to copy; this release takes its turn in the rotation")
+    if not any(int(row.get("impressions") or 0) for row in rows):
+        return ("no concept has impressions in the reach files yet, so there is "
+                "nothing to copy; this release takes its turn in the rotation")
+    # Trust is the flag the builder writes; a hand-written report may only carry
+    # `approved`, so both are accepted and neither is inferred from the other.
+    def trusted(row: dict) -> bool:
+        return bool(row.get("measurable") or row.get("approved"))
+
+    unmeasured = [row["concept"] for row in rows if not trusted(row)]
+    if unmeasured:
+        if len(unmeasured) == len(rows):
+            return ("no concept has cleared %d impressions yet, so there is nothing to "
+                    "copy; this release takes its turn in the rotation"
+                    % IMPRESSIONS_TO_ADOPT)
+        return ("%s has not cleared %d impressions, so a click-rate comparison is not a "
+                "comparison yet; this release takes its turn in the rotation"
+                % (", ".join(unmeasured), IMPRESSIONS_TO_ADOPT))
+    if not report.get("leader"):
+        return ("every concept has cleared the floor and none leads clearly enough to "
+                "be copied; the rotation continues")
+    # A leader exists but `measured_leader` still refused it: the impression floor
+    # is the only other reason, so say so rather than hand back a shrug.
+    short = [row["concept"] for row in rows
+             if int(row.get("impressions") or 0) < IMPRESSIONS_TO_ADOPT]
+    if short:
+        return ("%s is under the %d-impression floor, so a click-rate comparison is not "
+                "a comparison yet; this release takes its turn in the rotation"
+                % (", ".join(short), IMPRESSIONS_TO_ADOPT))
+    return ("the traffic has not settled on a winner that every concept was measured "
+            "against; the rotation continues")
+
+
+# --------------------------------------------------------------------------- #
 # What the traffic said
 # --------------------------------------------------------------------------- #
 def _concept_of_receipt(path: Path) -> tuple[str, str]:

@@ -29,7 +29,7 @@
     {
       "a": "wondering how you will face today",
       "img": "short-gardenpsalm118v24-scene-01.jpg",
-      "kicker": "PSALM 118:24",
+      "kicker": "A PRAYER FOR THIS DAY",
       "sub": "A PRAYER FOR THIS DAY",
       "cam": "push_in",
       "focus": [
@@ -306,5 +306,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Psalm 118:24"
+  "scripture": "Psalm 118:24",
+  "first_frame_repair": {
+    "moved": "PSALM 118:24",
+    "to": "A PRAYER FOR THIS DAY",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

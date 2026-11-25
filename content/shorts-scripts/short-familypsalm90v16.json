@@ -28,7 +28,7 @@
     {
       "a": "If the uncertainty of your future feels heavy today, let this prayer settle your heart.",
       "img": "short-familypsalm90v16-scene-01.jpg",
-      "kicker": "PSALM 90:16",
+      "kicker": "HEAVY UNCERTAINTY",
       "sub": "GOD'S LIGHT UPON YOUR HOME",
       "cam": "push_in",
       "focus": [
@@ -272,5 +272,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Psalm 90:16-17"
+  "scripture": "Psalm 90:16-17",
+  "first_frame_repair": {
+    "moved": "PSALM 90:16",
+    "to": "HEAVY UNCERTAINTY",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

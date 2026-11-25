@@ -28,7 +28,7 @@
     {
       "a": "If a terrifying report about your health has left you fearing the worst tonight, listen.",
       "img": "short-healingpsalm118v17-scene-01.jpg",
-      "kicker": "PSALM 118:17",
+      "kicker": "FAITH FOR HEALING",
       "sub": "FAITH FOR HEALING",
       "cam": "push_in",
       "focus": [
@@ -300,5 +300,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Psalm 118:17"
+  "scripture": "Psalm 118:17",
+  "first_frame_repair": {
+    "moved": "PSALM 118:17",
+    "to": "FAITH FOR HEALING",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

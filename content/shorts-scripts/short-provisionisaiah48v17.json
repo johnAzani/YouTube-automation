@@ -29,7 +29,7 @@
     {
       "a": "Right now, as you weigh this critical choice",
       "img": "short-provisionisaiah48v17-scene-01.jpg",
-      "kicker": "ISAIAH 48:17",
+      "kicker": "RIGHT NOW AS YOU WEIGH",
       "sub": "SEEK GOD'S GUIDANCE TODAY",
       "cam": "push_in",
       "focus": [
@@ -313,5 +313,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Isaiah 48:17"
+  "scripture": "Isaiah 48:17",
+  "first_frame_repair": {
+    "moved": "ISAIAH 48:17",
+    "to": "RIGHT NOW AS YOU WEIGH",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

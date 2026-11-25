@@ -1,0 +1,75 @@
+{
+ "acting": [
+  "shorts_steering",
+  "night_tail_length"
+ ],
+ "cost_lock": "$0.00 / month (docs/ZERO_DOLLAR_LOCK.md)",
+ "loops": [
+  {
+   "channels_reordered": 10,
+   "evidence": "34 Shorts measured; 3 book(s) carry two or more, and the ranking reorders 10 channel(s)' roadmap",
+   "loop": "shorts_steering",
+   "measured_shorts": 34,
+   "owner": "pipeline/performance_feedback.py: rank_candidates",
+   "state": "acting",
+   "what": "which passages and books the brain writes Shorts on next"
+  },
+  {
+   "evidence": "7 release(s) recorded a concept, but the reach files hold no impressions for any of them yet",
+   "leader": null,
+   "loop": "thumbnail_choice",
+   "owner": "pipeline/thumbnail_campaign.py: live_concept",
+   "state": "measuring",
+   "videos_assigned": 7,
+   "what": "which of the three thumbnail concepts goes live"
+  },
+  {
+   "decided": 0,
+   "evidence": "11 phrase(s) are under test on 10 channel(s) and none has a verdict yet: a verdict needs 5 videos on each side with 100 views",
+   "loop": "overlay_lessons",
+   "owner": "pipeline/lessons.py: update / judge",
+   "state": "waiting",
+   "under_test": 11,
+   "what": "wording offered to the title and overlay writers"
+  },
+  {
+   "evidence": "ceiling 978s is below the tail's own floor, so the tail is off on every channel \u2014 the measurement changed the build",
+   "loop": "night_tail_length",
+   "owner": "pipeline/night_tail.py: configured_minutes",
+   "state": "acting",
+   "tail_minutes": {
+    "prayer10": 0,
+    "prayer2": 0,
+    "prayer3": 0,
+    "prayer4": 0,
+    "prayer5": 0,
+    "prayer6": 0,
+    "prayer7": 0,
+    "prayer8": 0,
+    "prayer9": 0,
+    "secret-place": 0
+   },
+   "what": "how long a release is built"
+  },
+  {
+   "compositions": 1,
+   "evidence": "one composition across 639 Shorts: a variable with one level has no measured answer",
+   "loop": "first_frame_composition",
+   "owner": "pipeline/first_frame.py + pipeline/first_frame_repair.py",
+   "state": "measuring",
+   "what": "what a stranger sees at second one"
+  }
+ ],
+ "measuring_only": [
+  "thumbnail_choice",
+  "first_frame_composition"
+ ],
+ "not_claimed": [
+  "that a loop which is acting is improving anything. Acting means the measurement changes the next build; whether that build does better is what the next reading is for."
+ ],
+ "schema": 1,
+ "sentence": "2 of 5 loops act on their own measurement; thumbnail_choice, first_frame_composition measure and change nothing yet; overlay_lessons have too few videos to conclude.",
+ "waiting": [
+  "overlay_lessons"
+ ]
+}

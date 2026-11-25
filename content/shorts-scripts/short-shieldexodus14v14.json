@@ -29,7 +29,7 @@
     {
       "a": "If that looming conflict makes your chest tighten right now, stay and seek shelter here.",
       "img": "short-shieldexodus14v14-scene-01.jpg",
-      "kicker": "EXODUS 14:14",
+      "kicker": "FIND YOUR REFUGE HERE",
       "sub": "FIND YOUR REFUGE HERE",
       "cam": "push_in",
       "focus": [
@@ -291,5 +291,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Exodus 14:14"
+  "scripture": "Exodus 14:14",
+  "first_frame_repair": {
+    "moved": "EXODUS 14:14",
+    "to": "FIND YOUR REFUGE HERE",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

@@ -28,7 +28,7 @@
     {
       "a": "If the loneliness of this hour feels louder than the rest of the world, listen.",
       "img": "short-psalm23full-scene-01.jpg",
-      "kicker": "PSALM 23:1",
+      "kicker": "IF THE LONELINESS",
       "sub": "HE IS WITH YOU IN THE SILENCE",
       "cam": "push_in",
       "focus": [
@@ -278,5 +278,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Psalm 23"
+  "scripture": "Psalm 23",
+  "first_frame_repair": {
+    "moved": "PSALM 23:1",
+    "to": "IF THE LONELINESS",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

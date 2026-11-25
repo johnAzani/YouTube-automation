@@ -29,7 +29,7 @@
     {
       "a": "That looming decision on your desk is testing the very limits of your endurance.",
       "img": "short-middaypsalm84v5-scene-01.jpg",
-      "kicker": "PSALM 84:5",
+      "kicker": "FIND YOUR STRENGTH",
       "sub": "FIND YOUR STRENGTH",
       "cam": "push_in",
       "focus": [
@@ -292,5 +292,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Psalm 84:5-7"
+  "scripture": "Psalm 84:5-7",
+  "first_frame_repair": {
+    "moved": "PSALM 84:5",
+    "to": "FIND YOUR STRENGTH",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

@@ -28,7 +28,7 @@
     {
       "a": "The locked door you are staring at right now is not the end of your story.",
       "img": "short-midnightacts12v5-scene-01.jpg",
-      "kicker": "ACTS 12:5",
+      "kicker": "GOD HEARS YOUR PLEA",
       "sub": "GOD HEARS YOUR PLEA",
       "cam": "push_in",
       "focus": [
@@ -272,5 +272,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Acts 12:5-11"
+  "scripture": "Acts 12:5-11",
+  "first_frame_repair": {
+    "moved": "ACTS 12:5",
+    "to": "GOD HEARS YOUR PLEA",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

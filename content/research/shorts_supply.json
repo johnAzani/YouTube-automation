@@ -4,18 +4,22 @@
    "binding": "enough ready Shorts",
    "channel": "secret-place",
    "companion_longforms": 0,
-   "ready": 2,
-   "sources": 0,
-   "standalone_examples": [],
-   "standalone_passages": 0,
+   "ready": 3,
+   "sources": 3,
+   "standalone_examples": [
+    "Psalm 92:2",
+    "Psalm 119:164",
+    "Psalm 52:9"
+   ],
+   "standalone_passages": 3,
    "verdict": "enough"
   },
   {
    "binding": "enough ready Shorts",
    "channel": "prayer2",
    "companion_longforms": 0,
-   "ready": 5,
-   "sources": 8,
+   "ready": 4,
+   "sources": 10,
    "standalone_examples": [
     "Psalm 77:11",
     "Psalm 71:15",
@@ -23,7 +27,7 @@
     "Lamentations 3:23",
     "Luke 4:42"
    ],
-   "standalone_passages": 8,
+   "standalone_passages": 10,
    "verdict": "enough"
   },
   {
@@ -40,7 +44,7 @@
    "binding": "enough ready Shorts",
    "channel": "prayer4",
    "companion_longforms": 0,
-   "ready": 9,
+   "ready": 8,
    "sources": 2,
    "standalone_examples": [
     "Psalm 121:3-4",
@@ -63,7 +67,7 @@
    "binding": "enough ready Shorts",
    "channel": "prayer6",
    "companion_longforms": 0,
-   "ready": 3,
+   "ready": 2,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
@@ -83,7 +87,7 @@
    "binding": "enough ready Shorts",
    "channel": "prayer8",
    "companion_longforms": 0,
-   "ready": 9,
+   "ready": 8,
    "sources": 3,
    "standalone_examples": [
     "Psalm 16:8",
@@ -97,7 +101,7 @@
    "binding": "enough ready Shorts",
    "channel": "prayer9",
    "companion_longforms": 0,
-   "ready": 10,
+   "ready": 8,
    "sources": 3,
    "standalone_examples": [
     "Psalm 50:23",
@@ -111,7 +115,7 @@
    "binding": "enough ready Shorts",
    "channel": "prayer10",
    "companion_longforms": 0,
-   "ready": 7,
+   "ready": 6,
    "sources": 5,
    "standalone_examples": [
     "Exodus 33:14",
@@ -132,6 +136,6 @@
  "ready_floor": 2,
  "schema": 1,
  "sentence": "Every channel holds at least 2 ready Shorts.",
- "total_sources": 21,
+ "total_sources": 26,
  "under_floor": []
 }

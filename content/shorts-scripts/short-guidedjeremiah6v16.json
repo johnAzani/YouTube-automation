@@ -28,7 +28,7 @@
     {
       "a": "That heavy uncertainty",
       "img": "short-guidedjeremiah6v16-scene-01.jpg",
-      "kicker": "JEREMIAH 6:16",
+      "kicker": "HEAR HIS VOICE",
       "sub": "HEAR HIS VOICE",
       "cam": "push_in",
       "focus": [
@@ -277,5 +277,10 @@
       "slot": "C"
     }
   ],
-  "scripture": "Jeremiah 6:16"
+  "scripture": "Jeremiah 6:16",
+  "first_frame_repair": {
+    "moved": "JEREMIAH 6:16",
+    "to": "HEAR HIS VOICE",
+    "why": "the first frame must name the need; the citation belongs on the scene that reads the verse (pipeline/first_frame.py)"
+  }
 }

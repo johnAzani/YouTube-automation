@@ -1,0 +1,257 @@
+{
+  "key": "short-psalm63v7",
+  "channel": "secret-place",
+  "psalm": 63,
+  "title": [
+    "PSALM 63:7 PRAYER",
+    "A SHORT PRAYER"
+  ],
+  "poster": [
+    "PSALM 63:7 PRAYER",
+    "PSALM 63:7",
+    "UNDER HIS WINGS",
+    "A SHORT PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "Pray with us again tomorrow"
+  ],
+  "stock_queries": [
+    "starry night sky over calm hills",
+    "moonlight on still water at night",
+    "quiet city lights blurred at night",
+    "night sky with soft clouds and stars",
+    "lamp light in a dark quiet room",
+    "silhouette of trees against a deep blue night",
+    "calm sea under moonlight at night"
+  ],
+  "scenes": [
+    {
+      "a": "Breathe. This is The Secret Place, and this is the hour we keep.",
+      "img": "short-psalm63v7-scene-01.jpg",
+      "kicker": "FIRST, THIS",
+      "sub": "UNDER HIS WINGS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    {
+      "a": "The Secret Place reads it again, slowly: Because thou hast been my help, therefore in the shadow of thy wings will I rejoice.",
+      "img": "short-psalm63v7-scene-02.jpg",
+      "kicker": "PSALM 63:7",
+      "sub": "BECAUSE THOU HAST BEEN MY HELP",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The Secret Place reads it again, slowly: Because thou hast been my help, therefore in the shadow of thy wings will I rejoice.",
+      "img": "short-psalm63v7-scene-03.jpg",
+      "kicker": "THEREFORE",
+      "sub": "THE SECRET PLACE READS IT AGAIN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, The Secret Place comes to You about peaceful rest and sovereign nighttime protection.",
+      "img": "short-psalm63v7-scene-04.jpg",
+      "kicker": "PROTECTION",
+      "sub": "LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "What this verse promises is what The Secret Place is asking for on this channel.",
+      "img": "short-psalm63v7-scene-05.jpg",
+      "kicker": "PROMISES",
+      "sub": "WHAT THIS VERSE PROMISES IS WHAT",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Where peaceful rest and sovereign nighttime protection has gone wrong in our lives, stand in for us.",
+      "img": "short-psalm63v7-scene-06.jpg",
+      "kicker": "PROTECTION",
+      "sub": "WHERE PEACEFUL REST AND SOVEREIGN",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We are not asking for an easier hour at The Secret Place, but for Your hand in it.",
+      "img": "short-psalm63v7-scene-07.jpg",
+      "kicker": "ASKING",
+      "sub": "WE ARE NOT ASKING FOR AN EASIER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "Breathe. This is The Secret Place, and this is the hour we keep."
+    ],
+    [
+      7,
+      16,
+      "The Secret Place reads it again, slowly: Because thou hast been my help, therefore in the shadow of thy wings will I rejoice."
+    ],
+    [
+      16,
+      21,
+      "Lord, The Secret Place comes to You about peaceful rest and sovereign nighttime protection."
+    ],
+    [
+      21,
+      27,
+      "What this verse promises is what The Secret Place is asking for on this channel."
+    ],
+    [
+      27,
+      34,
+      "Where peaceful rest and sovereign nighttime protection has gone wrong in our lives, stand in for us."
+    ],
+    [
+      34,
+      41,
+      "We are not asking for an easier hour at The Secret Place, but for Your hand in it."
+    ],
+    [
+      41,
+      46,
+      "Take what The Secret Place just prayed into the rest of your day."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "BREATHE THIS IS THE",
+        "SECRET PLACE AND THIS",
+        "IS THE HOUR WE KEEP"
+      ],
+      [
+        "BREATHE",
+        "SECRET",
+        "PLACE"
+      ],
+      "PSALM 63:7"
+    ],
+    [
+      7,
+      16,
+      [
+        "THE SECRET PLACE READS",
+        "IT AGAIN SLOWLY",
+        "BECAUSE THOU HAST BEEN",
+        "MY HELP THEREFORE IN"
+      ],
+      [
+        "THEREFORE",
+        "BECAUSE"
+      ],
+      "PSALM 63:7"
+    ],
+    [
+      16,
+      21,
+      [
+        "LORD THE SECRET PLACE",
+        "COMES TO YOU ABOUT",
+        "PEACEFUL REST AND",
+        "SOVEREIGN NIGHTTIME"
+      ],
+      [
+        "NIGHTTIME",
+        "SOVEREIGN"
+      ],
+      "PSALM 63:7"
+    ],
+    [
+      21,
+      27,
+      [
+        "WHAT THIS VERSE",
+        "PROMISES IS WHAT THE",
+        "SECRET PLACE IS ASKING",
+        "FOR ON THIS CHANNEL"
+      ],
+      [
+        "PROMISES",
+        "CHANNEL",
+        "SECRET"
+      ],
+      "PSALM 63:7"
+    ],
+    [
+      27,
+      34,
+      [
+        "WHERE PEACEFUL REST",
+        "AND SOVEREIGN",
+        "NIGHTTIME PROTECTION",
+        "HAS GONE WRONG IN OUR"
+      ],
+      [
+        "PROTECTION",
+        "NIGHTTIME",
+        "SOVEREIGN"
+      ],
+      "PSALM 63:7"
+    ],
+    [
+      34,
+      41,
+      [
+        "WE ARE NOT ASKING FOR",
+        "AN EASIER HOUR AT THE",
+        "SECRET PLACE BUT FOR",
+        "YOUR HAND IN IT"
+      ],
+      [
+        "EASIER",
+        "SECRET",
+        "ASKING"
+      ],
+      "PSALM 63:7"
+    ],
+    [
+      41,
+      46,
+      [
+        "TAKE WHAT THE SECRET",
+        "PLACE JUST PRAYED INTO",
+        "THE REST OF YOUR DAY"
+      ],
+      [
+        "SECRET",
+        "PRAYED",
+        "PLACE"
+      ],
+      "PSALM 63:7"
+    ]
+  ],
+  "beats": [],
+  "scripture": "Psalm 63:7",
+  "authored_by": "passage-template"
+}

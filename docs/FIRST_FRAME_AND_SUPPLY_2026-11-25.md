@@ -31,7 +31,7 @@ renderer will actually draw in second one:
 | | |
 | :--- | ---: |
 | Shorts that put a **scripture reference** on the first frame | **456 of 639 (71%)** |
-| Distinct first-frame compositions | **1** |
+| Distinct first-frame compositions | **1** (a plate, a kicker, a sub, three stacked lines) |
 | Words a stranger must read before hearing a word (median) | **15** |
 | Median time the first caption ends | **8s** |
 
@@ -46,12 +46,18 @@ Two findings, one of them embarrassing:
   other direction: it did not recognise numbered books, so it missed every
   "1 PETER 5:7", "2 TIMOTHY 1:7" and "1 JOHN 4:18" — 456 is the corrected count.
 
-**Five Shorts now exist in the other composition.** `pipeline/passage_short.py`
-writes a spec from the passage itself, with the need on scene one and the citation
-arriving with the verse on scene two. It exists so a channel never runs dry when
-no model is available, and the five it wrote for `prayer2` are what makes the
-comparison possible at all — one composition against another, on the same
-channel, in the same month.
+**Five Shorts now exist without a citation on the first frame.** The composition
+is unchanged — a plate, a kicker, a sub, three stacked lines — but
+`pipeline/passage_short.py` writes the *first line* as a need, with the citation
+arriving on the scene that reads the verse. It exists so a channel never runs dry
+when no model is available.
+
+Stated precisely, because this was overstated in the first draft of this page:
+citation-first and need-first frames are **two levels of one variable, not two
+compositions.** The visual design has still never varied. What can now be compared
+is whether naming the need on the first frame keeps more people than naming the
+book — and that comparison needs published Shorts in both kinds, which is what the
+next section produces.
 - **Every first frame is the same composition.** A photograph, a kicker, a sub,
   and three stacked lines of kinetic type — 634 out of 634. Nothing about the
   frame has ever varied, so nothing about it has ever been tested. That is why
