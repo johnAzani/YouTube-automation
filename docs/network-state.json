@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T00:43:09Z",
+  "generated_at": "2026-11-25T01:27:18Z",
   "monitor_generated_at": "2026-11-25T00:25:47.876256+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 785,
-    "published_longform": 219,
+    "published_total": 786,
+    "published_longform": 220,
     "published_shorts": 566,
-    "public_total": 783,
-    "queued_longform": 60,
+    "public_total": 784,
+    "queued_longform": 61,
     "queued_shorts": 44,
     "automations_ok": 13,
     "automations_total": 15,
@@ -96,28 +96,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 105,
-        "published_longform": 33,
+        "published_total": 106,
+        "published_longform": 34,
         "published_shorts": 72,
         "thumbnail_pending": 2,
-        "public_total": 104,
-        "queued_longform": 12,
+        "public_total": 105,
+        "queued_longform": 13,
         "queued_other": 0,
         "queued_shorts": 0
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM5V3",
-        "title": "Say This Psalm 5:3 Prayer for Fresh Start at Sunrise | Before The Day Begins #Shorts",
-        "format": "short",
-        "youtube_video_id": "_BKg0DA0quE",
-        "watch_url": "https://www.youtube.com/shorts/_BKg0DA0quE",
-        "published_on": "2026-11-24",
-        "published_at": "2026-11-24T20:46:12Z"
-      },
-      "next_queued_longform": {
         "id": "0079",
         "title": "When I Awake, I Am Still with Thee: Psalm 139:17-18",
-        "words": 1605,
+        "format": "longform",
+        "youtube_video_id": "QhoCN_MPR-I",
+        "watch_url": "https://youtu.be/QhoCN_MPR-I",
+        "published_on": "2026-11-25",
+        "published_at": "2026-11-25T01:26:03Z"
+      },
+      "next_queued_longform": {
+        "id": "0080",
+        "title": "When You Need Joy to Meet the Day: Psalm 65:8 | The Morning Altar",
+        "words": 1417,
         "status": "approved"
       },
       "next_queued_short": null,
@@ -686,6 +686,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0079",
+      "slug": "when-i-awake-i-am-still-with-thee-psalm-139",
+      "file": "0079-when-i-awake-i-am-still-with-thee-psalm-139.md",
+      "title": "When I Awake, I Am Still with Thee: Psalm 139:17-18",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T01:26:03Z",
+      "youtube_video_id": "QhoCN_MPR-I",
+      "watch_url": "https://youtu.be/QhoCN_MPR-I",
+      "youtu_be_url": "https://youtu.be/QhoCN_MPR-I",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/QhoCN_MPR-I/edit",
+      "thumb_url": "https://i.ytimg.com/vi/QhoCN_MPR-I/hqdefault.jpg",
+      "thumb_text": "STILL WITH THEE",
+      "thumbnail_pending": false,
+      "duration_label": "10m 10s",
+      "words": 1605
+    },
     {
       "id": "SHORT-GARDENPSALM95V1",
       "slug": "short-gardenpsalm95v1-thanksgiving-prayer",
@@ -19556,19 +19580,6 @@
         "words": 1025
       },
       {
-        "id": "0079",
-        "slug": "when-i-awake-i-am-still-with-thee-psalm-139",
-        "file": "0079-when-i-awake-i-am-still-with-thee-psalm-139.md",
-        "title": "When I Awake, I Am Still with Thee: Psalm 139:17-18",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1605
-      },
-      {
         "id": "0080",
         "slug": "when-you-need-joy-to-meet-the-day-psalm-65-8-the-morning-altar",
         "file": "0080-when-you-need-joy-to-meet-the-day-psalm-65-8-the-morning-altar.md",
@@ -20308,6 +20319,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1481
+      },
+      {
+        "id": "0909",
+        "slug": "more-than-they-that-watch-for-the-morning-psalm-130-5-6-the-morning-altar",
+        "file": "0909-more-than-they-that-watch-for-the-morning-psalm-130-5-6-the-morning-altar.md",
+        "title": "More Than They That Watch for the Morning: Psalm 130:5-6",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1231
+      },
+      {
+        "id": "0910",
+        "slug": "morning-light-of-prophecy-2-peter-1-19",
+        "file": "0910-morning-light-of-prophecy-2-peter-1-19.md",
+        "title": "The Morning Light of Prophecy: 2 Peter 1:19 | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1401
       }
     ],
     "shorts": [
