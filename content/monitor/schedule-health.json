@@ -9,9 +9,9 @@
       "workflow": "thumbnail-campaign.yml"
     },
     {
-      "late_minutes": 329,
+      "late_minutes": 442,
       "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-21T00:10:21+00:00",
+      "ran_at": "2026-11-21T02:03:21+00:00",
       "slot": "2026-11-20T18:41:00+00:00",
       "workflow": "metrics.yml"
     },
@@ -72,8 +72,8 @@
       "workflow": "growth-autopilot.yml"
     }
   ],
-  "generated_at": "2026-11-25T00:00:51.083203+00:00",
-  "last_run_at": "2026-11-25T00:00:04+00:00",
+  "generated_at": "2026-11-25T00:25:34.108041+00:00",
+  "last_run_at": "2026-11-25T00:24:45+00:00",
   "on_time": [
     {
       "late_minutes": 90,
@@ -90,10 +90,10 @@
       "workflow": "community.yml"
     },
     {
-      "late_minutes": 21,
+      "late_minutes": 1,
       "name": "Automation monitor",
-      "ran_at": "2026-11-24T21:44:38+00:00",
-      "slot": "2026-11-24T21:23:00+00:00",
+      "ran_at": "2026-11-25T00:24:45+00:00",
+      "slot": "2026-11-25T00:23:00+00:00",
       "workflow": "monitor.yml"
     },
     {
