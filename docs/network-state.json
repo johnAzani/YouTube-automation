@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T23:56:54Z",
+  "generated_at": "2026-11-25T23:59:43Z",
   "monitor_generated_at": "2026-11-25T23:07:25.395195+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 828,
+    "published_total": 829,
     "published_longform": 228,
-    "published_shorts": 600,
-    "public_total": 826,
-    "queued_longform": 75,
-    "queued_shorts": 43,
+    "published_shorts": 601,
+    "public_total": 827,
+    "queued_longform": 76,
+    "queued_shorts": 42,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": true
@@ -368,23 +368,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 78,
+        "published_total": 79,
         "published_longform": 20,
-        "published_shorts": 58,
+        "published_shorts": 59,
         "thumbnail_pending": 5,
-        "public_total": 78,
-        "queued_longform": 6,
+        "public_total": 79,
+        "queued_longform": 7,
         "queued_other": 0,
-        "queued_shorts": 2
+        "queued_shorts": 1
       },
       "latest_video": {
-        "id": "0426",
-        "title": "Tears Heard and Answered by the Lord: 2 Kings 20:5 | The Healing Balm",
-        "format": "longform",
-        "youtube_video_id": "UaUyqeHIoDM",
-        "watch_url": "https://youtu.be/UaUyqeHIoDM",
+        "id": "SHORT-HEALINGPSALM118V17",
+        "title": "Pray This Psalm 118:17 Healing Prayer for Peace & Strength | Faith For Healing #Shorts",
+        "format": "short",
+        "youtube_video_id": "7BAJJVCuVnU",
+        "watch_url": "https://www.youtube.com/shorts/7BAJJVCuVnU",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T20:26:18Z"
+        "published_at": "2026-11-25T23:58:49Z"
       },
       "next_queued_longform": {
         "id": "0427",
@@ -393,8 +393,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingpsalm118v17",
-        "scripture": "Psalm 118:17",
+        "short": "short-healingrevelation21v4",
+        "scripture": "Revelation 21:4",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGPSALM118V17",
+      "slug": "short-healingpsalm118v17-restoration-prayer",
+      "file": "short-healingpsalm118v17-restoration-prayer.md",
+      "title": "Pray This Psalm 118:17 Healing Prayer for Peace & Strength | Faith For Healing #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T23:58:49Z",
+      "youtube_video_id": "7BAJJVCuVnU",
+      "watch_url": "https://www.youtube.com/shorts/7BAJJVCuVnU",
+      "youtu_be_url": "https://youtu.be/7BAJJVCuVnU",
+      "shorts_url": "https://www.youtube.com/shorts/7BAJJVCuVnU",
+      "studio_url": "https://studio.youtube.com/video/7BAJJVCuVnU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/7BAJJVCuVnU/hqdefault.jpg",
+      "thumb_text": "PSALM 118:17 \u00b7 I SHALL NOT DIE",
+      "thumbnail_pending": false,
+      "duration_label": "54s",
+      "words": 652
+    },
     {
       "id": "SHORT-MIDDAYPSALM84V5",
       "slug": "short-middaypsalm84v5-midday-prayer",
@@ -21014,6 +21038,19 @@
         "words": 1317
       },
       {
+        "id": "0434",
+        "slug": "health-to-your-body-and-strength-to-your-bones-proverbs-3-7-8",
+        "file": "0434-health-to-your-body-and-strength-to-your-bones-proverbs-3-7-8.md",
+        "title": "Health to Your Body and Strength to Your Bones: Proverbs 3:7-8",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1089
+      },
+      {
         "id": "0523",
         "slug": "when-provisions-shrink-to-the-last-morsel-1-kings-17-14-16",
         "file": "0523-when-provisions-shrink-to-the-last-morsel-1-kings-17-14-16.md",
@@ -21789,17 +21826,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healingpsalm118v17",
-        "file": "0427-short-healingpsalm118v17.yml",
-        "companion_longform_id": "0427",
-        "scripture": "Psalm 118:17",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingrevelation21v4",
