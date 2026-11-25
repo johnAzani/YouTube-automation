@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE BLOOD", "OF THE LAMB", "STAND VICTORIOUS", "IN PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-25T17:25:19Z"
+thumbnail_retry_after: "2026-12-02T19:25:18Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 The accusation whispered in your silent dark bedroom tonight ends at the feet of Jesus. And they overcame him by the blood of the Lamb, and by the word of their testimony; and they loved not their lives unto the death. Lord, in this midnight hour, we declare that every spiritual accusation against you is silenced. The precious blood cleanses your past and seals your ultimate victory. We stand unshaken, placing full trust in His eternal promise. Break every hidden chain of guilt and fear keeping you awake tonight. Receive His holy peace, surrender all worries, and rest secure in His almighty arms. Subscribe to join The Midnight Watch in prayer.

@@ -18,11 +18,11 @@ youtube_duration: PT54S
 receipt_recovered_from_youtube: true
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_attempts: 2
+thumbnail_attempts: 3
 thumbnail_poster: ["THE FAMILY ALTAR", "BLESS THIS HOME", "JOSHUA 24:15", "FAMILY PRAYER"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: ""
-thumbnail_retry_after: "2026-11-25T18:51:21Z"
+thumbnail_retry_after: "2026-12-02T19:25:21Z"
 thumbnail_retry_reason: "permission"
 metadata_revision: "selar-seo-v1"
 ---

@@ -26,14 +26,12 @@ short_visual_fingerprints: ["sha256:37ee4a0acc03d28d7161c6074c25237694b609811064
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_pending: false
 thumbnail_poster: ["FIND", "REST", "IN HIM", "THE COVENANT SHIELD"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-25T17:26:02Z"
-thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 0
+thumbnail_revision: "shorts-poster-v1"
 ---
 
 If you are feeling surrounded by the weight of silence in this empty room, stay. We seek the shadow of your wings to find our place of safety and strength. But let all those that put their trust in thee rejoice: let them ever shout for joy, because thou defendest them: let them also that love thy name be joyful in thee. Lord, defend every heart that trusts in your holy name tonight as we rest. Keep our minds anchored in your peace, shielded from every doubt that seeks entry. Grant us the quiet confidence that only comes from knowing we dwell under you.

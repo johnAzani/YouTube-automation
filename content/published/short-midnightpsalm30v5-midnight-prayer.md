@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["TEARS YOU HIDE", "ARE NOT FOREVER", "JOY COMETH IN MORNING", "MIDNIGHT WATCH PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-02T19:25:17Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 The tears you hide tonight are not forever. Psalm 30 verse 5 reminds us: For his anger endureth but a moment; in his favor is life: weeping may endure for a night, but joy cometh in the morning. Lord, in this quiet midnight hour, we bring the grief that held us through the shadows. Strengthen our hearts to trust your enduring favor when the room is cold and silent. Hold us steady until your light breaks through our darkness. Turn our sorrow into quiet hope as we wait on your promises. Amen. The tears you hide tonight are not forever.

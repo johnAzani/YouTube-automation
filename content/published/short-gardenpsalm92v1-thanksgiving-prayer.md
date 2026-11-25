@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["GIVE THANKS", "TO THE LORD", "FOR HIS MERCY", "IS EVERLASTING"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-25T17:26:07Z"
+thumbnail_retry_after: "2026-12-02T19:25:43Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If that restlessness in your heart has followed you into this quiet space, stay here. It is a good thing to give thanks unto the Lord, and to sing praises unto thy name, O most High: To show forth thy lovingkindness in the morning, and thy faithfulness every night, Lord, help me hold these words as a lantern in the shadows of my own uncertainty. Teach my spirit to recognize your hand in the light of dawn and the dark. May my heart become a garden of perpetual praise, rooted deeply in your unchanging truth, Amen.

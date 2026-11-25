@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE MIDNIGHT WATCH", "THE KEY OF DAVID", "DIVINE OPENING", "REVELATION 3:7-8"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-25T18:51:19Z"
+thumbnail_retry_after: "2026-12-02T19:25:19Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 The lock on your future is breaking because the One who holds the key arrives. These things saith he that is holy, he that is true, he that hath the key of David. He that openeth, and no man shutteth; and shutteth, and no man openeth; I know thy works: behold, I have set before thee an open door, and no man can shut it: For thou hast a little strength, and hast kept my word, and hast not denied my name. Lord, walk through this space and establish the path you have prepared for this soul. Amen.
