@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["A PRAYER", "OF PRAISE", "AND THANKS", "PSALM 66"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-25T02:27:34Z"
+thumbnail_retry_after: "2026-12-02T03:03:53Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If the weight of this morning feels too heavy to carry alone, please stay here. Make a joyful noise unto God, all ye lands: Sing forth the honor of his name: make his praise glorious. Say unto God, How terrible art thou in thy works! through the greatness of thy power shall thine enemies submit themselves unto thee. All the earth shall worship thee, and shall sing unto thee; they shall sing to thy name. Lord, my heart is yours today. I trust your hand. Please subscribe to The Praise Garden. Let every worry fade as I offer you this sacrifice of genuine, honest thanksgiving, amen.

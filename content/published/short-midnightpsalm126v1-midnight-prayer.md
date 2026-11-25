@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE LORD", "HAS DONE", "GREAT THINGS", "FOR YOU"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-25T02:27:26Z"
+thumbnail_retry_after: "2026-12-02T03:03:29Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 The heavy silence in this room mirrors the weight you have carried all day long. When the LORD turned again the captivity of Zion, we were like them that dream. Then was our mouth filled with laughter, and our tongue with singing: then said they among the heathen, The LORD hath done great things for them. The LORD hath done great things for us; whereof we are glad. Lord, replace this bitterness with the joy of your unexpected deliverance in this dark hour. May your spirit settle into the truth that the restoration you seek is already coming.

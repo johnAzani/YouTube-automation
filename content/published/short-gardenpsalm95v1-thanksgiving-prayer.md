@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE PRAISE GARDEN", "PSALM 95:1-2", "A PRAYER OF THANKSGIVING", "KJV WORSHIP"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-02T03:03:54Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 That unshakeable heaviness in your chest right now is asking for a different anchor today. Father, we quiet our wandering minds before Your throne and remember Your steadfast faithfulness. O come, let us sing unto the LORD: let us make a joyful noise to the rock of our salvation. Lord, You have been our dwelling place in all generations, holding us when the road grew steep. Let us come before his presence with thanksgiving, and make a joyful noise unto him with psalms. Accept our humble praise this day, and let our gratitude be a sweet offering unto Your holy name.
