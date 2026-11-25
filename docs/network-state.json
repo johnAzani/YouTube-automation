@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T00:35:41Z",
+  "generated_at": "2026-11-25T00:41:52Z",
   "monitor_generated_at": "2026-11-25T00:25:47.876256+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 782,
+    "published_total": 783,
     "published_longform": 219,
-    "published_shorts": 563,
-    "public_total": 780,
+    "published_shorts": 564,
+    "public_total": 781,
     "queued_longform": 60,
-    "queued_shorts": 47,
+    "queued_shorts": 46,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": false
@@ -630,23 +630,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 61,
+        "published_total": 62,
         "published_longform": 15,
-        "published_shorts": 46,
+        "published_shorts": 47,
         "thumbnail_pending": 2,
-        "public_total": 61,
+        "public_total": 62,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPSALM17V5",
-        "title": "Pray This Psalm 17:5 Prayer for God's Guidance | Seeking God's Wisdom Today #Shorts",
+        "id": "SHORT-GUIDEDEXODUS13V21",
+        "title": "Pray This Exodus 13:21 Prayer for God's Guidance | When The Path Is Hidden #Shorts",
         "format": "short",
-        "youtube_video_id": "fSXE1kEKiE4",
-        "watch_url": "https://www.youtube.com/shorts/fSXE1kEKiE4",
-        "published_on": "2026-11-24",
-        "published_at": "2026-11-24T21:01:57Z"
+        "youtube_video_id": "28jkzK9zW-0",
+        "watch_url": "https://www.youtube.com/shorts/28jkzK9zW-0",
+        "published_on": "2026-11-25",
+        "published_at": "2026-11-25T00:40:53Z"
       },
       "next_queued_longform": {
         "id": "0815",
@@ -655,8 +655,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedexodus13v21",
-        "scripture": "Exodus 13:21",
+        "short": "short-guidedjeremiah6v16",
+        "scripture": "Jeremiah 6:16",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -686,6 +686,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDEXODUS13V21",
+      "slug": "short-guidedexodus13v21-guidance-prayer",
+      "file": "short-guidedexodus13v21-guidance-prayer.md",
+      "title": "Pray This Exodus 13:21 Prayer for God's Guidance | When The Path Is Hidden #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T00:40:53Z",
+      "youtube_video_id": "28jkzK9zW-0",
+      "watch_url": "https://www.youtube.com/shorts/28jkzK9zW-0",
+      "youtu_be_url": "https://youtu.be/28jkzK9zW-0",
+      "shorts_url": "https://www.youtube.com/shorts/28jkzK9zW-0",
+      "studio_url": "https://studio.youtube.com/video/28jkzK9zW-0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/28jkzK9zW-0/hqdefault.jpg",
+      "thumb_text": "PILLAR OF CLOUD \u00b7 PILLAR OF FIRE",
+      "thumbnail_pending": false,
+      "duration_label": "49s",
+      "words": 643
+    },
     {
       "id": "SHORT-MIDDAYPSALM90V12",
       "slug": "short-middaypsalm90v12-midday-prayer",
@@ -20249,17 +20273,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-guidedexodus13v21",
-        "file": "0000-short-guidedexodus13v21.yml",
-        "companion_longform_id": "",
-        "scripture": "Exodus 13:21",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-provisionpsalm68v19",
