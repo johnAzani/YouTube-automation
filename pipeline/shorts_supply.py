@@ -29,8 +29,11 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 from typing import Any
+
+from pipeline.books import split_reference
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORT_PATH = ROOT / "content" / "research" / "shorts_supply.json"
@@ -42,24 +45,48 @@ PUBLISHED_DIR = ROOT / "content" / "published"
 READY_FLOOR = 2
 
 
-def _companion_left(channel_id: str) -> list[dict[str, str]]:
-    """Queued long-forms on this channel that have no companion Short yet."""
-    from pipeline.gemini_brain import short_key_for_doc
-    from pipeline.script_doc import parse_script
-    from pipeline.short_release import resolve_edition
+def _manifest_field(path: Path, name: str) -> str:
+    """One scalar field from a manifest, without a YAML parser.
 
-    made: set[str] = set()
-    covered: set[str] = set()
+    The daily growth job installs nothing, so this reading has to work with the
+    standard library alone. These manifests are flat mappings of scalars written by
+    ``yaml.safe_dump``; a line-wise read is enough, and a manifest that is not that
+    shape simply contributes nothing.
+    """
     try:
-        import yaml
-        for manifest in (ROOT / "content" / "shorts-queue").glob("*.yml"):
-            data = yaml.safe_load(manifest.read_text(encoding="utf-8")) or {}
-            if str(data.get("channel") or "") != channel_id:
-                continue
-            if data.get("companion_longform_id"):
-                covered.add(str(data["companion_longform_id"]).strip())
-    except Exception:  # noqa: BLE001 — a reading must not crash on one bad manifest
-        pass
+        text = path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return ""
+    for line in text.splitlines():
+        if line.startswith(f"{name}:"):
+            value = line.split(":", 1)[1].strip()
+            return value.strip("'\"") 
+    return ""
+
+
+def _shorts_scripts() -> set[str]:
+    """Keys a renderer can actually produce, read from the specs on disk."""
+    return {path.stem for path in (ROOT / "content" / "shorts-scripts").glob("*.json")}
+
+
+def _companion_left(channel_id: str) -> list[dict[str, str]]:
+    """Queued long-forms on this channel that have no companion Short yet.
+
+    A long-form whose Short already exists is not a source; that is the whole
+    reason this count differs from the size of the queue directory.
+
+    The key is derived here rather than by importing `gemini_brain`: this has to run
+    with nothing installed, and the derivation is three lines of the same rules
+    (`pipeline/gemini_brain.py: _base_short_key_for_doc`, which calls this one).
+    """
+    from pipeline.script_doc import parse_script
+
+    specs = _shorts_scripts()
+    covered: set[str] = set()
+    for manifest in (ROOT / "content" / "shorts-queue").glob("*.yml"):
+        if _manifest_field(manifest, "channel") != channel_id:
+            continue
+        covered.add(_manifest_field(manifest, "companion_longform_id"))
 
     out = []
     for path in sorted(QUEUE_DIR.glob("*.md")):
@@ -71,27 +98,92 @@ def _companion_left(channel_id: str) -> list[dict[str, str]]:
             continue
         if str(doc.status).strip().lower() not in {"approved", "published"}:
             continue
-        if str(doc.id).strip() in covered or str(doc.id).strip() in made:
+        doc_id = str(doc.id).strip()
+        if not doc_id or doc_id in covered:
             continue
-        edition = resolve_edition(short_key_for_doc(doc))
-        if edition and (PUBLISHED_DIR / f"{edition.slug}.md").is_file():
+        key = short_key_from_parts(channel_id, str(doc.title or ""),
+                                   slug=str(doc.slug or ""), doc_id=doc_id)
+        if key in specs or (PUBLISHED_DIR / f"{key}.md").is_file():
             continue
-        made.add(str(doc.id).strip())
-        out.append({"id": str(doc.id).strip(), "title": str(doc.title)[:80]})
+        covered.add(doc_id)
+        out.append({"id": doc_id, "title": str(doc.title)[:80]})
     return out
+
+
+#: Keys the renderer has a script for, from `tools/shorts.py` (which imports without
+#: third-party packages, unlike the rest of the release path).
+def _renderable_keys() -> set[str]:
+    try:
+        from tools.shorts import SCRIPTS
+        return {str(key) for key in SCRIPTS}
+    except Exception:  # noqa: BLE001 — fall back to the generated specs only
+        return set()
+
+
+def _ready_count(channel_id: str) -> int:
+    """Approved manifests for this channel whose spec exists and can render.
+
+    The same verdict `short_release.count_ready_shorts` gives, computed without
+    importing it: that module needs PyYAML, and the daily reading runs with no
+    dependencies installed. The test suite asserts the two agree.
+    """
+    renderable = _renderable_keys() | _shorts_scripts()
+    count = 0
+    for manifest in (ROOT / "content" / "shorts-queue").glob("*.yml"):
+        if _manifest_field(manifest, "channel") != channel_id:
+            continue
+        key = _manifest_field(manifest, "short") or _manifest_field(manifest, "edition")
+        status = _manifest_field(manifest, "status").lower()
+        if key in renderable and status == "approved":
+            count += 1
+    return count
+
+
+def short_key_from_parts(channel_id: str, title: str, *, slug: str = "",
+                         doc_id: str = "") -> str:
+    """The Short key a channel's long-form on `title` gets.
+
+    A dependency-free copy of `gemini_brain.short_key_for_doc` +
+    `channel_capabilities.short_key`, because this module runs in the daily growth
+    job, which installs nothing. `tests/test_shorts_supply.py` asserts the two
+    derivations agree for every long-form in the queue, so the copy cannot drift
+    silently — including its two special cases, a whole-psalm Short and a title
+    with no reference in it at all.
+    """
+    from pipeline.channel_capabilities import short_key
+
+    parts = split_reference(title)
+    if parts is None:
+        stem = re.sub(r"[^a-z0-9]+", "", str(slug or doc_id or "prayer").lower())[:24]
+        return short_key(channel_id, f"short-{stem or 'prayer'}")
+    book, chapter, verse = parts
+    clean = re.sub(r"[^a-z0-9]+", "", book)
+    if clean == "psalms":
+        clean = "psalm"
+    if clean == "psalm" and verse is None:
+        # A whole-chapter Short only says so when the long-form calls itself
+        # complete; `0008`-`0010` predate that convention (see gemini_brain).
+        hay = f"{title} {slug}".lower()
+        if "complete" in hay and str(doc_id) not in {"0008", "0009", "0010"}:
+            return short_key(channel_id, f"short-psalm{chapter}full")
+        return short_key(channel_id, f"short-psalm{chapter}")
+    tail = f"v{verse}" if verse is not None else ""
+    return short_key(channel_id, f"short-{clean}{chapter}{tail}")
+
+
+def _used_ids() -> set[str]:
+    """Roadmap ids already spent, repository-wide (ids are global)."""
+    return ({p.name[:4] for p in QUEUE_DIR.glob("*.md")}
+            | {p.name[:4] for p in PUBLISHED_DIR.glob("*.md")})
 
 
 def measure(channel_id: str) -> dict[str, Any]:
     """The three ways a channel can make its next Short, counted."""
     from pipeline.evergreen_shorts import candidates
-    from pipeline.gemini_brain import GeminiBrain
-    from pipeline.short_release import count_ready_shorts
 
-    brain = GeminiBrain(api_key="", channel_id=channel_id)
-    standalone = [ref for ref, _source in
-                  candidates(channel_id, taken_longform_ids=brain._existing_job_ids())]
+    standalone = [ref for ref, _source in candidates(channel_id, taken_longform_ids=_used_ids())]
     companions = _companion_left(channel_id)
-    ready = count_ready_shorts(channel_id=channel_id)
+    ready = _ready_count(channel_id)
 
     sources = len(standalone) + len(companions)
     if ready >= READY_FLOOR:

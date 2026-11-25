@@ -110,9 +110,9 @@
   {
    "binding": "enough ready Shorts",
    "channel": "prayer10",
-   "companion_longforms": 1,
+   "companion_longforms": 0,
    "ready": 7,
-   "sources": 6,
+   "sources": 5,
    "standalone_examples": [
     "Exodus 33:14",
     "Psalm 119:130",
@@ -132,6 +132,6 @@
  "ready_floor": 2,
  "schema": 1,
  "sentence": "Every channel holds at least 2 ready Shorts.",
- "total_sources": 22,
+ "total_sources": 21,
  "under_floor": []
 }

@@ -76,3 +76,59 @@ def test_a_companion_is_only_counted_before_its_short_exists():
         edition = resolve_edition(short_key_for_doc(doc))
         if edition:
             assert not (sup.PUBLISHED_DIR / f"{edition.slug}.md").is_file()
+
+
+def test_the_short_key_copy_agrees_with_the_real_derivation():
+    """`shorts_supply` re-derives Short keys so it can run with nothing installed.
+
+    A silent drift between the copy and `gemini_brain.short_key_for_doc` would make
+    the reading optimistic or pessimistic without anyone noticing, so it is checked
+    against every long-form in the queue.
+    """
+    from pipeline.gemini_brain import short_key_for_doc
+    from pipeline.script_doc import parse_script
+
+    checked = 0
+    for path in sorted(sup.QUEUE_DIR.glob("*.md")):
+        doc = parse_script(path)
+        expected = short_key_for_doc(doc)
+        actual = sup.short_key_from_parts(
+            doc.channel, str(doc.title or ""), slug=str(doc.slug or ""),
+            doc_id=str(doc.id))
+        assert actual == expected, f"{doc.id}: {actual} != {expected}"
+        checked += 1
+    assert checked, "expected queued long-forms to check against"
+
+
+def test_the_ready_count_agrees_with_the_release_module():
+    from pipeline.channels import scheduled_channels
+    from pipeline.short_release import count_ready_shorts
+
+    for cid in scheduled_channels():
+        assert sup._ready_count(cid) == count_ready_shorts(channel_id=cid), cid
+
+
+def test_the_reading_runs_without_third_party_packages():
+    """The daily growth job installs nothing, so importing this module must not."""
+    import subprocess
+    import sys
+    from pathlib import Path
+
+    root = Path(sup.__file__).resolve().parents[1]
+    blocker = Path(__file__).resolve().parent / "_no_yaml"
+    blocker.mkdir(exist_ok=True)
+    (blocker / "yaml.py").write_text('raise ImportError("PyYAML is not installed")\n')
+    try:
+        done = subprocess.run(
+            [sys.executable, "-m", "pipeline.shorts_supply", "--json"],
+            cwd=root, capture_output=True, text=True, timeout=300,
+            env={"PYTHONPATH": str(blocker), "PATH": "/usr/bin:/bin"},
+        )
+    finally:
+        (blocker / "yaml.py").unlink(missing_ok=True)
+        try:
+            blocker.rmdir()
+        except OSError:
+            pass
+    assert done.returncode == 0, done.stderr[-2000:]
+    assert json.loads(done.stdout)["channels"]
