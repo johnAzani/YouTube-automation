@@ -73,7 +73,7 @@
    "binding": "enough ready Shorts",
    "channel": "prayer7",
    "companion_longforms": 0,
-   "ready": 6,
+   "ready": 5,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
@@ -83,7 +83,7 @@
    "binding": "enough ready Shorts",
    "channel": "prayer8",
    "companion_longforms": 0,
-   "ready": 10,
+   "ready": 9,
    "sources": 3,
    "standalone_examples": [
     "Psalm 16:8",
