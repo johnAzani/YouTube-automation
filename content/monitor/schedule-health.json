@@ -51,13 +51,6 @@
       "workflow": "reporting-jobs.yml"
     },
     {
-      "late_minutes": 138,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-25T17:32:43+00:00",
-      "slot": "2026-11-25T15:14:00+00:00",
-      "workflow": "comments.yml"
-    },
-    {
       "late_minutes": 131,
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "ran_at": "2026-11-25T05:25:42+00:00",
@@ -65,8 +58,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-25T17:35:58.977958+00:00",
-  "last_run_at": "2026-11-25T17:35:11+00:00",
+  "generated_at": "2026-11-25T19:25:23.761275+00:00",
+  "last_run_at": "2026-11-25T19:24:32+00:00",
   "on_time": [
     {
       "late_minutes": 90,
@@ -83,31 +76,17 @@
       "workflow": "channel-analytics.yml"
     },
     {
-      "late_minutes": 119,
-      "name": "Autonomous Community Tab Automation",
-      "ran_at": "2026-11-22T21:13:05+00:00",
-      "slot": "2026-11-22T19:14:00+00:00",
-      "workflow": "community.yml"
-    },
-    {
-      "late_minutes": 8,
+      "late_minutes": 61,
       "name": "Automation monitor",
-      "ran_at": "2026-11-25T15:31:59+00:00",
-      "slot": "2026-11-25T15:23:00+00:00",
+      "ran_at": "2026-11-25T19:24:32+00:00",
+      "slot": "2026-11-25T18:23:00+00:00",
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 53,
-      "name": "Produce video",
-      "ran_at": "2026-11-25T15:07:05+00:00",
-      "slot": "2026-11-25T14:14:00+00:00",
-      "workflow": "produce.yml"
-    },
-    {
-      "late_minutes": 104,
+      "late_minutes": 37,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-25T17:31:39+00:00",
-      "slot": "2026-11-25T15:47:00+00:00",
+      "ran_at": "2026-11-25T19:24:32+00:00",
+      "slot": "2026-11-25T18:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
