@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["A PRAYER FOR", "THE FAMILY ALTAR", "PSALM SIXTY-EIGHT", "VERSE SIX"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-25T17:25:26Z"
+thumbnail_retry_after: "2026-12-02T19:31:09Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If the loneliness of this season feels like a wall around your heart, please listen. God setteth the solitary in families: he bringeth out those which are bound with chains: but the rebellious dwell in a dry land. Father, we bring our empty chairs and our quiet halls to You tonight. You are the one who binds the broken pieces of our weary hearts together. Break the chains of isolation and lead us into the safety of Your love. Fill our rooms with the warmth of Your purpose and the peace of belonging.
