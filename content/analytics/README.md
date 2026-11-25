@@ -9,26 +9,27 @@ Written by `pipeline/growth_score.py`; the detail is in `content/research/growth
 
 | Door | Hours, shared window |
 | :--- | ---: |
-| suggested | 43.8 |
-| Shorts feed — does not count | 24.8 |
-| yt search | 0.95 |
+| suggested | 55 |
+| Shorts feed — does not count | 24.5 |
+| yt search | 1 |
 | home subs | 1.1 |
-| other pages | 0.23 |
+| other pages | 3.3 |
+| playlist | 0 |
 | notifications | 0.1 |
 | ext url | 1.1 |
-| direct unknown | 2.3 |
+| direct unknown | 2 |
 | channel page | 0.58 |
 | sound pages | 0 |
 
-**Counted: 44.8 hours (59.7% of all watch hours read).**
+**Counted: 56 hours (63.1% of all watch hours read).**
 
-The threshold asks 57.9 hours a day for the 68 days left before it doubles; the channels run at 2.9 a day.
+The threshold asks 58.5 hours a day for the 67 days left before it doubles; the channels run at 3.4 a day.
 
-**Release length: 13 minutes.** the median view of a measured video is 13.5 minutes (across 7 videos); a release is not built longer than that
+**Release length: 16 minutes.** the median view of a measured video is 16.3 minutes (across 8 videos); a release is not built longer than that
 
 Night tail: `hold` — kept.
 
-Long-form retention, median of videos with a reading: **10.2% watched**. A Short is excluded from this figure: a looping Short reports past 100%.
+Long-form retention, median of videos with a reading: **10.5% watched**. A Short is excluded from this figure: a looping Short reports past 100%.
 
 ### Which thumbnail concept earns the click
 
@@ -36,15 +37,15 @@ Written by `pipeline/thumbnail_campaign.py`. The pack renders three concepts; a 
 
 | Concept | Videos | Impressions | Click rate |
 | :--- | ---: | ---: | ---: |
-| hook | 0 | 0 | — (too few impressions) |
-| quiet | 0 | 0 | — (too few impressions) |
-| poster | 0 | 0 | — (too few impressions) |
+| hook | 2 | 0 | — (too few impressions) |
+| quiet | 1 | 0 | — (too few impressions) |
+| poster | 1 | 0 | — (too few impressions) |
 
 ### How long a release should be
 
-A view is watched for a median of **13.5 minutes** across 7 measured videos. A release is not built longer than that, so length outside the prayer is time nobody spends.
+A view is watched for a median of **16.3 minutes** across 8 measured videos. A release is not built longer than that, so length outside the prayer is time nobody spends.
 
-The night tail is the problem: `13` — 92.5% of every published minute is never watched.
+The night tail is the problem: `16` — 91% of every published minute is never watched.
 
 ### What is actually reachable
 
@@ -52,11 +53,11 @@ Written by `pipeline/realistic_ceiling.py`. Every figure below is measured or is
 
 | Lever | Hours a day |
 | :--- | ---: |
-| as it stands | 1.3 |
-| click rate to 4% | 3.8 |
-| watch time to 3 minutes and a 4% click rate | 3.8 |
+| as it stands | 1.6 |
+| click rate to 4% | 4.5 |
+| watch time to 3 minutes and a 4% click rate | 4.5 |
 
-The threshold asks 58.82 hours a day; the channels produce 1.294. With both format levers at their documented levels it would be 3.779. To reach the threshold at a 4% click rate and the measured watch time, YouTube would have to serve 6,519 impressions a day where it serves 418. Impressions are chosen by YouTube's recommendation system from how viewers respond, so that is the honest distance: it is reach, not metadata.
+The threshold asks 59.7 hours a day; the channels produce 1.558. With both format levers at their documented levels it would be 4.55. To reach the threshold at a 4% click rate and the measured watch time, YouTube would have to serve 5,497 impressions a day where it serves 418. Impressions are chosen by YouTube's recommendation system from how viewers respond, so that is the honest distance: it is reach, not metadata.
 
 ## Toward the Partner Program
 
@@ -149,7 +150,7 @@ Videos by watch time, 365 days (up to 50):
 
 #### What was started, and what was actually watched
 
-Of 4,336 plays across the 34 most-viewed videos, **1,739 were engaged views** — plays that lasted rather than started. That 40.1% is the nearest thing the Analytics API offers to YouTube Studio's "viewed vs swiped away"; Studio does not expose that figure to any API, so it is a proxy, not the number itself.
+Of 4,394 plays across the 35 most-viewed videos, **1,762 were engaged views** — plays that lasted rather than started. That 40.1% is the nearest thing the Analytics API offers to YouTube Studio's "viewed vs swiped away"; Studio does not expose that figure to any API, so it is a proxy, not the number itself.
 
 | Video | Views | Engaged | Average watched |
 | :--- | ---: | ---: | ---: |
@@ -208,14 +209,14 @@ A phrase comes from the words viewers typed into YouTube search, or from wording
 
 | Channel | Phrase | Where it came from | Now | Long prayers with / without | Views with / without | Since |
 | :--- | :--- | :--- | :--- | ---: | ---: | :--- |
-| The Morning Altar | day with god | titles of the most-watched videos of this kind | being tried | 1 / 3 | 21 / 6 | 2026-11-17 |
-| The Morning Altar | morning worship | titles of the most-watched videos of this kind | being tried | 0 / 4 | 0 / 27 | 2026-11-17 |
-| The Midday Watch | morning prayer | titles of the most-watched videos of this kind | being tried | 0 / 4 | 0 / 30 | 2026-11-17 |
-| The Midday Watch | start your day | titles of the most-watched videos of this kind | being tried | 0 / 4 | 0 / 30 | 2026-11-17 |
+| The Morning Altar | day with god | titles of the most-watched videos of this kind | being tried | 1 / 4 | 21 / 8 | 2026-11-17 |
+| The Morning Altar | morning worship | titles of the most-watched videos of this kind | being tried | 0 / 5 | 0 / 29 | 2026-11-17 |
+| The Midday Watch | morning prayer | titles of the most-watched videos of this kind | being tried | 0 / 5 | 0 / 33 | 2026-11-17 |
+| The Midday Watch | start your day | titles of the most-watched videos of this kind | being tried | 0 / 5 | 0 / 33 | 2026-11-17 |
 | The Midday Watch | blessed morning | titles of the most-watched videos of this kind | being tried | 0 / 0 | 0 / 0 | 2026-11-24 |
-| The Provision Table | financial breakthrough | titles of the most-watched videos of this kind | being tried | 0 / 4 | 0 / 21 | 2026-11-17 |
-| The Provision Table | carry this scripture | titles of the most-watched videos of this kind | being tried | 0 / 4 | 0 / 21 | 2026-11-17 |
-| The Provision Table | breakthrough comes | titles of the most-watched videos of this kind | being tried | 0 / 4 | 0 / 21 | 2026-11-17 |
+| The Provision Table | financial breakthrough | titles of the most-watched videos of this kind | being tried | 0 / 5 | 0 / 35 | 2026-11-17 |
+| The Provision Table | carry this scripture | titles of the most-watched videos of this kind | being tried | 0 / 5 | 0 / 35 | 2026-11-17 |
+| The Provision Table | breakthrough comes | titles of the most-watched videos of this kind | being tried | 0 / 5 | 0 / 35 | 2026-11-17 |
 | The Covenant Shield | holy spirit | titles of the most-watched videos of this kind | being tried | 0 / 0 | 0 / 0 | 2026-11-24 |
-| The Praise Garden | thanksgiving worship | titles of the most-watched videos of this kind | being tried | 0 / 4 | 0 / 20 | 2026-11-17 |
+| The Praise Garden | thanksgiving worship | titles of the most-watched videos of this kind | being tried | 0 / 5 | 0 / 23 | 2026-11-17 |
 | The Guided Path | prayer for peace | titles of the most-watched videos of this kind | being tried | 0 / 0 | 0 / 0 | 2026-11-24 |
