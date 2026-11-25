@@ -2,9 +2,9 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 1329,
+      "late_minutes": 1366,
       "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-21T16:50:07+00:00",
+      "ran_at": "2026-11-21T17:27:09+00:00",
       "slot": "2026-11-20T18:41:00+00:00",
       "workflow": "metrics.yml"
     },
@@ -58,8 +58,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-25T15:32:48.562145+00:00",
-  "last_run_at": "2026-11-25T15:31:59+00:00",
+  "generated_at": "2026-11-25T17:32:37.478858+00:00",
+  "last_run_at": "2026-11-25T17:31:39+00:00",
   "on_time": [
     {
       "late_minutes": 90,
@@ -97,10 +97,10 @@
       "workflow": "produce.yml"
     },
     {
-      "late_minutes": 49,
+      "late_minutes": 104,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-25T13:36:54+00:00",
-      "slot": "2026-11-25T12:47:00+00:00",
+      "ran_at": "2026-11-25T17:31:39+00:00",
+      "slot": "2026-11-25T15:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
