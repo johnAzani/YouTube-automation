@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T13:49:40Z",
+  "generated_at": "2026-11-25T13:55:06Z",
   "monitor_generated_at": "2026-11-25T08:52:23.718913+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 803,
+    "published_total": 804,
     "published_longform": 223,
-    "published_shorts": 580,
-    "public_total": 801,
+    "published_shorts": 581,
+    "public_total": 802,
     "queued_longform": 75,
-    "queued_shorts": 57,
+    "queued_shorts": 56,
     "automations_ok": 9,
     "automations_total": 15,
     "network_healthy": false
@@ -499,23 +499,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 65,
+        "published_total": 66,
         "published_longform": 18,
-        "published_shorts": 47,
-        "thumbnail_pending": 34,
-        "public_total": 65,
+        "published_shorts": 48,
+        "thumbnail_pending": 35,
+        "public_total": 66,
         "queued_longform": 6,
         "queued_other": 4,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-SHIELD2CHRONICLES20V15",
-        "title": "Pray This 2 Chronicles 20:15 Prayer for Divine Protection | The Burden You Carry #Shorts",
+        "id": "SHORT-SHIELDLUKE10V19",
+        "title": "Pray This Luke 10:19 Prayer for Divine Protection | When Unseen Threats Surround You #Shorts",
         "format": "short",
-        "youtube_video_id": "Ff3QSCE4lcM",
-        "watch_url": "https://www.youtube.com/shorts/Ff3QSCE4lcM",
+        "youtube_video_id": "7-uY9oiePCk",
+        "watch_url": "https://www.youtube.com/shorts/7-uY9oiePCk",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T09:11:18Z"
+        "published_at": "2026-11-25T13:53:59Z"
       },
       "next_queued_longform": {
         "id": "0624",
@@ -524,8 +524,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldluke10v19",
-        "scripture": "Luke 10:19",
+        "short": "short-shieldpsalm119v114",
+        "scripture": "Psalm 119:114",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDLUKE10V19",
+      "slug": "short-shieldluke10v19-protection-prayer",
+      "file": "short-shieldluke10v19-protection-prayer.md",
+      "title": "Pray This Luke 10:19 Prayer for Divine Protection | When Unseen Threats Surround You #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T13:53:59Z",
+      "youtube_video_id": "7-uY9oiePCk",
+      "watch_url": "https://www.youtube.com/shorts/7-uY9oiePCk",
+      "youtu_be_url": "https://youtu.be/7-uY9oiePCk",
+      "shorts_url": "https://www.youtube.com/shorts/7-uY9oiePCk",
+      "studio_url": "https://studio.youtube.com/video/7-uY9oiePCk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/7-uY9oiePCk/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 661
+    },
     {
       "id": "SHORT-HEALINGPSALM6V2",
       "slug": "short-healingpsalm6v2-restoration-prayer",
@@ -21107,17 +21131,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldluke10v19",
-        "file": "0000-short-shieldluke10v19.yml",
-        "companion_longform_id": "",
-        "scripture": "Luke 10:19",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm119v114",
