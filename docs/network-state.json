@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T09:02:19Z",
+  "generated_at": "2026-11-25T09:02:53Z",
   "monitor_generated_at": "2026-11-25T08:52:23.718913+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 787,
+    "published_total": 788,
     "published_longform": 220,
-    "published_shorts": 567,
-    "public_total": 785,
+    "published_shorts": 568,
+    "public_total": 786,
     "queued_longform": 70,
-    "queued_shorts": 65,
+    "queued_shorts": 63,
     "automations_ok": 9,
     "automations_total": 15,
     "network_healthy": false
@@ -232,23 +232,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 82,
+        "published_total": 83,
         "published_longform": 26,
-        "published_shorts": 56,
-        "thumbnail_pending": 81,
-        "public_total": 82,
+        "published_shorts": 57,
+        "thumbnail_pending": 82,
+        "public_total": 83,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0225",
-        "title": "An Open Door No Man Can Shut: Revelation 3:7-8 | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "-dwi1agQdyA",
-        "watch_url": "https://youtu.be/-dwi1agQdyA",
+        "id": "SHORT-MIDNIGHTMICAH7V8",
+        "title": "Pray This Micah 7:8 Midnight Prayer | Stand In Prayer #Shorts",
+        "format": "short",
+        "youtube_video_id": "19aI0Enxsgo",
+        "watch_url": "https://www.youtube.com/shorts/19aI0Enxsgo",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T00:23:19Z"
+        "published_at": "2026-11-25T09:01:57Z"
       },
       "next_queued_longform": {
         "id": "0226",
@@ -257,8 +257,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightmicah7v8",
-        "scripture": "Micah 7:8",
+        "short": "short-midnightpsalm30v5",
+        "scripture": "Psalm 30:5",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTMICAH7V8",
+      "slug": "short-midnightmicah7v8-midnight-prayer",
+      "file": "short-midnightmicah7v8-midnight-prayer.md",
+      "title": "Pray This Micah 7:8 Midnight Prayer | Stand In Prayer #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T09:01:57Z",
+      "youtube_video_id": "19aI0Enxsgo",
+      "watch_url": "https://www.youtube.com/shorts/19aI0Enxsgo",
+      "youtu_be_url": "https://youtu.be/19aI0Enxsgo",
+      "shorts_url": "https://www.youtube.com/shorts/19aI0Enxsgo",
+      "studio_url": "https://studio.youtube.com/video/19aI0Enxsgo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/19aI0Enxsgo/hqdefault.jpg",
+      "thumb_text": "THE MIDNIGHT WATCH \u00b7 MICAH 7:8 PRAYER",
+      "thumbnail_pending": true,
+      "duration_label": "48s",
+      "words": 635
+    },
     {
       "id": "SHORT-MIDDAYPSALM46V10",
       "slug": "short-middaypsalm46v10-midday-prayer",
@@ -20588,17 +20612,6 @@
         "target_window_utc": "14:14"
       },
       {
-        "short": "short-midnightmicah7v8",
-        "file": "0000-short-midnightmicah7v8.yml",
-        "companion_longform_id": "",
-        "scripture": "Micah 7:8",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
-      },
-      {
         "short": "short-midnightpsalm30v5",
         "file": "0000-short-midnightpsalm30v5.yml",
         "companion_longform_id": "",
@@ -20779,17 +20792,6 @@
         "file": "0229-short-midnighthebrews13v20.yml",
         "companion_longform_id": "0229",
         "scripture": "Hebrews 13:20-21",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-midnightgenesis32v24",
-        "file": "0232-short-midnightgenesis32v24.yml",
-        "companion_longform_id": "0232",
-        "scripture": "Genesis 32:24-28",
         "channel": "prayer4",
         "channel_name": "The Midnight Watch",
         "status": "approved",
