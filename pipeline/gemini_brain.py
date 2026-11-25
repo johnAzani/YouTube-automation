@@ -21,6 +21,7 @@ from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
+from .books import BOOK_RE
 from .script_doc import (CHARON_WORDS_PER_MINUTE, MIN_LONGFORM_WORDS,
                          MIN_NARRATION_SECONDS)
 from typing import Any, Optional
@@ -51,16 +52,9 @@ from scripts.auto_scheduler import build_schedule_audit, ScheduleAudit
 from scripts.continuous_research import SCRIPTURE_ROADMAP, roadmap_for_channel
 
 
-_BOOK_RE = re.compile(
-    r"(?i)\b((?:[123]\s+)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|"
-    r"Judges|Ruth|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalm[s]?|"
-    r"Proverbs|Ecclesiastes|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|"
-    r"Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|"
-    r"Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|"
-    r"Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|Hebrews|James|"
-    r"Peter|Jude|Revelation))"
-    r"\s+(\d+)(?::(\d+(?:[–\-]\d+(?:,\s*\d+)?)?))?"
-)
+# The book-name pattern lives in `pipeline/books.py`, which imports nothing, so a
+# reading that only needs to recognise a reference does not drag PyYAML in with it.
+_BOOK_RE = BOOK_RE
 
 
 def extract_scripture_reference(doc: ScriptDoc) -> str:
@@ -2043,8 +2037,25 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
             if key in state["covered"]:
                 continue
             if key not in state["renderable"] and not self.is_api_available():
-                break
-            state["budget"] -= 1
+                # No model, but the passage is already chosen and its text is in the
+                # repository: `pipeline/passage_short.py` writes a plain, honest spec
+                # from them rather than letting the queue run dry. Its first frame
+                # shows the need, not a citation (pipeline/first_frame.py).
+                from .passage_short import write_spec
+                state["budget"] -= 1
+                try:
+                    spec_path, spec_key = write_spec(self.channel_id, reference)
+                    print(f"[gemini-brain] {spec_key} authored from the passage "
+                          f"(no model available): {spec_path.name}", flush=True)
+                except Exception as exc:  # noqa: BLE001
+                    failures += 1
+                    rows.append({"file": f"{STANDALONE_PREFIX}-{key}.yml", "key": key,
+                                 "verdict": "failed",
+                                 "reason": f"spec for {reference} could not be generated: "
+                                           f"{str(exc)[:120]}"})
+                    continue
+            else:
+                state["budget"] -= 1
             mpath, mkey = self.generate_standalone_short(reference, source=source)
             if mpath is None:
                 failures += 1

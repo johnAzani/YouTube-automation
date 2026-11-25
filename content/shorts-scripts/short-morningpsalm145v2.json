@@ -1,0 +1,256 @@
+{
+  "key": "short-morningpsalm145v2",
+  "channel": "prayer2",
+  "psalm": 145,
+  "title": [
+    "PSALM 145:2 PRAYER",
+    "A SHORT PRAYER"
+  ],
+  "poster": [
+    "PSALM 145:2 PRAYER",
+    "PSALM 145:2",
+    "EVERY DAY",
+    "A SHORT PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "Pray with us again tomorrow"
+  ],
+  "stock_queries": [
+    "soft golden sunrise over misty valley calm",
+    "sun rays through pine trees dawn mist peaceful",
+    "quiet lake reflection first light of morning",
+    "warm sunrise horizon over calm hills",
+    "dew on grass in early morning light close up",
+    "sunlight breaking through morning fog on a ridge",
+    "calm sky with pink and gold clouds at dawn"
+  ],
+  "scenes": [
+    {
+      "a": "Before this hour fills with its own noise, stop and turn your heart to God.",
+      "img": "short-morningpsalm145v2-scene-01.jpg",
+      "kicker": "BEFORE THE DAY BEGINS",
+      "sub": "EVERY DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    {
+      "a": "Your word says it plainly: Every day will I bless thee; and I will praise thy name for ever and ever.",
+      "img": "short-morningpsalm145v2-scene-02.jpg",
+      "kicker": "PSALM 145:2",
+      "sub": "EVERY DAY WILL I BLESS THEE; AND",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Your word says it plainly: Every day will I bless thee; and I will praise thy name for ever and ever.",
+      "img": "short-morningpsalm145v2-scene-03.jpg",
+      "kicker": "PLAINLY",
+      "sub": "YOUR WORD SAYS IT PLAINLY: EVERY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "So we ask for what this verse promises. Let it be true of us today, not only read.",
+      "img": "short-morningpsalm145v2-scene-04.jpg",
+      "kicker": "PROMISES",
+      "sub": "SO WE ASK FOR WHAT THIS VERSE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Where our own strength runs out, stand in for us. Where our thoughts wander, call them home.",
+      "img": "short-morningpsalm145v2-scene-05.jpg",
+      "kicker": "STRENGTH",
+      "sub": "WHERE OUR OWN STRENGTH RUNS OUT",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We are not asking for an easier day, but for Your presence through this one.",
+      "img": "short-morningpsalm145v2-scene-06.jpg",
+      "kicker": "PRESENCE",
+      "sub": "WE ARE NOT ASKING FOR AN EASIER",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Keep us steady, and let what we have read shape what we do next.",
+      "img": "short-morningpsalm145v2-scene-07.jpg",
+      "kicker": "STEADY",
+      "sub": "KEEP US STEADY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "Before this hour fills with its own noise, stop and turn your heart to God."
+    ],
+    [
+      7,
+      15,
+      "Your word says it plainly: Every day will I bless thee; and I will praise thy name for ever and ever."
+    ],
+    [
+      15,
+      22,
+      "So we ask for what this verse promises. Let it be true of us today, not only read."
+    ],
+    [
+      22,
+      29,
+      "Where our own strength runs out, stand in for us. Where our thoughts wander, call them home."
+    ],
+    [
+      29,
+      35,
+      "We are not asking for an easier day, but for Your presence through this one."
+    ],
+    [
+      35,
+      40,
+      "Keep us steady, and let what we have read shape what we do next."
+    ],
+    [
+      40,
+      45,
+      "Get up and carry His words with you."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "BEFORE THIS HOUR FILLS",
+        "WITH ITS OWN NOISE",
+        "STOP AND TURN YOUR",
+        "HEART TO GOD"
+      ],
+      [
+        "BEFORE",
+        "FILLS",
+        "NOISE"
+      ],
+      "PSALM 145:2"
+    ],
+    [
+      7,
+      15,
+      [
+        "YOUR WORD SAYS IT",
+        "PLAINLY EVERY DAY WILL",
+        "I BLESS THEE AND I",
+        "WILL PRAISE THY NAME"
+      ],
+      [
+        "PLAINLY",
+        "PRAISE",
+        "BLESS"
+      ],
+      "PSALM 145:2"
+    ],
+    [
+      15,
+      22,
+      [
+        "SO WE ASK FOR WHAT",
+        "THIS VERSE PROMISES",
+        "LET IT BE TRUE OF US",
+        "TODAY NOT ONLY READ"
+      ],
+      [
+        "PROMISES",
+        "TODAY",
+        "VERSE"
+      ],
+      "PSALM 145:2"
+    ],
+    [
+      22,
+      29,
+      [
+        "WHERE OUR OWN STRENGTH",
+        "RUNS OUT STAND IN FOR",
+        "US WHERE OUR THOUGHTS",
+        "WANDER CALL THEM HOME"
+      ],
+      [
+        "STRENGTH",
+        "THOUGHTS",
+        "WANDER"
+      ],
+      "PSALM 145:2"
+    ],
+    [
+      29,
+      35,
+      [
+        "WE ARE NOT ASKING FOR",
+        "AN EASIER DAY BUT FOR",
+        "YOUR PRESENCE THROUGH",
+        "THIS ONE"
+      ],
+      [
+        "PRESENCE",
+        "THROUGH",
+        "ASKING"
+      ],
+      "PSALM 145:2"
+    ],
+    [
+      35,
+      40,
+      [
+        "KEEP US STEADY AND LET",
+        "WHAT WE HAVE READ",
+        "SHAPE WHAT WE DO NEXT"
+      ],
+      [
+        "STEADY",
+        "SHAPE"
+      ],
+      "PSALM 145:2"
+    ],
+    [
+      40,
+      45,
+      [
+        "GET UP AND CARRY HIS",
+        "WORDS WITH YOU"
+      ],
+      [
+        "CARRY",
+        "WORDS"
+      ],
+      "PSALM 145:2"
+    ]
+  ],
+  "beats": [],
+  "scripture": "Psalm 145:2",
+  "authored_by": "passage-template"
+}

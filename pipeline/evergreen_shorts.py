@@ -56,6 +56,15 @@ EVERGREEN: dict[str, tuple[str, ...]] = {
         "Psalm 51:10", "Isaiah 43:18-19", "Psalm 37:4", "Matthew 5:14-16",
         "2 Corinthians 5:17", "Deuteronomy 31:8", "Psalm 46:5", "Psalm 90:14",
         "Psalm 113:3", "Psalm 16:8", "Psalm 138:8",
+        # Added 25 November 2026: all fifteen above were used and the nightly pass had
+        # no passage left, so this channel's Shorts queue reached zero. These seven are
+        # what remained unclaimed anywhere on the network - and they are now on this
+        # channel's roadmap too (0965-0972), so the pool refills rather than empties.
+        "Psalm 19:14", "Psalm 108:1-3", "Psalm 145:2", "Isaiah 50:4",
+        "Psalm 116:1-2", "Psalm 5:1-3", "Psalm 86:3",
+        # Added the same day, for the same reason: the first seven refill the pool but
+        # not for long at five Shorts a day.
+        "Lamentations 3:23", "Psalm 77:11", "Psalm 71:15", "Psalm 149:5-6", "Luke 4:42",
     ),
     # The Midday Watch: the middle of the working day, strength running low.
     "prayer3": (
@@ -130,22 +139,14 @@ LOW_POOL = 8
 
 
 def reference_parts(reference: str) -> tuple[str, int, int | None] | None:
-    """``"Psalm 91:4-7"`` -> ``("psalm", 91, 4)``; ``"Psalm 23"`` -> ``("psalm", 23, None)``.
+    """``(book, chapter, first verse)`` for a reference, or ``None``.
 
-    The book is lower-cased with its number kept (``"1 corinthians"``), "Psalms"
-    reads as "Psalm", and only the first verse of a range is kept: two Shorts
-    that begin at the same verse are the same Short to a listener.
+    Delegates to `pipeline/books.py`, which imports nothing: this runs in the daily
+    reading, where no package is installed.
     """
-    from .gemini_brain import _BOOK_RE
+    from .books import split_reference
 
-    match = _BOOK_RE.search(str(reference or "").replace("–", "-"))
-    if not match:
-        return None
-    book = re.sub(r"\s+", " ", match.group(1)).strip().lower()
-    if book == "psalms":
-        book = "psalm"
-    verse = re.match(r"\d+", match.group(3) or "")
-    return book, int(match.group(2)), int(verse.group(0)) if verse else None
+    return split_reference(reference)
 
 
 def same_passage(a: tuple[str, int, int | None] | None,
@@ -167,12 +168,14 @@ def used_references(channel_id: str, *, spec_dir: Path | None = None,
     Short has no spec file, and a spec written before the ``scripture`` field
     existed names only its psalm.
     """
-    import yaml
-
     from .channels import normalize_channel_id
-    from .config import PUBLISHED_DIR
-    from .short_release import SHORTS_QUEUE_DIR
+    from .config import CONTENT_DIR, PUBLISHED_DIR
     from .short_script import SPEC_DIR
+
+    # The queue directory, spelled out here rather than imported from
+    # `short_release`: that module needs PyYAML, and this reader must work in the
+    # daily growth run, which installs nothing.
+    SHORTS_QUEUE_DIR = CONTENT_DIR / "shorts-queue"
 
     wanted = normalize_channel_id(channel_id)
     found: set[tuple[str, int, int | None]] = set()
@@ -194,12 +197,19 @@ def used_references(channel_id: str, *, spec_dir: Path | None = None,
         elif isinstance(data.get("psalm"), int):
             note(f"Psalm {data['psalm']}")
     for path in sorted(Path(queue_dir or SHORTS_QUEUE_DIR).glob("*.yml")):
+        # Read the two fields this needs rather than parsing the file: the daily
+        # growth run installs no packages, and this list feeds a reading there.
+        text = ""
         try:
-            data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-        except (OSError, yaml.YAMLError):
+            text = path.read_text(encoding="utf-8", errors="replace")
+        except OSError:
             continue
-        if normalize_channel_id(data.get("channel")) == wanted:
-            note(str(data.get("scripture") or ""))
+        owner = re.search(r"^channel:\s*(\S+)", text, re.M)
+        if normalize_channel_id(owner.group(1) if owner else None) != wanted:
+            continue
+        scripture = re.search(r"^scripture:\s*['\"]?(.+?)['\"]?\s*$", text, re.M)
+        if scripture:
+            note(scripture.group(1))
     for path in sorted(Path(published_dir or PUBLISHED_DIR).glob("short-*.md")):
         try:
             text = path.read_text(encoding="utf-8")

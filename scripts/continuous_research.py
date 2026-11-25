@@ -4126,6 +4126,52 @@ MORNING_ALTAR_ROADMAP += [
     _planned("0917", "Luke 1:78-79", "The Dayspring From on High Hath Visited Us", "DAYSPRING MERCY",
              "Verses 78-79 (Exposition)", "Receiving the tender mercy of God as light on the day's path",
              "Tier 2 (Tender Mercy)"),
+    # Added 25 November 2026. The Morning Altar had 7 unqueued scriptures left where
+    # scripts/roadmap_headroom.py keeps 15, and its standalone Short pool had nothing
+    # left at all, so its queue held zero ready Shorts. These are the passages still
+    # free across every roadmap, every evergreen list and this channel's own specs -
+    # the network's supply of unclaimed scripture is nearly spent, which is why they
+    # serve as both roadmap rows and Short candidates.
+    _planned("0973", "Psalm 19:14", "Let the Words of My Mouth Be Acceptable", "WORDS OF MY MOUTH",
+             "Verse 14 (Exposition)", "Offering the first words of the day, and the thoughts behind them",
+             "Tier 1 (Morning Offering)"),
+    _planned("0974", "Psalm 73:24", "Thou Shalt Guide Me with Thy Counsel", "GUIDED, THEN GLORY",
+             "Verse 24 (Exposition)", "Being guided through the day by God's counsel, and received afterwards",
+             "Tier 2 (Guidance That Ends in Glory)"),
+    _planned("0975", "Psalm 71:15", "My Mouth Shall Shew Forth Thy Righteousness", "STILL SOMETHING TO SAY",
+             "Verse 15 (Exposition)", "Finding that the day's praise outlasts the day's trouble",
+             "Tier 2 (Praise That Outlasts)"),
+    _planned("0976", "Psalm 145:2", "Every Day Will I Bless Thee", "EVERY DAY",
+             "Verse 2 (Exposition)", "Blessing God daily rather than only on the days that went well",
+             "Tier 1 (Daily Praise)"),
+    _planned("0977", "Psalm 116:1-2", "Because He Hath Inclined His Ear unto Me", "HE BOWED TO LISTEN",
+             "Verses 1-2 (Exposition)", "Praying because God has already turned to listen, all the days of your life",
+             "Tier 2 (The God Who Listens)"),
+    _planned("0978", "Psalm 63:6", "When I Remember Thee upon My Bed", "ON MY BED I REMEMBER",
+             "Verse 6 (Exposition)", "Remembering God in the night watches, and rising with Him still in mind",
+             "Tier 2 (Remembering in the Night)"),
+    _planned("0979", "Psalm 86:3", "Be Merciful unto Me, O Lord", "MERCIFUL UNTO ME",
+             "Verse 3 (Exposition)", "Asking for mercy for the whole of a day that has only just begun",
+             "Tier 1 (Morning Mercy)"),
+    _planned("0980", "Psalm 130:6", "My Soul Waiteth for the Lord More Than They That Watch for the Morning",
+             "MORE THAN WATCHERS", "Verse 6 (Exposition)",
+             "Waiting for God with the certainty of people who know the morning is coming",
+             "Tier 2 (Waiting for the Morning)"),
+    _planned("0981", "Lamentations 3:23", "Great Is Thy Faithfulness", "NEW EVERY MORNING",
+             "Verse 23 (Exposition)", "Waking to mercies that were made new before the alarm went off",
+             "Tier 1 (Mercies New Every Morning)"),
+    _planned("0982", "Psalm 77:11", "I Will Remember the Works of the Lord", "I REMEMBER",
+             "Verse 11 (Exposition)", "Reaching for what God has already done when the morning feels empty",
+             "Tier 2 (Remembering)"),
+    _planned("0983", "Psalm 90:14", "Satisfy Us Early with Thy Mercy", "SATISFIED AT DAYBREAK",
+             "Verse 14 (Exposition)", "Asking for mercy to fill the morning before the day asks anything of you",
+             "Tier 2 (Mercy at Daybreak)"),
+    _planned("0984", "Psalm 149:5-6", "Let the Saints Be Joyful in Glory", "JOYFUL IN GLORY",
+             "Verses 5-6 (Exposition)", "Beginning the day with praise already on the tongue",
+             "Tier 1 (Praise Before the Day)"),
+    _planned("0985", "Luke 4:42", "He Went into a Desert Place, and the People Sought Him", "A DESERT PLACE",
+             "Verse 42 (Exposition)", "Finding the quiet place before the day's demands find you",
+             "Tier 2 (The Quiet Place First)"),
 ]
 
 MIDDAY_WATCH_ROADMAP += [
