@@ -1,0 +1,337 @@
+{
+  "key": "short-midnightisaiah26v3",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "PERFECT PEACE AT MIDNIGHT",
+    "ISAIAH 26:3-4 PRAYER"
+  ],
+  "poster": [
+    "PERFECT PEACE",
+    "STAYED ON THEE",
+    "EVERLASTING STRENGTH",
+    "THE MIDNIGHT WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette starry sky dark valley",
+    "calm dark mountain lake night reflection stars",
+    "ancient stone watchtower starry night quiet sanctuary",
+    "glowing lantern in dark room window night sky",
+    "deep blue night sky starry firmament quiet horizon",
+    "silhouette of lone tree under starry midnight sky"
+  ],
+  "scenes": [
+    {
+      "a": "Your spinning thoughts refuse to rest tonight.",
+      "img": "short-midnightisaiah26v3-scene-01.jpg",
+      "kicker": "RESTLESS MINDS",
+      "sub": "WHEN THOUGHTS REFUSE TO REST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee.",
+      "img": "short-midnightisaiah26v3-scene-02.jpg",
+      "kicker": "PERFECT PEACE",
+      "sub": "ISAIAH 26:3",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Trust ye in the LORD for ever: for in the LORD JEHOVAH is everlasting strength.",
+      "img": "short-midnightisaiah26v3-scene-03.jpg",
+      "kicker": "EVERLASTING STRENGTH",
+      "sub": "ISAIAH 26:4",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, anchor every anxious heart listening in the calm of this hour.",
+      "img": "short-midnightisaiah26v3-scene-04.jpg",
+      "kicker": "ANCHOR THE HEART",
+      "sub": "MIDNIGHT PETITION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Steadfast God, guard our minds against fear and fill us with Your quiet assurance.",
+      "img": "short-midnightisaiah26v3-scene-05.jpg",
+      "kicker": "GUARD OUR MINDS",
+      "sub": "STANDING IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Amen. When spinning thoughts refuse to rest.",
+      "img": "short-midnightisaiah26v3-scene-06.jpg",
+      "kicker": "STAYED ON HIM",
+      "sub": "THE MIDNIGHT WATCH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your spinning thoughts refuse to rest tonight."
+    ],
+    [
+      3,
+      7,
+      "As the midnight hour deepens, your mind wrestles with what lies ahead."
+    ],
+    [
+      7,
+      10,
+      "Turn your focus back to God, for His Word promises:"
+    ],
+    [
+      10,
+      18,
+      "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee."
+    ],
+    [
+      18,
+      24,
+      "Trust ye in the LORD for ever: for in the LORD JEHOVAH is everlasting strength."
+    ],
+    [
+      24,
+      28,
+      "Lord, anchor every anxious heart listening in the calm of this hour."
+    ],
+    [
+      28,
+      33,
+      "We surrender every heavy outcome and rest upon Your everlasting strength tonight."
+    ],
+    [
+      33,
+      38,
+      "Steadfast God, guard our minds against fear and fill us with Your quiet assurance."
+    ],
+    [
+      38,
+      42,
+      "Amen. When spinning thoughts refuse to rest."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR SPINNING THOUGHTS",
+        "REFUSE TO REST TONIGHT"
+      ],
+      [
+        "REST"
+      ],
+      "ISAIAH 26:3-4"
+    ],
+    [
+      3,
+      7,
+      [
+        "AS MIDNIGHT DEEPENS",
+        "YOUR MIND WRESTLES WITH TOMORROW"
+      ],
+      [
+        "WRESTLES"
+      ],
+      "ISAIAH 26:3-4"
+    ],
+    [
+      7,
+      10,
+      [
+        "TURN YOUR FOCUS BACK TO GOD",
+        "FOR HIS WORD PROMISES"
+      ],
+      [
+        "PROMISES"
+      ],
+      "ISAIAH 26:3-4"
+    ],
+    [
+      10,
+      18,
+      [
+        "THOU WILT KEEP HIM",
+        "IN PERFECT PEACE",
+        "WHOSE MIND IS STAYED ON THEE"
+      ],
+      [
+        "PERFECT PEACE"
+      ],
+      "ISAIAH 26:3"
+    ],
+    [
+      18,
+      24,
+      [
+        "TRUST YE IN THE LORD FOREVER",
+        "FOR IN THE LORD JEHOVAH",
+        "IS EVERLASTING STRENGTH"
+      ],
+      [
+        "EVERLASTING STRENGTH"
+      ],
+      "ISAIAH 26:4"
+    ],
+    [
+      24,
+      28,
+      [
+        "LORD ANCHOR EVERY ANXIOUS HEART",
+        "IN THIS QUIET HOUR"
+      ],
+      [
+        "ANCHOR"
+      ],
+      "ISAIAH 26:3-4"
+    ],
+    [
+      28,
+      33,
+      [
+        "WE SURRENDER HEAVY OUTCOMES",
+        "AND REST UPON YOUR STRENGTH"
+      ],
+      [
+        "SURRENDER"
+      ],
+      "ISAIAH 26:3-4"
+    ],
+    [
+      33,
+      38,
+      [
+        "STEADFAST GOD GUARD OUR MINDS",
+        "FILL US WITH QUIET ASSURANCE"
+      ],
+      [
+        "ASSURANCE"
+      ],
+      "ISAIAH 26:3-4"
+    ],
+    [
+      38,
+      42,
+      [
+        "AMEN WHEN SPINNING THOUGHTS",
+        "REFUSE TO REST"
+      ],
+      [
+        "AMEN"
+      ],
+      "ISAIAH 26:3-4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your spinning thoughts refuse to rest tonight.",
+      "kind": "phrase",
+      "words": [
+        "SPINNING",
+        "THOUGHTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As the midnight hour deepens, your mind wrestles with what lies ahead.",
+      "kind": "phrase",
+      "words": [
+        "MIND",
+        "WRESTLES"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Trust ye in the LORD for ever: for in the LORD JEHOVAH is everlasting strength.",
+      "kind": "phrase",
+      "words": [
+        "EVERLASTING",
+        "STRENGTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor every anxious heart listening in the calm of this hour.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We surrender every heavy outcome and rest upon Your everlasting strength tonight.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "OUTCOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Steadfast God, guard our minds against fear and fill us with Your quiet assurance.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "ASSURANCE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. When spinning thoughts refuse to rest.",
+      "kind": "phrase",
+      "words": [
+        "SPINNING",
+        "THOUGHTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 26:3-4"
+}
