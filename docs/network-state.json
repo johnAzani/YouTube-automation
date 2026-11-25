@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T13:46:36Z",
+  "generated_at": "2026-11-25T13:49:09Z",
   "monitor_generated_at": "2026-11-25T08:52:23.718913+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 801,
+    "published_total": 802,
     "published_longform": 223,
-    "published_shorts": 578,
-    "public_total": 799,
+    "published_shorts": 579,
+    "public_total": 800,
     "queued_longform": 75,
-    "queued_shorts": 59,
+    "queued_shorts": 58,
     "automations_ok": 9,
     "automations_total": 15,
     "network_healthy": false
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 101,
+        "published_total": 102,
         "published_longform": 26,
-        "published_shorts": 75,
+        "published_shorts": 76,
         "thumbnail_pending": 7,
-        "public_total": 100,
+        "public_total": 101,
         "queued_longform": 7,
         "queued_other": 5,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "SHORT-ISAIAH50V10",
-        "title": "Say This Isaiah 50:10 Prayer Before You Sleep | When No Light Can Be Seen #Shorts",
+        "id": "SHORT-LAMENTATIONS3V22",
+        "title": "Say This Lamentations 3:22-23 Prayer Before You Sleep | When Your Mind Is Racing #Shorts",
         "format": "short",
-        "youtube_video_id": "KaFIxgIw-0Y",
-        "watch_url": "https://www.youtube.com/shorts/KaFIxgIw-0Y",
+        "youtube_video_id": "IgehSk1Rs5E",
+        "watch_url": "https://www.youtube.com/shorts/IgehSk1Rs5E",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T09:02:14Z"
+        "published_at": "2026-11-25T13:47:57Z"
       },
       "next_queued_longform": {
         "id": "0034",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-lamentations3v22",
-        "scripture": "Lamentations 3:22-23",
+        "short": "short-psalm31v7",
+        "scripture": "Psalm 31:7",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-LAMENTATIONS3V22",
+      "slug": "short-lamentations3v22-pre-sleep-prayer",
+      "file": "short-lamentations3v22-pre-sleep-prayer.md",
+      "title": "Say This Lamentations 3:22-23 Prayer Before You Sleep | When Your Mind Is Racing #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T13:47:57Z",
+      "youtube_video_id": "IgehSk1Rs5E",
+      "watch_url": "https://www.youtube.com/shorts/IgehSk1Rs5E",
+      "youtu_be_url": "https://youtu.be/IgehSk1Rs5E",
+      "shorts_url": "https://www.youtube.com/shorts/IgehSk1Rs5E",
+      "studio_url": "https://studio.youtube.com/video/IgehSk1Rs5E/edit",
+      "thumb_url": "https://i.ytimg.com/vi/IgehSk1Rs5E/hqdefault.jpg",
+      "thumb_text": "WHEN YOUR MIND IS RACING \u00b7 LAMENTATIONS 3:22-23",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 632
+    },
     {
       "id": "SHORT-MIDDAYPSALM62V5",
       "slug": "short-middaypsalm62v5-midday-prayer",
@@ -20993,17 +21017,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-lamentations3v22",
-        "file": "0000-short-lamentations3v22.yml",
-        "companion_longform_id": "",
-        "scripture": "Lamentations 3:22-23",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-midnightpsalm30v5",
