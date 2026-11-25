@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T15:12:14Z",
+  "generated_at": "2026-11-25T15:13:40Z",
   "monitor_generated_at": "2026-11-25T15:09:12.518381+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 224,
     "published_shorts": 582,
     "public_total": 804,
-    "queued_longform": 75,
+    "queued_longform": 77,
     "queued_shorts": 55,
     "automations_ok": 12,
     "automations_total": 15,
@@ -106,7 +106,7 @@
         "published_shorts": 72,
         "thumbnail_pending": 2,
         "public_total": 106,
-        "queued_longform": 20,
+        "queued_longform": 22,
         "queued_other": 0,
         "queued_shorts": 0
       },
@@ -20078,6 +20078,19 @@
         "words": 1243
       },
       {
+        "id": "0078",
+        "slug": "wisdom-before-you-begin-the-day-james-1-5",
+        "file": "0078-wisdom-before-you-begin-the-day-james-1-5.md",
+        "title": "Wisdom Before You Begin the Day: James 1:5 | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1357
+      },
+      {
         "id": "0081",
         "slug": "strength-for-the-hours-ahead-deuteronomy-33-25",
         "file": "0081-strength-for-the-hours-ahead-deuteronomy-33-25.md",
@@ -20804,6 +20817,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 896
+      },
+      {
+        "id": "0901",
+        "slug": "before-the-world-calls-your-name-psalm-63-1",
+        "file": "0901-before-the-world-calls-your-name-psalm-63-1.md",
+        "title": "Before the World Calls Your Name: Psalm 63:1 | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1303
       },
       {
         "id": "0902",
