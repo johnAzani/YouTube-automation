@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T15:09:12.518381+00:00",
+  "generated_at": "2026-11-25T15:18:41.586180+00:00",
   "healthy": false,
   "automations": [
     {
@@ -18,7 +18,7 @@
       "failures_5": 5,
       "effect": "reports and files stalls",
       "verdict": "SELF-REPORT",
-      "detail": "this is the check itself; its previous run ended failure 9.7h ago, which is its own verdict and not independent evidence",
+      "detail": "this is the check itself; its previous run ended failure 9.9h ago, which is its own verdict and not independent evidence",
       "severity": "info"
     },
     {
@@ -37,7 +37,7 @@
       "failures_5": 0,
       "effect": "writes content/analytics/ \u2014 where each channel stands",
       "verdict": "OK",
-      "detail": "last success 1.7h ago",
+      "detail": "last success 1.9h ago",
       "severity": "ok"
     },
     {
@@ -53,12 +53,12 @@
       "last_success": "2026-11-25T08:55:15+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-20T08:07:29+00:00",
-      "last_slot": "2026-11-25T07:14:00+00:00",
+      "last_slot": "2026-11-25T15:14:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "posts replies and records them in content/comments/replied.json",
       "verdict": "OK",
-      "detail": "last success 6.2h ago",
+      "detail": "last success 6.4h ago",
       "severity": "ok"
     },
     {
@@ -77,7 +77,7 @@
       "failures_5": 0,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "OK",
-      "detail": "last success 62.8h ago",
+      "detail": "last success 63.0h ago",
       "severity": "ok"
     },
     {
@@ -96,7 +96,7 @@
       "failures_5": 0,
       "effect": "writes content/queue/ or content/shorts-scripts/",
       "verdict": "OK",
-      "detail": "last success 2.3h ago",
+      "detail": "last success 2.5h ago",
       "severity": "ok"
     },
     {
@@ -115,7 +115,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 4.0h ago",
+      "detail": "last success 4.1h ago",
       "severity": "ok"
     },
     {
@@ -125,8 +125,8 @@
         "37 4 * * *"
       ],
       "last_run": "2026-11-25T15:09:07+00:00",
-      "last_conclusion": null,
-      "last_success": "2026-11-25T14:55:10+00:00",
+      "last_conclusion": "success",
+      "last_success": "2026-11-25T15:09:07+00:00",
       "runs_14d": 11,
       "last_edited": "2026-11-24T15:40:05+00:00",
       "last_slot": "2026-11-25T04:37:00+00:00",
@@ -153,7 +153,7 @@
       "failures_5": 0,
       "effect": "re-arms scheduled workflows",
       "verdict": "OK",
-      "detail": "last success 49.9h ago",
+      "detail": "last success 50.1h ago",
       "severity": "ok"
     },
     {
@@ -172,7 +172,7 @@
       "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
       "verdict": "OK",
-      "detail": "last success 9.7h ago",
+      "detail": "last success 9.9h ago",
       "severity": "ok"
     },
     {
@@ -181,7 +181,7 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-25T15:07:04+00:00",
+      "last_run": "2026-11-25T15:17:38+00:00",
       "last_conclusion": null,
       "last_success": null,
       "runs_14d": 20,
@@ -214,7 +214,7 @@
       "failures_5": 1,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
       "verdict": "OK",
-      "detail": "last success 1.5h ago",
+      "detail": "last success 1.7h ago",
       "severity": "ok"
     },
     {
@@ -233,7 +233,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 6.2h ago",
+      "detail": "last success 6.4h ago",
       "severity": "ok"
     },
     {
@@ -242,9 +242,9 @@
       "crons": [
         "47 0,3,6,9,12,15,18,21 * * *"
       ],
-      "last_run": "2026-11-25T15:08:14+00:00",
+      "last_run": "2026-11-25T15:17:38+00:00",
       "last_conclusion": "success",
-      "last_success": "2026-11-25T15:08:14+00:00",
+      "last_success": "2026-11-25T15:17:38+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-07T19:31:06+00:00",
       "last_slot": "2026-11-25T12:47:00+00:00",
@@ -271,7 +271,7 @@
       "failures_5": 5,
       "effect": "proves main still passes its own unit tests (queue and publish commits skip them)",
       "verdict": "FAILING",
-      "detail": "failed 7m ago and nothing was changed since; the next slot will fail the same way",
+      "detail": "failed 17m ago and nothing was changed since; the next slot will fail the same way",
       "severity": "blocking"
     },
     {
@@ -290,7 +290,7 @@
       "failures_5": 0,
       "effect": "writes content/research/thumbnail_campaign.json: which thumbnail concept earns the click",
       "verdict": "OK",
-      "detail": "last success 6.2h ago",
+      "detail": "last success 6.4h ago",
       "severity": "ok"
     }
   ],
@@ -302,7 +302,7 @@
     },
     {
       "outcome": "last upload (secret-place)",
-      "detail": "The Secret Place: 2026-11-25 (1h ago \u2014 short-lamentations3v22-pre-sleep-prayer.md)",
+      "detail": "The Secret Place: 2026-11-25 (2h ago \u2014 short-lamentations3v22-pre-sleep-prayer.md)",
       "severity": "ok"
     },
     {
@@ -312,22 +312,22 @@
     },
     {
       "outcome": "last upload (prayer3)",
-      "detail": "The Midday Watch: 2026-11-25 (1h ago \u2014 short-middaypsalm62v5-midday-prayer.md)",
+      "detail": "The Midday Watch: 2026-11-25 (2h ago \u2014 short-middaypsalm62v5-midday-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer4)",
-      "detail": "The Midnight Watch: 2026-11-25 (1h ago \u2014 short-midnightisaiah26v3-midnight-prayer.md)",
+      "detail": "The Midnight Watch: 2026-11-25 (2h ago \u2014 short-midnightisaiah26v3-midnight-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer5)",
-      "detail": "The Family Altar: 2026-11-25 (1h ago \u2014 short-familyhebrews11v7-household-prayer.md)",
+      "detail": "The Family Altar: 2026-11-25 (2h ago \u2014 short-familyhebrews11v7-household-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer6)",
-      "detail": "The Healing Balm: 2026-11-25 (1h ago \u2014 short-healingpsalm6v2-restoration-prayer.md)",
+      "detail": "The Healing Balm: 2026-11-25 (2h ago \u2014 short-healingpsalm6v2-restoration-prayer.md)",
       "severity": "ok"
     },
     {
@@ -362,7 +362,7 @@
     },
     {
       "outcome": "publishable runway",
-      "detail": "73 of 74 approved script(s) over the 850-word floor (83 in queue)",
+      "detail": "76 of 77 approved script(s) over the 850-word floor (86 in queue)",
       "severity": "ok"
     },
     {
