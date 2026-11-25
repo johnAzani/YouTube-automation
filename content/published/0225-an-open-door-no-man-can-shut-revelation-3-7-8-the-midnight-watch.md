@@ -2,7 +2,7 @@
 id: '0225'
 title: 'An Open Door No Man Can Shut: Revelation 3:7-8 | The Midnight Watch'
 slug: an-open-door-no-man-can-shut-revelation-3-7-8-the-midnight-watch
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -73,6 +73,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-25"
+published_at: "2026-11-25T00:23:19Z"
+youtube_video_id: "-dwi1agQdyA"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 569.64
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Rising at the Midnight Hour

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T00:18:52Z",
+  "generated_at": "2026-11-25T00:24:15Z",
   "monitor_generated_at": "2026-11-24T23:58:40.655677+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 777,
-    "published_longform": 218,
+    "published_total": 778,
+    "published_longform": 219,
     "published_shorts": 559,
-    "public_total": 775,
-    "queued_longform": 61,
+    "public_total": 776,
+    "queued_longform": 60,
     "queued_shorts": 51,
     "automations_ok": 12,
     "automations_total": 15,
@@ -222,28 +222,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 81,
-        "published_longform": 25,
+        "published_total": 82,
+        "published_longform": 26,
         "published_shorts": 56,
-        "thumbnail_pending": 80,
-        "public_total": 81,
-        "queued_longform": 6,
+        "thumbnail_pending": 81,
+        "public_total": 82,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTNEHEMIAH4V9",
-        "title": "Pray This Nehemiah 4:9 Midnight Prayer | Unseen Pressures In The Dark #Shorts",
-        "format": "short",
-        "youtube_video_id": "u2zmnTvWytw",
-        "watch_url": "https://www.youtube.com/shorts/u2zmnTvWytw",
-        "published_on": "2026-11-24",
-        "published_at": "2026-11-24T20:45:48Z"
-      },
-      "next_queued_longform": {
         "id": "0225",
         "title": "An Open Door No Man Can Shut: Revelation 3:7-8 | The Midnight Watch",
-        "words": 1480,
+        "format": "longform",
+        "youtube_video_id": "-dwi1agQdyA",
+        "watch_url": "https://youtu.be/-dwi1agQdyA",
+        "published_on": "2026-11-25",
+        "published_at": "2026-11-25T00:23:19Z"
+      },
+      "next_queued_longform": {
+        "id": "0226",
+        "title": "When Accusation Whispers in the Dark: Revelation 12:11",
+        "words": 959,
         "status": "approved"
       },
       "next_queued_short": {
@@ -686,6 +686,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0225",
+      "slug": "an-open-door-no-man-can-shut-revelation-3-7-8-the-midnight-watch",
+      "file": "0225-an-open-door-no-man-can-shut-revelation-3-7-8-the-midnight-watch.md",
+      "title": "An Open Door No Man Can Shut: Revelation 3:7-8 | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T00:23:19Z",
+      "youtube_video_id": "-dwi1agQdyA",
+      "watch_url": "https://youtu.be/-dwi1agQdyA",
+      "youtu_be_url": "https://youtu.be/-dwi1agQdyA",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/-dwi1agQdyA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/-dwi1agQdyA/hqdefault.jpg",
+      "thumb_text": "NO MAN CAN SHUT",
+      "thumbnail_pending": true,
+      "duration_label": "9m 30s",
+      "words": 1480
+    },
     {
       "id": "0622",
       "slug": "the-lord-is-your-stronghold-in-trouble-nahum-1-7",
@@ -19544,19 +19568,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1766
-      },
-      {
-        "id": "0225",
-        "slug": "an-open-door-no-man-can-shut-revelation-3-7-8-the-midnight-watch",
-        "file": "0225-an-open-door-no-man-can-shut-revelation-3-7-8-the-midnight-watch.md",
-        "title": "An Open Door No Man Can Shut: Revelation 3:7-8 | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1480
       },
       {
         "id": "0226",
