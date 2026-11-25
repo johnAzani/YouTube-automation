@@ -32,6 +32,13 @@ on:
     paths:
       - ".github/workflows/growth-score.yml"
       - "pipeline/growth_score.py"
+      # The other readings this job writes: a change to one must be able to prove
+      # itself in CI on the day, which is the whole point of running on push.
+      - "pipeline/realistic_ceiling.py"
+      - "pipeline/shorts_supply.py"
+      - "pipeline/first_frame.py"
+      - "pipeline/books.py"
+      - "pipeline/evergreen_shorts.py"
 
 permissions:
   contents: write
