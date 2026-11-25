@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T20:54:20Z",
+  "generated_at": "2026-11-25T20:58:26Z",
   "monitor_generated_at": "2026-11-25T20:47:15.345030+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 823,
+    "published_total": 824,
     "published_longform": 228,
-    "published_shorts": 595,
-    "public_total": 821,
+    "published_shorts": 596,
+    "public_total": 822,
     "queued_longform": 74,
-    "queued_shorts": 48,
+    "queued_shorts": 47,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 108,
+        "published_total": 109,
         "published_longform": 35,
-        "published_shorts": 73,
+        "published_shorts": 74,
         "thumbnail_pending": 2,
-        "public_total": 107,
+        "public_total": 108,
         "queued_longform": 22,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM108V1",
-        "title": "Say This Psalm 108:1-3 Prayer for Fresh Start at Sunrise | A Short Prayer #Shorts",
+        "id": "SHORT-MORNINGPSALM116V1",
+        "title": "Say This Psalm 116:1-2 Prayer for Fresh Start at Sunrise | A Short Prayer #Shorts",
         "format": "short",
-        "youtube_video_id": "25bzmumLf_8",
-        "watch_url": "https://www.youtube.com/shorts/25bzmumLf_8",
+        "youtube_video_id": "U7nIzLO7LVg",
+        "watch_url": "https://www.youtube.com/shorts/U7nIzLO7LVg",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T17:23:23Z"
+        "published_at": "2026-11-25T20:57:14Z"
       },
       "next_queued_longform": {
         "id": "0076",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm116v1",
-        "scripture": "Psalm 116:1-2",
+        "short": "short-morningpsalm145v2",
+        "scripture": "Psalm 145:2",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM116V1",
+      "slug": "short-morningpsalm116v1-sunrise-prayer",
+      "file": "short-morningpsalm116v1-sunrise-prayer.md",
+      "title": "Say This Psalm 116:1-2 Prayer for Fresh Start at Sunrise | A Short Prayer #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T20:57:14Z",
+      "youtube_video_id": "U7nIzLO7LVg",
+      "watch_url": "https://www.youtube.com/shorts/U7nIzLO7LVg",
+      "youtu_be_url": "https://youtu.be/U7nIzLO7LVg",
+      "shorts_url": "https://www.youtube.com/shorts/U7nIzLO7LVg",
+      "studio_url": "https://studio.youtube.com/video/U7nIzLO7LVg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/U7nIzLO7LVg/hqdefault.jpg",
+      "thumb_text": "PSALM 116:1-2 PRAYER \u00b7 PSALM 116:1-2",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 641
+    },
     {
       "id": "SHORT-MIDNIGHTPSALM42V8",
       "slug": "short-midnightpsalm42v8-midnight-prayer",
@@ -21491,17 +21515,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningpsalm116v1",
-        "file": "0000-short-morningpsalm116v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 116:1-2",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm145v2",
