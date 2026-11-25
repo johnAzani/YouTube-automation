@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T10:32:07Z",
+  "generated_at": "2026-11-25T11:29:33Z",
   "monitor_generated_at": "2026-11-25T08:52:23.718913+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 222,
     "published_shorts": 575,
     "public_total": 795,
-    "queued_longform": 69,
+    "queued_longform": 71,
     "queued_shorts": 51,
     "automations_ok": 9,
     "automations_total": 15,
@@ -106,7 +106,7 @@
         "published_shorts": 72,
         "thumbnail_pending": 2,
         "public_total": 106,
-        "queued_longform": 15,
+        "queued_longform": 17,
         "queued_other": 0,
         "queued_shorts": 0
       },
@@ -130,7 +130,7 @@
         "available": true,
         "as_of": "2026-11-25",
         "measured_longform_videos": 0,
-        "total_longform_videos": 10,
+        "total_longform_videos": 11,
         "top_themes": [
           {
             "theme": "daily_guidance_wisdom",
@@ -144,7 +144,7 @@
           },
           {
             "theme": "morning_mercy_renewal",
-            "videos": 1,
+            "videos": 2,
             "top_scripture": ""
           }
         ]
@@ -329,7 +329,7 @@
         "available": true,
         "as_of": "2026-11-25",
         "measured_longform_videos": 0,
-        "total_longform_videos": 12,
+        "total_longform_videos": 11,
         "top_themes": [
           {
             "theme": "daily_guidance_wisdom",
@@ -337,13 +337,13 @@
             "top_scripture": ""
           },
           {
-            "theme": "general_prayer",
-            "videos": 6,
+            "theme": "stillness_refuge",
+            "videos": 1,
             "top_scripture": ""
           },
           {
-            "theme": "light_courage",
-            "videos": 2,
+            "theme": "general_prayer",
+            "videos": 6,
             "top_scripture": ""
           }
         ]
@@ -410,7 +410,7 @@
             "top_scripture": ""
           },
           {
-            "theme": "midday_strength_endurance",
+            "theme": "anxiety_peace",
             "videos": 1,
             "top_scripture": ""
           }
@@ -601,11 +601,11 @@
         "available": true,
         "as_of": "2026-11-25",
         "measured_longform_videos": 0,
-        "total_longform_videos": 9,
+        "total_longform_videos": 10,
         "top_themes": [
           {
             "theme": "general_prayer",
-            "videos": 4,
+            "videos": 5,
             "top_scripture": ""
           },
           {
@@ -20606,7 +20606,7 @@
         "id": "0905",
         "slug": "when-you-need-direction-for-today-psalm-143-10",
         "file": "0905-when-you-need-direction-for-today-psalm-143-10.md",
-        "title": "When You Need Direction for Today: Psalm 143:10 | The Morning Altar",
+        "title": "When You Need Your Path Made Clear: Psalm 143:10 | The Morning Altar",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
@@ -20718,6 +20718,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1169
+      },
+      {
+        "id": "0914",
+        "slug": "when-you-need-gods-hand-upon-your-day-1-chronicles-4-10",
+        "file": "0914-when-you-need-gods-hand-upon-your-day-1-chronicles-4-10.md",
+        "title": "When You Need God's Hand Upon Your Day: 1 Chronicles 4:10",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1357
+      },
+      {
+        "id": "0915",
+        "slug": "redeeming-the-time-today-ephesians-5-14-16",
+        "file": "0915-redeeming-the-time-today-ephesians-5-14-16.md",
+        "title": "Redeeming the Time Today: Ephesians 5:14-16 | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1598
       }
     ],
     "shorts": [
