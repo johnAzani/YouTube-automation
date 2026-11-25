@@ -327,6 +327,12 @@
     "code_id": "d8c0039f327d9b5c",
     "result": "dispatched"
   },
+  "comments.yml@2026-11-25T19:14:00+00:00": {
+    "at": "2026-11-25T20:47:46.836666+00:00",
+    "attempts": 1,
+    "code_id": "6c0ecbb221def4c5",
+    "result": "dispatched"
+  },
   "community.yml@2026-11-04T19:14:00+00:00": {
     "at": "2026-11-04T21:22:34.480686+00:00",
     "attempts": 3,
@@ -360,6 +366,12 @@
     "at": "2026-11-22T21:13:02.863561+00:00",
     "attempts": 1,
     "code_id": "28279ccf0b309c18",
+    "result": "dispatched"
+  },
+  "community.yml@2026-11-25T19:14:00+00:00": {
+    "at": "2026-11-25T20:47:46.836666+00:00",
+    "attempts": 1,
+    "code_id": "2086ca24e9d63f5f",
     "result": "dispatched"
   },
   "gemini_brain.yml@2026-11-02T03:14:00+00:00": {
@@ -1546,6 +1558,17 @@
     "attempts": 1,
     "code_id": "1d9130a5e4522d5a",
     "result": "dispatched secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer8, prayer9, prayer10"
+  },
+  "produce.yml@2026-11-25T19:14:00+00:00": {
+    "at": "2026-11-25T20:47:46.836666+00:00",
+    "attempted_channels": [
+      "prayer2",
+      "prayer4",
+      "prayer8"
+    ],
+    "attempts": 1,
+    "code_id": "c5bf71bdd592e75d",
+    "result": "dispatched prayer2, prayer4, prayer8"
   },
   "reporting-jobs.yml@2026-11-15T05:47:00+00:00": {
     "at": "2026-11-15T09:26:59.051436+00:00",
