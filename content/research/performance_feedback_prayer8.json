@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-24T12:31:42.617349+00:00",
-  "as_of": "2026-11-24",
+  "generated_at": "2026-11-25T05:33:04.608924+00:00",
+  "as_of": "2026-11-25",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 11,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 60,
+    "receipt_video_ids": 64,
     "matched_video_ids": 50,
     "longform_below_view_threshold": 11,
     "longform_missing_view_count": 0,
@@ -61,136 +61,135 @@
     "measured_shorts": 35,
     "total_shorts": 39,
     "sufficient_data": true,
-    "avg_views": 176.7,
-    "median_views": 182,
-    "total_views": 6186,
+    "avg_views": 152.9,
+    "median_views": 139,
+    "total_views": 5351,
     "minimum_age_days": 2,
     "by_book": {
+      "1 john": {
+        "shorts": 1,
+        "avg_views": 28.0,
+        "ratio": 0.728
+      },
       "2 kings": {
         "shorts": 1,
         "avg_views": 217.0,
-        "ratio": 1.076
+        "ratio": 1.14
       },
       "2 samuel": {
         "shorts": 1,
         "avg_views": 238.0,
-        "ratio": 1.116
+        "ratio": 1.186
       },
       "2 thessalonians": {
         "shorts": 1,
         "avg_views": 307.0,
-        "ratio": 1.246
+        "ratio": 1.336
       },
       "deuteronomy": {
         "shorts": 2,
         "avg_views": 228.5,
-        "ratio": 1.146
+        "ratio": 1.247
       },
       "ephesians": {
         "shorts": 2,
         "avg_views": 343.5,
-        "ratio": 1.472
+        "ratio": 1.623
       },
       "exodus": {
         "shorts": 1,
-        "avg_views": 323.0,
-        "ratio": 1.276
+        "avg_views": 328.0,
+        "ratio": 1.382
       },
       "isaiah": {
-        "shorts": 2,
-        "avg_views": 81.5,
-        "ratio": 0.731
+        "shorts": 3,
+        "avg_views": 62.3,
+        "ratio": 0.645
       },
       "jude": {
         "shorts": 1,
-        "avg_views": 23.0,
-        "ratio": 0.71
+        "avg_views": 24.0,
+        "ratio": 0.719
       },
       "numbers": {
         "shorts": 1,
         "avg_views": 28.0,
-        "ratio": 0.719
+        "ratio": 0.728
       },
       "proverbs": {
         "shorts": 3,
         "avg_views": 138.3,
-        "ratio": 0.87
+        "ratio": 0.943
       },
       "psalm": {
-        "shorts": 18,
-        "avg_views": 178.0,
-        "ratio": 1.006
+        "shorts": 16,
+        "avg_views": 144.5,
+        "ratio": 0.951
       },
       "romans": {
         "shorts": 1,
-        "avg_views": 37.0,
-        "ratio": 0.736
+        "avg_views": 36.0,
+        "ratio": 0.745
       },
       "zechariah": {
         "shorts": 1,
         "avg_views": 87.0,
-        "ratio": 0.831
+        "ratio": 0.856
       }
     },
     "by_theme": {
       "anxiety_peace": {
         "shorts": 1,
         "avg_views": 172.0,
-        "ratio": 0.991
+        "ratio": 1.042
       },
       "blessing_benediction": {
         "shorts": 1,
         "avg_views": 28.0,
-        "ratio": 0.719
+        "ratio": 0.728
       },
       "daily_guidance_wisdom": {
         "shorts": 3,
         "avg_views": 367.0,
-        "ratio": 1.646
+        "ratio": 1.84
       },
       "light_courage": {
         "shorts": 1,
         "avg_views": 239.0,
-        "ratio": 1.117
+        "ratio": 1.188
       },
       "midday_strength_endurance": {
-        "shorts": 1,
-        "avg_views": 182.0,
-        "ratio": 1.01
+        "shorts": 2,
+        "avg_views": 105.0,
+        "ratio": 0.843
       },
       "morning_mercy_renewal": {
         "shorts": 1,
         "avg_views": 105.0,
-        "ratio": 0.865
-      },
-      "peace_rest": {
-        "shorts": 2,
-        "avg_views": 266.5,
-        "ratio": 1.254
+        "ratio": 0.896
       },
       "protection": {
-        "shorts": 21,
-        "avg_views": 148.5,
-        "ratio": 0.854
+        "shorts": 22,
+        "avg_views": 126.8,
+        "ratio": 0.843
       },
       "stillness_refuge": {
         "shorts": 1,
         "avg_views": 237.0,
-        "ratio": 1.114
+        "ratio": 1.183
       },
       "trust_surrender": {
         "shorts": 3,
         "avg_views": 156.7,
-        "ratio": 0.932
+        "ratio": 1.015
       }
     },
     "guidance": [
-      "Shorts: Ephesians runs 1.5x this channel's average Short (177 views over 35 Shorts); its passages are written first."
+      "Shorts: Ephesians runs 1.6x this channel's average Short (153 views over 35 Shorts); its passages are written first."
     ]
   },
   "guidance": [
-    "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real.",
-    "Lesson 'holy spirit' (titles of the most-watched videos of this kind): now being tried in new long-prayer titles."
+    "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
   ],
   "cost_lock": "$0.00 \u2014 public Data API statistics only; no new quota or secret.",
   "privacy": "Aggregate theme scores only; raw per-video snapshot stays an Actions artifact.",
