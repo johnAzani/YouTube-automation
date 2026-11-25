@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T20:02:22Z",
+  "generated_at": "2026-11-25T20:04:56Z",
   "monitor_generated_at": "2026-11-25T19:38:53.897385+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 817,
+    "published_total": 818,
     "published_longform": 226,
-    "published_shorts": 591,
-    "public_total": 815,
+    "published_shorts": 592,
+    "public_total": 816,
     "queued_longform": 75,
-    "queued_shorts": 53,
+    "queued_shorts": 52,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -436,23 +436,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 76,
+        "published_total": 77,
         "published_longform": 21,
-        "published_shorts": 55,
+        "published_shorts": 56,
         "thumbnail_pending": 6,
-        "public_total": 76,
+        "public_total": 77,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0521",
-        "title": "Guidance for Your Daily Labor: Isaiah 48:17 | The Provision Table",
-        "format": "longform",
-        "youtube_video_id": "Atqnm5wE84o",
-        "watch_url": "https://youtu.be/Atqnm5wE84o",
+        "id": "SHORT-PROVISIONPSALM1V1",
+        "title": "Pray This Psalm 1:1-3 Prayer for Open Doors & Provision | Walk In The Counsel Of God #Shorts",
+        "format": "short",
+        "youtube_video_id": "89HPo6M2SaY",
+        "watch_url": "https://www.youtube.com/shorts/89HPo6M2SaY",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T14:57:02Z"
+        "published_at": "2026-11-25T20:03:57Z"
       },
       "next_queued_longform": {
         "id": "0523",
@@ -461,8 +461,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionpsalm1v1",
-        "scripture": "Psalm 1:1-3",
+        "short": "short-provisionproverbs22v29",
+        "scripture": "Proverbs 22:29",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONPSALM1V1",
+      "slug": "short-provisionpsalm1v1-stewardship-prayer",
+      "file": "short-provisionpsalm1v1-stewardship-prayer.md",
+      "title": "Pray This Psalm 1:1-3 Prayer for Open Doors & Provision | Walk In The Counsel Of God #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T20:03:57Z",
+      "youtube_video_id": "89HPo6M2SaY",
+      "watch_url": "https://www.youtube.com/shorts/89HPo6M2SaY",
+      "youtu_be_url": "https://youtu.be/89HPo6M2SaY",
+      "shorts_url": "https://www.youtube.com/shorts/89HPo6M2SaY",
+      "studio_url": "https://studio.youtube.com/video/89HPo6M2SaY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/89HPo6M2SaY/hqdefault.jpg",
+      "thumb_text": "DAILY WISDOM \u00b7 PSALM 1:1-3",
+      "thumbnail_pending": false,
+      "duration_label": "53s",
+      "words": 672
+    },
     {
       "id": "SHORT-MIDDAYPSALM73V26",
       "slug": "short-middaypsalm73v26-midday-prayer",
@@ -21635,17 +21659,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-provisionpsalm1v1",
-        "file": "0516-short-provisionpsalm1v1.yml",
-        "companion_longform_id": "0516",
-        "scripture": "Psalm 1:1-3",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionproverbs22v29",
