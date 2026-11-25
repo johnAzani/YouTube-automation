@@ -1,0 +1,382 @@
+{
+  "key": "short-garden2corinthians9v15",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "WHEN YOUR HANDS",
+    "FEEL EMPTY TODAY"
+  ],
+  "poster": [
+    "THANKS BE UNTO GOD",
+    "FOR HIS UNSPEAKABLE GIFT",
+    "2 CORINTHIANS 9:15",
+    "THE PRAISE GARDEN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "misty forest glade morning light",
+    "golden sunlight over calm meadow",
+    "peaceful forest path early morning",
+    "soft sunbeams through trees woodland",
+    "calm mirror lake sunset glow",
+    "golden hour countryside landscape",
+    "quiet misty mountain valley sunrise",
+    "peaceful river flowing gentle sunlight",
+    "soft evening light calm meadow hills"
+  ],
+  "scenes": [
+    {
+      "a": "Your hands feel empty after giving everything today.",
+      "img": "short-garden2corinthians9v15-scene-01.jpg",
+      "kicker": "EMPTY HANDS",
+      "sub": "WHEN YOU HAVE NOTHING LEFT TO GIVE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You spent your strength, your patience, and your warmth, wondering if any of it was enough.",
+      "img": "short-garden2corinthians9v15-scene-02.jpg",
+      "kicker": "SPENT STRENGTH",
+      "sub": "WONDERING IF IT WAS ENOUGH",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "The Scripture speaks into that quiet exhaustion:",
+      "img": "short-garden2corinthians9v15-scene-03.jpg",
+      "kicker": "GOD'S PROMISE",
+      "sub": "LIGHT IN THE QUIET EXHAUSTION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Thanks be unto God for his unspeakable gift.",
+      "img": "short-garden2corinthians9v15-scene-04.jpg",
+      "kicker": "UNSPEAKABLE GIFT",
+      "sub": "2 CORINTHIANS 9:15",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father, when we have nothing left to give, you bestow your greatest treasure upon us.",
+      "img": "short-garden2corinthians9v15-scene-05.jpg",
+      "kicker": "GREATEST TREASURE",
+      "sub": "HE BESTOWS HIS GRACE FREELY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "We thank you for Jesus, a gift too grand for human language to contain.",
+      "img": "short-garden2corinthians9v15-scene-06.jpg",
+      "kicker": "INFINITE GRACE",
+      "sub": "BEYOND ALL HUMAN WORDS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach us to receive your unearned grace with honest gratitude, knowing your love never drains away.",
+      "img": "short-garden2corinthians9v15-scene-07.jpg",
+      "kicker": "HONEST GRATITUDE",
+      "sub": "HIS LOVE NEVER DRAINS AWAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Keep our quiet hearts steady in your overflowing peace tonight.",
+      "img": "short-garden2corinthians9v15-scene-08.jpg",
+      "kicker": "OVERFLOWING PEACE",
+      "sub": "STEADY IN HIS PRESENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. Even when your hands feel empty.",
+      "img": "short-garden2corinthians9v15-scene-09.jpg",
+      "kicker": "HEAR US LORD",
+      "sub": "ENTER HIS GATES WITH THANKSGIVING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your hands feel empty after giving everything today."
+    ],
+    [
+      3,
+      8,
+      "You spent your strength, your patience, and your warmth, wondering if any of it was enough."
+    ],
+    [
+      8,
+      12,
+      "The Scripture speaks into that quiet exhaustion:"
+    ],
+    [
+      12,
+      16,
+      "Thanks be unto God for his unspeakable gift."
+    ],
+    [
+      16,
+      21,
+      "Father, when we have nothing left to give, you bestow your greatest treasure upon us."
+    ],
+    [
+      21,
+      26,
+      "We thank you for Jesus, a gift too grand for human language to contain."
+    ],
+    [
+      26,
+      31,
+      "Teach us to receive your unearned grace with honest gratitude, knowing your love never drains away."
+    ],
+    [
+      31,
+      35,
+      "Keep our quiet hearts steady in your overflowing peace tonight."
+    ],
+    [
+      35,
+      38,
+      "Amen. Even when your hands feel empty."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR HANDS FEEL EMPTY",
+        "AFTER GIVING EVERYTHING TODAY"
+      ],
+      [
+        "EMPTY"
+      ],
+      "2 CORINTHIANS 9:15"
+    ],
+    [
+      3,
+      8,
+      [
+        "YOU SPENT YOUR STRENGTH AND PATIENCE",
+        "WONDERING IF IT WAS ENOUGH"
+      ],
+      [
+        "ENOUGH"
+      ],
+      "2 CORINTHIANS 9:15"
+    ],
+    [
+      8,
+      12,
+      [
+        "THE SCRIPTURE SPEAKS INTO",
+        "THAT QUIET EXHAUSTION"
+      ],
+      [
+        "QUIET"
+      ],
+      "2 CORINTHIANS 9:15"
+    ],
+    [
+      12,
+      16,
+      [
+        "THANKS BE UNTO GOD",
+        "FOR HIS UNSPEAKABLE GIFT"
+      ],
+      [
+        "UNSPEAKABLE",
+        "GIFT"
+      ],
+      "2 CORINTHIANS 9:15"
+    ],
+    [
+      16,
+      21,
+      [
+        "WHEN WE HAVE NOTHING LEFT",
+        "YOU BESTOW YOUR TREASURE"
+      ],
+      [
+        "TREASURE"
+      ],
+      "2 CORINTHIANS 9:15"
+    ],
+    [
+      21,
+      26,
+      [
+        "WE THANK YOU FOR JESUS",
+        "TOO GRAND FOR WORDS TO CONTAIN"
+      ],
+      [
+        "JESUS"
+      ],
+      "2 CORINTHIANS 9:15"
+    ],
+    [
+      26,
+      31,
+      [
+        "RECEIVE YOUR UNEARNED GRACE",
+        "YOUR LOVE NEVER DRAINS AWAY"
+      ],
+      [
+        "GRACE"
+      ],
+      "2 CORINTHIANS 9:15"
+    ],
+    [
+      31,
+      35,
+      [
+        "KEEP OUR QUIET HEARTS STEADY",
+        "IN YOUR OVERFLOWING PEACE"
+      ],
+      [
+        "PEACE"
+      ],
+      "2 CORINTHIANS 9:15"
+    ],
+    [
+      35,
+      38,
+      [
+        "AMEN",
+        "EVEN WHEN YOUR HANDS FEEL EMPTY"
+      ],
+      [
+        "AMEN"
+      ],
+      "2 CORINTHIANS 9:15"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your hands feel empty after giving everything today.",
+      "kind": "phrase",
+      "words": [
+        "EMPTY",
+        "EVERYTHING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You spent your strength, your patience, and your warmth, wondering if any of it was enough.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "ENOUGH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Scripture speaks into that quiet exhaustion:",
+      "kind": "phrase",
+      "words": [
+        "SCRIPTURE",
+        "EXHAUSTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thanks be unto God for his unspeakable gift.",
+      "kind": "phrase",
+      "words": [
+        "THANKS",
+        "UNSPEAKABLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, when we have nothing left to give, you bestow your greatest treasure upon us.",
+      "kind": "phrase",
+      "words": [
+        "FATHER",
+        "TREASURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We thank you for Jesus, a gift too grand for human language to contain.",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "GRAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach us to receive your unearned grace with honest gratitude, knowing your love never drains away.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "GRATITUDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Keep our quiet hearts steady in your overflowing peace tonight.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Even when your hands feel empty.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "EMPTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Corinthians 9:15"
+}
