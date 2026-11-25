@@ -72,8 +72,8 @@
       "workflow": "growth-autopilot.yml"
     }
   ],
-  "generated_at": "2026-11-24T21:48:04.487280+00:00",
-  "last_run_at": "2026-11-24T21:47:15+00:00",
+  "generated_at": "2026-11-25T00:00:51.083203+00:00",
+  "last_run_at": "2026-11-25T00:00:04+00:00",
   "on_time": [
     {
       "late_minutes": 90,
@@ -97,10 +97,10 @@
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 84,
+      "late_minutes": 14,
       "name": "Produce video",
-      "ran_at": "2026-11-24T20:38:05+00:00",
-      "slot": "2026-11-24T19:14:00+00:00",
+      "ran_at": "2026-11-24T23:28:45+00:00",
+      "slot": "2026-11-24T23:14:00+00:00",
       "workflow": "produce.yml"
     },
     {
