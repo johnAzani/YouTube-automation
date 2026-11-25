@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T23:08:48Z",
+  "generated_at": "2026-11-25T23:55:44Z",
   "monitor_generated_at": "2026-11-25T23:07:25.395195+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 825,
+    "published_total": 826,
     "published_longform": 228,
-    "published_shorts": 597,
-    "public_total": 823,
+    "published_shorts": 598,
+    "public_total": 824,
     "queued_longform": 74,
-    "queued_shorts": 46,
+    "queued_shorts": 45,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 104,
+        "published_total": 105,
         "published_longform": 27,
-        "published_shorts": 77,
+        "published_shorts": 78,
         "thumbnail_pending": 7,
-        "public_total": 103,
+        "public_total": 104,
         "queued_longform": 7,
         "queued_other": 5,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "0034",
-        "title": "Psalm 91 Night Prayer for Protection While You Sleep (Full KJV)",
-        "format": "longform",
-        "youtube_video_id": "n9-rm8KCtEk",
-        "watch_url": "https://youtu.be/n9-rm8KCtEk",
+        "id": "SHORT-PSALM139V18",
+        "title": "Say This Psalm 139:18 Prayer Before You Sleep | A Short Prayer #Shorts",
+        "format": "short",
+        "youtube_video_id": "VaJ9KMCvn6E",
+        "watch_url": "https://www.youtube.com/shorts/VaJ9KMCvn6E",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T20:44:29Z"
+        "published_at": "2026-11-25T23:54:45Z"
       },
       "next_queued_longform": {
         "id": "0035",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm139v18",
-        "scripture": "Psalm 139:18",
+        "short": "short-psalm63v7",
+        "scripture": "Psalm 63:7",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM139V18",
+      "slug": "short-psalm139v18-pre-sleep-prayer",
+      "file": "short-psalm139v18-pre-sleep-prayer.md",
+      "title": "Say This Psalm 139:18 Prayer Before You Sleep | A Short Prayer #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T23:54:45Z",
+      "youtube_video_id": "VaJ9KMCvn6E",
+      "watch_url": "https://www.youtube.com/shorts/VaJ9KMCvn6E",
+      "youtu_be_url": "https://youtu.be/VaJ9KMCvn6E",
+      "shorts_url": "https://www.youtube.com/shorts/VaJ9KMCvn6E",
+      "studio_url": "https://studio.youtube.com/video/VaJ9KMCvn6E/edit",
+      "thumb_url": "https://i.ytimg.com/vi/VaJ9KMCvn6E/hqdefault.jpg",
+      "thumb_text": "PSALM 139:18 PRAYER \u00b7 PSALM 139:18",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 650
+    },
     {
       "id": "SHORT-SHIELDPROVERBS30V5",
       "slug": "short-shieldproverbs30v5-protection-prayer",
@@ -21572,17 +21596,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-psalm139v18",
-        "file": "0000-short-psalm139v18.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 139:18",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm63v7",
