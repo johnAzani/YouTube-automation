@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-25T05:28:41.776749+00:00",
+  "generated_at": "2026-11-25T11:15:32.272628+00:00",
   "as_of": "2026-11-25",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 9,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 89,
+    "receipt_video_ids": 90,
     "matched_video_ids": 49,
     "longform_below_view_threshold": 9,
     "longform_missing_view_count": 0,
@@ -34,68 +34,68 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 35,
+    "measured_shorts": 34,
     "total_shorts": 40,
     "sufficient_data": true,
-    "avg_views": 33.3,
+    "avg_views": 31.7,
     "median_views": 5,
-    "total_views": 1165,
+    "total_views": 1077,
     "minimum_age_days": 2,
     "by_book": {
       "1 corinthians": {
         "shorts": 1,
         "avg_views": 6.0,
-        "ratio": 0.727
+        "ratio": 0.73
       },
       "1 kings": {
         "shorts": 1,
         "avg_views": 2.0,
-        "ratio": 0.687
+        "ratio": 0.688
       },
       "1 peter": {
         "shorts": 1,
         "avg_views": 2.0,
-        "ratio": 0.687
+        "ratio": 0.688
       },
       "1 thessalonians": {
         "shorts": 1,
         "avg_views": 3.0,
-        "ratio": 0.697
+        "ratio": 0.698
       },
       "2 chronicles": {
         "shorts": 1,
         "avg_views": 5.0,
-        "ratio": 0.717
+        "ratio": 0.719
       },
       "2 corinthians": {
         "shorts": 2,
         "avg_views": 39.0,
-        "ratio": 1.086
+        "ratio": 1.116
       },
       "colossians": {
         "shorts": 2,
         "avg_views": 96.5,
-        "ratio": 1.95
+        "ratio": 2.023
       },
       "ecclesiastes": {
         "shorts": 1,
         "avg_views": 2.0,
-        "ratio": 0.687
+        "ratio": 0.688
       },
       "galatians": {
         "shorts": 1,
         "avg_views": 92.0,
-        "ratio": 1.588
+        "ratio": 1.635
       },
       "habakkuk": {
         "shorts": 1,
         "avg_views": 3.0,
-        "ratio": 0.697
+        "ratio": 0.698
       },
       "hebrews": {
         "shorts": 2,
         "avg_views": 1.5,
-        "ratio": 0.523
+        "ratio": 0.524
       },
       "isaiah": {
         "shorts": 1,
@@ -110,17 +110,17 @@
       "jeremiah": {
         "shorts": 1,
         "avg_views": 12.0,
-        "ratio": 0.787
+        "ratio": 0.793
       },
       "john": {
         "shorts": 2,
         "avg_views": 6.0,
-        "ratio": 0.59
+        "ratio": 0.595
       },
       "joshua": {
         "shorts": 1,
         "avg_views": 3.0,
-        "ratio": 0.697
+        "ratio": 0.698
       },
       "mark": {
         "shorts": 1,
@@ -140,58 +140,53 @@
       "proverbs": {
         "shorts": 1,
         "avg_views": 55.0,
-        "ratio": 1.217
+        "ratio": 1.245
       },
       "psalm": {
         "shorts": 10,
-        "avg_views": 60.2,
-        "ratio": 1.674
-      },
-      "romans": {
-        "shorts": 1,
-        "avg_views": 89.0,
-        "ratio": 1.558
+        "avg_views": 60.3,
+        "ratio": 1.753
       }
     },
     "by_theme": {
       "anxiety_peace": {
         "shorts": 2,
         "avg_views": 1.0,
-        "ratio": 0.515
+        "ratio": 0.516
       },
       "daily_guidance_wisdom": {
-        "shorts": 6,
-        "avg_views": 83.0,
-        "ratio": 2.12
+        "shorts": 5,
+        "avg_views": 81.8,
+        "ratio": 2.13
       },
       "light_courage": {
         "shorts": 1,
         "avg_views": 48.0,
-        "ratio": 1.147
+        "ratio": 1.172
       },
       "midday_strength_endurance": {
         "shorts": 20,
-        "avg_views": 17.2,
-        "ratio": 0.562
+        "avg_views": 17.3,
+        "ratio": 0.587
       },
       "peace_rest": {
         "shorts": 1,
         "avg_views": 76.0,
-        "ratio": 1.428
+        "ratio": 1.466
       },
       "protection": {
         "shorts": 2,
         "avg_views": 34.0,
-        "ratio": 1.011
+        "ratio": 1.037
       },
       "stillness_refuge": {
         "shorts": 3,
         "avg_views": 42.7,
-        "ratio": 1.169
+        "ratio": 1.208
       }
     },
     "guidance": [
-      "Shorts: Colossians runs 1.9x this channel's average Short (33 views over 35 Shorts); its passages are written first."
+      "Shorts: Colossians runs 2.0x this channel's average Short (32 views over 34 Shorts); its passages are written first."
     ]
   },
   "guidance": [
