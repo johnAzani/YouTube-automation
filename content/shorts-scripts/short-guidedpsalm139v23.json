@@ -1,0 +1,363 @@
+{
+  "key": "short-guidedpsalm139v23",
+  "channel": "prayer10",
+  "psalm": 139,
+  "title": [
+    "SEARCH MY HEART",
+    "A PRAYER FOR HONESTY"
+  ],
+  "poster": [
+    "SEARCH MY HEART",
+    "A PRAYER FOR GOD'S",
+    "DISCERNMENT AND",
+    "EVERLASTING PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley at dawn calm river",
+    "calm mountain lake reflection early morning",
+    "quiet pine forest path sunlight streaming fog",
+    "peaceful river flowing through canyon mountain sunset",
+    "misty mountain ridge early morning soft sunlight",
+    "placid alpine lake tranquil morning reflection mountains",
+    "serene mountain landscape golden hour valley river"
+  ],
+  "scenes": [
+    {
+      "a": "That motive you keep second-guessing is heavy.",
+      "img": "short-guidedpsalm139v23-scene-01.jpg",
+      "kicker": "HIDDEN MOTIVES",
+      "sub": "EXAMINE YOUR HEART TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Search me, O God, and know my heart:",
+      "img": "short-guidedpsalm139v23-scene-02.jpg",
+      "kicker": "SEARCH ME O GOD",
+      "sub": "ASK FOR HIS DISCERNMENT",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "And see if there be any wicked way in me,",
+      "img": "short-guidedpsalm139v23-scene-03.jpg",
+      "kicker": "EVERLASTING PATH",
+      "sub": "GOD LEADS THE FAITHFUL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, search the motives we try to hide",
+      "img": "short-guidedpsalm139v23-scene-04.jpg",
+      "kicker": "LAY DOWN PRIDE",
+      "sub": "BRING YOUR RESTLESSNESS TO GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Expose every hidden self-deception",
+      "img": "short-guidedpsalm139v23-scene-05.jpg",
+      "kicker": "CLEAR THE DECEPTION",
+      "sub": "SEEK GODS PURE WISDOM",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Lead our footsteps into the way everlasting,",
+      "img": "short-guidedpsalm139v23-scene-06.jpg",
+      "kicker": "GUIDED FOOTSTEPS",
+      "sub": "STEP BY QUIET STEP",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "That motive you second-guessed belongs in His hands.",
+      "img": "short-guidedpsalm139v23-scene-07.jpg",
+      "kicker": "IN HIS HANDS",
+      "sub": "LEAVE YOUR ANXIETY WITH HIM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That motive you keep second-guessing is heavy."
+    ],
+    [
+      3,
+      7,
+      "Psalm 139:23-24 tells us:"
+    ],
+    [
+      7,
+      14,
+      "Search me, O God, and know my heart: try me, and know my thoughts:"
+    ],
+    [
+      14,
+      21,
+      "And see if there be any wicked way in me, and lead me in the way everlasting."
+    ],
+    [
+      21,
+      26,
+      "Lord, search the motives we try to hide even from ourselves."
+    ],
+    [
+      26,
+      31,
+      "We want our choices to honor You, not our own pride."
+    ],
+    [
+      31,
+      36,
+      "Expose every hidden self-deception in this heart today."
+    ],
+    [
+      36,
+      42,
+      "Cleanse our restless thoughts and align our desires with Your wisdom."
+    ],
+    [
+      42,
+      48,
+      "Lead our footsteps into the way everlasting, step by quiet step."
+    ],
+    [
+      48,
+      52,
+      "Amen. That motive you second-guessed belongs in His hands."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT MOTIVE YOU KEEP",
+        "SECOND-GUESSING IS HEAVY."
+      ],
+      [
+        "HEAVY"
+      ],
+      "PSALM 139:23-24"
+    ],
+    [
+      3,
+      7,
+      [
+        "PSALM 139:23-24",
+        "TELLS US:"
+      ],
+      [
+        "TELLS"
+      ],
+      "PSALM 139:23-24"
+    ],
+    [
+      7,
+      14,
+      [
+        "SEARCH ME, O GOD,",
+        "AND KNOW MY HEART:",
+        "TRY ME, AND KNOW MY THOUGHTS:"
+      ],
+      [
+        "SEARCH",
+        "HEART"
+      ],
+      "PSALM 139:23"
+    ],
+    [
+      14,
+      21,
+      [
+        "AND SEE IF THERE BE",
+        "ANY WICKED WAY IN ME,",
+        "AND LEAD ME IN THE WAY EVERLASTING."
+      ],
+      [
+        "EVERLASTING"
+      ],
+      "PSALM 139:24"
+    ],
+    [
+      21,
+      26,
+      [
+        "LORD, SEARCH THE MOTIVES",
+        "WE TRY TO HIDE EVEN FROM OURSELVES."
+      ],
+      [
+        "SEARCH",
+        "MOTIVES"
+      ],
+      "PSALM 139:23-24"
+    ],
+    [
+      26,
+      31,
+      [
+        "WE WANT OUR CHOICES TO HONOR YOU,",
+        "NOT OUR OWN PRIDE."
+      ],
+      [
+        "HONOR",
+        "PRIDE"
+      ],
+      "PSALM 139:23-24"
+    ],
+    [
+      31,
+      36,
+      [
+        "EXPOSE EVERY HIDDEN",
+        "SELF-DECEPTION IN THIS HEART TODAY."
+      ],
+      [
+        "EXPOSE",
+        "HEART"
+      ],
+      "PSALM 139:23-24"
+    ],
+    [
+      36,
+      42,
+      [
+        "CLEANSE OUR RESTLESS THOUGHTS",
+        "AND ALIGN OUR DESIRES WITH YOUR WISDOM."
+      ],
+      [
+        "CLEANSE",
+        "WISDOM"
+      ],
+      "PSALM 139:23-24"
+    ],
+    [
+      42,
+      48,
+      [
+        "LEAD OUR FOOTSTEPS INTO",
+        "THE WAY EVERLASTING, STEP BY QUIET STEP."
+      ],
+      [
+        "LEAD",
+        "EVERLASTING"
+      ],
+      "PSALM 139:24"
+    ],
+    [
+      48,
+      52,
+      [
+        "AMEN. THAT MOTIVE YOU",
+        "SECOND-GUESSED BELONGS IN HIS HANDS."
+      ],
+      [
+        "BELONGS",
+        "HANDS"
+      ],
+      "PSALM 139:23-24"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That motive you keep second-guessing is heavy.",
+      "kind": "phrase",
+      "words": [
+        "SECOND-GUESSING",
+        "HEAVY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Search me, O God, and know my heart:",
+      "kind": "phrase",
+      "words": [
+        "SEARCH",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And see if there be any wicked way in me, and lead me in the way everlasting.",
+      "kind": "phrase",
+      "words": [
+        "LEAD",
+        "EVERLASTING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, search the motives we try to hide even from ourselves.",
+      "kind": "phrase",
+      "words": [
+        "MOTIVES",
+        "HIDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Expose every hidden self-deception in this heart today.",
+      "kind": "phrase",
+      "words": [
+        "EXPOSE",
+        "SELF-DECEPTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Cleanse our restless thoughts and align our desires with Your wisdom.",
+      "kind": "phrase",
+      "words": [
+        "DESIRES",
+        "WISDOM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. That motive you second-guessed belongs in His hands.",
+      "kind": "phrase",
+      "words": [
+        "BELONGS",
+        "HANDS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 139:23-24"
+}

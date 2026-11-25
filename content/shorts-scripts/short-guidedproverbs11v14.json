@@ -1,0 +1,348 @@
+{
+  "key": "short-guidedproverbs11v14",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "WHEN FACING A HARD CHOICE",
+    "SEEK GODLY COUNSEL"
+  ],
+  "poster": [
+    "DO NOT MAKE THIS",
+    "DECISION ALONE",
+    "PROVERBS 11:14",
+    "THE GUIDED PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain pass early morning quiet guidance",
+    "peaceful alpine lake calm water landscape",
+    "foggy valley pine forest morning sunbeams",
+    "calm mountain river flowing through valley",
+    "scenic mountain ridge early light mist",
+    "tranquil valley morning light alpine meadow",
+    "serene mountain lake sunset quiet water"
+  ],
+  "scenes": [
+    {
+      "a": "Trying to make this heavy choice completely alone?",
+      "img": "short-guidedproverbs11v14-scene-01.jpg",
+      "kicker": "DECISION ALONE",
+      "sub": "WEIGHING EVERY NEXT STEP",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "weighing every outcome without trusted guidance.",
+      "img": "short-guidedproverbs11v14-scene-02.jpg",
+      "kicker": "SILENT BURDEN",
+      "sub": "SEEKING CLEAR DIRECTION",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear the wisdom of Proverbs eleven verse fourteen:",
+      "img": "short-guidedproverbs11v14-scene-03.jpg",
+      "kicker": "GODLY WISDOM",
+      "sub": "PROVERBS ELEVEN FOURTEEN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Where no counsel is, the people fall: but in the multitude of counselors there is safety.",
+      "img": "short-guidedproverbs11v14-scene-04.jpg",
+      "kicker": "MULTITUDE OF COUNSEL",
+      "sub": "THERE IS SAFETY IN GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "we risk stumbling in our own blind spots.",
+      "img": "short-guidedproverbs11v14-scene-05.jpg",
+      "kicker": "AVOID ISOLATION",
+      "sub": "GUARD AGAINST BLIND SPOTS",
+      "cam": "pull_out",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "to seek wise and godly counsel before we move forward.",
+      "img": "short-guidedproverbs11v14-scene-06.jpg",
+      "kicker": "SEEK WISE COUNSEL",
+      "sub": "WALK IN QUIET HUMILITY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Guide this heavy choice completely today.",
+      "img": "short-guidedproverbs11v14-scene-07.jpg",
+      "kicker": "SAFE GROUND",
+      "sub": "GUIDE OUR STEPS TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Trying to make this heavy choice completely alone?"
+    ],
+    [
+      3,
+      8,
+      "You carry the silent burden of your next step, weighing every outcome without trusted guidance."
+    ],
+    [
+      8,
+      13,
+      "Hear the wisdom of Proverbs eleven verse fourteen:"
+    ],
+    [
+      13,
+      21,
+      "Where no counsel is, the people fall: but in the multitude of counselors there is safety."
+    ],
+    [
+      21,
+      28,
+      "Heavenly Father, when we try to navigate hard choices in isolation, we risk stumbling in our own blind spots."
+    ],
+    [
+      28,
+      34,
+      "Give us the quiet humility to seek wise and godly counsel before we move forward."
+    ],
+    [
+      34,
+      40,
+      "Surround us with faithful believers who offer truth, and protect our steps from pride."
+    ],
+    [
+      40,
+      45,
+      "Amen. Guide this heavy choice completely today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "TRYING TO MAKE",
+        "THIS HEAVY CHOICE",
+        "COMPLETELY ALONE?"
+      ],
+      [
+        "HEAVY",
+        "CHOICE"
+      ],
+      "PROVERBS 11 : 14"
+    ],
+    [
+      3,
+      8,
+      [
+        "YOU CARRY THE",
+        "SILENT BURDEN OF YOUR",
+        "NEXT STEP WEIGHING EVERY",
+        "OUTCOME WITHOUT GUIDANCE"
+      ],
+      [
+        "SILENT",
+        "BURDEN"
+      ],
+      "PROVERBS 11 : 14"
+    ],
+    [
+      8,
+      13,
+      [
+        "HEAR THE WISDOM",
+        "OF PROVERBS ELEVEN",
+        "VERSE FOURTEEN"
+      ],
+      [
+        "WISDOM"
+      ],
+      "PROVERBS 11 : 14"
+    ],
+    [
+      13,
+      21,
+      [
+        "WHERE NO COUNSEL IS",
+        "THE PEOPLE FALL",
+        "BUT IN THE MULTITUDE",
+        "OF COUNSELORS THERE IS SAFETY"
+      ],
+      [
+        "COUNSEL",
+        "SAFETY"
+      ],
+      "PROVERBS 11 : 14"
+    ],
+    [
+      21,
+      28,
+      [
+        "HEAVENLY FATHER WHEN WE",
+        "NAVIGATE HARD CHOICES IN ISOLATION",
+        "WE RISK STUMBLING IN",
+        "OUR OWN BLIND SPOTS"
+      ],
+      [
+        "ISOLATION",
+        "BLIND",
+        "SPOTS"
+      ],
+      "PROVERBS 11 : 14"
+    ],
+    [
+      28,
+      34,
+      [
+        "GIVE US THE QUIET HUMILITY",
+        "TO SEEK WISE AND GODLY",
+        "COUNSEL BEFORE WE MOVE FORWARD"
+      ],
+      [
+        "HUMILITY",
+        "WISE",
+        "COUNSEL"
+      ],
+      "PROVERBS 11 : 14"
+    ],
+    [
+      34,
+      40,
+      [
+        "SURROUND US WITH FAITHFUL",
+        "BELIEVERS WHO OFFER TRUTH",
+        "AND PROTECT OUR STEPS"
+      ],
+      [
+        "FAITHFUL",
+        "TRUTH"
+      ],
+      "PROVERBS 11 : 14"
+    ],
+    [
+      40,
+      45,
+      [
+        "AMEN GUIDE THIS HEAVY",
+        "CHOICE COMPLETELY TODAY"
+      ],
+      [
+        "AMEN",
+        "GUIDE"
+      ],
+      "PROVERBS 11 : 14"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Trying to make this heavy choice completely alone?",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "CHOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "weighing every outcome without trusted guidance.",
+      "kind": "phrase",
+      "words": [
+        "SILENT",
+        "BURDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the wisdom of Proverbs eleven verse fourteen:",
+      "kind": "phrase",
+      "words": [
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Where no counsel is, the people fall: but in the multitude of counselors there is safety.",
+      "kind": "phrase",
+      "words": [
+        "COUNSEL",
+        "SAFETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "we risk stumbling in our own blind spots.",
+      "kind": "phrase",
+      "words": [
+        "BLIND",
+        "SPOTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "to seek wise and godly counsel before we move forward.",
+      "kind": "phrase",
+      "words": [
+        "WISE",
+        "COUNSEL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and protect our steps from pride.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guide this heavy choice completely today.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "GUIDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 11:14"
+}

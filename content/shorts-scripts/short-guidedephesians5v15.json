@@ -1,0 +1,280 @@
+{
+  "key": "short-guidedephesians5v15",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "WALK WISELY",
+    "IN BUSY DAYS"
+  ],
+  "poster": [
+    "SEEK GOD'S WILL",
+    "REDEEM THE TIME",
+    "EPHESIANS 5:15-17",
+    "THE GUIDED PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain path early morning foggy trees peaceful",
+    "quiet alpine valley morning light serene calm river",
+    "peaceful forest path morning sunbeams pine trees",
+    "calm mountain lake reflection morning fog serene",
+    "misty valley river morning light golden hour landscape",
+    "quiet mountain pass early dawn calm sky landscape"
+  ],
+  "scenes": [
+    {
+      "a": "That crowded calendar is pressing on your mind.",
+      "img": "short-guidedephesians5v15-scene-01.jpg",
+      "kicker": "CROWDED CALENDAR",
+      "sub": "PRESSING ON YOUR MIND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "See then that ye walk circumspectly, not as fools, but as wise,",
+      "img": "short-guidedephesians5v15-scene-02.jpg",
+      "kicker": "WALK CIRCUMSPECTLY",
+      "sub": "NOT AS FOOLS BUT AS WISE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Redeeming the time, because the days are evil.",
+      "img": "short-guidedephesians5v15-scene-03.jpg",
+      "kicker": "REDEEM THE TIME",
+      "sub": "BECAUSE THE DAYS ARE EVIL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Wherefore be ye not unwise, but understanding what the will of the Lord is.",
+      "img": "short-guidedephesians5v15-scene-04.jpg",
+      "kicker": "GOD'S WILL",
+      "sub": "UNDERSTANDING HIS WILL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, teach me to walk thoughtfully through this busy day. Give me clear discernment to choose what truly matters and the courage to quiet every distraction.",
+      "img": "short-guidedephesians5v15-scene-05.jpg",
+      "kicker": "CLEAR DISCERNMENT",
+      "sub": "QUIET EVERY DISTRACTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Order my steps, guard my hours, and grant me wisdom to know Your will in each decision. In Jesus' name, Amen. That crowded calendar is pressing on your mind.",
+      "img": "short-guidedephesians5v15-scene-06.jpg",
+      "kicker": "GRANT WISDOM",
+      "sub": "IN EACH DECISION AHEAD",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That crowded calendar is pressing on your mind."
+    ],
+    [
+      3,
+      10,
+      "See then that ye walk circumspectly, not as fools, but as wise,"
+    ],
+    [
+      10,
+      16,
+      "Redeeming the time, because the days are evil."
+    ],
+    [
+      16,
+      23,
+      "Wherefore be ye not unwise, but understanding what the will of the Lord is."
+    ],
+    [
+      23,
+      33,
+      "Lord, teach me to walk thoughtfully through this busy day. Give me clear discernment to choose what truly matters and the courage to quiet every distraction."
+    ],
+    [
+      33,
+      42,
+      "Order my steps, guard my hours, and grant me wisdom to know Your will in each decision. In Jesus' name, Amen. That crowded calendar is pressing on your mind."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT CROWDED CALENDAR",
+        "IS PRESSING ON",
+        "YOUR MIND"
+      ],
+      [
+        "CROWDED",
+        "MIND"
+      ],
+      "EPHESIANS 5:15-17"
+    ],
+    [
+      3,
+      10,
+      [
+        "SEE THEN THAT YE",
+        "WALK CIRCUMSPECTLY",
+        "NOT AS FOOLS",
+        "BUT AS WISE"
+      ],
+      [
+        "CIRCUMSPECTLY",
+        "WISE"
+      ],
+      "EPHESIANS 5:15-17"
+    ],
+    [
+      10,
+      16,
+      [
+        "REDEEMING THE TIME",
+        "BECAUSE THE DAYS",
+        "ARE EVIL"
+      ],
+      [
+        "REDEEMING",
+        "TIME"
+      ],
+      "EPHESIANS 5:15-17"
+    ],
+    [
+      16,
+      23,
+      [
+        "WHEREFORE BE YE",
+        "NOT UNWISE BUT",
+        "UNDERSTANDING WHAT THE",
+        "WILL OF THE LORD IS"
+      ],
+      [
+        "UNDERSTANDING",
+        "WILL"
+      ],
+      "EPHESIANS 5:15-17"
+    ],
+    [
+      23,
+      33,
+      [
+        "LORD TEACH ME TO",
+        "WALK THOUGHTFULLY",
+        "GIVE ME CLEAR",
+        "DISCERNMENT TODAY"
+      ],
+      [
+        "THOUGHTFULLY",
+        "DISCERNMENT"
+      ],
+      "EPHESIANS 5:15-17"
+    ],
+    [
+      33,
+      42,
+      [
+        "ORDER MY STEPS",
+        "GRANT ME WISDOM",
+        "IN JESUS NAME AMEN",
+        "THAT CROWDED CALENDAR"
+      ],
+      [
+        "WISDOM",
+        "AMEN"
+      ],
+      "EPHESIANS 5:15-17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That crowded calendar is pressing on your mind.",
+      "kind": "phrase",
+      "words": [
+        "CROWDED",
+        "CALENDAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "See then that ye walk circumspectly, not as fools, but as wise,",
+      "kind": "phrase",
+      "words": [
+        "WALK",
+        "CIRCUMSPECTLY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Redeeming the time, because the days are evil.",
+      "kind": "phrase",
+      "words": [
+        "REDEEMING",
+        "TIME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Wherefore be ye not unwise, but understanding what the will of the Lord is.",
+      "kind": "phrase",
+      "words": [
+        "UNDERSTANDING",
+        "WILL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, teach me to walk thoughtfully through this busy day. Give me clear discernment to choose what truly matters and the courage to quiet every distraction.",
+      "kind": "phrase",
+      "words": [
+        "CLEAR",
+        "DISCERNMENT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Order my steps, guard my hours, and grant me wisdom to know Your will in each decision. In Jesus' name, Amen. That crowded calendar is pressing on your mind.",
+      "kind": "phrase",
+      "words": [
+        "GRANT",
+        "WISDOM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ephesians 5:15-17"
+}
