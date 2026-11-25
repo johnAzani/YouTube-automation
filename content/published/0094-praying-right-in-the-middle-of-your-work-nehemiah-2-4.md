@@ -1,6 +1,6 @@
 ---
 id: 0094
-title: 'Praying Right in the Middle of Your Work: Nehemiah 2:4'
+title: "Strength for an Unfinished Afternoon: Nehemiah 2:4 | The Midday Watch"
 slug: praying-right-in-the-middle-of-your-work-nehemiah-2-4
 status: published
 channel: prayer3
@@ -78,11 +78,14 @@ originality:
 published_on: "2026-11-18"
 published_at: "2026-11-18T17:06:30Z"
 youtube_video_id: "En2HZKRkFbg"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 top_comment: "ok"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Praying Right in the Middle of Your Work: Nehemiah 2:4"
+retitled_at: "2026-11-25"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Sudden Question at Midday
