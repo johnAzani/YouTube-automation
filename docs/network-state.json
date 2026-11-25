@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T23:55:44Z",
+  "generated_at": "2026-11-25T23:56:47Z",
   "monitor_generated_at": "2026-11-25T23:07:25.395195+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 826,
+    "published_total": 827,
     "published_longform": 228,
-    "published_shorts": 598,
-    "public_total": 824,
+    "published_shorts": 599,
+    "public_total": 825,
     "queued_longform": 74,
-    "queued_shorts": 45,
+    "queued_shorts": 44,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": true
@@ -300,23 +300,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 75,
+        "published_total": 76,
         "published_longform": 22,
-        "published_shorts": 53,
-        "thumbnail_pending": 75,
-        "public_total": 75,
+        "published_shorts": 54,
+        "thumbnail_pending": 76,
+        "public_total": 76,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-FAMILYJOSHUA4V6",
-        "title": "Pray This Joshua 4:6-7 Family Prayer Over Your Home | Teaching Your Children #Shorts",
+        "id": "SHORT-FAMILYROMANS15V13",
+        "title": "Pray This Romans 15:13 Family Prayer Over Your Home | Weariness Sits Beside You #Shorts",
         "format": "short",
-        "youtube_video_id": "OpihS8rEdSs",
-        "watch_url": "https://www.youtube.com/shorts/OpihS8rEdSs",
+        "youtube_video_id": "fPcGNaf97AA",
+        "watch_url": "https://www.youtube.com/shorts/fPcGNaf97AA",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T20:00:25Z"
+        "published_at": "2026-11-25T23:55:46Z"
       },
       "next_queued_longform": {
         "id": "0323",
@@ -325,8 +325,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyromans15v13",
-        "scripture": "Romans 15:13",
+        "short": "short-familypsalm144v12",
+        "scripture": "Psalm 144:12-15",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYROMANS15V13",
+      "slug": "short-familyromans15v13-household-prayer",
+      "file": "short-familyromans15v13-household-prayer.md",
+      "title": "Pray This Romans 15:13 Family Prayer Over Your Home | Weariness Sits Beside You #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T23:55:46Z",
+      "youtube_video_id": "fPcGNaf97AA",
+      "watch_url": "https://www.youtube.com/shorts/fPcGNaf97AA",
+      "youtu_be_url": "https://youtu.be/fPcGNaf97AA",
+      "shorts_url": "https://www.youtube.com/shorts/fPcGNaf97AA",
+      "studio_url": "https://studio.youtube.com/video/fPcGNaf97AA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/fPcGNaf97AA/hqdefault.jpg",
+      "thumb_text": "ROMANS 15:13 \u00b7 FILL YOUR HOME WITH",
+      "thumbnail_pending": true,
+      "duration_label": "53s",
+      "words": 672
+    },
     {
       "id": "SHORT-PSALM139V18",
       "slug": "short-psalm139v18-pre-sleep-prayer",
@@ -21487,17 +21511,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-familyromans15v13",
-        "file": "0000-short-familyromans15v13.yml",
-        "companion_longform_id": "",
-        "scripture": "Romans 15:13",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
       {
         "short": "short-gardenpsalm96v1",
         "file": "0000-short-gardenpsalm96v1.yml",
