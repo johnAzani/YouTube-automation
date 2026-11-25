@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T20:27:31Z",
+  "generated_at": "2026-11-25T20:45:50Z",
   "monitor_generated_at": "2026-11-25T19:38:53.897385+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 821,
-    "published_longform": 227,
+    "published_total": 822,
+    "published_longform": 228,
     "published_shorts": 594,
-    "public_total": 819,
-    "queued_longform": 75,
+    "public_total": 820,
+    "queued_longform": 74,
     "queued_shorts": 49,
     "automations_ok": 14,
     "automations_total": 15,
@@ -33,28 +33,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 103,
-        "published_longform": 26,
+        "published_total": 104,
+        "published_longform": 27,
         "published_shorts": 77,
         "thumbnail_pending": 7,
-        "public_total": 102,
-        "queued_longform": 8,
+        "public_total": 103,
+        "queued_longform": 7,
         "queued_other": 5,
         "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-PSALM31V7",
-        "title": "Say This Psalm 31:7 Prayer Before You Sleep | God Sees Your Heart Tonight #Shorts",
-        "format": "short",
-        "youtube_video_id": "sQd_79r-0bM",
-        "watch_url": "https://www.youtube.com/shorts/sQd_79r-0bM",
-        "published_on": "2026-11-25",
-        "published_at": "2026-11-25T17:30:02Z"
-      },
-      "next_queued_longform": {
         "id": "0034",
         "title": "Psalm 91 Night Prayer for Protection While You Sleep (Full KJV)",
-        "words": 975,
+        "format": "longform",
+        "youtube_video_id": "n9-rm8KCtEk",
+        "watch_url": "https://youtu.be/n9-rm8KCtEk",
+        "published_on": "2026-11-25",
+        "published_at": "2026-11-25T20:44:29Z"
+      },
+      "next_queued_longform": {
+        "id": "0035",
+        "title": "Psalm 23 Night Prayer to Fall Asleep in Peace (Full KJV)",
+        "words": 1025,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0034",
+      "slug": "psalm-91-complete-night-prayer-of-divine-protection",
+      "file": "0034-psalm-91-complete-night-prayer-of-divine-protection.md",
+      "title": "Psalm 91 Night Prayer for Protection While You Sleep (Full KJV)",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T20:44:29Z",
+      "youtube_video_id": "n9-rm8KCtEk",
+      "watch_url": "https://youtu.be/n9-rm8KCtEk",
+      "youtu_be_url": "https://youtu.be/n9-rm8KCtEk",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/n9-rm8KCtEk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/n9-rm8KCtEk/hqdefault.jpg",
+      "thumb_text": "ABIDE IN HIM",
+      "thumbnail_pending": false,
+      "duration_label": "7m 09s",
+      "words": 975
+    },
     {
       "id": "0426",
       "slug": "tears-heard-and-answered-by-the-lord-2-kings-20-5",
@@ -20403,19 +20427,6 @@
   ],
   "queues": {
     "longform": [
-      {
-        "id": "0034",
-        "slug": "psalm-91-complete-night-prayer-of-divine-protection",
-        "file": "0034-psalm-91-complete-night-prayer-of-divine-protection.md",
-        "title": "Psalm 91 Night Prayer for Protection While You Sleep (Full KJV)",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 7,
-        "words": 975
-      },
       {
         "id": "0035",
         "slug": "psalm-23-complete-night-prayer-restore-my-soul",

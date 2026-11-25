@@ -2,7 +2,7 @@
 id: '0034'
 title: "Psalm 91 Night Prayer for Protection While You Sleep (Full KJV)"
 slug: psalm-91-complete-night-prayer-of-divine-protection
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -93,6 +93,16 @@ originality:
   ai_disclosure: false
 seo_hook: Pray all 16 verses of Psalm 91 (KJV) before sleep to abide in the secret place of the Most High under God's wings and angelic guard.
 category_id: '22'
+published_on: "2026-11-25"
+published_at: "2026-11-25T20:44:29Z"
+youtube_video_id: "n9-rm8KCtEk"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 428.9
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — Entering the Secret Place (Verses 1–2)
