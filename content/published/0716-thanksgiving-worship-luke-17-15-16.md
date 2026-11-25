@@ -2,7 +2,7 @@
 id: '0716'
 title: 'Thanksgiving Worship When You Have Received His Mercy: Luke 17:15-16'
 slug: thanksgiving-worship-luke-17-15-16
-status: approved
+status: published
 channel: prayer9
 privacy: public
 format: longform
@@ -71,6 +71,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-25"
+published_at: "2026-11-25T10:30:50Z"
+youtube_video_id: "3tobdBrHGYc"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 654.68
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Entering His Gates With Thanksgiving

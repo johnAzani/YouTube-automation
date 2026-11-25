@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T09:56:41Z",
+  "generated_at": "2026-11-25T10:32:07Z",
   "monitor_generated_at": "2026-11-25T08:52:23.718913+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 795,
-    "published_longform": 221,
-    "published_shorts": 574,
-    "public_total": 793,
-    "queued_longform": 70,
-    "queued_shorts": 52,
+    "published_total": 797,
+    "published_longform": 222,
+    "published_shorts": 575,
+    "public_total": 795,
+    "queued_longform": 69,
+    "queued_shorts": 51,
     "automations_ok": 9,
     "automations_total": 15,
     "network_healthy": false
@@ -567,33 +567,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 65,
-        "published_longform": 15,
-        "published_shorts": 50,
-        "thumbnail_pending": 65,
-        "public_total": 65,
-        "queued_longform": 6,
+        "published_total": 67,
+        "published_longform": 16,
+        "published_shorts": 51,
+        "thumbnail_pending": 67,
+        "public_total": 67,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM95V1",
-        "title": "Pray This Psalm 95:1-2 Prayer of Thanksgiving | KJV Worship #Shorts",
-        "format": "short",
-        "youtube_video_id": "JYacVr7yTME",
-        "watch_url": "https://www.youtube.com/shorts/JYacVr7yTME",
-        "published_on": "2026-11-25",
-        "published_at": "2026-11-25T00:42:09Z"
-      },
-      "next_queued_longform": {
         "id": "0716",
         "title": "Thanksgiving Worship When You Have Received His Mercy: Luke 17:15-16",
-        "words": 1710,
+        "format": "longform",
+        "youtube_video_id": "3tobdBrHGYc",
+        "watch_url": "https://youtu.be/3tobdBrHGYc",
+        "published_on": "2026-11-25",
+        "published_at": "2026-11-25T10:30:50Z"
+      },
+      "next_queued_longform": {
+        "id": "0717",
+        "title": "Thanksgiving Worship When Mourning Turns to Joy: Psalm 30:11-12",
+        "words": 1465,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-garden2corinthians9v15",
-        "scripture": "2 Corinthians 9:15",
+        "short": "short-gardenpsalm118v24",
+        "scripture": "Psalm 118:24",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -692,6 +692,30 @@
   ],
   "videos": [
     {
+      "id": "0716",
+      "slug": "thanksgiving-worship-luke-17-15-16",
+      "file": "0716-thanksgiving-worship-luke-17-15-16.md",
+      "title": "Thanksgiving Worship When You Have Received His Mercy: Luke 17:15-16",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T10:30:50Z",
+      "youtube_video_id": "3tobdBrHGYc",
+      "watch_url": "https://youtu.be/3tobdBrHGYc",
+      "youtu_be_url": "https://youtu.be/3tobdBrHGYc",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/3tobdBrHGYc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/3tobdBrHGYc/hqdefault.jpg",
+      "thumb_text": "TURNED BACK",
+      "thumbnail_pending": true,
+      "duration_label": "10m 55s",
+      "words": 1710
+    },
+    {
       "id": "0080",
       "slug": "when-you-need-joy-to-meet-the-day-psalm-65-8-the-morning-altar",
       "file": "0080-when-you-need-joy-to-meet-the-day-psalm-65-8-the-morning-altar.md",
@@ -738,6 +762,30 @@
       "thumbnail_pending": false,
       "duration_label": "53s",
       "words": 648
+    },
+    {
+      "id": "SHORT-GARDEN2CORINTHIANS9V15",
+      "slug": "short-garden2corinthians9v15-thanksgiving-prayer",
+      "file": "short-garden2corinthians9v15-thanksgiving-prayer.md",
+      "title": "Pray This 2 Corinthians 9:15 Prayer of Thanksgiving | Wondering If It Was Enough #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T09:12:34Z",
+      "youtube_video_id": "E3mJ8ybGP6g",
+      "watch_url": "https://www.youtube.com/shorts/E3mJ8ybGP6g",
+      "youtu_be_url": "https://youtu.be/E3mJ8ybGP6g",
+      "shorts_url": "https://www.youtube.com/shorts/E3mJ8ybGP6g",
+      "studio_url": "https://studio.youtube.com/video/E3mJ8ybGP6g/edit",
+      "thumb_url": "https://i.ytimg.com/vi/E3mJ8ybGP6g/hqdefault.jpg",
+      "thumb_text": "THANKS BE UNTO GOD \u00b7 FOR HIS UNSPEAKABLE GIFT",
+      "thumbnail_pending": true,
+      "duration_label": "54s",
+      "words": 643
     },
     {
       "id": "SHORT-SHIELD2CHRONICLES20V15",
@@ -20360,19 +20408,6 @@
         "words": 1411
       },
       {
-        "id": "0716",
-        "slug": "thanksgiving-worship-luke-17-15-16",
-        "file": "0716-thanksgiving-worship-luke-17-15-16.md",
-        "title": "Thanksgiving Worship When You Have Received His Mercy: Luke 17:15-16",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1710
-      },
-      {
         "id": "0717",
         "slug": "thanksgiving-worship-when-mourning-turns-to-joy-psalm-30-11-12",
         "file": "0717-thanksgiving-worship-when-mourning-turns-to-joy-psalm-30-11-12.md",
@@ -20707,17 +20742,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-garden2corinthians9v15",
-        "file": "0000-short-garden2corinthians9v15.yml",
-        "companion_longform_id": "",
-        "scripture": "2 Corinthians 9:15",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-guidedphilippians1v9",
