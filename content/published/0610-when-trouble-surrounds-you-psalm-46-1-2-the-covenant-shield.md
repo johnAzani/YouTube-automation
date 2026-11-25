@@ -1,6 +1,6 @@
 ---
 id: '0610'
-title: 'When Trouble Surrounds You: Psalm 46:1-2 | The Covenant Shield'
+title: "When the Ground Feels Shaking: Psalm 46:1-2 | The Covenant Shield"
 slug: when-trouble-surrounds-you-psalm-46-1-2-the-covenant-shield
 status: published
 channel: prayer8
@@ -81,13 +81,16 @@ originality:
 published_on: "2026-11-18"
 published_at: "2026-11-18T02:25:14Z"
 youtube_video_id: "-klHB-q9h7Y"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 top_comment: "ok"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "When Trouble Surrounds You: Psalm 46:1-2 | The Covenant Shield"
+retitled_at: "2026-11-25"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Running Into the Strong Tower of the LORD
