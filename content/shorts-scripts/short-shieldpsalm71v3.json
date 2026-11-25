@@ -1,0 +1,389 @@
+{
+  "key": "short-shieldpsalm71v3",
+  "channel": "prayer8",
+  "psalm": 71,
+  "title": [
+    "MY ROCK AND",
+    "MY FORTRESS"
+  ],
+  "poster": [
+    "WHEN FEAR TELLS YOU",
+    "NOWHERE IS SAFE",
+    "GOD IS YOUR",
+    "STRONG HABITATION"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "foggy mountain valley storm clouds calm",
+    "ancient stone tower sunset golden light",
+    "dramatic sunbeams breaking through storm clouds",
+    "massive granite mountain peak sunlit standing firm",
+    "peaceful mountain lake reflection sunset",
+    "golden sunlight shining through forest canopy",
+    "calm river flowing through mountain gorge",
+    "ancient stone wall lit by warm sunlight",
+    "tranquil mountain ridge dusk sky golden hour"
+  ],
+  "scenes": [
+    {
+      "a": "When fear tells you nowhere is safe today,",
+      "img": "short-shieldpsalm71v3-scene-01.jpg",
+      "kicker": "NO SAFE PLACE",
+      "sub": "WHEN FEAR SURROUNDS YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "remember the ancient tower that never crumbles.",
+      "img": "short-shieldpsalm71v3-scene-02.jpg",
+      "kicker": "AN ANCIENT TOWER",
+      "sub": "A FORTRESS THAT STANDS FIRM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear the holy promise of Scripture:",
+      "img": "short-shieldpsalm71v3-scene-03.jpg",
+      "kicker": "THE HOLY WORD",
+      "sub": "PROMISE OF DIVINE COVERING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Be thou my strong habitation, whereunto I may continually resort: thou hast given commandment to save me; for thou art my rock and my fortress.",
+      "img": "short-shieldpsalm71v3-scene-04.jpg",
+      "kicker": "PSALM 71:3",
+      "sub": "MY ROCK AND MY FORTRESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, become our daily shelter when trouble presses from every side.",
+      "img": "short-shieldpsalm71v3-scene-05.jpg",
+      "kicker": "DAILY SHELTER",
+      "sub": "PROTECTION FROM EVERY TROUBLE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "You have ordered complete deliverance for the weary heart that trusts in You.",
+      "img": "short-shieldpsalm71v3-scene-06.jpg",
+      "kicker": "DIVINE COMMAND",
+      "sub": "COMMANDMENT TO SAVE YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We take refuge in Your unshakeable love, hidden from every unseen threat.",
+      "img": "short-shieldpsalm71v3-scene-07.jpg",
+      "kicker": "UNSHAKEABLE LOVE",
+      "sub": "HIDDEN FROM UNSEEN THREATS",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Stand guard over our lives and grant us calm assurance now.",
+      "img": "short-shieldpsalm71v3-scene-08.jpg",
+      "kicker": "CALM ASSURANCE",
+      "sub": "GOD STANDS GUARD OVER YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen, even when fear tells you nowhere is safe today.",
+      "img": "short-shieldpsalm71v3-scene-09.jpg",
+      "kicker": "SAFE IN HIM",
+      "sub": "WALK UNDER HIS DAILY COVERING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "When fear tells you nowhere is safe today,"
+    ],
+    [
+      3,
+      7,
+      "remember the ancient tower that never crumbles."
+    ],
+    [
+      7,
+      11,
+      "Hear the holy promise of Scripture:"
+    ],
+    [
+      11,
+      22,
+      "Be thou my strong habitation, whereunto I may continually resort: thou hast given commandment to save me; for thou art my rock and my fortress."
+    ],
+    [
+      22,
+      27,
+      "Lord, become our daily shelter when trouble presses from every side."
+    ],
+    [
+      27,
+      32,
+      "You have ordered complete deliverance for the weary heart that trusts in You."
+    ],
+    [
+      32,
+      36,
+      "We take refuge in Your unshakeable love, hidden from every unseen threat."
+    ],
+    [
+      36,
+      40,
+      "Stand guard over our lives and grant us calm assurance now."
+    ],
+    [
+      40,
+      44,
+      "Amen, even when fear tells you nowhere is safe today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WHEN FEAR TELLS YOU",
+        "NOWHERE IS SAFE TODAY"
+      ],
+      [
+        "NOWHERE",
+        "SAFE"
+      ],
+      "PSALM 71 : 3"
+    ],
+    [
+      3,
+      7,
+      [
+        "REMEMBER THE ANCIENT TOWER",
+        "THAT NEVER CRUMBLES"
+      ],
+      [
+        "ANCIENT",
+        "TOWER"
+      ],
+      "PSALM 71 : 3"
+    ],
+    [
+      7,
+      11,
+      [
+        "HEAR THE HOLY PROMISE",
+        "OF SCRIPTURE"
+      ],
+      [
+        "PROMISE"
+      ],
+      "PSALM 71 : 3"
+    ],
+    [
+      11,
+      22,
+      [
+        "BE THOU MY STRONG HABITATION",
+        "WHEREUNTO I MAY CONTINUALLY RESORT",
+        "THOU HAST GIVEN COMMANDMENT TO SAVE ME",
+        "FOR THOU ART MY ROCK AND MY FORTRESS"
+      ],
+      [
+        "STRONG",
+        "HABITATION",
+        "ROCK",
+        "FORTRESS"
+      ],
+      "PSALM 71 : 3"
+    ],
+    [
+      22,
+      27,
+      [
+        "LORD BECOME OUR DAILY SHELTER",
+        "WHEN TROUBLE PRESSES",
+        "FROM EVERY SIDE"
+      ],
+      [
+        "DAILY",
+        "SHELTER"
+      ],
+      "PSALM 71 : 3"
+    ],
+    [
+      27,
+      32,
+      [
+        "YOU HAVE ORDERED COMPLETE DELIVERANCE",
+        "FOR THE WEARY HEART",
+        "THAT TRUSTS IN YOU"
+      ],
+      [
+        "COMPLETE",
+        "DELIVERANCE"
+      ],
+      "PSALM 71 : 3"
+    ],
+    [
+      32,
+      36,
+      [
+        "WE TAKE REFUGE IN YOUR",
+        "UNSHAKEABLE LOVE HIDDEN",
+        "FROM EVERY UNSEEN THREAT"
+      ],
+      [
+        "REFUGE",
+        "UNSHAKEABLE"
+      ],
+      "PSALM 71 : 3"
+    ],
+    [
+      36,
+      40,
+      [
+        "STAND GUARD OVER OUR LIVES",
+        "AND GRANT US CALM ASSURANCE NOW"
+      ],
+      [
+        "STAND",
+        "GUARD"
+      ],
+      "PSALM 71 : 3"
+    ],
+    [
+      40,
+      44,
+      [
+        "AMEN EVEN WHEN FEAR TELLS YOU",
+        "NOWHERE IS SAFE TODAY"
+      ],
+      [
+        "SAFE"
+      ],
+      "PSALM 71 : 3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When fear tells you nowhere is safe today,",
+      "kind": "phrase",
+      "words": [
+        "FEAR",
+        "SAFE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "remember the ancient tower that never crumbles.",
+      "kind": "phrase",
+      "words": [
+        "ANCIENT",
+        "TOWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the holy promise of Scripture:",
+      "kind": "phrase",
+      "words": [
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be thou my strong habitation, whereunto I may continually resort: thou hast given commandment to save me; for thou art my rock and my fortress.",
+      "kind": "phrase",
+      "words": [
+        "ROCK",
+        "FORTRESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, become our daily shelter when trouble presses from every side.",
+      "kind": "phrase",
+      "words": [
+        "SHELTER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You have ordered complete deliverance for the weary heart that trusts in You.",
+      "kind": "phrase",
+      "words": [
+        "DELIVERANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We take refuge in Your unshakeable love, hidden from every unseen threat.",
+      "kind": "phrase",
+      "words": [
+        "REFUGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Stand guard over our lives and grant us calm assurance now.",
+      "kind": "phrase",
+      "words": [
+        "GUARD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen, even when fear tells you nowhere is safe today.",
+      "kind": "phrase",
+      "words": [
+        "SAFE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 71:3"
+}

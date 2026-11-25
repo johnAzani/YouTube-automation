@@ -1,0 +1,329 @@
+{
+  "key": "short-shieldluke10v19",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "TREAD UPON THE ENEMY",
+    "GOD'S PROMISE OF PROTECTION"
+  ],
+  "poster": [
+    "POWER TO TREAD",
+    "NO HARM SHALL TOUCH YOU",
+    "LUKE 10:19",
+    "THE COVENANT SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower sunlit mountain pass",
+    "sunbeam through dark clouds over river",
+    "golden light mountain path pine trees",
+    "calm river flowing through mountain gorge",
+    "rocky mountain peak under sunrise sky",
+    "ancient stone fortress wall sun rays",
+    "peaceful valley water reflection sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "Fear of hidden danger surrounds your steps today.",
+      "img": "short-shieldluke10v19-scene-01.jpg",
+      "kicker": "HIDDEN DANGER",
+      "sub": "WHEN UNSEEN THREATS SURROUND YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear the promise of Christ in Luke 10:19:",
+      "img": "short-shieldluke10v19-scene-02.jpg",
+      "kicker": "DIVINE AUTHORITY",
+      "sub": "GOD GIVES POWER OVER THE ENEMY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Behold, I give unto you power to tread on serpents and scorpions, and over all the power of the enemy: and nothing shall by any means hurt you.",
+      "img": "short-shieldluke10v19-scene-03.jpg",
+      "kicker": "NOTHING SHALL HURT YOU",
+      "sub": "DIVINE PROTECTION IN CHRIST",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, cover every path we walk and grant us spiritual authority over unseen threats that seek to bring harm.",
+      "img": "short-shieldluke10v19-scene-04.jpg",
+      "kicker": "UNSEEN PROTECTION",
+      "sub": "COVERING EVERY STEP OF THE PATH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Protect our going out and coming in, crushing every subtle snare beneath Your holy feet.",
+      "img": "short-shieldluke10v19-scene-05.jpg",
+      "kicker": "CRUSHING EVERY SNARE",
+      "sub": "WALKING UNDER GODS SHIELD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "We rest securely under Your sovereign hand, trusting that no enemy weapon can prevail.",
+      "img": "short-shieldluke10v19-scene-06.jpg",
+      "kicker": "REST SECURELY",
+      "sub": "NO ENEMY WEAPON SHALL PREVAIL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. We step forward safely, even when fear of hidden danger surrounds our steps.",
+      "img": "short-shieldluke10v19-scene-07.jpg",
+      "kicker": "WALK SAFELY",
+      "sub": "PLACING EVERY STEP IN HIS HAND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Fear of hidden danger surrounds your steps today."
+    ],
+    [
+      3,
+      10,
+      "Hear the promise of Christ in Luke 10:19:"
+    ],
+    [
+      10,
+      24,
+      "Behold, I give unto you power to tread on serpents and scorpions, and over all the power of the enemy: and nothing shall by any means hurt you."
+    ],
+    [
+      24,
+      33,
+      "Lord, cover every path we walk and grant us spiritual authority over unseen threats that seek to bring harm."
+    ],
+    [
+      33,
+      41,
+      "Protect our going out and coming in, crushing every subtle snare beneath Your holy feet."
+    ],
+    [
+      41,
+      49,
+      "We rest securely under Your sovereign hand, trusting that no enemy weapon can prevail."
+    ],
+    [
+      49,
+      57,
+      "Amen. We step forward safely, even when fear of hidden danger surrounds our steps."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "FEAR OF HIDDEN DANGER",
+        "SURROUNDS YOUR STEPS TODAY"
+      ],
+      [
+        "DANGER",
+        "STEPS"
+      ],
+      "LUKE 10 : 19"
+    ],
+    [
+      3,
+      10,
+      [
+        "HEAR THE PROMISE OF CHRIST",
+        "IN LUKE 10 : 19"
+      ],
+      [
+        "PROMISE",
+        "LUKE"
+      ],
+      "LUKE 10 : 19"
+    ],
+    [
+      10,
+      24,
+      [
+        "BEHOLD I GIVE UNTO YOU POWER",
+        "TO TREAD ON SERPENTS AND SCORPIONS",
+        "AND OVER ALL POWER OF THE ENEMY",
+        "NOTHING SHALL BY ANY MEANS HURT YOU"
+      ],
+      [
+        "POWER",
+        "TREAD",
+        "ENEMY",
+        "HURT"
+      ],
+      "LUKE 10 : 19"
+    ],
+    [
+      24,
+      33,
+      [
+        "LORD COVER EVERY PATH WE WALK",
+        "AND GRANT US SPIRITUAL AUTHORITY",
+        "OVER UNSEEN THREATS THAT SEEK HARM"
+      ],
+      [
+        "COVER",
+        "AUTHORITY",
+        "THREATS"
+      ],
+      "LUKE 10 : 19"
+    ],
+    [
+      33,
+      41,
+      [
+        "PROTECT OUR GOING OUT AND COMING IN",
+        "CRUSHING EVERY SUBTLE SNARE",
+        "BENEATH YOUR HOLY FEET"
+      ],
+      [
+        "PROTECT",
+        "SNARE",
+        "FEET"
+      ],
+      "LUKE 10 : 19"
+    ],
+    [
+      41,
+      49,
+      [
+        "WE REST SECURELY UNDER YOUR HAND",
+        "TRUSTING THAT NO ENEMY WEAPON",
+        "CAN PREVAIL AGAINST US"
+      ],
+      [
+        "REST",
+        "SECURELY",
+        "PREVAIL"
+      ],
+      "LUKE 10 : 19"
+    ],
+    [
+      49,
+      57,
+      [
+        "AMEN WE STEP FORWARD SAFELY",
+        "EVEN WHEN FEAR OF HIDDEN DANGER",
+        "SURROUNDS OUR STEPS"
+      ],
+      [
+        "SAFELY",
+        "DANGER",
+        "STEPS"
+      ],
+      "LUKE 10 : 19"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Fear of hidden danger surrounds your steps today.",
+      "kind": "phrase",
+      "words": [
+        "FEAR",
+        "HIDDEN",
+        "DANGER"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the promise of Christ in Luke 10:19:",
+      "kind": "phrase",
+      "words": [
+        "PROMISE",
+        "CHRIST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Behold, I give unto you power to tread on serpents and scorpions, and over all the power of the enemy: and nothing shall by any means hurt you.",
+      "kind": "phrase",
+      "words": [
+        "POWER",
+        "TREAD",
+        "ENEMY",
+        "HURT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, cover every path we walk and grant us spiritual authority over unseen threats that seek to bring harm.",
+      "kind": "phrase",
+      "words": [
+        "COVER",
+        "AUTHORITY",
+        "THREATS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Protect our going out and coming in, crushing every subtle snare beneath Your holy feet.",
+      "kind": "phrase",
+      "words": [
+        "PROTECT",
+        "CRUSHING",
+        "SNARE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We rest securely under Your sovereign hand, trusting that no enemy weapon can prevail.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "SECURELY",
+        "PREVAIL"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. We step forward safely, even when fear of hidden danger surrounds our steps.",
+      "kind": "phrase",
+      "words": [
+        "SAFELY",
+        "DANGER",
+        "STEPS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Luke 10:19"
+}

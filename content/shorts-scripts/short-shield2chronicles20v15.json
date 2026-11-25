@@ -1,0 +1,232 @@
+{
+  "key": "short-shield2chronicles20v15",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "THE BATTLE IS HIS",
+    "FINDING CALM REST"
+  ],
+  "poster": [
+    "THE BATTLE IS HIS",
+    "HE IS YOUR SHIELD",
+    "PEACE IN THE STORM",
+    "2 CHRONICLES 20:15"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "calm mountain lake night",
+    "golden light rays through thick clouds",
+    "ancient stone watchtower at dawn",
+    "still deep river under starlight",
+    "misty valley at sunrise",
+    "shield symbol in golden light"
+  ],
+  "scenes": [
+    {
+      "a": "That relentless pressure remains heavy within your chest.",
+      "img": "short-shield2chronicles20v15-scene-01.jpg",
+      "kicker": "THAT HEAVY PRESSURE",
+      "sub": "THE BURDEN YOU CARRY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "It feels like a tide rising against the walls of your quiet home.",
+      "img": "short-shield2chronicles20v15-scene-02.jpg",
+      "kicker": "THE RISING TIDE",
+      "sub": "A QUIET PLACE TO STAND",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hearken ye, all Judah, and ye inhabitants of Jerusalem, and thou king Jehoshaphat, Thus saith the LORD unto you, Be not afraid nor dismayed by reason of this great multitude; for the battle is not yours, but God’s.",
+      "img": "short-shield2chronicles20v15-scene-03.jpg",
+      "kicker": "THE DIVINE PROMISE",
+      "sub": "HEARKEN TO THE WORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Lord, take this multitude of concerns and hold them in Your steady hand.",
+      "img": "short-shield2chronicles20v15-scene-04.jpg",
+      "kicker": "THE STEADY HAND",
+      "sub": "RELEASE YOUR BURDEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "We trade our frantic striving for Your perfect, sovereign covering today.",
+      "img": "short-shield2chronicles20v15-scene-05.jpg",
+      "kicker": "PERFECT COVERING",
+      "sub": "REST IN HIS PROTECTION",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let Your peace guard our minds from the weight that still remains.",
+      "img": "short-shield2chronicles20v15-scene-06.jpg",
+      "kicker": "PEACE GUARDING HEARTS",
+      "sub": "AMEN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That relentless pressure remains heavy within your chest."
+    ],
+    [
+      3,
+      7,
+      "It feels like a tide rising against the walls of your quiet home."
+    ],
+    [
+      7,
+      24,
+      "Hearken ye, all Judah, and ye inhabitants of Jerusalem, and thou king Jehoshaphat, Thus saith the LORD unto you, Be not afraid nor dismayed by reason of this great multitude; for the battle is not yours, but God’s."
+    ],
+    [
+      24,
+      30,
+      "Lord, take this multitude of concerns and hold them in Your steady hand."
+    ],
+    [
+      30,
+      35,
+      "We trade our frantic striving for Your perfect, sovereign covering today."
+    ],
+    [
+      35,
+      40,
+      "Let Your peace guard our minds from the weight that still remains."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT RELENTLESS",
+        "PRESSURE REMAINS",
+        "HEAVY WITHIN",
+        "YOUR CHEST"
+      ],
+      [
+        "HEAVY",
+        "CHEST"
+      ],
+      "2 CHRONICLES 20:15"
+    ],
+    [
+      3,
+      7,
+      [
+        "A TIDE",
+        "RISING AGAINST",
+        "THE WALLS",
+        "OF YOUR HOME"
+      ],
+      [
+        "RISING",
+        "HOME"
+      ],
+      "2 CHRONICLES 20:15"
+    ],
+    [
+      7,
+      24,
+      [
+        "THE BATTLE",
+        "IS NOT",
+        "YOURS BUT",
+        "GODS"
+      ],
+      [
+        "BATTLE",
+        "GODS"
+      ],
+      "2 CHRONICLES 20:15"
+    ],
+    [
+      24,
+      30,
+      [
+        "TAKE EVERY",
+        "CONCERN",
+        "IN YOUR",
+        "STEADY HAND"
+      ],
+      [
+        "STEADY",
+        "HAND"
+      ],
+      "2 CHRONICLES 20:15"
+    ],
+    [
+      30,
+      35,
+      [
+        "WE TRADE",
+        "FRANTIC STRIVING",
+        "FOR YOUR",
+        "SOVEREIGN COVERING"
+      ],
+      [
+        "SOVEREIGN",
+        "COVERING"
+      ],
+      "2 CHRONICLES 20:15"
+    ],
+    [
+      35,
+      40,
+      [
+        "YOUR PEACE",
+        "GUARDS OUR MINDS",
+        "FROM THE",
+        "REMAINING WEIGHT"
+      ],
+      [
+        "PEACE",
+        "WEIGHT"
+      ],
+      "2 CHRONICLES 20:15"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That relentless pressure remains heavy within your chest.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "CHEST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Chronicles 20:15"
+}
