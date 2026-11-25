@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T09:09:04Z",
+  "generated_at": "2026-11-25T09:11:02Z",
   "monitor_generated_at": "2026-11-25T08:52:23.718913+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 791,
+    "published_total": 792,
     "published_longform": 220,
-    "published_shorts": 571,
-    "public_total": 789,
+    "published_shorts": 572,
+    "public_total": 790,
     "queued_longform": 70,
-    "queued_shorts": 58,
+    "queued_shorts": 56,
     "automations_ok": 9,
     "automations_total": 15,
     "network_healthy": false
@@ -368,23 +368,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 74,
+        "published_total": 75,
         "published_longform": 19,
-        "published_shorts": 55,
+        "published_shorts": 56,
         "thumbnail_pending": 5,
-        "public_total": 74,
+        "public_total": 75,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-HEALINGPSALM73V26",
-        "title": "Pray This Psalm 73:26 Healing Prayer for Peace & Strength | When Everything Is Gone #Shorts",
+        "id": "SHORT-HEALINGPSALM107V19",
+        "title": "Pray This Psalm 107:19-20 Healing Prayer for Peace & Strength | God's Grace #Shorts",
         "format": "short",
-        "youtube_video_id": "KTHFQ1rUT3w",
-        "watch_url": "https://www.youtube.com/shorts/KTHFQ1rUT3w",
+        "youtube_video_id": "e7B7VEDaWkw",
+        "watch_url": "https://www.youtube.com/shorts/e7B7VEDaWkw",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T00:33:53Z"
+        "published_at": "2026-11-25T09:09:56Z"
       },
       "next_queued_longform": {
         "id": "0426",
@@ -393,8 +393,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingpsalm107v19",
-        "scripture": "Psalm 107:19-20",
+        "short": "short-healingpsalm6v2",
+        "scripture": "Psalm 6:2-4",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGPSALM107V19",
+      "slug": "short-healingpsalm107v19-restoration-prayer",
+      "file": "short-healingpsalm107v19-restoration-prayer.md",
+      "title": "Pray This Psalm 107:19-20 Healing Prayer for Peace & Strength | God's Grace #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T09:09:56Z",
+      "youtube_video_id": "e7B7VEDaWkw",
+      "watch_url": "https://www.youtube.com/shorts/e7B7VEDaWkw",
+      "youtu_be_url": "https://youtu.be/e7B7VEDaWkw",
+      "shorts_url": "https://www.youtube.com/shorts/e7B7VEDaWkw",
+      "studio_url": "https://studio.youtube.com/video/e7B7VEDaWkw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/e7B7VEDaWkw/hqdefault.jpg",
+      "thumb_text": "FINDING REST \u00b7 IN GOD'S WORD",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 638
+    },
     {
       "id": "SHORT-PROVISIONPSALM85V12",
       "slug": "short-provisionpsalm85v12-stewardship-prayer",
@@ -20904,17 +20928,6 @@
         "target_window_utc": "17:14"
       },
       {
-        "short": "short-healingpsalm107v19",
-        "file": "0416-short-healingpsalm107v19.yml",
-        "companion_longform_id": "0416",
-        "scripture": "Psalm 107:19-20",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
-      },
-      {
         "short": "short-healingpsalm6v2",
         "file": "0422-short-healingpsalm6v2.yml",
         "companion_longform_id": "0422",
@@ -20952,17 +20965,6 @@
         "file": "0429-short-healingrevelation21v4.yml",
         "companion_longform_id": "0429",
         "scripture": "Revelation 21:4",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-healingisaiah61v1",
-        "file": "0432-short-healingisaiah61v1.yml",
-        "companion_longform_id": "0432",
-        "scripture": "Isaiah 61:1-3",
         "channel": "prayer6",
         "channel_name": "The Healing Balm",
         "status": "approved",
