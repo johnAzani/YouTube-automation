@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T20:01:27Z",
+  "generated_at": "2026-11-25T20:02:22Z",
   "monitor_generated_at": "2026-11-25T19:38:53.897385+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 816,
+    "published_total": 817,
     "published_longform": 226,
-    "published_shorts": 590,
-    "public_total": 814,
+    "published_shorts": 591,
+    "public_total": 815,
     "queued_longform": 75,
-    "queued_shorts": 54,
+    "queued_shorts": 53,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 92,
+        "published_total": 93,
         "published_longform": 27,
-        "published_shorts": 65,
+        "published_shorts": 66,
         "thumbnail_pending": 3,
-        "public_total": 92,
+        "public_total": 93,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "0104",
-        "title": "Planted by the Waters in the Heat: Jeremiah 17:7-8 | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "P1rxE2Qcq-c",
-        "watch_url": "https://youtu.be/P1rxE2Qcq-c",
+        "id": "SHORT-MIDDAYPSALM73V26",
+        "title": "Say This Psalm 73:26 Prayer for Strength at Noon | When Strength Fails #Shorts",
+        "format": "short",
+        "youtube_video_id": "AaxrGQ9lQqs",
+        "watch_url": "https://www.youtube.com/shorts/AaxrGQ9lQqs",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T15:55:45Z"
+        "published_at": "2026-11-25T20:01:14Z"
       },
       "next_queued_longform": {
         "id": "0105",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm73v26",
-        "scripture": "Psalm 73:26",
+        "short": "short-middaypsalm84v5",
+        "scripture": "Psalm 84:5-7",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYPSALM73V26",
+      "slug": "short-middaypsalm73v26-midday-prayer",
+      "file": "short-middaypsalm73v26-midday-prayer.md",
+      "title": "Say This Psalm 73:26 Prayer for Strength at Noon | When Strength Fails #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T20:01:14Z",
+      "youtube_video_id": "AaxrGQ9lQqs",
+      "watch_url": "https://www.youtube.com/shorts/AaxrGQ9lQqs",
+      "youtu_be_url": "https://youtu.be/AaxrGQ9lQqs",
+      "shorts_url": "https://www.youtube.com/shorts/AaxrGQ9lQqs",
+      "studio_url": "https://studio.youtube.com/video/AaxrGQ9lQqs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/AaxrGQ9lQqs/hqdefault.jpg",
+      "thumb_text": "MIDDAY WATCH \u00b7 STRENGTH FAILS",
+      "thumbnail_pending": false,
+      "duration_label": "49s",
+      "words": 630
+    },
     {
       "id": "SHORT-FAMILYJOSHUA4V6",
       "slug": "short-familyjoshua4v6-household-prayer",
@@ -21457,17 +21481,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-middaypsalm73v26",
-        "file": "0100-short-middaypsalm73v26.yml",
-        "companion_longform_id": "0100",
-        "scripture": "Psalm 73:26",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm84v5",
