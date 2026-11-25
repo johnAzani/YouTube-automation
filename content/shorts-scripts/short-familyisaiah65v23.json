@@ -1,0 +1,288 @@
+{
+  "key": "short-familyisaiah65v23",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "THEIR LABOR IS NOT IN VAIN",
+    "ISAIAH 65:23 HOUSEHOLD PRAYER"
+  ],
+  "poster": [
+    "YOUR FAMILY IS",
+    "BLESSED OF GOD",
+    "NO LABOR WASTED",
+    "ISAIAH 65:23"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit wooden table open bible olive branch peaceful room",
+    "cozy country house window soft morning sunlight gentle mist",
+    "open bible on dark wood table glowing candle warm golden ambient light",
+    "quiet cozy living room warm lamp light peaceful evening home",
+    "sunrise over peaceful country meadow warm golden light gentle mist",
+    "warm lit lantern on rustic wooden porch calm evening light"
+  ],
+  "scenes": [
+    {
+      "a": "You wonder if your quiet labor matters today.",
+      "img": "short-familyisaiah65v23-scene-01.jpg",
+      "kicker": "QUIET LABOR",
+      "sub": "YOUR WORK FOR THEM MATTERS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "When you spend your strength pouring into your family, the fear of failing them can weigh heavy.",
+      "img": "short-familyisaiah65v23-scene-02.jpg",
+      "kicker": "POURING OUT",
+      "sub": "WHEN THE EFFORT FEELS HEAVY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "God speaks through Isaiah: 'They shall not labor in vain, nor bring forth for trouble; for they are the seed of the blessed of the LORD, and their offspring with them.'",
+      "img": "short-familyisaiah65v23-scene-03.jpg",
+      "kicker": "ISAIAH 65:23",
+      "sub": "THE SEED OF THE BLESSED",
+      "cam": "push_in",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "Father, establish the work of our hands and guard our children in your lasting peace.",
+      "img": "short-familyisaiah65v23-scene-04.jpg",
+      "kicker": "ESTABLISH US",
+      "sub": "GUARD OUR CHILDREN IN PEACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let our household rest in the promise that no prayer or effort given to them is ever wasted.",
+      "img": "short-familyisaiah65v23-scene-05.jpg",
+      "kicker": "NEVER WASTED",
+      "sub": "REST IN HIS PROMISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "Amen, even when you wonder if your quiet labor matters today.",
+      "img": "short-familyisaiah65v23-scene-06.jpg",
+      "kicker": "HEATED HOME",
+      "sub": "YOUR LABOR IS NOT IN VAIN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You wonder if your quiet labor matters today."
+    ],
+    [
+      3,
+      8,
+      "When you spend your strength pouring into your family, the fear of failing them can weigh heavy."
+    ],
+    [
+      8,
+      17,
+      "God speaks through Isaiah: 'They shall not labor in vain, nor bring forth for trouble; for they are the seed of the blessed of the LORD, and their offspring with them.'"
+    ],
+    [
+      17,
+      23,
+      "Father, establish the work of our hands and guard our children in your lasting peace."
+    ],
+    [
+      23,
+      29,
+      "Let our household rest in the promise that no prayer or effort given to them is ever wasted."
+    ],
+    [
+      29,
+      34,
+      "Amen, even when you wonder if your quiet labor matters today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU WONDER IF YOUR",
+        "QUIET LABOR MATTERS TODAY."
+      ],
+      [
+        "QUIET",
+        "LABOR"
+      ],
+      "ISAIAH 65 : 23"
+    ],
+    [
+      3,
+      8,
+      [
+        "WHEN YOU SPEND YOUR STRENGTH",
+        "POURING INTO YOUR FAMILY,",
+        "THE FEAR OF FAILING THEM",
+        "CAN WEIGH HEAVY."
+      ],
+      [
+        "POURING",
+        "WEIGH",
+        "HEAVY"
+      ],
+      "ISAIAH 65 : 23"
+    ],
+    [
+      8,
+      17,
+      [
+        "THEY SHALL NOT LABOR IN VAIN,",
+        "NOR BRING FORTH FOR TROUBLE;",
+        "FOR THEY ARE THE SEED",
+        "OF THE BLESSED OF THE LORD."
+      ],
+      [
+        "NOT",
+        "LABOR",
+        "IN",
+        "VAIN"
+      ],
+      "ISAIAH 65 : 23"
+    ],
+    [
+      17,
+      23,
+      [
+        "FATHER, ESTABLISH THE WORK",
+        "OF OUR HANDS AND GUARD",
+        "OUR CHILDREN IN YOUR",
+        "LASTING PEACE."
+      ],
+      [
+        "ESTABLISH",
+        "GUARD",
+        "PEACE"
+      ],
+      "ISAIAH 65 : 23"
+    ],
+    [
+      23,
+      29,
+      [
+        "LET OUR HOUSEHOLD REST IN THE",
+        "PROMISE THAT NO PRAYER OR EFFORT",
+        "GIVEN TO THEM IS EVER WASTED."
+      ],
+      [
+        "NO",
+        "PRAYER",
+        "EVER",
+        "WASTED"
+      ],
+      "ISAIAH 65 : 23"
+    ],
+    [
+      29,
+      34,
+      [
+        "AMEN, EVEN WHEN YOU WONDER",
+        "IF YOUR QUIET LABOR",
+        "MATTERS TODAY."
+      ],
+      [
+        "AMEN",
+        "LABOR",
+        "MATTERS"
+      ],
+      "ISAIAH 65 : 23"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You wonder if your quiet labor matters today.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "LABOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When you spend your strength pouring into your family, the fear of failing them can weigh heavy.",
+      "kind": "phrase",
+      "words": [
+        "FEAR",
+        "OF",
+        "FAILING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "God speaks through Isaiah: 'They shall not labor in vain, nor bring forth for trouble; for they are the seed of the blessed of the LORD, and their offspring with them.'",
+      "kind": "phrase",
+      "words": [
+        "LABOR",
+        "IN",
+        "VAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, establish the work of our hands and guard our children in your lasting peace.",
+      "kind": "phrase",
+      "words": [
+        "WORK",
+        "OF",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let our household rest in the promise that no prayer or effort given to them is ever wasted.",
+      "kind": "phrase",
+      "words": [
+        "EVER",
+        "WASTED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen, even when you wonder if your quiet labor matters today.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "LABOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 65:23"
+}

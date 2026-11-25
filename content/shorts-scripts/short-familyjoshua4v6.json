@@ -1,0 +1,296 @@
+{
+  "key": "short-familyjoshua4v6",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "MEMORIAL STONES",
+    "JOSHUA 4"
+  ],
+  "poster": [
+    "HOW TO TELL",
+    "THE STORY TO",
+    "YOUR CHILDREN",
+    "TONIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit living room table with open bible",
+    "peaceful evening countryside home window glowing softly",
+    "old stone wall in quiet garden at dusk",
+    "rustic wooden table with vintage family bible and olive branch",
+    "gentle riverbank at twilight with smooth river stones",
+    "quiet family dining room table bathed in warm lamplight",
+    "cozy home interior with open scripture book at night"
+  ],
+  "scenes": [
+    {
+      "a": "When tomorrow brings questions from your children,",
+      "img": "short-familyjoshua4v6-scene-01.jpg",
+      "kicker": "WHEN THEY ASK",
+      "sub": "TEACHING YOUR CHILDREN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "remember what God has brought you through.",
+      "img": "short-familyjoshua4v6-scene-02.jpg",
+      "kicker": "REMEMBER",
+      "sub": "HIS FAITHFULNESS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "That this may be a sign among you, that when your children ask their fathers in time to come, saying, What mean ye by these stones?",
+      "img": "short-familyjoshua4v6-scene-03.jpg",
+      "kicker": "THE SIGN",
+      "sub": "JOSHUA 4:6",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Then ye shall answer them, That the waters of Jordan were cut off before the ark of the covenant of the LORD; when it passed over Jordan, the waters of Jordan were cut off: and these stones shall be for a memorial unto the children of Israel for ever.",
+      "img": "short-familyjoshua4v6-scene-04.jpg",
+      "kicker": "A MEMORIAL",
+      "sub": "JOSHUA 4:7",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, help us tell our children of Your mighty acts.",
+      "img": "short-familyjoshua4v6-scene-05.jpg",
+      "kicker": "OUR PRAYER",
+      "sub": "TELL THE NEXT GENERATION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Keep our hearts anchored in Your enduring grace.",
+      "img": "short-familyjoshua4v6-scene-06.jpg",
+      "kicker": "ANCHORED",
+      "sub": "ENDURING GRACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. When tomorrow brings questions from your children,",
+      "img": "short-familyjoshua4v6-scene-07.jpg",
+      "kicker": "AMEN",
+      "sub": "WHEN TOMORROW COMES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "When tomorrow brings questions from your children,"
+    ],
+    [
+      3,
+      6,
+      "remember what God has brought you through."
+    ],
+    [
+      6,
+      17,
+      "That this may be a sign among you, that when your children ask their fathers in time to come, saying, What mean ye by these stones?"
+    ],
+    [
+      17,
+      32,
+      "Then ye shall answer them, That the waters of Jordan were cut off before the ark of the covenant of the LORD; when it passed over Jordan, the waters of Jordan were cut off: and these stones shall be for a memorial unto the children of Israel for ever."
+    ],
+    [
+      32,
+      37,
+      "Lord, help us tell our children of Your mighty acts."
+    ],
+    [
+      37,
+      42,
+      "Keep our hearts anchored in Your enduring grace."
+    ],
+    [
+      42,
+      45,
+      "Amen. When tomorrow brings questions from your children,"
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WHEN TOMORROW BRINGS",
+        "QUESTIONS FROM",
+        "YOUR CHILDREN"
+      ],
+      "CHILDREN",
+      "JOSHUA 4 : 6"
+    ],
+    [
+      3,
+      6,
+      [
+        "REMEMBER WHAT GOD",
+        "HAS BROUGHT",
+        "YOU THROUGH"
+      ],
+      "THROUGH",
+      "JOSHUA 4 : 6"
+    ],
+    [
+      6,
+      17,
+      [
+        "THAT THIS MAY BE A SIGN",
+        "THAT WHEN YOUR CHILDREN ASK",
+        "WHAT MEAN YE BY THESE STONES"
+      ],
+      "STONES",
+      "JOSHUA 4 : 6"
+    ],
+    [
+      17,
+      32,
+      [
+        "THE WATERS OF JORDAN WERE CUT OFF",
+        "BEFORE THE ARK OF THE COVENANT",
+        "A MEMORIAL UNTO ISRAEL FOR EVER"
+      ],
+      "MEMORIAL",
+      "JOSHUA 4 : 7"
+    ],
+    [
+      32,
+      37,
+      [
+        "LORD HELP US TELL",
+        "OUR CHILDREN OF",
+        "YOUR MIGHTY ACTS"
+      ],
+      "ACTS",
+      "PRAYER"
+    ],
+    [
+      37,
+      42,
+      [
+        "KEEP OUR HEARTS ANCHORED",
+        "IN YOUR ENDURING",
+        "GRACE TODAY"
+      ],
+      "GRACE",
+      "PRAYER"
+    ],
+    [
+      42,
+      45,
+      [
+        "AMEN WHEN TOMORROW",
+        "BRINGS QUESTIONS FROM",
+        "YOUR CHILDREN"
+      ],
+      "CHILDREN",
+      "AMEN"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When tomorrow brings questions from your children,",
+      "kind": "phrase",
+      "words": [
+        "TOMORROW",
+        "CHILDREN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "remember what God has brought you through.",
+      "kind": "phrase",
+      "words": [
+        "REMEMBER",
+        "BROUGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "That this may be a sign among you, that when your children ask their fathers in time to come, saying, What mean ye by these stones?",
+      "kind": "phrase",
+      "words": [
+        "SIGN",
+        "STONES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Then ye shall answer them, That the waters of Jordan were cut off before the ark of the covenant of the LORD; when it passed over Jordan, the waters of Jordan were cut off: and these stones shall be for a memorial unto the children of Israel for ever.",
+      "kind": "phrase",
+      "words": [
+        "WATERS",
+        "MEMORIAL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help us tell our children of Your mighty acts.",
+      "kind": "phrase",
+      "words": [
+        "HELP",
+        "ACTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Keep our hearts anchored in Your enduring grace.",
+      "kind": "phrase",
+      "words": [
+        "ANCHORED",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. When tomorrow brings questions from your children,",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "CHILDREN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Joshua 4:6-7"
+}
