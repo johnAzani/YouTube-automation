@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T14:56:05Z",
+  "generated_at": "2026-11-25T14:58:25Z",
   "monitor_generated_at": "2026-11-25T14:54:36.747643+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 804,
-    "published_longform": 223,
-    "published_shorts": 581,
-    "public_total": 802,
-    "queued_longform": 75,
-    "queued_shorts": 56,
+    "published_total": 806,
+    "published_longform": 224,
+    "published_shorts": 582,
+    "public_total": 804,
+    "queued_longform": 74,
+    "queued_shorts": 55,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -431,33 +431,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 74,
-        "published_longform": 20,
-        "published_shorts": 54,
+        "published_total": 76,
+        "published_longform": 21,
+        "published_shorts": 55,
         "thumbnail_pending": 6,
-        "public_total": 74,
-        "queued_longform": 6,
+        "public_total": 76,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPSALM85V12",
-        "title": "Pray This Psalm 85:12 Prayer for Open Doors & Provision | Our Land Yields #Shorts",
-        "format": "short",
-        "youtube_video_id": "T4zPQzVWCYw",
-        "watch_url": "https://www.youtube.com/shorts/T4zPQzVWCYw",
-        "published_on": "2026-11-25",
-        "published_at": "2026-11-25T09:08:00Z"
-      },
-      "next_queued_longform": {
         "id": "0521",
         "title": "Guidance for Your Daily Labor: Isaiah 48:17 | The Provision Table",
-        "words": 1762,
+        "format": "longform",
+        "youtube_video_id": "Atqnm5wE84o",
+        "watch_url": "https://youtu.be/Atqnm5wE84o",
+        "published_on": "2026-11-25",
+        "published_at": "2026-11-25T14:57:02Z"
+      },
+      "next_queued_longform": {
+        "id": "0523",
+        "title": "When Provisions Shrink to the Last Morsel: 1 Kings 17:14-16",
+        "words": 1689,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionisaiah45v2",
-        "scripture": "Isaiah 45:2-3",
+        "short": "short-provisionpsalm1v1",
+        "scripture": "Psalm 1:1-3",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -692,6 +692,30 @@
   ],
   "videos": [
     {
+      "id": "0521",
+      "slug": "when-you-need-guidance-in-your-work-isaiah-48-17",
+      "file": "0521-when-you-need-guidance-in-your-work-isaiah-48-17.md",
+      "title": "Guidance for Your Daily Labor: Isaiah 48:17 | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T14:57:02Z",
+      "youtube_video_id": "Atqnm5wE84o",
+      "watch_url": "https://youtu.be/Atqnm5wE84o",
+      "youtu_be_url": "https://youtu.be/Atqnm5wE84o",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/Atqnm5wE84o/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Atqnm5wE84o/hqdefault.jpg",
+      "thumb_text": "LEAD ME IN WISDOM",
+      "thumbnail_pending": false,
+      "duration_label": "11m 47s",
+      "words": 1762
+    },
+    {
       "id": "SHORT-SHIELDLUKE10V19",
       "slug": "short-shieldluke10v19-protection-prayer",
       "file": "short-shieldluke10v19-protection-prayer.md",
@@ -714,6 +738,30 @@
       "thumbnail_pending": true,
       "duration_label": "51s",
       "words": 661
+    },
+    {
+      "id": "SHORT-PROVISIONISAIAH45V2",
+      "slug": "short-provisionisaiah45v2-stewardship-prayer",
+      "file": "short-provisionisaiah45v2-stewardship-prayer.md",
+      "title": "Pray This Isaiah 45:2-3 Prayer for Open Doors & Provision | Daily Provision Prayer #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T13:51:52Z",
+      "youtube_video_id": "ExJ_ZANAZDA",
+      "watch_url": "https://www.youtube.com/shorts/ExJ_ZANAZDA",
+      "youtu_be_url": "https://youtu.be/ExJ_ZANAZDA",
+      "shorts_url": "https://www.youtube.com/shorts/ExJ_ZANAZDA",
+      "studio_url": "https://studio.youtube.com/video/ExJ_ZANAZDA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ExJ_ZANAZDA/hqdefault.jpg",
+      "thumb_text": "THE PROVISION TABLE \u00b7 ISAIAH 45:2-3",
+      "thumbnail_pending": false,
+      "duration_label": "47s",
+      "words": 648
     },
     {
       "id": "SHORT-HEALINGPSALM6V2",
@@ -20433,19 +20481,6 @@
         "words": 1616
       },
       {
-        "id": "0521",
-        "slug": "when-you-need-guidance-in-your-work-isaiah-48-17",
-        "file": "0521-when-you-need-guidance-in-your-work-isaiah-48-17.md",
-        "title": "Guidance for Your Daily Labor: Isaiah 48:17 | The Provision Table",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1762
-      },
-      {
         "id": "0523",
         "slug": "when-provisions-shrink-to-the-last-morsel-1-kings-17-14-16",
         "file": "0523-when-provisions-shrink-to-the-last-morsel-1-kings-17-14-16.md",
@@ -21329,17 +21364,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-provisionisaiah45v2",
-        "file": "0515-short-provisionisaiah45v2.yml",
-        "companion_longform_id": "0515",
-        "scripture": "Isaiah 45:2-3",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionpsalm1v1",
