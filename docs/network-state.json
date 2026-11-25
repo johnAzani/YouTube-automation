@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T00:42:38Z",
+  "generated_at": "2026-11-25T00:43:09Z",
   "monitor_generated_at": "2026-11-25T00:25:47.876256+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 784,
+    "published_total": 785,
     "published_longform": 219,
-    "published_shorts": 565,
-    "public_total": 782,
+    "published_shorts": 566,
+    "public_total": 783,
     "queued_longform": 60,
-    "queued_shorts": 45,
+    "queued_shorts": 44,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": false
@@ -562,23 +562,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 64,
+        "published_total": 65,
         "published_longform": 15,
-        "published_shorts": 49,
-        "thumbnail_pending": 64,
-        "public_total": 64,
+        "published_shorts": 50,
+        "thumbnail_pending": 65,
+        "public_total": 65,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-GARDENREVELATION7V12",
-        "title": "Pray This Revelation 7:12 Prayer of Thanksgiving | When Your Effort Feels Unseen #Shorts",
+        "id": "SHORT-GARDENPSALM95V1",
+        "title": "Pray This Psalm 95:1-2 Prayer of Thanksgiving | KJV Worship #Shorts",
         "format": "short",
-        "youtube_video_id": "iZE02T_X2Jk",
-        "watch_url": "https://www.youtube.com/shorts/iZE02T_X2Jk",
-        "published_on": "2026-11-24",
-        "published_at": "2026-11-24T20:55:15Z"
+        "youtube_video_id": "JYacVr7yTME",
+        "watch_url": "https://www.youtube.com/shorts/JYacVr7yTME",
+        "published_on": "2026-11-25",
+        "published_at": "2026-11-25T00:42:09Z"
       },
       "next_queued_longform": {
         "id": "0716",
@@ -587,8 +587,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm95v1",
-        "scripture": "Psalm 95:1-2",
+        "short": "short-gardenpsalm118v24",
+        "scripture": "Psalm 118:24",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -686,6 +686,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM95V1",
+      "slug": "short-gardenpsalm95v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm95v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 95:1-2 Prayer of Thanksgiving | KJV Worship #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T00:42:09Z",
+      "youtube_video_id": "JYacVr7yTME",
+      "watch_url": "https://www.youtube.com/shorts/JYacVr7yTME",
+      "youtu_be_url": "https://youtu.be/JYacVr7yTME",
+      "shorts_url": "https://www.youtube.com/shorts/JYacVr7yTME",
+      "studio_url": "https://studio.youtube.com/video/JYacVr7yTME/edit",
+      "thumb_url": "https://i.ytimg.com/vi/JYacVr7yTME/hqdefault.jpg",
+      "thumb_text": "THE PRAISE GARDEN \u00b7 PSALM 95:1-2",
+      "thumbnail_pending": true,
+      "duration_label": "45s",
+      "words": 638
+    },
     {
       "id": "SHORT-PROVISIONPSALM68V19",
       "slug": "short-provisionpsalm68v19-stewardship-prayer",
@@ -20693,17 +20717,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-gardenpsalm95v1",
-        "file": "0710-short-gardenpsalm95v1.yml",
-        "companion_longform_id": "0710",
-        "scripture": "Psalm 95:1-2",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm118v24",
