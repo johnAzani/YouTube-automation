@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T17:22:43Z",
+  "generated_at": "2026-11-25T17:24:31Z",
   "monitor_generated_at": "2026-11-25T15:33:03.208224+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 813,
+    "published_total": 814,
     "published_longform": 226,
-    "published_shorts": 587,
-    "public_total": 811,
+    "published_shorts": 588,
+    "public_total": 812,
     "queued_longform": 75,
-    "queued_shorts": 55,
+    "queued_shorts": 54,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 107,
+        "published_total": 108,
         "published_longform": 35,
-        "published_shorts": 72,
+        "published_shorts": 73,
         "thumbnail_pending": 2,
-        "public_total": 106,
+        "public_total": 107,
         "queued_longform": 22,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0080",
-        "title": "When You Need Joy to Meet the Day: Psalm 65:8 | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "FaYzlv4eqcc",
-        "watch_url": "https://youtu.be/FaYzlv4eqcc",
+        "id": "SHORT-MORNINGPSALM108V1",
+        "title": "Say This Psalm 108:1-3 Prayer for Fresh Start at Sunrise | A Short Prayer #Shorts",
+        "format": "short",
+        "youtube_video_id": "25bzmumLf_8",
+        "watch_url": "https://www.youtube.com/shorts/25bzmumLf_8",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T09:55:37Z"
+        "published_at": "2026-11-25T17:23:23Z"
       },
       "next_queued_longform": {
         "id": "0076",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm108v1",
-        "scripture": "Psalm 108:1-3",
+        "short": "short-morningpsalm116v1",
+        "scripture": "Psalm 116:1-2",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM108V1",
+      "slug": "short-morningpsalm108v1-sunrise-prayer",
+      "file": "short-morningpsalm108v1-sunrise-prayer.md",
+      "title": "Say This Psalm 108:1-3 Prayer for Fresh Start at Sunrise | A Short Prayer #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T17:23:23Z",
+      "youtube_video_id": "25bzmumLf_8",
+      "watch_url": "https://www.youtube.com/shorts/25bzmumLf_8",
+      "youtu_be_url": "https://youtu.be/25bzmumLf_8",
+      "shorts_url": "https://www.youtube.com/shorts/25bzmumLf_8",
+      "studio_url": "https://studio.youtube.com/video/25bzmumLf_8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/25bzmumLf_8/hqdefault.jpg",
+      "thumb_text": "PSALM 108:1-3 PRAYER \u00b7 PSALM 108:1-3",
+      "thumbnail_pending": false,
+      "duration_label": "55s",
+      "words": 651
+    },
     {
       "id": "SHORT-SHIELDPSALM119V114",
       "slug": "short-shieldpsalm119v114-protection-prayer",
@@ -21319,17 +21343,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningpsalm108v1",
-        "file": "0000-short-morningpsalm108v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 108:1-3",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm116v1",
