@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T13:44:48Z",
+  "generated_at": "2026-11-25T13:46:28Z",
   "monitor_generated_at": "2026-11-25T08:52:23.718913+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 799,
+    "published_total": 800,
     "published_longform": 223,
-    "published_shorts": 576,
-    "public_total": 797,
+    "published_shorts": 577,
+    "public_total": 798,
     "queued_longform": 75,
-    "queued_shorts": 61,
+    "queued_shorts": 60,
     "automations_ok": 9,
     "automations_total": 15,
     "network_healthy": false
@@ -227,23 +227,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 83,
+        "published_total": 84,
         "published_longform": 26,
-        "published_shorts": 57,
-        "thumbnail_pending": 82,
-        "public_total": 83,
+        "published_shorts": 58,
+        "thumbnail_pending": 83,
+        "public_total": 84,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTMICAH7V8",
-        "title": "Pray This Micah 7:8 Midnight Prayer | Stand In Prayer #Shorts",
+        "id": "SHORT-MIDNIGHTISAIAH26V3",
+        "title": "Pray This Isaiah 26:3-4 Midnight Prayer | When Thoughts Refuse To Rest #Shorts",
         "format": "short",
-        "youtube_video_id": "19aI0Enxsgo",
-        "watch_url": "https://www.youtube.com/shorts/19aI0Enxsgo",
+        "youtube_video_id": "jOtykzvB1SM",
+        "watch_url": "https://www.youtube.com/shorts/jOtykzvB1SM",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T09:01:57Z"
+        "published_at": "2026-11-25T13:45:30Z"
       },
       "next_queued_longform": {
         "id": "0226",
@@ -252,8 +252,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightisaiah26v3",
-        "scripture": "Isaiah 26:3-4",
+        "short": "short-midnightpsalm30v5",
+        "scripture": "Psalm 30:5",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTISAIAH26V3",
+      "slug": "short-midnightisaiah26v3-midnight-prayer",
+      "file": "short-midnightisaiah26v3-midnight-prayer.md",
+      "title": "Pray This Isaiah 26:3-4 Midnight Prayer | When Thoughts Refuse To Rest #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T13:45:30Z",
+      "youtube_video_id": "jOtykzvB1SM",
+      "watch_url": "https://www.youtube.com/shorts/jOtykzvB1SM",
+      "youtu_be_url": "https://youtu.be/jOtykzvB1SM",
+      "shorts_url": "https://www.youtube.com/shorts/jOtykzvB1SM",
+      "studio_url": "https://studio.youtube.com/video/jOtykzvB1SM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/jOtykzvB1SM/hqdefault.jpg",
+      "thumb_text": "PERFECT PEACE \u00b7 STAYED ON THEE",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 644
+    },
     {
       "id": "SHORT-FAMILYHEBREWS11V7",
       "slug": "short-familyhebrews11v7-household-prayer",
@@ -20956,17 +20980,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-midnightisaiah26v3",
-        "file": "0000-short-midnightisaiah26v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 26:3-4",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightpsalm30v5",
