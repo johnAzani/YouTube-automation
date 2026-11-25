@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T17:22:07Z",
+  "generated_at": "2026-11-25T17:22:43Z",
   "monitor_generated_at": "2026-11-25T15:33:03.208224+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 812,
+    "published_total": 813,
     "published_longform": 226,
-    "published_shorts": 586,
-    "public_total": 810,
+    "published_shorts": 587,
+    "public_total": 811,
     "queued_longform": 75,
-    "queued_shorts": 56,
+    "queued_shorts": 55,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -504,23 +504,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 66,
+        "published_total": 67,
         "published_longform": 18,
-        "published_shorts": 48,
+        "published_shorts": 49,
         "thumbnail_pending": 35,
-        "public_total": 66,
+        "public_total": 67,
         "queued_longform": 6,
         "queued_other": 4,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-SHIELDLUKE10V19",
-        "title": "Pray This Luke 10:19 Prayer for Divine Protection | When Unseen Threats Surround You #Shorts",
+        "id": "SHORT-SHIELDPSALM119V114",
+        "title": "Pray This Psalm 119:114 Prayer for Divine Protection | Resting On Your Mind Is Known #Shorts",
         "format": "short",
-        "youtube_video_id": "7-uY9oiePCk",
-        "watch_url": "https://www.youtube.com/shorts/7-uY9oiePCk",
+        "youtube_video_id": "-5NS1zlzb78",
+        "watch_url": "https://www.youtube.com/shorts/-5NS1zlzb78",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T13:53:59Z"
+        "published_at": "2026-11-25T17:21:25Z"
       },
       "next_queued_longform": {
         "id": "0624",
@@ -529,8 +529,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm119v114",
-        "scripture": "Psalm 119:114",
+        "short": "short-shieldproverbs30v5",
+        "scripture": "Proverbs 30:5",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM119V114",
+      "slug": "short-shieldpsalm119v114-protection-prayer",
+      "file": "short-shieldpsalm119v114-protection-prayer.md",
+      "title": "Pray This Psalm 119:114 Prayer for Divine Protection | Resting On Your Mind Is Known #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T17:21:25Z",
+      "youtube_video_id": "-5NS1zlzb78",
+      "watch_url": "https://www.youtube.com/shorts/-5NS1zlzb78",
+      "youtu_be_url": "https://youtu.be/-5NS1zlzb78",
+      "shorts_url": "https://www.youtube.com/shorts/-5NS1zlzb78",
+      "studio_url": "https://studio.youtube.com/video/-5NS1zlzb78/edit",
+      "thumb_url": "https://i.ytimg.com/vi/-5NS1zlzb78/hqdefault.jpg",
+      "thumb_text": "THOU ART MY \u00b7 HIDING PLACE",
+      "thumbnail_pending": false,
+      "duration_label": "57s",
+      "words": 641
+    },
     {
       "id": "SHORT-HEALING2KINGS20V5",
       "slug": "short-healing2kings20v5-restoration-prayer",
@@ -21361,17 +21385,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldpsalm119v114",
-        "file": "0000-short-shieldpsalm119v114.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 119:114",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-psalm23full",
