@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T19:25:50.922853+00:00",
+  "generated_at": "2026-11-25T19:28:43.040174+00:00",
   "healthy": false,
   "automations": [
     {
@@ -12,14 +12,14 @@
       "last_conclusion": "failure",
       "last_success": "2026-11-25T15:21:42+00:00",
       "runs_14d": 20,
-      "last_edited": "2026-11-25T15:21:39+00:00",
+      "last_edited": "2026-11-25T19:28:50+00:00",
       "last_slot": "2026-11-24T20:14:00+00:00",
       "missed_slots": 0,
-      "failures_5": 1,
+      "failures_5": 0,
       "effect": "reports and files stalls",
-      "verdict": "SELF-REPORT",
-      "detail": "this is the check itself; its previous run ended failure 1.9h ago, which is its own verdict and not independent evidence",
-      "severity": "info"
+      "verdict": "UNTESTED FIX",
+      "detail": "failed 2.0h ago; edited just now \u2014 needs one green run",
+      "severity": "warning"
     },
     {
       "workflow": "channel-analytics.yml",
@@ -37,7 +37,7 @@
       "failures_5": 0,
       "effect": "writes content/analytics/ \u2014 where each channel stands",
       "verdict": "OK",
-      "detail": "last success 6.0h ago",
+      "detail": "last success 6.1h ago",
       "severity": "ok"
     },
     {
@@ -77,7 +77,7 @@
       "failures_5": 0,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "OK",
-      "detail": "last success 67.1h ago",
+      "detail": "last success 67.2h ago",
       "severity": "ok"
     },
     {
@@ -90,7 +90,7 @@
       "last_conclusion": "success",
       "last_success": "2026-11-25T12:51:21+00:00",
       "runs_14d": 20,
-      "last_edited": "2026-11-25T15:21:39+00:00",
+      "last_edited": "2026-11-25T19:28:50+00:00",
       "last_slot": "2026-11-25T03:14:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
@@ -115,7 +115,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 8.2h ago",
+      "detail": "last success 8.3h ago",
       "severity": "ok"
     },
     {
@@ -128,7 +128,7 @@
       "last_conclusion": "success",
       "last_success": "2026-11-25T19:16:19+00:00",
       "runs_14d": 13,
-      "last_edited": "2026-11-25T15:21:39+00:00",
+      "last_edited": "2026-11-25T19:28:50+00:00",
       "last_slot": "2026-11-25T04:37:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
@@ -153,7 +153,7 @@
       "failures_5": 0,
       "effect": "re-arms scheduled workflows",
       "verdict": "OK",
-      "detail": "last success 54.2h ago",
+      "detail": "last success 54.3h ago",
       "severity": "ok"
     },
     {
@@ -172,7 +172,7 @@
       "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
       "verdict": "OK",
-      "detail": "last success 1.9h ago",
+      "detail": "last success 2.0h ago",
       "severity": "ok"
     },
     {
@@ -181,18 +181,18 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-25T19:24:32+00:00",
+      "last_run": "2026-11-25T19:26:31+00:00",
       "last_conclusion": null,
       "last_success": null,
       "runs_14d": 20,
-      "last_edited": "2026-11-25T15:21:39+00:00",
+      "last_edited": "2026-11-25T19:28:50+00:00",
       "last_slot": "2026-11-25T18:23:00+00:00",
       "missed_slots": 0,
-      "failures_5": 3,
+      "failures_5": 0,
       "effect": "this report",
-      "verdict": "SELF-REPORT",
-      "detail": "its red runs are the verdicts below, not failures of it",
-      "severity": "info"
+      "verdict": "OK",
+      "detail": "last success 0.0h ago",
+      "severity": "ok"
     },
     {
       "workflow": "produce.yml",
@@ -208,13 +208,13 @@
       "last_conclusion": "success",
       "last_success": "2026-11-25T17:13:51+00:00",
       "runs_14d": 20,
-      "last_edited": "2026-11-24T17:29:56+00:00",
+      "last_edited": "2026-11-25T19:28:50+00:00",
       "last_slot": "2026-11-25T19:14:00+00:00",
       "missed_slots": 0,
-      "failures_5": 1,
+      "failures_5": 0,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
       "verdict": "OK",
-      "detail": "last success 2.2h ago",
+      "detail": "last success 2.3h ago",
       "severity": "ok"
     },
     {
@@ -233,7 +233,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 3.3h ago",
+      "detail": "last success 3.4h ago",
       "severity": "ok"
     },
     {
@@ -242,9 +242,9 @@
       "crons": [
         "47 0,3,6,9,12,15,18,21 * * *"
       ],
-      "last_run": "2026-11-25T19:24:32+00:00",
-      "last_conclusion": "success",
-      "last_success": "2026-11-25T19:24:32+00:00",
+      "last_run": "2026-11-25T19:27:25+00:00",
+      "last_conclusion": null,
+      "last_success": "2026-11-25T19:26:37+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-07T19:31:06+00:00",
       "last_slot": "2026-11-25T18:47:00+00:00",
@@ -284,7 +284,7 @@
       "last_conclusion": "success",
       "last_success": "2026-11-25T19:16:19+00:00",
       "runs_14d": 5,
-      "last_edited": "2026-11-24T15:40:05+00:00",
+      "last_edited": "2026-11-25T19:28:50+00:00",
       "last_slot": "2026-11-25T05:07:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
@@ -332,7 +332,7 @@
     },
     {
       "outcome": "last upload (prayer7)",
-      "detail": "The Provision Table: 2026-11-25 (4h ago \u2014 0521-when-you-need-guidance-in-your-work-isaiah-48-17.md)",
+      "detail": "The Provision Table: 2026-11-25 (5h ago \u2014 0521-when-you-need-guidance-in-your-work-isaiah-48-17.md)",
       "severity": "ok"
     },
     {
