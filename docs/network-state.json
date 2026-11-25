@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T20:04:56Z",
+  "generated_at": "2026-11-25T20:10:42Z",
   "monitor_generated_at": "2026-11-25T19:38:53.897385+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 818,
+    "published_total": 819,
     "published_longform": 226,
-    "published_shorts": 592,
-    "public_total": 816,
+    "published_shorts": 593,
+    "public_total": 817,
     "queued_longform": 75,
-    "queued_shorts": 52,
+    "queued_shorts": 50,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -572,23 +572,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 68,
+        "published_total": 69,
         "published_longform": 16,
-        "published_shorts": 52,
-        "thumbnail_pending": 68,
-        "public_total": 68,
+        "published_shorts": 53,
+        "thumbnail_pending": 69,
+        "public_total": 69,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM146V1",
-        "title": "Pray This Psalm 146:1-2 Prayer of Thanksgiving | When The Day Feels Long #Shorts",
+        "id": "SHORT-GARDENPSALM149V1",
+        "title": "Pray This Psalm 149:1-4 Prayer of Thanksgiving | Lift Your Heart Today #Shorts",
         "format": "short",
-        "youtube_video_id": "TWFsbOCB5aQ",
-        "watch_url": "https://www.youtube.com/shorts/TWFsbOCB5aQ",
+        "youtube_video_id": "4PZ_I4oFfKs",
+        "watch_url": "https://www.youtube.com/shorts/4PZ_I4oFfKs",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T15:21:08Z"
+        "published_at": "2026-11-25T20:09:25Z"
       },
       "next_queued_longform": {
         "id": "0717",
@@ -597,8 +597,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-garden2corinthians9v15",
-        "scripture": "2 Corinthians 9:15",
+        "short": "short-gardenpsalm96v1",
+        "scripture": "Psalm 96:1-4",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM149V1",
+      "slug": "short-gardenpsalm149v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm149v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 149:1-4 Prayer of Thanksgiving | Lift Your Heart Today #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T20:09:25Z",
+      "youtube_video_id": "4PZ_I4oFfKs",
+      "watch_url": "https://www.youtube.com/shorts/4PZ_I4oFfKs",
+      "youtu_be_url": "https://youtu.be/4PZ_I4oFfKs",
+      "shorts_url": "https://www.youtube.com/shorts/4PZ_I4oFfKs",
+      "studio_url": "https://studio.youtube.com/video/4PZ_I4oFfKs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/4PZ_I4oFfKs/hqdefault.jpg",
+      "thumb_text": "HE TAKES PLEASURE \u00b7 IN HIS PEOPLE",
+      "thumbnail_pending": true,
+      "duration_label": "46s",
+      "words": 651
+    },
     {
       "id": "SHORT-PROVISIONPSALM1V1",
       "slug": "short-provisionpsalm1v1-stewardship-prayer",
@@ -21318,28 +21342,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-garden2corinthians9v15",
-        "file": "0000-short-garden2corinthians9v15.yml",
-        "companion_longform_id": "",
-        "scripture": "2 Corinthians 9:15",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-gardenpsalm149v1",
-        "file": "0000-short-gardenpsalm149v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 149:1-4",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm96v1",
