@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["A SONG IN THE DARK", "MIDNIGHT WATCH", "PSALM 42:8", "PRAYER FOR RESTLESS HOURS"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-02T23:07:01Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 The night feels heavy in this quiet room. Yet the LORD will command his lovingkindness in the day time, and in the night his song shall be with me, and my prayer unto the God of my life. Lord of my life, when shadows cover the hours and silence presses close, send your song into the quiet dark. Surround this weary heart with mercy. Even when sleep stays far off, let your presence be a steady light. Anchor this restless mind in your unfailing grace. Hear this prayer made in the stillness, and turn every quiet fear into trust. Amen. The night feels heavy in this quiet room.

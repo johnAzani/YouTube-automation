@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["PRAYER FOR YOUR", "HOUSEHOLD AND FAMILY", "ACTS 16:31", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-25T22:10:08Z"
+thumbnail_retry_after: "2026-12-02T23:07:03Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If you carry a silent ache tonight for your family's salvation, hear God's promise. And they said, Believe on the Lord Jesus Christ, and thou shalt be saved, and thy house. Heavenly Father, we bring our entire household before Your throne in prayer. We pray for every child, spouse, and parent under this roof. Lord, break every heavy burden, draw their hearts to You, and cover our home in Your divine peace. Save our loved ones, wash away our fears, and fill our rooms with Your Holy Spirit. May our whole family rejoice together in Your salvation. Amen. Subscribe to cover your home in prayer.
