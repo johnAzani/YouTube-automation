@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["GOD SEES", "YOUR QUIET", "STRUGGLE", "TONIGHT"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Your quiet struggle is not hidden tonight. When nobody else sees the grief you carry behind closed doors, God knows every detail. Hear the quiet comfort of Psalm 31 verse 7. I will be glad and rejoice in thy mercy: for thou hast considered my trouble; thou hast known my soul in adversities; Father, thank you for witnessing the unseen trials of this day. You have not overlooked a single tear or quiet prayer. Surround this room with your unfailing mercy tonight, and quiet every restless thought. Grant peaceful sleep in the security of your presence. Amen. Your quiet struggle is not hidden.
