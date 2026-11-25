@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T09:03:38Z",
+  "generated_at": "2026-11-25T09:09:04Z",
   "monitor_generated_at": "2026-11-25T08:52:23.718913+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 790,
+    "published_total": 791,
     "published_longform": 220,
-    "published_shorts": 570,
-    "public_total": 788,
+    "published_shorts": 571,
+    "public_total": 789,
     "queued_longform": 70,
-    "queued_shorts": 60,
+    "queued_shorts": 58,
     "automations_ok": 9,
     "automations_total": 15,
     "network_healthy": false
@@ -436,23 +436,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 73,
+        "published_total": 74,
         "published_longform": 20,
-        "published_shorts": 53,
+        "published_shorts": 54,
         "thumbnail_pending": 6,
-        "public_total": 73,
+        "public_total": 74,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPSALM68V19",
-        "title": "Pray This Psalm 68:19 Prayer for Open Doors & Provision | Unanswered Daily Needs #Shorts",
+        "id": "SHORT-PROVISIONPSALM85V12",
+        "title": "Pray This Psalm 85:12 Prayer for Open Doors & Provision | Our Land Yields #Shorts",
         "format": "short",
-        "youtube_video_id": "6KpMZjeCDFc",
-        "watch_url": "https://www.youtube.com/shorts/6KpMZjeCDFc",
+        "youtube_video_id": "T4zPQzVWCYw",
+        "watch_url": "https://www.youtube.com/shorts/T4zPQzVWCYw",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T00:41:33Z"
+        "published_at": "2026-11-25T09:08:00Z"
       },
       "next_queued_longform": {
         "id": "0521",
@@ -461,8 +461,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionpsalm85v12",
-        "scripture": "Psalm 85:12",
+        "short": "short-provisionisaiah45v2",
+        "scripture": "Isaiah 45:2-3",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONPSALM85V12",
+      "slug": "short-provisionpsalm85v12-stewardship-prayer",
+      "file": "short-provisionpsalm85v12-stewardship-prayer.md",
+      "title": "Pray This Psalm 85:12 Prayer for Open Doors & Provision | Our Land Yields #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T09:08:00Z",
+      "youtube_video_id": "T4zPQzVWCYw",
+      "watch_url": "https://www.youtube.com/shorts/T4zPQzVWCYw",
+      "youtu_be_url": "https://youtu.be/T4zPQzVWCYw",
+      "shorts_url": "https://www.youtube.com/shorts/T4zPQzVWCYw",
+      "studio_url": "https://studio.youtube.com/video/T4zPQzVWCYw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/T4zPQzVWCYw/hqdefault.jpg",
+      "thumb_text": "THE LORD SHALL \u00b7 GIVE THAT WHICH",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 640
+    },
     {
       "id": "SHORT-FAMILYISAIAH65V23",
       "slug": "short-familyisaiah65v23-household-prayer",
@@ -20682,17 +20706,6 @@
         "target_window_utc": "23:14"
       },
       {
-        "short": "short-provisionpsalm85v12",
-        "file": "0000-short-provisionpsalm85v12.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 85:12",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
-      },
-      {
         "short": "short-psalm31v7",
         "file": "0000-short-psalm31v7.yml",
         "companion_longform_id": "",
@@ -21016,17 +21029,6 @@
         "file": "0521-short-provisionisaiah48v17.yml",
         "companion_longform_id": "0521",
         "scripture": "Isaiah 48:17",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-provisionpsalm145v15",
-        "file": "0528-short-provisionpsalm145v15.yml",
-        "companion_longform_id": "0528",
-        "scripture": "Psalm 145:15-16",
         "channel": "prayer7",
         "channel_name": "The Provision Table",
         "status": "approved",
