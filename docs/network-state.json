@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T13:46:28Z",
+  "generated_at": "2026-11-25T13:46:36Z",
   "monitor_generated_at": "2026-11-25T08:52:23.718913+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 800,
+    "published_total": 801,
     "published_longform": 223,
-    "published_shorts": 577,
-    "public_total": 798,
+    "published_shorts": 578,
+    "public_total": 799,
     "queued_longform": 75,
-    "queued_shorts": 60,
+    "queued_shorts": 59,
     "automations_ok": 9,
     "automations_total": 15,
     "network_healthy": false
@@ -164,23 +164,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 90,
+        "published_total": 91,
         "published_longform": 26,
-        "published_shorts": 64,
+        "published_shorts": 65,
         "thumbnail_pending": 3,
-        "public_total": 90,
+        "public_total": 91,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYPSALM46V10",
-        "title": "Say This Psalm 46:10 Prayer for Strength at Noon | God Is Near #Shorts",
+        "id": "SHORT-MIDDAYPSALM62V5",
+        "title": "Say This Psalm 62:5-8 Prayer for Strength at Noon | Stillness At Noon #Shorts",
         "format": "short",
-        "youtube_video_id": "A4ErjoGglws",
-        "watch_url": "https://www.youtube.com/shorts/A4ErjoGglws",
+        "youtube_video_id": "MBgoWxsLFgc",
+        "watch_url": "https://www.youtube.com/shorts/MBgoWxsLFgc",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T09:01:16Z"
+        "published_at": "2026-11-25T13:45:31Z"
       },
       "next_queued_longform": {
         "id": "0104",
@@ -189,8 +189,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm62v5",
-        "scripture": "Psalm 62:5-8",
+        "short": "short-middaypsalm73v26",
+        "scripture": "Psalm 73:26",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYPSALM62V5",
+      "slug": "short-middaypsalm62v5-midday-prayer",
+      "file": "short-middaypsalm62v5-midday-prayer.md",
+      "title": "Say This Psalm 62:5-8 Prayer for Strength at Noon | Stillness At Noon #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T13:45:31Z",
+      "youtube_video_id": "MBgoWxsLFgc",
+      "watch_url": "https://www.youtube.com/shorts/MBgoWxsLFgc",
+      "youtu_be_url": "https://youtu.be/MBgoWxsLFgc",
+      "shorts_url": "https://www.youtube.com/shorts/MBgoWxsLFgc",
+      "studio_url": "https://studio.youtube.com/video/MBgoWxsLFgc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/MBgoWxsLFgc/hqdefault.jpg",
+      "thumb_text": "WAITING UPON GOD \u00b7 MIDDAY REFLECTION",
+      "thumbnail_pending": false,
+      "duration_label": "47s",
+      "words": 627
+    },
     {
       "id": "SHORT-MIDNIGHTISAIAH26V3",
       "slug": "short-midnightisaiah26v3-midnight-prayer",
@@ -21079,17 +21103,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-middaypsalm62v5",
-        "file": "0097-short-middaypsalm62v5.yml",
-        "companion_longform_id": "0097",
-        "scripture": "Psalm 62:5-8",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm73v26",
