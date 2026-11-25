@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T15:11:07Z",
+  "generated_at": "2026-11-25T15:12:14Z",
   "monitor_generated_at": "2026-11-25T15:09:12.518381+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 224,
     "published_shorts": 582,
     "public_total": 804,
-    "queued_longform": 74,
+    "queued_longform": 75,
     "queued_shorts": 55,
     "automations_ok": 12,
     "automations_total": 15,
@@ -38,7 +38,7 @@
         "published_shorts": 76,
         "thumbnail_pending": 7,
         "public_total": 101,
-        "queued_longform": 7,
+        "queued_longform": 8,
         "queued_other": 5,
         "queued_shorts": 2
       },
@@ -20245,6 +20245,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1766
+      },
+      {
+        "id": "0141",
+        "slug": "release-what-you-cannot-carry-psalm-62-8",
+        "file": "0141-release-what-you-cannot-carry-psalm-62-8.md",
+        "title": "Release What You Cannot Carry: Psalm 62:8 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1256
       },
       {
         "id": "0226",
