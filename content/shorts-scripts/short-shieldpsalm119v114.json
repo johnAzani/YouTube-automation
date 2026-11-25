@@ -1,0 +1,384 @@
+{
+  "key": "short-shieldpsalm119v114",
+  "channel": "prayer8",
+  "psalm": 119,
+  "title": [
+    "HIDING PLACE",
+    "AND SHIELD"
+  ],
+  "poster": [
+    "THOU ART MY",
+    "HIDING PLACE",
+    "AND MY SHIELD",
+    "PSALM 119:114"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone fortress watchtower misty mountains dawn",
+    "dramatic light rays breaking through mountain cloud cover sunbeams",
+    "calm valley river safe passage deep mountain canyon soft light",
+    "golden sunset glowing over high mountain peak pine forest",
+    "massive stone cliff fortress quiet valley peaceful atmosphere",
+    "serene mountain lake mirror reflection calm sunset horizon"
+  ],
+  "scenes": [
+    {
+      "a": "The heavy burden on your mind is known.",
+      "img": "short-shieldpsalm119v114-scene-01.jpg",
+      "kicker": "HEAVY BURDEN",
+      "sub": "RESTING ON YOUR MIND IS KNOWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Thou art my hiding place and my shield: I hope in thy word.",
+      "img": "short-shieldpsalm119v114-scene-02.jpg",
+      "kicker": "PSALM 119:114",
+      "sub": "THOU ART MY HIDING PLACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, step directly between this soul and every unseen threat that looms today.",
+      "img": "short-shieldpsalm119v114-scene-03.jpg",
+      "kicker": "UNSEEN THREATS",
+      "sub": "BE THEIR SECRET SANCTUARY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Anchor their restless heart in the constant truth of your written word.",
+      "img": "short-shieldpsalm119v114-scene-04.jpg",
+      "kicker": "WRITTEN WORD",
+      "sub": "ANCHOR THEIR RESTLESS HEART",
+      "cam": "pan_right",
+      "focus": [
+        0.55,
+        0.45
+      ]
+    },
+    {
+      "a": "Shield their coming and going, quiet their anxious thoughts, and break the power of every panic.",
+      "img": "short-shieldpsalm119v114-scene-05.jpg",
+      "kicker": "DIVINE PROTECTION",
+      "sub": "COVER THEM IN YOUR STRENGTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "In Jesus' name, Amen.",
+      "img": "short-shieldpsalm119v114-scene-06.jpg",
+      "kicker": "BURDEN LIFTED",
+      "sub": "THE HEAVY BURDEN IS KNOWN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The heavy burden on your mind is known."
+    ],
+    [
+      3,
+      7,
+      "Hear the promise of Almighty God in Psalm 119:114:"
+    ],
+    [
+      7,
+      13,
+      "Thou art my hiding place and my shield: I hope in thy word."
+    ],
+    [
+      13,
+      19,
+      "Lord, step directly between this soul and every unseen threat that looms today."
+    ],
+    [
+      19,
+      25,
+      "When fear or opposition presses close, be their secret sanctuary and indestructible guard."
+    ],
+    [
+      25,
+      31,
+      "Anchor their restless heart in the constant truth of your written word."
+    ],
+    [
+      31,
+      38,
+      "Shield their coming and going, quiet their anxious thoughts, and break the power of every panic."
+    ],
+    [
+      38,
+      42,
+      "Cover them completely under the shadow of your strength."
+    ],
+    [
+      42,
+      44,
+      "In Jesus' name, Amen."
+    ],
+    [
+      44,
+      47,
+      "The heavy burden on your mind is known."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE HEAVY BURDEN",
+        "ON YOUR MIND IS KNOWN"
+      ],
+      [
+        "HEAVY",
+        "KNOWN"
+      ],
+      "YOUR HIDING PLACE"
+    ],
+    [
+      3,
+      7,
+      [
+        "HEAR THE PROMISE OF",
+        "ALMIGHTY GOD IN PSALM 119:114"
+      ],
+      [
+        "PROMISE",
+        "GOD"
+      ],
+      "PSALM 119 : 114"
+    ],
+    [
+      7,
+      13,
+      [
+        "THOU ART MY HIDING PLACE",
+        "AND MY SHIELD",
+        "I HOPE IN THY WORD"
+      ],
+      [
+        "HIDING",
+        "SHIELD",
+        "HOPE"
+      ],
+      "PSALM 119 : 114"
+    ],
+    [
+      13,
+      19,
+      [
+        "LORD STEP DIRECTLY BETWEEN",
+        "THIS SOUL AND EVERY",
+        "UNSEEN THREAT THAT LOOMS TODAY"
+      ],
+      [
+        "STEP",
+        "UNSEEN",
+        "THREAT"
+      ],
+      "PSALM 119 : 114"
+    ],
+    [
+      19,
+      25,
+      [
+        "WHEN FEAR OR OPPOSITION PRESSES CLOSE",
+        "BE THEIR SECRET SANCTUARY",
+        "AND INDESTRUCTIBLE GUARD"
+      ],
+      [
+        "SECRET",
+        "SANCTUARY",
+        "GUARD"
+      ],
+      "PSALM 119 : 114"
+    ],
+    [
+      25,
+      31,
+      [
+        "ANCHOR THEIR RESTLESS HEART",
+        "IN THE CONSTANT TRUTH",
+        "OF YOUR WRITTEN WORD"
+      ],
+      [
+        "ANCHOR",
+        "TRUTH",
+        "WORD"
+      ],
+      "PSALM 119 : 114"
+    ],
+    [
+      31,
+      38,
+      [
+        "SHIELD THEIR COMING AND GOING",
+        "QUIET THEIR ANXIOUS THOUGHTS",
+        "AND BREAK THE POWER",
+        "OF EVERY PANIC"
+      ],
+      [
+        "SHIELD",
+        "QUIET",
+        "BREAK"
+      ],
+      "PSALM 119 : 114"
+    ],
+    [
+      38,
+      42,
+      [
+        "COVER THEM COMPLETELY UNDER",
+        "THE SHADOW OF YOUR STRENGTH"
+      ],
+      [
+        "COVER",
+        "SHADOW",
+        "STRENGTH"
+      ],
+      "PSALM 119 : 114"
+    ],
+    [
+      42,
+      44,
+      [
+        "IN JESUS NAME",
+        "AMEN"
+      ],
+      [
+        "JESUS",
+        "AMEN"
+      ],
+      "PSALM 119 : 114"
+    ],
+    [
+      44,
+      47,
+      [
+        "THE HEAVY BURDEN",
+        "ON YOUR MIND IS KNOWN"
+      ],
+      [
+        "HEAVY",
+        "KNOWN"
+      ],
+      "PSALM 119 : 114"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The heavy burden on your mind is known.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "BURDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the promise of Almighty God in Psalm 119:114:",
+      "kind": "phrase",
+      "words": [
+        "ALMIGHTY",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thou art my hiding place and my shield: I hope in thy word.",
+      "kind": "phrase",
+      "words": [
+        "HIDING",
+        "PLACE",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, step directly between this soul and every unseen threat that looms today.",
+      "kind": "phrase",
+      "words": [
+        "UNSEEN",
+        "THREAT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When fear or opposition presses close, be their secret sanctuary and indestructible guard.",
+      "kind": "phrase",
+      "words": [
+        "SECRET",
+        "SANCTUARY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Anchor their restless heart in the constant truth of your written word.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Shield their coming and going, quiet their anxious thoughts, and break the power of every panic.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "ANXIOUS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Cover them completely under the shadow of your strength.",
+      "kind": "phrase",
+      "words": [
+        "SHADOW",
+        "STRENGTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus' name, Amen.",
+      "kind": "phrase",
+      "words": [
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 119:114"
+}
