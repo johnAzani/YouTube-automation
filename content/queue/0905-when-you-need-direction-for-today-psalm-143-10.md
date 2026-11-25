@@ -1,6 +1,6 @@
 ---
 id: 0905
-title: 'When You Need Direction for Today: Psalm 143:10 | The Morning Altar'
+title: "When You Need Your Path Made Clear: Psalm 143:10 | The Morning Altar"
 slug: when-you-need-direction-for-today-psalm-143-10
 status: approved
 channel: prayer2
@@ -70,6 +70,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When You Need Direction for Today: Psalm 143:10 | The Morning Altar"
+queue_title_fixed_at: "2026-11-25"
 ---
 
 ## Scene 1 — The First Light and the Cry for Guidance
