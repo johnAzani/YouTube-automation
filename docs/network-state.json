@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T09:11:02Z",
+  "generated_at": "2026-11-25T09:12:39Z",
   "monitor_generated_at": "2026-11-25T08:52:23.718913+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 792,
+    "published_total": 793,
     "published_longform": 220,
-    "published_shorts": 572,
-    "public_total": 790,
+    "published_shorts": 573,
+    "public_total": 791,
     "queued_longform": 70,
-    "queued_shorts": 56,
+    "queued_shorts": 55,
     "automations_ok": 9,
     "automations_total": 15,
     "network_healthy": false
@@ -504,23 +504,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 64,
+        "published_total": 65,
         "published_longform": 18,
-        "published_shorts": 46,
+        "published_shorts": 47,
         "thumbnail_pending": 34,
-        "public_total": 64,
+        "public_total": 65,
         "queued_longform": 6,
         "queued_other": 4,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0622",
-        "title": "The Lord Is Your Stronghold in Trouble: Nahum 1:7",
-        "format": "longform",
-        "youtube_video_id": "6v11qeOnyEI",
-        "watch_url": "https://youtu.be/6v11qeOnyEI",
+        "id": "SHORT-SHIELD2CHRONICLES20V15",
+        "title": "Pray This 2 Chronicles 20:15 Prayer for Divine Protection | The Burden You Carry #Shorts",
+        "format": "short",
+        "youtube_video_id": "Ff3QSCE4lcM",
+        "watch_url": "https://www.youtube.com/shorts/Ff3QSCE4lcM",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T00:17:54Z"
+        "published_at": "2026-11-25T09:11:18Z"
       },
       "next_queued_longform": {
         "id": "0624",
@@ -529,8 +529,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shield2chronicles20v15",
-        "scripture": "2 Chronicles 20:15",
+        "short": "short-shieldluke10v19",
+        "scripture": "Luke 10:19",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELD2CHRONICLES20V15",
+      "slug": "short-shield2chronicles20v15-protection-prayer",
+      "file": "short-shield2chronicles20v15-protection-prayer.md",
+      "title": "Pray This 2 Chronicles 20:15 Prayer for Divine Protection | The Burden You Carry #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T09:11:18Z",
+      "youtube_video_id": "Ff3QSCE4lcM",
+      "watch_url": "https://www.youtube.com/shorts/Ff3QSCE4lcM",
+      "youtu_be_url": "https://youtu.be/Ff3QSCE4lcM",
+      "shorts_url": "https://www.youtube.com/shorts/Ff3QSCE4lcM",
+      "studio_url": "https://studio.youtube.com/video/Ff3QSCE4lcM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Ff3QSCE4lcM/hqdefault.jpg",
+      "thumb_text": "THE BATTLE IS HIS \u00b7 HE IS YOUR SHIELD",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 629
+    },
     {
       "id": "SHORT-HEALINGPSALM107V19",
       "slug": "short-healingpsalm107v19-restoration-prayer",
@@ -20739,17 +20763,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shield2chronicles20v15",
-        "file": "0000-short-shield2chronicles20v15.yml",
-        "companion_longform_id": "",
-        "scripture": "2 Chronicles 20:15",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldluke10v19",
