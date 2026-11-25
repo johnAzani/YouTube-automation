@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T09:02:53Z",
+  "generated_at": "2026-11-25T09:03:30Z",
   "monitor_generated_at": "2026-11-25T08:52:23.718913+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 788,
+    "published_total": 789,
     "published_longform": 220,
-    "published_shorts": 568,
-    "public_total": 786,
+    "published_shorts": 569,
+    "public_total": 787,
     "queued_longform": 70,
-    "queued_shorts": 63,
+    "queued_shorts": 61,
     "automations_ok": 9,
     "automations_total": 15,
     "network_healthy": false
@@ -300,23 +300,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 71,
+        "published_total": 72,
         "published_longform": 21,
-        "published_shorts": 50,
-        "thumbnail_pending": 71,
-        "public_total": 71,
+        "published_shorts": 51,
+        "thumbnail_pending": 72,
+        "public_total": 72,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-FAMILYJUDE1V24",
-        "title": "Pray This Jude 1:24-25 Family Prayer Over Your Home | When You Fear You Might Slip #Shorts",
+        "id": "SHORT-FAMILYISAIAH65V23",
+        "title": "Pray This Isaiah 65:23 Family Prayer Over Your Home | Your Work For Them Matters #Shorts",
         "format": "short",
-        "youtube_video_id": "GiBa42kGvwU",
-        "watch_url": "https://www.youtube.com/shorts/GiBa42kGvwU",
+        "youtube_video_id": "AENSMjxx4E4",
+        "watch_url": "https://www.youtube.com/shorts/AENSMjxx4E4",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T00:33:23Z"
+        "published_at": "2026-11-25T09:02:22Z"
       },
       "next_queued_longform": {
         "id": "0322",
@@ -325,8 +325,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyisaiah65v23",
-        "scripture": "Isaiah 65:23",
+        "short": "short-familyjoshua4v6",
+        "scripture": "Joshua 4:6-7",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYISAIAH65V23",
+      "slug": "short-familyisaiah65v23-household-prayer",
+      "file": "short-familyisaiah65v23-household-prayer.md",
+      "title": "Pray This Isaiah 65:23 Family Prayer Over Your Home | Your Work For Them Matters #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T09:02:22Z",
+      "youtube_video_id": "AENSMjxx4E4",
+      "watch_url": "https://www.youtube.com/shorts/AENSMjxx4E4",
+      "youtu_be_url": "https://youtu.be/AENSMjxx4E4",
+      "shorts_url": "https://www.youtube.com/shorts/AENSMjxx4E4",
+      "studio_url": "https://studio.youtube.com/video/AENSMjxx4E4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/AENSMjxx4E4/hqdefault.jpg",
+      "thumb_text": "YOUR FAMILY IS \u00b7 BLESSED OF GOD",
+      "thumbnail_pending": true,
+      "duration_label": "43s",
+      "words": 674
+    },
     {
       "id": "SHORT-MIDNIGHTMICAH7V8",
       "slug": "short-midnightmicah7v8-midnight-prayer",
@@ -20524,17 +20548,6 @@
     ],
     "shorts": [
       {
-        "short": "short-familyisaiah65v23",
-        "file": "0000-short-familyisaiah65v23.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 65:23",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
-      {
         "short": "short-familyjoshua4v6",
         "file": "0000-short-familyjoshua4v6.yml",
         "companion_longform_id": "",
@@ -20858,17 +20871,6 @@
         "file": "0326-short-familygenesis12v2.yml",
         "companion_longform_id": "0326",
         "scripture": "Genesis 12:2-3",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-familyproverbs14v26",
-        "file": "0327-short-familyproverbs14v26.yml",
-        "companion_longform_id": "0327",
-        "scripture": "Proverbs 14:26",
         "channel": "prayer5",
         "channel_name": "The Family Altar",
         "status": "approved",
