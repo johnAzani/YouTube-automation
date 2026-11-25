@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-24T12:28:11.275128+00:00",
-  "as_of": "2026-11-24",
+  "generated_at": "2026-11-25T05:29:36.830612+00:00",
+  "as_of": "2026-11-25",
   "sufficient_data": false,
   "measured_longform_videos": 1,
-  "total_longform_videos": 12,
+  "total_longform_videos": 13,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 78,
+    "receipt_video_ids": 82,
     "matched_video_ids": 50,
-    "longform_below_view_threshold": 11,
+    "longform_below_view_threshold": 12,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 4,
+    "longform_too_young_or_undated": 3,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -28,15 +28,7 @@
     },
     {
       "theme": "general_prayer",
-      "videos": 9,
-      "measured_videos": 0,
-      "avg_score": 0.0,
-      "avg_engagement": 0.0,
-      "top_scripture": ""
-    },
-    {
-      "theme": "trust_surrender",
-      "videos": 1,
+      "videos": 10,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -49,163 +41,159 @@
       "avg_score": 0.0,
       "avg_engagement": 0.0,
       "top_scripture": ""
+    },
+    {
+      "theme": "trust_surrender",
+      "videos": 1,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": ""
     }
   ],
   "shorts": {
     "measured_shorts": 32,
-    "total_shorts": 38,
+    "total_shorts": 37,
     "sufficient_data": true,
-    "avg_views": 102.9,
-    "median_views": 52,
-    "total_views": 3294,
+    "avg_views": 79.3,
+    "median_views": 14,
+    "total_views": 2538,
     "minimum_age_days": 2,
     "by_book": {
       "1 peter": {
         "shorts": 1,
         "avg_views": 2.0,
-        "ratio": 0.673
+        "ratio": 0.675
       },
       "1 samuel": {
         "shorts": 1,
         "avg_views": 9.0,
-        "ratio": 0.696
+        "ratio": 0.704
       },
       "2 chronicles": {
         "shorts": 1,
         "avg_views": 251.0,
-        "ratio": 1.479
+        "ratio": 1.722
       },
       "2 timothy": {
         "shorts": 1,
         "avg_views": 273.0,
-        "ratio": 1.551
+        "ratio": 1.814
       },
       "colossians": {
         "shorts": 1,
         "avg_views": 112.0,
-        "ratio": 1.029
+        "ratio": 1.137
       },
       "daniel": {
         "shorts": 1,
         "avg_views": 19.0,
-        "ratio": 0.728
+        "ratio": 0.747
       },
       "deuteronomy": {
         "shorts": 1,
         "avg_views": 602.0,
-        "ratio": 2.616
+        "ratio": 3.197
       },
       "exodus": {
         "shorts": 1,
         "avg_views": 7.0,
-        "ratio": 0.689
+        "ratio": 0.696
       },
       "genesis": {
         "shorts": 1,
         "avg_views": 12.0,
-        "ratio": 0.706
+        "ratio": 0.717
       },
       "isaiah": {
-        "shorts": 1,
-        "avg_views": 0.0,
-        "ratio": 0.667
+        "shorts": 2,
+        "avg_views": 5.0,
+        "ratio": 0.532
       },
       "job": {
-        "shorts": 1,
-        "avg_views": 102.0,
-        "ratio": 0.997
-      },
-      "joel": {
-        "shorts": 1,
-        "avg_views": 184.0,
-        "ratio": 1.262
-      },
-      "judges": {
-        "shorts": 1,
-        "avg_views": 157.0,
-        "ratio": 1.175
+        "shorts": 2,
+        "avg_views": 51.5,
+        "ratio": 0.825
       },
       "lamentations": {
         "shorts": 1,
         "avg_views": 2.0,
-        "ratio": 0.673
+        "ratio": 0.675
       },
       "luke": {
-        "shorts": 2,
-        "avg_views": 191.5,
-        "ratio": 1.43
-      },
-      "mark": {
         "shorts": 1,
-        "avg_views": 104.0,
-        "ratio": 1.003
+        "avg_views": 48.0,
+        "ratio": 0.868
       },
       "matthew": {
         "shorts": 3,
         "avg_views": 41.0,
-        "ratio": 0.639
+        "ratio": 0.71
+      },
+      "micah": {
+        "shorts": 1,
+        "avg_views": 7.0,
+        "ratio": 0.696
       },
       "psalm": {
-        "shorts": 8,
-        "avg_views": 105.9,
-        "ratio": 1.023
+        "shorts": 9,
+        "avg_views": 94.8,
+        "ratio": 1.16
       },
       "revelation": {
         "shorts": 2,
         "avg_views": 43.0,
-        "ratio": 0.709
+        "ratio": 0.771
       },
       "romans": {
         "shorts": 1,
         "avg_views": 5.0,
-        "ratio": 0.683
+        "ratio": 0.688
       },
       "zechariah": {
         "shorts": 1,
         "avg_views": 14.0,
-        "ratio": 0.712
+        "ratio": 0.726
       }
     },
     "by_theme": {
       "anxiety_peace": {
         "shorts": 2,
         "avg_views": 1.0,
-        "ratio": 0.505
+        "ratio": 0.506
+      },
+      "daily_guidance_wisdom": {
+        "shorts": 1,
+        "avg_views": 7.0,
+        "ratio": 0.696
       },
       "general_prayer": {
         "shorts": 24,
-        "avg_views": 99.0,
-        "ratio": 0.964
+        "avg_views": 78.9,
+        "ratio": 0.995
       },
       "midday_strength_endurance": {
         "shorts": 2,
         "avg_views": 135.0,
-        "ratio": 1.156
-      },
-      "morning_mercy_renewal": {
-        "shorts": 1,
-        "avg_views": 104.0,
-        "ratio": 1.003
-      },
-      "peace_rest": {
-        "shorts": 1,
-        "avg_views": 184.0,
-        "ratio": 1.262
+        "ratio": 1.351
       },
       "protection": {
         "shorts": 1,
         "avg_views": 60.0,
-        "ratio": 0.861
+        "ratio": 0.919
+      },
+      "stillness_refuge": {
+        "shorts": 1,
+        "avg_views": 6.0,
+        "ratio": 0.692
       },
       "trust_surrender": {
         "shorts": 1,
         "avg_views": 299.0,
-        "ratio": 1.635
+        "ratio": 1.923
       }
     },
-    "guidance": [
-      "Shorts: Luke runs 1.4x this channel's average Short (103 views over 32 Shorts); its passages are written first."
-    ]
+    "guidance": []
   },
   "guidance": [
     "Only 1 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
