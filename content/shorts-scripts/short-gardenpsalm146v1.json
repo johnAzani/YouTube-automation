@@ -1,0 +1,323 @@
+{
+  "key": "short-gardenpsalm146v1",
+  "channel": "prayer9",
+  "psalm": 146,
+  "title": [
+    "A PRAYER OF PRAISE",
+    "WHEN WEARY"
+  ],
+  "poster": [
+    "PSALM 146:1-2",
+    "PRAISE THE LORD O MY SOUL",
+    "WHILE I LIVE I WILL SING",
+    "THE PRAISE GARDEN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "misty forest glade morning sunlight",
+    "sunlit meadow soft morning light",
+    "golden light over calm lake hills",
+    "peaceful river flowing through trees golden hour",
+    "calm countryside soft atmospheric sunlight",
+    "warm sunlight filtering through mountain forest",
+    "misty river landscape early morning glow"
+  ],
+  "scenes": [
+    {
+      "a": "Your hands feel empty after this long day.",
+      "img": "short-gardenpsalm146v1-scene-01.jpg",
+      "kicker": "EMPTY HANDS",
+      "sub": "WHEN THE DAY FEELS LONG",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Yet even here, your heart can turn toward heaven.",
+      "img": "short-gardenpsalm146v1-scene-02.jpg",
+      "kicker": "LOOK UPWARD",
+      "sub": "TURNING YOUR HEART TO GOD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The Psalmist writes, Praise ye the LORD. Praise the LORD, O my soul.",
+      "img": "short-gardenpsalm146v1-scene-03.jpg",
+      "kicker": "PRAISE THE LORD",
+      "sub": "PSALM 146:1",
+      "cam": "pull_out",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "While I live will I praise the LORD: I will sing praises unto my God while I have any being.",
+      "img": "short-gardenpsalm146v1-scene-04.jpg",
+      "kicker": "SING PRAISES",
+      "sub": "PSALM 146:2",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Father, when our strength falters and answers seem slow, remind us that our praise belongs to You in every season.",
+      "img": "short-gardenpsalm146v1-scene-05.jpg",
+      "kicker": "EVER PRESENT",
+      "sub": "PRAISE IN EVERY SEASON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We thank You for breath, for grace, and for Your unending love that sustains our souls today.",
+      "img": "short-gardenpsalm146v1-scene-06.jpg",
+      "kicker": "UNENDING LOVE",
+      "sub": "GRACE THAT SUSTAINS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Hear our grateful prayer, Amen. Your hands feel empty after this long day.",
+      "img": "short-gardenpsalm146v1-scene-07.jpg",
+      "kicker": "GRATEFUL HEART",
+      "sub": "AN EVERLASTING SONG",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your hands feel empty after this long day."
+    ],
+    [
+      3,
+      7,
+      "Yet even here, your heart can turn toward heaven."
+    ],
+    [
+      7,
+      12,
+      "The Psalmist writes, Praise ye the LORD. Praise the LORD, O my soul."
+    ],
+    [
+      12,
+      19,
+      "While I live will I praise the LORD: I will sing praises unto my God while I have any being."
+    ],
+    [
+      19,
+      26,
+      "Father, when our strength falters and answers seem slow, remind us that our praise belongs to You in every season."
+    ],
+    [
+      26,
+      33,
+      "We thank You for breath, for grace, and for Your unending love that sustains our souls today."
+    ],
+    [
+      33,
+      40,
+      "Hear our grateful prayer, Amen. Your hands feel empty after this long day."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR HANDS FEEL EMPTY",
+        "AFTER THIS LONG DAY."
+      ],
+      [
+        "EMPTY",
+        "DAY"
+      ],
+      "PSALM 146:1-2"
+    ],
+    [
+      3,
+      7,
+      [
+        "YET EVEN HERE,",
+        "YOUR HEART CAN TURN",
+        "TOWARD HEAVEN."
+      ],
+      [
+        "HEART",
+        "HEAVEN"
+      ],
+      "PSALM 146:1-2"
+    ],
+    [
+      7,
+      12,
+      [
+        "THE PSALMIST WRITES,",
+        "PRAISE YE THE LORD.",
+        "PRAISE THE LORD, O MY SOUL."
+      ],
+      [
+        "PRAISE",
+        "LORD",
+        "SOUL"
+      ],
+      "PSALM 146:1"
+    ],
+    [
+      12,
+      19,
+      [
+        "WHILE I LIVE WILL I PRAISE THE LORD:",
+        "I WILL SING PRAISES UNTO MY GOD",
+        "WHILE I HAVE ANY BEING."
+      ],
+      [
+        "PRAISE",
+        "SING",
+        "BEING"
+      ],
+      "PSALM 146:2"
+    ],
+    [
+      19,
+      26,
+      [
+        "FATHER, WHEN OUR STRENGTH FALTERS",
+        "AND ANSWERS SEEM SLOW,",
+        "REMIND US THAT OUR PRAISE",
+        "BELONGS TO YOU IN EVERY SEASON."
+      ],
+      [
+        "STRENGTH",
+        "PRAISE",
+        "SEASON"
+      ],
+      "PSALM 146:1-2"
+    ],
+    [
+      26,
+      33,
+      [
+        "WE THANK YOU FOR BREATH,",
+        "FOR GRACE, AND FOR YOUR",
+        "UNENDING LOVE THAT SUSTAINS",
+        "OUR SOULS TODAY."
+      ],
+      [
+        "THANK",
+        "GRACE",
+        "LOVE"
+      ],
+      "PSALM 146:1-2"
+    ],
+    [
+      33,
+      40,
+      [
+        "HEAR OUR GRATEFUL PRAYER, AMEN.",
+        "YOUR HANDS FEEL EMPTY",
+        "AFTER THIS LONG DAY."
+      ],
+      [
+        "GRATEFUL",
+        "EMPTY",
+        "DAY"
+      ],
+      "PSALM 146:1-2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your hands feel empty after this long day.",
+      "kind": "phrase",
+      "words": [
+        "EMPTY",
+        "DAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Yet even here, your heart can turn toward heaven.",
+      "kind": "phrase",
+      "words": [
+        "HEART",
+        "HEAVEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Psalmist writes, Praise ye the LORD. Praise the LORD, O my soul.",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "While I live will I praise the LORD: I will sing praises unto my God while I have any being.",
+      "kind": "phrase",
+      "words": [
+        "SING",
+        "PRAISES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, when our strength falters and answers seem slow, remind us that our praise belongs to You in every season.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "SEASON"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We thank You for breath, for grace, and for Your unending love that sustains our souls today.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear our grateful prayer, Amen. Your hands feel empty after this long day.",
+      "kind": "phrase",
+      "words": [
+        "GRATEFUL",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 146:1-2"
+}

@@ -1,0 +1,355 @@
+{
+  "key": "short-gardenpsalm149v1",
+  "channel": "prayer9",
+  "psalm": 149,
+  "title": [
+    "A NEW SONG",
+    "FOR HE DELIGHTS IN YOU"
+  ],
+  "poster": [
+    "HE TAKES PLEASURE",
+    "IN HIS PEOPLE",
+    "SING PRAISE TODAY",
+    "PSALM 149"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "misty forest glade morning light",
+    "sunlight filtering through green woodland",
+    "calm lake at sunrise golden glow",
+    "peaceful river flowing in meadow",
+    "golden hour countryside landscape",
+    "sunlit mountain valley serene landscape",
+    "misty green hills soft light",
+    "quiet forest stream sunlight"
+  ],
+  "scenes": [
+    {
+      "a": "You carry a quiet weight into this room.",
+      "img": "short-gardenpsalm149v1-scene-01.jpg",
+      "kicker": "QUIET WEIGHT",
+      "sub": "LIFT YOUR HEART TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear the word of the Lord from Psalm 149:",
+      "img": "short-gardenpsalm149v1-scene-02.jpg",
+      "kicker": "GODS PROMISE",
+      "sub": "HIS WORD IS FAITHFUL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Praise ye the LORD. Sing unto the LORD a new song, and his praise in the congregation of saints.",
+      "img": "short-gardenpsalm149v1-scene-03.jpg",
+      "kicker": "SING A NEW SONG",
+      "sub": "PRAISE YE THE LORD",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Let Israel rejoice in him that made him: let the children of Zion be joyful in their King.",
+      "img": "short-gardenpsalm149v1-scene-04.jpg",
+      "kicker": "REJOICE IN HIM",
+      "sub": "JOYFUL IN YOUR KING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "For the LORD taketh pleasure in his people: he will beautify the meek with salvation.",
+      "img": "short-gardenpsalm149v1-scene-05.jpg",
+      "kicker": "HIS PLEASURE",
+      "sub": "BEAUTIFY THE MEEK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father, thank You that You take pleasure in Your children even when we feel unseen.",
+      "img": "short-gardenpsalm149v1-scene-06.jpg",
+      "kicker": "HONEST THANKS",
+      "sub": "YOU DELIGHT IN US",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Adorn our hearts with Your peace, restore our strength, and give us a new song of praise today.",
+      "img": "short-gardenpsalm149v1-scene-07.jpg",
+      "kicker": "PEACE RESTORED",
+      "sub": "A NEW SONG OF PRAISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. You carry a quiet weight.",
+      "img": "short-gardenpsalm149v1-scene-08.jpg",
+      "kicker": "REST IN HIM",
+      "sub": "HIS GRACE IS ENOUGH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You carry a quiet weight into this room."
+    ],
+    [
+      3,
+      7,
+      "Hear the word of the Lord from Psalm 149:"
+    ],
+    [
+      7,
+      13,
+      "Praise ye the LORD. Sing unto the LORD a new song, and his praise in the congregation of saints."
+    ],
+    [
+      13,
+      19,
+      "Let Israel rejoice in him that made him: let the children of Zion be joyful in their King."
+    ],
+    [
+      19,
+      25,
+      "For the LORD taketh pleasure in his people: he will beautify the meek with salvation."
+    ],
+    [
+      25,
+      31,
+      "Father, thank You that You take pleasure in Your children even when we feel unseen."
+    ],
+    [
+      31,
+      37,
+      "Adorn our hearts with Your peace, restore our strength, and give us a new song of praise today."
+    ],
+    [
+      37,
+      40,
+      "Amen. You carry a quiet weight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU CARRY A",
+        "QUIET WEIGHT",
+        "INTO THIS ROOM"
+      ],
+      [
+        "QUIET",
+        "WEIGHT"
+      ],
+      "PSALM 149 : 1-4"
+    ],
+    [
+      3,
+      7,
+      [
+        "HEAR THE WORD",
+        "OF THE LORD",
+        "FROM PSALM 149"
+      ],
+      [
+        "PSALM",
+        "149"
+      ],
+      "PSALM 149 : 1-4"
+    ],
+    [
+      7,
+      13,
+      [
+        "SING UNTO THE LORD",
+        "A NEW SONG IN THE",
+        "CONGREGATION OF SAINTS"
+      ],
+      [
+        "NEW",
+        "SONG"
+      ],
+      "PSALM 149 : 1"
+    ],
+    [
+      13,
+      19,
+      [
+        "LET ISRAEL REJOICE",
+        "AND CHILDREN OF ZION",
+        "BE JOYFUL IN KING"
+      ],
+      [
+        "JOYFUL",
+        "KING"
+      ],
+      "PSALM 149 : 2"
+    ],
+    [
+      19,
+      25,
+      [
+        "THE LORD TAKETH",
+        "PLEASURE IN HIS PEOPLE",
+        "BEAUTIFY THE MEEK"
+      ],
+      [
+        "TAKETH",
+        "PLEASURE"
+      ],
+      "PSALM 149 : 4"
+    ],
+    [
+      25,
+      31,
+      [
+        "THANK YOU THAT YOU",
+        "TAKE PLEASURE IN US",
+        "EVEN WHEN UNSEEN"
+      ],
+      [
+        "THANK",
+        "YOU"
+      ],
+      "THE PRAISE GARDEN"
+    ],
+    [
+      31,
+      37,
+      [
+        "ADORN OUR HEARTS",
+        "RESTORE OUR STRENGTH",
+        "GIVE US A NEW SONG"
+      ],
+      [
+        "NEW",
+        "SONG"
+      ],
+      "THE PRAISE GARDEN"
+    ],
+    [
+      37,
+      40,
+      [
+        "AMEN YOU CARRY",
+        "A QUIET WEIGHT"
+      ],
+      [
+        "AMEN"
+      ],
+      "PSALM 149 : 1-4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You carry a quiet weight into this room.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "WEIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the word of the Lord from Psalm 149:",
+      "kind": "phrase",
+      "words": [
+        "WORD",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Praise ye the LORD. Sing unto the LORD a new song, and his praise in the congregation of saints.",
+      "kind": "phrase",
+      "words": [
+        "NEW",
+        "SONG"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let Israel rejoice in him that made him: let the children of Zion be joyful in their King.",
+      "kind": "phrase",
+      "words": [
+        "JOYFUL",
+        "KING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For the LORD taketh pleasure in his people: he will beautify the meek with salvation.",
+      "kind": "phrase",
+      "words": [
+        "TAKETH",
+        "PLEASURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, thank You that You take pleasure in Your children even when we feel unseen.",
+      "kind": "phrase",
+      "words": [
+        "THANK",
+        "YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Adorn our hearts with Your peace, restore our strength, and give us a new song of praise today.",
+      "kind": "phrase",
+      "words": [
+        "NEW",
+        "SONG"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. You carry a quiet weight.",
+      "kind": "phrase",
+      "words": [
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 149:1-4"
+}
