@@ -1,0 +1,362 @@
+{
+  "key": "short-isaiah50v10",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "WHEN NO LIGHT",
+    "CAN BE SEEN"
+  ],
+  "poster": [
+    "ISAIAH 50:10",
+    "TRUST IN THE DARK",
+    "A NIGHT PRAYER",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake night mist",
+    "starry night sky gentle trees",
+    "misty forest dark night moonlight",
+    "single lit candle in warm lantern dark room",
+    "calm ocean shore night moonlight waves",
+    "quiet mountain valley night stars",
+    "peaceful forest path moonlight shadow",
+    "calm still water lake night sky stars"
+  ],
+  "scenes": [
+    {
+      "a": "Night has fallen and you see no light.",
+      "img": "short-isaiah50v10-scene-01.jpg",
+      "kicker": "IN THE DARK",
+      "sub": "WHEN NO LIGHT CAN BE SEEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Scripture speaks into this quiet hour:",
+      "img": "short-isaiah50v10-scene-02.jpg",
+      "kicker": "ISAIAH 50:10",
+      "sub": "STAY UPON YOUR GOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Who is among you that feareth the LORD, that obeyeth the voice of his servant,",
+      "img": "short-isaiah50v10-scene-03.jpg",
+      "kicker": "THE VOICE",
+      "sub": "WALKETH IN DARKNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "that walketh in darkness, and hath no light? let him trust in the name of the LORD, and stay upon his God.",
+      "img": "short-isaiah50v10-scene-04.jpg",
+      "kicker": "TRUST HIS NAME",
+      "sub": "STAY UPON HIS GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, when the path ahead is hidden in shadows, grant rest to this searching mind.",
+      "img": "short-isaiah50v10-scene-05.jpg",
+      "kicker": "HIDDEN PATH",
+      "sub": "GRANT REST TO THIS MIND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach this heart to lean upon Your strength when every sight fails in the dark.",
+      "img": "short-isaiah50v10-scene-06.jpg",
+      "kicker": "LEAN ON HIM",
+      "sub": "WHEN EVERY SIGHT FAILS",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Cover this room with Your quiet peace until morning comes.",
+      "img": "short-isaiah50v10-scene-07.jpg",
+      "kicker": "QUIET PEACE",
+      "sub": "UNTIL MORNING COMES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. Night has fallen and you see no light.",
+      "img": "short-isaiah50v10-scene-08.jpg",
+      "kicker": "STAY IN PEACE",
+      "sub": "REST IN HIS NAME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Night has fallen and you see no light."
+    ],
+    [
+      3,
+      6,
+      "Scripture speaks into this quiet hour:"
+    ],
+    [
+      6,
+      13,
+      "Who is among you that feareth the LORD, that obeyeth the voice of his servant,"
+    ],
+    [
+      13,
+      22,
+      "that walketh in darkness, and hath no light? let him trust in the name of the LORD, and stay upon his God."
+    ],
+    [
+      22,
+      30,
+      "Lord, when the path ahead is hidden in shadows, grant rest to this searching mind."
+    ],
+    [
+      30,
+      37,
+      "Teach this heart to lean upon Your strength when every sight fails in the dark."
+    ],
+    [
+      37,
+      43,
+      "Cover this room with Your quiet peace until morning comes."
+    ],
+    [
+      43,
+      48,
+      "Amen. Night has fallen and you see no light."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "NIGHT HAS FALLEN",
+        "AND YOU SEE NO LIGHT"
+      ],
+      [
+        "NIGHT",
+        "NO",
+        "LIGHT"
+      ],
+      "ISAIAH 50 : 10"
+    ],
+    [
+      3,
+      6,
+      [
+        "SCRIPTURE SPEAKS",
+        "INTO THIS QUIET HOUR"
+      ],
+      [
+        "SCRIPTURE",
+        "QUIET"
+      ],
+      "ISAIAH 50 : 10"
+    ],
+    [
+      6,
+      13,
+      [
+        "WHO IS AMONG YOU",
+        "THAT FEARETH THE LORD",
+        "THAT OBEYETH HIS VOICE"
+      ],
+      [
+        "FEARETH",
+        "LORD",
+        "VOICE"
+      ],
+      "ISAIAH 50 : 10"
+    ],
+    [
+      13,
+      22,
+      [
+        "THAT WALKETH IN DARKNESS",
+        "AND HATH NO LIGHT",
+        "LET HIM TRUST IN THE LORD",
+        "AND STAY UPON HIS GOD"
+      ],
+      [
+        "DARKNESS",
+        "TRUST",
+        "STAY"
+      ],
+      "ISAIAH 50 : 10"
+    ],
+    [
+      22,
+      30,
+      [
+        "LORD WHEN THE PATH",
+        "IS HIDDEN IN SHADOWS",
+        "GRANT REST TO THIS MIND"
+      ],
+      [
+        "HIDDEN",
+        "REST",
+        "MIND"
+      ],
+      "ISAIAH 50 : 10"
+    ],
+    [
+      30,
+      37,
+      [
+        "TEACH THIS HEART TO LEAN",
+        "UPON YOUR STRENGTH",
+        "WHEN EVERY SIGHT FAILS"
+      ],
+      [
+        "LEAN",
+        "STRENGTH",
+        "FAILS"
+      ],
+      "ISAIAH 50 : 10"
+    ],
+    [
+      37,
+      43,
+      [
+        "COVER THIS ROOM",
+        "WITH YOUR QUIET PEACE",
+        "UNTIL MORNING COMES"
+      ],
+      [
+        "QUIET",
+        "PEACE",
+        "MORNING"
+      ],
+      "ISAIAH 50 : 10"
+    ],
+    [
+      43,
+      48,
+      [
+        "AMEN NIGHT HAS FALLEN",
+        "AND YOU SEE NO LIGHT"
+      ],
+      [
+        "AMEN",
+        "LIGHT"
+      ],
+      "ISAIAH 50 : 10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Night has fallen and you see no light.",
+      "kind": "phrase",
+      "words": [
+        "NIGHT",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture speaks into this quiet hour:",
+      "kind": "phrase",
+      "words": [
+        "SCRIPTURE",
+        "HOUR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Who is among you that feareth the LORD, that obeyeth the voice of his servant,",
+      "kind": "phrase",
+      "words": [
+        "FEARETH",
+        "VOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "that walketh in darkness, and hath no light? let him trust in the name of the LORD, and stay upon his God.",
+      "kind": "phrase",
+      "words": [
+        "DARKNESS",
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when the path ahead is hidden in shadows, grant rest to this searching mind.",
+      "kind": "phrase",
+      "words": [
+        "SHADOWS",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach this heart to lean upon Your strength when every sight fails in the dark.",
+      "kind": "phrase",
+      "words": [
+        "LEAN",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Cover this room with Your quiet peace until morning comes.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Night has fallen and you see no light.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 50:10"
+}

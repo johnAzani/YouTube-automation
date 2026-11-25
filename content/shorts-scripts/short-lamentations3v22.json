@@ -1,0 +1,378 @@
+{
+  "key": "short-lamentations3v22",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "NEW MERCIES",
+    "FOR YOUR NIGHT"
+  ],
+  "poster": [
+    "WHEN YOUR MIND IS RACING",
+    "LAMENTATIONS 3:22-23",
+    "BEDTIME PRAYER FOR REST",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm bedroom lantern dark night quiet",
+    "misty lake night calm blue water",
+    "starry night sky dark mountains calm",
+    "early dawn horizon soft sunrise light calm",
+    "candle glow dark room peaceful night",
+    "still forest night moonlight misty trees",
+    "gentle sunrise over quiet misty hills"
+  ],
+  "scenes": [
+    {
+      "a": "Your mind is racing in this quiet room.",
+      "img": "short-lamentations3v22-scene-01.jpg",
+      "kicker": "QUIET ROOM",
+      "sub": "WHEN YOUR MIND IS RACING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You carry the heavy thoughts of a long, exhausting day into your bed.",
+      "img": "short-lamentations3v22-scene-02.jpg",
+      "kicker": "HEAVY THOUGHTS",
+      "sub": "LAYING DOWN THE DAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "It is of the LORD's mercies that we are not consumed, because his compassions fail not.",
+      "img": "short-lamentations3v22-scene-03.jpg",
+      "kicker": "GOD'S MERCIES",
+      "sub": "LAMENTATIONS 3:22",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "They are new every morning: great is thy faithfulness.",
+      "img": "short-lamentations3v22-scene-04.jpg",
+      "kicker": "NEW EVERY MORNING",
+      "sub": "LAMENTATIONS 3:23",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, as the darkness settles, we lay down our anxious fears at your feet.",
+      "img": "short-lamentations3v22-scene-05.jpg",
+      "kicker": "EVENING PRAYER",
+      "sub": "REST IN HIS CARE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Forgive our doubts and silence the worries that keep our hearts awake tonight.",
+      "img": "short-lamentations3v22-scene-06.jpg",
+      "kicker": "SILENT NIGHT",
+      "sub": "PEACE FOR YOUR HEART",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "We trust that your endless mercy is already waiting for us at dawn. Amen. Sleep safely when your mind is racing.",
+      "img": "short-lamentations3v22-scene-07.jpg",
+      "kicker": "FAITHFUL DAWN",
+      "sub": "HIS MERCY AWAITS YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your mind is racing in this quiet room."
+    ],
+    [
+      3,
+      8,
+      "You carry the heavy thoughts of a long, exhausting day into your bed."
+    ],
+    [
+      8,
+      13,
+      "Hear these comforting words from Lamentations chapter 3:"
+    ],
+    [
+      13,
+      23,
+      "It is of the LORD's mercies that we are not consumed, because his compassions fail not."
+    ],
+    [
+      23,
+      29,
+      "They are new every morning: great is thy faithfulness."
+    ],
+    [
+      29,
+      34,
+      "Father, as the darkness settles, we lay down our anxious fears at your feet."
+    ],
+    [
+      34,
+      39,
+      "Forgive our doubts and silence the worries that keep our hearts awake tonight."
+    ],
+    [
+      39,
+      44,
+      "We trust that your endless mercy is already waiting for us at dawn."
+    ],
+    [
+      44,
+      48,
+      "Amen. Sleep safely when your mind is racing."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR MIND IS RACING",
+        "IN THIS QUIET ROOM"
+      ],
+      [
+        "RACING",
+        "ROOM"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      3,
+      8,
+      [
+        "YOU CARRY THE HEAVY THOUGHTS",
+        "OF A LONG EXHAUSTING DAY",
+        "INTO YOUR BED"
+      ],
+      [
+        "HEAVY",
+        "EXHAUSTING",
+        "BED"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      8,
+      13,
+      [
+        "HEAR THESE COMFORTING WORDS",
+        "FROM LAMENTATIONS CHAPTER THREE"
+      ],
+      [
+        "COMFORTING",
+        "LAMENTATIONS"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      13,
+      23,
+      [
+        "IT IS OF THE LORDS MERCIES",
+        "THAT WE ARE NOT CONSUMED",
+        "BECAUSE HIS COMPASSIONS FAIL NOT"
+      ],
+      [
+        "MERCIES",
+        "NOT CONSUMED",
+        "FAIL NOT"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      23,
+      29,
+      [
+        "THEY ARE NEW EVERY MORNING",
+        "GREAT IS THY FAITHFULNESS"
+      ],
+      [
+        "NEW",
+        "MORNING",
+        "FAITHFULNESS"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      29,
+      34,
+      [
+        "FATHER AS THE DARKNESS SETTLES",
+        "WE LAY DOWN OUR ANXIOUS FEARS",
+        "AT YOUR FEET"
+      ],
+      [
+        "DARKNESS",
+        "LAY DOWN",
+        "FEARS"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      34,
+      39,
+      [
+        "FORGIVE OUR DOUBTS AND SILENCE",
+        "THE WORRIES THAT KEEP",
+        "OUR HEARTS AWAKE TONIGHT"
+      ],
+      [
+        "SILENCE",
+        "WORRIES",
+        "AWAKE"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      39,
+      44,
+      [
+        "WE TRUST THAT YOUR ENDLESS MERCY",
+        "IS ALREADY WAITING FOR US",
+        "AT DAWN"
+      ],
+      [
+        "TRUST",
+        "ENDLESS MERCY",
+        "DAWN"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      44,
+      48,
+      [
+        "AMEN SLEEP SAFELY WHEN",
+        "YOUR MIND IS RACING"
+      ],
+      [
+        "AMEN",
+        "SAFELY",
+        "RACING"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your mind is racing in this quiet room.",
+      "kind": "phrase",
+      "words": [
+        "RACING",
+        "ROOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You carry the heavy thoughts of a long, exhausting day into your bed.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "EXHAUSTING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "It is of the LORD's mercies that we are not consumed,",
+      "kind": "phrase",
+      "words": [
+        "MERCIES",
+        "CONSUMED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "because his compassions fail not.",
+      "kind": "phrase",
+      "words": [
+        "COMPASSIONS",
+        "FAIL NOT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "They are new every morning: great is thy faithfulness.",
+      "kind": "phrase",
+      "words": [
+        "NEW",
+        "FAITHFULNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, as the darkness settles, we lay down our anxious fears at your feet.",
+      "kind": "phrase",
+      "words": [
+        "LAY DOWN",
+        "FEARS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Forgive our doubts and silence the worries that keep our hearts awake tonight.",
+      "kind": "phrase",
+      "words": [
+        "SILENCE",
+        "WORRIES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We trust that your endless mercy is already waiting for us at dawn.",
+      "kind": "phrase",
+      "words": [
+        "ENDLESS MERCY",
+        "DAWN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Sleep safely when your mind is racing.",
+      "kind": "phrase",
+      "words": [
+        "SLEEP SAFELY",
+        "RACING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Lamentations 3:22-23"
+}
