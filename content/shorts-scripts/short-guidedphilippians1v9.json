@@ -1,0 +1,388 @@
+{
+  "key": "short-guidedphilippians1v9",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "DISCERN WHAT IS EXCELLENT",
+    "A PRAYER FOR WISDOM"
+  ],
+  "poster": [
+    "THE GUIDED PATH",
+    "PHILIPPIANS 1:9-10",
+    "PRAYER FOR WISDOM",
+    "AND DISCERNMENT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley quiet river dawn",
+    "calm mountain pass foggy morning trees",
+    "peaceful mountain lake morning reflection",
+    "quiet forest path sunlight through mist",
+    "alpine mountain peak early morning light",
+    "calm river flowing through mountain valley",
+    "misty pine forest mountain valley sunrise",
+    "peaceful stream in quiet alpine forest",
+    "soft morning light over calm mountain lake"
+  ],
+  "scenes": [
+    {
+      "a": "You are weighing two good choices tonight.",
+      "img": "short-guidedphilippians1v9-scene-01.jpg",
+      "kicker": "TWO GOOD CHOICES",
+      "sub": "WEIGHING YOUR NEXT STEP TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "It is hard to know which direction honours God when both paths look clear.",
+      "img": "short-guidedphilippians1v9-scene-02.jpg",
+      "kicker": "SEEKING DIRECTION",
+      "sub": "WHEN BOTH PATHS LOOK RIGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear God's Word in Philippians:",
+      "img": "short-guidedphilippians1v9-scene-03.jpg",
+      "kicker": "GOD'S WORD",
+      "sub": "PHILIPPIANS 1:9-10",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And this I pray, that your love may abound yet more and more in knowledge and in all judgment;",
+      "img": "short-guidedphilippians1v9-scene-04.jpg",
+      "kicker": "PHILIPPIANS 1:9",
+      "sub": "ABOUND IN KNOWLEDGE AND JUDGMENT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "That ye may approve things that are excellent; that ye may be sincere and without offence till the day of Christ;",
+      "img": "short-guidedphilippians1v9-scene-05.jpg",
+      "kicker": "PHILIPPIANS 1:10",
+      "sub": "APPROVE THINGS THAT ARE EXCELLENT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, grant me true spiritual discernment today.",
+      "img": "short-guidedphilippians1v9-scene-06.jpg",
+      "kicker": "PRAY FOR WISDOM",
+      "sub": "ASKING FOR SPIRITUAL DISCERNMENT",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach my heart to look beyond what is merely good, that I may choose what is truly excellent in Your eyes.",
+      "img": "short-guidedphilippians1v9-scene-07.jpg",
+      "kicker": "CHOOSE EXCELLENCE",
+      "sub": "LOOKING BEYOND THE MERELY GOOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Keep my walk sincere and blameless as I follow You.",
+      "img": "short-guidedphilippians1v9-scene-08.jpg",
+      "kicker": "WALK SINCERELY",
+      "sub": "GUIDED BY HIS TRUTH TODAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. You are weighing two good choices tonight.",
+      "img": "short-guidedphilippians1v9-scene-09.jpg",
+      "kicker": "TWO GOOD CHOICES",
+      "sub": "RETURN YOUR DECISION TO HIM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You are weighing two good choices tonight."
+    ],
+    [
+      3,
+      8,
+      "It is hard to know which direction honours God when both paths look clear."
+    ],
+    [
+      8,
+      13,
+      "Hear God's Word in Philippians:"
+    ],
+    [
+      13,
+      22,
+      "And this I pray, that your love may abound yet more and more in knowledge and in all judgment;"
+    ],
+    [
+      22,
+      30,
+      "That ye may approve things that are excellent; that ye may be sincere and without offence till the day of Christ;"
+    ],
+    [
+      30,
+      36,
+      "Lord, grant me true spiritual discernment today."
+    ],
+    [
+      36,
+      43,
+      "Teach my heart to look beyond what is merely good, that I may choose what is truly excellent in Your eyes."
+    ],
+    [
+      43,
+      48,
+      "Keep my walk sincere and blameless as I follow You."
+    ],
+    [
+      48,
+      52,
+      "Amen. You are weighing two good choices tonight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU ARE WEIGHING",
+        "TWO GOOD CHOICES",
+        "TONIGHT"
+      ],
+      [
+        "CHOICES"
+      ],
+      "PHILIPPIANS 1:9-10"
+    ],
+    [
+      3,
+      8,
+      [
+        "HARD TO KNOW WHICH",
+        "DIRECTION HONOURS GOD",
+        "WHEN BOTH LOOK CLEAR"
+      ],
+      [
+        "HONOURS"
+      ],
+      "PHILIPPIANS 1:9-10"
+    ],
+    [
+      8,
+      13,
+      [
+        "HEAR GOD'S WORD",
+        "IN PHILIPPIANS"
+      ],
+      [
+        "WORD"
+      ],
+      "PHILIPPIANS 1:9-10"
+    ],
+    [
+      13,
+      22,
+      [
+        "THAT YOUR LOVE MAY ABOUND",
+        "MORE AND MORE IN KNOWLEDGE",
+        "AND IN ALL JUDGMENT"
+      ],
+      [
+        "ABOUND"
+      ],
+      "PHILIPPIANS 1:9"
+    ],
+    [
+      22,
+      30,
+      [
+        "THAT YE MAY APPROVE",
+        "THINGS THAT ARE EXCELLENT",
+        "SINCERE AND WITHOUT OFFENCE"
+      ],
+      [
+        "EXCELLENT"
+      ],
+      "PHILIPPIANS 1:10"
+    ],
+    [
+      30,
+      36,
+      [
+        "LORD GRANT ME TRUE",
+        "SPIRITUAL DISCERNMENT TODAY"
+      ],
+      [
+        "DISCERNMENT"
+      ],
+      "PHILIPPIANS 1:9-10"
+    ],
+    [
+      36,
+      43,
+      [
+        "TEACH MY HEART TO LOOK",
+        "BEYOND WHAT IS MERELY GOOD",
+        "TO WHAT IS TRULY EXCELLENT"
+      ],
+      [
+        "EXCELLENT"
+      ],
+      "PHILIPPIANS 1:9-10"
+    ],
+    [
+      43,
+      48,
+      [
+        "KEEP MY WALK SINCERE",
+        "AND BLAMELESS AS I",
+        "FOLLOW YOU TODAY"
+      ],
+      [
+        "SINCERE"
+      ],
+      "PHILIPPIANS 1:9-10"
+    ],
+    [
+      48,
+      52,
+      [
+        "AMEN YOU ARE WEIGHING",
+        "TWO GOOD CHOICES",
+        "TONIGHT"
+      ],
+      [
+        "CHOICES"
+      ],
+      "PHILIPPIANS 1:9-10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You are weighing two good choices tonight.",
+      "kind": "phrase",
+      "words": [
+        "WEIGHING",
+        "CHOICES"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "It is hard to know which direction honours God when both paths look clear.",
+      "kind": "phrase",
+      "words": [
+        "HONOURS",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear God's Word in Philippians:",
+      "kind": "phrase",
+      "words": [
+        "WORD",
+        "PHILIPPIANS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And this I pray, that your love may abound yet more and more in knowledge and in all judgment;",
+      "kind": "phrase",
+      "words": [
+        "ABOUND",
+        "KNOWLEDGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "That ye may approve things that are excellent; that ye may be sincere and without offence till the day of Christ;",
+      "kind": "phrase",
+      "words": [
+        "APPROVE",
+        "EXCELLENT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, grant me true spiritual discernment today.",
+      "kind": "phrase",
+      "words": [
+        "SPIRITUAL",
+        "DISCERNMENT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Teach my heart to look beyond what is merely good, that I may choose what is truly excellent in Your eyes.",
+      "kind": "phrase",
+      "words": [
+        "TRULY",
+        "EXCELLENT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Keep my walk sincere and blameless as I follow You.",
+      "kind": "phrase",
+      "words": [
+        "SINCERE",
+        "BLAMELESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. You are weighing two good choices tonight.",
+      "kind": "phrase",
+      "words": [
+        "WEIGHING",
+        "CHOICES"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Philippians 1:9-10"
+}

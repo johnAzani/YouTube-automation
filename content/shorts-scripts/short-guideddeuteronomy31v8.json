@@ -1,0 +1,360 @@
+{
+  "key": "short-guideddeuteronomy31v8",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "WHEN THE NEXT STEP",
+    "FEELS UNKNOWN"
+  ],
+  "poster": [
+    "WHEN YOU FACE",
+    "AN UNCERTAIN PATH",
+    "GOD GOES BEFORE YOU",
+    "DEUTERONOMY 31:8"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain valley at sunrise soft golden morning light",
+    "rocky alpine trail foggy morning mountain horizon",
+    "calm alpine lake reflections soft early light fog",
+    "sunbeams breaking through forest misty mountain path",
+    "quiet winding river flowing through mountain valley sunrise",
+    "dramatic mountain peaks illuminated by early morning light",
+    "peaceful mountain pass path at dawn calm stillness"
+  ],
+  "scenes": [
+    {
+      "a": "You step into an unknown path today.",
+      "img": "short-guideddeuteronomy31v8-scene-01.jpg",
+      "kicker": "UNKNOWN PATH",
+      "sub": "FACING A HEAVY DECISION TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The heavy decision ahead feels too large for your own sight.",
+      "img": "short-guideddeuteronomy31v8-scene-02.jpg",
+      "kicker": "UNCERTAIN STEPS",
+      "sub": "WHEN VISION FEELS UNCLEAR",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And the LORD, he it is that doth go before thee;",
+      "img": "short-guideddeuteronomy31v8-scene-03.jpg",
+      "kicker": "DEUTERONOMY 31:8",
+      "sub": "HE DOTH GO BEFORE THEE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Heavenly Father, as this new road begins, go ahead of every step.",
+      "img": "short-guideddeuteronomy31v8-scene-04.jpg",
+      "kicker": "SEEK HIS GUIDANCE",
+      "sub": "GO AHEAD OF EVERY STEP",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Clear the fog of doubt and give quiet wisdom for the choice at hand.",
+      "img": "short-guideddeuteronomy31v8-scene-05.jpg",
+      "kicker": "QUIET WISDOM",
+      "sub": "LIGHT FOR THE DECISION AHEAD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Remind us that we do not walk into tomorrow alone.",
+      "img": "short-guideddeuteronomy31v8-scene-06.jpg",
+      "kicker": "NEVER FORSAKEN",
+      "sub": "GOD WALKS WITH YOU",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In Jesus' name, Amen. You step into an unknown path today.",
+      "img": "short-guideddeuteronomy31v8-scene-07.jpg",
+      "kicker": "HE LEADS THE WAY",
+      "sub": "REST IN HIS PRESENCE TODAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You step into an unknown path today."
+    ],
+    [
+      3,
+      9,
+      "The heavy decision ahead feels too large for your own sight."
+    ],
+    [
+      9,
+      13,
+      "Hear what the Lord promises:"
+    ],
+    [
+      13,
+      26,
+      "And the LORD, he it is that doth go before thee; he will be with thee, he will not fail thee, neither forsake thee: fear not, neither be dismayed."
+    ],
+    [
+      26,
+      34,
+      "Heavenly Father, as this new road begins, go ahead of every step."
+    ],
+    [
+      34,
+      42,
+      "Clear the fog of doubt and give quiet wisdom for the choice at hand."
+    ],
+    [
+      42,
+      49,
+      "Remind us that we do not walk into tomorrow alone."
+    ],
+    [
+      49,
+      56,
+      "Grant strength when uncertainty pulls at the heart, for You lead the way."
+    ],
+    [
+      56,
+      61,
+      "In Jesus' name, Amen. You step into an unknown path today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU STEP INTO AN",
+        "UNKNOWN PATH TODAY"
+      ],
+      [
+        "UNKNOWN",
+        "PATH"
+      ],
+      "DEUTERONOMY 31 : 8"
+    ],
+    [
+      3,
+      9,
+      [
+        "THE HEAVY DECISION AHEAD",
+        "FEELS TOO LARGE FOR",
+        "YOUR OWN SIGHT"
+      ],
+      [
+        "HEAVY",
+        "DECISION"
+      ],
+      "DEUTERONOMY 31 : 8"
+    ],
+    [
+      9,
+      13,
+      [
+        "HEAR WHAT THE LORD",
+        "PROMISES IN HIS WORD"
+      ],
+      [
+        "PROMISES"
+      ],
+      "DEUTERONOMY 31 : 8"
+    ],
+    [
+      13,
+      26,
+      [
+        "AND THE LORD HE IT IS",
+        "THAT DOTH GO BEFORE THEE",
+        "HE WILL BE WITH THEE",
+        "HE WILL NOT FAIL THEE",
+        "NEITHER FORSAKE THEE"
+      ],
+      [
+        "GO",
+        "BEFORE",
+        "THEE"
+      ],
+      "DEUTERONOMY 31 : 8"
+    ],
+    [
+      26,
+      34,
+      [
+        "HEAVENLY FATHER AS THIS",
+        "NEW ROAD BEGINS GO",
+        "AHEAD OF EVERY STEP"
+      ],
+      [
+        "NEW",
+        "ROAD"
+      ],
+      "DEUTERONOMY 31 : 8"
+    ],
+    [
+      34,
+      42,
+      [
+        "CLEAR THE FOG OF DOUBT",
+        "AND GIVE QUIET WISDOM",
+        "FOR THE CHOICE AT HAND"
+      ],
+      [
+        "QUIET",
+        "WISDOM"
+      ],
+      "DEUTERONOMY 31 : 8"
+    ],
+    [
+      42,
+      49,
+      [
+        "REMIND US THAT WE DO NOT",
+        "WALK INTO TOMORROW ALONE"
+      ],
+      [
+        "NOT",
+        "ALONE"
+      ],
+      "DEUTERONOMY 31 : 8"
+    ],
+    [
+      49,
+      56,
+      [
+        "GRANT STRENGTH WHEN UNCERTAINTY",
+        "PULLS AT THE HEART FOR YOU",
+        "LEAD THE WAY"
+      ],
+      [
+        "LEAD",
+        "THE",
+        "WAY"
+      ],
+      "DEUTERONOMY 31 : 8"
+    ],
+    [
+      56,
+      61,
+      [
+        "IN JESUS NAME AMEN",
+        "YOU STEP INTO AN",
+        "UNKNOWN PATH TODAY"
+      ],
+      [
+        "AMEN",
+        "UNKNOWN"
+      ],
+      "DEUTERONOMY 31 : 8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You step into an unknown path today.",
+      "kind": "phrase",
+      "words": [
+        "UNKNOWN",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "The heavy decision ahead feels too large for your own sight.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "DECISION"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "And the LORD, he it is that doth go before thee; he will be with thee, he will not fail thee, neither forsake thee: fear not, neither be dismayed.",
+      "kind": "quote",
+      "words": [
+        "GO",
+        "BEFORE",
+        "THEE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, as this new road begins, go ahead of every step.",
+      "kind": "phrase",
+      "words": [
+        "AHEAD",
+        "OF",
+        "EVERY",
+        "STEP"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "Clear the fog of doubt and give quiet wisdom for the choice at hand.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "Remind us that we do not walk into tomorrow alone.",
+      "kind": "phrase",
+      "words": [
+        "NOT",
+        "WALK",
+        "ALONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus' name, Amen. You step into an unknown path today.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "UNKNOWN",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "A"
+    }
+  ],
+  "scripture": "Deuteronomy 31:8"
+}

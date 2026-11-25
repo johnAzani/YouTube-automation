@@ -1,0 +1,366 @@
+{
+  "key": "short-guidedpsalm16v11",
+  "channel": "prayer10",
+  "psalm": 16,
+  "title": [
+    "SEEKING WISDOM FOR",
+    "YOUR NEXT STEP"
+  ],
+  "poster": [
+    "WHEN YOU FACE",
+    "AN UNCERTAIN ROAD",
+    "SEEK GOD'S PATH",
+    "PSALM 16:11"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "calm alpine lake mist early morning",
+    "misty forest trail path morning light",
+    "peaceful mountain valley stream sunlight",
+    "sunbeams filtering through mountain pine trees",
+    "quiet mountain pass overlooking valley",
+    "serene river flowing through mountain woods",
+    "calm mountain lake glowing dawn sky"
+  ],
+  "scenes": [
+    {
+      "a": "That choice sitting on your mind needs wisdom.",
+      "img": "short-guidedpsalm16v11-scene-01.jpg",
+      "kicker": "DECISION AHEAD",
+      "sub": "WHEN YOUR NEXT STEP IS UNCLEAR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "When every option feels heavy and unclear, turn to His Word.",
+      "img": "short-guidedpsalm16v11-scene-02.jpg",
+      "kicker": "TURNING TO GOD",
+      "sub": "SEEKING HEAVENLY DIRECTION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The Lord promises in Psalm 16:11,",
+      "img": "short-guidedpsalm16v11-scene-03.jpg",
+      "kicker": "PSALM 16:11",
+      "sub": "THOU WILT SHOW ME THE PATH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Thou wilt show me the path of life: in thy presence is fulness of joy; at thy right hand there are pleasures for evermore.",
+      "img": "short-guidedpsalm16v11-scene-04.jpg",
+      "kicker": "FULNESS OF JOY",
+      "sub": "IN HIS PRESENCE IS REST",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, we yield our own plans and ask for Your clear direction.",
+      "img": "short-guidedpsalm16v11-scene-05.jpg",
+      "kicker": "SURRENDERING PLANS",
+      "sub": "LEAVING YOUR OUTCOME TO HIM",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Lead this quiet heart away from confusion and onto Your steady trail.",
+      "img": "short-guidedpsalm16v11-scene-06.jpg",
+      "kicker": "STEADY DIRECTION",
+      "sub": "WALKING IN GODS WISDOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "whenever that choice sitting on your mind needs wisdom.",
+      "img": "short-guidedpsalm16v11-scene-07.jpg",
+      "kicker": "SEEK HIS PATH",
+      "sub": "THAT CHOICE NEEDS WISDOM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That choice sitting on your mind needs wisdom."
+    ],
+    [
+      3,
+      7,
+      "When every option feels heavy and unclear, turn to His Word."
+    ],
+    [
+      7,
+      10,
+      "The Lord promises in Psalm 16:11,"
+    ],
+    [
+      10,
+      20,
+      "Thou wilt show me the path of life: in thy presence is fulness of joy; at thy right hand there are pleasures for evermore."
+    ],
+    [
+      20,
+      25,
+      "Lord, we yield our own plans and ask for Your clear direction."
+    ],
+    [
+      25,
+      30,
+      "Lead this quiet heart away from confusion and onto Your steady trail."
+    ],
+    [
+      30,
+      35,
+      "Fill this present moment with Your peace, knowing Your hand holds tomorrow."
+    ],
+    [
+      35,
+      38,
+      "Show us the way forward, Lord,"
+    ],
+    [
+      38,
+      42,
+      "whenever that choice sitting on your mind needs wisdom."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT CHOICE SITTING",
+        "ON YOUR MIND",
+        "NEEDS WISDOM"
+      ],
+      [
+        "WISDOM"
+      ],
+      "GUIDANCE PRAYER"
+    ],
+    [
+      3,
+      7,
+      [
+        "WHEN EVERY OPTION",
+        "FEELS HEAVY AND UNCLEAR",
+        "TURN TO HIS WORD"
+      ],
+      [
+        "HIS WORD"
+      ],
+      "PSALM 16:11"
+    ],
+    [
+      7,
+      10,
+      [
+        "THE LORD PROMISES",
+        "IN PSALM 16:11"
+      ],
+      [
+        "PROMISES"
+      ],
+      "PSALM 16:11"
+    ],
+    [
+      10,
+      20,
+      [
+        "THOU WILT SHOW ME",
+        "THE PATH OF LIFE",
+        "IN THY PRESENCE IS FULNESS OF JOY",
+        "AT THY RIGHT HAND",
+        "THERE ARE PLEASURES FOR EVERMORE"
+      ],
+      [
+        "PATH OF LIFE",
+        "FULNESS OF JOY"
+      ],
+      "PSALM 16:11"
+    ],
+    [
+      20,
+      25,
+      [
+        "LORD WE YIELD",
+        "OUR OWN PLANS",
+        "AND ASK FOR YOUR CLEAR DIRECTION"
+      ],
+      [
+        "CLEAR DIRECTION"
+      ],
+      "A PRAYER FOR WISDOM"
+    ],
+    [
+      25,
+      30,
+      [
+        "LEAD THIS QUIET HEART",
+        "AWAY FROM CONFUSION",
+        "AND ONTO YOUR STEADY TRAIL"
+      ],
+      [
+        "STEADY TRAIL"
+      ],
+      "A PRAYER FOR WISDOM"
+    ],
+    [
+      30,
+      35,
+      [
+        "FILL THIS PRESENT MOMENT",
+        "WITH YOUR PEACE",
+        "KNOWING YOUR HAND HOLDS TOMORROW"
+      ],
+      [
+        "YOUR PEACE"
+      ],
+      "A PRAYER FOR WISDOM"
+    ],
+    [
+      35,
+      38,
+      [
+        "SHOW US THE WAY FORWARD LORD"
+      ],
+      [
+        "WAY FORWARD"
+      ],
+      "A PRAYER FOR WISDOM"
+    ],
+    [
+      38,
+      42,
+      [
+        "WHENEVER THAT CHOICE",
+        "SITTING ON YOUR MIND",
+        "NEEDS WISDOM"
+      ],
+      [
+        "NEEDS WISDOM"
+      ],
+      "THE GUIDED PATH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That choice sitting on your mind needs wisdom.",
+      "kind": "phrase",
+      "words": [
+        "CHOICE",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When every option feels heavy and unclear, turn to His Word.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "WORD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord promises in Psalm 16:11,",
+      "kind": "phrase",
+      "words": [
+        "PROMISES",
+        "PSALM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thou wilt show me the path of life: in thy presence is fulness of joy; at thy right hand there are pleasures for evermore.",
+      "kind": "phrase",
+      "words": [
+        "PATH",
+        "JOY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we yield our own plans and ask for Your clear direction.",
+      "kind": "phrase",
+      "words": [
+        "YIELD",
+        "DIRECTION"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lead this quiet heart away from confusion and onto Your steady trail.",
+      "kind": "phrase",
+      "words": [
+        "CONFUSION",
+        "TRAIL"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Fill this present moment with Your peace, knowing Your hand holds tomorrow.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "TOMORROW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Show us the way forward, Lord,",
+      "kind": "phrase",
+      "words": [
+        "WAY",
+        "FORWARD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "whenever that choice sitting on your mind needs wisdom.",
+      "kind": "phrase",
+      "words": [
+        "CHOICE",
+        "WISDOM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 16:11"
+}
