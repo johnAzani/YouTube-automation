@@ -9,9 +9,9 @@
       "workflow": "thumbnail-campaign.yml"
     },
     {
-      "late_minutes": 442,
+      "late_minutes": 555,
       "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-21T02:03:21+00:00",
+      "ran_at": "2026-11-21T03:56:15+00:00",
       "slot": "2026-11-20T18:41:00+00:00",
       "workflow": "metrics.yml"
     },
@@ -65,15 +65,15 @@
       "workflow": "comments.yml"
     },
     {
-      "late_minutes": 123,
-      "name": "Growth autopilot",
-      "ran_at": "2026-11-24T04:17:41+00:00",
-      "slot": "2026-11-24T02:14:00+00:00",
-      "workflow": "growth-autopilot.yml"
+      "late_minutes": 135,
+      "name": "Scheduler supervisor",
+      "ran_at": "2026-11-25T03:02:04+00:00",
+      "slot": "2026-11-25T00:47:00+00:00",
+      "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "generated_at": "2026-11-25T00:25:34.108041+00:00",
-  "last_run_at": "2026-11-25T00:24:45+00:00",
+  "generated_at": "2026-11-25T03:02:59.549766+00:00",
+  "last_run_at": "2026-11-25T03:02:04+00:00",
   "on_time": [
     {
       "late_minutes": 90,
@@ -102,13 +102,6 @@
       "ran_at": "2026-11-24T23:28:45+00:00",
       "slot": "2026-11-24T23:14:00+00:00",
       "workflow": "produce.yml"
-    },
-    {
-      "late_minutes": 0,
-      "name": "Scheduler supervisor",
-      "ran_at": "2026-11-24T21:47:15+00:00",
-      "slot": "2026-11-24T21:47:00+00:00",
-      "workflow": "scheduler-supervisor.yml"
     }
   ],
   "silence_minutes": 0,
