@@ -51,13 +51,6 @@
       "workflow": "reporting-jobs.yml"
     },
     {
-      "late_minutes": 147,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-25T14:50:51+00:00",
-      "slot": "2026-11-25T12:23:00+00:00",
-      "workflow": "monitor.yml"
-    },
-    {
       "late_minutes": 131,
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "ran_at": "2026-11-25T05:25:42+00:00",
@@ -65,8 +58,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-25T15:18:28.174910+00:00",
-  "last_run_at": "2026-11-25T15:17:38+00:00",
+  "generated_at": "2026-11-25T15:23:48.255532+00:00",
+  "last_run_at": "2026-11-25T15:22:55+00:00",
   "on_time": [
     {
       "late_minutes": 90,
