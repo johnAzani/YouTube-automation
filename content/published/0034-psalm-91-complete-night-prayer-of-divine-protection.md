@@ -103,6 +103,7 @@ narration_voice: "Charon"
 duration_seconds: 428.9
 thumbnail_revision: "ctr-v3-cinema"
 thumbnail_concept: "quiet"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 ## Scene 1 — Entering the Secret Place (Verses 1–2)

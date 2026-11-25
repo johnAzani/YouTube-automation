@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["HE TAKES PLEASURE", "IN HIS PEOPLE", "SING PRAISE TODAY", "PSALM 149"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-02T20:47:07Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 You carry a quiet weight into this room. Hear the word of the Lord from Psalm 149: Praise ye the LORD. Sing unto the LORD a new song, and his praise in the congregation of saints. Let Israel rejoice in him that made him: let the children of Zion be joyful in their King. For the LORD taketh pleasure in his people: he will beautify the meek with salvation. Father, thank You that You take pleasure in Your children even when we feel unseen. Adorn our hearts with Your peace, restore our strength, and give us a new song of praise today. Amen. You carry a quiet weight.
