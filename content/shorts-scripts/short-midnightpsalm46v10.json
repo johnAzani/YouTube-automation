@@ -1,0 +1,301 @@
+{
+  "key": "short-midnightpsalm46v10",
+  "channel": "prayer4",
+  "psalm": 46,
+  "title": [
+    "BE STILL AND KNOW",
+    "MIDNIGHT PRAYER"
+  ],
+  "poster": [
+    "MIDNIGHT WATCH",
+    "PSALM 46:10",
+    "BE STILL",
+    "AND KNOW"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "calm dark mountain lake night reflection stars",
+    "ancient stone watchtower silhouette starry midnight sky",
+    "deep blue night sky starry heavens wilderness silhouette",
+    "dimly lit stone sanctuary vigil candle light night",
+    "misty dark midnight forest silent calm night",
+    "lamp illuminated quiet sanctuary window night sky"
+  ],
+  "scenes": [
+    {
+      "a": "Your racing thoughts demand an answer tonight.",
+      "img": "short-midnightpsalm46v10-scene-01.jpg",
+      "kicker": "RACING THOUGHTS",
+      "sub": "DEMAND AN ANSWER TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Yet God speaks into the quiet of this late hour.",
+      "img": "short-midnightpsalm46v10-scene-02.jpg",
+      "kicker": "SILENT HOUR",
+      "sub": "GOD SPEAKS INTO THE QUIET",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Be still, and know that I am God:",
+      "img": "short-midnightpsalm46v10-scene-03.jpg",
+      "kicker": "PSALM 46:10",
+      "sub": "BE STILL AND KNOW",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father, as midnight settles, we surrender the heavy urge",
+      "img": "short-midnightpsalm46v10-scene-04.jpg",
+      "kicker": "SURRENDER STRIVING",
+      "sub": "LAY DOWN THE HEAVY URGE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Help us lay down our striving, knowing You reign",
+      "img": "short-midnightpsalm46v10-scene-05.jpg",
+      "kicker": "GOD REIGNS",
+      "sub": "OVER EVERY CIRCUMSTANCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Establish Your perfect peace in this silent room right now.",
+      "img": "short-midnightpsalm46v10-scene-06.jpg",
+      "kicker": "PERFECT PEACE",
+      "sub": "YOUR RACING THOUGHTS CAN REST",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your racing thoughts demand an answer tonight."
+    ],
+    [
+      3,
+      9,
+      "Yet God speaks into the quiet of this late hour. His holy word declares:"
+    ],
+    [
+      9,
+      18,
+      "Be still, and know that I am God: I will be exalted among the heathen, I will be exalted in the earth."
+    ],
+    [
+      18,
+      27,
+      "Father, as midnight settles, we surrender the heavy urge to fix everything ourselves. Quiet the relentless storm within our minds."
+    ],
+    [
+      27,
+      35,
+      "Help us lay down our striving, knowing You reign over every circumstance beyond our control."
+    ],
+    [
+      35,
+      42,
+      "Establish Your perfect peace in this silent room right now. Lord, we trust Your sovereignty when our strength gives out. Amen. Your racing thoughts can rest."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR RACING THOUGHTS",
+        "DEMAND AN ANSWER",
+        "TONIGHT"
+      ],
+      [
+        "RACING",
+        "ANSWER"
+      ],
+      "MIDNIGHT WATCH"
+    ],
+    [
+      3,
+      9,
+      [
+        "YET GOD SPEAKS",
+        "INTO THE QUIET",
+        "OF THIS LATE HOUR",
+        "HIS WORD DECLARES"
+      ],
+      [
+        "SPEAKS",
+        "QUIET"
+      ],
+      "THE MIDNIGHT WATCH"
+    ],
+    [
+      9,
+      18,
+      [
+        "BE STILL AND KNOW",
+        "THAT I AM GOD",
+        "EXALTED IN THE EARTH"
+      ],
+      [
+        "STILL",
+        "GOD",
+        "EXALTED"
+      ],
+      "PSALM 46 : 10"
+    ],
+    [
+      18,
+      27,
+      [
+        "WE SURRENDER THE URGE",
+        "TO FIX EVERYTHING",
+        "QUIET THE STORM",
+        "WITHIN OUR MINDS"
+      ],
+      [
+        "SURRENDER",
+        "QUIET"
+      ],
+      "MIDNIGHT PRAYER"
+    ],
+    [
+      27,
+      35,
+      [
+        "LAY DOWN OUR STRIVING",
+        "KNOWING YOU REIGN",
+        "OVER EVERY",
+        "CIRCUMSTANCE"
+      ],
+      [
+        "STRIVING",
+        "REIGN"
+      ],
+      "MIDNIGHT PRAYER"
+    ],
+    [
+      35,
+      42,
+      [
+        "ESTABLISH PERFECT PEACE",
+        "IN THIS SILENT ROOM",
+        "WE TRUST YOUR SOVEREIGNTY",
+        "THOUGHTS CAN REST"
+      ],
+      [
+        "PEACE",
+        "REST"
+      ],
+      "PSALM 46 : 10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your racing thoughts demand an answer tonight.",
+      "kind": "phrase",
+      "words": [
+        "RACING",
+        "THOUGHTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Yet God speaks into the quiet of this late hour.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "SPEAKS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Be still, and know that I am God:",
+      "kind": "phrase",
+      "words": [
+        "BE",
+        "STILL"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Father, as midnight settles, we surrender the heavy urge to fix everything ourselves.",
+      "kind": "phrase",
+      "words": [
+        "WE",
+        "SURRENDER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Quiet the relentless storm within our minds.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "STORM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help us lay down our striving, knowing You reign over every circumstance beyond our control.",
+      "kind": "phrase",
+      "words": [
+        "YOU",
+        "REIGN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Establish Your perfect peace in this silent room right now.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Your racing thoughts can rest.",
+      "kind": "phrase",
+      "words": [
+        "CAN",
+        "REST"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 46:10"
+}

@@ -1,0 +1,317 @@
+{
+  "key": "short-midnightpsalm88v1",
+  "channel": "prayer4",
+  "psalm": 88,
+  "title": [
+    "WHEN TEARS FALL",
+    "IN THE DARK"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "PSALM 88:1-2",
+    "GOD HEARS YOUR CRY",
+    "MIDNIGHT PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "dark window rain midnight vigil sanctuary candle",
+    "starry sky over calm dark mountain lake night",
+    "ancient open holy bible candlelight sanctuary night",
+    "single candle burning dark sanctuary midnight",
+    "misty forest path night moon light silhouette",
+    "soft warm light in dark room lantern night",
+    "quiet starry heavens night skyline peaceful silhouette"
+  ],
+  "scenes": [
+    {
+      "a": "Your tears fell silently into the dark tonight.",
+      "img": "short-midnightpsalm88v1-scene-01.jpg",
+      "kicker": "SILENT TEARS",
+      "sub": "WHEN YOU CRY OUT IN THE DARK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You wondered if anyone heard the grief you could not name.",
+      "img": "short-midnightpsalm88v1-scene-02.jpg",
+      "kicker": "UNNAMED GRIEF",
+      "sub": "HEARING THE HIDDEN SORROW",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear the scripture of Psalm 88: O LORD God of my salvation, I have cried day and night before thee:",
+      "img": "short-midnightpsalm88v1-scene-03.jpg",
+      "kicker": "HOLY WORD",
+      "sub": "PSALM 88 VERSE 1",
+      "cam": "tilt_up",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Let my prayer come before thee: incline thine ear unto my cry.",
+      "img": "short-midnightpsalm88v1-scene-04.jpg",
+      "kicker": "INCLINE THINE EAR",
+      "sub": "PSALM 88 VERSE 2",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, in this quiet midnight hour, reach into the room where strength ran out.",
+      "img": "short-midnightpsalm88v1-scene-05.jpg",
+      "kicker": "MIDNIGHT WATCH",
+      "sub": "REACH INTO THIS QUIET ROOM",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Receive the groan that has no words, and hold the heart that spent all day pretending.",
+      "img": "short-midnightpsalm88v1-scene-06.jpg",
+      "kicker": "OPEN HEART",
+      "sub": "GOD RECEIVES YOUR GROAN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your presence anchor this weary space until peace arrives. Amen. Your tears fell silently into the dark tonight.",
+      "img": "short-midnightpsalm88v1-scene-07.jpg",
+      "kicker": "PEACE ARRIVES",
+      "sub": "YOUR CRY IS HEARD TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your tears fell silently into the dark tonight."
+    ],
+    [
+      3,
+      8,
+      "You wondered if anyone heard the grief you could not name."
+    ],
+    [
+      8,
+      14,
+      "Hear the scripture of Psalm 88: O LORD God of my salvation, I have cried day and night before thee:"
+    ],
+    [
+      14,
+      20,
+      "Let my prayer come before thee: incline thine ear unto my cry."
+    ],
+    [
+      20,
+      27,
+      "Lord, in this quiet midnight hour, reach into the room where strength ran out."
+    ],
+    [
+      27,
+      34,
+      "Receive the groan that has no words, and hold the heart that spent all day pretending."
+    ],
+    [
+      34,
+      42,
+      "Let your presence anchor this weary space until peace arrives. Amen. Your tears fell silently into the dark tonight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR TEARS FELL",
+        "SILENTLY INTO THE",
+        "DARK TONIGHT"
+      ],
+      [
+        "SILENTLY",
+        "DARK"
+      ],
+      "PSALM 88 : 1-2"
+    ],
+    [
+      3,
+      8,
+      [
+        "YOU WONDERED IF ANYONE",
+        "HEARD THE GRIEF YOU",
+        "COULD NOT NAME"
+      ],
+      [
+        "HEARD",
+        "GRIEF"
+      ],
+      "PSALM 88 : 1-2"
+    ],
+    [
+      8,
+      14,
+      [
+        "O LORD GOD OF",
+        "MY SALVATION I HAVE CRIED",
+        "DAY AND NIGHT BEFORE THEE"
+      ],
+      [
+        "SALVATION",
+        "CRIED"
+      ],
+      "PSALM 88 : 1-2"
+    ],
+    [
+      14,
+      20,
+      [
+        "LET MY PRAYER COME",
+        "BEFORE THEE INCLINE THINE",
+        "EAR UNTO MY CRY"
+      ],
+      [
+        "PRAYER",
+        "INCLINE"
+      ],
+      "PSALM 88 : 1-2"
+    ],
+    [
+      20,
+      27,
+      [
+        "LORD IN THIS QUIET",
+        "MIDNIGHT HOUR REACH INTO",
+        "THE ROOM WHERE STRENGTH RAN OUT"
+      ],
+      [
+        "MIDNIGHT",
+        "STRENGTH"
+      ],
+      "PSALM 88 : 1-2"
+    ],
+    [
+      27,
+      34,
+      [
+        "RECEIVE THE GROAN THAT",
+        "HAS NO WORDS AND HOLD",
+        "THE HEART PRETENDING"
+      ],
+      [
+        "GROAN",
+        "HOLD"
+      ],
+      "PSALM 88 : 1-2"
+    ],
+    [
+      34,
+      42,
+      [
+        "LET YOUR PRESENCE ANCHOR",
+        "THIS WEARY SPACE UNTIL",
+        "PEACE ARRIVES AMEN"
+      ],
+      [
+        "ANCHOR",
+        "PEACE"
+      ],
+      "PSALM 88 : 1-2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your tears fell silently into the dark tonight.",
+      "kind": "phrase",
+      "words": [
+        "TEARS",
+        "DARK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You wondered if anyone heard the grief you could not name.",
+      "kind": "phrase",
+      "words": [
+        "HEARD",
+        "GRIEF"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the scripture of Psalm 88: O LORD God of my salvation, I have cried day and night before thee:",
+      "kind": "phrase",
+      "words": [
+        "SALVATION",
+        "CRIED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let my prayer come before thee: incline thine ear unto my cry.",
+      "kind": "phrase",
+      "words": [
+        "PRAYER",
+        "INCLINE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, in this quiet midnight hour, reach into the room where strength ran out.",
+      "kind": "phrase",
+      "words": [
+        "MIDNIGHT",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Receive the groan that has no words, and hold the heart that spent all day pretending.",
+      "kind": "phrase",
+      "words": [
+        "GROAN",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your presence anchor this weary space until peace arrives. Amen. Your tears fell silently into the dark tonight.",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 88:1-2"
+}

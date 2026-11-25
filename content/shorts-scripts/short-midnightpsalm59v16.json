@@ -1,0 +1,352 @@
+{
+  "key": "short-midnightpsalm59v16",
+  "channel": "prayer4",
+  "psalm": 59,
+  "title": [
+    "DEFENCE IN THE NIGHT",
+    "PSALM 59:16 PRAYER"
+  ],
+  "poster": [
+    "THE TROUBLE",
+    "KEEPING YOU AWAKE",
+    "IS REAL TONIGHT",
+    "STAND IN PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette night sky stars",
+    "dark stormy sea cliff night sanctuary light",
+    "ancient stone wall night sky deep stars moon",
+    "calm mountain lake night stars lantern light",
+    "quiet lamp lit sanctuary altar midnight",
+    "dawn breaking over mist covered mountains horizon",
+    "starry midnight sky over peaceful valley",
+    "midnight watchtower silhouette deep starry sky"
+  ],
+  "scenes": [
+    {
+      "a": "The trouble keeping you awake tonight is real.",
+      "img": "short-midnightpsalm59v16-scene-01.jpg",
+      "kicker": "AWAKE TONIGHT",
+      "sub": "THE TROUBLE IS REAL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Yet in this dark hour, God remains your safe shelter.",
+      "img": "short-midnightpsalm59v16-scene-02.jpg",
+      "kicker": "SAFE SHELTER",
+      "sub": "GOD REMAINS YOUR REFUGE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "His word promises: But I will sing of thy power; yea, I will sing aloud of thy mercy in the morning: for thou hast been my defence and refuge in the day of my trouble.",
+      "img": "short-midnightpsalm59v16-scene-03.jpg",
+      "kicker": "PSALM 59:16",
+      "sub": "SING ALOUD OF HIS MERCY",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, cover this weary heart right now with your steadfast peace.",
+      "img": "short-midnightpsalm59v16-scene-04.jpg",
+      "kicker": "STEADFAST PEACE",
+      "sub": "COVER THIS WEARY HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Be our strong defence when fear presses close in the quiet.",
+      "img": "short-midnightpsalm59v16-scene-05.jpg",
+      "kicker": "STRONG DEFENCE",
+      "sub": "WHEN FEAR PRESSES CLOSE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your morning mercy rise brighter than every shadow.",
+      "img": "short-midnightpsalm59v16-scene-06.jpg",
+      "kicker": "MORNING MERCY",
+      "sub": "RISING BRIGHTER THAN SHADOWS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We trust your unfailing power to guard us until dawn.",
+      "img": "short-midnightpsalm59v16-scene-07.jpg",
+      "kicker": "UNFAILING POWER",
+      "sub": "GUARDING YOU UNTIL DAWN",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. The trouble keeping you awake tonight is real.",
+      "img": "short-midnightpsalm59v16-scene-08.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "STAND IN PRAYER AT MIDNIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The trouble keeping you awake tonight is real."
+    ],
+    [
+      3,
+      9,
+      "Yet in this dark hour, God remains your safe shelter."
+    ],
+    [
+      9,
+      21,
+      "His word promises: But I will sing of thy power; yea, I will sing aloud of thy mercy in the morning: for thou hast been my defence and refuge in the day of my trouble."
+    ],
+    [
+      21,
+      30,
+      "Lord, cover this weary heart right now with your steadfast peace."
+    ],
+    [
+      30,
+      39,
+      "Be our strong defence when fear presses close in the quiet."
+    ],
+    [
+      39,
+      48,
+      "Let your morning mercy rise brighter than every shadow."
+    ],
+    [
+      48,
+      54,
+      "We trust your unfailing power to guard us until dawn."
+    ],
+    [
+      54,
+      60,
+      "Amen. The trouble keeping you awake tonight is real."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE TROUBLE",
+        "KEEPING YOU AWAKE",
+        "IS REAL"
+      ],
+      [
+        "TROUBLE",
+        "AWAKE"
+      ],
+      "PSALM 59 : 16"
+    ],
+    [
+      3,
+      9,
+      [
+        "GOD REMAINS YOUR",
+        "SAFE SHELTER"
+      ],
+      [
+        "SAFE",
+        "SHELTER"
+      ],
+      "PSALM 59 : 16"
+    ],
+    [
+      9,
+      21,
+      [
+        "I WILL SING ALOUD",
+        "OF THY MERCY",
+        "IN THE MORNING"
+      ],
+      [
+        "MERCY",
+        "MORNING"
+      ],
+      "PSALM 59 : 16"
+    ],
+    [
+      21,
+      30,
+      [
+        "COVER THIS WEARY",
+        "HEART WITH PEACE"
+      ],
+      [
+        "STEADFAST",
+        "PEACE"
+      ],
+      "PSALM 59 : 16"
+    ],
+    [
+      30,
+      39,
+      [
+        "BE OUR STRONG",
+        "DEFENCE IN QUIET"
+      ],
+      [
+        "STRONG",
+        "DEFENCE"
+      ],
+      "PSALM 59 : 16"
+    ],
+    [
+      39,
+      48,
+      [
+        "LET MORNING MERCY",
+        "RISE BRIGHTER"
+      ],
+      [
+        "MORNING",
+        "MERCY"
+      ],
+      "PSALM 59 : 16"
+    ],
+    [
+      48,
+      54,
+      [
+        "WE TRUST YOUR",
+        "UNFAILING POWER"
+      ],
+      [
+        "UNFAILING",
+        "POWER"
+      ],
+      "PSALM 59 : 16"
+    ],
+    [
+      54,
+      60,
+      [
+        "THE TROUBLE KEEPING",
+        "YOU AWAKE IS REAL"
+      ],
+      [
+        "AWAKE",
+        "REAL"
+      ],
+      "PSALM 59 : 16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The trouble keeping you awake tonight is real.",
+      "kind": "phrase",
+      "words": [
+        "TROUBLE",
+        "AWAKE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Yet in this dark hour, God remains your safe shelter.",
+      "kind": "phrase",
+      "words": [
+        "SAFE",
+        "SHELTER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "His word promises: But I will sing of thy power; yea, I will sing aloud of thy mercy in the morning: for thou hast been my defence and refuge in the day of my trouble.",
+      "kind": "phrase",
+      "words": [
+        "DEFENCE",
+        "REFUGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, cover this weary heart right now with your steadfast peace.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Be our strong defence when fear presses close in the quiet.",
+      "kind": "phrase",
+      "words": [
+        "STRONG",
+        "DEFENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your morning mercy rise brighter than every shadow.",
+      "kind": "phrase",
+      "words": [
+        "MORNING",
+        "MERCY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "We trust your unfailing power to guard us until dawn.",
+      "kind": "phrase",
+      "words": [
+        "UNFAILING",
+        "POWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. The trouble keeping you awake tonight is real.",
+      "kind": "phrase",
+      "words": [
+        "TROUBLE",
+        "REAL"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 59:16"
+}

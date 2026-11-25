@@ -1,0 +1,331 @@
+{
+  "key": "short-midnightmicah7v8",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "WHEN YOU FALL",
+    "YOU SHALL ARISE"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "MICAH 7:8 PRAYER",
+    "LIGHT IN DARKNESS",
+    "STAND IN PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "ancient watchtower silhouette starry midnight sky",
+    "single lamp shining inside dark stone sanctuary night",
+    "calm lake reflecting starry night heavens quiet midnight",
+    "bright glowing light breaking through dark midnight shadows",
+    "lantern light illuminating dark path stone wall night",
+    "starry midnight sky above peaceful mountain sanctuary"
+  ],
+  "scenes": [
+    {
+      "a": "You fell tonight, but you will arise.",
+      "img": "short-midnightmicah7v8-scene-01.jpg",
+      "kicker": "FELL TONIGHT",
+      "sub": "YOU WILL STILL ARISE IN GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "when defeat feels heavy in your hands",
+      "img": "short-midnightmicah7v8-scene-02.jpg",
+      "kicker": "MIDNIGHT HOUR",
+      "sub": "HAND YOUR DEFEAT TO HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Rejoice not against me, O mine enemy",
+      "img": "short-midnightmicah7v8-scene-03.jpg",
+      "kicker": "MICAH 7:8",
+      "sub": "WHEN I FALL I SHALL ARISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "the LORD shall be a light unto me",
+      "img": "short-midnightmicah7v8-scene-04.jpg",
+      "kicker": "LIGHT IN DARKNESS",
+      "sub": "THE LORD SHINES UPON YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "be our strength",
+      "img": "short-midnightmicah7v8-scene-05.jpg",
+      "kicker": "OUR STRENGTH",
+      "sub": "OVERCOMING THE MOCKING SHADOWS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "into Your holy presence tonight",
+      "img": "short-midnightmicah7v8-scene-06.jpg",
+      "kicker": "RISE TONIGHT",
+      "sub": "THE LORD IS YOUR LIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You fell tonight, but you will arise."
+    ],
+    [
+      3,
+      8,
+      "In the quiet of this midnight hour, when defeat feels heavy in your hands,"
+    ],
+    [
+      8,
+      12,
+      "take heart from God's word in Micah chapter seven, verse eight:"
+    ],
+    [
+      12,
+      17,
+      "Rejoice not against me, O mine enemy: when I fall, I shall arise;"
+    ],
+    [
+      17,
+      22,
+      "when I sit in darkness, the LORD shall be a light unto me."
+    ],
+    [
+      22,
+      26,
+      "Lord, when the enemy mocks our weakness, be our strength."
+    ],
+    [
+      26,
+      30,
+      "When darkness settles around this room, shine Your truth into our heavy heart."
+    ],
+    [
+      30,
+      34,
+      "Lift us out of every shadow into Your holy presence tonight."
+    ],
+    [
+      34,
+      38,
+      "Amen. You fell tonight, but you will arise."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU FELL TONIGHT",
+        "BUT YOU WILL ARISE"
+      ],
+      [
+        "FELL",
+        "ARISE"
+      ],
+      "MICAH 7 : 8"
+    ],
+    [
+      3,
+      8,
+      [
+        "IN THE QUIET OF THIS",
+        "MIDNIGHT HOUR",
+        "WHEN DEFEAT FEELS HEAVY"
+      ],
+      [
+        "MIDNIGHT",
+        "HEAVY"
+      ],
+      "MICAH 7 : 8"
+    ],
+    [
+      8,
+      12,
+      [
+        "TAKE HEART FROM GODS WORD",
+        "IN MICAH CHAPTER SEVEN",
+        "VERSE EIGHT"
+      ],
+      [
+        "MICAH",
+        "EIGHT"
+      ],
+      "MICAH 7 : 8"
+    ],
+    [
+      12,
+      17,
+      [
+        "REJOICE NOT AGAINST ME",
+        "O MINE ENEMY",
+        "WHEN I FALL I SHALL ARISE"
+      ],
+      [
+        "REJOICE",
+        "ARISE"
+      ],
+      "MICAH 7 : 8"
+    ],
+    [
+      17,
+      22,
+      [
+        "WHEN I SIT IN DARKNESS",
+        "THE LORD SHALL BE",
+        "A LIGHT UNTO ME"
+      ],
+      [
+        "DARKNESS",
+        "LIGHT"
+      ],
+      "MICAH 7 : 8"
+    ],
+    [
+      22,
+      26,
+      [
+        "LORD WHEN THE ENEMY MOCKS",
+        "OUR WEAKNESS",
+        "BE OUR STRENGTH"
+      ],
+      [
+        "WEAKNESS",
+        "STRENGTH"
+      ],
+      "MICAH 7 : 8"
+    ],
+    [
+      26,
+      30,
+      [
+        "WHEN DARKNESS SETTLES AROUND",
+        "THIS ROOM SHINE YOUR TRUTH",
+        "INTO OUR HEAVY HEART"
+      ],
+      [
+        "DARKNESS",
+        "TRUTH"
+      ],
+      "MICAH 7 : 8"
+    ],
+    [
+      30,
+      34,
+      [
+        "LIFT US OUT OF EVERY SHADOW",
+        "INTO YOUR HOLY PRESENCE",
+        "TONIGHT"
+      ],
+      [
+        "SHADOW",
+        "PRESENCE"
+      ],
+      "MICAH 7 : 8"
+    ],
+    [
+      34,
+      38,
+      [
+        "AMEN YOU FELL TONIGHT",
+        "BUT YOU WILL ARISE"
+      ],
+      [
+        "AMEN",
+        "ARISE"
+      ],
+      "MICAH 7 : 8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You fell tonight, but you will arise.",
+      "kind": "phrase",
+      "words": [
+        "FELL",
+        "ARISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "defeat feels heavy in your hands",
+      "kind": "phrase",
+      "words": [
+        "DEFEAT",
+        "HEAVY"
+      ],
+      "hi": 1,
+      "slot": "L"
+    },
+    {
+      "a": "Rejoice not against me, O mine enemy",
+      "kind": "phrase",
+      "words": [
+        "REJOICE",
+        "ENEMY"
+      ],
+      "hi": 0,
+      "slot": "R"
+    },
+    {
+      "a": "the LORD shall be a light unto me",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "LIGHT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "be our strength",
+      "kind": "phrase",
+      "words": [
+        "BE",
+        "STRENGTH"
+      ],
+      "hi": 1,
+      "slot": "L"
+    },
+    {
+      "a": "into Your holy presence tonight",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "PRESENCE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Micah 7:8"
+}

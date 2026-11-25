@@ -1,0 +1,361 @@
+{
+  "key": "short-midnightpsalm30v5",
+  "channel": "prayer4",
+  "psalm": 30,
+  "title": [
+    "TEARS END",
+    "JOY COMETH"
+  ],
+  "poster": [
+    "TEARS YOU HIDE",
+    "ARE NOT FOREVER",
+    "JOY COMETH IN MORNING",
+    "MIDNIGHT WATCH PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette starry sky",
+    "calm mountain lake midnight stars",
+    "dim lit sanctuary oil lamp glowing night",
+    "dawn horizon light breaking over dark hills night sky",
+    "ancient stone watchtower starry night zenith",
+    "candle glowing in dark room window midnight",
+    "first golden light over mountain ridge night transitioning to dawn",
+    "starry sky over calm dark ocean horizon"
+  ],
+  "scenes": [
+    {
+      "a": "The tears you hide tonight are not forever.",
+      "img": "short-midnightpsalm30v5-scene-01.jpg",
+      "kicker": "TEARS IN DARKNESS",
+      "sub": "THE HEAVINESS YOU CARRY TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Psalm 30 verse 5 reminds us:",
+      "img": "short-midnightpsalm30v5-scene-02.jpg",
+      "kicker": "PSALM 30:5",
+      "sub": "PROMISE FOR THE SILENT HOUR",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For his anger endureth but a moment; in his favor is life:",
+      "img": "short-midnightpsalm30v5-scene-03.jpg",
+      "kicker": "ENDURING FAVOR",
+      "sub": "ANGER ENDURES BUT A MOMENT",
+      "cam": "pull_out",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "weeping may endure for a night, but joy cometh in the morning.",
+      "img": "short-midnightpsalm30v5-scene-04.jpg",
+      "kicker": "JOY COMETH",
+      "sub": "WEEPING ENDURES FOR A NIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Lord, in this quiet midnight hour, we bring the grief that held us through the shadows.",
+      "img": "short-midnightpsalm30v5-scene-05.jpg",
+      "kicker": "MIDNIGHT VIGIL",
+      "sub": "BRING YOUR GRIEF BEFORE GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Strengthen our hearts to trust your enduring favor when the room is cold and silent.",
+      "img": "short-midnightpsalm30v5-scene-06.jpg",
+      "kicker": "TRUST HIS FAVOR",
+      "sub": "WHEN THE ROOM IS COLD AND SILENT",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Hold us steady until your light breaks through our darkness.",
+      "img": "short-midnightpsalm30v5-scene-07.jpg",
+      "kicker": "DAWN IS COMING",
+      "sub": "LIGHT BREAKS THROUGH DARKNESS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Turn our sorrow into quiet hope as we wait on your promises. Amen. The tears you hide tonight are not forever.",
+      "img": "short-midnightpsalm30v5-scene-08.jpg",
+      "kicker": "STAY STEADFAST",
+      "sub": "HOPE RESTORES YOUR SPIRIT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The tears you hide tonight are not forever."
+    ],
+    [
+      3,
+      7,
+      "Psalm 30 verse 5 reminds us:"
+    ],
+    [
+      7,
+      15,
+      "For his anger endureth but a moment; in his favor is life:"
+    ],
+    [
+      15,
+      23,
+      "weeping may endure for a night, but joy cometh in the morning."
+    ],
+    [
+      23,
+      29,
+      "Lord, in this quiet midnight hour, we bring the grief that held us through the shadows."
+    ],
+    [
+      29,
+      35,
+      "Strengthen our hearts to trust your enduring favor when the room is cold and silent."
+    ],
+    [
+      35,
+      40,
+      "Hold us steady until your light breaks through our darkness."
+    ],
+    [
+      40,
+      46,
+      "Turn our sorrow into quiet hope as we wait on your promises. Amen. The tears you hide tonight are not forever."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE TEARS YOU HIDE",
+        "TONIGHT ARE NOT FOREVER"
+      ],
+      [
+        "TEARS",
+        "NOT",
+        "FOREVER"
+      ],
+      "PSALM 30 : 5"
+    ],
+    [
+      3,
+      7,
+      [
+        "PSALM THIRTY",
+        "VERSE FIVE REMINDS US"
+      ],
+      [
+        "REMINDS"
+      ],
+      "THE MIDNIGHT WATCH"
+    ],
+    [
+      7,
+      15,
+      [
+        "FOR HIS ANGER ENDURETH",
+        "BUT A MOMENT IN HIS",
+        "FAVOR IS LIFE"
+      ],
+      [
+        "MOMENT",
+        "FAVOR",
+        "LIFE"
+      ],
+      "PSALM 30 : 5"
+    ],
+    [
+      15,
+      23,
+      [
+        "WEEPING MAY ENDURE FOR",
+        "A NIGHT BUT JOY COMETH",
+        "IN THE MORNING"
+      ],
+      [
+        "WEEPING",
+        "NIGHT",
+        "JOY",
+        "MORNING"
+      ],
+      "PSALM 30 : 5"
+    ],
+    [
+      23,
+      29,
+      [
+        "LORD IN THIS QUIET MIDNIGHT",
+        "HOUR WE BRING THE GRIEF",
+        "HELD US THROUGH SHADOWS"
+      ],
+      [
+        "MIDNIGHT",
+        "GRIEF",
+        "SHADOWS"
+      ],
+      "MIDNIGHT PRAYER"
+    ],
+    [
+      29,
+      35,
+      [
+        "STRENGTHEN OUR HEARTS TO TRUST",
+        "YOUR ENDURING FAVOR WHEN",
+        "ROOM IS COLD AND SILENT"
+      ],
+      [
+        "STRENGTHEN",
+        "HEARTS",
+        "ENDURING",
+        "FAVOR"
+      ],
+      "MIDNIGHT PRAYER"
+    ],
+    [
+      35,
+      40,
+      [
+        "HOLD US STEADY UNTIL YOUR",
+        "LIGHT BREAKS THROUGH",
+        "OUR DARKNESS"
+      ],
+      [
+        "STEADY",
+        "LIGHT",
+        "DARKNESS"
+      ],
+      "MIDNIGHT PRAYER"
+    ],
+    [
+      40,
+      46,
+      [
+        "TURN OUR SORROW INTO",
+        "QUIET HOPE AS WE WAIT",
+        "AMEN TEARS NOT FOREVER"
+      ],
+      [
+        "SORROW",
+        "HOPE",
+        "PROMISES",
+        "AMEN"
+      ],
+      "THE MIDNIGHT WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The tears you hide tonight are not forever.",
+      "kind": "phrase",
+      "words": [
+        "TEARS",
+        "NOT",
+        "FOREVER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For his anger endureth but a moment; in his favor is life:",
+      "kind": "phrase",
+      "words": [
+        "HIS",
+        "FAVOR",
+        "IS",
+        "LIFE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "weeping may endure for a night, but joy cometh in the morning.",
+      "kind": "phrase",
+      "words": [
+        "JOY",
+        "COMETH",
+        "IN",
+        "MORNING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, in this quiet midnight hour, we bring the grief that held us through the shadows.",
+      "kind": "phrase",
+      "words": [
+        "MIDNIGHT",
+        "HOUR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Strengthen our hearts to trust your enduring favor when the room is cold and silent.",
+      "kind": "phrase",
+      "words": [
+        "ENDURING",
+        "FAVOR"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Hold us steady until your light breaks through our darkness.",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "BREAKS",
+        "THROUGH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Turn our sorrow into quiet hope as we wait on your promises.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "HOPE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 30:5"
+}
