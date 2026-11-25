@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T19:40:39Z",
+  "generated_at": "2026-11-25T20:01:27Z",
   "monitor_generated_at": "2026-11-25T19:38:53.897385+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 815,
+    "published_total": 816,
     "published_longform": 226,
-    "published_shorts": 589,
-    "public_total": 813,
+    "published_shorts": 590,
+    "public_total": 814,
     "queued_longform": 75,
-    "queued_shorts": 55,
+    "queued_shorts": 54,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -300,23 +300,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 74,
+        "published_total": 75,
         "published_longform": 22,
-        "published_shorts": 52,
-        "thumbnail_pending": 74,
-        "public_total": 74,
+        "published_shorts": 53,
+        "thumbnail_pending": 75,
+        "public_total": 75,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "0322",
-        "title": "An Eternal Blessing Over Your Home: 2 Samuel 7:29 | The Family Altar",
-        "format": "longform",
-        "youtube_video_id": "xFQeWrkg7kU",
-        "watch_url": "https://youtu.be/xFQeWrkg7kU",
+        "id": "SHORT-FAMILYJOSHUA4V6",
+        "title": "Pray This Joshua 4:6-7 Family Prayer Over Your Home | Teaching Your Children #Shorts",
+        "format": "short",
+        "youtube_video_id": "OpihS8rEdSs",
+        "watch_url": "https://www.youtube.com/shorts/OpihS8rEdSs",
         "published_on": "2026-11-25",
-        "published_at": "2026-11-25T15:46:24Z"
+        "published_at": "2026-11-25T20:00:25Z"
       },
       "next_queued_longform": {
         "id": "0323",
@@ -325,8 +325,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyjoshua4v6",
-        "scripture": "Joshua 4:6-7",
+        "short": "short-familyromans15v13",
+        "scripture": "Romans 15:13",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYJOSHUA4V6",
+      "slug": "short-familyjoshua4v6-household-prayer",
+      "file": "short-familyjoshua4v6-household-prayer.md",
+      "title": "Pray This Joshua 4:6-7 Family Prayer Over Your Home | Teaching Your Children #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-25",
+      "published_at": "2026-11-25T20:00:25Z",
+      "youtube_video_id": "OpihS8rEdSs",
+      "watch_url": "https://www.youtube.com/shorts/OpihS8rEdSs",
+      "youtu_be_url": "https://youtu.be/OpihS8rEdSs",
+      "shorts_url": "https://www.youtube.com/shorts/OpihS8rEdSs",
+      "studio_url": "https://studio.youtube.com/video/OpihS8rEdSs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/OpihS8rEdSs/hqdefault.jpg",
+      "thumb_text": "HOW TO TELL \u00b7 THE STORY TO",
+      "thumbnail_pending": true,
+      "duration_label": "45s",
+      "words": 686
+    },
     {
       "id": "SHORT-PSALM31V7",
       "slug": "short-psalm31v7-pre-sleep-prayer",
@@ -21236,17 +21260,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-familyjoshua4v6",
-        "file": "0000-short-familyjoshua4v6.yml",
-        "companion_longform_id": "",
-        "scripture": "Joshua 4:6-7",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
       {
         "short": "short-familyromans15v13",
         "file": "0000-short-familyromans15v13.yml",
