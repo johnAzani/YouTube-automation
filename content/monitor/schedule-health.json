@@ -65,8 +65,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-25T15:08:15.233570+00:00",
-  "last_run_at": "2026-11-25T15:07:05+00:00",
+  "generated_at": "2026-11-25T15:18:28.174910+00:00",
+  "last_run_at": "2026-11-25T15:17:38+00:00",
   "on_time": [
     {
       "late_minutes": 90,
@@ -81,13 +81,6 @@
       "ran_at": "2026-11-25T05:25:44+00:00",
       "slot": "2026-11-25T03:37:00+00:00",
       "workflow": "channel-analytics.yml"
-    },
-    {
-      "late_minutes": 101,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-25T08:55:15+00:00",
-      "slot": "2026-11-25T07:14:00+00:00",
-      "workflow": "comments.yml"
     },
     {
       "late_minutes": 119,
@@ -111,6 +104,6 @@
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 1,
+  "silence_minutes": 0,
   "warn_minutes": 120
 }
