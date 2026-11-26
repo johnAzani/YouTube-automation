@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T11:52:12Z",
+  "generated_at": "2026-11-26T11:58:09Z",
   "monitor_generated_at": "2026-11-26T11:50:45.351993+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 854,
-    "published_longform": 232,
-    "published_shorts": 622,
-    "public_total": 852,
-    "queued_longform": 86,
-    "queued_shorts": 49,
+    "published_total": 856,
+    "published_longform": 233,
+    "published_shorts": 623,
+    "public_total": 854,
+    "queued_longform": 85,
+    "queued_shorts": 48,
     "automations_ok": 15,
     "automations_total": 15,
     "network_healthy": true
@@ -635,33 +635,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 68,
-        "published_longform": 16,
-        "published_shorts": 52,
+        "published_total": 70,
+        "published_longform": 17,
+        "published_shorts": 53,
         "thumbnail_pending": 3,
-        "public_total": 68,
-        "queued_longform": 6,
+        "public_total": 70,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDEXODUS33V14",
-        "title": "Pray This Exodus 33:14 Prayer for God's Guidance | Exhausted From Carrying This #Shorts",
-        "format": "short",
-        "youtube_video_id": "STgPCqbf0tc",
-        "watch_url": "https://www.youtube.com/shorts/STgPCqbf0tc",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T07:25:42Z"
-      },
-      "next_queued_longform": {
         "id": "0817",
         "title": "Walking Into Unknown Territory: Isaiah 42:16 | The Guided Path",
-        "words": 1293,
+        "format": "longform",
+        "youtube_video_id": "7pGPHYDu5ks",
+        "watch_url": "https://youtu.be/7pGPHYDu5ks",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T11:57:05Z"
+      },
+      "next_queued_longform": {
+        "id": "0818",
+        "title": "Proving His Good and Perfect Will: Romans 12:2 | The Guided Path",
+        "words": 1953,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedhosea14v9",
-        "scripture": "Hosea 14:9",
+        "short": "short-guidedproverbs20v24",
+        "scripture": "Proverbs 20:24",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -691,6 +691,54 @@
     }
   ],
   "videos": [
+    {
+      "id": "0817",
+      "slug": "walking-into-unknown-territory-isaiah-42-16",
+      "file": "0817-walking-into-unknown-territory-isaiah-42-16.md",
+      "title": "Walking Into Unknown Territory: Isaiah 42:16 | The Guided Path",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T11:57:05Z",
+      "youtube_video_id": "7pGPHYDu5ks",
+      "watch_url": "https://youtu.be/7pGPHYDu5ks",
+      "youtu_be_url": "https://youtu.be/7pGPHYDu5ks",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/7pGPHYDu5ks/edit",
+      "thumb_url": "https://i.ytimg.com/vi/7pGPHYDu5ks/hqdefault.jpg",
+      "thumb_text": "UNKNOWN PATHS",
+      "thumbnail_pending": false,
+      "duration_label": "8m 27s",
+      "words": 1293
+    },
+    {
+      "id": "SHORT-GUIDEDHOSEA14V9",
+      "slug": "short-guidedhosea14v9-guidance-prayer",
+      "file": "short-guidedhosea14v9-guidance-prayer.md",
+      "title": "Pray This Hosea 14:9 Prayer for God's Guidance | Weighing Counsel In The Dark #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T11:23:55Z",
+      "youtube_video_id": "EV58d93Q6oA",
+      "watch_url": "https://www.youtube.com/shorts/EV58d93Q6oA",
+      "youtu_be_url": "https://youtu.be/EV58d93Q6oA",
+      "shorts_url": "https://www.youtube.com/shorts/EV58d93Q6oA",
+      "studio_url": "https://studio.youtube.com/video/EV58d93Q6oA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/EV58d93Q6oA/hqdefault.jpg",
+      "thumb_text": "WHEN ADVICE \u00b7 CONFUSES YOU",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 638
+    },
     {
       "id": "SHORT-SHIELDPSALM20V7",
       "slug": "short-shieldpsalm20v7-protection-prayer",
@@ -21945,19 +21993,6 @@
         "words": 1302
       },
       {
-        "id": "0817",
-        "slug": "walking-into-unknown-territory-isaiah-42-16",
-        "file": "0817-walking-into-unknown-territory-isaiah-42-16.md",
-        "title": "Walking Into Unknown Territory: Isaiah 42:16 | The Guided Path",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1293
-      },
-      {
         "id": "0818",
         "slug": "proving-his-good-and-perfect-will-romans-12-2",
         "file": "0818-proving-his-good-and-perfect-will-romans-12-2.md",
@@ -22310,17 +22345,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-guidedhosea14v9",
-        "file": "0000-short-guidedhosea14v9.yml",
-        "companion_longform_id": "",
-        "scripture": "Hosea 14:9",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
-      },
       {
         "short": "short-guidedproverbs20v24",
         "file": "0000-short-guidedproverbs20v24.yml",
