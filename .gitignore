@@ -42,3 +42,7 @@ env/
 
 # Brain staging: a job is validated here before the scheduler can see it
 content/queue/.incoming/
+
+# Local pytest output from scripts/ci_unit_tests.sh
+pytest.log
+pytest-alone.log
