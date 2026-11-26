@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["PROVERBS 31:25", "CLOTHED IN", "QUIET DIGNITY", "AND PEACE"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-03T18:11:25Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When tomorrow's burdens feel heavy across your quiet kitchen, remember who sustains your household today. Strength and honor are her clothing; and she shall rejoice in time to come. She openeth her mouth with wisdom; and in her tongue is the law of kindness. Lord, grant every weary heart in this home Your enduring peace, Your steady strength, and a quiet, steadfast resolve. Clothe our family with patient grace, removing all anxious dread about tomorrow and filling every room with joyful trust in Your faithful provision. Subscribe to The Family Altar, and join our family as we cover our households in daily prayer together.
