@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T09:47:27Z",
+  "generated_at": "2026-11-26T11:05:49Z",
   "monitor_generated_at": "2026-11-26T09:46:01.080003+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 848,
+    "published_total": 849,
     "published_longform": 232,
-    "published_shorts": 616,
-    "public_total": 846,
+    "published_shorts": 617,
+    "public_total": 847,
     "queued_longform": 86,
-    "queued_shorts": 56,
+    "queued_shorts": 55,
     "automations_ok": 15,
     "automations_total": 15,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 106,
+        "published_total": 107,
         "published_longform": 27,
-        "published_shorts": 79,
+        "published_shorts": 80,
         "thumbnail_pending": 7,
-        "public_total": 105,
+        "public_total": 106,
         "queued_longform": 7,
         "queued_other": 5,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-PSALM119V164",
-        "title": "Say This Psalm 119:164 Prayer Before You Sleep | Bedtime Prayer #Shorts",
+        "id": "SHORT-PSALM52V9",
+        "title": "Say This Psalm 52:9 Prayer Before You Sleep | Leave The Weight Of Today #Shorts",
         "format": "short",
-        "youtube_video_id": "D1mB06BJ9Dc",
-        "watch_url": "https://www.youtube.com/shorts/D1mB06BJ9Dc",
+        "youtube_video_id": "B-_aThlONto",
+        "watch_url": "https://www.youtube.com/shorts/B-_aThlONto",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T07:14:51Z"
+        "published_at": "2026-11-26T11:04:51Z"
       },
       "next_queued_longform": {
         "id": "0035",
@@ -58,16 +58,16 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm52v9",
-        "scripture": "Psalm 52:9",
+        "short": "short-psalm63v7",
+        "scripture": "Psalm 63:7",
         "target_window_utc": "14:14",
         "status": "approved"
       },
       "feedback": {
         "available": true,
         "as_of": "2026-11-26",
-        "measured_longform_videos": 5,
-        "total_longform_videos": 10,
+        "measured_longform_videos": 4,
+        "total_longform_videos": 9,
         "top_themes": [
           {
             "theme": "midday_strength_endurance",
@@ -76,7 +76,7 @@
           },
           {
             "theme": "anxiety_peace",
-            "videos": 7,
+            "videos": 6,
             "top_scripture": "John 14"
           },
           {
@@ -135,11 +135,11 @@
         "available": true,
         "as_of": "2026-11-26",
         "measured_longform_videos": 0,
-        "total_longform_videos": 10,
+        "total_longform_videos": 11,
         "top_themes": [
           {
             "theme": "daily_guidance_wisdom",
-            "videos": 8,
+            "videos": 9,
             "top_scripture": ""
           },
           {
@@ -397,11 +397,11 @@
         "available": true,
         "as_of": "2026-11-26",
         "measured_longform_videos": 0,
-        "total_longform_videos": 10,
+        "total_longform_videos": 9,
         "top_themes": [
           {
             "theme": "general_prayer",
-            "videos": 4,
+            "videos": 3,
             "top_scripture": ""
           },
           {
@@ -464,14 +464,9 @@
       "feedback": {
         "available": true,
         "as_of": "2026-11-26",
-        "measured_longform_videos": 1,
-        "total_longform_videos": 10,
+        "measured_longform_videos": 0,
+        "total_longform_videos": 9,
         "top_themes": [
-          {
-            "theme": "morning_mercy_renewal",
-            "videos": 2,
-            "top_scripture": "Psalm 5"
-          },
           {
             "theme": "general_prayer",
             "videos": 6,
@@ -479,6 +474,11 @@
           },
           {
             "theme": "midday_strength_endurance",
+            "videos": 1,
+            "top_scripture": ""
+          },
+          {
+            "theme": "morning_mercy_renewal",
             "videos": 1,
             "top_scripture": ""
           }
@@ -601,7 +601,7 @@
         "available": true,
         "as_of": "2026-11-26",
         "measured_longform_videos": 0,
-        "total_longform_videos": 9,
+        "total_longform_videos": 10,
         "top_themes": [
           {
             "theme": "general_prayer",
@@ -669,7 +669,7 @@
         "available": true,
         "as_of": "2026-11-26",
         "measured_longform_videos": 0,
-        "total_longform_videos": 10,
+        "total_longform_videos": 9,
         "top_themes": [
           {
             "theme": "trust_surrender",
@@ -683,7 +683,7 @@
           },
           {
             "theme": "daily_guidance_wisdom",
-            "videos": 3,
+            "videos": 2,
             "top_scripture": ""
           }
         ]
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM52V9",
+      "slug": "short-psalm52v9-pre-sleep-prayer",
+      "file": "short-psalm52v9-pre-sleep-prayer.md",
+      "title": "Say This Psalm 52:9 Prayer Before You Sleep | Leave The Weight Of Today #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T11:04:51Z",
+      "youtube_video_id": "B-_aThlONto",
+      "watch_url": "https://www.youtube.com/shorts/B-_aThlONto",
+      "youtu_be_url": "https://youtu.be/B-_aThlONto",
+      "shorts_url": "https://www.youtube.com/shorts/B-_aThlONto",
+      "studio_url": "https://studio.youtube.com/video/B-_aThlONto/edit",
+      "thumb_url": "https://i.ytimg.com/vi/B-_aThlONto/hqdefault.jpg",
+      "thumb_text": "LEAVE \u00b7 THE UNFINISHED",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 632
+    },
     {
       "id": "0717",
       "slug": "thanksgiving-worship-when-mourning-turns-to-joy-psalm-30-11-12",
@@ -8615,7 +8639,7 @@
       "id": "0709",
       "slug": "finding-mercy-when-hope-is-weary-lamentations-3-22-23",
       "file": "0709-finding-mercy-when-hope-is-weary-lamentations-3-22-23.md",
-      "title": "Finding Mercy When Hope Is Weary: Lamentations 3:22-23",
+      "title": "When Hope Is Hard to Find: Lamentations 3:22-23 | The Praise Garden",
       "channel": "prayer9",
       "channel_name": "The Praise Garden",
       "channel_handle": "@ThePraiseGardenDaily",
@@ -22385,17 +22409,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-psalm52v9",
-        "file": "0000-short-psalm52v9.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 52:9",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm63v7",
