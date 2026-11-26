@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T19:47:56Z",
+  "generated_at": "2026-11-26T20:17:03Z",
   "monitor_generated_at": "2026-11-26T18:11:34.591855+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 872,
-    "published_longform": 239,
+    "published_total": 873,
+    "published_longform": 240,
     "published_shorts": 633,
-    "public_total": 870,
-    "queued_longform": 91,
+    "public_total": 871,
+    "queued_longform": 92,
     "queued_shorts": 33,
     "automations_ok": 14,
     "automations_total": 15,
@@ -358,28 +358,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 82,
-        "published_longform": 21,
+        "published_total": 83,
+        "published_longform": 22,
         "published_shorts": 61,
         "thumbnail_pending": 0,
-        "public_total": 82,
-        "queued_longform": 13,
+        "public_total": 83,
+        "queued_longform": 14,
         "queued_other": 0,
         "queued_shorts": 1
       },
       "latest_video": {
-        "id": "SHORT-HEALINGISAIAH53V5",
-        "title": "Pray This Isaiah 53:5 Healing Prayer for Peace & Strength | That Lingers Tonight #Shorts",
-        "format": "short",
-        "youtube_video_id": "4IKw1l4eJ5U",
-        "watch_url": "https://www.youtube.com/shorts/4IKw1l4eJ5U",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T17:10:30Z"
-      },
-      "next_queued_longform": {
         "id": "0429",
         "title": "Comfort For Every Sorrow and Tear: Revelation 21:4 | The Healing Balm",
-        "words": 1154,
+        "format": "longform",
+        "youtube_video_id": "WpewbwS0EMI",
+        "watch_url": "https://youtu.be/WpewbwS0EMI",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T20:15:58Z"
+      },
+      "next_queued_longform": {
+        "id": "0430",
+        "title": "I Will Bring It Health and Cure: Jeremiah 33:6 | The Healing Balm",
+        "words": 1273,
         "status": "approved"
       },
       "next_queued_short": {
@@ -681,6 +681,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0429",
+      "slug": "comfort-for-every-sorrow-and-tear-revelation-21-4-the-healing-balm",
+      "file": "0429-comfort-for-every-sorrow-and-tear-revelation-21-4-the-healing-balm.md",
+      "title": "Comfort For Every Sorrow and Tear: Revelation 21:4 | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T20:15:58Z",
+      "youtube_video_id": "WpewbwS0EMI",
+      "watch_url": "https://youtu.be/WpewbwS0EMI",
+      "youtu_be_url": "https://youtu.be/WpewbwS0EMI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/WpewbwS0EMI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/WpewbwS0EMI/hqdefault.jpg",
+      "thumb_text": "ETERNAL COMFORT",
+      "thumbnail_pending": false,
+      "duration_label": "7m 54s",
+      "words": 1154
+    },
     {
       "id": "SHORT-GARDENCOLOSSIANS3V15",
       "slug": "short-gardencolossians3v15-thanksgiving-prayer",
@@ -21938,19 +21962,6 @@
         "words": 860
       },
       {
-        "id": "0429",
-        "slug": "comfort-for-every-sorrow-and-tear-revelation-21-4-the-healing-balm",
-        "file": "0429-comfort-for-every-sorrow-and-tear-revelation-21-4-the-healing-balm.md",
-        "title": "Comfort For Every Sorrow and Tear: Revelation 21:4 | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1154
-      },
-      {
         "id": "0430",
         "slug": "i-will-bring-it-health-and-cure-jeremiah-33-6-the-healing- balm",
         "file": "0430-i-will-bring-it-health-and-cure-jeremiah-33-6-the-healing- balm.md",
@@ -22105,6 +22116,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1544
+      },
+      {
+        "id": "0442",
+        "slug": "the-great-physician-and-the-balm-of-gilead-jeremiah-8-22-the-healing-balm",
+        "file": "0442-the-great-physician-and-the-balm-of-gilead-jeremiah-8-22-the-healing-balm.md",
+        "title": "The Great Physician and the Balm of Gilead: Jeremiah 8:22",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1168
+      },
+      {
+        "id": "0444",
+        "slug": "strength-for-weak-limbs-and-weary-bones-acts-3-6-8-the-healing-balm",
+        "file": "0444-strength-for-weak-limbs-and-weary-bones-acts-3-6-8-the-healing-balm.md",
+        "title": "Strength for Weak Limbs and Weary Bones: Acts 3:6-8 | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1720
       },
       {
         "id": "0525",
