@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["LET EVERYTHING", "THAT HATH BREATH", "PRAISE THE LORD", "PSALM 150:6"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-26T02:21:48Z"
+thumbnail_retry_after: "2026-12-03T03:40:37Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If your mind feels weary in this quiet room, remember every inhale is His mercy. Let every thing that hath breath praise the LORD. Praise ye the LORD. Heavenly Father, we thank You for the simple, sacred gift of life filling our lungs right now. Before we ask for anything or worry about what lies ahead, we pause to offer You our heartfelt praise. Every single breath is a living reminder of Your endless goodness and grace. Even when our strength seems small, You sustain us completely. May our lives honor You with every quiet breath we take today. Subscribe to join The Praise Garden for daily thanksgiving.

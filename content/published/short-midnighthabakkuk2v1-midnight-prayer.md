@@ -24,9 +24,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE MIDNIGHT WATCH", "WAIT FOR IT", "HABAKKUK 2:1-3", "MIDNIGHT PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-26T02:21:36Z"
+thumbnail_retry_after: "2026-12-03T03:40:07Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 2
+thumbnail_attempts: 3
 ---
 
 Rise in spirit at this midnight hour and take your stand upon the watchtower of faith. Habakkuk two verse one says, I will stand upon my watch, and set me upon the tower, to see what He will say. And the Lord answered, For the vision is yet for an appointed time: though it tarry, wait for it; because it will surely come. What feels delayed to human eyes is moving strictly on heaven's appointed calendar. Father, at this midnight watch we thank You that Your Word never lies and never arrives late. Strengthen our households to live by faith, loose weariness, and establish Your peace tonight. Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight.

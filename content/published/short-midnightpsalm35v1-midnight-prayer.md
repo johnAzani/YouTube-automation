@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["PRAYER FOR PROTECTION", "A MIDNIGHT PLEA", "TO THE LORD", "OF HOSTS"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-26T02:21:37Z"
+thumbnail_retry_after: "2026-12-03T03:40:09Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 That sharp anxiety keeping you awake in the dark is meeting its match right now. Plead my cause, O LORD, with them that strive with me: fight against them that fight against me. Take hold of shield and buckler, and stand up for mine help. Draw out also the spear, and stop the way against them that persecute me: say unto my soul, I am thy salvation. Let them be confounded and put to shame that seek after my soul: let them be turned back and brought to confusion that devise my hurt. Lord, secure my heart against every fear as I rest in your promise tonight. Amen.
