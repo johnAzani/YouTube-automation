@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T17:34:54Z",
+  "generated_at": "2026-11-26T18:10:13Z",
   "monitor_generated_at": "2026-11-26T17:07:24.135302+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 870,
-    "published_longform": 238,
+    "published_total": 871,
+    "published_longform": 239,
     "published_shorts": 632,
-    "public_total": 868,
-    "queued_longform": 89,
+    "public_total": 869,
+    "queued_longform": 88,
     "queued_shorts": 34,
     "automations_ok": 14,
     "automations_total": 15,
@@ -557,28 +557,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 73,
-        "published_longform": 17,
+        "published_total": 74,
+        "published_longform": 18,
         "published_shorts": 56,
-        "thumbnail_pending": 73,
-        "public_total": 73,
-        "queued_longform": 6,
+        "thumbnail_pending": 74,
+        "public_total": 74,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM50V23",
-        "title": "Pray This Psalm 50:23 Prayer of Thanksgiving | Daily Thanksgiving Prayer #Shorts",
-        "format": "short",
-        "youtube_video_id": "rlf7e53OV68",
-        "watch_url": "https://www.youtube.com/shorts/rlf7e53OV68",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T11:16:54Z"
-      },
-      "next_queued_longform": {
         "id": "0718",
         "title": "Drawing Joy From His Wells: Isaiah 12:2-5 | The Praise Garden",
-        "words": 1501,
+        "format": "longform",
+        "youtube_video_id": "ceCURMB2cWg",
+        "watch_url": "https://youtu.be/ceCURMB2cWg",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T18:09:13Z"
+      },
+      "next_queued_longform": {
+        "id": "0719",
+        "title": "Thanksgiving Worship When Your Soul Is Thirsty: Psalm 63:3-4",
+        "words": 1679,
         "status": "approved"
       },
       "next_queued_short": {
@@ -681,6 +681,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0718",
+      "slug": "drawing-joy-from-his-wells-isaiah-12-2-5",
+      "file": "0718-drawing-joy-from-his-wells-isaiah-12-2-5.md",
+      "title": "Drawing Joy From His Wells: Isaiah 12:2-5 | The Praise Garden",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T18:09:13Z",
+      "youtube_video_id": "ceCURMB2cWg",
+      "watch_url": "https://youtu.be/ceCURMB2cWg",
+      "youtu_be_url": "https://youtu.be/ceCURMB2cWg",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/ceCURMB2cWg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ceCURMB2cWg/hqdefault.jpg",
+      "thumb_text": "WELLS OF JOY",
+      "thumbnail_pending": true,
+      "duration_label": "10m 02s",
+      "words": 1501
+    },
     {
       "id": "0323",
       "slug": "establish-the-work-of-your-hands-psalm-90-16-17",
@@ -22239,19 +22263,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1354
-      },
-      {
-        "id": "0718",
-        "slug": "drawing-joy-from-his-wells-isaiah-12-2-5",
-        "file": "0718-drawing-joy-from-his-wells-isaiah-12-2-5.md",
-        "title": "Drawing Joy From His Wells: Isaiah 12:2-5 | The Praise Garden",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1501
       },
       {
         "id": "0719",

@@ -10,3 +10,8 @@ replace: false
 target_window_utc: 09:44
 notes: "Companion Short for Peace That Rules When Hearts Are Troubled: Colossians\
   \ 3:15-17 \u2014 spec authored by the brain (128 narration words)"
+alignment_failures: 1
+last_alignment_error: 'cannot prepare Charon narration for short-gardencolossians3v15
+  (Short speech alignment unavailable or incomplete; refusing to render [ValueError:
+  Narration does not match the script: only 55% of the 128 script words were recognised
+  (floor 85%); the audio is not this script]); refusing to render'
