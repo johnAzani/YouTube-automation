@@ -4,7 +4,7 @@
    "binding": "enough ready Shorts",
    "channel": "secret-place",
    "companion_longforms": 0,
-   "ready": 5,
+   "ready": 4,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
@@ -29,7 +29,7 @@
    "binding": "enough ready Shorts",
    "channel": "prayer3",
    "companion_longforms": 0,
-   "ready": 3,
+   "ready": 4,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
@@ -39,7 +39,7 @@
    "binding": "enough ready Shorts",
    "channel": "prayer4",
    "companion_longforms": 0,
-   "ready": 10,
+   "ready": 8,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
@@ -49,7 +49,7 @@
    "binding": "enough ready Shorts",
    "channel": "prayer5",
    "companion_longforms": 0,
-   "ready": 7,
+   "ready": 5,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
@@ -103,16 +103,12 @@
    "binding": "enough ready Shorts",
    "channel": "prayer10",
    "companion_longforms": 0,
-   "ready": 4,
-   "sources": 5,
+   "ready": 8,
+   "sources": 1,
    "standalone_examples": [
-    "Exodus 33:14",
-    "Psalm 119:130",
-    "Hosea 14:9",
-    "Proverbs 20:24",
     "Psalm 119:35"
    ],
-   "standalone_passages": 5,
+   "standalone_passages": 1,
    "verdict": "enough"
   }
  ],
@@ -124,6 +120,6 @@
  "ready_floor": 2,
  "schema": 1,
  "sentence": "Every channel holds at least 2 ready Shorts.",
- "total_sources": 12,
+ "total_sources": 8,
  "under_floor": []
 }
