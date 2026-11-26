@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T19:42:33Z",
+  "generated_at": "2026-11-26T19:47:56Z",
   "monitor_generated_at": "2026-11-26T18:11:34.591855+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 871,
+    "published_total": 872,
     "published_longform": 239,
-    "published_shorts": 632,
-    "public_total": 869,
+    "published_shorts": 633,
+    "public_total": 870,
     "queued_longform": 91,
-    "queued_shorts": 34,
+    "queued_shorts": 33,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": false
@@ -557,23 +557,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 74,
+        "published_total": 75,
         "published_longform": 18,
-        "published_shorts": 56,
-        "thumbnail_pending": 74,
-        "public_total": 74,
+        "published_shorts": 57,
+        "thumbnail_pending": 75,
+        "public_total": 75,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "0718",
-        "title": "Drawing Joy From His Wells: Isaiah 12:2-5 | The Praise Garden",
-        "format": "longform",
-        "youtube_video_id": "ceCURMB2cWg",
-        "watch_url": "https://youtu.be/ceCURMB2cWg",
+        "id": "SHORT-GARDENCOLOSSIANS3V15",
+        "title": "Pray This Colossians 3:15-17 Prayer of Thanksgiving | The Garden Waits #Shorts",
+        "format": "short",
+        "youtube_video_id": "8Z44gqKOQDs",
+        "watch_url": "https://www.youtube.com/shorts/8Z44gqKOQDs",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T18:09:13Z"
+        "published_at": "2026-11-26T19:46:44Z"
       },
       "next_queued_longform": {
         "id": "0719",
@@ -582,8 +582,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardencolossians3v15",
-        "scripture": "Colossians 3:15-17",
+        "short": "short-gardenhebrews13v15",
+        "scripture": "Hebrews 13:15",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -681,6 +681,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENCOLOSSIANS3V15",
+      "slug": "short-gardencolossians3v15-thanksgiving-prayer",
+      "file": "short-gardencolossians3v15-thanksgiving-prayer.md",
+      "title": "Pray This Colossians 3:15-17 Prayer of Thanksgiving | The Garden Waits #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T19:46:44Z",
+      "youtube_video_id": "8Z44gqKOQDs",
+      "watch_url": "https://www.youtube.com/shorts/8Z44gqKOQDs",
+      "youtu_be_url": "https://youtu.be/8Z44gqKOQDs",
+      "shorts_url": "https://www.youtube.com/shorts/8Z44gqKOQDs",
+      "studio_url": "https://studio.youtube.com/video/8Z44gqKOQDs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/8Z44gqKOQDs/hqdefault.jpg",
+      "thumb_text": "THE PEACE OF GOD \u00b7 DWELLING IN YOU",
+      "thumbnail_pending": true,
+      "duration_label": "58s",
+      "words": 666
+    },
     {
       "id": "0718",
       "slug": "drawing-joy-from-his-wells-isaiah-12-2-5",
@@ -23069,17 +23093,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-gardencolossians3v15",
-        "file": "0712-short-gardencolossians3v15.yml",
-        "companion_longform_id": "0712",
-        "scripture": "Colossians 3:15-17",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenhebrews13v15",
