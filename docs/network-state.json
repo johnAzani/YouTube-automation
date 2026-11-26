@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T08:06:27Z",
+  "generated_at": "2026-11-26T08:14:48Z",
   "monitor_generated_at": "2026-11-26T08:04:42.403939+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 846,
-    "published_longform": 231,
-    "published_shorts": 615,
-    "public_total": 844,
-    "queued_longform": 81,
-    "queued_shorts": 46,
+    "published_total": 848,
+    "published_longform": 232,
+    "published_shorts": 616,
+    "public_total": 846,
+    "queued_longform": 80,
+    "queued_shorts": 45,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -557,33 +557,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 70,
-        "published_longform": 16,
-        "published_shorts": 54,
-        "thumbnail_pending": 70,
-        "public_total": 70,
-        "queued_longform": 6,
+        "published_total": 72,
+        "published_longform": 17,
+        "published_shorts": 55,
+        "thumbnail_pending": 72,
+        "public_total": 72,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM96V1",
-        "title": "Pray This Psalm 96:1-4 Prayer of Thanksgiving | The Confusion In Your Heart #Shorts",
-        "format": "short",
-        "youtube_video_id": "DOLnrZiVYOA",
-        "watch_url": "https://www.youtube.com/shorts/DOLnrZiVYOA",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T00:03:58Z"
-      },
-      "next_queued_longform": {
         "id": "0717",
         "title": "Thanksgiving Worship When Mourning Turns to Joy: Psalm 30:11-12",
-        "words": 1465,
+        "format": "longform",
+        "youtube_video_id": "m63bZIcybjs",
+        "watch_url": "https://youtu.be/m63bZIcybjs",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T08:13:42Z"
+      },
+      "next_queued_longform": {
+        "id": "0718",
+        "title": "Drawing Joy From His Wells: Isaiah 12:2-5 | The Praise Garden",
+        "words": 1501,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm118v24",
-        "scripture": "Psalm 118:24",
+        "short": "short-gardencolossians3v15",
+        "scripture": "Colossians 3:15-17",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -682,6 +682,30 @@
   ],
   "videos": [
     {
+      "id": "0717",
+      "slug": "thanksgiving-worship-when-mourning-turns-to-joy-psalm-30-11-12",
+      "file": "0717-thanksgiving-worship-when-mourning-turns-to-joy-psalm-30-11-12.md",
+      "title": "Thanksgiving Worship When Mourning Turns to Joy: Psalm 30:11-12",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T08:13:42Z",
+      "youtube_video_id": "m63bZIcybjs",
+      "watch_url": "https://youtu.be/m63bZIcybjs",
+      "youtu_be_url": "https://youtu.be/m63bZIcybjs",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/m63bZIcybjs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/m63bZIcybjs/hqdefault.jpg",
+      "thumb_text": "MOURNING TO JOY",
+      "thumbnail_pending": true,
+      "duration_label": "9m 05s",
+      "words": 1465
+    },
+    {
       "id": "0076",
       "slug": "strength-for-the-challenges-ahead-ephesians-6-10-11",
       "file": "0076-strength-for-the-challenges-ahead-ephesians-6-10-11.md",
@@ -727,6 +751,30 @@
       "thumb_text": "",
       "thumbnail_pending": true,
       "duration_label": "51s",
+      "words": 651
+    },
+    {
+      "id": "SHORT-GARDENPSALM118V24",
+      "slug": "short-gardenpsalm118v24-thanksgiving-prayer",
+      "file": "short-gardenpsalm118v24-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 118:24 Prayer of Thanksgiving | A Prayer For This Day #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T07:23:02Z",
+      "youtube_video_id": "iHLqIb1IWww",
+      "watch_url": "https://www.youtube.com/shorts/iHLqIb1IWww",
+      "youtu_be_url": "https://youtu.be/iHLqIb1IWww",
+      "shorts_url": "https://www.youtube.com/shorts/iHLqIb1IWww",
+      "studio_url": "https://studio.youtube.com/video/iHLqIb1IWww/edit",
+      "thumb_url": "https://i.ytimg.com/vi/iHLqIb1IWww/hqdefault.jpg",
+      "thumb_text": "THIS IS THE DAY \u00b7 WHICH THE LORD",
+      "thumbnail_pending": true,
+      "duration_label": "48s",
       "words": 651
     },
     {
@@ -21626,19 +21674,6 @@
         "words": 1354
       },
       {
-        "id": "0717",
-        "slug": "thanksgiving-worship-when-mourning-turns-to-joy-psalm-30-11-12",
-        "file": "0717-thanksgiving-worship-when-mourning-turns-to-joy-psalm-30-11-12.md",
-        "title": "Thanksgiving Worship When Mourning Turns to Joy: Psalm 30:11-12",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1465
-      },
-      {
         "id": "0718",
         "slug": "drawing-joy-from-his-wells-isaiah-12-2-5",
         "file": "0718-drawing-joy-from-his-wells-isaiah-12-2-5.md",
@@ -22460,17 +22495,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-gardenpsalm118v24",
-        "file": "0711-short-gardenpsalm118v24.yml",
-        "companion_longform_id": "0711",
-        "scripture": "Psalm 118:24",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardencolossians3v15",
