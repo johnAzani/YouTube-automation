@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T07:10:34Z",
+  "generated_at": "2026-11-26T07:10:43Z",
   "monitor_generated_at": "2026-11-26T07:06:17.904520+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 837,
+    "published_total": 838,
     "published_longform": 230,
-    "published_shorts": 607,
-    "public_total": 835,
+    "published_shorts": 608,
+    "public_total": 836,
     "queued_longform": 82,
-    "queued_shorts": 60,
+    "queued_shorts": 58,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -295,23 +295,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 76,
+        "published_total": 77,
         "published_longform": 22,
-        "published_shorts": 54,
-        "thumbnail_pending": 76,
-        "public_total": 76,
+        "published_shorts": 55,
+        "thumbnail_pending": 77,
+        "public_total": 77,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-FAMILYROMANS15V13",
-        "title": "Pray This Romans 15:13 Family Prayer Over Your Home | Weariness Sits Beside You #Shorts",
+        "id": "SHORT-FAMILYPSALM144V12",
+        "title": "Pray This Psalm 144:12-15 Family Prayer Over Your Home | God's Promise For Your Home #Shorts",
         "format": "short",
-        "youtube_video_id": "fPcGNaf97AA",
-        "watch_url": "https://www.youtube.com/shorts/fPcGNaf97AA",
-        "published_on": "2026-11-25",
-        "published_at": "2026-11-25T23:55:46Z"
+        "youtube_video_id": "z9zXzLa97IE",
+        "watch_url": "https://www.youtube.com/shorts/z9zXzLa97IE",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T07:09:37Z"
       },
       "next_queued_longform": {
         "id": "0323",
@@ -320,8 +320,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familypsalm144v12",
-        "scripture": "Psalm 144:12-15",
+        "short": "short-familyephesians3v14",
+        "scripture": "Ephesians 3:14-19",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -714,6 +714,30 @@
       "thumbnail_pending": true,
       "duration_label": "49s",
       "words": 632
+    },
+    {
+      "id": "SHORT-FAMILYPSALM144V12",
+      "slug": "short-familypsalm144v12-household-prayer",
+      "file": "short-familypsalm144v12-household-prayer.md",
+      "title": "Pray This Psalm 144:12-15 Family Prayer Over Your Home | God's Promise For Your Home #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T07:09:37Z",
+      "youtube_video_id": "z9zXzLa97IE",
+      "watch_url": "https://www.youtube.com/shorts/z9zXzLa97IE",
+      "youtu_be_url": "https://youtu.be/z9zXzLa97IE",
+      "shorts_url": "https://www.youtube.com/shorts/z9zXzLa97IE",
+      "studio_url": "https://studio.youtube.com/video/z9zXzLa97IE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/z9zXzLa97IE/hqdefault.jpg",
+      "thumb_text": "BLESSINGS FOR \u00b7 YOUR HOME AND",
+      "thumbnail_pending": true,
+      "duration_label": "49s",
+      "words": 673
     },
     {
       "id": "SHORT-MORNINGPSALM145V2",
@@ -22170,17 +22194,6 @@
         "target_window_utc": "23:14"
       },
       {
-        "short": "short-familypsalm144v12",
-        "file": "0318-short-familypsalm144v12.yml",
-        "companion_longform_id": "0318",
-        "scripture": "Psalm 144:12-15",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
-      {
         "short": "short-familyephesians3v14",
         "file": "0319-short-familyephesians3v14.yml",
         "companion_longform_id": "0319",
@@ -22229,17 +22242,6 @@
         "file": "0326-short-familygenesis12v2.yml",
         "companion_longform_id": "0326",
         "scripture": "Genesis 12:2-3",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-familyromans15v13",
-        "file": "0328-short-familyromans15v13.yml",
-        "companion_longform_id": "0328",
-        "scripture": "Romans 15:13",
         "channel": "prayer5",
         "channel_name": "The Family Altar",
         "status": "approved",
