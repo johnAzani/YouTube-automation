@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T11:05:49Z",
+  "generated_at": "2026-11-26T11:07:14Z",
   "monitor_generated_at": "2026-11-26T09:46:01.080003+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 849,
+    "published_total": 850,
     "published_longform": 232,
-    "published_shorts": 617,
-    "public_total": 847,
+    "published_shorts": 618,
+    "public_total": 848,
     "queued_longform": 86,
-    "queued_shorts": 55,
+    "queued_shorts": 54,
     "automations_ok": 15,
     "automations_total": 15,
     "network_healthy": true
@@ -295,23 +295,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 77,
+        "published_total": 78,
         "published_longform": 22,
-        "published_shorts": 55,
-        "thumbnail_pending": 77,
-        "public_total": 77,
+        "published_shorts": 56,
+        "thumbnail_pending": 78,
+        "public_total": 78,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-FAMILYPSALM144V12",
-        "title": "Pray This Psalm 144:12-15 Family Prayer Over Your Home | God's Promise For Your Home #Shorts",
+        "id": "SHORT-FAMILYEPHESIANS3V14",
+        "title": "Pray This Ephesians 3:14-19 Family Prayer Over Your Home | Strength For Your Home #Shorts",
         "format": "short",
-        "youtube_video_id": "z9zXzLa97IE",
-        "watch_url": "https://www.youtube.com/shorts/z9zXzLa97IE",
+        "youtube_video_id": "UuN6KXRdte4",
+        "watch_url": "https://www.youtube.com/shorts/UuN6KXRdte4",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T07:09:37Z"
+        "published_at": "2026-11-26T11:06:00Z"
       },
       "next_queued_longform": {
         "id": "0323",
@@ -320,8 +320,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyephesians3v14",
-        "scripture": "Ephesians 3:14-19",
+        "short": "short-familyproverbs31v25",
+        "scripture": "Proverbs 31:25-28",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYEPHESIANS3V14",
+      "slug": "short-familyephesians3v14-household-prayer",
+      "file": "short-familyephesians3v14-household-prayer.md",
+      "title": "Pray This Ephesians 3:14-19 Family Prayer Over Your Home | Strength For Your Home #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T11:06:00Z",
+      "youtube_video_id": "UuN6KXRdte4",
+      "watch_url": "https://www.youtube.com/shorts/UuN6KXRdte4",
+      "youtu_be_url": "https://youtu.be/UuN6KXRdte4",
+      "shorts_url": "https://www.youtube.com/shorts/UuN6KXRdte4",
+      "studio_url": "https://studio.youtube.com/video/UuN6KXRdte4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/UuN6KXRdte4/hqdefault.jpg",
+      "thumb_text": "STRENGTHEN \u00b7 YOUR HOME",
+      "thumbnail_pending": true,
+      "duration_label": "45s",
+      "words": 674
+    },
     {
       "id": "SHORT-PSALM52V9",
       "slug": "short-psalm52v9-pre-sleep-prayer",
@@ -22497,17 +22521,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-familyephesians3v14",
-        "file": "0319-short-familyephesians3v14.yml",
-        "companion_longform_id": "0319",
-        "scripture": "Ephesians 3:14-19",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-familyproverbs31v25",
