@@ -12,7 +12,7 @@
     },
     {
       "concept": "hook",
-      "videos": 2,
+      "videos": 3,
       "impressions": 0,
       "clicks": 0,
       "click_rate_percent": null,
@@ -30,7 +30,7 @@
   "leader": null,
   "leader_click_rate_percent": null,
   "min_impressions": 300,
-  "videos_assigned": 11,
+  "videos_assigned": 12,
   "videos_in_reach": 1,
   "channels_with_reach": [
     "secret-place"
