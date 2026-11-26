@@ -9,27 +9,27 @@ Written by `pipeline/growth_score.py`; the detail is in `content/research/growth
 
 | Door | Hours, shared window |
 | :--- | ---: |
-| suggested | 55 |
-| Shorts feed — does not count | 24.5 |
+| suggested | 55.5 |
+| Shorts feed — does not count | 24 |
 | yt search | 1 |
-| home subs | 1.1 |
+| home subs | 1.4 |
 | other pages | 3.3 |
 | playlist | 0 |
 | notifications | 0.1 |
 | ext url | 1.1 |
 | direct unknown | 2 |
-| channel page | 0.58 |
+| channel page | 0.55 |
 | sound pages | 0 |
 
-**Counted: 56 hours (63.1% of all watch hours read).**
+**Counted: 56.5 hours (63.4% of all watch hours read).**
 
-The threshold asks 58.5 hours a day for the 67 days left before it doubles; the channels run at 3.4 a day.
+The threshold asks 59.4 hours a day for the 66 days left before it doubles; the channels run at 3.4 a day.
 
-**Release length: 16 minutes.** the median view of a measured video is 16.3 minutes (across 8 videos); a release is not built longer than that
+**Release length: 13 minutes.** the median view of a measured video is 13.5 minutes (across 9 videos); a release is not built longer than that
 
 Night tail: `hold` — kept.
 
-Long-form retention, median of videos with a reading: **10.5% watched**. A Short is excluded from this figure: a looping Short reports past 100%.
+Long-form retention, median of videos with a reading: **10.2% watched**. A Short is excluded from this figure: a looping Short reports past 100%.
 
 ### Which thumbnail concept earns the click
 
@@ -37,15 +37,15 @@ Written by `pipeline/thumbnail_campaign.py`. The pack renders three concepts; a 
 
 | Concept | Videos | Impressions | Click rate |
 | :--- | ---: | ---: | ---: |
-| hook | 2 | 0 | — (too few impressions) |
-| quiet | 5 | 0 | — (too few impressions) |
-| poster | 1 | 0 | — (too few impressions) |
+| poster | 1 | 68 | 0% (too few impressions) |
+| hook | 3 | 0 | — (too few impressions) |
+| quiet | 8 | 0 | — (too few impressions) |
 
 ### How long a release should be
 
-A view is watched for a median of **16.3 minutes** across 8 measured videos. A release is not built longer than that, so length outside the prayer is time nobody spends.
+A view is watched for a median of **13.5 minutes** across 9 measured videos. A release is not built longer than that, so length outside the prayer is time nobody spends.
 
-The night tail is the problem: `16` — 91% of every published minute is never watched.
+The night tail is the problem: `13` — 92.5% of every published minute is never watched.
 
 ### What is actually reachable
 
@@ -53,17 +53,17 @@ Written by `pipeline/realistic_ceiling.py`. Every figure below is measured or is
 
 | Lever | Hours a day |
 | :--- | ---: |
-| as it stands | 1.6 |
-| click rate to 4% | 4.5 |
-| watch time to 3 minutes and a 4% click rate | 4.5 |
+| as it stands | 1.3 |
+| click rate to 4% | 3.9 |
+| watch time to 3 minutes and a 4% click rate | 3.9 |
 
-The threshold asks 59.7 hours a day; the channels produce 1.558. With both format levers at their documented levels it would be 4.55. To reach the threshold at a 4% click rate and the measured watch time, YouTube would have to serve 5,497 impressions a day where it serves 418. Impressions are chosen by YouTube's recommendation system from how viewers respond, so that is the honest distance: it is reach, not metadata.
+The threshold asks 60.61 hours a day; the channels produce 1.284. With both format levers at their documented levels it would be 3.921. To reach the threshold at a 4% click rate and the measured watch time, YouTube would have to serve 6,718 impressions a day where it serves 434. Impressions are chosen by YouTube's recommendation system from how viewers respond, so that is the honest distance: it is reach, not metadata.
 
 ## Toward the Partner Program
 
 | Channel | Subscribers (need 1,000) | Watch hours, 365 days (need 4,000) | Shorts views, 90 days (need 10,000,000) | Long-form hours a day, last 28 days (need 11) | Read |
 | :--- | ---: | ---: | ---: | ---: | :--- |
-| The Secret Place | 1,270 | 77.8 | 5,493 | 2.3 | 2026-11-26 |
+| The Secret Place | 1,270 | 77.8 | 5,486 | 2.3 | 2026-11-26 |
 
 Ads need the subscribers and either the watch hours or the Shorts views. Watch hours counted here are long-form and live only: time watched in the Shorts feed does not count. A year of the daily figure in the last column is what the 365-day total becomes. YouTube Studio's Earn page holds the official count.
 
@@ -71,21 +71,21 @@ Not granted Analytics access yet: The Morning Altar, The Midday Watch, The Midni
 
 ## The Secret Place
 
-Last 28 days (2026-10-29 to 2026-11-26): 5,543 views, 89.1 watch hours (63.4 long-form and live, 25.7 Shorts). Over 365 days: 77.8 hours long-form and live, 76.8 hours Shorts.
+Last 28 days (2026-10-29 to 2026-11-26): 5,535 views, 89.1 watch hours (63.4 long-form and live, 25.7 Shorts). Over 365 days: 77.8 hours long-form and live, 76.7 hours Shorts.
 
 Where viewers came from, last 28 days:
 
 | Source | Views | Watch hours |
 | :--- | ---: | ---: |
-| Shorts feed | 4,788 | 24 |
+| Shorts feed | 4,782 | 24 |
 | YouTube search | 264 | 1 |
-| Suggested videos | 223 | 55.5 |
+| Suggested videos | 224 | 55.5 |
 | Home and subscriptions | 110 | 1.4 |
 | Other YouTube pages | 57 | 3.3 |
 | Channel page | 42 | 0.55 |
 | Other sites and apps | 30 | 1.1 |
 | Notifications | 11 | 0.1 |
-| Direct or unknown | 7 | 2 |
+| Direct or unknown | 6 | 2 |
 | Playlists | 2 | 0 |
 | Shorts sound pages | 1 | 0 |
 
@@ -112,7 +112,7 @@ Videos by watch time, 365 days (up to 50):
 
 | Video | Watch hours | Views | Average watched |
 | :--- | ---: | ---: | ---: |
-| [When Exhaustion Weighs on Your Soul: Isaiah 40:28-31](https://youtu.be/XLXi986WZ_k) | 20.8 | 61 | 19:24 (10.6%) |
+| [When Exhaustion Weighs on Your Soul: Isaiah 40:28-31](https://youtu.be/XLXi986WZ_k) | 20.8 | 61 | 19:48 (10.8%) |
 | [Bedtime Prayer for a Troubled Heart: John 14:27 / The Secret Place](https://youtu.be/uGkV42GvplM) | 10.6 | 49 | 13:32 (7.2%) |
 | [Bedtime Prayer for Anxiety and Overthinking: Philippians 4:6-7](https://youtu.be/YsHGDAO8uRE) | 7.1 | 9 | 47:33 (25.4%) |
 | [Night Prayer When Dread Keeps You Awake: 2 Timothy 1:7](https://youtu.be/IhL8prNsgaU) | 6.5 | 12 | 39:08 (21%) |
