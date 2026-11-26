@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T07:16:12Z",
+  "generated_at": "2026-11-26T07:18:17Z",
   "monitor_generated_at": "2026-11-26T07:06:17.904520+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 840,
+    "published_total": 841,
     "published_longform": 230,
-    "published_shorts": 610,
-    "public_total": 838,
+    "published_shorts": 611,
+    "public_total": 839,
     "queued_longform": 82,
-    "queued_shorts": 54,
+    "queued_shorts": 51,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -358,23 +358,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 79,
+        "published_total": 80,
         "published_longform": 20,
-        "published_shorts": 59,
+        "published_shorts": 60,
         "thumbnail_pending": 5,
-        "public_total": 79,
+        "public_total": 80,
         "queued_longform": 9,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 0
       },
       "latest_video": {
-        "id": "SHORT-HEALINGPSALM118V17",
-        "title": "Pray This Psalm 118:17 Healing Prayer for Peace & Strength | Faith For Healing #Shorts",
+        "id": "SHORT-HEALINGREVELATION21V4",
+        "title": "Pray This Revelation 21:4 Healing Prayer for Peace & Strength | Every Tear #Shorts",
         "format": "short",
-        "youtube_video_id": "7BAJJVCuVnU",
-        "watch_url": "https://www.youtube.com/shorts/7BAJJVCuVnU",
-        "published_on": "2026-11-25",
-        "published_at": "2026-11-25T23:58:49Z"
+        "youtube_video_id": "AuRByCRYCtU",
+        "watch_url": "https://www.youtube.com/shorts/AuRByCRYCtU",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T07:17:13Z"
       },
       "next_queued_longform": {
         "id": "0427",
@@ -382,12 +382,7 @@
         "words": 1098,
         "status": "approved"
       },
-      "next_queued_short": {
-        "short": "short-healingrevelation21v4",
-        "scripture": "Revelation 21:4",
-        "target_window_utc": "15:44",
-        "status": "approved"
-      },
+      "next_queued_short": null,
       "feedback": {
         "available": true,
         "as_of": "2026-11-26",
@@ -686,6 +681,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGREVELATION21V4",
+      "slug": "short-healingrevelation21v4-restoration-prayer",
+      "file": "short-healingrevelation21v4-restoration-prayer.md",
+      "title": "Pray This Revelation 21:4 Healing Prayer for Peace & Strength | Every Tear #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T07:17:13Z",
+      "youtube_video_id": "AuRByCRYCtU",
+      "watch_url": "https://www.youtube.com/shorts/AuRByCRYCtU",
+      "youtu_be_url": "https://youtu.be/AuRByCRYCtU",
+      "shorts_url": "https://www.youtube.com/shorts/AuRByCRYCtU",
+      "studio_url": "https://studio.youtube.com/video/AuRByCRYCtU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/AuRByCRYCtU/hqdefault.jpg",
+      "thumb_text": "WHEN PAIN FEELS \u00b7 HEAVY TONIGHT",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 651
+    },
     {
       "id": "SHORT-PSALM119V164",
       "slug": "short-psalm119v164-pre-sleep-prayer",
@@ -22268,39 +22287,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healingrevelation21v4",
-        "file": "0429-short-healingrevelation21v4.yml",
-        "companion_longform_id": "0429",
-        "scripture": "Revelation 21:4",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-healingpsalm71v20",
-        "file": "0435-short-healingpsalm71v20.yml",
-        "companion_longform_id": "0435",
-        "scripture": "Psalm 71:20-21",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-healingluke13v11",
-        "file": "0436-short-healingluke13v11.yml",
-        "companion_longform_id": "0436",
-        "scripture": "Luke 13:11-13",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-provisionpsalm65v11",
