@@ -8,23 +8,23 @@
   "first_frame": {
    "age_hours": 0.0,
    "stale": false,
-   "stamp": "2026-11-26T11:55:35.497096+00:00",
+   "stamp": "2026-11-26T14:25:13.492481+00:00",
    "why": ""
   },
   "growth_score": {
    "age_hours": 0.0,
    "stale": false,
-   "stamp": "2026-11-26T11:55:33.960499+00:00",
+   "stamp": "2026-11-26T14:25:11.980346+00:00",
    "why": ""
   },
   "learning_audit": {
-   "age_hours": 0.6,
+   "age_hours": 2.5,
    "stale": false,
-   "stamp": "2026-11-26T11:21:18.682926+00:00",
+   "stamp": "2026-11-26T11:55:35.949043+00:00",
    "why": ""
   },
   "performance_feedback": {
-   "age_hours": 1.1,
+   "age_hours": 3.6,
    "stale": false,
    "stamp": "2026-11-26T10:49:13.274922+00:00",
    "why": ""
@@ -32,17 +32,17 @@
   "shorts_supply": {
    "age_hours": 0.0,
    "stale": false,
-   "stamp": "2026-11-26T11:55:35.371998+00:00",
+   "stamp": "2026-11-26T14:25:13.372144+00:00",
    "why": ""
   },
   "thumbnail_campaign": {
-   "age_hours": 11.9,
+   "age_hours": 14.4,
    "stale": false,
    "stamp": "2026-11-26",
    "why": ""
   }
  },
- "generated_at": "2026-11-26T11:55:35.949043+00:00",
+ "generated_at": "2026-11-26T14:25:13.937676+00:00",
  "loops": [
   {
    "channels_reordered": 10,
@@ -92,7 +92,7 @@
   },
   {
    "compositions": 1,
-   "evidence": "one composition across 660 Shorts, but 434 of them (66%) still open on a citation: the design has one level, and the citation-versus-need choice inside it has two",
+   "evidence": "one composition across 664 Shorts, but 434 of them (65%) still open on a citation: the design has one level, and the citation-versus-need choice inside it has two",
    "loop": "first_frame_composition",
    "owner": "pipeline/first_frame.py + pipeline/first_frame_repair.py",
    "state": "measuring",

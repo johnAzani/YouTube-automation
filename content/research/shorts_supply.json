@@ -14,22 +14,21 @@
    "binding": "enough ready Shorts",
    "channel": "prayer2",
    "companion_longforms": 0,
-   "ready": 6,
-   "sources": 4,
+   "ready": 7,
+   "sources": 3,
    "standalone_examples": [
     "Psalm 63:6",
-    "Psalm 130:6",
     "Psalm 21:13",
     "Psalm 77:12"
    ],
-   "standalone_passages": 4,
+   "standalone_passages": 3,
    "verdict": "enough"
   },
   {
    "binding": "enough ready Shorts",
    "channel": "prayer3",
    "companion_longforms": 0,
-   "ready": 6,
+   "ready": 2,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
@@ -59,13 +58,10 @@
    "binding": "enough ready Shorts",
    "channel": "prayer6",
    "companion_longforms": 0,
-   "ready": 2,
-   "sources": 2,
-   "standalone_examples": [
-    "Isaiah 53:5",
-    "Psalm 34:18"
-   ],
-   "standalone_passages": 2,
+   "ready": 4,
+   "sources": 0,
+   "standalone_examples": [],
+   "standalone_passages": 0,
    "verdict": "enough"
   },
   {
@@ -106,23 +102,21 @@
    "channel": "prayer10",
    "companion_longforms": 0,
    "ready": 7,
-   "sources": 1,
-   "standalone_examples": [
-    "Psalm 119:35"
-   ],
-   "standalone_passages": 1,
+   "sources": 0,
+   "standalone_examples": [],
+   "standalone_passages": 0,
    "verdict": "enough"
   }
  ],
  "cost_lock": "$0.00 / month (docs/ZERO_DOLLAR_LOCK.md)",
  "dry": [],
- "generated_at": "2026-11-26T11:55:35.371998+00:00",
+ "generated_at": "2026-11-26T14:25:13.372144+00:00",
  "not_claimed": [
   "that more passages would produce more views. The supply reading says what can be authored, not what will be watched."
  ],
  "ready_floor": 2,
  "schema": 1,
  "sentence": "Every channel holds at least 2 ready Shorts.",
- "total_sources": 9,
+ "total_sources": 5,
  "under_floor": []
 }
