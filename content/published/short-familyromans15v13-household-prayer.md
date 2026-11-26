@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["ROMANS 15:13", "FILL YOUR HOME WITH", "JOY AND PEACE", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-03T02:19:49Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Weariness sits beside you at this table. Hear God's Word from Romans chapter fifteen verse thirteen. Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost. Heavenly Father, fill this home with your joy when our strength feels small. Grant our household deep peace in believing, removing every quiet fear tonight. Let your Holy Spirit pour fresh hope into every room of this home. Guard our loved ones and anchor our hearts in your steady grace. Amen. Weariness sits beside you at this table.
