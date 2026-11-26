@@ -1,6 +1,6 @@
 ---
 id: 0914
-title: 'When You Need God''s Hand Upon Your Day: 1 Chronicles 4:10'
+title: "Asking God to Bless Your Day: 1 Chronicles 4:10 | The Morning Altar"
 slug: when-you-need-gods-hand-upon-your-day-1-chronicles-4-10
 status: approved
 channel: prayer2
@@ -74,6 +74,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When You Need God's Hand Upon Your Day: 1 Chronicles 4:10"
+queue_title_fixed_at: "2026-11-26"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer
