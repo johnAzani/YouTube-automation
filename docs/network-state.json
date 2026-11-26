@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T07:30:47Z",
+  "generated_at": "2026-11-26T07:55:58Z",
   "monitor_generated_at": "2026-11-26T07:28:59.340282+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 844,
-    "published_longform": 230,
-    "published_shorts": 614,
-    "public_total": 842,
-    "queued_longform": 82,
-    "queued_shorts": 47,
+    "published_total": 846,
+    "published_longform": 231,
+    "published_shorts": 615,
+    "public_total": 844,
+    "queued_longform": 81,
+    "queued_shorts": 46,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -101,33 +101,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 110,
-        "published_longform": 35,
-        "published_shorts": 75,
-        "thumbnail_pending": 2,
-        "public_total": 109,
-        "queued_longform": 22,
+        "published_total": 112,
+        "published_longform": 36,
+        "published_shorts": 76,
+        "thumbnail_pending": 3,
+        "public_total": 111,
+        "queued_longform": 21,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM145V2",
-        "title": "Say This Psalm 145:2 Prayer for Fresh Start at Sunrise | A Short Prayer #Shorts",
-        "format": "short",
-        "youtube_video_id": "R7GGfsh-1fc",
-        "watch_url": "https://www.youtube.com/shorts/R7GGfsh-1fc",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T02:17:23Z"
-      },
-      "next_queued_longform": {
         "id": "0076",
         "title": "Strength for the Challenges Ahead: Ephesians 6:10-11",
-        "words": 1243,
+        "format": "longform",
+        "youtube_video_id": "_3OClNDS1uI",
+        "watch_url": "https://youtu.be/_3OClNDS1uI",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T07:54:52Z"
+      },
+      "next_queued_longform": {
+        "id": "0078",
+        "title": "Wisdom Before You Begin the Day: James 1:5 | The Morning Altar",
+        "words": 1357,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morninglamentations3v23",
-        "scripture": "Lamentations 3:23",
+        "short": "short-morningluke4v42",
+        "scripture": "Luke 4:42",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -682,6 +682,30 @@
   ],
   "videos": [
     {
+      "id": "0076",
+      "slug": "strength-for-the-challenges-ahead-ephesians-6-10-11",
+      "file": "0076-strength-for-the-challenges-ahead-ephesians-6-10-11.md",
+      "title": "Strength for the Challenges Ahead: Ephesians 6:10-11",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T07:54:52Z",
+      "youtube_video_id": "_3OClNDS1uI",
+      "watch_url": "https://youtu.be/_3OClNDS1uI",
+      "youtu_be_url": "https://youtu.be/_3OClNDS1uI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/_3OClNDS1uI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/_3OClNDS1uI/hqdefault.jpg",
+      "thumb_text": "CLOTHED IN HIS ARMOUR",
+      "thumbnail_pending": false,
+      "duration_label": "7m 26s",
+      "words": 1243
+    },
+    {
       "id": "SHORT-GUIDEDEXODUS33V14",
       "slug": "short-guidedexodus33v14-guidance-prayer",
       "file": "short-guidedexodus33v14-guidance-prayer.md",
@@ -800,6 +824,30 @@
       "thumbnail_pending": false,
       "duration_label": "55s",
       "words": 636
+    },
+    {
+      "id": "SHORT-MORNINGLAMENTATIONS3V23",
+      "slug": "short-morninglamentations3v23-sunrise-prayer",
+      "file": "short-morninglamentations3v23-sunrise-prayer.md",
+      "title": "Say This Lamentations 3:23 Prayer for Fresh Start at Sunrise | When Strength Feels Sca #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T07:14:34Z",
+      "youtube_video_id": "gCNE3jLTWQk",
+      "watch_url": "https://www.youtube.com/shorts/gCNE3jLTWQk",
+      "youtu_be_url": "https://youtu.be/gCNE3jLTWQk",
+      "shorts_url": "https://www.youtube.com/shorts/gCNE3jLTWQk",
+      "studio_url": "https://studio.youtube.com/video/gCNE3jLTWQk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/gCNE3jLTWQk/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "58s",
+      "words": 652
     },
     {
       "id": "SHORT-MIDDAYPROVERBS15V1",
@@ -20954,19 +21002,6 @@
         "words": 1025
       },
       {
-        "id": "0076",
-        "slug": "strength-for-the-challenges-ahead-ephesians-6-10-11",
-        "file": "0076-strength-for-the-challenges-ahead-ephesians-6-10-11.md",
-        "title": "Strength for the Challenges Ahead: Ephesians 6:10-11",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1243
-      },
-      {
         "id": "0078",
         "slug": "wisdom-before-you-begin-the-day-james-1-5",
         "file": "0078-wisdom-before-you-begin-the-day-james-1-5.md",
@@ -22095,17 +22130,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morninglamentations3v23",
-        "file": "0000-short-morninglamentations3v23.yml",
-        "companion_longform_id": "",
-        "scripture": "Lamentations 3:23",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningluke4v42",
