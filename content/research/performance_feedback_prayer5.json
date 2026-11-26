@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-26T03:52:24.674981+00:00",
+  "generated_at": "2026-11-26T10:53:10.678793+00:00",
   "as_of": "2026-11-26",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 12,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 76,
+    "receipt_video_ids": 77,
     "matched_video_ids": 50,
     "longform_below_view_threshold": 12,
     "longform_missing_view_count": 0,
@@ -58,134 +58,134 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 33,
+    "measured_shorts": 32,
     "total_shorts": 38,
     "sufficient_data": true,
-    "avg_views": 36.8,
+    "avg_views": 37.5,
     "median_views": 7,
-    "total_views": 1214,
+    "total_views": 1199,
     "minimum_age_days": 2,
     "by_book": {
       "1 samuel": {
         "shorts": 1,
         "avg_views": 4.0,
-        "ratio": 0.703
+        "ratio": 0.702
       },
       "2 timothy": {
         "shorts": 1,
         "avg_views": 2.0,
-        "ratio": 0.685
+        "ratio": 0.684
       },
       "acts": {
         "shorts": 1,
         "avg_views": 32.0,
-        "ratio": 0.957
+        "ratio": 0.951
       },
       "colossians": {
         "shorts": 1,
         "avg_views": 5.0,
-        "ratio": 0.712
+        "ratio": 0.711
       },
       "deuteronomy": {
         "shorts": 2,
-        "avg_views": 8.0,
-        "ratio": 0.609
+        "avg_views": 8.5,
+        "ratio": 0.613
       },
       "ecclesiastes": {
         "shorts": 1,
         "avg_views": 4.0,
-        "ratio": 0.703
+        "ratio": 0.702
       },
       "genesis": {
         "shorts": 2,
         "avg_views": 17.0,
-        "ratio": 0.731
+        "ratio": 0.727
       },
       "isaiah": {
         "shorts": 4,
         "avg_views": 34.8,
-        "ratio": 0.963
+        "ratio": 0.952
       },
       "job": {
         "shorts": 1,
         "avg_views": 155.0,
-        "ratio": 2.071
+        "ratio": 2.046
       },
       "luke": {
-        "shorts": 2,
-        "avg_views": 8.5,
-        "ratio": 0.616
+        "shorts": 1,
+        "avg_views": 1.0,
+        "ratio": 0.676
       },
       "malachi": {
         "shorts": 1,
         "avg_views": 3.0,
-        "ratio": 0.694
+        "ratio": 0.693
       },
       "mark": {
         "shorts": 1,
         "avg_views": 33.0,
-        "ratio": 0.966
+        "ratio": 0.96
       },
       "philippians": {
         "shorts": 1,
         "avg_views": 53.0,
-        "ratio": 1.147
+        "ratio": 1.138
       },
       "proverbs": {
         "shorts": 5,
         "avg_views": 22.0,
-        "ratio": 0.713
+        "ratio": 0.705
       },
       "psalm": {
         "shorts": 8,
         "avg_views": 75.2,
-        "ratio": 1.836
+        "ratio": 1.807
       },
       "ruth": {
         "shorts": 1,
         "avg_views": 5.0,
-        "ratio": 0.712
+        "ratio": 0.711
       }
     },
     "by_theme": {
       "anxiety_peace": {
         "shorts": 3,
         "avg_views": 50.3,
-        "ratio": 1.221
+        "ratio": 1.206
       },
       "daily_guidance_wisdom": {
         "shorts": 1,
         "avg_views": 5.0,
-        "ratio": 0.712
+        "ratio": 0.711
       },
       "general_prayer": {
-        "shorts": 24,
-        "avg_views": 35.8,
-        "ratio": 0.975
+        "shorts": 23,
+        "avg_views": 36.7,
+        "ratio": 0.981
       },
       "midday_strength_endurance": {
         "shorts": 1,
         "avg_views": 3.0,
-        "ratio": 0.694
+        "ratio": 0.693
       },
       "morning_mercy_renewal": {
         "shorts": 1,
         "avg_views": 33.0,
-        "ratio": 0.966
+        "ratio": 0.96
       },
       "protection": {
         "shorts": 1,
         "avg_views": 155.0,
-        "ratio": 2.071
+        "ratio": 2.046
       },
       "stillness_refuge": {
         "shorts": 2,
         "avg_views": 4.0,
-        "ratio": 0.554
+        "ratio": 0.553
       }
     },
     "guidance": [
-      "Shorts: Psalm runs 1.8x this channel's average Short (37 views over 33 Shorts); its passages are written first."
+      "Shorts: Psalm runs 1.8x this channel's average Short (38 views over 32 Shorts); its passages are written first."
     ]
   },
   "guidance": [
