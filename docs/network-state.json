@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T00:05:00Z",
+  "generated_at": "2026-11-26T00:06:16Z",
   "monitor_generated_at": "2026-11-25T23:07:25.395195+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 831,
+    "published_total": 832,
     "published_longform": 228,
-    "published_shorts": 603,
-    "public_total": 829,
+    "published_shorts": 604,
+    "public_total": 830,
     "queued_longform": 76,
-    "queued_shorts": 40,
+    "queued_shorts": 39,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": true
@@ -640,23 +640,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 66,
+        "published_total": 67,
         "published_longform": 16,
-        "published_shorts": 50,
+        "published_shorts": 51,
         "thumbnail_pending": 2,
-        "public_total": 66,
+        "public_total": 67,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPHILIPPIANS1V9",
-        "title": "Pray This Philippians 1:9-10 Prayer for God's Guidance | When Both Paths Look Right #Shorts",
+        "id": "SHORT-GUIDEDPROVERBS11V14",
+        "title": "Pray This Proverbs 11:14 Prayer for God's Guidance | Weighing Every Next Step #Shorts",
         "format": "short",
-        "youtube_video_id": "72Z2xvMdfhQ",
-        "watch_url": "https://www.youtube.com/shorts/72Z2xvMdfhQ",
-        "published_on": "2026-11-25",
-        "published_at": "2026-11-25T20:12:48Z"
+        "youtube_video_id": "wf3McmSuDNk",
+        "watch_url": "https://www.youtube.com/shorts/wf3McmSuDNk",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T00:05:21Z"
       },
       "next_queued_longform": {
         "id": "0817",
@@ -665,8 +665,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedproverbs11v14",
-        "scripture": "Proverbs 11:14",
+        "short": "short-guidedpsalm139v23",
+        "scripture": "Psalm 139:23-24",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDPROVERBS11V14",
+      "slug": "short-guidedproverbs11v14-guidance-prayer",
+      "file": "short-guidedproverbs11v14-guidance-prayer.md",
+      "title": "Pray This Proverbs 11:14 Prayer for God's Guidance | Weighing Every Next Step #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T00:05:21Z",
+      "youtube_video_id": "wf3McmSuDNk",
+      "watch_url": "https://www.youtube.com/shorts/wf3McmSuDNk",
+      "youtu_be_url": "https://youtu.be/wf3McmSuDNk",
+      "shorts_url": "https://www.youtube.com/shorts/wf3McmSuDNk",
+      "studio_url": "https://studio.youtube.com/video/wf3McmSuDNk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/wf3McmSuDNk/hqdefault.jpg",
+      "thumb_text": "DO NOT MAKE THIS \u00b7 DECISION ALONE",
+      "thumbnail_pending": false,
+      "duration_label": "54s",
+      "words": 632
+    },
     {
       "id": "SHORT-GARDENPSALM96V1",
       "slug": "short-gardenpsalm96v1-thanksgiving-prayer",
@@ -21633,17 +21657,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-guidedproverbs11v14",
-        "file": "0000-short-guidedproverbs11v14.yml",
-        "companion_longform_id": "",
-        "scripture": "Proverbs 11:14",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
-      },
       {
         "short": "short-guidedpsalm139v23",
         "file": "0000-short-guidedpsalm139v23.yml",
