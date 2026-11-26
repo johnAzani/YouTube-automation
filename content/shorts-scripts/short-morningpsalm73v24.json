@@ -1,0 +1,348 @@
+{
+  "key": "short-morningpsalm73v24",
+  "channel": "prayer2",
+  "psalm": 73,
+  "title": [
+    "WHEN DECISIONS WEIGH HEAVY",
+    "GOD WILL GUIDE YOUR STEPS"
+  ],
+  "poster": [
+    "PSALM 73:24",
+    "THOU SHALT GUIDE ME",
+    "WITH THY COUNSEL",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "misty mountain sunrise golden morning light",
+    "calm lake reflection early sunrise warm light",
+    "sunlight rays breaking through morning pine forest",
+    "open window sunrise soft curtains morning breeze",
+    "soft dawn horizon foggy valley sunrise",
+    "peaceful morning meadow golden sun flare",
+    "sunrise over still ocean water calm horizon",
+    "gentle dawn light mountain peak warm orange sky"
+  ],
+  "scenes": [
+    {
+      "a": "Decisions wait for you this morning.",
+      "img": "short-morningpsalm73v24-scene-01.jpg",
+      "kicker": "THIS MORNING",
+      "sub": "DECISIONS WAIT FOR YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You don't have to map out every single step alone before the sun climbs the sky.",
+      "img": "short-morningpsalm73v24-scene-02.jpg",
+      "kicker": "BEFORE THE SUN",
+      "sub": "YOU DO NOT WALK ALONE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Rest your mind in the timeless promise of God:",
+      "img": "short-morningpsalm73v24-scene-03.jpg",
+      "kicker": "HIS PROMISE",
+      "sub": "REST YOUR MIND IN GOD",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "'Thou shalt guide me with thy counsel, and afterward receive me to glory.'",
+      "img": "short-morningpsalm73v24-scene-04.jpg",
+      "kicker": "PSALM 73:24",
+      "sub": "THOU SHALT GUIDE ME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, before this day pulls us in every direction, we turn to your wisdom.",
+      "img": "short-morningpsalm73v24-scene-05.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "WE TURN TO YOUR WISDOM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Steer our thoughts through every choice today, and lift the heavy pressure to figure it all out.",
+      "img": "short-morningpsalm73v24-scene-06.jpg",
+      "kicker": "EVERY CHOICE",
+      "sub": "LIFT THE HEAVY PRESSURE",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Hold us steady by your hand, trusting that your gentle counsel leads us straight into your glory.",
+      "img": "short-morningpsalm73v24-scene-07.jpg",
+      "kicker": "STEADY HAND",
+      "sub": "COUNSEL INTO GLORY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Rest in peace, where decisions wait for you this morning.",
+      "img": "short-morningpsalm73v24-scene-08.jpg",
+      "kicker": "REST IN PEACE",
+      "sub": "HE GUIDES YOUR STEPS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Decisions wait for you this morning."
+    ],
+    [
+      3,
+      7,
+      "You don't have to map out every single step alone before the sun climbs the sky."
+    ],
+    [
+      7,
+      10,
+      "Rest your mind in the timeless promise of God:"
+    ],
+    [
+      10,
+      16,
+      "'Thou shalt guide me with thy counsel, and afterward receive me to glory.'"
+    ],
+    [
+      16,
+      21,
+      "Lord, before this day pulls us in every direction, we turn to your wisdom."
+    ],
+    [
+      21,
+      27,
+      "Steer our thoughts through every choice today, and lift the heavy pressure to figure it all out."
+    ],
+    [
+      27,
+      33,
+      "Hold us steady by your hand, trusting that your gentle counsel leads us straight into your glory."
+    ],
+    [
+      33,
+      37,
+      "Amen. Rest in peace, where decisions wait for you this morning."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "DECISIONS WAIT FOR YOU",
+        "THIS MORNING"
+      ],
+      [
+        "DECISIONS"
+      ],
+      "PSALM 73 : 24"
+    ],
+    [
+      3,
+      7,
+      [
+        "YOU DO NOT MAP",
+        "EVERY STEP ALONE",
+        "BEFORE SUNRISE"
+      ],
+      [
+        "ALONE"
+      ],
+      "PSALM 73 : 24"
+    ],
+    [
+      7,
+      10,
+      [
+        "REST YOUR MIND IN",
+        "THE TIMELESS PROMISE"
+      ],
+      [
+        "PROMISE"
+      ],
+      "PSALM 73 : 24"
+    ],
+    [
+      10,
+      16,
+      [
+        "THOU SHALT GUIDE ME",
+        "WITH THY COUNSEL",
+        "RECEIVE ME TO GLORY"
+      ],
+      [
+        "GUIDE",
+        "GLORY"
+      ],
+      "PSALM 73 : 24"
+    ],
+    [
+      16,
+      21,
+      [
+        "BEFORE THIS DAY PULLS",
+        "WE TURN TO WISDOM"
+      ],
+      [
+        "WISDOM"
+      ],
+      "PSALM 73 : 24"
+    ],
+    [
+      21,
+      27,
+      [
+        "STEER OUR THOUGHTS",
+        "LIFT THE HEAVY PRESSURE"
+      ],
+      [
+        "STEER",
+        "PRESSURE"
+      ],
+      "PSALM 73 : 24"
+    ],
+    [
+      27,
+      33,
+      [
+        "HOLD US STEADY",
+        "YOUR GENTLE COUNSEL",
+        "LEADS TO GLORY"
+      ],
+      [
+        "STEADY",
+        "COUNSEL"
+      ],
+      "PSALM 73 : 24"
+    ],
+    [
+      33,
+      37,
+      [
+        "REST IN PEACE",
+        "DECISIONS WAIT FOR YOU"
+      ],
+      [
+        "PEACE"
+      ],
+      "PSALM 73 : 24"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Decisions wait for you this morning.",
+      "kind": "phrase",
+      "words": [
+        "DECISIONS",
+        "MORNING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You don't have to map out every single step alone before the sun climbs the sky.",
+      "kind": "phrase",
+      "words": [
+        "ALONE",
+        "SUN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Rest your mind in the timeless promise of God:",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "PROMISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "'Thou shalt guide me with thy counsel, and afterward receive me to glory.'",
+      "kind": "phrase",
+      "words": [
+        "GUIDE",
+        "GLORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, before this day pulls us in every direction, we turn to your wisdom.",
+      "kind": "phrase",
+      "words": [
+        "TURN",
+        "WISDOM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Steer our thoughts through every choice today, and lift the heavy pressure to figure it all out.",
+      "kind": "phrase",
+      "words": [
+        "STEER",
+        "PRESSURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hold us steady by your hand, trusting that your gentle counsel leads us straight into your glory.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "COUNSEL"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Rest in peace, where decisions wait for you this morning.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "DECISIONS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 73:24"
+}

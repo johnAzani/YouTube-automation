@@ -1,0 +1,279 @@
+{
+  "key": "short-morningluke4v42",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "BEFORE DEMANDS BEGIN",
+    "Morning Solitude in Luke 4:42"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "BEFORE DEMANDS BEGIN",
+    "SUNRISE PRAYER",
+    "LUKE 4:42"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "calm desert sunrise golden light",
+    "quiet foggy morning hills dawn",
+    "solitary desert valley sunrise sunlight",
+    "peaceful morning mountain lake reflection",
+    "misty morning forest sunrise sunbeams",
+    "serene dawn sky over calm water"
+  ],
+  "scenes": [
+    {
+      "a": "Before the world demands your whole attention today,",
+      "img": "short-morningluke4v42-scene-01.jpg",
+      "kicker": "THE CROWDED HOUR",
+      "sub": "FINDING STILLNESS BEFORE DEMANDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "you might feel pulled to give yourself away to every voice asking for your time before you even pray.",
+      "img": "short-morningluke4v42-scene-02.jpg",
+      "kicker": "SEEKING SOLITUDE",
+      "sub": "WHEN EVERY VOICE CALLS OUT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Scripture records, And when it was day, he departed and went into a desert place: and the people sought him, and came unto him, and stayed him, that he should not depart from them.",
+      "img": "short-morningluke4v42-scene-03.jpg",
+      "kicker": "DESERT STILLNESS",
+      "sub": "HE DEPARTED TO A DESERT PLACE",
+      "cam": "pull_out",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, before the noise of this morning rushes in, teach us to seek quiet places with You.",
+      "img": "short-morningluke4v42-scene-04.jpg",
+      "kicker": "QUIET PRESENCE",
+      "sub": "TEACH US TO SEEK YOUR SILENCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "When duties press in from every side, help us anchor our hearts in Your quiet strength.",
+      "img": "short-morningluke4v42-scene-05.jpg",
+      "kicker": "ANCHORED HEART",
+      "sub": "STRENGTH FOR THE COMING DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Before the world demands your whole attention today.",
+      "img": "short-morningluke4v42-scene-06.jpg",
+      "kicker": "THE DAILY ALTAR",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Before the world demands your whole attention today,"
+    ],
+    [
+      3,
+      7,
+      "you might feel pulled to give yourself away to every voice asking for your time before you even pray."
+    ],
+    [
+      7,
+      17,
+      "Scripture records, And when it was day, he departed and went into a desert place: and the people sought him, and came unto him, and stayed him, that he should not depart from them."
+    ],
+    [
+      17,
+      22,
+      "Lord, before the noise of this morning rushes in, teach us to seek quiet places with You."
+    ],
+    [
+      22,
+      27,
+      "When duties press in from every side, help us anchor our hearts in Your quiet strength."
+    ],
+    [
+      27,
+      31,
+      "Amen. Before the world demands your whole attention today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "BEFORE THE WORLD DEMANDS",
+        "YOUR WHOLE ATTENTION TODAY"
+      ],
+      [
+        "DEMANDS",
+        "ATTENTION"
+      ],
+      "LUKE 4:42"
+    ],
+    [
+      3,
+      7,
+      [
+        "YOU MIGHT FEEL PULLED TO GIVE",
+        "YOURSELF AWAY TO EVERY VOICE",
+        "BEFORE YOU EVEN PRAY"
+      ],
+      [
+        "PULLED",
+        "VOICE",
+        "PRAY"
+      ],
+      "LUKE 4:42"
+    ],
+    [
+      7,
+      17,
+      [
+        "AND WHEN IT WAS DAY HE DEPARTED",
+        "INTO A DESERT PLACE",
+        "AND THE PEOPLE SOUGHT HIM",
+        "THAT HE SHOULD NOT DEPART"
+      ],
+      [
+        "DESERT",
+        "SOUGHT",
+        "DEPART"
+      ],
+      "LUKE 4:42"
+    ],
+    [
+      17,
+      22,
+      [
+        "LORD BEFORE THE NOISE RUSHES IN",
+        "TEACH US TO SEEK QUIET PLACES",
+        "WITH YOU THIS MORNING"
+      ],
+      [
+        "NOISE",
+        "QUIET",
+        "PLACES"
+      ],
+      "LUKE 4:42"
+    ],
+    [
+      22,
+      27,
+      [
+        "WHEN DUTIES PRESS IN FROM EVERY SIDE",
+        "HELP US ANCHOR OUR HEARTS",
+        "IN YOUR QUIET STRENGTH"
+      ],
+      [
+        "DUTIES",
+        "ANCHOR",
+        "STRENGTH"
+      ],
+      "LUKE 4:42"
+    ],
+    [
+      27,
+      31,
+      [
+        "AMEN BEFORE THE WORLD DEMANDS",
+        "YOUR WHOLE ATTENTION TODAY"
+      ],
+      [
+        "AMEN",
+        "ATTENTION"
+      ],
+      "LUKE 4:42"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Before the world demands your whole attention today,",
+      "kind": "phrase",
+      "words": [
+        "BEFORE",
+        "DEMANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "you might feel pulled to give yourself away to every voice asking for your time before you even pray.",
+      "kind": "phrase",
+      "words": [
+        "PULLED",
+        "VOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture records, And when it was day, he departed and went into a desert place: and the people sought him, and came unto him, and stayed him, that he should not depart from them.",
+      "kind": "phrase",
+      "words": [
+        "DESERT",
+        "PLACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, before the noise of this morning rushes in, teach us to seek quiet places with You.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PLACES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When duties press in from every side, help us anchor our hearts in Your quiet strength.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Before the world demands your whole attention today.",
+      "kind": "phrase",
+      "words": [
+        "WORLD",
+        "ATTENTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Luke 4:42"
+}

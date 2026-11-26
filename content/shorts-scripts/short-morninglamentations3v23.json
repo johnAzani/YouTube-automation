@@ -1,0 +1,310 @@
+{
+  "key": "short-morninglamentations3v23",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "WHEN STRENGTH FEELS SCARCE",
+    "Lamentations 3:23 Sunrise Prayer"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "WHEN STRENGTH FEELS SCARCE",
+    "LAMENTATIONS 3:23",
+    "SUNRISE PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "peaceful sunrise over calm misty lake",
+    "soft morning light through forest trees",
+    "golden dawn sky over quiet mountain valley",
+    "gentle sunrise light on calm water",
+    "warm morning sun breaking through clouds",
+    "early dawn horizon with soft light",
+    "serene morning landscape at sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "You woke up unsure if strength will come.",
+      "img": "short-morninglamentations3v23-scene-01.jpg",
+      "kicker": "EMPTY HANDS",
+      "sub": "WHEN STRENGTH FEELS SCARCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Yesterday drained every drop of your resolve, leaving your spirit quiet and heavy in this early room.",
+      "img": "short-morninglamentations3v23-scene-02.jpg",
+      "kicker": "HEAVY SILENCE",
+      "sub": "RESTING BEFORE THE DAY BEGINS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Yet Scripture speaks softly into your silence: They are new every morning: great is thy faithfulness.",
+      "img": "short-morninglamentations3v23-scene-03.jpg",
+      "kicker": "LAMENTATIONS 3:23",
+      "sub": "GREAT IS THY FAITHFULNESS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we gather what little we have at this sunrise, holding our tired hearts before Your steady presence.",
+      "img": "short-morninglamentations3v23-scene-04.jpg",
+      "kicker": "FRESH MERCY",
+      "sub": "BEFORE HIS STEADY PRESENCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "We do not ask for a whole year of strength right now, only the gentle grace required for this single morning.",
+      "img": "short-morninglamentations3v23-scene-05.jpg",
+      "kicker": "SUFFICIENT GRACE",
+      "sub": "GRACE FOR THIS SINGLE HOUR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Fill the empty spaces with Your patient mercy, and steady our step as the day begins.",
+      "img": "short-morninglamentations3v23-scene-06.jpg",
+      "kicker": "STEADY STEPS",
+      "sub": "HE FILLS THE EMPTY SPACES",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. You can rest even when you woke up unsure if strength will come.",
+      "img": "short-morninglamentations3v23-scene-07.jpg",
+      "kicker": "NEW MORNING",
+      "sub": "HIS FAITHFULNESS REMAINS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You woke up unsure if strength will come."
+    ],
+    [
+      3,
+      8,
+      "Yesterday drained every drop of your resolve, leaving your spirit quiet and heavy in this early room."
+    ],
+    [
+      8,
+      14,
+      "Yet Scripture speaks softly into your silence: They are new every morning: great is thy faithfulness."
+    ],
+    [
+      14,
+      20,
+      "Lord, we gather what little we have at this sunrise, holding our tired hearts before Your steady presence."
+    ],
+    [
+      20,
+      26,
+      "We do not ask for a whole year of strength right now, only the gentle grace required for this single morning."
+    ],
+    [
+      26,
+      31,
+      "Fill the empty spaces with Your patient mercy, and steady our step as the day begins."
+    ],
+    [
+      31,
+      35,
+      "Amen. You can rest even when you woke up unsure if strength will come."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU WOKE UP UNSURE",
+        "IF STRENGTH WILL COME"
+      ],
+      [
+        "UNSURE",
+        "STRENGTH"
+      ],
+      "LAMENTATIONS 3 : 23"
+    ],
+    [
+      3,
+      8,
+      [
+        "YESTERDAY DRAINED EVERY DROP",
+        "LEAVING YOUR SPIRIT HEAVY"
+      ],
+      [
+        "DRAINED",
+        "HEAVY"
+      ],
+      "LAMENTATIONS 3 : 23"
+    ],
+    [
+      8,
+      14,
+      [
+        "THEY ARE NEW EVERY MORNING",
+        "GREAT IS THY FAITHFULNESS"
+      ],
+      [
+        "NEW",
+        "FAITHFULNESS"
+      ],
+      "LAMENTATIONS 3 : 23"
+    ],
+    [
+      14,
+      20,
+      [
+        "WE GATHER WHAT LITTLE WE HAVE",
+        "BEFORE YOUR STEADY PRESENCE"
+      ],
+      [
+        "STEADY",
+        "PRESENCE"
+      ],
+      "LAMENTATIONS 3 : 23"
+    ],
+    [
+      20,
+      26,
+      [
+        "GENTLE GRACE REQUIRED FOR",
+        "THIS SINGLE MORNING"
+      ],
+      [
+        "GRACE",
+        "MORNING"
+      ],
+      "LAMENTATIONS 3 : 23"
+    ],
+    [
+      26,
+      31,
+      [
+        "FILL THE EMPTY SPACES WITH",
+        "YOUR PATIENT MERCY"
+      ],
+      [
+        "PATIENT",
+        "MERCY"
+      ],
+      "LAMENTATIONS 3 : 23"
+    ],
+    [
+      31,
+      35,
+      [
+        "EVEN WHEN YOU WOKE UP UNSURE",
+        "IF STRENGTH WILL COME"
+      ],
+      [
+        "REST",
+        "STRENGTH"
+      ],
+      "LAMENTATIONS 3 : 23"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You woke up unsure if strength will come.",
+      "kind": "phrase",
+      "words": [
+        "UNSURE",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Yesterday drained every drop of your resolve, leaving your spirit quiet and heavy in this early room.",
+      "kind": "phrase",
+      "words": [
+        "DRAINED",
+        "HEAVY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Yet Scripture speaks softly into your silence: They are new every morning: great is thy faithfulness.",
+      "kind": "phrase",
+      "words": [
+        "NEW",
+        "FAITHFULNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we gather what little we have at this sunrise, holding our tired hearts before Your steady presence.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We do not ask for a whole year of strength right now, only the gentle grace required for this single morning.",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Fill the empty spaces with Your patient mercy, and steady our step as the day begins.",
+      "kind": "phrase",
+      "words": [
+        "PATIENT",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. You can rest even when you woke up unsure if strength will come.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Lamentations 3:23"
+}

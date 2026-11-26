@@ -1,0 +1,330 @@
+{
+  "key": "short-morningpsalm77v11",
+  "channel": "prayer2",
+  "psalm": 77,
+  "title": [
+    "WHEN DOUBT WAKES UP",
+    "FIRST THING AT DAWN"
+  ],
+  "poster": [
+    "MORNING PRAYER",
+    "FOR ANXIOUS THOUGHTS",
+    "PSALM 77:11",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "soft dawn light bedroom window curtain morning stillness",
+    "misty morning sunrise calm valley lake golden hour",
+    "first sunrise rays breaking over distant mountains",
+    "calm river mist rising golden sunrise light",
+    "ancient mountain ridge morning sun rising through clouds",
+    "peaceful pine forest morning sunbeams shining through mist",
+    "golden morning sky clear horizon quiet sunrise vista"
+  ],
+  "scenes": [
+    {
+      "a": "The doubt did not leave your pillow.",
+      "img": "short-morningpsalm77v11-scene-01.jpg",
+      "kicker": "MORNING DOUBT",
+      "sub": "THE THOUGHTS WAITING AT DAWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Before your feet touch the cold floor",
+      "img": "short-morningpsalm77v11-scene-02.jpg",
+      "kicker": "FIRST STEPS",
+      "sub": "TURNING TOWARD GOD",
+      "cam": "pan_right",
+      "focus": [
+        0.52,
+        0.4
+      ]
+    },
+    {
+      "a": "Take this ancient resolve into your morning",
+      "img": "short-morningpsalm77v11-scene-03.jpg",
+      "kicker": "PSALM 77:11",
+      "sub": "REMEMBERING HIS WONDERS",
+      "cam": "tilt_up",
+      "focus": [
+        0.48,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, my soul is quick to fear",
+      "img": "short-morningpsalm77v11-scene-04.jpg",
+      "kicker": "SUNRISE PETITION",
+      "sub": "MEET ME IN UNCERTAINTY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    {
+      "a": "Anchor my racing thoughts",
+      "img": "short-morningpsalm77v11-scene-05.jpg",
+      "kicker": "ENDURING GRACE",
+      "sub": "GROUNDED IN HIS FAITHFULNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.55,
+        0.48
+      ]
+    },
+    {
+      "a": "You have carried me through every trial",
+      "img": "short-morningpsalm77v11-scene-06.jpg",
+      "kicker": "PROVEN MERCY",
+      "sub": "HE WILL NOT ABANDON YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lead me through this day in Your unbroken peace",
+      "img": "short-morningpsalm77v11-scene-07.jpg",
+      "kicker": "UNBROKEN PEACE",
+      "sub": "WALKING INTO THE LIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The doubt did not leave your pillow."
+    ],
+    [
+      3,
+      10,
+      "Before your feet touch the cold floor, turn your heart toward the God who kept you through the night."
+    ],
+    [
+      10,
+      20,
+      "Take this ancient resolve into your morning: I will remember the works of the LORD: surely I will remember thy wonders of old."
+    ],
+    [
+      20,
+      26,
+      "Lord, my soul is quick to fear when dawn brings unanswered questions."
+    ],
+    [
+      26,
+      32,
+      "Anchor my racing thoughts in the quiet proof of Your enduring faithfulness."
+    ],
+    [
+      32,
+      40,
+      "You have carried me through every trial before, and You will not abandon me in the hours ahead."
+    ],
+    [
+      40,
+      48,
+      "Lead me through this day in Your unbroken peace, even when doubt clings close. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE DOUBT DID NOT",
+        "LEAVE YOUR PILLOW"
+      ],
+      [
+        "DOUBT",
+        "PILLOW"
+      ],
+      "PSALM 77 : 11"
+    ],
+    [
+      3,
+      10,
+      [
+        "BEFORE YOUR FEET TOUCH",
+        "THE COLD FLOOR",
+        "TURN YOUR HEART TOWARD",
+        "THE GOD WHO KEPT YOU",
+        "THROUGH THE NIGHT"
+      ],
+      [
+        "COLD",
+        "KEPT",
+        "NIGHT"
+      ],
+      "PSALM 77 : 11"
+    ],
+    [
+      10,
+      20,
+      [
+        "TAKE THIS ANCIENT RESOLVE",
+        "INTO YOUR MORNING",
+        "I WILL REMEMBER THE WORKS",
+        "OF THE LORD",
+        "SURELY I WILL REMEMBER",
+        "THY WONDERS OF OLD"
+      ],
+      [
+        "REMEMBER",
+        "WORKS",
+        "WONDERS"
+      ],
+      "PSALM 77 : 11"
+    ],
+    [
+      20,
+      26,
+      [
+        "LORD MY SOUL IS QUICK",
+        "TO FEAR WHEN DAWN BRINGS",
+        "UNANSWERED QUESTIONS"
+      ],
+      [
+        "FEAR",
+        "DAWN",
+        "QUESTIONS"
+      ],
+      "PSALM 77 : 11"
+    ],
+    [
+      26,
+      32,
+      [
+        "ANCHOR MY RACING THOUGHTS",
+        "IN THE QUIET PROOF",
+        "OF YOUR ENDURING FAITHFULNESS"
+      ],
+      [
+        "ANCHOR",
+        "QUIET",
+        "FAITHFULNESS"
+      ],
+      "PSALM 77 : 11"
+    ],
+    [
+      32,
+      40,
+      [
+        "YOU HAVE CARRIED ME",
+        "THROUGH EVERY TRIAL BEFORE",
+        "AND YOU WILL NOT ABANDON ME",
+        "IN THE HOURS AHEAD"
+      ],
+      [
+        "CARRIED",
+        "ABANDON",
+        "HOURS"
+      ],
+      "PSALM 77 : 11"
+    ],
+    [
+      40,
+      48,
+      [
+        "LEAD ME THROUGH THIS DAY",
+        "IN YOUR UNBROKEN PEACE",
+        "EVEN WHEN DOUBT CLINGS CLOSE",
+        "AMEN"
+      ],
+      [
+        "UNBROKEN",
+        "PEACE",
+        "AMEN"
+      ],
+      "PSALM 77 : 11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The doubt did not leave your pillow.",
+      "kind": "phrase",
+      "words": [
+        "DOUBT",
+        "PILLOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "touch the cold floor",
+      "kind": "phrase",
+      "words": [
+        "COLD",
+        "FLOOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will remember the works of the LORD",
+      "kind": "phrase",
+      "words": [
+        "REMEMBER",
+        "WORKS",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "unanswered questions",
+      "kind": "phrase",
+      "words": [
+        "UNANSWERED",
+        "QUESTIONS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your enduring faithfulness",
+      "kind": "phrase",
+      "words": [
+        "ENDURING",
+        "FAITHFULNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "carried me through every trial",
+      "kind": "phrase",
+      "words": [
+        "CARRIED",
+        "TRIAL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "unbroken peace",
+      "kind": "phrase",
+      "words": [
+        "UNBROKEN",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 77:11"
+}

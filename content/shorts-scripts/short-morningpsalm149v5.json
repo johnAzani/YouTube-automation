@@ -1,0 +1,316 @@
+{
+  "key": "short-morningpsalm149v5",
+  "channel": "prayer2",
+  "psalm": 149,
+  "title": [
+    "WHEN YOU WAKE UP BRACING",
+    "FOR A FIGHT"
+  ],
+  "poster": [
+    "PRAY THIS",
+    "BEFORE YOUR FEET",
+    "TOUCH THE FLOOR",
+    "PSALM 149"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "sunrise glowing through bedroom window sheer curtains morning light",
+    "golden sunrise mist rolling over quiet mountain valley dawn",
+    "early morning sunlight breaking through dramatic dawn clouds",
+    "calm lake at sunrise with golden mist floating on water",
+    "sunrise light hitting pine forest trees morning atmosphere",
+    "first light over calm coastal horizon warm dawn sky"
+  ],
+  "scenes": [
+    {
+      "a": "You woke up bracing for another fight.",
+      "img": "short-morningpsalm149v5-scene-01.jpg",
+      "kicker": "BRACING FOR BATTLE",
+      "sub": "BEFORE YOUR FEET TOUCH THE FLOOR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear God's word today: Let the saints be joyful in glory:",
+      "img": "short-morningpsalm149v5-scene-02.jpg",
+      "kicker": "PSALM 149:5",
+      "sub": "SING ALOUD UPON YOUR BEDS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let the high praises of God be in their mouth,",
+      "img": "short-morningpsalm149v5-scene-03.jpg",
+      "kicker": "PSALM 149:6",
+      "sub": "HIGH PRAISES IN THEIR MOUTH",
+      "cam": "pan_right",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "Lord, fill my quiet breath with praise",
+      "img": "short-morningpsalm149v5-scene-04.jpg",
+      "kicker": "MORNING ALTAR",
+      "sub": "PRAISE BEFORE THE WORRY",
+      "cam": "pull_out",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "Make my thanksgiving an unyielding shield",
+      "img": "short-morningpsalm149v5-scene-05.jpg",
+      "kicker": "UNYIELDING SHIELD",
+      "sub": "FAITH OVER MORNING DREAD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Teach me to praise You from this quiet room",
+      "img": "short-morningpsalm149v5-scene-06.jpg",
+      "kicker": "REST AND PRAISE",
+      "sub": "FACING TODAY WITH GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You woke up bracing for another fight."
+    ],
+    [
+      3,
+      9,
+      "Before your feet even touch the cold floor, the day's demands are already pressing in."
+    ],
+    [
+      9,
+      19,
+      "Hear God's word today: Let the saints be joyful in glory: let them sing aloud upon their beds."
+    ],
+    [
+      19,
+      29,
+      "Let the high praises of God be in their mouth, and a two-edged sword in their hand;"
+    ],
+    [
+      29,
+      38,
+      "Lord, fill my quiet breath with praise before I speak a single anxious word today."
+    ],
+    [
+      38,
+      47,
+      "Make my thanksgiving an unyielding shield against the heavy dread trying to claim this morning."
+    ],
+    [
+      47,
+      57,
+      "Teach me to praise You from this quiet room whenever I wake up bracing for another fight. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU WOKE UP BRACING",
+        "FOR ANOTHER FIGHT"
+      ],
+      [
+        "ANOTHER FIGHT"
+      ],
+      "PSALM 149 : 5"
+    ],
+    [
+      3,
+      9,
+      [
+        "BEFORE YOUR FEET EVEN TOUCH",
+        "THE COLD FLOOR THE DAYS DEMANDS",
+        "ARE ALREADY PRESSING IN"
+      ],
+      [
+        "COLD FLOOR",
+        "PRESSING IN"
+      ],
+      "PSALM 149 : 5"
+    ],
+    [
+      9,
+      19,
+      [
+        "HEAR GODS WORD TODAY",
+        "LET THE SAINTS BE JOYFUL",
+        "IN GLORY LET THEM SING",
+        "ALOUD UPON THEIR BEDS"
+      ],
+      [
+        "JOYFUL IN GLORY",
+        "SING ALOUD"
+      ],
+      "PSALM 149 : 5"
+    ],
+    [
+      19,
+      29,
+      [
+        "LET THE HIGH PRAISES OF GOD",
+        "BE IN THEIR MOUTH",
+        "AND A TWO-EDGED SWORD",
+        "IN THEIR HAND"
+      ],
+      [
+        "HIGH PRAISES",
+        "TWO-EDGED SWORD"
+      ],
+      "PSALM 149 : 6"
+    ],
+    [
+      29,
+      38,
+      [
+        "LORD FILL MY QUIET BREATH",
+        "WITH PRAISE BEFORE I SPEAK",
+        "A SINGLE ANXIOUS WORD TODAY"
+      ],
+      [
+        "QUIET BREATH",
+        "PRAISE"
+      ],
+      "PSALM 149 : 5-6"
+    ],
+    [
+      38,
+      47,
+      [
+        "MAKE MY THANKSGIVING",
+        "AN UNYIELDING SHIELD",
+        "AGAINST THE HEAVY DREAD",
+        "TRYING TO CLAIM THIS MORNING"
+      ],
+      [
+        "UNYIELDING SHIELD"
+      ],
+      "PSALM 149 : 5-6"
+    ],
+    [
+      47,
+      57,
+      [
+        "TEACH ME TO PRAISE YOU",
+        "FROM THIS QUIET ROOM",
+        "WHENEVER I WAKE UP",
+        "BRACING FOR ANOTHER FIGHT AMEN"
+      ],
+      [
+        "PRAISE YOU",
+        "ANOTHER FIGHT"
+      ],
+      "PSALM 149 : 5-6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You woke up bracing",
+      "kind": "phrase",
+      "words": [
+        "BRACING",
+        "FIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "cold floor",
+      "kind": "phrase",
+      "words": [
+        "COLD",
+        "FLOOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "sing aloud upon their beds",
+      "kind": "phrase",
+      "words": [
+        "SING",
+        "ALOUD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "high praises of God",
+      "kind": "phrase",
+      "words": [
+        "HIGH",
+        "PRAISES"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "two-edged sword",
+      "kind": "phrase",
+      "words": [
+        "TWO-EDGED",
+        "SWORD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "quiet breath with praise",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "BREATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "unyielding shield",
+      "kind": "phrase",
+      "words": [
+        "UNYIELDING",
+        "SHIELD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Teach me to praise You",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 149:5-6"
+}

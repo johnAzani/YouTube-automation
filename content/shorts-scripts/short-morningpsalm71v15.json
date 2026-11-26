@@ -1,0 +1,404 @@
+{
+  "key": "short-morningpsalm71v15",
+  "channel": "prayer2",
+  "psalm": 71,
+  "title": [
+    "WHEN TODAY FEELS",
+    "TOO BIG TO MEASURE"
+  ],
+  "poster": [
+    "BEFORE YOUR DAY BEGINS",
+    "PSALM 71:15",
+    "BOUNDLESS MORNING GRACE",
+    "PRAYER FOR UNKNOWN HOURS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden sunrise over foggy misty mountain valley",
+    "soft early morning light touching calm forest lake",
+    "dawn sunlight breaking through pine trees morning fog",
+    "peaceful morning sun over quiet hills dawn sky",
+    "calm ocean horizon at sunrise morning light",
+    "gentle golden dawn sun rising over misty meadow",
+    "soft morning light on quiet alpine lake dawn",
+    "sunlight glowing over serene mountain range sunrise",
+    "first morning light filtering through trees sunrise mist"
+  ],
+  "scenes": [
+    {
+      "a": "The tasks ahead feel too vast to measure.",
+      "img": "short-morningpsalm71v15-scene-01.jpg",
+      "kicker": "TOO MUCH TO MEASURE",
+      "sub": "THE UNCOUNTABLE TASKS AHEAD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Yet God offers grace beyond any calculation.",
+      "img": "short-morningpsalm71v15-scene-02.jpg",
+      "kicker": "UNLIMITED GRACE",
+      "sub": "BEYOND OUR HUMAN CALCULATION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear Psalm 71 verse 15:",
+      "img": "short-morningpsalm71v15-scene-03.jpg",
+      "kicker": "SCRIPTURE READ",
+      "sub": "PSALM 71 VERSE 15",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "My mouth shall show forth thy righteousness and thy salvation all the day; for I know not the numbers thereof.",
+      "img": "short-morningpsalm71v15-scene-04.jpg",
+      "kicker": "PSALM 71:15",
+      "sub": "HIS SALVATION ALL THE DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, as light breaks, I admit I cannot count every demand or foresee every trial.",
+      "img": "short-morningpsalm71v15-scene-05.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "HANDING OVER THE DEMANDS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Your mercies outnumber my anxieties, and Your strength fills every unknown hour.",
+      "img": "short-morningpsalm71v15-scene-06.jpg",
+      "kicker": "UNCOUNTABLE MERCIES",
+      "sub": "STRENGTH FOR THE UNKNOWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Help me speak of Your goodness from morning until evening, trusting what I cannot calculate.",
+      "img": "short-morningpsalm71v15-scene-07.jpg",
+      "kicker": "SPEAK OF GOODNESS",
+      "sub": "TRUSTING GOD WITH THE DAY",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Give me peace to step into this morning with quiet trust.",
+      "img": "short-morningpsalm71v15-scene-08.jpg",
+      "kicker": "QUIET TRUST",
+      "sub": "PEACE FOR THE HOURS AHEAD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In Jesus' name, Amen. The tasks ahead feel too vast to measure.",
+      "img": "short-morningpsalm71v15-scene-09.jpg",
+      "kicker": "AMEN",
+      "sub": "THE TASKS AHEAD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The tasks ahead feel too vast to measure."
+    ],
+    [
+      3,
+      7,
+      "Yet God offers grace beyond any calculation."
+    ],
+    [
+      7,
+      10,
+      "Hear Psalm 71 verse 15:"
+    ],
+    [
+      10,
+      18,
+      "My mouth shall show forth thy righteousness and thy salvation all the day; for I know not the numbers thereof."
+    ],
+    [
+      18,
+      25,
+      "Lord, as light breaks, I admit I cannot count every demand or foresee every trial."
+    ],
+    [
+      25,
+      32,
+      "Your mercies outnumber my anxieties, and Your strength fills every unknown hour."
+    ],
+    [
+      32,
+      40,
+      "Help me speak of Your goodness from morning until evening, trusting what I cannot calculate."
+    ],
+    [
+      40,
+      46,
+      "Give me peace to step into this morning with quiet trust."
+    ],
+    [
+      46,
+      52,
+      "In Jesus' name, Amen. The tasks ahead feel too vast to measure."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE TASKS AHEAD",
+        "FEEL TOO VAST",
+        "TO MEASURE."
+      ],
+      [
+        "VAST",
+        "MEASURE"
+      ],
+      "PSALM 71 : 15"
+    ],
+    [
+      3,
+      7,
+      [
+        "YET GOD OFFERS GRACE",
+        "BEYOND ANY CALCULATION."
+      ],
+      [
+        "GRACE",
+        "CALCULATION"
+      ],
+      "PSALM 71 : 15"
+    ],
+    [
+      7,
+      10,
+      [
+        "HEAR PSALM 71",
+        "VERSE 15:"
+      ],
+      [
+        "PSALM",
+        "71"
+      ],
+      "PSALM 71 : 15"
+    ],
+    [
+      10,
+      18,
+      [
+        "MY MOUTH SHALL SHOW FORTH",
+        "THY RIGHTEOUSNESS AND THY",
+        "SALVATION ALL THE DAY;",
+        "FOR I KNOW NOT THE NUMBERS THEREOF."
+      ],
+      [
+        "RIGHTEOUSNESS",
+        "SALVATION",
+        "NUMBERS"
+      ],
+      "PSALM 71 : 15"
+    ],
+    [
+      18,
+      25,
+      [
+        "LORD, AS LIGHT BREAKS,",
+        "I ADMIT I CANNOT COUNT",
+        "EVERY DEMAND OR FORESEE TRIALS."
+      ],
+      [
+        "LIGHT",
+        "COUNT",
+        "DEMAND"
+      ],
+      "PSALM 71 : 15"
+    ],
+    [
+      25,
+      32,
+      [
+        "YOUR MERCIES OUTNUMBER",
+        "MY ANXIETIES, AND YOUR STRENGTH",
+        "FILLS EVERY UNKNOWN HOUR."
+      ],
+      [
+        "MERCIES",
+        "OUTNUMBER",
+        "STRENGTH"
+      ],
+      "PSALM 71 : 15"
+    ],
+    [
+      32,
+      40,
+      [
+        "HELP ME SPEAK OF YOUR GOODNESS",
+        "FROM MORNING UNTIL EVENING,",
+        "TRUSTING WHAT I CANNOT CALCULATE."
+      ],
+      [
+        "GOODNESS",
+        "MORNING",
+        "TRUSTING"
+      ],
+      "PSALM 71 : 15"
+    ],
+    [
+      40,
+      46,
+      [
+        "GIVE ME PEACE TO STEP INTO",
+        "THIS MORNING WITH QUIET TRUST."
+      ],
+      [
+        "PEACE",
+        "QUIET",
+        "TRUST"
+      ],
+      "PSALM 71 : 15"
+    ],
+    [
+      46,
+      52,
+      [
+        "IN JESUS' NAME, AMEN.",
+        "THE TASKS AHEAD FEEL",
+        "TOO VAST TO MEASURE."
+      ],
+      [
+        "AMEN",
+        "VAST",
+        "MEASURE"
+      ],
+      "PSALM 71 : 15"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The tasks ahead feel too vast to measure.",
+      "kind": "phrase",
+      "words": [
+        "TASKS",
+        "MEASURE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Yet God offers grace beyond any calculation.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "CALCULATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear Psalm 71 verse 15:",
+      "kind": "phrase",
+      "words": [
+        "PSALM",
+        "15"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "My mouth shall show forth thy righteousness and thy salvation all the day; for I know not the numbers thereof.",
+      "kind": "phrase",
+      "words": [
+        "RIGHTEOUSNESS",
+        "SALVATION",
+        "NUMBERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, as light breaks, I admit I cannot count every demand or foresee every trial.",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "DEMAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your mercies outnumber my anxieties, and Your strength fills every unknown hour.",
+      "kind": "phrase",
+      "words": [
+        "MERCIES",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help me speak of Your goodness from morning until evening, trusting what I cannot calculate.",
+      "kind": "phrase",
+      "words": [
+        "GOODNESS",
+        "TRUSTING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give me peace to step into this morning with quiet trust.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus' name, Amen. The tasks ahead feel too vast to measure.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "MEASURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 71:15"
+}
