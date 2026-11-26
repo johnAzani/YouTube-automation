@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T20:29:09Z",
+  "generated_at": "2026-11-26T20:29:20Z",
   "monitor_generated_at": "2026-11-26T20:20:30.304881+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 876,
+    "published_total": 877,
     "published_longform": 241,
-    "published_shorts": 635,
-    "public_total": 874,
+    "published_shorts": 636,
+    "public_total": 875,
     "queued_longform": 94,
-    "queued_shorts": 31,
+    "queued_shorts": 30,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": false
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 114,
+        "published_total": 115,
         "published_longform": 36,
-        "published_shorts": 78,
+        "published_shorts": 79,
         "thumbnail_pending": 0,
-        "public_total": 113,
+        "public_total": 114,
         "queued_longform": 21,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM130V6",
-        "title": "Say This Psalm 130:6 Prayer for Fresh Start at Sunrise | Waiting For Dawn #Shorts",
+        "id": "SHORT-MORNINGPSALM149V5",
+        "title": "Say This Psalm 149:5-6 Prayer for Fresh Start at Sunrise | Sing Aloud Upon Your Beds #Shorts",
         "format": "short",
-        "youtube_video_id": "-DXE2mx_vKI",
-        "watch_url": "https://www.youtube.com/shorts/-DXE2mx_vKI",
+        "youtube_video_id": "5AZaWG4xKRY",
+        "watch_url": "https://www.youtube.com/shorts/5AZaWG4xKRY",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T17:02:34Z"
+        "published_at": "2026-11-26T20:27:42Z"
       },
       "next_queued_longform": {
         "id": "0078",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm149v5",
-        "scripture": "Psalm 149:5-6",
+        "short": "short-morningpsalm19v14",
+        "scripture": "Psalm 19:14",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -704,6 +704,30 @@
       "thumbnail_pending": true,
       "duration_label": "47s",
       "words": 680
+    },
+    {
+      "id": "SHORT-MORNINGPSALM149V5",
+      "slug": "short-morningpsalm149v5-sunrise-prayer",
+      "file": "short-morningpsalm149v5-sunrise-prayer.md",
+      "title": "Say This Psalm 149:5-6 Prayer for Fresh Start at Sunrise | Sing Aloud Upon Your Beds #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T20:27:42Z",
+      "youtube_video_id": "5AZaWG4xKRY",
+      "watch_url": "https://www.youtube.com/shorts/5AZaWG4xKRY",
+      "youtu_be_url": "https://youtu.be/5AZaWG4xKRY",
+      "shorts_url": "https://www.youtube.com/shorts/5AZaWG4xKRY",
+      "studio_url": "https://studio.youtube.com/video/5AZaWG4xKRY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/5AZaWG4xKRY/hqdefault.jpg",
+      "thumb_text": "PRAY THIS \u00b7 BEFORE YOUR FEET",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 633
     },
     {
       "id": "SHORT-MIDNIGHTPSALM77V6",
@@ -22986,17 +23010,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningpsalm149v5",
-        "file": "0000-short-morningpsalm149v5.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 149:5-6",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm19v14",
