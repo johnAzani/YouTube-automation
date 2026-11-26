@@ -20,7 +20,7 @@
    "loop": "thumbnail_choice",
    "owner": "pipeline/thumbnail_campaign.py: live_concept",
    "state": "measuring",
-   "videos_assigned": 11,
+   "videos_assigned": 12,
    "what": "which of the three thumbnail concepts goes live"
   },
   {
@@ -53,7 +53,7 @@
   },
   {
    "compositions": 1,
-   "evidence": "one composition across 655 Shorts, but 434 of them (66%) still open on a citation: the design has one level, and the citation-versus-need choice inside it has two",
+   "evidence": "one composition across 660 Shorts, but 434 of them (66%) still open on a citation: the design has one level, and the citation-versus-need choice inside it has two",
    "loop": "first_frame_composition",
    "owner": "pipeline/first_frame.py + pipeline/first_frame_repair.py",
    "state": "measuring",
