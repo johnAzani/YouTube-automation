@@ -1,0 +1,408 @@
+{
+  "key": "short-guidedhosea14v9",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "DISCERN RIGHTEOUS COUNSEL",
+    "HOSEA 14:9 WISDOM PRAYER"
+  ],
+  "poster": [
+    "WHEN ADVICE",
+    "CONFUSES YOU",
+    "GOD'S WAYS",
+    "ARE RIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain valley at early dawn fog",
+    "forked trail through misty pine forest",
+    "peaceful river winding through mountain canyon",
+    "sunbeams breaking through forest canopy alpine",
+    "dramatic mountain pass scenic dawn light",
+    "quiet river reflection peaceful morning valley",
+    "misty alpine meadow path early morning",
+    "golden light over quiet mountain stream",
+    "foggy forest path morning light canyon"
+  ],
+  "scenes": [
+    {
+      "a": "You are weighing two competing pieces of advice.",
+      "img": "short-guidedhosea14v9-scene-01.jpg",
+      "kicker": "COMPETING ADVICE",
+      "sub": "WEIGHING COUNSEL IN THE DARK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Every path forward seems reasonable on the surface, yet your spirit feels unsettled.",
+      "img": "short-guidedhosea14v9-scene-02.jpg",
+      "kicker": "UNSETTLED SPIRIT",
+      "sub": "LOOKING PAST HUMAN LOGIC",
+      "cam": "pull_out",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "Hear the Prophet Hosea write:",
+      "img": "short-guidedhosea14v9-scene-03.jpg",
+      "kicker": "THE PROPHET SPEAKS",
+      "sub": "GOD'S ANCIENT WISDOM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Who is wise, and he shall understand these things? prudent, and he shall know them?",
+      "img": "short-guidedhosea14v9-scene-04.jpg",
+      "kicker": "HOSEA 14:9",
+      "sub": "WHO IS WISE AND PRUDENT",
+      "cam": "pan_right",
+      "focus": [
+        0.55,
+        0.48
+      ]
+    },
+    {
+      "a": "for the ways of the LORD are right, and the just shall walk in them: but the transgressors shall fall therein.",
+      "img": "short-guidedhosea14v9-scene-05.jpg",
+      "kicker": "HOSEA 14:9",
+      "sub": "THE WAYS OF THE LORD ARE RIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, grant me the prudence to discern your righteous way from clever human words.",
+      "img": "short-guidedhosea14v9-scene-06.jpg",
+      "kicker": "PRAYER FOR PRUDENCE",
+      "sub": "DISCERNMENT OVER CLEVER WORDS",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.55
+      ]
+    },
+    {
+      "a": "Teach my heart to walk steadily where your truth leads, rather than stumbling in self-reliance.",
+      "img": "short-guidedhosea14v9-scene-07.jpg",
+      "kicker": "WALK STEADILY",
+      "sub": "TRUSTING GOD OVER SELF",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    {
+      "a": "Give me clarity for this decision today.",
+      "img": "short-guidedhosea14v9-scene-08.jpg",
+      "kicker": "SEEKING CLARITY",
+      "sub": "WISDOM FOR YOUR NEXT STEP",
+      "cam": "push_in",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "Amen. You are weighing two competing pieces of advice.",
+      "img": "short-guidedhosea14v9-scene-09.jpg",
+      "kicker": "STILL WEIGHING",
+      "sub": "BRING THE CHOICE TO GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You are weighing two competing pieces of advice."
+    ],
+    [
+      3,
+      8,
+      "Every path forward seems reasonable on the surface, yet your spirit feels unsettled."
+    ],
+    [
+      8,
+      11,
+      "Hear the Prophet Hosea write:"
+    ],
+    [
+      11,
+      20,
+      "Who is wise, and he shall understand these things? prudent, and he shall know them?"
+    ],
+    [
+      20,
+      30,
+      "for the ways of the LORD are right, and the just shall walk in them: but the transgressors shall fall therein."
+    ],
+    [
+      30,
+      36,
+      "Lord, grant me the prudence to discern your righteous way from clever human words."
+    ],
+    [
+      36,
+      42,
+      "Teach my heart to walk steadily where your truth leads, rather than stumbling in self-reliance."
+    ],
+    [
+      42,
+      46,
+      "Give me clarity for this decision today."
+    ],
+    [
+      46,
+      51,
+      "Amen. You are weighing two competing pieces of advice."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU ARE WEIGHING",
+        "TWO COMPETING PIECES",
+        "OF ADVICE."
+      ],
+      [
+        "WEIGHING",
+        "ADVICE"
+      ],
+      "HOSEA 14 : 9"
+    ],
+    [
+      3,
+      8,
+      [
+        "EVERY PATH SEEMS",
+        "REASONABLE ON SURFACE",
+        "SPIRIT FEELS UNSETTLED"
+      ],
+      [
+        "REASONABLE",
+        "UNSETTLED"
+      ],
+      "HOSEA 14 : 9"
+    ],
+    [
+      8,
+      11,
+      [
+        "HEAR THE PROPHET",
+        "HOSEA WRITE:"
+      ],
+      [
+        "PROPHET",
+        "HOSEA"
+      ],
+      "HOSEA 14 : 9"
+    ],
+    [
+      11,
+      20,
+      [
+        "WHO IS WISE",
+        "AND SHALL UNDERSTAND?",
+        "PRUDENT AND SHALL KNOW?"
+      ],
+      [
+        "WISE",
+        "PRUDENT"
+      ],
+      "HOSEA 14 : 9"
+    ],
+    [
+      20,
+      30,
+      [
+        "WAYS OF THE LORD ARE RIGHT",
+        "JUST SHALL WALK IN THEM",
+        "TRANSGRESSORS SHALL FALL"
+      ],
+      [
+        "RIGHT",
+        "JUST",
+        "WALK"
+      ],
+      "HOSEA 14 : 9"
+    ],
+    [
+      30,
+      36,
+      [
+        "GRANT ME PRUDENCE",
+        "TO DISCERN YOUR WAY",
+        "FROM HUMAN WORDS"
+      ],
+      [
+        "PRUDENCE",
+        "DISCERN"
+      ],
+      "HOSEA 14 : 9"
+    ],
+    [
+      36,
+      42,
+      [
+        "TEACH MY HEART TO WALK",
+        "WHERE TRUTH LEADS",
+        "NOT IN SELF-RELIANCE"
+      ],
+      [
+        "WALK",
+        "TRUTH"
+      ],
+      "HOSEA 14 : 9"
+    ],
+    [
+      42,
+      46,
+      [
+        "GIVE ME CLARITY",
+        "FOR THIS DECISION TODAY"
+      ],
+      [
+        "CLARITY",
+        "DECISION"
+      ],
+      "HOSEA 14 : 9"
+    ],
+    [
+      46,
+      51,
+      [
+        "AMEN. YOU ARE WEIGHING",
+        "TWO COMPETING PIECES",
+        "OF ADVICE."
+      ],
+      [
+        "AMEN",
+        "WEIGHING"
+      ],
+      "HOSEA 14 : 9"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You are weighing two competing pieces of advice.",
+      "kind": "phrase",
+      "words": [
+        "WEIGHING",
+        "COMPETING",
+        "ADVICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Every path forward seems reasonable on the surface, yet your spirit feels unsettled.",
+      "kind": "phrase",
+      "words": [
+        "REASONABLE",
+        "SPIRIT",
+        "UNSETTLED"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the Prophet Hosea write:",
+      "kind": "phrase",
+      "words": [
+        "PROPHET",
+        "HOSEA",
+        "WRITE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Who is wise, and he shall understand these things? prudent, and he shall know them?",
+      "kind": "phrase",
+      "words": [
+        "WISE",
+        "UNDERSTAND",
+        "PRUDENT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "for the ways of the LORD are right, and the just shall walk in them: but the transgressors shall fall therein.",
+      "kind": "phrase",
+      "words": [
+        "WAYS",
+        "RIGHT",
+        "JUST",
+        "WALK"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, grant me the prudence to discern your righteous way from clever human words.",
+      "kind": "phrase",
+      "words": [
+        "PRUDENCE",
+        "DISCERN",
+        "RIGHTEOUS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach my heart to walk steadily where your truth leads, rather than stumbling in self-reliance.",
+      "kind": "phrase",
+      "words": [
+        "STEADILY",
+        "TRUTH",
+        "LEADS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Give me clarity for this decision today.",
+      "kind": "phrase",
+      "words": [
+        "CLARITY",
+        "DECISION",
+        "TODAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. You are weighing two competing pieces of advice.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "WEIGHING",
+        "ADVICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Hosea 14:9"
+}
