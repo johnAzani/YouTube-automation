@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T17:22:42Z",
+  "generated_at": "2026-11-26T17:29:19Z",
   "monitor_generated_at": "2026-11-26T17:07:24.135302+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 867,
-    "published_longform": 236,
+    "published_total": 868,
+    "published_longform": 237,
     "published_shorts": 631,
-    "public_total": 865,
+    "public_total": 866,
     "queued_longform": 90,
-    "queued_shorts": 37,
+    "queued_shorts": 35,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": false
@@ -164,36 +164,31 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 96,
-        "published_longform": 28,
+        "published_total": 97,
+        "published_longform": 29,
         "published_shorts": 68,
         "thumbnail_pending": 0,
-        "public_total": 96,
+        "public_total": 97,
         "queued_longform": 11,
         "queued_other": 0,
-        "queued_shorts": 2
+        "queued_shorts": 0
       },
       "latest_video": {
-        "id": "0105",
-        "title": "The Well That Never Runs Dry at Noon: John 4:13-14 | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "SI0vWNyAiy0",
-        "watch_url": "https://youtu.be/SI0vWNyAiy0",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T12:06:15Z"
-      },
-      "next_queued_longform": {
         "id": "0107",
         "title": "Strength for the Hours That Remain: Philippians 4:13",
-        "words": 1208,
+        "format": "longform",
+        "youtube_video_id": "EFtpDyIfqXI",
+        "watch_url": "https://youtu.be/EFtpDyIfqXI",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T17:28:16Z"
+      },
+      "next_queued_longform": {
+        "id": "0109",
+        "title": "Grace When the Afternoon Gets Heavy: Hebrews 4:16 | The Midday Watch",
+        "words": 1382,
         "status": "approved"
       },
-      "next_queued_short": {
-        "short": "short-middayhabakkuk3v19",
-        "scripture": "Habakkuk 3:19",
-        "target_window_utc": "12:14",
-        "status": "approved"
-      },
+      "next_queued_short": null,
       "feedback": {
         "available": true,
         "as_of": "2026-11-26",
@@ -686,6 +681,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0107",
+      "slug": "strength-for-the-hours-that-remain-philippians-4-13",
+      "file": "0107-strength-for-the-hours-that-remain-philippians-4-13.md",
+      "title": "Strength for the Hours That Remain: Philippians 4:13",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T17:28:16Z",
+      "youtube_video_id": "EFtpDyIfqXI",
+      "watch_url": "https://youtu.be/EFtpDyIfqXI",
+      "youtu_be_url": "https://youtu.be/EFtpDyIfqXI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/EFtpDyIfqXI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/EFtpDyIfqXI/hqdefault.jpg",
+      "thumb_text": "STRENGTH IN CHRIST",
+      "thumbnail_pending": false,
+      "duration_label": "7m 55s",
+      "words": 1208
+    },
     {
       "id": "SHORT-GUIDEDPROVERBS20V24",
       "slug": "short-guidedproverbs20v24-guidance-prayer",
@@ -21550,19 +21569,6 @@
         "words": 979
       },
       {
-        "id": "0107",
-        "slug": "strength-for-the-hours-that-remain-philippians-4-13",
-        "file": "0107-strength-for-the-hours-that-remain-philippians-4-13.md",
-        "title": "Strength for the Hours That Remain: Philippians 4:13",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1208
-      },
-      {
         "id": "0109",
         "slug": "grace-when-the-afternoon-gets-heavy-hebrews-4-16",
         "file": "0109-grace-when-the-afternoon-gets-heavy-hebrews-4-16.md",
@@ -22666,6 +22672,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1278
+      },
+      {
+        "id": "0957",
+        "slug": "strength-for-the-midday-mountain-joshua-14-11-12",
+        "file": "0957-strength-for-the-midday-mountain-joshua-14-11-12.md",
+        "title": "Strength for the Midday Mountain: Joshua 14:11-12 | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 910
       }
     ],
     "shorts": [
@@ -23053,28 +23072,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-middayhabakkuk3v19",
-        "file": "0955-short-middayhabakkuk3v19.yml",
-        "companion_longform_id": "0955",
-        "scripture": "Habakkuk 3:19",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-middaypsalm71v16",
-        "file": "0956-short-middaypsalm71v16.yml",
-        "companion_longform_id": "0956",
-        "scripture": "Psalm 71:16",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       }
     ]
   },
