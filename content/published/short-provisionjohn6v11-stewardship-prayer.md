@@ -26,8 +26,12 @@ short_visual_fingerprints: ["sha256:0f338b446efe06037d1afce3eac4ff778578e7816bb2
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_pending: false
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["GATHER THE", "FRAGMENTS", "GOD MULTIPLIES YOUR", "EFFORT", "DAILY PROVISION PRAYER", "JOHN 6:11-13"]
+thumbnail_kicker: "BLESS THE WORK OF OUR HANDS"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 You hold a meager portion in your hands. You wonder if what remains is enough for the work before you. Hear the holy scripture recorded in John. When they were filled, he said unto his disciples, Gather up the fragments that remain, that nothing be lost. Lord, we quietly bring the little we have left into Your hands today. Give us eyes to treasure every fragment of Your daily grace. Bless our small obedience and multiply our meager effort. Guard our faithful stewardship so that nothing You provide is lost or wasted. Amen, even while you hold a meager portion.

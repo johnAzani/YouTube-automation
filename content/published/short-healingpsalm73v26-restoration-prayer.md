@@ -26,8 +26,12 @@ short_visual_fingerprints: ["sha256:064c0d901ad6cd825dd938ae543326df0d9ffae127a6
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_pending: false
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["WHEN YOUR STRENGTH", "FAILS", "GOD IS YOUR PORTION", "HEALING PRAYER", "PSALM 73:26"]
+thumbnail_kicker: "RECEIVE GOD'S HEALING PEACE"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 Your energy is completely gone tonight. You have given everything away until nothing remains inside your weary body. Scripture reminds us, My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever. Lord, when our physical strength gives out and all courage fades, meet us in our deepest weakness. Be the unshakable foundation beneath our weary soul when every human effort fails today. Restore our heart with your quiet presence and sustain us through this fragile, heavy hour. Fill our inner emptiness with your divine peace, holding us secure forever in your love. Amen. When your energy is completely gone tonight.

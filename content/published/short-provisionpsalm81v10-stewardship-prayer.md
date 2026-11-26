@@ -23,8 +23,12 @@ short_visual_fingerprints: ["sha256:33ee723e82cb131a987f0119c8314f325e2cdfd03f28
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (9, 799, 1069, 848); shorten the authored lockup or reduce its size"
+thumbnail_pending: false
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["I AM THE LORD", "THY GOD WHICH", "BROUGHT THEE", "OUT OF EGYPT", "OPEN THY MOUTH WIDE"]
+thumbnail_kicker: "BLESS THE WORK OF OUR HANDS"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 Before you sign that contract or worry over tomorrow's shortfall, bring your need to God. His Word declares in Psalm 81:10, "I am the LORD thy God, which brought thee out of the land of Egypt: open thy mouth wide, and I will fill it." Heavenly Father, You delivered Your people from bondage and supplied all their daily practical needs in the wilderness. Lord, we bring our quiet worries, financial obligations, and household work into Your faithful hands today. Fill our hearts with wisdom and open doors of holy provision according to Your riches in glory. Subscribe to The Provision Table to walk in God's daily provision every day.

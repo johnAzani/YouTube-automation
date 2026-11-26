@@ -26,8 +26,12 @@ short_visual_fingerprints: ["sha256:06f06b5c1e88b960a641aa2c62179195cfe86da30bba
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_pending: false
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["THE PROVISION TABLE", "DAILY PRAYER FOR", "PROVISION", "KING JAMES VERSION", "PROVERBS 22:29"]
+thumbnail_kicker: "BLESS THE WORK OF OUR HANDS"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 If that lonely desk and every quiet hour of labor feels unseen, listen closely. Lord God, You see the honest sweat and the faithful hours poured into daily work. We bring every task, every craft, and every honest effort to Your holy throne. Your written word declares this eternal truth for our hands today. Seest thou a man diligent in his business? he shall stand before kings; he shall not stand before mean men. Establish the work of our hands, Father, and guide our steps into the doors You open. In Jesus name, amen.

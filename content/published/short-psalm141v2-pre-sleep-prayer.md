@@ -23,9 +23,13 @@ short_visual_fingerprints: ["sha256:09c99fcbdcb505c1458f6dfce8f5511e58d0225bf2a0
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (47, 698, 1032, 747); shorten the authored lockup or reduce its size"
+thumbnail_pending: false
 live_handle: "@SecretPlaceSanctuary"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["LET MY PRAYER BE SET", "FORTH", "AS EVENING INCENSE", "A QUIET NIGHT PRAYER", "PSALM 141:2"]
+thumbnail_kicker: "PRAYER BEFORE SLEEP"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 Before you check your phone once more to distract your restless mind, stay right here. Psalm 141 verse 2 says, Let my prayer be set forth before thee as incense; and the lifting up of my hands as the evening sacrifice. You do not need grand words or perfect strength to reach your Heavenly Father tonight. Even your quietest whisper rises straight to His throne like gentle incense drifting into the night sky. Lay down the burdens you carried all day, and let your tired heart find quiet release. He receives your simple prayer as a holy offering and surrounds you with His abiding peace. Subscribe to The Secret Place to join us in prayer every night.
