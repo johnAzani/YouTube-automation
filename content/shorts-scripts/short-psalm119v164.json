@@ -1,0 +1,355 @@
+{
+  "key": "short-psalm119v164",
+  "channel": "secret-place",
+  "psalm": 119,
+  "title": [
+    "PRAISE AT MIDNIGHT",
+    "WHEN TASKS REMAIN"
+  ],
+  "poster": [
+    "UNFINISHED WORK",
+    "SEVEN TIMES OF PRAISE",
+    "RESTING IN MERCY",
+    "BEDTIME PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "dim candle burning softly dark quiet room",
+    "calm lake at dusk with misty mountains",
+    "night sky stars twinkling over silent forest",
+    "gentle stream flowing under moonlight",
+    "foggy pine trees nocturnal landscape calm",
+    "single warm lantern glowing in darkness",
+    "gentle ocean waves under full moon night",
+    "soft glowing embers fireplace night stillness"
+  ],
+  "scenes": [
+    {
+      "a": "Unfinished tasks still echo",
+      "img": "short-psalm119v164-scene-01.jpg",
+      "kicker": "UNFINISHED TASKS",
+      "sub": "ECHOING IN THIS DARK ROOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "carrying what you could not control",
+      "img": "short-psalm119v164-scene-02.jpg",
+      "kicker": "HEAVY THOUGHTS",
+      "sub": "WHAT YOU COULD NOT CONTROL",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Seven times a day do I praise thee",
+      "img": "short-psalm119v164-scene-03.jpg",
+      "kicker": "PSALM 119:164",
+      "sub": "PRAISE IN EVERY PASSING HOUR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "I put down every defense",
+      "img": "short-psalm119v164-scene-04.jpg",
+      "kicker": "MIDNIGHT SETTLES",
+      "sub": "LAYING DOWN EVERY DEFENSE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "your righteous care remains steady",
+      "img": "short-psalm119v164-scene-05.jpg",
+      "kicker": "STEADY CARE",
+      "sub": "HE HELD EACH PASSING HOUR",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "silence the worries",
+      "img": "short-psalm119v164-scene-06.jpg",
+      "kicker": "RELEASE THE GRIP",
+      "sub": "SILENCE EVERY RACING WORRY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "restore my weary soul",
+      "img": "short-psalm119v164-scene-07.jpg",
+      "kicker": "RESTORE MY SOUL",
+      "sub": "PEACE UPON THIS BED",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Unfinished tasks fade",
+      "img": "short-psalm119v164-scene-08.jpg",
+      "kicker": "REST AT LAST",
+      "sub": "THE ROOM IS STILL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Unfinished tasks still echo in this dark room."
+    ],
+    [
+      3,
+      9,
+      "You spent the entire day carrying what you could not control."
+    ],
+    [
+      9,
+      17,
+      "Turn your tired thoughts to scripture: Seven times a day do I praise thee because of thy righteous judgments."
+    ],
+    [
+      17,
+      25,
+      "Lord, as midnight settles, I put down every defense and choose gratitude for your faithful rule."
+    ],
+    [
+      25,
+      33,
+      "You guided each morning hour, and your righteous care remains steady in this quiet night."
+    ],
+    [
+      33,
+      41,
+      "Loosen the tight grip in my chest and silence the worries still negotiating with tomorrow."
+    ],
+    [
+      41,
+      49,
+      "Cover this resting place with your presence and restore my weary soul in deep sleep."
+    ],
+    [
+      49,
+      55,
+      "Amen. Unfinished tasks fade in this quiet room."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "UNFINISHED TASKS",
+        "STILL ECHO IN",
+        "THIS DARK ROOM"
+      ],
+      [
+        "DARK ROOM"
+      ],
+      "PSALM 119 : 164"
+    ],
+    [
+      3,
+      9,
+      [
+        "YOU SPENT THE ENTIRE DAY",
+        "CARRYING WHAT YOU",
+        "COULD NOT CONTROL"
+      ],
+      [
+        "CONTROL"
+      ],
+      "PSALM 119 : 164"
+    ],
+    [
+      9,
+      17,
+      [
+        "TURN YOUR TIRED THOUGHTS",
+        "TO SCRIPTURE",
+        "SEVEN TIMES A DAY",
+        "DO I PRAISE THEE"
+      ],
+      [
+        "PRAISE THEE"
+      ],
+      "PSALM 119 : 164"
+    ],
+    [
+      17,
+      25,
+      [
+        "LORD AS MIDNIGHT SETTLES",
+        "I PUT DOWN EVERY DEFENSE",
+        "AND CHOOSE GRATITUDE"
+      ],
+      [
+        "GRATITUDE"
+      ],
+      "PSALM 119 : 164"
+    ],
+    [
+      25,
+      33,
+      [
+        "YOU GUIDED EACH MORNING",
+        "AND YOUR RIGHTEOUS CARE",
+        "REMAINS STEADY"
+      ],
+      [
+        "STEADY"
+      ],
+      "PSALM 119 : 164"
+    ],
+    [
+      33,
+      41,
+      [
+        "LOOSEN THE TIGHT GRIP",
+        "AND SILENCE THE WORRIES",
+        "STILL NEGOTIATING"
+      ],
+      [
+        "SILENCE"
+      ],
+      "PSALM 119 : 164"
+    ],
+    [
+      41,
+      49,
+      [
+        "COVER THIS RESTING PLACE",
+        "WITH YOUR PRESENCE",
+        "AND RESTORE MY SOUL"
+      ],
+      [
+        "RESTORE"
+      ],
+      "PSALM 119 : 164"
+    ],
+    [
+      49,
+      55,
+      [
+        "AMEN",
+        "UNFINISHED TASKS FADE",
+        "IN THIS QUIET ROOM"
+      ],
+      [
+        "QUIET ROOM"
+      ],
+      "PSALM 119 : 164"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Unfinished tasks still echo",
+      "kind": "phrase",
+      "words": [
+        "UNFINISHED",
+        "TASKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "carrying what you could not control",
+      "kind": "phrase",
+      "words": [
+        "COULD",
+        "NOT",
+        "CONTROL"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Seven times a day do I praise thee",
+      "kind": "phrase",
+      "words": [
+        "SEVEN",
+        "TIMES",
+        "PRAISE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "I put down every defense",
+      "kind": "phrase",
+      "words": [
+        "DOWN",
+        "DEFENSE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "your righteous care remains steady",
+      "kind": "phrase",
+      "words": [
+        "RIGHTEOUS",
+        "CARE",
+        "STEADY"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "silence the worries",
+      "kind": "phrase",
+      "words": [
+        "SILENCE",
+        "WORRIES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "restore my weary soul",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "WEARY",
+        "SOUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Unfinished tasks fade",
+      "kind": "phrase",
+      "words": [
+        "TASKS",
+        "FADE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 119:164"
+}

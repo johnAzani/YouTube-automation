@@ -1,0 +1,319 @@
+{
+  "key": "short-psalm52v9",
+  "channel": "secret-place",
+  "psalm": 52,
+  "title": [
+    "WHEN WORK FEELS UNFINISHED",
+    "REST IN WHAT GOD HAS DONE"
+  ],
+  "poster": [
+    "LEAVE",
+    "THE UNFINISHED",
+    "WORK TO GOD",
+    "TONIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm dark bedroom window night moonlight",
+    "single candle glowing dark wooden table",
+    "still lake reflection night mountains starry sky",
+    "misty forest canopy night calm moonlight",
+    "calm ocean water at midnight moonlight reflection",
+    "warm ambient lamp glow night dark cozy room"
+  ],
+  "scenes": [
+    {
+      "a": "You carried unfinished work into this bed.",
+      "img": "short-psalm52v9-scene-01.jpg",
+      "kicker": "UNFINISHED WORK",
+      "sub": "LEAVE THE WEIGHT OF TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "I will praise thee for ever",
+      "img": "short-psalm52v9-scene-02.jpg",
+      "kicker": "THOU HAST DONE IT",
+      "sub": "PSALM 52:9",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, I place into Your hands",
+      "img": "short-psalm52v9-scene-03.jpg",
+      "kicker": "HANDS SURRENDERED",
+      "sub": "REST BEYOND YOUR REACH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "You have already worked",
+      "img": "short-psalm52v9-scene-04.jpg",
+      "kicker": "ALREADY AT WORK",
+      "sub": "GOD CARRIES WHAT REMAINS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Settle this room in quiet peace",
+      "img": "short-psalm52v9-scene-05.jpg",
+      "kicker": "QUIET PEACE",
+      "sub": "TRUSTING HIS FAITHFUL CARE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Release every burden",
+      "img": "short-psalm52v9-scene-06.jpg",
+      "kicker": "LAY IT DOWN",
+      "sub": "REST IN HIS COMPLETED CARE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You carried unfinished work into this bed."
+    ],
+    [
+      3,
+      9,
+      "When your strength ran out of hours tonight, the unresolved questions stayed behind."
+    ],
+    [
+      9,
+      15,
+      "I will praise thee for ever, because thou hast done it:"
+    ],
+    [
+      15,
+      22,
+      "and I will wait on thy name; for it is good before thy saints."
+    ],
+    [
+      22,
+      29,
+      "Father, I place into Your hands what I could not complete before the dark fell."
+    ],
+    [
+      29,
+      36,
+      "You have already worked where my weary hands could never reach."
+    ],
+    [
+      36,
+      43,
+      "Settle this room in quiet peace as I trust Your faithful care."
+    ],
+    [
+      43,
+      49,
+      "Teach me to rest while You watch through the deep night."
+    ],
+    [
+      49,
+      55,
+      "Amen. Release every burden you carried into this bed."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU CARRIED",
+        "UNFINISHED WORK",
+        "INTO THIS BED"
+      ],
+      [
+        "UNFINISHED WORK"
+      ],
+      "PSALM 52 : 9"
+    ],
+    [
+      3,
+      9,
+      [
+        "WHEN YOUR STRENGTH RAN OUT",
+        "OF HOURS TONIGHT",
+        "THE UNRESOLVED QUESTIONS",
+        "STAYED BEHIND"
+      ],
+      [
+        "UNRESOLVED QUESTIONS"
+      ],
+      "PSALM 52 : 9"
+    ],
+    [
+      9,
+      15,
+      [
+        "I WILL PRAISE THEE FOR EVER",
+        "BECAUSE THOU HAST DONE IT"
+      ],
+      [
+        "THOU HAST DONE IT"
+      ],
+      "PSALM 52 : 9"
+    ],
+    [
+      15,
+      22,
+      [
+        "AND I WILL WAIT",
+        "ON THY NAME",
+        "FOR IT IS GOOD",
+        "BEFORE THY SAINTS"
+      ],
+      [
+        "THY NAME",
+        "GOOD"
+      ],
+      "PSALM 52 : 9"
+    ],
+    [
+      22,
+      29,
+      [
+        "FATHER I PLACE INTO YOUR HANDS",
+        "WHAT I COULD NOT COMPLETE",
+        "BEFORE THE DARK FELL"
+      ],
+      [
+        "INTO YOUR HANDS"
+      ],
+      "PSALM 52 : 9"
+    ],
+    [
+      29,
+      36,
+      [
+        "YOU HAVE ALREADY WORKED",
+        "WHERE MY WEARY HANDS",
+        "COULD NEVER REACH"
+      ],
+      [
+        "ALREADY WORKED"
+      ],
+      "PSALM 52 : 9"
+    ],
+    [
+      36,
+      43,
+      [
+        "SETTLE THIS ROOM IN QUIET PEACE",
+        "AS I TRUST YOUR FAITHFUL CARE"
+      ],
+      [
+        "QUIET PEACE"
+      ],
+      "PSALM 52 : 9"
+    ],
+    [
+      43,
+      49,
+      [
+        "TEACH ME TO REST",
+        "WHILE YOU WATCH THROUGH",
+        "THE DEEP NIGHT"
+      ],
+      [
+        "REST",
+        "WATCH"
+      ],
+      "PSALM 52 : 9"
+    ],
+    [
+      49,
+      55,
+      [
+        "AMEN RELEASE EVERY BURDEN",
+        "YOU CARRIED INTO THIS BED"
+      ],
+      [
+        "RELEASE EVERY BURDEN"
+      ],
+      "PSALM 52 : 9"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You carried unfinished work into this bed.",
+      "kind": "phrase",
+      "words": [
+        "UNFINISHED",
+        "WORK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "because thou hast done it:",
+      "kind": "phrase",
+      "words": [
+        "THOU",
+        "HAST",
+        "DONE",
+        "IT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "where my weary hands could never reach.",
+      "kind": "phrase",
+      "words": [
+        "COULD",
+        "NEVER",
+        "REACH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Settle this room in quiet peace as I trust Your faithful care.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Release every burden you carried into this bed.",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "EVERY",
+        "BURDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 52:9"
+}

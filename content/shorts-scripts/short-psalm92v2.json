@@ -1,0 +1,312 @@
+{
+  "key": "short-psalm92v2",
+  "channel": "secret-place",
+  "psalm": 92,
+  "title": [
+    "FAITHFUL EVERY NIGHT",
+    "PSALM 92:2 PRAYER"
+  ],
+  "poster": [
+    "BEDTIME PRAYER",
+    "HIS FAITHFULNESS",
+    "EVERY NIGHT",
+    "PSALM 92:2"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm lake night moonlight sky stars",
+    "misty forest dusk peaceful evening",
+    "soft glowing candle flame dark quiet room",
+    "gentle ocean waves dark twilight horizon",
+    "calm mountain lake still night water",
+    "starry night sky dark blue mountain silhouette",
+    "soft candlelight night stillness warm glow"
+  ],
+  "scenes": [
+    {
+      "a": "The darkness outside can leave your mind wandering.",
+      "img": "short-psalm92v2-scene-01.jpg",
+      "kicker": "NIGHTFALL STILLNESS",
+      "sub": "WHEN YOUR MIND DRIFTS IN DARKNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Psalm ninety-two verse two says, To show forth thy lovingkindness in the morning, and thy faithfulness every night,",
+      "img": "short-psalm92v2-scene-02.jpg",
+      "kicker": "HIS FAITHFULNESS",
+      "sub": "EVERY NIGHT HE IS STEADFAST",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, as the shadow falls over this room, we lean into Your enduring promise.",
+      "img": "short-psalm92v2-scene-03.jpg",
+      "kicker": "RESTING IN FAITH",
+      "sub": "LEANING ON HIS PROMISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "You kept us through the morning light, and You remain steadfast through the midnight hours.",
+      "img": "short-psalm92v2-scene-04.jpg",
+      "kicker": "THROUGH THE MIDNIGHT",
+      "sub": "HE KEEPS YOU IN THE DARK",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "When our hands drop their heavy burdens and our hearts struggle to quiet, cover us in Your peace.",
+      "img": "short-psalm92v2-scene-05.jpg",
+      "kicker": "LAY DOWN BURDENS",
+      "sub": "COVERED IN HIS EVENING PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Guard our resting tonight, and renew our strength before the dawn.",
+      "img": "short-psalm92v2-scene-06.jpg",
+      "kicker": "GUARDED REST",
+      "sub": "STRENGTH RENEWED BEFORE DAWN",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "We entrust every unspoken fear to You, resting in Your untiring love. Amen. Darkness outside leaves your mind wandering.",
+      "img": "short-psalm92v2-scene-07.jpg",
+      "kicker": "UNTIRING LOVE",
+      "sub": "ENTRUST EVERY FEAR TO HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The darkness outside can leave your mind wandering."
+    ],
+    [
+      3,
+      9,
+      "Psalm ninety-two verse two says, To show forth thy lovingkindness in the morning, and thy faithfulness every night,"
+    ],
+    [
+      9,
+      14,
+      "Lord, as the shadow falls over this room, we lean into Your enduring promise."
+    ],
+    [
+      14,
+      19,
+      "You kept us through the morning light, and You remain steadfast through the midnight hours."
+    ],
+    [
+      19,
+      25,
+      "When our hands drop their heavy burdens and our hearts struggle to quiet, cover us in Your peace."
+    ],
+    [
+      25,
+      30,
+      "Guard our resting tonight, and renew our strength before the dawn."
+    ],
+    [
+      30,
+      36,
+      "We entrust every unspoken fear to You, resting in Your untiring love. Amen. Darkness outside leaves your mind wandering."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE DARKNESS OUTSIDE",
+        "CAN LEAVE YOUR MIND",
+        "WANDERING"
+      ],
+      [
+        "WANDERING"
+      ],
+      "BEDTIME PRAYER"
+    ],
+    [
+      3,
+      9,
+      [
+        "TO SHOW FORTH THY",
+        "LOVINGKINDNESS IN MORNING",
+        "AND THY FAITHFULNESS",
+        "EVERY NIGHT"
+      ],
+      [
+        "LOVINGKINDNESS",
+        "FAITHFULNESS"
+      ],
+      "PSALM 92 : 2"
+    ],
+    [
+      9,
+      14,
+      [
+        "AS THE SHADOW FALLS",
+        "WE LEAN INTO YOUR",
+        "ENDURING PROMISE"
+      ],
+      [
+        "ENDURING"
+      ],
+      "PSALM 92 : 2"
+    ],
+    [
+      14,
+      19,
+      [
+        "YOU REMAIN STEADFAST",
+        "THROUGH THE MIDNIGHT",
+        "HOURS TONIGHT"
+      ],
+      [
+        "STEADFAST"
+      ],
+      "PSALM 92 : 2"
+    ],
+    [
+      19,
+      25,
+      [
+        "WHEN HANDS DROP BURDENS",
+        "COVER US IN YOUR",
+        "DEEP EVENING PEACE"
+      ],
+      [
+        "PEACE"
+      ],
+      "PSALM 92 : 2"
+    ],
+    [
+      25,
+      30,
+      [
+        "GUARD OUR RESTING",
+        "RENEW OUR STRENGTH",
+        "BEFORE THE DAWN"
+      ],
+      [
+        "GUARD"
+      ],
+      "PSALM 92 : 2"
+    ],
+    [
+      30,
+      36,
+      [
+        "ENTRUST EVERY FEAR",
+        "RESTING IN YOUR",
+        "UNTIRING LOVE"
+      ],
+      [
+        "UNTIRING"
+      ],
+      "PSALM 92 : 2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The darkness outside can leave your mind wandering.",
+      "kind": "phrase",
+      "words": [
+        "DARKNESS",
+        "WANDERING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm ninety-two verse two says, To show forth thy lovingkindness in the morning, and thy faithfulness every night,",
+      "kind": "quote",
+      "words": [
+        "LOVINGKINDNESS",
+        "FAITHFULNESS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, as the shadow falls over this room, we lean into Your enduring promise.",
+      "kind": "phrase",
+      "words": [
+        "ENDURING",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You kept us through the morning light, and You remain steadfast through the midnight hours.",
+      "kind": "phrase",
+      "words": [
+        "STEADFAST",
+        "MIDNIGHT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "When our hands drop their heavy burdens and our hearts struggle to quiet, cover us in Your peace.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Guard our resting tonight, and renew our strength before the dawn.",
+      "kind": "phrase",
+      "words": [
+        "GUARD",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We entrust every unspoken fear to You, resting in Your untiring love. Amen. Darkness outside leaves your mind wandering.",
+      "kind": "phrase",
+      "words": [
+        "UNTIRING",
+        "LOVE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 92:2"
+}
