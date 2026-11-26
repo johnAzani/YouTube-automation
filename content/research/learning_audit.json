@@ -15,12 +15,12 @@
    "what": "which passages and books the brain writes Shorts on next"
   },
   {
-   "evidence": "8 release(s) recorded a concept, but the reach files hold no impressions for any of them yet",
+   "evidence": "11 release(s) recorded a concept, but the reach files hold no impressions for any of them yet",
    "leader": null,
    "loop": "thumbnail_choice",
    "owner": "pipeline/thumbnail_campaign.py: live_concept",
    "state": "measuring",
-   "videos_assigned": 8,
+   "videos_assigned": 11,
    "what": "which of the three thumbnail concepts goes live"
   },
   {
@@ -33,7 +33,7 @@
    "what": "wording offered to the title and overlay writers"
   },
   {
-   "evidence": "ceiling 978s is below the tail's own floor, so the tail is off on every channel \u2014 the measurement changed the build",
+   "evidence": "ceiling 812s is below the tail's own floor, so the tail is off on every channel \u2014 the measurement changed the build",
    "loop": "night_tail_length",
    "owner": "pipeline/night_tail.py: configured_minutes",
    "state": "acting",
@@ -53,7 +53,7 @@
   },
   {
    "compositions": 1,
-   "evidence": "one composition across 641 Shorts, but 434 of them (68%) still open on a citation: the design has one level, and the citation-versus-need choice inside it has two",
+   "evidence": "one composition across 655 Shorts, but 434 of them (66%) still open on a citation: the design has one level, and the citation-versus-need choice inside it has two",
    "loop": "first_frame_composition",
    "owner": "pipeline/first_frame.py + pipeline/first_frame_repair.py",
    "state": "measuring",

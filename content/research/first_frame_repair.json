@@ -1502,7 +1502,7 @@
    "new_kicker": "STRUGGLING TO LOOK UP",
    "old_kicker": "LUKE 13:11-13",
    "published": true,
-   "queued": false,
+   "queued": true,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {
@@ -2715,7 +2715,7 @@
    "new_kicker": "STAND STRONG IN FAITH",
    "old_kicker": "ROMANS 16:20",
    "published": true,
-   "queued": false,
+   "queued": true,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {
@@ -3462,7 +3462,7 @@
    "key": "short-provisionephesians3v20",
    "old_kicker": "EPHESIANS 3:20",
    "published": true,
-   "queued": false,
+   "queued": true,
    "reason": "no need line to promote"
   },
   {
@@ -4546,6 +4546,6 @@
   }
  ],
  "schema": 1,
- "specs_examined": 641,
+ "specs_examined": 655,
  "written": true
 }
