@@ -37,8 +37,8 @@
       "workflow": "tests-on-main.yml"
     }
   ],
-  "generated_at": "2026-11-26T06:54:33.593913+00:00",
-  "last_run_at": "2026-11-26T06:54:20+00:00",
+  "generated_at": "2026-11-26T07:17:54.431399+00:00",
+  "last_run_at": "2026-11-26T07:17:07+00:00",
   "on_time": [
     {
       "late_minutes": 32,
@@ -46,13 +46,6 @@
       "ran_at": "2026-11-25T20:46:12+00:00",
       "slot": "2026-11-25T20:14:00+00:00",
       "workflow": "automation-health.yml"
-    },
-    {
-      "late_minutes": 93,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-25T20:47:51+00:00",
-      "slot": "2026-11-25T19:14:00+00:00",
-      "workflow": "comments.yml"
     },
     {
       "late_minutes": 93,
