@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T20:27:08Z",
+  "generated_at": "2026-11-26T20:29:09Z",
   "monitor_generated_at": "2026-11-26T20:20:30.304881+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 875,
+    "published_total": 876,
     "published_longform": 241,
-    "published_shorts": 634,
-    "public_total": 873,
+    "published_shorts": 635,
+    "public_total": 874,
     "queued_longform": 94,
-    "queued_shorts": 32,
+    "queued_shorts": 31,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": false
@@ -290,23 +290,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 80,
+        "published_total": 81,
         "published_longform": 23,
-        "published_shorts": 57,
-        "thumbnail_pending": 80,
-        "public_total": 80,
+        "published_shorts": 58,
+        "thumbnail_pending": 81,
+        "public_total": 81,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "0323",
-        "title": "Establish the Work of Your Hands: Psalm 90:16-17 | The Family Altar",
-        "format": "longform",
-        "youtube_video_id": "cEU1AX2ulcQ",
-        "watch_url": "https://youtu.be/cEU1AX2ulcQ",
+        "id": "SHORT-FAMILY2SAMUEL7V29",
+        "title": "Pray This 2 Samuel 7:29 Family Prayer Over Your Home | Bless This Household Today #Shorts",
+        "format": "short",
+        "youtube_video_id": "qfecCni6y60",
+        "watch_url": "https://www.youtube.com/shorts/qfecCni6y60",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T17:33:47Z"
+        "published_at": "2026-11-26T20:28:00Z"
       },
       "next_queued_longform": {
         "id": "0324",
@@ -315,8 +315,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-family2samuel7v29",
-        "scripture": "2 Samuel 7:29",
+        "short": "short-familypsalm90v16",
+        "scripture": "Psalm 90:16-17",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -681,6 +681,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILY2SAMUEL7V29",
+      "slug": "short-family2samuel7v29-household-prayer",
+      "file": "short-family2samuel7v29-household-prayer.md",
+      "title": "Pray This 2 Samuel 7:29 Family Prayer Over Your Home | Bless This Household Today #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T20:28:00Z",
+      "youtube_video_id": "qfecCni6y60",
+      "watch_url": "https://www.youtube.com/shorts/qfecCni6y60",
+      "youtu_be_url": "https://youtu.be/qfecCni6y60",
+      "shorts_url": "https://www.youtube.com/shorts/qfecCni6y60",
+      "studio_url": "https://studio.youtube.com/video/qfecCni6y60/edit",
+      "thumb_url": "https://i.ytimg.com/vi/qfecCni6y60/hqdefault.jpg",
+      "thumb_text": "BLESS THIS HOUSE \u00b7 LORD GOD HAS SPOKEN",
+      "thumbnail_pending": true,
+      "duration_label": "47s",
+      "words": 680
+    },
     {
       "id": "SHORT-MIDNIGHTPSALM77V6",
       "slug": "short-midnightpsalm77v6-midnight-prayer",
@@ -23094,17 +23118,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-family2samuel7v29",
-        "file": "0322-short-family2samuel7v29.yml",
-        "companion_longform_id": "0322",
-        "scripture": "2 Samuel 7:29",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-familypsalm90v16",
