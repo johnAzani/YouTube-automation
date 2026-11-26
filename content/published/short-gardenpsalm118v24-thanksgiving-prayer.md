@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THIS IS THE DAY", "WHICH THE LORD", "HATH MADE", "PSALM 118:24"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-03T08:38:11Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If you are standing over your morning coffee wondering how you will face today, listen. God's Word declares, This is the day which the LORD hath made; we will rejoice and be glad in it. Father, thank You for waking us into this exact morning and surrounding us with unearned grace. When anxiety bids us to worry about tomorrow, remind us that this moment belongs to You. We choose praise over panic, trusting that Your hand guides every step we take today. Fill our hearts with honest gratitude for Your quiet kindness and constant presence. Subscribe to join The Praise Garden as we walk in daily thanksgiving.
