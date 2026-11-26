@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T00:59:59Z",
+  "generated_at": "2026-11-26T02:18:34Z",
   "monitor_generated_at": "2026-11-25T23:07:25.395195+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 835,
+    "published_total": 836,
     "published_longform": 230,
-    "published_shorts": 605,
-    "public_total": 833,
+    "published_shorts": 606,
+    "public_total": 834,
     "queued_longform": 74,
-    "queued_shorts": 38,
+    "queued_shorts": 37,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 109,
+        "published_total": 110,
         "published_longform": 35,
-        "published_shorts": 74,
+        "published_shorts": 75,
         "thumbnail_pending": 2,
-        "public_total": 108,
+        "public_total": 109,
         "queued_longform": 22,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM116V1",
-        "title": "Say This Psalm 116:1-2 Prayer for Fresh Start at Sunrise | A Short Prayer #Shorts",
+        "id": "SHORT-MORNINGPSALM145V2",
+        "title": "Say This Psalm 145:2 Prayer for Fresh Start at Sunrise | A Short Prayer #Shorts",
         "format": "short",
-        "youtube_video_id": "U7nIzLO7LVg",
-        "watch_url": "https://www.youtube.com/shorts/U7nIzLO7LVg",
-        "published_on": "2026-11-25",
-        "published_at": "2026-11-25T20:57:14Z"
+        "youtube_video_id": "R7GGfsh-1fc",
+        "watch_url": "https://www.youtube.com/shorts/R7GGfsh-1fc",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T02:17:23Z"
       },
       "next_queued_longform": {
         "id": "0076",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm145v2",
-        "scripture": "Psalm 145:2",
+        "short": "short-morningpsalm19v14",
+        "scripture": "Psalm 19:14",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM145V2",
+      "slug": "short-morningpsalm145v2-sunrise-prayer",
+      "file": "short-morningpsalm145v2-sunrise-prayer.md",
+      "title": "Say This Psalm 145:2 Prayer for Fresh Start at Sunrise | A Short Prayer #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T02:17:23Z",
+      "youtube_video_id": "R7GGfsh-1fc",
+      "watch_url": "https://www.youtube.com/shorts/R7GGfsh-1fc",
+      "youtu_be_url": "https://youtu.be/R7GGfsh-1fc",
+      "shorts_url": "https://www.youtube.com/shorts/R7GGfsh-1fc",
+      "studio_url": "https://studio.youtube.com/video/R7GGfsh-1fc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/R7GGfsh-1fc/hqdefault.jpg",
+      "thumb_text": "PSALM 145:2 PRAYER \u00b7 PSALM 145:2",
+      "thumbnail_pending": false,
+      "duration_label": "41s",
+      "words": 626
+    },
     {
       "id": "0624",
       "slug": "when-you-stand-firm-in-the-storm-psalm-62-6-7",
@@ -21746,17 +21770,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningpsalm145v2",
-        "file": "0000-short-morningpsalm145v2.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 145:2",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm19v14",
