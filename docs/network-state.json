@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T20:31:51Z",
+  "generated_at": "2026-11-26T20:36:43Z",
   "monitor_generated_at": "2026-11-26T20:20:30.304881+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 878,
+    "published_total": 879,
     "published_longform": 241,
-    "published_shorts": 637,
-    "public_total": 876,
+    "published_shorts": 638,
+    "public_total": 877,
     "queued_longform": 94,
-    "queued_shorts": 29,
+    "queued_shorts": 28,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": false
@@ -625,23 +625,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 71,
+        "published_total": 72,
         "published_longform": 17,
-        "published_shorts": 54,
+        "published_shorts": 55,
         "thumbnail_pending": 0,
-        "public_total": 71,
+        "public_total": 72,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPROVERBS20V24",
-        "title": "Pray This Proverbs 20:24 Prayer for God's Guidance | When You Cannot See Ahead #Shorts",
+        "id": "SHORT-GUIDEDPSALM119V130",
+        "title": "Pray This Psalm 119:130 Prayer for God's Guidance | Waiting For Your Answer #Shorts",
         "format": "short",
-        "youtube_video_id": "EP4oH9-aKQk",
-        "watch_url": "https://www.youtube.com/shorts/EP4oH9-aKQk",
+        "youtube_video_id": "a9UtAX4Osh4",
+        "watch_url": "https://www.youtube.com/shorts/a9UtAX4Osh4",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T17:21:18Z"
+        "published_at": "2026-11-26T20:35:39Z"
       },
       "next_queued_longform": {
         "id": "0818",
@@ -650,8 +650,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedpsalm119v130",
-        "scripture": "Psalm 119:130",
+        "short": "short-guidedpsalm119v35",
+        "scripture": "Psalm 119:35",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -681,6 +681,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDPSALM119V130",
+      "slug": "short-guidedpsalm119v130-guidance-prayer",
+      "file": "short-guidedpsalm119v130-guidance-prayer.md",
+      "title": "Pray This Psalm 119:130 Prayer for God's Guidance | Waiting For Your Answer #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T20:35:39Z",
+      "youtube_video_id": "a9UtAX4Osh4",
+      "watch_url": "https://www.youtube.com/shorts/a9UtAX4Osh4",
+      "youtu_be_url": "https://youtu.be/a9UtAX4Osh4",
+      "shorts_url": "https://www.youtube.com/shorts/a9UtAX4Osh4",
+      "studio_url": "https://studio.youtube.com/video/a9UtAX4Osh4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/a9UtAX4Osh4/hqdefault.jpg",
+      "thumb_text": "THE ENTRANCE OF THY \u00b7 WORDS",
+      "thumbnail_pending": false,
+      "duration_label": "53s",
+      "words": 633
+    },
     {
       "id": "SHORT-SHIELDPSALM62V6",
       "slug": "short-shieldpsalm62v6-protection-prayer",
@@ -22980,17 +23004,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-guidedpsalm119v130",
-        "file": "0000-short-guidedpsalm119v130.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 119:130",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
-      },
       {
         "short": "short-guidedpsalm119v35",
         "file": "0000-short-guidedpsalm119v35.yml",
