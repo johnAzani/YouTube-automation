@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-26T03:56:37.783931+00:00",
+  "generated_at": "2026-11-26T10:57:37.835670+00:00",
   "as_of": "2026-11-26",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 10,
+  "total_longform_videos": 9,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 67,
+    "receipt_video_ids": 68,
     "matched_video_ids": 50,
-    "longform_below_view_threshold": 10,
+    "longform_below_view_threshold": 9,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 2,
     "minimum_views": 25,
@@ -34,7 +34,7 @@
     },
     {
       "theme": "daily_guidance_wisdom",
-      "videos": 3,
+      "videos": 2,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -59,7 +59,7 @@
   ],
   "shorts": {
     "measured_shorts": 35,
-    "total_shorts": 40,
+    "total_shorts": 41,
     "sufficient_data": true,
     "avg_views": 68.4,
     "median_views": 61,
