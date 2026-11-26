@@ -37,8 +37,8 @@
       "workflow": "tests-on-main.yml"
     }
   ],
-  "generated_at": "2026-11-26T09:29:47.380352+00:00",
-  "last_run_at": "2026-11-26T09:29:32+00:00",
+  "generated_at": "2026-11-26T09:32:03.886409+00:00",
+  "last_run_at": "2026-11-26T09:31:21+00:00",
   "on_time": [
     {
       "late_minutes": 32,
@@ -97,9 +97,9 @@
       "workflow": "reporting-jobs.yml"
     },
     {
-      "late_minutes": 30,
+      "late_minutes": 33,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-26T07:17:07+00:00",
+      "ran_at": "2026-11-26T07:20:18+00:00",
       "slot": "2026-11-26T06:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     },
