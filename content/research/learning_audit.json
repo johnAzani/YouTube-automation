@@ -7,20 +7,20 @@
  "loops": [
   {
    "channels_reordered": 10,
-   "evidence": "34 Shorts measured; 3 book(s) carry two or more, and the ranking reorders 10 channel(s)' roadmap",
+   "evidence": "35 Shorts measured; 4 book(s) carry two or more, and the ranking reorders 10 channel(s)' roadmap",
    "loop": "shorts_steering",
-   "measured_shorts": 34,
+   "measured_shorts": 35,
    "owner": "pipeline/performance_feedback.py: rank_candidates",
    "state": "acting",
    "what": "which passages and books the brain writes Shorts on next"
   },
   {
-   "evidence": "7 release(s) recorded a concept, but the reach files hold no impressions for any of them yet",
+   "evidence": "8 release(s) recorded a concept, but the reach files hold no impressions for any of them yet",
    "leader": null,
    "loop": "thumbnail_choice",
    "owner": "pipeline/thumbnail_campaign.py: live_concept",
    "state": "measuring",
-   "videos_assigned": 7,
+   "videos_assigned": 8,
    "what": "which of the three thumbnail concepts goes live"
   },
   {
@@ -53,7 +53,7 @@
   },
   {
    "compositions": 1,
-   "evidence": "one composition across 641 Shorts: a variable with one level has no measured answer",
+   "evidence": "one composition across 641 Shorts, but 434 of them (68%) still open on a citation: the design has one level, and the citation-versus-need choice inside it has two",
    "loop": "first_frame_composition",
    "owner": "pipeline/first_frame.py + pipeline/first_frame_repair.py",
    "state": "measuring",

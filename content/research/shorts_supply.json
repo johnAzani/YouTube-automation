@@ -4,30 +4,25 @@
    "binding": "enough ready Shorts",
    "channel": "secret-place",
    "companion_longforms": 0,
-   "ready": 3,
-   "sources": 3,
-   "standalone_examples": [
-    "Psalm 92:2",
-    "Psalm 119:164",
-    "Psalm 52:9"
-   ],
-   "standalone_passages": 3,
+   "ready": 5,
+   "sources": 0,
+   "standalone_examples": [],
+   "standalone_passages": 0,
    "verdict": "enough"
   },
   {
    "binding": "enough ready Shorts",
    "channel": "prayer2",
    "companion_longforms": 0,
-   "ready": 4,
-   "sources": 10,
+   "ready": 8,
+   "sources": 4,
    "standalone_examples": [
-    "Psalm 77:11",
-    "Psalm 71:15",
-    "Psalm 149:5-6",
-    "Lamentations 3:23",
-    "Luke 4:42"
+    "Psalm 63:6",
+    "Psalm 130:6",
+    "Psalm 21:13",
+    "Psalm 77:12"
    ],
-   "standalone_passages": 10,
+   "standalone_passages": 4,
    "verdict": "enough"
   },
   {
@@ -44,20 +39,17 @@
    "binding": "enough ready Shorts",
    "channel": "prayer4",
    "companion_longforms": 0,
-   "ready": 8,
-   "sources": 2,
-   "standalone_examples": [
-    "Psalm 121:3-4",
-    "Psalm 77:6"
-   ],
-   "standalone_passages": 2,
+   "ready": 10,
+   "sources": 0,
+   "standalone_examples": [],
+   "standalone_passages": 0,
    "verdict": "enough"
   },
   {
    "binding": "enough ready Shorts",
    "channel": "prayer5",
    "companion_longforms": 0,
-   "ready": 8,
+   "ready": 7,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
@@ -67,7 +59,7 @@
    "binding": "enough ready Shorts",
    "channel": "prayer6",
    "companion_longforms": 0,
-   "ready": 2,
+   "ready": 3,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
@@ -77,7 +69,7 @@
    "binding": "enough ready Shorts",
    "channel": "prayer7",
    "companion_longforms": 0,
-   "ready": 5,
+   "ready": 4,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
@@ -87,21 +79,17 @@
    "binding": "enough ready Shorts",
    "channel": "prayer8",
    "companion_longforms": 0,
-   "ready": 8,
-   "sources": 3,
-   "standalone_examples": [
-    "Psalm 16:8",
-    "Psalm 20:7",
-    "Psalm 115:9-11"
-   ],
-   "standalone_passages": 3,
+   "ready": 9,
+   "sources": 0,
+   "standalone_examples": [],
+   "standalone_passages": 0,
    "verdict": "enough"
   },
   {
    "binding": "enough ready Shorts",
    "channel": "prayer9",
    "companion_longforms": 0,
-   "ready": 8,
+   "ready": 5,
    "sources": 3,
    "standalone_examples": [
     "Psalm 50:23",
@@ -115,7 +103,7 @@
    "binding": "enough ready Shorts",
    "channel": "prayer10",
    "companion_longforms": 0,
-   "ready": 6,
+   "ready": 4,
    "sources": 5,
    "standalone_examples": [
     "Exodus 33:14",
@@ -136,6 +124,6 @@
  "ready_floor": 2,
  "schema": 1,
  "sentence": "Every channel holds at least 2 ready Shorts.",
- "total_sources": 26,
+ "total_sources": 12,
  "under_floor": []
 }

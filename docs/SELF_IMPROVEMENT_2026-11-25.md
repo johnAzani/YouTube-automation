@@ -11,11 +11,21 @@ loop in one of four states. Only one of them is learning.
 
 | loop | state before today | why |
 | :--- | :--- | :--- |
-| **shorts steering** | **acting** | 34 Shorts measured; 3 books carry two or more; the ranking reorders 10 channels' roadmaps |
+| **shorts steering** | **acting** | 35 Shorts measured; 4 books carry two or more; the ranking reorders 10 channels' roadmaps |
 | **night-tail length** | **acting** | the measured ceiling (16.3 min) is below the tail's floor, so the tail is off on every channel — the measurement changed the build |
 | **thumbnail choice** | **unwired** | the campaign measured a click rate per concept every day and **no release ever read it** |
 | **overlay lessons** | **waiting** | 11 phrases under test on 10 channels, **0 verdicts**: a verdict needs 5 videos each side with 100 views |
-| **first-frame composition** | **measuring** | one composition across 639 Shorts — a variable with one level has no measured answer |
+| **first-frame composition** | **measuring** | one composition across 641 Shorts, but 434 of them (68%) still open on a citation — the design has one level; the citation-versus-need choice inside it has two, and that split is the only variable the repository has varied |
+
+Two of those five states moved while this page was being written, and both moves
+were downwards — which is the audit doing its job. `thumbnail_choice` was
+reported as fixed the moment the release path could *read* the leader; it is
+**measuring** again until a Short actually goes out on it, because a loop is not
+closed by wiring (`_adopted_release()`). And `first_frame_composition` said "one
+composition across 639 Shorts", which read as though nothing had been varied at
+all while 434 Shorts opened on a citation — the same plate, kicker, subtitle and
+camera move with the citation's words in the kicker slot. The split is now named
+instead of averaged away.
 
 That table is the real answer to the request. Before today, **two of five loops
 learned**. Not because nobody wrote a learning module, but because three modules

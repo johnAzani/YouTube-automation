@@ -76,3 +76,30 @@ def test_the_repository_has_at_least_one_loop_that_actually_acts():
     """If nothing acts, "self improving" is a false description of this pipeline."""
     report = audit.build_audit()
     assert report["acting"], report["sentence"]
+
+
+def test_a_measured_leader_is_not_acting_until_a_release_uses_it():
+    """Wiring the loop is not the loop closing.
+
+    On 25 November 2026 the audit was changed to this rule within an hour of the
+    campaign becoming readable: until a Short actually goes out on the leader's
+    concept, "acting" would be a claim about code that has never run.
+    """
+    loop = audit._thumbnail_choice()
+    assert loop["state"] in {"measuring", "unwired", "acting"}
+    if loop["leader"] and loop["state"] == "acting":
+        assert audit._adopted_release(), "acting requires a receipt naming the leader"
+
+
+def test_the_first_frame_loop_does_not_hide_the_citation_split():
+    """A citation is not a second composition, and the audit must not let it pass.
+
+    434 of 641 Shorts opened on a citation while the audit said "one composition
+    across 639", which reads as though nothing had been varied at all.
+    """
+    loop = audit._first_frame()
+    assert loop["loop"] == "first_frame_composition"
+    if loop.get("compositions") == 1:
+        assert "citation" in loop["evidence"], (
+            "with one composition the citation-versus-need split is the only "
+            "variable in the repository and has to be named")
