@@ -101,6 +101,7 @@ narration_voice: "Charon"
 duration_seconds: 443.69
 thumbnail_revision: "ctr-v3-cinema"
 thumbnail_concept: "quiet"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 ## Scene 1 — The Good Shepherd and the End of Striving (Verse 1)
