@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T00:01:43Z",
+  "generated_at": "2026-11-26T00:05:00Z",
   "monitor_generated_at": "2026-11-25T23:07:25.395195+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 830,
+    "published_total": 831,
     "published_longform": 228,
-    "published_shorts": 602,
-    "public_total": 828,
+    "published_shorts": 603,
+    "public_total": 829,
     "queued_longform": 76,
-    "queued_shorts": 41,
+    "queued_shorts": 40,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": true
@@ -572,23 +572,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 69,
+        "published_total": 70,
         "published_longform": 16,
-        "published_shorts": 53,
-        "thumbnail_pending": 69,
-        "public_total": 69,
+        "published_shorts": 54,
+        "thumbnail_pending": 70,
+        "public_total": 70,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM149V1",
-        "title": "Pray This Psalm 149:1-4 Prayer of Thanksgiving | Lift Your Heart Today #Shorts",
+        "id": "SHORT-GARDENPSALM96V1",
+        "title": "Pray This Psalm 96:1-4 Prayer of Thanksgiving | The Confusion In Your Heart #Shorts",
         "format": "short",
-        "youtube_video_id": "4PZ_I4oFfKs",
-        "watch_url": "https://www.youtube.com/shorts/4PZ_I4oFfKs",
-        "published_on": "2026-11-25",
-        "published_at": "2026-11-25T20:09:25Z"
+        "youtube_video_id": "DOLnrZiVYOA",
+        "watch_url": "https://www.youtube.com/shorts/DOLnrZiVYOA",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T00:03:58Z"
       },
       "next_queued_longform": {
         "id": "0717",
@@ -597,8 +597,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm96v1",
-        "scripture": "Psalm 96:1-4",
+        "short": "short-gardenpsalm118v24",
+        "scripture": "Psalm 118:24",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM96V1",
+      "slug": "short-gardenpsalm96v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm96v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 96:1-4 Prayer of Thanksgiving | The Confusion In Your Heart #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T00:03:58Z",
+      "youtube_video_id": "DOLnrZiVYOA",
+      "watch_url": "https://www.youtube.com/shorts/DOLnrZiVYOA",
+      "youtu_be_url": "https://youtu.be/DOLnrZiVYOA",
+      "shorts_url": "https://www.youtube.com/shorts/DOLnrZiVYOA",
+      "studio_url": "https://studio.youtube.com/video/DOLnrZiVYOA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/DOLnrZiVYOA/hqdefault.jpg",
+      "thumb_text": "THE WONDER OF GOD \u00b7 A PRAYER OF PRAISE",
+      "thumbnail_pending": true,
+      "duration_label": "44s",
+      "words": 635
+    },
     {
       "id": "SHORT-PROVISIONPROVERBS22V29",
       "slug": "short-provisionproverbs22v29-stewardship-prayer",
@@ -21609,17 +21633,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-gardenpsalm96v1",
-        "file": "0000-short-gardenpsalm96v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 96:1-4",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
       {
         "short": "short-guidedproverbs11v14",
         "file": "0000-short-guidedproverbs11v14.yml",
