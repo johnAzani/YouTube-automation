@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-26T08:40:03Z",
-  "monitor_generated_at": "2026-11-26T08:38:18.787192+00:00",
+  "generated_at": "2026-11-26T08:42:58Z",
+  "monitor_generated_at": "2026-11-26T08:41:14.939338+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -12,8 +12,8 @@
     "published_longform": 232,
     "published_shorts": 616,
     "public_total": 846,
-    "queued_longform": 80,
-    "queued_shorts": 45,
+    "queued_longform": 82,
+    "queued_shorts": 47,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -169,9 +169,9 @@
         "published_shorts": 68,
         "thumbnail_pending": 3,
         "public_total": 95,
-        "queued_longform": 8,
+        "queued_longform": 10,
         "queued_other": 0,
-        "queued_shorts": 0
+        "queued_shorts": 2
       },
       "latest_video": {
         "id": "SHORT-MIDDAYPROVERBS15V1",
@@ -188,7 +188,12 @@
         "words": 2104,
         "status": "approved"
       },
-      "next_queued_short": null,
+      "next_queued_short": {
+        "short": "short-middayjohn15v5",
+        "scripture": "John 15:5",
+        "target_window_utc": "12:14",
+        "status": "approved"
+      },
       "feedback": {
         "available": true,
         "as_of": "2026-11-26",
@@ -22075,6 +22080,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1674
+      },
+      {
+        "id": "0953",
+        "slug": "abiding-in-the-vine-at-noon-john-15-5",
+        "file": "0953-abiding-in-the-vine-at-noon-john-15-5.md",
+        "title": "Abiding in the Vine at Noon: John 15:5 | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1311
+      },
+      {
+        "id": "0954",
+        "slug": "steadfast-when-the-noise-is-loud-nehemiah-6-3",
+        "file": "0954-steadfast-when-the-noise-is-loud-nehemiah-6-3.md",
+        "title": "Steadfast When the Noise Is Loud: Nehemiah 6:3 | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1637
       }
     ],
     "shorts": [
@@ -22572,6 +22603,28 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
+      },
+      {
+        "short": "short-middayjohn15v5",
+        "file": "0953-short-middayjohn15v5.yml",
+        "companion_longform_id": "0953",
+        "scripture": "John 15:5",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-middaynehemiah6v3",
+        "file": "0954-short-middaynehemiah6v3.yml",
+        "companion_longform_id": "0954",
+        "scripture": "Nehemiah 6:3",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
       }
     ]
   },
@@ -22609,7 +22662,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 6.4h ago",
+      "detail": "last success 6.5h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-26T02:12:13+00:00",
       "last_success": "2026-11-26T02:12:13+00:00",
@@ -22623,7 +22676,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 6.4h ago",
+      "detail": "last success 6.5h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-26T02:12:46+00:00",
       "last_success": "2026-11-26T02:12:46+00:00",
@@ -22679,7 +22732,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 67.4h ago",
+      "detail": "last success 67.5h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-23T13:13:52+00:00",
       "last_success": "2026-11-23T13:13:52+00:00",
@@ -22707,10 +22760,10 @@
       "name": "Automation monitor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.6h ago",
+      "detail": "last success 0.1h ago",
       "last_conclusion": "",
       "last_run": "2026-11-26T08:38:21+00:00",
-      "last_success": "2026-11-26T08:01:45+00:00",
+      "last_success": "2026-11-26T08:37:12+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -22735,7 +22788,7 @@
       "name": "YouTube reporting jobs (thumbnail impressions)",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.3h ago",
+      "detail": "last success 1.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-26T07:17:58+00:00",
       "last_success": "2026-11-26T07:17:58+00:00",
@@ -22750,9 +22803,9 @@
       "verdict": "OK",
       "severity": "ok",
       "detail": "last success 0.0h ago",
-      "last_conclusion": "",
-      "last_run": "2026-11-26T08:38:21+00:00",
-      "last_success": "2026-11-26T08:37:12+00:00",
+      "last_conclusion": "success",
+      "last_run": "2026-11-26T08:40:11+00:00",
+      "last_success": "2026-11-26T08:40:11+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -22763,7 +22816,7 @@
       "name": "Tests on main (daily)",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.7h ago",
+      "detail": "last success 1.8h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-26T06:54:20+00:00",
       "last_success": "2026-11-26T06:54:20+00:00",
