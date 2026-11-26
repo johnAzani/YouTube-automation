@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T20:29:20Z",
+  "generated_at": "2026-11-26T20:31:51Z",
   "monitor_generated_at": "2026-11-26T20:20:30.304881+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 877,
+    "published_total": 878,
     "published_longform": 241,
-    "published_shorts": 636,
-    "public_total": 875,
+    "published_shorts": 637,
+    "public_total": 876,
     "queued_longform": 94,
-    "queued_shorts": 30,
+    "queued_shorts": 29,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": false
@@ -489,23 +489,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 73,
+        "published_total": 74,
         "published_longform": 19,
-        "published_shorts": 54,
+        "published_shorts": 55,
         "thumbnail_pending": 23,
-        "public_total": 73,
+        "public_total": 74,
         "queued_longform": 6,
         "queued_other": 4,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-SHIELDNAHUM1V7",
-        "title": "Pray This Nahum 1:7 Prayer for Divine Protection | Strong Hold #Shorts",
+        "id": "SHORT-SHIELDPSALM62V6",
+        "title": "Pray This Psalm 62:6-7 Prayer for Divine Protection | Find Your Sanctuary Here #Shorts",
         "format": "short",
-        "youtube_video_id": "7xi0YLp2RpU",
-        "watch_url": "https://www.youtube.com/shorts/7xi0YLp2RpU",
+        "youtube_video_id": "SHvXuE5b2k4",
+        "watch_url": "https://www.youtube.com/shorts/SHvXuE5b2k4",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T17:12:35Z"
+        "published_at": "2026-11-26T20:30:37Z"
       },
       "next_queued_longform": {
         "id": "0625",
@@ -514,8 +514,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm62v6",
-        "scripture": "Psalm 62:6-7",
+        "short": "short-shieldexodus14v14",
+        "scripture": "Exodus 14:14",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -681,6 +681,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM62V6",
+      "slug": "short-shieldpsalm62v6-protection-prayer",
+      "file": "short-shieldpsalm62v6-protection-prayer.md",
+      "title": "Pray This Psalm 62:6-7 Prayer for Divine Protection | Find Your Sanctuary Here #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T20:30:37Z",
+      "youtube_video_id": "SHvXuE5b2k4",
+      "watch_url": "https://www.youtube.com/shorts/SHvXuE5b2k4",
+      "youtu_be_url": "https://youtu.be/SHvXuE5b2k4",
+      "shorts_url": "https://www.youtube.com/shorts/SHvXuE5b2k4",
+      "studio_url": "https://studio.youtube.com/video/SHvXuE5b2k4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/SHvXuE5b2k4/hqdefault.jpg",
+      "thumb_text": "GOD \u00b7 IS",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 627
+    },
     {
       "id": "SHORT-FAMILY2SAMUEL7V29",
       "slug": "short-family2samuel7v29-household-prayer",
@@ -23153,17 +23177,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-shieldpsalm62v6",
-        "file": "0624-short-shieldpsalm62v6.yml",
-        "companion_longform_id": "0624",
-        "scripture": "Psalm 62:6-7",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldexodus14v14",
