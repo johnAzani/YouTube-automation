@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T17:03:20Z",
+  "generated_at": "2026-11-26T17:03:36Z",
   "monitor_generated_at": "2026-11-26T12:06:37.504292+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 861,
+    "published_total": 862,
     "published_longform": 236,
-    "published_shorts": 625,
-    "public_total": 859,
+    "published_shorts": 626,
+    "public_total": 860,
     "queued_longform": 90,
-    "queued_shorts": 47,
+    "queued_shorts": 46,
     "automations_ok": 15,
     "automations_total": 15,
     "network_healthy": true
@@ -227,23 +227,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 89,
+        "published_total": 90,
         "published_longform": 27,
-        "published_shorts": 62,
-        "thumbnail_pending": 88,
-        "public_total": 89,
+        "published_shorts": 63,
+        "thumbnail_pending": 89,
+        "public_total": 90,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTPSALM46V10",
-        "title": "Pray This Psalm 46:10 Midnight Prayer | Demand An Answer Tonight #Shorts",
+        "id": "SHORT-MIDNIGHTPSALM59V16",
+        "title": "Pray This Psalm 59:16 Midnight Prayer | Stand In Prayer #Shorts",
         "format": "short",
-        "youtube_video_id": "hS7HV6Hxbuo",
-        "watch_url": "https://www.youtube.com/shorts/hS7HV6Hxbuo",
+        "youtube_video_id": "EgujHbGKS_Q",
+        "watch_url": "https://www.youtube.com/shorts/EgujHbGKS_Q",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T11:07:18Z"
+        "published_at": "2026-11-26T17:02:15Z"
       },
       "next_queued_longform": {
         "id": "0228",
@@ -252,8 +252,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightpsalm59v16",
-        "scripture": "Psalm 59:16",
+        "short": "short-midnightpsalm77v6",
+        "scripture": "Psalm 77:6",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTPSALM59V16",
+      "slug": "short-midnightpsalm59v16-midnight-prayer",
+      "file": "short-midnightpsalm59v16-midnight-prayer.md",
+      "title": "Pray This Psalm 59:16 Midnight Prayer | Stand In Prayer #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T17:02:15Z",
+      "youtube_video_id": "EgujHbGKS_Q",
+      "watch_url": "https://www.youtube.com/shorts/EgujHbGKS_Q",
+      "youtu_be_url": "https://youtu.be/EgujHbGKS_Q",
+      "shorts_url": "https://www.youtube.com/shorts/EgujHbGKS_Q",
+      "studio_url": "https://studio.youtube.com/video/EgujHbGKS_Q/edit",
+      "thumb_url": "https://i.ytimg.com/vi/EgujHbGKS_Q/hqdefault.jpg",
+      "thumb_text": "THE TROUBLE \u00b7 KEEPING YOU AWAKE",
+      "thumbnail_pending": true,
+      "duration_label": "50s",
+      "words": 634
+    },
     {
       "id": "SHORT-PSALM63V7",
       "slug": "short-psalm63v7-pre-sleep-prayer",
@@ -22595,17 +22619,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-midnightpsalm59v16",
-        "file": "0000-short-midnightpsalm59v16.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 59:16",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightpsalm77v6",
