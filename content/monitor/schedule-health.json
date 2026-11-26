@@ -2,9 +2,9 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 1943,
+      "late_minutes": 2755,
       "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-22T03:04:29+00:00",
+      "ran_at": "2026-11-22T16:36:05+00:00",
       "slot": "2026-11-20T18:41:00+00:00",
       "workflow": "metrics.yml"
     },
@@ -14,20 +14,6 @@
       "ran_at": "2026-11-23T08:40:16+00:00",
       "slot": "2026-11-23T03:23:00+00:00",
       "workflow": "keepalive.yml"
-    },
-    {
-      "late_minutes": 258,
-      "name": "Growth score (where the watch hours come from)",
-      "ran_at": "2026-11-25T08:55:01+00:00",
-      "slot": "2026-11-25T04:37:00+00:00",
-      "workflow": "growth-score.yml"
-    },
-    {
-      "late_minutes": 243,
-      "name": "Tests on main (daily)",
-      "ran_at": "2026-11-25T08:55:03+00:00",
-      "slot": "2026-11-25T04:52:00+00:00",
-      "workflow": "tests-on-main.yml"
     },
     {
       "late_minutes": 228,
@@ -44,8 +30,8 @@
       "workflow": "reporting-jobs.yml"
     }
   ],
-  "generated_at": "2026-11-26T03:47:10.054262+00:00",
-  "last_run_at": "2026-11-26T03:46:19+00:00",
+  "generated_at": "2026-11-26T04:59:23.369592+00:00",
+  "last_run_at": "2026-11-26T04:58:41+00:00",
   "on_time": [
     {
       "late_minutes": 32,
@@ -69,6 +55,13 @@
       "workflow": "community.yml"
     },
     {
+      "late_minutes": 93,
+      "name": "Growth autopilot",
+      "ran_at": "2026-11-26T03:47:15+00:00",
+      "slot": "2026-11-26T02:14:00+00:00",
+      "workflow": "growth-autopilot.yml"
+    },
+    {
       "late_minutes": 16,
       "name": "Automation monitor",
       "ran_at": "2026-11-26T03:39:14+00:00",
@@ -81,6 +74,13 @@
       "ran_at": "2026-11-25T23:47:55+00:00",
       "slot": "2026-11-25T23:14:00+00:00",
       "workflow": "produce.yml"
+    },
+    {
+      "late_minutes": 71,
+      "name": "Scheduler supervisor",
+      "ran_at": "2026-11-26T04:58:41+00:00",
+      "slot": "2026-11-26T03:47:00+00:00",
+      "workflow": "scheduler-supervisor.yml"
     }
   ],
   "silence_minutes": 0,
