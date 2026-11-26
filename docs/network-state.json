@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T20:17:03Z",
+  "generated_at": "2026-11-26T20:19:16Z",
   "monitor_generated_at": "2026-11-26T18:11:34.591855+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,10 +8,10 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 873,
-    "published_longform": 240,
+    "published_total": 874,
+    "published_longform": 241,
     "published_shorts": 633,
-    "public_total": 871,
+    "public_total": 872,
     "queued_longform": 92,
     "queued_shorts": 33,
     "automations_ok": 14,
@@ -33,28 +33,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 108,
-        "published_longform": 27,
+        "published_total": 109,
+        "published_longform": 28,
         "published_shorts": 81,
         "thumbnail_pending": 1,
-        "public_total": 107,
+        "public_total": 108,
         "queued_longform": 7,
         "queued_other": 5,
         "queued_shorts": 2
       },
       "latest_video": {
-        "id": "SHORT-PSALM63V7",
-        "title": "Say This Psalm 63:7 Prayer Before You Sleep | A Short Prayer #Shorts",
-        "format": "short",
-        "youtube_video_id": "a53xfILe8Jw",
-        "watch_url": "https://www.youtube.com/shorts/a53xfILe8Jw",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T17:02:05Z"
-      },
-      "next_queued_longform": {
         "id": "0035",
         "title": "Psalm 23 Night Prayer to Fall Asleep in Peace (Full KJV)",
-        "words": 1025,
+        "format": "longform",
+        "youtube_video_id": "LFFs7Nwy_p0",
+        "watch_url": "https://youtu.be/LFFs7Nwy_p0",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T20:18:18Z"
+      },
+      "next_queued_longform": {
+        "id": "0113",
+        "title": "When Sleep Will Not Come: Psalm 42:8 | The Secret Place",
+        "words": 1383,
         "status": "approved"
       },
       "next_queued_short": {
@@ -681,6 +681,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0035",
+      "slug": "psalm-23-complete-night-prayer-restore-my-soul",
+      "file": "0035-psalm-23-complete-night-prayer-restore-my-soul.md",
+      "title": "Psalm 23 Night Prayer to Fall Asleep in Peace (Full KJV)",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T20:18:18Z",
+      "youtube_video_id": "LFFs7Nwy_p0",
+      "watch_url": "https://youtu.be/LFFs7Nwy_p0",
+      "youtu_be_url": "https://youtu.be/LFFs7Nwy_p0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/LFFs7Nwy_p0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/LFFs7Nwy_p0/hqdefault.jpg",
+      "thumb_text": "RESTORE MY SOUL",
+      "thumbnail_pending": false,
+      "duration_label": "7m 24s",
+      "words": 1025
+    },
     {
       "id": "0429",
       "slug": "comfort-for-every-sorrow-and-tear-revelation-21-4-the-healing-balm",
@@ -21637,19 +21661,6 @@
   "queues": {
     "longform": [
       {
-        "id": "0035",
-        "slug": "psalm-23-complete-night-prayer-restore-my-soul",
-        "file": "0035-psalm-23-complete-night-prayer-restore-my-soul.md",
-        "title": "Psalm 23 Night Prayer to Fall Asleep in Peace (Full KJV)",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1025
-      },
-      {
         "id": "0078",
         "slug": "wisdom-before-you-begin-the-day-james-1-5",
         "file": "0078-wisdom-before-you-begin-the-day-james-1-5.md",
@@ -21791,6 +21802,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 997
+      },
+      {
+        "id": "0118",
+        "slug": "resting-in-the-presence-of-god-psalm-134",
+        "file": "0118-resting-in-the-presence-of-god-psalm-134.md",
+        "title": "Resting in the Presence of God: Psalm 134:1-3 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1074
       },
       {
         "id": "0139",

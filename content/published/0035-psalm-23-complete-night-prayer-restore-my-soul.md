@@ -2,7 +2,7 @@
 id: '0035'
 title: "Psalm 23 Night Prayer to Fall Asleep in Peace (Full KJV)"
 slug: psalm-23-complete-night-prayer-restore-my-soul
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -91,6 +91,16 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this complete Psalm 23 KJV night prayer before sleep as the Good Shepherd leads you beside still waters and restores your soul.
 category_id: '22'
+published_on: "2026-11-26"
+published_at: "2026-11-26T20:18:18Z"
+youtube_video_id: "LFFs7Nwy_p0"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 443.69
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — The Good Shepherd and the End of Striving (Verse 1)
