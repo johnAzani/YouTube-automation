@@ -121,8 +121,29 @@ def _thumbnail_choice() -> dict[str, Any]:
         because = "no release has recorded which concept went live yet"
     elif not total_impressions:
         state = "measuring"
-        because = ("%d release(s) recorded a concept, but the reach files hold no "
-                   "impressions for any of them yet" % assigned)
+        # Name the real cause. "No impressions yet" is only true when the network
+        # has no traffic; on 26 November 2026 it had 15,081 impressions and still
+        # joined to zero assigned videos, because every assigned video sat on a
+        # channel with no reach file. Those are different problems — one is time,
+        # the other is coverage — and conflating them sends the fix to the wrong
+        # place.
+        in_reach = int(campaign.get("videos_in_reach") or 0)
+        network = int(campaign.get("network_impressions_in_reach_files") or 0)
+        missing = campaign.get("channels_without_reach") or []
+        if network and not in_reach:
+            waited = ", ".join(str(x) for x in missing) or "no channel"
+            because = ("%d release(s) recorded a concept and not one of their videos is on "
+                       "a channel with a reach file, so no impression can be joined to a "
+                       "concept. The reach files hold %d impressions for the network; the "
+                       "concepts are waiting on reach coverage for %s."
+                       % (assigned, network, waited))
+        elif missing:
+            because = ("%d release(s) recorded a concept, %d of them on a channel with no "
+                       "reach file yet (%s)"
+                       % (assigned, assigned - in_reach, ", ".join(str(x) for x in missing)))
+        else:
+            because = ("%d release(s) recorded a concept, but the reach files hold no "
+                       "impressions for any of them yet" % assigned)
     elif not leader:
         state = "measuring"
         because = ("%d impressions pooled, under the %d floor for every concept, so "

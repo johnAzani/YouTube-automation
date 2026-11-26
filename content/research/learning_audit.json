@@ -15,12 +15,12 @@
    "what": "which passages and books the brain writes Shorts on next"
   },
   {
-   "evidence": "8 release(s) recorded a concept, but the reach files hold no impressions for any of them yet",
+   "evidence": "11 release(s) recorded a concept and not one of their videos is on a channel with a reach file, so no impression can be joined to a concept. The reach files hold 15081 impressions for the network; the concepts are waiting on reach coverage for prayer10, prayer2, prayer3, prayer6, prayer7, prayer8, unknown.",
    "leader": null,
    "loop": "thumbnail_choice",
    "owner": "pipeline/thumbnail_campaign.py: live_concept",
    "state": "measuring",
-   "videos_assigned": 8,
+   "videos_assigned": 11,
    "what": "which of the three thumbnail concepts goes live"
   },
   {
