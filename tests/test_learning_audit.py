@@ -8,6 +8,8 @@ concept every day and no release ever read the answer.
 from __future__ import annotations
 
 import json
+import unittest
+from pathlib import Path
 
 from pipeline import learning_audit as audit
 
@@ -103,3 +105,56 @@ def test_the_first_frame_loop_does_not_hide_the_citation_split():
         assert "citation" in loop["evidence"], (
             "with one composition the citation-versus-need split is the only "
             "variable in the repository and has to be named")
+
+
+class TestAReadingWithNoAgeCannotBeTrusted(unittest.TestCase):
+    """Four of the five readings carried no timestamp on 26 November 2026.
+
+    A stale reading and a fresh one were indistinguishable, so an `acting` verdict
+    could rest on a file nobody had refreshed for a month —
+    `channel_intelligence.json` had been frozen since 29 October while the docs
+    still described it as the brain's input.
+    """
+
+    def _write(self, payload: str):
+        import tempfile
+
+        handle = tempfile.NamedTemporaryFile("w", suffix=".json", delete=False,
+                                             encoding="utf-8")
+        handle.write(payload)
+        handle.close()
+        self.addCleanup(Path(handle.name).unlink, missing_ok=True)
+        return Path(handle.name)
+
+    def test_a_file_with_no_timestamp_is_not_assumed_fresh(self):
+        path = self._write('{"specs": 3}')
+        age = audit.reading_age(path)
+        self.assertTrue(age["stale"])
+        self.assertIsNone(age["age_hours"])
+        self.assertIn("no timestamp", age["why"])
+
+    def test_an_old_reading_is_called_old(self):
+        from datetime import datetime, timedelta, timezone
+
+        stamp = (datetime.now(timezone.utc) - timedelta(days=4)).isoformat()
+        age = audit.reading_age(self._write(json.dumps({"generated_at": stamp})))
+        self.assertTrue(age["stale"])
+        self.assertGreater(age["age_hours"], audit.MAX_READING_AGE_HOURS)
+
+    def test_a_fresh_reading_is_fresh(self):
+        from datetime import datetime, timezone
+
+        stamp = datetime.now(timezone.utc).isoformat()
+        age = audit.reading_age(self._write(json.dumps({"generated_at": stamp})))
+        self.assertFalse(age["stale"], age)
+
+    def test_the_audit_reports_the_age_of_the_evidence_it_used(self):
+        """The first version looked for `growth_score` instead of
+        `growth_score.json`, so every reading looked stamp-less and stale — a check
+        that can only ever shout has the same value as one that never does."""
+        report = audit.build_audit()
+        self.assertTrue(report["evidence"])
+        for name, age in report["evidence"].items():
+            self.assertIn("stale", age, name)
+        self.assertIn("growth_score", report["evidence"])
+        self.assertFalse(report["evidence"]["growth_score"]["stale"])

@@ -28,6 +28,8 @@ contradicted.
 """
 from __future__ import annotations
 
+from datetime import datetime, timezone
+
 import argparse
 import json
 import re
@@ -140,6 +142,7 @@ def build_audit(specs: Iterable[tuple[str, dict[str, Any]]] | None = None) -> di
 
     return {
         "schema": 1,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "specs": len(rows),
         "median_words_on_frame_one": statistics.median(words),
         "max_words_on_frame_one": max(words),

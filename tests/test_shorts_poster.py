@@ -247,3 +247,93 @@ class TestUploadGate(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestAnOverWideHeroIsFoldedNotDropped(unittest.TestCase):
+    """Forty-one Shorts could not make a poster on 26 November 2026.
+
+    `_fit` stops shrinking at a 64px floor, so a hero line wider than the safe box
+    stayed wider than the safe box and the poster refused: correct behaviour (a
+    muddy poster is worse than none) with the wrong cause — the authoring step had
+    no width limit. The fold must re-wrap the words and keep every one of them.
+    """
+
+    def test_a_too_wide_line_is_split_at_word_boundaries(self):
+        from pipeline.shorts_poster import fold_hero
+
+        self.assertEqual(fold_hero("IS FROM EVERLASTING TO EVERLASTING"),
+                         ["IS FROM EVERLASTING", "TO EVERLASTING"])
+
+    def test_a_fitting_line_is_left_alone(self):
+        from pipeline.shorts_poster import fold_hero
+
+        self.assertEqual(fold_hero("EVERLASTING"), ["EVERLASTING"])
+
+    def test_the_budget_is_measured_not_counted(self):
+        """Eleven capital W's are as wide as twenty-one letters of a real hero.
+
+        Any single character budget is therefore wrong in one direction or the
+        other: `HERO_MAX_CHARS = 22` still let an 845px line into a 796px box.
+        The honest rule is the one the renderer enforces — measure the pixels.
+        """
+        from pipeline.shorts_poster import _measure_width, fold_hero
+
+        wide, narrow = "W" * 12, "THE MERCY OF THE LORD"
+        self.assertGreater(_measure_width(wide, 64), _measure_width(narrow, 64))
+        # The shorter string is NOT the one that has to wrap.
+        self.assertEqual(len(fold_hero(wide)), 1)
+        self.assertEqual(len(fold_hero(narrow)), 2)
+
+    def test_folding_never_loses_a_word(self):
+        """The first version of the fold kept two lines and dropped the rest.
+
+        `IS FROM EVERLASTING TO EVERLASTING` was painted as
+        `IS FROM EVERLASTING TO` — a poster that reads fine and says the wrong
+        thing, which is worse than one that refuses.
+        """
+        from pipeline.shorts_poster import fold_hero
+
+        source = "THE MERCY OF THE LORD IS FROM EVERLASTING TO EVERLASTING"
+        folded = fold_hero(source)
+        self.assertEqual(" ".join(folded).split(), source.split())
+
+    def test_every_spec_in_the_repository_can_make_a_poster(self):
+        import json
+        from pathlib import Path
+
+        from pipeline.shorts_poster import PosterRefused, poster_for_spec
+
+        root = Path(__file__).resolve().parents[1]
+        refused = []
+        with tempfile.TemporaryDirectory() as tmp:
+            for path in sorted((root / "content" / "shorts-scripts").glob("*.json")):
+                try:
+                    report = poster_for_spec(path, Path(tmp) / f"{path.stem}.jpg")
+                except PosterRefused as exc:
+                    refused.append((path.stem, str(exc)[:70]))
+                    continue
+                self.assertTrue(all(report.lines), f"{path.stem} lost a poster line")
+        self.assertEqual(refused, [], f"{len(refused)} Shorts cannot make a poster")
+
+    def test_the_widest_hero_line_fits_the_safe_zone(self):
+        from PIL import Image, ImageDraw
+
+        from pipeline.shorts_poster import SAFE_BOX, _font, fold_hero
+
+        measure = ImageDraw.Draw(Image.new("RGB", (1080, 1920)))
+        inner = (SAFE_BOX[2] - SAFE_BOX[0]) - 140
+        for source in ("IS FROM EVERLASTING TO EVERLASTING",
+                       "THE SHADOW OF THE ALMIGHTY",
+                       "GOD MULTIPLIES YOUR EFFORT"):
+            for line in fold_hero(source):
+                width = measure.textlength(line, font=_font(64))
+                self.assertLessEqual(width, inner, f"{line!r} is {width:.0f}px, > {inner}px")
+
+
+class TestTheFoldIsTheOnlyWayWordsMove(unittest.TestCase):
+    def test_a_word_wider_than_the_box_is_left_whole(self):
+        """Better a line that shrinks than a word broken in half."""
+        from pipeline.shorts_poster import fold_hero
+
+        self.assertEqual(fold_hero("EXTRAORDINARILY EXTRAORDINARILY"),
+                         ["EXTRAORDINARILY", "EXTRAORDINARILY"])

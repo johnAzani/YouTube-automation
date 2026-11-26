@@ -41,6 +41,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -54,11 +55,55 @@ STATES = ("acting", "unwired", "measuring", "waiting")
 MIN_THUMBNAIL_IMPRESSIONS = 300
 
 
+#: A reading older than this cannot say what is true today. The growth job writes
+#: every one of them daily; three days is long enough to survive a skipped run and
+#: short enough that nobody reads a week-old number as this morning's.
+MAX_READING_AGE_HOURS = 72
+
+#: Readings whose absence of a timestamp is itself the defect. On 26 November 2026
+#: learning_audit, first_frame, first_frame_repair and shorts_supply all carried no
+#: stamp at all, so a stale reading and a fresh one were indistinguishable — and
+#: `channel_intelligence.json` had sat unread since 29 October without a word.
+_STAMPED = ("generated_at", "as_of", "audited_at", "updated_at", "written_at")
+
+
 def _read(path: Path) -> dict[str, Any]:
     try:
         return json.loads(path.read_text(encoding="utf-8")) or {}
     except (OSError, ValueError):
         return {}
+
+
+def reading_age(path: Path, now: datetime | None = None) -> dict[str, Any]:
+    """How old a committed reading is, and whether that is too old to trust.
+
+    Returns ``{"stamp": str, "age_hours": float|None, "stale": bool, "why": str}``.
+    A reading with no timestamp is not assumed fresh: it reports ``age_hours=None``
+    with ``why`` naming the missing stamp, because "I cannot tell how old this is"
+    and "this is from this morning" are different claims.
+    """
+    data = _read(path)
+    now = now or datetime.now(timezone.utc)
+    stamp = ""
+    for field in _STAMPED:
+        if data.get(field):
+            stamp = str(data[field])
+            break
+    if not stamp:
+        return {"stamp": "", "age_hours": None, "stale": True,
+                "why": "no timestamp in the file, so its age cannot be known"}
+    try:
+        when = datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+    except ValueError:
+        return {"stamp": stamp, "age_hours": None, "stale": True,
+                "why": f"timestamp {stamp!r} is not an ISO date"}
+    if when.tzinfo is None:
+        when = when.replace(tzinfo=timezone.utc)
+    age = (now - when).total_seconds() / 3600.0
+    return {"stamp": stamp, "age_hours": round(age, 1),
+            "stale": age > MAX_READING_AGE_HOURS,
+            "why": "" if age <= MAX_READING_AGE_HOURS
+            else f"{age / 24:.0f} day(s) old, over the {MAX_READING_AGE_HOURS}h limit"}
 
 
 def _shorts_steering() -> dict[str, Any]:
@@ -329,16 +374,33 @@ def build_audit() -> dict[str, Any]:
         for loop in loops:
             if loop["loop"] == "thumbnail_choice" and loop["state"] == "measuring":
                 loop["state"] = "unwired"
+    # A verdict built on a reading nobody refreshed is not a verdict. The loops
+    # keep their state — nothing here guesses what a stale file would say today —
+    # but the audit names which evidence is old, because a number with no age on it
+    # reads exactly like this morning's. On 26 November 2026 four of the five
+    # readings carried no timestamp at all, and `channel_intelligence.json` had been
+    # frozen since 29 October while `docs/GEMINI_BRAIN.md` still described it as the
+    # brain's input.
+    evidence = {
+        name: reading_age(ROOT / "content" / "research" / f"{name}.json")
+        for name in ("growth_score", "performance_feedback", "thumbnail_campaign",
+                     "first_frame", "learning_audit", "shorts_supply")
+    }
+    stale = sorted(name for name, age in evidence.items() if age["stale"])
     acting = [loop["loop"] for loop in loops if loop["state"] == "acting"]
     waiting = [loop["loop"] for loop in loops if loop["state"] == "waiting"]
     measuring = [loop["loop"] for loop in loops if loop["state"] in {"measuring", "unwired"}]
     return {
         "schema": 1,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "evidence": evidence,
+        "stale_evidence": stale,
         "loops": loops,
         "acting": acting,
         "measuring_only": measuring,
         "waiting": waiting,
-        "sentence": _sentence(len(acting), len(loops), measuring, waiting),
+        "sentence": _sentence(len(acting), len(loops), measuring, waiting)
+        + (" Evidence is stale for: %s." % ", ".join(stale) if stale else ""),
         "not_claimed": [
             "that a loop which is acting is improving anything. Acting means the "
             "measurement changes the next build; whether that build does better is "

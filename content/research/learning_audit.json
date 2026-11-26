@@ -4,6 +4,45 @@
   "night_tail_length"
  ],
  "cost_lock": "$0.00 / month (docs/ZERO_DOLLAR_LOCK.md)",
+ "evidence": {
+  "first_frame": {
+   "age_hours": 0.0,
+   "stale": false,
+   "stamp": "2026-11-26T11:21:03.218336+00:00",
+   "why": ""
+  },
+  "growth_score": {
+   "age_hours": 0.0,
+   "stale": false,
+   "stamp": "2026-11-26T11:21:03.113315+00:00",
+   "why": ""
+  },
+  "learning_audit": {
+   "age_hours": null,
+   "stale": true,
+   "stamp": "",
+   "why": "no timestamp in the file, so its age cannot be known"
+  },
+  "performance_feedback": {
+   "age_hours": 7.5,
+   "stale": false,
+   "stamp": "2026-11-26T03:48:21.012641+00:00",
+   "why": ""
+  },
+  "shorts_supply": {
+   "age_hours": 0.0,
+   "stale": false,
+   "stamp": "2026-11-26T11:21:05.097861+00:00",
+   "why": ""
+  },
+  "thumbnail_campaign": {
+   "age_hours": 11.4,
+   "stale": false,
+   "stamp": "2026-11-26",
+   "why": ""
+  }
+ },
+ "generated_at": "2026-11-26T11:21:18.682926+00:00",
  "loops": [
   {
    "channels_reordered": 10,
@@ -68,7 +107,10 @@
   "that a loop which is acting is improving anything. Acting means the measurement changes the next build; whether that build does better is what the next reading is for."
  ],
  "schema": 1,
- "sentence": "2 of 5 loops act on their own measurement; thumbnail_choice, first_frame_composition measure and change nothing yet; overlay_lessons have too few videos to conclude.",
+ "sentence": "2 of 5 loops act on their own measurement; thumbnail_choice, first_frame_composition measure and change nothing yet; overlay_lessons have too few videos to conclude. Evidence is stale for: learning_audit.",
+ "stale_evidence": [
+  "learning_audit"
+ ],
  "waiting": [
   "overlay_lessons"
  ]
