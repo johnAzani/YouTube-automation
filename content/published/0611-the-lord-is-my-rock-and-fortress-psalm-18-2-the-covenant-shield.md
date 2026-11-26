@@ -1,6 +1,6 @@
 ---
 id: '0611'
-title: 'The Lord Is My Rock and Fortress: Psalm 18:2 | The Covenant Shield'
+title: "When Your Footing Gives Way: Psalm 18:2 | The Covenant Shield"
 slug: the-lord-is-my-rock-and-fortress-psalm-18-2-the-covenant-shield
 status: published
 channel: prayer8
@@ -80,13 +80,16 @@ originality:
 published_on: "2026-11-19"
 published_at: "2026-11-19T02:19:37Z"
 youtube_video_id: "NwsmA331vTA"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 top_comment: "ok"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "The Lord Is My Rock and Fortress: Psalm 18:2 | The Covenant Shield"
+retitled_at: "2026-11-26"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Unmovable Rock
