@@ -1,0 +1,311 @@
+{
+  "key": "short-midnightpsalm121v3",
+  "channel": "prayer4",
+  "psalm": 121,
+  "title": [
+    "WHEN YOUR MIND REFUSES",
+    "TO REST AT MIDNIGHT"
+  ],
+  "poster": [
+    "MIDNIGHT PRAYER",
+    "PSALM 121:3-4",
+    "GOD NEVER SLUMBERS",
+    "STAND IN FAITH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight dark bedroom window starry sky silhouette",
+    "calm mountain lake night starry sky reflection",
+    "ancient stone watchtower starry night sky horizon",
+    "deep starry galaxy night sky glowing horizon silhouette",
+    "dim lit quiet chapel sanctuary altar candle glow night",
+    "ancient stone tower silhouette under vast starry sky",
+    "calm night horizon starry heavens serene midnight landscape"
+  ],
+  "scenes": [
+    {
+      "a": "Your heavy mind refuses to rest tonight.",
+      "img": "short-midnightpsalm121v3-scene-01.jpg",
+      "kicker": "RESTLESS NIGHT",
+      "sub": "WHEN YOUR MIND REFUSES TO REST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You lie awake in the dark, wondering who guards your life when your human strength runs dry.",
+      "img": "short-midnightpsalm121v3-scene-02.jpg",
+      "kicker": "EXHAUSTED HEART",
+      "sub": "WHEN HUMAN STRENGTH RUNS DRY",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "He will not suffer thy foot to be moved: he that keepeth thee will not slumber.",
+      "img": "short-midnightpsalm121v3-scene-03.jpg",
+      "kicker": "UNSHAKEN FOOTING",
+      "sub": "HE WILL NOT SUFFER THEE TO MOVE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Behold, he that keepeth Israel shall neither slumber nor sleep.",
+      "img": "short-midnightpsalm121v3-scene-04.jpg",
+      "kicker": "EVER WATCHFUL",
+      "sub": "GOD NEITHER SLUMBERS NOR SLEEPS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, anchor our weary feet in this quiet space when fear and exhaustion threaten to overturn us.",
+      "img": "short-midnightpsalm121v3-scene-05.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "ANCHOR OUR WEARY FEET TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.45,
+        0.55
+      ]
+    },
+    {
+      "a": "Guard our restless thoughts with your holy presence, for your watchful eyes never close or grow tired.",
+      "img": "short-midnightpsalm121v3-scene-06.jpg",
+      "kicker": "DIVINE PROTECTION",
+      "sub": "HIS EYES NEVER CLOSE IN SLEEP",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Keep watch over every hidden fear tonight, Amen, even when your heavy mind refuses to rest.",
+      "img": "short-midnightpsalm121v3-scene-07.jpg",
+      "kicker": "HEAR US LORD",
+      "sub": "KEEP WATCH OVER OUR HIDDEN FEARS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your heavy mind refuses to rest tonight."
+    ],
+    [
+      3,
+      9,
+      "You lie awake in the dark, wondering who guards your life when your human strength runs dry."
+    ],
+    [
+      9,
+      17,
+      "He will not suffer thy foot to be moved: he that keepeth thee will not slumber."
+    ],
+    [
+      17,
+      23,
+      "Behold, he that keepeth Israel shall neither slumber nor sleep."
+    ],
+    [
+      23,
+      30,
+      "Lord, anchor our weary feet in this quiet space when fear and exhaustion threaten to overturn us."
+    ],
+    [
+      30,
+      37,
+      "Guard our restless thoughts with your holy presence, for your watchful eyes never close or grow tired."
+    ],
+    [
+      37,
+      45,
+      "Keep watch over every hidden fear tonight, Amen, even when your heavy mind refuses to rest."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR HEAVY MIND",
+        "REFUSES TO REST",
+        "TONIGHT"
+      ],
+      [
+        "REST"
+      ],
+      "PSALM 121 : 3-4"
+    ],
+    [
+      3,
+      9,
+      [
+        "YOU LIE AWAKE IN THE DARK",
+        "WHO GUARDS YOUR LIFE",
+        "WHEN STRENGTH RUNS DRY"
+      ],
+      [
+        "GUARDS"
+      ],
+      "PSALM 121 : 3-4"
+    ],
+    [
+      9,
+      17,
+      [
+        "HE WILL NOT SUFFER",
+        "THY FOOT TO BE MOVED",
+        "HE THAT KEEPETH THEE",
+        "WILL NOT SLUMBER"
+      ],
+      [
+        "SLUMBER"
+      ],
+      "PSALM 121 : 3-4"
+    ],
+    [
+      17,
+      23,
+      [
+        "BEHOLD HE THAT KEEPETH ISRAEL",
+        "SHALL NEITHER SLUMBER",
+        "NOR SLEEP"
+      ],
+      [
+        "SLEEP"
+      ],
+      "PSALM 121 : 3-4"
+    ],
+    [
+      23,
+      30,
+      [
+        "LORD ANCHOR OUR WEARY FEET",
+        "IN THIS QUIET SPACE",
+        "WHEN EXHAUSTION THREATENS"
+      ],
+      [
+        "ANCHOR"
+      ],
+      "PSALM 121 : 3-4"
+    ],
+    [
+      30,
+      37,
+      [
+        "GUARD OUR RESTLESS THOUGHTS",
+        "YOUR WATCHFUL EYES",
+        "NEVER GROW TIRED"
+      ],
+      [
+        "GUARD"
+      ],
+      "PSALM 121 : 3-4"
+    ],
+    [
+      37,
+      45,
+      [
+        "KEEP WATCH OVER",
+        "EVERY HIDDEN FEAR",
+        "AMEN"
+      ],
+      [
+        "WATCH"
+      ],
+      "PSALM 121 : 3-4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your heavy mind refuses to rest tonight.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "MIND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You lie awake in the dark, wondering who guards your life when your human strength runs dry.",
+      "kind": "phrase",
+      "words": [
+        "HUMAN",
+        "STRENGTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "He will not suffer thy foot to be moved: he that keepeth thee will not slumber.",
+      "kind": "phrase",
+      "words": [
+        "FOOT",
+        "MOVED"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Behold, he that keepeth Israel shall neither slumber nor sleep.",
+      "kind": "phrase",
+      "words": [
+        "NEITHER",
+        "SLUMBER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor our weary feet in this quiet space when fear and exhaustion threaten to overturn us.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "FEET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guard our restless thoughts with your holy presence, for your watchful eyes never close or grow tired.",
+      "kind": "phrase",
+      "words": [
+        "WATCHFUL",
+        "EYES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Keep watch over every hidden fear tonight, Amen, even when your heavy mind refuses to rest.",
+      "kind": "phrase",
+      "words": [
+        "KEEP",
+        "WATCH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 121:3-4"
+}

@@ -1,0 +1,331 @@
+{
+  "key": "short-midnightpsalm77v6",
+  "channel": "prayer4",
+  "psalm": 77,
+  "title": [
+    "SONG IN THE NIGHT",
+    "MIDNIGHT SEARCH"
+  ],
+  "poster": [
+    "WHEN MEMORIES",
+    "KEEP YOU AWAKE",
+    "STAND IN PRAYER",
+    "MIDNIGHT WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "dim candle lamp burning in quiet room night",
+    "ancient holy bible open under warm candle flame night",
+    "deep starry midnight sky over tranquil still mountain lake",
+    "ancient stone chapel sanctuary interior dim lantern glow midnight",
+    "quiet midnight watchtower window looking at starry heavens",
+    "calm night lake reflection dark forest silhouettes stars",
+    "gently flickering prayer lamp in dark peaceful sanctuary"
+  ],
+  "scenes": [
+    {
+      "a": "Your quiet room holds a restless memory tonight.",
+      "img": "short-midnightpsalm77v6-scene-01.jpg",
+      "kicker": "RESTLESS MEMORY",
+      "sub": "YOUR QUIET ROOM TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "As the hour turns, the psalmist writes:",
+      "img": "short-midnightpsalm77v6-scene-02.jpg",
+      "kicker": "MIDNIGHT SCRIPTURE",
+      "sub": "PSALM 77:6",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I call to remembrance my song in the night: I commune with mine own heart: and my spirit made diligent search.",
+      "img": "short-midnightpsalm77v6-scene-03.jpg",
+      "kicker": "SONG IN THE NIGHT",
+      "sub": "PSALM 77:6",
+      "cam": "pan_right",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "Lord, in this dark hour, when forgotten melodies feel far away, we bring our quiet questioning before You.",
+      "img": "short-midnightpsalm77v6-scene-04.jpg",
+      "kicker": "DARK HOUR PRAYER",
+      "sub": "QUIET QUESTIONING BEFORE GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.52,
+        0.45
+      ]
+    },
+    {
+      "a": "Search our hearts where heavy sorrow lingers, and stir the steady praise we thought was lost.",
+      "img": "short-midnightpsalm77v6-scene-05.jpg",
+      "kicker": "SEARCH OUR HEARTS",
+      "sub": "RESTORE LOST PRAISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant true diligence to our seeking spirit until Your calm presence restores our hope tonight.",
+      "img": "short-midnightpsalm77v6-scene-06.jpg",
+      "kicker": "SEEKING SPIRIT",
+      "sub": "YOUR CALM PRESENCE RESTORES",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    {
+      "a": "In this silent hour, we place every deep search into Your hands. Amen. Your quiet room holds a restless memory.",
+      "img": "short-midnightpsalm77v6-scene-07.jpg",
+      "kicker": "DEEP SEARCH RESTS",
+      "sub": "IN YOUR HANDS TONIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.48
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your quiet room holds a restless memory tonight."
+    ],
+    [
+      3,
+      8,
+      "As the hour turns, the psalmist writes:"
+    ],
+    [
+      8,
+      18,
+      "I call to remembrance my song in the night: I commune with mine own heart: and my spirit made diligent search."
+    ],
+    [
+      18,
+      26,
+      "Lord, in this dark hour, when forgotten melodies feel far away, we bring our quiet questioning before You."
+    ],
+    [
+      26,
+      34,
+      "Search our hearts where heavy sorrow lingers, and stir the steady praise we thought was lost."
+    ],
+    [
+      34,
+      41,
+      "Grant true diligence to our seeking spirit until Your calm presence restores our hope tonight."
+    ],
+    [
+      41,
+      50,
+      "In this silent hour, we place every deep search into Your hands. Amen. Your quiet room holds a restless memory."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR QUIET ROOM",
+        "HOLDS A RESTLESS",
+        "MEMORY TONIGHT"
+      ],
+      [
+        "RESTLESS",
+        "MEMORY"
+      ],
+      "THE MIDNIGHT WATCH"
+    ],
+    [
+      3,
+      8,
+      [
+        "AS THE HOUR TURNS",
+        "THE PSALMIST WRITES"
+      ],
+      [
+        "PSALMIST",
+        "WRITES"
+      ],
+      "PSALM 77:6"
+    ],
+    [
+      8,
+      18,
+      [
+        "I CALL TO REMEMBRANCE",
+        "MY SONG IN THE NIGHT",
+        "I COMMUNE WITH MINE OWN HEART",
+        "AND MY SPIRIT MADE DILIGENT SEARCH"
+      ],
+      [
+        "SONG",
+        "NIGHT",
+        "DILIGENT",
+        "SEARCH"
+      ],
+      "PSALM 77:6"
+    ],
+    [
+      18,
+      26,
+      [
+        "LORD IN THIS DARK HOUR",
+        "WHEN FORGOTTEN MELODIES",
+        "FEEL FAR AWAY",
+        "WE BRING OUR QUIET QUESTIONING"
+      ],
+      [
+        "DARK",
+        "HOUR",
+        "QUESTIONING"
+      ],
+      "MIDNIGHT PRAYER"
+    ],
+    [
+      26,
+      34,
+      [
+        "SEARCH OUR HEARTS",
+        "WHERE HEAVY SORROW LINGERS",
+        "AND STIR THE STEADY PRAISE",
+        "WE THOUGHT WAS LOST"
+      ],
+      [
+        "SEARCH",
+        "HEARTS",
+        "PRAISE"
+      ],
+      "MIDNIGHT PRAYER"
+    ],
+    [
+      34,
+      41,
+      [
+        "GRANT TRUE DILIGENCE",
+        "TO OUR SEEKING SPIRIT",
+        "UNTIL YOUR CALM PRESENCE",
+        "RESTORES OUR HOPE TONIGHT"
+      ],
+      [
+        "SEEKING",
+        "SPIRIT",
+        "PRESENCE"
+      ],
+      "MIDNIGHT PRAYER"
+    ],
+    [
+      41,
+      50,
+      [
+        "IN THIS SILENT HOUR",
+        "WE PLACE EVERY DEEP SEARCH",
+        "INTO YOUR HANDS AMEN",
+        "YOUR QUIET ROOM HOLDS RESTLESS MEMORY"
+      ],
+      [
+        "DEEP",
+        "SEARCH",
+        "HANDS"
+      ],
+      "MIDNIGHT PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your quiet room holds a restless memory tonight.",
+      "kind": "phrase",
+      "words": [
+        "RESTLESS",
+        "MEMORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As the hour turns, the psalmist writes:",
+      "kind": "phrase",
+      "words": [
+        "PSALMIST",
+        "WRITES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I call to remembrance my song in the night: I commune with mine own heart: and my spirit made diligent search.",
+      "kind": "phrase",
+      "words": [
+        "SONG",
+        "IN",
+        "THE",
+        "NIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, in this dark hour, when forgotten melodies feel far away, we bring our quiet questioning before You.",
+      "kind": "phrase",
+      "words": [
+        "DARK",
+        "HOUR",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Search our hearts where heavy sorrow lingers, and stir the steady praise we thought was lost.",
+      "kind": "phrase",
+      "words": [
+        "SEARCH",
+        "OUR",
+        "HEARTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant true diligence to our seeking spirit until Your calm presence restores our hope tonight.",
+      "kind": "phrase",
+      "words": [
+        "SEEKING",
+        "SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In this silent hour, we place every deep search into Your hands. Amen. Your quiet room holds a restless memory.",
+      "kind": "phrase",
+      "words": [
+        "RESTLESS",
+        "MEMORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 77:6"
+}
