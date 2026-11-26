@@ -80,7 +80,7 @@ originality:
 published_on: "2026-11-19"
 published_at: "2026-11-19T02:19:37Z"
 youtube_video_id: "NwsmA331vTA"
-metadata_revision: "retitle-pending"
+metadata_revision: "selar-seo-v1"
 top_comment: "ok"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
