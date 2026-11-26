@@ -27,7 +27,10 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (-116, 775, 1196, 824); shorten the authored lockup or reduce its size"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-12-03T11:57:07Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 As you sit quietly by your child's bedside tonight worrying about their future, receive God's peace. But the mercy of the LORD is from everlasting to everlasting upon them that fear him, and his righteousness unto children’s children; To such as keep his covenant, and to those that remember his commandments to do them. Heavenly Father, cover our household with your unfailing mercy through all the years to come. Preserve our children and their children in your eternal truth, and anchor their lives in your holy covenant forever. Subscribe to join The Family Altar and cover your home in daily prayer.

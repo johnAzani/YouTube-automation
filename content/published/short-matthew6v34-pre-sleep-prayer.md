@@ -23,9 +23,13 @@ short_visual_fingerprints: ["sha256:15d4d372a00701b3ebff13741229b8372fbbd79b7f22
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (51, 794, 1028, 843); shorten the authored lockup or reduce its size"
+thumbnail_pending: false
 live_handle: "@SecretPlaceSanctuary"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["MATTHEW 6:34", "LEAVE TOMORROW", "WITH GOD", "A BEDTIME PRAYER", "THE SECRET PLACE"]
+thumbnail_kicker: "PRAYER BEFORE SLEEP"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 If you are replaying tomorrow's hardest conversation in the dark, put it down right now. Take therefore no thought for the morrow: for the morrow shall take thought for the things of itself. Sufficient unto the day is the evil thereof. Heavenly Father, we hand over every unseen sunrise, every unwritten hour, and every unknown outcome into your loving care. Release our hands from trying to carry what is not yet born, and quiet our weary minds. Rest over this bed, steady every anxious thought, and grant a deep, restoring night of sleep. Subscribe to rest in God's peace every night.

@@ -26,8 +26,12 @@ short_visual_fingerprints: ["sha256:26a932a1efd57af6c537c74c6da1b8f5e34b5e267eed
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (68, 790, 1011, 839); shorten the authored lockup or reduce its size"
+thumbnail_pending: false
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["WALK IN SAFETY", "THE HIDDEN TRAP IS", "BROKEN", "PSALM 124:6-8 PRAYER", "THE COVENANT SHIELD"]
+thumbnail_kicker: "THE LORD IS THY KEEPER"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 The trap set against your peace is broken. You were not handed over to the thing that sought to consume you today. Hear the word of God in Psalm 124: Blessed be the LORD, who hath not given us as a prey to their teeth. Our soul is escaped as a bird out of the snare of the fowlers: the snare is broken, and we are escaped. Our help is in the name of the LORD, who made heaven and earth. Lord, break every subtle net of fear and hidden trap plotted against this life. You are our refuge; pull our feet from the dark cables of anxiety. Amen. The trap set against your peace is broken.

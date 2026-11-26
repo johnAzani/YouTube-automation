@@ -26,8 +26,12 @@ short_visual_fingerprints: ["sha256:06f06b5c1e88b960a641aa2c62179195cfe86da30bba
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (0, 777, 1079, 826); shorten the authored lockup or reduce its size"
+thumbnail_pending: false
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["YOUR ARMS ARE TIRED", "WHEN STRENGTH FAILS", "AT NOON", "A MIDDAY PRAYER", "EXODUS 17:11-12"]
+thumbnail_kicker: "PAUSE AND PRAY AT NOON"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 Your arms are tired from holding everything up. In the middle of the day, heavy responsibility presses down. Scripture records: But Moses' hands were heavy; and they took a stone, and put it under him, and he sat thereon; and Aaron and Hur stayed up his hands, the one on the one side, and the other on the other side; and his hands were steady until the going down of the sun. Lord, when our strength gives out, raise up support around us. Establish our hearts in Your peace through this afternoon. Amen. Your arms are tired from holding everything up.

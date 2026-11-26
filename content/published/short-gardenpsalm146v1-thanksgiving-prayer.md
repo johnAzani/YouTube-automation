@@ -27,7 +27,10 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (70, 798, 1009, 847); shorten the authored lockup or reduce its size"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-12-03T11:58:43Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Your hands feel empty after this long day. Yet even here, your heart can turn toward heaven. The Psalmist writes, Praise ye the LORD. Praise the LORD, O my soul. While I live will I praise the LORD: I will sing praises unto my God while I have any being. Father, when our strength falters and answers seem slow, remind us that our praise belongs to You in every season. We thank You for breath, for grace, and for Your unending love that sustains our souls today. Hear our grateful prayer, Amen. Your hands feel empty after this long day.

@@ -26,8 +26,12 @@ short_visual_fingerprints: ["sha256:20a20a2e46a30d849a829e81f52d905d67ec5b16aa01
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (68, 788, 1010, 837); shorten the authored lockup or reduce its size"
+thumbnail_pending: false
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["POWER TO TREAD", "NO HARM SHALL TOUCH", "YOU", "LUKE 10:19", "THE COVENANT SHIELD"]
+thumbnail_kicker: "THE LORD IS THY KEEPER"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 Fear of hidden danger surrounds your steps today. Hear the promise of Christ in Luke 10:19: Behold, I give unto you power to tread on serpents and scorpions, and over all the power of the enemy: and nothing shall by any means hurt you. Lord, cover every path we walk and grant us spiritual authority over unseen threats that seek to bring harm. Protect our going out and coming in, crushing every subtle snare beneath Your holy feet. We rest securely under Your sovereign hand, trusting that no enemy weapon can prevail. Amen. We step forward safely, even when fear of hidden danger surrounds our steps.

@@ -26,9 +26,13 @@ short_visual_fingerprints: ["sha256:27b6c998014009a24346df401cd1a94c81f8e95cd765
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (24, 775, 1056, 824); shorten the authored lockup or reduce its size"
+thumbnail_pending: false
 live_handle: "@SecretPlaceSanctuary"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["WHEN YOU ARE", "DRAINED", "LET GOD REPLENISH", "YOUR SOUL", "BEDTIME PRAYER FOR REST", "JEREMIAH 31:25-26"]
+thumbnail_kicker: "PRAYER BEFORE SLEEP"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 Lay down the heavy exhaustion that followed you into this dark room tonight. Scripture promises, For I have satiated the weary soul, and I have replenished every sorrowful soul. Upon this I awaked, and beheld; and my sleep was sweet unto me. Lord, reach into this quiet room tonight and touch this weary heart. You see the silent burdens carried through the day, and the deep sorrow that lingers in the dark. Satiate this soul with Your gentle comfort, replenish every depleted place, and cover this bed with heavenly rest. May sleep be sweet, peaceful, and restoring tonight. Subscribe to The Secret Place for quiet prayers every night.

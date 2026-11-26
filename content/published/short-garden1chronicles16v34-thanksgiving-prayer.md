@@ -24,7 +24,10 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (49, 672, 1031, 721); shorten the authored lockup or reduce its size"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-12-03T11:58:41Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 That recurring doubt about your future needs to be quieted by a greater, eternal truth. O give thanks unto the LORD; for he is good; for his mercy endureth for ever. Lord, help me to hold fast to this promise when the world feels uncertain and cold. I choose to trust that Your goodness remains the foundation beneath my unsteady, weary feet today. Let my heart overflow with gratitude for the unchanging nature of Your constant, perfect love now. Please subscribe to walk with us in this garden of prayer and find daily, quiet hope.

@@ -26,8 +26,12 @@ short_visual_fingerprints: ["sha256:10ebbe4b982920245b3449a432937ca311542d8d720a
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (25, 783, 1054, 832); shorten the authored lockup or reduce its size"
+thumbnail_pending: false
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["THE HEALING BALM", "JEREMIAH EIGHT", "TWENTY TWO", "A QUIET PRAYER", "FOR RESTORATION"]
+thumbnail_kicker: "RECEIVE GOD'S HEALING PEACE"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 If this lingering ache leaves you wondering where healing is found, stay right here. Lord, we bring every persistent weariness and unspoken hurt into your presence today. We acknowledge the deep questions we carry when restoration feels so distant. Your word asks us directly, saying, Is there no balm in Gilead; is there no physician there? Why then is not the health of the daughter of my people recovered? Father, touch our lives with your restoring grace and bind up every broken place. Grant us quiet trust in your enduring mercy, in Jesus name, amen.

@@ -26,8 +26,12 @@ short_visual_fingerprints: ["sha256:0a31874a92ad22dd6474b4205a155d8a09e14456c48d
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (55, 696, 1023, 745); shorten the authored lockup or reduce its size"
+thumbnail_pending: false
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["STRENGTH FOR WEAK", "HANDS", "Isaiah 35:3-4 Prayer", "Pause and Pray at Noon", "The Midday Watch"]
+thumbnail_kicker: "PAUSE AND PRAY AT NOON"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 Your trembling hands need steady strength right now. In the middle of this demanding workday, fatigue can make your spirit feel faint and uncertain. Hear what God speaks through Isaiah: Strengthen ye the weak hands, and confirm the feeble knees. Say to them that are of a fearful heart, Be strong, fear not: behold, your God will come with vengeance, even God with a recompence; he will come and save you. Lord, reach into this exact hour and steady our shaken hearts. Quiet every anxious thought, renew our worn courage, and sustain us where we are weak. Amen. Your trembling hands need steady strength right now.

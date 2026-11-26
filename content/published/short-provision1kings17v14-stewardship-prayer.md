@@ -26,8 +26,12 @@ short_visual_fingerprints: ["sha256:0aae1b5897ae516f42a9637f020199753a6028756e95
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (25, 706, 1054, 755); shorten the authored lockup or reduce its size"
+thumbnail_pending: false
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["THE BARREL SHALL NOT", "WASTE", "NEITHER CRUSE OF OIL", "FAIL", "TRUST GOD'S DAILY PROVISION", "THE PROVISION TABLE"]
+thumbnail_kicker: "BLESS THE WORK OF OUR HANDS"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 If you are staring at your dwindling bank account wondering how tomorrow is covered, hear this. For thus saith the LORD God of Israel, The barrel of meal shall not waste, neither shall the cruse of oil fail, until the day that the LORD sendeth rain upon the earth. And the barrel of meal wasted not, neither did the cruse of oil fail, according to the word of the LORD, which he spake by Elijah. Lord, we yield our meager reserves into Your hands. Sustain our household, multiply our obedience, and provide for every pressing need today. Subscribe to walk in God's daily provision.

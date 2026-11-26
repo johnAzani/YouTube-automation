@@ -23,10 +23,12 @@ short_visual_fingerprints: ["sha256:3e0f75ef22e65e0d8b76591abde861dca54b9958b3c9
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (9, 703, 1070, 752); shorten the authored lockup or reduce its size"
-thumbnail_retry_after: "2026-11-23T07:16:27Z"
-thumbnail_retry_reason: "rate_limit"
+thumbnail_pending: false
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["THE SHADOW OF THE", "ALMIGHTY", "A DAILY PROTECTION", "PRAYER", "PSALM 91:1-2", "THE COVENANT SHIELD"]
+thumbnail_kicker: "THE LORD IS THY KEEPER"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 If lingering fear about tomorrow is keeping your mind awake tonight, stay and pray. He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty. I will say of the LORD, He is my refuge and my fortress: my God; in him will I trust. Father, cover this weary heart right now with Your unseen presence and quiet mercy. Surround every thought with divine peace, shield this home from all harm, and grant rest. You alone are the sure fortress when everything else trembles. Subscribe to The Covenant Shield and walk daily under God's covering.

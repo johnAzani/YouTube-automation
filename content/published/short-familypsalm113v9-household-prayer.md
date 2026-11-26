@@ -27,7 +27,10 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (58, 775, 1021, 824); shorten the authored lockup or reduce its size"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-12-03T11:57:08Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 The empty chair at your table. He maketh the barren woman to keep house, and to be a joyful mother of children. Praise ye the LORD. Lord please turn our barrenness into a season of fruitfulness and fill our home with your grace. We trust your hand to grow what is sown in faith, even when the silence feels heavy. Let our hearts be anchored in your promise as we wait for the life you provide. We bring our household to you today, trusting that every good thing comes from your loving heart. Amen. The empty chair remains silent.

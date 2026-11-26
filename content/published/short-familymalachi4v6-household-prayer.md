@@ -27,7 +27,10 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (67, 673, 1012, 722); shorten the authored lockup or reduce its size"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-12-03T11:57:06Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Silence feels heavy at your kitchen table today. Remember that God sees every distance in your home. The prophet Malachi writes, And he shall turn the heart of the fathers to the children, and the heart of the children to their fathers, lest I come and smite the earth with a curse. Lord, where hard words or long quiet distance have grown between generations, soften our hearts today. Turn us back to one another in patience and gentle truth. Heal what feels broken past mending, and fill every room of this household with Your steady grace. Amen. Silence feels heavy at your kitchen table today.

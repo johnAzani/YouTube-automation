@@ -27,7 +27,10 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (37, 782, 1042, 831); shorten the authored lockup or reduce its size"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-12-03T11:58:42Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If that lingering ache in your chest has made it hard to look up today, stay right here. Father, we confess how easily our blessings are consumed without a second glance backward. Teach our spirits to remember Your mercy when the noise of the day tries to drown it out. And one of them, when he saw that he was healed, turned back, and with a loud voice glorified God, And fell down on his face at his feet, giving him thanks: and he was a Samaritan. Lord, give us this humble posture, recognizing every good gift comes straight from Your hand. May our lips not just receive kindness, but return to offer genuine praise to Your holy name.

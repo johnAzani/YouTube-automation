@@ -26,8 +26,12 @@ short_visual_fingerprints: ["sha256:00ae07eec142193d0edce6a725a172fd92acc36f020d
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (59, 685, 1020, 734); shorten the authored lockup or reduce its size"
+thumbnail_pending: false
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["JESUS HEALS EVERY", "DISEASE", "MATTHEW 9:35", "RECEIVE HIS HEALING TOUCH", "THE HEALING BALM"]
+thumbnail_kicker: "RECEIVE GOD'S HEALING PEACE"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 When physical sickness makes you feel completely forgotten in this quiet room, hear this truth. And Jesus went about all the cities and villages, teaching in their synagogues, and preaching the gospel of the kingdom, and healing every sickness and every disease among the people. Lord Jesus, you walked through every town to reach the suffering. No pain is hidden from your sight, and no body is beyond your restorative power. Lay your gentle hand upon this hurting servant. Renew lost strength, calm all anxious fear, and let your living waters flow through every cell. Subscribe to rest in God's healing peace with The Healing Balm.

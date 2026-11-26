@@ -23,8 +23,12 @@ short_visual_fingerprints: ["sha256:0eb61602761518281073ac95031d33fadec5bc9fe018
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (18, 703, 1062, 752); shorten the authored lockup or reduce its size"
+thumbnail_pending: false
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["WHEN YOU HAVE", "NOTHING LEFT", "BRING YOUR EMPTY", "VESSELS", "TO THE LORD", "2 KINGS 4:1-7"]
+thumbnail_kicker: "BLESS THE WORK OF OUR HANDS"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 When you feel you have nothing left to meet this month's pressing obligation, look to God. And Elisha said unto her, What shall I do for thee? tell me, what hast thou in the house? And she said, Thine handmaid hath not any thing in the house, save a pot of oil. Then he said, Go, borrow thee vessels abroad of all thy neighbors, even empty vessels; borrow not a few. Heavenly Father, multiply our modest resources as we trust Your word. Provide for every pressing obligation, clear our honest debts, and grant us wise, steady hands. Subscribe to walk in God's daily provision.

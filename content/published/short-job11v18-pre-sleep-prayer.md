@@ -26,9 +26,13 @@ short_visual_fingerprints: ["sha256:5b020948bee1ba836e6e9ea0af3bf9d3ab00952df561
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (25, 700, 1054, 749); shorten the authored lockup or reduce its size"
+thumbnail_pending: false
 live_handle: "@SecretPlaceSanctuary"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["WHEN NIGHT FEELS", "UNCERTAIN", "FIND REST IN SAFETY", "A BEDTIME PRAYER FOR PEACE", "THE SECRET PLACE"]
+thumbnail_kicker: "PRAYER BEFORE SLEEP"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 Your mind is still searching for safety tonight. Scripture promises, 'And thou shalt be secure, because there is hope; yea, thou shalt dig about thee, and thou shalt take thy rest in safety.' Lord, when tomorrow feels uncertain and we try to guard our own heart, anchor us deeply in your quiet peace. Clear away the lingering fears that keep this pillow restless in the dark. Replace every heavy thought with the quiet assurance that we are fully held in your steady care. Let sleep come gently now, rooted in the security only you provide. Amen. Your mind can rest in safety tonight.

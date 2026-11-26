@@ -26,8 +26,12 @@ short_visual_fingerprints: ["sha256:0b893a7fda146a2e8ce053ef47249f6a7ba19efbcf10
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (8, 780, 1071, 829); shorten the authored lockup or reduce its size"
+thumbnail_pending: false
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
+thumbnail_poster: ["THE MORNING ALTAR", "WHEN STRENGTH FEELS", "SCARCE", "LAMENTATIONS 3:23", "SUNRISE PRAYER"]
+thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 You woke up unsure if strength will come. Yesterday drained every drop of your resolve, leaving your spirit quiet and heavy in this early room. Yet Scripture speaks softly into your silence: They are new every morning: great is thy faithfulness. Lord, we gather what little we have at this sunrise, holding our tired hearts before Your steady presence. We do not ask for a whole year of strength right now, only the gentle grace required for this single morning. Fill the empty spaces with Your patient mercy, and steady our step as the day begins. Amen. You can rest even when you woke up unsure if strength will come.
