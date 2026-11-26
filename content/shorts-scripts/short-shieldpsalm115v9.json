@@ -1,0 +1,262 @@
+{
+  "key": "short-shieldpsalm115v9",
+  "channel": "prayer8",
+  "psalm": 115,
+  "title": [
+    "GOD IS YOUR SHIELD",
+    "TRUST IN HIS HELP"
+  ],
+  "poster": [
+    "THE ANXIOUS HOUR",
+    "GOD IS YOUR HELP",
+    "HIS SHIELD REMAINS",
+    "PRAYER OF REFUGE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "misty morning mountain ridge",
+    "ancient stone tower silhouette",
+    "golden light breaking through clouds",
+    "calm flowing river at dawn",
+    "sunlit valley shadows moving",
+    "serene lake reflection at twilight"
+  ],
+  "scenes": [
+    {
+      "a": "That heavy silence",
+      "img": "short-shieldpsalm115v9-scene-01.jpg",
+      "kicker": "THAT HEAVY SILENCE",
+      "sub": "THE HOUR THAT WILL NOT PASS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "O Israel",
+      "img": "short-shieldpsalm115v9-scene-02.jpg",
+      "kicker": "TRUST THE LORD",
+      "sub": "HIS WORD IS YOUR REFUGE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "he is their help",
+      "img": "short-shieldpsalm115v9-scene-03.jpg",
+      "kicker": "DIVINE COVERING",
+      "sub": "SAFE UNDER HIS WINGS",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "O house of Aaron",
+      "img": "short-shieldpsalm115v9-scene-04.jpg",
+      "kicker": "STRENGTH REMAINS",
+      "sub": "STANDING IN HIS LIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "he is their help",
+      "img": "short-shieldpsalm115v9-scene-05.jpg",
+      "kicker": "SURE DEFENSE",
+      "sub": "THE SHIELD THAT ENDURES",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "trust in the LORD",
+      "img": "short-shieldpsalm115v9-scene-06.jpg",
+      "kicker": "HIS PEACE",
+      "sub": "RESTING IN THE SHADOW",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That heavy silence is still here."
+    ],
+    [
+      3,
+      15,
+      "O Israel, trust thou in the LORD: he is their help and their shield."
+    ],
+    [
+      15,
+      27,
+      "O house of Aaron, trust in the LORD: he is their help and their shield."
+    ],
+    [
+      27,
+      40,
+      "Ye that fear the LORD, trust in the LORD: he is their help and their shield."
+    ],
+    [
+      40,
+      65,
+      "Father, the weight of this hour feels immense, yet I turn my eyes to Your unchanging strength."
+    ],
+    [
+      65,
+      85,
+      "Be the shield around my weary heart, guarding my mind when the silence grows too loud for comfort."
+    ],
+    [
+      85,
+      107,
+      "Grant me the grace to lean fully upon Your promises, anchoring my spirit in the hope that endures forever. Amen. That heavy silence."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT HEAVY",
+        "SILENCE",
+        "IS STILL HERE"
+      ],
+      [
+        "HEAVY",
+        "SILENCE"
+      ],
+      "PSALM 115:9-11"
+    ],
+    [
+      3,
+      15,
+      [
+        "O ISRAEL",
+        "TRUST THOU",
+        "IN THE LORD"
+      ],
+      [
+        "TRUST",
+        "LORD"
+      ],
+      "PSALM 115:9"
+    ],
+    [
+      15,
+      27,
+      [
+        "O HOUSE",
+        "OF AARON",
+        "TRUST IN THE LORD"
+      ],
+      [
+        "TRUST",
+        "LORD"
+      ],
+      "PSALM 115:10"
+    ],
+    [
+      27,
+      40,
+      [
+        "YE THAT FEAR",
+        "THE LORD",
+        "TRUST IN THE LORD"
+      ],
+      [
+        "TRUST",
+        "LORD"
+      ],
+      "PSALM 115:11"
+    ],
+    [
+      40,
+      65,
+      [
+        "FATHER",
+        "THE WEIGHT",
+        "IS IMMENSE"
+      ],
+      [
+        "WEIGHT"
+      ],
+      "PRAYER"
+    ],
+    [
+      65,
+      85,
+      [
+        "BE THE",
+        "SHIELD",
+        "AROUND MY HEART"
+      ],
+      [
+        "SHIELD"
+      ],
+      "PRAYER"
+    ],
+    [
+      85,
+      107,
+      [
+        "LEAN FULLY",
+        "UPON YOUR",
+        "PROMISES AMEN"
+      ],
+      [
+        "PROMISES"
+      ],
+      "REFUGE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That heavy silence",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "SILENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "he is their help",
+      "kind": "phrase",
+      "words": [
+        "HELP",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "trust in the LORD",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 115:9-11"
+}

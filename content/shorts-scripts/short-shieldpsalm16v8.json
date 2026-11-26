@@ -1,0 +1,328 @@
+{
+  "key": "short-shieldpsalm16v8",
+  "channel": "prayer8",
+  "psalm": 16,
+  "title": [
+    "WHEN PRESSURE MOUNTS",
+    "PSALM 16:8 COVENANT PRAYER"
+  ],
+  "poster": [
+    "I SHALL NOT",
+    "BE MOVED",
+    "PSALM 16:8",
+    "DAILY REFUGE PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower sunbeams mountain pass",
+    "calm alpine lake reflection golden sunrise light",
+    "sun rays shining through mountain valley clouds",
+    "peaceful river flowing through rugged canyon cliff",
+    "dramatic golden sky over calm ocean waters horizon",
+    "majestic mountain peak bathed in morning sunlight"
+  ],
+  "scenes": [
+    {
+      "a": "Your steps feel unsteady under this sudden pressure.",
+      "img": "short-shieldpsalm16v8-scene-01.jpg",
+      "kicker": "UNSTEADY STEPS",
+      "sub": "WHEN PRESSURE MOUNTS TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "I have set the LORD always before me: because he is at my right hand, I shall not be moved.",
+      "img": "short-shieldpsalm16v8-scene-02.jpg",
+      "kicker": "PSALM 16:8",
+      "sub": "HE IS AT MY RIGHT HAND",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord God, keep my eyes fixed on Your holy presence today.",
+      "img": "short-shieldpsalm16v8-scene-03.jpg",
+      "kicker": "DIVINE COVERING",
+      "sub": "FIX YOUR EYES ON HIM",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Guard my thoughts against every storm and steady my footing on Your truth.",
+      "img": "short-shieldpsalm16v8-scene-04.jpg",
+      "kicker": "UNSHAKEN REFUGE",
+      "sub": "STAND FIRM IN HIS TRUTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Be my strong anchor so no wave can shake me from Your peace.",
+      "img": "short-shieldpsalm16v8-scene-05.jpg",
+      "kicker": "STRONG ANCHOR",
+      "sub": "HELD BY ALMIGHTY HANDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Strengthen my resolve to walk upright, secure under Your unyielding shield.",
+      "img": "short-shieldpsalm16v8-scene-06.jpg",
+      "kicker": "COVENANT SHIELD",
+      "sub": "WALK UNDER GODS COVERING",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your steps feel unsteady under this sudden pressure."
+    ],
+    [
+      3,
+      6,
+      "Scripture assures us in Psalm 16 verse 8:"
+    ],
+    [
+      6,
+      12,
+      "I have set the LORD always before me: because he is at my right hand, I shall not be moved."
+    ],
+    [
+      12,
+      16,
+      "Lord God, keep my eyes fixed on Your holy presence today."
+    ],
+    [
+      16,
+      21,
+      "When circumstances shift and fear tries to sway my heart, stand beside me."
+    ],
+    [
+      21,
+      26,
+      "Guard my thoughts against every storm and steady my footing on Your truth."
+    ],
+    [
+      26,
+      31,
+      "Be my strong anchor so no wave can shake me from Your peace."
+    ],
+    [
+      31,
+      36,
+      "Strengthen my resolve to walk upright, secure under Your unyielding shield."
+    ],
+    [
+      36,
+      40,
+      "Amen. When your steps feel unsteady under sudden pressure."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR STEPS FEEL UNSTEADY",
+        "UNDER THIS SUDDEN PRESSURE"
+      ],
+      [
+        "UNSTEADY",
+        "PRESSURE"
+      ],
+      "PSALM 16 : 8"
+    ],
+    [
+      3,
+      6,
+      [
+        "SCRIPTURE ASSURES US",
+        "IN PSALM 16 VERSE 8"
+      ],
+      [
+        "PSALM 16",
+        "VERSE 8"
+      ],
+      "PSALM 16 : 8"
+    ],
+    [
+      6,
+      12,
+      [
+        "I HAVE SET THE LORD ALWAYS BEFORE ME",
+        "BECAUSE HE IS AT MY RIGHT HAND",
+        "I SHALL NOT BE MOVED"
+      ],
+      [
+        "LORD",
+        "NOT MOVED"
+      ],
+      "PSALM 16 : 8"
+    ],
+    [
+      12,
+      16,
+      [
+        "LORD GOD KEEP MY EYES FIXED",
+        "ON YOUR HOLY PRESENCE TODAY"
+      ],
+      [
+        "EYES",
+        "FIXED"
+      ],
+      "PRAYER OF REFUGE"
+    ],
+    [
+      16,
+      21,
+      [
+        "WHEN CIRCUMSTANCES SHIFT",
+        "AND FEAR TRIES TO SWAY MY HEART",
+        "STAND BESIDE ME"
+      ],
+      [
+        "STAND",
+        "BESIDE"
+      ],
+      "PRAYER OF REFUGE"
+    ],
+    [
+      21,
+      26,
+      [
+        "GUARD MY THOUGHTS AGAINST EVERY STORM",
+        "AND STEADY MY FOOTING ON YOUR TRUTH"
+      ],
+      [
+        "STEADY",
+        "FOOTING"
+      ],
+      "PRAYER OF REFUGE"
+    ],
+    [
+      26,
+      31,
+      [
+        "BE MY STRONG ANCHOR",
+        "SO NO WAVE CAN SHAKE ME",
+        "FROM YOUR PEACE"
+      ],
+      [
+        "STRONG",
+        "ANCHOR"
+      ],
+      "PRAYER OF REFUGE"
+    ],
+    [
+      31,
+      36,
+      [
+        "STRENGTHEN MY RESOLVE TO WALK UPRIGHT",
+        "SECURE UNDER YOUR UNYIELDING SHIELD"
+      ],
+      [
+        "UNYIELDING",
+        "SHIELD"
+      ],
+      "PRAYER OF REFUGE"
+    ],
+    [
+      36,
+      40,
+      [
+        "AMEN WHEN YOUR STEPS FEEL UNSTEADY",
+        "UNDER SUDDEN PRESSURE"
+      ],
+      [
+        "UNSTEADY",
+        "PRESSURE"
+      ],
+      "THE COVENANT SHIELD"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your steps feel unsteady under this sudden pressure.",
+      "kind": "phrase",
+      "words": [
+        "UNSTEADY",
+        "PRESSURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I have set the LORD always before me: because he is at my right hand, I shall not be moved.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "NOT",
+        "MOVED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord God, keep my eyes fixed on Your holy presence today.",
+      "kind": "phrase",
+      "words": [
+        "EYES",
+        "FIXED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guard my thoughts against every storm and steady my footing on Your truth.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "FOOTING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be my strong anchor so no wave can shake me from Your peace.",
+      "kind": "phrase",
+      "words": [
+        "STRONG",
+        "ANCHOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Strengthen my resolve to walk upright, secure under Your unyielding shield.",
+      "kind": "phrase",
+      "words": [
+        "UNYIELDING",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 16:8"
+}

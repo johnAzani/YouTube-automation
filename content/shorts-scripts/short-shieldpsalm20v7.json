@@ -1,0 +1,303 @@
+{
+  "key": "short-shieldpsalm20v7",
+  "channel": "prayer8",
+  "psalm": 20,
+  "title": [
+    "WHEN HUMAN STRENGTH FAILS",
+    "REMEMBRANCE IN GOD"
+  ],
+  "poster": [
+    "PSALM 20:7 PRAYER",
+    "WHEN CHARIOTS FALL",
+    "THE LORD IS REFUGE",
+    "WALK IN COVERING"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower misty mountains sunrise",
+    "sunlit mountain pass golden rays through clouds",
+    "peaceful river flowing through majestic pine valley",
+    "dramatic mountain peak golden light fortress landscape",
+    "calm mountain lake sun rays shadow towering cliff",
+    "glowing horizon over ancient fortress mountain ridge"
+  ],
+  "scenes": [
+    {
+      "a": "Human strength feels fragile as trouble gathers today.",
+      "img": "short-shieldpsalm20v7-scene-01.jpg",
+      "kicker": "WHEN STRENGTH FAILS",
+      "sub": "HUMAN DEFENSES ARE FRAGILE TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Scriptural truth declares, Some trust in chariots, and some in horses: but we will remember the name of the LORD our God.",
+      "img": "short-shieldpsalm20v7-scene-02.jpg",
+      "kicker": "PSALM 20:7",
+      "sub": "WE REMEMBER THE NAME OF THE LORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Heavenly Father, when earthly systems shake and earthly defenses fail, anchor our weary hearts in Your holy name.",
+      "img": "short-shieldpsalm20v7-scene-03.jpg",
+      "kicker": "UNSHAKEABLE TOWER",
+      "sub": "ANCHOR OUR HEARTS IN YOUR NAME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Deliver us from the snare of fear, protect our homes from unseen danger, and shield our minds from quiet dread.",
+      "img": "short-shieldpsalm20v7-scene-04.jpg",
+      "kicker": "DIVINE PROTECTION",
+      "sub": "SHIELD OUR HOMES AND MINDS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "We lay down our self-reliance today and stand secure beneath Your Almighty covering.",
+      "img": "short-shieldpsalm20v7-scene-05.jpg",
+      "kicker": "ALMIGHTY COVERING",
+      "sub": "STAND SECURE IN GOD ALONE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. Even when trouble gathers today.",
+      "img": "short-shieldpsalm20v7-scene-06.jpg",
+      "kicker": "SAFE REFUGE",
+      "sub": "WALK UNDER HIS DAILY SHADOW",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Human strength feels fragile as trouble gathers today."
+    ],
+    [
+      3,
+      9,
+      "When human power and worldly strength demand your reliance, God remains your unshakeable refuge."
+    ],
+    [
+      9,
+      18,
+      "Scriptural truth declares, Some trust in chariots, and some in horses: but we will remember the name of the LORD our God."
+    ],
+    [
+      18,
+      26,
+      "Heavenly Father, when earthly systems shake and earthly defenses fail, anchor our weary hearts in Your holy name."
+    ],
+    [
+      26,
+      34,
+      "Deliver us from the snare of fear, protect our homes from unseen danger, and shield our minds from quiet dread."
+    ],
+    [
+      34,
+      42,
+      "We lay down our self-reliance today and stand secure beneath Your Almighty covering."
+    ],
+    [
+      42,
+      46,
+      "Amen. Even when trouble gathers today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "HUMAN STRENGTH FEELS FRAGILE",
+        "AS TROUBLE GATHERS TODAY"
+      ],
+      [
+        "FRAGILE",
+        "GATHERS"
+      ],
+      "PSALM 20 : 7"
+    ],
+    [
+      3,
+      9,
+      [
+        "WHEN HUMAN POWER DEMANDS RELIANCE",
+        "GOD REMAINS YOUR UNSHAKEABLE REFUGE"
+      ],
+      [
+        "RELIANCE",
+        "UNSHAKEABLE"
+      ],
+      "PSALM 20 : 7"
+    ],
+    [
+      9,
+      18,
+      [
+        "SOME TRUST IN CHARIOTS AND HORSES",
+        "BUT WE WILL REMEMBER THE NAME OF THE LORD"
+      ],
+      [
+        "CHARIOTS",
+        "REMEMBER",
+        "LORD"
+      ],
+      "PSALM 20 : 7"
+    ],
+    [
+      18,
+      26,
+      [
+        "WHEN EARTHLY SYSTEMS SHAKE AND FAIL",
+        "ANCHOR OUR HEARTS IN YOUR HOLY NAME"
+      ],
+      [
+        "SHAKE",
+        "ANCHOR",
+        "HOLY"
+      ],
+      "PSALM 20 : 7"
+    ],
+    [
+      26,
+      34,
+      [
+        "DELIVER US FROM THE SNARE OF FEAR",
+        "PROTECT OUR HOMES AND SHIELD OUR MINDS"
+      ],
+      [
+        "DELIVER",
+        "PROTECT",
+        "SHIELD"
+      ],
+      "PSALM 20 : 7"
+    ],
+    [
+      34,
+      42,
+      [
+        "WE LAY DOWN OUR SELF RELIANCE TODAY",
+        "STAND SECURE BENEATH YOUR ALMIGHTY COVERING"
+      ],
+      [
+        "SELF-RELIANCE",
+        "SECURE",
+        "ALMIGHTY"
+      ],
+      "PSALM 20 : 7"
+    ],
+    [
+      42,
+      46,
+      [
+        "AMEN",
+        "EVEN WHEN TROUBLE GATHERS TODAY"
+      ],
+      [
+        "AMEN",
+        "TROUBLE"
+      ],
+      "PSALM 20 : 7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Human strength feels fragile as trouble gathers today.",
+      "kind": "phrase",
+      "words": [
+        "HUMAN",
+        "FRAGILE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "When human power and worldly strength demand your reliance, God remains your unshakeable refuge.",
+      "kind": "phrase",
+      "words": [
+        "UNSHAKEABLE",
+        "REFUGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Scriptural truth declares, Some trust in chariots, and some in horses: but we will remember the name of the LORD our God.",
+      "kind": "phrase",
+      "words": [
+        "CHARIOTS",
+        "HORSES",
+        "LORD"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, when earthly systems shake and earthly defenses fail, anchor our weary hearts in Your holy name.",
+      "kind": "phrase",
+      "words": [
+        "EARTHLY",
+        "ANCHOR"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Deliver us from the snare of fear, protect our homes from unseen danger, and shield our minds from quiet dread.",
+      "kind": "phrase",
+      "words": [
+        "SNARE",
+        "SHIELD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "We lay down our self-reliance today and stand secure beneath Your Almighty covering.",
+      "kind": "phrase",
+      "words": [
+        "SECURE",
+        "ALMIGHTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Even when trouble gathers today.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "TROUBLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 20:7"
+}
