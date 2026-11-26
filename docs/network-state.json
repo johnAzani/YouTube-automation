@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T18:13:04Z",
+  "generated_at": "2026-11-26T19:39:16Z",
   "monitor_generated_at": "2026-11-26T18:11:34.591855+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 239,
     "published_shorts": 632,
     "public_total": 869,
-    "queued_longform": 88,
+    "queued_longform": 89,
     "queued_shorts": 34,
     "automations_ok": 14,
     "automations_total": 15,
@@ -169,7 +169,7 @@
         "published_shorts": 68,
         "thumbnail_pending": 0,
         "public_total": 97,
-        "queued_longform": 11,
+        "queued_longform": 12,
         "queued_other": 0,
         "queued_shorts": 0
       },
@@ -22731,6 +22731,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 910
+      },
+      {
+        "id": "0958",
+        "slug": "when-words-slip-and-sting-psalm-141-3",
+        "file": "0958-when-words-slip-and-sting-psalm-141-3.md",
+        "title": "When Words Slip and Sting: Psalm 141:3 | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 833
       }
     ],
     "shorts": [
