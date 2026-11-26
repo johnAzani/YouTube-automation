@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T17:11:44Z",
+  "generated_at": "2026-11-26T17:12:47Z",
   "monitor_generated_at": "2026-11-26T17:07:24.135302+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 864,
+    "published_total": 865,
     "published_longform": 236,
-    "published_shorts": 628,
-    "public_total": 862,
+    "published_shorts": 629,
+    "public_total": 863,
     "queued_longform": 90,
-    "queued_shorts": 42,
+    "queued_shorts": 39,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": false
@@ -431,23 +431,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 81,
+        "published_total": 82,
         "published_longform": 22,
-        "published_shorts": 59,
+        "published_shorts": 60,
         "thumbnail_pending": 0,
-        "public_total": 81,
+        "public_total": 82,
         "queued_longform": 8,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 0
       },
       "latest_video": {
-        "id": "0523",
-        "title": "When Provisions Shrink to the Last Morsel: 1 Kings 17:14-16",
-        "format": "longform",
-        "youtube_video_id": "ImDsst_xyo0",
-        "watch_url": "https://youtu.be/ImDsst_xyo0",
+        "id": "SHORT-PROVISIONISAIAH48V17",
+        "title": "Pray This Isaiah 48:17 Prayer for Open Doors & Provision | Seek God's Guidance Today #Shorts",
+        "format": "short",
+        "youtube_video_id": "5G3PGYuR9mM",
+        "watch_url": "https://www.youtube.com/shorts/5G3PGYuR9mM",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T12:28:02Z"
+        "published_at": "2026-11-26T17:11:40Z"
       },
       "next_queued_longform": {
         "id": "0525",
@@ -455,12 +455,7 @@
         "words": 1451,
         "status": "approved"
       },
-      "next_queued_short": {
-        "short": "short-provisionisaiah48v17",
-        "scripture": "Isaiah 48:17",
-        "target_window_utc": "10:44",
-        "status": "approved"
-      },
+      "next_queued_short": null,
       "feedback": {
         "available": true,
         "as_of": "2026-11-26",
@@ -691,6 +686,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONISAIAH48V17",
+      "slug": "short-provisionisaiah48v17-stewardship-prayer",
+      "file": "short-provisionisaiah48v17-stewardship-prayer.md",
+      "title": "Pray This Isaiah 48:17 Prayer for Open Doors & Provision | Seek God's Guidance Today #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T17:11:40Z",
+      "youtube_video_id": "5G3PGYuR9mM",
+      "watch_url": "https://www.youtube.com/shorts/5G3PGYuR9mM",
+      "youtu_be_url": "https://youtu.be/5G3PGYuR9mM",
+      "shorts_url": "https://www.youtube.com/shorts/5G3PGYuR9mM",
+      "studio_url": "https://studio.youtube.com/video/5G3PGYuR9mM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/5G3PGYuR9mM/hqdefault.jpg",
+      "thumb_text": "HE LEADETH THEE \u00b7 BY THE WAY",
+      "thumbnail_pending": false,
+      "duration_label": "49s",
+      "words": 652
+    },
     {
       "id": "SHORT-HEALINGISAIAH53V5",
       "slug": "short-healingisaiah53v5-restoration-prayer",
@@ -22854,39 +22873,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-provisionisaiah48v17",
-        "file": "0521-short-provisionisaiah48v17.yml",
-        "companion_longform_id": "0521",
-        "scripture": "Isaiah 48:17",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-provisiondeuteronomy28v2",
-        "file": "0531-short-provisiondeuteronomy28v2.yml",
-        "companion_longform_id": "0531",
-        "scripture": "Deuteronomy 28:2-6",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-provision2corinthians9v10",
-        "file": "0532-short-provision2corinthians9v10.yml",
-        "companion_longform_id": "0532",
-        "scripture": "2 Corinthians 9:10-11",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-shieldnahum1v7",
