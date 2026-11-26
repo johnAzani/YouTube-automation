@@ -8,41 +8,41 @@
   "first_frame": {
    "age_hours": 0.0,
    "stale": false,
-   "stamp": "2026-11-26T11:21:03.218336+00:00",
+   "stamp": "2026-11-26T11:55:35.497096+00:00",
    "why": ""
   },
   "growth_score": {
    "age_hours": 0.0,
    "stale": false,
-   "stamp": "2026-11-26T11:21:03.113315+00:00",
+   "stamp": "2026-11-26T11:55:33.960499+00:00",
    "why": ""
   },
   "learning_audit": {
-   "age_hours": null,
-   "stale": true,
-   "stamp": "",
-   "why": "no timestamp in the file, so its age cannot be known"
+   "age_hours": 0.6,
+   "stale": false,
+   "stamp": "2026-11-26T11:21:18.682926+00:00",
+   "why": ""
   },
   "performance_feedback": {
-   "age_hours": 7.5,
+   "age_hours": 1.1,
    "stale": false,
-   "stamp": "2026-11-26T03:48:21.012641+00:00",
+   "stamp": "2026-11-26T10:49:13.274922+00:00",
    "why": ""
   },
   "shorts_supply": {
    "age_hours": 0.0,
    "stale": false,
-   "stamp": "2026-11-26T11:21:05.097861+00:00",
+   "stamp": "2026-11-26T11:55:35.371998+00:00",
    "why": ""
   },
   "thumbnail_campaign": {
-   "age_hours": 11.4,
+   "age_hours": 11.9,
    "stale": false,
    "stamp": "2026-11-26",
    "why": ""
   }
  },
- "generated_at": "2026-11-26T11:21:18.682926+00:00",
+ "generated_at": "2026-11-26T11:55:35.949043+00:00",
  "loops": [
   {
    "channels_reordered": 10,
@@ -107,10 +107,8 @@
   "that a loop which is acting is improving anything. Acting means the measurement changes the next build; whether that build does better is what the next reading is for."
  ],
  "schema": 1,
- "sentence": "2 of 5 loops act on their own measurement; thumbnail_choice, first_frame_composition measure and change nothing yet; overlay_lessons have too few videos to conclude. Evidence is stale for: learning_audit.",
- "stale_evidence": [
-  "learning_audit"
- ],
+ "sentence": "2 of 5 loops act on their own measurement; thumbnail_choice, first_frame_composition measure and change nothing yet; overlay_lessons have too few videos to conclude.",
+ "stale_evidence": [],
  "waiting": [
   "overlay_lessons"
  ]
