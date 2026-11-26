@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T20:24:20Z",
+  "generated_at": "2026-11-26T20:27:08Z",
   "monitor_generated_at": "2026-11-26T20:20:30.304881+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 874,
+    "published_total": 875,
     "published_longform": 241,
-    "published_shorts": 633,
-    "public_total": 872,
+    "published_shorts": 634,
+    "public_total": 873,
     "queued_longform": 94,
-    "queued_shorts": 33,
+    "queued_shorts": 32,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": false
@@ -222,23 +222,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 90,
+        "published_total": 91,
         "published_longform": 27,
-        "published_shorts": 63,
-        "thumbnail_pending": 89,
-        "public_total": 90,
+        "published_shorts": 64,
+        "thumbnail_pending": 90,
+        "public_total": 91,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTPSALM59V16",
-        "title": "Pray This Psalm 59:16 Midnight Prayer | Stand In Prayer #Shorts",
+        "id": "SHORT-MIDNIGHTPSALM77V6",
+        "title": "Pray This Psalm 77:6 Midnight Prayer | Your Quiet Room Tonight #Shorts",
         "format": "short",
-        "youtube_video_id": "EgujHbGKS_Q",
-        "watch_url": "https://www.youtube.com/shorts/EgujHbGKS_Q",
+        "youtube_video_id": "v4LLDxbfkJE",
+        "watch_url": "https://www.youtube.com/shorts/v4LLDxbfkJE",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T17:02:15Z"
+        "published_at": "2026-11-26T20:26:06Z"
       },
       "next_queued_longform": {
         "id": "0228",
@@ -247,8 +247,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightpsalm77v6",
-        "scripture": "Psalm 77:6",
+        "short": "short-midnightpsalm88v1",
+        "scripture": "Psalm 88:1-2",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -681,6 +681,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTPSALM77V6",
+      "slug": "short-midnightpsalm77v6-midnight-prayer",
+      "file": "short-midnightpsalm77v6-midnight-prayer.md",
+      "title": "Pray This Psalm 77:6 Midnight Prayer | Your Quiet Room Tonight #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T20:26:06Z",
+      "youtube_video_id": "v4LLDxbfkJE",
+      "watch_url": "https://www.youtube.com/shorts/v4LLDxbfkJE",
+      "youtu_be_url": "https://youtu.be/v4LLDxbfkJE",
+      "shorts_url": "https://www.youtube.com/shorts/v4LLDxbfkJE",
+      "studio_url": "https://studio.youtube.com/video/v4LLDxbfkJE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/v4LLDxbfkJE/hqdefault.jpg",
+      "thumb_text": "WHEN MEMORIES \u00b7 KEEP YOU AWAKE",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 636
+    },
     {
       "id": "0035",
       "slug": "psalm-23-complete-night-prayer-restore-my-soul",
@@ -22927,17 +22951,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-midnightpsalm77v6",
-        "file": "0000-short-midnightpsalm77v6.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 77:6",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightpsalm88v1",
