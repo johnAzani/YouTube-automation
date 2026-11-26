@@ -27,7 +27,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (-49, 809, 1129, 858); shorten the authored lockup or reduce its size"
 ---
 
 You are exhausted from carrying this lonely choice. You wonder if stepping forward will only bring deeper exhaustion. Hear the promise given in Exodus 33:14: And he said, My presence shall go with thee, and I will give thee rest. Lord, we bring this heavy decision into Your light. Do not let us move a single step without Your guidance. Calm the noise in our hearts and steady our anxious thoughts. Lead us by Your Spirit, for we cannot walk alone. Give us the wisdom to rest in Your presence today. Amen. You carry this choice, but God gives rest.
