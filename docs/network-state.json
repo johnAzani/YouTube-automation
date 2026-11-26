@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T12:29:11Z",
+  "generated_at": "2026-11-26T17:03:20Z",
   "monitor_generated_at": "2026-11-26T12:06:37.504292+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 860,
+    "published_total": 861,
     "published_longform": 236,
-    "published_shorts": 624,
-    "public_total": 858,
-    "queued_longform": 83,
-    "queued_shorts": 38,
+    "published_shorts": 625,
+    "public_total": 859,
+    "queued_longform": 90,
+    "queued_shorts": 47,
     "automations_ok": 15,
     "automations_total": 15,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 107,
+        "published_total": 108,
         "published_longform": 27,
-        "published_shorts": 80,
+        "published_shorts": 81,
         "thumbnail_pending": 1,
-        "public_total": 106,
+        "public_total": 107,
         "queued_longform": 7,
         "queued_other": 5,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "SHORT-PSALM52V9",
-        "title": "Say This Psalm 52:9 Prayer Before You Sleep | Leave The Weight Of Today #Shorts",
+        "id": "SHORT-PSALM63V7",
+        "title": "Say This Psalm 63:7 Prayer Before You Sleep | A Short Prayer #Shorts",
         "format": "short",
-        "youtube_video_id": "B-_aThlONto",
-        "watch_url": "https://www.youtube.com/shorts/B-_aThlONto",
+        "youtube_video_id": "a53xfILe8Jw",
+        "watch_url": "https://www.youtube.com/shorts/a53xfILe8Jw",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T11:04:51Z"
+        "published_at": "2026-11-26T17:02:05Z"
       },
       "next_queued_longform": {
         "id": "0035",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm63v7",
-        "scripture": "Psalm 63:7",
+        "short": "short-psalm92v2",
+        "scripture": "Psalm 92:2",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -108,7 +108,7 @@
         "public_total": 112,
         "queued_longform": 21,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 7
       },
       "latest_video": {
         "id": "SHORT-MORNINGLUKE4V42",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm149v5",
-        "scripture": "Psalm 149:5-6",
+        "short": "short-morningpsalm130v6",
+        "scripture": "Psalm 130:6",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -169,9 +169,9 @@
         "published_shorts": 68,
         "thumbnail_pending": 0,
         "public_total": 96,
-        "queued_longform": 9,
+        "queued_longform": 11,
         "queued_other": 0,
-        "queued_shorts": 0
+        "queued_shorts": 2
       },
       "latest_video": {
         "id": "0105",
@@ -188,7 +188,12 @@
         "words": 1208,
         "status": "approved"
       },
-      "next_queued_short": null,
+      "next_queued_short": {
+        "short": "short-middayhabakkuk3v19",
+        "scripture": "Habakkuk 3:19",
+        "target_window_utc": "12:14",
+        "status": "approved"
+      },
       "feedback": {
         "available": true,
         "as_of": "2026-11-26",
@@ -363,9 +368,9 @@
         "published_shorts": 60,
         "thumbnail_pending": 0,
         "public_total": 81,
-        "queued_longform": 11,
+        "queued_longform": 13,
         "queued_other": 0,
-        "queued_shorts": 0
+        "queued_shorts": 4
       },
       "latest_video": {
         "id": "0427",
@@ -382,7 +387,12 @@
         "words": 1154,
         "status": "approved"
       },
-      "next_queued_short": null,
+      "next_queued_short": {
+        "short": "short-healingisaiah53v5",
+        "scripture": "Isaiah 53:5",
+        "target_window_utc": "15:44",
+        "status": "approved"
+      },
       "feedback": {
         "available": true,
         "as_of": "2026-11-26",
@@ -426,9 +436,9 @@
         "published_shorts": 59,
         "thumbnail_pending": 0,
         "public_total": 81,
-        "queued_longform": 6,
+        "queued_longform": 8,
         "queued_other": 0,
-        "queued_shorts": 1
+        "queued_shorts": 3
       },
       "latest_video": {
         "id": "0523",
@@ -630,9 +640,9 @@
         "published_shorts": 53,
         "thumbnail_pending": 0,
         "public_total": 70,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 7
       },
       "latest_video": {
         "id": "0817",
@@ -681,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM63V7",
+      "slug": "short-psalm63v7-pre-sleep-prayer",
+      "file": "short-psalm63v7-pre-sleep-prayer.md",
+      "title": "Say This Psalm 63:7 Prayer Before You Sleep | A Short Prayer #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T17:02:05Z",
+      "youtube_video_id": "a53xfILe8Jw",
+      "watch_url": "https://www.youtube.com/shorts/a53xfILe8Jw",
+      "youtu_be_url": "https://youtu.be/a53xfILe8Jw",
+      "shorts_url": "https://www.youtube.com/shorts/a53xfILe8Jw",
+      "studio_url": "https://studio.youtube.com/video/a53xfILe8Jw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/a53xfILe8Jw/hqdefault.jpg",
+      "thumb_text": "PSALM 63:7 PRAYER \u00b7 PSALM 63:7",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 641
+    },
     {
       "id": "0523",
       "slug": "when-provisions-shrink-to-the-last-morsel-1-kings-17-14-16",
@@ -21819,6 +21853,32 @@
         "words": 1231
       },
       {
+        "id": "0440",
+        "slug": "healing-every-sickness-and-every-disease-matthew-9-35",
+        "file": "0440-healing-every-sickness-and-every-disease-matthew-9-35.md",
+        "title": "Healing Every Sickness and Every Disease: Matthew 9:35",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1247
+      },
+      {
+        "id": "0441",
+        "slug": "recovery-and-life-for-the-weary-body-isaiah-38-16-17",
+        "file": "0441-recovery-and-life-for-the-weary-body-isaiah-38-16-17.md",
+        "title": "Recovery and Life For the Weary Body: Isaiah 38:16-17",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1544
+      },
+      {
         "id": "0525",
         "slug": "promotion-cometh-from-the-lord-psalm-75-6-7",
         "file": "0525-promotion-cometh-from-the-lord-psalm-75-6-7.md",
@@ -21895,6 +21955,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1418
+      },
+      {
+        "id": "0531",
+        "slug": "when-blessings-chase-you-down-deuteronomy-28-2-6",
+        "file": "0531-when-blessings-chase-you-down-deuteronomy-28-2-6.md",
+        "title": "When Blessings Chase You Down: Deuteronomy 28:2-6",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1513
+      },
+      {
+        "id": "0532",
+        "slug": "the-sowers-provision-and-bread-2-corinthians-9-10-11",
+        "file": "0532-the-sowers-provision-and-bread-2-corinthians-9-10-11.md",
+        "title": "The Sower's Provision and Bread: 2 Corinthians 9:10-11",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1270
       },
       {
         "id": "0625",
@@ -22116,6 +22202,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 983
+      },
+      {
+        "id": "0826",
+        "slug": "when-you-need-to-know-your-heart-psalm-139-23-24-the-guided-path",
+        "file": "0826-when-you-need-to-know-your-heart-psalm-139-23-24-the-guided-path.md",
+        "title": "When You Need to Know Your Heart: Psalm 139:23-24 | The Guided Path",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1207
       },
       {
         "id": "0900",
@@ -22402,6 +22501,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1637
+      },
+      {
+        "id": "0955",
+        "slug": "strength-to-walk-on-high-places-habakkuk-3-19",
+        "file": "0955-strength-to-walk-on-high-places-habakkuk-3-19.md",
+        "title": "Strength to Walk on High Places: Habakkuk 3:19 | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 859
+      },
+      {
+        "id": "0956",
+        "slug": "strength-for-a-long-afternoon-psalm-71-16-the-midday-watch",
+        "file": "0956-strength-for-a-long-afternoon-psalm-71-16-the-midday-watch.md",
+        "title": "Strength for a Long Afternoon: Psalm 71:16 | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1278
       }
     ],
     "shorts": [
@@ -22428,6 +22553,17 @@
         "target_window_utc": "18:44"
       },
       {
+        "short": "short-guidedpsalm119v35",
+        "file": "0000-short-guidedpsalm119v35.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 119:35",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "18:44"
+      },
+      {
         "short": "short-guidedpsalm139v23",
         "file": "0000-short-guidedpsalm139v23.yml",
         "companion_longform_id": "",
@@ -22437,6 +22573,28 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
+      },
+      {
+        "short": "short-healingisaiah53v5",
+        "file": "0000-short-healingisaiah53v5.yml",
+        "companion_longform_id": "",
+        "scripture": "Isaiah 53:5",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-healingpsalm34v18",
+        "file": "0000-short-healingpsalm34v18.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 34:18",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
       },
       {
         "short": "short-midnightpsalm59v16",
@@ -22470,6 +22628,17 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-morningpsalm130v6",
+        "file": "0000-short-morningpsalm130v6.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 130:6",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm149v5",
@@ -22536,17 +22705,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-psalm63v7",
-        "file": "0000-short-psalm63v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 63:7",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm92v2",
@@ -22659,10 +22817,54 @@
         "target_window_utc": "17:14"
       },
       {
+        "short": "short-healingmatthew9v35",
+        "file": "0440-short-healingmatthew9v35.yml",
+        "companion_longform_id": "0440",
+        "scripture": "Matthew 9:35",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-healingisaiah38v16",
+        "file": "0441-short-healingisaiah38v16.yml",
+        "companion_longform_id": "0441",
+        "scripture": "Isaiah 38:16-17",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
         "short": "short-provisionisaiah48v17",
         "file": "0521-short-provisionisaiah48v17.yml",
         "companion_longform_id": "0521",
         "scripture": "Isaiah 48:17",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-provisiondeuteronomy28v2",
+        "file": "0531-short-provisiondeuteronomy28v2.yml",
+        "companion_longform_id": "0531",
+        "scripture": "Deuteronomy 28:2-6",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-provision2corinthians9v10",
+        "file": "0532-short-provision2corinthians9v10.yml",
+        "companion_longform_id": "0532",
+        "scripture": "2 Corinthians 9:10-11",
         "channel": "prayer7",
         "channel_name": "The Provision Table",
         "status": "approved",
@@ -22822,6 +23024,28 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
+      },
+      {
+        "short": "short-middayhabakkuk3v19",
+        "file": "0955-short-middayhabakkuk3v19.yml",
+        "companion_longform_id": "0955",
+        "scripture": "Habakkuk 3:19",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-middaypsalm71v16",
+        "file": "0956-short-middaypsalm71v16.yml",
+        "companion_longform_id": "0956",
+        "scripture": "Psalm 71:16",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
       }
     ]
   },
