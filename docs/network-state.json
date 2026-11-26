@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T19:39:16Z",
+  "generated_at": "2026-11-26T19:42:33Z",
   "monitor_generated_at": "2026-11-26T18:11:34.591855+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 239,
     "published_shorts": 632,
     "public_total": 869,
-    "queued_longform": 89,
+    "queued_longform": 91,
     "queued_shorts": 34,
     "automations_ok": 14,
     "automations_total": 15,
@@ -431,7 +431,7 @@
         "published_shorts": 60,
         "thumbnail_pending": 0,
         "public_total": 82,
-        "queued_longform": 8,
+        "queued_longform": 10,
         "queued_other": 0,
         "queued_shorts": 0
       },
@@ -22185,6 +22185,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1270
+      },
+      {
+        "id": "0534",
+        "slug": "when-provisions-shrink-to-the-last-morsel-exodus-16-4-the-provision-table",
+        "file": "0534-when-provisions-shrink-to-the-last-morsel-exodus-16-4-the-provision-table.md",
+        "title": "When Daily Bread Is All You Have: Exodus 16:4 | The Provision Table",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1828
+      },
+      {
+        "id": "0535",
+        "slug": "the-lord-shall-give-that-which-is-good-psalm-85-12",
+        "file": "0535-the-lord-shall-give-that-which-is-good-psalm-85-12.md",
+        "title": "The Lord Shall Give That Which Is Good: Psalm 85:12",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1230
       },
       {
         "id": "0625",
