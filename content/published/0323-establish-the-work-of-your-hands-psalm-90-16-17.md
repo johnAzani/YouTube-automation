@@ -2,7 +2,7 @@
 id: '0323'
 title: 'Establish the Work of Your Hands: Psalm 90:16-17 | The Family Altar'
 slug: establish-the-work-of-your-hands-psalm-90-16-17
-status: approved
+status: published
 channel: prayer5
 privacy: public
 format: longform
@@ -77,6 +77,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-26"
+published_at: "2026-11-26T17:33:47Z"
+youtube_video_id: "cEU1AX2ulcQ"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 350.49
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar

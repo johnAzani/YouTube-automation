@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T17:29:19Z",
+  "generated_at": "2026-11-26T17:34:54Z",
   "monitor_generated_at": "2026-11-26T17:07:24.135302+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 868,
-    "published_longform": 237,
-    "published_shorts": 631,
-    "public_total": 866,
-    "queued_longform": 90,
-    "queued_shorts": 35,
+    "published_total": 870,
+    "published_longform": 238,
+    "published_shorts": 632,
+    "public_total": 868,
+    "queued_longform": 89,
+    "queued_shorts": 34,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": false
@@ -290,33 +290,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 78,
-        "published_longform": 22,
-        "published_shorts": 56,
-        "thumbnail_pending": 78,
-        "public_total": 78,
-        "queued_longform": 6,
+        "published_total": 80,
+        "published_longform": 23,
+        "published_shorts": 57,
+        "thumbnail_pending": 80,
+        "public_total": 80,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-FAMILYEPHESIANS3V14",
-        "title": "Pray This Ephesians 3:14-19 Family Prayer Over Your Home | Strength For Your Home #Shorts",
-        "format": "short",
-        "youtube_video_id": "UuN6KXRdte4",
-        "watch_url": "https://www.youtube.com/shorts/UuN6KXRdte4",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T11:06:00Z"
-      },
-      "next_queued_longform": {
         "id": "0323",
         "title": "Establish the Work of Your Hands: Psalm 90:16-17 | The Family Altar",
-        "words": 913,
+        "format": "longform",
+        "youtube_video_id": "cEU1AX2ulcQ",
+        "watch_url": "https://youtu.be/cEU1AX2ulcQ",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T17:33:47Z"
+      },
+      "next_queued_longform": {
+        "id": "0324",
+        "title": "When Tension Fills the Living Room: Luke 10:5-6 | The Family Altar",
+        "words": 1184,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyproverbs31v25",
-        "scripture": "Proverbs 31:25-28",
+        "short": "short-family2samuel7v29",
+        "scripture": "2 Samuel 7:29",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -682,6 +682,30 @@
   ],
   "videos": [
     {
+      "id": "0323",
+      "slug": "establish-the-work-of-your-hands-psalm-90-16-17",
+      "file": "0323-establish-the-work-of-your-hands-psalm-90-16-17.md",
+      "title": "Establish the Work of Your Hands: Psalm 90:16-17 | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T17:33:47Z",
+      "youtube_video_id": "cEU1AX2ulcQ",
+      "watch_url": "https://youtu.be/cEU1AX2ulcQ",
+      "youtu_be_url": "https://youtu.be/cEU1AX2ulcQ",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/cEU1AX2ulcQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/cEU1AX2ulcQ/hqdefault.jpg",
+      "thumb_text": "ESTABLISH OUR WORK",
+      "thumbnail_pending": true,
+      "duration_label": "5m 50s",
+      "words": 913
+    },
+    {
       "id": "0107",
       "slug": "strength-for-the-hours-that-remain-philippians-4-13",
       "file": "0107-strength-for-the-hours-that-remain-philippians-4-13.md",
@@ -872,6 +896,30 @@
       "thumbnail_pending": false,
       "duration_label": "50s",
       "words": 641
+    },
+    {
+      "id": "SHORT-FAMILYPROVERBS31V25",
+      "slug": "short-familyproverbs31v25-household-prayer",
+      "file": "short-familyproverbs31v25-household-prayer.md",
+      "title": "Pray This Proverbs 31:25-28 Family Prayer Over Your Home | Trust God With Tomorrow #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T17:01:27Z",
+      "youtube_video_id": "0cxji1UHHQY",
+      "watch_url": "https://www.youtube.com/shorts/0cxji1UHHQY",
+      "youtu_be_url": "https://youtu.be/0cxji1UHHQY",
+      "shorts_url": "https://www.youtube.com/shorts/0cxji1UHHQY",
+      "studio_url": "https://studio.youtube.com/video/0cxji1UHHQY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/0cxji1UHHQY/hqdefault.jpg",
+      "thumb_text": "PROVERBS 31:25 \u00b7 CLOTHED IN",
+      "thumbnail_pending": true,
+      "duration_label": "55s",
+      "words": 679
     },
     {
       "id": "0523",
@@ -21777,19 +21825,6 @@
         "words": 1381
       },
       {
-        "id": "0323",
-        "slug": "establish-the-work-of-your-hands-psalm-90-16-17",
-        "file": "0323-establish-the-work-of-your-hands-psalm-90-16-17.md",
-        "title": "Establish the Work of Your Hands: Psalm 90:16-17 | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 913
-      },
-      {
         "id": "0324",
         "slug": "inviting-gods-peace-into-your-home-luke-10-5-6",
         "file": "0324-inviting-gods-peace-into-your-home-luke-10-5-6.md",
@@ -22885,17 +22920,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-familyproverbs31v25",
-        "file": "0320-short-familyproverbs31v25.yml",
-        "companion_longform_id": "0320",
-        "scripture": "Proverbs 31:25-28",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-family2samuel7v29",
