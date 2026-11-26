@@ -16,6 +16,13 @@
       "workflow": "keepalive.yml"
     },
     {
+      "late_minutes": 221,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-26T22:55:55+00:00",
+      "slot": "2026-11-26T19:14:00+00:00",
+      "workflow": "comments.yml"
+    },
+    {
       "late_minutes": 196,
       "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
       "ran_at": "2026-11-26T06:53:04+00:00",
@@ -37,8 +44,8 @@
       "workflow": "tests-on-main.yml"
     }
   ],
-  "generated_at": "2026-11-26T22:55:50.765223+00:00",
-  "last_run_at": "2026-11-26T22:55:11+00:00",
+  "generated_at": "2026-11-26T22:56:51.997091+00:00",
+  "last_run_at": "2026-11-26T22:55:57+00:00",
   "on_time": [
     {
       "late_minutes": 5,
