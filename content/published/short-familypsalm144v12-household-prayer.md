@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["BLESSINGS FOR", "YOUR HOME AND", "YOUR CHILDREN", "PSALM 144:12-15"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-03T07:17:55Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When you worry whether your home will stand strong in this world, hear God's promise. That our sons may be as plants grown up in their youth; that our daughters may be as corner stones, polished after the similitude of a palace: Happy is that people, that is in such a case: yea, happy is that people, whose God is the LORD. Heavenly Father, establish our children in Your truth and shield our household from harm. Supply all our needs, fill our rooms with joy, and keep our family steadfast in faith. Subscribe to join us in covering your home in daily prayer.

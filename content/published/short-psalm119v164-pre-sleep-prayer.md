@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["UNFINISHED WORK", "SEVEN TIMES OF PRAISE", "RESTING IN MERCY", "BEDTIME PRAYER"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Unfinished tasks still echo in this dark room. You spent the entire day carrying what you could not control. Turn your tired thoughts to scripture: Seven times a day do I praise thee because of thy righteous judgments. Lord, as midnight settles, I put down every defense and choose gratitude for your faithful rule. You guided each morning hour, and your righteous care remains steady in this quiet night. Loosen the tight grip in my chest and silence the worries still negotiating with tomorrow. Cover this resting place with your presence and restore my weary soul in deep sleep. Amen. Unfinished tasks fade in this quiet room.
