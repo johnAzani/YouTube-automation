@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T07:07:51Z",
+  "generated_at": "2026-11-26T07:10:34Z",
   "monitor_generated_at": "2026-11-26T07:06:17.904520+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 836,
+    "published_total": 837,
     "published_longform": 230,
-    "published_shorts": 606,
-    "public_total": 834,
+    "published_shorts": 607,
+    "public_total": 835,
     "queued_longform": 82,
-    "queued_shorts": 62,
+    "queued_shorts": 60,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -227,23 +227,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 87,
+        "published_total": 88,
         "published_longform": 27,
-        "published_shorts": 60,
-        "thumbnail_pending": 86,
-        "public_total": 87,
+        "published_shorts": 61,
+        "thumbnail_pending": 87,
+        "public_total": 88,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0226",
-        "title": "When Accusation Whispers in the Dark: Revelation 12:11",
-        "format": "longform",
-        "youtube_video_id": "hKIvsMhgQCs",
-        "watch_url": "https://youtu.be/hKIvsMhgQCs",
+        "id": "SHORT-MIDNIGHTPSALM121V3",
+        "title": "Pray This Psalm 121:3-4 Midnight Prayer | Stand In Faith #Shorts",
+        "format": "short",
+        "youtube_video_id": "N9JHbdCrr_0",
+        "watch_url": "https://www.youtube.com/shorts/N9JHbdCrr_0",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T00:12:55Z"
+        "published_at": "2026-11-26T07:09:37Z"
       },
       "next_queued_longform": {
         "id": "0228",
@@ -252,8 +252,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightpsalm121v3",
-        "scripture": "Psalm 121:3-4",
+        "short": "short-midnightpsalm46v10",
+        "scripture": "Psalm 46:10",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTPSALM121V3",
+      "slug": "short-midnightpsalm121v3-midnight-prayer",
+      "file": "short-midnightpsalm121v3-midnight-prayer.md",
+      "title": "Pray This Psalm 121:3-4 Midnight Prayer | Stand In Faith #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T07:09:37Z",
+      "youtube_video_id": "N9JHbdCrr_0",
+      "watch_url": "https://www.youtube.com/shorts/N9JHbdCrr_0",
+      "youtu_be_url": "https://youtu.be/N9JHbdCrr_0",
+      "shorts_url": "https://www.youtube.com/shorts/N9JHbdCrr_0",
+      "studio_url": "https://studio.youtube.com/video/N9JHbdCrr_0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/N9JHbdCrr_0/hqdefault.jpg",
+      "thumb_text": "MIDNIGHT PRAYER \u00b7 PSALM 121:3-4",
+      "thumbnail_pending": true,
+      "duration_label": "49s",
+      "words": 632
+    },
     {
       "id": "SHORT-MORNINGPSALM145V2",
       "slug": "short-morningpsalm145v2-sunrise-prayer",
@@ -21882,17 +21906,6 @@
         "target_window_utc": "18:44"
       },
       {
-        "short": "short-midnightpsalm121v3",
-        "file": "0000-short-midnightpsalm121v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 121:3-4",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
-      },
-      {
         "short": "short-midnightpsalm46v10",
         "file": "0000-short-midnightpsalm46v10.yml",
         "companion_longform_id": "",
@@ -22150,17 +22163,6 @@
         "file": "0229-short-midnighthebrews13v20.yml",
         "companion_longform_id": "0229",
         "scripture": "Hebrews 13:20-21",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-midnightromans16v20",
-        "file": "0233-short-midnightromans16v20.yml",
-        "companion_longform_id": "0233",
-        "scripture": "Romans 16:20",
         "channel": "prayer4",
         "channel_name": "The Midnight Watch",
         "status": "approved",
