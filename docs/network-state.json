@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T11:07:14Z",
+  "generated_at": "2026-11-26T11:08:05Z",
   "monitor_generated_at": "2026-11-26T09:46:01.080003+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 850,
+    "published_total": 851,
     "published_longform": 232,
-    "published_shorts": 618,
-    "public_total": 848,
+    "published_shorts": 619,
+    "public_total": 849,
     "queued_longform": 86,
-    "queued_shorts": 54,
+    "queued_shorts": 53,
     "automations_ok": 15,
     "automations_total": 15,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 112,
+        "published_total": 113,
         "published_longform": 36,
-        "published_shorts": 76,
+        "published_shorts": 77,
         "thumbnail_pending": 3,
-        "public_total": 111,
+        "public_total": 112,
         "queued_longform": 21,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0076",
-        "title": "Strength for the Challenges Ahead: Ephesians 6:10-11",
-        "format": "longform",
-        "youtube_video_id": "_3OClNDS1uI",
-        "watch_url": "https://youtu.be/_3OClNDS1uI",
+        "id": "SHORT-MORNINGLUKE4V42",
+        "title": "Say This Luke 4:42 Prayer for Fresh Start at Sunrise | When Every Voice Calls Out #Shorts",
+        "format": "short",
+        "youtube_video_id": "LohfRdWk0Yw",
+        "watch_url": "https://www.youtube.com/shorts/LohfRdWk0Yw",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T07:54:52Z"
+        "published_at": "2026-11-26T11:06:42Z"
       },
       "next_queued_longform": {
         "id": "0078",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningluke4v42",
-        "scripture": "Luke 4:42",
+        "short": "short-morningpsalm149v5",
+        "scripture": "Psalm 149:5-6",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGLUKE4V42",
+      "slug": "short-morningluke4v42-sunrise-prayer",
+      "file": "short-morningluke4v42-sunrise-prayer.md",
+      "title": "Say This Luke 4:42 Prayer for Fresh Start at Sunrise | When Every Voice Calls Out #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T11:06:42Z",
+      "youtube_video_id": "LohfRdWk0Yw",
+      "watch_url": "https://www.youtube.com/shorts/LohfRdWk0Yw",
+      "youtu_be_url": "https://youtu.be/LohfRdWk0Yw",
+      "shorts_url": "https://www.youtube.com/shorts/LohfRdWk0Yw",
+      "studio_url": "https://studio.youtube.com/video/LohfRdWk0Yw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/LohfRdWk0Yw/hqdefault.jpg",
+      "thumb_text": "THE MORNING ALTAR \u00b7 BEFORE DEMANDS BEGIN",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 621
+    },
     {
       "id": "SHORT-FAMILYEPHESIANS3V14",
       "slug": "short-familyephesians3v14-household-prayer",
@@ -22356,17 +22380,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningluke4v42",
-        "file": "0000-short-morningluke4v42.yml",
-        "companion_longform_id": "",
-        "scripture": "Luke 4:42",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm149v5",
