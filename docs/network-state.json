@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T17:03:36Z",
+  "generated_at": "2026-11-26T17:03:47Z",
   "monitor_generated_at": "2026-11-26T12:06:37.504292+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 862,
+    "published_total": 863,
     "published_longform": 236,
-    "published_shorts": 626,
-    "public_total": 860,
+    "published_shorts": 627,
+    "public_total": 861,
     "queued_longform": 90,
-    "queued_shorts": 46,
+    "queued_shorts": 45,
     "automations_ok": 15,
     "automations_total": 15,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 113,
+        "published_total": 114,
         "published_longform": 36,
-        "published_shorts": 77,
+        "published_shorts": 78,
         "thumbnail_pending": 0,
-        "public_total": 112,
+        "public_total": 113,
         "queued_longform": 21,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MORNINGLUKE4V42",
-        "title": "Say This Luke 4:42 Prayer for Fresh Start at Sunrise | When Every Voice Calls Out #Shorts",
+        "id": "SHORT-MORNINGPSALM130V6",
+        "title": "Say This Psalm 130:6 Prayer for Fresh Start at Sunrise | Waiting For Dawn #Shorts",
         "format": "short",
-        "youtube_video_id": "LohfRdWk0Yw",
-        "watch_url": "https://www.youtube.com/shorts/LohfRdWk0Yw",
+        "youtube_video_id": "-DXE2mx_vKI",
+        "watch_url": "https://www.youtube.com/shorts/-DXE2mx_vKI",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T11:06:42Z"
+        "published_at": "2026-11-26T17:02:34Z"
       },
       "next_queued_longform": {
         "id": "0078",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm130v6",
-        "scripture": "Psalm 130:6",
+        "short": "short-morningpsalm149v5",
+        "scripture": "Psalm 149:5-6",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM130V6",
+      "slug": "short-morningpsalm130v6-sunrise-prayer",
+      "file": "short-morningpsalm130v6-sunrise-prayer.md",
+      "title": "Say This Psalm 130:6 Prayer for Fresh Start at Sunrise | Waiting For Dawn #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T17:02:34Z",
+      "youtube_video_id": "-DXE2mx_vKI",
+      "watch_url": "https://www.youtube.com/shorts/-DXE2mx_vKI",
+      "youtu_be_url": "https://youtu.be/-DXE2mx_vKI",
+      "shorts_url": "https://www.youtube.com/shorts/-DXE2mx_vKI",
+      "studio_url": "https://studio.youtube.com/video/-DXE2mx_vKI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/-DXE2mx_vKI/hqdefault.jpg",
+      "thumb_text": "YOU COUNTED \u00b7 EVERY HOUR",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 624
+    },
     {
       "id": "SHORT-MIDNIGHTPSALM59V16",
       "slug": "short-midnightpsalm59v16-midnight-prayer",
@@ -22641,17 +22665,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningpsalm130v6",
-        "file": "0000-short-morningpsalm130v6.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 130:6",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm149v5",
