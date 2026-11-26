@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T07:18:17Z",
+  "generated_at": "2026-11-26T07:19:45Z",
   "monitor_generated_at": "2026-11-26T07:06:17.904520+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 841,
+    "published_total": 842,
     "published_longform": 230,
-    "published_shorts": 611,
-    "public_total": 839,
+    "published_shorts": 612,
+    "public_total": 840,
     "queued_longform": 82,
-    "queued_shorts": 51,
+    "queued_shorts": 49,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -421,23 +421,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 78,
+        "published_total": 79,
         "published_longform": 21,
-        "published_shorts": 57,
+        "published_shorts": 58,
         "thumbnail_pending": 7,
-        "public_total": 78,
+        "public_total": 79,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPROVERBS22V29",
-        "title": "Pray This Proverbs 22:29 Prayer for Open Doors & Provision | The Labor Of Your Hands #Shorts",
+        "id": "SHORT-PROVISIONPSALM65V11",
+        "title": "Pray This Psalm 65:11 Prayer for Open Doors & Provision | Commit Your Financial Needs #Shorts",
         "format": "short",
-        "youtube_video_id": "NULM2x6uzbU",
-        "watch_url": "https://www.youtube.com/shorts/NULM2x6uzbU",
+        "youtube_video_id": "hdEuaZlOYMU",
+        "watch_url": "https://www.youtube.com/shorts/hdEuaZlOYMU",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T00:00:29Z"
+        "published_at": "2026-11-26T07:18:33Z"
       },
       "next_queued_longform": {
         "id": "0523",
@@ -446,8 +446,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionpsalm65v11",
-        "scripture": "Psalm 65:11",
+        "short": "short-provisionproverbs10v22",
+        "scripture": "Proverbs 10:22",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -681,6 +681,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONPSALM65V11",
+      "slug": "short-provisionpsalm65v11-stewardship-prayer",
+      "file": "short-provisionpsalm65v11-stewardship-prayer.md",
+      "title": "Pray This Psalm 65:11 Prayer for Open Doors & Provision | Commit Your Financial Needs #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T07:18:33Z",
+      "youtube_video_id": "hdEuaZlOYMU",
+      "watch_url": "https://www.youtube.com/shorts/hdEuaZlOYMU",
+      "youtu_be_url": "https://youtu.be/hdEuaZlOYMU",
+      "shorts_url": "https://www.youtube.com/shorts/hdEuaZlOYMU",
+      "studio_url": "https://studio.youtube.com/video/hdEuaZlOYMU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/hdEuaZlOYMU/hqdefault.jpg",
+      "thumb_text": "THOU CROWNEST THE YEAR \u00b7 WITH THY GOODNESS",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 653
+    },
     {
       "id": "SHORT-HEALINGREVELATION21V4",
       "slug": "short-healingrevelation21v4-restoration-prayer",
@@ -22289,17 +22313,6 @@
         "target_window_utc": "17:14"
       },
       {
-        "short": "short-provisionpsalm65v11",
-        "file": "0519-short-provisionpsalm65v11.yml",
-        "companion_longform_id": "0519",
-        "scripture": "Psalm 65:11",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
-      },
-      {
         "short": "short-provisionproverbs10v22",
         "file": "0520-short-provisionproverbs10v22.yml",
         "companion_longform_id": "0520",
@@ -22315,17 +22328,6 @@
         "file": "0521-short-provisionisaiah48v17.yml",
         "companion_longform_id": "0521",
         "scripture": "Isaiah 48:17",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-provisionephesians3v20",
-        "file": "0529-short-provisionephesians3v20.yml",
-        "companion_longform_id": "0529",
-        "scripture": "Ephesians 3:20",
         "channel": "prayer7",
         "channel_name": "The Provision Table",
         "status": "approved",
