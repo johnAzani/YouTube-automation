@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T11:08:05Z",
+  "generated_at": "2026-11-26T11:08:42Z",
   "monitor_generated_at": "2026-11-26T09:46:01.080003+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 851,
+    "published_total": 852,
     "published_longform": 232,
-    "published_shorts": 619,
-    "public_total": 849,
+    "published_shorts": 620,
+    "public_total": 850,
     "queued_longform": 86,
-    "queued_shorts": 53,
+    "queued_shorts": 52,
     "automations_ok": 15,
     "automations_total": 15,
     "network_healthy": true
@@ -227,23 +227,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 88,
+        "published_total": 89,
         "published_longform": 27,
-        "published_shorts": 61,
-        "thumbnail_pending": 87,
-        "public_total": 88,
+        "published_shorts": 62,
+        "thumbnail_pending": 88,
+        "public_total": 89,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTPSALM121V3",
-        "title": "Pray This Psalm 121:3-4 Midnight Prayer | Stand In Faith #Shorts",
+        "id": "SHORT-MIDNIGHTPSALM46V10",
+        "title": "Pray This Psalm 46:10 Midnight Prayer | Demand An Answer Tonight #Shorts",
         "format": "short",
-        "youtube_video_id": "N9JHbdCrr_0",
-        "watch_url": "https://www.youtube.com/shorts/N9JHbdCrr_0",
+        "youtube_video_id": "hS7HV6Hxbuo",
+        "watch_url": "https://www.youtube.com/shorts/hS7HV6Hxbuo",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T07:09:37Z"
+        "published_at": "2026-11-26T11:07:18Z"
       },
       "next_queued_longform": {
         "id": "0228",
@@ -252,8 +252,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightpsalm46v10",
-        "scripture": "Psalm 46:10",
+        "short": "short-midnightpsalm59v16",
+        "scripture": "Psalm 59:16",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTPSALM46V10",
+      "slug": "short-midnightpsalm46v10-midnight-prayer",
+      "file": "short-midnightpsalm46v10-midnight-prayer.md",
+      "title": "Pray This Psalm 46:10 Midnight Prayer | Demand An Answer Tonight #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T11:07:18Z",
+      "youtube_video_id": "hS7HV6Hxbuo",
+      "watch_url": "https://www.youtube.com/shorts/hS7HV6Hxbuo",
+      "youtu_be_url": "https://youtu.be/hS7HV6Hxbuo",
+      "shorts_url": "https://www.youtube.com/shorts/hS7HV6Hxbuo",
+      "studio_url": "https://studio.youtube.com/video/hS7HV6Hxbuo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/hS7HV6Hxbuo/hqdefault.jpg",
+      "thumb_text": "MIDNIGHT WATCH \u00b7 PSALM 46:10",
+      "thumbnail_pending": true,
+      "duration_label": "55s",
+      "words": 635
+    },
     {
       "id": "SHORT-MORNINGLUKE4V42",
       "slug": "short-morningluke4v42-sunrise-prayer",
@@ -22336,17 +22360,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightpsalm46v10",
-        "file": "0000-short-midnightpsalm46v10.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 46:10",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightpsalm59v16",
