@@ -2,7 +2,7 @@
 id: '0525'
 title: 'Promotion Cometh from the Lord: Psalm 75:6-7 | The Provision Table'
 slug: promotion-cometh-from-the-lord-psalm-75-6-7
-status: approved
+status: published
 channel: prayer7
 privacy: public
 format: longform
@@ -72,6 +72,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-26"
+published_at: "2026-11-26T20:58:50Z"
+youtube_video_id: "Zz0afT2UTvw"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 560.25
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — Approaching Jehovah-Jireh at the Prepared Table

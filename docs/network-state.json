@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T20:36:43Z",
+  "generated_at": "2026-11-26T20:59:49Z",
   "monitor_generated_at": "2026-11-26T20:20:30.304881+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 879,
-    "published_longform": 241,
+    "published_total": 880,
+    "published_longform": 242,
     "published_shorts": 638,
-    "public_total": 877,
-    "queued_longform": 94,
+    "public_total": 878,
+    "queued_longform": 95,
     "queued_shorts": 28,
     "automations_ok": 14,
     "automations_total": 15,
@@ -426,28 +426,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 82,
-        "published_longform": 22,
+        "published_total": 83,
+        "published_longform": 23,
         "published_shorts": 60,
         "thumbnail_pending": 0,
-        "public_total": 82,
-        "queued_longform": 10,
+        "public_total": 83,
+        "queued_longform": 11,
         "queued_other": 0,
         "queued_shorts": 0
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONISAIAH48V17",
-        "title": "Pray This Isaiah 48:17 Prayer for Open Doors & Provision | Seek God's Guidance Today #Shorts",
-        "format": "short",
-        "youtube_video_id": "5G3PGYuR9mM",
-        "watch_url": "https://www.youtube.com/shorts/5G3PGYuR9mM",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T17:11:40Z"
-      },
-      "next_queued_longform": {
         "id": "0525",
         "title": "Promotion Cometh from the Lord: Psalm 75:6-7 | The Provision Table",
-        "words": 1451,
+        "format": "longform",
+        "youtube_video_id": "Zz0afT2UTvw",
+        "watch_url": "https://youtu.be/Zz0afT2UTvw",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T20:58:50Z"
+      },
+      "next_queued_longform": {
+        "id": "0526",
+        "title": "When Labour Yields Nothing: Luke 5:4-6 | The Provision Table",
+        "words": 1267,
         "status": "approved"
       },
       "next_queued_short": null,
@@ -681,6 +681,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0525",
+      "slug": "promotion-cometh-from-the-lord-psalm-75-6-7",
+      "file": "0525-promotion-cometh-from-the-lord-psalm-75-6-7.md",
+      "title": "Promotion Cometh from the Lord: Psalm 75:6-7 | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T20:58:50Z",
+      "youtube_video_id": "Zz0afT2UTvw",
+      "watch_url": "https://youtu.be/Zz0afT2UTvw",
+      "youtu_be_url": "https://youtu.be/Zz0afT2UTvw",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/Zz0afT2UTvw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Zz0afT2UTvw/hqdefault.jpg",
+      "thumb_text": "GOD OPENS PROMOTION",
+      "thumbnail_pending": false,
+      "duration_label": "9m 20s",
+      "words": 1451
+    },
     {
       "id": "SHORT-GUIDEDPSALM119V130",
       "slug": "short-guidedpsalm119v130-guidance-prayer",
@@ -22288,19 +22312,6 @@
         "words": 1720
       },
       {
-        "id": "0525",
-        "slug": "promotion-cometh-from-the-lord-psalm-75-6-7",
-        "file": "0525-promotion-cometh-from-the-lord-psalm-75-6-7.md",
-        "title": "Promotion Cometh from the Lord: Psalm 75:6-7 | The Provision Table",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1451
-      },
-      {
         "id": "0526",
         "slug": "when-labour-yields-nothing-luke-5-4-6",
         "file": "0526-when-labour-yields-nothing-luke-5-4-6.md",
@@ -22416,6 +22427,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1230
+      },
+      {
+        "id": "0537",
+        "slug": "food-on-the-table-and-bread-for-tomorrow-psalm-111-5",
+        "file": "0537-food-on-the-table-and-bread-for-tomorrow-psalm-111-5.md",
+        "title": "Food on the Table and Bread for Tomorrow: Psalm 111:5",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1355
+      },
+      {
+        "id": "0538",
+        "slug": "trusting-god-when-supplies-are-low-psalm-37-3-5",
+        "file": "0538-trusting-god-when-supplies-are-low-psalm-37-3-5.md",
+        "title": "Trusting God When Supplies Are Low: Psalm 37:3-5 | The Provision Table",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1636
       },
       {
         "id": "0625",
