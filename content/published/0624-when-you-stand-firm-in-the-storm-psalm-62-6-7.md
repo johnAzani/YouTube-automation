@@ -2,7 +2,7 @@
 id: '0624'
 title: 'When You Stand Firm in the Storm: Psalm 62:6-7 | The Covenant Shield'
 slug: when-you-stand-firm-in-the-storm-psalm-62-6-7
-status: approved
+status: published
 channel: prayer8
 privacy: public
 format: longform
@@ -74,6 +74,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-26"
+published_at: "2026-11-26T00:59:01Z"
+youtube_video_id: "yOYG5lUPqw0"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 582.04
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — The Unshakeable Rock of Our Refuge

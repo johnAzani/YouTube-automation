@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T00:13:53Z",
+  "generated_at": "2026-11-26T00:59:59Z",
   "monitor_generated_at": "2026-11-25T23:07:25.395195+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 833,
-    "published_longform": 229,
-    "published_shorts": 604,
-    "public_total": 831,
-    "queued_longform": 75,
-    "queued_shorts": 39,
+    "published_total": 835,
+    "published_longform": 230,
+    "published_shorts": 605,
+    "public_total": 833,
+    "queued_longform": 74,
+    "queued_shorts": 38,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": true
@@ -504,33 +504,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 68,
-        "published_longform": 18,
-        "published_shorts": 50,
+        "published_total": 70,
+        "published_longform": 19,
+        "published_shorts": 51,
         "thumbnail_pending": 30,
-        "public_total": 68,
-        "queued_longform": 6,
+        "public_total": 70,
+        "queued_longform": 5,
         "queued_other": 4,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPROVERBS30V5",
-        "title": "Pray This Proverbs 30:5 Prayer for Divine Protection | Hear His Promise #Shorts",
-        "format": "short",
-        "youtube_video_id": "I7FhHkMuJSo",
-        "watch_url": "https://www.youtube.com/shorts/I7FhHkMuJSo",
-        "published_on": "2026-11-25",
-        "published_at": "2026-11-25T20:57:19Z"
-      },
-      "next_queued_longform": {
         "id": "0624",
         "title": "When You Stand Firm in the Storm: Psalm 62:6-7 | The Covenant Shield",
-        "words": 1419,
+        "format": "longform",
+        "youtube_video_id": "yOYG5lUPqw0",
+        "watch_url": "https://youtu.be/yOYG5lUPqw0",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T00:59:01Z"
+      },
+      "next_queued_longform": {
+        "id": "0625",
+        "title": "Stillness When Battles Loom: Exodus 14:14 | The Covenant Shield",
+        "words": 1488,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm28v7",
-        "scripture": "Psalm 28:7",
+        "short": "short-shieldnahum1v7",
+        "scripture": "Nahum 1:7",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -697,6 +697,30 @@
   ],
   "videos": [
     {
+      "id": "0624",
+      "slug": "when-you-stand-firm-in-the-storm-psalm-62-6-7",
+      "file": "0624-when-you-stand-firm-in-the-storm-psalm-62-6-7.md",
+      "title": "When You Stand Firm in the Storm: Psalm 62:6-7 | The Covenant Shield",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T00:59:01Z",
+      "youtube_video_id": "yOYG5lUPqw0",
+      "watch_url": "https://youtu.be/yOYG5lUPqw0",
+      "youtu_be_url": "https://youtu.be/yOYG5lUPqw0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/yOYG5lUPqw0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/yOYG5lUPqw0/hqdefault.jpg",
+      "thumb_text": "NOT BE MOVED",
+      "thumbnail_pending": false,
+      "duration_label": "9m 42s",
+      "words": 1419
+    },
+    {
       "id": "0226",
       "slug": "when-accusation-whispers-in-the-dark-revelation-12-11",
       "file": "0226-when-accusation-whispers-in-the-dark-revelation-12-11.md",
@@ -743,6 +767,30 @@
       "thumbnail_pending": false,
       "duration_label": "54s",
       "words": 632
+    },
+    {
+      "id": "SHORT-SHIELDPSALM28V7",
+      "slug": "short-shieldpsalm28v7-protection-prayer",
+      "file": "short-shieldpsalm28v7-protection-prayer.md",
+      "title": "Pray This Psalm 28:7 Prayer for Divine Protection | Trust In Him #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T00:04:57Z",
+      "youtube_video_id": "qrAUVUUuE4U",
+      "watch_url": "https://www.youtube.com/shorts/qrAUVUUuE4U",
+      "youtu_be_url": "https://youtu.be/qrAUVUUuE4U",
+      "shorts_url": "https://www.youtube.com/shorts/qrAUVUUuE4U",
+      "studio_url": "https://studio.youtube.com/video/qrAUVUUuE4U/edit",
+      "thumb_url": "https://i.ytimg.com/vi/qrAUVUUuE4U/hqdefault.jpg",
+      "thumb_text": "THE LORD IS \u00b7 MY STRENGTH AND",
+      "thumbnail_pending": false,
+      "duration_label": "59s",
+      "words": 659
     },
     {
       "id": "SHORT-GARDENPSALM96V1",
@@ -21199,19 +21247,6 @@
         "words": 1449
       },
       {
-        "id": "0624",
-        "slug": "when-you-stand-firm-in-the-storm-psalm-62-6-7",
-        "file": "0624-when-you-stand-firm-in-the-storm-psalm-62-6-7.md",
-        "title": "When You Stand Firm in the Storm: Psalm 62:6-7 | The Covenant Shield",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1419
-      },
-      {
         "id": "0625",
         "slug": "stillness-when-battles-loom-exodus-14-14-the-covenant-shield",
         "file": "0625-stillness-when-battles-loom-exodus-14-14-the-covenant-shield.md",
@@ -21931,17 +21966,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldpsalm28v7",
-        "file": "0621-short-shieldpsalm28v7.yml",
-        "companion_longform_id": "0621",
-        "scripture": "Psalm 28:7",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldnahum1v7",
