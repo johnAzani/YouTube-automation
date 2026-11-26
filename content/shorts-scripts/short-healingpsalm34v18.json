@@ -1,0 +1,337 @@
+{
+  "key": "short-healingpsalm34v18",
+  "channel": "prayer6",
+  "psalm": 34,
+  "title": [
+    "HEALING FOR A",
+    "BROKEN HEART"
+  ],
+  "poster": [
+    "NEAR TO THE",
+    "BROKENHEARTED",
+    "GOD BRINGS HEALING",
+    "REST IN HIS PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters sunset calm reflection",
+    "warm golden sanctuary light soft glowing beam cross background",
+    "white dove hovering soft golden glowing peace background",
+    "calm serene water surface ripples golden sunlight glowing",
+    "soft sanctuary light warm glowing aura peaceful quiet space",
+    "tranquil turquoise mountain lake gentle golden light peace"
+  ],
+  "scenes": [
+    {
+      "a": "You carry a quiet, hidden heartbreak today.",
+      "img": "short-healingpsalm34v18-scene-01.jpg",
+      "kicker": "HIDDEN HEARTBREAK",
+      "sub": "GOD IS NEAR IN YOUR SILENT GRIEF",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The LORD is nigh unto them that are of a broken heart",
+      "img": "short-healingpsalm34v18-scene-02.jpg",
+      "kicker": "PSALM 34:18",
+      "sub": "THE LORD IS NIGH UNTO THEM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, reach into this silent room right now",
+      "img": "short-healingpsalm34v18-scene-03.jpg",
+      "kicker": "DRAW NEAR LORD",
+      "sub": "RESTORE THIS WEARY SOUL",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "let your gentle presence bring comfort",
+      "img": "short-healingpsalm34v18-scene-04.jpg",
+      "kicker": "GENTLE COMFORT",
+      "sub": "QUIET RESTORATION FOR YOUR HEART",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "stitch together every crushed place",
+      "img": "short-healingpsalm34v18-scene-05.jpg",
+      "kicker": "TENDER MERCY",
+      "sub": "SAVING THE CONTRITE SPIRIT",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "We trust your promise to stay close",
+      "img": "short-healingpsalm34v18-scene-06.jpg",
+      "kicker": "HE STAYS CLOSE",
+      "sub": "REST IN GOD'S UNFAILING PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You carry a quiet, hidden heartbreak today."
+    ],
+    [
+      3,
+      8,
+      "When grief tears through your spirit, remember what is written in Psalm 34:18."
+    ],
+    [
+      8,
+      16,
+      "The LORD is nigh unto them that are of a broken heart; and saveth such as be of a contrite spirit."
+    ],
+    [
+      16,
+      24,
+      "Lord, reach into this silent room right now and draw near to this weary, wounded soul."
+    ],
+    [
+      24,
+      32,
+      "Where heartbreak has shattered their strength, let your gentle presence bring comfort and quiet restoration."
+    ],
+    [
+      32,
+      40,
+      "Save them from despair, stitch together every crushed place, and cover them with your tender mercy."
+    ],
+    [
+      40,
+      48,
+      "We trust your promise to stay close when heartbreak feels too heavy to bear."
+    ],
+    [
+      48,
+      52,
+      "Amen. You carry a quiet, hidden heartbreak today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU CARRY A",
+        "QUIET HIDDEN",
+        "HEARTBREAK TODAY"
+      ],
+      [
+        "HEARTBREAK"
+      ],
+      "HIDDEN PAIN"
+    ],
+    [
+      3,
+      8,
+      [
+        "WHEN GRIEF TEARS THROUGH",
+        "YOUR SPIRIT REMEMBER",
+        "PSALM 34 : 18"
+      ],
+      [
+        "PSALM"
+      ],
+      "PSALM 34 : 18"
+    ],
+    [
+      8,
+      16,
+      [
+        "THE LORD IS NIGH",
+        "UNTO THEM THAT ARE OF",
+        "A BROKEN HEART AND SAVETH",
+        "SUCH AS BE OF A",
+        "CONTRITE SPIRIT"
+      ],
+      [
+        "NIGH",
+        "SAVETH"
+      ],
+      "PSALM 34 : 18"
+    ],
+    [
+      16,
+      24,
+      [
+        "LORD REACH INTO THIS",
+        "SILENT ROOM RIGHT NOW",
+        "AND DRAW NEAR TO THIS",
+        "WEARY WOUNDED SOUL"
+      ],
+      [
+        "DRAW",
+        "NEAR"
+      ],
+      "PRAYER OF RESTORATION"
+    ],
+    [
+      24,
+      32,
+      [
+        "WHERE HEARTBREAK HAS",
+        "SHATTERED THEIR STRENGTH",
+        "LET YOUR GENTLE PRESENCE",
+        "BRING COMFORT AND QUIET"
+      ],
+      [
+        "GENTLE",
+        "PRESENCE"
+      ],
+      "GOD IS NEAR"
+    ],
+    [
+      32,
+      40,
+      [
+        "SAVE THEM FROM DESPAIR",
+        "STITCH TOGETHER EVERY",
+        "CRUSHED PLACE AND COVER",
+        "THEM WITH MERCY"
+      ],
+      [
+        "STITCH",
+        "MERCY"
+      ],
+      "HEAL THE BROKEN"
+    ],
+    [
+      40,
+      48,
+      [
+        "WE TRUST YOUR PROMISE",
+        "TO STAY CLOSE WHEN",
+        "HEARTBREAK FEELS TOO",
+        "HEAVY TO BEAR"
+      ],
+      [
+        "PROMISE",
+        "CLOSE"
+      ],
+      "FAITHFUL GOD"
+    ],
+    [
+      48,
+      52,
+      [
+        "AMEN YOU CARRY A",
+        "QUIET HIDDEN",
+        "HEARTBREAK TODAY"
+      ],
+      [
+        "AMEN"
+      ],
+      "HEALING BALM"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You carry a quiet, hidden heartbreak today.",
+      "kind": "phrase",
+      "words": [
+        "HIDDEN",
+        "HEARTBREAK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When grief tears through your spirit, remember what is written in Psalm 34:18.",
+      "kind": "phrase",
+      "words": [
+        "GRIEF",
+        "SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD is nigh unto them that are of a broken heart; and saveth such as be of a contrite spirit.",
+      "kind": "phrase",
+      "words": [
+        "NIGH",
+        "SAVETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, reach into this silent room right now and draw near to this weary, wounded soul.",
+      "kind": "phrase",
+      "words": [
+        "DRAW",
+        "NEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Where heartbreak has shattered their strength, let your gentle presence bring comfort and quiet restoration.",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "COMFORT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Save them from despair, stitch together every crushed place, and cover them with your tender mercy.",
+      "kind": "phrase",
+      "words": [
+        "TENDER",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We trust your promise to stay close when heartbreak feels too heavy to bear.",
+      "kind": "phrase",
+      "words": [
+        "STAY",
+        "CLOSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. You carry a quiet, hidden heartbreak today.",
+      "kind": "phrase",
+      "words": [
+        "HEARTBREAK",
+        "TODAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 34:18"
+}

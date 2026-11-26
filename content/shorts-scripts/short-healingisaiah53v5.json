@@ -1,0 +1,357 @@
+{
+  "key": "short-healingisaiah53v5",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALING IN HIS STRIPES",
+    "ISAIAH 53:5"
+  ],
+  "poster": [
+    "THE WOUNDED HEALER",
+    "PEACE UPON HIM",
+    "STRIPES FOR US",
+    "ISAIAH 53:5"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "warm golden sanctuary light peaceful quiet room",
+    "tranquil turquoise living waters gentle ripples",
+    "soft morning sun through olive branches calm",
+    "peaceful stream in forest morning light",
+    "white dove soaring in clear blue sky calm",
+    "gentle candlelight in quiet prayer room",
+    "calm mountain lake at sunrise reflection",
+    "soft golden light on old stone wall"
+  ],
+  "scenes": [
+    {
+      "a": "That stubborn pain lingers tonight.",
+      "img": "short-healingisaiah53v5-scene-01.jpg",
+      "kicker": "STUBBORN PAIN",
+      "sub": "THAT LINGERS TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, when the body aches and exhaustion settles deep into the bones, meet us right here in this quiet hour.",
+      "img": "short-healingisaiah53v5-scene-02.jpg",
+      "kicker": "BODY ACHES",
+      "sub": "EXHAUSTION DEEP IN BONES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We turn to Your holy word written in Isaiah 53:5.",
+      "img": "short-healingisaiah53v5-scene-03.jpg",
+      "kicker": "HOLY WORD",
+      "sub": "TURNING TO SCRIPTURE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed.",
+      "img": "short-healingisaiah53v5-scene-04.jpg",
+      "kicker": "ISAIAH 53:5",
+      "sub": "WITH HIS STRIPES HEALED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, let Your healing grace touch every hidden hurt and restore what has grown weary.",
+      "img": "short-healingisaiah53v5-scene-05.jpg",
+      "kicker": "HEALING GRACE",
+      "sub": "TOUCH EVERY HIDDEN HURT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Grant us quiet trust when the healing takes longer than we hoped.",
+      "img": "short-healingisaiah53v5-scene-06.jpg",
+      "kicker": "QUIET TRUST",
+      "sub": "WHEN HEALING TAKES TIME",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Anchor our souls in Your unchanging love, and let Your peace guard our hearts until morning.",
+      "img": "short-healingisaiah53v5-scene-07.jpg",
+      "kicker": "UNCHANGING LOVE",
+      "sub": "PEACE GUARD OUR HEARTS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Amen.",
+      "img": "short-healingisaiah53v5-scene-08.jpg",
+      "kicker": "RESTORED",
+      "sub": "THAT STUBBORN PAIN LINGERS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That stubborn pain lingers tonight."
+    ],
+    [
+      3,
+      12,
+      "Lord, when the body aches and exhaustion settles deep into the bones, meet us right here in this quiet hour."
+    ],
+    [
+      12,
+      17,
+      "We turn to Your holy word written in Isaiah 53:5."
+    ],
+    [
+      17,
+      32,
+      "But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed."
+    ],
+    [
+      32,
+      41,
+      "Father, let Your healing grace touch every hidden hurt and restore what has grown weary."
+    ],
+    [
+      41,
+      48,
+      "Grant us quiet trust when the healing takes longer than we hoped."
+    ],
+    [
+      48,
+      56,
+      "Anchor our souls in Your unchanging love, and let Your peace guard our hearts until morning."
+    ],
+    [
+      56,
+      60,
+      "Amen. That stubborn pain lingers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "STUBBORN",
+        "PAIN LINGERS",
+        "TONIGHT"
+      ],
+      [
+        "PAIN",
+        "LINGERS"
+      ],
+      "ISAIAH 53 : 5"
+    ],
+    [
+      3,
+      12,
+      [
+        "BODY ACHES",
+        "EXHAUSTION",
+        "QUIET HOUR"
+      ],
+      [
+        "BODY",
+        "ACHES"
+      ],
+      "ISAIAH 53 : 5"
+    ],
+    [
+      12,
+      17,
+      [
+        "TURNING TO",
+        "HOLY WORD",
+        "ISAIAH 53"
+      ],
+      [
+        "HOLY",
+        "WORD"
+      ],
+      "ISAIAH 53 : 5"
+    ],
+    [
+      17,
+      32,
+      [
+        "WOUNDED FOR",
+        "OUR TRANSGRESSIONS",
+        "STRIPES HEALED"
+      ],
+      [
+        "WOUNDED",
+        "HEALED"
+      ],
+      "ISAIAH 53 : 5"
+    ],
+    [
+      32,
+      41,
+      [
+        "HEALING GRACE",
+        "HIDDEN HURT",
+        "GROWN WEARY"
+      ],
+      [
+        "HEALING",
+        "GRACE"
+      ],
+      "ISAIAH 53 : 5"
+    ],
+    [
+      41,
+      48,
+      [
+        "QUIET TRUST",
+        "HEALING TAKES TIME",
+        "OUR HOPE"
+      ],
+      [
+        "QUIET",
+        "TRUST"
+      ],
+      "ISAIAH 53 : 5"
+    ],
+    [
+      48,
+      56,
+      [
+        "ANCHOR SOULS",
+        "UNCHANGING LOVE",
+        "UNTIL MORNING"
+      ],
+      [
+        "ANCHOR",
+        "SOULS"
+      ],
+      "ISAIAH 53 : 5"
+    ],
+    [
+      56,
+      60,
+      [
+        "AMEN",
+        "STUBBORN PAIN",
+        "LINGERS"
+      ],
+      [
+        "AMEN",
+        "LINGERS"
+      ],
+      "ISAIAH 53 : 5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That stubborn pain lingers tonight.",
+      "kind": "phrase",
+      "words": [
+        "STUBBORN",
+        "PAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when the body aches and exhaustion settles deep into the bones, meet us right here in this quiet hour.",
+      "kind": "phrase",
+      "words": [
+        "BODY",
+        "ACHES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We turn to Your holy word written in Isaiah 53:5.",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "WORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed.",
+      "kind": "phrase",
+      "words": [
+        "WOUNDED",
+        "HEALED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, let Your healing grace touch every hidden hurt and restore what has grown weary.",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us quiet trust when the healing takes longer than we hoped.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Anchor our souls in Your unchanging love, and let Your peace guard our hearts until morning.",
+      "kind": "phrase",
+      "words": [
+        "UNCHANGING",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen.",
+      "kind": "phrase",
+      "words": [
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 53:5"
+}
