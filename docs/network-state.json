@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T00:06:16Z",
+  "generated_at": "2026-11-26T00:13:53Z",
   "monitor_generated_at": "2026-11-25T23:07:25.395195+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 832,
-    "published_longform": 228,
+    "published_total": 833,
+    "published_longform": 229,
     "published_shorts": 604,
-    "public_total": 830,
-    "queued_longform": 76,
+    "public_total": 831,
+    "queued_longform": 75,
     "queued_shorts": 39,
     "automations_ok": 13,
     "automations_total": 15,
@@ -232,28 +232,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 86,
-        "published_longform": 26,
+        "published_total": 87,
+        "published_longform": 27,
         "published_shorts": 60,
-        "thumbnail_pending": 85,
-        "public_total": 86,
-        "queued_longform": 6,
+        "thumbnail_pending": 86,
+        "public_total": 87,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTPSALM42V8",
-        "title": "Pray This Psalm 42:8 Midnight Prayer | Prayer For Restless Hours #Shorts",
-        "format": "short",
-        "youtube_video_id": "pvFkKAxx-zY",
-        "watch_url": "https://www.youtube.com/shorts/pvFkKAxx-zY",
-        "published_on": "2026-11-25",
-        "published_at": "2026-11-25T20:53:24Z"
-      },
-      "next_queued_longform": {
         "id": "0226",
         "title": "When Accusation Whispers in the Dark: Revelation 12:11",
-        "words": 959,
+        "format": "longform",
+        "youtube_video_id": "hKIvsMhgQCs",
+        "watch_url": "https://youtu.be/hKIvsMhgQCs",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T00:12:55Z"
+      },
+      "next_queued_longform": {
+        "id": "0228",
+        "title": "The Watchman's Midnight Vigil: Colossians 4:2 | The Midnight Watch",
+        "words": 1121,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0226",
+      "slug": "when-accusation-whispers-in-the-dark-revelation-12-11",
+      "file": "0226-when-accusation-whispers-in-the-dark-revelation-12-11.md",
+      "title": "When Accusation Whispers in the Dark: Revelation 12:11",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T00:12:55Z",
+      "youtube_video_id": "hKIvsMhgQCs",
+      "watch_url": "https://youtu.be/hKIvsMhgQCs",
+      "youtu_be_url": "https://youtu.be/hKIvsMhgQCs",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/hKIvsMhgQCs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/hKIvsMhgQCs/hqdefault.jpg",
+      "thumb_text": "BLOOD AND TESTIMONY",
+      "thumbnail_pending": true,
+      "duration_label": "6m 14s",
+      "words": 959
+    },
     {
       "id": "SHORT-GUIDEDPROVERBS11V14",
       "slug": "short-guidedproverbs11v14-guidance-prayer",
@@ -20887,19 +20911,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1256
-      },
-      {
-        "id": "0226",
-        "slug": "when-accusation-whispers-in-the-dark-revelation-12-11",
-        "file": "0226-when-accusation-whispers-in-the-dark-revelation-12-11.md",
-        "title": "When Accusation Whispers in the Dark: Revelation 12:11",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 959
       },
       {
         "id": "0228",
