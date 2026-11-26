@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T12:00:46Z",
+  "generated_at": "2026-11-26T12:04:08Z",
   "monitor_generated_at": "2026-11-26T11:59:22.460437+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 856,
-    "published_longform": 233,
+    "published_total": 857,
+    "published_longform": 234,
     "published_shorts": 623,
-    "public_total": 854,
+    "public_total": 855,
     "queued_longform": 85,
-    "queued_shorts": 48,
+    "queued_shorts": 46,
     "automations_ok": 15,
     "automations_total": 15,
     "network_healthy": true
@@ -363,36 +363,31 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 80,
-        "published_longform": 20,
+        "published_total": 81,
+        "published_longform": 21,
         "published_shorts": 60,
         "thumbnail_pending": 1,
-        "public_total": 80,
+        "public_total": 81,
         "queued_longform": 11,
         "queued_other": 0,
-        "queued_shorts": 2
+        "queued_shorts": 0
       },
       "latest_video": {
-        "id": "SHORT-HEALINGREVELATION21V4",
-        "title": "Pray This Revelation 21:4 Healing Prayer for Peace & Strength | Every Tear #Shorts",
-        "format": "short",
-        "youtube_video_id": "AuRByCRYCtU",
-        "watch_url": "https://www.youtube.com/shorts/AuRByCRYCtU",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T07:17:13Z"
-      },
-      "next_queued_longform": {
         "id": "0427",
         "title": "Strength for a Long Afternoon: Psalm 118:17 | The Healing Balm",
-        "words": 1098,
+        "format": "longform",
+        "youtube_video_id": "7f6UDxIYlPI",
+        "watch_url": "https://youtu.be/7f6UDxIYlPI",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T12:03:01Z"
+      },
+      "next_queued_longform": {
+        "id": "0429",
+        "title": "Comfort For Every Sorrow and Tear: Revelation 21:4 | The Healing Balm",
+        "words": 1154,
         "status": "approved"
       },
-      "next_queued_short": {
-        "short": "short-healingezekiel34v16",
-        "scripture": "Ezekiel 34:16",
-        "target_window_utc": "15:44",
-        "status": "approved"
-      },
+      "next_queued_short": null,
       "feedback": {
         "available": true,
         "as_of": "2026-11-26",
@@ -691,6 +686,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0427",
+      "slug": "strength-for-a-long-afternoon-psalm-118-17-the-healing-balm",
+      "file": "0427-strength-for-a-long-afternoon-psalm-118-17-the-healing-balm.md",
+      "title": "Strength for a Long Afternoon: Psalm 118:17 | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T12:03:01Z",
+      "youtube_video_id": "7f6UDxIYlPI",
+      "watch_url": "https://youtu.be/7f6UDxIYlPI",
+      "youtu_be_url": "https://youtu.be/7f6UDxIYlPI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/7f6UDxIYlPI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/7f6UDxIYlPI/hqdefault.jpg",
+      "thumb_text": "I SHALL NOT DIE",
+      "thumbnail_pending": false,
+      "duration_label": "7m 37s",
+      "words": 1098
+    },
     {
       "id": "0817",
       "slug": "walking-into-unknown-territory-isaiah-42-16",
@@ -21603,19 +21622,6 @@
         "words": 860
       },
       {
-        "id": "0427",
-        "slug": "strength-for-a-long-afternoon-psalm-118-17-the-healing-balm",
-        "file": "0427-strength-for-a-long-afternoon-psalm-118-17-the-healing-balm.md",
-        "title": "Strength for a Long Afternoon: Psalm 118:17 | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1098
-      },
-      {
         "id": "0429",
         "slug": "comfort-for-every-sorrow-and-tear-revelation-21-4-the-healing-balm",
         "file": "0429-comfort-for-every-sorrow-and-tear-revelation-21-4-the-healing-balm.md",
@@ -21744,6 +21750,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1732
+      },
+      {
+        "id": "0439",
+        "slug": "tender-comfort-in-deep-sorrow-isaiah-66-13",
+        "file": "0439-tender-comfort-in-deep-sorrow-isaiah-66-13.md",
+        "title": "Tender Comfort in Deep Sorrow: Isaiah 66:13 | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1231
       },
       {
         "id": "0523",
@@ -22641,28 +22660,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healingezekiel34v16",
-        "file": "0437-short-healingezekiel34v16.yml",
-        "companion_longform_id": "0437",
-        "scripture": "Ezekiel 34:16",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-healingpsalm116v8",
-        "file": "0438-short-healingpsalm116v8.yml",
-        "companion_longform_id": "0438",
-        "scripture": "Psalm 116:8-9",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-provisionproverbs10v22",
