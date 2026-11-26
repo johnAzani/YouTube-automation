@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T20:22:06Z",
+  "generated_at": "2026-11-26T20:24:20Z",
   "monitor_generated_at": "2026-11-26T20:20:30.304881+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 241,
     "published_shorts": 633,
     "public_total": 872,
-    "queued_longform": 92,
+    "queued_longform": 94,
     "queued_shorts": 33,
     "automations_ok": 14,
     "automations_total": 15,
@@ -169,7 +169,7 @@
         "published_shorts": 68,
         "thumbnail_pending": 0,
         "public_total": 97,
-        "queued_longform": 12,
+        "queued_longform": 14,
         "queued_other": 0,
         "queued_shorts": 0
       },
@@ -22855,6 +22855,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 833
+      },
+      {
+        "id": "0959",
+        "slug": "when-the-journey-is-too-great-1-kings-19-5-8",
+        "file": "0959-when-the-journey-is-too-great-1-kings-19-5-8.md",
+        "title": "When the Journey Is Too Great: 1 Kings 19:5-8 | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1730
+      },
+      {
+        "id": "0960",
+        "slug": "when-your-hands-grow-heavy-exodus-17-11-12",
+        "file": "0960-when-your-hands-grow-heavy-exodus-17-11-12.md",
+        "title": "When Your Hands Grow Heavy: Exodus 17:11-12 | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1033
       }
     ],
     "shorts": [
