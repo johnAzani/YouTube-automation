@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T17:12:47Z",
+  "generated_at": "2026-11-26T17:13:41Z",
   "monitor_generated_at": "2026-11-26T17:07:24.135302+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 865,
+    "published_total": 866,
     "published_longform": 236,
-    "published_shorts": 629,
-    "public_total": 863,
+    "published_shorts": 630,
+    "public_total": 864,
     "queued_longform": 90,
-    "queued_shorts": 39,
+    "queued_shorts": 38,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": false
@@ -494,23 +494,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 72,
+        "published_total": 73,
         "published_longform": 19,
-        "published_shorts": 53,
+        "published_shorts": 54,
         "thumbnail_pending": 23,
-        "public_total": 72,
+        "public_total": 73,
         "queued_longform": 6,
         "queued_other": 4,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM20V7",
-        "title": "Pray This Psalm 20:7 Prayer for Divine Protection | Walk In Covering #Shorts",
+        "id": "SHORT-SHIELDNAHUM1V7",
+        "title": "Pray This Nahum 1:7 Prayer for Divine Protection | Strong Hold #Shorts",
         "format": "short",
-        "youtube_video_id": "gS2Ge3K4LBA",
-        "watch_url": "https://www.youtube.com/shorts/gS2Ge3K4LBA",
+        "youtube_video_id": "7xi0YLp2RpU",
+        "watch_url": "https://www.youtube.com/shorts/7xi0YLp2RpU",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T11:18:43Z"
+        "published_at": "2026-11-26T17:12:35Z"
       },
       "next_queued_longform": {
         "id": "0625",
@@ -519,8 +519,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldnahum1v7",
-        "scripture": "Nahum 1:7",
+        "short": "short-shieldpsalm62v6",
+        "scripture": "Psalm 62:6-7",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -686,6 +686,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDNAHUM1V7",
+      "slug": "short-shieldnahum1v7-protection-prayer",
+      "file": "short-shieldnahum1v7-protection-prayer.md",
+      "title": "Pray This Nahum 1:7 Prayer for Divine Protection | Strong Hold #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T17:12:35Z",
+      "youtube_video_id": "7xi0YLp2RpU",
+      "watch_url": "https://www.youtube.com/shorts/7xi0YLp2RpU",
+      "youtu_be_url": "https://youtu.be/7xi0YLp2RpU",
+      "shorts_url": "https://www.youtube.com/shorts/7xi0YLp2RpU",
+      "studio_url": "https://studio.youtube.com/video/7xi0YLp2RpU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/7xi0YLp2RpU/hqdefault.jpg",
+      "thumb_text": "WHEN TROUBLE \u00b7 ENTERS YOUR ROOM",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 636
+    },
     {
       "id": "SHORT-PROVISIONISAIAH48V17",
       "slug": "short-provisionisaiah48v17-stewardship-prayer",
@@ -22873,17 +22897,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-shieldnahum1v7",
-        "file": "0622-short-shieldnahum1v7.yml",
-        "companion_longform_id": "0622",
-        "scripture": "Nahum 1:7",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm62v6",
