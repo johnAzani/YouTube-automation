@@ -1,6 +1,6 @@
 ---
 id: 0709
-title: 'Finding Mercy When Hope Is Weary: Lamentations 3:22-23'
+title: "When Hope Is Hard to Find: Lamentations 3:22-23 | The Praise Garden"
 slug: finding-mercy-when-hope-is-weary-lamentations-3-22-23
 status: published
 channel: prayer9
@@ -74,7 +74,7 @@ originality:
 published_on: "2026-11-19"
 published_at: "2026-11-19T22:10:40Z"
 youtube_video_id: "nrAzoS3z5-o"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 top_comment: "ok"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
@@ -82,6 +82,9 @@ thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_retry_after: "2026-11-26T22:14:25Z"
 thumbnail_retry_reason: "permission"
+title_before: "Finding Mercy When Hope Is Weary: Lamentations 3:22-23"
+retitled_at: "2026-11-26"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Entering His Gates With Thanksgiving
