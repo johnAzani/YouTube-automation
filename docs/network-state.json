@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T12:04:08Z",
+  "generated_at": "2026-11-26T12:07:12Z",
   "monitor_generated_at": "2026-11-26T11:59:22.460437+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 857,
-    "published_longform": 234,
+    "published_total": 858,
+    "published_longform": 235,
     "published_shorts": 623,
-    "public_total": 855,
-    "queued_longform": 85,
-    "queued_shorts": 46,
+    "public_total": 856,
+    "queued_longform": 84,
+    "queued_shorts": 40,
     "automations_ok": 15,
     "automations_total": 15,
     "network_healthy": true
@@ -164,36 +164,31 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 95,
-        "published_longform": 27,
+        "published_total": 96,
+        "published_longform": 28,
         "published_shorts": 68,
         "thumbnail_pending": 0,
-        "public_total": 95,
-        "queued_longform": 10,
+        "public_total": 96,
+        "queued_longform": 9,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 0
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYPROVERBS15V1",
-        "title": "Say This Proverbs 15:1 Prayer for Strength at Noon | Bring Your Anger To The Lord #Shorts",
-        "format": "short",
-        "youtube_video_id": "sAW3jIyraDo",
-        "watch_url": "https://www.youtube.com/shorts/sAW3jIyraDo",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T07:10:06Z"
-      },
-      "next_queued_longform": {
         "id": "0105",
         "title": "The Well That Never Runs Dry at Noon: John 4:13-14 | The Midday Watch",
-        "words": 2104,
+        "format": "longform",
+        "youtube_video_id": "SI0vWNyAiy0",
+        "watch_url": "https://youtu.be/SI0vWNyAiy0",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T12:06:15Z"
+      },
+      "next_queued_longform": {
+        "id": "0107",
+        "title": "Strength for the Hours That Remain: Philippians 4:13",
+        "words": 1208,
         "status": "approved"
       },
-      "next_queued_short": {
-        "short": "short-midday1corinthians10v13",
-        "scripture": "1 Corinthians 10:13",
-        "target_window_utc": "12:14",
-        "status": "approved"
-      },
+      "next_queued_short": null,
       "feedback": {
         "available": true,
         "as_of": "2026-11-26",
@@ -686,6 +681,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0105",
+      "slug": "the-well-that-never-runs-dry-at-noon-john-4-13-14",
+      "file": "0105-the-well-that-never-runs-dry-at-noon-john-4-13-14.md",
+      "title": "The Well That Never Runs Dry at Noon: John 4:13-14 | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T12:06:15Z",
+      "youtube_video_id": "SI0vWNyAiy0",
+      "watch_url": "https://youtu.be/SI0vWNyAiy0",
+      "youtu_be_url": "https://youtu.be/SI0vWNyAiy0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/SI0vWNyAiy0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/SI0vWNyAiy0/hqdefault.jpg",
+      "thumb_text": "LIVING WATER AT NOON",
+      "thumbnail_pending": false,
+      "duration_label": "13m 13s",
+      "words": 2104
+    },
     {
       "id": "0427",
       "slug": "strength-for-a-long-afternoon-psalm-118-17-the-healing-balm",
@@ -21310,19 +21329,6 @@
         "words": 979
       },
       {
-        "id": "0105",
-        "slug": "the-well-that-never-runs-dry-at-noon-john-4-13-14",
-        "file": "0105-the-well-that-never-runs-dry-at-noon-john-4-13-14.md",
-        "title": "The Well That Never Runs Dry at Noon: John 4:13-14 | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2104
-      },
-      {
         "id": "0107",
         "slug": "strength-for-the-hours-that-remain-philippians-4-13",
         "file": "0107-strength-for-the-hours-that-remain-philippians-4-13.md",
@@ -22398,50 +22404,6 @@
         "target_window_utc": "18:44"
       },
       {
-        "short": "short-midday1corinthians10v13",
-        "file": "0000-short-midday1corinthians10v13.yml",
-        "companion_longform_id": "",
-        "scripture": "1 Corinthians 10:13",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midday1corinthians15v58",
-        "file": "0000-short-midday1corinthians15v58.yml",
-        "companion_longform_id": "",
-        "scripture": "1 Corinthians 15:58",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midday1kings19v5",
-        "file": "0000-short-midday1kings19v5.yml",
-        "companion_longform_id": "",
-        "scripture": "1 Kings 19:5-8",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midday1peter4v11",
-        "file": "0000-short-midday1peter4v11.yml",
-        "companion_longform_id": "",
-        "scripture": "1 Peter 4:11",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
-      {
         "short": "short-midnightpsalm59v16",
         "file": "0000-short-midnightpsalm59v16.yml",
         "companion_longform_id": "",
@@ -22847,28 +22809,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-middayjohn15v5",
-        "file": "0953-short-middayjohn15v5.yml",
-        "companion_longform_id": "0953",
-        "scripture": "John 15:5",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-middaynehemiah6v3",
-        "file": "0954-short-middaynehemiah6v3.yml",
-        "companion_longform_id": "0954",
-        "scripture": "Nehemiah 6:3",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       }
     ]
   },
