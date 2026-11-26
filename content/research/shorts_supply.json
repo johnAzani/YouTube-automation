@@ -14,7 +14,7 @@
    "binding": "enough ready Shorts",
    "channel": "prayer2",
    "companion_longforms": 0,
-   "ready": 8,
+   "ready": 7,
    "sources": 4,
    "standalone_examples": [
     "Psalm 63:6",
@@ -29,7 +29,7 @@
    "binding": "enough ready Shorts",
    "channel": "prayer3",
    "companion_longforms": 0,
-   "ready": 4,
+   "ready": 6,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
@@ -59,17 +59,20 @@
    "binding": "enough ready Shorts",
    "channel": "prayer6",
    "companion_longforms": 0,
-   "ready": 3,
-   "sources": 0,
-   "standalone_examples": [],
-   "standalone_passages": 0,
+   "ready": 2,
+   "sources": 2,
+   "standalone_examples": [
+    "Isaiah 53:5",
+    "Psalm 34:18"
+   ],
+   "standalone_passages": 2,
    "verdict": "enough"
   },
   {
    "binding": "enough ready Shorts",
    "channel": "prayer7",
    "companion_longforms": 0,
-   "ready": 4,
+   "ready": 3,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
@@ -79,7 +82,7 @@
    "binding": "enough ready Shorts",
    "channel": "prayer8",
    "companion_longforms": 0,
-   "ready": 9,
+   "ready": 8,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
@@ -89,21 +92,20 @@
    "binding": "enough ready Shorts",
    "channel": "prayer9",
    "companion_longforms": 0,
-   "ready": 5,
-   "sources": 3,
+   "ready": 6,
+   "sources": 2,
    "standalone_examples": [
-    "Psalm 50:23",
     "Psalm 138:1-2",
     "Psalm 135:3"
    ],
-   "standalone_passages": 3,
+   "standalone_passages": 2,
    "verdict": "enough"
   },
   {
    "binding": "enough ready Shorts",
    "channel": "prayer10",
    "companion_longforms": 0,
-   "ready": 8,
+   "ready": 7,
    "sources": 1,
    "standalone_examples": [
     "Psalm 119:35"
@@ -120,6 +122,6 @@
  "ready_floor": 2,
  "schema": 1,
  "sentence": "Every channel holds at least 2 ready Shorts.",
- "total_sources": 8,
+ "total_sources": 9,
  "under_floor": []
 }

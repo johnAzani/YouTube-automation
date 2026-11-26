@@ -4401,6 +4401,16 @@ HEALING_BALM_ROADMAP += [
     _planned("0444", "Acts 3:6-8", "In the Name of Jesus Christ Rise Up and Walk", "RISE UP AND WALK",
              "Verses 6-8 (Exposition)", "Praying in the name of Jesus for strength to stand and walk again",
              "Tier 1 (Rise Up and Walk)"),
+    # Added 26 November 2026: the headroom floor is 15 and this channel reached 14
+    # once main's own releases were merged. Both checked free against every roadmap,
+    # every evergreen list and the seasonal tables, and the words verified against
+    # the repository's KJV text.
+    _planned("0445", "Psalm 34:18", "The Lord Is Nigh unto Them of a Broken Heart", "NIGH TO THE BROKEN",
+             "Verse 18 (Exposition)", "When the spirit is crushed, God is nearer than the feeling says",
+             "Tier 1 (Near to the Broken)"),
+    _planned("0446", "Isaiah 53:5", "With His Stripes We Are Healed", "BY HIS STRIPES",
+             "Verse 5 (Exposition)", "Healing asked for on the ground of what was already borne for us",
+             "Tier 1 (Healed by His Stripes)"),
 ]
 
 PROVISION_TABLE_ROADMAP += [
