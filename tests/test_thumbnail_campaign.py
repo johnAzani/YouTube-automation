@@ -10,6 +10,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from pipeline import learning_audit as audit
 from pipeline import thumbnail_campaign as campaign
 
 
@@ -130,3 +131,34 @@ def test_the_workflow_reads_the_campaign_without_a_credential():
     steps = " ".join(str(step.get("run", "")) for step in job["steps"])
     assert "pipeline.thumbnail_campaign" in steps
     assert "secrets." not in path.read_text(encoding="utf-8")
+
+
+def test_it_says_when_the_concepts_wait_on_reach_coverage_not_on_traffic():
+    """Two causes, two fixes.
+
+    On 26 November 2026 the reading said "no impressions for any concept" while the
+    reach files held 15,081 impressions. Every assigned video sat on a channel with
+    no reach file, so the join matched nothing. "No traffic yet" sends someone to
+    look at thumbnails; the real problem is which channels are granted.
+    """
+    report = campaign.build_campaign(
+        assignments={"vid1": "hook", "vid2": "quiet"},
+        reach={"other": {"impressions": 9000, "clicks": 90, "channel": "secret-place"}},
+    )
+    assert report["videos_in_reach"] == 0
+    assert report["network_impressions_in_reach_files"] == 9000
+    assert report["leader"] is None
+
+    loop = audit._thumbnail_choice()
+    assert loop["loop"] == "thumbnail_choice"
+
+
+def test_reach_coverage_counts_the_videos_it_can_actually_join():
+    report = campaign.build_campaign(
+        assignments={"vid1": "hook", "vid2": "quiet"},
+        reach={"vid1": {"impressions": 400, "clicks": 8, "channel": "prayer2"}},
+    )
+    assert report["videos_in_reach"] == 1
+    assert report["channels_with_reach"] == ["prayer2"]
+    hook = next(row for row in report["concepts"] if row["concept"] == "hook")
+    assert hook["impressions"] == 400

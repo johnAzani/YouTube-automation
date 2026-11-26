@@ -1,3 +1,16 @@
+## 2026-11-26 — The thumbnail loop's blocker is coverage, not traffic
+
+`content/research/thumbnail_campaign.json` said "no impressions for any concept"
+while the reach files held **15,081 impressions**: 0 of 11 assigned videos joins
+to an impression row, because only one channel of ten has a reach file and that
+channel holds no video with a recorded concept. The reading now carries
+`videos_in_reach`, `channels_with_reach`, `channels_without_reach` and
+`network_impressions_in_reach_files`, and `pipeline/learning_audit.py` names
+coverage when coverage is what is missing. See `docs/REACH_COVERAGE_2026-11-26.md`.
+
+The loop is still `measuring`. This makes the blocker legible, it does not grant
+a channel.
+
 # Changelog
 
 Notable changes to the studio. Newest first. Reconstructed from `git log` on 2026-10-20 —

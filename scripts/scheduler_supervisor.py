@@ -341,7 +341,16 @@ def due_but_missing(now: datetime | None = None,
             # supply fault rather than a produce dispatch target.
             from scripts.automation_monitor import active_quota_cooldown
 
-            if active_quota_cooldown(now) is not None:
+            # A cooldown check that cannot run must never read as "quota is free":
+            # dispatching into an exhausted pool is the other failure mode, and this
+            # one costs a run instead of a stale channel. `active_quota_cooldown`
+            # raises rather than answering wrongly; the skip is the safe side.
+            try:
+                cooling = active_quota_cooldown(now) is not None
+            except Exception as exc:  # noqa: BLE001
+                print(f"[supervisor] cooldown unknown, skipping slot: {exc!r}", file=sys.stderr)
+                continue
+            if cooling:
                 continue
             done = published_channels_since(slot)
             missing = _unserved_produce_channels(done, now=now)
@@ -386,10 +395,16 @@ def _unserved_produce_channels(
     channels = _channels()
     supplied = [c for c in channels if _channel_has_supply(c)]
     pool = supplied or channels
-    ready = [
-        c for c in pool
-        if c not in done and active_quota_cooldown(now, channel_id=c) is None
-    ]
+    def _free(channel: str) -> bool:
+        try:
+            return active_quota_cooldown(now, channel_id=channel) is None
+        except Exception as exc:  # noqa: BLE001
+            # Unknown is not free. Leave the channel out of this pass rather than
+            # spend a dispatch on a pool that may be exhausted.
+            print(f"[supervisor] cooldown unknown for {channel}: {exc!r}", file=sys.stderr)
+            return False
+
+    ready = [c for c in pool if c not in done and _free(c)]
     prior = list(attempted or ())
     counts = {c: prior.count(c) for c in ready}
     return [
@@ -515,7 +530,13 @@ def _failed_dispatches(state: dict, latest: dict[str, tuple[datetime, str | None
     """Ledger entries whose dispatched run has finished badly and can be retried."""
     from scripts.automation_monitor import active_quota_cooldown
 
-    produce_cooldown = active_quota_cooldown(now)
+    try:
+        produce_cooldown = active_quota_cooldown(now)
+    except Exception as exc:  # noqa: BLE001
+        # Unknown is not "no cooldown": retrying failed dispatches into a pool that
+        # may be exhausted is what the cooldown exists to prevent.
+        print(f"[supervisor] cooldown unknown, retrying nothing: {exc!r}", file=sys.stderr)
+        return []
     crons_by_workflow = _cron_map()
     out: list[tuple[str, str]] = []
     for key, entry in state.items():
@@ -877,7 +898,13 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
 
     from scripts.automation_monitor import active_quota_cooldown
 
-    produce_cooldown = active_quota_cooldown(now)
+    try:
+        produce_cooldown = active_quota_cooldown(now)
+    except Exception as exc:  # noqa: BLE001
+        # Unknown is not "no cooldown": retrying failed dispatches into a pool that
+        # may be exhausted is what the cooldown exists to prevent.
+        print(f"[supervisor] cooldown unknown, retrying nothing: {exc!r}", file=sys.stderr)
+        return []
 
     # Say out loud what the ledger decided, so a slot that is deliberately not
     # retried is visible in the log instead of merely absent.

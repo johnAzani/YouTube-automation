@@ -237,3 +237,31 @@ class TestIdempotentLiveMetadataRetrofit(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestACooldownCheckThatCannotRunNeverReadsAsFree(unittest.TestCase):
+    """The direction of failure matters more than the failure.
+
+    `active_quota_cooldown` returns `None` to mean "this channel is not waiting on
+    quota". Every caller acts on that: the supervisor retries the failed slot and
+    the monitor calls the workflow FAILING. On 26 November 2026 a bare
+    `except Exception: return None` let a real internal error masquerade as that
+    confident answer. The check now raises, and each caller treats "unknown" as
+    "not free" — a skipped slot costs one run, a wrongly-free slot costs a run
+    against an exhausted pool.
+    """
+
+    def test_the_check_raises_instead_of_answering_none(self):
+        now = datetime(2026, 11, 3, 20, 0, tzinfo=timezone.utc)
+        with mock.patch("scripts.pipeline_watchdog.last_publish",
+                        return_value=(Path("x.md"), now - timedelta(hours=1))), \
+             mock.patch("pipeline.run.quota_blocked_until",
+                        side_effect=RuntimeError("state file unreadable")):
+            with self.assertRaises(RuntimeError):
+                am.active_quota_cooldown(now)
+
+    def test_the_supervisor_skips_a_slot_when_the_cooldown_is_unknown(self):
+        now = datetime(2026, 11, 3, 20, 0, tzinfo=timezone.utc)
+        with mock.patch.object(am, "active_quota_cooldown",
+                               side_effect=RuntimeError("state file unreadable")):
+            self.assertEqual(sup._failed_dispatches({}, {}, now), [])

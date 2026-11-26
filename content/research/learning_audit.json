@@ -15,7 +15,7 @@
    "what": "which passages and books the brain writes Shorts on next"
   },
   {
-   "evidence": "11 release(s) recorded a concept, but the reach files hold no impressions for any of them yet",
+   "evidence": "68 impressions pooled, under the 300 floor for every concept, so nothing is trusted",
    "leader": null,
    "loop": "thumbnail_choice",
    "owner": "pipeline/thumbnail_campaign.py: live_concept",

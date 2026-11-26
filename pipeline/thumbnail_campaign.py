@@ -247,6 +247,35 @@ def _concept_of_receipt(path: Path) -> tuple[str, str]:
     return (concept if concept in CONCEPTS else ""), vid
 
 
+def assignments_by_channel(published_dir: Path | None = None) -> dict[str, str]:
+    """``video_id -> channel`` for the receipts that recorded a concept.
+
+    Kept apart from `read_assignments` so the campaign's own reading stays
+    ``video_id -> concept``; this exists only so a coverage gap can be named.
+    """
+    directory = Path(published_dir) if published_dir else ROOT / "content" / "published"
+    out: dict[str, str] = {}
+    if not directory.is_dir():
+        return out
+    for path in sorted(directory.glob("*.md")):
+        if path.name.startswith("short-"):
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        concept, vid = _concept_of_receipt(path)
+        if not (vid and concept):
+            continue
+        channel = ""
+        for line in text.splitlines()[:40]:
+            if line.lower().startswith("channel:"):
+                channel = line.split(":", 1)[1].strip().strip("\"'")
+                break
+        out[vid] = channel
+    return out
+
+
 def read_assignments(published_dir: Path | None = None) -> dict[str, str]:
     """``video_id -> concept`` for every receipt that recorded one."""
     directory = Path(published_dir) if published_dir else ROOT / "content" / "published"
@@ -282,6 +311,8 @@ def read_reach(directory: Path | None = None) -> dict[str, dict]:
             slot = out.setdefault(vid, {"impressions": 0, "clicks": 0})
             slot["impressions"] += int(row.get("impressions") or 0)
             slot["clicks"] += int(row.get("clicks") or 0)
+            if payload.get("channel"):
+                slot["channel"] = str(payload["channel"])
     for row in out.values():
         row["click_rate_percent"] = (round(100.0 * row["clicks"] / row["impressions"], 2)
                                      if row["impressions"] else None)
@@ -317,6 +348,19 @@ def build_campaign(assignments: dict[str, str] | None = None,
                                      if row["impressions"] else None)
         row["measurable"] = row["impressions"] >= MIN_IMPRESSIONS
         measured.append(row)
+
+    # Two different reasons a concept can show no traffic, and they need different
+    # fixes. On 26 November 2026 the reading said "no impressions for any concept"
+    # while the reach files held 15,081 of them: every assigned video belonged to a
+    # channel with no reach file yet, so the join matched nothing. That sentence
+    # reads as "the videos got no traffic", which was false and would have sent
+    # someone looking at thumbnails instead of at which channels are granted.
+    covered = sorted({reach[vid]["channel"] for vid in assignments
+                      if vid in reach and reach[vid].get("channel")})
+    ownership = assignments_by_channel()
+    uncovered = sorted({ownership.get(vid) or "unknown" for vid in assignments
+                        if vid not in reach} - {""})
+    reach_impressions = sum(int(row.get("impressions") or 0) for row in reach.values())
     trusted = [row for row in measured if row["measurable"]]
     leader = max(trusted, key=lambda row: row["click_rate_percent"]) if trusted else None
     return {
@@ -327,6 +371,10 @@ def build_campaign(assignments: dict[str, str] | None = None,
         "leader_click_rate_percent": leader["click_rate_percent"] if leader else None,
         "min_impressions": MIN_IMPRESSIONS,
         "videos_assigned": len(assignments),
+        "videos_in_reach": sum(1 for vid in assignments if vid in reach),
+        "channels_with_reach": covered,
+        "channels_without_reach": uncovered,
+        "network_impressions_in_reach_files": reach_impressions,
         "note": ("A per-video Test & Compare cannot be opened or read by the Data API; this "
                  "compares the concepts the rotation put live on different videos of the "
                  "same channel. A concept under the impression floor is shown and not "

@@ -439,8 +439,16 @@ def active_quota_cooldown(
             blocks.append(b)
         return min(blocks)
     except Exception as exc:  # noqa: BLE001
-        print(f"[monitor] active_quota_cooldown check failed: {exc!r}", file=sys.stderr)
-        return None
+        # Never let a broken check read as "no cooldown". `None` here means "the
+        # channel is not waiting on quota", and every caller acts on that: the
+        # supervisor retries the failed slot and the monitor calls it FAILING. On
+        # 26 November 2026 a bare `return None` here hid a real exception behind a
+        # confident answer, and the only reason anyone noticed was a unit test
+        # failing for reasons nothing could explain. A check that cannot run says
+        # so, loudly, instead of answering.
+        print(f"[monitor] active_quota_cooldown could not be evaluated: {exc!r}",
+              file=sys.stderr)
+        raise
 
 
 def classify(report: MonitorReport, runs: list[dict], now: datetime | None = None,
