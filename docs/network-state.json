@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T11:08:42Z",
+  "generated_at": "2026-11-26T11:18:07Z",
   "monitor_generated_at": "2026-11-26T09:46:01.080003+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 852,
+    "published_total": 853,
     "published_longform": 232,
-    "published_shorts": 620,
-    "public_total": 850,
+    "published_shorts": 621,
+    "public_total": 851,
     "queued_longform": 86,
-    "queued_shorts": 52,
+    "queued_shorts": 50,
     "automations_ok": 15,
     "automations_total": 15,
     "network_healthy": true
@@ -567,23 +567,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 72,
+        "published_total": 73,
         "published_longform": 17,
-        "published_shorts": 55,
-        "thumbnail_pending": 72,
-        "public_total": 72,
+        "published_shorts": 56,
+        "thumbnail_pending": 73,
+        "public_total": 73,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0717",
-        "title": "Thanksgiving Worship When Mourning Turns to Joy: Psalm 30:11-12",
-        "format": "longform",
-        "youtube_video_id": "m63bZIcybjs",
-        "watch_url": "https://youtu.be/m63bZIcybjs",
+        "id": "SHORT-GARDENPSALM50V23",
+        "title": "Pray This Psalm 50:23 Prayer of Thanksgiving | Daily Thanksgiving Prayer #Shorts",
+        "format": "short",
+        "youtube_video_id": "rlf7e53OV68",
+        "watch_url": "https://www.youtube.com/shorts/rlf7e53OV68",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T08:13:42Z"
+        "published_at": "2026-11-26T11:16:54Z"
       },
       "next_queued_longform": {
         "id": "0718",
@@ -592,8 +592,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm50v23",
-        "scripture": "Psalm 50:23",
+        "short": "short-gardencolossians3v15",
+        "scripture": "Colossians 3:15-17",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM50V23",
+      "slug": "short-gardenpsalm50v23-thanksgiving-prayer",
+      "file": "short-gardenpsalm50v23-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 50:23 Prayer of Thanksgiving | Daily Thanksgiving Prayer #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T11:16:54Z",
+      "youtube_video_id": "rlf7e53OV68",
+      "watch_url": "https://www.youtube.com/shorts/rlf7e53OV68",
+      "youtu_be_url": "https://youtu.be/rlf7e53OV68",
+      "shorts_url": "https://www.youtube.com/shorts/rlf7e53OV68",
+      "studio_url": "https://studio.youtube.com/video/rlf7e53OV68/edit",
+      "thumb_url": "https://i.ytimg.com/vi/rlf7e53OV68/hqdefault.jpg",
+      "thumb_text": "OFFER PRAISE \u00b7 HONOUR GOD",
+      "thumbnail_pending": true,
+      "duration_label": "50s",
+      "words": 639
+    },
     {
       "id": "SHORT-MIDNIGHTPSALM46V10",
       "slug": "short-midnightpsalm46v10-midnight-prayer",
@@ -22263,17 +22287,6 @@
     ],
     "shorts": [
       {
-        "short": "short-gardenpsalm50v23",
-        "file": "0000-short-gardenpsalm50v23.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 50:23",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
         "short": "short-guidedhosea14v9",
         "file": "0000-short-guidedhosea14v9.yml",
         "companion_longform_id": "",
@@ -22762,17 +22775,6 @@
         "file": "0720-short-gardenephesians5v20.yml",
         "companion_longform_id": "0720",
         "scripture": "Ephesians 5:20",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-gardenpsalm42v11",
-        "file": "0724-short-gardenpsalm42v11.yml",
-        "companion_longform_id": "0724",
-        "scripture": "Psalm 42:11",
         "channel": "prayer9",
         "channel_name": "The Praise Garden",
         "status": "approved",
