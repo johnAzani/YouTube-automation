@@ -26,14 +26,12 @@ short_visual_fingerprints: ["sha256:024a79bf4181d1294dca62fd742ff9050a4820fb0052
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_poster: ["WHEN MALICE THREATENS", "GOD IS YOUR FORTRESS", "PSALM 97:10", "THE COVENANT SHIELD"]
+thumbnail_pending: false
+thumbnail_poster: ["WHEN MALICE", "THREATENS", "GOD IS YOUR FORTRESS", "PSALM 97:10", "THE COVENANT SHIELD"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-26T22:14:23Z"
-thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 0
+thumbnail_revision: "shorts-poster-v1"
 ---
 
 If someone's malice or quiet hostility has made you fearful today, listen to this promise. Ye that love the LORD, hate evil: he preserveth the souls of his saints; he delivereth them out of the hand of the wicked. Lord, cover this beloved soul who seeks to walk uprightly in Your sight. When hidden traps are set or sharp words are spoken against them, be their fortress and shield. Guard their inner spirit from all corruption, and pull them safely out of every snare crafted by deceitful hands. Let no weapon formed in secret stand against Your chosen ones. Subscribe to The Covenant Shield to rest under God's protection every day.

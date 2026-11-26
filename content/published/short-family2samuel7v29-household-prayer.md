@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["BLESS THIS HOUSE", "LORD GOD HAS SPOKEN", "EVERLASTING BLESSING", "THE FAMILY ALTAR"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-03T22:55:59Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When worry over your family's future fills your heart today, turn to God's eternal word. Therefore now let it please thee to bless the house of thy servant, that it may continue for ever before thee: for thou, O Lord GOD, hast spoken it: and with thy blessing let the house of thy servant be blessed for ever. Heavenly Father, we bring our home before You today. Bless every room, protect our family, and let Your abiding presence rule our hearts forever. Establish our household in Your truth and shield us from all harm. Subscribe to The Family Altar to cover your home in prayer every day.

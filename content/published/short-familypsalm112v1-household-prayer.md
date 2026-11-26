@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["BLESSINGS UPON", "YOUR HOUSEHOLD", "PSALM 112:1-3", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-26T22:14:20Z"
+thumbnail_retry_after: "2026-12-03T22:56:01Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If you are worrying about your children's future while standing in their quiet doorway, listen. Scripture says, Praise ye the LORD. Blessed is the man that feareth the LORD, that delighteth greatly in his commandments. His seed shall be mighty upon earth: the generation of the upright shall be blessed. Wealth and riches shall be in his house: and his righteousness endureth for ever. Father, anchor our household in your fear and grace. Make our children strong and faithful on this earth. Fill this home with your enduring peace and righteousness tonight. Subscribe to join our family altar.

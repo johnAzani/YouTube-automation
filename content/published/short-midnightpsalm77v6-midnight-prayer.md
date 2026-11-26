@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["WHEN MEMORIES", "KEEP YOU AWAKE", "STAND IN PRAYER", "MIDNIGHT WATCH"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-03T22:55:54Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Your quiet room holds a restless memory tonight. As the hour turns, the psalmist writes: I call to remembrance my song in the night: I commune with mine own heart: and my spirit made diligent search. Lord, in this dark hour, when forgotten melodies feel far away, we bring our quiet questioning before You. Search our hearts where heavy sorrow lingers, and stir the steady praise we thought was lost. Grant true diligence to our seeking spirit until Your calm presence restores our hope tonight. In this silent hour, we place every deep search into Your hands. Amen. Your quiet room holds a restless memory.

@@ -80,7 +80,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-26T22:14:25Z"
+thumbnail_retry_after: "2026-12-03T22:56:17Z"
 thumbnail_retry_reason: "permission"
 title_before: "Finding Mercy When Hope Is Weary: Lamentations 3:22-23"
 retitled_at: "2026-11-26"

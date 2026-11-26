@@ -24,9 +24,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE FAMILY ALTAR", "PROTECT OUR CHILDREN", "ISAIAH 54:13", "FAMILY PRAYER"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-26T20:50:16Z"
+thumbnail_retry_after: "2026-12-03T22:56:00Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 2
+thumbnail_attempts: 3
 ---
 
 Gather your home in faith and lift every child and loved one before the Father today. Isaiah fifty-four verse thirteen promises, And all thy children shall be taught of the LORD; and great shall be the peace of thy children. Parents speak to the outward ear, but the Holy Spirit teaches and anchors the inward heart. In righteousness shalt thou be established, and fearful oppression shall stay far from thy home. Father, guard our sons, daughters, and grandchildren in wisdom, purity, and living faith. No weapon formed against our household shall prosper; cover our home in Your covenant peace. Type Amen and subscribe to The Family Altar to cover your home in daily prayer.
