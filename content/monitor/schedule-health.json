@@ -16,15 +16,29 @@
       "workflow": "keepalive.yml"
     },
     {
+      "late_minutes": 196,
+      "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
+      "ran_at": "2026-11-26T06:53:04+00:00",
+      "slot": "2026-11-26T03:37:00+00:00",
+      "workflow": "channel-analytics.yml"
+    },
+    {
       "late_minutes": 127,
       "name": "Growth score (where the watch hours come from)",
       "ran_at": "2026-11-26T06:44:59+00:00",
       "slot": "2026-11-26T04:37:00+00:00",
       "workflow": "growth-score.yml"
+    },
+    {
+      "late_minutes": 121,
+      "name": "Tests on main (daily)",
+      "ran_at": "2026-11-26T06:53:05+00:00",
+      "slot": "2026-11-26T04:52:00+00:00",
+      "workflow": "tests-on-main.yml"
     }
   ],
-  "generated_at": "2026-11-26T06:52:54.793233+00:00",
-  "last_run_at": "2026-11-26T06:51:43+00:00",
+  "generated_at": "2026-11-26T06:54:33.593913+00:00",
+  "last_run_at": "2026-11-26T06:54:20+00:00",
   "on_time": [
     {
       "late_minutes": 32,
@@ -69,13 +83,27 @@
       "workflow": "monitor.yml"
     },
     {
+      "late_minutes": 39,
+      "name": "Produce video",
+      "ran_at": "2026-11-26T06:53:14+00:00",
+      "slot": "2026-11-26T06:14:00+00:00",
+      "workflow": "produce.yml"
+    },
+    {
       "late_minutes": 4,
       "name": "Scheduler supervisor",
       "ran_at": "2026-11-26T06:51:43+00:00",
       "slot": "2026-11-26T06:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
+    },
+    {
+      "late_minutes": 106,
+      "name": "Thumbnail campaign (which concept earns the click)",
+      "ran_at": "2026-11-26T06:53:07+00:00",
+      "slot": "2026-11-26T05:07:00+00:00",
+      "workflow": "thumbnail-campaign.yml"
     }
   ],
-  "silence_minutes": 1,
+  "silence_minutes": 0,
   "warn_minutes": 120
 }
