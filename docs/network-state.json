@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T07:20:09Z",
+  "generated_at": "2026-11-26T07:23:25Z",
   "monitor_generated_at": "2026-11-26T07:18:10.116862+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 842,
+    "published_total": 843,
     "published_longform": 230,
-    "published_shorts": 612,
-    "public_total": 840,
+    "published_shorts": 613,
+    "public_total": 841,
     "queued_longform": 82,
-    "queued_shorts": 49,
+    "queued_shorts": 48,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -489,23 +489,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 70,
+        "published_total": 71,
         "published_longform": 19,
-        "published_shorts": 51,
+        "published_shorts": 52,
         "thumbnail_pending": 28,
-        "public_total": 70,
+        "public_total": 71,
         "queued_longform": 6,
         "queued_other": 4,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0624",
-        "title": "When You Stand Firm in the Storm: Psalm 62:6-7 | The Covenant Shield",
-        "format": "longform",
-        "youtube_video_id": "yOYG5lUPqw0",
-        "watch_url": "https://youtu.be/yOYG5lUPqw0",
+        "id": "SHORT-SHIELDPSALM16V8",
+        "title": "Pray This Psalm 16:8 Prayer for Divine Protection | Daily Refuge Prayer #Shorts",
+        "format": "short",
+        "youtube_video_id": "dT2sWMCKKZQ",
+        "watch_url": "https://www.youtube.com/shorts/dT2sWMCKKZQ",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T00:59:01Z"
+        "published_at": "2026-11-26T07:22:21Z"
       },
       "next_queued_longform": {
         "id": "0625",
@@ -514,8 +514,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm16v8",
-        "scripture": "Psalm 16:8",
+        "short": "short-shieldpsalm20v7",
+        "scripture": "Psalm 20:7",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -681,6 +681,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM16V8",
+      "slug": "short-shieldpsalm16v8-protection-prayer",
+      "file": "short-shieldpsalm16v8-protection-prayer.md",
+      "title": "Pray This Psalm 16:8 Prayer for Divine Protection | Daily Refuge Prayer #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T07:22:21Z",
+      "youtube_video_id": "dT2sWMCKKZQ",
+      "watch_url": "https://www.youtube.com/shorts/dT2sWMCKKZQ",
+      "youtu_be_url": "https://youtu.be/dT2sWMCKKZQ",
+      "shorts_url": "https://www.youtube.com/shorts/dT2sWMCKKZQ",
+      "studio_url": "https://studio.youtube.com/video/dT2sWMCKKZQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/dT2sWMCKKZQ/hqdefault.jpg",
+      "thumb_text": "I SHALL NOT \u00b7 BE MOVED",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 640
+    },
     {
       "id": "SHORT-PROVISIONPSALM65V11",
       "slug": "short-provisionpsalm65v11-stewardship-prayer",
@@ -22179,17 +22203,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldpsalm16v8",
-        "file": "0000-short-shieldpsalm16v8.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 16:8",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm20v7",
