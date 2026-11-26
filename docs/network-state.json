@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T07:10:43Z",
+  "generated_at": "2026-11-26T07:11:13Z",
   "monitor_generated_at": "2026-11-26T07:06:17.904520+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 838,
+    "published_total": 839,
     "published_longform": 230,
-    "published_shorts": 608,
-    "public_total": 836,
+    "published_shorts": 609,
+    "public_total": 837,
     "queued_longform": 82,
-    "queued_shorts": 58,
+    "queued_shorts": 55,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": true
@@ -164,23 +164,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 94,
+        "published_total": 95,
         "published_longform": 27,
-        "published_shorts": 67,
+        "published_shorts": 68,
         "thumbnail_pending": 3,
-        "public_total": 94,
+        "public_total": 95,
         "queued_longform": 8,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 0
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYPSALM84V5",
-        "title": "Say This Psalm 84:5-7 Prayer for Strength at Noon | Find Your Strength #Shorts",
+        "id": "SHORT-MIDDAYPROVERBS15V1",
+        "title": "Say This Proverbs 15:1 Prayer for Strength at Noon | Bring Your Anger To The Lord #Shorts",
         "format": "short",
-        "youtube_video_id": "bIrHZQ7NzWI",
-        "watch_url": "https://www.youtube.com/shorts/bIrHZQ7NzWI",
-        "published_on": "2026-11-25",
-        "published_at": "2026-11-25T23:55:52Z"
+        "youtube_video_id": "sAW3jIyraDo",
+        "watch_url": "https://www.youtube.com/shorts/sAW3jIyraDo",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T07:10:06Z"
       },
       "next_queued_longform": {
         "id": "0105",
@@ -188,12 +188,7 @@
         "words": 2104,
         "status": "approved"
       },
-      "next_queued_short": {
-        "short": "short-middayproverbs15v1",
-        "scripture": "Proverbs 15:1",
-        "target_window_utc": "12:14",
-        "status": "approved"
-      },
+      "next_queued_short": null,
       "feedback": {
         "available": true,
         "as_of": "2026-11-26",
@@ -691,6 +686,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYPROVERBS15V1",
+      "slug": "short-middayproverbs15v1-midday-prayer",
+      "file": "short-middayproverbs15v1-midday-prayer.md",
+      "title": "Say This Proverbs 15:1 Prayer for Strength at Noon | Bring Your Anger To The Lord #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T07:10:06Z",
+      "youtube_video_id": "sAW3jIyraDo",
+      "watch_url": "https://www.youtube.com/shorts/sAW3jIyraDo",
+      "youtu_be_url": "https://youtu.be/sAW3jIyraDo",
+      "shorts_url": "https://www.youtube.com/shorts/sAW3jIyraDo",
+      "studio_url": "https://studio.youtube.com/video/sAW3jIyraDo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/sAW3jIyraDo/hqdefault.jpg",
+      "thumb_text": "PROVERBS 15:1 \u00b7 A SOFT ANSWER",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 632
+    },
     {
       "id": "SHORT-MIDNIGHTPSALM121V3",
       "slug": "short-midnightpsalm121v3-midnight-prayer",
@@ -22139,17 +22158,6 @@
         "target_window_utc": "14:14"
       },
       {
-        "short": "short-middayproverbs15v1",
-        "file": "0102-short-middayproverbs15v1.yml",
-        "companion_longform_id": "0102",
-        "scripture": "Proverbs 15:1",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
-      {
         "short": "short-midnightdaniel2v19",
         "file": "0222-short-midnightdaniel2v19.yml",
         "companion_longform_id": "0222",
@@ -22489,28 +22497,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-middayecclesiastes9v10",
-        "file": "0950-short-middayecclesiastes9v10.yml",
-        "companion_longform_id": "0950",
-        "scripture": "Ecclesiastes 9:10",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-middayisaiah26v12",
-        "file": "0951-short-middayisaiah26v12.yml",
-        "companion_longform_id": "0951",
-        "scripture": "Isaiah 26:12",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       }
     ]
   },
