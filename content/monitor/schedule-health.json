@@ -37,8 +37,8 @@
       "workflow": "tests-on-main.yml"
     }
   ],
-  "generated_at": "2026-11-26T09:37:36.732152+00:00",
-  "last_run_at": "2026-11-26T09:36:46+00:00",
+  "generated_at": "2026-11-26T09:46:06.861369+00:00",
+  "last_run_at": "2026-11-26T09:44:59+00:00",
   "on_time": [
     {
       "late_minutes": 32,
@@ -97,9 +97,9 @@
       "workflow": "reporting-jobs.yml"
     },
     {
-      "late_minutes": 40,
+      "late_minutes": 43,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-26T07:27:55+00:00",
+      "ran_at": "2026-11-26T07:30:55+00:00",
       "slot": "2026-11-26T06:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     },
@@ -111,6 +111,6 @@
       "workflow": "thumbnail-campaign.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 1,
   "warn_minutes": 120
 }
