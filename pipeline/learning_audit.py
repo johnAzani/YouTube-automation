@@ -127,13 +127,24 @@ def _thumbnail_choice() -> dict[str, Any]:
         state = "measuring"
         because = ("%d impressions pooled, under the %d floor for every concept, so "
                    "nothing is trusted" % (total_impressions, MIN_THUMBNAIL_IMPRESSIONS))
+    elif not _adopts_leader():
+        state = "unwired"
+        because = (f"{leader} leads, and nothing reads the leader when choosing the "
+                   "next release's concept")
     else:
-        # A leader only counts as learning if the next release can adopt it.
-        from pipeline.thumbnail_campaign import concept_for
-        state = "acting" if _adopts_leader() else "unwired"
-        because = (f"{leader} leads at {campaign.get('leader_click_rate_percent')}%"
-                   + ("" if state == "acting" else
-                      ", and nothing reads the leader when choosing the next release's concept"))
+        # Wiring is necessary, not sufficient. The loop is acting only once a
+        # release has actually gone out on the leader's concept — the audit could
+        # otherwise report the loop closed on the day it was wired, before any
+        # video had used the answer.
+        adopted = _adopted_release()
+        if adopted:
+            state = "acting"
+            because = (f"{leader} leads at {campaign.get('leader_click_rate_percent')}% "
+                       f"and a release has gone out on it ({adopted})")
+        else:
+            state = "measuring"
+            because = (f"{leader} leads, the release path can adopt it, and no release "
+                       "has gone out on it yet")
     return {
         "loop": "thumbnail_choice",
         "what": "which of the three thumbnail concepts goes live",
@@ -143,6 +154,31 @@ def _thumbnail_choice() -> dict[str, Any]:
         "videos_assigned": assigned,
         "owner": "pipeline/thumbnail_campaign.py: live_concept",
     }
+
+
+def _adopted_release() -> str:
+    """The first release that went out on the measured leader, or "".
+
+    Reads the receipts the pipeline already writes; it does not infer adoption from
+    the campaign's own intention to adopt.
+    """
+    from pipeline.thumbnail_campaign import measured_leader
+
+    leader = measured_leader()
+    name = (leader or {}).get("concept") if isinstance(leader, dict) else leader
+    if not name:
+        return ""
+    for path in sorted((ROOT / "content" / "published").glob("short-*.md")):
+        try:
+            text = path.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        for line in text.splitlines():
+            if line.lower().startswith("thumbnail_concept:"):
+                value = line.split(":", 1)[1].strip().strip("\"'")
+                if value == str(name):
+                    return path.stem
+    return ""
 
 
 def _adopts_leader() -> bool:
@@ -238,8 +274,14 @@ def _first_frame() -> dict[str, Any]:
     specs = int(audit.get("specs") or 1)
     if len(compositions) <= 1:
         state = "measuring"
-        because = ("one composition across %d Shorts: a variable with one level has no "
-                   "measured answer" % specs)
+        # A citation on frame one is not a second composition — it is the same
+        # plate, kicker, subtitle and camera move with the citation's words in the
+        # kicker slot. Saying "one composition across N Shorts" while N in ten open
+        # on a citation hides the only variable the repository has actually varied.
+        because = ("one composition across %d Shorts, but %d of them (%d%%) still open "
+                   "on a citation: the design has one level, and the citation-versus-need "
+                   "choice inside it has two"
+                   % (specs, references, round(100 * references / specs)))
     elif references:
         state = "measuring"
         because = ("%d composition(s) now exist, but %d of %d Shorts (%d%%) still open on "
