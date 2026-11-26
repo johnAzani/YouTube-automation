@@ -27,6 +27,8 @@ inventing a passage is worse than reporting an empty pool.
 """
 from __future__ import annotations
 
+from datetime import datetime, timezone
+
 import argparse
 import json
 import re
@@ -235,6 +237,7 @@ def build_report(channels: list[str] | None = None) -> dict[str, Any]:
     thin = [r["channel"] for r in rows if r["ready"] < READY_FLOOR]
     return {
         "schema": 1,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "channels": rows,
         "ready_floor": READY_FLOOR,
         "under_floor": thin,

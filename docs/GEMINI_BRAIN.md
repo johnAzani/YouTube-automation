@@ -13,7 +13,9 @@
 To achieve full operational autonomy where video creation and scheduling continue uninterrupted without human presence or chat pings, **Google Gemini** has been equipped as the official **Autonomous Brain** of each channel. One engine runs for all of them: `gemini_brain.yml` replenishes every channel in sequence, each on its own roadmap and its own free-tier key pool, and no channel has a code path the others lack.
 
 The Gemini Brain handles the cognitive and editorial functions previously performed by human prompt engineers:
-1. **Scripture Demand Research:** Evaluates audience telemetry (`content/metrics.csv` & `content/research/channel_intelligence.json`) to select the optimal high-intent bedtime prayer chapters (e.g. Psalms 91, 23, 121, 27, 46, Isaiah 40).
+1. **Scripture Demand Research:** Picks the passages the brain writes next from the channel's own roadmap (`scripts/continuous_research.ROADMAPS`), the per-channel evergreen pool (`pipeline/evergreen_shorts.py`) and the watch data in `content/research/performance_feedback*.json`, which is what `pipeline/passage_short.next_passages()` reads.
+
+   > **Correction, 26 November 2026.** This line used to say the brain read `content/research/channel_intelligence.json`. It never did: that file is written by a manual run of `scripts/continuous_research.py` and read by nothing, and the committed copy had not changed since 29 October 2026. The docs described a loop that did not exist.
 2. **Devotional Script Authoring:** Drafts complete, reverent, 6-scene deep-dive scripts in `content/queue/*.md` adhering to the DOCOGA REELS v2 visual and kinetic typography specifications.
 3. **Theological Exegesis:** Injects original commentary citing historical authorities (Charles Spurgeon's *The Treasury of David* and Matthew Henry's Commentary), ensuring structural immunity against YouTube's July 2026 "Inauthentic Content" policies.
 4. **Companion Short Manifest Generation:** Automatically drafts and stages matching 9:16 vertical Short manifests in `content/shorts-queue/*.yml`.

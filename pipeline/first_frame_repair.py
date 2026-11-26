@@ -28,6 +28,8 @@ allowed to author.
 """
 from __future__ import annotations
 
+from datetime import datetime, timezone
+
 import argparse
 import json
 from pathlib import Path
@@ -211,6 +213,7 @@ def audit(write: bool = False, spec_dir: Path | None = None,
     control = [row for row in rows if row["action"] == "control"]
     return {
         "schema": 1,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "written": write,
         "specs_examined": len(list(folder.glob("*.json"))),
         "citation_frames": len(rows),

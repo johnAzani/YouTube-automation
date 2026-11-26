@@ -525,9 +525,9 @@ def _disabled_legacy_process(path: Path, dry_run: bool) -> dict:
              f"title {pack['title_report']['length']} chars "
              f"({'ok' if pack['title_report']['visible_mobile'] else 'LONG for mobile'})")
 
-        narration_dur = 39.55
-        narration_engine = "gemini-3.8-flash-tts"
-        srt_path_str = ""
+        # Nothing below this point is reachable: the authored-master branch above
+        # ends in a hard stop. Kept as a marker so a reader sees the last thing the
+        # authored path does.
     else:
         from .tts import synthesize
         from .quota_handler import GeminiQuotaExceededError, QuotaExceededError, pause_longform_job_on_quota
@@ -565,132 +565,17 @@ def _disabled_legacy_process(path: Path, dry_run: bool) -> dict:
             scene_assets.append([a.path for a in assets])
             _log(f"  scene {scene.index:02d} «{scene.heading[:40]}» -> {len(assets)} asset(s)")
 
-        # ---- 4. assemble --------------------------------------------------
-        from .assemble import assemble, scene_durations_from_words
-
-        durations = scene_durations_from_words(doc, narration.duration_seconds)
-        raise RuntimeError("Legacy montage renderer is prohibited by the visual style lock")
-        _log(f"rendered {final} ({final.stat().st_size / 1e6:.1f} MB)")
-
-        # ---- 5. thumbnail (+ A/B variants for Studio Test & Compare) -------
-        from .thumbnail import generate_thumbnail_variants
-
-        bg = scene_assets[0][0] if scene_assets and scene_assets[0] else None
-        thumbs = generate_thumbnail_variants(doc, bg, out_dir)
-        thumb = thumbs[0]
-        _log(f"thumbnail {thumb.name} + {len(thumbs) - 1} A/B variants")
-
-        # ---- 5b. SEO metadata pack (chapters, description, tags) ----------
-        from .metadata import write_metadata_pack
-
-        pack = write_metadata_pack(doc, durations, out_dir)
-        _log(f"metadata pack: {len(pack['chapters'])} chapters, "
-             f"title {pack['title_report']['length']} chars "
-             f"({'ok' if pack['title_report']['visible_mobile'] else 'LONG for mobile'})")
-
-        narration_dur = narration.duration_seconds
-        narration_engine = narration.engine
-        srt_path_str = str(narration.srt_path)
-
-    result = {
-        "id": doc.id,
-        "slug": doc.slug,
-        "title": doc.title,
-        "video": str(final),
-        "thumbnail": str(thumb),
-        "thumbnail_variants": [str(t) for t in thumbs],
-        "srt": srt_path_str,
-        "duration_seconds": narration_dur,
-        "tts_engine": narration_engine,
-        "metadata": pack,
-        "dry_run": dry_run,
-    }
-
-    # ---- 5c. auto-Shorts (opt-in via MAKE_SHORTS=1) -------------------
-    if os.environ.get("MAKE_SHORTS", "").lower() in {"1", "true", "yes"}:
-        from .shorts import cut_shorts
-
-        shorts = cut_shorts(doc, final, narration.srt_path, durations,
-                            out_dir / "shorts", count=int(os.environ.get("SHORTS_COUNT", "2")))
-        result["shorts"] = [str(s) for s in shorts]
-        _log(f"cut {len(shorts)} Short(s)")
-
-    # ---- 6. upload ----------------------------------------------------
-    if not dry_run:
-        from .upload import upload
-
-        upload_thumb = None if doc.format == "short" else thumb
-        privacy_val = doc.meta.get("privacy")
-        publish_at_val = doc.meta.get("publish_at")
-        try:
-            up = upload(doc, final, upload_thumb, privacy=privacy_val, publish_at=publish_at_val, description=pack.get("description"))
-        except (QuotaExceededError, GeminiQuotaExceededError) as q_exc:
-            reset_dt = getattr(q_exc, "reset_utc", None) or calculate_next_quota_reset_utc()
-            reset_iso = reset_dt.isoformat()
-            _log(f"Daily quota reached: {q_exc}. Pausing job {path.name} until {reset_iso} UTC ($0.00 lock active)...")
-            pause_longform_job_on_quota(path, str(q_exc), reset_dt)
-            return {
-                "job": doc.id,
-                "status": "quota_paused",
-                "quota_reset_utc": reset_iso,
-                "error": str(q_exc),
-            }
-        if up.privacy_status == "duplicate_prevented":
-            from .upload import inspect_existing_video
-            video = inspect_existing_video(up.video_id, doc.title)
-            _log(f"YouTube upload skipped: matching video on channel ({up.video_id}).")
-            result.update({
-                "uploaded": False,
-                "duplicate_prevented": True,
-                "video_id": up.video_id,
-                "watch_url": f"https://youtu.be/{up.video_id}",
-                "privacy_status": up.privacy_status,
-                "thumbnail_status": up.thumbnail_status,
-            })
-            _mark_job_uploaded(path, doc, up.video_id, recovered_video=video)
-            (out_dir / "job_result.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
-            return result
-        if not up.video_id:
-            raise RuntimeError("YouTube upload returned no video ID; leaving the queue job untouched.")
-        result.update({
-            "uploaded": True,
-            "video_id": up.video_id,
-            "watch_url": up.watch_url,
-            "privacy_status": up.privacy_status,
-            "thumbnail_status": up.thumbnail_status,
-        })
-        _log(f"uploaded {up.watch_url} (privacy={up.privacy_status}, "
-             f"thumbnail={up.thumbnail_status})")
-        _open_release_ticket(doc, up.watch_url, up.privacy_status, up.video_id)
-
-        # A queue transition is allowed only after a confirmed upload.
-        _mark_job_uploaded(path, doc, up.video_id, up.thumbnail_status,
-                           scheduled_for=getattr(up, "scheduled_for", "") or None,
-                           pinned_comment=getattr(up, "pinned_comment", None),
-                           caption_track=getattr(up, "caption_track", None),
-                           caption_cues=getattr(up, "caption_cues", None),
-                           caption_sha256=getattr(up, "caption_sha256", None))
-        if getattr(up, "scheduled_for", ""):
-            result["scheduled_for"] = up.scheduled_for
-
-    (out_dir / "job_result.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
-
-    # GitHub Actions job summary (renders nicely on the run page)
-    summary_path = Path(os.environ["GITHUB_STEP_SUMMARY"]) if os.environ.get("GITHUB_STEP_SUMMARY") else None
-    if summary_path:
-        with open(summary_path, "a", encoding="utf-8") as f:
-            f.write(f"### 🎬 {doc.title}\n\n")
-            f.write(f"- slug: `{doc.slug}`\n- duration: {narration_dur:.0f}s\n")
-            f.write(f"- tts: {narration_engine}\n- video: `{final.name}`\n")
-            if result.get("watch_url"):
-                f.write(f"- watch: {result['watch_url']}\n")
-            if result.get("thumbnail_status"):
-                # A published video with no custom thumbnail is a silent CTR
-                # loss; say it on the run page instead of only in a log line.
-                f.write(f"- thumbnail: `{result['thumbnail_status']}`\n")
-            f.write("\n> ⚠️ Human QC required before publish: thumbnail, title, intro hook (first 30s), "
-                    "captions, and the originality checklist signature.\n")
-    return result
+        # ---- 4. render ----------------------------------------------------
+        # The legacy montage renderer used to sit here and was prohibited by the
+        # visual style lock: everything below the old `raise` was unreachable, and
+        # it had quietly rotted — it called `calculate_next_quota_reset_utc`
+        # without importing it, so had it ever run it would have raised NameError
+        # while reporting a quota pause. Production never reaches this function;
+        # `process()` delegates to `prayer_pipeline.produce`.
+        raise RuntimeError(
+            "Legacy montage renderer is prohibited by the visual style lock; "
+            "queue entries render through pipeline.prayer_pipeline.produce"
+        )
 
 
 def _open_release_ticket(doc: ScriptDoc, url: str, privacy: str, video_id: str = "") -> None:

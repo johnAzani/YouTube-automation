@@ -320,6 +320,58 @@ def _text_box(draw, text: str, font, xy) -> tuple[int, int, int, int]:
     return int(left), int(top), int(right), int(bottom)
 
 
+#: The size the hero lockup can shrink to before the poster is considered
+#: unreadable, and the width it has to fit inside.
+HERO_FLOOR_PX = 64
+HERO_INNER_WIDTH = (SAFE_BOX[2] - SAFE_BOX[0]) - 140
+
+
+def _measure_width(text: str, size: int) -> float:
+    """How wide `text` is at `size`, using the font the poster will paint it in."""
+    from PIL import Image, ImageDraw
+
+    measure = ImageDraw.Draw(Image.new("RGB", (8, 8)))
+    return measure.textlength(text, font=_font(size))
+
+
+def fold_hero(line: str, *, inner: int = HERO_INNER_WIDTH,
+              size: int = HERO_FLOOR_PX) -> list[str]:
+    """Split an over-wide hero line into lines that fit, keeping every word.
+
+    The poster refuses a frame whose text escapes the UI safe zone, and on 26
+    November 2026 forty-one Shorts were refused for exactly that: the authoring
+    step had no width limit, so it wrote `IS FROM EVERLASTING TO EVERLASTING`,
+    which needs 1319px at the smallest size the layout allows and only 796px
+    exist. Refusing is the correct behaviour — a muddy poster is worse than none —
+    but the fix belongs in the words, not in the guard.
+
+    Width is measured, never guessed from a character count: eleven capital W's
+    are as wide as twenty-one letters of `THE MERCY OF THE LORD`, so any single
+    character budget is either too loose to prevent a refusal or tight enough to
+    wrap a line that would have fitted.
+
+    Words are only ever moved onto another line, never dropped or hyphenated, so
+    the poster still says exactly what the spec says.
+    """
+    text = " ".join(str(line or "").split())
+    if not text:
+        return []
+    if _measure_width(text, size) <= inner:
+        return [text]
+    out: list[str] = []
+    current: list[str] = []
+    for word in text.split(" "):
+        trial = " ".join([*current, word])
+        if current and _measure_width(trial, size) > inner:
+            out.append(" ".join(current))
+            current = [word]
+        else:
+            current.append(word)
+    if current:
+        out.append(" ".join(current))
+    return out
+
+
 def _inside(box, safe) -> bool:
     return box[0] >= safe[0] and box[1] >= safe[1] and box[2] <= safe[2] and box[3] <= safe[3]
 
@@ -354,19 +406,36 @@ def render_shorts_poster(
     measure = ImageDraw.Draw(canvas)
 
     inner = (SAFE_BOX[2] - SAFE_BOX[0]) - 140
+    # An over-wide hero is folded onto extra lines before anything is measured, so
+    # the lockup shrinks with the words instead of pushing them out of the safe
+    # box. `fold_hero` only moves words between lines; it never drops one.
+    hero_lines = [w for w in (fold_hero(hero1) + fold_hero(hero2)) if w]
+    # One size for the whole lockup: whatever the widest folded line needs, never
+    # below the readability floor.
+    if not hero_lines:
+        hero_lines = [w for w in (hero1, hero2) if w]
+    # Every folded line is kept. An earlier version of this fold held only the
+    # first two lines and silently dropped the rest, so "IS FROM EVERLASTING TO
+    # EVERLASTING" was painted as "IS FROM EVERLASTING TO" — a poster that reads
+    # fine and says the wrong thing. Folding may re-wrap the words, never lose them.
+    if not hero_lines:
+        hero_lines = [w for w in (hero1, hero2) if w]
+
     f_kick = _fit(measure, kicker, inner, 50, 34)
-    f1 = _fit(measure, hero1, inner, 132, 64) if hero1 else None
-    f2 = _fit(measure, hero2, inner, 132, 64) if hero2 else None
+    # One size for the whole lockup, chosen so the widest folded line fits.
+    hero_size = 132
+    while hero_size > 64 and any(
+            measure.textlength(line, font=_font(hero_size)) > inner for line in hero_lines):
+        hero_size -= 2
+    hero_fonts = [_font(hero_size) for _ in hero_lines]
     f_sub = _fit(measure, sub, inner, 54, 32) if sub else None
     f_tag = _fit(measure, tag, inner, 38, 26) if tag else None
 
     # Layout: hug the lockup, centre the card inside the safe box.
     pad = 78
     heights = [pad] + ([62] if kicker else [])
-    if f1:
-        heights.append(int(f1.size * 1.14))
-    if f2:
-        heights.append(int(f2.size * 1.14))
+    for _font_one in hero_fonts:
+        heights.append(int(_font_one.size * 1.14))
     if f_sub:
         heights += [30, 34, int(f_sub.size * 1.5)]
     if f_tag:
@@ -404,8 +473,8 @@ def render_shorts_poster(
         boxes.append(_text_box(draw, kicker, f_kick, (kx, y + 2)))
         y += 62
 
-    for line, font in ((hero1, f1), (hero2, f2)):
-        if not line or font is None:
+    for line, font in zip(hero_lines, hero_fonts):
+        if not line:
             continue
         w = draw.textlength(line, font=font)
         x = (width - w) / 2
@@ -454,9 +523,9 @@ def render_shorts_poster(
         width=width,
         height=height,
         contrast=contrast,
-        hero_px=(f1.size if f1 else 0),
+        hero_px=(hero_fonts[0].size if hero_fonts else 0),
         kicker=kicker,
-        lines=(hero1, hero2, sub, tag),
+        lines=(*hero_lines, sub, tag),
         plate=plate or DEFAULT_PLATE,
         grade=grade_name,
         safe_zone_ok=safe_ok,
