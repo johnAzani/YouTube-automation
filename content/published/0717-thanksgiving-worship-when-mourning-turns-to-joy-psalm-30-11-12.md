@@ -2,7 +2,7 @@
 id: '0717'
 title: 'Thanksgiving Worship When Mourning Turns to Joy: Psalm 30:11-12'
 slug: thanksgiving-worship-when-mourning-turns-to-joy-psalm-30-11-12
-status: approved
+status: published
 channel: prayer9
 privacy: public
 format: longform
@@ -73,6 +73,18 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-26"
+published_at: "2026-11-26T08:13:42Z"
+youtube_video_id: "m63bZIcybjs"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 544.69
+thumbnail_pending: true
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-12-03T08:38:09Z"
+thumbnail_retry_reason: "permission"
 ---
 
 ## Scene 1 — Entering His Gates With Thanksgiving

@@ -37,8 +37,8 @@
       "workflow": "tests-on-main.yml"
     }
   ],
-  "generated_at": "2026-11-26T07:17:54.431399+00:00",
-  "last_run_at": "2026-11-26T07:17:07+00:00",
+  "generated_at": "2026-11-26T09:00:20.165396+00:00",
+  "last_run_at": "2026-11-26T08:59:31+00:00",
   "on_time": [
     {
       "late_minutes": 32,
@@ -83,9 +83,16 @@
       "workflow": "produce.yml"
     },
     {
-      "late_minutes": 4,
+      "late_minutes": 90,
+      "name": "YouTube reporting jobs (thumbnail impressions)",
+      "ran_at": "2026-11-26T07:17:58+00:00",
+      "slot": "2026-11-26T05:47:00+00:00",
+      "workflow": "reporting-jobs.yml"
+    },
+    {
+      "late_minutes": 7,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-26T06:51:43+00:00",
+      "ran_at": "2026-11-26T06:54:20+00:00",
       "slot": "2026-11-26T06:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     },

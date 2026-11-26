@@ -1,0 +1,282 @@
+{
+  "key": "short-gardenpsalm50v23",
+  "channel": "prayer9",
+  "psalm": 50,
+  "title": [
+    "WHEN QUIET PRAISE",
+    "GLORIFIES GOD"
+  ],
+  "poster": [
+    "OFFER PRAISE",
+    "HONOUR GOD",
+    "PSALM 50:23",
+    "DAILY THANKSGIVING PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade soft morning light",
+    "misty meadow calm countryside sunrise",
+    "golden light over peaceful river landscape",
+    "calm lake reflection surrounded by autumn trees",
+    "quiet valley with sunbeams through morning fog",
+    "serene golden forest path at dusk"
+  ],
+  "scenes": [
+    {
+      "a": "You wonder if your quiet thankfulness matters.",
+      "img": "short-gardenpsalm50v23-scene-01.jpg",
+      "kicker": "QUIET THANKFULNESS",
+      "sub": "YOUR HONEST PRAISE MATTERS TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In the middle of an ordinary day, when no one sees, offering honest praise to God carries eternal weight.",
+      "img": "short-gardenpsalm50v23-scene-02.jpg",
+      "kicker": "EVERY HONEST WORD",
+      "sub": "GOD HEARS YOUR PRAISE TODAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Scripture reminds us: Whoso offereth praise glorifieth me: and to him that ordereth his conversation aright will I show the salvation of God.",
+      "img": "short-gardenpsalm50v23-scene-03.jpg",
+      "kicker": "PSALM 50:23",
+      "sub": "WHOSO OFFERETH PRAISE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Heavenly Father, we turn our heart toward You now with gratitude, not because every trouble has vanished, but because You remain constant and worthy of our worship.",
+      "img": "short-gardenpsalm50v23-scene-04.jpg",
+      "kicker": "ALWAYS FAITHFUL",
+      "sub": "TURNING OUR HEART IN GRATITUDE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Help us order our daily words and conduct in obedience, trusting You to reveal Your saving help in every moment.",
+      "img": "short-gardenpsalm50v23-scene-05.jpg",
+      "kicker": "WALK IN TRUTH",
+      "sub": "HE WILL SHOW HIS SALVATION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen, your quiet thankfulness matters.",
+      "img": "short-gardenpsalm50v23-scene-06.jpg",
+      "kicker": "PEACE IN HIS PRESENCE",
+      "sub": "YOUR PRAISE GLORIFIES HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You wonder if your quiet thankfulness matters."
+    ],
+    [
+      3,
+      9,
+      "In the middle of an ordinary day, when no one sees, offering honest praise to God carries eternal weight."
+    ],
+    [
+      9,
+      18,
+      "Scripture reminds us: Whoso offereth praise glorifieth me: and to him that ordereth his conversation aright will I show the salvation of God."
+    ],
+    [
+      18,
+      28,
+      "Heavenly Father, we turn our heart toward You now with gratitude, not because every trouble has vanished, but because You remain constant and worthy of our worship."
+    ],
+    [
+      28,
+      37,
+      "Help us order our daily words and conduct in obedience, trusting You to reveal Your saving help in every moment."
+    ],
+    [
+      37,
+      42,
+      "Amen, your quiet thankfulness matters."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU WONDER IF",
+        "YOUR QUIET THANKFULNESS",
+        "MATTERS TODAY"
+      ],
+      [
+        "QUIET",
+        "THANKFULNESS"
+      ],
+      "PSALM 50 : 23"
+    ],
+    [
+      3,
+      9,
+      [
+        "IN AN ORDINARY DAY",
+        "OFFERING HONEST PRAISE TO GOD",
+        "CARRIES ETERNAL WEIGHT"
+      ],
+      [
+        "HONEST",
+        "PRAISE",
+        "ETERNAL"
+      ],
+      "PSALM 50 : 23"
+    ],
+    [
+      9,
+      18,
+      [
+        "WHOSO OFFERETH PRAISE",
+        "GLORIFIETH ME AND TO HIM",
+        "THAT ORDERETH HIS WAY",
+        "I WILL SHOW SALVATION"
+      ],
+      [
+        "PRAISE",
+        "GLORIFIETH",
+        "SALVATION"
+      ],
+      "PSALM 50 : 23"
+    ],
+    [
+      18,
+      28,
+      [
+        "WE TURN OUR HEART",
+        "TOWARD YOU WITH GRATITUDE",
+        "YOU REMAIN CONSTANT AND WORTHY"
+      ],
+      [
+        "GRATITUDE",
+        "CONSTANT",
+        "WORTHY"
+      ],
+      "PSALM 50 : 23"
+    ],
+    [
+      28,
+      37,
+      [
+        "HELP US ORDER OUR WORDS",
+        "AND CONDUCT IN OBEDIENCE",
+        "TRUSTING YOUR SAVING HELP"
+      ],
+      [
+        "ORDER",
+        "OBEDIENCE",
+        "SAVING"
+      ],
+      "PSALM 50 : 23"
+    ],
+    [
+      37,
+      42,
+      [
+        "AMEN YOUR QUIET",
+        "THANKFULNESS MATTERS"
+      ],
+      [
+        "THANKFULNESS",
+        "MATTERS"
+      ],
+      "PSALM 50 : 23"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You wonder if your quiet thankfulness matters.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "THANKFULNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In the middle of an ordinary day, when no one sees, offering honest praise to God carries eternal weight.",
+      "kind": "phrase",
+      "words": [
+        "HONEST",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture reminds us: Whoso offereth praise glorifieth me: and to him that ordereth his conversation aright will I show the salvation of God.",
+      "kind": "phrase",
+      "words": [
+        "OFFERETH",
+        "PRAISE",
+        "GLORIFIETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we turn our heart toward You now with gratitude, not because every trouble has vanished, but because You remain constant and worthy of our worship.",
+      "kind": "phrase",
+      "words": [
+        "HEAVENLY",
+        "FATHER",
+        "GRATITUDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help us order our daily words and conduct in obedience, trusting You to reveal Your saving help in every moment.",
+      "kind": "phrase",
+      "words": [
+        "SAVING",
+        "HELP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen, your quiet thankfulness matters.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "THANKFULNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 50:23"
+}
