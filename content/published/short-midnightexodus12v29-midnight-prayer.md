@@ -24,9 +24,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE MIDNIGHT WATCH", "EXODUS 12:29-31", "BREAK EVERY CHAIN", "STAND IN PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-26T09:14:39Z"
+thumbnail_retry_after: "2026-12-03T09:29:36Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 2
+thumbnail_attempts: 3
 ---
 
 As midnight falls, step into the sanctuary of quiet prayer. At this quiet hour, heavy chains are broken in the spirit realm. Exodus chapter twelve, verses twenty-nine through thirty-one declares: At midnight the Lord smote all the firstborn in Egypt, and Pharaoh rose up in the night, saying, Rise up, and get you forth. Tonight, whatever spiritual stronghold has bound your peace or your family must release its grip. The darkness of night cannot withstand the sudden light of divine deliverance. Stand firm in faithful prayer while the world sleeps. Receive your total freedom, walk out of bondage, and enter God's promise. Subscribe to The Midnight Watch and pray with us every night.
