@@ -37,8 +37,8 @@
       "workflow": "tests-on-main.yml"
     }
   ],
-  "generated_at": "2026-11-26T10:58:42.405473+00:00",
-  "last_run_at": "2026-11-26T10:57:53+00:00",
+  "generated_at": "2026-11-26T11:48:01.769660+00:00",
+  "last_run_at": "2026-11-26T11:47:14+00:00",
   "on_time": [
     {
       "late_minutes": 32,
@@ -81,6 +81,13 @@
       "ran_at": "2026-11-26T09:28:49+00:00",
       "slot": "2026-11-26T09:23:00+00:00",
       "workflow": "monitor.yml"
+    },
+    {
+      "late_minutes": 44,
+      "name": "Produce video",
+      "ran_at": "2026-11-26T10:58:50+00:00",
+      "slot": "2026-11-26T10:14:00+00:00",
+      "workflow": "produce.yml"
     },
     {
       "late_minutes": 90,
