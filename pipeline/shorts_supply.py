@@ -212,19 +212,30 @@ def measure(channel_id: str) -> dict[str, Any]:
     }
 
 
+def _is_are(names: list[str]) -> str:
+    """`is` for one channel, `are` for several. Three channels read as `is` before."""
+    return "is" if len(names) == 1 else "are"
+
+
 def _sentence(thin: list[str], dry: list[str]) -> str:
     """One sentence a person can act on, naming the binding constraint."""
     if not thin:
         return "Every channel holds at least %d ready Shorts." % READY_FLOOR
-    parts = ["%s is below the floor of %d ready Shorts" % (", ".join(thin), READY_FLOOR)]
+    parts = ["%s %s below the floor of %d ready Shorts"
+             % (", ".join(thin), _is_are(thin), READY_FLOOR)]
     if dry:
-        verb = "cannot" if len(dry) == 1 else "cannot"
-        parts.append("and %s %s make another Short at all: no standalone passage is "
-                     "free and no queued long-form is waiting for its companion"
-                     % (", ".join(dry), verb))
+        # "cannot" is the same for one channel and for ten; the verb that has to
+        # agree is the "is/are" above. The old code chose between two identical
+        # strings here, so the branch could never change the output.
+        parts.append("and %s cannot make another Short at all: no standalone passage "
+                     "is free and no queued long-form is waiting for its companion"
+                     % ", ".join(dry))
+    elif len(thin) == 1:
+        parts.append("but it has passages to author from, so the next scheduled "
+                     "pass fills it")
     else:
-        parts.append("but it has passages to author from, so the next scheduled pass "
-                     "fills it")
+        parts.append("but they have passages to author from, so the next scheduled "
+                     "pass fills them")
     return "; ".join(parts) + "."
 
 
@@ -263,6 +274,8 @@ def write_report(path: Path | None = None, report: dict[str, Any] | None = None)
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("--json", action="store_true")
+    parser.add_argument("--no-write", action="store_true",
+                        help="print the reading and leave the committed file alone")
     args = parser.parse_args(argv)
     report = build_report()
     if args.json:
@@ -274,7 +287,8 @@ def main(argv: list[str] | None = None) -> int:
                   f'{row["companion_longforms"]:12}  {row["verdict"]}')
         print()
         print(report["sentence"])
-    write_report(report=report)
+    if not args.no_write:
+        write_report(report=report)
     return 0
 
 

@@ -8,6 +8,7 @@ concept every day and no release ever read the answer.
 from __future__ import annotations
 
 import json
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -140,6 +141,44 @@ class TestAReadingWithNoAgeCannotBeTrusted(unittest.TestCase):
         age = audit.reading_age(self._write(json.dumps({"generated_at": stamp})))
         self.assertTrue(age["stale"])
         self.assertGreater(age["age_hours"], audit.MAX_READING_AGE_HOURS)
+
+    def test_a_corrupt_reading_is_not_blamed_for_having_no_timestamp(self):
+        """The failure has to name itself.
+
+        `_read` answered `{}` for any unparseable file, so `reading_age` reported
+        "no timestamp in the file" about a reading whose timestamp was fine and
+        whose bytes were broken. Two different faults, one confident wrong answer.
+        """
+        path = self._write('{"generated_at": "2026-11-21T06:0')  # a killed write
+        age = audit.reading_age(path)
+        self.assertTrue(age["stale"])
+        self.assertIsNone(age["age_hours"])
+        self.assertIn("corrupt", age["why"])
+        self.assertNotIn("no timestamp", age["why"])
+
+    def test_a_missing_reading_says_missing_not_corrupt(self):
+        path = Path(tempfile.gettempdir()) / "definitely-not-here-9f2a.json"
+        age = audit.reading_age(path)
+        self.assertTrue(age["stale"])
+        self.assertIn("missing", age["why"])
+        self.assertNotIn("corrupt", age["why"])
+
+    def test_a_reading_of_the_wrong_shape_answers_instead_of_crashing(self):
+        """Valid JSON of the wrong shape used to crash `reading_age` on `.get`.
+
+        A list or a bare string is not a reading, but the audit must still produce
+        a sentence about it: an exception here would take down the whole reading.
+        """
+        for body in ("[1, 2, 3]", '"hello"', "42", "null"):
+            age = audit.reading_age(self._write(body))
+            self.assertTrue(age["stale"], body)
+            self.assertIn("wrong shape", age["why"], body)
+
+    def test_the_three_failures_are_all_different_sentences(self):
+        no_stamp = audit.reading_age(self._write('{"specs": 3}'))["why"]
+        corrupt = audit.reading_age(self._write('{"a":'))["why"]
+        missing = audit.reading_age(Path(tempfile.gettempdir()) / "nope-9f2a.json")["why"]
+        self.assertEqual(len({no_stamp, corrupt, missing}), 3, (no_stamp, corrupt, missing))
 
     def test_a_fresh_reading_is_fresh(self):
         from datetime import datetime, timezone

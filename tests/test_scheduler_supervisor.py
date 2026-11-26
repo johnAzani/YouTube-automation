@@ -11,6 +11,7 @@ import unittest
 import unittest.mock
 from unittest import mock
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
 from scripts import scheduler_supervisor as sup
 
@@ -734,6 +735,68 @@ class TestAWedgedRunIsNotAllowedToHoldTheLock(unittest.TestCase):
         with mock.patch.object(sup, "published_channels_since", return_value={"secret-place"}):
             out = sup.supervise(now, history, dry_run=True, state=state)
         self.assertNotIn("produce.yml", [r["workflow"] for r in out["dispatched"]])
+
+
+class TheLedgerCannotBeLostSilently(unittest.TestCase):
+    """An empty ledger is a lost memory, not a fresh start.
+
+    `load_state` used to answer `{}` for a file it could not parse. Every pass
+    reads that as "nothing was dispatched yet", so a truncated commit would
+    re-arm slots that were already served — and `produce.yml` allows
+    `2 * channels + 1` attempts per slot, so a finished slot could have been
+    re-dispatched twenty-one more times. The same bad read was then written back
+    over the ledger and committed by the workflow, making the loss permanent.
+    """
+
+    def setUp(self):
+        import tempfile
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        for name, value in (("STATE", self.root / "dispatched.json"),
+                            ("SCHEDULE_HEALTH", self.root / "schedule-health.json")):
+            patcher = mock.patch.object(sup, name, value)
+            patcher.start()
+            self.addCleanup(patcher.stop)
+
+    def test_a_truncated_ledger_refuses_instead_of_answering_empty(self):
+        sup.STATE.write_text('{"produce.yml@2026-11-26T06:14:00+00:00": {"at": "2026-11')
+        with self.assertRaises(sup.LedgerUnreadable):
+            sup.load_state()
+
+    def test_a_zero_byte_ledger_refuses_too(self):
+        # A killed write leaves the truncation, not the JSON.
+        sup.STATE.write_text("")
+        with self.assertRaises(sup.LedgerUnreadable):
+            sup.load_state()
+
+    def test_a_non_object_ledger_refuses(self):
+        sup.STATE.write_text("[1, 2, 3]")
+        with self.assertRaises(sup.LedgerUnreadable):
+            sup.load_state()
+
+    def test_a_missing_ledger_is_a_first_run_not_a_failure(self):
+        self.assertEqual(sup.load_state(), {})
+
+    def test_an_unreadable_ledger_dispatches_nothing(self):
+        sup.STATE.write_text('{"produce.yml@2026-11-26T06:14:00+00:00": {"at": "2026-11')
+        before = sup.STATE.read_text()
+        out = sup.supervise(datetime(2026, 11, 26, 8, 0, tzinfo=UTC), runs())
+        self.assertEqual(out["dispatched"], [])
+        self.assertTrue(out["failed"])
+        self.assertIn("dispatched.json", out["failed"][0]["reason"])
+        # It must not "repair" the file by writing an empty ledger over it.
+        self.assertEqual(sup.STATE.read_text(), before)
+
+    def test_the_write_is_atomic_and_leaves_no_staging_file(self):
+        sup.save_state({"produce.yml@2026-11-26T06:14:00+00:00": {"attempts": 2}})
+        self.assertEqual(sup.load_state()["produce.yml@2026-11-26T06:14:00+00:00"]["attempts"], 2)
+        self.assertFalse(sup.STATE.with_name(sup.STATE.name + ".staged").exists())
+
+    def test_a_successful_pass_still_reads_and_writes_the_ledger(self):
+        sup.STATE.write_text('{"other.yml@2026-11-26T00:00:00+00:00": {"at": "2026-11-26T00:00:00+00:00", "attempts": 1}}')
+        sup.supervise(datetime(2026, 11, 26, 8, 0, tzinfo=UTC), runs(), dry_run=True)
+        self.assertIn("other.yml@2026-11-26T00:00:00+00:00", sup.load_state())
 
 
 

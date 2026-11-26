@@ -636,3 +636,41 @@ class TestBrainApiReporting(unittest.TestCase):
             wd.check_brain_api(report)
         self.assertEqual(report.findings, [])
         self.assertTrue(any("connected" in c for c in report.checked))
+
+class AnUnreadableScriptIsNotAnEmptyQueue(unittest.TestCase):
+    """A file that cannot be parsed looks exactly like a file that is not there.
+
+    `publishable_longform` skipped unparseable queue files with a bare `continue`,
+    so a ready script with a broken header simply subtracted itself from supply.
+    The queue then reads as dry — the one condition the watchdog exists to notice —
+    while the script is still sitting in it. The count stays honest (an unreadable
+    script is not publishable), but the skip is now reported beside it.
+    """
+
+    def setUp(self):
+        import shutil
+        import tempfile
+
+        from pipeline.config import QUEUE_DIR
+
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.queue = Path(self.tmp.name) / "queue"
+        shutil.copytree(QUEUE_DIR, self.queue)
+        self.addCleanup(sp.UNREADABLE_QUEUE_FILES.clear)
+
+    def test_an_unreadable_ready_script_is_named_not_swallowed(self):
+        before = sp.publishable_longform(queue_dir=self.queue, channel_id="secret-place")
+        self.assertTrue(before, "fixture needs at least one ready script")
+        self.assertEqual(sp.UNREADABLE_QUEUE_FILES, [])
+
+        victim = before[0]
+        victim.write_text("not a script at all\n")
+        after = sp.publishable_longform(queue_dir=self.queue, channel_id="secret-place")
+
+        self.assertEqual(len(after), len(before) - 1)
+        self.assertIn(victim.name, sp.UNREADABLE_QUEUE_FILES)
+
+    def test_a_clean_queue_reports_nothing(self):
+        sp.publishable_longform(queue_dir=self.queue, channel_id="secret-place")
+        self.assertEqual(sp.UNREADABLE_QUEUE_FILES, [])

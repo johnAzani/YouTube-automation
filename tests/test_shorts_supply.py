@@ -119,8 +119,12 @@ def test_the_reading_runs_without_third_party_packages():
     blocker.mkdir(exist_ok=True)
     (blocker / "yaml.py").write_text('raise ImportError("PyYAML is not installed")\n')
     try:
+        # `--no-write` matters: without it this subprocess calls the real
+        # `write_report()` and rewrites the committed
+        # `content/research/shorts_supply.json`, so running the suite dirtied the
+        # tree and changed a reading nobody had regenerated.
         done = subprocess.run(
-            [sys.executable, "-m", "pipeline.shorts_supply", "--json"],
+            [sys.executable, "-m", "pipeline.shorts_supply", "--json", "--no-write"],
             cwd=root, capture_output=True, text=True, timeout=300,
             env={"PYTHONPATH": str(blocker), "PATH": "/usr/bin:/bin"},
         )
@@ -132,3 +136,29 @@ def test_the_reading_runs_without_third_party_packages():
             pass
     assert done.returncode == 0, done.stderr[-2000:]
     assert json.loads(done.stdout)["channels"]
+
+def test_the_sentence_agrees_with_how_many_channels_it_names():
+    """Three channels read as "is" until 27 November 2026.
+
+    `_sentence` picked between two identical strings ("cannot" / "cannot"), so the
+    branch that looked like it handled plurality could never change the output, and
+    the verb was hard-wired to the singular. The readings are read by a person, so
+    an ungrammatical line is a real defect in the artifact, not a style opinion.
+    """
+    one = sup._sentence(["prayer3"], ["prayer3"])
+    many = sup._sentence(["prayer3", "prayer6", "prayer7"],
+                         ["prayer3", "prayer6", "prayer7"])
+    assert "prayer3 is below the floor" in one
+    assert "are below the floor" in many
+    assert " is below the floor" not in many
+    assert "but they have passages" in sup._sentence(["a", "b"], [])
+    assert "but it has passages" in sup._sentence(["a"], [])
+
+
+def test_the_sentence_never_makes_a_channel_look_able_when_it_is_not():
+    """"cannot" is correct for one channel and for ten; it must never flip."""
+    for count in (1, 2, 5):
+        names = [f"c{i}" for i in range(count)]
+        sentence = sup._sentence(names, names)
+        assert "cannot make another Short" in sentence
+        assert "can make another Short" not in sentence.replace("cannot", "")
