@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T12:07:56Z",
+  "generated_at": "2026-11-26T12:29:11Z",
   "monitor_generated_at": "2026-11-26T12:06:37.504292+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 858,
-    "published_longform": 235,
-    "published_shorts": 623,
-    "public_total": 856,
-    "queued_longform": 84,
-    "queued_shorts": 40,
+    "published_total": 860,
+    "published_longform": 236,
+    "published_shorts": 624,
+    "public_total": 858,
+    "queued_longform": 83,
+    "queued_shorts": 38,
     "automations_ok": 15,
     "automations_total": 15,
     "network_healthy": true
@@ -421,33 +421,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 79,
-        "published_longform": 21,
-        "published_shorts": 58,
+        "published_total": 81,
+        "published_longform": 22,
+        "published_shorts": 59,
         "thumbnail_pending": 0,
-        "public_total": 79,
-        "queued_longform": 7,
+        "public_total": 81,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 1
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPSALM65V11",
-        "title": "Pray This Psalm 65:11 Prayer for Open Doors & Provision | Commit Your Financial Needs #Shorts",
-        "format": "short",
-        "youtube_video_id": "hdEuaZlOYMU",
-        "watch_url": "https://www.youtube.com/shorts/hdEuaZlOYMU",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T07:18:33Z"
-      },
-      "next_queued_longform": {
         "id": "0523",
         "title": "When Provisions Shrink to the Last Morsel: 1 Kings 17:14-16",
-        "words": 1689,
+        "format": "longform",
+        "youtube_video_id": "ImDsst_xyo0",
+        "watch_url": "https://youtu.be/ImDsst_xyo0",
+        "published_on": "2026-11-26",
+        "published_at": "2026-11-26T12:28:02Z"
+      },
+      "next_queued_longform": {
+        "id": "0525",
+        "title": "Promotion Cometh from the Lord: Psalm 75:6-7 | The Provision Table",
+        "words": 1451,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionproverbs10v22",
-        "scripture": "Proverbs 10:22",
+        "short": "short-provisionisaiah48v17",
+        "scripture": "Isaiah 48:17",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -682,6 +682,30 @@
   ],
   "videos": [
     {
+      "id": "0523",
+      "slug": "when-provisions-shrink-to-the-last-morsel-1-kings-17-14-16",
+      "file": "0523-when-provisions-shrink-to-the-last-morsel-1-kings-17-14-16.md",
+      "title": "When Provisions Shrink to the Last Morsel: 1 Kings 17:14-16",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T12:28:02Z",
+      "youtube_video_id": "ImDsst_xyo0",
+      "watch_url": "https://youtu.be/ImDsst_xyo0",
+      "youtu_be_url": "https://youtu.be/ImDsst_xyo0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/ImDsst_xyo0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ImDsst_xyo0/hqdefault.jpg",
+      "thumb_text": "UNFAILING SUPPLY",
+      "thumbnail_pending": false,
+      "duration_label": "11m 32s",
+      "words": 1689
+    },
+    {
       "id": "0105",
       "slug": "the-well-that-never-runs-dry-at-noon-john-4-13-14",
       "file": "0105-the-well-that-never-runs-dry-at-noon-john-4-13-14.md",
@@ -824,6 +848,30 @@
       "thumbnail_pending": true,
       "duration_label": "50s",
       "words": 639
+    },
+    {
+      "id": "SHORT-PROVISIONPROVERBS10V22",
+      "slug": "short-provisionproverbs10v22-stewardship-prayer",
+      "file": "short-provisionproverbs10v22-stewardship-prayer.md",
+      "title": "Pray This Proverbs 10:22 Prayer for Open Doors & Provision | Without Sorrow #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T11:14:33Z",
+      "youtube_video_id": "JlsIlL2_7Bs",
+      "watch_url": "https://www.youtube.com/shorts/JlsIlL2_7Bs",
+      "youtu_be_url": "https://youtu.be/JlsIlL2_7Bs",
+      "shorts_url": "https://www.youtube.com/shorts/JlsIlL2_7Bs",
+      "studio_url": "https://studio.youtube.com/video/JlsIlL2_7Bs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/JlsIlL2_7Bs/hqdefault.jpg",
+      "thumb_text": "PROVERBS 10:22 \u00b7 GOD'S BLESSING",
+      "thumbnail_pending": false,
+      "duration_label": "53s",
+      "words": 664
     },
     {
       "id": "SHORT-MIDNIGHTPSALM46V10",
@@ -21771,19 +21819,6 @@
         "words": 1231
       },
       {
-        "id": "0523",
-        "slug": "when-provisions-shrink-to-the-last-morsel-1-kings-17-14-16",
-        "file": "0523-when-provisions-shrink-to-the-last-morsel-1-kings-17-14-16.md",
-        "title": "When Provisions Shrink to the Last Morsel: 1 Kings 17:14-16",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1689
-      },
-      {
         "id": "0525",
         "slug": "promotion-cometh-from-the-lord-psalm-75-6-7",
         "file": "0525-promotion-cometh-from-the-lord-psalm-75-6-7.md",
@@ -22624,32 +22659,10 @@
         "target_window_utc": "17:14"
       },
       {
-        "short": "short-provisionproverbs10v22",
-        "file": "0520-short-provisionproverbs10v22.yml",
-        "companion_longform_id": "0520",
-        "scripture": "Proverbs 10:22",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
-      },
-      {
         "short": "short-provisionisaiah48v17",
         "file": "0521-short-provisionisaiah48v17.yml",
         "companion_longform_id": "0521",
         "scripture": "Isaiah 48:17",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-provisionproverbs11v24",
-        "file": "0530-short-provisionproverbs11v24.yml",
-        "companion_longform_id": "0530",
-        "scripture": "Proverbs 11:24-25",
         "channel": "prayer7",
         "channel_name": "The Provision Table",
         "status": "approved",

@@ -2,7 +2,7 @@
 id: '0523'
 title: 'When Provisions Shrink to the Last Morsel: 1 Kings 17:14-16'
 slug: when-provisions-shrink-to-the-last-morsel-1-kings-17-14-16
-status: approved
+status: published
 channel: prayer7
 privacy: public
 format: longform
@@ -74,6 +74,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-26"
+published_at: "2026-11-26T12:28:02Z"
+youtube_video_id: "ImDsst_xyo0"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 692.06
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — Approaching Jehovah-Jireh at the Prepared Table
