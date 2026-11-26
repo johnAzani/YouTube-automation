@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T17:08:53Z",
+  "generated_at": "2026-11-26T17:11:44Z",
   "monitor_generated_at": "2026-11-26T17:07:24.135302+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 863,
+    "published_total": 864,
     "published_longform": 236,
-    "published_shorts": 627,
-    "public_total": 861,
+    "published_shorts": 628,
+    "public_total": 862,
     "queued_longform": 90,
-    "queued_shorts": 45,
+    "queued_shorts": 42,
     "automations_ok": 14,
     "automations_total": 15,
     "network_healthy": false
@@ -363,23 +363,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 81,
+        "published_total": 82,
         "published_longform": 21,
-        "published_shorts": 60,
+        "published_shorts": 61,
         "thumbnail_pending": 0,
-        "public_total": 81,
+        "public_total": 82,
         "queued_longform": 13,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 1
       },
       "latest_video": {
-        "id": "0427",
-        "title": "Strength for a Long Afternoon: Psalm 118:17 | The Healing Balm",
-        "format": "longform",
-        "youtube_video_id": "7f6UDxIYlPI",
-        "watch_url": "https://youtu.be/7f6UDxIYlPI",
+        "id": "SHORT-HEALINGISAIAH53V5",
+        "title": "Pray This Isaiah 53:5 Healing Prayer for Peace & Strength | That Lingers Tonight #Shorts",
+        "format": "short",
+        "youtube_video_id": "4IKw1l4eJ5U",
+        "watch_url": "https://www.youtube.com/shorts/4IKw1l4eJ5U",
         "published_on": "2026-11-26",
-        "published_at": "2026-11-26T12:03:01Z"
+        "published_at": "2026-11-26T17:10:30Z"
       },
       "next_queued_longform": {
         "id": "0429",
@@ -388,8 +388,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingisaiah53v5",
-        "scripture": "Isaiah 53:5",
+        "short": "short-healingpsalm34v18",
+        "scripture": "Psalm 34:18",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGISAIAH53V5",
+      "slug": "short-healingisaiah53v5-restoration-prayer",
+      "file": "short-healingisaiah53v5-restoration-prayer.md",
+      "title": "Pray This Isaiah 53:5 Healing Prayer for Peace & Strength | That Lingers Tonight #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-26",
+      "published_at": "2026-11-26T17:10:30Z",
+      "youtube_video_id": "4IKw1l4eJ5U",
+      "watch_url": "https://www.youtube.com/shorts/4IKw1l4eJ5U",
+      "youtu_be_url": "https://youtu.be/4IKw1l4eJ5U",
+      "shorts_url": "https://www.youtube.com/shorts/4IKw1l4eJ5U",
+      "studio_url": "https://studio.youtube.com/video/4IKw1l4eJ5U/edit",
+      "thumb_url": "https://i.ytimg.com/vi/4IKw1l4eJ5U/hqdefault.jpg",
+      "thumb_text": "THE WOUNDED HEALER \u00b7 PEACE UPON HIM",
+      "thumbnail_pending": false,
+      "duration_label": "53s",
+      "words": 655
+    },
     {
       "id": "SHORT-MORNINGPSALM130V6",
       "slug": "short-morningpsalm130v6-sunrise-prayer",
@@ -22623,17 +22647,6 @@
         "target_window_utc": "18:44"
       },
       {
-        "short": "short-healingisaiah53v5",
-        "file": "0000-short-healingisaiah53v5.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 53:5",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
-      },
-      {
         "short": "short-healingpsalm34v18",
         "file": "0000-short-healingpsalm34v18.yml",
         "companion_longform_id": "",
@@ -22841,28 +22854,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healingmatthew9v35",
-        "file": "0440-short-healingmatthew9v35.yml",
-        "companion_longform_id": "0440",
-        "scripture": "Matthew 9:35",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-healingisaiah38v16",
-        "file": "0441-short-healingisaiah38v16.yml",
-        "companion_longform_id": "0441",
-        "scripture": "Isaiah 38:16-17",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-provisionisaiah48v17",
