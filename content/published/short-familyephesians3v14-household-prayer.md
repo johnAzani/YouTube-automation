@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["STRENGTHEN", "YOUR HOME", "EPHESIANS 3:14", "FAMILY PRAYER"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-03T11:47:54Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Sitting at your kitchen table worrying if your household will weather this storm, listen. For this cause I bow my knees unto the Father of our Lord Jesus Christ, Of whom the whole family in heaven and earth is named, That he would grant you, according to the riches of his glory, to be strengthened with might by his Spirit in the inner man; Lord God, fortify this home with Your Holy Spirit. Strengthen each heart under this roof, Root our family deeply in Your endless love, and grant us Your heavenly peace today. Amen. Subscribe to cover your home in prayer.

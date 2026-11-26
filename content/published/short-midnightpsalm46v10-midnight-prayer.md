@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["MIDNIGHT WATCH", "PSALM 46:10", "BE STILL", "AND KNOW"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-03T11:47:52Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Your racing thoughts demand an answer tonight. Yet God speaks into the quiet of this late hour. His holy word declares: Be still, and know that I am God: I will be exalted among the heathen, I will be exalted in the earth. Father, as midnight settles, we surrender the heavy urge to fix everything ourselves. Quiet the relentless storm within our minds. Help us lay down our striving, knowing You reign over every circumstance beyond our control. Establish Your perfect peace in this silent room right now. Lord, we trust Your sovereignty when our strength gives out. Amen. Your racing thoughts can rest.

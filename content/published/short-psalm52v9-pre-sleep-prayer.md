@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["LEAVE", "THE UNFINISHED", "WORK TO GOD", "TONIGHT"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 You carried unfinished work into this bed. When your strength ran out of hours tonight, the unresolved questions stayed behind. I will praise thee for ever, because thou hast done it: and I will wait on thy name; for it is good before thy saints. Father, I place into Your hands what I could not complete before the dark fell. You have already worked where my weary hands could never reach. Settle this room in quiet peace as I trust Your faithful care. Teach me to rest while You watch through the deep night. Amen. Release every burden you carried into this bed.
