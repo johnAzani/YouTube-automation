@@ -1,0 +1,325 @@
+{
+  "key": "short-guidedproverbs20v24",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "WHEN THE WAY AHEAD",
+    "IS UNCERTAIN"
+  ],
+  "poster": [
+    "MAN'S GOINGS",
+    "ARE OF THE LORD",
+    "SEEK HIS GUIDANCE",
+    "PROVERBS 20:24"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine trail at dawn quiet wilderness",
+    "calm mountain lake early morning light",
+    "foggy pine forest trail morning sunbeams",
+    "peaceful river winding through mountain valley",
+    "serene mountain ridge sunrise soft glow",
+    "still waters in misty alpine valley",
+    "quiet mountain path leading into golden morning"
+  ],
+  "scenes": [
+    {
+      "a": "You cannot see where this path turns.",
+      "img": "short-guidedproverbs20v24-scene-01.jpg",
+      "kicker": "UNSEEN PATH",
+      "sub": "WHEN YOU CANNOT SEE AHEAD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Scripture reminds us in Proverbs twenty, verse twenty-four:",
+      "img": "short-guidedproverbs20v24-scene-02.jpg",
+      "kicker": "GOD ORDERS STEPS",
+      "sub": "PROVERBS 20:24",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Man’s goings are of the LORD; how can a man then understand his own way?",
+      "img": "short-guidedproverbs20v24-scene-03.jpg",
+      "kicker": "HIS SOVEREIGN WAY",
+      "sub": "MAN'S GOINGS ARE OF THE LORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Heavenly Father, when our steps feel confused and our own plans make no sense, we yield our understanding to You.",
+      "img": "short-guidedproverbs20v24-scene-04.jpg",
+      "kicker": "YIELDING CONTROL",
+      "sub": "WHEN PLANS MAKE NO SENSE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We admit that we cannot chart our own future or force our own outcomes.",
+      "img": "short-guidedproverbs20v24-scene-05.jpg",
+      "kicker": "TRUSTING THE FUTURE",
+      "sub": "LEAVING OUTCOMES TO GOD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Order our steps according to Your purpose, and quiet our restless need to figure out every detail.",
+      "img": "short-guidedproverbs20v24-scene-06.jpg",
+      "kicker": "QUIET RESTLESSNESS",
+      "sub": "ORDERING EVERY STEP",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lead us through every uncertain hour into Your quiet peace. Amen. Teach us to trust, even when you cannot see where this path turns.",
+      "img": "short-guidedproverbs20v24-scene-07.jpg",
+      "kicker": "ABIDING PEACE",
+      "sub": "HE LEADS THROUGH THE UNKNOWN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You cannot see where this path turns."
+    ],
+    [
+      3,
+      9,
+      "Scripture reminds us in Proverbs twenty, verse twenty-four:"
+    ],
+    [
+      9,
+      16,
+      "Man’s goings are of the LORD; how can a man then understand his own way?"
+    ],
+    [
+      16,
+      23,
+      "Heavenly Father, when our steps feel confused and our own plans make no sense, we yield our understanding to You."
+    ],
+    [
+      23,
+      30,
+      "We admit that we cannot chart our own future or force our own outcomes."
+    ],
+    [
+      30,
+      38,
+      "Order our steps according to Your purpose, and quiet our restless need to figure out every detail."
+    ],
+    [
+      38,
+      46,
+      "Lead us through every uncertain hour into Your quiet peace. Amen. Teach us to trust, even when you cannot see where this path turns."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU CANNOT SEE",
+        "WHERE THIS PATH TURNS"
+      ],
+      [
+        "CANNOT",
+        "TURNS"
+      ],
+      "PROVERBS 20 : 24"
+    ],
+    [
+      3,
+      9,
+      [
+        "SCRIPTURE REMINDS US",
+        "IN PROVERBS 20:24"
+      ],
+      [
+        "PROVERBS"
+      ],
+      "PROVERBS 20 : 24"
+    ],
+    [
+      9,
+      16,
+      [
+        "MAN'S GOINGS ARE",
+        "OF THE LORD",
+        "HOW CAN A MAN",
+        "UNDERSTAND HIS WAY"
+      ],
+      [
+        "LORD",
+        "UNDERSTAND"
+      ],
+      "PROVERBS 20 : 24"
+    ],
+    [
+      16,
+      23,
+      [
+        "WHEN OUR STEPS",
+        "FEEL CONFUSED",
+        "WE YIELD OUR",
+        "UNDERSTANDING TO YOU"
+      ],
+      [
+        "YIELD",
+        "UNDERSTANDING"
+      ],
+      "PROVERBS 20 : 24"
+    ],
+    [
+      23,
+      30,
+      [
+        "WE CANNOT CHART",
+        "OUR OWN FUTURE",
+        "OR FORCE OUR",
+        "OWN OUTCOMES"
+      ],
+      [
+        "CHART",
+        "OUTCOMES"
+      ],
+      "PROVERBS 20 : 24"
+    ],
+    [
+      30,
+      38,
+      [
+        "ORDER OUR STEPS",
+        "QUIET OUR NEED TO",
+        "FIGURE OUT EVERY DETAIL"
+      ],
+      [
+        "ORDER",
+        "QUIET"
+      ],
+      "PROVERBS 20 : 24"
+    ],
+    [
+      38,
+      46,
+      [
+        "LEAD US THROUGH",
+        "EVERY UNCERTAIN HOUR",
+        "INTO YOUR PEACE",
+        "TEACH US TO TRUST"
+      ],
+      [
+        "LEAD",
+        "PEACE",
+        "TRUST"
+      ],
+      "PROVERBS 20 : 24"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You cannot see where this path turns.",
+      "kind": "phrase",
+      "words": [
+        "CANNOT",
+        "SEE",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture reminds us in Proverbs twenty, verse twenty-four:",
+      "kind": "phrase",
+      "words": [
+        "SCRIPTURE",
+        "PROVERBS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Man’s goings are of the LORD; how can a man then understand his own way?",
+      "kind": "phrase",
+      "words": [
+        "GOINGS",
+        "LORD",
+        "UNDERSTAND"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, when our steps feel confused and our own plans make no sense, we yield our understanding to You.",
+      "kind": "phrase",
+      "words": [
+        "CONFUSED",
+        "YIELD",
+        "UNDERSTANDING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "We admit that we cannot chart our own future or force our own outcomes.",
+      "kind": "phrase",
+      "words": [
+        "CANNOT",
+        "CHART",
+        "OUTCOMES"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Order our steps according to Your purpose, and quiet our restless need to figure out every detail.",
+      "kind": "phrase",
+      "words": [
+        "ORDER",
+        "QUIET",
+        "RESTLESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lead us through every uncertain hour into Your quiet peace. Amen. Teach us to trust, even when you cannot see where this path turns.",
+      "kind": "phrase",
+      "words": [
+        "LEAD",
+        "PEACE",
+        "TRUST"
+      ],
+      "hi": 2,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 20:24"
+}

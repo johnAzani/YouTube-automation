@@ -1,0 +1,365 @@
+{
+  "key": "short-guidedpsalm119v130",
+  "channel": "prayer10",
+  "psalm": 119,
+  "title": [
+    "WHEN YOU FACE A CONFUSING DECISION",
+    "PRAY PSALM 119:130 FOR WISDOM"
+  ],
+  "poster": [
+    "THE ENTRANCE OF THY WORDS",
+    "GIVETH LIGHT",
+    "SEEKING GOD'S WISDOM",
+    "FOR EVERY STEP"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley at dawn soft sunlight",
+    "quiet mountain pass with gentle morning fog",
+    "peaceful river flowing through forest valley",
+    "calm alpine lake reflecting distant peaks",
+    "sunbeams breaking through trees over mountain valley",
+    "still mountain stream in morning light",
+    "mist rising over quiet green mountain valley"
+  ],
+  "scenes": [
+    {
+      "a": "That confusing document sits waiting for your answer.",
+      "img": "short-guidedpsalm119v130-scene-01.jpg",
+      "kicker": "BEFORE YOU DECIDE",
+      "sub": "WAITING FOR YOUR ANSWER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "enough wisdom to decide.",
+      "img": "short-guidedpsalm119v130-scene-02.jpg",
+      "kicker": "SEEKING CLARITY",
+      "sub": "WHEN SIGHT FAILS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The entrance of thy words giveth light",
+      "img": "short-guidedpsalm119v130-scene-03.jpg",
+      "kicker": "GOD'S WORD",
+      "sub": "PSALM 119:130",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "understanding unto the simple.",
+      "img": "short-guidedpsalm119v130-scene-04.jpg",
+      "kicker": "DIVINE COUNSEL",
+      "sub": "BRINGING THE CHOICE TO GOD",
+      "cam": "push_in",
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    {
+      "a": "illuminate what I cannot see.",
+      "img": "short-guidedpsalm119v130-scene-05.jpg",
+      "kicker": "HEAVENLY LIGHT",
+      "sub": "ILLUMINATE THE UNKNOWN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "steady my heart with quiet discernment.",
+      "img": "short-guidedpsalm119v130-scene-06.jpg",
+      "kicker": "QUIET DISCERNMENT",
+      "sub": "EXPOSE EVERY FALSE PATH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "rely on your eternal light",
+      "img": "short-guidedpsalm119v130-scene-07.jpg",
+      "kicker": "ETERNAL PATH",
+      "sub": "LEAD EVERY STEP I TAKE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That confusing document sits waiting for your answer."
+    ],
+    [
+      3,
+      7,
+      "You wonder if you have enough wisdom to decide."
+    ],
+    [
+      7,
+      12,
+      "Hear the word of God in Psalm 119 verse 130."
+    ],
+    [
+      12,
+      19,
+      "The entrance of thy words giveth light; it giveth understanding unto the simple."
+    ],
+    [
+      19,
+      25,
+      "Lord, I bring this hard choice into your presence."
+    ],
+    [
+      25,
+      30,
+      "I am simple without your counsel."
+    ],
+    [
+      30,
+      36,
+      "Let the entrance of your truth illuminate what I cannot see."
+    ],
+    [
+      36,
+      42,
+      "Expose every false path and steady my heart with quiet discernment."
+    ],
+    [
+      42,
+      49,
+      "Teach me to rely on your eternal light above my own understanding."
+    ],
+    [
+      49,
+      56,
+      "Lead every step I take. Amen. That confusing document sits waiting for your answer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT CONFUSING DOCUMENT",
+        "SITS WAITING FOR YOUR ANSWER"
+      ],
+      [
+        "WAITING",
+        "ANSWER"
+      ],
+      "THE GUIDED PATH"
+    ],
+    [
+      3,
+      7,
+      [
+        "YOU WONDER IF YOU HAVE",
+        "ENOUGH WISDOM TO DECIDE"
+      ],
+      [
+        "WISDOM",
+        "DECIDE"
+      ],
+      "THE GUIDED PATH"
+    ],
+    [
+      7,
+      12,
+      [
+        "HEAR THE WORD OF GOD",
+        "IN PSALM 119 VERSE 130"
+      ],
+      [
+        "WORD",
+        "GOD"
+      ],
+      "PSALM 119 : 130"
+    ],
+    [
+      12,
+      19,
+      [
+        "THE ENTRANCE OF THY WORDS GIVETH LIGHT",
+        "IT GIVETH UNDERSTANDING UNTO THE SIMPLE"
+      ],
+      [
+        "GIVETH",
+        "LIGHT",
+        "UNDERSTANDING"
+      ],
+      "PSALM 119 : 130"
+    ],
+    [
+      19,
+      25,
+      [
+        "LORD I BRING THIS HARD CHOICE",
+        "INTO YOUR PRESENCE"
+      ],
+      [
+        "HARD",
+        "CHOICE"
+      ],
+      "THE GUIDED PATH"
+    ],
+    [
+      25,
+      30,
+      [
+        "I AM SIMPLE WITHOUT",
+        "YOUR COUNSEL"
+      ],
+      [
+        "SIMPLE",
+        "COUNSEL"
+      ],
+      "THE GUIDED PATH"
+    ],
+    [
+      30,
+      36,
+      [
+        "LET THE ENTRANCE OF YOUR TRUTH",
+        "ILLUMINATE WHAT I CANNOT SEE"
+      ],
+      [
+        "TRUTH",
+        "ILLUMINATE"
+      ],
+      "THE GUIDED PATH"
+    ],
+    [
+      36,
+      42,
+      [
+        "EXPOSE EVERY FALSE PATH AND STEADY",
+        "MY HEART WITH QUIET DISCERNMENT"
+      ],
+      [
+        "QUIET",
+        "DISCERNMENT"
+      ],
+      "THE GUIDED PATH"
+    ],
+    [
+      42,
+      49,
+      [
+        "TEACH ME TO RELY ON YOUR ETERNAL LIGHT",
+        "ABOVE MY OWN UNDERSTANDING"
+      ],
+      [
+        "ETERNAL",
+        "LIGHT"
+      ],
+      "THE GUIDED PATH"
+    ],
+    [
+      49,
+      56,
+      [
+        "LEAD EVERY STEP I TAKE AMEN",
+        "THAT CONFUSING DOCUMENT SITS WAITING"
+      ],
+      [
+        "STEP",
+        "ANSWER"
+      ],
+      "THE GUIDED PATH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That confusing document sits waiting for your answer.",
+      "kind": "phrase",
+      "words": [
+        "WAITING",
+        "ANSWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "enough wisdom to decide.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "DECIDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The entrance of thy words giveth light",
+      "kind": "phrase",
+      "words": [
+        "ENTRANCE",
+        "LIGHT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "understanding unto the simple.",
+      "kind": "phrase",
+      "words": [
+        "UNDERSTANDING",
+        "SIMPLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "illuminate what I cannot see.",
+      "kind": "phrase",
+      "words": [
+        "ILLUMINATE",
+        "SEE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "steady my heart with quiet discernment.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "DISCERNMENT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "rely on your eternal light",
+      "kind": "phrase",
+      "words": [
+        "ETERNAL",
+        "LIGHT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 119:130"
+}

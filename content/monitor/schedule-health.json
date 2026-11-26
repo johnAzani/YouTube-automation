@@ -16,22 +16,29 @@
       "workflow": "keepalive.yml"
     },
     {
-      "late_minutes": 228,
-      "name": "Thumbnail campaign (which concept earns the click)",
-      "ran_at": "2026-11-25T08:55:04+00:00",
-      "slot": "2026-11-25T05:07:00+00:00",
-      "workflow": "thumbnail-campaign.yml"
+      "late_minutes": 196,
+      "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
+      "ran_at": "2026-11-26T06:53:04+00:00",
+      "slot": "2026-11-26T03:37:00+00:00",
+      "workflow": "channel-analytics.yml"
     },
     {
-      "late_minutes": 188,
-      "name": "YouTube reporting jobs (thumbnail impressions)",
-      "ran_at": "2026-11-25T08:55:07+00:00",
-      "slot": "2026-11-25T05:47:00+00:00",
-      "workflow": "reporting-jobs.yml"
+      "late_minutes": 127,
+      "name": "Growth score (where the watch hours come from)",
+      "ran_at": "2026-11-26T06:44:59+00:00",
+      "slot": "2026-11-26T04:37:00+00:00",
+      "workflow": "growth-score.yml"
+    },
+    {
+      "late_minutes": 121,
+      "name": "Tests on main (daily)",
+      "ran_at": "2026-11-26T06:53:05+00:00",
+      "slot": "2026-11-26T04:52:00+00:00",
+      "workflow": "tests-on-main.yml"
     }
   ],
-  "generated_at": "2026-11-26T05:02:13.356128+00:00",
-  "last_run_at": "2026-11-26T05:01:22+00:00",
+  "generated_at": "2026-11-26T07:17:54.431399+00:00",
+  "last_run_at": "2026-11-26T07:17:07+00:00",
   "on_time": [
     {
       "late_minutes": 32,
@@ -39,13 +46,6 @@
       "ran_at": "2026-11-25T20:46:12+00:00",
       "slot": "2026-11-25T20:14:00+00:00",
       "workflow": "automation-health.yml"
-    },
-    {
-      "late_minutes": 93,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-25T20:47:51+00:00",
-      "slot": "2026-11-25T19:14:00+00:00",
-      "workflow": "comments.yml"
     },
     {
       "late_minutes": 93,
@@ -69,25 +69,32 @@
       "workflow": "growth-autopilot.yml"
     },
     {
-      "late_minutes": 16,
+      "late_minutes": 28,
       "name": "Automation monitor",
-      "ran_at": "2026-11-26T03:39:14+00:00",
-      "slot": "2026-11-26T03:23:00+00:00",
+      "ran_at": "2026-11-26T06:51:43+00:00",
+      "slot": "2026-11-26T06:23:00+00:00",
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 33,
+      "late_minutes": 39,
       "name": "Produce video",
-      "ran_at": "2026-11-25T23:47:55+00:00",
-      "slot": "2026-11-25T23:14:00+00:00",
+      "ran_at": "2026-11-26T06:53:14+00:00",
+      "slot": "2026-11-26T06:14:00+00:00",
       "workflow": "produce.yml"
     },
     {
-      "late_minutes": 71,
+      "late_minutes": 4,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-26T04:58:41+00:00",
-      "slot": "2026-11-26T03:47:00+00:00",
+      "ran_at": "2026-11-26T06:51:43+00:00",
+      "slot": "2026-11-26T06:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
+    },
+    {
+      "late_minutes": 106,
+      "name": "Thumbnail campaign (which concept earns the click)",
+      "ran_at": "2026-11-26T06:53:07+00:00",
+      "slot": "2026-11-26T05:07:00+00:00",
+      "workflow": "thumbnail-campaign.yml"
     }
   ],
   "silence_minutes": 0,

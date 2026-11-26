@@ -1,0 +1,388 @@
+{
+  "key": "short-guidedexodus33v14",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "BEFORE YOUR NEXT STEP",
+    "FIND REST IN HIS PRESENCE"
+  ],
+  "poster": [
+    "EXODUS 33:14",
+    "MY PRESENCE SHALL GO WITH THEE",
+    "A PRAYER FOR GUIDANCE AND REST",
+    "THE GUIDED PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain valley at sunrise soft light",
+    "calm alpine lake reflecting high peaks dawn",
+    "quiet forest path through morning fog mist",
+    "peaceful mountain river flowing smoothly morning",
+    "serene pine valley with distant mountains sunlight",
+    "tranquil mountain lake glowing early morning sky"
+  ],
+  "scenes": [
+    {
+      "a": "You are exhausted from carrying this lonely choice.",
+      "img": "short-guidedexodus33v14-scene-01.jpg",
+      "kicker": "LONELY CHOICE",
+      "sub": "EXHAUSTED FROM CARRYING THIS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear the promise given in Exodus 33:14:",
+      "img": "short-guidedexodus33v14-scene-02.jpg",
+      "kicker": "EXODUS 33:14",
+      "sub": "MY PRESENCE SHALL GO WITH THEE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we bring this heavy decision into Your light.",
+      "img": "short-guidedexodus33v14-scene-03.jpg",
+      "kicker": "SEEK HIS LIGHT",
+      "sub": "BRINGING THIS HEAVY DECISION",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Calm the noise in our hearts and steady our anxious thoughts.",
+      "img": "short-guidedexodus33v14-scene-04.jpg",
+      "kicker": "STEADY THOUGHTS",
+      "sub": "CALM THE NOISE IN OUR HEARTS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Give us the wisdom to rest in Your presence today.",
+      "img": "short-guidedexodus33v14-scene-05.jpg",
+      "kicker": "REST IN HIM",
+      "sub": "WISDOM FOR YOUR PRESENCE TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. You carry this choice, but God gives rest.",
+      "img": "short-guidedexodus33v14-scene-06.jpg",
+      "kicker": "HE GIVES REST",
+      "sub": "YOU CARRY THIS CHOICE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You are exhausted from carrying this lonely choice."
+    ],
+    [
+      3,
+      7,
+      "You wonder if stepping forward will only bring deeper exhaustion."
+    ],
+    [
+      7,
+      10,
+      "Hear the promise given in Exodus 33:14:"
+    ],
+    [
+      10,
+      16,
+      "And he said, My presence shall go with thee, and I will give thee rest."
+    ],
+    [
+      16,
+      20,
+      "Lord, we bring this heavy decision into Your light."
+    ],
+    [
+      20,
+      24,
+      "Do not let us move a single step without Your guidance."
+    ],
+    [
+      24,
+      28,
+      "Calm the noise in our hearts and steady our anxious thoughts."
+    ],
+    [
+      28,
+      32,
+      "Lead us by Your Spirit, for we cannot walk alone."
+    ],
+    [
+      32,
+      36,
+      "Give us the wisdom to rest in Your presence today."
+    ],
+    [
+      36,
+      40,
+      "Amen. You carry this choice, but God gives rest."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU ARE EXHAUSTED",
+        "FROM CARRYING THIS",
+        "LONELY CHOICE"
+      ],
+      [
+        "EXHAUSTED",
+        "CHOICE"
+      ],
+      "EXODUS 33 : 14"
+    ],
+    [
+      3,
+      7,
+      [
+        "YOU WONDER IF STEPPING",
+        "FORWARD WILL ONLY BRING",
+        "DEEPER EXHAUSTION"
+      ],
+      [
+        "DEEPER",
+        "EXHAUSTION"
+      ],
+      "EXHAUSTED"
+    ],
+    [
+      7,
+      10,
+      [
+        "HEAR THE PROMISE",
+        "GIVEN IN",
+        "EXODUS 33:14"
+      ],
+      [
+        "PROMISE",
+        "EXODUS"
+      ],
+      "GOD'S WORD"
+    ],
+    [
+      10,
+      16,
+      [
+        "MY PRESENCE SHALL",
+        "GO WITH THEE AND I WILL",
+        "GIVE THEE REST"
+      ],
+      [
+        "PRESENCE",
+        "REST"
+      ],
+      "EXODUS 33 : 14"
+    ],
+    [
+      16,
+      20,
+      [
+        "LORD WE BRING THIS",
+        "HEAVY DECISION INTO",
+        "YOUR LIGHT"
+      ],
+      [
+        "HEAVY",
+        "DECISION"
+      ],
+      "PRAYER FOR WISDOM"
+    ],
+    [
+      20,
+      24,
+      [
+        "DO NOT LET US MOVE",
+        "A SINGLE STEP WITHOUT",
+        "YOUR GUIDANCE"
+      ],
+      [
+        "SINGLE",
+        "GUIDANCE"
+      ],
+      "SEEKING DIRECTION"
+    ],
+    [
+      24,
+      28,
+      [
+        "CALM THE NOISE IN",
+        "OUR HEARTS AND STEADY",
+        "OUR ANXIOUS THOUGHTS"
+      ],
+      [
+        "STEADY",
+        "THOUGHTS"
+      ],
+      "FINDING PEACE"
+    ],
+    [
+      28,
+      32,
+      [
+        "LEAD US BY YOUR",
+        "SPIRIT FOR WE CANNOT",
+        "WALK ALONE"
+      ],
+      [
+        "SPIRIT",
+        "WALK"
+      ],
+      "DIVINE PATH"
+    ],
+    [
+      32,
+      36,
+      [
+        "GIVE US WISDOM TO",
+        "REST IN YOUR PRESENCE",
+        "TODAY"
+      ],
+      [
+        "WISDOM",
+        "REST"
+      ],
+      "EXODUS 33 : 14"
+    ],
+    [
+      36,
+      40,
+      [
+        "YOU CARRY THIS CHOICE",
+        "BUT GOD GIVES",
+        "REST"
+      ],
+      [
+        "GOD",
+        "REST"
+      ],
+      "REST IN HIM"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You are exhausted from carrying this lonely choice.",
+      "kind": "phrase",
+      "words": [
+        "EXHAUSTED",
+        "CHOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You wonder if stepping forward will only bring deeper exhaustion.",
+      "kind": "phrase",
+      "words": [
+        "FORWARD",
+        "EXHAUSTION"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the promise given in Exodus 33:14:",
+      "kind": "phrase",
+      "words": [
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And he said, My presence shall go with thee, and I will give thee rest.",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE",
+        "REST"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we bring this heavy decision into Your light.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "DECISION"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Do not let us move a single step without Your guidance.",
+      "kind": "phrase",
+      "words": [
+        "GUIDANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Calm the noise in our hearts and steady our anxious thoughts.",
+      "kind": "phrase",
+      "words": [
+        "STEADY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lead us by Your Spirit, for we cannot walk alone.",
+      "kind": "phrase",
+      "words": [
+        "SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give us the wisdom to rest in Your presence today.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. You carry this choice, but God gives rest.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "REST"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Exodus 33:14"
+}
