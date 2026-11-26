@@ -37,13 +37,6 @@
       "workflow": "thumbnail-campaign.yml"
     },
     {
-      "late_minutes": 191,
-      "name": "Growth autopilot",
-      "ran_at": "2026-11-25T05:25:41+00:00",
-      "slot": "2026-11-25T02:14:00+00:00",
-      "workflow": "growth-autopilot.yml"
-    },
-    {
       "late_minutes": 188,
       "name": "YouTube reporting jobs (thumbnail impressions)",
       "ran_at": "2026-11-25T08:55:07+00:00",
@@ -58,8 +51,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-25T23:47:44.713183+00:00",
-  "last_run_at": "2026-11-25T23:46:54+00:00",
+  "generated_at": "2026-11-26T02:14:21.959524+00:00",
+  "last_run_at": "2026-11-26T02:13:30+00:00",
   "on_time": [
     {
       "late_minutes": 32,
@@ -90,17 +83,17 @@
       "workflow": "community.yml"
     },
     {
-      "late_minutes": 103,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-25T23:06:17+00:00",
-      "slot": "2026-11-25T21:23:00+00:00",
-      "workflow": "monitor.yml"
+      "late_minutes": 33,
+      "name": "Produce video",
+      "ran_at": "2026-11-25T23:47:55+00:00",
+      "slot": "2026-11-25T23:14:00+00:00",
+      "workflow": "produce.yml"
     },
     {
-      "late_minutes": 79,
+      "late_minutes": 86,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-25T23:06:17+00:00",
-      "slot": "2026-11-25T21:47:00+00:00",
+      "ran_at": "2026-11-26T02:13:30+00:00",
+      "slot": "2026-11-26T00:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
