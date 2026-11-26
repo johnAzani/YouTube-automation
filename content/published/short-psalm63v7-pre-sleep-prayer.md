@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["PSALM 63:7 PRAYER", "PSALM 63:7", "UNDER HIS WINGS", "A SHORT PRAYER"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Breathe. This is The Secret Place, and this is the hour we keep. The Secret Place reads it again, slowly: Because thou hast been my help, therefore in the shadow of thy wings will I rejoice. Lord, The Secret Place comes to You about peaceful rest and sovereign nighttime protection. What this verse promises is what The Secret Place is asking for on this channel. Where peaceful rest and sovereign nighttime protection has gone wrong in our lives, stand in for us. We are not asking for an easier hour at The Secret Place, but for Your hand in it. Take what The Secret Place just prayed into the rest of your day.

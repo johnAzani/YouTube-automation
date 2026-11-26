@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE TROUBLE", "KEEPING YOU AWAKE", "IS REAL TONIGHT", "STAND IN PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-03T17:07:00Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 The trouble keeping you awake tonight is real. Yet in this dark hour, God remains your safe shelter. His word promises: But I will sing of thy power; yea, I will sing aloud of thy mercy in the morning: for thou hast been my defence and refuge in the day of my trouble. Lord, cover this weary heart right now with your steadfast peace. Be our strong defence when fear presses close in the quiet. Let your morning mercy rise brighter than every shadow. We trust your unfailing power to guard us until dawn. Amen. The trouble keeping you awake tonight is real.

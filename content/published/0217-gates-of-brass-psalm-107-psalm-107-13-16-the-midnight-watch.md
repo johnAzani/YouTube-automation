@@ -84,7 +84,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-26T16:53:33Z"
+thumbnail_retry_after: "2026-12-03T17:06:58Z"
 thumbnail_retry_reason: "permission"
 ---
 

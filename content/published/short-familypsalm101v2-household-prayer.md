@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["WALK WITH A", "PERFECT HEART", "IN YOUR HOME", "PSALM 101:2"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-26T16:53:38Z"
+thumbnail_retry_after: "2026-12-03T17:07:04Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If an argument almost started in your hallway just now, let God rule your words. I will behave myself wisely in a perfect way. O when wilt thou come unto me? I will walk within my house with a perfect heart. Lord, cover our home with your quiet presence today. When tempers flare or quiet choices must be made behind closed doors, teach us wisdom. Let integrity guide how we speak to those we love most, making our household a sanctuary of peace and truth. Help us guard our hearts so your holy spirit feels truly welcome under this roof. Subscribe to cover your home in daily prayer.

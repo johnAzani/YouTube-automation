@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["GOD IS YOUR", "SHELTER", "IN THE FEAR", "OF THE LORD"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-26T16:53:37Z"
+thumbnail_retry_after: "2026-12-03T17:07:03Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If you are bracing yourself for a difficult conversation within your home, listen to this. Heavenly Father, we bring our household before You, seeking Your wisdom to anchor our hearts. In the fear of the LORD is strong confidence: and his children shall have a place of refuge. May this confidence define how we speak to one another and how we face our fears. Let our home be a sanctuary where Your peace dwells, sheltering every soul beneath Your grace. We rest in You, trusting that You hold our future and protect our quiet dwelling place.

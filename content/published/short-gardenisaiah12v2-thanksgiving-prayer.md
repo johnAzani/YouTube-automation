@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["HIS STRENGTH", "AND SONG", "IN THE QUIET", "OF HIS GRACE"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-26T16:53:55Z"
+thumbnail_retry_after: "2026-12-03T17:07:19Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If that restlessness in your heart won't settle, stay here in this moment of quiet. Behold, God is my salvation; I will trust, and not be afraid: for the LORD JEHOVAH is my strength and my song; he also is become my salvation. Therefore with joy shall ye draw water out of the wells of salvation. And in that day shall ye say, Praise the LORD, call upon his name, declare his doings among the people, make mention that his name is exalted. Sing unto the LORD; for he hath done excellent things: this is known in all the earth. Lord, fill my spirit with this truth, let my heart overflow with praise for You today.
