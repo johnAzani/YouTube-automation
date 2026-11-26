@@ -1,6 +1,6 @@
 ---
 id: '0071'
-title: 'Walking in the Light of His Guidance: Proverbs 4:18'
+title: "Guidance For Your Next Step: Proverbs 4:18 | The Morning Altar"
 slug: walking-in-the-light-of-his-guidance-proverbs-4-18
 status: published
 channel: prayer2
@@ -76,11 +76,14 @@ originality:
 published_on: "2026-11-19"
 published_at: "2026-11-19T16:09:12Z"
 youtube_video_id: "Nf5Ghz7lLMw"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 top_comment: "ok"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Walking in the Light of His Guidance: Proverbs 4:18"
+retitled_at: "2026-11-26"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Sunrise Hook and Directing the Prayer
