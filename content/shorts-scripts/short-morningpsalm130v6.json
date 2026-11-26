@@ -1,0 +1,324 @@
+{
+  "key": "short-morningpsalm130v6",
+  "channel": "prayer2",
+  "psalm": 130,
+  "title": [
+    "WAITING FOR DAWN",
+    "PSALM 130:6 SUNRISE PRAYER"
+  ],
+  "poster": [
+    "YOU COUNTED",
+    "EVERY HOUR",
+    "WAITING FOR",
+    "DAWN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "dark bedroom window early morning blue light",
+    "calm dark foggy lake dawn",
+    "golden sunrise light breaking over mountains",
+    "first light through forest trees morning mist",
+    "soft morning sun rays in empty room",
+    "tranquil ocean horizon dawn golden hour",
+    "sunrise glow over peaceful valley mist"
+  ],
+  "scenes": [
+    {
+      "a": "You counted every hour waiting for dawn.",
+      "img": "short-morningpsalm130v6-scene-01.jpg",
+      "kicker": "COUNTING THE HOURS",
+      "sub": "WAITING FOR DAWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The heavy thoughts you carried into the dark are still sitting beside your bed.",
+      "img": "short-morningpsalm130v6-scene-02.jpg",
+      "kicker": "HEAVY THOUGHTS",
+      "sub": "RESTING BEFORE THE SUNRISE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "In Psalm 130, verse 6, the Scriptures remind us: \"My soul waiteth for the Lord more than they that watch for the morning: I say, more than they that watch for the morning.\"",
+      "img": "short-morningpsalm130v6-scene-03.jpg",
+      "kicker": "PSALM 130:6",
+      "sub": "MORE THAN THEY THAT WATCH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, when the darkness inside feels longer than the night, steady our weary hearts.",
+      "img": "short-morningpsalm130v6-scene-04.jpg",
+      "kicker": "STEADY OUR HEARTS",
+      "sub": "LIGHT BREAKING THROUGH THE DARK",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach us to look for Your grace with the same certainty that daylight returns to this room.",
+      "img": "short-morningpsalm130v6-scene-05.jpg",
+      "kicker": "LOOK FOR HIS GRACE",
+      "sub": "DAYLIGHT RETURNS AGAIN",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Quiet our fears and anchor our trust in You today.",
+      "img": "short-morningpsalm130v6-scene-06.jpg",
+      "kicker": "ANCHOR OUR TRUST",
+      "sub": "QUIET PEACE AT DAWN",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. You counted every hour waiting for dawn.",
+      "img": "short-morningpsalm130v6-scene-07.jpg",
+      "kicker": "WAITING FOR DAWN",
+      "sub": "BEGIN AGAIN IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "You counted every hour waiting for dawn."
+    ],
+    [
+      3,
+      8,
+      "The heavy thoughts you carried into the dark are still sitting beside your bed."
+    ],
+    [
+      8,
+      20,
+      "In Psalm 130, verse 6, the Scriptures remind us: \"My soul waiteth for the Lord more than they that watch for the morning: I say, more than they that watch for the morning.\""
+    ],
+    [
+      20,
+      27,
+      "Lord, when the darkness inside feels longer than the night, steady our weary hearts."
+    ],
+    [
+      27,
+      34,
+      "Teach us to look for Your grace with the same certainty that daylight returns to this room."
+    ],
+    [
+      34,
+      38,
+      "Quiet our fears and anchor our trust in You today."
+    ],
+    [
+      38,
+      43,
+      "Amen. You counted every hour waiting for dawn."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOU COUNTED EVERY HOUR",
+        "WAITING FOR DAWN"
+      ],
+      [
+        "COUNTED",
+        "WAITING"
+      ],
+      "THE MORNING ALTAR"
+    ],
+    [
+      3,
+      8,
+      [
+        "THE HEAVY THOUGHTS YOU CARRIED",
+        "INTO THE DARK ARE STILL",
+        "SITTING BESIDE YOUR BED"
+      ],
+      [
+        "HEAVY",
+        "THOUGHTS",
+        "BED"
+      ],
+      "PSALM 130 : 6"
+    ],
+    [
+      8,
+      20,
+      [
+        "MY SOUL WAITETH FOR THE LORD",
+        "MORE THAN THEY THAT WATCH",
+        "FOR THE MORNING I SAY MORE",
+        "THAN THEY THAT WATCH",
+        "FOR THE MORNING"
+      ],
+      [
+        "SOUL",
+        "WAITETH",
+        "LORD",
+        "WATCH",
+        "MORNING"
+      ],
+      "PSALM 130 : 6"
+    ],
+    [
+      20,
+      27,
+      [
+        "LORD WHEN THE DARKNESS INSIDE",
+        "FEELS LONGER THAN THE NIGHT",
+        "STEADY OUR WEARY HEARTS"
+      ],
+      [
+        "DARKNESS",
+        "STEADY",
+        "HEARTS"
+      ],
+      "PSALM 130 : 6"
+    ],
+    [
+      27,
+      34,
+      [
+        "TEACH US TO LOOK FOR YOUR GRACE",
+        "WITH THE SAME CERTAINTY THAT",
+        "DAYLIGHT RETURNS TO THIS ROOM"
+      ],
+      [
+        "GRACE",
+        "CERTAINTY",
+        "DAYLIGHT"
+      ],
+      "PSALM 130 : 6"
+    ],
+    [
+      34,
+      38,
+      [
+        "QUIET OUR FEARS AND ANCHOR",
+        "OUR TRUST IN YOU TODAY"
+      ],
+      [
+        "QUIET",
+        "ANCHOR",
+        "TRUST"
+      ],
+      "PSALM 130 : 6"
+    ],
+    [
+      38,
+      43,
+      [
+        "AMEN YOU COUNTED EVERY HOUR",
+        "WAITING FOR DAWN"
+      ],
+      [
+        "AMEN",
+        "COUNTED",
+        "DAWN"
+      ],
+      "PSALM 130 : 6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You counted every hour waiting for dawn.",
+      "kind": "phrase",
+      "words": [
+        "COUNTED",
+        "HOURS"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "The heavy thoughts you carried into the dark are still sitting beside your bed.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "BED"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "In Psalm 130, verse 6, the Scriptures remind us: \"My soul waiteth for the Lord more than they that watch for the morning: I say, more than they that watch for the morning.\"",
+      "kind": "phrase",
+      "words": [
+        "SOUL",
+        "WAITETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when the darkness inside feels longer than the night, steady our weary hearts.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "HEARTS"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "Teach us to look for Your grace with the same certainty that daylight returns to this room.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "CERTAINTY"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "Quiet our fears and anchor our trust in You today.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "ANCHOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. You counted every hour waiting for dawn.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "DAWN"
+      ],
+      "hi": 0,
+      "slot": "A"
+    }
+  ],
+  "scripture": "Psalm 130:6"
+}
