@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T23:00:33Z",
+  "generated_at": "2026-11-26T23:18:40Z",
   "monitor_generated_at": "2026-11-26T22:58:58.148168+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,8 +12,8 @@
     "published_longform": 242,
     "published_shorts": 638,
     "public_total": 878,
-    "queued_longform": 97,
-    "queued_shorts": 28,
+    "queued_longform": 99,
+    "queued_shorts": 29,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -169,9 +169,9 @@
         "published_shorts": 68,
         "thumbnail_pending": 0,
         "public_total": 97,
-        "queued_longform": 16,
+        "queued_longform": 18,
         "queued_other": 0,
-        "queued_shorts": 0
+        "queued_shorts": 1
       },
       "latest_video": {
         "id": "0107",
@@ -188,7 +188,12 @@
         "words": 1382,
         "status": "approved"
       },
-      "next_queued_short": null,
+      "next_queued_short": {
+        "short": "short-middaygalatians4v4",
+        "scripture": "Galatians 4:4-5",
+        "target_window_utc": "12:14",
+        "status": "approved"
+      },
       "feedback": {
         "available": true,
         "as_of": "2026-11-26",
@@ -23064,6 +23069,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1567
+      },
+      {
+        "id": "0963",
+        "slug": "the-wisdom-of-numbering-our-days-psalm-90-12",
+        "file": "0963-the-wisdom-of-numbering-our-days-psalm-90-12.md",
+        "title": "The Wisdom of Numbering Our Days: Psalm 90:12 | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1809
+      },
+      {
+        "id": "0964",
+        "slug": "when-your-foot-slips-psalm-94-18",
+        "file": "0964-when-your-foot-slips-psalm-94-18.md",
+        "title": "When Your Foot Slips: Psalm 94:18 | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 2147
       }
     ],
     "shorts": [
@@ -23099,6 +23130,17 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-middaygalatians4v4",
+        "file": "0000-short-middaygalatians4v4.yml",
+        "companion_longform_id": "",
+        "scripture": "Galatians 4:4-5",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
       },
       {
         "short": "short-midnightpsalm88v1",

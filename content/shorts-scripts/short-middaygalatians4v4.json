@@ -1,0 +1,374 @@
+{
+  "key": "short-middaygalatians4v4",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "WHEN WAITING WEARS ON YOU",
+    "AN ADVENT MIDDAY PRAYER"
+  ],
+  "poster": [
+    "MIDDAY WATCH",
+    "WHEN WAITING",
+    "WEARS ON YOU",
+    "GALATIANS 4:4-5"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "quiet desk midday sunlight window",
+    "warm sunbeam across empty wooden table",
+    "winter sunlight glowing through cathedral glass",
+    "bright midday sun beam dusty room quiet",
+    "still midday sun over calm winter field",
+    "gentle sunlight on open bible on desk",
+    "warm midday light glowing on stone floor",
+    "soft sun rays through window peaceful midday"
+  ],
+  "scenes": [
+    {
+      "a": "Waiting wears on you this Advent midday.",
+      "img": "short-middaygalatians4v4-scene-01.jpg",
+      "kicker": "WEARY WAITING",
+      "sub": "THIS ADVENT MIDDAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Your tasks pile up",
+      "img": "short-middaygalatians4v4-scene-02.jpg",
+      "kicker": "HEAVY TASKS",
+      "sub": "LONGING FOR QUIET ARRIVAL",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear the promise",
+      "img": "short-middaygalatians4v4-scene-03.jpg",
+      "kicker": "GALATIANS 4:4",
+      "sub": "WHEN THE FULNESS WAS COME",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "made of a woman",
+      "img": "short-middaygalatians4v4-scene-04.jpg",
+      "kicker": "GALATIANS 4:5",
+      "sub": "THE ADOPTION OF SONS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we grow impatient",
+      "img": "short-middaygalatians4v4-scene-05.jpg",
+      "kicker": "RESTLESS HEARTS",
+      "sub": "IN THE MIDDLE OF WAITING",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Quiet our hurried striving",
+      "img": "short-middaygalatians4v4-scene-06.jpg",
+      "kicker": "MIDDAY QUIET",
+      "sub": "STILLNESS IN HIS PRESENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Assure us that You still arrive",
+      "img": "short-middaygalatians4v4-scene-07.jpg",
+      "kicker": "APPOINTED HOUR",
+      "sub": "HE CLAIMS US AS HIS OWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Amen. Light is coming",
+      "img": "short-middaygalatians4v4-scene-08.jpg",
+      "kicker": "LIGHT IS COMING",
+      "sub": "AN ADVENT PROMISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Waiting wears on you this Advent midday."
+    ],
+    [
+      3,
+      9,
+      "Your tasks pile up, yet your heart longs for quiet arrival."
+    ],
+    [
+      9,
+      18,
+      "Hear the promise: But when the fulness of the time was come, God sent forth his Son,"
+    ],
+    [
+      18,
+      28,
+      "made of a woman, made under the law, To redeem them that were under the law, that we might receive the adoption of sons."
+    ],
+    [
+      28,
+      35,
+      "Lord, we grow impatient in the middle of our waiting."
+    ],
+    [
+      35,
+      41,
+      "Quiet our hurried striving under this midday sun."
+    ],
+    [
+      41,
+      50,
+      "Assure us that You still arrive at the appointed hour to claim us as Your own."
+    ],
+    [
+      50,
+      57,
+      "Amen. Light is coming even when waiting wears on you."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "WAITING WEARS ON YOU",
+        "THIS ADVENT MIDDAY"
+      ],
+      [
+        "WAITING",
+        "ADVENT"
+      ],
+      "THE MIDDAY WATCH"
+    ],
+    [
+      3,
+      9,
+      [
+        "YOUR TASKS PILE UP",
+        "YET YOUR HEART LONGS",
+        "FOR QUIET ARRIVAL"
+      ],
+      [
+        "TASKS",
+        "LONGS",
+        "ARRIVAL"
+      ],
+      "GALATIANS 4 : 4"
+    ],
+    [
+      9,
+      18,
+      [
+        "HEAR THE PROMISE",
+        "BUT WHEN THE FULNESS",
+        "OF THE TIME WAS COME",
+        "GOD SENT FORTH HIS SON"
+      ],
+      [
+        "FULNESS",
+        "TIME",
+        "SON"
+      ],
+      "GALATIANS 4 : 4"
+    ],
+    [
+      18,
+      28,
+      [
+        "MADE UNDER THE LAW",
+        "TO REDEEM THEM THAT WERE UNDER",
+        "THAT WE MIGHT RECEIVE",
+        "THE ADOPTION OF SONS"
+      ],
+      [
+        "REDEEM",
+        "ADOPTION",
+        "SONS"
+      ],
+      "GALATIANS 4 : 5"
+    ],
+    [
+      28,
+      35,
+      [
+        "LORD WE GROW IMPATIENT",
+        "IN THE MIDDLE",
+        "OF OUR WAITING"
+      ],
+      [
+        "IMPATIENT",
+        "WAITING"
+      ],
+      "NOONDAY PRAYER"
+    ],
+    [
+      35,
+      41,
+      [
+        "QUIET OUR HURRIED STRIVING",
+        "UNDER THIS MIDDAY SUN"
+      ],
+      [
+        "QUIET",
+        "STRIVING",
+        "SUN"
+      ],
+      "NOONDAY PRAYER"
+    ],
+    [
+      41,
+      50,
+      [
+        "ASSURE US THAT YOU STILL ARRIVE",
+        "AT THE APPOINTED HOUR",
+        "TO CLAIM US AS YOUR OWN"
+      ],
+      [
+        "APPOINTED",
+        "HOUR",
+        "CLAIM"
+      ],
+      "GALATIANS 4 : 4-5"
+    ],
+    [
+      50,
+      57,
+      [
+        "AMEN LIGHT IS COMING",
+        "EVEN WHEN WAITING",
+        "WEARS ON YOU"
+      ],
+      [
+        "LIGHT",
+        "COMING",
+        "WAITING"
+      ],
+      "THE MIDDAY WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Waiting wears on you this Advent midday.",
+      "kind": "phrase",
+      "words": [
+        "WAITING",
+        "WEARS",
+        "ON",
+        "YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your tasks pile up",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "ARRIVAL"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the promise",
+      "kind": "phrase",
+      "words": [
+        "FULNESS",
+        "OF",
+        "THE",
+        "TIME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "made of a woman",
+      "kind": "phrase",
+      "words": [
+        "ADOPTION",
+        "OF",
+        "SONS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we grow impatient",
+      "kind": "phrase",
+      "words": [
+        "MIDDLE",
+        "OF",
+        "OUR",
+        "WAITING"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Quiet our hurried striving",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "OUR",
+        "HURRIED",
+        "STRIVING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Assure us that You still arrive",
+      "kind": "phrase",
+      "words": [
+        "APPOINTED",
+        "HOUR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Light is coming",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "IS",
+        "COMING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Galatians 4:4-5"
+}
