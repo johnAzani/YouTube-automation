@@ -1,6 +1,6 @@
 ---
 id: 0826
-title: 'When You Need to Know Your Heart: Psalm 139:23-24 | The Guided Path'
+title: "When Your Heart Is Uncertain: Psalm 139:23-24 | The Guided Path"
 slug: when-you-need-to-know-your-heart-psalm-139-23-24-the-guided-path
 status: approved
 channel: prayer10
@@ -74,6 +74,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When You Need to Know Your Heart: Psalm 139:23-24 | The Guided Path"
+queue_title_fixed_at: "2026-11-27"
 ---
 
 ## Scene 1 — The Honest Petition
