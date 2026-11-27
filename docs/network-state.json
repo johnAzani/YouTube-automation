@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T09:08:57Z",
+  "generated_at": "2026-11-27T09:12:58Z",
   "monitor_generated_at": "2026-11-27T05:34:22.095144+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 892,
+    "published_total": 893,
     "published_longform": 246,
-    "published_shorts": 646,
-    "public_total": 890,
+    "published_shorts": 647,
+    "public_total": 891,
     "queued_longform": 119,
-    "queued_shorts": 44,
+    "queued_shorts": 42,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -300,23 +300,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 82,
+        "published_total": 83,
         "published_longform": 23,
-        "published_shorts": 59,
-        "thumbnail_pending": 82,
-        "public_total": 82,
+        "published_shorts": 60,
+        "thumbnail_pending": 83,
+        "public_total": 83,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 1
       },
       "latest_video": {
-        "id": "SHORT-FAMILYPSALM90V16",
-        "title": "Pray This Psalm 90:16-17 Family Prayer Over Your Home | God's Light Upon Your Home #Shorts",
+        "id": "SHORT-FAMILYGENESIS12V2",
+        "title": "Pray This Genesis 12:2-3 Family Prayer Over Your Home | When Leaving On A New Path #Shorts",
         "format": "short",
-        "youtube_video_id": "pRJGiGi_fYI",
-        "watch_url": "https://www.youtube.com/shorts/pRJGiGi_fYI",
+        "youtube_video_id": "uhYemYvhgic",
+        "watch_url": "https://www.youtube.com/shorts/uhYemYvhgic",
         "published_on": "2026-11-27",
-        "published_at": "2026-11-27T00:08:58Z"
+        "published_at": "2026-11-27T09:11:52Z"
       },
       "next_queued_longform": {
         "id": "0324",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYGENESIS12V2",
+      "slug": "short-familygenesis12v2-household-prayer",
+      "file": "short-familygenesis12v2-household-prayer.md",
+      "title": "Pray This Genesis 12:2-3 Family Prayer Over Your Home | When Leaving On A New Path #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T09:11:52Z",
+      "youtube_video_id": "uhYemYvhgic",
+      "watch_url": "https://www.youtube.com/shorts/uhYemYvhgic",
+      "youtu_be_url": "https://youtu.be/uhYemYvhgic",
+      "shorts_url": "https://www.youtube.com/shorts/uhYemYvhgic",
+      "studio_url": "https://studio.youtube.com/video/uhYemYvhgic/edit",
+      "thumb_url": "https://i.ytimg.com/vi/uhYemYvhgic/hqdefault.jpg",
+      "thumb_text": "GOD'S PROMISE \u00b7 FOR YOUR",
+      "thumbnail_pending": true,
+      "duration_label": "45s",
+      "words": 679
+    },
     {
       "id": "0517",
       "slug": "when-you-need-daily-bread-psalm-34-9-10-the-provision-table",
@@ -23952,28 +23976,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-familygenesis12v2",
-        "file": "0326-short-familygenesis12v2.yml",
-        "companion_longform_id": "0326",
-        "scripture": "Genesis 12:2-3",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-familypsalm78v4",
-        "file": "0330-short-familypsalm78v4.yml",
-        "companion_longform_id": "0330",
-        "scripture": "Psalm 78:4-7",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-healingisaiah41v10",
