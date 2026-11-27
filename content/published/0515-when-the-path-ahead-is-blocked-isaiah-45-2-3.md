@@ -1,6 +1,6 @@
 ---
 id: '0515'
-title: "God Goes Before You: Isaiah 45:2-3 | The Provision Table"
+title: "When Closed Doors Block Your Work: Isaiah 45:2-3 | The Provision Table"
 slug: when-the-path-ahead-is-blocked-isaiah-45-2-3
 status: published
 channel: prayer7
@@ -77,16 +77,18 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
-title_before: "When the Path Ahead Is Blocked: Isaiah 45:2-3 | The Provision Table"
+title_before: "God Goes Before You: Isaiah 45:2-3 | The Provision Table"
 queue_title_fixed_at: "2026-11-16"
 published_on: "2026-11-20"
 published_at: "2026-11-20T12:41:49Z"
 youtube_video_id: "EoOmt6kwQg8"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 top_comment: "ok"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+retitled_at: "2026-11-27"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Shepherd Who Goes Before Us
