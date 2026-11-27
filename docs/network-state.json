@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T16:47:07Z",
+  "generated_at": "2026-11-27T16:49:00Z",
   "monitor_generated_at": "2026-11-27T12:48:50.085354+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 910,
+    "published_total": 911,
     "published_longform": 254,
-    "published_shorts": 656,
-    "public_total": 908,
+    "published_shorts": 657,
+    "public_total": 909,
     "queued_longform": 128,
-    "queued_shorts": 27,
+    "queued_shorts": 26,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -232,23 +232,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 95,
+        "published_total": 96,
         "published_longform": 28,
-        "published_shorts": 67,
-        "thumbnail_pending": 94,
-        "public_total": 95,
+        "published_shorts": 68,
+        "thumbnail_pending": 95,
+        "public_total": 96,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTACTS12V5",
-        "title": "Pray This Acts 12:5-11 Midnight Prayer | The Gate Opens #Shorts",
+        "id": "SHORT-MIDNIGHTCOLOSSIANS4V2",
+        "title": "Pray This Colossians 4:2 Midnight Prayer | The Thought That Won't Rest #Shorts",
         "format": "short",
-        "youtube_video_id": "4pqnRQ6GQyM",
-        "watch_url": "https://www.youtube.com/shorts/4pqnRQ6GQyM",
+        "youtube_video_id": "My1jrEw2Sak",
+        "watch_url": "https://www.youtube.com/shorts/My1jrEw2Sak",
         "published_on": "2026-11-27",
-        "published_at": "2026-11-27T12:36:36Z"
+        "published_at": "2026-11-27T16:47:51Z"
       },
       "next_queued_longform": {
         "id": "0229",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTCOLOSSIANS4V2",
+      "slug": "short-midnightcolossians4v2-midnight-prayer",
+      "file": "short-midnightcolossians4v2-midnight-prayer.md",
+      "title": "Pray This Colossians 4:2 Midnight Prayer | The Thought That Won't Rest #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T16:47:51Z",
+      "youtube_video_id": "My1jrEw2Sak",
+      "watch_url": "https://www.youtube.com/shorts/My1jrEw2Sak",
+      "youtu_be_url": "https://youtu.be/My1jrEw2Sak",
+      "shorts_url": "https://www.youtube.com/shorts/My1jrEw2Sak",
+      "studio_url": "https://studio.youtube.com/video/My1jrEw2Sak/edit",
+      "thumb_url": "https://i.ytimg.com/vi/My1jrEw2Sak/hqdefault.jpg",
+      "thumb_text": "CONTINUE IN PRAYER \u00b7 WATCH WITH",
+      "thumbnail_pending": true,
+      "duration_label": "54s",
+      "words": 630
+    },
     {
       "id": "0113",
       "slug": "when-the-dark-hours-wont-let-you-rest-psalm-42-8",
@@ -24380,17 +24404,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-midnightcolossians4v2",
-        "file": "0228-short-midnightcolossians4v2.yml",
-        "companion_longform_id": "0228",
-        "scripture": "Colossians 4:2",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnighthebrews13v20",
