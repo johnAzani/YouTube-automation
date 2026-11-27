@@ -16,6 +16,27 @@
       "workflow": "keepalive.yml"
     },
     {
+      "late_minutes": 268,
+      "name": "Growth score (where the watch hours come from)",
+      "ran_at": "2026-11-27T09:05:32+00:00",
+      "slot": "2026-11-27T04:37:00+00:00",
+      "workflow": "growth-score.yml"
+    },
+    {
+      "late_minutes": 253,
+      "name": "Tests on main (daily)",
+      "ran_at": "2026-11-27T09:05:33+00:00",
+      "slot": "2026-11-27T04:52:00+00:00",
+      "workflow": "tests-on-main.yml"
+    },
+    {
+      "late_minutes": 238,
+      "name": "Thumbnail campaign (which concept earns the click)",
+      "ran_at": "2026-11-27T09:05:35+00:00",
+      "slot": "2026-11-27T05:07:00+00:00",
+      "workflow": "thumbnail-campaign.yml"
+    },
+    {
       "late_minutes": 200,
       "name": "Growth autopilot",
       "ran_at": "2026-11-27T05:34:01+00:00",
@@ -23,22 +44,22 @@
       "workflow": "growth-autopilot.yml"
     },
     {
+      "late_minutes": 198,
+      "name": "YouTube reporting jobs (thumbnail impressions)",
+      "ran_at": "2026-11-27T09:05:37+00:00",
+      "slot": "2026-11-27T05:47:00+00:00",
+      "workflow": "reporting-jobs.yml"
+    },
+    {
       "late_minutes": 140,
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "ran_at": "2026-11-27T05:34:03+00:00",
       "slot": "2026-11-27T03:14:00+00:00",
       "workflow": "gemini_brain.yml"
-    },
-    {
-      "late_minutes": 137,
-      "name": "Scheduler supervisor",
-      "ran_at": "2026-11-27T09:04:34+00:00",
-      "slot": "2026-11-27T06:47:00+00:00",
-      "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "generated_at": "2026-11-27T09:05:25.578085+00:00",
-  "last_run_at": "2026-11-27T09:04:34+00:00",
+  "generated_at": "2026-11-27T10:57:22.686921+00:00",
+  "last_run_at": "2026-11-27T10:56:33+00:00",
   "on_time": [
     {
       "late_minutes": 5,
@@ -55,11 +76,25 @@
       "workflow": "channel-analytics.yml"
     },
     {
+      "late_minutes": 111,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-27T09:05:43+00:00",
+      "slot": "2026-11-27T07:14:00+00:00",
+      "workflow": "comments.yml"
+    },
+    {
       "late_minutes": 93,
       "name": "Autonomous Community Tab Automation",
       "ran_at": "2026-11-25T20:47:53+00:00",
       "slot": "2026-11-25T19:14:00+00:00",
       "workflow": "community.yml"
+    },
+    {
+      "late_minutes": 69,
+      "name": "Scheduler supervisor",
+      "ran_at": "2026-11-27T10:56:33+00:00",
+      "slot": "2026-11-27T09:47:00+00:00",
+      "workflow": "scheduler-supervisor.yml"
     }
   ],
   "silence_minutes": 0,
