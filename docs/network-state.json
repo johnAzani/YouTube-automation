@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T09:16:09Z",
+  "generated_at": "2026-11-27T09:25:22Z",
   "monitor_generated_at": "2026-11-27T05:34:22.095144+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 895,
+    "published_total": 896,
     "published_longform": 246,
-    "published_shorts": 649,
-    "public_total": 893,
+    "published_shorts": 650,
+    "public_total": 894,
     "queued_longform": 119,
-    "queued_shorts": 34,
+    "queued_shorts": 32,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -504,23 +504,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 76,
+        "published_total": 77,
         "published_longform": 20,
-        "published_shorts": 56,
+        "published_shorts": 57,
         "thumbnail_pending": 20,
-        "public_total": 76,
+        "public_total": 77,
         "queued_longform": 6,
         "queued_other": 4,
-        "queued_shorts": 6
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0625",
-        "title": "Stillness When Battles Loom: Exodus 14:14 | The Covenant Shield",
-        "format": "longform",
-        "youtube_video_id": "1ExKv-3nwyA",
-        "watch_url": "https://youtu.be/1ExKv-3nwyA",
+        "id": "SHORT-SHIELDPSALM140V7",
+        "title": "Pray This Psalm 140:7 Prayer for Divine Protection | When Pressure Presses Hard Today #Shorts",
+        "format": "short",
+        "youtube_video_id": "A_IigmfKHbI",
+        "watch_url": "https://www.youtube.com/shorts/A_IigmfKHbI",
         "published_on": "2026-11-27",
-        "published_at": "2026-11-27T01:25:50Z"
+        "published_at": "2026-11-27T09:24:01Z"
       },
       "next_queued_longform": {
         "id": "0615",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM140V7",
+      "slug": "short-shieldpsalm140v7-protection-prayer",
+      "file": "short-shieldpsalm140v7-protection-prayer.md",
+      "title": "Pray This Psalm 140:7 Prayer for Divine Protection | When Pressure Presses Hard Today #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T09:24:01Z",
+      "youtube_video_id": "A_IigmfKHbI",
+      "watch_url": "https://www.youtube.com/shorts/A_IigmfKHbI",
+      "youtu_be_url": "https://youtu.be/A_IigmfKHbI",
+      "shorts_url": "https://www.youtube.com/shorts/A_IigmfKHbI",
+      "studio_url": "https://studio.youtube.com/video/A_IigmfKHbI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/A_IigmfKHbI/hqdefault.jpg",
+      "thumb_text": "GOD IS YOUR STRENGTH \u00b7 HE COVERS YOUR HEAD",
+      "thumbnail_pending": false,
+      "duration_label": "54s",
+      "words": 631
+    },
     {
       "id": "SHORT-PSALM23FULL",
       "slug": "short-psalm23full-pre-sleep-prayer",
@@ -23980,28 +24004,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-shieldzechariah2v5",
-        "file": "0615-short-shieldzechariah2v5.yml",
-        "companion_longform_id": "0615",
-        "scripture": "Zechariah 2:5",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-shieldpsalm140v7",
-        "file": "0630-short-shieldpsalm140v7.yml",
-        "companion_longform_id": "0630",
-        "scripture": "Psalm 140:7",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm94v22",
