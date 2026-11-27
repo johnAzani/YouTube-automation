@@ -2,13 +2,6 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 4604,
-      "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-23T23:25:52+00:00",
-      "slot": "2026-11-20T18:41:00+00:00",
-      "workflow": "metrics.yml"
-    },
-    {
       "late_minutes": 317,
       "name": "Keepalive",
       "ran_at": "2026-11-23T08:40:16+00:00",
@@ -65,13 +58,6 @@
       "workflow": "gemini_brain.yml"
     },
     {
-      "late_minutes": 132,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-27T17:35:37+00:00",
-      "slot": "2026-11-27T15:23:00+00:00",
-      "workflow": "monitor.yml"
-    },
-    {
       "late_minutes": 131,
       "name": "Autonomous Comment Replies",
       "ran_at": "2026-11-27T17:25:23+00:00",
@@ -79,8 +65,8 @@
       "workflow": "comments.yml"
     }
   ],
-  "generated_at": "2026-11-27T17:36:26.493135+00:00",
-  "last_run_at": "2026-11-27T17:35:37+00:00",
+  "generated_at": "2026-11-27T19:11:26.210228+00:00",
+  "last_run_at": "2026-11-27T19:10:43+00:00",
   "on_time": [
     {
       "late_minutes": 5,
@@ -104,10 +90,10 @@
       "workflow": "community.yml"
     },
     {
-      "late_minutes": 106,
+      "late_minutes": 23,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-27T17:33:15+00:00",
-      "slot": "2026-11-27T15:47:00+00:00",
+      "ran_at": "2026-11-27T19:10:43+00:00",
+      "slot": "2026-11-27T18:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
