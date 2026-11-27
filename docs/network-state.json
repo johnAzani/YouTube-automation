@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T12:50:35Z",
+  "generated_at": "2026-11-27T13:13:59Z",
   "monitor_generated_at": "2026-11-27T12:48:50.085354+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 908,
-    "published_longform": 252,
+    "published_total": 909,
+    "published_longform": 253,
     "published_shorts": 656,
-    "public_total": 906,
-    "queued_longform": 128,
-    "queued_shorts": 33,
+    "public_total": 907,
+    "queued_longform": 127,
+    "queued_shorts": 31,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -300,28 +300,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 83,
-        "published_longform": 23,
+        "published_total": 84,
+        "published_longform": 24,
         "published_shorts": 60,
-        "thumbnail_pending": 83,
-        "public_total": 83,
-        "queued_longform": 10,
+        "thumbnail_pending": 84,
+        "public_total": 84,
+        "queued_longform": 9,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 1
       },
       "latest_video": {
-        "id": "SHORT-FAMILYGENESIS12V2",
-        "title": "Pray This Genesis 12:2-3 Family Prayer Over Your Home | When Leaving On A New Path #Shorts",
-        "format": "short",
-        "youtube_video_id": "uhYemYvhgic",
-        "watch_url": "https://www.youtube.com/shorts/uhYemYvhgic",
-        "published_on": "2026-11-27",
-        "published_at": "2026-11-27T09:11:52Z"
-      },
-      "next_queued_longform": {
         "id": "0324",
         "title": "When Tension Fills the Living Room: Luke 10:5-6 | The Family Altar",
-        "words": 1184,
+        "format": "longform",
+        "youtube_video_id": "78SRRzQPPGE",
+        "watch_url": "https://youtu.be/78SRRzQPPGE",
+        "published_on": "2026-11-27",
+        "published_at": "2026-11-27T13:12:59Z"
+      },
+      "next_queued_longform": {
+        "id": "0325",
+        "title": "Strength in Marriage and Home: Ecclesiastes 4:9-12 | The Family Altar",
+        "words": 1309,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0324",
+      "slug": "inviting-gods-peace-into-your-home-luke-10-5-6",
+      "file": "0324-inviting-gods-peace-into-your-home-luke-10-5-6.md",
+      "title": "When Tension Fills the Living Room: Luke 10:5-6 | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T13:12:59Z",
+      "youtube_video_id": "78SRRzQPPGE",
+      "watch_url": "https://youtu.be/78SRRzQPPGE",
+      "youtu_be_url": "https://youtu.be/78SRRzQPPGE",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/78SRRzQPPGE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/78SRRzQPPGE/hqdefault.jpg",
+      "thumb_text": "PEACE TO THIS HOUSE",
+      "thumbnail_pending": true,
+      "duration_label": "7m 07s",
+      "words": 1184
+    },
     {
       "id": "SHORT-SHIELDPSALM94V22",
       "slug": "short-shieldpsalm94v22-protection-prayer",
@@ -22843,19 +22867,6 @@
         "words": 1689
       },
       {
-        "id": "0324",
-        "slug": "inviting-gods-peace-into-your-home-luke-10-5-6",
-        "file": "0324-inviting-gods-peace-into-your-home-luke-10-5-6.md",
-        "title": "When Tension Fills the Living Room: Luke 10:5-6 | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1184
-      },
-      {
         "id": "0325",
         "slug": "strength-in-marriage-and-home-ecclesiastes-4-9-12",
         "file": "0325-strength-in-marriage-and-home-ecclesiastes-4-9-12.md",
@@ -24376,28 +24387,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-familymalachi4v6",
-        "file": "0333-short-familymalachi4v6.yml",
-        "companion_longform_id": "0333",
-        "scripture": "Malachi 4:6",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-familyisaiah8v18",
-        "file": "0334-short-familyisaiah8v18.yml",
-        "companion_longform_id": "0334",
-        "scripture": "Isaiah 8:18",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-healingnahum1v7",
