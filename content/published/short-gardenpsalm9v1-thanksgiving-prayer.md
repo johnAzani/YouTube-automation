@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["GIVE THANKS", "TO THE LORD", "WITH YOUR WHOLE HEART", "THE PRAISE GARDEN"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-04T22:20:57Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If that worry about tomorrow is keeping you awake, stay here for this quiet prayer. I will praise thee, O LORD, with my whole heart; I will show forth all thy marvelous works. I will be glad and rejoice in thee: I will sing praise to thy name, O thou most High. Lord, I give you every heavy thought, choosing to fix my gaze upon your goodness instead. Help me carry this joy into the hours ahead and rest in your sovereign, loving care. Lord, help me trust your grace today. Amen. Subscribe to The Praise Garden for more.

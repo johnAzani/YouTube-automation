@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE PRAISE GARDEN", "EXALTING HIS NAME", "DAILY WORSHIP", "KJV SCRIPTURE"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-27T22:00:13Z"
+thumbnail_retry_after: "2026-12-04T22:20:56Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If the decision weighing on your mind feels too complex to navigate, stay right here. I will extol thee, my God, O king; and I will bless thy name for ever and ever. Every day will I bless thee; and I will praise thy name for ever and ever. Great is the LORD, and greatly to be praised; and his greatness is unsearchable. Lord, help me trust Your path when my own understanding fails to see the way forward. May this quiet reflection lead me to honor Your sovereignty in everything I do today, Amen.

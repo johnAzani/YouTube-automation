@@ -26,14 +26,12 @@ short_visual_fingerprints: ["sha256:795073a563b18ed551dd68a2d5eb612cf4fbf6ba3777
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_pending: false
 thumbnail_poster: ["AS THE MOUNTAINS", "ARE ROUND ABOUT", "HIS PEOPLE", "FOREVERMORE"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-27T22:00:10Z"
-thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 0
+thumbnail_revision: "shorts-poster-v1"
 ---
 
 If the uncertainty of this specific situation is making your heart tremble, stay right here. We recognize the pressures seeking to break your focus in this quiet hour of reflection. As the mountains are round about Jerusalem, so the LORD is round about his people from henceforth even for ever. Heavenly Father, we lift up this soul who feels exposed to the storms of life tonight. Establish their steps in the knowledge that no enemy can breach the borders of Your sovereignty. Grant them the grace to rest in the shadow of the Almighty until the morning light breaks.

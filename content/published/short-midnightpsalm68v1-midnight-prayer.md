@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["GOD", "SCATTER", "REJOICE", "MIDNIGHT"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-27T21:59:59Z"
+thumbnail_retry_after: "2026-12-04T22:20:33Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 The doubt about tomorrow weighing on your chest finds no sanctuary here tonight. Let God arise, let his enemies be scattered: let them also that hate him flee before him. As smoke is driven away, so drive them away: as wax melteth before the fire, so let the wicked perish at the presence of God. But let the righteous be glad; let them rejoice before God: yea, let them exceedingly rejoice. Lord we stand in your shadow and ask for your holy fire to burn away all our fear. May your light pierce this stillness and bring peace to a heart seeking only your truth.

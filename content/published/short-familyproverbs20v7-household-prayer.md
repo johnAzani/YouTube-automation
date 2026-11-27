@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["WALK IN INTEGRITY", "BLESS YOUR CHILDREN", "A HOUSEHOLD PRAYER", "PROVERBS 20:7"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-27T22:00:03Z"
+thumbnail_retry_after: "2026-12-04T22:20:37Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 When choosing quiet honesty over easy shortcuts at work today, remember your legacy. Proverbs twenty verse seven declares, The just man walketh in his integrity: his children are blessed after him. Heavenly Father, grant us the strength to walk with upright hearts in every small decision. May the quiet truth of our daily lives build a secure foundation for our children. Protect our household from deception, and let your righteousness guide our family through every single generation. We pray that our steadfast faith becomes a lasting inheritance for those we love. Subscribe to cover your home in daily prayer.
