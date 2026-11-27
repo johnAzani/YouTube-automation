@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T11:01:02Z",
+  "generated_at": "2026-11-27T11:01:23Z",
   "monitor_generated_at": "2026-11-27T05:34:22.095144+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 248,
     "published_shorts": 653,
     "public_total": 899,
-    "queued_longform": 119,
+    "queued_longform": 121,
     "queued_shorts": 28,
     "automations_ok": 12,
     "automations_total": 15,
@@ -38,7 +38,7 @@
         "published_shorts": 83,
         "thumbnail_pending": 1,
         "public_total": 110,
-        "queued_longform": 8,
+        "queued_longform": 10,
         "queued_other": 5,
         "queued_shorts": 1
       },
@@ -22530,6 +22530,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1133
+      },
+      {
+        "id": "0120",
+        "slug": "cleared-of-accusation-at-midnight-psalm-17-3",
+        "file": "0120-cleared-of-accusation-at-midnight-psalm-17-3.md",
+        "title": "Cleared of Accusation at Midnight: Psalm 17:3 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1253
+      },
+      {
+        "id": "0121",
+        "slug": "when-you-need-protection-in-the-dark-psalm-17-8",
+        "file": "0121-when-you-need-protection-in-the-dark-psalm-17-8.md",
+        "title": "When Terror of the Night Finds You: Psalm 17:8 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1678
       },
       {
         "id": "0139",
