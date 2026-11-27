@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T16:59:21Z",
+  "generated_at": "2026-11-27T17:31:41Z",
   "monitor_generated_at": "2026-11-27T12:48:50.085354+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 915,
-    "published_longform": 254,
+    "published_total": 916,
+    "published_longform": 255,
     "published_shorts": 661,
-    "public_total": 913,
-    "queued_longform": 128,
+    "public_total": 914,
+    "queued_longform": 129,
     "queued_shorts": 20,
     "automations_ok": 12,
     "automations_total": 15,
@@ -300,28 +300,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 84,
-        "published_longform": 24,
+        "published_total": 85,
+        "published_longform": 25,
         "published_shorts": 60,
-        "thumbnail_pending": 84,
-        "public_total": 84,
-        "queued_longform": 9,
+        "thumbnail_pending": 85,
+        "public_total": 85,
+        "queued_longform": 10,
         "queued_other": 0,
         "queued_shorts": 1
       },
       "latest_video": {
-        "id": "0324",
-        "title": "When Tension Fills the Living Room: Luke 10:5-6 | The Family Altar",
-        "format": "longform",
-        "youtube_video_id": "78SRRzQPPGE",
-        "watch_url": "https://youtu.be/78SRRzQPPGE",
-        "published_on": "2026-11-27",
-        "published_at": "2026-11-27T13:12:59Z"
-      },
-      "next_queued_longform": {
         "id": "0325",
         "title": "Strength in Marriage and Home: Ecclesiastes 4:9-12 | The Family Altar",
-        "words": 1309,
+        "format": "longform",
+        "youtube_video_id": "aqJ9CbO05Hg",
+        "watch_url": "https://youtu.be/aqJ9CbO05Hg",
+        "published_on": "2026-11-27",
+        "published_at": "2026-11-27T17:30:25Z"
+      },
+      "next_queued_longform": {
+        "id": "0326",
+        "title": "A Covenant Blessing for Every Generation: Genesis 12:2-3",
+        "words": 1437,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0325",
+      "slug": "strength-in-marriage-and-home-ecclesiastes-4-9-12",
+      "file": "0325-strength-in-marriage-and-home-ecclesiastes-4-9-12.md",
+      "title": "Strength in Marriage and Home: Ecclesiastes 4:9-12 | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T17:30:25Z",
+      "youtube_video_id": "aqJ9CbO05Hg",
+      "watch_url": "https://youtu.be/aqJ9CbO05Hg",
+      "youtu_be_url": "https://youtu.be/aqJ9CbO05Hg",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/aqJ9CbO05Hg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/aqJ9CbO05Hg/hqdefault.jpg",
+      "thumb_text": "STRENGTH IN MARRIAGE",
+      "thumbnail_pending": true,
+      "duration_label": "8m 34s",
+      "words": 1309
+    },
     {
       "id": "SHORT-GUIDEDJEREMIAH6V16",
       "slug": "short-guidedjeremiah6v16-guidance-prayer",
@@ -23024,19 +23048,6 @@
         "words": 1689
       },
       {
-        "id": "0325",
-        "slug": "strength-in-marriage-and-home-ecclesiastes-4-9-12",
-        "file": "0325-strength-in-marriage-and-home-ecclesiastes-4-9-12.md",
-        "title": "Strength in Marriage and Home: Ecclesiastes 4:9-12 | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1309
-      },
-      {
         "id": "0326",
         "slug": "a-covenant-blessing-for-every-generation-genesis-12-2-3",
         "file": "0326-a-covenant-blessing-for-every-generation-genesis-12-2-3.md",
@@ -23139,6 +23150,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1603
+      },
+      {
+        "id": "0335",
+        "slug": "the-legacy-of-integrity-proverbs-20-7",
+        "file": "0335-the-legacy-of-integrity-proverbs-20-7.md",
+        "title": "The Legacy of Integrity: Proverbs 20:7 | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1439
+      },
+      {
+        "id": "0336",
+        "slug": "when-your-children-ask-what-mean-these-stones-joshua-4-6-7",
+        "file": "0336-when-your-children-ask-what-mean-these-stones-joshua-4-6-7.md",
+        "title": "When Your Children Ask, What Mean These Stones: Joshua 4:6-7",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 932
       },
       {
         "id": "0419",
