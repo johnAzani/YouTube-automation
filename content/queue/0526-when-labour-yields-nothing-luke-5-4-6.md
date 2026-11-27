@@ -1,6 +1,6 @@
 ---
 id: '0526'
-title: 'When Labour Yields Nothing: Luke 5:4-6 | The Provision Table'
+title: "Empty Nets and Labour Without Fruit: Luke 5:4-6 | The Provision Table"
 slug: when-labour-yields-nothing-luke-5-4-6
 status: approved
 channel: prayer7
@@ -75,6 +75,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When Labour Yields Nothing: Luke 5:4-6 | The Provision Table"
+queue_title_fixed_at: "2026-11-27"
 ---
 
 ## Scene 1 — Approaching the Shore of Weary Labour
