@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T20:21:14Z",
+  "generated_at": "2026-11-27T20:22:54Z",
   "monitor_generated_at": "2026-11-27T20:19:39.147944+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 259,
     "published_shorts": 661,
     "public_total": 918,
-    "queued_longform": 139,
+    "queued_longform": 141,
     "queued_shorts": 20,
     "automations_ok": 12,
     "automations_total": 15,
@@ -305,7 +305,7 @@
         "published_shorts": 60,
         "thumbnail_pending": 85,
         "public_total": 85,
-        "queued_longform": 12,
+        "queued_longform": 14,
         "queued_other": 0,
         "queued_shorts": 1
       },
@@ -23363,6 +23363,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 936
+      },
+      {
+        "id": "0339",
+        "slug": "when-your-hard-work-feels-unseen-isaiah-65-23",
+        "file": "0339-when-your-hard-work-feels-unseen-isaiah-65-23.md",
+        "title": "When Your Hard Work Feels Unseen: Isaiah 65:23 | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1149
+      },
+      {
+        "id": "0340",
+        "slug": "the-faith-of-those-who-came-before-us-2-timothy-1-5-the-family-altar",
+        "file": "0340-the-faith-of-those-who-came-before-us-2-timothy-1-5-the-family-altar.md",
+        "title": "The Faith of Those Who Came Before Us: 2 Timothy 1:5",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1134
       },
       {
         "id": "0420",
