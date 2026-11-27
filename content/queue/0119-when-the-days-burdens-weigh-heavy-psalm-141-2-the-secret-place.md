@@ -1,6 +1,6 @@
 ---
 id: 0119
-title: 'When the Day''s Burdens Weigh Heavy: Psalm 141:2 | The Secret Place'
+title: "Surrendering the Weight of This Day: Psalm 141:2 | The Secret Place"
 slug: when-the-days-burdens-weigh-heavy-psalm-141-2-the-secret-place
 status: approved
 channel: secret-place
@@ -74,6 +74,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When the Day's Burdens Weigh Heavy: Psalm 141:2 | The Secret Place"
+queue_title_fixed_at: "2026-11-27"
 ---
 
 ## Scene 1 — The Quiet Room and the Closing Day
