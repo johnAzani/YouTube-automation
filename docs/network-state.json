@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T13:15:34Z",
+  "generated_at": "2026-11-27T16:43:52Z",
   "monitor_generated_at": "2026-11-27T12:48:50.085354+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 254,
     "published_shorts": 656,
     "public_total": 908,
-    "queued_longform": 126,
+    "queued_longform": 128,
     "queued_shorts": 29,
     "automations_ok": 12,
     "automations_total": 15,
@@ -38,7 +38,7 @@
         "published_shorts": 83,
         "thumbnail_pending": 1,
         "public_total": 111,
-        "queued_longform": 11,
+        "queued_longform": 13,
         "queued_other": 5,
         "queued_shorts": 1
       },
@@ -22772,6 +22772,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1649
+      },
+      {
+        "id": "0124",
+        "slug": "when-your-heart-is-overwhelmed-psalm-61-night-prayer",
+        "file": "0124-when-your-heart-is-overwhelmed-psalm-61-night-prayer.md",
+        "title": "When Sorrow Weighs Down the Soul: Psalm 61:2-4 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1741
+      },
+      {
+        "id": "0125",
+        "slug": "peace-in-the-stillness-of-midnight-psalm-85-8",
+        "file": "0125-peace-in-the-stillness-of-midnight-psalm-85-8.md",
+        "title": "Peace in the Stillness of Midnight: Psalm 85:8 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1542
       },
       {
         "id": "0139",
