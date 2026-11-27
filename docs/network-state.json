@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T19:30:13Z",
+  "generated_at": "2026-11-27T19:30:30Z",
   "monitor_generated_at": "2026-11-27T17:37:13.999368+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 256,
     "published_shorts": 661,
     "public_total": 915,
-    "queued_longform": 138,
+    "queued_longform": 139,
     "queued_shorts": 20,
     "automations_ok": 12,
     "automations_total": 15,
@@ -237,7 +237,7 @@
         "published_shorts": 68,
         "thumbnail_pending": 95,
         "public_total": 96,
-        "queued_longform": 6,
+        "queued_longform": 7,
         "queued_other": 0,
         "queued_shorts": 2
       },
@@ -23109,6 +23109,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1689
+      },
+      {
+        "id": "0235",
+        "slug": "arise-cry-out-in-the-night-lamentations-2-19-the-midnight-watch",
+        "file": "0235-arise-cry-out-in-the-night-lamentations-2-19-the-midnight-watch.md",
+        "title": "Arise, Cry Out in the Night: Lamentations 2:19 | The Midnight Watch",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1210
       },
       {
         "id": "0326",
