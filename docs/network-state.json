@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T20:22:54Z",
+  "generated_at": "2026-11-27T20:28:04Z",
   "monitor_generated_at": "2026-11-27T20:19:39.147944+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 920,
+    "published_total": 921,
     "published_longform": 259,
-    "published_shorts": 661,
-    "public_total": 918,
-    "queued_longform": 141,
-    "queued_shorts": 20,
+    "published_shorts": 662,
+    "public_total": 919,
+    "queued_longform": 142,
+    "queued_shorts": 19,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -232,23 +232,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 96,
+        "published_total": 97,
         "published_longform": 28,
-        "published_shorts": 68,
-        "thumbnail_pending": 95,
-        "public_total": 96,
-        "queued_longform": 7,
+        "published_shorts": 69,
+        "thumbnail_pending": 96,
+        "public_total": 97,
+        "queued_longform": 8,
         "queued_other": 0,
-        "queued_shorts": 2
+        "queued_shorts": 1
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTCOLOSSIANS4V2",
-        "title": "Pray This Colossians 4:2 Midnight Prayer | The Thought That Won't Rest #Shorts",
+        "id": "SHORT-MIDNIGHTHEBREWS13V20",
+        "title": "Pray This Hebrews 13:20-21 Midnight Prayer | Glory Forevermore #Shorts",
         "format": "short",
-        "youtube_video_id": "My1jrEw2Sak",
-        "watch_url": "https://www.youtube.com/shorts/My1jrEw2Sak",
+        "youtube_video_id": "wFGNUJYYakw",
+        "watch_url": "https://www.youtube.com/shorts/wFGNUJYYakw",
         "published_on": "2026-11-27",
-        "published_at": "2026-11-27T16:47:51Z"
+        "published_at": "2026-11-27T20:27:04Z"
       },
       "next_queued_longform": {
         "id": "0229",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTHEBREWS13V20",
+      "slug": "short-midnighthebrews13v20-midnight-prayer",
+      "file": "short-midnighthebrews13v20-midnight-prayer.md",
+      "title": "Pray This Hebrews 13:20-21 Midnight Prayer | Glory Forevermore #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T20:27:04Z",
+      "youtube_video_id": "wFGNUJYYakw",
+      "watch_url": "https://www.youtube.com/shorts/wFGNUJYYakw",
+      "youtu_be_url": "https://youtu.be/wFGNUJYYakw",
+      "shorts_url": "https://www.youtube.com/shorts/wFGNUJYYakw",
+      "studio_url": "https://studio.youtube.com/video/wFGNUJYYakw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/wFGNUJYYakw/hqdefault.jpg",
+      "thumb_text": "THE GOD OF PEACE \u00b7 MADE PERFECT IN",
+      "thumbnail_pending": true,
+      "duration_label": "50s",
+      "words": 643
+    },
     {
       "id": "0419",
       "slug": "strength-of-heart-when-flesh-and-spirit-fail-psalm-73-26",
@@ -23209,6 +23233,19 @@
         "words": 1210
       },
       {
+        "id": "0236",
+        "slug": "when-longing-keeps-you-awake-isaiah-26-9-the-midnight-watch",
+        "file": "0236-when-longing-keeps-you-awake-isaiah-26-9-the-midnight-watch.md",
+        "title": "Longing for God in the Night Hours: Isaiah 26:9 | The Midnight Watch",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1490
+      },
+      {
         "id": "0326",
         "slug": "a-covenant-blessing-for-every-generation-genesis-12-2-3",
         "file": "0326-a-covenant-blessing-for-every-generation-genesis-12-2-3.md",
@@ -24767,17 +24804,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-midnighthebrews13v20",
-        "file": "0229-short-midnighthebrews13v20.yml",
-        "companion_longform_id": "0229",
-        "scripture": "Hebrews 13:20-21",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-shieldpsalm115v9",
