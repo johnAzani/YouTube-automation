@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T20:29:43Z",
+  "generated_at": "2026-11-27T20:30:01Z",
   "monitor_generated_at": "2026-11-27T20:19:39.147944+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 924,
+    "published_total": 925,
     "published_longform": 259,
-    "published_shorts": 665,
-    "public_total": 922,
+    "published_shorts": 666,
+    "public_total": 923,
     "queued_longform": 143,
-    "queued_shorts": 16,
+    "queued_shorts": 15,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -572,23 +572,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 79,
+        "published_total": 80,
         "published_longform": 19,
-        "published_shorts": 60,
-        "thumbnail_pending": 79,
-        "public_total": 79,
+        "published_shorts": 61,
+        "thumbnail_pending": 80,
+        "public_total": 80,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM138V1",
-        "title": "Pray This Psalm 138:1-2 Prayer of Thanksgiving | Slow To Offer Praise Today #Shorts",
+        "id": "SHORT-GARDENPSALM9V1",
+        "title": "Pray This Psalm 9:1-2 Prayer of Thanksgiving | Whole Heart #Shorts",
         "format": "short",
-        "youtube_video_id": "BAYLivpXVno",
-        "watch_url": "https://www.youtube.com/shorts/BAYLivpXVno",
+        "youtube_video_id": "DUUv6YcjcYg",
+        "watch_url": "https://www.youtube.com/shorts/DUUv6YcjcYg",
         "published_on": "2026-11-27",
-        "published_at": "2026-11-27T16:57:34Z"
+        "published_at": "2026-11-27T20:28:48Z"
       },
       "next_queued_longform": {
         "id": "0720",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM9V1",
+      "slug": "short-gardenpsalm9v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm9v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 9:1-2 Prayer of Thanksgiving | Whole Heart #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T20:28:48Z",
+      "youtube_video_id": "DUUv6YcjcYg",
+      "watch_url": "https://www.youtube.com/shorts/DUUv6YcjcYg",
+      "youtu_be_url": "https://youtu.be/DUUv6YcjcYg",
+      "shorts_url": "https://www.youtube.com/shorts/DUUv6YcjcYg",
+      "studio_url": "https://studio.youtube.com/video/DUUv6YcjcYg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/DUUv6YcjcYg/hqdefault.jpg",
+      "thumb_text": "GIVE THANKS \u00b7 TO THE LORD",
+      "thumbnail_pending": true,
+      "duration_label": "46s",
+      "words": 635
+    },
     {
       "id": "SHORT-GUIDEDISAIAH42V16",
       "slug": "short-guidedisaiah42v16-guidance-prayer",
@@ -24878,17 +24902,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-gardenpsalm9v1",
-        "file": "0715-short-gardenpsalm9v1.yml",
-        "companion_longform_id": "0715",
-        "scripture": "Psalm 9:1-2",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenephesians5v20",
