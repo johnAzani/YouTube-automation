@@ -1,0 +1,278 @@
+{
+  "key": "short-familymatthew1v20",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "PEACE IN ADVENT",
+    "A PRAYER FOR YOUR HOME"
+  ],
+  "poster": [
+    "MATTHEW 1:20-21",
+    "FEAR NOT THIS SEASON",
+    "A HOUSEHOLD PRAYER",
+    "THE FAMILY ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit wooden table with open holy bible during advent season",
+    "cozy dim lit living room with warm candle light and olive branches",
+    "peaceful snow covered cottage window with warm light inside at twilight",
+    "dark cozy room illuminated by warm candlelight on open scripture",
+    "cozy kitchen table with warm lamp light and bible open to gospels",
+    "peaceful rustic home living room bathed in warm glow of advent candle"
+  ],
+  "scenes": [
+    {
+      "a": "Your silent worry this Advent has an answer.",
+      "img": "short-familymatthew1v20-scene-01.jpg",
+      "kicker": "SILENT WORRY",
+      "sub": "THIS ADVENT HAS AN ANSWER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "But while he thought on these things, behold, the angel of the LORD appeared unto him in a dream, saying,",
+      "img": "short-familymatthew1v20-scene-02.jpg",
+      "kicker": "MATTHEW 1:20",
+      "sub": "THE ANGEL OF THE LORD APPEARED",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Joseph, thou son of David, fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost.",
+      "img": "short-familymatthew1v20-scene-03.jpg",
+      "kicker": "FEAR NOT",
+      "sub": "CONCEIVED OF THE HOLY GHOST",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And she shall bring forth a son, and thou shalt call his name JESUS: for he shall save his people from their sins.",
+      "img": "short-familymatthew1v20-scene-04.jpg",
+      "kicker": "MATTHEW 1:21",
+      "sub": "HE SHALL SAVE HIS PEOPLE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, in this season of waiting, quiet the doubts that trouble our home. Cover our family with Your promise, and remind us that You came to save.",
+      "img": "short-familymatthew1v20-scene-05.jpg",
+      "kicker": "HOUSEHOLD PRAYER",
+      "sub": "QUIET THE DOUBTS IN OUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Your silent worry this Advent has an answer.",
+      "img": "short-familymatthew1v20-scene-06.jpg",
+      "kicker": "LIGHT HAS COME",
+      "sub": "GOD REMEMBERS YOUR HOME",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your silent worry this Advent has an answer."
+    ],
+    [
+      3,
+      12,
+      "But while he thought on these things, behold, the angel of the LORD appeared unto him in a dream, saying,"
+    ],
+    [
+      12,
+      22,
+      "Joseph, thou son of David, fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost."
+    ],
+    [
+      22,
+      32,
+      "And she shall bring forth a son, and thou shalt call his name JESUS: for he shall save his people from their sins."
+    ],
+    [
+      32,
+      42,
+      "Lord, in this season of waiting, quiet the doubts that trouble our home. Cover our family with Your promise, and remind us that You came to save."
+    ],
+    [
+      42,
+      49,
+      "Amen. Your silent worry this Advent has an answer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR SILENT WORRY",
+        "THIS ADVENT HAS",
+        "AN ANSWER"
+      ],
+      [
+        "ANSWER"
+      ],
+      "MATTHEW 1:20-21"
+    ],
+    [
+      3,
+      12,
+      [
+        "WHILE HE THOUGHT",
+        "ON THESE THINGS",
+        "BEHOLD THE ANGEL"
+      ],
+      [
+        "ANGEL"
+      ],
+      "MATTHEW 1:20"
+    ],
+    [
+      12,
+      22,
+      [
+        "FEAR NOT TO TAKE",
+        "MARY THY WIFE",
+        "OF THE HOLY GHOST"
+      ],
+      [
+        "FEAR NOT"
+      ],
+      "MATTHEW 1:20"
+    ],
+    [
+      22,
+      32,
+      [
+        "CALL HIS NAME JESUS",
+        "HE SHALL SAVE HIS",
+        "PEOPLE FROM SINS"
+      ],
+      [
+        "JESUS"
+      ],
+      "MATTHEW 1:21"
+    ],
+    [
+      32,
+      42,
+      [
+        "QUIET THE DOUBTS",
+        "THAT TROUBLE OUR HOME",
+        "YOU CAME TO SAVE"
+      ],
+      [
+        "QUIET"
+      ],
+      "MATTHEW 1:20-21"
+    ],
+    [
+      42,
+      49,
+      [
+        "AMEN YOUR SILENT",
+        "WORRY HAS AN ANSWER"
+      ],
+      [
+        "ANSWER"
+      ],
+      "MATTHEW 1:20-21"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your silent worry this Advent has an answer.",
+      "kind": "phrase",
+      "words": [
+        "SILENT",
+        "WORRY",
+        "ANSWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But while he thought on these things, behold, the angel of the LORD appeared unto him in a dream, saying,",
+      "kind": "phrase",
+      "words": [
+        "BEHOLD",
+        "ANGEL",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Joseph, thou son of David, fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost.",
+      "kind": "phrase",
+      "words": [
+        "FEAR",
+        "NOT",
+        "HOLY",
+        "GHOST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And she shall bring forth a son, and thou shalt call his name JESUS: for he shall save his people from their sins.",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "SAVE",
+        "PEOPLE",
+        "SINS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, in this season of waiting, quiet the doubts that trouble our home. Cover our family with Your promise, and remind us that You came to save.",
+      "kind": "phrase",
+      "words": [
+        "WAITING",
+        "QUIET",
+        "FAMILY",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Your silent worry this Advent has an answer.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "SILENT",
+        "WORRY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 1:20-21"
+}

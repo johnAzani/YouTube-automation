@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T00:09:13Z",
+  "generated_at": "2026-11-27T00:10:14Z",
   "monitor_generated_at": "2026-11-26T23:19:47.437412+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,10 +8,10 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 882,
+    "published_total": 883,
     "published_longform": 242,
-    "published_shorts": 640,
-    "public_total": 880,
+    "published_shorts": 641,
+    "public_total": 881,
     "queued_longform": 101,
     "queued_shorts": 28,
     "automations_ok": 13,
@@ -295,23 +295,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 81,
+        "published_total": 82,
         "published_longform": 23,
-        "published_shorts": 58,
-        "thumbnail_pending": 81,
-        "public_total": 81,
+        "published_shorts": 59,
+        "thumbnail_pending": 82,
+        "public_total": 82,
         "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 2
       },
       "latest_video": {
-        "id": "SHORT-FAMILY2SAMUEL7V29",
-        "title": "Pray This 2 Samuel 7:29 Family Prayer Over Your Home | Bless This Household Today #Shorts",
+        "id": "SHORT-FAMILYPSALM90V16",
+        "title": "Pray This Psalm 90:16-17 Family Prayer Over Your Home | God's Light Upon Your Home #Shorts",
         "format": "short",
-        "youtube_video_id": "qfecCni6y60",
-        "watch_url": "https://www.youtube.com/shorts/qfecCni6y60",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T20:28:00Z"
+        "youtube_video_id": "pRJGiGi_fYI",
+        "watch_url": "https://www.youtube.com/shorts/pRJGiGi_fYI",
+        "published_on": "2026-11-27",
+        "published_at": "2026-11-27T00:08:58Z"
       },
       "next_queued_longform": {
         "id": "0324",
@@ -320,8 +320,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familypsalm90v16",
-        "scripture": "Psalm 90:16-17",
+        "short": "short-familymatthew1v20",
+        "scripture": "Matthew 1:20-21",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -686,6 +686,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYPSALM90V16",
+      "slug": "short-familypsalm90v16-household-prayer",
+      "file": "short-familypsalm90v16-household-prayer.md",
+      "title": "Pray This Psalm 90:16-17 Family Prayer Over Your Home | God's Light Upon Your Home #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T00:08:58Z",
+      "youtube_video_id": "pRJGiGi_fYI",
+      "watch_url": "https://www.youtube.com/shorts/pRJGiGi_fYI",
+      "youtu_be_url": "https://youtu.be/pRJGiGi_fYI",
+      "shorts_url": "https://www.youtube.com/shorts/pRJGiGi_fYI",
+      "studio_url": "https://studio.youtube.com/video/pRJGiGi_fYI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/pRJGiGi_fYI/hqdefault.jpg",
+      "thumb_text": "THE GLORY \u00b7 OF THE LORD",
+      "thumbnail_pending": true,
+      "duration_label": "45s",
+      "words": 677
+    },
     {
       "id": "SHORT-PSALM92V2",
       "slug": "short-psalm92v2-pre-sleep-prayer",
@@ -23173,6 +23197,17 @@
     ],
     "shorts": [
       {
+        "short": "short-familymatthew1v20",
+        "file": "0000-short-familymatthew1v20.yml",
+        "companion_longform_id": "",
+        "scripture": "Matthew 1:20-21",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "17:14"
+      },
+      {
         "short": "short-guidedpsalm119v35",
         "file": "0000-short-guidedpsalm119v35.yml",
         "companion_longform_id": "",
@@ -23336,17 +23371,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-familypsalm90v16",
-        "file": "0323-short-familypsalm90v16.yml",
-        "companion_longform_id": "0323",
-        "scripture": "Psalm 90:16-17",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-familygenesis12v2",

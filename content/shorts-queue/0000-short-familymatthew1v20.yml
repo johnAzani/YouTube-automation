@@ -1,0 +1,16 @@
+short: short-familymatthew1v20
+channel: prayer5
+standalone: true
+source: seasonal
+scripture: Matthew 1:20-21
+status: approved
+renderer_ready: true
+authored_by_brain: true
+privacy: public
+replace: false
+target_window_utc: '17:14'
+notes: "Advent Short on Matthew 1:20-21, for 2026-11-29 to 2026-12-23 \u2014 spec\
+  \ authored by the brain (113 narration words)"
+season: advent
+not_before: '2026-11-29'
+not_after: '2026-12-23'
