@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T12:10:51Z",
+  "generated_at": "2026-11-27T12:37:42Z",
   "monitor_generated_at": "2026-11-27T05:34:22.095144+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 905,
+    "published_total": 906,
     "published_longform": 252,
-    "published_shorts": 653,
-    "public_total": 903,
-    "queued_longform": 120,
-    "queued_shorts": 28,
+    "published_shorts": 654,
+    "public_total": 904,
+    "queued_longform": 128,
+    "queued_shorts": 35,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -38,9 +38,9 @@
         "published_shorts": 83,
         "thumbnail_pending": 1,
         "public_total": 110,
-        "queued_longform": 10,
+        "queued_longform": 12,
         "queued_other": 5,
-        "queued_shorts": 1
+        "queued_shorts": 3
       },
       "latest_video": {
         "id": "SHORT-PSALM23FULL",
@@ -232,23 +232,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 94,
+        "published_total": 95,
         "published_longform": 28,
-        "published_shorts": 66,
-        "thumbnail_pending": 93,
-        "public_total": 94,
+        "published_shorts": 67,
+        "thumbnail_pending": 94,
+        "public_total": 95,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTDANIEL2V19",
-        "title": "Pray This Daniel 2:19-22 Midnight Prayer | God Knows All #Shorts",
+        "id": "SHORT-MIDNIGHTACTS12V5",
+        "title": "Pray This Acts 12:5-11 Midnight Prayer | The Gate Opens #Shorts",
         "format": "short",
-        "youtube_video_id": "ZS2hcNKa7qk",
-        "watch_url": "https://www.youtube.com/shorts/ZS2hcNKa7qk",
+        "youtube_video_id": "4pqnRQ6GQyM",
+        "watch_url": "https://www.youtube.com/shorts/4pqnRQ6GQyM",
         "published_on": "2026-11-27",
-        "published_at": "2026-11-27T09:12:25Z"
+        "published_at": "2026-11-27T12:36:36Z"
       },
       "next_queued_longform": {
         "id": "0229",
@@ -305,9 +305,9 @@
         "published_shorts": 60,
         "thumbnail_pending": 83,
         "public_total": 83,
-        "queued_longform": 8,
+        "queued_longform": 10,
         "queued_other": 0,
-        "queued_shorts": 1
+        "queued_shorts": 3
       },
       "latest_video": {
         "id": "SHORT-FAMILYGENESIS12V2",
@@ -373,9 +373,9 @@
         "published_shorts": 62,
         "thumbnail_pending": 0,
         "public_total": 85,
-        "queued_longform": 18,
+        "queued_longform": 20,
         "queued_other": 0,
-        "queued_shorts": 1
+        "queued_shorts": 3
       },
       "latest_video": {
         "id": "0417",
@@ -577,9 +577,9 @@
         "published_shorts": 59,
         "thumbnail_pending": 78,
         "public_total": 78,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 5
       },
       "latest_video": {
         "id": "0719",
@@ -645,9 +645,9 @@
         "published_shorts": 57,
         "thumbnail_pending": 0,
         "public_total": 75,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 5
       },
       "latest_video": {
         "id": "0818",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTACTS12V5",
+      "slug": "short-midnightacts12v5-midnight-prayer",
+      "file": "short-midnightacts12v5-midnight-prayer.md",
+      "title": "Pray This Acts 12:5-11 Midnight Prayer | The Gate Opens #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T12:36:36Z",
+      "youtube_video_id": "4pqnRQ6GQyM",
+      "watch_url": "https://www.youtube.com/shorts/4pqnRQ6GQyM",
+      "youtu_be_url": "https://youtu.be/4pqnRQ6GQyM",
+      "shorts_url": "https://www.youtube.com/shorts/4pqnRQ6GQyM",
+      "studio_url": "https://studio.youtube.com/video/4pqnRQ6GQyM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/4pqnRQ6GQyM/hqdefault.jpg",
+      "thumb_text": "MIDNIGHT VIGIL \u00b7 ACTS CHAPTER TWELVE",
+      "thumbnail_pending": true,
+      "duration_label": "42s",
+      "words": 634
+    },
     {
       "id": "0818",
       "slug": "proving-his-good-and-perfect-will-romans-12-2",
@@ -22641,6 +22665,32 @@
         "words": 1678
       },
       {
+        "id": "0122",
+        "slug": "under-the-shadow-of-his-wings-psalm-36-7",
+        "file": "0122-under-the-shadow-of-his-wings-psalm-36-7.md",
+        "title": "Under the Shadow of His Wings: Psalm 36:7 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1382
+      },
+      {
+        "id": "0123",
+        "slug": "safe-in-the-dark-psalm-57-1",
+        "file": "0123-safe-in-the-dark-psalm-57-1.md",
+        "title": "Safe in the Dark: Psalm 57:1 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1649
+      },
+      {
         "id": "0139",
         "slug": "when-fear-keeps-you-awake-1-john-4-18",
         "file": "0139-when-fear-keeps-you-awake-1-john-4-18.md",
@@ -22849,6 +22899,32 @@
         "words": 1294
       },
       {
+        "id": "0333",
+        "slug": "restoring-hearts-within-your-walls-malachi-4-6",
+        "file": "0333-restoring-hearts-within-your-walls-malachi-4-6.md",
+        "title": "Restoring Hearts Within Your Walls: Malachi 4:6 | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 920
+      },
+      {
+        "id": "0334",
+        "slug": "signs-and-wonders-in-your-home-isaiah-8-18",
+        "file": "0334-signs-and-wonders-in-your-home-isaiah-8-18.md",
+        "title": "Signs and Wonders in Your Home: Isaiah 8:18 | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1603
+      },
+      {
         "id": "0419",
         "slug": "strength-of-heart-when-flesh-and-spirit-fail-psalm-73-26",
         "file": "0419-strength-of-heart-when-flesh-and-spirit-fail-psalm-73-26.md",
@@ -22886,6 +22962,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1479
+      },
+      {
+        "id": "0423",
+        "slug": "a-strong-hold-in-the-day-of-trouble-nahum-1-7-the-healing-balm",
+        "file": "0423-a-strong-hold-in-the-day-of-trouble-nahum-1-7-the-healing-balm.md",
+        "title": "A Strong Hold in the Day of Trouble: Nahum 1:7 | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1724
+      },
+      {
+        "id": "0424",
+        "slug": "rest-for-a-mind-that-carries-too-much-1-peter-5-7",
+        "file": "0424-rest-for-a-mind-that-carries-too-much-1-peter-5-7.md",
+        "title": "Rest for a Mind That Carries Too Much: 1 Peter 5:7 | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1196
       },
       {
         "id": "0430",
@@ -23486,6 +23588,19 @@
         "words": 1402
       },
       {
+        "id": "0726",
+        "slug": "exalting-his-majesty-in-every-season-psalm-8-1-the-praise-garden",
+        "file": "0726-exalting-his-majesty-in-every-season-psalm-8-1-the-praise-garden.md",
+        "title": "Exalting His Majesty in Every Season: Psalm 8:1 | The Praise Garden",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1157
+      },
+      {
         "id": "0819",
         "slug": "filled-with-the-knowledge-of-his-will-colossians-1-9-10",
         "file": "0819-filled-with-the-knowledge-of-his-will-colossians-1-9-10.md",
@@ -23549,6 +23664,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1207
+      },
+      {
+        "id": "0827",
+        "slug": "finding-safety-in-godly-counsel-proverbs-1114",
+        "file": "0827-finding-safety-in-godly-counsel-proverbs-1114.md",
+        "title": "Finding Safety in Godly Counsel: Proverbs 11:14 | The Guided Path",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 941
       },
       {
         "id": "0900",
@@ -24169,15 +24297,26 @@
         "target_window_utc": "08:44"
       },
       {
-        "short": "short-midnightacts12v5",
-        "file": "0223-short-midnightacts12v5.yml",
-        "companion_longform_id": "0223",
-        "scripture": "Acts 12:5-11",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
+        "short": "short-psalm36v7",
+        "file": "0122-short-psalm36v7.yml",
+        "companion_longform_id": "0122",
+        "scripture": "Psalm 36:7",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "publishable": true,
-        "target_window_utc": "23:14"
+        "target_window_utc": "14:14"
+      },
+      {
+        "short": "short-psalm57v1",
+        "file": "0123-short-psalm57v1.yml",
+        "companion_longform_id": "0123",
+        "scripture": "Psalm 57:1",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "14:14"
       },
       {
         "short": "short-midnightcolossians4v2",
@@ -24200,6 +24339,50 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-familymalachi4v6",
+        "file": "0333-short-familymalachi4v6.yml",
+        "companion_longform_id": "0333",
+        "scripture": "Malachi 4:6",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "17:14"
+      },
+      {
+        "short": "short-familyisaiah8v18",
+        "file": "0334-short-familyisaiah8v18.yml",
+        "companion_longform_id": "0334",
+        "scripture": "Isaiah 8:18",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "17:14"
+      },
+      {
+        "short": "short-healingnahum1v7",
+        "file": "0423-short-healingnahum1v7.yml",
+        "companion_longform_id": "0423",
+        "scripture": "Nahum 1:7",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-healing1peter5v7",
+        "file": "0424-short-healing1peter5v7.yml",
+        "companion_longform_id": "0424",
+        "scripture": "1 Peter 5:7",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
       },
       {
         "short": "short-shieldpsalm94v22",
@@ -24257,6 +24440,17 @@
         "target_window_utc": "09:44"
       },
       {
+        "short": "short-gardenpsalm8v1",
+        "file": "0726-short-gardenpsalm8v1.yml",
+        "companion_longform_id": "0726",
+        "scripture": "Psalm 8:1",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
         "short": "short-guidedjeremiah6v16",
         "file": "0815-short-guidedjeremiah6v16.yml",
         "companion_longform_id": "0815",
@@ -24283,6 +24477,17 @@
         "file": "0824-short-guidedpsalm16v11.yml",
         "companion_longform_id": "0824",
         "scripture": "Psalm 16:11",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "18:44"
+      },
+      {
+        "short": "short-guidedproverbs11v14",
+        "file": "0827-short-guidedproverbs11v14.yml",
+        "companion_longform_id": "0827",
+        "scripture": "Proverbs 11:14",
         "channel": "prayer10",
         "channel_name": "The Guided Path",
         "status": "approved",
