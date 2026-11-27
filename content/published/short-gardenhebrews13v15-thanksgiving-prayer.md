@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "deferred_processing_unknown"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["BY HIM LET US OFFER", "THE SACRIFICE OF", "PRAISE", "THE FRUIT OF OUR LIPS", "HEBREWS 13:15"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-04T01:49:38Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When your words have run out today, give God the simple song inside your heart. By him therefore let us offer the sacrifice of praise to God continually, that is, the fruit of our lips giving thanks to his name. Lord Jesus, even when our circumstances try to quiet our joy, we choose to lift up praise to You. We bring You thanksgiving not only in ease, but in every quiet hour. Let the fruit of our lips bring honor to Your holy name. May our hearts continually overflow with gratitude for Your endless mercy. Subscribe to The Praise Garden for daily moments of praise.

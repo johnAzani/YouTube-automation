@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["BEDTIME PRAYER", "HIS FAITHFULNESS", "EVERY NIGHT", "PSALM 92:2"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 The darkness outside can leave your mind wandering. Psalm ninety-two verse two says, To show forth thy lovingkindness in the morning, and thy faithfulness every night, Lord, as the shadow falls over this room, we lean into Your enduring promise. You kept us through the morning light, and You remain steadfast through the midnight hours. When our hands drop their heavy burdens and our hearts struggle to quiet, cover us in Your peace. Guard our resting tonight, and renew our strength before the dawn. We entrust every unspoken fear to You, resting in Your untiring love. Amen. Darkness outside leaves your mind wandering.
