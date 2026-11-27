@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T17:46:56Z",
+  "generated_at": "2026-11-27T19:30:13Z",
   "monitor_generated_at": "2026-11-27T17:37:13.999368+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 256,
     "published_shorts": 661,
     "public_total": 915,
-    "queued_longform": 136,
+    "queued_longform": 138,
     "queued_shorts": 20,
     "automations_ok": 12,
     "automations_total": 15,
@@ -305,7 +305,7 @@
         "published_shorts": 60,
         "thumbnail_pending": 85,
         "public_total": 85,
-        "queued_longform": 10,
+        "queued_longform": 12,
         "queued_other": 0,
         "queued_shorts": 1
       },
@@ -23239,6 +23239,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 932
+      },
+      {
+        "id": "0337",
+        "slug": "when-your-family-needs-peace-and-protection-psalm-147-13-14",
+        "file": "0337-when-your-family-needs-peace-and-protection-psalm-147-13-14.md",
+        "title": "When Your Family Needs Peace and Protection: Psalm 147:13-14",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1559
+      },
+      {
+        "id": "0338",
+        "slug": "god-saves-my-children-isaiah-49-25",
+        "file": "0338-god-saves-my-children-isaiah-49-25.md",
+        "title": "God Saves My Children: Isaiah 49:25 | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 936
       },
       {
         "id": "0419",
