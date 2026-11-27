@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["TRAIN UP A CHILD", "TRUSTING IN HIS WORD", "PROVERBS 22:6", "A PRAYER FOR HOME"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-27T02:14:09Z"
+thumbnail_retry_after: "2026-12-04T03:05:26Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If you are questioning your influence over your child's heart, stay for this quiet prayer. Lord, we lift every parent feeling the heavy weight of responsibility for their little ones. Train up a child in the way he should go: and when he is old, he will not depart from it. Give us patience to lead with love when our own wisdom seems to fall so short. Anchor their souls in the truth of your spirit so they remain rooted in your grace. We entrust our future generations to you, knowing you are faithful to finish your good work.

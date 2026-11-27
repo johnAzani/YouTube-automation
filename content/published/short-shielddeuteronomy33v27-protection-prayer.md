@@ -26,14 +26,12 @@ short_visual_fingerprints: ["sha256:0c1597db7bb59df3496bbf610830ae251e79ac5c515b
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_pending: false
 thumbnail_poster: ["REST IN HIS ARMS", "UNDER HIS PROTECTION", "THE ETERNAL GOD", "IS YOUR REFUGE"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-27T02:14:15Z"
-thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 0
+thumbnail_revision: "shorts-poster-v1"
 ---
 
 If you are hesitating to step forward because of the unseen shadows, stay right here. The eternal God is thy refuge, and underneath are the everlasting arms: and he shall thrust out the enemy from before thee; and shall say, Destroy them. Lord, anchor this weary heart in the certainty of your presence. When the path ahead feels uncertain, remind this soul that your everlasting arms remain beneath every step taken in faith. Drive out every fear and all lingering confusion that clouds the view of your sovereignty. Grant a settled spirit, knowing that we dwell in the shelter of the Most High, safe from all that troubles us this day.

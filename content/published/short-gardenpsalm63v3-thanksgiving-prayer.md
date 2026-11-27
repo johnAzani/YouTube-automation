@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["PSALM 63:3-4", "LOVINGKINDNESS", "BETTER THAN LIFE", "THE PRAISE GARDEN"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-27T02:14:17Z"
+thumbnail_retry_after: "2026-12-04T03:05:44Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If a quiet sorrow is shadowing your heart right now, lift your eyes to God. Because thy lovingkindness is better than life, my lips shall praise thee. Thus will I bless thee while I live: I will lift up my hands in thy name. Lord, we thank You that Your mercy is sweeter than any earthly joy. When our spirits grow faint, Your steadfast presence restores us. We offer You our praise with joyful hearts, trusting Your tender care in every moment. Strengthen us today to walk faithfully in Your abundant grace and truth. Subscribe to The Praise Garden for daily thanksgiving, praise, and worship.
