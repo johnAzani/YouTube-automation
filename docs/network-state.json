@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T10:02:28Z",
+  "generated_at": "2026-11-27T10:23:53Z",
   "monitor_generated_at": "2026-11-27T05:34:22.095144+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 899,
-    "published_longform": 247,
-    "published_shorts": 652,
-    "public_total": 897,
-    "queued_longform": 118,
-    "queued_shorts": 30,
+    "published_total": 901,
+    "published_longform": 248,
+    "published_shorts": 653,
+    "public_total": 899,
+    "queued_longform": 117,
+    "queued_shorts": 28,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -572,33 +572,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 76,
-        "published_longform": 18,
-        "published_shorts": 58,
-        "thumbnail_pending": 76,
-        "public_total": 76,
-        "queued_longform": 6,
+        "published_total": 78,
+        "published_longform": 19,
+        "published_shorts": 59,
+        "thumbnail_pending": 78,
+        "public_total": 78,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-GARDENHEBREWS13V15",
-        "title": "Pray This Hebrews 13:15 Prayer of Thanksgiving | Sacrifice Of Praise #Shorts",
-        "format": "short",
-        "youtube_video_id": "MOtjSAE7fjs",
-        "watch_url": "https://www.youtube.com/shorts/MOtjSAE7fjs",
-        "published_on": "2026-11-27",
-        "published_at": "2026-11-27T00:17:37Z"
-      },
-      "next_queued_longform": {
         "id": "0719",
         "title": "Thanksgiving Worship When Your Soul Is Thirsty: Psalm 63:3-4",
-        "words": 1679,
+        "format": "longform",
+        "youtube_video_id": "cdlvGSm4K14",
+        "watch_url": "https://youtu.be/cdlvGSm4K14",
+        "published_on": "2026-11-27",
+        "published_at": "2026-11-27T10:22:50Z"
+      },
+      "next_queued_longform": {
+        "id": "0720",
+        "title": "Giving Thanks in All Things: Ephesians 5:20 | The Praise Garden",
+        "words": 1132,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm135v3",
-        "scripture": "Psalm 135:3",
+        "short": "short-gardenpsalm138v1",
+        "scripture": "Psalm 138:1-2",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -697,6 +697,30 @@
   ],
   "videos": [
     {
+      "id": "0719",
+      "slug": "thanksgiving-worship-when-your-soul-is-thirsty-psalm-63-3-4",
+      "file": "0719-thanksgiving-worship-when-your-soul-is-thirsty-psalm-63-3-4.md",
+      "title": "Thanksgiving Worship When Your Soul Is Thirsty: Psalm 63:3-4",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T10:22:50Z",
+      "youtube_video_id": "cdlvGSm4K14",
+      "watch_url": "https://youtu.be/cdlvGSm4K14",
+      "youtu_be_url": "https://youtu.be/cdlvGSm4K14",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/cdlvGSm4K14/edit",
+      "thumb_url": "https://i.ytimg.com/vi/cdlvGSm4K14/hqdefault.jpg",
+      "thumb_text": "BETTER THAN LIFE",
+      "thumbnail_pending": true,
+      "duration_label": "10m 31s",
+      "words": 1679
+    },
+    {
       "id": "0078",
       "slug": "wisdom-before-you-begin-the-day-james-1-5",
       "file": "0078-wisdom-before-you-begin-the-day-james-1-5.md",
@@ -767,6 +791,30 @@
       "thumbnail_pending": false,
       "duration_label": "54s",
       "words": 631
+    },
+    {
+      "id": "SHORT-GARDENPSALM135V3",
+      "slug": "short-gardenpsalm135v3-thanksgiving-prayer",
+      "file": "short-gardenpsalm135v3-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 135:3 Prayer of Thanksgiving | The Lord Is Good #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T09:23:54Z",
+      "youtube_video_id": "IMkSiHUpg1g",
+      "watch_url": "https://www.youtube.com/shorts/IMkSiHUpg1g",
+      "youtu_be_url": "https://youtu.be/IMkSiHUpg1g",
+      "shorts_url": "https://www.youtube.com/shorts/IMkSiHUpg1g",
+      "studio_url": "https://studio.youtube.com/video/IMkSiHUpg1g/edit",
+      "thumb_url": "https://i.ytimg.com/vi/IMkSiHUpg1g/hqdefault.jpg",
+      "thumb_text": "WHEN THOUGHTS \u00b7 GROW HEAVY",
+      "thumbnail_pending": true,
+      "duration_label": "52s",
+      "words": 646
     },
     {
       "id": "SHORT-MORNINGPSALM21V13",
@@ -23225,19 +23273,6 @@
         "words": 1354
       },
       {
-        "id": "0719",
-        "slug": "thanksgiving-worship-when-your-soul-is-thirsty-psalm-63-3-4",
-        "file": "0719-thanksgiving-worship-when-your-soul-is-thirsty-psalm-63-3-4.md",
-        "title": "Thanksgiving Worship When Your Soul Is Thirsty: Psalm 63:3-4",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1679
-      },
-      {
         "id": "0720",
         "slug": "giving-thanks-in-all-things-ephesians-5-20",
         "file": "0720-giving-thanks-in-all-things-ephesians-5-20.md",
@@ -23823,17 +23858,6 @@
         "target_window_utc": "17:14"
       },
       {
-        "short": "short-gardenpsalm135v3",
-        "file": "0000-short-gardenpsalm135v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 135:3",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
         "short": "short-gardenpsalm138v1",
         "file": "0000-short-gardenpsalm138v1.yml",
         "companion_longform_id": "",
@@ -24091,17 +24115,6 @@
         "file": "0720-short-gardenephesians5v20.yml",
         "companion_longform_id": "0720",
         "scripture": "Ephesians 5:20",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-gardenpsalm116v12",
-        "file": "0725-short-gardenpsalm116v12.yml",
-        "companion_longform_id": "0725",
-        "scripture": "Psalm 116:12-13",
         "channel": "prayer9",
         "channel_name": "The Praise Garden",
         "status": "approved",
