@@ -26,14 +26,12 @@ short_visual_fingerprints: ["sha256:3778830dc6871e2bafce0af94c6fc8c1158d5c26d7ee
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_pending: false
 thumbnail_poster: ["PSALM 27:1", "THE LORD IS MY LIGHT", "AND MY SALVATION", "DIVINE PROTECTION PRAYER"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-27T18:43:52Z"
-thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 0
+thumbnail_revision: "shorts-poster-v1"
 ---
 
 If an unexpected threat has unsettled your peace in this quiet hour, hear this. The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid? Lord God, arise as a towering shield over this heart right now. Dispel every shadow of worry and shatter the spirit of fear trying to overwhelm them. Be their fortress, their safe refuge, and their unfailing strength against every unseen storm. Surround them with Your divine protection today. Subscribe to walk under God's daily covering.

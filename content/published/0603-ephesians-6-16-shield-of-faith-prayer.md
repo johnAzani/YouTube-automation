@@ -75,13 +75,11 @@ youtube_video_id: "S7i2vZMHgE0"
 metadata_revision: "selar-seo-v1"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-27T18:43:51Z"
-thumbnail_retry_reason: "permission"
+thumbnail_pending: false
 title_before: "Ephesians 6:16 Shield of Faith Prayer | The Covenant Shield"
 retitled_at: "2026-11-20"
 retitle_reason: "unwatched after 7 days or more"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Standing Strong in the Lord & the Power of His Might

@@ -88,6 +88,7 @@ narration_voice: "Charon"
 duration_seconds: 391.7
 thumbnail_revision: "ctr-v3-cinema"
 thumbnail_concept: "hook"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 ## Scene 1 — The Sacred Hook & Evening Surrender

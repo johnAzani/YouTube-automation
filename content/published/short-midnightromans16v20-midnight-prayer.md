@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["VICTORY AT MIDNIGHT", "THE GOD OF PEACE", "CRUSHES ALL DARKNESS", "STAND IN FAITH"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-27T18:43:41Z"
+thumbnail_retry_after: "2026-12-04T20:19:09Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If the conflict in your mind reached breaking point tonight, listen closely right now. And the God of peace shall bruise Satan under your feet shortly. The grace of our Lord Jesus Christ be with you. Amen. Lord, we stand in the stillness of midnight, weary from battles fought in silence. The spiritual enemy has tried to steal your quiet assurance and leave only fear in this room. But your divine promise is sure: your peace is a force that crushes all darkness beneath our feet. We surrender every lingering tension, stepping boldly into your complete victory tonight. May your unmerited grace fill every corner of this quiet space. Subscribe to stand in prayer with The Midnight Watch.

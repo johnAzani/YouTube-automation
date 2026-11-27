@@ -83,7 +83,7 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-27T18:43:55Z"
+thumbnail_retry_after: "2026-12-04T20:19:32Z"
 thumbnail_retry_reason: "permission"
 title_before: "Habakkuk 3:17-19 Yet I Will Rejoice Prayer | The Praise Garden"
 retitled_at: "2026-11-20"
