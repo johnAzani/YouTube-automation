@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T17:40:16Z",
+  "generated_at": "2026-11-27T17:46:36Z",
   "monitor_generated_at": "2026-11-27T17:37:13.999368+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 256,
     "published_shorts": 661,
     "public_total": 915,
-    "queued_longform": 132,
+    "queued_longform": 134,
     "queued_shorts": 20,
     "automations_ok": 12,
     "automations_total": 15,
@@ -373,7 +373,7 @@
         "published_shorts": 62,
         "thumbnail_pending": 0,
         "public_total": 85,
-        "queued_longform": 22,
+        "queued_longform": 24,
         "queued_other": 0,
         "queued_shorts": 1
       },
@@ -23475,6 +23475,19 @@
         "words": 1168
       },
       {
+        "id": "0443",
+        "slug": "restoration-in-the-midst-of-trouble-psalm-138-7-the-healing-balm",
+        "file": "0443-restoration-in-the-midst-of-trouble-psalm-138-7-the-healing-balm.md",
+        "title": "Restoration in the Midst of Trouble: Psalm 138:7 | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1025
+      },
+      {
         "id": "0444",
         "slug": "strength-for-weak-limbs-and-weary-bones-acts-3-6-8-the-healing-balm",
         "file": "0444-strength-for-weak-limbs-and-weary-bones-acts-3-6-8-the-healing-balm.md",
@@ -23486,6 +23499,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1720
+      },
+      {
+        "id": "0445",
+        "slug": "the-nearness-of-god-to-a-broken-heart-psalm-34-18",
+        "file": "0445-the-nearness-of-god-to-a-broken-heart-psalm-34-18.md",
+        "title": "The Nearness of God to a Broken Heart: Psalm 34:18 | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1142
       },
       {
         "id": "0446",
