@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T22:34:01Z",
+  "generated_at": "2026-11-27T22:46:12Z",
   "monitor_generated_at": "2026-11-27T22:30:28.622024+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 259,
     "published_shorts": 666,
     "public_total": 923,
-    "queued_longform": 147,
+    "queued_longform": 149,
     "queued_shorts": 15,
     "automations_ok": 12,
     "automations_total": 15,
@@ -305,7 +305,7 @@
         "published_shorts": 60,
         "thumbnail_pending": 85,
         "public_total": 85,
-        "queued_longform": 18,
+        "queued_longform": 20,
         "queued_other": 0,
         "queued_shorts": 1
       },
@@ -319,9 +319,9 @@
         "published_at": "2026-11-27T17:30:25Z"
       },
       "next_queued_longform": {
-        "id": "0326",
-        "title": "A Covenant Blessing for Every Generation: Genesis 12:2-3",
-        "words": 1437,
+        "id": "0321",
+        "title": "When Your Labor Feels Unseen: Ruth 2:12 | The Family Altar",
+        "words": 1268,
         "status": "approved"
       },
       "next_queued_short": {
@@ -23342,6 +23342,19 @@
         "words": 1490
       },
       {
+        "id": "0321",
+        "slug": "when-your-labor-feels-unseen-ruth-2-12",
+        "file": "0321-when-your-labor-feels-unseen-ruth-2-12.md",
+        "title": "When Your Labor Feels Unseen: Ruth 2:12 | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1268
+      },
+      {
         "id": "0326",
         "slug": "a-covenant-blessing-for-every-generation-genesis-12-2-3",
         "file": "0326-a-covenant-blessing-for-every-generation-genesis-12-2-3.md",
@@ -23379,6 +23392,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 860
+      },
+      {
+        "id": "0329",
+        "slug": "when-you-worry-your-family-will-stray-jude-1-24-25-the-family-altar",
+        "file": "0329-when-you-worry-your-family-will-stray-jude-1-24-25-the-family-altar.md",
+        "title": "When You Worry Your Family Will Stray: Jude 1:24-25 | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1383
       },
       {
         "id": "0330",
