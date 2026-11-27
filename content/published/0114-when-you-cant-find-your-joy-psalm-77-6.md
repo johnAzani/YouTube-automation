@@ -2,7 +2,7 @@
 id: '0114'
 title: "When Your Soul Refuses Comfort: Psalm 77:6 | The Secret Place"
 slug: when-you-cant-find-your-joy-psalm-77-6
-status: approved
+status: published
 channel: secret-place
 privacy: public
 format: longform
@@ -78,6 +78,16 @@ originality:
   source_notes: true
 title_before: "When You Can't Find Your Joy: Psalm 77:6 | The Secret Place"
 queue_title_fixed_at: "2026-11-23"
+published_on: "2026-11-27"
+published_at: "2026-11-27T20:04:37Z"
+youtube_video_id: "iloryqdQ3NY"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 391.7
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "hook"
 ---
 
 ## Scene 1 — The Sacred Hook & Evening Surrender

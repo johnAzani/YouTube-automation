@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T20:05:26Z",
+  "generated_at": "2026-11-27T20:05:38Z",
   "monitor_generated_at": "2026-11-27T17:37:13.999368+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 918,
-    "published_longform": 257,
+    "published_total": 919,
+    "published_longform": 258,
     "published_shorts": 661,
-    "public_total": 916,
-    "queued_longform": 139,
+    "public_total": 917,
+    "queued_longform": 140,
     "queued_shorts": 20,
     "automations_ok": 12,
     "automations_total": 15,
@@ -33,28 +33,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 112,
-        "published_longform": 29,
+        "published_total": 113,
+        "published_longform": 30,
         "published_shorts": 83,
         "thumbnail_pending": 1,
-        "public_total": 111,
-        "queued_longform": 17,
+        "public_total": 112,
+        "queued_longform": 18,
         "queued_other": 5,
         "queued_shorts": 1
       },
       "latest_video": {
-        "id": "0113",
-        "title": "When Sleep Will Not Come: Psalm 42:8 | The Secret Place",
-        "format": "longform",
-        "youtube_video_id": "RwGDy-gekEw",
-        "watch_url": "https://youtu.be/RwGDy-gekEw",
-        "published_on": "2026-11-27",
-        "published_at": "2026-11-27T13:14:28Z"
-      },
-      "next_queued_longform": {
         "id": "0114",
         "title": "When Your Soul Refuses Comfort: Psalm 77:6 | The Secret Place",
-        "words": 1082,
+        "format": "longform",
+        "youtube_video_id": "iloryqdQ3NY",
+        "watch_url": "https://youtu.be/iloryqdQ3NY",
+        "published_on": "2026-11-27",
+        "published_at": "2026-11-27T20:04:37Z"
+      },
+      "next_queued_longform": {
+        "id": "0115",
+        "title": "Rest for the Mind at Midnight: Psalm 119:55 | The Secret Place",
+        "words": 1450,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0114",
+      "slug": "when-you-cant-find-your-joy-psalm-77-6",
+      "file": "0114-when-you-cant-find-your-joy-psalm-77-6.md",
+      "title": "When Your Soul Refuses Comfort: Psalm 77:6 | The Secret Place",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T20:04:37Z",
+      "youtube_video_id": "iloryqdQ3NY",
+      "watch_url": "https://youtu.be/iloryqdQ3NY",
+      "youtu_be_url": "https://youtu.be/iloryqdQ3NY",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/iloryqdQ3NY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/iloryqdQ3NY/hqdefault.jpg",
+      "thumb_text": "HIS WORKS",
+      "thumbnail_pending": false,
+      "duration_label": "6m 32s",
+      "words": 1082
+    },
     {
       "id": "0524",
       "slug": "honest-work-and-heavenly-wages-colossians-3-23-24",
@@ -22836,19 +22860,6 @@
         "words": 1368
       },
       {
-        "id": "0114",
-        "slug": "when-you-cant-find-your-joy-psalm-77-6",
-        "file": "0114-when-you-cant-find-your-joy-psalm-77-6.md",
-        "title": "When Your Soul Refuses Comfort: Psalm 77:6 | The Secret Place",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1082
-      },
-      {
         "id": "0115",
         "slug": "rest-for-the-mind-at-midnight-psalm-119-55",
         "file": "0115-rest-for-the-mind-at-midnight-psalm-119-55.md",
@@ -23029,6 +23040,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1237
+      },
+      {
+        "id": "0133",
+        "slug": "when-exhaustion-pulls-you-under-jeremiah-31-25-26",
+        "file": "0133-when-exhaustion-pulls-you-under-jeremiah-31-25-26.md",
+        "title": "When Exhaustion Pulls You Under: Jeremiah 31:25-26 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1242
+      },
+      {
+        "id": "0134",
+        "slug": "when-your-soul-cannot-quiet-down-zephaniah-3-17",
+        "file": "0134-when-your-soul-cannot-quiet-down-zephaniah-3-17.md",
+        "title": "When Your Soul Cannot Quiet Down: Zephaniah 3:17 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1593
       },
       {
         "id": "0139",
