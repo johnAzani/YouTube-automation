@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T00:03:39Z",
+  "generated_at": "2026-11-27T00:09:03Z",
   "monitor_generated_at": "2026-11-26T23:19:47.437412+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 880,
+    "published_total": 881,
     "published_longform": 242,
-    "published_shorts": 638,
-    "public_total": 878,
+    "published_shorts": 639,
+    "public_total": 879,
     "queued_longform": 101,
-    "queued_shorts": 29,
+    "queued_shorts": 28,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": false
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 115,
+        "published_total": 116,
         "published_longform": 36,
-        "published_shorts": 79,
+        "published_shorts": 80,
         "thumbnail_pending": 0,
-        "public_total": 114,
+        "public_total": 115,
         "queued_longform": 21,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM149V5",
-        "title": "Say This Psalm 149:5-6 Prayer for Fresh Start at Sunrise | Sing Aloud Upon Your Beds #Shorts",
+        "id": "SHORT-MORNINGPSALM19V14",
+        "title": "Say This Psalm 19:14 Prayer for Fresh Start at Sunrise | A Short Prayer #Shorts",
         "format": "short",
-        "youtube_video_id": "5AZaWG4xKRY",
-        "watch_url": "https://www.youtube.com/shorts/5AZaWG4xKRY",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T20:27:42Z"
+        "youtube_video_id": "1peoOI4dHmE",
+        "watch_url": "https://www.youtube.com/shorts/1peoOI4dHmE",
+        "published_on": "2026-11-27",
+        "published_at": "2026-11-27T00:07:47Z"
       },
       "next_queued_longform": {
         "id": "0078",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm19v14",
-        "scripture": "Psalm 19:14",
+        "short": "short-morningpsalm71v15",
+        "scripture": "Psalm 71:15",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -686,6 +686,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM19V14",
+      "slug": "short-morningpsalm19v14-sunrise-prayer",
+      "file": "short-morningpsalm19v14-sunrise-prayer.md",
+      "title": "Say This Psalm 19:14 Prayer for Fresh Start at Sunrise | A Short Prayer #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T00:07:47Z",
+      "youtube_video_id": "1peoOI4dHmE",
+      "watch_url": "https://www.youtube.com/shorts/1peoOI4dHmE",
+      "youtu_be_url": "https://youtu.be/1peoOI4dHmE",
+      "shorts_url": "https://www.youtube.com/shorts/1peoOI4dHmE",
+      "studio_url": "https://studio.youtube.com/video/1peoOI4dHmE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/1peoOI4dHmE/hqdefault.jpg",
+      "thumb_text": "PSALM 19:14 PRAYER \u00b7 PSALM 19:14",
+      "thumbnail_pending": false,
+      "duration_label": "49s",
+      "words": 645
+    },
     {
       "id": "0525",
       "slug": "promotion-cometh-from-the-lord-psalm-75-6-7",
@@ -23178,17 +23202,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningpsalm19v14",
-        "file": "0000-short-morningpsalm19v14.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 19:14",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm71v15",
