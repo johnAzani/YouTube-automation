@@ -1,6 +1,6 @@
 ---
 id: 0956
-title: 'Strength for a Long Afternoon: Psalm 71:16 | The Midday Watch'
+title: "Carrying the Weight of the Day Alone: Psalm 71:16 | The Midday Watch"
 slug: strength-for-a-long-afternoon-psalm-71-16-the-midday-watch
 status: approved
 channel: prayer3
@@ -71,6 +71,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "Strength for a Long Afternoon: Psalm 71:16 | The Midday Watch"
+queue_title_fixed_at: "2026-11-27"
 ---
 
 ## Scene 1 — The Noonday Pause
