@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T20:28:39Z",
+  "generated_at": "2026-11-27T20:28:59Z",
   "monitor_generated_at": "2026-11-27T20:19:39.147944+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 922,
+    "published_total": 923,
     "published_longform": 259,
-    "published_shorts": 663,
-    "public_total": 920,
-    "queued_longform": 142,
-    "queued_shorts": 18,
+    "published_shorts": 664,
+    "public_total": 921,
+    "queued_longform": 143,
+    "queued_shorts": 17,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -504,23 +504,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 79,
+        "published_total": 80,
         "published_longform": 20,
-        "published_shorts": 59,
+        "published_shorts": 60,
         "thumbnail_pending": 13,
-        "public_total": 79,
-        "queued_longform": 7,
+        "public_total": 80,
+        "queued_longform": 8,
         "queued_other": 4,
-        "queued_shorts": 2
+        "queued_shorts": 1
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM71V3",
-        "title": "Pray This Psalm 71:3 Prayer for Divine Protection | Strong Habitation #Shorts",
+        "id": "SHORT-SHIELDPSALM115V9",
+        "title": "Pray This Psalm 115:9-11 Prayer for Divine Protection | Prayer Of Refuge #Shorts",
         "format": "short",
-        "youtube_video_id": "fUlZbFDsXmY",
-        "watch_url": "https://www.youtube.com/shorts/fUlZbFDsXmY",
+        "youtube_video_id": "99qvsns8RWA",
+        "watch_url": "https://www.youtube.com/shorts/99qvsns8RWA",
         "published_on": "2026-11-27",
-        "published_at": "2026-11-27T16:56:53Z"
+        "published_at": "2026-11-27T20:27:51Z"
       },
       "next_queued_longform": {
         "id": "0615",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM115V9",
+      "slug": "short-shieldpsalm115v9-protection-prayer",
+      "file": "short-shieldpsalm115v9-protection-prayer.md",
+      "title": "Pray This Psalm 115:9-11 Prayer for Divine Protection | Prayer Of Refuge #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T20:27:51Z",
+      "youtube_video_id": "99qvsns8RWA",
+      "watch_url": "https://www.youtube.com/shorts/99qvsns8RWA",
+      "youtu_be_url": "https://youtu.be/99qvsns8RWA",
+      "shorts_url": "https://www.youtube.com/shorts/99qvsns8RWA",
+      "studio_url": "https://studio.youtube.com/video/99qvsns8RWA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/99qvsns8RWA/hqdefault.jpg",
+      "thumb_text": "THE ANXIOUS HOUR \u00b7 GOD IS YOUR HELP",
+      "thumbnail_pending": false,
+      "duration_label": "58s",
+      "words": 635
+    },
     {
       "id": "SHORT-MORNINGPSALM73V24",
       "slug": "short-morningpsalm73v24-sunrise-prayer",
@@ -24024,6 +24048,19 @@
         "words": 1176
       },
       {
+        "id": "0623",
+        "slug": "when-you-need-strength-to-stand-firm-ephesians-6-10-11",
+        "file": "0623-when-you-need-strength-to-stand-firm-ephesians-6-10-11.md",
+        "title": "When You Need Strength to Stand Firm: Ephesians 6:10-11",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1862
+      },
+      {
         "id": "0627",
         "slug": "if-god-be-for-us-romans-8-31",
         "file": "0627-if-god-be-for-us-romans-8-31.md",
@@ -24812,17 +24849,6 @@
         "file": "0000-short-shieldisaiah7v14.yml",
         "companion_longform_id": "",
         "scripture": "Isaiah 7:14",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-shieldpsalm115v9",
-        "file": "0644-short-shieldpsalm115v9.yml",
-        "companion_longform_id": "0644",
-        "scripture": "Psalm 115:9-11",
         "channel": "prayer8",
         "channel_name": "The Covenant Shield",
         "status": "approved",
