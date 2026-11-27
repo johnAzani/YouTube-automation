@@ -44,6 +44,13 @@
       "workflow": "reporting-jobs.yml"
     },
     {
+      "late_minutes": 186,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-27T22:20:41+00:00",
+      "slot": "2026-11-27T19:14:00+00:00",
+      "workflow": "comments.yml"
+    },
+    {
       "late_minutes": 140,
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "ran_at": "2026-11-27T05:34:03+00:00",
@@ -51,8 +58,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-27T22:20:35.135121+00:00",
-  "last_run_at": "2026-11-27T22:19:44+00:00",
+  "generated_at": "2026-11-27T22:23:26.378402+00:00",
+  "last_run_at": "2026-11-27T22:22:38+00:00",
   "on_time": [
     {
       "late_minutes": 4,
