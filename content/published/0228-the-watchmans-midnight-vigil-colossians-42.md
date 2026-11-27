@@ -2,7 +2,7 @@
 id: 0228
 title: 'The Watchman''s Midnight Vigil: Colossians 4:2 | The Midnight Watch'
 slug: the-watchmans-midnight-vigil-colossians-42
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -76,6 +76,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-27"
+published_at: "2026-11-27T00:56:13Z"
+youtube_video_id: "Um0QQpAcIcM"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 445.28
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Rising at the Twelfth Hour

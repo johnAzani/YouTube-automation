@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T00:20:16Z",
+  "generated_at": "2026-11-27T00:57:15Z",
   "monitor_generated_at": "2026-11-26T23:19:47.437412+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 886,
-    "published_longform": 242,
-    "published_shorts": 644,
-    "public_total": 884,
-    "queued_longform": 104,
-    "queued_shorts": 27,
+    "published_total": 888,
+    "published_longform": 243,
+    "published_shorts": 645,
+    "public_total": 886,
+    "queued_longform": 103,
+    "queued_shorts": 26,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": false
@@ -227,33 +227,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 91,
-        "published_longform": 27,
-        "published_shorts": 64,
-        "thumbnail_pending": 90,
-        "public_total": 91,
-        "queued_longform": 6,
+        "published_total": 93,
+        "published_longform": 28,
+        "published_shorts": 65,
+        "thumbnail_pending": 92,
+        "public_total": 93,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTPSALM77V6",
-        "title": "Pray This Psalm 77:6 Midnight Prayer | Your Quiet Room Tonight #Shorts",
-        "format": "short",
-        "youtube_video_id": "v4LLDxbfkJE",
-        "watch_url": "https://www.youtube.com/shorts/v4LLDxbfkJE",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T20:26:06Z"
-      },
-      "next_queued_longform": {
         "id": "0228",
         "title": "The Watchman's Midnight Vigil: Colossians 4:2 | The Midnight Watch",
-        "words": 1121,
+        "format": "longform",
+        "youtube_video_id": "Um0QQpAcIcM",
+        "watch_url": "https://youtu.be/Um0QQpAcIcM",
+        "published_on": "2026-11-27",
+        "published_at": "2026-11-27T00:56:13Z"
+      },
+      "next_queued_longform": {
+        "id": "0229",
+        "title": "The God of Peace Who Seals the Broken: Hebrews 13:20-21",
+        "words": 1401,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightpsalm88v1",
-        "scripture": "Psalm 88:1-2",
+        "short": "short-midnightdaniel2v19",
+        "scripture": "Daniel 2:19-22",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -692,6 +692,30 @@
   ],
   "videos": [
     {
+      "id": "0228",
+      "slug": "the-watchmans-midnight-vigil-colossians-42",
+      "file": "0228-the-watchmans-midnight-vigil-colossians-42.md",
+      "title": "The Watchman's Midnight Vigil: Colossians 4:2 | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T00:56:13Z",
+      "youtube_video_id": "Um0QQpAcIcM",
+      "watch_url": "https://youtu.be/Um0QQpAcIcM",
+      "youtu_be_url": "https://youtu.be/Um0QQpAcIcM",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/Um0QQpAcIcM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Um0QQpAcIcM/hqdefault.jpg",
+      "thumb_text": "WATCH AND PRAY",
+      "thumbnail_pending": true,
+      "duration_label": "7m 25s",
+      "words": 1121
+    },
+    {
       "id": "SHORT-GUIDEDPSALM119V35",
       "slug": "short-guidedpsalm119v35-guidance-prayer",
       "file": "short-guidedpsalm119v35-guidance-prayer.md",
@@ -834,6 +858,30 @@
       "thumbnail_pending": false,
       "duration_label": "49s",
       "words": 645
+    },
+    {
+      "id": "SHORT-MIDNIGHTPSALM88V1",
+      "slug": "short-midnightpsalm88v1-midnight-prayer",
+      "file": "short-midnightpsalm88v1-midnight-prayer.md",
+      "title": "Pray This Psalm 88:1-2 Midnight Prayer | When You Cry Out In The Dark #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T00:06:51Z",
+      "youtube_video_id": "bJodhDMZjTM",
+      "watch_url": "https://www.youtube.com/shorts/bJodhDMZjTM",
+      "youtu_be_url": "https://youtu.be/bJodhDMZjTM",
+      "shorts_url": "https://www.youtube.com/shorts/bJodhDMZjTM",
+      "studio_url": "https://studio.youtube.com/video/bJodhDMZjTM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/bJodhDMZjTM/hqdefault.jpg",
+      "thumb_text": "THE MIDNIGHT WATCH \u00b7 PSALM 88:1-2",
+      "thumbnail_pending": true,
+      "duration_label": "50s",
+      "words": 634
     },
     {
       "id": "0525",
@@ -22167,19 +22215,6 @@
         "words": 1256
       },
       {
-        "id": "0228",
-        "slug": "the-watchmans-midnight-vigil-colossians-42",
-        "file": "0228-the-watchmans-midnight-vigil-colossians-42.md",
-        "title": "The Watchman's Midnight Vigil: Colossians 4:2 | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1121
-      },
-      {
         "id": "0229",
         "slug": "the-god-of-peace-who-seals-the-broken-hebrews-13-20-21",
         "file": "0229-the-god-of-peace-who-seals-the-broken-hebrews-13-20-21.md",
@@ -23366,17 +23401,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightpsalm88v1",
-        "file": "0000-short-midnightpsalm88v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 88:1-2",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-morningpsalm71v15",
