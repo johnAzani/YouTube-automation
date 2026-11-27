@@ -2,7 +2,7 @@
 id: '0524'
 title: 'Honest Work and Heavenly Wages: Colossians 3:23-24'
 slug: honest-work-and-heavenly-wages-colossians-3-23-24
-status: approved
+status: published
 channel: prayer7
 privacy: public
 format: longform
@@ -75,6 +75,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-27"
+published_at: "2026-11-27T20:04:26Z"
+youtube_video_id: "3uepFLRvLQU"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 380.07
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — The Table Prepared in Daily Labour
