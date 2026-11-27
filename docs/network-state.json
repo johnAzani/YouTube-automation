@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T22:32:04Z",
+  "generated_at": "2026-11-27T22:34:01Z",
   "monitor_generated_at": "2026-11-27T22:30:28.622024+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 259,
     "published_shorts": 666,
     "public_total": 923,
-    "queued_longform": 145,
+    "queued_longform": 147,
     "queued_shorts": 15,
     "automations_ok": 12,
     "automations_total": 15,
@@ -305,7 +305,7 @@
         "published_shorts": 60,
         "thumbnail_pending": 85,
         "public_total": 85,
-        "queued_longform": 16,
+        "queued_longform": 18,
         "queued_other": 0,
         "queued_shorts": 1
       },
@@ -23548,6 +23548,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1354
+      },
+      {
+        "id": "0343",
+        "slug": "building-a-refuge-for-your-family-hebrews-117-the-family-altar",
+        "file": "0343-building-a-refuge-for-your-family-hebrews-117-the-family-altar.md",
+        "title": "Building a Refuge for Your Family: Hebrews 11:7 | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1220
+      },
+      {
+        "id": "0344",
+        "slug": "a-joyful-mother-of-children-psalm-113-9-the-family-altar",
+        "file": "0344-a-joyful-mother-of-children-psalm-113-9-the-family-altar.md",
+        "title": "A Joyful Mother of Children: Psalm 113:9 | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1487
       },
       {
         "id": "0420",
