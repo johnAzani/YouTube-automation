@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T12:37:51Z",
+  "generated_at": "2026-11-27T12:39:59Z",
   "monitor_generated_at": "2026-11-27T05:34:22.095144+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 907,
+    "published_total": 908,
     "published_longform": 252,
-    "published_shorts": 655,
-    "public_total": 905,
+    "published_shorts": 656,
+    "public_total": 906,
     "queued_longform": 128,
-    "queued_shorts": 34,
+    "queued_shorts": 33,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -504,23 +504,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 77,
+        "published_total": 78,
         "published_longform": 20,
-        "published_shorts": 57,
+        "published_shorts": 58,
         "thumbnail_pending": 20,
-        "public_total": 77,
+        "public_total": 78,
         "queued_longform": 6,
         "queued_other": 4,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM140V7",
-        "title": "Pray This Psalm 140:7 Prayer for Divine Protection | When Pressure Presses Hard Today #Shorts",
+        "id": "SHORT-SHIELDPSALM94V22",
+        "title": "Pray This Psalm 94:22 Prayer for Divine Protection | Unfair Words Pressing Hard #Shorts",
         "format": "short",
-        "youtube_video_id": "A_IigmfKHbI",
-        "watch_url": "https://www.youtube.com/shorts/A_IigmfKHbI",
+        "youtube_video_id": "mQtt6a1J8_Y",
+        "watch_url": "https://www.youtube.com/shorts/mQtt6a1J8_Y",
         "published_on": "2026-11-27",
-        "published_at": "2026-11-27T09:24:01Z"
+        "published_at": "2026-11-27T12:38:46Z"
       },
       "next_queued_longform": {
         "id": "0615",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM94V22",
+      "slug": "short-shieldpsalm94v22-protection-prayer",
+      "file": "short-shieldpsalm94v22-protection-prayer.md",
+      "title": "Pray This Psalm 94:22 Prayer for Divine Protection | Unfair Words Pressing Hard #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T12:38:46Z",
+      "youtube_video_id": "mQtt6a1J8_Y",
+      "watch_url": "https://www.youtube.com/shorts/mQtt6a1J8_Y",
+      "youtu_be_url": "https://youtu.be/mQtt6a1J8_Y",
+      "shorts_url": "https://www.youtube.com/shorts/mQtt6a1J8_Y",
+      "studio_url": "https://studio.youtube.com/video/mQtt6a1J8_Y/edit",
+      "thumb_url": "https://i.ytimg.com/vi/mQtt6a1J8_Y/hqdefault.jpg",
+      "thumb_text": "PSALM 94:22 \u00b7 GOD IS YOUR DEFENCE",
+      "thumbnail_pending": false,
+      "duration_label": "56s",
+      "words": 633
+    },
     {
       "id": "SHORT-MORNINGPSALM63V6",
       "slug": "short-morningpsalm63v6-sunrise-prayer",
@@ -24396,17 +24420,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-shieldpsalm94v22",
-        "file": "0633-short-shieldpsalm94v22.yml",
-        "companion_longform_id": "0633",
-        "scripture": "Psalm 94:22",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm71v3",
