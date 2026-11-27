@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T09:13:31Z",
+  "generated_at": "2026-11-27T09:15:13Z",
   "monitor_generated_at": "2026-11-27T05:34:22.095144+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 894,
+    "published_total": 895,
     "published_longform": 246,
-    "published_shorts": 648,
-    "public_total": 892,
+    "published_shorts": 649,
+    "public_total": 893,
     "queued_longform": 119,
-    "queued_shorts": 40,
+    "queued_shorts": 38,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 110,
+        "published_total": 111,
         "published_longform": 28,
-        "published_shorts": 82,
+        "published_shorts": 83,
         "thumbnail_pending": 1,
-        "public_total": 109,
+        "public_total": 110,
         "queued_longform": 8,
         "queued_other": 5,
-        "queued_shorts": 3
+        "queued_shorts": 1
       },
       "latest_video": {
-        "id": "SHORT-PSALM92V2",
-        "title": "Say This Psalm 92:2 Prayer Before You Sleep | When Your Mind Drifts In Darkness #Shorts",
+        "id": "SHORT-PSALM23FULL",
+        "title": "Say This Psalm 23 Prayer Before You Sleep | He Is With You In The Silence #Shorts",
         "format": "short",
-        "youtube_video_id": "a3eQxdeq4NU",
-        "watch_url": "https://www.youtube.com/shorts/a3eQxdeq4NU",
+        "youtube_video_id": "gclYs47Xhbs",
+        "watch_url": "https://www.youtube.com/shorts/gclYs47Xhbs",
         "published_on": "2026-11-27",
-        "published_at": "2026-11-27T00:08:07Z"
+        "published_at": "2026-11-27T09:14:05Z"
       },
       "next_queued_longform": {
         "id": "0113",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM23FULL",
+      "slug": "short-psalm23full-pre-sleep-prayer",
+      "file": "short-psalm23full-pre-sleep-prayer.md",
+      "title": "Say This Psalm 23 Prayer Before You Sleep | He Is With You In The Silence #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T09:14:05Z",
+      "youtube_video_id": "gclYs47Xhbs",
+      "watch_url": "https://www.youtube.com/shorts/gclYs47Xhbs",
+      "youtu_be_url": "https://youtu.be/gclYs47Xhbs",
+      "shorts_url": "https://www.youtube.com/shorts/gclYs47Xhbs",
+      "studio_url": "https://studio.youtube.com/video/gclYs47Xhbs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/gclYs47Xhbs/hqdefault.jpg",
+      "thumb_text": "THE LORD IS \u00b7 MY SHEPHERD",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 635
+    },
     {
       "id": "SHORT-MIDNIGHTDANIEL2V19",
       "slug": "short-midnightdaniel2v19-midnight-prayer",
@@ -23923,28 +23947,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-psalm23full",
-        "file": "0035-short-psalm23full.yml",
-        "companion_longform_id": "0035",
-        "scripture": "Psalm 23",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-psalm141v2",
-        "file": "0119-short-psalm141v2.yml",
-        "companion_longform_id": "0119",
-        "scripture": "Psalm 141:2",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-midnightacts12v5",
