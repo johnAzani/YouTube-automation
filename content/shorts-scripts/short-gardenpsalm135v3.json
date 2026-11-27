@@ -1,0 +1,302 @@
+{
+  "key": "short-gardenpsalm135v3",
+  "channel": "prayer9",
+  "psalm": 135,
+  "title": [
+    "THE GOODNESS",
+    "OF HIS NAME"
+  ],
+  "poster": [
+    "WHEN THOUGHTS",
+    "GROW HEAVY",
+    "SING PRAISES TO",
+    "THE LORD IS GOOD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "misty forest glade golden morning light sunbeams",
+    "calm lake reflection sunrise soft light mountain background",
+    "peaceful stream flowing through mossy green woods",
+    "golden sun rays filtering through forest trees calm",
+    "serene pine forest mist early morning light landscape",
+    "tranquil river morning mist soft golden glow",
+    "quiet forest meadow soft evening sun rays"
+  ],
+  "scenes": [
+    {
+      "a": "Heavy thoughts are lingering in your heart.",
+      "img": "short-gardenpsalm135v3-scene-01.jpg",
+      "kicker": "HEAVY THOUGHTS",
+      "sub": "LINGERING IN YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Praise the LORD; for the LORD is good:",
+      "img": "short-gardenpsalm135v3-scene-02.jpg",
+      "kicker": "PSALM 135:3",
+      "sub": "THE LORD IS GOOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "sing praises unto his name; for it is pleasant.",
+      "img": "short-gardenpsalm135v3-scene-03.jpg",
+      "kicker": "SING PRAISES",
+      "sub": "UNTO HIS NAME",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "we turn our gaze back to Your enduring kindness.",
+      "img": "short-gardenpsalm135v3-scene-04.jpg",
+      "kicker": "ENDURING KINDNESS",
+      "sub": "TURNING TO HIS GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We bring You honest praise right here,",
+      "img": "short-gardenpsalm135v3-scene-05.jpg",
+      "kicker": "UNCHANGING NATURE",
+      "sub": "HONEST PRAISE TODAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "how pleasant it is to honor Your holy name.",
+      "img": "short-gardenpsalm135v3-scene-06.jpg",
+      "kicker": "PLEASANT PRAISE",
+      "sub": "FILL THIS QUIET SPACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "heavy thoughts are lingering in your heart.",
+      "img": "short-gardenpsalm135v3-scene-07.jpg",
+      "kicker": "RESTING IN GOODNESS",
+      "sub": "HEAVY THOUGHTS LINGER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Heavy thoughts are lingering in your heart."
+    ],
+    [
+      3,
+      11,
+      "The Word of God declares, Praise the LORD; for the LORD is good: sing praises unto his name; for it is pleasant."
+    ],
+    [
+      11,
+      17,
+      "Father, when the heavy worries of this long day press closely, we turn our gaze back to Your enduring kindness."
+    ],
+    [
+      17,
+      23,
+      "We bring You honest praise right here, knowing that Your nature never changes even when our strength feels very small."
+    ],
+    [
+      23,
+      29,
+      "Fill this quiet room with true thanksgiving, and remind our weary hearts how pleasant it is to honor Your holy name."
+    ],
+    [
+      29,
+      34,
+      "We rest in Your goodness tonight, Amen, even while heavy thoughts are lingering in your heart."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "HEAVY THOUGHTS ARE",
+        "LINGERING IN YOUR HEART"
+      ],
+      [
+        "HEAVY",
+        "LINGERING"
+      ],
+      "HEAVY THOUGHTS"
+    ],
+    [
+      3,
+      11,
+      [
+        "PRAISE THE LORD FOR",
+        "THE LORD IS GOOD",
+        "SING PRAISES UNTO HIS NAME",
+        "FOR IT IS PLEASANT"
+      ],
+      [
+        "GOOD",
+        "PLEASANT"
+      ],
+      "PSALM 135 : 3"
+    ],
+    [
+      11,
+      17,
+      [
+        "FATHER WHEN WORRIES PRESS",
+        "WE TURN OUR GAZE BACK TO",
+        "YOUR ENDURING KINDNESS"
+      ],
+      [
+        "KINDNESS"
+      ],
+      "PSALM 135 : 3"
+    ],
+    [
+      17,
+      23,
+      [
+        "WE BRING YOU HONEST PRAISE",
+        "YOUR NATURE NEVER CHANGES",
+        "WHEN OUR STRENGTH FEELS SMALL"
+      ],
+      [
+        "PRAISE",
+        "NEVER"
+      ],
+      "PSALM 135 : 3"
+    ],
+    [
+      23,
+      29,
+      [
+        "FILL THIS QUIET ROOM WITH",
+        "TRUE THANKSGIVING AND REMIND US",
+        "HOW PLEASANT TO HONOR YOU"
+      ],
+      [
+        "THANKSGIVING",
+        "PLEASANT"
+      ],
+      "PSALM 135 : 3"
+    ],
+    [
+      29,
+      34,
+      [
+        "WE REST IN YOUR GOODNESS",
+        "AMEN EVEN WHILE HEAVY THOUGHTS",
+        "ARE LINGERING IN YOUR HEART"
+      ],
+      [
+        "GOODNESS",
+        "LINGERING"
+      ],
+      "PSALM 135 : 3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Heavy thoughts are lingering in your heart.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "THOUGHTS",
+        "LINGERING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Praise the LORD; for the LORD is good:",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "LORD",
+        "GOOD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "sing praises unto his name; for it is pleasant.",
+      "kind": "phrase",
+      "words": [
+        "SING",
+        "PRAISES",
+        "PLEASANT"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "we turn our gaze back to Your enduring kindness.",
+      "kind": "phrase",
+      "words": [
+        "TURN",
+        "ENDURING",
+        "KINDNESS"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "We bring You honest praise right here,",
+      "kind": "phrase",
+      "words": [
+        "HONEST",
+        "PRAISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "how pleasant it is to honor Your holy name.",
+      "kind": "phrase",
+      "words": [
+        "PLEASANT",
+        "HONOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "heavy thoughts are lingering in your heart.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "THOUGHTS",
+        "LINGERING"
+      ],
+      "hi": 2,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 135:3"
+}

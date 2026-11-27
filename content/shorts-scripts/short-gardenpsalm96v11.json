@@ -1,0 +1,238 @@
+{
+  "key": "short-gardenpsalm96v11",
+  "channel": "prayer9",
+  "psalm": 96,
+  "title": [
+    "HE COMETH",
+    "ADVENT PRAISE"
+  ],
+  "poster": [
+    "GOD COMES",
+    "TO JUDGE",
+    "THE WORLD",
+    "WITH TRUTH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "misty morning forest sunlight",
+    "golden light on calm meadow",
+    "soft sunlight through winter trees",
+    "peaceful river at dawn",
+    "evergreen branches with morning dew",
+    "distant mountains in light"
+  ],
+  "scenes": [
+    {
+      "a": "That sharp chill of morning",
+      "img": "short-gardenpsalm96v11-scene-01.jpg",
+      "kicker": "WINTER MORNING",
+      "sub": "WAITING FOR THE PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Let the heavens rejoice",
+      "img": "short-gardenpsalm96v11-scene-02.jpg",
+      "kicker": "SCRIPTURE",
+      "sub": "PSALM 96:11-13",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Let the field be joyful",
+      "img": "short-gardenpsalm96v11-scene-03.jpg",
+      "kicker": "ADVENT HOPE",
+      "sub": "REJOICING IN HIS LIGHT",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Before the LORD: for he cometh",
+      "img": "short-gardenpsalm96v11-scene-04.jpg",
+      "kicker": "KING OF GLORY",
+      "sub": "HE COMETH TO JUDGE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Lord we thank You",
+      "img": "short-gardenpsalm96v11-scene-05.jpg",
+      "kicker": "HONEST PRAYER",
+      "sub": "BRINGING TRUTH TO DARKNESS",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "The waiting remains",
+      "img": "short-gardenpsalm96v11-scene-06.jpg",
+      "kicker": "RESTING IN HIM",
+      "sub": "THAT SHARP CHILL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "That sharp chill of morning remains."
+    ],
+    [
+      3,
+      10,
+      "Let the heavens rejoice, and let the earth be glad; let the sea roar, and the fulness thereof."
+    ],
+    [
+      10,
+      17,
+      "Let the field be joyful, and all that is therein: then shall all the trees of the wood rejoice"
+    ],
+    [
+      17,
+      26,
+      "Before the LORD: for he cometh, for he cometh to judge the earth: he shall judge the world with righteousness, and the people with his truth."
+    ],
+    [
+      26,
+      33,
+      "Lord we thank You for this season of Advent when light finds its way into the dark."
+    ],
+    [
+      33,
+      40,
+      "Help us trust that justice and truth are coming even when the waiting remains."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THAT SHARP CHILL",
+        "OF MORNING",
+        "REMAINS"
+      ],
+      [
+        "SHARP CHILL"
+      ],
+      "PSALM 96:11"
+    ],
+    [
+      3,
+      10,
+      [
+        "LET THE HEAVENS",
+        "REJOICE",
+        "AND EARTH",
+        "BE GLAD"
+      ],
+      [
+        "HEAVENS",
+        "REJOICE"
+      ],
+      "PSALM 96:11"
+    ],
+    [
+      10,
+      17,
+      [
+        "FIELD BE JOYFUL",
+        "TREES OF",
+        "THE WOOD",
+        "REJOICE"
+      ],
+      [
+        "JOYFUL",
+        "REJOICE"
+      ],
+      "PSALM 96:12"
+    ],
+    [
+      17,
+      26,
+      [
+        "FOR HE COMETH",
+        "TO JUDGE",
+        "THE EARTH",
+        "WITH TRUTH"
+      ],
+      [
+        "COMETH",
+        "TRUTH"
+      ],
+      "PSALM 96:13"
+    ],
+    [
+      26,
+      33,
+      [
+        "WE THANK YOU",
+        "FOR THIS",
+        "ADVENT SEASON"
+      ],
+      [
+        "THANK",
+        "ADVENT"
+      ],
+      "PRAYER"
+    ],
+    [
+      33,
+      40,
+      [
+        "TRUTH IS COMING",
+        "THAT SHARP CHILL",
+        "REMAINS"
+      ],
+      [
+        "TRUTH",
+        "SHARP CHILL"
+      ],
+      "PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That sharp chill of morning",
+      "kind": "phrase",
+      "words": [
+        "SHARP",
+        "CHILL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord we thank You",
+      "kind": "phrase",
+      "words": [
+        "THANK",
+        "YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 96:11-13"
+}

@@ -1,0 +1,16 @@
+short: short-gardenpsalm96v11
+channel: prayer9
+standalone: true
+source: seasonal
+scripture: Psalm 96:11-13
+status: approved
+renderer_ready: true
+authored_by_brain: true
+privacy: public
+replace: false
+target_window_utc: 09:44
+notes: "Advent Short on Psalm 96:11-13, for 2026-11-29 to 2026-12-23 \u2014 spec authored\
+  \ by the brain (100 narration words)"
+season: advent
+not_before: '2026-11-29'
+not_after: '2026-12-23'

@@ -1,0 +1,351 @@
+{
+  "key": "short-gardenpsalm138v1",
+  "channel": "prayer9",
+  "psalm": 138,
+  "title": [
+    "PRAISE WITH YOUR WHOLE HEART",
+    "PSALM 138:1-2 PRAYER"
+  ],
+  "poster": [
+    "WHEN YOUR HEART",
+    "FEELS DIVIDED",
+    "A PRAYER OF THANKS",
+    "PSALM 138:1-2"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade golden morning light mist",
+    "misty countryside calm valley soft dawn",
+    "peaceful meadow golden hour autumn trees light",
+    "calm river reflecting sunset golden light silence",
+    "misty woodland footpath morning sunlight leaves",
+    "tranquil lake soft sunrise glow quiet nature"
+  ],
+  "scenes": [
+    {
+      "a": "Your divided heart feels slow to offer praise.",
+      "img": "short-gardenpsalm138v1-scene-01.jpg",
+      "kicker": "DIVIDED HEART",
+      "sub": "SLOW TO OFFER PRAISE TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "I will praise thee with my whole heart: before the gods will I sing praise unto thee.",
+      "img": "short-gardenpsalm138v1-scene-02.jpg",
+      "kicker": "PSALM 138:1",
+      "sub": "BEFORE THE GODS WILL I SING",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "I will worship toward thy holy temple, and praise thy name for thy lovingkindness",
+      "img": "short-gardenpsalm138v1-scene-03.jpg",
+      "kicker": "PSALM 138:2",
+      "sub": "LOVINGKINDNESS AND TRUTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Father, thank You for Your steadfast truth and tender lovingkindness.",
+      "img": "short-gardenpsalm138v1-scene-04.jpg",
+      "kicker": "THANK YOU FATHER",
+      "sub": "YOUR TRUTH IS MAGNIFIED",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Magnify Your word within us today, and steady our hearts in praise.",
+      "img": "short-gardenpsalm138v1-scene-05.jpg",
+      "kicker": "STEADY OUR HEARTS",
+      "sub": "ENTER HIS GATES WITH THANKSGIVING",
+      "cam": "push_in",
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Even when your divided heart feels slow.",
+      "img": "short-gardenpsalm138v1-scene-06.jpg",
+      "kicker": "ALWAYS FAITHFUL",
+      "sub": "HIS TRUTH ENDURES FOREVER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your divided heart feels slow to offer praise."
+    ],
+    [
+      3,
+      7,
+      "Yet here in this quiet corner, God welcomes your whole heart."
+    ],
+    [
+      7,
+      13,
+      "Psalm 138 says, I will praise thee with my whole heart: before the gods will I sing praise unto thee."
+    ],
+    [
+      13,
+      22,
+      "I will worship toward thy holy temple, and praise thy name for thy lovingkindness and for thy truth: for thou hast magnified thy word above all thy name."
+    ],
+    [
+      22,
+      29,
+      "Father, thank You for Your steadfast truth and tender lovingkindness."
+    ],
+    [
+      29,
+      35,
+      "Magnify Your word within us today, and steady our hearts in praise."
+    ],
+    [
+      35,
+      40,
+      "Amen. Even when your divided heart feels slow."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR DIVIDED HEART FEELS",
+        "SLOW TO OFFER PRAISE."
+      ],
+      [
+        "DIVIDED",
+        "PRAISE"
+      ],
+      "PSALM 138 : 1-2"
+    ],
+    [
+      3,
+      7,
+      [
+        "GOD WELCOMES YOUR",
+        "WHOLE HEART HERE."
+      ],
+      [
+        "WHOLE",
+        "HEART"
+      ],
+      "PSALM 138 : 1-2"
+    ],
+    [
+      7,
+      13,
+      [
+        "I WILL PRAISE THEE WITH",
+        "MY WHOLE HEART."
+      ],
+      [
+        "WHOLE",
+        "HEART"
+      ],
+      "PSALM 138 : 1"
+    ],
+    [
+      13,
+      22,
+      [
+        "I WILL WORSHIP TOWARD",
+        "THY HOLY TEMPLE."
+      ],
+      [
+        "WORSHIP",
+        "TEMPLE"
+      ],
+      "PSALM 138 : 2"
+    ],
+    [
+      22,
+      29,
+      [
+        "THANK YOU FOR YOUR",
+        "LOVINGKINDNESS AND TRUTH."
+      ],
+      [
+        "LOVINGKINDNESS",
+        "TRUTH"
+      ],
+      "PSALM 138 : 1-2"
+    ],
+    [
+      29,
+      35,
+      [
+        "MAGNIFY YOUR WORD",
+        "STEADY OUR HEARTS."
+      ],
+      [
+        "MAGNIFY",
+        "STEADY"
+      ],
+      "PSALM 138 : 1-2"
+    ],
+    [
+      35,
+      40,
+      [
+        "EVEN WHEN YOUR HEART",
+        "FEELS SLOW."
+      ],
+      [
+        "HEART",
+        "SLOW"
+      ],
+      "PSALM 138 : 1-2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your divided heart feels slow to offer praise.",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "DIVIDED",
+        "HEART",
+        "FEELS",
+        "SLOW",
+        "TO",
+        "OFFER",
+        "PRAISE."
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Yet here in this quiet corner, God welcomes your whole heart.",
+      "kind": "phrase",
+      "words": [
+        "YET",
+        "HERE",
+        "IN",
+        "THIS",
+        "QUIET",
+        "CORNER,",
+        "GOD",
+        "WELCOMES",
+        "YOUR",
+        "WHOLE",
+        "HEART."
+      ],
+      "hi": 9,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm 138 says, I will praise thee with my whole heart: before the gods will I sing praise unto thee.",
+      "kind": "phrase",
+      "words": [
+        "PSALM",
+        "138",
+        "SAYS,",
+        "I",
+        "WILL",
+        "PRAISE",
+        "THEE",
+        "WITH",
+        "MY",
+        "WHOLE",
+        "HEART:"
+      ],
+      "hi": 9,
+      "slot": "C"
+    },
+    {
+      "a": "I will worship toward thy holy temple, and praise thy name for thy lovingkindness and for thy truth: for thou hast magnified thy word above all thy name.",
+      "kind": "phrase",
+      "words": [
+        "FOR",
+        "THOU",
+        "HAST",
+        "MAGNIFIED",
+        "THY",
+        "WORD",
+        "ABOVE",
+        "ALL",
+        "THY",
+        "NAME."
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Father, thank You for Your steadfast truth and tender lovingkindness.",
+      "kind": "phrase",
+      "words": [
+        "THANK",
+        "YOU",
+        "FOR",
+        "YOUR",
+        "STEADFAST",
+        "TRUTH",
+        "AND",
+        "TENDER",
+        "LOVINGKINDNESS."
+      ],
+      "hi": 8,
+      "slot": "C"
+    },
+    {
+      "a": "Magnify Your word within us today, and steady our hearts in praise.",
+      "kind": "phrase",
+      "words": [
+        "MAGNIFY",
+        "YOUR",
+        "WORD",
+        "WITHIN",
+        "US",
+        "TODAY,",
+        "AND",
+        "STEADY",
+        "OUR",
+        "HEARTS."
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Even when your divided heart feels slow.",
+      "kind": "phrase",
+      "words": [
+        "AMEN.",
+        "EVEN",
+        "WHEN",
+        "YOUR",
+        "DIVIDED",
+        "HEART",
+        "FEELS",
+        "SLOW."
+      ],
+      "hi": 4,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 138:1-2"
+}
