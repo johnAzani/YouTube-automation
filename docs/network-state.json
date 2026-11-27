@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T03:00:17Z",
+  "generated_at": "2026-11-27T03:04:05Z",
   "monitor_generated_at": "2026-11-27T01:49:44.815385+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 245,
     "published_shorts": 646,
     "public_total": 889,
-    "queued_longform": 105,
+    "queued_longform": 107,
     "queued_shorts": 25,
     "automations_ok": 12,
     "automations_total": 15,
@@ -436,7 +436,7 @@
         "published_shorts": 60,
         "thumbnail_pending": 0,
         "public_total": 83,
-        "queued_longform": 15,
+        "queued_longform": 17,
         "queued_other": 0,
         "queued_shorts": 1
       },
@@ -450,9 +450,9 @@
         "published_at": "2026-11-26T20:58:50Z"
       },
       "next_queued_longform": {
-        "id": "0526",
-        "title": "When Labour Yields Nothing: Luke 5:4-6 | The Provision Table",
-        "words": 1267,
+        "id": "0517",
+        "title": "When Your Finances Are Tried: Psalm 34:9-10 | The Provision Table",
+        "words": 1107,
         "status": "approved"
       },
       "next_queued_short": {
@@ -22625,6 +22625,19 @@
         "words": 1790
       },
       {
+        "id": "0517",
+        "slug": "when-you-need-daily-bread-psalm-34-9-10-the-provision-table",
+        "file": "0517-when-you-need-daily-bread-psalm-34-9-10-the-provision-table.md",
+        "title": "When Your Finances Are Tried: Psalm 34:9-10 | The Provision Table",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1107
+      },
+      {
         "id": "0526",
         "slug": "when-labour-yields-nothing-luke-5-4-6",
         "file": "0526-when-labour-yields-nothing-luke-5-4-6.md",
@@ -22818,6 +22831,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1421
+      },
+      {
+        "id": "0544",
+        "slug": "the-prayer-for-daily-bread-matthew-6-11",
+        "file": "0544-the-prayer-for-daily-bread-matthew-6-11.md",
+        "title": "The Prayer for Daily Bread: Matthew 6:11 | The Provision Table",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1167
       },
       {
         "id": "0627",
