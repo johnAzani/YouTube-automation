@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T17:46:36Z",
+  "generated_at": "2026-11-27T17:46:56Z",
   "monitor_generated_at": "2026-11-27T17:37:13.999368+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 256,
     "published_shorts": 661,
     "public_total": 915,
-    "queued_longform": 134,
+    "queued_longform": 136,
     "queued_shorts": 20,
     "automations_ok": 12,
     "automations_total": 15,
@@ -38,7 +38,7 @@
         "published_shorts": 83,
         "thumbnail_pending": 1,
         "public_total": 111,
-        "queued_longform": 15,
+        "queued_longform": 17,
         "queued_other": 5,
         "queued_shorts": 1
       },
@@ -22979,6 +22979,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1396
+      },
+      {
+        "id": "0129",
+        "slug": "when-your-soul-refuses-comfort-psalm-131-2",
+        "file": "0129-when-your-soul-refuses-comfort-psalm-131-2.md",
+        "title": "Quietness When Exhausted: Psalm 131:2 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1392
+      },
+      {
+        "id": "0130",
+        "slug": "dwelling-in-safety-when-you-feel-exposed-deuteronomy-3312",
+        "file": "0130-dwelling-in-safety-when-you-feel-exposed-deuteronomy-3312.md",
+        "title": "Dwelling in Safety When You Feel Exposed: Deuteronomy 33:12",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1237
       },
       {
         "id": "0139",
