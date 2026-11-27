@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T11:01:23Z",
+  "generated_at": "2026-11-27T11:39:47Z",
   "monitor_generated_at": "2026-11-27T05:34:22.095144+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 901,
-    "published_longform": 248,
+    "published_total": 902,
+    "published_longform": 249,
     "published_shorts": 653,
-    "public_total": 899,
-    "queued_longform": 121,
+    "public_total": 900,
+    "queued_longform": 122,
     "queued_shorts": 28,
     "automations_ok": 12,
     "automations_total": 15,
@@ -368,28 +368,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 84,
-        "published_longform": 22,
+        "published_total": 85,
+        "published_longform": 23,
         "published_shorts": 62,
         "thumbnail_pending": 0,
-        "public_total": 84,
-        "queued_longform": 17,
+        "public_total": 85,
+        "queued_longform": 18,
         "queued_other": 0,
         "queued_shorts": 1
       },
       "latest_video": {
-        "id": "SHORT-HEALINGPSALM34V18",
-        "title": "Pray This Psalm 34:18 Healing Prayer for Peace & Strength | Rest In His Peace #Shorts",
-        "format": "short",
-        "youtube_video_id": "pGFVfxNPj9c",
-        "watch_url": "https://www.youtube.com/shorts/pGFVfxNPj9c",
-        "published_on": "2026-11-27",
-        "published_at": "2026-11-27T00:11:44Z"
-      },
-      "next_queued_longform": {
         "id": "0417",
         "title": "Strength and Peace When Fear Surrounds You: Isaiah 41:10",
-        "words": 1043,
+        "format": "longform",
+        "youtube_video_id": "MWieBDY5GVQ",
+        "watch_url": "https://youtu.be/MWieBDY5GVQ",
+        "published_on": "2026-11-27",
+        "published_at": "2026-11-27T11:38:42Z"
+      },
+      "next_queued_longform": {
+        "id": "0419",
+        "title": "Strength of Heart When Flesh and Spirit Fail: Psalm 73:26",
+        "words": 1113,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0417",
+      "slug": "strength-and-peace-when-fear-surrounds-you-isaiah-41-10",
+      "file": "0417-strength-and-peace-when-fear-surrounds-you-isaiah-41-10.md",
+      "title": "Strength and Peace When Fear Surrounds You: Isaiah 41:10",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T11:38:42Z",
+      "youtube_video_id": "MWieBDY5GVQ",
+      "watch_url": "https://youtu.be/MWieBDY5GVQ",
+      "youtu_be_url": "https://youtu.be/MWieBDY5GVQ",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/MWieBDY5GVQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/MWieBDY5GVQ/hqdefault.jpg",
+      "thumb_text": "DO NOT FEAR",
+      "thumbnail_pending": false,
+      "duration_label": "7m 24s",
+      "words": 1043
+    },
     {
       "id": "0719",
       "slug": "thanksgiving-worship-when-your-soul-is-thirsty-psalm-63-3-4",
@@ -22766,19 +22790,6 @@
         "words": 1294
       },
       {
-        "id": "0417",
-        "slug": "strength-and-peace-when-fear-surrounds-you-isaiah-41-10",
-        "file": "0417-strength-and-peace-when-fear-surrounds-you-isaiah-41-10.md",
-        "title": "Strength and Peace When Fear Surrounds You: Isaiah 41:10",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1043
-      },
-      {
         "id": "0419",
         "slug": "strength-of-heart-when-flesh-and-spirit-fail-psalm-73-26",
         "file": "0419-strength-of-heart-when-flesh-and-spirit-fail-psalm-73-26.md",
@@ -22790,6 +22801,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1113
+      },
+      {
+        "id": "0420",
+        "slug": "peace-when-your-mind-wont-rest-isaiah-26-3-4",
+        "file": "0420-peace-when-your-mind-wont-rest-isaiah-26-3-4.md",
+        "title": "Quiet Confidence in Troubled Times: Isaiah 26:3-4 | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1401
+      },
+      {
+        "id": "0421",
+        "slug": "power-and-peace-for-anxious-days-2-timothy-1-7-the-healing-balm",
+        "file": "0421-power-and-peace-for-anxious-days-2-timothy-1-7-the-healing-balm.md",
+        "title": "Power and Peace For Anxious Days: 2 Timothy 1:7 | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1479
       },
       {
         "id": "0430",

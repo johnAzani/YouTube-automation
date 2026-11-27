@@ -2,7 +2,7 @@
 id: '0417'
 title: 'Strength and Peace When Fear Surrounds You: Isaiah 41:10'
 slug: strength-and-peace-when-fear-surrounds-you-isaiah-41-10
-status: approved
+status: published
 channel: prayer6
 privacy: public
 format: longform
@@ -76,6 +76,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-27"
+published_at: "2026-11-27T11:38:42Z"
+youtube_video_id: "MWieBDY5GVQ"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 443.66
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith
