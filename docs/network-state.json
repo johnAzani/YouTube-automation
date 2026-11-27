@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T23:21:13Z",
+  "generated_at": "2026-11-27T00:03:39Z",
   "monitor_generated_at": "2026-11-26T23:19:47.437412+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 242,
     "published_shorts": 638,
     "public_total": 878,
-    "queued_longform": 99,
+    "queued_longform": 101,
     "queued_shorts": 29,
     "automations_ok": 13,
     "automations_total": 15,
@@ -169,7 +169,7 @@
         "published_shorts": 68,
         "thumbnail_pending": 0,
         "public_total": 97,
-        "queued_longform": 18,
+        "queued_longform": 20,
         "queued_other": 0,
         "queued_shorts": 1
       },
@@ -183,9 +183,9 @@
         "published_at": "2026-11-26T17:28:16Z"
       },
       "next_queued_longform": {
-        "id": "0109",
-        "title": "Grace When the Afternoon Gets Heavy: Hebrews 4:16 | The Midday Watch",
-        "words": 1382,
+        "id": "0098",
+        "title": "Courage When the Afternoon Weighs Down: Psalm 27:13-14",
+        "words": 1433,
         "status": "approved"
       },
       "next_queued_short": {
@@ -21847,6 +21847,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 979
+      },
+      {
+        "id": "0098",
+        "slug": "courage-when-the-afternoon-weighs-down-psalm-27-13-14",
+        "file": "0098-courage-when-the-afternoon-weighs-down-psalm-27-13-14.md",
+        "title": "Courage When the Afternoon Weighs Down: Psalm 27:13-14",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1433
+      },
+      {
+        "id": "0099",
+        "slug": "deliverance-from-fear-at-noon-psalm-34-4-8",
+        "file": "0099-deliverance-from-fear-at-noon-psalm-34-4-8.md",
+        "title": "Deliverance From Fear at Noon: Psalm 34:4-8 | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1371
       },
       {
         "id": "0109",
