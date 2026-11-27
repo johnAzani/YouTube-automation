@@ -23,6 +23,20 @@
       "workflow": "comments.yml"
     },
     {
+      "late_minutes": 200,
+      "name": "Growth autopilot",
+      "ran_at": "2026-11-27T05:34:01+00:00",
+      "slot": "2026-11-27T02:14:00+00:00",
+      "workflow": "growth-autopilot.yml"
+    },
+    {
+      "late_minutes": 140,
+      "name": "Gemini Brain Autonomous Queue Replenishment",
+      "ran_at": "2026-11-27T05:34:03+00:00",
+      "slot": "2026-11-27T03:14:00+00:00",
+      "workflow": "gemini_brain.yml"
+    },
+    {
       "late_minutes": 130,
       "name": "Automation monitor",
       "ran_at": "2026-11-27T05:33:10+00:00",
@@ -30,8 +44,8 @@
       "workflow": "monitor.yml"
     }
   ],
-  "generated_at": "2026-11-27T05:33:58.287642+00:00",
-  "last_run_at": "2026-11-27T05:33:10+00:00",
+  "generated_at": "2026-11-27T05:37:07.227075+00:00",
+  "last_run_at": "2026-11-27T05:36:07+00:00",
   "on_time": [
     {
       "late_minutes": 5,
@@ -39,6 +53,13 @@
       "ran_at": "2026-11-26T20:19:33+00:00",
       "slot": "2026-11-26T20:14:00+00:00",
       "workflow": "automation-health.yml"
+    },
+    {
+      "late_minutes": 117,
+      "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
+      "ran_at": "2026-11-27T05:34:04+00:00",
+      "slot": "2026-11-27T03:37:00+00:00",
+      "workflow": "channel-analytics.yml"
     },
     {
       "late_minutes": 93,
@@ -69,6 +90,6 @@
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 1,
   "warn_minutes": 120
 }
