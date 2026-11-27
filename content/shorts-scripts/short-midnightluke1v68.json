@@ -1,0 +1,309 @@
+{
+  "key": "short-midnightluke1v68",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "SAVED FROM ENEMIES",
+    "AN ADVENT MIDNIGHT PRAYER"
+  ],
+  "poster": [
+    "MIDNIGHT WATCH",
+    "ADVENT DELIVERANCE",
+    "LUKE 1:68-71",
+    "STAND IN PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette starry sky dark night",
+    "deep starry night sky over quiet valley advent",
+    "lamp lit sanctuary vigil dark window midnight",
+    "ancient stone archway moonlight starry night sky",
+    "midnight horizon calm lake reflection starlight",
+    "dim candle flame in dark quiet sanctuary midnight",
+    "starry cosmos night sky over dark silhouettes"
+  ],
+  "scenes": [
+    {
+      "a": "The fear following you into Advent stops tonight.",
+      "img": "short-midnightluke1v68-scene-01.jpg",
+      "kicker": "ADVENT MIDNIGHT",
+      "sub": "THE FEAR STOPS TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Blessed be the Lord God of Israel; for he hath visited and redeemed his people,",
+      "img": "short-midnightluke1v68-scene-02.jpg",
+      "kicker": "LUKE 1:68",
+      "sub": "HE HATH VISITED HIS PEOPLE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "And hath raised up an horn of salvation for us in the house of his servant David;",
+      "img": "short-midnightluke1v68-scene-03.jpg",
+      "kicker": "LUKE 1:69",
+      "sub": "A HORN OF SALVATION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "As he spake by the mouth of his holy prophets, which have been since the world began:",
+      "img": "short-midnightluke1v68-scene-04.jpg",
+      "kicker": "LUKE 1:70",
+      "sub": "PROPHETICAL PROMISE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "That we should be saved from our enemies, and from the hand of all that hate us;",
+      "img": "short-midnightluke1v68-scene-05.jpg",
+      "kicker": "LUKE 1:71",
+      "sub": "SAVED FROM ENEMIES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, in this midnight watch of Advent, break every siege surrounding our hearts.",
+      "img": "short-midnightluke1v68-scene-06.jpg",
+      "kicker": "MIDNIGHT PETITION",
+      "sub": "BREAK EVERY SIEGE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Deliver us from old fears and hidden foes. Amen. The fear following you stops tonight.",
+      "img": "short-midnightluke1v68-scene-07.jpg",
+      "kicker": "STAND IN PRAYER",
+      "sub": "THE FEAR STOPS TONIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The fear following you into Advent stops tonight."
+    ],
+    [
+      3,
+      9,
+      "Blessed be the Lord God of Israel; for he hath visited and redeemed his people,"
+    ],
+    [
+      9,
+      15,
+      "And hath raised up an horn of salvation for us in the house of his servant David;"
+    ],
+    [
+      15,
+      21,
+      "As he spake by the mouth of his holy prophets, which have been since the world began:"
+    ],
+    [
+      21,
+      28,
+      "That we should be saved from our enemies, and from the hand of all that hate us;"
+    ],
+    [
+      28,
+      35,
+      "Lord, in this midnight watch of Advent, break every siege surrounding our hearts."
+    ],
+    [
+      35,
+      42,
+      "Deliver us from old fears and hidden foes. Amen. The fear following you stops tonight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE FEAR FOLLOWING YOU",
+        "INTO ADVENT STOPS TONIGHT"
+      ],
+      [
+        "STOPS"
+      ],
+      "LUKE 1:68-71"
+    ],
+    [
+      3,
+      9,
+      [
+        "BLESSED BE THE LORD",
+        "GOD OF ISRAEL",
+        "FOR HE HATH VISITED"
+      ],
+      [
+        "VISITED"
+      ],
+      "LUKE 1:68"
+    ],
+    [
+      9,
+      15,
+      [
+        "AND HATH RAISED UP",
+        "AN HORN OF SALVATION",
+        "IN DAVID'S HOUSE"
+      ],
+      [
+        "SALVATION"
+      ],
+      "LUKE 1:69"
+    ],
+    [
+      15,
+      21,
+      [
+        "AS HE SPAKE BY THE MOUTH",
+        "OF HIS HOLY PROPHETS",
+        "SINCE WORLD BEGAN"
+      ],
+      [
+        "PROPHETS"
+      ],
+      "LUKE 1:70"
+    ],
+    [
+      21,
+      28,
+      [
+        "THAT WE SHOULD BE SAVED",
+        "FROM OUR ENEMIES AND HAND",
+        "OF ALL THAT HATE US"
+      ],
+      [
+        "SAVED"
+      ],
+      "LUKE 1:71"
+    ],
+    [
+      28,
+      35,
+      [
+        "LORD IN THIS MIDNIGHT WATCH",
+        "OF ADVENT BREAK EVERY SIEGE",
+        "SURROUNDING OUR HEARTS"
+      ],
+      [
+        "BREAK"
+      ],
+      "LUKE 1:68-71"
+    ],
+    [
+      35,
+      42,
+      [
+        "DELIVER US FROM OLD FEARS",
+        "AND HIDDEN FOES AMEN",
+        "THE FEAR STOPS TONIGHT"
+      ],
+      [
+        "DELIVER"
+      ],
+      "LUKE 1:68-71"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The fear following you into Advent stops tonight.",
+      "kind": "phrase",
+      "words": [
+        "STOPS",
+        "TONIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed be the Lord God of Israel; for he hath visited and redeemed his people,",
+      "kind": "phrase",
+      "words": [
+        "VISITED",
+        "REDEEMED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And hath raised up an horn of salvation for us in the house of his servant David;",
+      "kind": "phrase",
+      "words": [
+        "HORN",
+        "SALVATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As he spake by the mouth of his holy prophets, which have been since the world began:",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "PROPHETS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "That we should be saved from our enemies, and from the hand of all that hate us;",
+      "kind": "phrase",
+      "words": [
+        "SAVED",
+        "ENEMIES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, in this midnight watch of Advent, break every siege surrounding our hearts.",
+      "kind": "phrase",
+      "words": [
+        "BREAK",
+        "SIEGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Deliver us from old fears and hidden foes. Amen. The fear following you stops tonight.",
+      "kind": "phrase",
+      "words": [
+        "DELIVER",
+        "STOPS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Luke 1:68-71"
+}

@@ -1,0 +1,16 @@
+short: short-midnightluke1v68
+channel: prayer4
+standalone: true
+source: seasonal
+scripture: Luke 1:68-71
+status: approved
+renderer_ready: true
+authored_by_brain: true
+privacy: public
+replace: false
+target_window_utc: '23:14'
+notes: "Advent Short on Luke 1:68-71, for 2026-11-29 to 2026-12-23 \u2014 spec authored\
+  \ by the brain (102 narration words)"
+season: advent
+not_before: '2026-11-29'
+not_after: '2026-12-23'
