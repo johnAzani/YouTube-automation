@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T10:23:53Z",
+  "generated_at": "2026-11-27T11:01:02Z",
   "monitor_generated_at": "2026-11-27T05:34:22.095144+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 248,
     "published_shorts": 653,
     "public_total": 899,
-    "queued_longform": 117,
+    "queued_longform": 119,
     "queued_shorts": 28,
     "automations_ok": 12,
     "automations_total": 15,
@@ -135,11 +135,11 @@
         "available": true,
         "as_of": "2026-11-27",
         "measured_longform_videos": 0,
-        "total_longform_videos": 10,
+        "total_longform_videos": 11,
         "top_themes": [
           {
             "theme": "daily_guidance_wisdom",
-            "videos": 8,
+            "videos": 9,
             "top_scripture": ""
           },
           {
@@ -305,7 +305,7 @@
         "published_shorts": 60,
         "thumbnail_pending": 83,
         "public_total": 83,
-        "queued_longform": 6,
+        "queued_longform": 8,
         "queued_other": 0,
         "queued_shorts": 1
       },
@@ -415,8 +415,8 @@
             "top_scripture": ""
           },
           {
-            "theme": "anxiety_peace",
-            "videos": 1,
+            "theme": "daily_guidance_wisdom",
+            "videos": 2,
             "top_scripture": ""
           }
         ]
@@ -538,7 +538,7 @@
         "available": true,
         "as_of": "2026-11-27",
         "measured_longform_videos": 0,
-        "total_longform_videos": 11,
+        "total_longform_videos": 10,
         "top_themes": [
           {
             "theme": "daily_guidance_wisdom",
@@ -606,7 +606,7 @@
         "available": true,
         "as_of": "2026-11-27",
         "measured_longform_videos": 0,
-        "total_longform_videos": 10,
+        "total_longform_videos": 11,
         "top_themes": [
           {
             "theme": "general_prayer",
@@ -674,13 +674,8 @@
         "available": true,
         "as_of": "2026-11-27",
         "measured_longform_videos": 0,
-        "total_longform_videos": 10,
+        "total_longform_videos": 9,
         "top_themes": [
-          {
-            "theme": "trust_surrender",
-            "videos": 2,
-            "top_scripture": ""
-          },
           {
             "theme": "midday_strength_endurance",
             "videos": 3,
@@ -689,6 +684,11 @@
           {
             "theme": "daily_guidance_wisdom",
             "videos": 3,
+            "top_scripture": ""
+          },
+          {
+            "theme": "trust_surrender",
+            "videos": 1,
             "top_scripture": ""
           }
         ]
@@ -9004,7 +9004,7 @@
       "id": "0316",
       "slug": "the-lord-will-bless-you-and-your-children-psalm-115-12-15",
       "file": "0316-the-lord-will-bless-you-and-your-children-psalm-115-12-15.md",
-      "title": "The Lord Will Bless You and Your Children: Psalm 115:12-15",
+      "title": "Gathering Your Children in Faith: Psalm 115:12-15 | The Family Altar",
       "channel": "prayer5",
       "channel_name": "The Family Altar",
       "channel_handle": "@TheFamilyAltarDaily",
@@ -22522,7 +22522,7 @@
         "id": "0119",
         "slug": "when-the-days-burdens-weigh-heavy-psalm-141-2-the-secret-place",
         "file": "0119-when-the-days-burdens-weigh-heavy-psalm-141-2-the-secret-place.md",
-        "title": "When the Day's Burdens Weigh Heavy: Psalm 141:2 | The Secret Place",
+        "title": "Surrendering the Weight of This Day: Psalm 141:2 | The Secret Place",
         "channel": "secret-place",
         "channel_name": "The Secret Place",
         "status": "approved",
@@ -22712,6 +22712,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1581
+      },
+      {
+        "id": "0331",
+        "slug": "the-words-we-leave-our-children-deuteronomy-11-18-21",
+        "file": "0331-the-words-we-leave-our-children-deuteronomy-11-18-21.md",
+        "title": "The Words We Leave Our Children: Deuteronomy 11:18-21",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1159
+      },
+      {
+        "id": "0332",
+        "slug": "the-legacy-of-generations-proverbs-17-6",
+        "file": "0332-the-legacy-of-generations-proverbs-17-6.md",
+        "title": "The Legacy of Generations: Proverbs 17:6 | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1294
       },
       {
         "id": "0417",
@@ -22964,7 +22990,7 @@
         "id": "0526",
         "slug": "when-labour-yields-nothing-luke-5-4-6",
         "file": "0526-when-labour-yields-nothing-luke-5-4-6.md",
-        "title": "When Labour Yields Nothing: Luke 5:4-6 | The Provision Table",
+        "title": "Empty Nets and Labour Without Fruit: Luke 5:4-6 | The Provision Table",
         "channel": "prayer7",
         "channel_name": "The Provision Table",
         "status": "approved",
