@@ -83,6 +83,7 @@ narration_voice: "Charon"
 duration_seconds: 546.89
 thumbnail_revision: "ctr-v3-cinema"
 thumbnail_concept: "quiet"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 ## Scene 1 — The Quiet Room and the Midnight Hour

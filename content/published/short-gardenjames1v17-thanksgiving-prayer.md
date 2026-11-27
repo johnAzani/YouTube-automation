@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["EVERY GOOD GIFT", "AND PERFECT GIFT", "COMETH FROM ABOVE", "JAMES 1:17"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-27T16:30:26Z"
+thumbnail_retry_after: "2026-12-04T17:37:07Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If you fear the gentle peace you felt today will fade by morning, rest in God. Scripture promises, Every good gift and every perfect gift is from above, and cometh down from the Father of lights, with whom is no variableness, neither shadow of turning. Heavenly Father, we thank You that Your loving grace never shifts with changing seasons. Every quiet comfort, every unseen blessing, and every breath we draw flows directly from Your holy hand. You do not withdraw Your kindness when our strength fails. We give You honest praise today for Your unearned goodness. Teach us to notice Your constant light in all things. Subscribe to join us in daily thanksgiving.

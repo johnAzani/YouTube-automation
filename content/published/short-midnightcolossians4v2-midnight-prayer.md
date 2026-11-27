@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["CONTINUE IN PRAYER", "WATCH WITH", "THANKSGIVING", "MIDNIGHT PRAYER", "COLOSSIANS 4:2"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-04T17:36:20Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 That restless thought still keeps you awake. You have prayed through the evening, yet your heart remains fully alert. Scripture reminds us in Colossians 4:2: Continue in prayer, and watch in the same with thanksgiving; Lord, in this quiet midnight hour, we bring our watchful hearts to You. We choose to stay alert, not in lingering fear, but with grateful hearts. Keep our eyes fixed on Your holy presence when sleep feels far away tonight. Grant us grace to remain steadfast in this silent vigil. Fill this dark room with Your steady, enduring peace. Amen. That restless thought still keeps you awake.

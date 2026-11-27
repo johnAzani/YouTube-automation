@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["A PRAYER FOR", "YOUR HOUSEHOLD", "DEUTERONOMY 11", "GOD'S PROMISE"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-27T16:30:10Z"
+thumbnail_retry_after: "2026-12-04T17:36:30Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If the weight of tomorrow presses against your spirit, anchor your heart in truth today. Therefore shall ye lay up these my words in your heart and in your soul, and bind them for a sign upon your hand, that they may be as frontlets between your eyes. And ye shall teach them your children, speaking of them when thou sittest in thine house, and when thou walkest by the way, when thou liest down, and when thou risest up. Lord, may Your promises remain our firm foundation, guarding our doorways and sanctifying our family life.

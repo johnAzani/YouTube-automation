@@ -77,7 +77,9 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 duration_seconds: 427.08
 thumbnail_pending: true
-thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-12-04T17:36:27Z"
+thumbnail_retry_reason: "permission"
 ---
 
 ## Scene 1 — The Threshold of Grace
