@@ -3,7 +3,7 @@
  "citation_first_control": 354,
  "citation_frames": 434,
  "cost_lock": "$0.00 / month (docs/ZERO_DOLLAR_LOCK.md)",
- "generated_at": "2026-11-26T14:25:13.661271+00:00",
+ "generated_at": "2026-11-27T09:05:54.802095+00:00",
  "no_need_line": 80,
  "not_claimed": [
   "that a repaired frame keeps more people. This moves an already-written line to where the rule says it belongs; whether that helps is the next reading's question, and one composition still cannot be compared against another until the repaired Shorts are published and watched."
@@ -81,8 +81,8 @@
    "action": "keep",
    "key": "short-family2samuel7v29",
    "old_kicker": "2 SAMUEL 7:29",
-   "published": false,
-   "queued": true,
+   "published": true,
+   "queued": false,
    "reason": "no need line to promote"
   },
   {
@@ -348,8 +348,8 @@
    "action": "keep",
    "key": "short-familyproverbs31v25",
    "old_kicker": "PROVERBS 31:25",
-   "published": false,
-   "queued": true,
+   "published": true,
+   "queued": false,
    "reason": "no need line to promote"
   },
   {
@@ -448,7 +448,7 @@
    "new_kicker": "YOUR FAITH MATTERS",
    "old_kicker": "PSALM 78:4",
    "published": true,
-   "queued": false,
+   "queued": true,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {
@@ -1382,7 +1382,7 @@
    "new_kicker": "HE IS WITH YOU",
    "old_kicker": "ISAIAH 41:10",
    "published": true,
-   "queued": false,
+   "queued": true,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {
@@ -1563,7 +1563,7 @@
    "key": "short-healingmatthew9v35",
    "old_kicker": "MATTHEW 9:35",
    "published": true,
-   "queued": true,
+   "queued": false,
    "reason": "no need line to promote"
   },
   {
@@ -2286,7 +2286,7 @@
    "new_kicker": "THAT DECISION SITTING",
    "old_kicker": "PSALM 71:16",
    "published": true,
-   "queued": true,
+   "queued": false,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {
@@ -2760,7 +2760,7 @@
    "new_kicker": "A PLAIN BEFORE HIM",
    "old_kicker": "ZECHARIAH 4:7",
    "published": true,
-   "queued": false,
+   "queued": true,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {
@@ -3389,7 +3389,7 @@
    "new_kicker": "AS YOU STARE",
    "old_kicker": "2 CORINTHIANS 9",
    "published": true,
-   "queued": true,
+   "queued": false,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {
@@ -3433,7 +3433,7 @@
    "new_kicker": "HEAR HIS VOICE",
    "old_kicker": "DEUTERONOMY 28:2",
    "published": true,
-   "queued": true,
+   "queued": false,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {
@@ -3912,7 +3912,7 @@
    "key": "short-psalm141v2",
    "old_kicker": "PSALM 141:2",
    "published": true,
-   "queued": false,
+   "queued": true,
    "reason": "no need line to promote"
   },
   {
@@ -4534,7 +4534,7 @@
    "new_kicker": "IF FEAR FOR YOUR HOME",
    "old_kicker": "ZECHARIAH 2:5",
    "published": true,
-   "queued": false,
+   "queued": true,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {
@@ -4547,6 +4547,6 @@
   }
  ],
  "schema": 1,
- "specs_examined": 664,
+ "specs_examined": 679,
  "written": true
 }

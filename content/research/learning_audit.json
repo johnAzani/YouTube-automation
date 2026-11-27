@@ -8,47 +8,47 @@
   "first_frame": {
    "age_hours": 0.0,
    "stale": false,
-   "stamp": "2026-11-26T14:25:13.492481+00:00",
+   "stamp": "2026-11-27T09:05:54.709907+00:00",
    "why": ""
   },
   "growth_score": {
    "age_hours": 0.0,
    "stale": false,
-   "stamp": "2026-11-26T14:25:11.980346+00:00",
+   "stamp": "2026-11-27T09:05:53.843478+00:00",
    "why": ""
   },
   "learning_audit": {
-   "age_hours": 2.5,
+   "age_hours": 18.7,
    "stale": false,
-   "stamp": "2026-11-26T11:55:35.949043+00:00",
+   "stamp": "2026-11-26T14:25:13.937676+00:00",
    "why": ""
   },
   "performance_feedback": {
-   "age_hours": 3.6,
+   "age_hours": 3.5,
    "stale": false,
-   "stamp": "2026-11-26T10:49:13.274922+00:00",
+   "stamp": "2026-11-27T05:35:04.006255+00:00",
    "why": ""
   },
   "shorts_supply": {
    "age_hours": 0.0,
    "stale": false,
-   "stamp": "2026-11-26T14:25:13.372144+00:00",
+   "stamp": "2026-11-27T09:05:54.630391+00:00",
    "why": ""
   },
   "thumbnail_campaign": {
-   "age_hours": 14.4,
+   "age_hours": 33.1,
    "stale": false,
    "stamp": "2026-11-26",
    "why": ""
   }
  },
- "generated_at": "2026-11-26T14:25:13.937676+00:00",
+ "generated_at": "2026-11-27T09:05:54.970112+00:00",
  "loops": [
   {
    "channels_reordered": 10,
-   "evidence": "35 Shorts measured; 4 book(s) carry two or more, and the ranking reorders 10 channel(s)' roadmap",
+   "evidence": "36 Shorts measured; 4 book(s) carry two or more, and the ranking reorders 10 channel(s)' roadmap",
    "loop": "shorts_steering",
-   "measured_shorts": 35,
+   "measured_shorts": 36,
    "owner": "pipeline/performance_feedback.py: rank_candidates",
    "state": "acting",
    "what": "which passages and books the brain writes Shorts on next"
@@ -59,7 +59,7 @@
    "loop": "thumbnail_choice",
    "owner": "pipeline/thumbnail_campaign.py: live_concept",
    "state": "measuring",
-   "videos_assigned": 12,
+   "videos_assigned": 16,
    "what": "which of the three thumbnail concepts goes live"
   },
   {
@@ -92,7 +92,7 @@
   },
   {
    "compositions": 1,
-   "evidence": "one composition across 664 Shorts, but 434 of them (65%) still open on a citation: the design has one level, and the citation-versus-need choice inside it has two",
+   "evidence": "one composition across 679 Shorts, but 434 of them (64%) still open on a citation: the design has one level, and the citation-versus-need choice inside it has two",
    "loop": "first_frame_composition",
    "owner": "pipeline/first_frame.py + pipeline/first_frame_repair.py",
    "state": "measuring",

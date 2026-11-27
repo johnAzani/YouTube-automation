@@ -1,25 +1,25 @@
 {
  "compositions": {
   "kicker + sub": 0,
-  "kicker + sub + kinetic": 664,
+  "kicker + sub + kinetic": 679,
   "kicker only": 0,
   "nothing": 0
  },
  "cost_lock": "$0.00 / month (docs/ZERO_DOLLAR_LOCK.md)",
  "findings": [
-  "434 of 664 Shorts (65%) put a scripture reference on the first frame, which the authoring prompt forbids: a reference is not a reason for a stranger to stay.",
-  "Every first frame is the same composition \u2014 664 of 664 are a scene plate with three stacked lines of type. Nothing about the frame has ever varied, so nothing about it has ever been tested.",
+  "434 of 679 Shorts (64%) put a scripture reference on the first frame, which the authoring prompt forbids: a reference is not a reason for a stranger to stay.",
+  "Every first frame is the same composition \u2014 679 of 679 are a scene plate with three stacked lines of type. Nothing about the frame has ever varied, so nothing about it has ever been tested.",
   "A stranger must read a median of 15 words on that frame before hearing a word. The decision they are making takes about one second."
  ],
  "first_frames_with_a_reference": 434,
  "first_frames_with_a_vague_kicker": 0,
- "generated_at": "2026-11-26T14:25:13.492481+00:00",
+ "generated_at": "2026-11-27T09:05:54.709907+00:00",
  "max_words_on_frame_one": 31,
  "median_first_caption_seconds": 8.0,
- "median_words_on_frame_one": 15.0,
+ "median_words_on_frame_one": 15,
  "not_claimed": [
   "that one first-frame composition earns more stays than another. Twelve Shorts could be matched to their spec on 25 November 2026; that cannot separate two compositions, and the module says so rather than picking one."
  ],
  "schema": 1,
- "specs": 664
+ "specs": 679
 }
