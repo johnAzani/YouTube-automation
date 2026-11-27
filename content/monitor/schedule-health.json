@@ -2,9 +2,9 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 3421,
+      "late_minutes": 4287,
       "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-23T03:42:41+00:00",
+      "ran_at": "2026-11-23T18:08:21+00:00",
       "slot": "2026-11-20T18:41:00+00:00",
       "workflow": "metrics.yml"
     },
@@ -23,29 +23,15 @@
       "workflow": "comments.yml"
     },
     {
-      "late_minutes": 196,
-      "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
-      "ran_at": "2026-11-26T06:53:04+00:00",
-      "slot": "2026-11-26T03:37:00+00:00",
-      "workflow": "channel-analytics.yml"
-    },
-    {
-      "late_minutes": 127,
-      "name": "Growth score (where the watch hours come from)",
-      "ran_at": "2026-11-26T06:44:59+00:00",
-      "slot": "2026-11-26T04:37:00+00:00",
-      "workflow": "growth-score.yml"
-    },
-    {
-      "late_minutes": 121,
-      "name": "Tests on main (daily)",
-      "ran_at": "2026-11-26T06:53:05+00:00",
-      "slot": "2026-11-26T04:52:00+00:00",
-      "workflow": "tests-on-main.yml"
+      "late_minutes": 130,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-27T05:33:10+00:00",
+      "slot": "2026-11-27T03:23:00+00:00",
+      "workflow": "monitor.yml"
     }
   ],
-  "generated_at": "2026-11-27T03:05:09.012961+00:00",
-  "last_run_at": "2026-11-27T03:04:21+00:00",
+  "generated_at": "2026-11-27T05:33:58.287642+00:00",
+  "last_run_at": "2026-11-27T05:33:10+00:00",
   "on_time": [
     {
       "late_minutes": 5,
@@ -62,20 +48,6 @@
       "workflow": "community.yml"
     },
     {
-      "late_minutes": 105,
-      "name": "Gemini Brain Autonomous Queue Replenishment",
-      "ran_at": "2026-11-26T04:59:26+00:00",
-      "slot": "2026-11-26T03:14:00+00:00",
-      "workflow": "gemini_brain.yml"
-    },
-    {
-      "late_minutes": 85,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-27T01:48:47+00:00",
-      "slot": "2026-11-27T00:23:00+00:00",
-      "workflow": "monitor.yml"
-    },
-    {
       "late_minutes": 45,
       "name": "Produce video",
       "ran_at": "2026-11-26T23:59:50+00:00",
@@ -90,18 +62,11 @@
       "workflow": "reporting-jobs.yml"
     },
     {
-      "late_minutes": 64,
-      "name": "Scheduler supervisor",
-      "ran_at": "2026-11-27T01:51:25+00:00",
-      "slot": "2026-11-27T00:47:00+00:00",
-      "workflow": "scheduler-supervisor.yml"
-    },
-    {
       "late_minutes": 106,
-      "name": "Thumbnail campaign (which concept earns the click)",
-      "ran_at": "2026-11-26T06:53:07+00:00",
-      "slot": "2026-11-26T05:07:00+00:00",
-      "workflow": "thumbnail-campaign.yml"
+      "name": "Scheduler supervisor",
+      "ran_at": "2026-11-27T05:33:10+00:00",
+      "slot": "2026-11-27T03:47:00+00:00",
+      "workflow": "scheduler-supervisor.yml"
     }
   ],
   "silence_minutes": 0,
