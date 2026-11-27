@@ -1,0 +1,331 @@
+{
+  "key": "short-healingisaiah40v1",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "GOD SEES YOUR WAITING",
+    "ADVENT COMFORT & RESTORATION"
+  ],
+  "poster": [
+    "IN THIS ADVENT SEASON",
+    "YOUR LONG WAITING IS SEEN",
+    "GOD BRINGS COMFORT",
+    "AND RESTORES YOUR SOUL"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "warm golden sanctuary light candle twilight calm",
+    "tranquil turquoise living waters soft light",
+    "white dove peace serene atmospheric background",
+    "warm golden candlelight glow quiet sacred room",
+    "tranquil turquoise still lake sunrise glow",
+    "soft gold light breaking through dark clouds calm"
+  ],
+  "scenes": [
+    {
+      "a": "In this Advent season, your waiting is seen.",
+      "img": "short-healingisaiah40v1-scene-01.jpg",
+      "kicker": "WAITING IN DARKNESS",
+      "sub": "GOD SEES YOUR WEARY HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Comfort ye, comfort ye my people, saith your God.",
+      "img": "short-healingisaiah40v1-scene-02.jpg",
+      "kicker": "DIVINE COMFORT",
+      "sub": "HIS PROMISE OF PEACE ENDURES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Speak ye comfortably to Jerusalem, and cry unto her",
+      "img": "short-healingisaiah40v1-scene-03.jpg",
+      "kicker": "WARFARE ACCOMPLISHED",
+      "sub": "THE HARD SEASON IS ENDING",
+      "cam": "tilt_up",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "Lord, reach into this quiet room today.",
+      "img": "short-healingisaiah40v1-scene-04.jpg",
+      "kicker": "HEALING PRESENCE",
+      "sub": "ENTER OUR QUIET WEARINESS",
+      "cam": "push_in",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "and let your promised light push back our deep darkness.",
+      "img": "short-healingisaiah40v1-scene-05.jpg",
+      "kicker": "DAWN IS COMING",
+      "sub": "CHRIST OUR LIGHT APPROACHES",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Comfort your weary child with peace that restores the soul.",
+      "img": "short-healingisaiah40v1-scene-06.jpg",
+      "kicker": "SOUL RESTORATION",
+      "sub": "RECEIVE HIS GENTLE COMFORT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "In this Advent season, your waiting is seen."
+    ],
+    [
+      3,
+      8,
+      "Isaiah writes: Comfort ye, comfort ye my people, saith your God."
+    ],
+    [
+      8,
+      17,
+      "Speak ye comfortably to Jerusalem, and cry unto her, that her warfare is accomplished, that her iniquity is pardoned:"
+    ],
+    [
+      17,
+      24,
+      "for she hath received of the LORD’s hand double for all her sins."
+    ],
+    [
+      24,
+      29,
+      "Lord, reach into this quiet room today."
+    ],
+    [
+      29,
+      36,
+      "Smooth the hard places in our hearts, lift the heavy ache we carry,"
+    ],
+    [
+      36,
+      42,
+      "and let your promised light push back our deep darkness."
+    ],
+    [
+      42,
+      48,
+      "Comfort your weary child with peace that restores the soul."
+    ],
+    [
+      48,
+      52,
+      "Amen. In this Advent season, your waiting is seen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "IN THIS ADVENT SEASON",
+        "YOUR WAITING IS SEEN"
+      ],
+      [
+        "WAITING",
+        "SEEN"
+      ],
+      "ISAIAH 40 : 1-2"
+    ],
+    [
+      3,
+      8,
+      [
+        "COMFORT YE COMFORT YE",
+        "MY PEOPLE SAITH YOUR GOD"
+      ],
+      [
+        "COMFORT",
+        "GOD"
+      ],
+      "ISAIAH 40 : 1"
+    ],
+    [
+      8,
+      17,
+      [
+        "SPEAK YE COMFORTABLY",
+        "HER WARFARE IS ACCOMPLISHED",
+        "HER INIQUITY IS PARDONED"
+      ],
+      [
+        "WARFARE",
+        "PARDONED"
+      ],
+      "ISAIAH 40 : 2"
+    ],
+    [
+      17,
+      24,
+      [
+        "FOR SHE HATH RECEIVED",
+        "OF THE LORDS HAND DOUBLE"
+      ],
+      [
+        "RECEIVED",
+        "DOUBLE"
+      ],
+      "ISAIAH 40 : 2"
+    ],
+    [
+      24,
+      29,
+      [
+        "LORD REACH INTO",
+        "THIS QUIET ROOM TODAY"
+      ],
+      [
+        "REACH",
+        "QUIET"
+      ],
+      "ISAIAH 40 : 1-2"
+    ],
+    [
+      29,
+      36,
+      [
+        "SMOOTH THE HARD PLACES",
+        "LIFT THE HEAVY ACHE"
+      ],
+      [
+        "SMOOTH",
+        "HEAVY"
+      ],
+      "ISAIAH 40 : 1-2"
+    ],
+    [
+      36,
+      42,
+      [
+        "LET YOUR PROMISED LIGHT",
+        "PUSH BACK OUR DARKNESS"
+      ],
+      [
+        "LIGHT",
+        "DARKNESS"
+      ],
+      "ISAIAH 40 : 1-2"
+    ],
+    [
+      42,
+      48,
+      [
+        "COMFORT YOUR WEARY CHILD",
+        "WITH PEACE THAT RESTORES"
+      ],
+      [
+        "PEACE",
+        "RESTORES"
+      ],
+      "ISAIAH 40 : 1-2"
+    ],
+    [
+      48,
+      52,
+      [
+        "AMEN YOUR WAITING",
+        "IS SEEN TODAY"
+      ],
+      [
+        "AMEN",
+        "SEEN"
+      ],
+      "ISAIAH 40 : 1-2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "In this Advent season, your waiting is seen.",
+      "kind": "phrase",
+      "words": [
+        "ADVENT",
+        "WAITING",
+        "SEEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Comfort ye, comfort ye my people, saith your God.",
+      "kind": "phrase",
+      "words": [
+        "COMFORT",
+        "PEOPLE",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Speak ye comfortably to Jerusalem, and cry unto her",
+      "kind": "phrase",
+      "words": [
+        "COMFORTABLY",
+        "WARFARE",
+        "ACCOMPLISHED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, reach into this quiet room today.",
+      "kind": "phrase",
+      "words": [
+        "REACH",
+        "QUIET",
+        "ROOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and let your promised light push back our deep darkness.",
+      "kind": "phrase",
+      "words": [
+        "PROMISED",
+        "LIGHT",
+        "DARKNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Comfort your weary child with peace that restores the soul.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "PEACE",
+        "RESTORES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 40:1-2"
+}
