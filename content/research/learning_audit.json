@@ -8,47 +8,47 @@
   "first_frame": {
    "age_hours": 0.0,
    "stale": false,
-   "stamp": "2026-11-27T09:05:54.709907+00:00",
+   "stamp": "2026-11-27T14:18:22.833498+00:00",
    "why": ""
   },
   "growth_score": {
    "age_hours": 0.0,
    "stale": false,
-   "stamp": "2026-11-27T09:05:53.843478+00:00",
+   "stamp": "2026-11-27T14:18:21.572524+00:00",
    "why": ""
   },
   "learning_audit": {
-   "age_hours": 18.7,
+   "age_hours": 5.2,
    "stale": false,
-   "stamp": "2026-11-26T14:25:13.937676+00:00",
+   "stamp": "2026-11-27T09:05:54.970112+00:00",
    "why": ""
   },
   "performance_feedback": {
    "age_hours": 3.5,
    "stale": false,
-   "stamp": "2026-11-27T05:35:04.006255+00:00",
+   "stamp": "2026-11-27T10:48:30.543549+00:00",
    "why": ""
   },
   "shorts_supply": {
    "age_hours": 0.0,
    "stale": false,
-   "stamp": "2026-11-27T09:05:54.630391+00:00",
+   "stamp": "2026-11-27T14:18:22.730710+00:00",
    "why": ""
   },
   "thumbnail_campaign": {
-   "age_hours": 33.1,
+   "age_hours": 14.3,
    "stale": false,
-   "stamp": "2026-11-26",
+   "stamp": "2026-11-27",
    "why": ""
   }
  },
- "generated_at": "2026-11-27T09:05:54.970112+00:00",
+ "generated_at": "2026-11-27T14:18:23.202295+00:00",
  "loops": [
   {
    "channels_reordered": 10,
-   "evidence": "36 Shorts measured; 4 book(s) carry two or more, and the ranking reorders 10 channel(s)' roadmap",
+   "evidence": "35 Shorts measured; 4 book(s) carry two or more, and the ranking reorders 10 channel(s)' roadmap",
    "loop": "shorts_steering",
-   "measured_shorts": 36,
+   "measured_shorts": 35,
    "owner": "pipeline/performance_feedback.py: rank_candidates",
    "state": "acting",
    "what": "which passages and books the brain writes Shorts on next"
@@ -59,7 +59,7 @@
    "loop": "thumbnail_choice",
    "owner": "pipeline/thumbnail_campaign.py: live_concept",
    "state": "measuring",
-   "videos_assigned": 16,
+   "videos_assigned": 23,
    "what": "which of the three thumbnail concepts goes live"
   },
   {

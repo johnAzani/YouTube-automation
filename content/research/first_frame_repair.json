@@ -3,7 +3,7 @@
  "citation_first_control": 354,
  "citation_frames": 434,
  "cost_lock": "$0.00 / month (docs/ZERO_DOLLAR_LOCK.md)",
- "generated_at": "2026-11-27T09:05:54.802095+00:00",
+ "generated_at": "2026-11-27T14:18:22.974732+00:00",
  "no_need_line": 80,
  "not_claimed": [
   "that a repaired frame keeps more people. This moves an already-written line to where the rule says it belongs; whether that helps is the next reading's question, and one composition still cannot be compared against another until the repaired Shorts are published and watched."
@@ -448,7 +448,7 @@
    "new_kicker": "YOUR FAITH MATTERS",
    "old_kicker": "PSALM 78:4",
    "published": true,
-   "queued": true,
+   "queued": false,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {
@@ -1256,7 +1256,7 @@
    "new_kicker": "RELEASE YOUR BURDEN",
    "old_kicker": "1 PETER 5:7",
    "published": true,
-   "queued": false,
+   "queued": true,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {
@@ -1382,7 +1382,7 @@
    "new_kicker": "HE IS WITH YOU",
    "old_kicker": "ISAIAH 41:10",
    "published": true,
-   "queued": true,
+   "queued": false,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {
@@ -2391,8 +2391,8 @@
    "action": "keep",
    "key": "short-midnightdaniel2v19",
    "old_kicker": "DANIEL 2:19",
-   "published": false,
-   "queued": true,
+   "published": true,
+   "queued": false,
    "reason": "no need line to promote"
   },
   {
@@ -2760,7 +2760,7 @@
    "new_kicker": "A PLAIN BEFORE HIM",
    "old_kicker": "ZECHARIAH 4:7",
    "published": true,
-   "queued": true,
+   "queued": false,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {
@@ -3912,7 +3912,7 @@
    "key": "short-psalm141v2",
    "old_kicker": "PSALM 141:2",
    "published": true,
-   "queued": true,
+   "queued": false,
    "reason": "no need line to promote"
   },
   {
@@ -4534,7 +4534,7 @@
    "new_kicker": "IF FEAR FOR YOUR HOME",
    "old_kicker": "ZECHARIAH 2:5",
    "published": true,
-   "queued": true,
+   "queued": false,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {
