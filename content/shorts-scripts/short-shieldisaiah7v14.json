@@ -1,0 +1,462 @@
+{
+  "key": "short-shieldisaiah7v14",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "IMMANUEL IN THE DARKNESS",
+    "ADVENT PROTECTION PRAYER"
+  ],
+  "poster": [
+    "IMMANUEL WITH US",
+    "ADVENT COVENANT SHIELD",
+    "DIVINE PROTECTION PRAYER",
+    "ISAIAH 7:14 KJV"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower misty mountains sunrise",
+    "calm dark mountain lake night twilight",
+    "golden light rays cloud beam dark valley",
+    "sunlit snow mountain pass golden hour",
+    "peaceful winter forest pine trees soft light",
+    "dramatic mountain peak clouds sunset refuge",
+    "calm river flowing through mountain gorge sunrise",
+    "ancient stone fortress watchtower golden twilight"
+  ],
+  "scenes": [
+    {
+      "a": "In this Advent season of long waiting,",
+      "img": "short-shieldisaiah7v14-scene-01.jpg",
+      "kicker": "LONG WAITING",
+      "sub": "IN THE DARKNESS OF ADVENT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "you carry quiet worries about the shadows around you.",
+      "img": "short-shieldisaiah7v14-scene-02.jpg",
+      "kicker": "QUIET WORRIES",
+      "sub": "GOD SEES YOUR HEART TODAY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Therefore the Lord himself shall give you a sign;",
+      "img": "short-shieldisaiah7v14-scene-03.jpg",
+      "kicker": "ISAIAH 7:14",
+      "sub": "THE PROMISE OF IMMANUEL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "and shall call his name Immanuel.",
+      "img": "short-shieldisaiah7v14-scene-04.jpg",
+      "kicker": "GOD WITH US",
+      "sub": "LIGHT SHINING IN DARKNESS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord God, into our deepest darkness You bring Your promised presence.",
+      "img": "short-shieldisaiah7v14-scene-05.jpg",
+      "kicker": "PROMISED PRESENCE",
+      "sub": "ENTERING THE SHADOWS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Be a strong tower against every fear that threatens to overtake us.",
+      "img": "short-shieldisaiah7v14-scene-06.jpg",
+      "kicker": "STRONG TOWER",
+      "sub": "SHIELDED FROM EVERY FEAR",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Guard our steps, preserve our peace, and keep us safe under Your wings.",
+      "img": "short-shieldisaiah7v14-scene-07.jpg",
+      "kicker": "UNDER HIS WINGS",
+      "sub": "SAFETY FOR EVERY STEP",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. In this Advent season of long waiting.",
+      "img": "short-shieldisaiah7v14-scene-08.jpg",
+      "kicker": "FAITHFUL COVERING",
+      "sub": "WALK UNDER HIS COVENANT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "In this Advent season of long waiting,"
+    ],
+    [
+      3,
+      7,
+      "you carry quiet worries about the shadows around you."
+    ],
+    [
+      7,
+      10,
+      "Listen to the holy promise of Scripture:"
+    ],
+    [
+      10,
+      15,
+      "Therefore the Lord himself shall give you a sign;"
+    ],
+    [
+      15,
+      20,
+      "Behold, a virgin shall conceive, and bear a son,"
+    ],
+    [
+      20,
+      24,
+      "and shall call his name Immanuel."
+    ],
+    [
+      24,
+      28,
+      "Lord God, into our deepest darkness You bring Your promised presence."
+    ],
+    [
+      28,
+      31,
+      "Cover this weary soul with Your divine protection today."
+    ],
+    [
+      31,
+      35,
+      "Be a strong tower against every fear that threatens to overtake us."
+    ],
+    [
+      35,
+      39,
+      "Guard our steps, preserve our peace, and keep us safe under Your wings."
+    ],
+    [
+      39,
+      43,
+      "We place every unseen concern into Your faithful hands."
+    ],
+    [
+      43,
+      47,
+      "Amen. In this Advent season of long waiting."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "IN THIS ADVENT SEASON",
+        "OF LONG WAITING"
+      ],
+      [
+        "ADVENT",
+        "WAITING"
+      ],
+      "ISAIAH 7 : 14"
+    ],
+    [
+      3,
+      7,
+      [
+        "YOU CARRY QUIET WORRIES",
+        "ABOUT THE SHADOWS AROUND YOU"
+      ],
+      [
+        "QUIET",
+        "WORRIES"
+      ],
+      "ISAIAH 7 : 14"
+    ],
+    [
+      7,
+      10,
+      [
+        "LISTEN TO THE HOLY PROMISE",
+        "OF SCRIPTURE"
+      ],
+      [
+        "HOLY",
+        "PROMISE"
+      ],
+      "ISAIAH 7 : 14"
+    ],
+    [
+      10,
+      15,
+      [
+        "THEREFORE THE LORD HIMSELF",
+        "SHALL GIVE YOU A SIGN"
+      ],
+      [
+        "LORD",
+        "SIGN"
+      ],
+      "ISAIAH 7 : 14"
+    ],
+    [
+      15,
+      20,
+      [
+        "BEHOLD A VIRGIN SHALL CONCEIVE",
+        "AND BEAR A SON"
+      ],
+      [
+        "BEHOLD",
+        "SON"
+      ],
+      "ISAIAH 7 : 14"
+    ],
+    [
+      20,
+      24,
+      [
+        "AND SHALL CALL HIS NAME",
+        "IMMANUEL"
+      ],
+      [
+        "NAME",
+        "IMMANUEL"
+      ],
+      "ISAIAH 7 : 14"
+    ],
+    [
+      24,
+      28,
+      [
+        "LORD GOD INTO OUR DEEPEST",
+        "DARKNESS YOU BRING PRESENCE"
+      ],
+      [
+        "DEEPEST",
+        "DARKNESS"
+      ],
+      "ISAIAH 7 : 14"
+    ],
+    [
+      28,
+      31,
+      [
+        "COVER THIS WEARY SOUL WITH",
+        "YOUR DIVINE PROTECTION TODAY"
+      ],
+      [
+        "DIVINE",
+        "PROTECTION"
+      ],
+      "ISAIAH 7 : 14"
+    ],
+    [
+      31,
+      35,
+      [
+        "BE A STRONG TOWER AGAINST",
+        "EVERY FEAR THAT THREATENS US"
+      ],
+      [
+        "STRONG",
+        "TOWER"
+      ],
+      "ISAIAH 7 : 14"
+    ],
+    [
+      35,
+      39,
+      [
+        "GUARD OUR STEPS PRESERVE PEACE",
+        "KEEP US SAFE UNDER WINGS"
+      ],
+      [
+        "PRESERVE",
+        "PEACE"
+      ],
+      "ISAIAH 7 : 14"
+    ],
+    [
+      39,
+      43,
+      [
+        "WE PLACE EVERY UNSEEN CONCERN",
+        "INTO YOUR FAITHFUL HANDS"
+      ],
+      [
+        "FAITHFUL",
+        "HANDS"
+      ],
+      "ISAIAH 7 : 14"
+    ],
+    [
+      43,
+      47,
+      [
+        "AMEN IN THIS ADVENT SEASON",
+        "OF LONG WAITING"
+      ],
+      [
+        "ADVENT",
+        "WAITING"
+      ],
+      "ISAIAH 7 : 14"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "In this Advent season of long waiting,",
+      "kind": "phrase",
+      "words": [
+        "ADVENT",
+        "WAITING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "you carry quiet worries about the shadows around you.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "WORRIES"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Listen to the holy promise of Scripture:",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "PROMISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Therefore the Lord himself shall give you a sign;",
+      "kind": "quote",
+      "words": [
+        "LORD",
+        "SIGN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Behold, a virgin shall conceive, and bear a son,",
+      "kind": "quote",
+      "words": [
+        "BEHOLD",
+        "SON"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and shall call his name Immanuel.",
+      "kind": "quote",
+      "words": [
+        "NAME",
+        "IMMANUEL"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord God, into our deepest darkness You bring Your promised presence.",
+      "kind": "phrase",
+      "words": [
+        "DEEPEST",
+        "DARKNESS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Cover this weary soul with Your divine protection today.",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "PROTECTION"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Be a strong tower against every fear that threatens to overtake us.",
+      "kind": "phrase",
+      "words": [
+        "STRONG",
+        "TOWER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Guard our steps, preserve our peace, and keep us safe under Your wings.",
+      "kind": "phrase",
+      "words": [
+        "PRESERVE",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "We place every unseen concern into Your faithful hands.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "HANDS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. In this Advent season of long waiting.",
+      "kind": "phrase",
+      "words": [
+        "ADVENT",
+        "SEASON"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 7:14"
+}
