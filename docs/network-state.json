@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T22:22:30Z",
+  "generated_at": "2026-11-27T22:23:59Z",
   "monitor_generated_at": "2026-11-27T22:21:05.660460+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 259,
     "published_shorts": 666,
     "public_total": 923,
-    "queued_longform": 143,
+    "queued_longform": 145,
     "queued_shorts": 15,
     "automations_ok": 12,
     "automations_total": 15,
@@ -305,7 +305,7 @@
         "published_shorts": 60,
         "thumbnail_pending": 85,
         "public_total": 85,
-        "queued_longform": 14,
+        "queued_longform": 16,
         "queued_other": 0,
         "queued_shorts": 1
       },
@@ -23522,6 +23522,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1134
+      },
+      {
+        "id": "0341",
+        "slug": "for-the-heart-of-your-child",
+        "file": "0341-for-the-heart-of-your-child.md",
+        "title": "For the Heart of Your Child: 1 Samuel 1:27-28 | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1319
+      },
+      {
+        "id": "0342",
+        "slug": "a-blessing-over-your-children-and-home-genesis-48-15-16",
+        "file": "0342-a-blessing-over-your-children-and-home-genesis-48-15-16.md",
+        "title": "Blessing the Next Generation: Genesis 48:15-16 | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1354
       },
       {
         "id": "0420",
