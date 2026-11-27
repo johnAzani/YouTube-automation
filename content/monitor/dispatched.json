@@ -1787,16 +1787,16 @@
     "result": "nothing dispatched: secret-place, prayer6, prayer7 already tried 2x for this slot"
   },
   "produce.yml@2026-11-27T19:14:00+00:00": {
-    "at": "2026-11-27T22:30:10.360633+00:00",
+    "at": "2026-11-27T22:47:13.891557+00:00",
     "attempted_channels": [
       "prayer3",
       "prayer5",
       "prayer3",
       "prayer5"
     ],
-    "attempts": 3,
+    "attempts": 4,
     "code_id": "852cbff159441845",
-    "result": "dispatched prayer3, prayer5"
+    "result": "nothing dispatched: prayer3, prayer5 already tried 2x for this slot"
   },
   "reporting-jobs.yml@2026-11-15T05:47:00+00:00": {
     "at": "2026-11-15T09:26:59.051436+00:00",
@@ -1931,8 +1931,8 @@
     "result": "dispatched"
   },
   "tests-on-main.yml@2026-11-27T04:52:00+00:00": {
-    "at": "2026-11-27T22:30:10.360633+00:00",
-    "attempts": 1,
+    "at": "2026-11-27T22:47:13.891557+00:00",
+    "attempts": 2,
     "code_id": "b17454eb419139b1",
     "result": "dispatched"
   },
