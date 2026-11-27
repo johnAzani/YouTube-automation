@@ -1745,7 +1745,7 @@
     "result": "dispatched secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8, prayer9, prayer10"
   },
   "produce.yml@2026-11-27T10:14:00+00:00": {
-    "at": "2026-11-27T10:57:22.686921+00:00",
+    "at": "2026-11-27T12:29:39.456530+00:00",
     "attempted_channels": [
       "secret-place",
       "prayer2",
@@ -1755,11 +1755,16 @@
       "prayer6",
       "prayer7",
       "prayer8",
-      "prayer10"
+      "prayer10",
+      "secret-place",
+      "prayer2",
+      "prayer4",
+      "prayer5",
+      "prayer8"
     ],
-    "attempts": 1,
+    "attempts": 2,
     "code_id": "1b756692d8676600",
-    "result": "dispatched secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8, prayer10"
+    "result": "dispatched secret-place, prayer2, prayer4, prayer5, prayer8"
   },
   "reporting-jobs.yml@2026-11-15T05:47:00+00:00": {
     "at": "2026-11-15T09:26:59.051436+00:00",
@@ -1894,8 +1899,8 @@
     "result": "dispatched"
   },
   "tests-on-main.yml@2026-11-27T04:52:00+00:00": {
-    "at": "2026-11-27T10:57:22.686921+00:00",
-    "attempts": 2,
+    "at": "2026-11-27T12:29:39.456530+00:00",
+    "attempts": 3,
     "code_id": "15481658647a6314",
     "result": "dispatched"
   },
