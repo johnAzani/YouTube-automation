@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T11:39:47Z",
+  "generated_at": "2026-11-27T11:49:44Z",
   "monitor_generated_at": "2026-11-27T05:34:22.095144+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 902,
-    "published_longform": 249,
+    "published_total": 903,
+    "published_longform": 250,
     "published_shorts": 653,
-    "public_total": 900,
-    "queued_longform": 122,
+    "public_total": 901,
+    "queued_longform": 121,
     "queued_shorts": 28,
     "automations_ok": 12,
     "automations_total": 15,
@@ -164,28 +164,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 98,
-        "published_longform": 30,
+        "published_total": 99,
+        "published_longform": 31,
         "published_shorts": 68,
         "thumbnail_pending": 0,
-        "public_total": 98,
-        "queued_longform": 23,
+        "public_total": 99,
+        "queued_longform": 22,
         "queued_other": 0,
         "queued_shorts": 1
       },
       "latest_video": {
-        "id": "0098",
-        "title": "Courage When the Afternoon Weighs Down: Psalm 27:13-14",
-        "format": "longform",
-        "youtube_video_id": "YbF5Jz89rUc",
-        "watch_url": "https://youtu.be/YbF5Jz89rUc",
-        "published_on": "2026-11-27",
-        "published_at": "2026-11-27T02:59:02Z"
-      },
-      "next_queued_longform": {
         "id": "0099",
         "title": "Deliverance From Fear at Noon: Psalm 34:4-8 | The Midday Watch",
-        "words": 1371,
+        "format": "longform",
+        "youtube_video_id": "b53n0cXXrGk",
+        "watch_url": "https://youtu.be/b53n0cXXrGk",
+        "published_on": "2026-11-27",
+        "published_at": "2026-11-27T11:48:44Z"
+      },
+      "next_queued_longform": {
+        "id": "0103",
+        "title": "A Strong Tower in the Middle of the Day: Proverbs 18:10",
+        "words": 2034,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0099",
+      "slug": "deliverance-from-fear-at-noon-psalm-34-4-8",
+      "file": "0099-deliverance-from-fear-at-noon-psalm-34-4-8.md",
+      "title": "Deliverance From Fear at Noon: Psalm 34:4-8 | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T11:48:44Z",
+      "youtube_video_id": "b53n0cXXrGk",
+      "watch_url": "https://youtu.be/b53n0cXXrGk",
+      "youtu_be_url": "https://youtu.be/b53n0cXXrGk",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/b53n0cXXrGk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/b53n0cXXrGk/hqdefault.jpg",
+      "thumb_text": "DELIVERED FROM FEARS",
+      "thumbnail_pending": false,
+      "duration_label": "8m 54s",
+      "words": 1371
+    },
     {
       "id": "0417",
       "slug": "strength-and-peace-when-fear-surrounds-you-isaiah-41-10",
@@ -22372,19 +22396,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 979
-      },
-      {
-        "id": "0099",
-        "slug": "deliverance-from-fear-at-noon-psalm-34-4-8",
-        "file": "0099-deliverance-from-fear-at-noon-psalm-34-4-8.md",
-        "title": "Deliverance From Fear at Noon: Psalm 34:4-8 | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1371
       },
       {
         "id": "0103",

@@ -2,7 +2,7 @@
 id: 0099
 title: 'Deliverance From Fear at Noon: Psalm 34:4-8 | The Midday Watch'
 slug: deliverance-from-fear-at-noon-psalm-34-4-8
-status: approved
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -76,6 +76,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-27"
+published_at: "2026-11-27T11:48:44Z"
+youtube_video_id: "b53n0cXXrGk"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 533.55
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — The Pause at Noon
