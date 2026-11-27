@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["GOD'S DESIGN FOR", "THE FAMILY HEART", "PROVERBS 17:6", "A PRAYER FOR YOU"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-27T10:27:29Z"
+thumbnail_retry_after: "2026-12-04T12:48:22Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If the noise of your busy home feels overwhelming right now, find your center here. Children’s children are the crown of old men; and the glory of children are their fathers. Lord, we lift up every generation currently under our roof to Your loving care today. May the grace that binds parents to their children remain strong through every passing season. Protect our hearts from bitterness and fill our common life with Your deep abiding love. Please subscribe to support our channel as we seek to honor You in all things.

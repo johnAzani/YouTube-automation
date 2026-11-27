@@ -77,7 +77,7 @@ originality:
 published_on: "2026-11-20"
 published_at: "2026-11-20T16:14:44Z"
 youtube_video_id: "ozA_GimxTNE"
-metadata_revision: "retitle-pending"
+metadata_revision: "selar-seo-v1"
 top_comment: "ok"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"

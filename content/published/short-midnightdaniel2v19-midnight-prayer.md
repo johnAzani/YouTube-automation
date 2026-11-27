@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["DANIEL 2:19", "THE NIGHT VISION", "WISDOM FROM ABOVE", "GOD KNOWS ALL"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-04T12:48:12Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 That question you cannot answer is being solved by the light of heaven right now. Then was the secret revealed unto Daniel in a night vision. Then Daniel blessed the God of heaven. He revealeth the deep and secret things: he knoweth what is in the darkness, and the light dwelleth with him. Father, bring your clarity into this hidden struggle that weighs upon my spirit tonight. Let your peace rest upon this room and guide my thoughts toward your perfect truth. Subscribe to join us for our next midnight watch.

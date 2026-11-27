@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["WHEN THOUGHTS", "GROW HEAVY", "SING PRAISES TO THE LORD IS GOOD", "THE PRAISE GARDEN"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-04T12:48:37Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Heavy thoughts are lingering in your heart. The Word of God declares, Praise the LORD; for the LORD is good: sing praises unto his name; for it is pleasant. Father, when the heavy worries of this long day press closely, we turn our gaze back to Your enduring kindness. We bring You honest praise right here, knowing that Your nature never changes even when our strength feels very small. Fill this quiet room with true thanksgiving, and remind our weary hearts how pleasant it is to honor Your holy name. We rest in Your goodness tonight, Amen, even while heavy thoughts are lingering in your heart.

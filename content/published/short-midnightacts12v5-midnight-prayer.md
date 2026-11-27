@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["MIDNIGHT VIGIL", "ACTS CHAPTER TWELVE", "THE CHAINS FALL", "THE GATE OPENS"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-04T12:48:11Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 The locked door you are staring at right now is not the end of your story. Peter therefore was kept in prison: but prayer was made without ceasing of the church unto God for him. And when they were past the first and the second ward, they came unto the iron gate that leadeth unto the city; which opened to them of his own accord. Father, move in the quiet of this night as only You can. Break every chain that restricts your path and lead your weary heart into the light. May the peace of the Lord carry you safely through this hour and beyond.

@@ -24,9 +24,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["RISE", "IN THE", "STILLNESS", "OF NIGHT"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-27T10:27:22Z"
+thumbnail_retry_after: "2026-12-04T12:48:10Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 2
+thumbnail_attempts: 3
 ---
 
 Rise in spirit this midnight hour, as we quiet our minds before the Lord. For though we walk in the flesh, we do not war according to the flesh. For the weapons of our warfare are not carnal, but mighty in God for pulling down strongholds. Casting down arguments and every high thing that exalts itself against the knowledge of God. Bringing every thought into captivity to the obedience of Christ. Lord, anchor our hearts in Your peace tonight. Let Your truth guard our minds. Subscribe to The Midnight Watch for daily midnight prayer.
