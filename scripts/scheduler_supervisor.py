@@ -101,19 +101,40 @@ NEVER_DISPATCH = {"monitor.yml", "automation-health.yml", "scheduler-supervisor.
                   "dry-run.yml", "preview-render.yml", "prayer-alignment-check.yml"}
 
 
+class LedgerUnreadable(RuntimeError):
+    """The dispatch ledger exists but cannot be read.
+
+    An empty ledger is not a fresh start, it is a lost memory. Every later pass
+    would re-dispatch slots that were already served — and `produce.yml` allows
+    `2 * channels + 1` attempts per slot, so one bad read could re-arm a finished
+    slot twenty-one more times. The ledger is committed by the workflow, so a
+    wipe is also pushed to `main`. Refuse to guess: stop and say so.
+    """
+
+
 def load_state() -> dict:
     if not STATE.is_file():
         return {}
     try:
         data = json.loads(STATE.read_text(encoding="utf-8"))
-        return data if isinstance(data, dict) else {}
-    except Exception:  # noqa: BLE001
-        return {}
+    except (OSError, ValueError) as exc:
+        raise LedgerUnreadable(f"cannot read {STATE.name}: {exc}") from exc
+    if not isinstance(data, dict):
+        raise LedgerUnreadable(f"{STATE.name} does not hold a JSON object")
+    return data
 
 
 def save_state(state: dict) -> None:
+    """Write the ledger atomically.
+
+    `write_text` truncates before it writes, so a job killed mid-write leaves a
+    half-record behind — the very input `load_state` now refuses. Stage beside it
+    and rename, which is atomic on the same filesystem.
+    """
     STATE.parent.mkdir(parents=True, exist_ok=True)
-    STATE.write_text(json.dumps(state, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    staged = STATE.with_name(STATE.name + ".staged")
+    staged.write_text(json.dumps(state, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    os.replace(staged, STATE)
 
 
 def _dispatch_after(workflow: str) -> timedelta:
@@ -867,7 +888,16 @@ def save_schedule_health(health: dict) -> None:
 def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
               state: dict | None = None) -> dict:
     now = now or datetime.now(timezone.utc)
-    state = load_state() if state is None else state
+    if state is None:
+        try:
+            state = load_state()
+        except LedgerUnreadable as exc:
+            # Dispatching from an empty ledger would re-arm every slot, so the
+            # unreadable file stops the pass instead of being read as "nothing
+            # dispatched yet". The workflow's ledger step still commits the file.
+            result = {"dispatched": [], "skipped": [], "cancelled": [],
+                      "failed": [{"workflow": "-", "reason": str(exc)}]}
+            return result
     result = {"dispatched": [], "skipped": [], "failed": [], "cancelled": []}
 
     try:

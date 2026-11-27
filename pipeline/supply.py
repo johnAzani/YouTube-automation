@@ -123,6 +123,13 @@ def _wanted_channel(channel_id: str | None, brain=None) -> str | None:
     return None
 
 
+# Unreadable queue files met by the last `publishable_longform()` scan. They are
+# not counted as supply, but they are not nothing either: a file that cannot be
+# parsed looks exactly like a file that does not exist, so a queue could read as
+# dry while a ready script sits there unreadable.
+UNREADABLE_QUEUE_FILES: list[str] = []
+
+
 def publishable_longform(queue_dir: Path | None = None,
                          channel_id: str | None = None) -> list[Path]:
     """Approved scripts that are actually over the word floor.
@@ -136,13 +143,15 @@ def publishable_longform(queue_dir: Path | None = None,
     from .script_doc import MIN_LONGFORM_WORDS, parse_script
 
     wanted = normalize_channel_id(channel_id) if channel_id else None
+    UNREADABLE_QUEUE_FILES.clear()
 
     if queue_dir is not None:  # tests: a scratch queue
         out: list[Path] = []
         for path in sorted(Path(queue_dir).glob("*.md")):
             try:
                 doc = parse_script(path)
-            except Exception:  # noqa: BLE001
+            except Exception:  # noqa: BLE001 - one bad file must not hide the rest
+                UNREADABLE_QUEUE_FILES.append(path.name)
                 continue
             if wanted and doc.channel != wanted:
                 continue
@@ -161,7 +170,8 @@ def publishable_longform(queue_dir: Path | None = None,
     for path in sorted(Path(QUEUE_DIR).glob("*.md")):
         try:
             doc = parse_script(path)
-        except Exception:  # noqa: BLE001
+        except Exception:  # noqa: BLE001 - one bad file must not hide the rest
+            UNREADABLE_QUEUE_FILES.append(path.name)
             continue
         if doc.channel != wanted:
             continue

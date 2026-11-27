@@ -67,11 +67,37 @@ MAX_READING_AGE_HOURS = 72
 _STAMPED = ("generated_at", "as_of", "audited_at", "updated_at", "written_at")
 
 
+class _Unreadable(dict):
+    """A reading that could not be read, carrying the reason it could not be.
+
+    `_read` used to answer `{}` for a file it could not parse, which made a
+    corrupt reading and an absent timestamp look identical: `reading_age` then
+    reported "no timestamp in the file" about a file whose timestamp was fine and
+    whose bytes were broken. A wrong diagnosis is worse than no diagnosis, so the
+    failure travels with the empty mapping.
+    """
+
+    why: str = ""
+
+
 def _read(path: Path) -> dict[str, Any]:
     try:
-        return json.loads(path.read_text(encoding="utf-8")) or {}
-    except (OSError, ValueError):
-        return {}
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        blank = _Unreadable()
+        blank.why = "missing"
+        return blank
+    except (OSError, ValueError) as exc:
+        blank = _Unreadable()
+        blank.why = f"corrupt ({type(exc).__name__})"
+        return blank
+    if not isinstance(data, dict):
+        # Valid JSON of the wrong shape — a list, a string, a number. `reading_age`
+        # would crash on `.get`, so it is a defective reading like any other.
+        blank = _Unreadable()
+        blank.why = f"wrong shape ({type(data).__name__}, not an object)"
+        return blank
+    return data or {}
 
 
 def reading_age(path: Path, now: datetime | None = None) -> dict[str, Any]:
@@ -84,6 +110,9 @@ def reading_age(path: Path, now: datetime | None = None) -> dict[str, Any]:
     """
     data = _read(path)
     now = now or datetime.now(timezone.utc)
+    if getattr(data, "why", ""):
+        return {"stamp": "", "age_hours": None, "stale": True,
+                "why": f"{data.why}, so its age cannot be known"}
     stamp = ""
     for field in _STAMPED:
         if data.get(field):

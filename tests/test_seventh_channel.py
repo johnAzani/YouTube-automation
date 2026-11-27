@@ -53,7 +53,24 @@ class TestSeventhChannelRegistration(unittest.TestCase):
         self.assertIn("longform:prayer7", health_rows)
         self.assertIn("shorts:prayer7", health_rows)
         self.assertGreater(health_rows["longform:prayer7"]["ready"], 0)
-        self.assertGreater(health_rows["shorts:prayer7"]["ready"], 0)
+
+        # A Shorts floor here would restate a content outcome, not the registration
+        # this test is about. On 26 November 2026 it went red on `main` because
+        # prayer7 had published its whole roadmap — no ready Shorts AND no passage
+        # left to author from, which is a content wall, not a registration fault.
+        # What registration must guarantee is that the row exists, is counted, and
+        # reports the wall honestly instead of going quiet.
+        from pipeline.shorts_supply import measure
+
+        row = measure("prayer7")
+        self.assertEqual(health_rows["shorts:prayer7"]["ready"], row["ready"])
+        if row["verdict"] == "dry":
+            self.assertEqual(row["sources"], 0,
+                             "prayer7 is dry but has sources, so authoring is broken")
+        else:
+            self.assertGreater(health_rows["shorts:prayer7"]["ready"], 0,
+                               f"prayer7 can author ({row['sources']} source(s)) but has "
+                               f"no ready Shorts")
 
 
 class TestSeventhChannelIdentityAndVisuals(unittest.TestCase):

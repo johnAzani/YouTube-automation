@@ -149,7 +149,7 @@ def queue_health() -> list[dict]:
     """
     from pipeline.channel_capabilities import capabilities_for
     from pipeline.channels import scheduled_channels
-    from pipeline.supply import publishable_longform
+    from pipeline import supply
     from pipeline.short_release import queue_report
 
     rows: list[dict] = []
@@ -160,8 +160,14 @@ def queue_health() -> list[dict]:
     for channel_id in scheduled_channels():
         caps = capabilities_for(channel_id)
         try:
-            count = len(publishable_longform(channel_id=channel_id))
+            count = len(supply.publishable_longform(channel_id=channel_id))
             note = "approved and above the word floor"
+            # An unparseable script is invisible to the count and indistinguishable
+            # from a missing one. Say so next to the number instead of reporting a
+            # dry queue that has a usable script sitting in it.
+            skipped = list(supply.UNREADABLE_QUEUE_FILES)
+            if skipped:
+                note += f"; {len(skipped)} unreadable: {', '.join(sorted(skipped)[:3])}"
         except Exception as exc:  # a broken queue is a finding, not a crash
             count, note = 0, f"selection failed: {exc}"
         rows.append({"queue": f"longform:{channel_id}", "channel": channel_id,
