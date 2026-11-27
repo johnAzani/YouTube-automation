@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T09:15:45Z",
+  "generated_at": "2026-11-27T09:16:09Z",
   "monitor_generated_at": "2026-11-27T05:34:22.095144+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -13,7 +13,7 @@
     "published_shorts": 649,
     "public_total": 893,
     "queued_longform": 119,
-    "queued_shorts": 36,
+    "queued_shorts": 34,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -375,7 +375,7 @@
         "public_total": 84,
         "queued_longform": 17,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 1
       },
       "latest_video": {
         "id": "SHORT-HEALINGPSALM34V18",
@@ -23980,28 +23980,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-healingisaiah41v10",
-        "file": "0417-short-healingisaiah41v10.yml",
-        "companion_longform_id": "0417",
-        "scripture": "Isaiah 41:10",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-healingpsalm73v26",
-        "file": "0419-short-healingpsalm73v26.yml",
-        "companion_longform_id": "0419",
-        "scripture": "Psalm 73:26",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-shieldzechariah2v5",
