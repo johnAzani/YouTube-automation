@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T01:51:17Z",
+  "generated_at": "2026-11-27T01:56:03Z",
   "monitor_generated_at": "2026-11-27T01:49:44.815385+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 244,
     "published_shorts": 646,
     "public_total": 888,
-    "queued_longform": 102,
+    "queued_longform": 104,
     "queued_shorts": 25,
     "automations_ok": 12,
     "automations_total": 15,
@@ -436,7 +436,7 @@
         "published_shorts": 60,
         "thumbnail_pending": 0,
         "public_total": 83,
-        "queued_longform": 13,
+        "queued_longform": 15,
         "queued_other": 0,
         "queued_shorts": 1
       },
@@ -22755,6 +22755,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1243
+      },
+      {
+        "id": "0541",
+        "slug": "earth-yield-her-increase-psalm-67-psalm-67-5-7",
+        "file": "0541-earth-yield-her-increase-psalm-67-psalm-67-5-7.md",
+        "title": "Earth Yield Her Increase: Psalm 67:5-7 | The Provision Table",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1434
+      },
+      {
+        "id": "0542",
+        "slug": "when-honest-labour-needs-gods-hand",
+        "file": "0542-when-honest-labour-needs-gods-hand.md",
+        "title": "When Honest Labour Needs God's Hand: Genesis 39:2-3",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1421
       },
       {
         "id": "0627",
