@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T13:13:59Z",
+  "generated_at": "2026-11-27T13:15:34Z",
   "monitor_generated_at": "2026-11-27T12:48:50.085354+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 909,
-    "published_longform": 253,
+    "published_total": 910,
+    "published_longform": 254,
     "published_shorts": 656,
-    "public_total": 907,
-    "queued_longform": 127,
-    "queued_shorts": 31,
+    "public_total": 908,
+    "queued_longform": 126,
+    "queued_shorts": 29,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -33,28 +33,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 111,
-        "published_longform": 28,
+        "published_total": 112,
+        "published_longform": 29,
         "published_shorts": 83,
         "thumbnail_pending": 1,
-        "public_total": 110,
-        "queued_longform": 12,
+        "public_total": 111,
+        "queued_longform": 11,
         "queued_other": 5,
-        "queued_shorts": 3
+        "queued_shorts": 1
       },
       "latest_video": {
-        "id": "SHORT-PSALM23FULL",
-        "title": "Say This Psalm 23 Prayer Before You Sleep | He Is With You In The Silence #Shorts",
-        "format": "short",
-        "youtube_video_id": "gclYs47Xhbs",
-        "watch_url": "https://www.youtube.com/shorts/gclYs47Xhbs",
-        "published_on": "2026-11-27",
-        "published_at": "2026-11-27T09:14:05Z"
-      },
-      "next_queued_longform": {
         "id": "0113",
         "title": "When Sleep Will Not Come: Psalm 42:8 | The Secret Place",
-        "words": 1383,
+        "format": "longform",
+        "youtube_video_id": "RwGDy-gekEw",
+        "watch_url": "https://youtu.be/RwGDy-gekEw",
+        "published_on": "2026-11-27",
+        "published_at": "2026-11-27T13:14:28Z"
+      },
+      "next_queued_longform": {
+        "id": "0114",
+        "title": "When Your Soul Refuses Comfort: Psalm 77:6 | The Secret Place",
+        "words": 1082,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0113",
+      "slug": "when-the-dark-hours-wont-let-you-rest-psalm-42-8",
+      "file": "0113-when-the-dark-hours-wont-let-you-rest-psalm-42-8.md",
+      "title": "When Sleep Will Not Come: Psalm 42:8 | The Secret Place",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T13:14:28Z",
+      "youtube_video_id": "RwGDy-gekEw",
+      "watch_url": "https://youtu.be/RwGDy-gekEw",
+      "youtu_be_url": "https://youtu.be/RwGDy-gekEw",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/RwGDy-gekEw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/RwGDy-gekEw/hqdefault.jpg",
+      "thumb_text": "HIS SONG",
+      "thumbnail_pending": false,
+      "duration_label": "9m 07s",
+      "words": 1383
+    },
     {
       "id": "0324",
       "slug": "inviting-gods-peace-into-your-home-luke-10-5-6",
@@ -22633,19 +22657,6 @@
         "words": 1368
       },
       {
-        "id": "0113",
-        "slug": "when-the-dark-hours-wont-let-you-rest-psalm-42-8",
-        "file": "0113-when-the-dark-hours-wont-let-you-rest-psalm-42-8.md",
-        "title": "When Sleep Will Not Come: Psalm 42:8 | The Secret Place",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1383
-      },
-      {
         "id": "0114",
         "slug": "when-you-cant-find-your-joy-psalm-77-6",
         "file": "0114-when-you-cant-find-your-joy-psalm-77-6.md",
@@ -24343,28 +24354,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-psalm36v7",
-        "file": "0122-short-psalm36v7.yml",
-        "companion_longform_id": "0122",
-        "scripture": "Psalm 36:7",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-psalm57v1",
-        "file": "0123-short-psalm57v1.yml",
-        "companion_longform_id": "0123",
-        "scripture": "Psalm 57:1",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-midnightcolossians4v2",
