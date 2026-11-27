@@ -2,7 +2,7 @@
 id: '0522'
 title: 'Guiding Your Affairs With Discretion: Psalm 112:1-5'
 slug: guiding-your-affairs-with-discretion-psalm-112-1-5
-status: approved
+status: published
 channel: prayer7
 privacy: public
 format: longform
@@ -74,6 +74,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-27"
+published_at: "2026-11-27T11:57:46Z"
+youtube_video_id: "6nByzY8kuWc"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 480.81
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "hook"
 ---
 
 ## Scene 1 — The Blessed Man Who Feareth the Lord
