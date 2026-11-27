@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T00:12:45Z",
+  "generated_at": "2026-11-27T00:18:44Z",
   "monitor_generated_at": "2026-11-26T23:19:47.437412+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 884,
+    "published_total": 885,
     "published_longform": 242,
-    "published_shorts": 642,
-    "public_total": 882,
+    "published_shorts": 643,
+    "public_total": 883,
     "queued_longform": 104,
-    "queued_shorts": 29,
+    "queued_shorts": 28,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": false
@@ -567,23 +567,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 75,
+        "published_total": 76,
         "published_longform": 18,
-        "published_shorts": 57,
-        "thumbnail_pending": 75,
-        "public_total": 75,
+        "published_shorts": 58,
+        "thumbnail_pending": 76,
+        "public_total": 76,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "SHORT-GARDENCOLOSSIANS3V15",
-        "title": "Pray This Colossians 3:15-17 Prayer of Thanksgiving | The Garden Waits #Shorts",
+        "id": "SHORT-GARDENHEBREWS13V15",
+        "title": "Pray This Hebrews 13:15 Prayer of Thanksgiving | Sacrifice Of Praise #Shorts",
         "format": "short",
-        "youtube_video_id": "8Z44gqKOQDs",
-        "watch_url": "https://www.youtube.com/shorts/8Z44gqKOQDs",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T19:46:44Z"
+        "youtube_video_id": "MOtjSAE7fjs",
+        "watch_url": "https://www.youtube.com/shorts/MOtjSAE7fjs",
+        "published_on": "2026-11-27",
+        "published_at": "2026-11-27T00:17:37Z"
       },
       "next_queued_longform": {
         "id": "0719",
@@ -592,8 +592,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenhebrews13v15",
-        "scripture": "Hebrews 13:15",
+        "short": "short-gardenpsalm9v1",
+        "scripture": "Psalm 9:1-2",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENHEBREWS13V15",
+      "slug": "short-gardenhebrews13v15-thanksgiving-prayer",
+      "file": "short-gardenhebrews13v15-thanksgiving-prayer.md",
+      "title": "Pray This Hebrews 13:15 Prayer of Thanksgiving | Sacrifice Of Praise #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T00:17:37Z",
+      "youtube_video_id": "MOtjSAE7fjs",
+      "watch_url": "https://www.youtube.com/shorts/MOtjSAE7fjs",
+      "youtu_be_url": "https://youtu.be/MOtjSAE7fjs",
+      "shorts_url": "https://www.youtube.com/shorts/MOtjSAE7fjs",
+      "studio_url": "https://studio.youtube.com/video/MOtjSAE7fjs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/MOtjSAE7fjs/hqdefault.jpg",
+      "thumb_text": "BY HIM LET US OFFER \u00b7 THE SACRIFICE OF",
+      "thumbnail_pending": true,
+      "duration_label": "48s",
+      "words": 619
+    },
     {
       "id": "SHORT-HEALINGPSALM34V18",
       "slug": "short-healingpsalm34v18-restoration-prayer",
@@ -23516,17 +23540,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-gardenhebrews13v15",
-        "file": "0714-short-gardenhebrews13v15.yml",
-        "companion_longform_id": "0714",
-        "scripture": "Hebrews 13:15",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm9v1",
