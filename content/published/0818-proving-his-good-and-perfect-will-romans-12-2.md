@@ -2,7 +2,7 @@
 id: 0818
 title: 'Proving His Good and Perfect Will: Romans 12:2 | The Guided Path'
 slug: proving-his-good-and-perfect-will-romans-12-2
-status: approved
+status: published
 channel: prayer10
 privacy: public
 format: longform
@@ -75,6 +75,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-27"
+published_at: "2026-11-27T12:09:41Z"
+youtube_video_id: "dJFuUOqBLKw"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 734.06
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — The Pull of the World and the Need for Renewal

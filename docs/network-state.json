@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T11:59:06Z",
+  "generated_at": "2026-11-27T12:10:51Z",
   "monitor_generated_at": "2026-11-27T05:34:22.095144+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 904,
-    "published_longform": 251,
+    "published_total": 905,
+    "published_longform": 252,
     "published_shorts": 653,
-    "public_total": 902,
-    "queued_longform": 121,
+    "public_total": 903,
+    "queued_longform": 120,
     "queued_shorts": 28,
     "automations_ok": 12,
     "automations_total": 15,
@@ -640,28 +640,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 74,
-        "published_longform": 17,
+        "published_total": 75,
+        "published_longform": 18,
         "published_shorts": 57,
         "thumbnail_pending": 0,
-        "public_total": 74,
-        "queued_longform": 6,
+        "public_total": 75,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPSALM139V23",
-        "title": "Pray This Psalm 139:23-24 Prayer for God's Guidance | Everlasting Path #Shorts",
-        "format": "short",
-        "youtube_video_id": "bOogI5wWdvw",
-        "watch_url": "https://www.youtube.com/shorts/bOogI5wWdvw",
-        "published_on": "2026-11-27",
-        "published_at": "2026-11-27T09:24:34Z"
-      },
-      "next_queued_longform": {
         "id": "0818",
         "title": "Proving His Good and Perfect Will: Romans 12:2 | The Guided Path",
-        "words": 1953,
+        "format": "longform",
+        "youtube_video_id": "dJFuUOqBLKw",
+        "watch_url": "https://youtu.be/dJFuUOqBLKw",
+        "published_on": "2026-11-27",
+        "published_at": "2026-11-27T12:09:41Z"
+      },
+      "next_queued_longform": {
+        "id": "0819",
+        "title": "Filled With the Knowledge of His Will: Colossians 1:9-10",
+        "words": 1613,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0818",
+      "slug": "proving-his-good-and-perfect-will-romans-12-2",
+      "file": "0818-proving-his-good-and-perfect-will-romans-12-2.md",
+      "title": "Proving His Good and Perfect Will: Romans 12:2 | The Guided Path",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T12:09:41Z",
+      "youtube_video_id": "dJFuUOqBLKw",
+      "watch_url": "https://youtu.be/dJFuUOqBLKw",
+      "youtu_be_url": "https://youtu.be/dJFuUOqBLKw",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/dJFuUOqBLKw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/dJFuUOqBLKw/hqdefault.jpg",
+      "thumb_text": "RENEW MY MIND",
+      "thumbnail_pending": false,
+      "duration_label": "12m 14s",
+      "words": 1953
+    },
     {
       "id": "0522",
       "slug": "guiding-your-affairs-with-discretion-psalm-112-1-5",
@@ -23460,19 +23484,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1402
-      },
-      {
-        "id": "0818",
-        "slug": "proving-his-good-and-perfect-will-romans-12-2",
-        "file": "0818-proving-his-good-and-perfect-will-romans-12-2.md",
-        "title": "Proving His Good and Perfect Will: Romans 12:2 | The Guided Path",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1953
       },
       {
         "id": "0819",
