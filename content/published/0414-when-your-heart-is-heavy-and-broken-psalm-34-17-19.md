@@ -1,6 +1,6 @@
 ---
 id: '0414'
-title: 'When Your Heart Is Heavy and Broken: Psalm 34:17-19 | The Healing Balm'
+title: "Comfort for a Broken Spirit: Psalm 34:17-19 | The Healing Balm"
 slug: when-your-heart-is-heavy-and-broken-psalm-34-17-19
 status: published
 channel: prayer6
@@ -81,11 +81,14 @@ originality:
 published_on: "2026-11-20"
 published_at: "2026-11-20T21:50:52Z"
 youtube_video_id: "WkCwviY7JCM"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 top_comment: "ok"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "When Your Heart Is Heavy and Broken: Psalm 34:17-19 | The Healing Balm"
+retitled_at: "2026-11-27"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith
