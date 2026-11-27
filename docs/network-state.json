@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T20:28:04Z",
+  "generated_at": "2026-11-27T20:28:39Z",
   "monitor_generated_at": "2026-11-27T20:19:39.147944+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 921,
+    "published_total": 922,
     "published_longform": 259,
-    "published_shorts": 662,
-    "public_total": 919,
+    "published_shorts": 663,
+    "public_total": 920,
     "queued_longform": 142,
-    "queued_shorts": 19,
+    "queued_shorts": 18,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 120,
+        "published_total": 121,
         "published_longform": 37,
-        "published_shorts": 83,
+        "published_shorts": 84,
         "thumbnail_pending": 0,
-        "public_total": 119,
+        "public_total": 120,
         "queued_longform": 20,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM71V15",
-        "title": "Say This Psalm 71:15 Prayer for Fresh Start at Sunrise | Prayer For Unknown Hours #Shorts",
+        "id": "SHORT-MORNINGPSALM73V24",
+        "title": "Say This Psalm 73:24 Prayer for Fresh Start at Sunrise | Decisions Wait For You #Shorts",
         "format": "short",
-        "youtube_video_id": "gQKVZc6CVMQ",
-        "watch_url": "https://www.youtube.com/shorts/gQKVZc6CVMQ",
+        "youtube_video_id": "oO61g8ExXDM",
+        "watch_url": "https://www.youtube.com/shorts/oO61g8ExXDM",
         "published_on": "2026-11-27",
-        "published_at": "2026-11-27T16:48:56Z"
+        "published_at": "2026-11-27T20:27:24Z"
       },
       "next_queued_longform": {
         "id": "0081",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM73V24",
+      "slug": "short-morningpsalm73v24-sunrise-prayer",
+      "file": "short-morningpsalm73v24-sunrise-prayer.md",
+      "title": "Say This Psalm 73:24 Prayer for Fresh Start at Sunrise | Decisions Wait For You #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T20:27:24Z",
+      "youtube_video_id": "oO61g8ExXDM",
+      "watch_url": "https://www.youtube.com/shorts/oO61g8ExXDM",
+      "youtu_be_url": "https://youtu.be/oO61g8ExXDM",
+      "shorts_url": "https://www.youtube.com/shorts/oO61g8ExXDM",
+      "studio_url": "https://studio.youtube.com/video/oO61g8ExXDM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/oO61g8ExXDM/hqdefault.jpg",
+      "thumb_text": "PSALM 73:24 \u00b7 THOU SHALT GUIDE ME",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 649
+    },
     {
       "id": "SHORT-MIDNIGHTHEBREWS13V20",
       "slug": "short-midnighthebrews13v20-midnight-prayer",
@@ -24733,17 +24757,6 @@
         "file": "0000-short-morningjohn1v4.yml",
         "companion_longform_id": "",
         "scripture": "John 1:4-5",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-morningpsalm73v24",
-        "file": "0000-short-morningpsalm73v24.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 73:24",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
