@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T16:57:51Z",
+  "generated_at": "2026-11-27T16:58:50Z",
   "monitor_generated_at": "2026-11-27T12:48:50.085354+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 913,
+    "published_total": 914,
     "published_longform": 254,
-    "published_shorts": 659,
-    "public_total": 911,
+    "published_shorts": 660,
+    "public_total": 912,
     "queued_longform": 128,
-    "queued_shorts": 24,
+    "queued_shorts": 22,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -572,23 +572,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 78,
+        "published_total": 79,
         "published_longform": 19,
-        "published_shorts": 59,
-        "thumbnail_pending": 78,
-        "public_total": 78,
+        "published_shorts": 60,
+        "thumbnail_pending": 79,
+        "public_total": 79,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "0719",
-        "title": "Thanksgiving Worship When Your Soul Is Thirsty: Psalm 63:3-4",
-        "format": "longform",
-        "youtube_video_id": "cdlvGSm4K14",
-        "watch_url": "https://youtu.be/cdlvGSm4K14",
+        "id": "SHORT-GARDENPSALM138V1",
+        "title": "Pray This Psalm 138:1-2 Prayer of Thanksgiving | Slow To Offer Praise Today #Shorts",
+        "format": "short",
+        "youtube_video_id": "BAYLivpXVno",
+        "watch_url": "https://www.youtube.com/shorts/BAYLivpXVno",
         "published_on": "2026-11-27",
-        "published_at": "2026-11-27T10:22:50Z"
+        "published_at": "2026-11-27T16:57:34Z"
       },
       "next_queued_longform": {
         "id": "0720",
@@ -597,8 +597,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm138v1",
-        "scripture": "Psalm 138:1-2",
+        "short": "short-gardenpsalm96v11",
+        "scripture": "Psalm 96:11-13",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM138V1",
+      "slug": "short-gardenpsalm138v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm138v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 138:1-2 Prayer of Thanksgiving | Slow To Offer Praise Today #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T16:57:34Z",
+      "youtube_video_id": "BAYLivpXVno",
+      "watch_url": "https://www.youtube.com/shorts/BAYLivpXVno",
+      "youtu_be_url": "https://youtu.be/BAYLivpXVno",
+      "shorts_url": "https://www.youtube.com/shorts/BAYLivpXVno",
+      "studio_url": "https://studio.youtube.com/video/BAYLivpXVno/edit",
+      "thumb_url": "https://i.ytimg.com/vi/BAYLivpXVno/hqdefault.jpg",
+      "thumb_text": "WHEN YOUR HEART \u00b7 FEELS DIVIDED",
+      "thumbnail_pending": true,
+      "duration_label": "49s",
+      "words": 633
+    },
     {
       "id": "SHORT-SHIELDPSALM71V3",
       "slug": "short-shieldpsalm71v3-protection-prayer",
@@ -24289,17 +24313,6 @@
         "target_window_utc": "17:14"
       },
       {
-        "short": "short-gardenpsalm138v1",
-        "file": "0000-short-gardenpsalm138v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 138:1-2",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
         "short": "short-gardenpsalm96v11",
         "file": "0000-short-gardenpsalm96v11.yml",
         "companion_longform_id": "",
@@ -24480,17 +24493,6 @@
         "file": "0720-short-gardenephesians5v20.yml",
         "companion_longform_id": "0720",
         "scripture": "Ephesians 5:20",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-gardenpsalm8v1",
-        "file": "0726-short-gardenpsalm8v1.yml",
-        "companion_longform_id": "0726",
-        "scripture": "Psalm 8:1",
         "channel": "prayer9",
         "channel_name": "The Praise Garden",
         "status": "approved",
