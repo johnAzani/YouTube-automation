@@ -3,24 +3,24 @@
   "as_of": "2026-11-27",
   "concepts": [
     {
+      "concept": "quiet",
+      "videos": 21,
+      "impressions": 196,
+      "clicks": 8,
+      "click_rate_percent": 4.08,
+      "measurable": false
+    },
+    {
       "concept": "poster",
       "videos": 3,
-      "impressions": 68,
+      "impressions": 128,
       "clicks": 0,
       "click_rate_percent": 0.0,
       "measurable": false
     },
     {
       "concept": "hook",
-      "videos": 4,
-      "impressions": 0,
-      "clicks": 0,
-      "click_rate_percent": null,
-      "measurable": false
-    },
-    {
-      "concept": "quiet",
-      "videos": 16,
+      "videos": 5,
       "impressions": 0,
       "clicks": 0,
       "click_rate_percent": null,
@@ -30,8 +30,8 @@
   "leader": null,
   "leader_click_rate_percent": null,
   "min_impressions": 300,
-  "videos_assigned": 23,
-  "videos_in_reach": 1,
+  "videos_assigned": 29,
+  "videos_in_reach": 2,
   "channels_with_reach": [
     "secret-place"
   ],
@@ -42,9 +42,10 @@
     "prayer6",
     "prayer7",
     "prayer8",
+    "secret-place",
     "unknown"
   ],
-  "network_impressions_in_reach_files": 17369,
+  "network_impressions_in_reach_files": 18160,
   "note": "A per-video Test & Compare cannot be opened or read by the Data API; this compares the concepts the rotation put live on different videos of the same channel. A concept under the impression floor is shown and not trusted.",
   "privacy": "Impressions, clicks and a click rate. No revenue, no viewer.",
   "cost_lock": "$0.00 \u2014 reads committed reach files; no API call."
