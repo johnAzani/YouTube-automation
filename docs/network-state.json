@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T19:30:30Z",
+  "generated_at": "2026-11-27T19:33:34Z",
   "monitor_generated_at": "2026-11-27T17:37:13.999368+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 256,
     "published_shorts": 661,
     "public_total": 915,
-    "queued_longform": 139,
+    "queued_longform": 140,
     "queued_shorts": 20,
     "automations_ok": 12,
     "automations_total": 15,
@@ -509,7 +509,7 @@
         "published_shorts": 59,
         "thumbnail_pending": 15,
         "public_total": 79,
-        "queued_longform": 6,
+        "queued_longform": 7,
         "queued_other": 4,
         "queued_shorts": 2
       },
@@ -23863,6 +23863,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1587
+      },
+      {
+        "id": "0620",
+        "slug": "guarded-in-all-your-ways-psalm-91-11",
+        "file": "0620-guarded-in-all-your-ways-psalm-91-11.md",
+        "title": "Guarded in All Your Ways: Psalm 91:11 | The Covenant Shield",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1176
       },
       {
         "id": "0627",
