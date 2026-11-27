@@ -2,7 +2,7 @@
 id: '0625'
 title: 'Stillness When Battles Loom: Exodus 14:14 | The Covenant Shield'
 slug: stillness-when-battles-loom-exodus-14-14-the-covenant-shield
-status: approved
+status: published
 channel: prayer8
 privacy: public
 format: longform
@@ -72,6 +72,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-27"
+published_at: "2026-11-27T01:25:50Z"
+youtube_video_id: "1ExKv-3nwyA"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 597.68
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — The Strong Tower of Divine Defense

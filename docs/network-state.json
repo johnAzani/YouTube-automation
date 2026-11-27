@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T00:57:15Z",
+  "generated_at": "2026-11-27T01:27:08Z",
   "monitor_generated_at": "2026-11-26T23:19:47.437412+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 888,
-    "published_longform": 243,
-    "published_shorts": 645,
-    "public_total": 886,
-    "queued_longform": 103,
-    "queued_shorts": 26,
+    "published_total": 890,
+    "published_longform": 244,
+    "published_shorts": 646,
+    "public_total": 888,
+    "queued_longform": 102,
+    "queued_shorts": 25,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": false
@@ -499,33 +499,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 74,
-        "published_longform": 19,
-        "published_shorts": 55,
+        "published_total": 76,
+        "published_longform": 20,
+        "published_shorts": 56,
         "thumbnail_pending": 22,
-        "public_total": 74,
-        "queued_longform": 6,
+        "public_total": 76,
+        "queued_longform": 5,
         "queued_other": 4,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM62V6",
-        "title": "Pray This Psalm 62:6-7 Prayer for Divine Protection | Find Your Sanctuary Here #Shorts",
-        "format": "short",
-        "youtube_video_id": "SHvXuE5b2k4",
-        "watch_url": "https://www.youtube.com/shorts/SHvXuE5b2k4",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T20:30:37Z"
-      },
-      "next_queued_longform": {
         "id": "0625",
         "title": "Stillness When Battles Loom: Exodus 14:14 | The Covenant Shield",
-        "words": 1488,
+        "format": "longform",
+        "youtube_video_id": "1ExKv-3nwyA",
+        "watch_url": "https://youtu.be/1ExKv-3nwyA",
+        "published_on": "2026-11-27",
+        "published_at": "2026-11-27T01:25:50Z"
+      },
+      "next_queued_longform": {
+        "id": "0627",
+        "title": "If God Be For Us: Romans 8:31 | The Covenant Shield",
+        "words": 1140,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldexodus14v14",
-        "scripture": "Exodus 14:14",
+        "short": "short-shieldpsalm140v7",
+        "scripture": "Psalm 140:7",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -692,6 +692,30 @@
   ],
   "videos": [
     {
+      "id": "0625",
+      "slug": "stillness-when-battles-loom-exodus-14-14-the-covenant-shield",
+      "file": "0625-stillness-when-battles-loom-exodus-14-14-the-covenant-shield.md",
+      "title": "Stillness When Battles Loom: Exodus 14:14 | The Covenant Shield",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T01:25:50Z",
+      "youtube_video_id": "1ExKv-3nwyA",
+      "watch_url": "https://youtu.be/1ExKv-3nwyA",
+      "youtu_be_url": "https://youtu.be/1ExKv-3nwyA",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/1ExKv-3nwyA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/1ExKv-3nwyA/hqdefault.jpg",
+      "thumb_text": "GOD FIGHTS FOR ME",
+      "thumbnail_pending": false,
+      "duration_label": "9m 58s",
+      "words": 1488
+    },
+    {
       "id": "0228",
       "slug": "the-watchmans-midnight-vigil-colossians-42",
       "file": "0228-the-watchmans-midnight-vigil-colossians-42.md",
@@ -762,6 +786,30 @@
       "thumbnail_pending": true,
       "duration_label": "48s",
       "words": 619
+    },
+    {
+      "id": "SHORT-SHIELDEXODUS14V14",
+      "slug": "short-shieldexodus14v14-protection-prayer",
+      "file": "short-shieldexodus14v14-protection-prayer.md",
+      "title": "Pray This Exodus 14:14 Prayer for Divine Protection | Find Your Refuge Here #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T00:17:35Z",
+      "youtube_video_id": "WgDCcpofb6c",
+      "watch_url": "https://www.youtube.com/shorts/WgDCcpofb6c",
+      "youtu_be_url": "https://youtu.be/WgDCcpofb6c",
+      "shorts_url": "https://www.youtube.com/shorts/WgDCcpofb6c",
+      "studio_url": "https://studio.youtube.com/video/WgDCcpofb6c/edit",
+      "thumb_url": "https://i.ytimg.com/vi/WgDCcpofb6c/hqdefault.jpg",
+      "thumb_text": "DIVINE \u00b7 PROTECTION",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 635
     },
     {
       "id": "SHORT-HEALINGPSALM34V18",
@@ -22709,19 +22757,6 @@
         "words": 1243
       },
       {
-        "id": "0625",
-        "slug": "stillness-when-battles-loom-exodus-14-14-the-covenant-shield",
-        "file": "0625-stillness-when-battles-loom-exodus-14-14-the-covenant-shield.md",
-        "title": "Stillness When Battles Loom: Exodus 14:14 | The Covenant Shield",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1488
-      },
-      {
         "id": "0627",
         "slug": "if-god-be-for-us-romans-8-31",
         "file": "0627-if-god-be-for-us-romans-8-31.md",
@@ -23522,17 +23557,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-shieldexodus14v14",
-        "file": "0625-short-shieldexodus14v14.yml",
-        "companion_longform_id": "0625",
-        "scripture": "Exodus 14:14",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm140v7",
