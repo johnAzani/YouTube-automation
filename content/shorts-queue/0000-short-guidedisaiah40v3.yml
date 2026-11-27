@@ -1,0 +1,16 @@
+short: short-guidedisaiah40v3
+channel: prayer10
+standalone: true
+source: seasonal
+scripture: Isaiah 40:3
+status: approved
+renderer_ready: true
+authored_by_brain: true
+privacy: public
+replace: false
+target_window_utc: '18:44'
+notes: "Advent Short on Isaiah 40:3, for 2026-11-29 to 2026-12-23 \u2014 spec authored\
+  \ by the brain (101 narration words)"
+season: advent
+not_before: '2026-11-29'
+not_after: '2026-12-23'

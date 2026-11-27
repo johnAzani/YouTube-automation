@@ -1,0 +1,310 @@
+{
+  "key": "short-guidedisaiah40v3",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "PREPARE THE WAY",
+    "WISDOM FOR ADVENT"
+  ],
+  "poster": [
+    "IN THIS SEASON",
+    "OF QUIET WAITING",
+    "PREPARE A PATH",
+    "FOR HIS LIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain pass dawn blue light",
+    "quiet alpine forest path winter fog",
+    "calm mountain valley golden hour early light",
+    "wide desert valley dawn light highway path",
+    "peaceful mountain stream winter pine forest",
+    "snowy alpine river valley calm morning",
+    "misty forest path sunlight breaking through trees",
+    "serene mountain lake mirror reflection twilight"
+  ],
+  "scenes": [
+    {
+      "a": "In these quiet weeks of Advent, you wait.",
+      "img": "short-guidedisaiah40v3-scene-01.jpg",
+      "kicker": "QUIET WAITING",
+      "sub": "ADVENT SEASON OF WAITING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You carry unresolved decisions into the winter shadows.",
+      "img": "short-guidedisaiah40v3-scene-02.jpg",
+      "kicker": "WINTER SHADOWS",
+      "sub": "UNRESOLVED DECISIONS TODAY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear God's word to you today:",
+      "img": "short-guidedisaiah40v3-scene-03.jpg",
+      "kicker": "THE PROMISED WORD",
+      "sub": "ISAIAH FORTY VERSE THREE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "The voice of him that crieth in the wilderness, Prepare ye the way of the LORD, make straight in the desert a highway for our God.",
+      "img": "short-guidedisaiah40v3-scene-04.jpg",
+      "kicker": "PREPARE THE WAY",
+      "sub": "A HIGHWAY FOR OUR GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, in this dry wilderness, clean out the clutter of my restless mind.",
+      "img": "short-guidedisaiah40v3-scene-05.jpg",
+      "kicker": "CLEAR THE CLUTTER",
+      "sub": "CLEAN OUT RESTLESS THOUGHTS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Make a plain path for Your peace to enter my home.",
+      "img": "short-guidedisaiah40v3-scene-06.jpg",
+      "kicker": "MAKE A PATH",
+      "sub": "PEACE IN YOUR HOME",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Help me surrender every anxious thought so Your light may shine clear.",
+      "img": "short-guidedisaiah40v3-scene-07.jpg",
+      "kicker": "HIS COMING LIGHT",
+      "sub": "SURRENDER EVERY ANXIOUS CARE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Teach my heart to wait with quiet trust. Amen. In these quiet weeks of Advent, you wait.",
+      "img": "short-guidedisaiah40v3-scene-08.jpg",
+      "kicker": "QUIET TRUST",
+      "sub": "REST IN HIS PROMISED LIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "In these quiet weeks of Advent, you wait."
+    ],
+    [
+      3,
+      7,
+      "You carry unresolved decisions into the winter shadows."
+    ],
+    [
+      7,
+      11,
+      "Hear God's word to you today:"
+    ],
+    [
+      11,
+      22,
+      "The voice of him that crieth in the wilderness, Prepare ye the way of the LORD, make straight in the desert a highway for our God."
+    ],
+    [
+      22,
+      29,
+      "Lord, in this dry wilderness, clean out the clutter of my restless mind."
+    ],
+    [
+      29,
+      36,
+      "Make a plain path for Your peace to enter my home."
+    ],
+    [
+      36,
+      44,
+      "Help me surrender every anxious thought so Your light may shine clear."
+    ],
+    [
+      44,
+      52,
+      "Teach my heart to wait with quiet trust. Amen. In these quiet weeks of Advent, you wait."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "IN THESE QUIET WEEKS",
+        "OF ADVENT, YOU WAIT"
+      ],
+      [
+        "ADVENT",
+        "WAIT"
+      ],
+      "ISAIAH 40 : 3"
+    ],
+    [
+      3,
+      7,
+      [
+        "YOU CARRY UNRESOLVED",
+        "DECISIONS INTO SHADOWS"
+      ],
+      [
+        "DECISIONS",
+        "SHADOWS"
+      ],
+      "ISAIAH 40 : 3"
+    ],
+    [
+      7,
+      11,
+      [
+        "HEAR GOD'S WORD",
+        "TO YOU TODAY"
+      ],
+      [
+        "WORD",
+        "TODAY"
+      ],
+      "ISAIAH 40 : 3"
+    ],
+    [
+      11,
+      22,
+      [
+        "PREPARE YE THE WAY",
+        "MAKE STRAIGHT A HIGHWAY"
+      ],
+      [
+        "PREPARE",
+        "HIGHWAY"
+      ],
+      "ISAIAH 40 : 3"
+    ],
+    [
+      22,
+      29,
+      [
+        "CLEAN OUT THE CLUTTER",
+        "OF MY RESTLESS MIND"
+      ],
+      [
+        "CLUTTER",
+        "MIND"
+      ],
+      "ISAIAH 40 : 3"
+    ],
+    [
+      29,
+      36,
+      [
+        "MAKE A PLAIN PATH",
+        "FOR YOUR PEACE"
+      ],
+      [
+        "PATH",
+        "PEACE"
+      ],
+      "ISAIAH 40 : 3"
+    ],
+    [
+      36,
+      44,
+      [
+        "SURRENDER EVERY THOUGHT",
+        "SO YOUR LIGHT SHINES CLEAR"
+      ],
+      [
+        "SURRENDER",
+        "LIGHT"
+      ],
+      "ISAIAH 40 : 3"
+    ],
+    [
+      44,
+      52,
+      [
+        "TEACH MY HEART TO WAIT",
+        "WITH QUIET TRUST"
+      ],
+      [
+        "WAIT",
+        "TRUST"
+      ],
+      "ISAIAH 40 : 3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "In these quiet weeks of Advent, you wait.",
+      "kind": "phrase",
+      "words": [
+        "ADVENT",
+        "WAIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The voice of him that crieth in the wilderness, Prepare ye the way of the LORD, make straight in the desert a highway for our God.",
+      "kind": "phrase",
+      "words": [
+        "PREPARE",
+        "HIGHWAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, in this dry wilderness, clean out the clutter of my restless mind.",
+      "kind": "phrase",
+      "words": [
+        "CLEAN",
+        "RESTLESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help me surrender every anxious thought so Your light may shine clear.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 40:3"
+}
