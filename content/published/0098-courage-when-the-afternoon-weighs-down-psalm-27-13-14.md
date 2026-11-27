@@ -2,7 +2,7 @@
 id: 0098
 title: 'Courage When the Afternoon Weighs Down: Psalm 27:13-14'
 slug: courage-when-the-afternoon-weighs-down-psalm-27-13-14
-status: approved
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -73,6 +73,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-27"
+published_at: "2026-11-27T02:59:02Z"
+youtube_video_id: "YbF5Jz89rUc"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 572.13
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — The Noonday Pause and the Mid-Shift Weight
