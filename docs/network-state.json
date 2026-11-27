@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T17:40:06Z",
+  "generated_at": "2026-11-27T17:40:16Z",
   "monitor_generated_at": "2026-11-27T17:37:13.999368+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 256,
     "published_shorts": 661,
     "public_total": 915,
-    "queued_longform": 130,
+    "queued_longform": 132,
     "queued_shorts": 20,
     "automations_ok": 12,
     "automations_total": 15,
@@ -38,7 +38,7 @@
         "published_shorts": 83,
         "thumbnail_pending": 1,
         "public_total": 111,
-        "queued_longform": 13,
+        "queued_longform": 15,
         "queued_other": 5,
         "queued_shorts": 1
       },
@@ -22953,6 +22953,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1542
+      },
+      {
+        "id": "0127",
+        "slug": "return-unto-thy-rest-psalm-116-7",
+        "file": "0127-return-unto-thy-rest-psalm-116-7.md",
+        "title": "Return Unto Thy Rest: Psalm 116:7 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1152
+      },
+      {
+        "id": "0128",
+        "slug": "the-gift-of-rest-when-you-cannot-switch-off-psalm-127-2",
+        "file": "0128-the-gift-of-rest-when-you-cannot-switch-off-psalm-127-2.md",
+        "title": "The Gift of Rest When You Cannot Switch Off: Psalm 127:2",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1396
       },
       {
         "id": "0139",
