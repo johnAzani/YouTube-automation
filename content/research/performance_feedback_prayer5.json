@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-27T05:39:04.947478+00:00",
+  "generated_at": "2026-11-27T10:52:01.749599+00:00",
   "as_of": "2026-11-27",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 11,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 82,
+    "receipt_video_ids": 83,
     "matched_video_ids": 50,
     "longform_below_view_threshold": 11,
     "longform_missing_view_count": 0,
@@ -50,58 +50,58 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 34,
+    "measured_shorts": 33,
     "total_shorts": 39,
     "sufficient_data": true,
-    "avg_views": 28.9,
-    "median_views": 6,
-    "total_views": 981,
+    "avg_views": 27.2,
+    "median_views": 5,
+    "total_views": 897,
     "minimum_age_days": 2,
     "by_book": {
       "1 samuel": {
         "shorts": 1,
         "avg_views": 4.0,
-        "ratio": 0.713
+        "ratio": 0.716
       },
       "2 timothy": {
         "shorts": 1,
         "avg_views": 2.0,
-        "ratio": 0.69
+        "ratio": 0.691
       },
       "acts": {
         "shorts": 1,
         "avg_views": 32.0,
-        "ratio": 1.036
+        "ratio": 1.059
       },
       "colossians": {
         "shorts": 1,
         "avg_views": 5.0,
-        "ratio": 0.724
+        "ratio": 0.728
       },
       "deuteronomy": {
         "shorts": 2,
         "avg_views": 8.5,
-        "ratio": 0.647
+        "ratio": 0.656
       },
       "ecclesiastes": {
         "shorts": 1,
         "avg_views": 4.0,
-        "ratio": 0.713
+        "ratio": 0.716
       },
       "genesis": {
         "shorts": 1,
         "avg_views": 3.0,
-        "ratio": 0.701
+        "ratio": 0.703
       },
       "hebrews": {
         "shorts": 1,
         "avg_views": 7.0,
-        "ratio": 0.748
+        "ratio": 0.753
       },
       "isaiah": {
-        "shorts": 5,
-        "avg_views": 28.2,
-        "ratio": 0.984
+        "shorts": 4,
+        "avg_views": 14.2,
+        "ratio": 0.683
       },
       "joshua": {
         "shorts": 1,
@@ -111,83 +111,83 @@
       "jude": {
         "shorts": 1,
         "avg_views": 6.0,
-        "ratio": 0.736
+        "ratio": 0.74
       },
       "luke": {
         "shorts": 1,
         "avg_views": 1.0,
-        "ratio": 0.678
+        "ratio": 0.679
       },
       "malachi": {
         "shorts": 1,
         "avg_views": 3.0,
-        "ratio": 0.701
+        "ratio": 0.703
       },
       "mark": {
         "shorts": 1,
         "avg_views": 35.0,
-        "ratio": 1.071
+        "ratio": 1.096
       },
       "proverbs": {
         "shorts": 5,
         "avg_views": 22.0,
-        "ratio": 0.83
+        "ratio": 0.864
       },
       "psalm": {
         "shorts": 8,
         "avg_views": 75.4,
-        "ratio": 2.29
+        "ratio": 2.418
       },
       "romans": {
         "shorts": 1,
         "avg_views": 3.0,
-        "ratio": 0.701
+        "ratio": 0.703
       },
       "ruth": {
         "shorts": 1,
         "avg_views": 5.0,
-        "ratio": 0.724
+        "ratio": 0.728
       }
     },
     "by_theme": {
       "anxiety_peace": {
         "shorts": 2,
         "avg_views": 49.0,
-        "ratio": 1.349
+        "ratio": 1.401
       },
       "daily_guidance_wisdom": {
         "shorts": 1,
         "avg_views": 5.0,
-        "ratio": 0.724
+        "ratio": 0.728
       },
       "general_prayer": {
-        "shorts": 26,
-        "avg_views": 31.8,
-        "ratio": 1.094
+        "shorts": 25,
+        "avg_views": 29.7,
+        "ratio": 1.085
       },
       "light_courage": {
         "shorts": 1,
         "avg_views": 6.0,
-        "ratio": 0.736
+        "ratio": 0.74
       },
       "midday_strength_endurance": {
         "shorts": 1,
         "avg_views": 3.0,
-        "ratio": 0.701
+        "ratio": 0.703
       },
       "morning_mercy_renewal": {
         "shorts": 1,
         "avg_views": 35.0,
-        "ratio": 1.071
+        "ratio": 1.096
       },
       "stillness_refuge": {
         "shorts": 2,
         "avg_views": 4.0,
-        "ratio": 0.569
+        "ratio": 0.574
       }
     },
     "guidance": [
-      "Shorts: Psalm runs 2.3x this channel's average Short (29 views over 34 Shorts); its passages are written first."
+      "Shorts: Psalm runs 2.4x this channel's average Short (27 views over 33 Shorts); its passages are written first."
     ]
   },
   "guidance": [
