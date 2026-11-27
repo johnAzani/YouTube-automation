@@ -1,0 +1,16 @@
+short: short-morningjohn1v4
+channel: prayer2
+standalone: true
+source: seasonal
+scripture: John 1:4-5
+status: approved
+renderer_ready: true
+authored_by_brain: true
+privacy: public
+replace: false
+target_window_utc: 06:14
+notes: "Advent Short on John 1:4-5, for 2026-11-29 to 2026-12-23 \u2014 spec authored\
+  \ by the brain (100 narration words)"
+season: advent
+not_before: '2026-11-29'
+not_after: '2026-12-23'

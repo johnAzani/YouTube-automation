@@ -1,0 +1,356 @@
+{
+  "key": "short-morningpsalm21v13",
+  "channel": "prayer2",
+  "psalm": 21,
+  "title": [
+    "WHEN YOUR STRENGTH",
+    "RUNS EMPTY AT SUNRISE"
+  ],
+  "poster": [
+    "WHEN YOUR OWN",
+    "STRENGTH IS GONE",
+    "PRAY PSALM 21",
+    "AT SUNRISE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden sunrise over mountain ridge quiet morning mist",
+    "early morning sunlight filtering through open window wooden floor",
+    "vast dawn sky glowing orange above calm water horizon",
+    "sunlight piercing through morning forest fog canopy",
+    "gentle sunrise glow over quiet rural field morning",
+    "sun climbing above valley dawn light peaceful morning",
+    "first rays of sunlight across quiet still lake dawn"
+  ],
+  "scenes": [
+    {
+      "a": "Your own strength ran dry yesterday.",
+      "img": "short-morningpsalm21v13-scene-01.jpg",
+      "kicker": "RUNNING ON EMPTY",
+      "sub": "WHEN YOUR STRENGTH IS SPENT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You step into this quiet sunrise",
+      "img": "short-morningpsalm21v13-scene-02.jpg",
+      "kicker": "EMPTY HANDS",
+      "sub": "NOTHING LEFT TO GIVE",
+      "cam": "pan_right",
+      "focus": [
+        0.48,
+        0.5
+      ]
+    },
+    {
+      "a": "Be thou exalted, LORD, in thine own strength",
+      "img": "short-morningpsalm21v13-scene-03.jpg",
+      "kicker": "PSALM 21:13",
+      "sub": "EXALTED IN HIS OWN STRENGTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father, we lay down our hurried striving",
+      "img": "short-morningpsalm21v13-scene-04.jpg",
+      "kicker": "SURRENDER STRIVING",
+      "sub": "LOOKING TO HEAVENLY POWER",
+      "cam": "push_in",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "Be exalted in every impossible task",
+      "img": "short-morningpsalm21v13-scene-05.jpg",
+      "kicker": "EVERY HIDDEN TRIAL",
+      "sub": "LIFTING UP IMPOSSIBLE TASKS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.52
+      ]
+    },
+    {
+      "a": "Work through what our hands cannot resolve",
+      "img": "short-morningpsalm21v13-scene-06.jpg",
+      "kicker": "A NEW SONG",
+      "sub": "PRAISE BEFORE THE DAY ENDS",
+      "cam": "tilt_up",
+      "focus": [
+        0.48,
+        0.45
+      ]
+    },
+    {
+      "a": "Amen. Rest in His power",
+      "img": "short-morningpsalm21v13-scene-07.jpg",
+      "kicker": "HIS POWER",
+      "sub": "WHEN YOUR STRENGTH RUNS DRY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.48
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Your own strength ran dry yesterday."
+    ],
+    [
+      3,
+      10,
+      "You step into this quiet sunrise wondering what you have left to give."
+    ],
+    [
+      10,
+      21,
+      "Hear the word of God from Psalm 21, verse 13: Be thou exalted, LORD, in thine own strength: so will we sing and praise thy power."
+    ],
+    [
+      21,
+      31,
+      "Father, we lay down our hurried striving and look to the power that spoke light into the sky."
+    ],
+    [
+      31,
+      40,
+      "Be exalted in every impossible task, every quiet ache, and every hidden trial waiting on our doorsteps."
+    ],
+    [
+      40,
+      50,
+      "Work through what our hands cannot resolve, and give our hearts reason to sing praise before dusk falls."
+    ],
+    [
+      50,
+      57,
+      "Amen. Rest in His power when your own strength runs dry."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "YOUR OWN STRENGTH",
+        "RAN DRY YESTERDAY"
+      ],
+      [
+        "STRENGTH",
+        "RAN",
+        "DRY"
+      ],
+      "PSALM 21:13"
+    ],
+    [
+      3,
+      10,
+      [
+        "YOU STEP INTO THIS QUIET SUNRISE",
+        "WONDERING WHAT YOU HAVE",
+        "LEFT TO GIVE"
+      ],
+      [
+        "QUIET",
+        "SUNRISE",
+        "GIVE"
+      ],
+      "PSALM 21:13"
+    ],
+    [
+      10,
+      21,
+      [
+        "BE THOU EXALTED LORD",
+        "IN THINE OWN STRENGTH",
+        "SO WILL WE SING",
+        "AND PRAISE THY POWER"
+      ],
+      [
+        "EXALTED",
+        "LORD",
+        "STRENGTH",
+        "POWER"
+      ],
+      "PSALM 21:13"
+    ],
+    [
+      21,
+      31,
+      [
+        "FATHER WE LAY DOWN",
+        "OUR HURRIED STRIVING",
+        "AND LOOK TO THE POWER",
+        "THAT SPOKE LIGHT"
+      ],
+      [
+        "LAY",
+        "DOWN",
+        "STRIVING",
+        "POWER"
+      ],
+      "PSALM 21:13"
+    ],
+    [
+      31,
+      40,
+      [
+        "BE EXALTED IN EVERY",
+        "IMPOSSIBLE TASK EVERY QUIET ACHE",
+        "AND EVERY HIDDEN TRIAL",
+        "ON OUR DOORSTEPS"
+      ],
+      [
+        "EXALTED",
+        "ACHE",
+        "TRIAL"
+      ],
+      "PSALM 21:13"
+    ],
+    [
+      40,
+      50,
+      [
+        "WORK THROUGH WHAT OUR HANDS",
+        "CANNOT RESOLVE AND GIVE",
+        "OUR HEARTS REASON TO SING",
+        "BEFORE DUSK FALLS"
+      ],
+      [
+        "RESOLVE",
+        "HEARTS",
+        "SING"
+      ],
+      "PSALM 21:13"
+    ],
+    [
+      50,
+      57,
+      [
+        "AMEN REST IN HIS POWER",
+        "WHEN YOUR OWN STRENGTH",
+        "RUNS DRY TODAY"
+      ],
+      [
+        "REST",
+        "POWER",
+        "STRENGTH"
+      ],
+      "PSALM 21:13"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Your own strength ran dry yesterday.",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "OWN",
+        "STRENGTH",
+        "RAN",
+        "DRY"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "wondering what you have left to give.",
+      "kind": "phrase",
+      "words": [
+        "WHAT",
+        "YOU",
+        "HAVE",
+        "LEFT",
+        "TO",
+        "GIVE"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Be thou exalted, LORD, in thine own strength",
+      "kind": "phrase",
+      "words": [
+        "BE",
+        "THOU",
+        "EXALTED",
+        "LORD"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "so will we sing and praise thy power.",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "THY",
+        "POWER"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we lay down our hurried striving",
+      "kind": "phrase",
+      "words": [
+        "LAY",
+        "DOWN",
+        "HURRIED",
+        "STRIVING"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Be exalted in every impossible task",
+      "kind": "phrase",
+      "words": [
+        "BE",
+        "EXALTED",
+        "IMPOSSIBLE",
+        "TASK"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Work through what our hands cannot resolve",
+      "kind": "phrase",
+      "words": [
+        "HANDS",
+        "CANNOT",
+        "RESOLVE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Rest in His power when your own strength runs dry.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "IN",
+        "HIS",
+        "POWER"
+      ],
+      "hi": 3,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 21:13"
+}

@@ -1,0 +1,361 @@
+{
+  "key": "short-morningjohn1v4",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "LIGHT IN THE ADVENT DARK",
+    "JOHN 1:4-5 MORNING PRAYER"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "JOHN 1:4-5",
+    "ADVENT LIGHT IN DARKNESS",
+    "SUNRISE PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "dim quiet bedroom sunrise through window",
+    "foggy mountain valley early advent dawn",
+    "first light breaking over dark forest horizon",
+    "golden morning light illuminating dark misty valley",
+    "soft blue sunrise light through open window curtain",
+    "bright sun beam piercing morning shadow trees",
+    "peaceful calm lake at dawn golden reflections",
+    "warm sunrise glow filling cozy dark room"
+  ],
+  "scenes": [
+    {
+      "a": "The dark still lingers in your room.",
+      "img": "short-morningjohn1v4-scene-01.jpg",
+      "kicker": "DARK ROOM",
+      "sub": "THE LIGHT IS COMING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In this season of Advent, we wait for the sunrise and remember the light that no shadow can quench.",
+      "img": "short-morningjohn1v4-scene-02.jpg",
+      "kicker": "ADVENT DAWN",
+      "sub": "WAITING FOR THE SUNRISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "In him was life; and the life was the light of men.",
+      "img": "short-morningjohn1v4-scene-03.jpg",
+      "kicker": "JOHN 1:4",
+      "sub": "IN HIM WAS LIFE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And the light shineth in darkness; and the darkness comprehended it not.",
+      "img": "short-morningjohn1v4-scene-04.jpg",
+      "kicker": "JOHN 1:5",
+      "sub": "THE LIGHT SHINETH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, as dawn breaks, step into the places we carry in secret.",
+      "img": "short-morningjohn1v4-scene-05.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "STEP INTO OUR SECRET PLACES",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Where fear tells us the dark has won, shine your unquenchable peace into our hearts.",
+      "img": "short-morningjohn1v4-scene-06.jpg",
+      "kicker": "UNQUENCHABLE PEACE",
+      "sub": "LIGHT IN THE DARKNESS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Give us patience while we wait, and quiet confidence that your morning has already begun.",
+      "img": "short-morningjohn1v4-scene-07.jpg",
+      "kicker": "QUIET CONFIDENCE",
+      "sub": "HIS MORNING HAS BEGUN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. The dark still lingers in your room.",
+      "img": "short-morningjohn1v4-scene-08.jpg",
+      "kicker": "THE LIGHT LINGERS",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The dark still lingers in your room."
+    ],
+    [
+      3,
+      9,
+      "In this season of Advent, we wait for the sunrise and remember the light that no shadow can quench."
+    ],
+    [
+      9,
+      14,
+      "In him was life; and the life was the light of men."
+    ],
+    [
+      14,
+      20,
+      "And the light shineth in darkness; and the darkness comprehended it not."
+    ],
+    [
+      20,
+      26,
+      "Lord, as dawn breaks, step into the places we carry in secret."
+    ],
+    [
+      26,
+      32,
+      "Where fear tells us the dark has won, shine your unquenchable peace into our hearts."
+    ],
+    [
+      32,
+      39,
+      "Give us patience while we wait, and quiet confidence that your morning has already begun."
+    ],
+    [
+      39,
+      44,
+      "Amen. The dark still lingers in your room."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE DARK STILL LINGERS",
+        "IN YOUR ROOM."
+      ],
+      [
+        "DARK",
+        "LINGERS"
+      ],
+      "THE MORNING ALTAR"
+    ],
+    [
+      3,
+      9,
+      [
+        "IN THIS SEASON OF ADVENT",
+        "WE WAIT FOR THE SUNRISE",
+        "AND REMEMBER THE LIGHT",
+        "THAT NO SHADOW CAN QUENCH"
+      ],
+      [
+        "ADVENT",
+        "SUNRISE",
+        "LIGHT"
+      ],
+      "ADVENT PRAYER"
+    ],
+    [
+      9,
+      14,
+      [
+        "IN HIM WAS LIFE",
+        "AND THE LIFE WAS",
+        "THE LIGHT OF MEN"
+      ],
+      [
+        "LIFE",
+        "LIGHT"
+      ],
+      "JOHN 1 : 4"
+    ],
+    [
+      14,
+      20,
+      [
+        "AND THE LIGHT SHINETH",
+        "IN DARKNESS AND THE DARKNESS",
+        "COMPREHENDED IT NOT"
+      ],
+      [
+        "LIGHT",
+        "SHINETH",
+        "DARKNESS"
+      ],
+      "JOHN 1 : 5"
+    ],
+    [
+      20,
+      26,
+      [
+        "LORD AS DAWN BREAKS",
+        "STEP INTO THE PLACES",
+        "WE CARRY IN SECRET"
+      ],
+      [
+        "DAWN",
+        "SECRET"
+      ],
+      "JOHN 1 : 4 - 5"
+    ],
+    [
+      26,
+      32,
+      [
+        "WHERE FEAR TELLS US",
+        "THE DARK HAS WON",
+        "SHINE YOUR UNQUENCHABLE",
+        "PEACE INTO OUR HEARTS"
+      ],
+      [
+        "PEACE",
+        "HEARTS"
+      ],
+      "JOHN 1 : 4 - 5"
+    ],
+    [
+      32,
+      39,
+      [
+        "GIVE US PATIENCE WHILE WE WAIT",
+        "AND QUIET CONFIDENCE THAT YOUR",
+        "MORNING HAS ALREADY BEGUN"
+      ],
+      [
+        "PATIENCE",
+        "CONFIDENCE",
+        "MORNING"
+      ],
+      "JOHN 1 : 4 - 5"
+    ],
+    [
+      39,
+      44,
+      [
+        "AMEN THE DARK STILL LINGERS",
+        "IN YOUR ROOM"
+      ],
+      [
+        "AMEN",
+        "ROOM"
+      ],
+      "JOHN 1 : 4 - 5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The dark still lingers in your room.",
+      "kind": "phrase",
+      "words": [
+        "DARK",
+        "LINGERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In this season of Advent,",
+      "kind": "phrase",
+      "words": [
+        "SEASON",
+        "ADVENT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "In him was life;",
+      "kind": "phrase",
+      "words": [
+        "HIM",
+        "LIFE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "And the light shineth in darkness;",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "SHINETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, as dawn breaks,",
+      "kind": "phrase",
+      "words": [
+        "DAWN",
+        "BREAKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "shine your unquenchable peace into our hearts.",
+      "kind": "phrase",
+      "words": [
+        "UNQUENCHABLE",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Give us patience while we wait,",
+      "kind": "phrase",
+      "words": [
+        "PATIENCE",
+        "WAIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. The dark still lingers in your room.",
+      "kind": "phrase",
+      "words": [
+        "DARK",
+        "ROOM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "John 1:4-5"
+}

@@ -1,0 +1,354 @@
+{
+  "key": "short-morningpsalm63v6",
+  "channel": "prayer2",
+  "psalm": 63,
+  "title": [
+    "IN THE NIGHT WATCHES",
+    "FIND PEACE AT SUNRISE"
+  ],
+  "poster": [
+    "THE THOUGHTS THAT",
+    "KEPT YOU AWAKE",
+    "STILL LINGER",
+    "PSALM 63:6"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "dark room blue sunrise morning light window",
+    "misty mountain valley early dawn calm",
+    "soft morning light over quiet lake dawn",
+    "golden sunrise horizon calm water fog",
+    "gentle sunrise light through forest trees",
+    "peaceful morning sun breaking through clouds",
+    "bright golden morning dawn light horizon"
+  ],
+  "scenes": [
+    {
+      "a": "The thoughts that kept you awake still linger.",
+      "img": "short-morningpsalm63v6-scene-01.jpg",
+      "kicker": "RESTLESS HOURS",
+      "sub": "THE THOUGHTS STILL LINGER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In the dark hours before sunrise, you lie awake turning over every care.",
+      "img": "short-morningpsalm63v6-scene-02.jpg",
+      "kicker": "BEFORE DAWN",
+      "sub": "TURNING OVER EVERY CARE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "God's Word reminds us of a quiet place to anchor our heart.",
+      "img": "short-morningpsalm63v6-scene-03.jpg",
+      "kicker": "ANCHOR YOUR HEART",
+      "sub": "A QUIET PLACE TO REST",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "When I remember thee upon my bed, and meditate on thee in the night watches.",
+      "img": "short-morningpsalm63v6-scene-04.jpg",
+      "kicker": "PSALM 63:6",
+      "sub": "IN THE NIGHT WATCHES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, when the hours feel heavy, turn my restless mind toward your faithful goodness.",
+      "img": "short-morningpsalm63v6-scene-05.jpg",
+      "kicker": "TURN TO GOD",
+      "sub": "FAITHFUL GOODNESS IN DARKNESS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Fill the silent watches of my soul with your peace and steady grace.",
+      "img": "short-morningpsalm63v6-scene-06.jpg",
+      "kicker": "STEADY PEACE",
+      "sub": "FILLING THE SILENT WATCHES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach me to rest in your enduring love before this new day begins.",
+      "img": "short-morningpsalm63v6-scene-07.jpg",
+      "kicker": "NEW DAYLIGHT",
+      "sub": "REST IN ENDURING LOVE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The thoughts that kept you awake still linger."
+    ],
+    [
+      3,
+      8,
+      "In the dark hours before sunrise, you lie awake turning over every care."
+    ],
+    [
+      8,
+      14,
+      "God's Word reminds us of a quiet place to anchor our heart."
+    ],
+    [
+      14,
+      20,
+      "When I remember thee upon my bed, and meditate on thee in the night watches."
+    ],
+    [
+      20,
+      26,
+      "Lord, when the hours feel heavy, turn my restless mind toward your faithful goodness."
+    ],
+    [
+      26,
+      31,
+      "Fill the silent watches of my soul with your peace and steady grace."
+    ],
+    [
+      31,
+      35,
+      "Teach me to rest in your enduring love before this new day begins."
+    ],
+    [
+      35,
+      38,
+      "Amen. The thoughts that kept you awake still linger."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE THOUGHTS THAT KEPT YOU",
+        "AWAKE STILL LINGER."
+      ],
+      [
+        "AWAKE",
+        "LINGER"
+      ],
+      "PSALM 63 : 6"
+    ],
+    [
+      3,
+      8,
+      [
+        "IN THE DARK HOURS BEFORE SUNRISE,",
+        "YOU LIE AWAKE TURNING OVER EVERY CARE."
+      ],
+      [
+        "DARK",
+        "HOURS",
+        "TURNING"
+      ],
+      "PSALM 63 : 6"
+    ],
+    [
+      8,
+      14,
+      [
+        "GOD'S WORD REMINDS US OF A QUIET",
+        "PLACE TO ANCHOR OUR HEART."
+      ],
+      [
+        "QUIET",
+        "ANCHOR"
+      ],
+      "PSALM 63 : 6"
+    ],
+    [
+      14,
+      20,
+      [
+        "WHEN I REMEMBER THEE UPON MY BED,",
+        "AND MEDITATE ON THEE IN THE NIGHT WATCHES."
+      ],
+      [
+        "REMEMBER",
+        "MEDITATE",
+        "NIGHT",
+        "WATCHES"
+      ],
+      "PSALM 63 : 6"
+    ],
+    [
+      20,
+      26,
+      [
+        "LORD, WHEN THE HOURS FEEL HEAVY,",
+        "TURN MY RESTLESS MIND TOWARD YOUR FAITHFUL GOODNESS."
+      ],
+      [
+        "HEAVY",
+        "RESTLESS",
+        "FAITHFUL"
+      ],
+      "PSALM 63 : 6"
+    ],
+    [
+      26,
+      31,
+      [
+        "FILL THE SILENT WATCHES OF MY SOUL",
+        "WITH YOUR PEACE AND STEADY GRACE."
+      ],
+      [
+        "SILENT",
+        "PEACE",
+        "STEADY"
+      ],
+      "PSALM 63 : 6"
+    ],
+    [
+      31,
+      35,
+      [
+        "TEACH ME TO REST IN YOUR ENDURING LOVE",
+        "BEFORE THIS NEW DAY BEGINS."
+      ],
+      [
+        "REST",
+        "ENDURING",
+        "LOVE"
+      ],
+      "PSALM 63 : 6"
+    ],
+    [
+      35,
+      38,
+      [
+        "AMEN. THE THOUGHTS THAT KEPT YOU",
+        "AWAKE STILL LINGER."
+      ],
+      [
+        "AMEN",
+        "AWAKE",
+        "LINGER"
+      ],
+      "PSALM 63 : 6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The thoughts that kept you awake still linger.",
+      "kind": "phrase",
+      "words": [
+        "THOUGHTS",
+        "AWAKE",
+        "LINGER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "In the dark hours before sunrise, you lie awake turning over every care.",
+      "kind": "phrase",
+      "words": [
+        "DARK",
+        "HOURS",
+        "TURNING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "God's Word reminds us of a quiet place to anchor our heart.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PLACE",
+        "ANCHOR"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "When I remember thee upon my bed, and meditate on thee in the night watches.",
+      "kind": "phrase",
+      "words": [
+        "REMEMBER",
+        "MEDITATE",
+        "NIGHT",
+        "WATCHES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when the hours feel heavy, turn my restless mind toward your faithful goodness.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "RESTLESS",
+        "FAITHFUL"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Fill the silent watches of my soul with your peace and steady grace.",
+      "kind": "phrase",
+      "words": [
+        "SILENT",
+        "PEACE",
+        "STEADY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Teach me to rest in your enduring love before this new day begins.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "ENDURING",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. The thoughts that kept you awake still linger.",
+      "kind": "phrase",
+      "words": [
+        "AMEN",
+        "AWAKE",
+        "LINGER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 63:6"
+}

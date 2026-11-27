@@ -1,0 +1,367 @@
+{
+  "key": "short-morningpsalm77v12",
+  "channel": "prayer2",
+  "psalm": 77,
+  "title": [
+    "WHEN WORRY RETURNS",
+    "PRAY PSALM 77:12"
+  ],
+  "poster": [
+    "BEFORE THE NOISE",
+    "REMEMBER HIS HAND",
+    "MEDITATE ON HIS WORK",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "misty mountain valley at early dawn sunrise",
+    "soft morning sunlight through mountain pines",
+    "fog lifting over quiet lake at sunrise",
+    "golden sunrise rays over misty meadows",
+    "dew on grass at first morning light",
+    "sunlight illuminating mountain ridges at dawn",
+    "warm sunrise glow across calm river",
+    "peaceful sunrise breaking over quiet hills"
+  ],
+  "scenes": [
+    {
+      "a": "The heavy worries returned before daybreak.",
+      "img": "short-morningpsalm77v12-scene-01.jpg",
+      "kicker": "HEAVY WORRIES",
+      "sub": "BEFORE DAYBREAK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Before the noise of this morning crowds in,",
+      "img": "short-morningpsalm77v12-scene-02.jpg",
+      "kicker": "BEFORE THE NOISE",
+      "sub": "REMEMBER HIS FAITHFULNESS",
+      "cam": "pan_right",
+      "focus": [
+        0.48,
+        0.5
+      ]
+    },
+    {
+      "a": "The psalmist wrote: I will meditate also of all thy work,",
+      "img": "short-morningpsalm77v12-scene-03.jpg",
+      "kicker": "PSALM 77:12",
+      "sub": "TALK OF THY DOINGS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, anchor my restless thoughts right now",
+      "img": "short-morningpsalm77v12-scene-04.jpg",
+      "kicker": "ANCHOR MY THOUGHTS",
+      "sub": "IN STEADY FAITHFULNESS",
+      "cam": "pull_out",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "When uncertainty tries to take hold,",
+      "img": "short-morningpsalm77v12-scene-05.jpg",
+      "kicker": "QUIET PROVISION",
+      "sub": "WHEN UNCERTAINTY PRESSES",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.52
+      ]
+    },
+    {
+      "a": "Teach my mouth to speak of your goodness today",
+      "img": "short-morningpsalm77v12-scene-06.jpg",
+      "kicker": "SPEAK OF GOODNESS",
+      "sub": "INSTEAD OF DEFEAT",
+      "cam": "push_in",
+      "focus": [
+        0.46,
+        0.45
+      ]
+    },
+    {
+      "a": "Give me eyes to see your hand moving",
+      "img": "short-morningpsalm77v12-scene-07.jpg",
+      "kicker": "OPEN MY EYES",
+      "sub": "TO EVERY DETAIL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    {
+      "a": "Lead me through this new light, and quiet the heavy worries",
+      "img": "short-morningpsalm77v12-scene-08.jpg",
+      "kicker": "QUIET THE HEART",
+      "sub": "WALK IN HIS LIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "The heavy worries returned before daybreak."
+    ],
+    [
+      3,
+      9,
+      "Before the noise of this morning crowds in, remember what God has carried you through."
+    ],
+    [
+      9,
+      16,
+      "The psalmist wrote: I will meditate also of all thy work, and talk of thy doings."
+    ],
+    [
+      16,
+      23,
+      "Lord, anchor my restless thoughts right now in your steady faithfulness rather than my fears."
+    ],
+    [
+      23,
+      30,
+      "When uncertainty tries to take hold, remind me of the quiet ways you have always provided."
+    ],
+    [
+      30,
+      36,
+      "Teach my mouth to speak of your goodness today instead of rehearsing defeat."
+    ],
+    [
+      36,
+      42,
+      "Give me eyes to see your hand moving in every small detail."
+    ],
+    [
+      42,
+      50,
+      "Lead me through this new light, and quiet the heavy worries that returned before daybreak. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "THE HEAVY WORRIES",
+        "RETURNED BEFORE DAYBREAK"
+      ],
+      [
+        "HEAVY",
+        "WORRIES"
+      ],
+      "PSALM 77 : 12"
+    ],
+    [
+      3,
+      9,
+      [
+        "BEFORE THE NOISE OF THIS MORNING",
+        "REMEMBER WHAT GOD HAS CARRIED YOU THROUGH"
+      ],
+      [
+        "REMEMBER",
+        "GOD"
+      ],
+      "PSALM 77 : 12"
+    ],
+    [
+      9,
+      16,
+      [
+        "THE PSALMIST WROTE",
+        "I WILL MEDITATE ALSO OF ALL THY WORK",
+        "AND TALK OF THY DOINGS"
+      ],
+      [
+        "MEDITATE",
+        "WORK",
+        "DOINGS"
+      ],
+      "PSALM 77 : 12"
+    ],
+    [
+      16,
+      23,
+      [
+        "LORD ANCHOR MY RESTLESS THOUGHTS",
+        "IN YOUR STEADY FAITHFULNESS",
+        "RATHER THAN MY FEARS"
+      ],
+      [
+        "STEADY",
+        "FAITHFULNESS"
+      ],
+      "PSALM 77 : 12"
+    ],
+    [
+      23,
+      30,
+      [
+        "WHEN UNCERTAINTY TRIES TO TAKE HOLD",
+        "REMIND ME OF THE QUIET WAYS",
+        "YOU HAVE ALWAYS PROVIDED"
+      ],
+      [
+        "ALWAYS",
+        "PROVIDED"
+      ],
+      "PSALM 77 : 12"
+    ],
+    [
+      30,
+      36,
+      [
+        "TEACH MY MOUTH TO SPEAK",
+        "OF YOUR GOODNESS TODAY",
+        "INSTEAD OF REHEARSING DEFEAT"
+      ],
+      [
+        "SPEAK",
+        "GOODNESS"
+      ],
+      "PSALM 77 : 12"
+    ],
+    [
+      36,
+      42,
+      [
+        "GIVE ME EYES TO SEE YOUR HAND",
+        "MOVING IN EVERY SMALL DETAIL"
+      ],
+      [
+        "EYES",
+        "HAND"
+      ],
+      "PSALM 77 : 12"
+    ],
+    [
+      42,
+      50,
+      [
+        "LEAD ME THROUGH THIS NEW LIGHT",
+        "AND QUIET THE HEAVY WORRIES",
+        "THAT RETURNED BEFORE DAYBREAK",
+        "AMEN"
+      ],
+      [
+        "NEW LIGHT",
+        "QUIET",
+        "AMEN"
+      ],
+      "PSALM 77 : 12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The heavy worries returned before daybreak.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "WORRIES",
+        "DAYBREAK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "remember what God has carried you through.",
+      "kind": "phrase",
+      "words": [
+        "REMEMBER",
+        "GOD",
+        "CARRIED"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "I will meditate also of all thy work, and talk of thy doings.",
+      "kind": "phrase",
+      "words": [
+        "MEDITATE",
+        "WORK",
+        "TALK",
+        "DOINGS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "anchor my restless thoughts right now in your steady faithfulness",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "STEADY",
+        "FAITHFULNESS"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "remind me of the quiet ways you have always provided.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "ALWAYS",
+        "PROVIDED"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Teach my mouth to speak of your goodness today",
+      "kind": "phrase",
+      "words": [
+        "SPEAK",
+        "GOODNESS",
+        "TODAY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "see your hand moving in every small detail.",
+      "kind": "phrase",
+      "words": [
+        "SEE",
+        "HAND",
+        "DETAIL"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "quiet the heavy worries that returned before daybreak. Amen.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "WORRIES",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 77:12"
+}
