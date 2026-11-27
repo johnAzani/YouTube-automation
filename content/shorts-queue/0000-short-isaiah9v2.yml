@@ -1,0 +1,16 @@
+short: short-isaiah9v2
+channel: secret-place
+standalone: true
+source: seasonal
+scripture: Isaiah 9:2
+status: approved
+renderer_ready: true
+authored_by_brain: true
+privacy: public
+replace: false
+target_window_utc: '14:14'
+notes: "Advent Short on Isaiah 9:2, for 2026-11-29 to 2026-12-23 \u2014 spec authored\
+  \ by the brain (99 narration words)"
+season: advent
+not_before: '2026-11-29'
+not_after: '2026-12-23'

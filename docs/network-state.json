@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T00:09:03Z",
+  "generated_at": "2026-11-27T00:09:13Z",
   "monitor_generated_at": "2026-11-26T23:19:47.437412+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,10 +8,10 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 881,
+    "published_total": 882,
     "published_longform": 242,
-    "published_shorts": 639,
-    "public_total": 879,
+    "published_shorts": 640,
+    "public_total": 880,
     "queued_longform": 101,
     "queued_shorts": 28,
     "automations_ok": 13,
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 109,
+        "published_total": 110,
         "published_longform": 28,
-        "published_shorts": 81,
+        "published_shorts": 82,
         "thumbnail_pending": 1,
-        "public_total": 108,
+        "public_total": 109,
         "queued_longform": 7,
         "queued_other": 5,
         "queued_shorts": 2
       },
       "latest_video": {
-        "id": "0035",
-        "title": "Psalm 23 Night Prayer to Fall Asleep in Peace (Full KJV)",
-        "format": "longform",
-        "youtube_video_id": "LFFs7Nwy_p0",
-        "watch_url": "https://youtu.be/LFFs7Nwy_p0",
-        "published_on": "2026-11-26",
-        "published_at": "2026-11-26T20:18:18Z"
+        "id": "SHORT-PSALM92V2",
+        "title": "Say This Psalm 92:2 Prayer Before You Sleep | When Your Mind Drifts In Darkness #Shorts",
+        "format": "short",
+        "youtube_video_id": "a3eQxdeq4NU",
+        "watch_url": "https://www.youtube.com/shorts/a3eQxdeq4NU",
+        "published_on": "2026-11-27",
+        "published_at": "2026-11-27T00:08:07Z"
       },
       "next_queued_longform": {
         "id": "0113",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm92v2",
-        "scripture": "Psalm 92:2",
+        "short": "short-isaiah9v2",
+        "scripture": "Isaiah 9:2",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -686,6 +686,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM92V2",
+      "slug": "short-psalm92v2-pre-sleep-prayer",
+      "file": "short-psalm92v2-pre-sleep-prayer.md",
+      "title": "Say This Psalm 92:2 Prayer Before You Sleep | When Your Mind Drifts In Darkness #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T00:08:07Z",
+      "youtube_video_id": "a3eQxdeq4NU",
+      "watch_url": "https://www.youtube.com/shorts/a3eQxdeq4NU",
+      "youtu_be_url": "https://youtu.be/a3eQxdeq4NU",
+      "shorts_url": "https://www.youtube.com/shorts/a3eQxdeq4NU",
+      "studio_url": "https://studio.youtube.com/video/a3eQxdeq4NU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/a3eQxdeq4NU/hqdefault.jpg",
+      "thumb_text": "BEDTIME PRAYER \u00b7 HIS FAITHFULNESS",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 632
+    },
     {
       "id": "SHORT-MORNINGPSALM19V14",
       "slug": "short-morningpsalm19v14-sunrise-prayer",
@@ -23182,6 +23206,17 @@
         "target_window_utc": "15:44"
       },
       {
+        "short": "short-isaiah9v2",
+        "file": "0000-short-isaiah9v2.yml",
+        "companion_longform_id": "",
+        "scripture": "Isaiah 9:2",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "14:14"
+      },
+      {
         "short": "short-middaygalatians4v4",
         "file": "0000-short-middaygalatians4v4.yml",
         "companion_longform_id": "",
@@ -23246,17 +23281,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-psalm92v2",
-        "file": "0000-short-psalm92v2.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 92:2",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm23full",

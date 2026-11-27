@@ -1,0 +1,281 @@
+{
+  "key": "short-isaiah9v2",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "ADVENT NIGHT",
+    "LIGHT IN THE DARK"
+  ],
+  "poster": [
+    "GREAT LIGHT",
+    "IN THE SHADOW",
+    "BEDTIME PRAYER",
+    "ISAIAH 9:2"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "single advent candle burning warm dark room",
+    "calm snowy pine forest night moonlight",
+    "warm lantern light soft dark bedroom night",
+    "peaceful starry night sky quiet silhouette",
+    "cozy fireplace glow warm dark quiet room",
+    "gentle dawn light over snowy winter hills"
+  ],
+  "scenes": [
+    {
+      "a": "Advent night finds you waiting in the dark.",
+      "img": "short-isaiah9v2-scene-01.jpg",
+      "kicker": "WAITING IN DARKNESS",
+      "sub": "ADVENT NIGHT FINDS YOU HERE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Isaiah wrote, The people that walked in darkness have seen a great light: they that dwell in the land of the shadow of death, upon them hath the light shined.",
+      "img": "short-isaiah9v2-scene-02.jpg",
+      "kicker": "ISAIAH 9:2",
+      "sub": "A GREAT LIGHT HAS SHINED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, in these quiet weeks of Advent, we bring every lingering fear and heavy shadow into your presence.",
+      "img": "short-isaiah9v2-scene-03.jpg",
+      "kicker": "HEAVY SHADOWS",
+      "sub": "BRINGING FEAR TO HIS PRESENCE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "As we wait for Christmas, let the promise of Christ's coming shine warmth into this silent room.",
+      "img": "short-isaiah9v2-scene-04.jpg",
+      "kicker": "CHRISTMAS PROMISE",
+      "sub": "LIGHT SHINING IN THE SILENT ROOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant this weary heart restful sleep tonight, trusting that your morning light is already on its way.",
+      "img": "short-isaiah9v2-scene-05.jpg",
+      "kicker": "RESTFUL SLEEP",
+      "sub": "MORNING LIGHT IS ON ITS WAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Amen. Advent night finds you waiting in the dark.",
+      "img": "short-isaiah9v2-scene-06.jpg",
+      "kicker": "STILL WAITING",
+      "sub": "ADVENT NIGHT FINDS YOU HERE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      3,
+      "Advent night finds you waiting in the dark."
+    ],
+    [
+      3,
+      11,
+      "Isaiah wrote, The people that walked in darkness have seen a great light: they that dwell in the land of the shadow of death, upon them hath the light shined."
+    ],
+    [
+      11,
+      17,
+      "Lord, in these quiet weeks of Advent, we bring every lingering fear and heavy shadow into your presence."
+    ],
+    [
+      17,
+      23,
+      "As we wait for Christmas, let the promise of Christ's coming shine warmth into this silent room."
+    ],
+    [
+      23,
+      29,
+      "Grant this weary heart restful sleep tonight, trusting that your morning light is already on its way."
+    ],
+    [
+      29,
+      34,
+      "Amen. Advent night finds you waiting in the dark."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      3,
+      [
+        "ADVENT NIGHT FINDS YOU",
+        "WAITING IN THE DARK"
+      ],
+      [
+        "ADVENT",
+        "DARK"
+      ],
+      "ISAIAH 9 : 2"
+    ],
+    [
+      3,
+      11,
+      [
+        "THE PEOPLE THAT WALKED IN DARKNESS",
+        "HAVE SEEN A GREAT LIGHT",
+        "THEY THAT DWELL IN SHADOW OF DEATH",
+        "UPON THEM HATH LIGHT SHINED"
+      ],
+      [
+        "GREAT",
+        "LIGHT",
+        "SHINED"
+      ],
+      "ISAIAH 9 : 2"
+    ],
+    [
+      11,
+      17,
+      [
+        "IN QUIET WEEKS OF ADVENT",
+        "WE BRING EVERY LINGERING FEAR",
+        "INTO YOUR PRESENCE"
+      ],
+      [
+        "ADVENT",
+        "PRESENCE"
+      ],
+      "ISAIAH 9 : 2"
+    ],
+    [
+      17,
+      23,
+      [
+        "AS WE WAIT FOR CHRISTMAS",
+        "LET THE PROMISE OF CHRIST SHINE",
+        "INTO THIS SILENT ROOM"
+      ],
+      [
+        "CHRISTMAS",
+        "PROMISE",
+        "SHINE"
+      ],
+      "ISAIAH 9 : 2"
+    ],
+    [
+      23,
+      29,
+      [
+        "GRANT THIS WEARY HEART",
+        "RESTFUL SLEEP TONIGHT",
+        "LIGHT IS ALREADY ON ITS WAY"
+      ],
+      [
+        "RESTFUL",
+        "LIGHT",
+        "WAY"
+      ],
+      "ISAIAH 9 : 2"
+    ],
+    [
+      29,
+      34,
+      [
+        "AMEN",
+        "ADVENT NIGHT FINDS YOU",
+        "WAITING IN THE DARK"
+      ],
+      [
+        "AMEN",
+        "DARK"
+      ],
+      "ISAIAH 9 : 2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Advent night finds you waiting in the dark.",
+      "kind": "phrase",
+      "words": [
+        "ADVENT",
+        "NIGHT",
+        "FINDS",
+        "YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Isaiah wrote, The people that walked in darkness have seen a great light: they that dwell in the land of the shadow of death, upon them hath the light shined.",
+      "kind": "phrase",
+      "words": [
+        "GREAT",
+        "LIGHT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, in these quiet weeks of Advent, we bring every lingering fear and heavy shadow into your presence.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "WEEKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As we wait for Christmas, let the promise of Christ's coming shine warmth into this silent room.",
+      "kind": "phrase",
+      "words": [
+        "PROMISE",
+        "COMING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant this weary heart restful sleep tonight, trusting that your morning light is already on its way.",
+      "kind": "phrase",
+      "words": [
+        "MORNING",
+        "LIGHT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Advent night finds you waiting in the dark.",
+      "kind": "phrase",
+      "words": [
+        "WAITING",
+        "DARK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 9:2"
+}
