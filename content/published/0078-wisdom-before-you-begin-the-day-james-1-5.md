@@ -2,7 +2,7 @@
 id: 0078
 title: 'Wisdom Before You Begin the Day: James 1:5 | The Morning Altar'
 slug: wisdom-before-you-begin-the-day-james-1-5
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -81,6 +81,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-27"
+published_at: "2026-11-27T10:01:17Z"
+youtube_video_id: "cLpW2VR5jEQ"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 512.55
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — Directing the Morning Prayer
