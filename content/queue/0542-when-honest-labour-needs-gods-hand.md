@@ -1,6 +1,6 @@
 ---
 id: '0542'
-title: 'When Honest Labour Needs God''s Hand: Genesis 39:2-3'
+title: "When Daily Work Needs God's Hand: Genesis 39:2-3 | The Provision Table"
 slug: when-honest-labour-needs-gods-hand
 status: approved
 channel: prayer7
@@ -75,6 +75,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When Honest Labour Needs God's Hand: Genesis 39:2-3"
+queue_title_fixed_at: "2026-11-27"
 ---
 
 ## Scene 1 — The Master's Presence in the Daily Task
