@@ -44,8 +44,8 @@
       "workflow": "tests-on-main.yml"
     }
   ],
-  "generated_at": "2026-11-27T01:52:21.314475+00:00",
-  "last_run_at": "2026-11-27T01:51:25+00:00",
+  "generated_at": "2026-11-27T02:17:43.327064+00:00",
+  "last_run_at": "2026-11-27T02:16:56+00:00",
   "on_time": [
     {
       "late_minutes": 5,
@@ -67,13 +67,6 @@
       "ran_at": "2026-11-26T04:59:26+00:00",
       "slot": "2026-11-26T03:14:00+00:00",
       "workflow": "gemini_brain.yml"
-    },
-    {
-      "late_minutes": 93,
-      "name": "Growth autopilot",
-      "ran_at": "2026-11-26T03:47:15+00:00",
-      "slot": "2026-11-26T02:14:00+00:00",
-      "workflow": "growth-autopilot.yml"
     },
     {
       "late_minutes": 85,
