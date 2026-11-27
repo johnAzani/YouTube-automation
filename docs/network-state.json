@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T00:10:14Z",
+  "generated_at": "2026-11-27T00:12:34Z",
   "monitor_generated_at": "2026-11-26T23:19:47.437412+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,8 +12,8 @@
     "published_longform": 242,
     "published_shorts": 641,
     "public_total": 881,
-    "queued_longform": 101,
-    "queued_shorts": 28,
+    "queued_longform": 103,
+    "queued_shorts": 29,
     "automations_ok": 13,
     "automations_total": 15,
     "network_healthy": false
@@ -436,9 +436,9 @@
         "published_shorts": 60,
         "thumbnail_pending": 0,
         "public_total": 83,
-        "queued_longform": 11,
+        "queued_longform": 13,
         "queued_other": 0,
-        "queued_shorts": 0
+        "queued_shorts": 1
       },
       "latest_video": {
         "id": "0525",
@@ -455,7 +455,12 @@
         "words": 1267,
         "status": "approved"
       },
-      "next_queued_short": null,
+      "next_queued_short": {
+        "short": "short-provisionluke1v53",
+        "scripture": "Luke 1:53",
+        "target_window_utc": "10:44",
+        "status": "approved"
+      },
       "feedback": {
         "available": true,
         "as_of": "2026-11-26",
@@ -22558,6 +22563,32 @@
         "words": 1636
       },
       {
+        "id": "0539",
+        "slug": "gathering-the-fragments-of-honest-labour-john-6-11-13",
+        "file": "0539-gathering-the-fragments-of-honest-labour-john-6-11-13.md",
+        "title": "Gathering the Fragments of Honest Labour: John 6:11-13",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1404
+      },
+      {
+        "id": "0540",
+        "slug": "the-god-who-sustains-you-in-the-wilderness-deuteronomy-2-7-the-provision-table",
+        "file": "0540-the-god-who-sustains-you-in-the-wilderness-deuteronomy-2-7-the-provision-table.md",
+        "title": "The God Who Sustains You in the Wilderness: Deuteronomy 2:7",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1243
+      },
+      {
         "id": "0625",
         "slug": "stillness-when-battles-loom-exodus-14-14-the-covenant-shield",
         "file": "0625-stillness-when-battles-loom-exodus-14-14-the-covenant-shield.md",
@@ -23316,6 +23347,17 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-provisionluke1v53",
+        "file": "0000-short-provisionluke1v53.yml",
+        "companion_longform_id": "",
+        "scripture": "Luke 1:53",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
       },
       {
         "short": "short-psalm23full",
