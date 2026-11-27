@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T09:12:58Z",
+  "generated_at": "2026-11-27T09:13:31Z",
   "monitor_generated_at": "2026-11-27T05:34:22.095144+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 893,
+    "published_total": 894,
     "published_longform": 246,
-    "published_shorts": 647,
-    "public_total": 891,
+    "published_shorts": 648,
+    "public_total": 892,
     "queued_longform": 119,
-    "queued_shorts": 42,
+    "queued_shorts": 40,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -232,23 +232,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 93,
+        "published_total": 94,
         "published_longform": 28,
-        "published_shorts": 65,
-        "thumbnail_pending": 92,
-        "public_total": 93,
+        "published_shorts": 66,
+        "thumbnail_pending": 93,
+        "public_total": 94,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0228",
-        "title": "The Watchman's Midnight Vigil: Colossians 4:2 | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "Um0QQpAcIcM",
-        "watch_url": "https://youtu.be/Um0QQpAcIcM",
+        "id": "SHORT-MIDNIGHTDANIEL2V19",
+        "title": "Pray This Daniel 2:19-22 Midnight Prayer | God Knows All #Shorts",
+        "format": "short",
+        "youtube_video_id": "ZS2hcNKa7qk",
+        "watch_url": "https://www.youtube.com/shorts/ZS2hcNKa7qk",
         "published_on": "2026-11-27",
-        "published_at": "2026-11-27T00:56:13Z"
+        "published_at": "2026-11-27T09:12:25Z"
       },
       "next_queued_longform": {
         "id": "0229",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTDANIEL2V19",
+      "slug": "short-midnightdaniel2v19-midnight-prayer",
+      "file": "short-midnightdaniel2v19-midnight-prayer.md",
+      "title": "Pray This Daniel 2:19-22 Midnight Prayer | God Knows All #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T09:12:25Z",
+      "youtube_video_id": "ZS2hcNKa7qk",
+      "watch_url": "https://www.youtube.com/shorts/ZS2hcNKa7qk",
+      "youtu_be_url": "https://youtu.be/ZS2hcNKa7qk",
+      "shorts_url": "https://www.youtube.com/shorts/ZS2hcNKa7qk",
+      "studio_url": "https://studio.youtube.com/video/ZS2hcNKa7qk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ZS2hcNKa7qk/hqdefault.jpg",
+      "thumb_text": "DANIEL 2:19 \u00b7 THE NIGHT VISION",
+      "thumbnail_pending": true,
+      "duration_label": "43s",
+      "words": 619
+    },
     {
       "id": "SHORT-FAMILYGENESIS12V2",
       "slug": "short-familygenesis12v2-household-prayer",
@@ -23923,17 +23947,6 @@
         "target_window_utc": "14:14"
       },
       {
-        "short": "short-midnightdaniel2v19",
-        "file": "0222-short-midnightdaniel2v19.yml",
-        "companion_longform_id": "0222",
-        "scripture": "Daniel 2:19-22",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
-      },
-      {
         "short": "short-midnightacts12v5",
         "file": "0223-short-midnightacts12v5.yml",
         "companion_longform_id": "0223",
@@ -23960,17 +23973,6 @@
         "file": "0229-short-midnighthebrews13v20.yml",
         "companion_longform_id": "0229",
         "scripture": "Hebrews 13:20-21",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-midnightzechariah4v7",
-        "file": "0234-short-midnightzechariah4v7.yml",
-        "companion_longform_id": "0234",
-        "scripture": "Zechariah 4:7",
         "channel": "prayer4",
         "channel_name": "The Midnight Watch",
         "status": "approved",
