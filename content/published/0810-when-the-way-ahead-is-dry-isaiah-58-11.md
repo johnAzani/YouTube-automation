@@ -1,6 +1,6 @@
 ---
 id: 0810
-title: "Guidance for a Season of Dry Ground: Isaiah 58:11 | The Guided Path"
+title: "When Your Strength Runs Dry: Isaiah 58:11 | The Guided Path"
 slug: when-the-way-ahead-is-dry-isaiah-58-11
 status: published
 channel: prayer10
@@ -74,16 +74,18 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
-title_before: "When the Way Ahead Is Dry: Isaiah 58:11 | The Guided Path"
+title_before: "Guidance for a Season of Dry Ground: Isaiah 58:11 | The Guided Path"
 queue_title_fixed_at: "2026-11-16"
 published_on: "2026-11-20"
 published_at: "2026-11-20T12:20:17Z"
 youtube_video_id: "LzCEM00drpc"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 top_comment: "ok"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+retitled_at: "2026-11-27"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Bringing the Decision to the Lord
