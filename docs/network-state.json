@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T12:37:42Z",
+  "generated_at": "2026-11-27T12:37:51Z",
   "monitor_generated_at": "2026-11-27T05:34:22.095144+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 906,
+    "published_total": 907,
     "published_longform": 252,
-    "published_shorts": 654,
-    "public_total": 904,
+    "published_shorts": 655,
+    "public_total": 905,
     "queued_longform": 128,
-    "queued_shorts": 35,
+    "queued_shorts": 34,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 118,
+        "published_total": 119,
         "published_longform": 37,
-        "published_shorts": 81,
+        "published_shorts": 82,
         "thumbnail_pending": 0,
-        "public_total": 117,
+        "public_total": 118,
         "queued_longform": 20,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0078",
-        "title": "Wisdom Before You Begin the Day: James 1:5 | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "cLpW2VR5jEQ",
-        "watch_url": "https://youtu.be/cLpW2VR5jEQ",
+        "id": "SHORT-MORNINGPSALM63V6",
+        "title": "Say This Psalm 63:6 Prayer for Fresh Start at Sunrise | The Thoughts Still Linger #Shorts",
+        "format": "short",
+        "youtube_video_id": "kQJqU-JFGfI",
+        "watch_url": "https://www.youtube.com/shorts/kQJqU-JFGfI",
         "published_on": "2026-11-27",
-        "published_at": "2026-11-27T10:01:17Z"
+        "published_at": "2026-11-27T12:36:39Z"
       },
       "next_queued_longform": {
         "id": "0081",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM63V6",
+      "slug": "short-morningpsalm63v6-sunrise-prayer",
+      "file": "short-morningpsalm63v6-sunrise-prayer.md",
+      "title": "Say This Psalm 63:6 Prayer for Fresh Start at Sunrise | The Thoughts Still Linger #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T12:36:39Z",
+      "youtube_video_id": "kQJqU-JFGfI",
+      "watch_url": "https://www.youtube.com/shorts/kQJqU-JFGfI",
+      "youtu_be_url": "https://youtu.be/kQJqU-JFGfI",
+      "shorts_url": "https://www.youtube.com/shorts/kQJqU-JFGfI",
+      "studio_url": "https://studio.youtube.com/video/kQJqU-JFGfI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/kQJqU-JFGfI/hqdefault.jpg",
+      "thumb_text": "THE THOUGHTS THAT \u00b7 KEPT YOU AWAKE",
+      "thumbnail_pending": false,
+      "duration_label": "49s",
+      "words": 637
+    },
     {
       "id": "SHORT-MIDNIGHTACTS12V5",
       "slug": "short-midnightacts12v5-midnight-prayer",
@@ -24202,17 +24226,6 @@
         "file": "0000-short-morningjohn1v4.yml",
         "companion_longform_id": "",
         "scripture": "John 1:4-5",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-morningpsalm63v6",
-        "file": "0000-short-morningpsalm63v6.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 63:6",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
