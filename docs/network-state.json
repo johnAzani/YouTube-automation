@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T16:50:38Z",
+  "generated_at": "2026-11-27T16:57:51Z",
   "monitor_generated_at": "2026-11-27T12:48:50.085354+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 912,
+    "published_total": 913,
     "published_longform": 254,
-    "published_shorts": 658,
-    "public_total": 910,
+    "published_shorts": 659,
+    "public_total": 911,
     "queued_longform": 128,
-    "queued_shorts": 25,
+    "queued_shorts": 24,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -504,23 +504,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 78,
+        "published_total": 79,
         "published_longform": 20,
-        "published_shorts": 58,
+        "published_shorts": 59,
         "thumbnail_pending": 19,
-        "public_total": 78,
+        "public_total": 79,
         "queued_longform": 6,
         "queued_other": 4,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM94V22",
-        "title": "Pray This Psalm 94:22 Prayer for Divine Protection | Unfair Words Pressing Hard #Shorts",
+        "id": "SHORT-SHIELDPSALM71V3",
+        "title": "Pray This Psalm 71:3 Prayer for Divine Protection | Strong Habitation #Shorts",
         "format": "short",
-        "youtube_video_id": "mQtt6a1J8_Y",
-        "watch_url": "https://www.youtube.com/shorts/mQtt6a1J8_Y",
+        "youtube_video_id": "fUlZbFDsXmY",
+        "watch_url": "https://www.youtube.com/shorts/fUlZbFDsXmY",
         "published_on": "2026-11-27",
-        "published_at": "2026-11-27T12:38:46Z"
+        "published_at": "2026-11-27T16:56:53Z"
       },
       "next_queued_longform": {
         "id": "0615",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM71V3",
+      "slug": "short-shieldpsalm71v3-protection-prayer",
+      "file": "short-shieldpsalm71v3-protection-prayer.md",
+      "title": "Pray This Psalm 71:3 Prayer for Divine Protection | Strong Habitation #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-27",
+      "published_at": "2026-11-27T16:56:53Z",
+      "youtube_video_id": "fUlZbFDsXmY",
+      "watch_url": "https://www.youtube.com/shorts/fUlZbFDsXmY",
+      "youtu_be_url": "https://youtu.be/fUlZbFDsXmY",
+      "shorts_url": "https://www.youtube.com/shorts/fUlZbFDsXmY",
+      "studio_url": "https://studio.youtube.com/video/fUlZbFDsXmY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/fUlZbFDsXmY/hqdefault.jpg",
+      "thumb_text": "WHEN FEAR TELLS YOU \u00b7 NOWHERE IS SAFE",
+      "thumbnail_pending": false,
+      "duration_label": "58s",
+      "words": 631
+    },
     {
       "id": "SHORT-MORNINGPSALM71V15",
       "slug": "short-morningpsalm71v15-sunrise-prayer",
@@ -24428,17 +24452,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-shieldpsalm71v3",
-        "file": "0637-short-shieldpsalm71v3.yml",
-        "companion_longform_id": "0637",
-        "scripture": "Psalm 71:3",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm115v9",
