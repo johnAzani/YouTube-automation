@@ -65,8 +65,8 @@
       "workflow": "channel-analytics.yml"
     }
   ],
-  "generated_at": "2026-11-28T11:55:18.532362+00:00",
-  "last_run_at": "2026-11-28T11:54:29+00:00",
+  "generated_at": "2026-11-28T12:22:08.410211+00:00",
+  "last_run_at": "2026-11-28T12:21:21+00:00",
   "on_time": [
     {
       "late_minutes": 4,
@@ -88,6 +88,13 @@
       "ran_at": "2026-11-27T20:18:21+00:00",
       "slot": "2026-11-27T18:41:00+00:00",
       "workflow": "metrics.yml"
+    },
+    {
+      "late_minutes": 101,
+      "name": "Produce video",
+      "ran_at": "2026-11-28T11:55:38+00:00",
+      "slot": "2026-11-28T10:14:00+00:00",
+      "workflow": "produce.yml"
     },
     {
       "late_minutes": 40,
