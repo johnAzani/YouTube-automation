@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T12:57:14Z",
+  "generated_at": "2026-11-28T12:59:26Z",
   "monitor_generated_at": "2026-11-28T08:06:30.892982+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 943,
-    "published_longform": 272,
+    "published_total": 944,
+    "published_longform": 273,
     "published_shorts": 671,
-    "public_total": 941,
-    "queued_longform": 171,
+    "public_total": 942,
+    "queued_longform": 170,
     "queued_shorts": 12,
     "automations_ok": 11,
     "automations_total": 15,
@@ -164,28 +164,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 101,
-        "published_longform": 33,
+        "published_total": 102,
+        "published_longform": 34,
         "published_shorts": 68,
         "thumbnail_pending": 0,
-        "public_total": 101,
-        "queued_longform": 20,
+        "public_total": 102,
+        "queued_longform": 19,
         "queued_other": 0,
         "queued_shorts": 1
       },
       "latest_video": {
-        "id": "0106",
-        "title": "Grace for the Hours That Exhaust You: 2 Corinthians 12:9",
-        "format": "longform",
-        "youtube_video_id": "JwxmB66Q31M",
-        "watch_url": "https://youtu.be/JwxmB66Q31M",
-        "published_on": "2026-11-28",
-        "published_at": "2026-11-28T02:21:54Z"
-      },
-      "next_queued_longform": {
         "id": "0108",
         "title": "Ceaseless Communion Through Every Hour: 1 Thessalonians 5:16-18",
-        "words": 1737,
+        "format": "longform",
+        "youtube_video_id": "HvPixZmsq0E",
+        "watch_url": "https://youtu.be/HvPixZmsq0E",
+        "published_on": "2026-11-28",
+        "published_at": "2026-11-28T12:58:29Z"
+      },
+      "next_queued_longform": {
+        "id": "0109",
+        "title": "Grace When the Afternoon Gets Heavy: Hebrews 4:16 | The Midday Watch",
+        "words": 1382,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0108",
+      "slug": "ceaseless-communion-through-every-hour",
+      "file": "0108-ceaseless-communion-through-every-hour.md",
+      "title": "Ceaseless Communion Through Every Hour: 1 Thessalonians 5:16-18",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-28",
+      "published_at": "2026-11-28T12:58:29Z",
+      "youtube_video_id": "HvPixZmsq0E",
+      "watch_url": "https://youtu.be/HvPixZmsq0E",
+      "youtu_be_url": "https://youtu.be/HvPixZmsq0E",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/HvPixZmsq0E/edit",
+      "thumb_url": "https://i.ytimg.com/vi/HvPixZmsq0E/hqdefault.jpg",
+      "thumb_text": "PRAY WITHOUT CEASING",
+      "thumbnail_pending": false,
+      "duration_label": "11m 13s",
+      "words": 1737
+    },
     {
       "id": "0620",
       "slug": "guarded-in-all-your-ways-psalm-91-11",
@@ -23343,19 +23367,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 780
-      },
-      {
-        "id": "0108",
-        "slug": "ceaseless-communion-through-every-hour",
-        "file": "0108-ceaseless-communion-through-every-hour.md",
-        "title": "Ceaseless Communion Through Every Hour: 1 Thessalonians 5:16-18",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1737
       },
       {
         "id": "0109",

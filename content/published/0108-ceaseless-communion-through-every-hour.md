@@ -2,7 +2,7 @@
 id: 0108
 title: 'Ceaseless Communion Through Every Hour: 1 Thessalonians 5:16-18'
 slug: ceaseless-communion-through-every-hour
-status: approved
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -74,6 +74,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-28"
+published_at: "2026-11-28T12:58:29Z"
+youtube_video_id: "HvPixZmsq0E"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 672.97
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "hook"
 ---
 
 ## Scene 1 — The Noonday Pause
