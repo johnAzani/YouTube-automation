@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T01:51:10Z",
+  "generated_at": "2026-11-28T01:55:12Z",
   "monitor_generated_at": "2026-11-27T23:34:54.795338+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 925,
+    "published_total": 926,
     "published_longform": 259,
-    "published_shorts": 666,
-    "public_total": 923,
+    "published_shorts": 667,
+    "public_total": 924,
     "queued_longform": 151,
-    "queued_shorts": 15,
+    "queued_shorts": 14,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 121,
+        "published_total": 122,
         "published_longform": 37,
-        "published_shorts": 84,
+        "published_shorts": 85,
         "thumbnail_pending": 0,
-        "public_total": 120,
+        "public_total": 121,
         "queued_longform": 20,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM73V24",
-        "title": "Say This Psalm 73:24 Prayer for Fresh Start at Sunrise | Decisions Wait For You #Shorts",
+        "id": "SHORT-MORNINGPSALM77V11",
+        "title": "Say This Psalm 77:11 Prayer for Fresh Start at Sunrise | The Thoughts Waiting At Dawn #Shorts",
         "format": "short",
-        "youtube_video_id": "oO61g8ExXDM",
-        "watch_url": "https://www.youtube.com/shorts/oO61g8ExXDM",
-        "published_on": "2026-11-27",
-        "published_at": "2026-11-27T20:27:24Z"
+        "youtube_video_id": "uH1x2fCmwto",
+        "watch_url": "https://www.youtube.com/shorts/uH1x2fCmwto",
+        "published_on": "2026-11-28",
+        "published_at": "2026-11-28T01:54:00Z"
       },
       "next_queued_longform": {
         "id": "0081",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM77V11",
+      "slug": "short-morningpsalm77v11-sunrise-prayer",
+      "file": "short-morningpsalm77v11-sunrise-prayer.md",
+      "title": "Say This Psalm 77:11 Prayer for Fresh Start at Sunrise | The Thoughts Waiting At Dawn #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-28",
+      "published_at": "2026-11-28T01:54:00Z",
+      "youtube_video_id": "uH1x2fCmwto",
+      "watch_url": "https://www.youtube.com/shorts/uH1x2fCmwto",
+      "youtu_be_url": "https://youtu.be/uH1x2fCmwto",
+      "shorts_url": "https://www.youtube.com/shorts/uH1x2fCmwto",
+      "studio_url": "https://studio.youtube.com/video/uH1x2fCmwto/edit",
+      "thumb_url": "https://i.ytimg.com/vi/uH1x2fCmwto/hqdefault.jpg",
+      "thumb_text": "MORNING PRAYER \u00b7 FOR ANXIOUS",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 655
+    },
     {
       "id": "SHORT-GARDENPSALM9V1",
       "slug": "short-gardenpsalm9v1-thanksgiving-prayer",
@@ -24946,17 +24970,6 @@
         "file": "0000-short-morningjohn1v4.yml",
         "companion_longform_id": "",
         "scripture": "John 1:4-5",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-morningpsalm77v11",
-        "file": "0000-short-morningpsalm77v11.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 77:11",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
