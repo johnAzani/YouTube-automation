@@ -31,9 +31,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["A CALM EVENING", "IN YOUR HOME", "COLOSSIANS THREE", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-28T02:04:06Z"
+thumbnail_retry_after: "2026-12-05T02:49:09Z"
 thumbnail_retry_reason: "permission"
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 ---
 
 If tension at the dinner table still lingers in your chest, pause with us now. Lord, where impatience took root today, we ask You to soften every heart under this roof. Your Word commands us: And above all these things put on charity, which is the bond of perfectness. Wrap every family member in that perfect love, binding us together through every disagreement. And let the peace of God rule in your hearts, to the which also ye are called in one body; and be ye thankful. Father, let that quiet gratitude overflow in our household tonight.

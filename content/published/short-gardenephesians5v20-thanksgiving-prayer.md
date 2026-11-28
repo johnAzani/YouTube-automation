@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["GIVING THANKS", "ALWAYS", "FOR ALL THINGS", "UNTO GOD THE FATHER", "EPHESIANS 5:20"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-12-05T02:49:20Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When unexpected hard news reaches your hands today, remember that praise still belongs to God. Giving thanks always for all things unto God and the Father in the name of our Lord Jesus Christ; Heavenly Father, when hard news breaks our day, give us an honest heart to give You thanks anyway. We offer gratitude not for the pain, but for Your unchanging grace holding us steady inside it. Teach us to trust Your goodness in every circumstance and honor You in all things. In Christ's holy name we pray, Amen. When unexpected hard news reaches your hands today.
