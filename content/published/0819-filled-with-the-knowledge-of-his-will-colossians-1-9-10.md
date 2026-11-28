@@ -2,7 +2,7 @@
 id: 0819
 title: 'Filled With the Knowledge of His Will: Colossians 1:9-10'
 slug: filled-with-the-knowledge-of-his-will-colossians-1-9-10
-status: approved
+status: published
 channel: prayer10
 privacy: public
 format: longform
@@ -74,6 +74,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-28"
+published_at: "2026-11-28T09:10:44Z"
+youtube_video_id: "flRqYWyvNIU"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 646.82
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — Bringing the Decision to the Lord
