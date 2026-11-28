@@ -2,7 +2,7 @@
 id: '0620'
 title: 'Guarded in All Your Ways: Psalm 91:11 | The Covenant Shield'
 slug: guarded-in-all-your-ways-psalm-91-11
-status: approved
+status: published
 channel: prayer8
 privacy: public
 format: longform
@@ -74,6 +74,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-28"
+published_at: "2026-11-28T12:56:02Z"
+youtube_video_id: "7BA0hLf9T5Q"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 482.64
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — The Strong Tower of Divine Keeping
