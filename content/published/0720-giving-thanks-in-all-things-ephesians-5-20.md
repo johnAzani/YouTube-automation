@@ -2,7 +2,7 @@
 id: '0720'
 title: 'Giving Thanks in All Things: Ephesians 5:20 | The Praise Garden'
 slug: giving-thanks-in-all-things-ephesians-5-20
-status: approved
+status: published
 channel: prayer9
 privacy: public
 format: longform
@@ -72,6 +72,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-28"
+published_at: "2026-11-28T08:57:12Z"
+youtube_video_id: "w7Ho6o7mFX0"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 471.02
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Entering His Gates With Thanksgiving
