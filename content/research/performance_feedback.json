@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T05:46:48.408273+00:00",
+  "generated_at": "2026-11-28T10:19:24.910645+00:00",
   "as_of": "2026-11-28",
   "sufficient_data": true,
   "measured_longform_videos": 3,
@@ -74,7 +74,7 @@
     "sufficient_data": true,
     "avg_views": 20.4,
     "median_views": 14,
-    "total_views": 734,
+    "total_views": 736,
     "minimum_age_days": 2,
     "by_book": {
       "1 john": {
@@ -85,17 +85,17 @@
       "2 thessalonians": {
         "shorts": 1,
         "avg_views": 94.0,
-        "ratio": 2.203
+        "ratio": 2.199
       },
       "deuteronomy": {
         "shorts": 1,
         "avg_views": 33.0,
-        "ratio": 1.206
+        "ratio": 1.205
       },
       "exodus": {
         "shorts": 1,
         "avg_views": 11.0,
-        "ratio": 0.847
+        "ratio": 0.846
       },
       "hebrews": {
         "shorts": 1,
@@ -105,7 +105,7 @@
       "isaiah": {
         "shorts": 3,
         "avg_views": 14.0,
-        "ratio": 0.812
+        "ratio": 0.811
       },
       "jeremiah": {
         "shorts": 1,
@@ -115,12 +115,12 @@
       "job": {
         "shorts": 1,
         "avg_views": 11.0,
-        "ratio": 0.847
+        "ratio": 0.846
       },
       "jude": {
         "shorts": 1,
         "avg_views": 18.0,
-        "ratio": 0.961
+        "ratio": 0.96
       },
       "lamentations": {
         "shorts": 1,
@@ -130,7 +130,7 @@
       "nahum": {
         "shorts": 1,
         "avg_views": 17.0,
-        "ratio": 0.945
+        "ratio": 0.944
       },
       "numbers": {
         "shorts": 1,
@@ -139,27 +139,27 @@
       },
       "psalm": {
         "shorts": 19,
-        "avg_views": 21.9,
-        "ratio": 1.067,
-        "avg_apv": 465.1,
+        "avg_views": 22.0,
+        "ratio": 1.069,
+        "avg_apv": 411.2,
         "loop_ratio": 1.0
       },
       "romans": {
         "shorts": 2,
         "avg_views": 19.0,
-        "ratio": 0.966
+        "ratio": 0.965
       },
       "zephaniah": {
         "shorts": 1,
         "avg_views": 12.0,
-        "ratio": 0.863
+        "ratio": 0.862
       }
     },
     "by_theme": {
       "anxiety_peace": {
         "shorts": 1,
         "avg_views": 17.0,
-        "ratio": 0.945
+        "ratio": 0.944
       },
       "blessing_benediction": {
         "shorts": 1,
@@ -168,29 +168,29 @@
       },
       "daily_guidance_wisdom": {
         "shorts": 6,
-        "avg_views": 15.0,
-        "ratio": 0.802
+        "avg_views": 15.2,
+        "ratio": 0.806
       },
       "midday_strength_endurance": {
         "shorts": 4,
         "avg_views": 9.5,
-        "ratio": 0.644
+        "ratio": 0.643
       },
       "morning_mercy_renewal": {
         "shorts": 3,
         "avg_views": 57.7,
-        "ratio": 2.097
+        "ratio": 2.092
       },
       "peace_rest": {
         "shorts": 17,
-        "avg_views": 20.5,
+        "avg_views": 20.6,
         "ratio": 1.006
       },
       "protection": {
         "shorts": 3,
         "avg_views": 17.7,
-        "ratio": 0.92,
-        "avg_apv": 465.1,
+        "ratio": 0.918,
+        "avg_apv": 411.2,
         "loop_ratio": 1.0
       },
       "trust_surrender": {
@@ -200,10 +200,10 @@
       }
     },
     "measured_with_apv": 1,
-    "avg_apv": 465.1,
+    "avg_apv": 411.2,
     "looped_shorts": 1,
     "guidance": [
-      "Shorts: 1 of 1 with Analytics retention were watched past the end (average % viewed 100 or more, channel average 465%); looping books share the ranking with view counts."
+      "Shorts: 1 of 1 with Analytics retention were watched past the end (average % viewed 100 or more, channel average 411%); looping books share the ranking with view counts."
     ]
   },
   "guidance": [
