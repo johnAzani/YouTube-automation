@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T02:43:42Z",
+  "generated_at": "2026-11-28T02:48:05Z",
   "monitor_generated_at": "2026-11-27T23:34:54.795338+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 263,
     "published_shorts": 669,
     "public_total": 930,
-    "queued_longform": 153,
+    "queued_longform": 155,
     "queued_shorts": 12,
     "automations_ok": 12,
     "automations_total": 15,
@@ -38,7 +38,7 @@
         "published_shorts": 83,
         "thumbnail_pending": 1,
         "public_total": 112,
-        "queued_longform": 20,
+        "queued_longform": 22,
         "queued_other": 5,
         "queued_shorts": 1
       },
@@ -23393,6 +23393,19 @@
         "words": 874
       },
       {
+        "id": "0138",
+        "slug": "the-promise-that-never-breaks-hebrews-13-5-6-the-secret-place",
+        "file": "0138-the-promise-that-never-breaks-hebrews-13-5-6-the-secret-place.md",
+        "title": "The Promise That Never Breaks: Hebrews 13:5-6 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1683
+      },
+      {
         "id": "0139",
         "slug": "when-fear-keeps-you-awake-1-john-4-18",
         "file": "0139-when-fear-keeps-you-awake-1-john-4-18.md",
@@ -23417,6 +23430,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1256
+      },
+      {
+        "id": "0142",
+        "slug": "when-no-one-else-understands-psalm-31-7",
+        "file": "0142-when-no-one-else-understands-psalm-31-7.md",
+        "title": "When No One Else Understands: Psalm 31:7 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1295
       },
       {
         "id": "0230",
