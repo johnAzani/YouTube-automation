@@ -37,9 +37,9 @@ Written by `pipeline/thumbnail_campaign.py`. The pack renders three concepts; a 
 
 | Concept | Videos | Impressions | Click rate |
 | :--- | ---: | ---: | ---: |
-| poster | 3 | 68 | 0% (too few impressions) |
-| hook | 4 | 0 | — (too few impressions) |
-| quiet | 16 | 0 | — (too few impressions) |
+| quiet | 21 | 196 | 4.1% (too few impressions) |
+| poster | 3 | 128 | 0% (too few impressions) |
+| hook | 5 | 0 | — (too few impressions) |
 
 ### How long a release should be
 
@@ -54,16 +54,16 @@ Written by `pipeline/realistic_ceiling.py`. Every figure below is measured or is
 | Lever | Hours a day |
 | :--- | ---: |
 | as it stands | 1.3 |
-| click rate to 4% | 4.1 |
-| watch time to 3 minutes and a 4% click rate | 4.1 |
+| click rate to 4% | 4.2 |
+| watch time to 3 minutes and a 4% click rate | 4.2 |
 
-The threshold asks 61.54 hours a day; the channels produce 1.309. With both format levers at their documented levels it would be 4.124. To reach the threshold at a 4% click rate and the measured watch time, YouTube would have to serve 6,821 impressions a day where it serves 457. Impressions are chosen by YouTube's recommendation system from how viewers respond, so that is the honest distance: it is reach, not metadata.
+The threshold asks 61.54 hours a day; the channels produce 1.334. With both format levers at their documented levels it would be 4.201. To reach the threshold at a 4% click rate and the measured watch time, YouTube would have to serve 6,821 impressions a day where it serves 465. Impressions are chosen by YouTube's recommendation system from how viewers respond, so that is the honest distance: it is reach, not metadata.
 
 ## Toward the Partner Program
 
 | Channel | Subscribers (need 1,000) | Watch hours, 365 days (need 4,000) | Shorts views, 90 days (need 10,000,000) | Long-form hours a day, last 28 days (need 11) | Read |
 | :--- | ---: | ---: | ---: | ---: | :--- |
-| The Secret Place | 1,270 | 79.5 | 5,538 | 2.3 | 2026-11-27 |
+| The Secret Place | 1,270 | 79.8 | 5,738 | 2.3 | 2026-11-28 |
 
 Ads need the subscribers and either the watch hours or the Shorts views. Watch hours counted here are long-form and live only: time watched in the Shorts feed does not count. A year of the daily figure in the last column is what the 365-day total becomes. YouTube Studio's Earn page holds the official count.
 
@@ -71,21 +71,21 @@ Not granted Analytics access yet: The Morning Altar, The Midday Watch, The Midni
 
 ## The Secret Place
 
-Last 28 days (2026-10-30 to 2026-11-27): 5,389 views, 90.7 watch hours (65 long-form and live, 25.7 Shorts). Over 365 days: 79.5 hours long-form and live, 77.2 hours Shorts.
+Last 28 days (2026-10-31 to 2026-11-28): 5,596 views, 91.3 watch hours (65.3 long-form and live, 26 Shorts). Over 365 days: 79.8 hours long-form and live, 77.5 hours Shorts.
 
 Where viewers came from, last 28 days:
 
 | Source | Views | Watch hours |
 | :--- | ---: | ---: |
-| Shorts feed | 4,640 | 24.1 |
-| YouTube search | 262 | 1 |
-| Suggested videos | 229 | 57.1 |
-| Home and subscriptions | 116 | 1.4 |
-| Other YouTube pages | 55 | 3.3 |
-| Channel page | 34 | 0.52 |
+| Shorts feed | 4,823 | 24.3 |
+| YouTube search | 270 | 1 |
+| Suggested videos | 238 | 57.4 |
+| Home and subscriptions | 119 | 1.4 |
+| Other YouTube pages | 56 | 3.3 |
+| Channel page | 41 | 0.55 |
 | Other sites and apps | 28 | 1.1 |
 | Notifications | 10 | 0.1 |
-| Direct or unknown | 6 | 2 |
+| Direct or unknown | 8 | 2 |
 | Playlists | 2 | 0 |
 | Shorts sound pages | 1 | 0 |
 
@@ -103,10 +103,8 @@ What viewers typed into YouTube search to find this channel, last 90 days:
 | psalm 42 | 2 | 0 |
 | psalms 91 | 2 | 0 |
 | psalmul 91 | 2 | 0 |
-| 91 psalm | 1 | 0 |
-| 91 psalm prayer | 1 | 0 |
 
-13 other search(es) in YouTube's top 25 were not about prayer or scripture and are not listed.
+15 other search(es) in YouTube's top 25 were not about prayer or scripture and are not listed.
 
 Videos by watch time, 365 days (up to 50):
 
@@ -120,7 +118,7 @@ Videos by watch time, 365 days (up to 50):
 | [Night Prayer to Quiet a Racing Mind: Isaiah 26:3-4 / The Secret Place](https://youtu.be/t00bsmMtC-s) | 4.8 | 70 | 8:47 (4.7%) |
 | [When the Night Feels Too Dark: Psalm 139:11-12 / The Secret Place](https://youtu.be/VPAFfGNkCGs) | 2.8 | 18 | 10:34 (5.7%) |
 | [Say This Psalm 23 Prayer Before You Sleep / Divine Peace #Shorts](https://youtu.be/kLgHN57fb1w) | 2.1 | 260 | 1:17 (146%) |
-| [Bedtime Prayer to Let Go of Worry: 1 Peter 5:7 / The Secret Place](https://youtu.be/mzA1qTbk1Kc) | 2 | 11 | 7:42 (4.1%) |
+| [Bedtime Prayer to Let Go of Worry: 1 Peter 5:7 / The Secret Place](https://youtu.be/mzA1qTbk1Kc) | 2.1 | 16 | 5:53 (3.1%) |
 | [Say This Psalm 27 Prayer Before You Sleep / Fear No Evil #Shorts](https://youtu.be/KkPAtMLoGf4) | 2 | 394 | 0:46 (75.4%) |
 | [Say This Psalm 62:1-2 Prayer Before You Sleep / The Secret Place #Sho…](https://youtu.be/-kl7Qg8lQhk) | 1.9 | 111 | 3:34 (363%) |
 | [Say This Psalm 16:7-8 Prayer Before You Sleep / Never Be Moved #Shorts](https://youtu.be/d0Et8L_6y1o) | 1.8 | 139 | 1:52 (191%) |
@@ -142,16 +140,17 @@ Videos by watch time, 365 days (up to 50):
 | [Say This Psalm 103:1-5 Prayer Before You Sleep / Night Prayer #Shorts](https://youtu.be/y1Vt4YVBLdQ) | 0.47 | 78 | 0:58 (100%) |
 | [Say This Psalm 139:11-12 Prayer Before You Sleep / The Secret Place #…](https://youtu.be/avnYVdvDmkc) | 0.47 | 51 | 1:02 (99.6%) |
 | [Say This Isaiah 41:10 Prayer Before You Sleep / The Secret Place #Sho…](https://youtu.be/nZO6mwej0Is) | 0.42 | 69 | 0:42 (67.9%) |
-| [Say This Psalm 91 Prayer Before You Sleep / Find Peace Now #Shorts](https://youtu.be/jQOsb_7el2A) | 0.4 | 22 | 3:29 (465%) |
+| [Say This Psalm 91 Prayer Before You Sleep / Find Peace Now #Shorts](https://youtu.be/jQOsb_7el2A) | 0.42 | 27 | 3:05 (411%) |
 | [Psalm 37:7 Bedtime Prayer / Rest in the Lord & Fret Not](https://youtu.be/sAyMduXhoeQ) | 0.4 | 8 | 3:27 (50.5%) |
 | [Say This Matthew 28:20 Prayer Before You Sleep / Constant Presence #S…](https://youtu.be/T3HVq07iMzM) | 0.38 | 101 | 0:27 (49.7%) |
 | [Say This Psalm 91:11-12 Prayer Before You Sleep / Angelic Night Guard…](https://youtu.be/dqKjQaJbU0c) | 0.38 | 151 | 0:23 (46.2%) |
 | [Say This Psalm 139:7-10 Prayer Before You Sleep / The Secret Place #S…](https://youtu.be/6Y9d1w6Cvzg) | 0.37 | 175 | 0:24 (58.1%) |
 | [Say This 2 Timothy 1:7 Prayer Before You Sleep / Mind #Shorts](https://youtu.be/XyFODtqpNkU) | 0.37 | 78 | 0:34 (69%) |
+| [Say This Matthew 11:28-30 Prayer Before You Sleep / The Secret Place…](https://youtu.be/GBNCiP8UTS8) | 0.33 | 69 | 0:47 (81.3%) |
 
 #### What was started, and what was actually watched
 
-Of 4,498 plays across the 36 most-viewed videos, **1,773 were engaged views** — plays that lasted rather than started. That 39.4% is the nearest thing the Analytics API offers to YouTube Studio's "viewed vs swiped away"; Studio does not expose that figure to any API, so it is a proxy, not the number itself.
+Of 4,652 plays across the 37 most-viewed videos, **1,794 were engaged views** — plays that lasted rather than started. That 38.6% is the nearest thing the Analytics API offers to YouTube Studio's "viewed vs swiped away"; Studio does not expose that figure to any API, so it is a proxy, not the number itself.
 
 | Video | Views | Engaged | Average watched |
 | :--- | ---: | ---: | ---: |
@@ -162,6 +161,7 @@ Of 4,498 plays across the 36 most-viewed videos, **1,773 were engaged views** �
 | [uSsaVvsLsfU](https://youtu.be/uSsaVvsLsfU) | 194 | 96 | 0:32 (63.5%) |
 | [dmwIvRt6Ve8](https://youtu.be/dmwIvRt6Ve8) | 177 | 84 | 1:04 (109%) |
 | [6Y9d1w6Cvzg](https://youtu.be/6Y9d1w6Cvzg) | 175 | 48 | 0:24 (58.1%) |
+| [VaJ9KMCvn6E](https://youtu.be/VaJ9KMCvn6E) | 160 | 21 | 0:09 (18.2%) |
 | [dqKjQaJbU0c](https://youtu.be/dqKjQaJbU0c) | 151 | 55 | 0:23 (46.2%) |
 | [xkpfupurX-0](https://youtu.be/xkpfupurX-0) | 147 | 41 | 0:20 (42.4%) |
 | [d0Et8L_6y1o](https://youtu.be/d0Et8L_6y1o) | 139 | 56 | 1:52 (191%) |
@@ -169,9 +169,8 @@ Of 4,498 plays across the 36 most-viewed videos, **1,773 were engaged views** �
 | [jhOlEJvNg-0](https://youtu.be/jhOlEJvNg-0) | 126 | 47 | 0:54 (98.8%) |
 | [fsnBaSiXhHY](https://youtu.be/fsnBaSiXhHY) | 123 | 59 | 0:37 (69.5%) |
 | [GQT7eKz9MAE](https://youtu.be/GQT7eKz9MAE) | 120 | 56 | 0:35 (81.3%) |
-| [D4SsfbWpMK4](https://youtu.be/D4SsfbWpMK4) | 118 | 42 | 1:47 (238%) |
 
-Thumbnails, 2026-10-15 to 2026-11-25 (39 days of YouTube's daily reach files): shown 18,160 times, clicked 230 times, a click rate of 1.3%.
+Thumbnails, 2026-10-15 to 2026-11-26 (40 days of YouTube's daily reach files): shown 18,605 times, clicked 234 times, a click rate of 1.3%.
 A thumbnail is counted where YouTube shows one (search, home, suggested, the channel page). The Shorts feed shows none, so Shorts watched there are not in these figures.
 
 Videos by times shown (up to 25):
@@ -186,23 +185,23 @@ Videos by times shown (up to 25):
 | [When the Night Feels Too Dark: Psalm 139:11-12 / The Secret Place](https://youtu.be/VPAFfGNkCGs) | 1,352 | 10 | 0.74% |
 | [Bedtime Prayer for Anxiety and Overthinking: Philippians 4:6-7](https://youtu.be/YsHGDAO8uRE) | 1,220 | 5 | 0.41% |
 | [Night Prayer When You Feel Afraid: Isaiah 41:10 / The Secret Place](https://youtu.be/nBujp4zoTCk) | 1,103 | 18 | 1.6% |
-| [Bedtime Prayer to Let Go of Worry: 1 Peter 5:7 / The Secret Place](https://youtu.be/mzA1qTbk1Kc) | 686 | 10 | 1.5% |
+| [Bedtime Prayer to Let Go of Worry: 1 Peter 5:7 / The Secret Place](https://youtu.be/mzA1qTbk1Kc) | 764 | 11 | 1.4% |
 | [Psalm 91:11-12 Night Prayer / Angels Guard Your Home & Sleep](https://youtu.be/dgvGl0EZyYE) | 581 | 18 | 3.1% |
+| [Psalm 23 Night Prayer to Fall Asleep in Peace (Full KJV)](https://youtu.be/LFFs7Nwy_p0) | 225 | 2 | 0.89% |
+| [Psalm 91 Night Prayer for Protection While You Sleep (Full KJV)](https://youtu.be/n9-rm8KCtEk) | 204 | 8 | 3.9% |
 | [Psalm 37:7 Bedtime Prayer / Rest in the Lord & Fret Not](https://youtu.be/sAyMduXhoeQ) | 202 | 5 | 2.5% |
-| [Psalm 91 Night Prayer for Protection While You Sleep (Full KJV)](https://youtu.be/n9-rm8KCtEk) | 196 | 8 | 4.1% |
 | [pbpPdG7_DQk](https://youtu.be/pbpPdG7_DQk) | 167 | 3 | 1.8% |
 | [Say This Psalm 121 Prayer Before You Sleep / He Who Keeps You #Shorts](https://youtu.be/xkpfupurX-0) | 137 | 0 | 0% |
+| [Say This Matthew 6:34 Prayer Before You Sleep / The Secret Place #Sho…](https://youtu.be/EiF_FNNAhCU) | 135 | 1 | 0.74% |
 | [Psalm 91:5-6 Night Prayer / Deliverance From Terror by Night](https://youtu.be/rb6X37vQt7o) | 132 | 1 | 0.76% |
 | [Zw0pjLM5hEI](https://youtu.be/Zw0pjLM5hEI) | 131 | 3 | 2.3% |
+| [A Blessing to Fall Asleep Under: Numbers 6:24-26 / The Secret Place](https://youtu.be/uFnHfI-w0p8) | 129 | 0 | 0% |
 | [Say This Psalm 37:7 Prayer Before You Sleep / The Secret Place #Shorts](https://youtu.be/5ekShDmycic) | 128 | 0 | 0% |
-| [A Blessing to Fall Asleep Under: Numbers 6:24-26 / The Secret Place](https://youtu.be/uFnHfI-w0p8) | 128 | 0 | 0% |
-| [Say This Matthew 6:34 Prayer Before You Sleep / The Secret Place #Sho…](https://youtu.be/EiF_FNNAhCU) | 126 | 1 | 0.79% |
 | [Surrendering Every Heavy Burden: Psalm 31:5 / The Secret Place](https://youtu.be/r3nA7BgZpP4) | 123 | 1 | 0.81% |
-| [Say This Psalm 27 Prayer Before You Sleep / Fear No Evil #Shorts](https://youtu.be/KkPAtMLoGf4) | 113 | 0 | 0% |
+| [Say This Psalm 27 Prayer Before You Sleep / Fear No Evil #Shorts](https://youtu.be/KkPAtMLoGf4) | 116 | 0 | 0% |
 | [Say This Psalm 91 Prayer Before You Sleep / Divine Protection #Shorts](https://youtu.be/SG69BbNlfRw) | 108 | 1 | 0.93% |
-| [Say This Psalm 91 Prayer Before You Sleep / Find Peace Now #Shorts](https://youtu.be/jQOsb_7el2A) | 103 | 0 | 0% |
+| [Say This Psalm 91 Prayer Before You Sleep / Find Peace Now #Shorts](https://youtu.be/jQOsb_7el2A) | 106 | 0 | 0% |
 | [Say This Psalm 34 Prayer Before You Sleep / Angels Stand Watch #Shorts](https://youtu.be/fTYu1V5GHUE) | 99 | 0 | 0% |
-| [Bedtime Prayer for Sleep Without Fear: Proverbs 3:24-26](https://youtu.be/3xrS2BqNeWA) | 89 | 1 | 1.1% |
 
 ## What each channel is trying in its titles
 
