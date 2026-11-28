@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T11:59:19Z",
+  "generated_at": "2026-11-28T12:04:04Z",
   "monitor_generated_at": "2026-11-28T08:06:30.892982+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 939,
+    "published_total": 940,
     "published_longform": 269,
-    "published_shorts": 670,
-    "public_total": 937,
+    "published_shorts": 671,
+    "public_total": 938,
     "queued_longform": 174,
-    "queued_shorts": 20,
+    "queued_shorts": 18,
     "automations_ok": 11,
     "automations_total": 15,
     "network_healthy": false
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 124,
+        "published_total": 125,
         "published_longform": 38,
-        "published_shorts": 86,
+        "published_shorts": 87,
         "thumbnail_pending": 0,
-        "public_total": 123,
+        "public_total": 124,
         "queued_longform": 20,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 1
       },
       "latest_video": {
-        "id": "0082",
-        "title": "Starting the Day with God: Exodus 33:14 | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "MP1a_up2qJ4",
-        "watch_url": "https://youtu.be/MP1a_up2qJ4",
+        "id": "SHORT-MORNINGPSALM86V3",
+        "title": "Say This Psalm 86:3 Prayer for Fresh Start at Sunrise | A Short Prayer #Shorts",
+        "format": "short",
+        "youtube_video_id": "CpWndkNGh2g",
+        "watch_url": "https://www.youtube.com/shorts/CpWndkNGh2g",
         "published_on": "2026-11-28",
-        "published_at": "2026-11-28T09:01:25Z"
+        "published_at": "2026-11-28T12:02:46Z"
       },
       "next_queued_longform": {
         "id": "0081",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM86V3",
+      "slug": "short-morningpsalm86v3-sunrise-prayer",
+      "file": "short-morningpsalm86v3-sunrise-prayer.md",
+      "title": "Say This Psalm 86:3 Prayer for Fresh Start at Sunrise | A Short Prayer #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-28",
+      "published_at": "2026-11-28T12:02:46Z",
+      "youtube_video_id": "CpWndkNGh2g",
+      "watch_url": "https://www.youtube.com/shorts/CpWndkNGh2g",
+      "youtu_be_url": "https://youtu.be/CpWndkNGh2g",
+      "shorts_url": "https://www.youtube.com/shorts/CpWndkNGh2g",
+      "studio_url": "https://studio.youtube.com/video/CpWndkNGh2g/edit",
+      "thumb_url": "https://i.ytimg.com/vi/CpWndkNGh2g/hqdefault.jpg",
+      "thumb_text": "PSALM 86:3 PRAYER \u00b7 PSALM 86:3",
+      "thumbnail_pending": false,
+      "duration_label": "41s",
+      "words": 647
+    },
     {
       "id": "0819",
       "slug": "filled-with-the-knowledge-of-his-will-colossians-1-9-10",
@@ -25588,17 +25612,6 @@
         "target_window_utc": "06:14"
       },
       {
-        "short": "short-morningpsalm86v3",
-        "file": "0000-short-morningpsalm86v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 86:3",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
-      {
         "short": "short-provisionluke1v53",
         "file": "0000-short-provisionluke1v53.yml",
         "companion_longform_id": "",
@@ -25707,17 +25720,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-morningpsalm19v14",
-        "file": "0973-short-morningpsalm19v14.yml",
-        "companion_longform_id": "0973",
-        "scripture": "Psalm 19:14",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       }
     ]
   },
