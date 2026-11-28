@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T08:58:23Z",
+  "generated_at": "2026-11-28T09:02:42Z",
   "monitor_generated_at": "2026-11-28T08:06:30.892982+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 936,
-    "published_longform": 267,
-    "published_shorts": 669,
-    "public_total": 934,
-    "queued_longform": 165,
-    "queued_shorts": 14,
+    "published_total": 938,
+    "published_longform": 268,
+    "published_shorts": 670,
+    "public_total": 936,
+    "queued_longform": 164,
+    "queued_shorts": 13,
     "automations_ok": 11,
     "automations_total": 15,
     "network_healthy": false
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 122,
-        "published_longform": 37,
-        "published_shorts": 85,
+        "published_total": 124,
+        "published_longform": 38,
+        "published_shorts": 86,
         "thumbnail_pending": 0,
-        "public_total": 121,
-        "queued_longform": 20,
+        "public_total": 123,
+        "queued_longform": 19,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM77V11",
-        "title": "Say This Psalm 77:11 Prayer for Fresh Start at Sunrise | The Thoughts Waiting At Dawn #Shorts",
-        "format": "short",
-        "youtube_video_id": "uH1x2fCmwto",
-        "watch_url": "https://www.youtube.com/shorts/uH1x2fCmwto",
+        "id": "0082",
+        "title": "Starting the Day with God: Exodus 33:14 | The Morning Altar",
+        "format": "longform",
+        "youtube_video_id": "MP1a_up2qJ4",
+        "watch_url": "https://youtu.be/MP1a_up2qJ4",
         "published_on": "2026-11-28",
-        "published_at": "2026-11-28T01:54:00Z"
+        "published_at": "2026-11-28T09:01:25Z"
       },
       "next_queued_longform": {
         "id": "0081",
@@ -697,6 +697,30 @@
   ],
   "videos": [
     {
+      "id": "0082",
+      "slug": "when-you-need-gods-presence-before-you-move-exodus-33-14",
+      "file": "0082-when-you-need-gods-presence-before-you-move-exodus-33-14.md",
+      "title": "Starting the Day with God: Exodus 33:14 | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-28",
+      "published_at": "2026-11-28T09:01:25Z",
+      "youtube_video_id": "MP1a_up2qJ4",
+      "watch_url": "https://youtu.be/MP1a_up2qJ4",
+      "youtu_be_url": "https://youtu.be/MP1a_up2qJ4",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/MP1a_up2qJ4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/MP1a_up2qJ4/hqdefault.jpg",
+      "thumb_text": "HIS PRESENCE GOES",
+      "thumbnail_pending": false,
+      "duration_label": "6m 10s",
+      "words": 979
+    },
+    {
       "id": "0720",
       "slug": "giving-thanks-in-all-things-ephesians-5-20",
       "file": "0720-giving-thanks-in-all-things-ephesians-5-20.md",
@@ -719,6 +743,30 @@
       "thumbnail_pending": true,
       "duration_label": "7m 51s",
       "words": 1132
+    },
+    {
+      "id": "SHORT-MORNINGPSALM77V12",
+      "slug": "short-morningpsalm77v12-sunrise-prayer",
+      "file": "short-morningpsalm77v12-sunrise-prayer.md",
+      "title": "Say This Psalm 77:12 Prayer for Fresh Start at Sunrise | Before Daybreak #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-28",
+      "published_at": "2026-11-28T08:17:52Z",
+      "youtube_video_id": "_Qy4YPY8Qpg",
+      "watch_url": "https://www.youtube.com/shorts/_Qy4YPY8Qpg",
+      "youtu_be_url": "https://youtu.be/_Qy4YPY8Qpg",
+      "shorts_url": "https://www.youtube.com/shorts/_Qy4YPY8Qpg",
+      "studio_url": "https://studio.youtube.com/video/_Qy4YPY8Qpg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/_Qy4YPY8Qpg/hqdefault.jpg",
+      "thumb_text": "BEFORE THE NOISE \u00b7 REMEMBER HIS HAND",
+      "thumbnail_pending": false,
+      "duration_label": "54s",
+      "words": 657
     },
     {
       "id": "0526",
@@ -23177,19 +23225,6 @@
         "words": 780
       },
       {
-        "id": "0082",
-        "slug": "when-you-need-gods-presence-before-you-move-exodus-33-14",
-        "file": "0082-when-you-need-gods-presence-before-you-move-exodus-33-14.md",
-        "title": "Starting the Day with God: Exodus 33:14 | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 979
-      },
-      {
         "id": "0108",
         "slug": "ceaseless-communion-through-every-hour",
         "file": "0108-ceaseless-communion-through-every-hour.md",
@@ -25392,17 +25427,6 @@
         "file": "0000-short-morningjohn1v4.yml",
         "companion_longform_id": "",
         "scripture": "John 1:4-5",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-morningpsalm77v12",
-        "file": "0000-short-morningpsalm77v12.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 77:12",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",

@@ -2,7 +2,7 @@
 id: 0082
 title: "Starting the Day with God: Exodus 33:14 | The Morning Altar"
 slug: when-you-need-gods-presence-before-you-move-exodus-33-14
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -77,6 +77,16 @@ originality:
   source_notes: true
 title_before: "When You Need God's Presence Before You Move: Exodus 33:14"
 queue_title_fixed_at: "2026-11-23"
+published_on: "2026-11-28"
+published_at: "2026-11-28T09:01:25Z"
+youtube_video_id: "MP1a_up2qJ4"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 370.25
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "poster"
 ---
 
 ## Scene 1 — The Sunrise Hook and Directing the Prayer
