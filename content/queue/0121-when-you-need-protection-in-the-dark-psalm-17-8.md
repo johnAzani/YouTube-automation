@@ -1,6 +1,6 @@
 ---
 id: '0121'
-title: "When Terror of the Night Finds You: Psalm 17:8 | The Secret Place"
+title: "Safe in the Shadow of His Wings: Psalm 17:8 | The Secret Place"
 slug: when-you-need-protection-in-the-dark-psalm-17-8
 status: approved
 channel: secret-place
@@ -72,6 +72,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When Terror of the Night Finds You: Psalm 17:8 | The Secret Place"
+queue_title_fixed_at: "2026-11-28"
 ---
 
 ## Scene 1 — The Quiet Room and Evening Surrender
