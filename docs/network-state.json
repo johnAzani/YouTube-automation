@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T12:04:04Z",
+  "generated_at": "2026-11-28T12:36:50Z",
   "monitor_generated_at": "2026-11-28T08:06:30.892982+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 940,
-    "published_longform": 269,
+    "published_total": 941,
+    "published_longform": 270,
     "published_shorts": 671,
-    "public_total": 938,
-    "queued_longform": 174,
-    "queued_shorts": 18,
+    "public_total": 939,
+    "queued_longform": 173,
+    "queued_shorts": 16,
     "automations_ok": 11,
     "automations_total": 15,
     "network_healthy": false
@@ -232,28 +232,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 98,
-        "published_longform": 29,
+        "published_total": 99,
+        "published_longform": 30,
         "published_shorts": 69,
-        "thumbnail_pending": 97,
-        "public_total": 98,
-        "queued_longform": 13,
+        "thumbnail_pending": 98,
+        "public_total": 99,
+        "queued_longform": 12,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 1
       },
       "latest_video": {
-        "id": "0229",
-        "title": "The God of Peace Who Seals the Broken: Hebrews 13:20-21",
-        "format": "longform",
-        "youtube_video_id": "Ky2Io214rRE",
-        "watch_url": "https://youtu.be/Ky2Io214rRE",
-        "published_on": "2026-11-28",
-        "published_at": "2026-11-28T02:22:48Z"
-      },
-      "next_queued_longform": {
         "id": "0230",
         "title": "The Lord Shall Fight for You: Exodus 14:13-14 | The Midnight Watch",
-        "words": 1083,
+        "format": "longform",
+        "youtube_video_id": "t0g5y5RdFIA",
+        "watch_url": "https://youtu.be/t0g5y5RdFIA",
+        "published_on": "2026-11-28",
+        "published_at": "2026-11-28T12:35:55Z"
+      },
+      "next_queued_longform": {
+        "id": "0231",
+        "title": "Songs in the Darkest Hour: Job 35:10 | The Midnight Watch",
+        "words": 1064,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0230",
+      "slug": "the-lord-shall-fight-for-you-exodus-14-13-14",
+      "file": "0230-the-lord-shall-fight-for-you-exodus-14-13-14.md",
+      "title": "The Lord Shall Fight for You: Exodus 14:13-14 | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-28",
+      "published_at": "2026-11-28T12:35:55Z",
+      "youtube_video_id": "t0g5y5RdFIA",
+      "watch_url": "https://youtu.be/t0g5y5RdFIA",
+      "youtu_be_url": "https://youtu.be/t0g5y5RdFIA",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/t0g5y5RdFIA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/t0g5y5RdFIA/hqdefault.jpg",
+      "thumb_text": "STAND STILL AND SEE",
+      "thumbnail_pending": true,
+      "duration_label": "7m 35s",
+      "words": 1083
+    },
     {
       "id": "SHORT-MORNINGPSALM86V3",
       "slug": "short-morningpsalm86v3-sunrise-prayer",
@@ -23715,19 +23739,6 @@
         "words": 1264
       },
       {
-        "id": "0230",
-        "slug": "the-lord-shall-fight-for-you-exodus-14-13-14",
-        "file": "0230-the-lord-shall-fight-for-you-exodus-14-13-14.md",
-        "title": "The Lord Shall Fight for You: Exodus 14:13-14 | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1083
-      },
-      {
         "id": "0231",
         "slug": "songs-in-the-darkest-hour-job-35-10-the-midnight-watch",
         "file": "0231-songs-in-the-darkest-hour-job-35-10-the-midnight-watch.md",
@@ -25632,28 +25643,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-midnightacts27v23",
-        "file": "0241-short-midnightacts27v23.yml",
-        "companion_longform_id": "0241",
-        "scripture": "Acts 27:23-25",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-midnightdaniel6v19",
-        "file": "0242-short-midnightdaniel6v19.yml",
-        "companion_longform_id": "0242",
-        "scripture": "Daniel 6:19-22",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-shieldisaiah59v19",

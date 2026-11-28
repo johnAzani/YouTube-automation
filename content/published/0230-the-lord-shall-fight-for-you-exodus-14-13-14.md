@@ -2,7 +2,7 @@
 id: '0230'
 title: 'The Lord Shall Fight for You: Exodus 14:13-14 | The Midnight Watch'
 slug: the-lord-shall-fight-for-you-exodus-14-13-14
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -71,6 +71,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-28"
+published_at: "2026-11-28T12:35:55Z"
+youtube_video_id: "t0g5y5RdFIA"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 454.81
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Rising at the Midnight Hour
