@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-28T05:54:37.268309+00:00",
+  "generated_at": "2026-11-28T10:26:43.861404+00:00",
   "as_of": "2026-11-28",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 11,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 81,
+    "receipt_video_ids": 82,
     "matched_video_ids": 50,
     "longform_below_view_threshold": 11,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 3,
+    "longform_too_young_or_undated": 4,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
