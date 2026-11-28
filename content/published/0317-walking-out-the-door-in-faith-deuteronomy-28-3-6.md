@@ -77,7 +77,7 @@ originality:
 published_on: "2026-11-21"
 published_at: "2026-11-21T16:11:56Z"
 youtube_video_id: "FmiTNRubtS8"
-metadata_revision: "retitle-pending"
+metadata_revision: "selar-seo-v1"
 top_comment: "ok"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"

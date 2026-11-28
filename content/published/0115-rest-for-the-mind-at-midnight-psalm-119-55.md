@@ -89,6 +89,7 @@ narration_voice: "Charon"
 duration_seconds: 569.98
 thumbnail_revision: "ctr-v3-cinema"
 thumbnail_concept: "poster"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 ## Scene 1 — The Quiet Sanctuary of Night
