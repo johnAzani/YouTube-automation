@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T15:34:40Z",
+  "generated_at": "2026-11-28T15:34:51Z",
   "monitor_generated_at": "2026-11-28T08:06:30.892982+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 275,
     "published_shorts": 671,
     "public_total": 944,
-    "queued_longform": 170,
+    "queued_longform": 172,
     "queued_shorts": 10,
     "automations_ok": 11,
     "automations_total": 15,
@@ -106,7 +106,7 @@
         "published_shorts": 87,
         "thumbnail_pending": 0,
         "public_total": 124,
-        "queued_longform": 20,
+        "queued_longform": 22,
         "queued_other": 0,
         "queued_shorts": 1
       },
@@ -25612,6 +25612,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1326
+      },
+      {
+        "id": "0974",
+        "slug": "when-you-need-your-path-made-clear-psalm-7324",
+        "file": "0974-when-you-need-your-path-made-clear-psalm-7324.md",
+        "title": "When You Need Your Path Made Clear: Psalm 73:24 | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 991
+      },
+      {
+        "id": "0975",
+        "slug": "morning-worship-and-your-day-with-god-psalm-71-15",
+        "file": "0975-morning-worship-and-your-day-with-god-psalm-71-15.md",
+        "title": "Morning Worship and Your Day With God: Psalm 71:15 | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1629
       }
     ],
     "shorts": [
