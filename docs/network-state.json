@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T08:07:58Z",
+  "generated_at": "2026-11-28T08:11:58Z",
   "monitor_generated_at": "2026-11-28T08:06:30.892982+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -13,7 +13,7 @@
     "published_shorts": 669,
     "public_total": 933,
     "queued_longform": 166,
-    "queued_shorts": 22,
+    "queued_shorts": 20,
     "automations_ok": 11,
     "automations_total": 15,
     "network_healthy": false
@@ -40,7 +40,7 @@
         "public_total": 113,
         "queued_longform": 27,
         "queued_other": 5,
-        "queued_shorts": 3
+        "queued_shorts": 1
       },
       "latest_video": {
         "id": "0115",
@@ -25430,28 +25430,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-psalm103v1",
-        "file": "0126-short-psalm103v1.yml",
-        "companion_longform_id": "0126",
-        "scripture": "Psalm 103:1-5",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-deuteronomy33v27",
-        "file": "0131-short-deuteronomy33v27.yml",
-        "companion_longform_id": "0131",
-        "scripture": "Deuteronomy 33:27",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-midnightjudges7v19",
