@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T02:52:58Z",
+  "generated_at": "2026-11-28T05:20:55Z",
   "monitor_generated_at": "2026-11-28T02:49:26.469694+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 932,
-    "published_longform": 263,
+    "published_total": 933,
+    "published_longform": 264,
     "published_shorts": 669,
-    "public_total": 930,
-    "queued_longform": 157,
+    "public_total": 931,
+    "queued_longform": 158,
     "queued_shorts": 12,
     "automations_ok": 12,
     "automations_total": 15,
@@ -33,28 +33,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 113,
-        "published_longform": 30,
+        "published_total": 114,
+        "published_longform": 31,
         "published_shorts": 83,
         "thumbnail_pending": 1,
-        "public_total": 112,
-        "queued_longform": 24,
+        "public_total": 113,
+        "queued_longform": 25,
         "queued_other": 5,
         "queued_shorts": 1
       },
       "latest_video": {
-        "id": "0114",
-        "title": "When Your Soul Refuses Comfort: Psalm 77:6 | The Secret Place",
-        "format": "longform",
-        "youtube_video_id": "iloryqdQ3NY",
-        "watch_url": "https://youtu.be/iloryqdQ3NY",
-        "published_on": "2026-11-27",
-        "published_at": "2026-11-27T20:04:37Z"
-      },
-      "next_queued_longform": {
         "id": "0115",
         "title": "Rest for the Mind at Midnight: Psalm 119:55 | The Secret Place",
-        "words": 1450,
+        "format": "longform",
+        "youtube_video_id": "4EE5JSVJeCY",
+        "watch_url": "https://youtu.be/4EE5JSVJeCY",
+        "published_on": "2026-11-28",
+        "published_at": "2026-11-28T05:19:56Z"
+      },
+      "next_queued_longform": {
+        "id": "0116",
+        "title": "Midnight Gratitude When Sleep Eludes You: Psalm 119:62",
+        "words": 1115,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0115",
+      "slug": "rest-for-the-mind-at-midnight-psalm-119-55",
+      "file": "0115-rest-for-the-mind-at-midnight-psalm-119-55.md",
+      "title": "Rest for the Mind at Midnight: Psalm 119:55 | The Secret Place",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-28",
+      "published_at": "2026-11-28T05:19:56Z",
+      "youtube_video_id": "4EE5JSVJeCY",
+      "watch_url": "https://youtu.be/4EE5JSVJeCY",
+      "youtu_be_url": "https://youtu.be/4EE5JSVJeCY",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/4EE5JSVJeCY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/4EE5JSVJeCY/hqdefault.jpg",
+      "thumb_text": "THY NAME TONIGHT",
+      "thumbnail_pending": false,
+      "duration_label": "9m 30s",
+      "words": 1450
+    },
     {
       "id": "0615",
       "slug": "protected-by-a-wall-of-fire-zechariah-2-5",
@@ -23159,17 +23183,17 @@
         "words": 1368
       },
       {
-        "id": "0115",
-        "slug": "rest-for-the-mind-at-midnight-psalm-119-55",
-        "file": "0115-rest-for-the-mind-at-midnight-psalm-119-55.md",
-        "title": "Rest for the Mind at Midnight: Psalm 119:55 | The Secret Place",
+        "id": "0116",
+        "slug": "midnight-gratitude-when-sleep-eludes-you-psalm-119-62",
+        "file": "0116-midnight-gratitude-when-sleep-eludes-you-psalm-119-62.md",
+        "title": "Midnight Gratitude When Sleep Eludes You: Psalm 119:62",
         "channel": "secret-place",
         "channel_name": "The Secret Place",
         "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
-        "words": 1450
+        "words": 1115
       },
       {
         "id": "0117",
@@ -23443,6 +23467,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1295
+      },
+      {
+        "id": "0143",
+        "slug": "when-the-world-is-too-loud-isaiah-26-20",
+        "file": "0143-when-the-world-is-too-loud-isaiah-26-20.md",
+        "title": "When the World Is Too Loud: Isaiah 26:20 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1343
       },
       {
         "id": "0144",
