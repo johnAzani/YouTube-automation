@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T02:14:01Z",
+  "generated_at": "2026-11-28T02:22:52Z",
   "monitor_generated_at": "2026-11-27T23:34:54.795338+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 928,
-    "published_longform": 259,
+    "published_total": 929,
+    "published_longform": 260,
     "published_shorts": 669,
-    "public_total": 926,
-    "queued_longform": 153,
+    "public_total": 927,
+    "queued_longform": 152,
     "queued_shorts": 12,
     "automations_ok": 12,
     "automations_total": 15,
@@ -164,28 +164,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 100,
-        "published_longform": 32,
+        "published_total": 101,
+        "published_longform": 33,
         "published_shorts": 68,
         "thumbnail_pending": 0,
-        "public_total": 100,
-        "queued_longform": 21,
+        "public_total": 101,
+        "queued_longform": 20,
         "queued_other": 0,
         "queued_shorts": 1
       },
       "latest_video": {
-        "id": "0103",
-        "title": "A Strong Tower in the Middle of the Day: Proverbs 18:10",
-        "format": "longform",
-        "youtube_video_id": "tgBjuDcBXIc",
-        "watch_url": "https://youtu.be/tgBjuDcBXIc",
-        "published_on": "2026-11-27",
-        "published_at": "2026-11-27T17:34:19Z"
-      },
-      "next_queued_longform": {
         "id": "0106",
         "title": "Grace for the Hours That Exhaust You: 2 Corinthians 12:9",
-        "words": 987,
+        "format": "longform",
+        "youtube_video_id": "JwxmB66Q31M",
+        "watch_url": "https://youtu.be/JwxmB66Q31M",
+        "published_on": "2026-11-28",
+        "published_at": "2026-11-28T02:21:54Z"
+      },
+      "next_queued_longform": {
+        "id": "0108",
+        "title": "Ceaseless Communion Through Every Hour: 1 Thessalonians 5:16-18",
+        "words": 1737,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0106",
+      "slug": "grace-for-the-hours-that-exhaust-you-2-corinthians-12-9",
+      "file": "0106-grace-for-the-hours-that-exhaust-you-2-corinthians-12-9.md",
+      "title": "Grace for the Hours That Exhaust You: 2 Corinthians 12:9",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-28",
+      "published_at": "2026-11-28T02:21:54Z",
+      "youtube_video_id": "JwxmB66Q31M",
+      "watch_url": "https://youtu.be/JwxmB66Q31M",
+      "youtu_be_url": "https://youtu.be/JwxmB66Q31M",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/JwxmB66Q31M/edit",
+      "thumb_url": "https://i.ytimg.com/vi/JwxmB66Q31M/hqdefault.jpg",
+      "thumb_text": "SUFFICIENT GRACE",
+      "thumbnail_pending": false,
+      "duration_label": "6m 16s",
+      "words": 987
+    },
     {
       "id": "SHORT-GUIDEDPSALM16V11",
       "slug": "short-guidedpsalm16v11-guidance-prayer",
@@ -22996,19 +23020,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 979
-      },
-      {
-        "id": "0106",
-        "slug": "grace-for-the-hours-that-exhaust-you-2-corinthians-12-9",
-        "file": "0106-grace-for-the-hours-that-exhaust-you-2-corinthians-12-9.md",
-        "title": "Grace for the Hours That Exhaust You: 2 Corinthians 12:9",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 987
       },
       {
         "id": "0108",

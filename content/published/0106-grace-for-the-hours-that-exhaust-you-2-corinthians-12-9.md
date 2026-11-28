@@ -2,7 +2,7 @@
 id: '0106'
 title: 'Grace for the Hours That Exhaust You: 2 Corinthians 12:9'
 slug: grace-for-the-hours-that-exhaust-you-2-corinthians-12-9
-status: approved
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -74,6 +74,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-28"
+published_at: "2026-11-28T02:21:54Z"
+youtube_video_id: "JwxmB66Q31M"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 375.72
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — The Noonday Pause
