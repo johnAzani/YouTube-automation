@@ -2,7 +2,7 @@
 id: '0326'
 title: 'A Covenant Blessing for Every Generation: Genesis 12:2-3'
 slug: a-covenant-blessing-for-every-generation-genesis-12-2-3
-status: approved
+status: published
 channel: prayer5
 privacy: public
 format: longform
@@ -75,6 +75,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-28"
+published_at: "2026-11-28T12:50:14Z"
+youtube_video_id: "WCyM2hyAEAE"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 576.96
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar

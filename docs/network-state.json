@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T12:40:10Z",
+  "generated_at": "2026-11-28T12:51:19Z",
   "monitor_generated_at": "2026-11-28T08:06:30.892982+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 941,
-    "published_longform": 270,
+    "published_total": 942,
+    "published_longform": 271,
     "published_shorts": 671,
-    "public_total": 939,
-    "queued_longform": 173,
+    "public_total": 940,
+    "queued_longform": 172,
     "queued_shorts": 14,
     "automations_ok": 11,
     "automations_total": 15,
@@ -300,28 +300,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 86,
-        "published_longform": 26,
+        "published_total": 87,
+        "published_longform": 27,
         "published_shorts": 60,
-        "thumbnail_pending": 86,
-        "public_total": 86,
-        "queued_longform": 19,
+        "thumbnail_pending": 87,
+        "public_total": 87,
+        "queued_longform": 18,
         "queued_other": 0,
         "queued_shorts": 1
       },
       "latest_video": {
-        "id": "0321",
-        "title": "When Your Labor Feels Unseen: Ruth 2:12 | The Family Altar",
-        "format": "longform",
-        "youtube_video_id": "-IyNOC9rRXI",
-        "watch_url": "https://youtu.be/-IyNOC9rRXI",
-        "published_on": "2026-11-28",
-        "published_at": "2026-11-28T02:37:31Z"
-      },
-      "next_queued_longform": {
         "id": "0326",
         "title": "A Covenant Blessing for Every Generation: Genesis 12:2-3",
-        "words": 1437,
+        "format": "longform",
+        "youtube_video_id": "WCyM2hyAEAE",
+        "watch_url": "https://youtu.be/WCyM2hyAEAE",
+        "published_on": "2026-11-28",
+        "published_at": "2026-11-28T12:50:14Z"
+      },
+      "next_queued_longform": {
+        "id": "0327",
+        "title": "When Fear Creeps Into Your Home: Proverbs 14:26 | The Family Altar",
+        "words": 1088,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0326",
+      "slug": "a-covenant-blessing-for-every-generation-genesis-12-2-3",
+      "file": "0326-a-covenant-blessing-for-every-generation-genesis-12-2-3.md",
+      "title": "A Covenant Blessing for Every Generation: Genesis 12:2-3",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-28",
+      "published_at": "2026-11-28T12:50:14Z",
+      "youtube_video_id": "WCyM2hyAEAE",
+      "watch_url": "https://youtu.be/WCyM2hyAEAE",
+      "youtu_be_url": "https://youtu.be/WCyM2hyAEAE",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/WCyM2hyAEAE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/WCyM2hyAEAE/hqdefault.jpg",
+      "thumb_text": "BLESSED TO BLESS",
+      "thumbnail_pending": true,
+      "duration_label": "9m 37s",
+      "words": 1437
+    },
     {
       "id": "0230",
       "slug": "the-lord-shall-fight-for-you-exodus-14-13-14",
@@ -23893,19 +23917,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1536
-      },
-      {
-        "id": "0326",
-        "slug": "a-covenant-blessing-for-every-generation-genesis-12-2-3",
-        "file": "0326-a-covenant-blessing-for-every-generation-genesis-12-2-3.md",
-        "title": "A Covenant Blessing for Every Generation: Genesis 12:2-3",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1437
       },
       {
         "id": "0327",
