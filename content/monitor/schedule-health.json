@@ -9,11 +9,11 @@
       "workflow": "keepalive.yml"
     },
     {
-      "late_minutes": 198,
-      "name": "YouTube reporting jobs (thumbnail impressions)",
-      "ran_at": "2026-11-27T09:05:37+00:00",
-      "slot": "2026-11-27T05:47:00+00:00",
-      "workflow": "reporting-jobs.yml"
+      "late_minutes": 211,
+      "name": "Growth autopilot",
+      "ran_at": "2026-11-28T05:45:27+00:00",
+      "slot": "2026-11-28T02:14:00+00:00",
+      "workflow": "growth-autopilot.yml"
     },
     {
       "late_minutes": 186,
@@ -30,15 +30,29 @@
       "workflow": "produce.yml"
     },
     {
+      "late_minutes": 151,
+      "name": "Gemini Brain Autonomous Queue Replenishment",
+      "ran_at": "2026-11-28T05:45:29+00:00",
+      "slot": "2026-11-28T03:14:00+00:00",
+      "workflow": "gemini_brain.yml"
+    },
+    {
       "late_minutes": 141,
       "name": "Automation monitor",
       "ran_at": "2026-11-28T05:44:35+00:00",
       "slot": "2026-11-28T03:23:00+00:00",
       "workflow": "monitor.yml"
+    },
+    {
+      "late_minutes": 128,
+      "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
+      "ran_at": "2026-11-28T05:45:30+00:00",
+      "slot": "2026-11-28T03:37:00+00:00",
+      "workflow": "channel-analytics.yml"
     }
   ],
-  "generated_at": "2026-11-28T05:45:23.324867+00:00",
-  "last_run_at": "2026-11-28T05:44:35+00:00",
+  "generated_at": "2026-11-28T05:47:57.914970+00:00",
+  "last_run_at": "2026-11-28T05:47:06+00:00",
   "on_time": [
     {
       "late_minutes": 4,
