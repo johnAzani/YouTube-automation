@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T05:36:35Z",
+  "generated_at": "2026-11-28T05:44:14Z",
   "monitor_generated_at": "2026-11-28T02:49:26.469694+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 934,
-    "published_longform": 265,
+    "published_total": 935,
+    "published_longform": 266,
     "published_shorts": 669,
-    "public_total": 932,
-    "queued_longform": 157,
+    "public_total": 933,
+    "queued_longform": 156,
     "queued_shorts": 12,
     "automations_ok": 12,
     "automations_total": 15,
@@ -436,28 +436,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 86,
-        "published_longform": 26,
+        "published_total": 87,
+        "published_longform": 27,
         "published_shorts": 60,
         "thumbnail_pending": 0,
-        "public_total": 86,
-        "queued_longform": 19,
+        "public_total": 87,
+        "queued_longform": 18,
         "queued_other": 0,
         "queued_shorts": 1
       },
       "latest_video": {
-        "id": "0524",
-        "title": "Honest Work and Heavenly Wages: Colossians 3:23-24",
-        "format": "longform",
-        "youtube_video_id": "3uepFLRvLQU",
-        "watch_url": "https://youtu.be/3uepFLRvLQU",
-        "published_on": "2026-11-27",
-        "published_at": "2026-11-27T20:04:26Z"
-      },
-      "next_queued_longform": {
         "id": "0526",
         "title": "Empty Nets and Labour Without Fruit: Luke 5:4-6 | The Provision Table",
-        "words": 1267,
+        "format": "longform",
+        "youtube_video_id": "qPIaEfpkPAI",
+        "watch_url": "https://youtu.be/qPIaEfpkPAI",
+        "published_on": "2026-11-28",
+        "published_at": "2026-11-28T05:43:08Z"
+      },
+      "next_queued_longform": {
+        "id": "0527",
+        "title": "Daily Bread for Every Need: Proverbs 30:8-9 | The Provision Table",
+        "words": 1656,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0526",
+      "slug": "when-labour-yields-nothing-luke-5-4-6",
+      "file": "0526-when-labour-yields-nothing-luke-5-4-6.md",
+      "title": "Empty Nets and Labour Without Fruit: Luke 5:4-6 | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-28",
+      "published_at": "2026-11-28T05:43:08Z",
+      "youtube_video_id": "qPIaEfpkPAI",
+      "watch_url": "https://youtu.be/qPIaEfpkPAI",
+      "youtu_be_url": "https://youtu.be/qPIaEfpkPAI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/qPIaEfpkPAI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/qPIaEfpkPAI/hqdefault.jpg",
+      "thumb_text": "AT THY WORD LORD",
+      "thumbnail_pending": false,
+      "duration_label": "8m 30s",
+      "words": 1267
+    },
     {
       "id": "0420",
       "slug": "peace-when-your-mind-wont-rest-isaiah-26-3-4",
@@ -24180,19 +24204,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1790
-      },
-      {
-        "id": "0526",
-        "slug": "when-labour-yields-nothing-luke-5-4-6",
-        "file": "0526-when-labour-yields-nothing-luke-5-4-6.md",
-        "title": "Empty Nets and Labour Without Fruit: Luke 5:4-6 | The Provision Table",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1267
       },
       {
         "id": "0527",
