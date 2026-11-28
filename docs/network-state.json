@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T09:11:42Z",
+  "generated_at": "2026-11-28T11:59:19Z",
   "monitor_generated_at": "2026-11-28T08:06:30.892982+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,8 +12,8 @@
     "published_longform": 269,
     "published_shorts": 670,
     "public_total": 937,
-    "queued_longform": 163,
-    "queued_shorts": 11,
+    "queued_longform": 174,
+    "queued_shorts": 20,
     "automations_ok": 11,
     "automations_total": 15,
     "network_healthy": false
@@ -38,7 +38,7 @@
         "published_shorts": 83,
         "thumbnail_pending": 1,
         "public_total": 113,
-        "queued_longform": 27,
+        "queued_longform": 29,
         "queued_other": 5,
         "queued_shorts": 1
       },
@@ -106,9 +106,9 @@
         "published_shorts": 86,
         "thumbnail_pending": 0,
         "public_total": 123,
-        "queued_longform": 19,
+        "queued_longform": 20,
         "queued_other": 0,
-        "queued_shorts": 2
+        "queued_shorts": 3
       },
       "latest_video": {
         "id": "0082",
@@ -135,11 +135,11 @@
         "available": true,
         "as_of": "2026-11-28",
         "measured_longform_videos": 0,
-        "total_longform_videos": 10,
+        "total_longform_videos": 11,
         "top_themes": [
           {
             "theme": "daily_guidance_wisdom",
-            "videos": 8,
+            "videos": 9,
             "top_scripture": ""
           },
           {
@@ -237,9 +237,9 @@
         "published_shorts": 69,
         "thumbnail_pending": 97,
         "public_total": 98,
-        "queued_longform": 11,
+        "queued_longform": 13,
         "queued_other": 0,
-        "queued_shorts": 1
+        "queued_shorts": 3
       },
       "latest_video": {
         "id": "0229",
@@ -274,12 +274,12 @@
             "top_scripture": ""
           },
           {
-            "theme": "anxiety_peace",
+            "theme": "peace_rest",
             "videos": 1,
             "top_scripture": ""
           },
           {
-            "theme": "peace_rest",
+            "theme": "anxiety_peace",
             "videos": 1,
             "top_scripture": ""
           }
@@ -509,9 +509,9 @@
         "published_shorts": 60,
         "thumbnail_pending": 10,
         "public_total": 81,
-        "queued_longform": 11,
+        "queued_longform": 13,
         "queued_other": 4,
-        "queued_shorts": 1
+        "queued_shorts": 3
       },
       "latest_video": {
         "id": "0615",
@@ -577,9 +577,9 @@
         "published_shorts": 62,
         "thumbnail_pending": 82,
         "public_total": 82,
-        "queued_longform": 8,
+        "queued_longform": 10,
         "queued_other": 0,
-        "queued_shorts": 1
+        "queued_shorts": 3
       },
       "latest_video": {
         "id": "0720",
@@ -645,9 +645,9 @@
         "published_shorts": 60,
         "thumbnail_pending": 0,
         "public_total": 79,
-        "queued_longform": 8,
+        "queued_longform": 10,
         "queued_other": 0,
-        "queued_shorts": 1
+        "queued_shorts": 3
       },
       "latest_video": {
         "id": "0819",
@@ -677,13 +677,13 @@
         "total_longform_videos": 10,
         "top_themes": [
           {
-            "theme": "midday_strength_endurance",
-            "videos": 3,
+            "theme": "daily_guidance_wisdom",
+            "videos": 5,
             "top_scripture": ""
           },
           {
-            "theme": "daily_guidance_wisdom",
-            "videos": 4,
+            "theme": "midday_strength_endurance",
+            "videos": 2,
             "top_scripture": ""
           },
           {
@@ -8668,7 +8668,7 @@
       "id": "0073",
       "slug": "when-you-need-direction-for-today-isaiah-30-21-the-morning-altar",
       "file": "0073-when-you-need-direction-for-today-isaiah-30-21-the-morning-altar.md",
-      "title": "Prayer for Today's First Decision: Isaiah 30:21 | The Morning Altar",
+      "title": "When You Stand at a Crossroads: Isaiah 30:21 | The Morning Altar",
       "channel": "prayer2",
       "channel_name": "The Morning Altar",
       "channel_handle": "@TheMorningAltarDaily",
@@ -9220,7 +9220,7 @@
       "id": "0614",
       "slug": "as-the-mountains-are-round-about-jerusalem-psalm-125-2-the-covenant-shield",
       "file": "0614-as-the-mountains-are-round-about-jerusalem-psalm-125-2-the-covenant-shield.md",
-      "title": "As the Mountains Are Round About Jerusalem: Psalm 125:2",
+      "title": "Surrounded by God Unmovable: Psalm 125:2 | The Covenant Shield",
       "channel": "prayer8",
       "channel_name": "The Covenant Shield",
       "channel_handle": "@TheCovenantShieldDaily",
@@ -23382,7 +23382,7 @@
         "id": "0121",
         "slug": "when-you-need-protection-in-the-dark-psalm-17-8",
         "file": "0121-when-you-need-protection-in-the-dark-psalm-17-8.md",
-        "title": "When Terror of the Night Finds You: Psalm 17:8 | The Secret Place",
+        "title": "Safe in the Shadow of His Wings: Psalm 17:8 | The Secret Place",
         "channel": "secret-place",
         "channel_name": "The Secret Place",
         "status": "approved",
@@ -23522,6 +23522,19 @@
         "words": 1156
       },
       {
+        "id": "0132",
+        "slug": "light-in-the-dark-when-you-are-alone-exodus-13-21",
+        "file": "0132-light-in-the-dark-when-you-are-alone-exodus-13-21.md",
+        "title": "Light in the Dark When You Are Alone: Exodus 13:21 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1642
+      },
+      {
         "id": "0133",
         "slug": "when-exhaustion-pulls-you-under-jeremiah-31-25-26",
         "file": "0133-when-exhaustion-pulls-you-under-jeremiah-31-25-26.md",
@@ -23546,6 +23559,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1593
+      },
+      {
+        "id": "0135",
+        "slug": "a-strong-hold-in-the-day-of-trouble-nahum-1-7",
+        "file": "0135-a-strong-hold-in-the-day-of-trouble-nahum-1-7.md",
+        "title": "A Strong Hold in the Day of Trouble: Nahum 1:7 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1458
       },
       {
         "id": "0136",
@@ -23806,6 +23832,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1581
+      },
+      {
+        "id": "0241",
+        "slug": "when-the-storm-hits-the-fourth-watch-acts-27-23-25",
+        "file": "0241-when-the-storm-hits-the-fourth-watch-acts-27-23-25.md",
+        "title": "Finding Calm in Sudden Fear: Acts 27:23-25 | The Midnight Watch",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1640
+      },
+      {
+        "id": "0242",
+        "slug": "when-unseen-dangers-surround-you-daniel-6-19-22",
+        "file": "0242-when-unseen-dangers-surround-you-daniel-6-19-22.md",
+        "title": "When Unseen Dangers Surround You: Daniel 6:19-22 | The Midnight Watch",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1536
       },
       {
         "id": "0326",
@@ -24679,6 +24731,32 @@
         "words": 1127
       },
       {
+        "id": "0632",
+        "slug": "a-standard-raised-against-the-enemy-isaiah-59-19-the-covenant-shield",
+        "file": "0632-a-standard-raised-against-the-enemy-isaiah-59-19-the-covenant-shield.md",
+        "title": "A Standard Raised Against the Enemy: Isaiah 59:19",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1459
+      },
+      {
+        "id": "0634",
+        "slug": "courage-when-the-way-ahead-is-hard-deuteronomy-31-6-the-covenant-shield",
+        "file": "0634-courage-when-the-way-ahead-is-hard-deuteronomy-31-6-the-covenant-shield.md",
+        "title": "Courage When the Way Ahead Is Hard: Deuteronomy 31:6",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1090
+      },
+      {
         "id": "0635",
         "slug": "delivered-from-hidden-traps-psalm-124-6-8",
         "file": "0635-delivered-from-hidden-traps-psalm-124-6-8.md",
@@ -24822,6 +24900,32 @@
         "words": 1596
       },
       {
+        "id": "0731",
+        "slug": "magnify-him-with-thanksgiving-psalm-69-30",
+        "file": "0731-magnify-him-with-thanksgiving-psalm-69-30.md",
+        "title": "Magnify Him With Thanksgiving: Psalm 69:30 | The Praise Garden",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1448
+      },
+      {
+        "id": "0732",
+        "slug": "joy-that-breaks-through-the-silence-psalm-98-4",
+        "file": "0732-joy-that-breaks-through-the-silence-psalm-98-4.md",
+        "title": "Joy That Breaks Through the Silence: Psalm 98:4 | The Praise Garden",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1159
+      },
+      {
         "id": "0821",
         "slug": "clear-footing-for-the-way-ahead-proverbs-4-11-12",
         "file": "0821-clear-footing-for-the-way-ahead-proverbs-4-11-12.md",
@@ -24924,6 +25028,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1395
+      },
+      {
+        "id": "0832",
+        "slug": "when-you-need-to-know-you-are-on-the-right-path-romans-8-14",
+        "file": "0832-when-you-need-to-know-you-are-on-the-right-path-romans-8-14.md",
+        "title": "When You Need to Know You Are on the Right Path: Romans 8:14",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1272
+      },
+      {
+        "id": "0833",
+        "slug": "prayer-for-peace-in-a-shaken-season-luke-1-79",
+        "file": "0833-prayer-for-peace-in-a-shaken-season-luke-1-79.md",
+        "title": "Prayer for Peace in a Shaken Season: Luke 1:79 | The Guided Path",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1261
       },
       {
         "id": "0900",
@@ -25353,6 +25483,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 2147
+      },
+      {
+        "id": "0973",
+        "slug": "guarding-your-words-before-the-day-begins-psalm-19-14",
+        "file": "0973-guarding-your-words-before-the-day-begins-psalm-19-14.md",
+        "title": "Guarding Your Words Before the Day Begins: Psalm 19:14",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1326
       }
     ],
     "shorts": [
@@ -25476,6 +25619,105 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
+      },
+      {
+        "short": "short-midnightacts27v23",
+        "file": "0241-short-midnightacts27v23.yml",
+        "companion_longform_id": "0241",
+        "scripture": "Acts 27:23-25",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-midnightdaniel6v19",
+        "file": "0242-short-midnightdaniel6v19.yml",
+        "companion_longform_id": "0242",
+        "scripture": "Daniel 6:19-22",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-shieldisaiah59v19",
+        "file": "0632-short-shieldisaiah59v19.yml",
+        "companion_longform_id": "0632",
+        "scripture": "Isaiah 59:19",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "08:44"
+      },
+      {
+        "short": "short-shielddeuteronomy31v6",
+        "file": "0634-short-shielddeuteronomy31v6.yml",
+        "companion_longform_id": "0634",
+        "scripture": "Deuteronomy 31:6",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "08:44"
+      },
+      {
+        "short": "short-gardenpsalm69v30",
+        "file": "0731-short-gardenpsalm69v30.yml",
+        "companion_longform_id": "0731",
+        "scripture": "Psalm 69:30",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
+        "short": "short-gardenpsalm98v4",
+        "file": "0732-short-gardenpsalm98v4.yml",
+        "companion_longform_id": "0732",
+        "scripture": "Psalm 98:4",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
+        "short": "short-guidedromans8v14",
+        "file": "0832-short-guidedromans8v14.yml",
+        "companion_longform_id": "0832",
+        "scripture": "Romans 8:14",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "18:44"
+      },
+      {
+        "short": "short-guidedluke1v79",
+        "file": "0833-short-guidedluke1v79.yml",
+        "companion_longform_id": "0833",
+        "scripture": "Luke 1:79",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "18:44"
+      },
+      {
+        "short": "short-morningpsalm19v14",
+        "file": "0973-short-morningpsalm19v14.yml",
+        "companion_longform_id": "0973",
+        "scripture": "Psalm 19:14",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
       }
     ]
   },
