@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T13:08:56Z",
+  "generated_at": "2026-11-28T13:34:57Z",
   "monitor_generated_at": "2026-11-28T08:06:30.892982+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 945,
-    "published_longform": 274,
+    "published_total": 946,
+    "published_longform": 275,
     "published_shorts": 671,
-    "public_total": 943,
-    "queued_longform": 169,
-    "queued_shorts": 12,
+    "public_total": 944,
+    "queued_longform": 168,
+    "queued_shorts": 10,
     "automations_ok": 11,
     "automations_total": 15,
     "network_healthy": false
@@ -640,28 +640,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 79,
-        "published_longform": 19,
+        "published_total": 80,
+        "published_longform": 20,
         "published_shorts": 60,
         "thumbnail_pending": 0,
-        "public_total": 79,
-        "queued_longform": 10,
+        "public_total": 80,
+        "queued_longform": 9,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 1
       },
       "latest_video": {
-        "id": "0819",
-        "title": "Filled With the Knowledge of His Will: Colossians 1:9-10",
-        "format": "longform",
-        "youtube_video_id": "flRqYWyvNIU",
-        "watch_url": "https://youtu.be/flRqYWyvNIU",
-        "published_on": "2026-11-28",
-        "published_at": "2026-11-28T09:10:44Z"
-      },
-      "next_queued_longform": {
         "id": "0821",
         "title": "Clear Footing for the Way Ahead: Proverbs 4:11-12 | The Guided Path",
-        "words": 1399,
+        "format": "longform",
+        "youtube_video_id": "db34RynQvkY",
+        "watch_url": "https://youtu.be/db34RynQvkY",
+        "published_on": "2026-11-28",
+        "published_at": "2026-11-28T13:33:44Z"
+      },
+      "next_queued_longform": {
+        "id": "0824",
+        "title": "When You Need to Know the Path of Life: Psalm 16:11 | The Guided Path",
+        "words": 1861,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0821",
+      "slug": "clear-footing-for-the-way-ahead-proverbs-4-11-12",
+      "file": "0821-clear-footing-for-the-way-ahead-proverbs-4-11-12.md",
+      "title": "Clear Footing for the Way Ahead: Proverbs 4:11-12 | The Guided Path",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-28",
+      "published_at": "2026-11-28T13:33:44Z",
+      "youtube_video_id": "db34RynQvkY",
+      "watch_url": "https://youtu.be/db34RynQvkY",
+      "youtu_be_url": "https://youtu.be/db34RynQvkY",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/db34RynQvkY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/db34RynQvkY/hqdefault.jpg",
+      "thumb_text": "RIGHT PATHS",
+      "thumbnail_pending": false,
+      "duration_label": "9m 03s",
+      "words": 1399
+    },
     {
       "id": "0527",
       "slug": "daily-bread-for-every-need-proverbs-30-8-9",
@@ -25005,19 +25029,6 @@
         "words": 1159
       },
       {
-        "id": "0821",
-        "slug": "clear-footing-for-the-way-ahead-proverbs-4-11-12",
-        "file": "0821-clear-footing-for-the-way-ahead-proverbs-4-11-12.md",
-        "title": "Clear Footing for the Way Ahead: Proverbs 4:11-12 | The Guided Path",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1399
-      },
-      {
         "id": "0824",
         "slug": "when-you-need-to-know-the-path-of-life-psalm-16-11",
         "file": "0824-when-you-need-to-know-the-path-of-life-psalm-16-11.md",
@@ -25687,28 +25698,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-guidedromans8v14",
-        "file": "0832-short-guidedromans8v14.yml",
-        "companion_longform_id": "0832",
-        "scripture": "Romans 8:14",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-guidedluke1v79",
-        "file": "0833-short-guidedluke1v79.yml",
-        "companion_longform_id": "0833",
-        "scripture": "Luke 1:79",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       }
     ]
   },
