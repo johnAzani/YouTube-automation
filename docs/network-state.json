@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T02:23:45Z",
+  "generated_at": "2026-11-28T02:38:29Z",
   "monitor_generated_at": "2026-11-27T23:34:54.795338+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 930,
-    "published_longform": 261,
+    "published_total": 931,
+    "published_longform": 262,
     "published_shorts": 669,
-    "public_total": 928,
-    "queued_longform": 153,
+    "public_total": 929,
+    "queued_longform": 152,
     "queued_shorts": 12,
     "automations_ok": 12,
     "automations_total": 15,
@@ -300,28 +300,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 85,
-        "published_longform": 25,
+        "published_total": 86,
+        "published_longform": 26,
         "published_shorts": 60,
-        "thumbnail_pending": 85,
-        "public_total": 85,
-        "queued_longform": 20,
+        "thumbnail_pending": 86,
+        "public_total": 86,
+        "queued_longform": 19,
         "queued_other": 0,
         "queued_shorts": 1
       },
       "latest_video": {
-        "id": "0325",
-        "title": "Strength in Marriage and Home: Ecclesiastes 4:9-12 | The Family Altar",
-        "format": "longform",
-        "youtube_video_id": "aqJ9CbO05Hg",
-        "watch_url": "https://youtu.be/aqJ9CbO05Hg",
-        "published_on": "2026-11-27",
-        "published_at": "2026-11-27T17:30:25Z"
-      },
-      "next_queued_longform": {
         "id": "0321",
         "title": "When Your Labor Feels Unseen: Ruth 2:12 | The Family Altar",
-        "words": 1268,
+        "format": "longform",
+        "youtube_video_id": "-IyNOC9rRXI",
+        "watch_url": "https://youtu.be/-IyNOC9rRXI",
+        "published_on": "2026-11-28",
+        "published_at": "2026-11-28T02:37:31Z"
+      },
+      "next_queued_longform": {
+        "id": "0326",
+        "title": "A Covenant Blessing for Every Generation: Genesis 12:2-3",
+        "words": 1437,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0321",
+      "slug": "when-your-labor-feels-unseen-ruth-2-12",
+      "file": "0321-when-your-labor-feels-unseen-ruth-2-12.md",
+      "title": "When Your Labor Feels Unseen: Ruth 2:12 | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-28",
+      "published_at": "2026-11-28T02:37:31Z",
+      "youtube_video_id": "-IyNOC9rRXI",
+      "watch_url": "https://youtu.be/-IyNOC9rRXI",
+      "youtu_be_url": "https://youtu.be/-IyNOC9rRXI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/-IyNOC9rRXI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/-IyNOC9rRXI/hqdefault.jpg",
+      "thumb_text": "UNDER HIS WINGS",
+      "thumbnail_pending": true,
+      "duration_label": "8m 49s",
+      "words": 1268
+    },
     {
       "id": "0229",
       "slug": "the-god-of-peace-who-seals-the-broken-hebrews-13-20-21",
@@ -23486,19 +23510,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 2124
-      },
-      {
-        "id": "0321",
-        "slug": "when-your-labor-feels-unseen-ruth-2-12",
-        "file": "0321-when-your-labor-feels-unseen-ruth-2-12.md",
-        "title": "When Your Labor Feels Unseen: Ruth 2:12 | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1268
       },
       {
         "id": "0326",
