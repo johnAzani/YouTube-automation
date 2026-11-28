@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T02:22:52Z",
+  "generated_at": "2026-11-28T02:23:45Z",
   "monitor_generated_at": "2026-11-27T23:34:54.795338+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 929,
-    "published_longform": 260,
+    "published_total": 930,
+    "published_longform": 261,
     "published_shorts": 669,
-    "public_total": 927,
-    "queued_longform": 152,
+    "public_total": 928,
+    "queued_longform": 153,
     "queued_shorts": 12,
     "automations_ok": 12,
     "automations_total": 15,
@@ -232,28 +232,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 97,
-        "published_longform": 28,
+        "published_total": 98,
+        "published_longform": 29,
         "published_shorts": 69,
-        "thumbnail_pending": 96,
-        "public_total": 97,
-        "queued_longform": 8,
+        "thumbnail_pending": 97,
+        "public_total": 98,
+        "queued_longform": 9,
         "queued_other": 0,
         "queued_shorts": 1
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTHEBREWS13V20",
-        "title": "Pray This Hebrews 13:20-21 Midnight Prayer | Glory Forevermore #Shorts",
-        "format": "short",
-        "youtube_video_id": "wFGNUJYYakw",
-        "watch_url": "https://www.youtube.com/shorts/wFGNUJYYakw",
-        "published_on": "2026-11-27",
-        "published_at": "2026-11-27T20:27:04Z"
-      },
-      "next_queued_longform": {
         "id": "0229",
         "title": "The God of Peace Who Seals the Broken: Hebrews 13:20-21",
-        "words": 1401,
+        "format": "longform",
+        "youtube_video_id": "Ky2Io214rRE",
+        "watch_url": "https://youtu.be/Ky2Io214rRE",
+        "published_on": "2026-11-28",
+        "published_at": "2026-11-28T02:22:48Z"
+      },
+      "next_queued_longform": {
+        "id": "0230",
+        "title": "The Lord Shall Fight for You: Exodus 14:13-14 | The Midnight Watch",
+        "words": 1083,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0229",
+      "slug": "the-god-of-peace-who-seals-the-broken-hebrews-13-20-21",
+      "file": "0229-the-god-of-peace-who-seals-the-broken-hebrews-13-20-21.md",
+      "title": "The God of Peace Who Seals the Broken: Hebrews 13:20-21",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-28",
+      "published_at": "2026-11-28T02:22:48Z",
+      "youtube_video_id": "Ky2Io214rRE",
+      "watch_url": "https://youtu.be/Ky2Io214rRE",
+      "youtu_be_url": "https://youtu.be/Ky2Io214rRE",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/Ky2Io214rRE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Ky2Io214rRE/hqdefault.jpg",
+      "thumb_text": "THE GOD OF PEACE",
+      "thumbnail_pending": true,
+      "duration_label": "9m 00s",
+      "words": 1401
+    },
     {
       "id": "0106",
       "slug": "grace-for-the-hours-that-exhaust-you-2-corinthians-12-9",
@@ -23347,19 +23371,6 @@
         "words": 1256
       },
       {
-        "id": "0229",
-        "slug": "the-god-of-peace-who-seals-the-broken-hebrews-13-20-21",
-        "file": "0229-the-god-of-peace-who-seals-the-broken-hebrews-13-20-21.md",
-        "title": "The God of Peace Who Seals the Broken: Hebrews 13:20-21",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1401
-      },
-      {
         "id": "0230",
         "slug": "the-lord-shall-fight-for-you-exodus-14-13-14",
         "file": "0230-the-lord-shall-fight-for-you-exodus-14-13-14.md",
@@ -23449,6 +23460,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1490
+      },
+      {
+        "id": "0237",
+        "slug": "when-you-struggle-to-keep-vigil-matthew-26-40-41",
+        "file": "0237-when-you-struggle-to-keep-vigil-matthew-26-40-41.md",
+        "title": "When You Struggle to Keep Vigil: Matthew 26:40-41 | The Midnight Watch",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1312
+      },
+      {
+        "id": "0238",
+        "slug": "staying-watchful-in-the-dark-watch-1-peter-5-8-9",
+        "file": "0238-staying-watchful-in-the-dark-watch-1-peter-5-8-9.md",
+        "title": "Staying Watchful in the Dark Watch: 1 Peter 5:8-9 | The Midnight Watch",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 2124
       },
       {
         "id": "0321",
