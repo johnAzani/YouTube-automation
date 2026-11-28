@@ -30,13 +30,6 @@
       "workflow": "thumbnail-campaign.yml"
     },
     {
-      "late_minutes": 200,
-      "name": "Growth autopilot",
-      "ran_at": "2026-11-27T05:34:01+00:00",
-      "slot": "2026-11-27T02:14:00+00:00",
-      "workflow": "growth-autopilot.yml"
-    },
-    {
       "late_minutes": 198,
       "name": "YouTube reporting jobs (thumbnail impressions)",
       "ran_at": "2026-11-27T09:05:37+00:00",
@@ -58,6 +51,13 @@
       "workflow": "produce.yml"
     },
     {
+      "late_minutes": 145,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-28T02:48:18+00:00",
+      "slot": "2026-11-28T00:23:00+00:00",
+      "workflow": "monitor.yml"
+    },
+    {
       "late_minutes": 140,
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "ran_at": "2026-11-27T05:34:03+00:00",
@@ -65,8 +65,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-28T02:07:31.172121+00:00",
-  "last_run_at": "2026-11-28T02:06:36+00:00",
+  "generated_at": "2026-11-28T02:49:11.903110+00:00",
+  "last_run_at": "2026-11-28T02:48:18+00:00",
   "on_time": [
     {
       "late_minutes": 4,
