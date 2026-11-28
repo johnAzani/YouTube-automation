@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T02:04:35Z",
+  "generated_at": "2026-11-28T02:14:01Z",
   "monitor_generated_at": "2026-11-27T23:34:54.795338+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 927,
+    "published_total": 928,
     "published_longform": 259,
-    "published_shorts": 668,
-    "public_total": 925,
-    "queued_longform": 152,
-    "queued_shorts": 13,
+    "published_shorts": 669,
+    "public_total": 926,
+    "queued_longform": 153,
+    "queued_shorts": 12,
     "automations_ok": 12,
     "automations_total": 15,
     "network_healthy": false
@@ -640,23 +640,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 77,
+        "published_total": 78,
         "published_longform": 18,
-        "published_shorts": 59,
+        "published_shorts": 60,
         "thumbnail_pending": 0,
-        "public_total": 77,
-        "queued_longform": 6,
+        "public_total": 78,
+        "queued_longform": 7,
         "queued_other": 0,
-        "queued_shorts": 2
+        "queued_shorts": 1
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDISAIAH42V16",
-        "title": "Pray This Isaiah 42:16 Prayer for God's Guidance | Walking Into The Unknown #Shorts",
+        "id": "SHORT-GUIDEDPSALM16V11",
+        "title": "Pray This Psalm 16:11 Prayer for God's Guidance | When Your Next Step Is Unclear #Shorts",
         "format": "short",
-        "youtube_video_id": "OX4oY_I8Guc",
-        "watch_url": "https://www.youtube.com/shorts/OX4oY_I8Guc",
-        "published_on": "2026-11-27",
-        "published_at": "2026-11-27T20:28:38Z"
+        "youtube_video_id": "O1bwd0Hs3FQ",
+        "watch_url": "https://www.youtube.com/shorts/O1bwd0Hs3FQ",
+        "published_on": "2026-11-28",
+        "published_at": "2026-11-28T02:12:52Z"
       },
       "next_queued_longform": {
         "id": "0819",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDPSALM16V11",
+      "slug": "short-guidedpsalm16v11-guidance-prayer",
+      "file": "short-guidedpsalm16v11-guidance-prayer.md",
+      "title": "Pray This Psalm 16:11 Prayer for God's Guidance | When Your Next Step Is Unclear #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-28",
+      "published_at": "2026-11-28T02:12:52Z",
+      "youtube_video_id": "O1bwd0Hs3FQ",
+      "watch_url": "https://www.youtube.com/shorts/O1bwd0Hs3FQ",
+      "youtu_be_url": "https://youtu.be/O1bwd0Hs3FQ",
+      "shorts_url": "https://www.youtube.com/shorts/O1bwd0Hs3FQ",
+      "studio_url": "https://studio.youtube.com/video/O1bwd0Hs3FQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/O1bwd0Hs3FQ/hqdefault.jpg",
+      "thumb_text": "WHEN YOU FACE \u00b7 AN UNCERTAIN ROAD",
+      "thumbnail_pending": false,
+      "duration_label": "46s",
+      "words": 627
+    },
     {
       "id": "SHORT-GARDENEPHESIANS5V20",
       "slug": "short-gardenephesians5v20-thanksgiving-prayer",
@@ -24495,6 +24519,19 @@
         "words": 941
       },
       {
+        "id": "0828",
+        "slug": "the-wisdom-that-is-from-above-james-3-17",
+        "file": "0828-the-wisdom-that-is-from-above-james-3-17.md",
+        "title": "The Wisdom That Is From Above: James 3:17 | The Guided Path",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1515
+      },
+      {
         "id": "0900",
         "slug": "faithful-work-today-ecclesiastes-116-the-morning-altar",
         "file": "0900-faithful-work-today-ecclesiastes-116-the-morning-altar.md",
@@ -25056,17 +25093,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-guidedpsalm16v11",
-        "file": "0824-short-guidedpsalm16v11.yml",
-        "companion_longform_id": "0824",
-        "scripture": "Psalm 16:11",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       }
     ]
   },
