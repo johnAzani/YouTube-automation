@@ -1,24 +1,24 @@
 {
  "channels": [
   {
-   "binding": "enough ready Shorts",
+   "binding": "no passage and no companion: this channel cannot make another Short",
    "channel": "secret-place",
    "companion_longforms": 0,
-   "ready": 3,
+   "ready": 1,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
-   "verdict": "enough"
+   "verdict": "dry"
   },
   {
-   "binding": "enough ready Shorts",
+   "binding": "no passage and no companion: this channel cannot make another Short",
    "channel": "prayer2",
    "companion_longforms": 0,
-   "ready": 3,
+   "ready": 1,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
-   "verdict": "enough"
+   "verdict": "dry"
   },
   {
    "binding": "no passage and no companion: this channel cannot make another Short",
@@ -31,14 +31,14 @@
    "verdict": "dry"
   },
   {
-   "binding": "enough ready Shorts",
+   "binding": "no passage and no companion: this channel cannot make another Short",
    "channel": "prayer4",
    "companion_longforms": 0,
-   "ready": 3,
+   "ready": 1,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
-   "verdict": "enough"
+   "verdict": "dry"
   },
   {
    "binding": "no passage and no companion: this channel cannot make another Short",
@@ -71,24 +71,24 @@
    "verdict": "dry"
   },
   {
-   "binding": "enough ready Shorts",
+   "binding": "no passage and no companion: this channel cannot make another Short",
    "channel": "prayer8",
    "companion_longforms": 0,
-   "ready": 3,
+   "ready": 1,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
-   "verdict": "enough"
+   "verdict": "dry"
   },
   {
-   "binding": "enough ready Shorts",
+   "binding": "no passage and no companion: this channel cannot make another Short",
    "channel": "prayer9",
    "companion_longforms": 0,
-   "ready": 3,
+   "ready": 1,
    "sources": 0,
    "standalone_examples": [],
    "standalone_passages": 0,
-   "verdict": "enough"
+   "verdict": "dry"
   },
   {
    "binding": "enough ready Shorts",
@@ -103,23 +103,33 @@
  ],
  "cost_lock": "$0.00 / month (docs/ZERO_DOLLAR_LOCK.md)",
  "dry": [
+  "secret-place",
+  "prayer2",
   "prayer3",
+  "prayer4",
   "prayer5",
   "prayer6",
-  "prayer7"
+  "prayer7",
+  "prayer8",
+  "prayer9"
  ],
- "generated_at": "2026-11-28T08:09:23.402665+00:00",
+ "generated_at": "2026-11-28T13:34:26.300035+00:00",
  "not_claimed": [
   "that more passages would produce more views. The supply reading says what can be authored, not what will be watched."
  ],
  "ready_floor": 2,
  "schema": 1,
- "sentence": "prayer3, prayer5, prayer6, prayer7 are below the floor of 2 ready Shorts; and prayer3, prayer5, prayer6, prayer7 cannot make another Short at all: no standalone passage is free and no queued long-form is waiting for its companion.",
+ "sentence": "secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8, prayer9 are below the floor of 2 ready Shorts; and secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8, prayer9 cannot make another Short at all: no standalone passage is free and no queued long-form is waiting for its companion.",
  "total_sources": 0,
  "under_floor": [
+  "secret-place",
+  "prayer2",
   "prayer3",
+  "prayer4",
   "prayer5",
   "prayer6",
-  "prayer7"
+  "prayer7",
+  "prayer8",
+  "prayer9"
  ]
 }

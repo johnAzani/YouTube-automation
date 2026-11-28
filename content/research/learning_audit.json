@@ -8,41 +8,41 @@
   "first_frame": {
    "age_hours": 0.0,
    "stale": false,
-   "stamp": "2026-11-28T08:09:23.486581+00:00",
+   "stamp": "2026-11-28T13:34:26.424873+00:00",
    "why": ""
   },
   "growth_score": {
    "age_hours": 0.0,
    "stale": false,
-   "stamp": "2026-11-28T08:09:22.610421+00:00",
+   "stamp": "2026-11-28T13:34:24.777221+00:00",
    "why": ""
   },
   "learning_audit": {
-   "age_hours": 9.8,
+   "age_hours": 5.4,
    "stale": false,
-   "stamp": "2026-11-27T22:20:12.291838+00:00",
+   "stamp": "2026-11-28T08:09:23.746024+00:00",
    "why": ""
   },
   "performance_feedback": {
-   "age_hours": 2.4,
+   "age_hours": 3.3,
    "stale": false,
-   "stamp": "2026-11-28T05:46:48.408273+00:00",
+   "stamp": "2026-11-28T10:19:24.910645+00:00",
    "why": ""
   },
   "shorts_supply": {
    "age_hours": 0.0,
    "stale": false,
-   "stamp": "2026-11-28T08:09:23.402665+00:00",
+   "stamp": "2026-11-28T13:34:26.300035+00:00",
    "why": ""
   },
   "thumbnail_campaign": {
-   "age_hours": 32.2,
+   "age_hours": 13.6,
    "stale": false,
-   "stamp": "2026-11-27",
+   "stamp": "2026-11-28",
    "why": ""
   }
  },
- "generated_at": "2026-11-28T08:09:23.746024+00:00",
+ "generated_at": "2026-11-28T13:34:26.879013+00:00",
  "loops": [
   {
    "channels_reordered": 10,
@@ -54,12 +54,12 @@
    "what": "which passages and books the brain writes Shorts on next"
   },
   {
-   "evidence": "324 impressions pooled, under the 300 floor for every concept, so nothing is trusted",
-   "leader": null,
+   "evidence": "quiet leads, the release path can adopt it, and no release has gone out on it yet",
+   "leader": "quiet",
    "loop": "thumbnail_choice",
    "owner": "pipeline/thumbnail_campaign.py: live_concept",
    "state": "measuring",
-   "videos_assigned": 29,
+   "videos_assigned": 38,
    "what": "which of the three thumbnail concepts goes live"
   },
   {

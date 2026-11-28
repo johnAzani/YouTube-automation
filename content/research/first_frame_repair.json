@@ -3,7 +3,7 @@
  "citation_first_control": 354,
  "citation_frames": 434,
  "cost_lock": "$0.00 / month (docs/ZERO_DOLLAR_LOCK.md)",
- "generated_at": "2026-11-28T08:09:23.581662+00:00",
+ "generated_at": "2026-11-28T13:34:26.598394+00:00",
  "no_need_line": 80,
  "not_claimed": [
   "that a repaired frame keeps more people. This moves an already-written line to where the rule says it belongs; whether that helps is the next reading's question, and one composition still cannot be compared against another until the repaired Shorts are published and watched."
@@ -63,7 +63,7 @@
    "new_kicker": "AS YOU TURN OFF",
    "old_kicker": "DEUTERONOMY 33:27",
    "published": true,
-   "queued": true,
+   "queued": false,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {
@@ -2584,7 +2584,7 @@
    "new_kicker": "THE FOURTH WATCH",
    "old_kicker": "MATTHEW 14:25",
    "published": true,
-   "queued": true,
+   "queued": false,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {
@@ -3794,7 +3794,7 @@
    "new_kicker": "SET DOWN YOUR REGRET",
    "old_kicker": "PSALM 103:1",
    "published": true,
-   "queued": true,
+   "queued": false,
    "reason": "already published; kept as the citation-first control the need-first frames are compared against"
   },
   {

@@ -5,8 +5,8 @@
   "days_until_the_threshold_doubles": 64,
   "hours_a_day_needed": 62.5,
   "measured": {
-    "impressions_a_day": 465.1,
-    "click_rate_percent": 1.26,
+    "impressions_a_day": 464.7,
+    "click_rate_percent": 1.25,
     "watch_seconds_a_view": 812.0,
     "views_a_day": 215.2,
     "reach_sufficient": true,
@@ -15,26 +15,26 @@
   "levers": [
     {
       "lever": "as it stands",
-      "hours_a_day": 1.322,
+      "hours_a_day": 1.31,
       "note": "the measured impressions, click rate and watch time"
     },
     {
       "lever": "click rate to 4%",
-      "hours_a_day": 4.196,
+      "hours_a_day": 4.193,
       "note": "the bottom of the 4-8% band prayer and sleep channels report"
     },
     {
       "lever": "watch time to 3 minutes and a 4% click rate",
-      "hours_a_day": 4.196,
+      "hours_a_day": 4.193,
       "note": "both format levers at their documented levels, impressions unchanged"
     }
   ],
   "verdict": {
     "reachable_on_impressions_alone": false,
-    "times_the_pace_must_rise": 47.3,
+    "times_the_pace_must_rise": 47.7,
     "impressions_a_day_needed": 6927,
     "impressions_multiple_needed": 14.9,
-    "sentence": "The threshold asks 62.5 hours a day; the channels produce 1.322. With both format levers at their documented levels it would be 4.196. To reach the threshold at a 4% click rate and the measured watch time, YouTube would have to serve 6,927 impressions a day where it serves 465. Impressions are chosen by YouTube's recommendation system from how viewers respond, so that is the honest distance: it is reach, not metadata."
+    "sentence": "The threshold asks 62.5 hours a day; the channels produce 1.31. With both format levers at their documented levels it would be 4.193. To reach the threshold at a 4% click rate and the measured watch time, YouTube would have to serve 6,927 impressions a day where it serves 464. Impressions are chosen by YouTube's recommendation system from how viewers respond, so that is the honest distance: it is reach, not metadata."
   },
   "not_claimed": [
     "any particular view count on any particular video",
