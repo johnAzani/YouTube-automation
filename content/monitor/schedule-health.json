@@ -9,27 +9,6 @@
       "workflow": "keepalive.yml"
     },
     {
-      "late_minutes": 268,
-      "name": "Growth score (where the watch hours come from)",
-      "ran_at": "2026-11-27T09:05:32+00:00",
-      "slot": "2026-11-27T04:37:00+00:00",
-      "workflow": "growth-score.yml"
-    },
-    {
-      "late_minutes": 253,
-      "name": "Tests on main (daily)",
-      "ran_at": "2026-11-27T09:05:33+00:00",
-      "slot": "2026-11-27T04:52:00+00:00",
-      "workflow": "tests-on-main.yml"
-    },
-    {
-      "late_minutes": 238,
-      "name": "Thumbnail campaign (which concept earns the click)",
-      "ran_at": "2026-11-27T09:05:35+00:00",
-      "slot": "2026-11-27T05:07:00+00:00",
-      "workflow": "thumbnail-campaign.yml"
-    },
-    {
       "late_minutes": 198,
       "name": "YouTube reporting jobs (thumbnail impressions)",
       "ran_at": "2026-11-27T09:05:37+00:00",
@@ -49,10 +28,17 @@
       "ran_at": "2026-11-28T01:47:45+00:00",
       "slot": "2026-11-27T23:14:00+00:00",
       "workflow": "produce.yml"
+    },
+    {
+      "late_minutes": 141,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-28T05:44:35+00:00",
+      "slot": "2026-11-28T03:23:00+00:00",
+      "workflow": "monitor.yml"
     }
   ],
-  "generated_at": "2026-11-28T03:31:06.591054+00:00",
-  "last_run_at": "2026-11-28T03:30:17+00:00",
+  "generated_at": "2026-11-28T05:45:23.324867+00:00",
+  "last_run_at": "2026-11-28T05:44:35+00:00",
   "on_time": [
     {
       "late_minutes": 4,
@@ -60,13 +46,6 @@
       "ran_at": "2026-11-27T20:18:22+00:00",
       "slot": "2026-11-27T20:14:00+00:00",
       "workflow": "automation-health.yml"
-    },
-    {
-      "late_minutes": 117,
-      "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
-      "ran_at": "2026-11-27T05:34:04+00:00",
-      "slot": "2026-11-27T03:37:00+00:00",
-      "workflow": "channel-analytics.yml"
     },
     {
       "late_minutes": 93,
@@ -83,10 +62,10 @@
       "workflow": "metrics.yml"
     },
     {
-      "late_minutes": 59,
+      "late_minutes": 117,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-28T01:46:33+00:00",
-      "slot": "2026-11-28T00:47:00+00:00",
+      "ran_at": "2026-11-28T05:44:35+00:00",
+      "slot": "2026-11-28T03:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
