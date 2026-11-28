@@ -1,6 +1,6 @@
 ---
 id: 0339
-title: 'When Your Hard Work Feels Unseen: Isaiah 65:23 | The Family Altar'
+title: "Exhausted by Daily Provision: Isaiah 65:23 | The Family Altar"
 slug: when-your-hard-work-feels-unseen-isaiah-65-23
 status: approved
 channel: prayer5
@@ -74,6 +74,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When Your Hard Work Feels Unseen: Isaiah 65:23 | The Family Altar"
+queue_title_fixed_at: "2026-11-28"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar
