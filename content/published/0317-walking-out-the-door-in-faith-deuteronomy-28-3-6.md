@@ -1,6 +1,6 @@
 ---
 id: '0317'
-title: 'Walking Out the Door in Faith: Deuteronomy 28:3-6 | The Family Altar'
+title: "Covering Your Daily Going Out: Deuteronomy 28:3-6 | The Family Altar"
 slug: walking-out-the-door-in-faith-deuteronomy-28-3-6
 status: published
 channel: prayer5
@@ -77,7 +77,7 @@ originality:
 published_on: "2026-11-21"
 published_at: "2026-11-21T16:11:56Z"
 youtube_video_id: "FmiTNRubtS8"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 top_comment: "ok"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
@@ -85,6 +85,9 @@ thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_retry_after: "2026-11-28T16:51:09Z"
 thumbnail_retry_reason: "permission"
+title_before: "Walking Out the Door in Faith: Deuteronomy 28:3-6 | The Family Altar"
+retitled_at: "2026-11-28"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar
