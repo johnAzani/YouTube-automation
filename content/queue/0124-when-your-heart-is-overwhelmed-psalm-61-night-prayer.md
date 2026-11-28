@@ -1,6 +1,6 @@
 ---
 id: '0124'
-title: "When Sorrow Weighs Down the Soul: Psalm 61:2-4 | The Secret Place"
+title: "Overwhelmed and Weary at Night: Psalm 61:2-4 | The Secret Place"
 slug: when-your-heart-is-overwhelmed-psalm-61-night-prayer
 status: approved
 channel: secret-place
@@ -72,6 +72,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When Sorrow Weighs Down the Soul: Psalm 61:2-4 | The Secret Place"
+queue_title_fixed_at: "2026-11-28"
 ---
 
 ## Scene 1 — The Nighttime Burden and the Cry from Afar
