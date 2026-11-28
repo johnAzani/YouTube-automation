@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T23:36:12Z",
+  "generated_at": "2026-11-28T01:51:10Z",
   "monitor_generated_at": "2026-11-27T23:34:54.795338+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 259,
     "published_shorts": 666,
     "public_total": 923,
-    "queued_longform": 149,
+    "queued_longform": 151,
     "queued_shorts": 15,
     "automations_ok": 12,
     "automations_total": 15,
@@ -38,7 +38,7 @@
         "published_shorts": 83,
         "thumbnail_pending": 1,
         "public_total": 112,
-        "queued_longform": 18,
+        "queued_longform": 20,
         "queued_other": 5,
         "queued_shorts": 1
       },
@@ -23210,6 +23210,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1593
+      },
+      {
+        "id": "0136",
+        "slug": "nothing-shall-separate-you-romans-8-38-39-the-secret_place",
+        "file": "0136-nothing-shall-separate-you-romans-8-38-39-the-secret_place.md",
+        "title": "Nothing Shall Separate You: Romans 8:38-39 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1785
+      },
+      {
+        "id": "0137",
+        "slug": "peace-always-by-all-means-2-thessalonians-3-16",
+        "file": "0137-peace-always-by-all-means-2-thessalonians-3-16.md",
+        "title": "Peace Always by All Means: 2 Thessalonians 3:16 | The Secret Place",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 874
       },
       {
         "id": "0139",
