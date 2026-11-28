@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T15:34:51Z",
+  "generated_at": "2026-11-28T15:40:42Z",
   "monitor_generated_at": "2026-11-28T08:06:30.892982+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -12,7 +12,7 @@
     "published_longform": 275,
     "published_shorts": 671,
     "public_total": 944,
-    "queued_longform": 172,
+    "queued_longform": 174,
     "queued_shorts": 10,
     "automations_ok": 11,
     "automations_total": 15,
@@ -509,7 +509,7 @@
         "published_shorts": 60,
         "thumbnail_pending": 10,
         "public_total": 82,
-        "queued_longform": 12,
+        "queued_longform": 14,
         "queued_other": 4,
         "queued_shorts": 1
       },
@@ -24899,6 +24899,19 @@
         "words": 1159
       },
       {
+        "id": "0636",
+        "slug": "unshakable-stability-in-uncertain-times-psalm-16-8",
+        "file": "0636-unshakable-stability-in-uncertain-times-psalm-16-8.md",
+        "title": "Unshakable Stability in Uncertain Times: Psalm 16:8",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1655
+      },
+      {
         "id": "0637",
         "slug": "when-you-need-a-safe-place-to-hide-psalm-71-3",
         "file": "0637-when-you-need-a-safe-place-to-hide-psalm-71-3.md",
@@ -24910,6 +24923,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1411
+      },
+      {
+        "id": "0638",
+        "slug": "greater-is-he-that-is-in-you-1-john-4-4",
+        "file": "0638-greater-is-he-that-is-in-you-1-john-4-4.md",
+        "title": "Greater Is He That Is in You: 1 John 4:4 | The Covenant Shield",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1304
       },
       {
         "id": "0644",
