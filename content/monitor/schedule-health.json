@@ -30,6 +30,13 @@
       "workflow": "tests-on-main.yml"
     },
     {
+      "late_minutes": 194,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-28T10:28:47+00:00",
+      "slot": "2026-11-28T07:14:00+00:00",
+      "workflow": "comments.yml"
+    },
+    {
       "late_minutes": 182,
       "name": "Thumbnail campaign (which concept earns the click)",
       "ran_at": "2026-11-28T08:09:00+00:00",
@@ -58,8 +65,8 @@
       "workflow": "channel-analytics.yml"
     }
   ],
-  "generated_at": "2026-11-28T10:28:42.329912+00:00",
-  "last_run_at": "2026-11-28T10:27:55+00:00",
+  "generated_at": "2026-11-28T11:55:18.532362+00:00",
+  "last_run_at": "2026-11-28T11:54:29+00:00",
   "on_time": [
     {
       "late_minutes": 4,
