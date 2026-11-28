@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T02:38:29Z",
+  "generated_at": "2026-11-28T02:43:42Z",
   "monitor_generated_at": "2026-11-27T23:34:54.795338+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 931,
-    "published_longform": 262,
+    "published_total": 932,
+    "published_longform": 263,
     "published_shorts": 669,
-    "public_total": 929,
-    "queued_longform": 152,
+    "public_total": 930,
+    "queued_longform": 153,
     "queued_shorts": 12,
     "automations_ok": 12,
     "automations_total": 15,
@@ -504,28 +504,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 80,
-        "published_longform": 20,
+        "published_total": 81,
+        "published_longform": 21,
         "published_shorts": 60,
         "thumbnail_pending": 11,
-        "public_total": 80,
-        "queued_longform": 8,
+        "public_total": 81,
+        "queued_longform": 9,
         "queued_other": 4,
         "queued_shorts": 1
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM115V9",
-        "title": "Pray This Psalm 115:9-11 Prayer for Divine Protection | Prayer Of Refuge #Shorts",
-        "format": "short",
-        "youtube_video_id": "99qvsns8RWA",
-        "watch_url": "https://www.youtube.com/shorts/99qvsns8RWA",
-        "published_on": "2026-11-27",
-        "published_at": "2026-11-27T20:27:51Z"
-      },
-      "next_queued_longform": {
         "id": "0615",
         "title": "Protected by a Wall of Fire: Zechariah 2:5 | The Covenant Shield",
-        "words": 1587,
+        "format": "longform",
+        "youtube_video_id": "0xvHsHu050A",
+        "watch_url": "https://youtu.be/0xvHsHu050A",
+        "published_on": "2026-11-28",
+        "published_at": "2026-11-28T02:42:48Z"
+      },
+      "next_queued_longform": {
+        "id": "0620",
+        "title": "Guarded in All Your Ways: Psalm 91:11 | The Covenant Shield",
+        "words": 1176,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0615",
+      "slug": "protected-by-a-wall-of-fire-zechariah-2-5",
+      "file": "0615-protected-by-a-wall-of-fire-zechariah-2-5.md",
+      "title": "Protected by a Wall of Fire: Zechariah 2:5 | The Covenant Shield",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-28",
+      "published_at": "2026-11-28T02:42:48Z",
+      "youtube_video_id": "0xvHsHu050A",
+      "watch_url": "https://youtu.be/0xvHsHu050A",
+      "youtu_be_url": "https://youtu.be/0xvHsHu050A",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/0xvHsHu050A/edit",
+      "thumb_url": "https://i.ytimg.com/vi/0xvHsHu050A/hqdefault.jpg",
+      "thumb_text": "WALL OF FIRE",
+      "thumbnail_pending": false,
+      "duration_label": "10m 43s",
+      "words": 1587
+    },
     {
       "id": "0321",
       "slug": "when-your-labor-feels-unseen-ruth-2-12",
@@ -24305,19 +24329,6 @@
         "words": 1167
       },
       {
-        "id": "0615",
-        "slug": "protected-by-a-wall-of-fire-zechariah-2-5",
-        "file": "0615-protected-by-a-wall-of-fire-zechariah-2-5.md",
-        "title": "Protected by a Wall of Fire: Zechariah 2:5 | The Covenant Shield",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1587
-      },
-      {
         "id": "0620",
         "slug": "guarded-in-all-your-ways-psalm-91-11",
         "file": "0620-guarded-in-all-your-ways-psalm-91-11.md",
@@ -24344,6 +24355,19 @@
         "words": 1862
       },
       {
+        "id": "0626",
+        "slug": "when-your-head-is-bowed-by-trouble-psalm-3-3",
+        "file": "0626-when-your-head-is-bowed-by-trouble-psalm-3-3.md",
+        "title": "When Your Head Is Bowed by Trouble: Psalm 3:3 | The Covenant Shield",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1495
+      },
+      {
         "id": "0627",
         "slug": "if-god-be-for-us-romans-8-31",
         "file": "0627-if-god-be-for-us-romans-8-31.md",
@@ -24355,6 +24379,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1140
+      },
+      {
+        "id": "0628",
+        "slug": "the-blessing-of-the-lord-that-keeps-you-numbers-6-24-26",
+        "file": "0628-the-blessing-of-the-lord-that-keeps-you-numbers-6-24-26.md",
+        "title": "The Blessing of the LORD That Keeps You: Numbers 6:24-26",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1205
       },
       {
         "id": "0630",

@@ -2,7 +2,7 @@
 id: '0615'
 title: 'Protected by a Wall of Fire: Zechariah 2:5 | The Covenant Shield'
 slug: protected-by-a-wall-of-fire-zechariah-2-5
-status: approved
+status: published
 channel: prayer8
 privacy: public
 format: longform
@@ -73,6 +73,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-28"
+published_at: "2026-11-28T02:42:48Z"
+youtube_video_id: "0xvHsHu050A"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 642.83
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — The Strong Tower of Divine Presence
