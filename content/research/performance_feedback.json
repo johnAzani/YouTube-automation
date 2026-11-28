@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-27T10:48:30.543549+00:00",
-  "as_of": "2026-11-27",
+  "generated_at": "2026-11-28T05:46:48.408273+00:00",
+  "as_of": "2026-11-28",
   "sufficient_data": true,
-  "measured_longform_videos": 4,
-  "total_longform_videos": 10,
+  "measured_longform_videos": 3,
+  "total_longform_videos": 12,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 111,
+    "receipt_video_ids": 114,
     "matched_video_ids": 50,
-    "longform_below_view_threshold": 6,
+    "longform_below_view_threshold": 9,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 2,
+    "longform_too_young_or_undated": 4,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -29,10 +29,10 @@
     },
     {
       "theme": "anxiety_peace",
-      "videos": 6,
-      "measured_videos": 3,
-      "avg_score": 0.5387,
-      "avg_engagement": 0.0402,
+      "videos": 5,
+      "measured_videos": 2,
+      "avg_score": 0.6191,
+      "avg_engagement": 0.0467,
       "top_scripture": "John 14"
     },
     {
@@ -45,6 +45,14 @@
     },
     {
       "theme": "peace_rest",
+      "videos": 3,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": ""
+    },
+    {
+      "theme": "daily_guidance_wisdom",
       "videos": 1,
       "measured_videos": 0,
       "avg_score": 0.0,
@@ -61,134 +69,134 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 35,
-    "total_shorts": 40,
+    "measured_shorts": 36,
+    "total_shorts": 38,
     "sufficient_data": true,
-    "avg_views": 20.7,
+    "avg_views": 20.4,
     "median_views": 14,
-    "total_views": 726,
+    "total_views": 734,
     "minimum_age_days": 2,
     "by_book": {
       "1 john": {
         "shorts": 1,
         "avg_views": 10.0,
-        "ratio": 0.827
+        "ratio": 0.83
       },
       "2 thessalonians": {
         "shorts": 1,
         "avg_views": 94.0,
-        "ratio": 2.177
+        "ratio": 2.203
       },
       "deuteronomy": {
-        "shorts": 2,
-        "avg_views": 19.0,
-        "ratio": 0.958
+        "shorts": 1,
+        "avg_views": 33.0,
+        "ratio": 1.206
       },
       "exodus": {
         "shorts": 1,
         "avg_views": 11.0,
-        "ratio": 0.843
+        "ratio": 0.847
       },
       "hebrews": {
         "shorts": 1,
         "avg_views": 10.0,
-        "ratio": 0.827
+        "ratio": 0.83
       },
       "isaiah": {
         "shorts": 3,
         "avg_views": 14.0,
-        "ratio": 0.805
+        "ratio": 0.812
       },
       "jeremiah": {
         "shorts": 1,
         "avg_views": 10.0,
-        "ratio": 0.827
+        "ratio": 0.83
       },
       "job": {
         "shorts": 1,
         "avg_views": 11.0,
-        "ratio": 0.843
+        "ratio": 0.847
       },
       "jude": {
         "shorts": 1,
         "avg_views": 18.0,
-        "ratio": 0.956
+        "ratio": 0.961
       },
       "lamentations": {
         "shorts": 1,
         "avg_views": 5.0,
-        "ratio": 0.747
+        "ratio": 0.748
       },
       "nahum": {
         "shorts": 1,
         "avg_views": 17.0,
-        "ratio": 0.94
+        "ratio": 0.945
       },
       "numbers": {
         "shorts": 1,
         "avg_views": 7.0,
-        "ratio": 0.779
+        "ratio": 0.781
       },
       "psalm": {
-        "shorts": 17,
-        "avg_views": 23.7,
-        "ratio": 1.128,
+        "shorts": 19,
+        "avg_views": 21.9,
+        "ratio": 1.067,
         "avg_apv": 465.1,
         "loop_ratio": 1.0
       },
       "romans": {
         "shorts": 2,
         "avg_views": 19.0,
-        "ratio": 0.958
+        "ratio": 0.966
       },
       "zephaniah": {
         "shorts": 1,
         "avg_views": 12.0,
-        "ratio": 0.86
+        "ratio": 0.863
       }
     },
     "by_theme": {
       "anxiety_peace": {
         "shorts": 1,
         "avg_views": 17.0,
-        "ratio": 0.94
+        "ratio": 0.945
       },
       "blessing_benediction": {
         "shorts": 1,
         "avg_views": 7.0,
-        "ratio": 0.779
+        "ratio": 0.781
       },
       "daily_guidance_wisdom": {
         "shorts": 6,
-        "avg_views": 15.2,
-        "ratio": 0.798
+        "avg_views": 15.0,
+        "ratio": 0.802
       },
       "midday_strength_endurance": {
-        "shorts": 3,
-        "avg_views": 11.3,
-        "ratio": 0.728
+        "shorts": 4,
+        "avg_views": 9.5,
+        "ratio": 0.644
       },
       "morning_mercy_renewal": {
-        "shorts": 4,
-        "avg_views": 44.0,
-        "ratio": 1.747
+        "shorts": 3,
+        "avg_views": 57.7,
+        "ratio": 2.097
       },
       "peace_rest": {
-        "shorts": 16,
-        "avg_views": 21.4,
-        "ratio": 1.027
+        "shorts": 17,
+        "avg_views": 20.5,
+        "ratio": 1.006
       },
       "protection": {
         "shorts": 3,
-        "avg_views": 17.3,
-        "ratio": 0.901,
+        "avg_views": 17.7,
+        "ratio": 0.92,
         "avg_apv": 465.1,
         "loop_ratio": 1.0
       },
       "trust_surrender": {
         "shorts": 1,
         "avg_views": 7.0,
-        "ratio": 0.779
+        "ratio": 0.781
       }
     },
     "measured_with_apv": 1,
