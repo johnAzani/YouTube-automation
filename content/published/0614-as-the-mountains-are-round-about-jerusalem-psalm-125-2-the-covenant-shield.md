@@ -1,6 +1,6 @@
 ---
 id: '0614'
-title: 'As the Mountains Are Round About Jerusalem: Psalm 125:2'
+title: "Surrounded by God Unmovable: Psalm 125:2 | The Covenant Shield"
 slug: as-the-mountains-are-round-about-jerusalem-psalm-125-2-the-covenant-shield
 status: published
 channel: prayer8
@@ -79,13 +79,16 @@ originality:
 published_on: "2026-11-21"
 published_at: "2026-11-21T02:01:35Z"
 youtube_video_id: "7q08AGLETis"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 top_comment: "ok"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "As the Mountains Are Round About Jerusalem: Psalm 125:2"
+retitled_at: "2026-11-28"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Strong Tower and Fortress of Our Daily Steps
