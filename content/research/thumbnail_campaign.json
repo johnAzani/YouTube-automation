@@ -4,7 +4,7 @@
   "concepts": [
     {
       "concept": "quiet",
-      "videos": 26,
+      "videos": 29,
       "impressions": 429,
       "clicks": 10,
       "click_rate_percent": 2.33,
@@ -12,15 +12,15 @@
     },
     {
       "concept": "poster",
-      "videos": 5,
-      "impressions": 129,
+      "videos": 7,
+      "impressions": 124,
       "clicks": 0,
       "click_rate_percent": 0.0,
       "measurable": false
     },
     {
       "concept": "hook",
-      "videos": 7,
+      "videos": 8,
       "impressions": 0,
       "clicks": 0,
       "click_rate_percent": null,
@@ -30,7 +30,7 @@
   "leader": "quiet",
   "leader_click_rate_percent": 2.33,
   "min_impressions": 300,
-  "videos_assigned": 38,
+  "videos_assigned": 44,
   "videos_in_reach": 3,
   "channels_with_reach": [
     "secret-place"
@@ -44,7 +44,7 @@
     "prayer8",
     "secret-place"
   ],
-  "network_impressions_in_reach_files": 18605,
+  "network_impressions_in_reach_files": 18587,
   "note": "A per-video Test & Compare cannot be opened or read by the Data API; this compares the concepts the rotation put live on different videos of the same channel. A concept under the impression floor is shown and not trusted.",
   "privacy": "Impressions, clicks and a click rate. No revenue, no viewer.",
   "cost_lock": "$0.00 \u2014 reads committed reach files; no API call."
