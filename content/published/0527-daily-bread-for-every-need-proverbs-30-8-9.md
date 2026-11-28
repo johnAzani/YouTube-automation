@@ -2,7 +2,7 @@
 id: '0527'
 title: 'Daily Bread for Every Need: Proverbs 30:8-9 | The Provision Table'
 slug: daily-bread-for-every-need-proverbs-30-8-9
-status: approved
+status: published
 channel: prayer7
 privacy: public
 format: longform
@@ -76,6 +76,16 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-28"
+published_at: "2026-11-28T13:07:57Z"
+youtube_video_id: "QZZs_Fw7u9c"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+duration_seconds: 699.22
+thumbnail_revision: "ctr-v3-cinema"
+thumbnail_concept: "quiet"
 ---
 
 ## Scene 1 — Approaching Jehovah-Jireh at the Prepared Table
